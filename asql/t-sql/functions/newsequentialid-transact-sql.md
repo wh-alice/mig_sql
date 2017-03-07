@@ -33,9 +33,9 @@ manager: "jhubbard"
  NEWSEQUENTIALID is a wrapper over the Windows [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) function.  
   
 > [!WARNING]  
->  The UuidCreateSequential function has hardware dependencies. On [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], clusters of sequential values can develop when databases (such as contained databases) are moved to other computers. When using Always On and on [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)], clusters of sequential values can develop if the database fails over to a different computer.  
+>  The UuidCreateSequential function has hardware dependencies. On [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], clusters of sequential values can develop when databases (such as contained databases) are moved to other computers. When using Always On and on [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)], clusters of sequential values can develop if the database fails over to a different computer.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

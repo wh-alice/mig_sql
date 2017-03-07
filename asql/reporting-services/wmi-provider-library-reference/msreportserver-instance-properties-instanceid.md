@@ -23,7 +23,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # MSReportServer_Instance Properties - InstanceID
-  This object supports the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] infrastructure and is not intended to be used directly from your code.  
+  This object supports the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] infrastructure and is not intended to be used directly from your code.  
   
 ## Syntax  
   

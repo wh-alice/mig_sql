@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   **Subscription Watch List**  
   
-     This tab is intended to display information about subscriptions from all publications available at the selected Publisher that have errors, warnings, or the poorest performance. This tab is not displayed for Distributors running versions prior to [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)].  
+     This tab is intended to display information about subscriptions from all publications available at the selected Publisher that have errors, warnings, or the poorest performance. This tab is not displayed for Distributors running versions prior to [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)].  
   
  For more information about the options on each tab, click the tab in the right pane, and then click **Help** on the menu bar. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
@@ -52,6 +52,6 @@ manager: "jhubbard"
 ## See Also  
  [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
  [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [Monitoring Replication](../Topic/Monitoring%20Replication.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

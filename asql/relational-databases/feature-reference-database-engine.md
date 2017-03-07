@@ -18,21 +18,21 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Feature Reference (Database Engine)
-  The [!INCLUDE[ssDEnoversion](../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] includes several tools and applications that you can use to create, manage, and view database objects and data. In addition, there are tools that you can use to monitor and troubleshoot server and database performance and enable and disable features, services, and network protocols. This section provides specific topics describing the dialog boxes of these tools and applications.  
+  The [!INCLUDE[ssDEnoversion](../a9notintoc/includes/ssdenoversion-md.md)] includes several tools and applications that you can use to create, manage, and view database objects and data. In addition, there are tools that you can use to monitor and troubleshoot server and database performance and enable and disable features, services, and network protocols. This section provides specific topics describing the dialog boxes of these tools and applications.  
   
  To access a user interface topic while the tool or application is running, press F1 or click Help while the dialog box, Web page, or wizard is open.  
   
 ## In This Section  
  [Start and Use the Database Engine Tuning Advisor](../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
- Provides help for [!INCLUDE[ssDE](../analysis-services/instances/install/windows/includes/ssde-md.md)] Tuning Advisor and its related dialog boxes.  
+ Provides help for [!INCLUDE[ssDE](../a9notintoc/includes/ssde-md.md)] Tuning Advisor and its related dialog boxes.  
   
- Provides help for the tools, wizards, and services supplied with [!INCLUDE[ssManStudioFull](../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]  
+ Provides help for the tools, wizards, and services supplied with [!INCLUDE[ssManStudioFull](../a9notintoc/includes/ssmanstudiofull-md.md)]  
   
  [SQL Server Monitor Overview](../database-engine/configure/windows/sql-server-monitor-overview.md)  
- Provides help for the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Monitor and the Database Mirroring Monitor.  
+ Provides help for the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Monitor and the Database Mirroring Monitor.  
   
  [SQL Server Profiler F1 Help](../tools/sql-server-profiler/sql-server-profiler-f1-help.md)  
- Provides help for [!INCLUDE[ssSqlProfiler](../analysis-services/data-mining/includes/sssqlprofiler-md.md)] and its related dialog boxes.  
+ Provides help for [!INCLUDE[ssSqlProfiler](../a9retired/includes/sssqlprofiler-md.md)] and its related dialog boxes.  
   
  [Visual Database Tools F1 Help](../Topic/Visual%20Database%20Tools%20F1%20Help.md)  
  Provides help for the Database Diagram Designer, Table Designer, and Query and View Designer tools and related dialog boxes.  

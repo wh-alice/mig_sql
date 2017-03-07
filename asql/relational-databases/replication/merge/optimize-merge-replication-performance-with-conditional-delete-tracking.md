@@ -43,7 +43,7 @@ manager: "jhubbard"
   
  **To specify that deletes should not be tracked**  
   
--   Replication [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] programming: [Specify That Deletes Should Not Be Tracked For Merge Articles &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/publish/0fe330ca-5fb5-422e-ad6f-92fb5d6a3b6c.md)  
+-   Replication [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] programming: [Specify That Deletes Should Not Be Tracked For Merge Articles &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/publish/0fe330ca-5fb5-422e-ad6f-92fb5d6a3b6c.md)  
   
 ## See Also  
  [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   

@@ -23,7 +23,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # SSIS Package Upgrade Wizard F1 Help
-  Use the SSIS Package Upgrade Wizard to upgrade packages created by earlier versions of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] to the package format for the current release of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)].  
+  Use the SSIS Package Upgrade Wizard to upgrade packages created by earlier versions of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] to the package format for the current release of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)].  
   
  **To run the SSIS Package Upgrade Wizard**  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
  Use the **Select Source Location** page to specify the source from which to upgrade packages.  
   
 > [!NOTE]  
->  This page is only available when you run the [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Package Upgrade Wizard from [!INCLUDE[ssManStudioFull](../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or at the command prompt.  
+>  This page is only available when you run the [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Package Upgrade Wizard from [!INCLUDE[ssManStudioFull](../a9notintoc/includes/ssmanstudiofull-md.md)] or at the command prompt.  
   
 ### Static Options  
  **Package source**  
@@ -48,8 +48,8 @@ manager: "jhubbard"
 |Value|Description|  
 |-----------|-----------------|  
 |**File System**|Indicates that the packages to be upgraded are in a folder on the local computer.<br /><br /> To have the wizard back up the original packages before upgrading those packages, the original packages must be stored in the file system. For more information, see How To Topic.|  
-|**SSIS Package Store**|Indicates that the packages to be upgraded are in the package store. The package store consists of the set of file system folders that the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] service manages. For more information, see [Package Management &#40;SSIS Service&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> Selecting this value displays the corresponding **Package source** dynamic options.|  
-|**Microsoft SQL Server**|Indicates the packages to be upgraded are from an existing instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)].<br /><br /> Selecting this value displays the corresponding **Package source** dynamic options.|  
+|**SSIS Package Store**|Indicates that the packages to be upgraded are in the package store. The package store consists of the set of file system folders that the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] service manages. For more information, see [Package Management &#40;SSIS Service&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> Selecting this value displays the corresponding **Package source** dynamic options.|  
+|**Microsoft SQL Server**|Indicates the packages to be upgraded are from an existing instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)].<br /><br /> Selecting this value displays the corresponding **Package source** dynamic options.|  
   
  **Folder**  
  Type the name of a folder that contains the packages you want to upgrade or click **Browse** and locate the folder.  
@@ -71,19 +71,19 @@ manager: "jhubbard"
  Select to use Windows Authentication to connect to the server.  
   
  **Use SQL Server authentication**  
- Select to use [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication to connect to the server. If you use [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication, you must provide a user name and password.  
+ Select to use [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Authentication to connect to the server. If you use [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Authentication, you must provide a user name and password.  
   
  **User name**  
- Type the user name that [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication will use to connect to the server.  
+ Type the user name that [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Authentication will use to connect to the server.  
   
  **Password**  
- Type the password that [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication will use to connect to the server.  
+ Type the password that [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Authentication will use to connect to the server.  
  
 ## Select Destination Location page
  Use the **Select Destination Location** page to specify the destination to which to save the upgraded packages.  
   
 > [!NOTE]  
->  This page is only available when you run the [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Package Upgrade Wizard from [!INCLUDE[ssManStudioFull](../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or at the command prompt.  
+>  This page is only available when you run the [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Package Upgrade Wizard from [!INCLUDE[ssManStudioFull](../a9notintoc/includes/ssmanstudiofull-md.md)] or at the command prompt.  
  
 ### Static Options  
  **Save to source location**  
@@ -101,7 +101,7 @@ manager: "jhubbard"
 |-----------|-----------------|  
 |**File System**|Indicates that the upgraded packages are to be saved to a folder on the local computer.|  
 |**SSIS Package Store**|Indicates that the upgraded packages are to be saved to the Integration Services package store. The package store consists of the set of file system folders that the Integration Services service manages. For more information, see [Package Management &#40;SSIS Service&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> Selecting this value displays the corresponding **Package source** dynamics options.|  
-|**Microsoft SQL Server**|Indicates that the upgraded packages are to be saved to an existing instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)].<br /><br /> Selecting this value displays the corresponding dynamic **Package source** dynamic options.|  
+|**Microsoft SQL Server**|Indicates that the upgraded packages are to be saved to an existing instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)].<br /><br /> Selecting this value displays the corresponding dynamic **Package source** dynamic options.|  
   
  **Folder**  
  Type the name of a folder to which the upgraded packages will be saved, or click **Browse** and locate the folder.  
@@ -123,13 +123,13 @@ manager: "jhubbard"
  Select to use Windows Authentication to connect to the server.  
   
  **Use SQL Server authentication**  
- Select to use [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication to connect to the server. If you use [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication, you must provide a user name and password.  
+ Select to use [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Authentication to connect to the server. If you use [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Authentication, you must provide a user name and password.  
   
  **User name**  
- Type the user name to be used when using [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication to connect to the server.  
+ Type the user name to be used when using [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Authentication to connect to the server.  
   
  **Password**  
- Type the password to be used when using [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication to connect to the server.  
+ Type the password to be used when using [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Authentication to connect to the server.  
  
 ## Select Package Management Options page
   Use the **Select Package Management Options** page to specify options for upgrading packages.  
@@ -140,13 +140,13 @@ manager: "jhubbard"
   
 ### Options  
  **Update connection strings to use new provider names**  
- Update the connection strings to use the names for the following providers for the current release of [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)]:  
+ Update the connection strings to use the names for the following providers for the current release of [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)]:  
   
--   OLE DB Provider for [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)]  
+-   OLE DB Provider for [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client  
+-   [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Native Client  
   
- The [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Package Upgrade Wizard updates only connection strings that are stored in connection managers. The wizard does not update connection strings that are constructed dynamically by using the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] expression language, or by using code in a Script task.  
+ The [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Package Upgrade Wizard updates only connection strings that are stored in connection managers. The wizard does not update connection strings that are constructed dynamically by using the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] expression language, or by using code in a Script task.  
   
  **Validate upgrade packages**  
  Validate the upgrade packages and save only those upgrade packages that pass validation.  
@@ -159,7 +159,7 @@ manager: "jhubbard"
  Create new package IDs for the upgrade packages.  
   
  **Continue upgrade process when a package upgrade fails**  
- Specify that when a package cannot be upgraded, the [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Package Upgrade Wizard continues to upgrade the remaining packages.  
+ Specify that when a package cannot be upgraded, the [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Package Upgrade Wizard continues to upgrade the remaining packages.  
   
  **Package name conflicts**  
  Specify how the wizard should handle packages that have the same name. This option has the values listed in the following table.  
@@ -195,7 +195,7 @@ manager: "jhubbard"
  Provide the destination package name, or use the default name that the wizard provides.  
   
 > [!NOTE]  
->  You can also change the destination package name after upgrading the package. In [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)] or [!INCLUDE[ssManStudioFull](../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], open the upgraded package and change the package name.  
+>  You can also change the destination package name after upgrading the package. In [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)] or [!INCLUDE[ssManStudioFull](../a9notintoc/includes/ssmanstudiofull-md.md)], open the upgraded package and change the package name.  
   
  **Password**  
  Specify the password that is used to decrypt the selected upgrade packages.  
@@ -211,7 +211,7 @@ manager: "jhubbard"
  Review the upgrade options that you have selected in the wizard. To change any options, click **Back** to return to previous wizard pages.
  
 ## Upgrading the Packages page
-  Use the **Upgrading the Packages** page to view the progress of package upgrade and to interrupt the upgrade process. The [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Package Upgrade Wizard upgrades the selected packages one by one.  
+  Use the **Upgrading the Packages** page to view the progress of package upgrade and to interrupt the upgrade process. The [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Package Upgrade Wizard upgrades the selected packages one by one.  
   
 ### Options  
  **Message pane**  
@@ -243,11 +243,11 @@ manager: "jhubbard"
 ## View upgraded packages
 ### View upgraded packages that were saved to a SQL Server database or to the package store
   
-In [!INCLUDE[ssManStudio](../advanced-analytics/r-services/includes/ssmanstudio-md.md)], in Object Explorer, connect to the local instance of [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)], and then expand the **Stored Packages** node to see the packages that were upgraded.  
+In [!INCLUDE[ssManStudio](../a9notintoc/includes/ssmanstudio-md.md)], in Object Explorer, connect to the local instance of [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)], and then expand the **Stored Packages** node to see the packages that were upgraded.  
   
 ### View upgraded packages that were upgraded from SQL Server Data Tools  
   
-In [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], in Solution Explorer, open the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project, and then expand the **SSIS Packages** node to see the upgraded packages.  
+In [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], in Solution Explorer, open the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] project, and then expand the **SSIS Packages** node to see the upgraded packages.  
   
 ## See Also  
  [Upgrade Integration Services Packages](../integration-services/install/windows/upgrade-integration-services-packages.md)  

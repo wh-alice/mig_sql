@@ -25,7 +25,7 @@ manager: "jhubbard"
 |Product Name|SQL Server|  
 |Event ID|20011|  
 |Event Source|MSSQLSERVER|  
-|Component|[!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]|  
+|Component|[!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)]|  
 |Symbolic Name||  
 |Message Text|The process could not execute '%1' on '%2'.|  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)  
+ [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-repldone-transact-sql.md)  
   
   

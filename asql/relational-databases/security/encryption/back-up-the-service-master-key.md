@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Back Up the Service Master Key
-  This topic describes how to back-up the Service Master key in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]. The service master key is the root of the encryption hierarchy. It should be backed up and stored in a secure, off-site location. Creating this backup should be one of the first administrative actions performed on the server.  
+  This topic describes how to back-up the Service Master key in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]. The service master key is the root of the encryption hierarchy. It should be backed up and stored in a secure, off-site location. Creating this backup should be one of the first administrative actions performed on the server.  
   
  **In This Topic**  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 #### To back-up the Service Master key  
   
-1.  In [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance containing the service master key you wish to back up.  
+1.  In [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance containing the service master key you wish to back up.  
   
 2.  Choose a password that will be used to encrypt the service master key on the backup medium. This password is subject to complexity checks. For more information, see [Password Policy](../../../relational-databases/security/password-policy.md).  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 4.  Identify an NTFS directory in which to create the backup of the key. This is where you will create the file specified in the next step. The directory should be protected with highly restrictive access control lists (ACLs).  
   
-5.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+5.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 6.  On the Standard bar, click **New Query**.  
   

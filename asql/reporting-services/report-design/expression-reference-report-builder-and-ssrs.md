@@ -16,12 +16,12 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Expression Reference (Report Builder and SSRS)
-  Report expressions support a variety of references to built-in functions and built-in collections. Expressions must have valid [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] syntax before a report can be published or processed.  
+  Report expressions support a variety of references to built-in functions and built-in collections. Expressions must have valid [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] syntax before a report can be published or processed.  
   
- To develop complex expressions or expressions that use custom code or custom assemblies, we recommend that you use Report Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)]. For more information, see [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ To develop complex expressions or expressions that use custom code or custom assemblies, we recommend that you use Report Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)]. For more information, see [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
  Use the topics in this section to help write simple expressions in a report.  
   
@@ -32,19 +32,19 @@ manager: "erikre"
   
  [Operators in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)  
   
- [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../Topic/Built-in%20Collections%20in%20Expressions%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
   
- [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](../Topic/Built-in%20Globals%20and%20Users%20References%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
- [Parameters Collection References &#40;Report Builder and SSRS&#41;](../Topic/Parameters%20Collection%20References%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Parameters Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
- [Dataset Fields Collection References &#40;Report Builder and SSRS&#41;](../Topic/Dataset%20Fields%20Collection%20References%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Dataset Fields Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)  
   
- [DataSources and DataSets Collection References &#40;Report Builder and SSRS&#41;](../Topic/DataSources%20and%20DataSets%20Collection%20References%20\(Report%20Builder%20and%20SSRS\).md)  
+ [DataSources and DataSets Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)  
   
- [Report and Group Variables Collections References &#40;Report Builder and SSRS&#41;](../Topic/Report%20and%20Group%20Variables%20Collections%20References%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Report and Group Variables Collections References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- [ReportItems Collection References &#40;Report Builder and SSRS&#41;](../Topic/ReportItems%20Collection%20References%20\(Report%20Builder%20and%20SSRS\).md)  
+ [ReportItems Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md)  
   
 ## See Also  
  [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

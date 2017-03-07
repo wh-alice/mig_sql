@@ -17,7 +17,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Tutorial: Add a Parameter to Your Report (Report Builder)
-In this tutorial, you add a parameter to a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report so report readers can filter report data for one or more values. 
+In this tutorial, you add a parameter to a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report so report readers can filter report data for one or more values. 
   
 ![report-builder-parameter-tutorial](../../reporting-services/tutorials/media/report-builder-parameter-tutorial.png)
 
@@ -39,7 +39,7 @@ Create a matrix report, a data source, and a dataset.
   
 ### To create a new matrix report  
   
-1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
+1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
   
     The **New Report or Dataset** dialog box opens.  
   
@@ -79,7 +79,7 @@ Create a matrix report, a data source, and a dataset.
     FROM CTE  
     ```  
   
-    This query combines the results of several [!INCLUDE[tsql_md](../../advanced-analytics/r-services/includes/tsql-md.md)] SELECT statements inside a common table expression to specify values that are based on simplified sales data for cameras from the Contoso sample database. The subcategories are digital cameras, digital single lens reflex (SLR) cameras, camcorders, and accessories.  
+    This query combines the results of several [!INCLUDE[tsql_md](../../a9notintoc/includes/tsql-md.md)] SELECT statements inside a common table expression to specify values that are based on simplified sales data for cameras from the Contoso sample database. The subcategories are digital cameras, digital single lens reflex (SLR) cameras, camcorders, and accessories.  
   
 11. On the query designer toolbar, click **Run** (**!**) to see the data.   
   
@@ -137,7 +137,7 @@ When you add a query parameter to a query, Report Builder automatically creates 
   
 2.  In the Report Data pane, expand the **Datasets** folder, right-click **DataSet1**, and then click **Query**.  
   
-3.  Add the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] **WHERE** clause as the last line in the query:  
+3.  Add the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] **WHERE** clause as the last line in the query:  
   
     ```  
     WHERE StoreID = (@StoreID)  
@@ -149,11 +149,11 @@ When you add a query parameter to a query, Report Builder automatically creates 
   
 5.  In **Parameter Value**, type **200**.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
     The result set displays the quantities sold for Accessories, Camcorders, and Digital SLR Cameras for the store identifier **200**.  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 8.  In the Report Data pane, expand the **Parameters** folder.  
   
@@ -178,7 +178,7 @@ By default, the parameter you created has the data type **Text**. Because the st
   
 4.  Accept the remaining default values in the dialog box.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 6.  Click **Run** to preview the report. The report viewer displays the prompt **Store Identifier?** for *@StoreID*.  
   
@@ -212,7 +212,7 @@ To make sure your report readers type only valid values for a parameter, you can
     UNION SELECT 306 AS StoreID, 'Contoso Europe Online Store' as StoreName  
     ```  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
     The Report Data pane displays the fields StoreID and StoreName under the **Stores** dataset node.  
   
@@ -237,7 +237,7 @@ After you create a dataset to provide available values, you change the report pr
   
     Report readers will now select from a list of store names instead of store identifiers. Note that the parameter data type remains **Integer** because the parameter is based on the store identifier, not the store name.  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 9. Preview the report.  
   
@@ -262,7 +262,7 @@ You can specify a default value for each parameter so the report runs automatica
   
 5.  In **Value field**, from the drop-down list, click StoreID.  
   
-6.  [!INCLUDE[clickOK_md](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK_md](../../a9notintoc/includes/clickok-md.md)]  
   
 7.  Preview the report.  
   
@@ -278,7 +278,7 @@ For *@StoreID*, the report viewer displays the value "Contoso North America Onli
   
 4.  In **Value**, type **200**.  
   
-5.  [!INCLUDE[clickOK_md](../../analysis-services/data-mining/includes/clickok-md.md)] 
+5.  [!INCLUDE[clickOK_md](../../a9notintoc/includes/clickok-md.md)] 
   
 6.  Preview the report.  
   
@@ -307,7 +307,7 @@ A dataset might contain both the identifier and the corresponding name field. Wh
   
     The Lookup function takes the value for StoreID, looks it up in the "Stores" dataset, and returns the StoreName value.  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
     The store column header contains the display text for a complex expression: **Expr**.  
   
@@ -330,7 +330,7 @@ When your report readers have questions about a report, it helps to know which p
   
 5.  Right-click the first `[@StoreID]` and click **Expression**. The **Expression** dialog box opens. Replace the text `Value` with `Label`.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
     The text displays: `[@StoreID.Label] [@StoreID]`.  
   
@@ -355,7 +355,7 @@ Filters help control which data to use in a report after it is retrieved from an
 
     `[@StoreID]` is the simple expression syntax that represents `=Parameters!StoreID.Value`.  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 8.  Preview the report.  
   
@@ -376,11 +376,11 @@ To change a parameter from single to multivalued, you must change the query and 
   
 3.  Select **Allow multiple values**.  
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 5.  In the Report Data pane, expand the **Datasets** folder, right-click **DataSet1**, and then click **Query**.  
   
-6.  Change the **equals sign** (=) to **IN** in the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] **WHERE** clause in the last line in the query:  
+6.  Change the **equals sign** (=) to **IN** in the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] **WHERE** clause in the last line in the query:  
   
     ```  
     WHERE StoreID IN (@StoreID)  
@@ -388,7 +388,7 @@ To change a parameter from single to multivalued, you must change the query and 
   
     The **IN** operator tests a value for inclusion in a set of values.  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 8.  Right-click a row or column header handle on the matrix, and then click **Tablix Properties**.  
   
@@ -396,7 +396,7 @@ To change a parameter from single to multivalued, you must change the query and 
   
 10. In **Operator**, select **In**.  
   
-11. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+11. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 12. In the text box that displays the parameter in the page footer, delete all text.  
   
@@ -404,7 +404,7 @@ To change a parameter from single to multivalued, you must change the query and 
   
     This expression concatenates all store names that the user selected, separated by a comma and a space.  
   
-14. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+14. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 15. Click in the text box in front of the expression that you just created, and then type the following: 
 
@@ -443,7 +443,7 @@ To change a parameter from single to multivalued, you must change the query and 
   
 7.  In **Value**, type **False**.  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To set visibility based on a Boolean parameter  
   
@@ -457,9 +457,9 @@ To change a parameter from single to multivalued, you must change the query and 
   
     The text box Visibility option is controlled by the property Hidden. Apply the **Not** operator so that when the parameter is selected, the Hidden property is false, and the text box will be displayed.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 7.  Preview the report.  
   
@@ -503,4 +503,4 @@ This concludes the walkthrough for how to add a parameter to your report. To lea
 ## See Also  
 * [Report Builder Tutorials](../../reporting-services/tutorials/report-builder-tutorials.md)
 * [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-*  [Lookup Function](Lookup%20Function%20\(Report%20Builder%20and%20SSRS\).md)   
+*  [Lookup Function](../../reporting-services/report-design/report-builder-functions-lookup-function.md)   

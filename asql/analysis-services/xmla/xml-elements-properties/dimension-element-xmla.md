@@ -63,6 +63,6 @@ manager: "erikre"
 ## See Also  
  [Database Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)   
  [Dimension Element (XMLA)](../../../analysis-services/xmla/xml-elements-properties/dimension-element-xmla.md)   
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

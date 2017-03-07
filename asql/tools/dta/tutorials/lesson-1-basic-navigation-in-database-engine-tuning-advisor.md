@@ -28,7 +28,7 @@ This lesson contains the following topics:
 -   Setting Tool Options and Layout  
   
 ## Next Task in This Lesson  
-[Launching Database Engine Tuning Advisor](../Topic/Launching%20Database%20Engine%20Tuning%20Advisor.md)  
+[Launching Database Engine Tuning Advisor](../../../tools/dta/tutorials/lesson-1-1-launching-database-engine-tuning-advisor.md)  
   
   
   

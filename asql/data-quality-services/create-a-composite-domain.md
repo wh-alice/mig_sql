@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Composite Domain
-  This topic describes how to create a composite domain in a knowledge base in [!INCLUDE[ssDQSnoversion](../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS). A composite domain consists of one or more single domains that apply to a single data field. For more information on composite domains, see [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md).  
+  This topic describes how to create a composite domain in a knowledge base in [!INCLUDE[ssDQSnoversion](../a9retired/includes/ssdqsnoversion-md.md)] (DQS). A composite domain consists of one or more single domains that apply to a single data field. For more information on composite domains, see [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md).  
   
  There are two ways to create a new composite domain. The first is during the Map step of the knowledge discovery activity, when you are in the process of analyzing a data sample to add knowledge to a new or existing knowledge base. The second is during the domain management activity, when instead of changing an existing domain, you create a new one. In order to create a composite domain, you must already have created at least two single domains to add to the composite domain. Only those single domains that have already been created and that have not been added to an existing composite domain are available when you create a new composite domain. A single domain cannot be added to more than one composite domain, and a composite domain cannot be added to another composite domain.  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssDQSInitialStep](../data-quality-services/includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] home screen, click **Open knowledge base** and then select a knowledge base, or click **New knowledge base** and enter properties for the new knowledge base.  
+2.  In the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] home screen, click **Open knowledge base** and then select a knowledge base, or click **New knowledge base** and enter properties for the new knowledge base.  
   
 3.  Select **Knowledge Discovery** as the activity, and then click **Create** to create the new knowledge base or **Open** to open an existing knowledge base.  
   
@@ -84,7 +84,7 @@ manager: "jhubbard"
   
 5.  If you selected **Delimiters** for the parsing method, you can also select **Use Knowledge Based Parsing**. For more information, see [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
-6.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md).  
+6.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](../a9retired/end-the-domain-management-activity.md).  
   
 ##  <a name="FollowUp"></a> Follow Up: After Creating a Composite Domain  
  After you create a composite domain, you can perform other domain management tasks on the domain, you can perform knowledge discovery to add knowledge to the domain, or you can add a matching policy to the domain. For more information, see [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md), [Managing a Domain](../data-quality-services/managing-a-domain.md), or [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  

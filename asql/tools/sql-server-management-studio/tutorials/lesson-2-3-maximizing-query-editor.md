@@ -40,7 +40,7 @@ Programmers frequently ask, "How can I get more room to write my code?" The answ
 3.  To restore the tool windows, open each tool, and then click the **Auto Hide** button on the window to pin it open.  
   
 ## Next Task in Lesson  
-[Using Comments](../Topic/Using%20Comments.md)  
+[Using Comments](../../../tools/sql-server-management-studio/tutorials/lesson-2-4-using-comments.md)  
   
   
   

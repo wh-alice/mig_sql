@@ -23,7 +23,7 @@ manager: "erikre"
  Gauge and indicator options can be set by using expressions. For more information, see [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ### To embed an indicator in a gauge  
   
@@ -35,7 +35,7 @@ manager: "erikre"
   
 4.  Click **Radial**. The first radial gauge is selected.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 6.  Click the gauge. The **Gauge Data** pane opens.  
   
@@ -45,7 +45,7 @@ manager: "erikre"
   
 9. In the **Select Indicator Style** dialog box, in the left pane, click the indicator type you want, and then click the indicator set.  
   
-10. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 11. Click the indicator. The **Gauge Data** pane opens.  
   
@@ -53,7 +53,7 @@ manager: "erikre"
   
      The field can be the same or a different field from the one you use in the gauge.  
   
-13. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+13. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To show an indicator and gauge side by side  
   
@@ -65,7 +65,7 @@ manager: "erikre"
   
 4.  Click **Radial**. The first radial gauge is selected.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 6.  Click the gauge. The **Gauge Data** pane opens.  
   
@@ -75,7 +75,7 @@ manager: "erikre"
   
 9. In the **Select Indicator Style** dialog box, in the left pane, click the indicator type you want, and then click the indicator set.  
   
-10. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 11. Click the indicator. The **Gauge Data** pane opens.  
   
@@ -83,7 +83,7 @@ manager: "erikre"
   
      The field can be the same or a different field from the one you use in the gauge.  
   
-13. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+13. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 14. Right-click the gauge panel and click **Add Label**. A label is added to the gauge panel. Repeat one more time.  
   
@@ -95,7 +95,7 @@ manager: "erikre"
   
 17. Right-click the label near the indicator, click **Label Properties**,and type the text you want in the **Text** box.  
   
-18. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+18. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## See Also  
  [Indicators &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

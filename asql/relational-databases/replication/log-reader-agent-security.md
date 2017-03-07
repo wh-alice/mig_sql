@@ -21,9 +21,9 @@ manager: "jhubbard"
 # Log Reader Agent Security
   The **Log Reader Agent Security** dialog box allows you to specify:  
   
--   The [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows account under which the Log Reader Agent runs at the Distributor. The Windows account is also referred to as the *process account*, because the agent process runs under this account.  
+-   The [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows account under which the Log Reader Agent runs at the Distributor. The Windows account is also referred to as the *process account*, because the agent process runs under this account.  
   
--   The context under which the Log Reader Agent makes connections to the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Publisher. The connection can be made by impersonating the Windows account or under the context of a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] account you specify.  
+-   The context under which the Log Reader Agent makes connections to the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Publisher. The connection can be made by impersonating the Windows account or under the context of a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] account you specify.  
   
     > [!NOTE]  
     >  The Log Reader Agent makes connections to the Publisher even if the Publisher and Distributor are on the same computer. The Log Reader Agent also makes connections to the Distributor; these connections are always made by impersonating the Windows account under which the agent runs.  
@@ -40,12 +40,12 @@ manager: "jhubbard"
  Enter the password for the Windows account.  
   
  **Connect to the Publisher**  
- Select whether the Log Reader Agent should make connections to the Publisher by impersonating the account specified in the **Process account** text box or by using a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] account. If you select to use a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] account, enter a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login and password.  
+ Select whether the Log Reader Agent should make connections to the Publisher by impersonating the account specified in the **Process account** text box or by using a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] account. If you select to use a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] account, enter a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login and password.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] recommends that you select to impersonate the Windows account rather than using a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] account.  
+>  [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] recommends that you select to impersonate the Windows account rather than using a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] account.  
   
- The Windows account or [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] account used for the connection must at minimum be a member of the **db_owner** fixed database role in the publication database.  
+ The Windows account or [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] account used for the connection must at minimum be a member of the **db_owner** fixed database role in the publication database.  
   
 ## See Also  
  [Manage Logins and Passwords in Replication](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   

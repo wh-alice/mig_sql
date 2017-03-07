@@ -19,11 +19,11 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Monitor System Activity Using Extended Events
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   This procedure illustrates how Extended Events can be used with Event Tracing for Windows (ETW) to monitor system activity. The procedure also shows how the CREATE EVENT SESSION, ALTER EVENT SESSION, and DROP EVENT SESSION statements are used.  
   
- Accomplishing these tasks involves using Query Editor in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to carry out the following procedure. The procedure also requires using the command prompt to run ETW commands.  
+ Accomplishing these tasks involves using Query Editor in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] to carry out the following procedure. The procedure also requires using the command prompt to run ETW commands.  
   
 ### To monitor system activity using Extended Events  
   
@@ -119,8 +119,8 @@ manager: "jhubbard"
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
- [Extended Events Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
- [Extended Events Dynamic Management Views](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [SQL Server Extended Events Targets](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)  
+ [Extended Events Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [Extended Events Dynamic Management Views](../../relational-databases/reference/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
+ [SQL Server Extended Events Targets](../../a9retired/sql-server-extended-events-targets.md)  
   
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
 
   Returns the last day of the month that contains the specified date, with an optional offset.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -49,7 +49,7 @@ EOMONTH ( start_date [, month_to_add ] )
  **date**  
   
 ## Remarks  
- This function can be remoted to [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] servers and higher. It cannot be remoted to servers with a version lower than [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)].  
+ This function can be remoted to [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] servers and higher. It cannot be remoted to servers with a version lower than [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)].  
   
 ## Examples  
   
@@ -121,7 +121,7 @@ Last Month
 (1 row(s) affected)  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### D. EOMONTH with explicit datetime type  
   

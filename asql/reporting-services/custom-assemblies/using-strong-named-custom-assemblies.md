@@ -37,7 +37,7 @@ manager: "erikre"
 [assembly:AllowPartiallyTrustedCallers]  
 ```  
   
- **AllowPartiallyTrustedCallersAttribute** is effective only when applied by a strong-named assembly at the assembly level. For more information about applying attributes at the assembly level, see "Applying Attributes" in the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] SDK documentation.  
+ **AllowPartiallyTrustedCallersAttribute** is effective only when applied by a strong-named assembly at the assembly level. For more information about applying attributes at the assembly level, see "Applying Attributes" in the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] SDK documentation.  
   
 > [!CAUTION]  
 >  When **AllowPartiallyTrustedCallersAttribute** is present, the default **FullTrustLinkDemand** security checks are prevented, making the assembly callable from any other partially trusted assembly. All security checks, including class-level or method-level declarative security attributes, must be explicitly stated.  

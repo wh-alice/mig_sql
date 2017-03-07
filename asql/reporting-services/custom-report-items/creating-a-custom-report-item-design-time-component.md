@@ -20,19 +20,19 @@ ms.author: "carlasab"
 manager: "erikre"
 ---
 # Creating a Custom Report Item Design-Time Component
-  A custom report item design-time component is a control that can be used in the Visual Studio Report Designer environment. The custom report item design-time component provides an activated design surface that can accept drag-and-drop operations, integration with the [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] property browser, and the ability to provide custom property editors.  
+  A custom report item design-time component is a control that can be used in the Visual Studio Report Designer environment. The custom report item design-time component provides an activated design surface that can accept drag-and-drop operations, integration with the [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] property browser, and the ability to provide custom property editors.  
   
  With a custom report item design-time component, the user can position a custom report item on a report in the design environment, set custom data properties on the custom report item, and then save the custom report item as part of the report project.  
   
  The properties that are set using the design-time component in the development environment are serialized and deserialized by the host design environment and then stored as elements in the Report Definition Language (RDL) file. When the report is executed by the report processor, the properties that are set using the design-time component are passed by the report processor to a custom report item run-time component, which renders the custom report item and passes it back to the report processor.  
   
 > [!NOTE]  
->  The custom report item design-time component is implemented as a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] component. This document will describe implementation details specific to the custom report item design-time component. For more information about developing components using the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)], see [Components in Visual Studio](http://go.microsoft.com/fwlink/?LinkId=116576) in the MSDN library.  
+>  The custom report item design-time component is implemented as a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] component. This document will describe implementation details specific to the custom report item design-time component. For more information about developing components using the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)], see [Components in Visual Studio](http://go.microsoft.com/fwlink/?LinkId=116576) in the MSDN library.  
   
  For a sample of a fully implemented custom report item, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## Implementing a Design-Time Component  
- The main class of a custom report item design-time component is inherited from the **Microsoft.ReportDesigner.CustomReportItemDesigner** class. In addition to the standard attributes used for a [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] control, your component class should define a **CustomReportItem** attribute. This attribute must correspond to the name of the custom report item as it is defined in the reportserver.config file. For a list of [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] attributes, see Attributes in the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] SDK documentation.  
+ The main class of a custom report item design-time component is inherited from the **Microsoft.ReportDesigner.CustomReportItemDesigner** class. In addition to the standard attributes used for a [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] control, your component class should define a **CustomReportItem** attribute. This attribute must correspond to the name of the custom report item as it is defined in the reportserver.config file. For a list of [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] attributes, see Attributes in the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] SDK documentation.  
   
  The following code example shows attributes being applied to a custom report item design-time control:  
   
@@ -86,7 +86,7 @@ public override void InitializeNewComponent()
 ```  
   
 ### Modifying Component Properties  
- You can modify **CustomData** properties in the design environment in several ways. You can modify any properties that are exposed by the design-time component that are marked with the <xref:System.ComponentModel.BrowsableAttribute> attribute by using the [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] property browser. In addition, you can modify properties by dragging items onto the custom report item's design surface, or by right-clicking the control in the design environment and selecting **Properties** on the shortcut menu to display a custom properties window.  
+ You can modify **CustomData** properties in the design environment in several ways. You can modify any properties that are exposed by the design-time component that are marked with the <xref:System.ComponentModel.BrowsableAttribute> attribute by using the [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] property browser. In addition, you can modify properties by dragging items onto the custom report item's design surface, or by right-clicking the control in the design environment and selecting **Properties** on the shortcut menu to display a custom properties window.  
   
  The following code example shows a **Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData** property that has the <xref:System.ComponentModel.BrowsableAttribute> attribute applied:  
   
@@ -184,13 +184,13 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### Using Adornments  
- Custom report item classes can also implement a **Microsoft.ReportDesigner.Design.Adornment** class. An adornment allows the custom report item control to provide areas outside the main rectangle of the design surface. These areas can handle user interface events, such as mouse clicks and drag-and-drop operations. The **Adornment** class that is defined in the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] **Microsoft.ReportDesigner** namespace is a pass-through implementation of the <xref:System.Windows.Forms.Design.Behavior.Adorner> class found in Windows Forms. For complete documentation on the **Adorner** class, see [Behavior Service Overview](http://go.microsoft.com/fwlink/?LinkId=116673) in the MSDN library. For sample code that implements a **Microsoft.ReportDesigner.Design.Adornment** class, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Custom report item classes can also implement a **Microsoft.ReportDesigner.Design.Adornment** class. An adornment allows the custom report item control to provide areas outside the main rectangle of the design surface. These areas can handle user interface events, such as mouse clicks and drag-and-drop operations. The **Adornment** class that is defined in the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] **Microsoft.ReportDesigner** namespace is a pass-through implementation of the <xref:System.Windows.Forms.Design.Behavior.Adorner> class found in Windows Forms. For complete documentation on the **Adorner** class, see [Behavior Service Overview](http://go.microsoft.com/fwlink/?LinkId=116673) in the MSDN library. For sample code that implements a **Microsoft.ReportDesigner.Design.Adornment** class, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
- For more information about programming and using Windows Forms in [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)], see these topics in the MSDN Library:  
+ For more information about programming and using Windows Forms in [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)], see these topics in the MSDN Library:  
   
 -   Design-Time Attributes for Components  
   
--   Components in [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)]  
+-   Components in [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)]  
   
 -   Walkthrough: Creating a Windows Forms Control that Takes Advantage of Visual Studio Design-Time Features  
   

@@ -21,7 +21,7 @@ manager: "jhubbard"
 # What&#39;s New in Integration Services in SQL Server 2016
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../integration-services/includes/feedback-stackoverflow-msdn-connect-md.md)]
 
- This topic describes the features that have been added or updated in [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)].  
+ This topic describes the features that have been added or updated in [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)].  
   
 ## Improvements grouped by category  
   
@@ -149,7 +149,7 @@ manager: "jhubbard"
 ####  <a name="AlwaysOn"></a> Support for Always On in the SSIS Catalog  
  The Always On Availability Groups feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. An availability group supports a failover environment for a discrete set of user databases known as availability databases that fail over together. For more information, see [Always On Availability Groups](https://msdn.microsoft.com/library/hh510230.aspx).  
   
- In [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)], SSIS introduces new capabilities that let you easily deploy to a centralized SSIS Catalog (i.e. SSISDB user database). In order to provide high availability for the SSISDB database and its contents - projects, packages, execution logs, and so on - you can add the SSISDB database to an Always On Availability Group, just like any other user database. When a failover occurs, one of the secondary nodes automatically becomes the new primary node.  
+ In [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)], SSIS introduces new capabilities that let you easily deploy to a centralized SSIS Catalog (i.e. SSISDB user database). In order to provide high availability for the SSISDB database and its contents - projects, packages, execution logs, and so on - you can add the SSISDB database to an Always On Availability Group, just like any other user database. When a failover occurs, one of the secondary nodes automatically becomes the new primary node.  
   
  For a detailed overview and step-by-step instructions for enabling Always On for SSISDB, see [Always On for SSIS Catalog &#40;SSISDB&#41;](../integration-services/service/always-on-for-ssis-catalog-ssisdb.md).  
 
@@ -169,7 +169,7 @@ The Incremental Package Deployment feature lets you deploy one or more packages 
  For more info, see [Deploy Packages to Integration Services Server](../integration-services/packages/deploy-packages-to-integration-services-server.md) .  
 
 ####  <a name="encrypted"></a> Support for Always Encrypted in the SSIS Catalog  
- SSIS already supports the Always Encrypted feature in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more info, see the following blog posts.  
+ SSIS already supports the Always Encrypted feature in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]. For more info, see the following blog posts.  
   
 -   [SSIS with Always Encrypted](http://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
   
@@ -186,7 +186,7 @@ The Incremental Package Deployment feature lets you deploy one or more packages 
  The new **RuntimeLineage** logging level in the SSIS catalog collects the data required to track lineage information in the data flow. You can parse this lineage information to map the lineage relationship between tasks. ISVs and developers  can build custom lineage mapping tools with this information. 
 
 ####  <a name="CustomLogging"></a> New custom logging level in the SSIS catalog  
- Previous versions of the SSIS catalog let you choose from four built-in logging levels when you run a package: **None, Basic, Performance, or Verbose**. [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)] adds the **RuntimeLineage** logging level. In addition, you can now create and save multiple customized logging levels in the SSIS catalog, and pick the logging level to use every time you run a package. For each customized logging level,  select only the statistics and events you want to capture. Optionally include the event context to see variable values, connection strings, and task properties. For more info, see [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/enable-logging-for-package-execution-on-the-ssis-server.md). 
+ Previous versions of the SSIS catalog let you choose from four built-in logging levels when you run a package: **None, Basic, Performance, or Verbose**. [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)] adds the **RuntimeLineage** logging level. In addition, you can now create and save multiple customized logging levels in the SSIS catalog, and pick the logging level to use every time you run a package. For each customized logging level,  select only the statistics and events you want to capture. Optionally include the event context to see variable values, connection strings, and task properties. For more info, see [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/enable-logging-for-package-execution-on-the-ssis-server.md). 
 
 ####  <a name="ErrorColumn"></a> Column names for errors in the data flow  
  When you redirect rows in the data flow that contain errors to an error output, the output contains a numeric identifier for the column in which the error occurred, but does not display the name of the column. There are now several ways to find or display the name of the column in which the error occurred.  
@@ -282,7 +282,7 @@ The destination adapters for loading data into PDW with AU5 have been released. 
 ### Expanded connectivity to the cloud
 
 ####  <a name="AFP2016"></a> Azure Feature Pack for SSIS released for SQL Server 2016  
- The Azure Feature Pack for Integration Services has been released for [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)]. The feature pack contains connection managers to connect to Azure data sources and tasks to do common Azure operations. For more info, see [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
+ The Azure Feature Pack for Integration Services has been released for [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)]. The feature pack contains connection managers to connect to Azure data sources and tasks to do common Azure operations. For more info, see [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
 
 >   [!NOTE]
 > To ensure that the Azure Storage Connection Manager and the components that use it - that is, the Blob Source, the Blob Destination, the Blob Upload Task, and the Blob Download Task - can connect to both general-purpose storage accounts and to blob storage accounts, make sure you download the latest version of the Azure Feature Pack [here](https://www.microsoft.com/download/details.aspx?id=49492). For more info about these two types of storage accounts, see [Introduction to Microsoft Azure Storage](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/#general-purpose-storage-accounts).
@@ -313,7 +313,7 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
 
  In Solution Explorer, right-click on an Integration Services project and select **Properties** to open the property pages for the project. On the **General** tab of **Configuration Properties**, select the **TargetServerVersion** property,  and then choose SQL Server 2016, SQL Server 2014, or SQL Server 2012.  
    
- ![TargetServerVersion property in project properties dialog box](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
+ ![TargetServerVersion property in project properties dialog box](../a9retired/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
 
 >   [!IMPORTANT]
 > If you develop custom extensions for SSIS, see [Support multi-targeting in your custom components](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) and [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/).  
@@ -326,10 +326,10 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
 ### Other enhancements
 
 ####  <a name="BDDinbox"></a> Balanced Data Distributor transformation is now part of SSIS  
- The Balanced Data Distributor transformation, which required a separate download in previous versions of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], is now installed when you install [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)]. For more info, see [Balanced Data Distributor Transformation](../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md).  
+ The Balanced Data Distributor transformation, which required a separate download in previous versions of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], is now installed when you install [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)]. For more info, see [Balanced Data Distributor Transformation](../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md).  
   
 ####  <a name="ComplexFeedinbox"></a> Data Feed Publishing Components are now part of SSIS  
- The Data Feed Publishing Components, which required a separate download in previous versions of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], are now installed when you install [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)]. For more info, see [Data Streaming Destination](../integration-services/data-flow/data-streaming-destination.md).  
+ The Data Feed Publishing Components, which required a separate download in previous versions of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], are now installed when you install [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)]. For more info, see [Data Streaming Destination](../integration-services/data-flow/data-streaming-destination.md).  
 
 ####  <a name="AzureBlob"></a> Support for Azure Blob Storage in the SQL Server Import and Export Wizard  
  The SQL Server Import and Export Wizard can now import data from, and save data to, Azure Blob Storage. For more info, see [Choose a Data Source &#40;SQL Server Import and Export Wizard&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) and [Choose a Destination &#40;SQL Server Import and Export Wizard&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md). 
@@ -352,12 +352,12 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
  The Dimension Processing Destination does not work for Tabular models with the SQL 2016 compatibility level.  The Analysis Services Processing Task and the Partition Processing Destination are all you need for tabular processing. 
 
 ####  <a name="builtinR"></a> Support for Built-in R Services  
- SSIS already supports the built-in R services in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. You can use SSIS not only to extract data and load the output of analysis, but to build, run and periodically retrain R models. For more info, see the following log post. [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](http://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx). 
+ SSIS already supports the built-in R services in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]. You can use SSIS not only to extract data and load the output of analysis, but to build, run and periodically retrain R models. For more info, see the following log post. [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](http://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx). 
 
 ####  <a name="ValidateXML"></a> Rich XML validation output in the XML Task  
  Validate XML documents and get rich error output by enabling the **ValidationDetails** property of the XML Task. Before the **ValidationDetails** property was available, XML validation by the XML Task returned only a true or false result, with no information about errors or their locations. Now, when you set **ValidationDetails** to true, the output file contains detailed information about every error including the line number and the position. You can use this information to understand, locate, and fix errors in XML documents. For more info, see [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md).  
   
- [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] introduced the **ValidationDetails** property in [!INCLUDE[ssSQL11](../analysis-services/includes/sssql11-md.md)] Service Pack 2. This new property was not announced or documented at that time. The **ValidationDetails** property is also available in [!INCLUDE[ssSQL14](../analysis-services/includes/sssql14-md.md)] and in [!INCLUDE[ssSQL15](../analysis-services/powershell/includes/sssql15-md.md)].   
+ [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] introduced the **ValidationDetails** property in [!INCLUDE[ssSQL11](../a9notintoc/includes/sssql11-md.md)] Service Pack 2. This new property was not announced or documented at that time. The **ValidationDetails** property is also available in [!INCLUDE[ssSQL14](../a9notintoc/includes/sssql14-md.md)] and in [!INCLUDE[ssSQL15](../a9notintoc/includes/sssql15-md.md)].   
 
 ## See Also  
  [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   

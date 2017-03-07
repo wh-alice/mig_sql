@@ -34,7 +34,7 @@ manager: "jhubbard"
 ```  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **int**  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] return type: **int**  
   
  CLR return type: **int**  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
 ## Examples  
   
 ### A. Testing CircularString type for compatibility with compatibility level 110  
- The following example tests a `CircularString` instance for compatibility with an earlier version of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]:  
+ The following example tests a `CircularString` instance for compatibility with an earlier version of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]:  
   
 ```  
 DECLARE @g geometry = 'CIRCULARSTRING(-120.533 46.566, -118.283 46.1, -122.3 47.45)';  
@@ -56,7 +56,7 @@ END
 ```  
   
 ### B. Testing LineString type for compatibility with compatibility level 100  
- The following example tests a `LineString` instance for compatibility with [!INCLUDE[ssKatmai](../../../analysis-services/data-mining/includes/sskatmai-md.md)]:  
+ The following example tests a `LineString` instance for compatibility with [!INCLUDE[ssKatmai](../../../a9notintoc/includes/sskatmai-md.md)]:  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(-120.533 46.566, -118.283 46.1, -122.3 47.45)';  
@@ -87,7 +87,7 @@ END
  The first SELECT statement returns 110 and the second SELECT statement returns 100.  
   
 ## See Also  
- [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)   
+ [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
  [SQL Server Database Engine Backward Compatibility](../../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   

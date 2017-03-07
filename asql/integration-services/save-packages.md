@@ -23,14 +23,14 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Save Packages
-  In [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)] you build packages by using [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer and save the packages to the file system as XML files (.dtsx files). You can also save copies of the package XML file to the msdb database in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] or to the package store. The package store represents the folders in the file system location that the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] service manages.  
+  In [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)] you build packages by using [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer and save the packages to the file system as XML files (.dtsx files). You can also save copies of the package XML file to the msdb database in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] or to the package store. The package store represents the folders in the file system location that the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] service manages.  
   
- If you save a package to the file system, you can later use the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] service to import the package to [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] or to the package store. For more information, see [Import and Export Packages &#40;SSIS Service&#41;](../integration-services/service/import-and-export-packages-ssis-service.md).  
+ If you save a package to the file system, you can later use the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] service to import the package to [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] or to the package store. For more information, see [Import and Export Packages &#40;SSIS Service&#41;](../integration-services/service/import-and-export-packages-ssis-service.md).  
   
  You can also use a command prompt utility, **dtutil**, to copy a package between the file system and msdb. For more information, see [dtutil Utility](../integration-services/dtutil-utility.md).  
 ## Save a package to the file system  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want to save to a file.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want to save to a file.  
   
 2.  In Solution Explorer, click the package you want to save.  
   
@@ -40,14 +40,14 @@ manager: "jhubbard"
     >  You can verify the path and file name where the package was saved in the Properties window.  
 
 ## Save a copy of a package
-  This section describes how to save a copy of a package to the file system, to the package store, or to the **msdb** database in [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. When you specify a location to save the package copy, you can also update the name of the package.  
+  This section describes how to save a copy of a package to the file system, to the package store, or to the **msdb** database in [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]. When you specify a location to save the package copy, you can also update the name of the package.  
   
  The package store can include both the **msdb** database and the folders in the file system, only **msdb**, or only folders in the file system. In **msdb**, packages are saved to the **sysssispackages** table. This table includes a **folderid** column that identifies the logical folder to which the package belongs. The logical folders provide a useful way to group packages saved to **msdb** in the same way that folders in the file system provide a way to group packages saved to the file system. Rows in the **sysssispackagefolders** table in **msdb** define the folders.  
   
  If **msdb** is not defined as part of the package store, you can continue to associate packages with existing logical folders when you select SQL Server in the **Package Path** option.  
   
 > [!NOTE]  
->  The package must be opened in [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer before you can save a copy of the package.  
+>  The package must be opened in [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer before you can save a copy of the package.  
   
 ### To save a copy of a package  
   
@@ -62,7 +62,7 @@ manager: "jhubbard"
   
 4.  If the location is **SQL Server** or **SSIS Package Store**, provide a server name.  
   
-5.  If saving to [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], specify the authentication type and, if using [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication, provide a user name and password.  
+5.  If saving to [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], specify the authentication type and, if using [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Authentication, provide a user name and password.  
   
 6.  To specify the package path, either type the path or click the browse button **(…)** to specify the location of the package. The default name of the package is Package. Optionally, update the package name to one that suits your needs.  
   
@@ -83,7 +83,7 @@ manager: "jhubbard"
 9. Click **OK**.  
 
 ## Save a package as a package template
- This section describes how to designate and use custom packages as templates when you create new Integration Services packages in [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)]. By default, [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] uses a package template that creates an empty package when you add a new package to an [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project. You cannot replace this default template, but you can add new templates.  
+ This section describes how to designate and use custom packages as templates when you create new Integration Services packages in [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)]. By default, [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] uses a package template that creates an empty package when you add a new package to an [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] project. You cannot replace this default template, but you can add new templates.  
   
  You can designate multiple packages to use as templates. Before you can implement custom packages as templates, you must create the packages.  
   
@@ -99,7 +99,7 @@ manager: "jhubbard"
   
 ### To use a custom package as a package template  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project in which you want to create a package.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] project in which you want to create a package.  
   
 2.  In Solution Explorer, right-click the project, point to **Add**, and then click **New Item**.  
   

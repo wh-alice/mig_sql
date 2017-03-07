@@ -19,11 +19,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Conversions (OLE DB)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   This section discusses how to convert between **datetime** and **datetimeoffset** values. The conversions described in this section are either already provided by OLE DB or are a consistent extension of OLE DB.  
   
- The format of literals and strings for dates and times in OLE DB generally follows ISO, and is not dependent on the client locale. One exception is DBTYPE_DATE, where the standard is OLE Automation. However, because [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client only converts between types when data is transmitted to or from the client, there is no way for an application to force [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client to convert between DBTYPE_DATE and string formats. Otherwise, strings use the following formats (text in brackets indicates an optional element):  
+ The format of literals and strings for dates and times in OLE DB generally follows ISO, and is not dependent on the client locale. One exception is DBTYPE_DATE, where the standard is OLE Automation. However, because [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client only converts between types when data is transmitted to or from the client, there is no way for an application to force [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client to convert between DBTYPE_DATE and string formats. Otherwise, strings use the following formats (text in brackets indicates an optional element):  
   
 -   The format of **datetime** and **datetimeoffset** strings is:  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
      *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
->  Earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client and SQLOLEDB implemented OLE conversions, in case standard conversions failed. As a result, some conversions performed by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client 10.0 and later differ from the OLE DB specification.  
+>  Earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client and SQLOLEDB implemented OLE conversions, in case standard conversions failed. As a result, some conversions performed by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client 10.0 and later differ from the OLE DB specification.  
   
  Conversions from strings allow flexibility in white space and field width. For more information, see the "Data Formats: Strings and Literals" section in [Data Type Support for OLE DB Date and Time Improvements](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   
@@ -62,10 +62,10 @@ manager: "jhubbard"
   
 ## In This Section  
  [Conversions Performed from Client to Server](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)  
- Describes date/time conversions performed between a client application written with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB and [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] (or later).  
+ Describes date/time conversions performed between a client application written with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB and [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] (or later).  
   
  [Conversions Performed from Server to Client](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-server-to-client.md)  
- Describes date/time conversions performed between [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] (or later) and a client application written with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB.  
+ Describes date/time conversions performed between [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] (or later) and a client application written with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB.  
   
 ## See Also  
  [Date and Time Improvements &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

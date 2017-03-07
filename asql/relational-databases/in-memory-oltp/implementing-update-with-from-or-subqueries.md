@@ -16,7 +16,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Implementing UPDATE with FROM or Subqueries
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 Natively compiled T-SQL modules do not support the FROM clause and do not support subqueries in UPDATE statements (they are supported in SELECT). UPDATE statements with FROM clause are typically used to update information in a table based on a table-valued parameter (TVP), or to update columns in a table in an AFTER trigger. 
 

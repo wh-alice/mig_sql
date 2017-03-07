@@ -23,19 +23,19 @@ Customers who have tables using self joins to express hierarchical relationships
   
 This lesson, examines an existing table, creates a new table containing a **hierarchyid** column, populates the table with the data from the source table, and then demonstrates three indexing strategies. This lesson contains the following topics:  
   
--   [Examining the Current Structure of the Employee Table](../Topic/Examining%20the%20Current%20Structure%20of%20the%20Employee%20Table.md)  
+-   [Examining the Current Structure of the Employee Table](../../../relational-databases/data-types/tutorials/lesson-1-1-examining-the-current-structure-of-the-employee-table.md)  
   
--   [Populating a Table with Existing Hierarchical Data](../Topic/Populating%20a%20Table%20with%20Existing%20Hierarchical%20Data.md)  
+-   [Populating a Table with Existing Hierarchical Data](../../../relational-databases/data-types/tutorials/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)  
   
--   [Optimizing the NewOrg Table](../Topic/Optimizing%20the%20NewOrg%20Table.md)  
+-   [Optimizing the NewOrg Table](../../../relational-databases/data-types/tutorials/lesson-1-3-optimizing-the-neworg-table.md)  
   
--   [Summary: Converting a Table to a Hierarchical Structure](../Topic/Summary:%20Converting%20a%20Table%20to%20a%20Hierarchical%20Structure.md)  
+-   [Summary: Converting a Table to a Hierarchical Structure](../../../relational-databases/data-types/tutorials/lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
 ## Prerequisites  
-This lesson requires the [!INCLUDE[ssSampleDBobject](../../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] sample database.  
+This lesson requires the [!INCLUDE[ssSampleDBobject](../../../a9retired/includes/sssampledbobject-md.md)] sample database.  
   
 ## Next Task in Lesson  
-[Examining the Current Structure of the Employee Table](../Topic/Examining%20the%20Current%20Structure%20of%20the%20Employee%20Table.md)  
+[Examining the Current Structure of the Employee Table](../../../relational-databases/data-types/tutorials/lesson-1-1-examining-the-current-structure-of-the-employee-table.md)  
   
 ## Next Lesson  
 [Lesson 2: Creating and Managing Data in a Hierarchical Table](../../../relational-databases/data-types/tutorials/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  

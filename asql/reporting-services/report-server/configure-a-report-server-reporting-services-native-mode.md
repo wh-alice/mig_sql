@@ -41,7 +41,7 @@ manager: "erikre"
   
 2.  Click **Web Service URL** to open the page for configuring a URL for the report server. For instructions on how to define the URL, see [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/configure-a-url-ssrs-configuration-manager.md).  
   
-3.  Click **Database** to create the report server database. For instructions, see [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../Topic/Create%20a%20Native%20Mode%20Report%20Server%20Database%20%20\(SSRS%20Configuration%20Manager\).md).  
+3.  Click **Database** to create the report server database. For instructions, see [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
 4.  Go back to the **Web Service URL** page and click the URL to verify it works.  
   

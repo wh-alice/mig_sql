@@ -48,7 +48,7 @@ manager: "erikre"
   
      When you first save to, publish to, or browse to a report server or SharePoint site, you might need to enter your credentials. The credentials that you enter are used until the Report Builder session ends. If you choose to save the credentials, they are stored securely with your user settings on your computer. In subsequent Report Builder sessions, saved credentials are used to connect to the same report server or SharePoint site. The report server administrator or SharePoint administrator specifies which type of credentials to use.  
   
--   Data source credentials that you enter in the [Data Source Properties Dialog Box, Credentials &#40;Report Builder&#41;](../Topic/Data%20Source%20Properties%20Dialog%20Box,%20Credentials%20\(Report%20Builder\).md) page for an embedded data source.  
+-   Data source credentials that you enter in the [Data Source Properties Dialog Box, Credentials &#40;Report Builder&#41;](../../a9retired/data-source-properties-dialog-box-credentials-report-builder.md) page for an embedded data source.  
   
      These credentials are used by the report server to make a data connection to the external data source. For some types of data sources, credentials can be stored securely on the report server. These credentials enable other users to run the report without providing credentials for the underlying data connection.  
   
@@ -58,14 +58,14 @@ manager: "erikre"
   
      For shared data sources, use the **Save my password** option to save the credentials locally with your user settings on your computer. Report Builder uses the saved credentials every time a connection is made to the corresponding external data source.  
   
- For more information, see [Data Source Properties Dialog Box, General &#40;Report Builder&#41;](../Topic/Data%20Source%20Properties%20Dialog%20Box,%20General%20\(Report%20Builder\).md) and [Previewing Reports in Report Builder](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
+ For more information, see [Data Source Properties Dialog Box, General &#40;Report Builder&#41;](../../a9retired/data-source-properties-dialog-box-general-report-builder.md) and [Previewing Reports in Report Builder](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ## Using Remote Data Sources  
  If the report retrieves data from a remote database server, verify the following:  
   
 -   The credentials provided to the database server are valid. If you are using Windows user credentials, make sure that the user has permission to the server and database.  
   
--   Ports used by the database server are open. If you are accessing [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] relational databases on external computers, or if the report server database is on an external [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance, you must open port 1433 and 1434 on the external computer. Be sure to restart the server after you open ports. For more information, see [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure/windows/configure-a-windows-firewall-for-database-engine-access.md).  
+-   Ports used by the database server are open. If you are accessing [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] relational databases on external computers, or if the report server database is on an external [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance, you must open port 1433 and 1434 on the external computer. Be sure to restart the server after you open ports. For more information, see [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure/windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 -   Remote connections must be enabled. If you are accessing SQL Server relational databases on external computers, you can use SQL Server Configuration Manager tool to verify that remote connections over TCP are enabled.  
   
@@ -144,7 +144,7 @@ manager: "erikre"
  Under these conditions, the report server connects to a remote data source using the unattended execution account that you must define in advance. Because the report server does not connect to a remote server using its service credentials, you must specify an account that the report server can use to make the connection. For more information about creating this account, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## User Name and Password Login  
- When you select **Use this user name and password**, a user name and password must be supplied to access the data source. For a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database, the credentials might be for a database login. The credentials are passed to the data source for authentication.  
+ When you select **Use this user name and password**, a user name and password must be supplied to access the data source. For a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database, the credentials might be for a database login. The credentials are passed to the data source for authentication.  
   
 ##  <a name="DataSourceConfigurationConnections"></a> Data Source Configuration and Network Connections  
  The following table shows how connections are made for specific combinations of credential types and data processing extensions. If you are using a custom data processing extension, see [Specify Connections for Custom Data Processing Extensions](../../reporting-services/report-data/specify-connections-for-custom-data-processing-extensions.md).  
@@ -152,9 +152,9 @@ manager: "erikre"
 |**Type**|**Context for network connection**|**Data Source Types**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |Integrated security|Impersonate the current user|For all data source types, connect using the current user account.|  
-|Windows credentials|Impersonate the specified user|For [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], Oracle, ODBC, and OLE DB: connect using the impersonated user account.|  
-|Database credentials|Impersonate the unattended execution account or the service account.<br /><br /> (Reporting Services removes administrator permissions when sending the connection request using the service identity).|For [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], Oracle, ODBC, and OLE DB:<br /><br /> Append the user name and password on the connection string.<br /><br /> For [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)]:<br /><br /> The connection succeeds if you are using the TCP/IP protocol, otherwise it fails.<br /><br /> For XML:<br /><br /> Fail the connection on the report server if database credentials are used.|  
-|None|Impersonate the unattended execution account.|For [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], Oracle, ODBC, and OLE DB:<br /><br /> Use the credentials defined in the connection string. The connection fails on the report server if the unattended execution account is undefined.<br /><br /> For [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)]:<br /><br /> Always fail the connection if no credentials are specified, even if the unattended execution account is defined.<br /><br /> For XML:<br /><br /> Connect as Anonymous User if the unattended execution account is defined; otherwise, fail the connection.|  
+|Windows credentials|Impersonate the specified user|For [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], Oracle, ODBC, and OLE DB: connect using the impersonated user account.|  
+|Database credentials|Impersonate the unattended execution account or the service account.<br /><br /> (Reporting Services removes administrator permissions when sending the connection request using the service identity).|For [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], Oracle, ODBC, and OLE DB:<br /><br /> Append the user name and password on the connection string.<br /><br /> For [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)]:<br /><br /> The connection succeeds if you are using the TCP/IP protocol, otherwise it fails.<br /><br /> For XML:<br /><br /> Fail the connection on the report server if database credentials are used.|  
+|None|Impersonate the unattended execution account.|For [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], Oracle, ODBC, and OLE DB:<br /><br /> Use the credentials defined in the connection string. The connection fails on the report server if the unattended execution account is undefined.<br /><br /> For [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)]:<br /><br /> Always fail the connection if no credentials are specified, even if the unattended execution account is defined.<br /><br /> For XML:<br /><br /> Connect as Anonymous User if the unattended execution account is defined; otherwise, fail the connection.|  
   
 ## Setting Credentials Programmatically  
  You can set credentials in your code to control access to reports and to the report server. For more information, see [Data Sources and Connection Methods](../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md).  
@@ -163,8 +163,8 @@ manager: "erikre"
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
  [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
- [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Shared%20Data%20Source%20\(Report%20Manager\).md)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md)   
+ [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../../a9retired/create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

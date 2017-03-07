@@ -46,7 +46,7 @@ manager: "jhubbard"
   Table hints override the default behavior of the query optimizer for the duration of the data manipulation language (DML) statement by specifying a locking method, one or more indexes, a query-processing operation such as a table scan or index seek, or other options. Table hints are specified in the FROM clause of the DML statement and affect only the table or view referenced in that clause.  
   
 > [!CAUTION]  
->  Because the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that hints be used only as a last resort by experienced developers and database administrators.  
+>  Because the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that hints be used only as a last resort by experienced developers and database administrators.  
   
  **Applies to:**  
   
@@ -60,7 +60,7 @@ manager: "jhubbard"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -150,7 +150,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  If a clustered index exists, INDEX(0) forces a clustered index scan and INDEX(1) forces a clustered index scan or seek. If no clustered index exists, INDEX(0) forces a table scan and INDEX(1) is interpreted as an error.  
   
- If multiple indexes are used in a single hint list, the duplicates are ignored and the rest of the listed indexes are used to retrieve the rows of the table. The order of the indexes in the index hint is significant. A multiple index hint also enforces index ANDing, and the query optimizer applies as many conditions as possible on each index accessed. If the collection of hinted indexes do not include all columns referenced by the query, a fetch is performed to retrieve the remaining columns after the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] retrieves all the indexed columns.  
+ If multiple indexes are used in a single hint list, the duplicates are ignored and the rest of the listed indexes are used to retrieve the rows of the table. The order of the indexes in the index hint is significant. A multiple index hint also enforces index ANDing, and the query optimizer applies as many conditions as possible on each index accessed. If the collection of hinted indexes do not include all columns referenced by the query, a fetch is performed to retrieve the remaining columns after the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] retrieves all the indexed columns.  
   
 > [!NOTE]  
 >  When an index hint referring to multiple indexes is used on the fact table in a star join, the optimizer ignores the index hint and returns a warning message. Also, index ORing is not allowed for a table with an index hint specified.  
@@ -195,7 +195,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  When using the FORCESEEK hint (with or without index parameters), consider the following guidelines.  
   
--   The hint can be specified as a table hint or as a query hint. For more information about query hints, see [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).  
+-   The hint can be specified as a table hint or as a query hint. For more information about query hints, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 -   To apply FORCESEEK to an indexed view, the NOEXPAND hint must also be specified.  
   
@@ -227,7 +227,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   The hint cannot be specified in combination with the FORCESCAN hint.  
   
--   For partitioned indexes, the partitioning column implicitly added by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] cannot be specified in the FORCESEEK hint.  
+-   For partitioned indexes, the partitioning column implicitly added by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] cannot be specified in the FORCESEEK hint.  
   
 > [!CAUTION]  
 >  Specifying FORCESEEK with parameters limits the number of plans that can be considered by the optimizer more than when specifying FORCESEEK without parameters. This may cause a "Plan cannot be generated" error to occur in more cases. In a future release, internal modifications to the optimizer may allow more plans to be considered.  
@@ -259,9 +259,9 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  Specifies that any constraints on the table are ignored by the bulk-import operation. By default, INSERT checks [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md) and [Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md). When IGNORE_CONSTRAINTS is specified for a bulk-import operation, INSERT must ignore these constraints on a target table. Note that you cannot disable UNIQUE, PRIMARY KEY, or NOT NULL constraints.  
   
- You might want to disable CHECK and FOREIGN KEY constraints if the input data contains rows that violate constraints. By disabling the CHECK and FOREIGN KEY constraints, you can import the data and then use [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements to clean up the data.  
+ You might want to disable CHECK and FOREIGN KEY constraints if the input data contains rows that violate constraints. By disabling the CHECK and FOREIGN KEY constraints, you can import the data and then use [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements to clean up the data.  
   
- However, when CHECK and FOREIGN KEY constraints are ignored, each ignored constraint on the table is marked as **is_not_trusted** in the [sys.check_constraints](../../relational-databases/system-catalog-views/sys.check-constraints-transact-sql.md) or [sys.foreign_keys](../../relational-databases/system-catalog-views/sys.foreign-keys-transact-sql.md) catalog view after the operation. At some point, you should check the constraints on the whole table. If the table was not empty before the bulk import operation, the cost of revalidating the constraint may exceed the cost of applying CHECK and FOREIGN KEY constraints to the incremental data.  
+ However, when CHECK and FOREIGN KEY constraints are ignored, each ignored constraint on the table is marked as **is_not_trusted** in the [sys.check_constraints](../../relational-databases/reference/system-catalog-views/sys.check-constraints-transact-sql.md) or [sys.foreign_keys](../../relational-databases/reference/system-catalog-views/sys.foreign-keys-transact-sql.md) catalog view after the operation. At some point, you should check the constraints on the whole table. If the table was not empty before the bulk import operation, the cost of revalidating the constraint may exceed the cost of applying CHECK and FOREIGN KEY constraints to the incremental data.  
   
  IGNORE_TRIGGERS  
  Is applicable only in an INSERT statement when the BULK option is used with [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
@@ -277,22 +277,22 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 >  For UPDATE or DELETE statements: [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)]  
   
  NOWAIT  
- Instructs the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] to return a message as soon as a lock is encountered on the table. NOWAIT is equivalent to specifying SET LOCK_TIMEOUT 0 for a specific table. The NOWAIT hint does not work when the TABLOCK hint is also included. To terminate a query without waiting when using the TABLOCK hint, preface the query with `SETLOCK_TIMEOUT 0;` instead.  
+ Instructs the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] to return a message as soon as a lock is encountered on the table. NOWAIT is equivalent to specifying SET LOCK_TIMEOUT 0 for a specific table. The NOWAIT hint does not work when the TABLOCK hint is also included. To terminate a query without waiting when using the TABLOCK hint, preface the query with `SETLOCK_TIMEOUT 0;` instead.  
   
  PAGLOCK  
  Takes page locks either where individual locks are ordinarily taken on rows or keys, or where a single table lock is ordinarily taken. By default, uses the lock mode appropriate for the operation. When specified in transactions operating at the SNAPSHOT isolation level, page locks are not taken unless PAGLOCK is combined with other table hints that require locks, such as UPDLOCK and HOLDLOCK.  
   
  READCOMMITTED  
- Specifies that read operations comply with the rules for the READ COMMITTED isolation level by using either locking or row versioning. If the database option READ_COMMITTED_SNAPSHOT is OFF, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] acquires shared locks as data is read and releases those locks when the read operation is completed. If the database option READ_COMMITTED_SNAPSHOT is ON, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] does not acquire locks and uses row versioning. For more information about isolation levels, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ Specifies that read operations comply with the rules for the READ COMMITTED isolation level by using either locking or row versioning. If the database option READ_COMMITTED_SNAPSHOT is OFF, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] acquires shared locks as data is read and releases those locks when the read operation is completed. If the database option READ_COMMITTED_SNAPSHOT is ON, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] does not acquire locks and uses row versioning. For more information about isolation levels, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 > [!NOTE]  
 >  For UPDATE or DELETE statements: [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)]  
   
  READCOMMITTEDLOCK  
- Specifies that read operations comply with the rules for the READ COMMITTED isolation level by using locking. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] acquires shared locks as data is read and releases those locks when the read operation is completed, regardless of the setting of the READ_COMMITTED_SNAPSHOT database option. For more information about isolation levels, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). This hint cannot be specified on the target table of an INSERT statement; error 4140 is returned.  
+ Specifies that read operations comply with the rules for the READ COMMITTED isolation level by using locking. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] acquires shared locks as data is read and releases those locks when the read operation is completed, regardless of the setting of the READ_COMMITTED_SNAPSHOT database option. For more information about isolation levels, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). This hint cannot be specified on the target table of an INSERT statement; error 4140 is returned.  
   
  READPAST  
- Specifies that the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] not read rows that are locked by other transactions. When READPAST is specified, row-level locks are skipped. That is, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] skips past the rows instead of blocking the current transaction until the locks are released. For example, assume table `T1` contains a single integer column with the values of 1, 2, 3, 4, 5. If transaction A changes the value of 3 to 8 but has not yet committed, a SELECT * FROM T1 (READPAST) yields values 1, 2, 4, 5. READPAST is primarily used to reduce locking contention when implementing a work queue that uses a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table. A queue reader that uses READPAST skips past queue entries locked by other transactions to the next available queue entry, without having to wait until the other transactions release their locks.  
+ Specifies that the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] not read rows that are locked by other transactions. When READPAST is specified, row-level locks are skipped. That is, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] skips past the rows instead of blocking the current transaction until the locks are released. For example, assume table `T1` contains a single integer column with the values of 1, 2, 3, 4, 5. If transaction A changes the value of 3 to 8 but has not yet committed, a SELECT * FROM T1 (READPAST) yields values 1, 2, 4, 5. READPAST is primarily used to reduce locking contention when implementing a work queue that uses a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] table. A queue reader that uses READPAST skips past queue entries locked by other transactions to the next available queue entry, without having to wait until the other transactions release their locks.  
   
  READPAST can be specified for any table referenced in an UPDATE or DELETE statement, and any table referenced in a FROM clause. When specified in an UPDATE statement, READPAST is applied only when reading data to identify which records to update, regardless of where in the statement it is specified. READPAST cannot be specified for tables in the INTO clause of an INSERT statement. Read operations that use READPAST do not block. Update or delete operations that use READPAST may block when reading foreign keys or indexed views, or when modifying secondary indexes.  
   
@@ -311,10 +311,10 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  READUNCOMMITTED and NOLOCK hints apply only to data locks. All queries, including those with READUNCOMMITTED and NOLOCK hints, acquire Sch-S (schema stability) locks during compilation and execution. Because of this, queries are blocked when a concurrent transaction holds a Sch-M (schema modification) lock on the table. For example, a data definition language (DDL) operation acquires a Sch-M lock before it modifies the schema information of the table. Any concurrent queries, including those running with READUNCOMMITTED or NOLOCK hints, are blocked when attempting to acquire a Sch-S lock. Conversely, a query holding a Sch-S lock blocks a concurrent transaction that attempts to acquire a Sch-M lock.  
   
- READUNCOMMITTED and NOLOCK cannot be specified for tables modified by insert, update, or delete operations. The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] query optimizer ignores the READUNCOMMITTED and NOLOCK hints in the FROM clause that apply to the target table of an UPDATE or DELETE statement.  
+ READUNCOMMITTED and NOLOCK cannot be specified for tables modified by insert, update, or delete operations. The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] query optimizer ignores the READUNCOMMITTED and NOLOCK hints in the FROM clause that apply to the target table of an UPDATE or DELETE statement.  
   
 > [!NOTE]  
->  Support for use of the READUNCOMMITTED and NOLOCK hints in the FROM clause that apply to the target table of an UPDATE or DELETE statement will be removed in a future version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Avoid using these hints in this context in new development work, and plan to modify applications that currently use them.  
+>  Support for use of the READUNCOMMITTED and NOLOCK hints in the FROM clause that apply to the target table of an UPDATE or DELETE statement will be removed in a future version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Avoid using these hints in this context in new development work, and plan to modify applications that currently use them.  
   
  You can minimize locking contention while protecting transactions from dirty reads of uncommitted data modifications by using either of the following:  
   
@@ -339,7 +339,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  SNAPSHOT  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  The memory-optimized table is accessed under SNAPSHOT isolation. SNAPSHOT can only be used with memory-optimized tables (not with disk-based tables). For more information, see [Introduction to Memory-Optimized Tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -353,7 +353,7 @@ LEFT JOIN dbo.[Order History] AS oh
  SPATIAL_WINDOW_MAX_CELLS = *integer*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Specifies the maximum number of cells to use for tessellating a geometry or geography object. *number* is a value between 1 and 8192.  
   
@@ -382,13 +382,13 @@ LEFT JOIN dbo.[Order History] AS oh
 ## Remarks  
  The table hints are ignored if the table is not accessed by the query plan. This may be caused by the optimizer choosing not to access the table at all, or because an indexed view is accessed instead. In the latter case, accessing an indexed view can be prevented by using the OPTION (EXPAND VIEWS) query hint.  
   
- All lock hints are propagated to all the tables and views that are accessed by the query plan, including tables and views referenced in a view. Also, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] performs the corresponding lock consistency checks.  
+ All lock hints are propagated to all the tables and views that are accessed by the query plan, including tables and views referenced in a view. Also, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] performs the corresponding lock consistency checks.  
   
  Lock hints ROWLOCK, UPDLOCK, AND XLOCK that acquire row-level locks may place locks on index keys rather than the actual data rows. For example, if a table has a nonclustered index, and a SELECT statement using a lock hint is handled by a covering index, a lock is acquired on the index key in the covering index rather than on the data row in the base table.  
   
  If a table contains computed columns that are computed by expressions or functions accessing columns in other tables, the table hints are not used on those tables and are not propagated. For example, a NOLOCK table hint is specified on a table in the query. This table has computed columns that are computed by a combination of expressions and functions that access columns in another table. The tables referenced by the expressions and functions do not use the NOLOCK table hint when accessed.  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not allow for more than one table hint from each of the following groups for each table in the FROM clause:  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not allow for more than one table hint from each of the following groups for each table in the FROM clause:  
   
 -   Granularity hints: PAGLOCK, NOLOCK, READCOMMITTEDLOCK, ROWLOCK, TABLOCK, or TABLOCKX.  
   
@@ -417,7 +417,7 @@ GO
  The query optimizer will not consider an index hint if the SET options do not have the required values for filtered indexes. For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## Using NOEXPAND  
- NOEXPAND applies only to *indexed views*. An indexed view is a view with a unique clustered index created on it. If a query contains references to columns that are present both in an indexed view and base tables, and the query optimizer determines that using the indexed view provides the best method for executing the query, the query optimizer uses the index on the view. This functionality is called *indexed view matching*. Prior to [!INCLUDE[ssSQL15_md](../../analysis-services/powershell/includes/sssql15-md.md)] SP1, automatic use of an indexed view by the query optimizer is supported only in specific editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ NOEXPAND applies only to *indexed views*. An indexed view is a view with a unique clustered index created on it. If a query contains references to columns that are present both in an indexed view and base tables, and the query optimizer determines that using the indexed view provides the best method for executing the query, the query optimizer uses the index on the view. This functionality is called *indexed view matching*. Prior to [!INCLUDE[ssSQL15_md](../../a9notintoc/includes/sssql15-md.md)] SP1, automatic use of an indexed view by the query optimizer is supported only in specific editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  However, for the optimizer to consider indexed views for matching, or use an indexed view that is referenced with the NOEXPAND hint, the following SET options must be set to ON.  
   
@@ -430,10 +430,10 @@ GO
   
  Also, the NUMERIC_ROUNDABORT option must be set to OFF.  
   
- To force the optimizer to use an index for an indexed view, specify the NOEXPAND option. This hint can be used only if the view is also named in the query. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not provide a hint to force a particular indexed view to be used in a query that does not name the view directly in the FROM clause; however, the query optimizer considers using indexed views, even if they are not referenced directly in the query.  
+ To force the optimizer to use an index for an indexed view, specify the NOEXPAND option. This hint can be used only if the view is also named in the query. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not provide a hint to force a particular indexed view to be used in a query that does not name the view directly in the FROM clause; however, the query optimizer considers using indexed views, even if they are not referenced directly in the query.  
   
 ## Using a Table Hint as a Query Hint  
- *Table hints* can also be specified as a query hint by using the OPTION (TABLE HINT) clause. We recommend using a table hint as a query hint only in the context of a [plan guide](../../relational-databases/performance/plan-guides.md). For ad-hoc queries, specify these hints only as table hints. For more information, see [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).  
+ *Table hints* can also be specified as a query hint by using the OPTION (TABLE HINT) clause. We recommend using a table hint as a query hint only in the context of a [plan guide](../../relational-databases/performance/plan-guides.md). For ad-hoc queries, specify these hints only as table hints. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## Permissions  
  The KEEPIDENTITY, IGNORE_CONSTRAINTS, and IGNORE_TRIGGERS hints require ALTER permissions on the table.  
@@ -441,7 +441,7 @@ GO
 ## Examples  
   
 ### A. Using the TABLOCK hint to specify a locking method  
- The following example specifies that a shared lock is taken on the `Production.Product` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database and is held until the end of the UPDATE statement.  
+ The following example specifies that a shared lock is taken on the `Production.Product` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database and is held until the end of the UPDATE statement.  
   
 ```tsql  
 UPDATE Production.Product  
@@ -452,7 +452,7 @@ GO
 ```  
   
 ### B. Using the FORCESEEK hint to specify an index seek operation  
- The following example uses the FORCESEEK hint without specifying an index to force the query optimizer to perform an index seek operation on the `Sales.SalesOrderDetail` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example uses the FORCESEEK hint without specifying an index to force the query optimizer to perform an index seek operation on the `Sales.SalesOrderDetail` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 SELECT *  
@@ -480,7 +480,7 @@ GO
 ```  
   
 ### C. Using the FORCESCAN hint to specify an index scan operation  
- The following example uses the FORCESCAN hint to force the query optimizer to perform a scan operation on the `Sales.SalesOrderDetail` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example uses the FORCESCAN hint to force the query optimizer to perform a scan operation on the `Sales.SalesOrderDetail` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```tsql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
@@ -495,6 +495,6 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
 ## See Also  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
- [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md)  
+ [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  
   
   

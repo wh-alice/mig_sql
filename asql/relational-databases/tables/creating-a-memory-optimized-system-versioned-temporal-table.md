@@ -16,7 +16,7 @@ ms.author: "carlrab"
 manager: "jhubbard"
 ---
 # Creating a Memory-Optimized System-Versioned Temporal Table
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Similar to creating a disk-based history table, you can create a memory-optimized temporal table in a number of ways.  
   

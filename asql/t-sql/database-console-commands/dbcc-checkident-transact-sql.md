@@ -33,12 +33,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # DBCC CHECKIDENT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Checks the current identity value for the specified table in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and, if it is needed, changes the identity value. You can also use DBCC CHECKIDENT to manually set a new current identity value for the identity column.  
+  Checks the current identity value for the specified table in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and, if it is needed, changes the identity value. You can also use DBCC CHECKIDENT to manually set a new current identity value for the identity column.  
    
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -75,7 +75,7 @@ DBCC CHECKIDENT
 |-----------------------------|---------------------------------------------|  
 |DBCC CHECKIDENT ( *table_name*, NORESEED )|Current identity value is not reset. DBCC CHECKIDENT returns the current identity value and the current maximum value of the identity column. If the two values are not the same, you should reset the identity value to avoid potential errors or gaps in the sequence of values.|  
 |DBCC CHECKIDENT ( *table_name* )<br /><br /> or<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|If the current identity value for a table is less than the maximum identity value stored in the identity column, it is reset using the maximum value in the identity column. See the 'Exceptions' section that follows.|  
-|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|Current identity value is set to the *new_reseed_value*. If no rows have been inserted into the table since the table was created, or if all rows have been removed by using the TRUNCATE TABLE statement, the first row inserted after you run DBCC CHECKIDENT uses *new_reseed_value* as the identity.<br /><br /> If rows are present in the table, the next row is inserted with the *new_reseed_value* value. In version [!INCLUDE[ssKilimanjaro](../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)] and earlier, the next row inserted uses *new_reseed_value* + the [current increment](../../t-sql/functions/ident-incr-transact-sql.md) value.<br /><br /> If the table is not empty, setting the identity value to a number less than the maximum value in the identity column can result in one of the following conditions:<br /><br /> -If a PRIMARY KEY or UNIQUE constraint exists on the identity column, error message 2627 will be generated on later insert operations into the table because the generated identity value will conflict with existing values.<br /><br /> -If a PRIMARY KEY or UNIQUE constraint does not exist, later insert operations will result in duplicate identity values.|  
+|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|Current identity value is set to the *new_reseed_value*. If no rows have been inserted into the table since the table was created, or if all rows have been removed by using the TRUNCATE TABLE statement, the first row inserted after you run DBCC CHECKIDENT uses *new_reseed_value* as the identity.<br /><br /> If rows are present in the table, the next row is inserted with the *new_reseed_value* value. In version [!INCLUDE[ssKilimanjaro](../../a9notintoc/includes/sskilimanjaro-md.md)] and earlier, the next row inserted uses *new_reseed_value* + the [current increment](../../t-sql/functions/ident-incr-transact-sql.md) value.<br /><br /> If the table is not empty, setting the identity value to a number less than the maximum value in the identity column can result in one of the following conditions:<br /><br /> -If a PRIMARY KEY or UNIQUE constraint exists on the identity column, error message 2627 will be generated on later insert operations into the table because the generated identity value will conflict with existing values.<br /><br /> -If a PRIMARY KEY or UNIQUE constraint does not exist, later insert operations will result in duplicate identity values.|  
   
 ## Exceptions  
  The following table lists conditions when DBCC CHECKIDENT does not automatically reset the current identity value and provides methods for resetting the value.  
@@ -111,7 +111,7 @@ DBCC CHECKIDENT
 ## Examples  
   
 ### A. Resetting the current identity value, if it is needed  
- The following example resets the current identity value, if it is needed, of the specified table in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+ The following example resets the current identity value, if it is needed, of the specified table in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database.  
   
 ```  
 USE AdventureWorks2012;  
@@ -121,7 +121,7 @@ GO
 ```  
   
 ### B. Reporting the current identity value  
- The following example reports the current identity value in the specified table in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database, and does not correct the identity value if it is incorrect.  
+ The following example reports the current identity value in the specified table in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database, and does not correct the identity value if it is incorrect.  
   
 ```  
 USE AdventureWorks2012;   
@@ -146,7 +146,7 @@ GO
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
- [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../Topic/IDENTITY%20\(Property\)%20\(Transact-SQL\).md)   
+ [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
  [Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)   
  [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   

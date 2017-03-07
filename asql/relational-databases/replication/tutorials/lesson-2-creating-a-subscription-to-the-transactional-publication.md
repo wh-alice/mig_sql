@@ -19,11 +19,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 2: Creating a Subscription to the Transactional Publication
-In this lesson, you will create a subscription using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. This lesson requires that you have completed the previous lesson, [Lesson 1: Publishing Data Using Transactional Replication](../../../relational-databases/replication/tutorials/lesson-1-publishing-data-using-transactional-replication.md).  
+In this lesson, you will create a subscription using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)]. This lesson requires that you have completed the previous lesson, [Lesson 1: Publishing Data Using Transactional Replication](../../../relational-databases/replication/tutorials/lesson-1-publishing-data-using-transactional-replication.md).  
   
 ### To create the subscription  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
   
 2.  In the **Local Publications** folder, right-click the **AdvWorksProductTrans** publication, and then click **New Subscriptions**.  
   
@@ -45,7 +45,7 @@ In this lesson, you will create a subscription using [!INCLUDE[ssManStudioFull](
   
 ### Setting database permissions at the Subscriber  
   
-1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], expand **Databases**, **ProductReplica**, and **Security**, right-click **Users**, and then select **New User**.  
+1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], expand **Databases**, **ProductReplica**, and **Security**, right-click **Users**, and then select **New User**.  
   
 2.  On the **General** page, in the **User type** list, select **Windows user**.  
   
@@ -55,7 +55,7 @@ In this lesson, you will create a subscription using [!INCLUDE[ssManStudioFull](
   
 ### To view the synchronization status of the subscription  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
   
 2.  In the **Local Publications** folder, expand the **AdvWorksProductTrans** publication, right-click the subscription in the **ProductReplica** database, and then click **View Synchronization Status**.  
   

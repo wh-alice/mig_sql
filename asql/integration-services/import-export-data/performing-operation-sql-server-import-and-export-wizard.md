@@ -17,7 +17,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Performing Operation (SQL Server Import and Export Wizard)
-After you review the choices that you made in the wizard and click **Finish** on the **Complete the Wizard** page, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard shows **Performing Operation**. On this page, you see the progress and the result of the operation that you configured on the preceding pages. You don't have to take any action on this page.
+After you review the choices that you made in the wizard and click **Finish** on the **Complete the Wizard** page, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard shows **Performing Operation**. On this page, you see the progress and the result of the operation that you configured on the preceding pages. You don't have to take any action on this page.
 
 ## Screen shot - Operation in progress 
  The following screen shot shows the **Performing Operation** page of the wizard while the operation is still in progress.  
@@ -47,7 +47,7 @@ After you review the choices that you made in the wizard and click **Finish** on
  View a report of the results, save the report to a file, copy the report to the clipboard, or send the report by e-mail.  
   
 ## What's next?  
- After the operation that you configured runs and completes successfully, you're finished running the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard.  
+ After the operation that you configured runs and completes successfully, you're finished running the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard.  
 -   If you ran the operation immediately, you can open the destination that you selected to review the data that the wizard copied.  
 -   If you saved the SSIS package created by the wizard, you can open it in SQL Server Data Tools to customize it and reuse it. For info about how to customize the saved package and run it again later, see [Save SSIS Package](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).
 

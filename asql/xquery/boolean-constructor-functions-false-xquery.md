@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Boolean Constructor Functions - false (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns the xs:boolean value False. This is equivalent to `xs:boolean("0")`.  
   
@@ -36,9 +36,9 @@ fn:false() as xs:boolean
  This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the AdventureWorks database.  
   
 ### A. Using the false() XQuery Boolean function  
- For a working sample, see [true Function &#40;XQuery&#41;](../Topic/true%20Function%20\(XQuery\).md).  
+ For a working sample, see [true Function &#40;XQuery&#41;](../xquery/boolean-constructor-functions-true-xquery.md).  
   
 ## See Also  
- [Boolean Constructor Functions &#40;XQuery&#41;](../Topic/Boolean%20Constructor%20Functions%20\(XQuery\).md)  
+ [Boolean Constructor Functions &#40;XQuery&#41;](../a9retired/boolean-constructor-functions-xquery.md)  
   
   

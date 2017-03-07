@@ -33,7 +33,7 @@ manager: "jhubbard"
 -   The **lax** value specifies that only elements and attributes for which schema definitions are available are validated.  
   
 ## Lax Validation and xs:anyType Elements  
- The XML Schema specification uses **lax** validation for elements of the **anyType** type. Because [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] did not support lax validation, strict validation was applied for elements of the **anyType**. Beginning with [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)], lax validation is supported. Content of elements of type **anyType** will be validated using lax validation.  
+ The XML Schema specification uses **lax** validation for elements of the **anyType** type. Because [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] did not support lax validation, strict validation was applied for elements of the **anyType**. Beginning with [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)], lax validation is supported. Content of elements of type **anyType** will be validated using lax validation.  
   
  The following example illustrates the lax validation. The schema element `e` is of the **anyType** type. The example creates typed **xml** variables and illustrates the lax validation of the element of the **anyType** type.  
   

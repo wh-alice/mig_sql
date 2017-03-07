@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Altering an Assembly
-  Assemblies that have been registered in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] can be updated from a more recent version using the ALTER ASSEMBLY statement. To update an assembly, use the ALTER ASSEMBLY statement with the following syntax:  
+  Assemblies that have been registered in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] can be updated from a more recent version using the ALTER ASSEMBLY statement. To update an assembly, use the ALTER ASSEMBLY statement with the following syntax:  
   
 ```  
 ALTER ASSEMBLY SQLCLRTest  

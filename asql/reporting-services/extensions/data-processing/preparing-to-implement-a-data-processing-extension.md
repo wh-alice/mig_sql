@@ -21,21 +21,21 @@ ms.author: "carlasab"
 manager: "erikre"
 ---
 # Preparing to Implement a Data Processing Extension
-  Before you implement your [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] data processing extension, you should define the interfaces to implement. You may want to provide extension-specific implementations of the entire set of interfaces, or you may simply want to focus your implementation on a subset, such as the <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> and <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> interfaces in which clients would interact primarily with a result set as a **DataReader** object and would use your [!INCLUDE[ssRS](../../../database-engine/configure/windows/includes/ssrs-md.md)] data processing extension as a bridge between the result set and your data source.  
+  Before you implement your [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] data processing extension, you should define the interfaces to implement. You may want to provide extension-specific implementations of the entire set of interfaces, or you may simply want to focus your implementation on a subset, such as the <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> and <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> interfaces in which clients would interact primarily with a result set as a **DataReader** object and would use your [!INCLUDE[ssRS](../../../database-engine/configure/windows/includes/ssrs-md.md)] data processing extension as a bridge between the result set and your data source.  
   
  You can implement data processing extensions in one of two ways:  
   
--   Your data processing extension classes can implement the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] data provider interfaces and optionally the extended data processing extension interfaces provided by [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)].  
+-   Your data processing extension classes can implement the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] data provider interfaces and optionally the extended data processing extension interfaces provided by [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)].  
   
--   Your data processing extension classes can implement the data processing extension interfaces provided by [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] and optionally the extended data processing extension interfaces.  
+-   Your data processing extension classes can implement the data processing extension interfaces provided by [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] and optionally the extended data processing extension interfaces.  
   
- If your [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] data processing extension will not support a particular property or method, implement the property or method as no-operation. If a client expects a particular behavior, throw a **NotSupportedException** exception.  
+ If your [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] data processing extension will not support a particular property or method, implement the property or method as no-operation. If a client expects a particular behavior, throw a **NotSupportedException** exception.  
   
 > [!NOTE]  
 >  A no-operation implementation of a property or method only applies to the properties and methods of those interfaces that you choose to implement. Optional interfaces that you choose not to implement should be left out of your data processing extension assembly. For more information about whether an interface is required or optional, see the table later in this section.  
   
 ## Required Extension Functionality  
- Each [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] data processing extension must provide the following functionality:  
+ Each [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] data processing extension must provide the following functionality:  
   
 -   Open a connection to a data source.  
   
@@ -76,9 +76,9 @@ manager: "erikre"
 |IDataParameterCollection|Represents a collection of all parameters relevant to a command or query.|Required|  
 |IDataReader|Provides a method of reading a forward-only, read-only stream of data from your data source.|Required|  
 |IDataReaderExtension|Provides a method of reading one or more forward-only streams of result sets, obtained by executing a command at a data source. This interface provides additional support for field aggregates.|Optional|  
-|IExtension|Provides the base class for a [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] data processing extension. Also enables an implementer to include a localized name for the extension and to pass configuration settings from the configuration file to the extension.|Required|  
+|IExtension|Provides the base class for a [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] data processing extension. Also enables an implementer to include a localized name for the extension and to pass configuration settings from the configuration file to the extension.|Required|  
   
- The data processing extension interfaces are identical to a subset of the [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] data provider interfaces, methods, and properties whenever possible. For more information about implementing a full [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] data provider, see "Implementing a .NET Framework Data Provider" in your [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] Software Development Kit (SDK) documentation.  
+ The data processing extension interfaces are identical to a subset of the [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] data provider interfaces, methods, and properties whenever possible. For more information about implementing a full [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] data provider, see "Implementing a .NET Framework Data Provider" in your [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] Software Development Kit (SDK) documentation.  
   
 ## See Also  
  [Reporting Services Extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   

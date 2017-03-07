@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Processing Results How-to Topics (OLE DB)
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
   Processing results in an OLE DB application involves first determining the characteristics of the result set, and then retrieving the data into program variables. If the command executes a stored procedure, you also must know how to process return codes and output parameters from the stored procedures.  
   

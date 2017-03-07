@@ -17,11 +17,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # IBCPSession2 (OLE DB)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   The IBCPSession2 interface is an extension to IBCPSession that provides a member function that is an alternative to calling IBCPSession::BCPColFmt for each column.  IBCPSession2 inherits from IBCPSession and adds one new method: [IBCPSession2::BCPSetBulkMode](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md).  
   
 ## See Also  
- [Interfaces &#40;OLE DB&#41;](../Topic/Interfaces%20\(OLE%20DB\).md)  
+ [Interfaces &#40;OLE DB&#41;](../../a9retired/interfaces-ole-db.md)  
   
   

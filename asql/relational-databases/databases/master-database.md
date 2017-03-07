@@ -18,10 +18,10 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # master Database
-  The **master** database records all the system-level information for a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system. This includes instance-wide metadata such as logon accounts, endpoints, linked servers, and system configuration settings. In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], system objects are no longer stored in the **master** database; instead, they are stored in the [Resource database](../../relational-databases/databases/resource-database.md). Also, **master** is the database that records the existence of all other databases and the location of those database files and records the initialization information for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Therefore, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] cannot start if the **master** database is unavailable.  
+  The **master** database records all the system-level information for a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system. This includes instance-wide metadata such as logon accounts, endpoints, linked servers, and system configuration settings. In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], system objects are no longer stored in the **master** database; instead, they are stored in the [Resource database](../../relational-databases/databases/resource-database.md). Also, **master** is the database that records the existence of all other databases and the location of those database files and records the initialization information for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Therefore, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] cannot start if the **master** database is unavailable.  
   
 ## Physical Properties of master  
- The following table lists the initial configuration values of the **master** data and log files. The sizes of these files may vary slightly for different editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ The following table lists the initial configuration values of the **master** data and log files. The sizes of these files may vary slightly for different editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 |File|Logical name|Physical name|File growth|  
 |----------|------------------|-------------------|-----------------|  
@@ -31,7 +31,7 @@ manager: "jhubbard"
  For information about how to move the **master** data and log files, see [Move System Databases](../../relational-databases/databases/move-system-databases.md).  
   
 ### Database Options  
- The following table lists the default value for each database option in the **master** database and whether the option can be modified. To view the current settings for these options, use the [sys.databases](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view.  
+ The following table lists the default value for each database option in the **master** database and whether the option can be modified. To view the current settings for these options, use the [sys.databases](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view.  
   
 |Database option|Default value|Can be modified|  
 |---------------------|-------------------|---------------------|  
@@ -122,7 +122,7 @@ manager: "jhubbard"
   
 -   Rebuild **master** completely.  
   
-     If severe damage to **master** prevents you from starting [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you must rebuild **master**. For more information, see [Rebuild System Databases](../../relational-databases/databases/rebuild-system-databases.md).  
+     If severe damage to **master** prevents you from starting [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], you must rebuild **master**. For more information, see [Rebuild System Databases](../../relational-databases/databases/rebuild-system-databases.md).  
   
     > [!IMPORTANT]  
     >  Rebuilding **master** rebuilds all of the system databases.  
@@ -132,9 +132,9 @@ manager: "jhubbard"
   
  [System Databases](../../relational-databases/databases/system-databases.md)  
   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md)  
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md)  
   
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.master-files-transact-sql.md)  
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.master-files-transact-sql.md)  
   
  [Move Database Files](../../relational-databases/databases/move-database-files.md)  
   

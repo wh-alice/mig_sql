@@ -21,13 +21,13 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Reserved Keywords (MDX Syntax)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] reserves certain keywords for its exclusive use. For a list of reserved keywords, see [MDX Reserved Words](../mdx/mdx-reserved-words.md).  
+  [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] reserves certain keywords for its exclusive use. For a list of reserved keywords, see [MDX Reserved Words](../mdx/mdx-reserved-words.md).  
   
  Reserved keywords follow these guidelines:  
   
--   You cannot include reserved keywords in a Multidimensional Expressions (MDX) statement in any location except that defined by [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)].  
+-   You cannot include reserved keywords in a Multidimensional Expressions (MDX) statement in any location except that defined by [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)].  
   
 -   No objects in the database should be specific a name that matches a reserved keyword. If such a name exists, the object must always be referred to using delimited identifiers. Although this method does allow for object names to be reserved words, using keywords to name objects should be avoided.  
   

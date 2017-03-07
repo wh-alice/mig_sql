@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # String Search in XQuery
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   This topic provides sample queries that show how to search text in XML documents.  
   

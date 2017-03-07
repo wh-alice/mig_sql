@@ -30,11 +30,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # DELETE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Removes one or more rows from a table or view in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Removes one or more rows from a table or view in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -102,7 +102,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *server_name*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  The name of the server (using a linked server name or the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) function as the server name) on which the table or view is located. If *server_name* is specified, *database_name* and *schema_name* are required.  
   
@@ -122,18 +122,18 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *rowset_function_limited*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Either the [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) function, subject to provider capabilities.  
   
  WITH **(** <table_hint_limited> [... *n*] **)**  
- Specifies one or more table hints that are allowed for a target table. The WITH keyword and the parentheses are required. NOLOCK and READUNCOMMITTED are not allowed. For more information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+ Specifies one or more table hints that are allowed for a target table. The WITH keyword and the parentheses are required. NOLOCK and READUNCOMMITTED are not allowed. For more information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  <OUTPUT_Clause>  
  Returns deleted rows, or expressions based on them, as part of the DELETE operation. The OUTPUT clause is not supported in any DML statements targeting views or remote tables. For more information, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  FROM *table_source*  
- Specifies an additional FROM clause. This [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] extension to DELETE allows specifying data from <table_source> and deleting the corresponding rows from the table in the first FROM clause.  
+ Specifies an additional FROM clause. This [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] extension to DELETE allows specifying data from <table_source> and deleting the corresponding rows from the table in the first FROM clause.  
   
  This extension, specifying a join, can be used instead of a subquery in the WHERE clause to identify rows to be removed.  
   
@@ -164,7 +164,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  The name of a cursor variable. The cursor variable must reference a cursor that allows updates.  
   
  OPTION **(** <query_hint> [ **,**... *n*] **)**  
- Keywords that indicate which optimizer hints are used to customize the way the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] processes the statement. For more information, see [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).  
+ Keywords that indicate which optimizer hints are used to customize the way the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] processes the statement. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## Best Practices  
  To delete all the rows in a table, use TRUNCATE TABLE. TRUNCATE TABLE is faster than DELETE and uses fewer system and transaction log resources. TRUNCATE TABLE has restrictions, for example, the table cannot participate in replication. For more information, see [TRUNCATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/truncate-table-transact-sql.md)  
@@ -176,7 +176,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  The DELETE statement may fail if it violates a trigger or tries to remove a row referenced by data in another table with a FOREIGN KEY constraint. If the DELETE removes multiple rows, and any one of the removed rows violates a trigger or constraint, the statement is canceled, an error is returned, and no rows are removed.  
   
- When a DELETE statement encounters an arithmetic error (overflow, divide by zero, or a domain error) occurring during expression evaluation, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] handles these errors as if SET ARITHABORT is set ON. The rest of the batch is canceled, and an error message is returned.  
+ When a DELETE statement encounters an arithmetic error (overflow, divide by zero, or a domain error) occurring during expression evaluation, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] handles these errors as if SET ARITHABORT is set ON. The rest of the batch is canceled, and an error message is returned.  
   
 ## Interoperability  
  DELETE can be used in the body of a user-defined function if the object modified is a table variable.  
@@ -191,13 +191,13 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  TOP cannot be used in a DELETE statement against partitioned views.  
   
 ## Locking Behavior  
- By default, a DELETE statement always acquires an exclusive (X) lock on the table it modifies, and holds that lock until the transaction completes. With an exclusive (X) lock, no other transactions can modify data; read operations can take place only with the use of the NOLOCK hint or read uncommitted isolation level. You can specify table hints to override this default behavior for the duration of the DELETE statement by specifying another locking method, however, we recommend that hints be used only as a last resort by experienced developers and database administrators. For more information, see [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+ By default, a DELETE statement always acquires an exclusive (X) lock on the table it modifies, and holds that lock until the transaction completes. With an exclusive (X) lock, no other transactions can modify data; read operations can take place only with the use of the NOLOCK hint or read uncommitted isolation level. You can specify table hints to override this default behavior for the duration of the DELETE statement by specifying another locking method, however, we recommend that hints be used only as a last resort by experienced developers and database administrators. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
- When rows are deleted from a heap the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] may use row or page locking for the operation. As a result, the pages made empty by the delete operation remain allocated to the heap. When empty pages are not deallocated, the associated space cannot be reused by other objects in the database.  
+ When rows are deleted from a heap the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] may use row or page locking for the operation. As a result, the pages made empty by the delete operation remain allocated to the heap. When empty pages are not deallocated, the associated space cannot be reused by other objects in the database.  
   
  To delete rows in a heap and deallocate pages, use one of the following methods.  
   
--   Specify the TABLOCK hint in the DELETE statement. Using the TABLOCK hint causes the delete operation to take an exclusive lock on the table instead of a row or page lock. This allows the pages to be deallocated. For more information about the TABLOCK hint, see [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+-   Specify the TABLOCK hint in the DELETE statement. Using the TABLOCK hint causes the delete operation to take an exclusive lock on the table instead of a row or page lock. This allows the pages to be deallocated. For more information about the TABLOCK hint, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 -   Use TRUNCATE TABLE if all rows are to be deleted from the table.  
   
@@ -229,7 +229,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Examples in this section demonstrate the basic functionality of the DELETE statement using the minimum required syntax.  
   
 #### A. Using DELETE with no WHERE clause  
- The following example deletes all rows from the `SalesPersonQuotaHistory` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database because a WHERE clause is not used to limit the number of rows deleted.  
+ The following example deletes all rows from the `SalesPersonQuotaHistory` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database because a WHERE clause is not used to limit the number of rows deleted.  
   
 ```  
 DELETE FROM Sales.SalesPersonQuotaHistory;  
@@ -240,7 +240,7 @@ GO
  Examples in this section demonstrate how to limit the number of rows that will be deleted.  
   
 #### A. Using the WHERE clause to delete a set of rows  
- The following example deletes all rows from the `ProductCostHistory` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database in which the value in the `StandardCost` column is more than `1000.00`.  
+ The following example deletes all rows from the `ProductCostHistory` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database in which the value in the `StandardCost` column is more than `1000.00`.  
   
 ```  
   
@@ -260,7 +260,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### B. Using a cursor to determine the row to delete  
- The following example deletes a single row from the `EmployeePayHistory` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database using a cursor named `my`_`cursor`. The delete operation affects only the single row currently fetched from the cursor.  
+ The following example deletes a single row from the `EmployeePayHistory` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database using a cursor named `my`_`cursor`. The delete operation affects only the single row currently fetched from the cursor.  
   
 ```  
   
@@ -281,7 +281,7 @@ GO
 ```  
   
 #### C. Using joins and subqueries to data in one table to delete rows in another table  
- The following examples show two ways to delete rows in one table based on data in another table. In both examples, rows from the `SalesPersonQuotaHistory` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database are deleted based on the year-to-date sales stored in the `SalesPerson` table. The first `DELETE` statement shows the ISO-compatible subquery solution, and the second `DELETE` statement shows the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] FROM extension to join the two tables.  
+ The following examples show two ways to delete rows in one table based on data in another table. In both examples, rows from the `SalesPersonQuotaHistory` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database are deleted based on the year-to-date sales stored in the `SalesPerson` table. The first `DELETE` statement shows the ISO-compatible subquery solution, and the second `DELETE` statement shows the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] FROM extension to join the two tables.  
   
 ```sql  
 -- SQL-2003 Standard subquery  
@@ -317,7 +317,7 @@ DELETE spqh
 ```  
   
 #### A. Using TOP to limit the number of rows deleted  
- When a TOP (*n*) clause is used with DELETE, the delete operation is performed on a random selection of *n* number of rows. The following example deletes `20` random rows from the `PurchaseOrderDetail` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database that have due dates that are earlier than July 1, 2006.  
+ When a TOP (*n*) clause is used with DELETE, the delete operation is performed on a random selection of *n* number of rows. The following example deletes `20` random rows from the `PurchaseOrderDetail` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database that have due dates that are earlier than July 1, 2006.  
   
 ```  
   
@@ -339,14 +339,14 @@ GO
 ```  
   
 ###  <a name="RemoteTables"></a> Deleting Rows From a Remote Table  
- Examples in this section demonstrate how to delete rows from a remote table by using a [linked server](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../../t-sql/functions/rowset-functions-transact-sql.md) to reference the remote table. A remote table exists on a different server or instance of SQL Server.  
+ Examples in this section demonstrate how to delete rows from a remote table by using a [linked server](../../relational-databases/reference/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../../t-sql/functions/rowset-functions-transact-sql.md) to reference the remote table. A remote table exists on a different server or instance of SQL Server.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 #### A. Deleting data from a remote table by using a linked server  
- The following example deletes rows from a remote table. The example begins by creating a link to the remote data source by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). The linked server name, `MyLinkServer`, is then specified as part of the four-part object name in the form *server.catalog.schema.object*.  
+ The following example deletes rows from a remote table. The example begins by creating a link to the remote data source by using [sp_addlinkedserver](../../relational-databases/reference/system-stored-procedures/sp-addlinkedserver-transact-sql.md). The linked server name, `MyLinkServer`, is then specified as part of the four-part object name in the form *server.catalog.schema.object*.  
   
 ```  
 USE master;  
@@ -392,7 +392,7 @@ WHERE DepartmentID = 17;'
 ###  <a name="CaptureResults"></a> Capturing the results of the DELETE statement  
   
 #### A. Using DELETE with the OUTPUT clause  
- The following example shows how to save the results of a `DELETE` statement to a table variable in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example shows how to save the results of a `DELETE` statement to a table variable in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
   
@@ -406,7 +406,7 @@ GO
 ```  
   
 #### B. Using OUTPUT with <from_table_name> in a DELETE statement  
- The following example deletes rows in the `ProductProductPhoto` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database based on search criteria defined in the `FROM` clause of the `DELETE` statement. The `OUTPUT` clause returns columns from the table being deleted, `DELETED.ProductID`, `DELETED.ProductPhotoID`, and columns from the `Product` table. This is used in the `FROM` clause to specify the rows to delete.  
+ The following example deletes rows in the `ProductProductPhoto` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database based on search criteria defined in the `FROM` clause of the `DELETE` statement. The `OUTPUT` clause returns columns from the table being deleted, `DELETED.ProductID`, `DELETED.ProductPhotoID`, and columns from the `Product` table. This is used in the `FROM` clause to specify the rows to delete.  
   
 ```  
 DECLARE @MyTableVar table (  
@@ -433,7 +433,7 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### C. Delete all rows from a table  
  The following example deletes all rows from the `Table1` table because a WHERE clause is not used to limit the number of rows deleted.  

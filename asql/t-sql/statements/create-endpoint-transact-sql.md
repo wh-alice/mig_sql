@@ -36,7 +36,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # CREATE ENDPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates endpoints and defines their properties, including the methods available to client applications. For related permissions information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Endpoint%20Permissions%20\(Transact-SQL\).md).  
   
@@ -48,11 +48,11 @@ manager: "jhubbard"
   
 -   The second part starts with the FOR clause.  
   
-     In this part, you define the payload that is supported on the endpoint. The payload can be one of several supported types: [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], service broker, database mirroring. In this part, you also include language-specific information.  
+     In this part, you define the payload that is supported on the endpoint. The payload can be one of several supported types: [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], service broker, database mirroring. In this part, you also include language-specific information.  
   
-> **NOTE:** Native XML Web Services (SOAP/HTTP endpoints) was removed in [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)].  
+> **NOTE:** Native XML Web Services (SOAP/HTTP endpoints) was removed in [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -114,7 +114,7 @@ FOR DATABASE_MIRRORING (
  Is the assigned name for the endpoint you are creating. Use when updating or deleting the endpoint.  
   
  AUTHORIZATION *login*  
- Specifies a valid [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or Windows login that is assigned ownership of the newly created endpoint object. If AUTHORIZATION is not specified, by default, the caller becomes owner of the newly created object.  
+ Specifies a valid [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] or Windows login that is assigned ownership of the newly created endpoint object. If AUTHORIZATION is not specified, by default, the caller becomes owner of the newly created object.  
   
  To assign ownership by specifying AUTHORIZATION, the caller must have IMPERSONATE permission on the specified *login*.  
   
@@ -140,7 +140,7 @@ FOR DATABASE_MIRRORING (
  FOR { TSQL | SERVICE_BROKER | DATABASE_MIRRORING }  
  Specifies the payload type.  
   
- Currently, there are no [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] language-specific arguments to pass in the `<language_specific_arguments>` parameter.  
+ Currently, there are no [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] language-specific arguments to pass in the `<language_specific_arguments>` parameter.  
   
  **TCP Protocol Option**  
   
@@ -200,13 +200,13 @@ FOR DATABASE_MIRRORING (
  Optionally, you can use the ALGORITHM argument to specify the form of encryption used by the endpoint, as follows:  
   
  **AES**  
- Specifies that the endpoint must use the AES algorithm. This is the default in [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] and later.  
+ Specifies that the endpoint must use the AES algorithm. This is the default in [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] and later.  
   
  RC4  
- Specifies that the endpoint must use the RC4 algorithm. This is the default through [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)].  
+ Specifies that the endpoint must use the RC4 algorithm. This is the default through [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)].  
   
 > [!NOTE]  
->  The RC4 algorithm is only supported for backward compatibility. New material can only be encrypted using RC4 or RC4_128 when the database is in compatibility level 90 or 100. (Not recommended.) Use a newer algorithm such as one of the AES algorithms instead. In [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] and later versions, material encrypted using RC4 or RC4_128 can be decrypted in any compatibility level.  
+>  The RC4 algorithm is only supported for backward compatibility. New material can only be encrypted using RC4 or RC4_128 when the database is in compatibility level 90 or 100. (Not recommended.) Use a newer algorithm such as one of the AES algorithms instead. In [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] and later versions, material encrypted using RC4 or RC4_128 can be decrypted in any compatibility level.  
   
  AES RC4  
  Specifies that the two endpoints will negotiate for an encryption algorithm with this endpoint giving preference to the AES algorithm.  
@@ -246,7 +246,7 @@ FOR DATABASE_MIRRORING (
  Enables the endpoint to perform in the role of a witness in the mirroring process.  
   
 > [!NOTE]  
->  For [!INCLUDE[ssExpressEd2005](../../relational-databases/replication/includes/ssexpressed2005-md.md)], WITNESS is the only option available.  
+>  For [!INCLUDE[ssExpressEd2005](../../a9retired/includes/ssexpressed2005-md.md)], WITNESS is the only option available.  
   
  PARTNER  
  Enables the endpoint to perform in the role of a partner in the mirroring process.  

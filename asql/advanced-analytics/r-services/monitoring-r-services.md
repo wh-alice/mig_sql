@@ -15,7 +15,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Monitoring R Services
-  This section provides information about these common monitoring tasks when using [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)]:  
+  This section provides information about these common monitoring tasks when using [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)]:  
   
 -   Identifying server resources being used by R  
   
@@ -23,13 +23,13 @@ manager: "jhubbard"
   
 -   Determining the jobs that are executing using the R runtime  
   
--   Identifying remote R jobs that are using the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance as the compute context  
+-   Identifying remote R jobs that are using the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance as the compute context  
   
 -   Correlating long-running queries with R jobs  
   
 -   Terminating R processes  
   
- The topic also describes the tools installed on the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer as part of R setup, and lists the DMVs and Extended Events related to [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)].  
+ The topic also describes the tools installed on the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] computer as part of R setup, and lists the DMVs and Extended Events related to [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)].  
   
 ## In This Section
 

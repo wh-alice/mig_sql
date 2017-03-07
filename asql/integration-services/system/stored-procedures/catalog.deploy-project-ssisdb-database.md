@@ -15,9 +15,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.deploy_project (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Deploys a project to a folder in the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog or updates an existing project that has been deployed previously.  
+  Deploys a project to a folder in the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] catalog or updates an existing project that has been deployed previously.  
   
 ## Syntax  
   
@@ -36,7 +36,7 @@ deploy_project [ @folder_name = ] folder_name
  The name of the new or updated project in the folder. The *project_name* is **nvarchar(128)**.  
   
  [ @projectstream = ] *projectstream*  
- The binary contents of an [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project deployment file (.ispac extension).  
+ The binary contents of an [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] project deployment file (.ispac extension).  
   
  You can use a SELECT statement with the OPENROWSET function and the BULK rowset provider to retrieve the binary contents of the file. For an example, see [Deploy and Execute SSIS Packages using Stored Procedures](../../../integration-services/packages/deploy-and-execute-ssis-packages-using-stored-procedures.md). For more information about OPENROWSET, see [OPENROWSET &#40;Transact-SQL&#41;](../../../t-sql/functions/openrowset-transact-sql.md).  
   

@@ -19,10 +19,10 @@ manager: "erikre"
   The **ReportItems** built-in collection is the set of text boxes from report items such as rows of a data region or text boxes on the report design surface. The **ReportItems** collection includes text boxes that are in the current scope of a page header, page footer, or report body. This collection is determined at run time by the report processor and the report renderer. The current scope changes as the report processor successively combines report data and the report item layout elements as the user views pages of a report. You can use the **ReportItems** built-in collection to produce dictionary-style page headers that show the first and last items on each page.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Using the ReportItems Value Property  
- Items within the **ReportItems** collection have only one property: Value. The value for a **ReportItems** item can be used to display or calculate data from another field in the report. To access the value of the current text box, you can use the [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] built-in global Me.Value or simply Value. In report functions such as First and aggregate functions, use the fully qualified syntax.  
+ Items within the **ReportItems** collection have only one property: Value. The value for a **ReportItems** item can be used to display or calculate data from another field in the report. To access the value of the current text box, you can use the [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] built-in global Me.Value or simply Value. In report functions such as First and aggregate functions, use the fully qualified syntax.  
   
  For example:  
   
@@ -46,10 +46,10 @@ manager: "erikre"
 ## Scope for the ReportItems Collection  
  As the report is processed, each text box in the report body or in a data region is evaluated in the context of its dataset, data region, and group associations. The scope for a reference to the **ReportItems** collection is the current scope or any point higher than the current scope.  
   
- For example, a text box in a row that is in a parent group must not contain an expression that refers to the name of a text box in a child group row. Such an expression does not resolve to a value in the report because the child row text box is out of scope. For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../Topic/Aggregate%20Functions%20Reference%20\(Report%20Builder%20and%20SSRS\).md).  
+ For example, a text box in a row that is in a parent group must not contain an expression that refers to the name of a text box in a child group row. Such an expression does not resolve to a value in the report because the child row text box is out of scope. For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ## See Also  
- [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../Topic/Built-in%20Collections%20in%20Expressions%20\(Report%20Builder%20and%20SSRS\).md)   
+ [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

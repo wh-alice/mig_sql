@@ -18,9 +18,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLNativeSql
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver satisfies **SQLNativeSql** requests without visiting the server. The function efficiently tests the syntax of SQL statements. Syntax checking does not determine if identifiers or the results of expressions in the SQL statements are valid, and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] native SQL returned by **SQLNativeSql** can fail to run.  
+  The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver satisfies **SQLNativeSql** requests without visiting the server. The function efficiently tests the syntax of SQL statements. Syntax checking does not determine if identifiers or the results of expressions in the SQL statements are valid, and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] native SQL returned by **SQLNativeSql** can fail to run.  
   
 ## See Also  
  [SQLNativeSql Function](http://go.microsoft.com/fwlink/?LinkID=59358)   

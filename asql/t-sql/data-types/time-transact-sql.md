@@ -26,7 +26,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # time (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Defines a time of a day. The time is without time zone awareness and is based on a 24-hour clock.  
   
@@ -82,9 +82,9 @@ manager: "jhubbard"
  The default string literal format (used for down-level client) will align with the SQL standard form, which is defined as hh:mm:ss[.nnnnnnn]. This format resembles the ISO 8601 definition for TIME excluding fractional seconds.  
   
 ##  <a name="BackwardCompatibilityforDownlevelClients"></a> Backward Compatibility for Down-level Clients  
- Some down-level clients do not support the **time**, **date**, **datetime2** and **datetimeoffset** data types. The following table shows the type mapping between an up-level instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and down-level clients.  
+ Some down-level clients do not support the **time**, **date**, **datetime2** and **datetimeoffset** data types. The following table shows the type mapping between an up-level instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and down-level clients.  
   
-|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data type|Default string literal format passed to down-level client|Down-level ODBC|Down-level OLEDB|Down-level JDBC|Down-level SQLCLIENT|  
+|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data type|Default string literal format passed to down-level client|Down-level ODBC|Down-level OLEDB|Down-level JDBC|Down-level SQLCLIENT|  
 |-----------------------------------------|----------------------------------------------------------------|----------------------|-----------------------|----------------------|---------------------------|  
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR or SQL_VARCHAR|DBTYPE_WSTRor DBTYPE_STR|Java.sql.String|String or SqString|  
 |**date**|YYYY-MM-DD|SQL_WVARCHAR or SQL_VARCHAR|DBTYPE_WSTRor DBTYPE_STR|Java.sql.String|String or SqString|  
@@ -92,7 +92,7 @@ manager: "jhubbard"
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR or SQL_VARCHAR|DBTYPE_WSTRor DBTYPE_STR|Java.sql.String|String or SqString|  
   
 ## Converting Date and Time Data  
- When you convert to date and time data types, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] rejects all values it cannot recognize as dates or times. For information about using the CAST and CONVERT functions with date and time data, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ When you convert to date and time data types, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] rejects all values it cannot recognize as dates or times. For information about using the CAST and CONVERT functions with date and time data, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
 ### Converting time(n) Data Type to Other Date and Time Types  
  This section describes what occurs when a **time** data type is converted to other date and time data types.  
@@ -240,13 +240,13 @@ SELECT
   
 |String literal format type|Inserted string literal|time(7) value that is stored|Description|  
 |--------------------------------|-----------------------------|------------------------------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|'01:01:01:123AM'|01:01:01.1230000|When a colon (:) comes before fractional seconds precision, scale cannot exceed three positions or an error will be raised.|  
-|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|'01:01:01.1234567 AM'|01:01:01.1234567|When AM or PM is specified, the time is stored in 24-hour format without the literal AM or PM|  
-|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|'01:01:01.1234567 PM'|13:01:01.1234567|When AM or PM is specified, the time is stored in 24-hour format without the literal AM or PM|  
-|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|'01:01:01.1234567PM'|13:01:01.1234567|A space before AM or PM is optional.|  
-|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|'01AM'|01:00:00.0000000|When only the hour is specified, all other values are 0.|  
+|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]|'01:01:01:123AM'|01:01:01.1230000|When a colon (:) comes before fractional seconds precision, scale cannot exceed three positions or an error will be raised.|  
+|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]|'01:01:01.1234567 AM'|01:01:01.1234567|When AM or PM is specified, the time is stored in 24-hour format without the literal AM or PM|  
+|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]|'01:01:01.1234567 PM'|13:01:01.1234567|When AM or PM is specified, the time is stored in 24-hour format without the literal AM or PM|  
+|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]|'01:01:01.1234567PM'|13:01:01.1234567|A space before AM or PM is optional.|  
+|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]|'01AM'|01:00:00.0000000|When only the hour is specified, all other values are 0.|  
 |SQL Server|'01 AM'|01:00:00.0000000|A space before AM or PM is optional.|  
-|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|'01:01:01'|01:01:01.0000000|When fractional seconds precision is not specified, each position that is defined by the data type is 0.|  
+|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]|'01:01:01'|01:01:01.0000000|When fractional seconds precision is not specified, each position that is defined by the data type is 0.|  
 |ISO 8601|'01:01:01.1234567'|01:01:01.1234567|To comply with ISO 8601, use 24-hour format, not AM or PM.|  
 |ISO 8601|'01:01:01.1234567 +01:01'|01:01:01.1234567|The optional time zone difference (TZD) is allowed in the input but is not stored.|  
   

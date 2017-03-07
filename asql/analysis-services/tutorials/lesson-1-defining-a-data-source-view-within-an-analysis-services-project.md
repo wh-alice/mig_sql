@@ -17,21 +17,21 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Lesson 1: Defining a Data Source View within an Analysis Services Project
-Designing a business intelligence application in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] starts with creating an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)]. Within this project, you define all the elements of your solution, starting with a data source view.  
+Designing a business intelligence application in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] starts with creating an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)]. Within this project, you define all the elements of your solution, starting with a data source view.  
   
 This lesson contains the following tasks:  
   
-[Creating an Analysis Services Project](../Topic/Creating%20an%20Analysis%20Services%20Project.md)  
-In this task, you create the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial project, based on an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] multidimensional model template.  
+[Creating an Analysis Services Project](../../analysis-services/tutorials/lesson-1-1-creating-an-analysis-services-project.md)  
+In this task, you create the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial project, based on an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] multidimensional model template.  
   
-[Defining a Data Source](../Topic/Defining%20a%20Data%20Source.md)  
-In this task, you specify the **AdventureWorksDW2012** database as the data source for the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] dimensions and cubes that you will define in subsequent lessons.  
+[Defining a Data Source](../../analysis-services/tutorials/lesson-1-2-defining-a-data-source.md)  
+In this task, you specify the **AdventureWorksDW2012** database as the data source for the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] dimensions and cubes that you will define in subsequent lessons.  
   
-[Defining a Data Source View](../Topic/Defining%20a%20Data%20Source%20View.md)  
+[Defining a Data Source View](../../analysis-services/tutorials/lesson-1-3-defining-a-data-source-view.md)  
 In this task, you define a single unified view of the metadata from selected tables in the **AdventureWorksDW2012** database.  
   
-[Modifying Default Table Names](../Topic/Modifying%20Default%20Table%20Names.md)  
-In this task, you modify table names in the data source view, so that the names of subsequent [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] objects that you define will be more user-friendly.  
+[Modifying Default Table Names](../../analysis-services/tutorials/lesson-1-4-modifying-default-table-names.md)  
+In this task, you modify table names in the data source view, so that the names of subsequent [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] objects that you define will be more user-friendly.  
   
 Compare your results against a sample project file that was built for this lesson. For more information about downloading the sample projects that go with this tutorial, see [SSAS Multidimensional Model Projects for SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) on the product samples page on codeplex.  
   

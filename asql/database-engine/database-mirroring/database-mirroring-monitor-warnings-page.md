@@ -54,7 +54,7 @@ manager: "jhubbard"
  On a given partner, the events logged depend on its current role, principal or mirror. However, we recommend that you set a warning threshold for a given event on both partners to ensure that the warning persists if the database fails over. The appropriate threshold for each partner depends on the performance capabilities of that partner's system.  
   
 > [!NOTE]  
->  You can also use the **sp_dbmmonitorchangealert** system stored procedure to configure thresholds for the equivalent events—unsent log, unrecovered log, oldest unsent transaction, and mirror commit overhead. For more information, see [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md).  
+>  You can also use the **sp_dbmmonitorchangealert** system stored procedure to configure thresholds for the equivalent events—unsent log, unrecovered log, oldest unsent transaction, and mirror commit overhead. For more information, see [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md).  
   
  The following table shows the event ID associated with each warning.  
   
@@ -73,6 +73,6 @@ manager: "jhubbard"
 ## See Also  
  [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoring Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Start the Configuring Database Mirroring Security Wizard &#40;SQL Server Management Studio&#41;](../Topic/Start%20the%20Configuring%20Database%20Mirroring%20Security%20Wizard%20\(SQL%20Server%20Management%20Studio\).md)  
+ [Start the Configuring Database Mirroring Security Wizard &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

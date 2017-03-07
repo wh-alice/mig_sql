@@ -18,9 +18,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Commands
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider exposes the **ICommand** interface and command objects, which are described in this section:  
+  The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider exposes the **ICommand** interface and command objects, which are described in this section:  
   
 -   [Command Syntax](../../relational-databases/native-client-ole-db-commands/command-syntax.md)  
   

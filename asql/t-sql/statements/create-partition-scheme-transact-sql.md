@@ -37,7 +37,7 @@ manager: "jhubbard"
 
   Creates a scheme in the current database that maps the partitions of a partitioned table or index to filegroups. The number and domain of the partitions of a partitioned table or index are determined in a partition function. A partition function must first be created in a [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) statement before creating a partition scheme.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -68,7 +68,7 @@ AS PARTITION partition_function_name
   
  When you specify the primary filegroup in *file_group_name* [ 1**,***...n*], PRIMARY must be delimited, as in **[**PRIMARY**]**, because it is a keyword.  
   
- Only PRIMARY is supported for [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)]. See example E below. 
+ Only PRIMARY is supported for [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)]. See example E below. 
   
 ## Permissions  
  The following permissions can be used to execute CREATE PARTITION SCHEME:  
@@ -153,7 +153,7 @@ Partition scheme 'myRangePS4' has been created successfully. 'test5fg' is marked
   
  If partition function `myRangePF4` is changed to add a partition, filegroup `test5fg` receives the newly created partition.  
 
-### E. Creating a partition schema only on PRIMARY - only PRIMARY is supported for [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)]
+### E. Creating a partition schema only on PRIMARY - only PRIMARY is supported for [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)]
 
  The following example creates a partition function to partition a table or index into four partitions. A partition scheme is then created that specifies that all partitions are created in the PRIMARY filegroup.  
   
@@ -172,12 +172,12 @@ ALL TO ( [PRIMARY] );
  [DROP PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Create Partitioned Tables and Indexes](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)   
- [sys.partition_schemes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.partition-schemes-transact-sql.md)   
- [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.data-spaces-transact-sql.md)   
- [sys.destination_data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.destination-data-spaces-transact-sql.md)   
- [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.partitions-transact-sql.md)   
- [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.tables-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md)   
- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.index-columns-transact-sql.md)  
+ [sys.partition_schemes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.partition-schemes-transact-sql.md)   
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.data-spaces-transact-sql.md)   
+ [sys.destination_data_spaces &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.destination-data-spaces-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.partitions-transact-sql.md)   
+ [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.tables-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md)   
+ [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.index-columns-transact-sql.md)  
   
   

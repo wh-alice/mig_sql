@@ -33,7 +33,7 @@ manager: "erikre"
 |-----------------|-----------------|  
 |ConnectionID|Contains the unique connection ID associated with the command event.|  
 |TextData|Contains the text data associated with the command event.|  
-|ServerName|Contains the name of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance on which the command event occurred.|  
+|ServerName|Contains the name of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance on which the command event occurred.|  
 |CurrentTime|Contains the current time of the command event.|  
 |DatabaseName|Contains the name of the database in which the command is running.|  
 |EventSubclass|Contains the class of event within the command event. Supported values are:<br /><br /> 0: Create<br /><br /> 1: Alter<br /><br /> 2: Delete<br /><br /> 3: Process<br /><br /> 4: DesignAggregations<br /><br /> 5: WBInsert<br /><br /> 6: WBUpdate<br /><br /> 7: WBDelete<br /><br /> 8: Backup<br /><br /> 9: Restore<br /><br /> 10: MergePartitions<br /><br /> 11: Subscribe<br /><br /> 12: Batch<br /><br /> 13: BeginTransaction<br /><br /> 14: CommitTransaction<br /><br /> 15: RollbackTransaction<br /><br /> 16: GetTransactionState<br /><br /> 17: Cancel<br /><br /> 18: Synchronize<br /><br /> 19: Import80MiningModels<br /><br /> 20: Attach<br /><br /> 21: Detach<br /><br /> 22: SetAuthContext<br /><br /> 23: ImageLoad<br /><br /> 24: ImageSave<br /><br /> 10000: Other|  
@@ -51,7 +51,7 @@ manager: "erikre"
 |-----------------|-----------------|  
 |ConnectionID|Contains the unique connection ID associated with the command event.|  
 |TextData|Contains the text data associated with the command event.|  
-|ServerName|Contains the name of the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance on which the command event occurred.|  
+|ServerName|Contains the name of the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance on which the command event occurred.|  
 |CurrentTime|Contains the current time of the command event. For filtering, the formats are *YYYY*-*MM*-*DD* and *YYYY*-*MM*-*DD HH*:*MM*:*SS*.|  
 |DatabaseName|Contains the name of the database in which the command is running.|  
 |Duration|Contains the approximate amount of time between the command begin and the command end event.|  

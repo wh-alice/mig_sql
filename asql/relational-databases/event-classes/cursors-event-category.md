@@ -27,7 +27,7 @@ manager: "jhubbard"
 |-----------|-----------------|  
 |[CursorClose Event Class](../../relational-databases/event-classes/cursorclose-event-class.md)|Describes cursor close events that occur in application programming interface (API) cursors.|  
 |[CursorExecute Event Class](../../relational-databases/event-classes/cursorexecute-event-class.md)|Describes cursor execute events that occur in API cursors.|  
-|[CursorImplicitConversion Event Class](../../relational-databases/event-classes/cursorimplicitconversion-event-class.md)|Describes cursor implicit conversion events that occur in API or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] cursors.|  
+|[CursorImplicitConversion Event Class](../../relational-databases/event-classes/cursorimplicitconversion-event-class.md)|Describes cursor implicit conversion events that occur in API or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] cursors.|  
 |[CursorOpen Event Class](../../relational-databases/event-classes/cursoropen-event-class.md)|Describes cursor open events that occur in API cursors.|  
 |[CursorPrepare Event Class](../../relational-databases/event-classes/cursorprepare-event-class.md)|Describes cursor prepare events that occur in API cursors.|  
 |[CursorRecompile Event Class](../../relational-databases/event-classes/cursorrecompile-event-class.md)|Describes cursor recompile events that occur in API cursors.|  

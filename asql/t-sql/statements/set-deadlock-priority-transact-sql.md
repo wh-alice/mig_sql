@@ -28,11 +28,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SET DEADLOCK_PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Specifies the relative importance that the current session continue processing if it is deadlocked with another session.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -63,11 +63,11 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  Is an integer variable specifying the deadlock priority. The variable must be set to an integer value in the range (-10 to 10).  
   
 ## Remarks  
- Deadlocks arise when two sessions are both waiting for access to resources locked by the other. When an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] detects that two sessions are deadlocked, it resolves the deadlock by choosing one of the sessions as a deadlock victim. The current transaction of the victim is rolled back and deadlock error message 1205 is returned to the client. This releases all of the locks held by that session, allowing the other session to proceed.  
+ Deadlocks arise when two sessions are both waiting for access to resources locked by the other. When an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] detects that two sessions are deadlocked, it resolves the deadlock by choosing one of the sessions as a deadlock victim. The current transaction of the victim is rolled back and deadlock error message 1205 is returned to the client. This releases all of the locks held by that session, allowing the other session to proceed.  
   
  Which session is chosen as the deadlock victim depends on each session's deadlock priority:  
   
--   If both sessions have the same deadlock priority, the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] chooses the session that is less expensive to roll back as the deadlock victim. For example, if both sessions have set their deadlock priority to HIGH, the instance will choose as a victim the session it estimates is less costly to roll back.  
+-   If both sessions have the same deadlock priority, the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] chooses the session that is less expensive to roll back as the deadlock victim. For example, if both sessions have set their deadlock priority to HIGH, the instance will choose as a victim the session it estimates is less costly to roll back.  
   
 -   If the sessions have different deadlock priorities, the session with the lowest deadlock priority is chosen as the deadlock victim.  
   

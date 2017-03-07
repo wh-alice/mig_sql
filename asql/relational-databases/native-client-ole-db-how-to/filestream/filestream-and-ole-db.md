@@ -15,9 +15,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Filestream and OLE DB
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
-  This section contains four samples that show how to use [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB with the filestream feature:  
+  This section contains four samples that show how to use [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB with the filestream feature:  
   
 -   [Read a FILESTREAM Column to File Using IBCPSession &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)  
   

@@ -19,18 +19,18 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Business Rules (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], a business rule is a rule that you use to ensure the quality and accuracy of your master data. You can use a business rule to automatically update data, to send email, or to start a business process or workflow.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], a business rule is a rule that you use to ensure the quality and accuracy of your master data. You can use a business rule to automatically update data, to send email, or to start a business process or workflow.  
   
  To view examples of business rules, see [Business Rule Examples &#40;Master Data Services&#41;](../master-data-services/business-rule-examples-master-data-services.md).  
   
 ## Create and Publish Business Rules  
- Business rules are **If/Then/Else** statements that you create in [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)]. If an attribute value meets a specified condition, then an action is taken, otherwise a Else action is taken. Possible actions include setting a default value or changing a value. These actions can be combined with sending an email notification.  
+ Business rules are **If/Then/Else** statements that you create in [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)]. If an attribute value meets a specified condition, then an action is taken, otherwise a Else action is taken. Possible actions include setting a default value or changing a value. These actions can be combined with sending an email notification.  
   
  Business rules can be based on specific attribute values (for example, take action if Color=Blue), or when attribute values change (for example, take action if the value of the Color attribute changes). For more information about tracking non-specific changes, see [Change Tracking &#40;Master Data Services&#41;](../Topic/Change%20Tracking%20\(Master%20Data%20Services\).md).  
   
  To use business rules you must first create and publish your rules, then apply the published rules to data. You can apply rules to subsets of data or to all data for a version by validating the version. A version cannot be committed until all attributes pass business rule validation.  
   
- If a user attempts to add an attribute value that doesn’t pass business rule validation, the value can still be saved. You can review and correct validation issues, which are displayed in [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)].  
+ If a user attempts to add an attribute value that doesn’t pass business rule validation, the value can still be saved. You can review and correct validation issues, which are displayed in [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)].  
   
  When you create a model deployment package, if you want to include business rules you must include data from the version in the package.  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
 -   A business rule cannot contain more than one **start workflow** action.  
   
 ## System Settings  
- There are two settings in [!INCLUDE[ssMDScfgmgr](../database-engine/install/windows/includes/ssmdscfgmgr-md.md)] that affect business rules. You can adjust these settings in [!INCLUDE[ssMDScfgmgr](../database-engine/install/windows/includes/ssmdscfgmgr-md.md)] or directly in the System Settings table. For more information, see [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
+ There are two settings in [!INCLUDE[ssMDScfgmgr](../a9retired/includes/ssmdscfgmgr-md.md)] that affect business rules. You can adjust these settings in [!INCLUDE[ssMDScfgmgr](../a9retired/includes/ssmdscfgmgr-md.md)] or directly in the System Settings table. For more information, see [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
 ## Related Tasks  
   
@@ -77,7 +77,7 @@ manager: "jhubbard"
 |Create a business rule to take user-defined script as a condition|[Business Rules Extension &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
 |Create a business rule to take a user-defined script as an action|[Business Rules Extension &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
 |Change the name of an existing business rule.|[Change a Business Rule Name &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
-|Configure [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] to send notifications when business rules are applied.|[Configure Business Rules to Send Notifications &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
+|Configure [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] to send notifications when business rules are applied.|[Configure Business Rules to Send Notifications &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
 |Apply business rules to specific members.|[Validate Specific Members against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |Exclude a business rule so it is not used.|[Exclude a Business Rule &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
 |Delete an existing business rule.|[Delete a Business Rule &#40;Master Data Services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  

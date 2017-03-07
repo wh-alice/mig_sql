@@ -22,7 +22,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # STRING_SPLIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Splits the character expression using specified separator.  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
 >   
 >  Note that compatibility level 120 might be default even in new Azure SQL Databases.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -155,7 +155,7 @@ JOIN STRING_SPLIT('1,2,3',',')
     ON value = ProductId;  
 ```  
   
- This is replacement for common anti-pattern such as creating a dynamic SQL string in application layer or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], or by using LIKE operator:  
+ This is replacement for common anti-pattern such as creating a dynamic SQL string in application layer or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], or by using LIKE operator:  
   
 ```  
 SELECT ProductId, Name, Tags  

@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Comparison Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery provides the following types of comparison operators:  
   
@@ -181,7 +181,7 @@ WHERE ProductModelID=19
 </PD:Picture>  
 ```  
   
- Note that the type promotion rules for value comparisons are the same as for general comparisons. Also, [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses the same casting rules for untyped values during value comparisons as it uses during general comparisons. In contrast, the rules in the XQuery specification always cast the untyped value to xs:string during value comparisons.  
+ Note that the type promotion rules for value comparisons are the same as for general comparisons. Also, [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] uses the same casting rules for untyped values during value comparisons as it uses during general comparisons. In contrast, the rules in the XQuery specification always cast the untyped value to xs:string during value comparisons.  
   
 ## Node Comparison Operator  
  The node comparison operator, **is**, applies only to node types. The result it returns indicates whether two nodes passed in as operands represent the same node in the source document. This operator returns True if the two operands are the same node. Otherwise, it returns False.  

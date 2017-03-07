@@ -23,13 +23,13 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # User-Defined Hierarchies - Add or Delete a User-Defined Hierarchy
-  You add a user-defined hierarchy to or remove a user-defined hierarchy from a dimension on the **Dimension Structure** tab in Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+  You add a user-defined hierarchy to or remove a user-defined hierarchy from a dimension on the **Dimension Structure** tab in Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
- When you add a user-defined hierarchy, it is not available to users until it is instantiated in an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance and the dimension is processed. For more information, see [Multidimensional Model Databases &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) and [Processing a multidimensional model &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ When you add a user-defined hierarchy, it is not available to users until it is instantiated in an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance and the dimension is processed. For more information, see [Multidimensional Model Databases &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) and [Processing a multidimensional model &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
 ### To add a user-defined hierarchy to a dimension  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the appropriate [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] project, and then open the dimension with which you want to work.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the appropriate [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] project, and then open the dimension with which you want to work.  
   
      The dimension opens in Dimension Designer on the **Dimension Structure** tab.  
   
@@ -43,10 +43,10 @@ manager: "erikre"
   
 5.  Optionally, modify properties of the user-defined hierarchy or its levels.  
   
-     For example, you might want to specify a name for the user-defined hierarchy, rename one or more of its levels, and define a custom name for the All level. For more information, see [User Hierarchy Properties](../Topic/User%20Hierarchy%20Properties.md), and [Level Properties - user hierarchies](../Topic/Level%20Properties%20-%20user%20hierarchies.md).  
+     For example, you might want to specify a name for the user-defined hierarchy, rename one or more of its levels, and define a custom name for the All level. For more information, see [User Hierarchy Properties](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md), and [Level Properties - user hierarchies](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md).  
   
     > [!NOTE]  
-    >  By default, a user-defined hierarchy is just a path that enables users to drill down for information. However, if relationships exist between levels, you can increase query performance by configuring attribute relationships between levels. For more information, see [Attribute Relationships](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md) and [Define Attribute Relationships](../Topic/Define%20Attribute%20Relationships.md).  
+    >  By default, a user-defined hierarchy is just a path that enables users to drill down for information. However, if relationships exist between levels, you can increase query performance by configuring attribute relationships between levels. For more information, see [Attribute Relationships](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md) and [Define Attribute Relationships](../../analysis-services/multidimensional-models/attribute-relationships-define.md).  
   
 ### To remove a user-defined hierarchy from a dimension  
   
@@ -62,6 +62,6 @@ manager: "erikre"
   
 ## See Also  
  [User Hierarchies](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
- [Create User-Defined Hierarchies](../Topic/Create%20User-Defined%20Hierarchies.md)  
+ [Create User-Defined Hierarchies](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
   
   

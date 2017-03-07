@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Ancestor (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   A function that returns the ancestor of a specified member at a specified level or at a specified distance from the member.  
   

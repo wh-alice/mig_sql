@@ -16,7 +16,7 @@ ms.author: "carlrab"
 manager: "jhubbard"
 ---
 # Temporal Table Considerations and Limitations
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   There are some considerations and limitations to be aware of when working with temporal tables, due to the nature of system-versioning.  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 -   If current table is partitioned, the history table is created on default file group because partitioning configuration is not replicated automatically from the current table to the history table.  
   
--   Temporal and history tables cannot be **FILETABLE** and can contain columns of any supported datatype other than **FILESTREAM** since **FILETABLE** and **FILESTREAM** allow data manipulation outside of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and thus system versioning cannot be guaranteed.  
+-   Temporal and history tables cannot be **FILETABLE** and can contain columns of any supported datatype other than **FILESTREAM** since **FILETABLE** and **FILESTREAM** allow data manipulation outside of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and thus system versioning cannot be guaranteed.  
   
 -   While temporal tables support blob data types, such as **(n)varchar(max)**, **varbinary(max)**, **(n)text**, and **image**, they will incur significant storage costs and have performance implications due to their size. As such, when designing your system, care should be taken when using these data types.  
   

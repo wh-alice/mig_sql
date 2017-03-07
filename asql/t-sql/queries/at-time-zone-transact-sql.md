@@ -19,13 +19,13 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # AT TIME ZONE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Converts an *inputdate* to the corresponding *datetimeoffset* value in the target time zone. If *inputdate* is provided without offset information, the function applies the offset of the time zone assuming that *inputdate* value is provided in the target time zone. If *inputdate* is provided as a *datetimeoffset* value, than **AT TIME ZONE** clause converts it into the target time zone using time zone conversion rules.  
   
  **AT TIME ZONE** implementation relies on a Windows mechanism to convert **datetime** values across time zones.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -38,7 +38,7 @@ inputdate AT TIME ZONE timezone
  Is an expression that can be resolved to a **smalldatetime**, **datetime**, **datetime2**, or **datetimeoffset** value.  
   
  *timezone*  
- Name of the destination time zone. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] relies on time zones that are stored in the Windows Registry. All time zones installed on the computer are stored in the following registry hive: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. A list of installed time zones is also exposed through the [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.time-zone-info-transact-sql.md) view.  
+ Name of the destination time zone. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] relies on time zones that are stored in the Windows Registry. All time zones installed on the computer are stored in the following registry hive: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. A list of installed time zones is also exposed through the [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.time-zone-info-transact-sql.md) view.  
   
 ## Return Types  
  Returns the data type of **datetimeoffset**  
@@ -112,7 +112,7 @@ inputdate AT TIME ZONE timezone
   
     ```  
 
-Since some information (such as timezone rules) is maintained outside of [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and are subject to occasional change, the **AT TIME ZONE** function is classed as nondeterministic. 
+Since some information (such as timezone rules) is maintained outside of [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] and are subject to occasional change, the **AT TIME ZONE** function is classed as nondeterministic. 
   
 ## Examples  
   

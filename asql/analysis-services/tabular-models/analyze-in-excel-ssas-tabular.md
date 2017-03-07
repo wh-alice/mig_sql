@@ -17,7 +17,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Analyze in Excel (SSAS Tabular)
-  The Analyze in Excel feature, in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], provides tabular model authors a way to quickly analyze model projects during development. The Analyze in Excel feature opens Microsoft Excel, creates a data source connection to the model workspace database, and automatically adds a PivotTable to the worksheet. Workspace database objects (tables, columns, and measures) are included as fields in the PivotTable Field List. Objects and data can then be viewed within the context of the effective user or role and perspective.  
+  The Analyze in Excel feature, in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], provides tabular model authors a way to quickly analyze model projects during development. The Analyze in Excel feature opens Microsoft Excel, creates a data source connection to the model workspace database, and automatically adds a PivotTable to the worksheet. Workspace database objects (tables, columns, and measures) are included as fields in the PivotTable Field List. Objects and data can then be viewed within the context of the effective user or role and perspective.  
   
  This topic assumes you are already familiar with Microsoft Excel, PivotTables, and PivotCharts. To learn more about using Excel, see Excel Help.  
   
@@ -28,10 +28,10 @@ manager: "erikre"
 -   [Related Tasks](#bkmk_rt)  
   
 ##  <a name="bkmk_benefits"></a> Benefits  
- The Analyze in Excel feature provides model authors the ability to test the efficacy of a model project by using the common data analysis application, Microsoft Excel. In order to use the Analyze in Excel feature, you must have Microsoft Office 2003 or later installed on the same computer as [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+ The Analyze in Excel feature provides model authors the ability to test the efficacy of a model project by using the common data analysis application, Microsoft Excel. In order to use the Analyze in Excel feature, you must have Microsoft Office 2003 or later installed on the same computer as [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
->  If Office is not installed on the same computer as [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], you can use Excel on another computer to connect to the workspace database as a data source. You can then manually add a PivotTable to the worksheet.  
+>  If Office is not installed on the same computer as [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], you can use Excel on another computer to connect to the workspace database as a data source. You can then manually add a PivotTable to the worksheet.  
   
  The Analyze in Excel feature opens Excel and creates a new Excel workbook (.xls). A data connection from the workbook to the model workspace database is created. A blank PivotTable is added to the worksheet and model object metadata is populated in the PivotTable Field list. You can then add viewable data and slicers to the PivotTable.  
   
@@ -46,7 +46,7 @@ manager: "erikre"
  **Role**  
  A role is used to define user permissions on the object metadata and data. Roles are usually defined for a particular Windows user or Windows user group. Certain roles can include additional row-level filters defined in a DAX formula. When using the Analyze in Excel feature, you can optionally select a role to be used. Object metadata and data views will be restricted by the permission and filters defined for the role. For more information, see [Create and Manage Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
   
- In addition to the effective user or role, you can specify a perspective. Perspectives enable model authors to define particular business scenario views of model objects and data. By default, no perspective is used. In order to use a perspective with Analyze in Excel, perspectives must already be defined by using the Perspectives dialog box in [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)]. If a perspective is specified, the PivotTable Field List will contain only those objects selected in the perspective. For more information, see [Create and Manage Perspectives &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md).  
+ In addition to the effective user or role, you can specify a perspective. Perspectives enable model authors to define particular business scenario views of model objects and data. By default, no perspective is used. In order to use a perspective with Analyze in Excel, perspectives must already be defined by using the Perspectives dialog box in [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)]. If a perspective is specified, the PivotTable Field List will contain only those objects selected in the perspective. For more information, see [Create and Manage Perspectives &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md).  
   
 ##  <a name="bkmk_rt"></a> Related Tasks  
   

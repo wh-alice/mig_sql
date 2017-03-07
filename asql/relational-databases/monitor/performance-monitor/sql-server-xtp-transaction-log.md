@@ -15,16 +15,16 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server XTP Transaction Log
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  The SQL Server XTP Transaction Log performance object contains counters related to In-Memory OLTP transaction log activity in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  The SQL Server XTP Transaction Log performance object contains counters related to In-Memory OLTP transaction log activity in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
  This table describes the **SQL Server XTP Transaction Log** counters.  
   
 |Counter|Description|  
 |-------------|-----------------|  
-|**Log bytes written/sec**|The number of bytes written to the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] transaction log by the In-Memory OLTP engine (on average), per second.|  
-|**Log records written/sec**|The number of records written to the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] transaction log by the In-Memory OLTP engine (on average), per second.|  
+|**Log bytes written/sec**|The number of bytes written to the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] transaction log by the In-Memory OLTP engine (on average), per second.|  
+|**Log records written/sec**|The number of records written to the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] transaction log by the In-Memory OLTP engine (on average), per second.|  
   
 ## See Also  
  [SQL Server XTP &#40;In-Memory OLTP&#41; Performance Counters](../../../relational-databases/monitor/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  

@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ### To delete a condition from a filter on a mining model  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], in Solution Explorer, click the mining structure that contains the mining model you want to filter.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], in Solution Explorer, click the mining structure that contains the mining model you want to filter.  
   
 2.  Click the **Mining Models** tab.  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
  If you want to delete the whole filter, you do not need to open the filter editor dialog boxes. The filter conditions that you created are available in the **Filter** property of the mining model.  
   
 > [!NOTE]  
->  You can view the properties of a mining model in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], but not in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+>  You can view the properties of a mining model in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], but not in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 #### To clear the filter on a mining model in Solution Explorer  
   

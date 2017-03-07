@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Back Up a Database Master Key
-  This topic describes how to back up a database master key in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]. The database master key is used to encrypt other keys and certificates inside a database. If it is deleted or corrupted, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] may be unable to decrypt those keys, and the data encrypted using them will be effectively lost. For this reason, you should back up the database master key and store the backup in a secure off-site location.  
+  This topic describes how to back up a database master key in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]. The database master key is used to encrypt other keys and certificates inside a database. If it is deleted or corrupted, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] may be unable to decrypt those keys, and the data encrypted using them will be effectively lost. For this reason, you should back up the database master key and store the backup in a secure off-site location.  
   
  **In This Topic**  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 #### To back-up the database master key  
   
-1.  In [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance containing the database master key you wish to back up.  
+1.  In [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance containing the database master key you wish to back up.  
   
 2.  Choose a password that will be used to encrypt the database master key on the backup medium. This password is subject to complexity checks.  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 4.  Identify an NTFS directory in which to create the backup of the key. This is where you will create the file specified in the next step. The directory should be protected with highly restrictive access control lists (ACLs).  
   
-5.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+5.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 6.  On the Standard bar, click **New Query**.  
   

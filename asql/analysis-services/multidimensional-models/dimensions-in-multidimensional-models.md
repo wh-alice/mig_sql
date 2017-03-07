@@ -45,13 +45,13 @@ manager: "erikre"
  [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
  Describes how to define, modify, and configure a database dimension attribute by using Dimension Designer.  
   
- [Define Attribute Relationships](../Topic/Define%20Attribute%20Relationships.md)  
+ [Define Attribute Relationships](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
  Describes how to define, modify, and configure an attribute relationship by using Dimension Designer.  
   
- [Create User-Defined Hierarchies](../Topic/Create%20User-Defined%20Hierarchies.md)  
+ [Create User-Defined Hierarchies](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
  Describes how to define, modify, and configure a user-defined hierarchy of dimension attributes by using Dimension Designer.  
   
- [Use the Business Intelligence Wizard to Enhance Dimensions](../Topic/Use%20the%20Business%20Intelligence%20Wizard%20to%20Enhance%20Dimensions.md)  
+ [Use the Business Intelligence Wizard to Enhance Dimensions](../../a9retired/use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  Describes how to enhance a database dimension by using the Business Intelligence Wizard.  
   
 ## See Also  

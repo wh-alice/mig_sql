@@ -15,29 +15,29 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Install or Uninstall the Reporting Services Add-in for SharePoint
-  Run the installation package [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Add-in for SharePoint products (rsSharePoint.msi) on SharePoint servers to enable [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] features within a SharePoint deployment. Features include Power View, a Report Viewer Web Part, a URL proxy endpoint, [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] content types and application pages so that you can create, view, and manage reports, report models, data sources and other report server content on a SharePoint site. The [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Add-in for SharePoint products is a required component for a report server that runs in SharePoint mode. The add-in can be installed from either the [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] setup wizard or by downloading the rsSharePoint.msi from the [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] feature pack. For a list of the versions of the add-in and download pages, see [Where to find the Reporting Services add-in for SharePoint Products](../../../reporting-services/install/windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+  Run the installation package [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Add-in for SharePoint products (rsSharePoint.msi) on SharePoint servers to enable [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] features within a SharePoint deployment. Features include Power View, a Report Viewer Web Part, a URL proxy endpoint, [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] content types and application pages so that you can create, view, and manage reports, report models, data sources and other report server content on a SharePoint site. The [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Add-in for SharePoint products is a required component for a report server that runs in SharePoint mode. The add-in can be installed from either the [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] setup wizard or by downloading the rsSharePoint.msi from the [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] feature pack. For a list of the versions of the add-in and download pages, see [Where to find the Reporting Services add-in for SharePoint Products](../../../reporting-services/install/windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../analysis-services/includes/applies-md.md)]**  SharePoint 2013 & SharePoint 2016|  
+|**[!INCLUDE[applies](../../../a9retired/includes/applies-md.md)]**  SharePoint 2013 & SharePoint 2016|  
   
 ##  <a name="bkmk_prereq"></a> Prerequisites  
- Installing the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Add-in is one of several steps that are necessary for integrating a report server with an instance of a SharePoint product. For more information on installing and configuring [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], see [Install The First Report Server in SharePoint Mode](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+ Installing the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Add-in is one of several steps that are necessary for integrating a report server with an instance of a SharePoint product. For more information on installing and configuring [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)], see [Install The First Report Server in SharePoint Mode](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
   
--   If you are integrating [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] with a SharePoint farm that has multiple Web front end applications, install the add-in to each computer in the farm that has a Web server front-end. Do this only for Web front ends that will be used to access report server content.  
+-   If you are integrating [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] with a SharePoint farm that has multiple Web front end applications, install the add-in to each computer in the farm that has a Web server front-end. Do this only for Web front ends that will be used to access report server content.  
   
--   To install the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Add-in, you must be an administrator on the computer. For example if you are going to run the rsSharePoint.msi at the command prompt, you should open the command prompt with administrator privileges by using the **Run as administrator** option.  
+-   To install the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Add-in, you must be an administrator on the computer. For example if you are going to run the rsSharePoint.msi at the command prompt, you should open the command prompt with administrator privileges by using the **Run as administrator** option.  
   
--   To install the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Add-in, you must be a member of the SharePoint Farm Administrators group.  
+-   To install the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Add-in, you must be a member of the SharePoint Farm Administrators group.  
   
--   You must be a Site Collection administrator to activate the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] integration feature.   
+-   You must be a Site Collection administrator to activate the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] integration feature.   
   
 ##  <a name="bkmk_whatinstalled"></a> What Does The Add-in Install?  
  The add-in setup process is composed of two phases, both are completed automatically when you complete a standard installation:  
   
 -   The first phase is to install files to the proper folders. The folders are standard for SharePoint deployments. One of the files that is installed is rsCustomAction.exe.  
   
--   The second portion of the installation is to run a set of custom actions to register the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] files with SharePoint. The custom actions are run from rsCustomAction.exe. The exe is removed when the full two phase installation completes. You can run a **files only** installation and rsCustomAction.exe is not run at the end of installation and it is left on the drive.  
+-   The second portion of the installation is to run a set of custom actions to register the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] files with SharePoint. The custom actions are run from rsCustomAction.exe. The exe is removed when the full two phase installation completes. You can run a **files only** installation and rsCustomAction.exe is not run at the end of installation and it is left on the drive.  
   
 ## The Reporting Services Installation order  
  The add-in can be installed before installing SharePoint or after SharePoint installation. The add-in follows SharePoint pre-deployment standards and installs files in locations used by the SharePoint installation.  
@@ -46,9 +46,9 @@ manager: "erikre"
 >  The advantage of installing the add-in prior to the SharePoint product is that as new servers are added to the farm, the Reporting Services Add-in will be configured and activated by the SharePoint farm.  
   
 ##  <a name="bkmk_3ways_to_install"></a> Overview of the Installation Methods  
- The [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Add-in for SharePoint products can be installed using one of the following two methods:  
+ The [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Add-in for SharePoint products can be installed using one of the following two methods:  
   
--   **The installation wizard:** ![note](../../../analysis-services/instances/install/windows/media/ssrs-fyi-note.png "note")New with [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)], the add-in can be installed by the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] installation wizard. Choose **Reporting Services Add-in for SharePoint Products** on the **Feature Selection** page of the wizard.  
+-   **The installation wizard:** ![note](../../../a9retired/media/ssrs-fyi-note.png "note")New with [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)], the add-in can be installed by the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] installation wizard. Choose **Reporting Services Add-in for SharePoint Products** on the **Feature Selection** page of the wizard.  
   
 -   **rsSharepoint.msi:** The add-in can be installed directly from the installation media or downloaded and installed. The rsSharepoint.msi supports both a graphical user interface and a command line installation. You must run the .msi with administrator privileges by first opening a command prompt with elevated permissions, and then running the rsSharepoint.msi from the command line. For more information on downloading the add-in, see [Where to find the Reporting Services add-in for SharePoint Products](../../../reporting-services/install/windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
@@ -64,7 +64,7 @@ manager: "erikre"
 Rssharepoint.msi /?  
 ```  
   
-1.  Download the Setup program (**rsSharepoint.msi**) for the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Add-in. For more information on downloading the add-in, see [Where to find the Reporting Services add-in for SharePoint Products](../../../reporting-services/install/windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+1.  Download the Setup program (**rsSharepoint.msi**) for the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Add-in. For more information on downloading the add-in, see [Where to find the Reporting Services add-in for SharePoint Products](../../../reporting-services/install/windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 2.  As an administrator, run **rsSharepoint.msi** to run the Installation Wizard. The wizard displays a Welcome page, the Software license terms, and a registration information page. Setup creates folders under the following path and copies files to the folders:  
   
@@ -74,7 +74,7 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\16\` (SharePoint 2016)  
   
-3.  Configure the report server settings and feature activation in SharePoint Central Administration. . For more information on installing and configuring [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] SharePoint mode, see [Install The First Report Server in SharePoint Mode](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+3.  Configure the report server settings and feature activation in SharePoint Central Administration. . For more information on installing and configuring [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] SharePoint mode, see [Install The First Report Server in SharePoint Mode](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
   
 ###  <a name="bkmk_files_only_installation"></a> Files-only installation  
  To install the files but skip the custom action phase of installation, run the rssharepoint.msi from the command line with the SKIPCA option.:  
@@ -127,21 +127,21 @@ Rssharepoint.msi /?
     ```  
   
 ##  <a name="bkmk_remove_addin"></a> How to Remove the Reporting Services Add-in  
- You can uninstall the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Add-in for SharePoint Products from [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows control panel or the command line.  
+ You can uninstall the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Add-in for SharePoint Products from [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Windows control panel or the command line.  
   
-1.  Using control panel will run a complete uninstall of the files on the current computer **AND** it will remove the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] object and features from the SharePoint farm. When the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] object and features are removed you can no longer review and update reports.  
+1.  Using control panel will run a complete uninstall of the files on the current computer **AND** it will remove the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] object and features from the SharePoint farm. When the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] object and features are removed you can no longer review and update reports.  
   
-2.  The command line method to uninstall the add-in allows you to use the LocalOnly parameter to only remove the add-in files from the local computer and the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] object and features in the farm will not be changed.  
+2.  The command line method to uninstall the add-in allows you to use the LocalOnly parameter to only remove the add-in files from the local computer and the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] object and features in the farm will not be changed.  
   
- Uninstalling the add-in will remove server integration features that are used to process reports on a report server. It will also remove the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] pages from SharePoint Central Administration and other custom [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] pages. You may also want to remove any reports and other report server items that you no longer use on the affected SharePoint sites. They will not run after the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Add-in is removed.  
+ Uninstalling the add-in will remove server integration features that are used to process reports on a report server. It will also remove the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] pages from SharePoint Central Administration and other custom [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] pages. You may also want to remove any reports and other report server items that you no longer use on the affected SharePoint sites. They will not run after the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Add-in is removed.  
   
- To uninstall the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Add-in, you must have a SharePoint installation still running. If you uninstall SharePoint first, you must reinstall it to uninstall the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Add-in.  
+ To uninstall the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Add-in, you must have a SharePoint installation still running. If you uninstall SharePoint first, you must reinstall it to uninstall the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Add-in.  
   
  The steps for uninstalling the add-in are the same for both stand-alone servers and server farms. Setup will remove program files and any configuration settings that were added during installation.  
   
  Uninstalling the add-in will not remove the following:  
   
--   Logins created for the Report Server service account that is used to access the SharePoint configuration and content databases. You must delete any logins for the Report Server service account from the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] instance used to host the SharePoint databases.  
+-   Logins created for the Report Server service account that is used to access the SharePoint configuration and content databases. You must delete any logins for the Report Server service account from the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] instance used to host the SharePoint databases.  
   
 -   Permissions or groups that you created for report users. If you created custom permission levels or SharePoint groups to grant access to report server features, you should revoke any permissions that are no longer required.  
   
@@ -150,7 +150,7 @@ Rssharepoint.msi /?
 -   Setup will not delete the report server database or modify the report server instance that was used for integrated operations.  
   
 ### To Uninstall from Windows Control Panel  
- To start the wizard from [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows Control Panel and remove the add-in:  
+ To start the wizard from [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Windows Control Panel and remove the add-in:  
   
 1.  In Control Panel, in **Programs**, select **Uninstall a Program**  
   
@@ -172,7 +172,7 @@ Rssharepoint.msi /?
 3.  You will see a confirmation message box. Click **Yes**.  
   
 ### Uninstall the add-in from the local server only  
- The previous methods of uninstalling the add-in will remove the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] features and object from the farm. If you have a multi-server farm and want to uninstall the add-in from only the local computer and leave the SharePoint farm in a functional state, complete the following steps:  
+ The previous methods of uninstalling the add-in will remove the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] features and object from the farm. If you have a multi-server farm and want to uninstall the add-in from only the local computer and leave the SharePoint farm in a functional state, complete the following steps:  
   
 1.  Open a command prompt **with administrator permissions**.  
   
@@ -182,9 +182,9 @@ Rssharepoint.msi /?
     Msiexec.exe /uninstall rsSharePoint.msi LocalOnly=1  
     ```  
   
- This will unregister the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] components from SharePoint and remove the files, but for the local computer only.  
+ This will unregister the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] components from SharePoint and remove the files, but for the local computer only.  
   
- If you want to unregister the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] features from SharePoint but leave the files on the disk for use later, complete the following steps:  
+ If you want to unregister the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] features from SharePoint but leave the files on the disk for use later, complete the following steps:  
   
 1.  Open a command prompt **with administrator permissions**.  
   
@@ -197,7 +197,7 @@ Rssharepoint.msi /?
  The above steps assume you completed an installation of the .msi with SkipCA=1 and the rscusstomaction.exe is available. For more information, see the section describing the files only installation.  
   
 ##  <a name="bkmk_repair"></a> How to Repair rssharepoint.msi from the Command Line  
- To repair or uninstall the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] add-in using the command line, complete the following steps:  
+ To repair or uninstall the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] add-in using the command line, complete the following steps:  
   
 1.  Open a command prompt **with administrator permissions**.  
   
@@ -208,7 +208,7 @@ Rssharepoint.msi /?
     ```  
   
 ##  <a name="bkmk_logfiles"></a> Setup Log Files  
- When Setup runs, it logs information to a log file in the **%temp%** folder for the user who installed the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Add-in. For example **c:\Users\\<username\>\AppData\Local\Temp** .The file name is **RS_SP_\<number>.log**, for example **RS_SP_0.log**. Each error in the log starts with the string "SSRSCustomActionError".  
+ When Setup runs, it logs information to a log file in the **%temp%** folder for the user who installed the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Add-in. For example **c:\Users\\<username\>\AppData\Local\Temp** .The file name is **RS_SP_\<number>.log**, for example **RS_SP_0.log**. Each error in the log starts with the string "SSRSCustomActionError".  
   
 > [!NOTE]  
 >  AppData is a hidden folder in the Windows operating system. You may need to modify your Windows Explorer folder settings so you can see hidden files and folders.  
@@ -242,24 +242,24 @@ Rssharepoint.msi /?
      `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`.  
   
 ##  <a name="bkmk_upgrade"></a> Upgrade  
- If you have an existing installation of the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Add-in, you can upgrade to the current version. The add-in setup will detect the existing version and prompt you to confirm the update. The message will be similar to the following:  
+ If you have an existing installation of the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Add-in, you can upgrade to the current version. The add-in setup will detect the existing version and prompt you to confirm the update. The message will be similar to the following:  
   
  **A Lower version of this product has been detected on your system. Would you like to upgrade your existing installation?**  
   
  If you confirm, the older version of the add-in will be removed and then the new version will be installed.  
   
- Note that the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Add-in is not instance-aware. You can only have one instance of the add-in on a computer. You cannot run different versions side-by-side the current version.  
+ Note that the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Add-in is not instance-aware. You can only have one instance of the add-in on a computer. You cannot run different versions side-by-side the current version.  
   
 ##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  The following table summarizes the rscustomaction.exe switches:  
   
 |Switch|Description|  
 |------------|-----------------|  
-|i|Install the custom actions. This will register the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] components in SharePoint. This will restart the W3SVCservice.|  
+|i|Install the custom actions. This will register the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] components in SharePoint. This will restart the W3SVCservice.|  
 |r|Repair|  
-|u|Uninstall. This will unregister the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] components from the entire SharePoint farm but leave the files on disk. This will restart the W3SVCservice.|  
-|p|Local uninstall. This will unregister the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] components from only the local computer. The files will remain on disk. This will restart the W3SVCservice.|  
-|t|SQL Server [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] 2005 only. The switch tests if the report server has a working connection to the report server database.|  
+|u|Uninstall. This will unregister the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] components from the entire SharePoint farm but leave the files on disk. This will restart the W3SVCservice.|  
+|p|Local uninstall. This will unregister the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] components from only the local computer. The files will remain on disk. This will restart the W3SVCservice.|  
+|t|SQL Server [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] 2005 only. The switch tests if the report server has a working connection to the report server database.|  
   
 ## Configuring Reporting Services  
  After you have installed the add-in on all the necessary computers, you need to configure the report server from SharePoint Central Administration. The steps that are needed depend on the order which the different technologies were installed. For more information, see [Install The First Report Server in SharePoint Mode](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538) and [Reporting Services Report Server &#40;SharePoint Mode&#41;](../../../reporting-services/report-server/sharepoint/reporting-services-report-server-sharepoint-mode.md)  

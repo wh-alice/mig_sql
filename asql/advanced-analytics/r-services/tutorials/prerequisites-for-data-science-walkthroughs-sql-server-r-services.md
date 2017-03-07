@@ -20,15 +20,15 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Prerequisites for Data Science Walkthroughs (SQL Server R Services)
-We recommend that you do the walkthroughs on an R workstation that can connect to a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer on the same network. You can also run the walkthrough on a computer that has both [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and an R development environment. 
+We recommend that you do the walkthroughs on an R workstation that can connect to a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] computer on the same network. You can also run the walkthrough on a computer that has both [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] and an R development environment. 
   
   
 ## Install SQL Server 2016 R Services (In-Database)  
-You must have access to an instance of [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)]  with [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)] installed. For more information about how to set up [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)], see [Set up  SQL Server R Services (In-Database](https://msdn.microsoft.com/library/mt696069.aspx).  
+You must have access to an instance of [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)]  with [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)] installed. For more information about how to set up [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)], see [Set up  SQL Server R Services (In-Database](https://msdn.microsoft.com/library/mt696069.aspx).  
   
   
 > [!IMPORTANT]  
-> Be sure to use [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] or later. Previous versions of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] do not support integration with R. However, you can use older SQL databases as an ODBC data source.  
+> Be sure to use [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] or later. Previous versions of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] do not support integration with R. However, you can use older SQL databases as an ODBC data source.  
   
 ## Install an R Development Environment  
 To complete this walkthrough on your computer, you will need an R development environment, or any other command line tool that can run R commands.    
@@ -41,11 +41,11 @@ To complete this walkthrough on your computer, you will need an R development en
   
     However, you cannot complete this tutorial using a generic installation of RStudio or other environment; you must also install the R packages and connectivity libraries for Microsoft R Open. For more information, see [Set Up a Data Science Client](https://msdn.microsoft.com/library/mt696067.aspx).  
 
-- R tools (R.exe, RTerm.exe, RScripts.exe) are installed by default when you install [!INCLUDE[rsql_rro-noversion](../../../advanced-analytics/r-services/includes/rsql-rro-noversion-md.md)]. If you do not wish to install an IDE you can use these tools.  
+- R tools (R.exe, RTerm.exe, RScripts.exe) are installed by default when you install [!INCLUDE[rsql_rro-noversion](../../../a9notintoc/includes/rsql-rro-noversion-md.md)]. If you do not wish to install an IDE you can use these tools.  
   
   
 ## Get Permissions to Connect to SQL Server  
-In this walkthrough, you will connect to an instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to run scripts and upload data. To do this, you must have a valid login on the database server.  You can use either a SQL login or integrated Windows authentication. Ask the database administrator to create an account for you on the server with the following privileges on the database where you will be using R:  
+In this walkthrough, you will connect to an instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] to run scripts and upload data. To do this, you must have a valid login on the database server.  You can use either a SQL login or integrated Windows authentication. Ask the database administrator to create an account for you on the server with the following privileges on the database where you will be using R:  
   
 -   Create database, tables, functions, and stored procedures    
 -   Insert data into tables  

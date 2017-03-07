@@ -23,11 +23,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # HASHBYTES (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns the MD2, MD4, MD5, SHA, SHA1, or SHA2 hash of its input in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Returns the MD2, MD4, MD5, SHA, SHA1, or SHA2 hash of its input in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -41,7 +41,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
 ## Arguments  
  **'**\<algorithm>**'**  
- Identifies the hashing algorithm to be used to hash the input. This is a required argument with no default. The single quotation marks are required. Beginning with [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)], all algorithms other than SHA2_256, and SHA2_512 are deprecated. Older algorithms (not recommended) will continue working, but they will raise a deprecation event.  
+ Identifies the hashing algorithm to be used to hash the input. This is a required argument with no default. The single quotation marks are required. Beginning with [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)], all algorithms other than SHA2_256, and SHA2_512 are deprecated. Older algorithms (not recommended) will continue working, but they will raise a deprecation event.  
   
  **@input**  
  Specifies a variable containing the data to be hashed. **@input** is **varchar**, **nvarchar**, or **varbinary**.  
@@ -53,9 +53,9 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
 ||  
 |-|  
-|256 bits (32 bytes) for SHA2_256, and 512 bits (64 bytes) for SHA2_512 applies to [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|256 bits (32 bytes) for SHA2_256, and 512 bits (64 bytes) for SHA2_512 applies to [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
- For [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] and earlier, allowed input values are limited to 8000 bytes.  
+ For [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] and earlier, allowed input values are limited to 8000 bytes.  
   
 ## Return Value  
  **varbinary** (maximum 8000 bytes)  

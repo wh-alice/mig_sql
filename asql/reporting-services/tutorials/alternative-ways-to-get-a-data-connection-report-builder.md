@@ -17,7 +17,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Alternative Ways to Get a Data Connection (Report Builder)
-A data connection contains the information to connect to an external data source such as a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database. Usually, you get the connection information and the type of credentials to use from the data source owner.  
+A data connection contains the information to connect to an external data source such as a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database. Usually, you get the connection information and the type of credentials to use from the data source owner.  
   
 To specify a data connection, you can use a shared data source from the report server or create an embedded data source that is used only in a specific report.  
   
@@ -34,13 +34,13 @@ To use a shared data source, you browse to a report server and select one. Usual
   
 2.  From the list of data sources, select a data source that you have permission to access.  
   
-3.  To verify that you can connect to the data source, click **Test Connection**. The message "Connection created successfully" appears. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  To verify that you can connect to the data source, click **Test Connection**. The message "Connection created successfully" appears. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 4.  Click **Next**.  
   
     If necessary, enter your credentials. To save the credentials locally, select **Save password with connection**. If you don't select this option, you will be prompted for credentials every time that you run the report  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To specify a data connection by browsing to a shared data source on a report server  
   
@@ -62,13 +62,13 @@ To use a shared data source, you browse to a report server and select one. Usual
   
 6.  To verify that you can connect to the data source, click **Test Connection**.  
   
-    The message "Connection created successfully" appears. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+    The message "Connection created successfully" appears. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 7.  Click **Next**.  
   
 8.  If you are prompted for a user name and password, enter your credentials. To save the credentials locally, select **Save password with connection**.  
   
-9. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## See Also  
 [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

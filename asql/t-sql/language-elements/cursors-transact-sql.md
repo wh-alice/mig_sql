@@ -23,7 +23,7 @@ manager: "jhubbard"
 # Cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] statements produce a complete result set, but there are times when the results are best processed one row at a time. Opening a cursor on a result set allows processing the result set one row at a time. You can assign a cursor to a variable or parameter with a **cursor** data type.  
+  [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] statements produce a complete result set, but there are times when the results are best processed one row at a time. Opening a cursor on a result set allows processing the result set one row at a time. You can assign a cursor to a variable or parameter with a **cursor** data type.  
   
  Cursor operations are supported on these statements:  
   
@@ -55,13 +55,13 @@ manager: "jhubbard"
   
  [@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md)  
   
- [sp_cursor_list](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)  
+ [sp_cursor_list](../../relational-databases/reference/system-stored-procedures/sp-cursor-list-transact-sql.md)  
   
- [sp_describe_cursor](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)  
+ [sp_describe_cursor](../../relational-databases/reference/system-stored-procedures/sp-describe-cursor-transact-sql.md)  
   
- [sp_describe_cursor_columns](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)  
+ [sp_describe_cursor_columns](../../relational-databases/reference/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)  
   
- [sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
+ [sp_describe_cursor_tables](../../relational-databases/reference/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
 ## See Also  
  [Cursors](../../relational-databases/cursors.md)  

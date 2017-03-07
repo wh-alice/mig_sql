@@ -18,7 +18,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Maintaining an Always On Publication Database (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   This topic discusses special considerations for maintaining a publication database when you use Always On availability groups.  
   
@@ -33,16 +33,16 @@ manager: "jhubbard"
 ##  <a name="MaintainPublDb"></a> Maintaining a Published Database in an Availability Group  
  Maintaining an Always On publication database is basically the same as maintaining a standard publication database, with the following considerations:  
   
--   Administration must occur at the primary replica host. In [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], publications appear under the **Local Publications** folder for the primary replica host and also for readable secondary replicas. After failover, you might have to manually refresh [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] for the change to be reflected if the secondary that was promoted to primary was not readable.  
+-   Administration must occur at the primary replica host. In [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], publications appear under the **Local Publications** folder for the primary replica host and also for readable secondary replicas. After failover, you might have to manually refresh [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)] for the change to be reflected if the secondary that was promoted to primary was not readable.  
   
 -   Replication Monitor always displays publication information under the original publisher. However, this information can be viewed in Replication Monitor from any replica by adding the original publisher as a server.  
   
 -   When using stored procedures or Replication Management Objects (RMO) to administer replication at the current primary, for cases in which you specify the Publisher name, you must specify the name of the instance on which the database was enabled for replication (the original publisher). To determine the appropriate name, use the **PUBLISHINGSERVERNAME** function. When a publishing database joins an availability group, the replication metadata stored in the secondary database replicas is identical to that at the primary. Consequently, for publication databases enabled for replication at the primary, the publisher instance name stored in system tables at the secondary is the name of the primary, not the secondary. This affects replication configuration and maintenance if the publication database fails over to a secondary. For example, if you are configuring replication with stored procedures at a secondary after failover, and you want a pull subscription to a publication database that was enabled at a different replica, you must specify the name of the original publisher instead of the current publisher as the *@publisher* parameter of **sp_addpullsubscription** or **sp_addmergepulllsubscription**. However, if you enable a publication database after failover, the publisher instance name stored in the system tables is the name of the current primary host. In this case, you would use the host name of the current primary replica for the *@publisher* parameter.  
   
     > [!NOTE]  
-    >  For some procedures, such as **sp_addpublication**, the *@publisher* parameter is supported only for publishers that are not instances of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]; in these cases, it is not relevant for [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Always On.  
+    >  For some procedures, such as **sp_addpublication**, the *@publisher* parameter is supported only for publishers that are not instances of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]; in these cases, it is not relevant for [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Always On.  
   
--   To synchronize a subscription in [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] after a failover, synchronize pull subscriptions from the subscriber and synchronize push subscriptions from the active publisher.  
+-   To synchronize a subscription in [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)] after a failover, synchronize pull subscriptions from the subscriber and synchronize push subscriptions from the active publisher.  
   
 ##  <a name="RemovePublDb"></a> Removing a Published Database from an Availability Group  
  Consider the following issues if a published database is removed from an availability group, or if an availability group that has a published member database is dropped.  
@@ -109,14 +109,14 @@ manager: "jhubbard"
   
 -   [Configure Replication for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   
--   [Replication, Change Tracking, Change Data Capture, and Always On Availability Groups &#40;SQL Server&#41;](../Topic/Replication,%20Change%20Tracking,%20Change%20Data%20Capture,%20and%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md)  
+-   [Replication, Change Tracking, Change Data Capture, and Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
 -   [Administration &#40;Replication&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
   
 -   [Replication Subscribers and Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   
 ## See Also  
- [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../Topic/Prerequisites,%20Restrictions,%20and%20Recommendations%20for%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md)   
+ [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Always On Availability Groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server Replication](../../../relational-databases/replication/sql-server-replication.md)  

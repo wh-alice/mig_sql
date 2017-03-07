@@ -18,9 +18,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SQL Server, SQL Errors Object
-  The **SQLServer:SQL Errors** object in Microsoft [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provides counters to monitor **SQL Errors**.  
+  The **SQLServer:SQL Errors** object in Microsoft [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] provides counters to monitor **SQL Errors**.  
   
- This table describes the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] **SQL Errors** counters.  
+ This table describes the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] **SQL Errors** counters.  
   
 |SQL Server SQL Errors counters|Description|  
 |------------------------------------|-----------------|  
@@ -31,9 +31,9 @@ manager: "jhubbard"
 |Item|Definition|  
 |----------|----------------|  
 |**_Total**|Information for all errors.|  
-|**DB Offline Errors**|Tracks severe errors that cause [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to take the current database offline.|  
+|**DB Offline Errors**|Tracks severe errors that cause [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] to take the current database offline.|  
 |**Info Errors**|Information related to error messages that provide information to users but do not cause errors.|  
-|**Kill Connection Errors**|Tracks severe errors that cause [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to kill the current connection.|  
+|**Kill Connection Errors**|Tracks severe errors that cause [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] to kill the current connection.|  
 |**User Errors**|Information about user errors.|  
   
 ## See Also  

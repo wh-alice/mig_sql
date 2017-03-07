@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Resource Governor Classifier Function
-  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] resource governor classification process assigns incoming sessions to a workload group based on the characteristics of the session. You can tailor the classification logic by writing a user-defined function, called a classifier function.  
+  The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] resource governor classification process assigns incoming sessions to a workload group based on the characteristics of the session. You can tailor the classification logic by writing a user-defined function, called a classifier function.  
   
 ## Classification  
  Resource Governor supports the classification of incoming sessions. Classification is based on a set of user-written criteria contained in a function. The results of the function logic enable Resource Governor to classify sessions into existing workload groups.  
@@ -74,7 +74,7 @@ manager: "jhubbard"
  When classification starts, Resource Governor executes the classifier function and uses the value returned by the function to send requests to the appropriate workload group.  
   
 > [!NOTE]  
->  Information about the execution of the classifier function and LOGON triggers is exposed in [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys.dm-exec-sessions-transact-sql.md) and [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys.dm-exec-requests-transact-sql.md).  
+>  Information about the execution of the classifier function and LOGON triggers is exposed in [sys.dm_exec_sessions](../../relational-databases/reference/system-dynamic-management-views/sys.dm-exec-sessions-transact-sql.md) and [sys.dm_exec_requests](../../relational-databases/reference/system-dynamic-management-views/sys.dm-exec-requests-transact-sql.md).  
   
 ## Classification Function Tasks  
   

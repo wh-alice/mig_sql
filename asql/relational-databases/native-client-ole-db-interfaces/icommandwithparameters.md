@@ -15,13 +15,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ICommandWithParameters
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  Improvements in the database engine beginning with [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] allow ICommandWithParameters::GetParameterInfo to obtain more accurate descriptions of the expected results. These more accurate results may differ from the values returned by CommandWithParameters::GetParameterInfo in previous versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information, see [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
+  Improvements in the database engine beginning with [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] allow ICommandWithParameters::GetParameterInfo to obtain more accurate descriptions of the expected results. These more accurate results may differ from the values returned by CommandWithParameters::GetParameterInfo in previous versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For more information, see [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
- Also beginning in [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)], when calling ICommandWithParameters::SetParameterInfo, the value passed to the *pwszName* parameter must be a valid identifier. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+ Also beginning in [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)], when calling ICommandWithParameters::SetParameterInfo, the value passed to the *pwszName* parameter must be a valid identifier. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ## See Also  
- [Interfaces &#40;OLE DB&#41;](../Topic/Interfaces%20\(OLE%20DB\).md)  
+ [Interfaces &#40;OLE DB&#41;](../../a9retired/interfaces-ole-db.md)  
   
   

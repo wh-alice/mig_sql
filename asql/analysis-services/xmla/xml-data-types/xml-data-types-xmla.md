@@ -31,19 +31,19 @@ manager: "erikre"
 |----------------|-----------------|  
 |Boolean|The standard XML **boolean** data type.|  
 |Decimal|The standard XML **decimal** data type.|  
-|[EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|A namespace on the **root** element. This namespace is returned when an XMLA command does not return a result because either the XMLA command does not normally return a result or because an error occurred on the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance while executing the XMLA command.|  
+|[EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|A namespace on the **root** element. This namespace is returned when an XMLA command does not return a result because either the XMLA command does not normally return a result or because an error occurred on the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance while executing the XMLA command.|  
 |[EnumString](../../../analysis-services/xmla/xml-data-types/enumstring-data-type-xmla.md)|A set of named string constants for a given enumerator.|  
 |Integer|The standard XML **int** data type.|  
-|[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)|Multidimensional data returned by the *Result* parameter of the [Execute](../Topic/Execute%20Method%20\(XMLA\).md) method.|  
+|[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)|Multidimensional data returned by the *Result* parameter of the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.|  
 |[Resultset](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|A self-describing XML result set returned by the **Execute** method.|  
-|[Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)|Rows from a data source, structured by an embedded XML schema, returned by the [Discover](../Topic/Discover%20Method%20\(XMLA\).md) method.|  
+|[Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)|Rows from a data source, structured by an embedded XML schema, returned by the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method.|  
 |String|The XML **string** data type.|  
 |UnsignedInt|The XML **unsignedInt** schema type.|  
   
  For complete descriptions of the standard XML data types, see the World Wide Web Consortium (WC3) candidate recommendation.  
   
 ## See Also  
- [XML Elements &#40;XMLA&#41;](../Topic/XML%20Elements%20\(XMLA\).md)   
+ [XML Elements &#40;XMLA&#41;](../../../a9retired/xml-elements-xmla.md)   
  [XML for Analysis  &#40;XMLA&#41; Reference](../../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
   
   

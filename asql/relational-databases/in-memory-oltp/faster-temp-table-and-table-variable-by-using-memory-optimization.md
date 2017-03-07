@@ -15,7 +15,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Faster temp table and table variable by using memory optimization
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
 If you use temporary tables, table variables, or table-valued parameters, consider conversions of them to leverage memory-optimized tables and table variables to improve performance. The code changes are usually minimal.  
@@ -294,7 +294,7 @@ The following script creates the filegroup for you and configures recommended da
   
 For more information about `ALTER DATABASE ... ADD` for FILE and FILEGROUP, see:  
   
-- [ALTER DATABASE File and Filegroup Options (Transact-SQL)](ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20(Transact-SQL).xml)  
+- [ALTER DATABASE File and Filegroup Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
 - [The Memory Optimized Filegroup](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)    
   
   

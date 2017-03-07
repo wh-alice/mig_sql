@@ -31,7 +31,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Handling Events Programmatically
-  The [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] runtime provides a collection of events that occur before, during, and after the validation and execution of a package. These events can be captured in two ways. The first method is by implementing the <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> interface in a class, and supplying the class as a parameter to the **Execute** and **Validate** methods of the package. The second method is by creating <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> objects, which can contain other [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] objects, such as tasks and loops, that are executed when an event in <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> occurs. This section describes these two methods and provides code examples to demonstrate their use.  
+  The [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] runtime provides a collection of events that occur before, during, and after the validation and execution of a package. These events can be captured in two ways. The first method is by implementing the <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> interface in a class, and supplying the class as a parameter to the **Execute** and **Validate** methods of the package. The second method is by creating <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> objects, which can contain other [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] objects, such as tasks and loops, that are executed when an event in <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> occurs. This section describes these two methods and provides code examples to demonstrate their use.  
   
 ## Receiving IDTSEvents Callbacks  
  Developers who build and execute packages programmatically can receive event notifications during the validation and execution process using the <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> interface. This is done by creating a class that implements the <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> interface and providing this class as a parameter to the **Validate** and **Execute** methods of a package. The methods of the class are then called by the run-time engine when the events occur.  
@@ -248,10 +248,10 @@ End Module
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] page on MSDN:<br /><br /><br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] page on MSDN:<br /><br /><br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Event Handlers](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Add an Event Handler to a Package](../Topic/Add%20an%20Event%20Handler%20to%20a%20Package.md)  
+ [Add an Event Handler to a Package](../../a9retired/add-an-event-handler-to-a-package.md)  
   
   

@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Derive a Template from a Trace File or Trace Table (SQL Server Profiler)
-  This topic describes how to create a trace template from an existing trace file or table by using [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)].  
+  This topic describes how to create a trace template from an existing trace file or table by using [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)].  
   
 ### To derive a template from a trace file or trace table  
   

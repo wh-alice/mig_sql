@@ -25,15 +25,15 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # ADD SIGNATURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adds a digital signature to a stored procedure, function, assembly, or trigger. Also adds a countersignature to a stored procedure, function, assembly, or trigger.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://msdn.microsoft.com/library/bb500435.aspx)), [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://msdn.microsoft.com/library/bb500435.aspx)), [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -100,7 +100,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 -   Signing ProcSelectT1ForAlice would not work by itself, because the signature would be lost in the call to procSelectT1.  
   
- However, by countersigning procSelectT1 with the same certificate used to sign ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will keep the signature across the call chain and will allow access to T1. If Alice attempts to call procSelectT1 directly, she cannot access T1, because the countersignature doesn't grant any rights. Example C below, shows the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] for this example.  
+ However, by countersigning procSelectT1 with the same certificate used to sign ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will keep the signature across the call chain and will allow access to T1. If Alice attempts to call procSelectT1 directly, she cannot access T1, because the countersignature doesn't grant any rights. Example C below, shows the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] for this example.  
   
 ## Permissions  
  Requires ALTER permission on the object and CONTROL permission on the certificate or asymmetric key. If an associated private key is protected by a password, the user also must have the password.  
@@ -250,7 +250,7 @@ DROP LOGIN Alice;
 ```  
   
 ## See Also  
- [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.crypt-properties-transact-sql.md)   
+ [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.crypt-properties-transact-sql.md)   
  [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
   
   

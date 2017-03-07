@@ -20,7 +20,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Step 1: Download the Sample Data (In-Database Advanced Analytics Tutorial)
-In this step, you'll download the sample dataset and the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] script files that are used in this walkthrough. Both the data and the script files are shared on Github, but the PowerShell script will download the data and script files to a local directory of your choosing.  
+In this step, you'll download the sample dataset and the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] script files that are used in this walkthrough. Both the data and the script files are shared on Github, but the PowerShell script will download the data and script files to a local directory of your choosing.  
   
 ## Download the Data and Scripts  
   
@@ -62,7 +62,7 @@ In this step, you'll download the sample dataset and the [!INCLUDE[tsql](../../.
     ![list of files downloaded by PowerShell script](../../../advanced-analytics/r-services/tutorials/media/rsql-devtut-filelist.PNG "list of files downloaded by PowerShell script")  
   
 ## Next Step  
-[Step 2: Import Data to SQL Server using PowerShell](../Topic/Step%202:%20Import%20Data%20to%20SQL%20Server%20using%20PowerShell%20(In-Database%20Advanced%20Analytics%20Tutorial).md)  
+[Step 2: Import Data to SQL Server using PowerShell](../../../advanced-analytics/r-services/tutorials/step-2-import-data-to-sql-server-using-powershell.md)  
   
 ## Previous Step  
 [In-Database Advanced Analytics for SQL Developers &#40;Tutorial&#41;](../../../advanced-analytics/r-services/tutorials/in-database-advanced-analytics-for-sql-developers-tutorial.md)  

@@ -24,11 +24,11 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Configure and Administer a Report Server (SSRS Native Mode)
-  This topic summarizes the approaches that you can use to configure [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]. It also includes a list of topics that explain how to configure specific components, features, or server capabilities. To configure [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], you can:  
+  This topic summarizes the approaches that you can use to configure [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]. It also includes a list of topics that explain how to configure specific components, features, or server capabilities. To configure [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)], you can:  
   
 -   Use the Reporting Services Configuration Manager. Many of the topics in this section contain information about how to configure specific features through this tool.  
   
--   Use [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] to customize server properties, enable My Reports, enable trace logs, and set site-wide defaults. For more information about site settings, see [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md) for Management Studio. Note that you can create and run script that sets server properties programmatically. For more information, see [Script Deployment and Administrative Tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md) and [Report Server System Properties](../Topic/Report%20Server%20System%20Properties.md).  
+-   Use [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] to customize server properties, enable My Reports, enable trace logs, and set site-wide defaults. For more information about site settings, see [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md) for Management Studio. Note that you can create and run script that sets server properties programmatically. For more information, see [Script Deployment and Administrative Tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md) and [Report Server System Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
   
 -   Use Report Manager to grant permissions to access the report server. Permissions are conveyed through role assignments that you define for each user or group account. For more information, see [Roles and Permissions &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
@@ -41,7 +41,7 @@ manager: "erikre"
  [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  Provides recommendations and steps on how to modify service account and password.  
   
- [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../Topic/Create%20a%20Report%20Server%20Database%20%20\(SSRS%20Configuration%20Manager\).md)  
+ [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/ssrs-report-server-create-a-report-server-database.md)  
  Describes how to create a report server database, required for storing server metadata and objects.  
   
  [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  

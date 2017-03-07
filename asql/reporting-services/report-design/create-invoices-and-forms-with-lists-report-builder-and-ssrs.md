@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Create Invoices and Forms with Lists (Report Builder and SSRS)
-  A list data region repeats with each group or row in the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report dataset. A list can be used to create free-form reports or forms, such as invoices, or in conjunction with other data regions. You can define lists that contain any number of report items. A list can be nested wit  
+  A list data region repeats with each group or row in the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report dataset. A list can be used to create free-form reports or forms, such as invoices, or in conjunction with other data regions. You can define lists that contain any number of report items. A list can be nested wit  
   
  To quickly get started with lists, see [Tutorial: Creating a Free Form Report &#40;Report Builder&#41;](../../reporting-services/tutorials/tutorial-creating-a-free-form-report-report-builder.md).  
   
@@ -63,7 +63,7 @@ manager: "erikre"
   
   
 ## See Also  
- [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../Topic/Aggregate%20Functions%20Reference%20\(Report%20Builder%20and%20SSRS\).md)   
+ [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

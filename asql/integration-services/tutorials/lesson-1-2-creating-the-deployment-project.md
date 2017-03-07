@@ -17,13 +17,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Lesson 1-2 - Creating the Deployment Project
-In [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)], the deployable unit is an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project. Before you can deploy packages, you must create a new [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project and add all the packages and any ancillary files that you want to deploy with the packages to that project.  
+In [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)], the deployable unit is an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project. Before you can deploy packages, you must create a new [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project and add all the packages and any ancillary files that you want to deploy with the packages to that project.  
   
 ### To create the Integration Services project  
   
 1.  Click **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then click **SQL ServerSQL Server Data Tools**.  
   
-2.  On the **File** menu, point to **New**, and then click **Project** to create a new [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project.  
+2.  On the **File** menu, point to **New**, and then click **Project** to create a new [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project.  
   
 3.  In the **New Project** dialog box, select **Integration Services Project** in the **Templates** pane.  
   
@@ -38,7 +38,7 @@ In [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnov
 8.  By default, an empty package, named Package.dtsx, is created and added to your project. However, you will not use this package; instead, you will add existing packages to the project. Because all the packages in a project will be included in the deployment, you should delete Package.dtsx. To delete it, right-click it, and then click **Delete**.  
   
 ## Next Task in Lesson  
-[Step 3: Adding Packages and Other Files](../Topic/Step%203:%20Adding%20Packages%20and%20Other%20Files.md)  
+[Step 3: Adding Packages and Other Files](../../integration-services/tutorials/lesson-1-3-adding-packages-and-other-files.md)  
   
 ## See Also  
 [Integration Services &#40;SSIS&#41; Projects](../Topic/Integration%20Services%20(SSIS)%20Projects.md)  

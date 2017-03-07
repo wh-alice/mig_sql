@@ -26,7 +26,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Primary Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   The XQuery primary expressions include literals, variable references, context item expressions, constructors, and function calls.  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
  A string literal can also contain a character reference, an XML-style reference to a Unicode character, that is identified by its decimal or hexadecimal code point. For example, the Euro symbol can be represented by the character reference, "&\#8364;".  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses XML version 1.0 as the basis for parsing.  
+>  [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] uses XML version 1.0 as the basis for parsing.  
   
 ### Examples  
  The following examples illustrate the use of literals and also entity and character references.  
@@ -150,7 +150,7 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
   
 -   Module import is not supported.  
   
--   External variable declarations are not supported. A solution to this is to use the [sql:variable() function](../Topic/sql:variable\(\)%20Function%20\(XQuery\).md).  
+-   External variable declarations are not supported. A solution to this is to use the [sql:variable() function](../xquery/xquery-extension-functions-sql-variable.md).  
   
 ## Context Item Expressions  
  The context item is the item currently being processed in the context of a path expression. It is initialized in a not-NULL XML data type instance with the document node. It can also be changed by the nodes() method, in the context of XPath expressions or the [] predicates.  
@@ -171,7 +171,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## Function Calls  
- You can call built-in XQuery functions and the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] sql:variable() and sql:column() functions. For a list of implemented functions, see [XQuery Functions against the xml Data Type](../xquery/xquery-functions-against-the-xml-data-type.md).  
+ You can call built-in XQuery functions and the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] sql:variable() and sql:column() functions. For a list of implemented functions, see [XQuery Functions against the xml Data Type](../xquery/xquery-functions-against-the-xml-data-type.md).  
   
 #### Implementation Limitations  
  These are the implementation limitations:  

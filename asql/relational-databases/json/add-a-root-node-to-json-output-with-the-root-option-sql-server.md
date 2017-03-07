@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Add a Root Node to JSON Output with the ROOT Option (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   To add a single, top-level element to the JSON output of the **FOR JSON** clause, specify the **ROOT** option.  
   
@@ -150,6 +150,6 @@ SELECT TOP 5
 ```  
   
 ## See Also  
- [FOR Clause &#40;Transact-SQL&#41;](../Topic/FOR%20Clause%20\(Transact-SQL\).md)  
+ [FOR Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  
   
   

@@ -16,7 +16,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Merge Conflicts (MDS Add-in for Excel)
-  In the [!INCLUDE[ssMDSshort](../../analysis-services/includes/ssmdsshort-md.md)] Add-in for Excel, if data has been changed on the server by another user, the publish will fail with a conflict error. To resolve this error, you can perform merge conflicts and republish the changes.  
+  In the [!INCLUDE[ssMDSshort](../../a9notintoc/includes/ssmdsshort-md.md)] Add-in for Excel, if data has been changed on the server by another user, the publish will fail with a conflict error. To resolve this error, you can perform merge conflicts and republish the changes.  
   
 ## Prerequisites  
  To perform this procedure:  

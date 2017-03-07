@@ -23,19 +23,19 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Configure a Native Mode Report Server for Local Administration (SSRS)
-  Deploying a [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report server on one of the following operating systems requires more configuration steps if you want to administer the report server instance locally. This topic explains how to configure the report server for local administration. If you have not yet installed or configured the report server, see [Install SQL Server 2016 from the Installation Wizard &#40;Setup&#41;](../Topic/Install%20SQL%20Server%202016%20from%20the%20Installation%20Wizard%20\(Setup\).md) and [Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
+  Deploying a [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] report server on one of the following operating systems requires more configuration steps if you want to administer the report server instance locally. This topic explains how to configure the report server for local administration. If you have not yet installed or configured the report server, see [Install SQL Server 2016 from the Installation Wizard &#40;Setup&#41;](../../database-engine/install/windows/install-sql-server-from-the-installation-wizard-setup.md) and [Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../analysis-services/includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Native mode|  
+|**[!INCLUDE[applies](../../a9retired/includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] Native mode|  
   
--   [!INCLUDE[winblue_server_2](../../master-data-services/includes/winblue-server-2-md.md)]  
+-   [!INCLUDE[winblue_server_2](../../a9retired/includes/winblue-server-2-md.md)]  
   
--   [!INCLUDE[winblue_client_2](../../reporting-services/report-server/includes/winblue-client-2-md.md)]  
+-   [!INCLUDE[winblue_client_2](../../a9notintoc/includes/winblue-client-2-md.md)]  
   
--   [!INCLUDE[win8](../../database-engine/availability-groups/windows/includes/win8-md.md)]  
+-   [!INCLUDE[win8](../../a9notintoc/includes/win8-md.md)]  
   
--   [!INCLUDE[win8srv](../../database-engine/availability-groups/windows/includes/win8srv-md.md)]  
+-   [!INCLUDE[win8srv](../../a9notintoc/includes/win8srv-md.md)]  
   
 -   [!INCLUDE[winserver2008r2](../../database-engine/configure/windows/includes/winserver2008r2-md.md)]  
   
@@ -60,7 +60,7 @@ manager: "erikre"
 ##  <a name="bkmk_configuraiton_overview"></a> Overview of Configuration Changes  
  The following configuration changes configure the server so that you can use standard user permissions to manage report server content and operations:  
   
--   Add [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] URLs to trusted sites. By default, Internet Explorer running on the listed operating systems runs in **Protected Mode**, a feature that blocks browser requests from reaching high-level processes that run on the same computer. You can disable protected mode for the report server applications by adding them as Trusted Sites.  
+-   Add [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] URLs to trusted sites. By default, Internet Explorer running on the listed operating systems runs in **Protected Mode**, a feature that blocks browser requests from reaching high-level processes that run on the same computer. You can disable protected mode for the report server applications by adding them as Trusted Sites.  
   
 -   Create role assignments that grant you, the report server administrator, permission to manage content and operations without having to use the **Run as administrator** feature on Internet Explorer. By creating role assignments for your Windows user account, you gain access to a report server with Content Manager and System Administrator permissions through explicit role assignments that replace the predefined, built-in role assignments that Reporting Services creates.  
   
@@ -75,7 +75,7 @@ manager: "erikre"
   
 2.  Click **Allow** to continue.  
   
-3.  In the URL address, enter the Report Manager URL. For instructions, see [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md) in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Books Online.  
+3.  In the URL address, enter the Report Manager URL. For instructions, see [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md) in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Books Online.  
   
 4.  Click **Tools**.  
   
@@ -93,7 +93,7 @@ manager: "erikre"
   
 11. Click **Add**.  
   
-12. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+12. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ###  <a name="bkmk_configure_folder_settings"></a> Report Manager Folder Settings  
   
@@ -107,7 +107,7 @@ manager: "erikre"
   
 5.  Select **Content Manager**.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ###  <a name="bkmk_configure_site_settings"></a> Report Manager Site Settings  
   
@@ -126,20 +126,20 @@ manager: "erikre"
   
 6.  Select **System Administrator**.  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 8.  Close Report Manager.  
   
 9. Re-open Report Manager in Internet Explorer, without using **Run as administrator**.  
   
 ##  <a name="bkmk_configure_ssms"></a> To Configure SQL Server Management Studio (SSMS) for local report server administration  
- By default, you cannot access all of the report server properties available in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] unless you start [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] with administrative privileges.  
+ By default, you cannot access all of the report server properties available in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] unless you start [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] with administrative privileges.  
   
- **To configure [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]** role properties and role assignments so you do not need to start [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] with elevated permissions each time:  
+ **To configure [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]** role properties and role assignments so you do not need to start [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] with elevated permissions each time:  
   
--   From the **Start** menu, click **All Programs**, click **SQL Server 2014**, right-click **[!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)]**, and then click **Run as administrator**.  
+-   From the **Start** menu, click **All Programs**, click **SQL Server 2014**, right-click **[!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)]**, and then click **Run as administrator**.  
   
--   Connect to your local [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] server.  
+-   Connect to your local [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] server.  
   
 -   In the **Security** node, click **System Roles**.  
   
@@ -149,14 +149,14 @@ manager: "erikre"
   
 -   Click **OK**.  
   
--   Close [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)]  
+-   Close [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)]  
   
 -   To add a user to the system role "system administrator", see the [Report Manager Site Settings](#bkmk_configure_site_settings) section earlier in this topic.  
   
- Now when you open [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] and do not explicitly select **Run as administrator** you have access to the report server properties.  
+ Now when you open [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] and do not explicitly select **Run as administrator** you have access to the report server properties.  
   
 ##  <a name="bkmk_configure_ssdt"></a> To Configure SQL Server Data Tools (SSDT) to Publish to a Local Report Server  
- If you installed [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)] on one of the operating systems listed in the first section of this topic, and you want SSDT to interact with a local Native mode report server, you will experiences permission errors unless you open [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] with elevated permissions or configure reporting services roles. For example, if you do not have sufficient permissions, you experience issues similar to the following:  
+ If you installed [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)] on one of the operating systems listed in the first section of this topic, and you want SSDT to interact with a local Native mode report server, you will experiences permission errors unless you open [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] with elevated permissions or configure reporting services roles. For example, if you do not have sufficient permissions, you experience issues similar to the following:  
   
 -   When you attempt to deploy report items to the local report server, you see an error message similar to the following in the **Error List** window:  
   
@@ -172,12 +172,12 @@ manager: "erikre"
   
  You should now be able to deploy reports and other items to a local report server.  
   
- **To configure [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] role assignments so you do not need to start SSDT with elevated permissions each time:**  
+ **To configure [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] role assignments so you do not need to start SSDT with elevated permissions each time:**  
   
 -   See the [Report Manager Folder Settings](#bkmk_configure_folder_settings) and [Report Manager Site Settings](#bkmk_configure_site_settings) sections earlier in this topic.  
   
 ##  <a name="bkmk_addiitonal_informaiton"></a> Additional Information  
- An additional and common configuration step related to [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] administration is to open port 80 in Windows Firewall to allow access to the report server computer. For instructions, see [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
+ An additional and common configuration step related to [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] administration is to open port 80 in Windows Firewall to allow access to the report server computer. For instructions, see [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
 ## See Also  
  [Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  

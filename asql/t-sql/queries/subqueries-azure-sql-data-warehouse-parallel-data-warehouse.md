@@ -15,9 +15,9 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # Subqueries (Azure SQL Data Warehouse, Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../a9retired/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  This topic gives examples of using subqueries in [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)].  
+  This topic gives examples of using subqueries in [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)].  
   
  For the SELECT statement, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
@@ -37,8 +37,8 @@ manager: "jhubbard"
  Correlated subquery  
  A subquery that refers to a table in the outer query.  
   
-##  <a name="Examples"></a> Examples: [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
- This section provides examples of subqueries supported in [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)].  
+##  <a name="Examples"></a> Examples: [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
+ This section provides examples of subqueries supported in [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)].  
   
 ### A. TOP and ORDER BY in a subquery  
   

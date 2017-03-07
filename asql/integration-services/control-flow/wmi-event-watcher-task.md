@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 -   Watch for installation of an application, and then run a package that uses the application.  
   
- [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] includes a task that reads WMI information.  
+ [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] includes a task that reads WMI information.  
   
  For more information about this task, click the following topic:  
   
@@ -68,11 +68,11 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   Specify the source of the WQL query. The source can be external to the task, a variable or a file, or the query can be stored in a task property.  
   
--   Specify the action that the task takes when the WMI event occurs. You can log the event notification and the status after the event, or raise custom [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] events that provide information associated with the WMI event, the notification, and the status after the event.  
+-   Specify the action that the task takes when the WMI event occurs. You can log the event notification and the status after the event, or raise custom [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] events that provide information associated with the WMI event, the notification, and the status after the event.  
   
 -   Define how the task responds to the event. The task can be configured to succeed or fail, depending on the event, or the task can just watch for the event again.  
   
--   Specify the action the task takes when the WMI query times out. You can log the time-out and the status after time-out, or raise a custom [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] event, indicating that the WMI event timed out and logging the time-out and time-out status.  
+-   Specify the action the task takes when the WMI query times out. You can log the time-out and the status after time-out, or raise a custom [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] event, indicating that the WMI event timed out and logging the time-out and time-out status.  
   
 -   Define how the task responds to the time-out. The task can be configured to succeed or fail, or the task can just watch for the event again.  
   
@@ -84,9 +84,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  The WMI Event Watcher task uses a WMI connection manager to connect to the server from which it reads WMI information. For more information, see [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md).  
   
- You can set properties through [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click one of the following topics:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [WMI Event Watcher Task Editor &#40;General Page&#41;](../../integration-services/control-flow/wmi-event-watcher-task-editor-general-page.md)  
   
@@ -94,9 +94,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   [Expressions Page](../../integration-services/expressions/expressions-page.md)  
   
- For more information about how to set these properties in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Set the Properties of a Task or Container](../../a9retired/set-the-properties-of-a-task-or-container.md)  
   
 ## Programmatic Configuration of the WMI Event Watcher Task  
  For more information about programmatically setting these properties, click the following topic:  

@@ -127,4 +127,4 @@ namespace TOMSamples
 
 ## Next step 
 
-Within a model, you’ll need to set up data bindings that map source columns in the data source to destination columns in the model. You will also need to define the partitions, a minimum of one per table, that store the data. The following link shows you how: [Create tables, partitions, and columns](Create%20Tables,%20Partitions,%20and%20Columns%20in%20a%20Tabular%20model%20\(Analysis%20Services%20AMO-TOM\).md) 
+Within a model, you’ll need to set up data bindings that map source columns in the data source to destination columns in the model. You will also need to define the partitions, a minimum of one per table, that store the data. The following link shows you how: [Create tables, partitions, and columns](../../analysis-services/tabular-model-programming-compatibility-level-1200/create-tables-partitions-and-columns-in-a-tabular-model.md) 

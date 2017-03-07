@@ -16,7 +16,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # ConfigurationSetting Method - SetExtendedProtectionSettings
-  The SetExtendedProtectionSettings method is used to set the RSWindowsExtendedProtectionLevel and the RSWindowsExtendedProtectionScenario properties in the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] configuration file RSReportServer.config.  
+  The SetExtendedProtectionSettings method is used to set the RSWindowsExtendedProtectionLevel and the RSWindowsExtendedProtectionScenario properties in the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] configuration file RSReportServer.config.  
   
 ## Syntax  
   
@@ -62,8 +62,8 @@ public void SetExtendedProtectionSettings(
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../reporting-services/wmi-provider-library-reference/includes/ssrswminmspca-md.md)]  
   
 ## See Also  
- [RSWindowsExtendedProtectionScenario Property &#40;WMI MSReportServer_ConfigurationSetting&#41;](../Topic/RSWindowsExtendedProtectionScenario%20Property%20\(WMI%20MSReportServer_ConfigurationSetting\).md)   
- [RSWindowsExtendedProtectionLevel Property &#40;WMI MSReportServer_ConfigurationSetting&#41;](../Topic/RSWindowsExtendedProtectionLevel%20Property%20\(WMI%20MSReportServer_ConfigurationSetting\).md)   
+ [RSWindowsExtendedProtectionScenario Property &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-rswindowsextendedprotectionscenario.md)   
+ [RSWindowsExtendedProtectionLevel Property &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-rswindowsextendedprotectionlevel.md)   
  [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver.config-configuration-file.md)  
   

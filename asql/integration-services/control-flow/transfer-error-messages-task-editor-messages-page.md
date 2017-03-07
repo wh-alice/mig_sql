@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transfer Error Messages Task Editor (Messages Page)
-  Use the **Messages** page of the **Transfer Error Messages Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] user-defined error messages from one instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to another. For more information about this task, see [Transfer Error Messages Task](../../integration-services/control-flow/transfer-error-messages-task.md).  
+  Use the **Messages** page of the **Transfer Error Messages Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] user-defined error messages from one instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to another. For more information about this task, see [Transfer Error Messages Task](../../integration-services/control-flow/transfer-error-messages-task.md).  
   
 ## Options  
  **SourceConnection**  

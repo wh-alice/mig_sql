@@ -16,7 +16,7 @@ ms.author: "carlrab"
 manager: "jhubbard"
 ---
 # Monitoring Memory-Optimized System-Versioned Temporal Tables
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   You can use existing views to track detailed and summarized memory consumption for every system-versioned memory-optimized table.  
   

@@ -22,9 +22,9 @@ ms.author: "carlasab"
 manager: "erikre"
 ---
 # Using the Detail Property to Handle Specific Errors
-  To further classify exceptions, [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] returns additional error information in the **InnerText** property of the child elements in the SOAP exception's **Detail** property. Because the **Detail** property is an **XmlNode** object, you can access the inner text of the **Message** child element using the following code.  
+  To further classify exceptions, [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] returns additional error information in the **InnerText** property of the child elements in the SOAP exception's **Detail** property. Because the **Detail** property is an **XmlNode** object, you can access the inner text of the **Message** child element using the following code.  
   
- For a list of all of the available child elements contained in the **Detail** property, see [Detail Property](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md). For more information, see "Detail Property" in the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] SDK documentation.  
+ For a list of all of the available child elements contained in the **Detail** property, see [Detail Property](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md). For more information, see "Detail Property" in the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] SDK documentation.  
   
 ```vb#  
 Try  

@@ -28,15 +28,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # MOVE CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Moves a conversation to a different conversation group.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -58,7 +58,7 @@ MOVE CONVERSATION conversation_handle
  The MOVE CONVERSATION statement moves the conversation specified by *conversation_handle* to the conversation group identified by *conversation_group_id*. Dialogs can be only be redirected between conversation groups that are associated with the same queue.  
   
 > [!IMPORTANT]  
->  If the MOVE CONVERSATION statement is not the first statement in a batch or stored procedure, the preceding statement must be terminated with a semicolon (**;**), the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement terminator.  
+>  If the MOVE CONVERSATION statement is not the first statement in a batch or stored procedure, the preceding statement must be terminated with a semicolon (**;**), the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement terminator.  
   
  The MOVE CONVERSATION statement locks the conversation group associated with *conversation_handle* and the conversation group specified by *conversation_group_id* until the transaction containing the statement commits or rolls back.  
   
@@ -86,7 +86,7 @@ MOVE CONVERSATION @conversation_handle TO @conversation_group_id ;
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.conversation-groups-transact-sql.md)   
- [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.conversation-endpoints-transact-sql.md)  
+ [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.conversation-groups-transact-sql.md)   
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.conversation-endpoints-transact-sql.md)  
   
   

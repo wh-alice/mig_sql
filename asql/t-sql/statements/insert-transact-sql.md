@@ -36,11 +36,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Adds one or more rows to a table or a view in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For examples, see [Examples](#InsertExamples).  
+  Adds one or more rows to a table or a view in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For examples, see [Examples](#InsertExamples).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -141,16 +141,16 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
  *server_name*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
- Is the name of the linked server on which the table or view is located. *server_name* can be specified as a [linked server](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) name, or by using the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) function.  
+ Is the name of the linked server on which the table or view is located. *server_name* can be specified as a [linked server](../../relational-databases/reference/system-stored-procedures/sp-addlinkedserver-transact-sql.md) name, or by using the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) function.  
   
  When *server_name* is specified as a linked server, *database_name* and *schema_name* are required. When *server_name* is specified with OPENDATASOURCE, *database_name* and *schema_name* may not apply to all data sources and is subject to the capabilities of the OLE DB provider that accesses the remote object.  
   
  *database_name*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Is the name of the database.  
   
@@ -167,24 +167,24 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
  *rowset_function_limited*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Is either the [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) function. Use of these functions is subject to the capabilities of the OLE DB provider that accesses the remote object.  
   
  WITH ( <table_hint_limited> [... *n* ] )  
  Specifies one or more table hints that are allowed for a target table. The WITH keyword and the parentheses are required.  
   
- READPAST, NOLOCK, and READUNCOMMITTED are not allowed. For more information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+ READPAST, NOLOCK, and READUNCOMMITTED are not allowed. For more information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 > [!IMPORTANT]  
->  The ability to specify the HOLDLOCK, SERIALIZABLE, READCOMMITTED, REPEATABLEREAD, or UPDLOCK hints on tables that are targets of INSERT statements will be removed in a future version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. These hints do not affect the performance of INSERT statements. Avoid using them in new development work, and plan to modify applications that currently use them.  
+>  The ability to specify the HOLDLOCK, SERIALIZABLE, READCOMMITTED, REPEATABLEREAD, or UPDLOCK hints on tables that are targets of INSERT statements will be removed in a future version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. These hints do not affect the performance of INSERT statements. Avoid using them in new development work, and plan to modify applications that currently use them.  
   
  Specifying the TABLOCK hint on a table that is the target of an INSERT statement has the same effect as specifying the TABLOCKX hint. An exclusive lock is taken on the table.  
   
  (*column_list*)  
  Is a list of one or more columns in which to insert data. *column_list* must be enclosed in parentheses and delimited by commas.  
   
- If a column is not in *column_list*, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] must be able to provide a value based on the definition of the column; otherwise, the row cannot be loaded. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] automatically provides a value for the column if the column:  
+ If a column is not in *column_list*, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] must be able to provide a value based on the definition of the column; otherwise, the row cannot be loaded. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] automatically provides a value for the column if the column:  
   
 -   Has an IDENTITY property. The next incremental identity value is used.  
   
@@ -208,21 +208,21 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
   
  If the values in the Value list are not in the same order as the columns in the table or do not have a value for each column in the table, *column_list* must be used to explicitly specify the column that stores each incoming value.  
   
- You can use the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] row constructor (also called a table value constructor) to specify multiple rows in a single INSERT statement. The row constructor consists of a single VALUES clause with multiple value lists enclosed in parentheses and separated by a comma. For more information, see [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
+ You can use the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] row constructor (also called a table value constructor) to specify multiple rows in a single INSERT statement. The row constructor consists of a single VALUES clause with multiple value lists enclosed in parentheses and separated by a comma. For more information, see [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
  DEFAULT  
- Forces the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] to load the default value defined for a column. If a default does not exist for the column and the column allows null values, NULL is inserted. For a column defined with the **timestamp** data type, the next timestamp value is inserted. DEFAULT is not valid for an identity column.  
+ Forces the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] to load the default value defined for a column. If a default does not exist for the column and the column allows null values, NULL is inserted. For a column defined with the **timestamp** data type, the next timestamp value is inserted. DEFAULT is not valid for an identity column.  
   
  *expression*  
  Is a constant, a variable, or an expression. The expression cannot contain an EXECUTE statement.  
   
- When referencing the Unicode character data types **nchar**, **nvarchar**, and **ntext**, '*expression*' should be prefixed with the capital letter 'N'. If 'N' is not specified, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] converts the string to the code page that corresponds to the default collation of the database or column. Any characters not found in this code page are lost.  
+ When referencing the Unicode character data types **nchar**, **nvarchar**, and **ntext**, '*expression*' should be prefixed with the capital letter 'N'. If 'N' is not specified, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] converts the string to the code page that corresponds to the default collation of the database or column. Any characters not found in this code page are lost.  
   
  *derived_table*  
  Is any valid SELECT statement that returns rows of data to be loaded into the table. The SELECT statement cannot contain a common table expression (CTE).  
   
  *execute_statement*  
- Is any valid EXECUTE statement that returns data with SELECT or READTEXT statements. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../Topic/EXECUTE%20\(Transact-SQL\).md).  
+ Is any valid EXECUTE statement that returns data with SELECT or READTEXT statements. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
  The RESULT SETS options of the EXECUTE statement cannot be specified in an INSERT…EXEC statement.  
   
@@ -264,35 +264,35 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
  DEFAULT VALUES  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Forces the new row to contain the default values defined for each column.  
   
  BULK  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
- Used by external tools to upload a binary data stream. This option is not intended for use with tools such as [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], SQLCMD, OSQL, or data access application programming interfaces such as [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client.  
+ Used by external tools to upload a binary data stream. This option is not intended for use with tools such as [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], SQLCMD, OSQL, or data access application programming interfaces such as [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client.  
   
  FIRE_TRIGGERS  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Specifies that any insert triggers defined on the destination table execute during the binary data stream upload operation. For more information, see [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
  CHECK_CONSTRAINTS  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Specifies that all constraints on the target table or view must be checked during the binary data stream upload operation. For more information, see [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
  KEEPNULLS  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Specifies that empty columns should retain a null value during the binary data stream upload operation. For more information, see [Keep Nulls or Use Default Values During Bulk Import &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
@@ -302,7 +302,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
  ROWS_PER_BATCH =*rows_per_batch*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Indicates the approximate number of rows of data in the binary data stream. For more information, see [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
@@ -343,7 +343,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
   
 -   The KEEPIDENTITY hint allows the identity values in the imported data file to be used for the identity column in the target table.  
   
- These optimizations are similar to those available with the BULK INSERT command. For more information, see [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+ These optimizations are similar to those available with the BULK INSERT command. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## Data Types  
  When you insert rows, consider the following data type behavior:  
@@ -362,14 +362,14 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
   
 -   Inserting a null value into a **text** or **image** column does not create a valid text pointer, nor does it preallocate an 8-KB text page.  
   
--   Columns created with the **uniqueidentifier** data type store specially formatted 16-byte binary values. Unlike with identity columns, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] does not automatically generate values for columns with the **uniqueidentifier** data type. During an insert operation, variables with a data type of **uniqueidentifier** and string constants in the form *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* (36 characters including hyphens, where *x* is a hexadecimal digit in the range 0-9 or a-f) can be used for **uniqueidentifier** columns. For example, 6F9619FF-8B86-D011-B42D-00C04FC964FF is a valid value for a **uniqueidentifier** variable or column. Use the [NEWID()](../../t-sql/functions/newid-transact-sql.md) function to obtain a globally unique ID (GUID).  
+-   Columns created with the **uniqueidentifier** data type store specially formatted 16-byte binary values. Unlike with identity columns, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] does not automatically generate values for columns with the **uniqueidentifier** data type. During an insert operation, variables with a data type of **uniqueidentifier** and string constants in the form *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* (36 characters including hyphens, where *x* is a hexadecimal digit in the range 0-9 or a-f) can be used for **uniqueidentifier** columns. For example, 6F9619FF-8B86-D011-B42D-00C04FC964FF is a valid value for a **uniqueidentifier** variable or column. Use the [NEWID()](../../t-sql/functions/newid-transact-sql.md) function to obtain a globally unique ID (GUID).  
   
 ### Inserting Values into User-Defined Type Columns  
  You can insert values in user-defined type columns by:  
   
 -   Supplying a value of the user-defined type.  
   
--   Supplying a value in a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system data type, as long as the user-defined type supports implicit or explicit conversion from that type. The following example shows how to insert a value in a column of user-defined type `Point`, by explicitly converting from a string.  
+-   Supplying a value in a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system data type, as long as the user-defined type supports implicit or explicit conversion from that type. The following example shows how to insert a value in a column of user-defined type `Point`, by explicitly converting from a string.  
   
     ```  
     INSERT INTO Cities (Location)  
@@ -392,7 +392,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
   
  If INSERT is loading multiple rows with SELECT or EXECUTE, any violation of a rule or constraint that occurs from the values being loaded causes the statement to be stopped, and no rows are loaded.  
   
- When an INSERT statement encounters an arithmetic error (overflow, divide by zero, or a domain error) occurring during expression evaluation, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] handles these errors as if SET ARITHABORT is set to ON. The batch is stopped, and an error message is returned. During expression evaluation when SET ARITHABORT and SET ANSI_WARNINGS are OFF, if an INSERT, DELETE or UPDATE statement encounters an arithmetic error, overflow, divide-by-zero, or a domain error, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] inserts or updates a NULL value. If the target column is not nullable, the insert or update action fails and the user receives an error.  
+ When an INSERT statement encounters an arithmetic error (overflow, divide by zero, or a domain error) occurring during expression evaluation, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] handles these errors as if SET ARITHABORT is set to ON. The batch is stopped, and an error message is returned. During expression evaluation when SET ARITHABORT and SET ANSI_WARNINGS are OFF, if an INSERT, DELETE or UPDATE statement encounters an arithmetic error, overflow, divide-by-zero, or a domain error, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] inserts or updates a NULL value. If the target column is not nullable, the insert or update action fails and the user receives an error.  
   
 ## Interoperability  
  When an INSTEAD OF trigger is defined on INSERT actions against a table or view, the trigger executes instead of the INSERT statement. For more information about INSTEAD OF triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
@@ -408,9 +408,9 @@ INSERT queries that use SELECT with ORDER BY to populate rows guarantees how ide
  The INSERT statement is always fully logged except when using the OPENROWSET function with the BULK keyword or when using INSERT INTO <target_table> SELECT \<columns> FROM <source_table>. These operations can be minimally logged. For more information, see the section "Best Practices for Bulk Loading Data" earlier in this topic.  
   
 ## Security  
- During a linked server connection, the sending server provides a login name and password to connect to the receiving server on its behalf. For this connection to work, you must create a login mapping between the linked servers by using [sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md).  
+ During a linked server connection, the sending server provides a login name and password to connect to the receiving server on its behalf. For this connection to work, you must create a login mapping between the linked servers by using [sp_addlinkedsrvlogin](../../relational-databases/reference/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md).  
   
- When you use OPENROWSET(BULK…), it is important to understand how [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] handles impersonation. For more information, see "Security Considerations" in [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk...-sql-server.md).  
+ When you use OPENROWSET(BULK…), it is important to understand how [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] handles impersonation. For more information, see "Security Considerations" in [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk...-sql-server.md).  
   
 ### Permissions  
  INSERT permission is required on the target table.  
@@ -436,7 +436,7 @@ INSERT queries that use SELECT with ORDER BY to populate rows guarantees how ide
  Examples in this section demonstrate the basic functionality of the INSERT statement using the minimum required syntax.  
   
 #### A. Inserting a single row of data  
- The following example inserts one row into the `Production.UnitMeasure` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. The columns in this table are `UnitMeasureCode`, `Name`, and `ModifiedDate`. Because values for all columns are supplied and are listed in the same order as the columns in the table, the column names do not have to be specified in the column list*.*  
+ The following example inserts one row into the `Production.UnitMeasure` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database. The columns in this table are `UnitMeasureCode`, `Name`, and `ModifiedDate`. Because values for all columns are supplied and are listed in the same order as the columns in the table, the column names do not have to be specified in the column list*.*  
   
 ```  
 INSERT INTO Production.UnitMeasure  
@@ -445,7 +445,7 @@ VALUES (N'FT', N'Feet', '20080414');
 ```  
   
 #### B. Inserting multiple rows of data  
- The following example uses the [table value constructor](../../t-sql/queries/table-value-constructor-transact-sql.md) to insert three rows into the `Production.UnitMeasure` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database in a single INSERT statement. Because values for all columns are supplied and are listed in the same order as the columns in the table, the column names do not have to be specified in the column list.  
+ The following example uses the [table value constructor](../../t-sql/queries/table-value-constructor-transact-sql.md) to insert three rows into the `Production.UnitMeasure` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database in a single INSERT statement. Because values for all columns are supplied and are listed in the same order as the columns in the table, the column names do not have to be specified in the column list.  
   
 ```  
 INSERT INTO Production.UnitMeasure  
@@ -454,7 +454,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923'), (N'Y
 ```  
   
 #### C. Inserting data that is not in the same order as the table columns  
- The following example uses a column list to explicitly specify the values that are inserted into each column. The column order in the `Production.UnitMeasure` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database is `UnitMeasureCode`, `Name`, `ModifiedDate`; however, the columns are not listed in that order in *column_list*.  
+ The following example uses a column list to explicitly specify the values that are inserted into each column. The column order in the `Production.UnitMeasure` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database is `UnitMeasureCode`, `Name`, `ModifiedDate`; however, the columns are not listed in that order in *column_list*.  
   
 ```  
 INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,  
@@ -520,7 +520,7 @@ GO
 ```  
   
 #### C. Inserting data into a uniqueidentifier column by using NEWID()  
- The following example uses the [NEWID](../../t-sql/functions/newid-transact-sql.md)() function to obtain a GUID for `column_2`. Unlike for identity columns, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] does not automatically generate values for columns with the [uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md) data type, as shown by the second `INSERT` statement.  
+ The following example uses the [NEWID](../../t-sql/functions/newid-transact-sql.md)() function to obtain a GUID for `column_2`. Unlike for identity columns, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] does not automatically generate values for columns with the [uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md) data type, as shown by the second `INSERT` statement.  
   
 ```  
 IF OBJECT_ID ('dbo.T1', 'U') IS NOT NULL  
@@ -542,7 +542,7 @@ FROM dbo.T1;
 ```  
   
 #### D. Inserting data into user-defined type columns  
- The following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements insert three rows into the `PointValue` column of the `Points` table. This column uses a [CLR user-defined type](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) (UDT). The `Point` data type consists of X and Y integer values that are exposed as properties of the UDT. You must use either the CAST or CONVERT function to cast the comma-delimited X and Y values to the `Point` type. The first two statements use the CONVERT function to convert a string value to the `Point` type, and the third statement uses the CAST function. For more information, see [Manipulating UDT Data](../Topic/Manipulating%20UDT%20Data.md).  
+ The following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements insert three rows into the `PointValue` column of the `Points` table. This column uses a [CLR user-defined type](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) (UDT). The `Point` data type consists of X and Y integer values that are exposed as properties of the UDT. You must use either the CAST or CONVERT function to cast the comma-delimited X and Y values to the `Point` type. The first two statements use the CONVERT function to convert a string value to the `Point` type, and the third statement uses the CAST function. For more information, see [Manipulating UDT Data](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md).  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -556,7 +556,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 #### A. Using the SELECT and EXECUTE options to insert data from other tables  
  The following example shows how to insert data from one table into another table by using INSERT…SELECT or INSERT…EXECUTE. Each is based on a multi-table SELECT statement that includes an expression and a literal value in the column list.  
   
- The first INSERT statement uses a SELECT statement to derive the data from the source tables (`Employee`, `SalesPerson`, and `Person`) in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database and store the result set in the `EmployeeSales` table. The second INSERT statement uses the EXECUTE clause to call a stored procedure that contains the SELECT statement, and the third INSERT uses the EXECUTE clause to reference the SELECT statement as a literal string.  
+ The first INSERT statement uses a SELECT statement to derive the data from the source tables (`Employee`, `SalesPerson`, and `Person`) in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database and store the result set in the `EmployeeSales` table. The second INSERT statement uses the EXECUTE clause to call a stored procedure that contains the SELECT statement, and the third INSERT uses the EXECUTE clause to reference the SELECT statement as a literal string.  
   
 ```  
 IF OBJECT_ID ('dbo.EmployeeSales', 'U') IS NOT NULL  
@@ -616,7 +616,7 @@ FROM dbo.EmployeeSales;
 ```  
   
 #### B. Using WITH common table expression to define the data inserted  
- The following example creates the `NewEmployee` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. A common table expression (`EmployeeTemp`) defines the rows from one or more tables to be inserted into the `NewEmployee` table. The INSERT statement references the columns in the common table expression.  
+ The following example creates the `NewEmployee` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database. A common table expression (`EmployeeTemp`) defines the rows from one or more tables to be inserted into the `NewEmployee` table. The INSERT statement references the columns in the common table expression.  
   
 ```  
 IF OBJECT_ID (N'HumanResources.NewEmployee', N'U') IS NOT NULL  
@@ -663,7 +663,7 @@ GO
 ```  
   
 #### C. Using TOP to limit the data inserted from the source table  
- The following example creates the table `EmployeeSales` and inserts the name and year-to-date sales data for the top 5 random employees from the table `HumanResources.Employee` in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. The INSERT statement chooses any 5 rows returned by the `SELECT` statement. The OUTPUT clause displays the rows that are inserted into the `EmployeeSales` table. Notice that the ORDER BY clause in the SELECT statement is not used to determine the top 5 employees.  
+ The following example creates the table `EmployeeSales` and inserts the name and year-to-date sales data for the top 5 random employees from the table `HumanResources.Employee` in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database. The INSERT statement chooses any 5 rows returned by the `SELECT` statement. The OUTPUT clause displays the rows that are inserted into the `EmployeeSales` table. Notice that the ORDER BY clause in the SELECT statement is not used to determine the top 5 employees.  
   
 ```  
 IF OBJECT_ID ('dbo.EmployeeSales', 'U') IS NOT NULL  
@@ -733,7 +733,7 @@ GO
 ```  
   
 #### B. Inserting data into a table variable  
- The following example specifies a table variable as the target object in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example specifies a table variable as the target object in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 -- Create the table variable.  
@@ -755,14 +755,14 @@ GO
 ```  
   
 ###  <a name="RemoteTables"></a> Inserting Rows into a Remote Table  
- Examples in this section demonstrate how to insert rows into a remote target table by using a [linked server](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../../t-sql/functions/rowset-functions-transact-sql.md) to reference the remote table.  
+ Examples in this section demonstrate how to insert rows into a remote target table by using a [linked server](../../relational-databases/reference/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../../t-sql/functions/rowset-functions-transact-sql.md) to reference the remote table.  
   
 #### A. Inserting data into a remote table by using a linked server  
- The following example inserts rows into a remote table. The example begins by creating a link to the remote data source by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). The linked server name, `MyLinkServer`, is then specified as part of the four-part object name in the form *server.catalog.schema.object*.  
+ The following example inserts rows into a remote table. The example begins by creating a link to the remote data source by using [sp_addlinkedserver](../../relational-databases/reference/system-stored-procedures/sp-addlinkedserver-transact-sql.md). The linked server name, `MyLinkServer`, is then specified as part of the four-part object name in the form *server.catalog.schema.object*.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 USE master;  
@@ -794,7 +794,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 INSERT OPENQUERY (MyLinkServer, 'SELECT Name, GroupName FROM AdventureWorks2012.HumanResources.Department')  
@@ -808,7 +808,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 -- Use the OPENDATASOURCE function to specify the remote data source.  
@@ -827,7 +827,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 -- Create an external table.   
@@ -905,7 +905,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 -- Use the OPENROWSET function to specify the data source and specifies the IGNORE_TRIGGERS table hint.  
@@ -919,17 +919,17 @@ FROM OPENROWSET (
 ```  
   
 ###  <a name="TableHints"></a> Overriding the Default Behavior of the Query Optimizer by Using Hints  
- Examples in this section demonstrate how to use [table hints](../Topic/Table%20Hints%20\(Transact-SQL\).md) to temporarily override the default behavior of the query optimizer when processing the INSERT statement.  
+ Examples in this section demonstrate how to use [table hints](../../t-sql/queries/hints-transact-sql-table.md) to temporarily override the default behavior of the query optimizer when processing the INSERT statement.  
   
 > [!CAUTION]  
->  Because the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that hints be used only as a last resort by experienced developers and database administrators.  
+>  Because the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that hints be used only as a last resort by experienced developers and database administrators.  
   
 #### A. Using the TABLOCK hint to specify a locking method  
  The following example specifies that an exclusive (X) lock is taken on the Production.Location table and is held until the end of the INSERT statement.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], [!INCLUDE[ssSDS_md](../../analysis-services/multidimensional-models/includes/sssds-md.md)].|  
+|**Applies to**: [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)], [!INCLUDE[ssSDS_md](../../a9retired/includes/sssds-md.md)].|  
   
 ```  
 INSERT INTO Production.Location WITH (XLOCK)  
@@ -942,7 +942,7 @@ VALUES ( N'Final Inventory', 15.00, 80.00);
  Examples in this section demonstrate how to use the [OUTPUT Clause](../../t-sql/queries/output-clause-transact-sql.md) to return information from, or expressions based on, each row affected by an INSERT statement. These results can be returned to the processing application for use in such things as confirmation messages, archiving, and other such application requirements.  
   
 #### A Using OUTPUT with an INSERT statement  
- The following example inserts a row into the `ScrapReason` table and uses the `OUTPUT` clause to return the results of the statement to the `@MyTableVar` table variable. Because the `ScrapReasonID` column is defined with an `IDENTITY` property, a value is not specified in the `INSERT` statement for that column. However, note that the value generated by the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] for that column is returned in the `OUTPUT` clause in the `INSERTED.ScrapReasonID` column.  
+ The following example inserts a row into the `ScrapReason` table and uses the `OUTPUT` clause to return the results of the statement to the `@MyTableVar` table variable. Because the `ScrapReasonID` column is defined with an `IDENTITY` property, a value is not specified in the `INSERT` statement for that column. However, note that the value generated by the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] for that column is returned in the `OUTPUT` clause in the `INSERTED.ScrapReasonID` column.  
   
 ```  
 DECLARE @MyTableVar table( NewScrapReasonID smallint,  
@@ -962,7 +962,7 @@ FROM Production.ScrapReason;
 ```  
   
 #### B. Using OUTPUT with identity and computed columns  
- The following example creates the `EmployeeSales` table and then inserts several rows into it using an INSERT statement with a SELECT statement to retrieve data from source tables. The `EmployeeSales` table contains an identity column (`EmployeeID`) and a computed column (`ProjectedSales`). Because these values are generated by the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] during the insert operation, neither of these columns can be defined in `@MyTableVar`.  
+ The following example creates the `EmployeeSales` table and then inserts several rows into it using an INSERT statement with a SELECT statement to retrieve data from source tables. The `EmployeeSales` table contains an identity column (`EmployeeID`) and a computed column (`ProjectedSales`). Because these values are generated by the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] during the insert operation, neither of these columns can be defined in `@MyTableVar`.  
   
 ```  
 IF OBJECT_ID ('dbo.EmployeeSales', 'U') IS NOT NULL  
@@ -1003,7 +1003,7 @@ FROM dbo.EmployeeSales;
 ```  
   
 #### C. Inserting data returned from an OUTPUT clause  
- The following example captures data returned from the OUTPUT clause of a MERGE statement, and inserts that data into another table. The MERGE statement updates the `Quantity` column of the `ProductInventory` table daily, based on orders that are processed in the `SalesOrderDetail` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. It also deletes rows for products whose inventories drop to 0. The example captures the rows that are deleted and inserts them into another table, `ZeroInventory`, which tracks products with no inventory.  
+ The following example captures data returned from the OUTPUT clause of a MERGE statement, and inserts that data into another table. The MERGE statement updates the `Quantity` column of the `ProductInventory` table daily, based on orders that are processed in the `SalesOrderDetail` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database. It also deletes rows for products whose inventories drop to 0. The example captures the rows that are deleted and inserts them into another table, `ZeroInventory`, which tracks products with no inventory.  
   
 ```  
 IF OBJECT_ID(N'Production.ZeroInventory', N'U') IS NOT NULL  
@@ -1036,7 +1036,7 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
   
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### D. Using a simple INSERT statement  
  The following example inserts one row in the `Production.UnitMeasure` table. Because values for all columns are supplied and are listed in the same order as the columns in the table, the column names do not have to be specified in the column list*.*  
@@ -1085,7 +1085,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### H. Using a label and a query hint with the INSERT statement  
- This query shows the basic syntax for using a label and a query join hint with the INSERT statement. After the query is submitted to the Control node, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], running on the Compute nodes, will apply the hash join strategy when it generates the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] query plan. For more information on join hints and how to use the OPTION clause, see [OPTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc).  
+ This query shows the basic syntax for using a label and a query join hint with the INSERT statement. After the query is submitted to the Control node, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], running on the Compute nodes, will apply the hash join strategy when it generates the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] query plan. For more information on join hints and how to use the OPTION clause, see [OPTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc).  
   
 ```  
 -- Uses AdventureWorks  
@@ -1102,9 +1102,9 @@ OPTION ( LABEL = 'Add French Prospects', HASH JOIN)
 ## See Also  
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [EXECUTE &#40;Transact-SQL&#41;](../Topic/EXECUTE%20\(Transact-SQL\).md)   
+ [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
- [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../Topic/IDENTITY%20\(Property\)%20\(Transact-SQL\).md)   
+ [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
  [NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   

@@ -28,7 +28,7 @@ manager: "jhubbard"
 
   Returns a pseudo-random **float** value from 0 through 1, exclusive.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -39,7 +39,7 @@ RAND ( [ seed ] )
   
 ## Arguments  
  *seed*  
- Is an integer [expression](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**, **smallint**, or **int**) that gives the seed value. If *seed* is not specified, the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] assigns a seed value at random. For a specified seed value, the result returned is always the same.  
+ Is an integer [expression](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**, **smallint**, or **int**) that gives the seed value. If *seed* is not specified, the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] assigns a seed value at random. For a specified seed value, the result returned is always the same.  
   
 ## Return Types  
  **float**  

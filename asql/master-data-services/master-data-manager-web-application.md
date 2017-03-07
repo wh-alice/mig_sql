@@ -16,10 +16,10 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Master Data Manager Web Application
-  The [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] web application is used primarily by administrators to perform administrative tasks. For example, only administrators can create models, business rules, or versions of data. For more information about administrators, see [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+  The [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] web application is used primarily by administrators to perform administrative tasks. For example, only administrators can create models, business rules, or versions of data. For more information about administrators, see [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] works only in Internet Explorer (IE) 9 or later. IE 8  and earlier versions, Microsoft Edge and Chrome are not supported.  
+>  [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] works only in Internet Explorer (IE) 9 or later. IE 8  and earlier versions, Microsoft Edge and Chrome are not supported.  
 
 > **Can't create an MDS web site?**
 >>Check out this Microsoft support article for instructions on how to resolve this problem.

@@ -16,10 +16,10 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Report Design Tips (Report Builder and SSRS)
-  Use the following tips to help design your [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports.  
+  Use the following tips to help design your [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ##  <a name="DesigningReports"></a> Designing Reports  
   
@@ -53,7 +53,7 @@ manager: "erikre"
   
         2.  **Data region as a data feed.** With appropriate permissions, a report reader can create an ATOM data feed from a data region.  
   
--   Use underscores instead of spaces in report names. If you download a report from a [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, spaces are replaced by underscores. If you use the download feature to save reports locally, and then include them in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], using underscores helps to keep report dependencies for subreports and drillthrough links accurate.  
+-   Use underscores instead of spaces in report names. If you download a report from a [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, spaces are replaced by underscores. If you use the download feature to save reports locally, and then include them in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], using underscores helps to keep report dependencies for subreports and drillthrough links accurate.  
   
 ##  <a name="Data"></a> Working with Data  
   
@@ -99,7 +99,7 @@ manager: "erikre"
   
     -   To work with row groups and column groups in a tablix data region, select the group from the Grouping pane.  
   
- In Report Designer in [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], you can select from the drop-down list of objects in the Properties pane toolbar or from the hierarchical view of report items in the Document Outline window. You can select items in this pane and see which item is selected on the design surface. To open the Document Outline window, from the **View** menu, point to **Other Windows**, and then click **Document Outline**.  
+ In Report Designer in [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], you can select from the drop-down list of objects in the Properties pane toolbar or from the hierarchical view of report items in the Document Outline window. You can select items in this pane and see which item is selected on the design surface. To open the Document Outline window, from the **View** menu, point to **Other Windows**, and then click **Document Outline**.  
   
 ##  <a name="ReportItems"></a> Working with Specific Types of Report Items  
   

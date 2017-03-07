@@ -18,7 +18,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Rename a Database
-  This topic describes how to rename a user-defined database in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. The name of the database can include any characters that follow the rules for identifiers.  
+  This topic describes how to rename a user-defined database in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. The name of the database can include any characters that follow the rules for identifiers.  
   
  **In This Topic**  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 #### To rename a database  
   
-1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Make sure that no one is using the database, and then [set the database to single-user mode](../../relational-databases/databases/set-a-database-to-single-user-mode.md).  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 #### To rename a database  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   

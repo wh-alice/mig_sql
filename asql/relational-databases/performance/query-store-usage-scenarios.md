@@ -18,7 +18,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Query Store Usage Scenarios
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Query Store can be used in wide set of scenarios when tracking and ensuring predictable workload performance is critical. Here are some examples you can consider:  
   
@@ -28,16 +28,16 @@ manager: "jhubbard"
   
 -   A/B testing  
   
--   Keep performance stability during the upgrade to [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)]  
+-   Keep performance stability during the upgrade to [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)]  
   
 -   Identify and improve ad-hoc workloads  
   
 ## Pinpoint and fix queries with plan choice regressions  
- During the regular query execution Query Optimizer may decide to take a different plan because important inputs became different: data cardinality has changed, indexes have been created, altered or dropped, statistics have been updated, etc.  For the most part new plan it picks is better or about the same than one was used previously. However, there are cases when new plan is significantly worse - we refer to that situation as plan choice change regression. Prior to Query Store, it was an issue very difficult to identify and fix as [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] didn’t provide built-in data store for users to look at for execution plans that were used over time.  
+ During the regular query execution Query Optimizer may decide to take a different plan because important inputs became different: data cardinality has changed, indexes have been created, altered or dropped, statistics have been updated, etc.  For the most part new plan it picks is better or about the same than one was used previously. However, there are cases when new plan is significantly worse - we refer to that situation as plan choice change regression. Prior to Query Store, it was an issue very difficult to identify and fix as [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] didn’t provide built-in data store for users to look at for execution plans that were used over time.  
   
  Now with the Query Store you can quickly:  
   
--   Identify all queries which execution metrics have been degraded in the period of time of interest (last hour, day, week, etc.). Use **Regressed Queries** in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to speed up your analysis.  
+-   Identify all queries which execution metrics have been degraded in the period of time of interest (last hour, day, week, etc.). Use **Regressed Queries** in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] to speed up your analysis.  
   
 -   Among the regressed queries it’s very easy to find those that had multiple plans and which degraded because of the bad plan choice. Use **Plan Summary** pane in **Regressed Queries** to visualize all plans for a regressed query and their query performance over time.  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
 ## Identify and tune top resource consuming queries  
  Although your workload may generate thousands of queries, typically only a handful of them actually use the most of the system resources and therefore require your attention. Among top resource consuming queries you will typically find those that are either regressed or those that can be improved with additional tuning.  
   
- The easiest way to start exploration is to open **Top Resource Consuming Queries** in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)].  User interface is separated into three panes: A histogram representing top resource consuming queries (left), a plan summary for selected query (right) and visual query plan for selected plan (bottom). Click the **Configure** button to control how many queries you want to analyze and the time interval of interest. Additionally, you can choose between different resource consumption dimensions (duration, CPU, memory, IO, number of execution) and the baseline (Average, Min, Max, Total, Standard Deviation).  
+ The easiest way to start exploration is to open **Top Resource Consuming Queries** in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)].  User interface is separated into three panes: A histogram representing top resource consuming queries (left), a plan summary for selected query (right) and visual query plan for selected plan (bottom). Click the **Configure** button to control how many queries you want to analyze and the time interval of interest. Additionally, you can choose between different resource consumption dimensions (duration, CPU, memory, IO, number of execution) and the baseline (Average, Min, Max, Total, Standard Deviation).  
   
  ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
@@ -58,7 +58,7 @@ manager: "jhubbard"
   
  When you identify a query with sub-optimal performance, your action depends on the nature of the problem:  
   
-1.  If the query was executed with multiple plans and the last plan is significantly worse than previous plan, you can use the plan forcing mechanism to ensure [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will use the optimal plan for future executions  
+1.  If the query was executed with multiple plans and the last plan is significantly worse than previous plan, you can use the plan forcing mechanism to ensure [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will use the optimal plan for future executions  
   
 2.  Check if the optimizer is suggesting any missing indexes in XML plan. If yes, create the missing index and use the Query Store to evaluate query performance after the index creation  
   
@@ -93,7 +93,7 @@ manager: "jhubbard"
   
     1.  Open **Overall Database Consumption** to determine impact to the entire database  
   
-    2.  Open **Top Resource Consuming Queries** (or run your own analysis using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]) to analyze impact of the change to the most important queries.  
+    2.  Open **Top Resource Consuming Queries** (or run your own analysis using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]) to analyze impact of the change to the most important queries.  
   
 5.  Decide whether to keep the change or perform roll back in case when new performance is unacceptable.  
   
@@ -112,13 +112,13 @@ manager: "jhubbard"
  Based on analysis you would likely keep the index as query performance has been improved.  
   
 ## Keep performance stability during the upgrade to SQL Server 2016  
- Prior to [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)], users were exposed to the risk of performance regression during the upgrade to the latest platform version. The reason for that was the fact that latest version of Query Optimizer became active immediately once new bits are installed.  
+ Prior to [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)], users were exposed to the risk of performance regression during the upgrade to the latest platform version. The reason for that was the fact that latest version of Query Optimizer became active immediately once new bits are installed.  
   
- Starting with [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] all Query Optimizer changes are tied to the latest `COMPATIBILITY_LEVEL`, so plans are not changed right at point of upgrade but rather when a user changes the `COMPATIBILITY_LEVEL` to the latest one. This capability, in combination with Query Store gives you a great level of control over the query performance in the upgrade process. Recommended upgrade workflow is shown on the following picture:  
+ Starting with [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] all Query Optimizer changes are tied to the latest `COMPATIBILITY_LEVEL`, so plans are not changed right at point of upgrade but rather when a user changes the `COMPATIBILITY_LEVEL` to the latest one. This capability, in combination with Query Store gives you a great level of control over the query performance in the upgrade process. Recommended upgrade workflow is shown on the following picture:  
   
  ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   
-1.  Upgrade [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] without changing the `COMPATIBILITY_LEVEL`. It doesn’t expose you to the latest Query Optimizer but gives you [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] features including Query Store.  
+1.  Upgrade [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] without changing the `COMPATIBILITY_LEVEL`. It doesn’t expose you to the latest Query Optimizer but gives you [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] features including Query Store.  
   
 2.  Enable Query Store: capture queries and plans and establish performance baseline with previous `COMPATIBILITY_LEVEL`. Stay at this step long enough to capture all plans and get stable baseline.  
   
@@ -135,7 +135,7 @@ manager: "jhubbard"
   
  Use **Execution Count** metric to analyze whether your top queries are ad hoc (this requires you to run Query Store with `QUERY_CAPTURE_MODE = ALL`). From diagram above you can see that 90% of your **Top Resource Consuming Queries** are executed only once.  
   
- Alternatively, you can run [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] script to get total number of query texts, queries and plans in the system and determine how different they are by comparing their query_hash and plan_hash:  
+ Alternatively, you can run [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] script to get total number of query texts, queries and plans in the system and determine how different they are by comparing their query_hash and plan_hash:  
   
 ```  
 /*Do cardinality analysis when suspect on ad-hoc workloads*/  

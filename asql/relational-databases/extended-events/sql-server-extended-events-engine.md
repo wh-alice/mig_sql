@@ -18,9 +18,9 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # SQL Server Extended Events Engine
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Extended Events engine is a collection of services and objects that:  
+  The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Extended Events engine is a collection of services and objects that:  
   
 -   Enable the definition of events.  
   

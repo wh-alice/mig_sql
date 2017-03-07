@@ -28,9 +28,9 @@ manager: "erikre"
 # Browser Support for Reporting Services and Power View
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../integration-services/includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-Learn about what browser versions are supported for managing and viewing [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], the ReportViewer Controls and Power View.
+Learn about what browser versions are supported for managing and viewing [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)], the ReportViewer Controls and Power View.
   
- **Applies to:** [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Native mode | [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] SharePoint mode  
+ **Applies to:** [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] Native mode | [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] SharePoint mode  
   
 ##  <a name="bkmk_webportal"></a> Browser requirements for the [!INCLUDE[ssRSWebPortal](../reporting-services/includes/ssrswebportal.md)]
 
@@ -63,7 +63,7 @@ The following is the current list of browsers supported for the [!INCLUDE[ssRSWe
  **(+)** Latest publicly released version  
   
 ##  <a name="bkmk_reportviewer"></a> Browser requirements for the ReportViewer web control (2015) 
- The following is the current list of browsers supported with the ReportViewer web control (2015). The report viewer supports viewing reports from [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal and SharePoint libraries.  
+ The following is the current list of browsers supported with the ReportViewer web control (2015). The report viewer supports viewing reports from [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] web portal and SharePoint libraries.  
   
 **Microsoft Windows**  
 *Windows 7, 8.1, 10; Windows Server 2008 R2, 2012, 2012 R2*
@@ -80,7 +80,7 @@ The following is the current list of browsers supported for the [!INCLUDE[ssRSWe
   
  **(+)** Latest publicly released version  
   
- If you are using a SharePoint product that is integrated with [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], see  [Plan browser support in SharePoint 2016](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).  
+ If you are using a SharePoint product that is integrated with [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)], see  [Plan browser support in SharePoint 2016](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).  
   
 ###  <a name="bkmk_authentication"></a> Authentication requirements  
  Browsers support specific authentication schemes that must be handled by the report server in order for the client request to succeed. The following table identifies the default authentication types supported by each browser running on a Windows operating system.  

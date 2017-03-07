@@ -21,9 +21,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # View or Change the Properties of a Database
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  This topic describes how to view or change the properties of a database in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. After you change a database property, the modification takes effect immediately.  
+  This topic describes how to view or change the properties of a database in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. After you change a database property, the modification takes effect immediately.  
   
  **In This Topic**  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   When AUTO_CLOSE is ON, some columns in the [sys.databases](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view and DATABASEPROPERTYEX function will return NULL because the database is unavailable to retrieve the data. To resolve this, open the database.  
+-   When AUTO_CLOSE is ON, some columns in the [sys.databases](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view and DATABASEPROPERTYEX function will return NULL because the database is unavailable to retrieve the data. To resolve this, open the database.  
   
 ###  <a name="Security"></a> Security  
   
@@ -54,22 +54,22 @@ manager: "jhubbard"
   
 #### To view or change the properties of a database  
   
-1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **Databases**, right-click the database to view, and then click **Properties**.  
   
 3.  In the **Database Properties** dialog box, select a page to view the corresponding information. For example, select the **Files** page to view data and log file information.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
- Transact-SQL provides a number of different methods for viewing the properties of a database and for changing the properties of a database. To view the properties of a database, you can use the [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) function and the [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view. To change the properties of a database, you can use the version of the ALTER DATABASE statement for your environment:  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) or [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md). To view database scoped properties, use the [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-scoped-configurations-transact-sql.md) catalog view and to alter database scoped properties, use the [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) statement.  
+ Transact-SQL provides a number of different methods for viewing the properties of a database and for changing the properties of a database. To view the properties of a database, you can use the [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) function and the [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view. To change the properties of a database, you can use the version of the ALTER DATABASE statement for your environment:  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) or [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md). To view database scoped properties, use the [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-scoped-configurations-transact-sql.md) catalog view and to alter database scoped properties, use the [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) statement.  
   
 #### To view a property of a database by using the DATABASEPROPERTYEX function  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] and then connect to the database for which you wish to view its properties.  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] and then connect to the database for which you wish to view its properties.  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example uses the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) system function to return the status of the AUTO_SHRINK database option in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database. A return value of 1 means that the option is set to ON, and a return value of 0 means that the option is set to OFF.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example uses the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) system function to return the status of the AUTO_SHRINK database option in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database. A return value of 1 means that the option is set to ON, and a return value of 0 means that the option is set to OFF.  
   
     ```tsql  
     SELECT DATABASEPROPERTYEX('AdventureWorks2012', 'IsAutoShrink');  
@@ -77,11 +77,11 @@ manager: "jhubbard"
   
 #### To view the properties of a database by querying sys.databases  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] and then connect to the database for which you wish to view its properties..  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] and then connect to the database for which you wish to view its properties..  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.databases](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view to view several properties of the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database. This example returns the database ID number (`database_id`), whether the database is read-only or read-write (`is_read_only`), the collation for the database (`collation_name`), and the database compatibility level (`compatibility_level`).  
+3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.databases](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view to view several properties of the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database. This example returns the database ID number (`database_id`), whether the database is read-only or read-write (`is_read_only`), the collation for the database (`collation_name`), and the database compatibility level (`compatibility_level`).  
   
     ```tsql  
     SELECT database_id, is_read_only, collation_name, compatibility_level  
@@ -90,26 +90,26 @@ manager: "jhubbard"
   
 #### To view the properties of a database-scoped configuration by querying sys.databases_scoped_configuration  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] and then connect to the database for which you wish to view its properties..  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] and then connect to the database for which you wish to view its properties..  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-scoped-configurations-transact-sql.md) catalog view to view several properties of the current database.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-scoped-configurations-transact-sql.md) catalog view to view several properties of the current database.  
   
     ```tsql  
     SELECT configuration_id, name, value, value_for_secondary  
     FROM sys.database_scoped_configurations;  
     ```  
   
-     For more examples, see [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-scoped-configurations-transact-sql.md)  
+     For more examples, see [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-scoped-configurations-transact-sql.md)  
   
 #### To change the properties of a SQL Server 2016 database using ALTER DATABASE  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window. The example determines the state of snapshot isolation on the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database, changes the state of the property, and then verifies the change.  
+3.  Copy and paste the following example into the query window. The example determines the state of snapshot isolation on the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database, changes the state of the property, and then verifies the change.  
   
      To determine the state of snapshot isolation, select the first `SELECT` statement and click **Execute**.  
   
@@ -132,12 +132,12 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
- [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-scoped-configurations-transact-sql.md)  
+ [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-scoped-configurations-transact-sql.md)  
 
   
   

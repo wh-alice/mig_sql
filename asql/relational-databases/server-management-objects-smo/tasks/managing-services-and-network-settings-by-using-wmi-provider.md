@@ -20,15 +20,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Managing Services and Network Settings by Using WMI Provider
-  The WMI provider is a published interface that is used by [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Management Console (MMC) to manage the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] services and network protocols. In SMO, the <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> object represents the WMI Provider.  
+  The WMI provider is a published interface that is used by [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Management Console (MMC) to manage the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] services and network protocols. In SMO, the <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> object represents the WMI Provider.  
   
- The <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> object operates independently of the connection established with the <xref:Microsoft.SqlServer.Management.Smo.Server> object to an instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and uses Windows credentials to connect to the WMI service.  
+ The <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> object operates independently of the connection established with the <xref:Microsoft.SqlServer.Management.Smo.Server> object to an instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], and uses Windows credentials to connect to the WMI service.  
   
 ## Example  
-To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20Basic%20SMO%20Project%20in%20Visual%20Studio%20.NET.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20C%23%20SMO%20Project%20in%20Visual%20Studio%20.NET.md).  
+To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-.net.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-.net.md).  
 
   
- For programs that use the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] WMI provider, you must include the **Imports** statement to qualify the WMI namespace. Insert the statement after the other **Imports** statements, before any declarations in the application, such as:  
+ For programs that use the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] WMI provider, you must include the **Imports** statement to qualify the WMI namespace. Insert the statement after the other **Imports** statements, before any declarations in the application, such as:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -207,6 +207,6 @@ $svc.ServiceState
 ```  
   
 ## See Also  
- [WMI Provider for Configuration Management Concepts](../Topic/WMI%20Provider%20for%20Configuration%20Management%20Concepts.md)  
+ [WMI Provider for Configuration Management Concepts](../../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
   

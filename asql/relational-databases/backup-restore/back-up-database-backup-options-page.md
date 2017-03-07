@@ -30,7 +30,7 @@ manager: "jhubbard"
 >  You can define a database maintenance plan to create database backups. For more information, see [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md) and [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
 > [!NOTE]  
->  When you specify a backup task by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], you can generate the corresponding [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) script by clicking the **Script** button and then selecting a destination for the script.  
+>  When you specify a backup task by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], you can generate the corresponding [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) script by clicking the **Script** button and then selecting a destination for the script.  
   
 ## Options  
   

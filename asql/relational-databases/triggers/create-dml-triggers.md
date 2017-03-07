@@ -24,7 +24,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create DML Triggers
-  This topic describes how to create a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] DML trigger by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and by using the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] CREATE TRIGGER statement.  
+  This topic describes how to create a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] DML trigger by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] and by using the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] CREATE TRIGGER statement.  
   
 ##  <a name="Top"></a> Before You Begin  
   
@@ -43,9 +43,9 @@ manager: "jhubbard"
   
 ###  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] and then expand that instance.  
   
-2.  Expand **Databases**, expand the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database, expand **Tables** and then expand the table **Purchasing.PurchaseOrderHeader**.  
+2.  Expand **Databases**, expand the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database, expand **Tables** and then expand the table **Purchasing.PurchaseOrderHeader**.  
   
 3.  Right-click **Triggers**, and then select **New Trigger**.  
   
@@ -99,7 +99,7 @@ manager: "jhubbard"
   
 ###  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] and then expand that instance.  
   
 2.  From the **File** menu, click **New Query**.  
   

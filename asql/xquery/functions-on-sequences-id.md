@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Functions on Sequences - id
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns the sequence of element nodes with xs:ID values that match the values of one or more of the xs:IDREF values supplied in *$arg*.  
   
@@ -43,7 +43,7 @@ fn:id($arg as xs:IDREF*) as element()*
  If the xs:IDREF value does not match any element, the function returns the empty sequence.  
   
 ## Examples  
- This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the [!INCLUDE[ssSampleDBobject](../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+ This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the [!INCLUDE[ssSampleDBobject](../a9retired/includes/sssampledbobject-md.md)] database.  
   
 ### A. Retrieving elements based on the IDREF attribute value  
  The following example uses fn:id to retrieve the <`employee`> elements, based on the IDREF manager attribute. In this example, the manager attribute is an IDREF type attribute and the eid attribute is an ID type attribute.  
@@ -175,11 +175,11 @@ select @x.query('declare namespace CustOrders="Customers";
 ### Implementation Limitations  
  These are the limitations:  
   
--   [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not support the two-argument version of **id()**.  
+-   [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] does not support the two-argument version of **id()**.  
   
--   [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] requires the argument type of **id()** to be a subtype of xs:IDREF*.  
+-   [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] requires the argument type of **id()** to be a subtype of xs:IDREF*.  
   
 ## See Also  
- [Functions on Sequences](../Topic/Functions%20on%20Sequences.md)  
+ [Functions on Sequences](../a9retired/functions-on-sequences.md)  
   
   

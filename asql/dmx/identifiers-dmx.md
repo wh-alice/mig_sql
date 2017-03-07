@@ -25,9 +25,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Identifiers (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  All objects in [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] must have an identifier. An object's name is its identifier. Servers, databases, and database objects such as data sources, data source views, cubes, dimensions, mining models, and so on have identifiers.  
+  All objects in [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] must have an identifier. An object's name is its identifier. Servers, databases, and database objects such as data sources, data source views, cubes, dimensions, mining models, and so on have identifiers.  
   
  There are two classes of identifiers in Data Mining Extensions (DMX):  
   
@@ -38,7 +38,7 @@ manager: "erikre"
  An object identifier is created when you define the object. You then use the identifier to reference the object. Identifiers must be 100 characters or less.  
   
 ##  <a name="RegularIdentifiers"></a> Regular Identifiers  
- Regular identifiers in DMX comply with the [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] rules for the format of identifiers. Regular identifiers in DMX do not require delimiters. Following is an example of a DMX statement that uses a regular, non-delimited identifier:  
+ Regular identifiers in DMX comply with the [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] rules for the format of identifiers. Regular identifiers in DMX do not require delimiters. Following is an example of a DMX statement that uses a regular, non-delimited identifier:  
   
 ```  
 SELECT * FROM Clustering.CONTENT;  
@@ -84,11 +84,11 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   When you use reserved words for object names or parts of object names.  
   
-     We recommend that you do not use reserved keywords as object names. Databases that you upgrade from earlier versions of [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] may contain identifiers that include words that were not reserved in the earlier version of [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] but that are reserved words for[!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)]. You can use a delimited identifier to refer to such an object until you can change the object's name.  
+     We recommend that you do not use reserved keywords as object names. Databases that you upgrade from earlier versions of [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] may contain identifiers that include words that were not reserved in the earlier version of [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] but that are reserved words for[!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)]. You can use a delimited identifier to refer to such an object until you can change the object's name.  
   
 -   When you use characters that are not listed as qualified identifiers.  
   
-     In [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] you can use any character in the current code page in a delimited identifier; however, indiscriminate use of special characters in an object name may make DMX statements difficult to read and maintain.  
+     In [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] you can use any character in the current code page in a delimited identifier; however, indiscriminate use of special characters in an object name may make DMX statements difficult to read and maintain.  
   
 ### Rules for Delimited Identifiers  
  Following are the rules for the format of delimited identifiers:  
@@ -109,7 +109,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
  [Data Mining Extensions &#40;DMX&#41; Syntax Elements](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40;DMX&#41; Syntax Conventions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Structure and Usage of DMX Prediction Queries](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

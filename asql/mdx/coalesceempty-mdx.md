@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # CoalesceEmpty (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Converts an empty cell value to a specified nonempty cell value, which can be either a number or string.  
   

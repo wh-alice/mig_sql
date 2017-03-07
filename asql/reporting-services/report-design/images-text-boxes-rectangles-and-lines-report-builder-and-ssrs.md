@@ -16,10 +16,10 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Images, Text Boxes, Rectangles, and Lines (Report Builder and SSRS)
-  In addition to data regions like tables, matrices, and charts, [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports use other report items like images, text boxes, and rectangles to add visual interest, highlight key information, or provide related information. You can change the formatting of a report item. For example, you can add a border or padding, change the initial visibility or direction, or specify an exact size and location for the item.  
+  In addition to data regions like tables, matrices, and charts, [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports use other report items like images, text boxes, and rectangles to add visual interest, highlight key information, or provide related information. You can change the formatting of a report item. For example, you can add a border or padding, change the initial visibility or direction, or specify an exact size and location for the item.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## In This Section  
  [Text Boxes &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  

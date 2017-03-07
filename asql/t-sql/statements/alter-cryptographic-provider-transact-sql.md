@@ -24,11 +24,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Alters a cryptographic provider within [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from an Extensible Key Management (EKM) provider.  
+  Alters a cryptographic provider within [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] from an Extensible Key Management (EKM) provider.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -44,15 +44,15 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  Name of the Extensible Key Management provider.  
   
  *Path_of_DLL*  
- Path of the .dll file that implements the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Extensible Key Management interface.  
+ Path of the .dll file that implements the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Extensible Key Management interface.  
   
  ENABLE | DISABLE  
  Enables or disables a provider.  
   
 ## Remarks  
- If the provider changes the .dll file that is used to implement Extensible Key Management in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you must use the ALTER CRYPTOGRAPHIC PROVIDER statement.  
+ If the provider changes the .dll file that is used to implement Extensible Key Management in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], you must use the ALTER CRYPTOGRAPHIC PROVIDER statement.  
   
- When the .dll file path is updated by using the ALTER CRYPTOGRAPHIC PROVIDER statement, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] performs the following actions:  
+ When the .dll file path is updated by using the ALTER CRYPTOGRAPHIC PROVIDER statement, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] performs the following actions:  
   
 -   Disables the provider.  
   
@@ -76,7 +76,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  Requires CONTROL permission on the cryptographic provider.  
   
 ## Examples  
- The following example alters a cryptographic provider, called `SecurityProvider` in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], to a newer version of a .dll file. This new version is named `c:\SecurityProvider\SecurityProvider_v2.dll` and is installed on the server. The provider's certificate must be installed on the server.  
+ The following example alters a cryptographic provider, called `SecurityProvider` in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], to a newer version of a .dll file. This new version is named `c:\SecurityProvider\SecurityProvider_v2.dll` and is installed on the server. The provider's certificate must be installed on the server.  
   
 ```  
 /* First, disable the provider to perform the upgrade.  

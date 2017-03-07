@@ -15,6 +15,6 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SQL Server Integration Services Properties (Advanced Tab)
-  Microsoft [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] is implemented as the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)]service. If custom properties are defined, they appear on this tab, with their values. This tab may have no properties listed.  
+  Microsoft [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] is implemented as the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)]service. If custom properties are defined, they appear on this tab, with their values. This tab may have no properties listed.  
   
   

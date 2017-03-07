@@ -40,7 +40,7 @@ manager: "jhubbard"
   
  To create an external table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -271,7 +271,7 @@ PolyBase only uses the custom date format for importing the data. It does not us
  Requires ALTER ANY EXTERNAL FILE FORMAT permission.  
   
 ## General Remarks  
- The external file format is database-scoped in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)]. It is server-scoped in [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)].  
+ The external file format is database-scoped in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)]. It is server-scoped in [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)].  
   
  The format options are all optional and only apply to delimited text files.  
   
@@ -293,7 +293,7 @@ PolyBase only uses the custom date format for importing the data. It does not us
 ## Performance  
  Using compressed files always comes with the tradeoff between transferring less data between the external data source and SQL Server while increasing the CPU usage to compress and decompress the data.  
   
- Gzip compressed text files are not splittable. To improve performance for Gzip compressed text files, we recommend generating multiple files that are all stored in the same directory within the external data source. This allows PolyBase to read and decompress the data faster by using multiple reader and decompression processes. The ideal number of compressed files is the maximum number of data reader processes per compute node. In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)], the maximum number of data reader processes is 8 per node in the current release. In [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)], the maximum number of data reader processes per node varies by SLO. See [Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/) for details.  
+ Gzip compressed text files are not splittable. To improve performance for Gzip compressed text files, we recommend generating multiple files that are all stored in the same directory within the external data source. This allows PolyBase to read and decompress the data faster by using multiple reader and decompression processes. The ideal number of compressed files is the maximum number of data reader processes per compute node. In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)], the maximum number of data reader processes is 8 per node in the current release. In [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)], the maximum number of data reader processes per node varies by SLO. See [Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/) for details.  
   
 ## Examples  
   
@@ -352,6 +352,6 @@ WITH (
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
  [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
- [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.external-file-formats-transact-sql.md)  
+ [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.external-file-formats-transact-sql.md)  
   
   

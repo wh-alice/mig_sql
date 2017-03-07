@@ -21,7 +21,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Enumerating Available Packages Programmatically
-  <a name="top"></a> As you work programmatically with [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] packages, you may want to determine whether an individual package or folder exists, or to enumerate the saved packages that are available to load and execute. The <xref:Microsoft.SqlServer.Dts.Runtime.Application> class of the <xref:Microsoft.SqlServer.Dts.Runtime> namespace provides a variety of methods to satisfy these requirements.    
+  <a name="top"></a> As you work programmatically with [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] packages, you may want to determine whether an individual package or folder exists, or to enumerate the saved packages that are available to load and execute. The <xref:Microsoft.SqlServer.Dts.Runtime.Application> class of the <xref:Microsoft.SqlServer.Dts.Runtime> namespace provides a variety of methods to satisfy these requirements.    
     
 ##  <a name="exists"></a> Determining Whether a Package or Folder Exists    
  To determine programmatically whether a saved package exists, call one of the following methods before attempting to load and run it:    
@@ -29,14 +29,14 @@ manager: "jhubbard"
 |Storage Location|Method to Call|    
 |----------------------|--------------------|    
 |SSIS Package Store|<xref:Microsoft.SqlServer.Dts.Runtime.Application.ExistsOnDtsServer%2A>|    
-|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.ExistsOnSqlServer%2A>|    
+|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.ExistsOnSqlServer%2A>|    
     
  To determine programmatically whether a folder exists before attempting to list the packages stored in it, call one of the following methods:    
     
 |Storage Location|Method to Call|    
 |----------------------|--------------------|    
 |SSIS Package Store|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
-|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
+|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
     
  [Back to top](#top)    
     
@@ -46,7 +46,7 @@ manager: "jhubbard"
 |Storage Location|Method to Call|    
 |----------------------|--------------------|    
 |SSIS Package Store|<xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A>|    
-|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A>|    
+|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A>|    
     
  The following samples are console applications that demonstrate the use of these methods.    
     
@@ -157,7 +157,7 @@ namespace EnumeratePackagesSSIS_CS
  [Back to top](#top)    
     
 ###  <a name="listing_sql"></a> Example (SQL Server)    
- Use the <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> method to list [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] packages that are stored in an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].    
+ Use the <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> method to list [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] packages that are stored in an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].    
     
 ```vb#    
 Imports Microsoft.SqlServer.Dts.Runtime    

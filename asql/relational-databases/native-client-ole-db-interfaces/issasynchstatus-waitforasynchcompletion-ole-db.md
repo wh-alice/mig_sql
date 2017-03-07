@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   Waits until the asynchronously executing operation is complete or until a time-out occurs.  
   

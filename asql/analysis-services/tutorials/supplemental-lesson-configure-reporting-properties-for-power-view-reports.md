@@ -1,7 +1,7 @@
 ---
 title: "Configure Reporting Properties for Power View Reports | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -70,7 +70,7 @@ Sometimes it may be necessary to create new data in your model by using DAX form
 ## Default field set  
 The Default Field Set is a predefined list of columns and measures for a table that are automatically added to a report canvas when the table is clicked on in the report field list. Essentially, you can specify the default columns, measures, and field ordering users will want to see when this table is visualized in Power View reports.  For the Internet Sales model, you will define a default field set and order for the Customer, Geography, and Product tables. Included are only those most common columns that users will want to see when analyzing Adventure Works Internet Sales data by using Power View reports.  
   
-For detailed information about Default Field Set, see [Configure Default Field Set for Power View Reports &#40;SSAS Tabular&#41;](../Topic/Configure%20Default%20Field%20Set%20for%20Power%20View%20Reports%20(SSAS%20Tabular).md) in SQL Server Books Online.  
+For detailed information about Default Field Set, see [Configure Default Field Set for Power View Reports &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md) in SQL Server Books Online.  
   
 #### To set default field set for tables  
   
@@ -105,7 +105,7 @@ For detailed information about Default Field Set, see [Configure Default Field S
 ## Table behavior  
 By using Table Behavior properties, you can change the default behavior for different visualization types and grouping behavior for tables used in Power View reports. This allows better default placement of identifying information such as names, images, or titles in tile, card, and chart layouts.  
   
-For detailed information about Table Behavior properties, see [Configure Table Behavior Properties for Power View Reports &#40;SSAS Tabular&#41;](../Topic/Configure%20Table%20Behavior%20Properties%20for%20Power%20View%20Reports%20(SSAS%20Tabular).md) in SQL Server Books Online.  
+For detailed information about Table Behavior properties, see [Configure Table Behavior Properties for Power View Reports &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md) in SQL Server Books Online.  
   
 #### To set table behavior 
   
@@ -203,11 +203,11 @@ You will only set a few different column properties here, but there are many oth
     |Ship Date|Data Format|Short Date|  
   
 ## Redeploy the Adventure Works Internet Sales tabular model  
-Because you have changed the model, you must re-deploy it. You will essentially repeat the tasks performed in [Lesson 14: Deploy](../../analysis-services/tutorials/lesson-14-deploy.md).  
+Because you have changed the model, you must re-deploy it. You will essentially repeat the tasks performed in [Lesson 14: Deploy](../Topic/Lesson%2014:%20Deploy.md).  
   
 #### To redeploy the Adventure Works Internet Sales tabular model  
   
--   In [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], click the **Build** menu, and then click **Deploy Adventure Works Internet Sales Model**.  
+-   In [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], click the **Build** menu, and then click **Deploy Adventure Works Internet Sales Model**.  
   
     The **Deploy** dialog box appears and displays the deployment status of the metadata as well as each table included in the model.  
   

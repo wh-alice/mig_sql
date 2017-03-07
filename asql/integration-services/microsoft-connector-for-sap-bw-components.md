@@ -15,7 +15,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Microsoft Connector for SAP BW Components
-  This section contains topics that describe the three components of the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Connector 1.1 for SAP BW:  
+  This section contains topics that describe the three components of the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Connector 1.1 for SAP BW:  
   
 -   SAP BW connection manager  
   

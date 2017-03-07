@@ -15,14 +15,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure Health Policies (SQL Server Utility)
-  Use the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility dashboard in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to view [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility resource parameters for managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and data-tier applications. For more information, see [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+  Use the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility dashboard in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] to view [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility resource parameters for managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and data-tier applications. For more information, see [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
- To view [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility health policy results, connect to a utility control point from [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)]. For more information, see [Use Utility Explorer to Manage the SQL Server Utility](../../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md).  
+ To view [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility health policy results, connect to a utility control point from [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)]. For more information, see [Use Utility Explorer to Manage the SQL Server Utility](../../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md).  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility health policies can be configured for data-tier applications and managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Health policies can be defined globally for all data-tier applications and managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility, or they can be defined individually for each data-tier application and for each managed instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility health policies can be configured for data-tier applications and managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Health policies can be defined globally for all data-tier applications and managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility, or they can be defined individually for each data-tier application and for each managed instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility.  
   
 ## Monitoring Policies for Data-tier Applications  
- Overutilization and underutilization policies for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data-tier applications are as follows:  
+ Overutilization and underutilization policies for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data-tier applications are as follows:  
   
 -   Data-tier application processor utilization.  
   
@@ -35,24 +35,24 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Storage volume and processor utilization are read-only policies for data-tier applications.  
   
- For more information about viewing or changing global monitoring policies for data-tier applications, see [Utility Administration &#40;SQL Server Utility&#41;](../Topic/Utility%20Administration%20\(SQL%20Server%20Utility\).md).  
+ For more information about viewing or changing global monitoring policies for data-tier applications, see [Utility Administration &#40;SQL Server Utility&#41;](../../a9retired/utility-administration-sql-server-utility.md).  
   
- For more information about viewing or changing monitoring policies for individual data-tier applications, see [Deployed Data-tier Application Details &#40;SQL Server Utility&#41;](../Topic/Deployed%20Data-tier%20Application%20Details%20\(SQL%20Server%20Utility\).md).  
+ For more information about viewing or changing monitoring policies for individual data-tier applications, see [Deployed Data-tier Application Details &#40;SQL Server Utility&#41;](../../a9retired/deployed-data-tier-application-details-sql-server-utility.md).  
   
 ## Monitoring Policies for Managed Instances of SQL Server  
- Overutilization and underutilization policies for managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] are as follows:  
+ Overutilization and underutilization policies for managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] are as follows:  
   
--   [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance processor utilization.  
+-   [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance processor utilization.  
   
--   [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance file space for database files.  
+-   [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance file space for database files.  
   
--   [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance file space for storage volumes.  
+-   [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance file space for storage volumes.  
   
 -   Computer processor utilization.  
   
- For more information about viewing or changing global monitoring policies for managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Utility Administration &#40;SQL Server Utility&#41;](../Topic/Utility%20Administration%20\(SQL%20Server%20Utility\).md).  
+ For more information about viewing or changing global monitoring policies for managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Utility Administration &#40;SQL Server Utility&#41;](../../a9retired/utility-administration-sql-server-utility.md).  
   
- For more information about viewing or changing monitoring policies for individual managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Managed Instance Details &#40;SQL Server Utility&#41;](../Topic/Managed%20Instance%20Details%20\(SQL%20Server%20Utility\).md).  
+ For more information about viewing or changing monitoring policies for individual managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Managed Instance Details &#40;SQL Server Utility&#41;](../../a9retired/managed-instance-details-sql-server-utility.md).  
   
 ## See Also  
  [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

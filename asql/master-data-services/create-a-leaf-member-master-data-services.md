@@ -20,9 +20,9 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Create a Leaf Member (Master Data Services)
-  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], create a leaf member when you want to add master data to your system. If you want to add data in bulk, use staging tables instead. For more information, see  [Import Data from Tables &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
+  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], create a leaf member when you want to add master data to your system. If you want to add data in bulk, use staging tables instead. For more information, see  [Import Data from Tables &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   
- You can also use [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../analysis-services/includes/ssmdsxls-md.md)] to import data.  
+ You can also use [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../a9notintoc/includes/ssmdsxls-md.md)] to import data.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 ### To create a leaf member  
   
-1.  On the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] home page, from the **Model** list, select a model.  
+1.  On the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] home page, from the **Model** list, select a model.  
   
 2.  If you are a user, select an open version from the **Version** list. If you are an administrator, select a version with open or locked status from the **Version** list.  
   

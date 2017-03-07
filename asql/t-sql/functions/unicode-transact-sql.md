@@ -24,11 +24,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # UNICODE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the integer value, as defined by the Unicode standard, for the first character of the input expression.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -46,7 +46,7 @@ UNICODE ( 'ncharacter_expression' )
  **int**  
   
 ## Remarks  
- In versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] and in [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)], the UNICODE function returns a UCS-2 codepoint in the range 0 through 0xFFFF. In [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] and later editions, when using SC collations, UNICODE returns a UTF-16 codepoint in the range 0 through 0x10FFFF.  
+ In versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] and in [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)], the UNICODE function returns a UCS-2 codepoint in the range 0 through 0xFFFF. In [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] and later editions, when using SC collations, UNICODE returns a UTF-16 codepoint in the range 0 through 0x10FFFF.  
   
 ## Examples  
   
@@ -137,7 +137,7 @@ Character # Unicode Character UNICODE Value
 12          4                 52  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### C. Using UNICODE and the NCHAR function  
  The following example uses the `UNICODE` and `NCHAR` functions to print the UNICODE value of the first character of the `Åkergatan` 24-character string, and to print the actual first character, `Å`.  

@@ -17,9 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Lesson 1-2 - Defining a Data Source
-After you create an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] project, you generally start working with the project by defining one or more data sources that the project will use. When you define a data source, you are defining the connection string information that will be used to connect to the data source. For more information, see [Create a Data Source &#40;SSAS Multidimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
+After you create an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] project, you generally start working with the project by defining one or more data sources that the project will use. When you define a data source, you are defining the connection string information that will be used to connect to the data source. For more information, see [Create a Data Source &#40;SSAS Multidimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
   
-In the following task, you define the AdventureWorksDWSQLServer2012 sample database as the data source for the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial project. While this database is located on your local computer for the purposes of this tutorial, source databases are frequently hosted on one or more remote computers.  
+In the following task, you define the AdventureWorksDWSQLServer2012 sample database as the data source for the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial project. While this database is located on your local computer for the purposes of this tutorial, source databases are frequently hosted on one or more remote computers.  
   
 ### To define a new data source  
   
@@ -31,7 +31,7 @@ In the following task, you define the AdventureWorksDWSQLServer2012 sample datab
   
 4.  In the **Connection Manager** dialog box, you define connection properties for the data source. In the **Provider** list box, verify that **Native OLE DB\SQL Server Native Client 11.0** is selected.  
   
-    [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] also supports other providers, which are displayed in the **Provider** list.  
+    [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] also supports other providers, which are displayed in the **Provider** list.  
   
 5.  In the **Server name** text box, type **localhost**.  
   
@@ -43,7 +43,7 @@ In the following task, you define the AdventureWorksDWSQLServer2012 sample datab
   
 8.  Click **OK**, and then click **Next**.  
   
-9. On the **Impersonation Information** page of the wizard, you define the security credentials for [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] to use to connect to the data source. Impersonation affects the Windows account used to connect to the data source when Windows Authentication is selected. [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] does not support impersonation for processing OLAP objects. Select **Use the service account**, and then click **Next**.  
+9. On the **Impersonation Information** page of the wizard, you define the security credentials for [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] to use to connect to the data source. Impersonation affects the Windows account used to connect to the data source when Windows Authentication is selected. [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] does not support impersonation for processing OLAP objects. Select **Use the service account**, and then click **Next**.  
   
 10. On the **Completing the Wizard** page, accept the default name, **Adventure Works DW 2012**, and then click **Finish** to create the new data source.  
   
@@ -51,7 +51,7 @@ In the following task, you define the AdventureWorksDWSQLServer2012 sample datab
 > To modify the properties of the data source after it has been created, double-click the data source in the **Data Sources** folder to display the data source properties in **Data Source Designer**.  
   
 ## Next Task in Lesson  
-[Defining a Data Source View](../Topic/Defining%20a%20Data%20Source%20View.md)  
+[Defining a Data Source View](../../analysis-services/tutorials/lesson-1-3-defining-a-data-source-view.md)  
   
 ## See Also  
 [Create a Data Source &#40;SSAS Multidimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  

@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Backup Compression (SQL Server)
-  This topic describes the compression of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backups, including restrictions, performance trade-off of compressing backups, the configuration of backup compression, and the compression ratio.  Backup compression is supported on [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] editions: Enterprise, Standard, and Developer.  Every edition of [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] and later can restore a compressed backup. 
+  This topic describes the compression of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] backups, including restrictions, performance trade-off of compressing backups, the configuration of backup compression, and the compression ratio.  Backup compression is supported on [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] editions: Enterprise, Standard, and Developer.  Every edition of [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] and later can restore a compressed backup. 
  
   
 ##  <a name="Benefits"></a> Benefits  
@@ -37,9 +37,9 @@ manager: "jhubbard"
   
 -   Compressed and uncompressed backups cannot co-exist in a media set.  
   
--   Previous versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] cannot read compressed backups.  
+-   Previous versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] cannot read compressed backups.  
   
--   NTbackups cannot share a tape with compressed [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backups.  
+-   NTbackups cannot share a tape with compressed [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] backups.  
   
   
 ##  <a name="PerfImpact"></a> Performance Impact of Compressing Backups  
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
    
 ##  <a name="CompressionRatio"></a> Calculate the Compression Ratio of a Compressed Backup  
- To calculate the compression ratio of a backup, use the values for the backup in the **backup_size** and **compressed_backup_size** columns of the [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) history table, as follows:  
+ To calculate the compression ratio of a backup, use the values for the backup in the **backup_size** and **compressed_backup_size** columns of the [backupset](../../relational-databases/reference/system-tables/backupset-transact-sql.md) history table, as follows:  
   
  **backup_size**:**compressed_backup_size**  
   
@@ -105,6 +105,6 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 ## See Also  
  [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [Trace Flags &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md)  
+ [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
   

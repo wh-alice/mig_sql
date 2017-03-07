@@ -22,14 +22,14 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # ad hoc distributed queries Server Configuration Option
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  By default, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not allow ad hoc distributed queries using OPENROWSET and OPENDATASOURCE. When this option is set to 1, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] allows ad hoc access. When this option is not set or is set to 0, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not allow ad hoc access.  
+  By default, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] does not allow ad hoc distributed queries using OPENROWSET and OPENDATASOURCE. When this option is set to 1, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] allows ad hoc access. When this option is not set or is set to 0, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] does not allow ad hoc access.  
   
  Ad hoc distributed queries use the OPENROWSET and OPENDATASOURCE functions to connect to remote data sources that use OLE DB. OPENROWSET and OPENDATASOURCE should be used only to reference OLE DB data sources that are accessed infrequently. For any data sources that will be accessed more than several times, define a linked server.  
   
 > [!IMPORTANT]  
->  Enabling the use of ad hoc names means that any authenticated login to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] can access the provider. [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] administrators should enable this feature for providers that are safe to be accessed by any local login.  
+>  Enabling the use of ad hoc names means that any authenticated login to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] can access the provider. [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] administrators should enable this feature for providers that are safe to be accessed by any local login.  
   
 ## Remarks  
  Attempting to make an ad hoc connection with **Ad Hoc Distributed Queries** not enabled results in error: Msg 7415, Level 16, State 1, Line 1  
@@ -60,6 +60,6 @@ GO
  [Linked Servers &#40;Database Engine&#41;](../../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../../t-sql/functions/openrowset-transact-sql.md)   
  [OPENDATASOURCE &#40;Transact-SQL&#41;](../../../t-sql/functions/opendatasource-transact-sql.md)   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
   
   

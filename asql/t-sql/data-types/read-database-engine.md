@@ -24,7 +24,7 @@ manager: "jhubbard"
 # Read (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Read reads binary representation of **SqlHierarchyId** from the passed-in **BinaryReader** and sets the **SqlHierarchyId** object to that value. Read cannot be called by using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. Use CAST or CONVERT instead.  
+  Read reads binary representation of **SqlHierarchyId** from the passed-in **BinaryReader** and sets the **SqlHierarchyId** object to that value. Read cannot be called by using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. Use CAST or CONVERT instead.  
   
 ## Syntax  
   
@@ -45,7 +45,7 @@ void Read( BinaryReader r )
   
  Read can only be called on a newly created **SqlHierarchyId** object.  
   
- Read is used internally by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] when it is necessary, such as when writing data to **hierarchyid** column. Read is also called internally when a conversion is done between **varbinary** and **hierarchyid**.  
+ Read is used internally by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] when it is necessary, such as when writing data to **hierarchyid** column. Read is also called internally when a conversion is done between **varbinary** and **hierarchyid**.  
   
 ## Examples  
   
@@ -61,6 +61,6 @@ hid.Read(br);
  [Write &#40;Database Engine&#41;](../../t-sql/data-types/write-database-engine.md)   
  [ToString &#40;Database Engine&#41;](../../t-sql/data-types/tostring-database-engine.md)   
  [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [hierarchyid Data Type Method Reference](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
+ [hierarchyid Data Type Method Reference](../../a9retired/hierarchyid-data-type-method-reference.md)  
   
   

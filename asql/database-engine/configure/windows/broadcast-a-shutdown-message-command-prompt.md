@@ -23,7 +23,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Broadcast a Shutdown Message (Command Prompt)
-  This topic describes how to broadcast a shutdown message in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using the **net send** command. In the message, include the time the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will be stopped so that users can finish their tasks.  
+  This topic describes how to broadcast a shutdown message in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using the **net send** command. In the message, include the time the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] will be stopped so that users can finish their tasks.  
   
 ##  <a name="SSMSProcedure"></a>  
   
@@ -38,9 +38,9 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The **net send** command requires the messenger service to be running on both the sending and the receiving computers. The messenger service is disabled by default on Windows Server 2003. For information about **net send**, see the Windows documentation.  
   
- On your network, it may be more appropriate to contact users by e-mail or the telephone. To determine which users are currently connected to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], use the Activity Monitor. For information on the Activity Monitor, see [Activity Monitor](../../../relational-databases/monitor/activity-monitor.md) and [Open Activity Monitor &#40;SQL Server Management Studio&#41;](../../../relational-databases/monitor/open-activity-monitor-sql-server-management-studio.md).  
+ On your network, it may be more appropriate to contact users by e-mail or the telephone. To determine which users are currently connected to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], use the Activity Monitor. For information on the Activity Monitor, see [Activity Monitor](../../../relational-databases/monitor/activity-monitor.md) and [Open Activity Monitor &#40;SQL Server Management Studio&#41;](../../../relational-databases/monitor/open-activity-monitor-sql-server-management-studio.md).  
   
 ## See Also  
- [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../Topic/Start,%20Stop,%20Pause,%20Resume,%20Restart%20the%20Database%20Engine,%20SQL%20Server%20Agent,%20or%20SQL%20Server%20Browser%20Service.md)  
+ [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../../database-engine/configure/windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
   

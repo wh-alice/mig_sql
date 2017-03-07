@@ -25,10 +25,10 @@ manager: "erikre"
 >  In contrast, a *behavior change* is characterized as a code change that doesn't break a model or application, but does introduce a different behavior from a previous release.  Examples of behavior changes might include changing a default value, or disallowing a configuration of properties or options that was previously allowed. To learn more about behavior changes in this release, see [Behavior Changes to Analysis Services Features in SQL Server 2016](../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md).  
   
 ## .NET 4.0 version upgrade  
- Analysis Services Management Objects (AMO), ADOMD.NET, and Tabular Object Model (TOM) client libraries in [!INCLUDE[ssASCurrent](../analysis-services/includes/ssascurrent-md.md)] now target the .NET 4.0 runtime. This can be a breaking change for applications that target .NET 3.5. Applications using newer versions of these assemblies must now target .NET 4.0 or later.  
+ Analysis Services Management Objects (AMO), ADOMD.NET, and Tabular Object Model (TOM) client libraries in [!INCLUDE[ssASCurrent](../a9notintoc/includes/ssascurrent-md.md)] now target the .NET 4.0 runtime. This can be a breaking change for applications that target .NET 3.5. Applications using newer versions of these assemblies must now target .NET 4.0 or later.  
   
 ## AMO version upgrade  
- [!INCLUDE[ssASCurrent](../analysis-services/includes/ssascurrent-md.md)] is a version upgrade for [Analysis Services Management Objects &#40;AMO&#41;](../Topic/Analysis%20Services%20Management%20Objects%20\(AMO\).md) and is  a breaking change under certain circumstances.  Existing code and scripts that call into AMO will continue to run as before if you upgrade from a previous version. However, if you need to *recompile* your application and you are targeting a [!INCLUDE[ssASCurrent](../analysis-services/includes/ssascurrent-md.md)] instance, you must add the following namespace to make your code or script operational:  
+ [!INCLUDE[ssASCurrent](../a9notintoc/includes/ssascurrent-md.md)] is a version upgrade for [Analysis Services Management Objects &#40;AMO&#41;](../Topic/Analysis%20Services%20Management%20Objects%20\(AMO\).md) and is  a breaking change under certain circumstances.  Existing code and scripts that call into AMO will continue to run as before if you upgrade from a previous version. However, if you need to *recompile* your application and you are targeting a [!INCLUDE[ssASCurrent](../a9notintoc/includes/ssascurrent-md.md)] instance, you must add the following namespace to make your code or script operational:  
   
 ```  
   
@@ -42,7 +42,7 @@ using Microsoft.AnalysisServices.Core;
  Although there are now multiple namespaces, both exist in the same assembly (Microsoft.AnalysisServices.dll).  
   
 ## XEvent DISCOVER changes  
- To better support XEvent DISCOVER streaming in SSMS for [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)], `DISCOVER_XEVENT_TRACE_DEFINITION` is replaced with the following XEvent traces:  
+ To better support XEvent DISCOVER streaming in SSMS for [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)], `DISCOVER_XEVENT_TRACE_DEFINITION` is replaced with the following XEvent traces:  
   
 -   DISCOVER_XEVENT_PACKAGES  
   

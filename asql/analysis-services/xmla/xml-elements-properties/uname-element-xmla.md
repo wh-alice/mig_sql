@@ -63,6 +63,6 @@ manager: "erikre"
  For **Member** elements, the **UName** element contains the unique name of the parent **Member** element.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

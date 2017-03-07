@@ -31,7 +31,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # XML Elements - Methods - Execute
-  Sends XML for Analysis (XMLA) commands to an instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)]. This includes requests involving data transfer, such as retrieving or updating data on the server.  
+  Sends XML for Analysis (XMLA) commands to an instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)]. This includes requests involving data transfer, such as retrieving or updating data on the server.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -89,9 +89,9 @@ manager: "erikre"
   
 ## See Also  
  [XML Data Types &#40;XMLA&#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
- [Discover Method &#40;XMLA&#41;](../Topic/Discover%20Method%20\(XMLA\).md)   
- [Methods &#40;XMLA&#41;](../Topic/Methods%20\(XMLA\).md)   
- [XML Elements &#40;XMLA&#41;](../Topic/XML%20Elements%20\(XMLA\).md)   
+ [Discover Method &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
+ [Methods &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods.md)   
+ [XML Elements &#40;XMLA&#41;](../../a9retired/xml-elements-xmla.md)   
  [Analysis Services Schema Rowsets](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

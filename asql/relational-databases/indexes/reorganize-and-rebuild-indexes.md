@@ -35,9 +35,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Reorganize and Rebuild Indexes
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  This topic describes how to reorganize or rebuild a fragmented index in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. The [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] automatically maintains indexes whenever insert, update, or delete operations are made to the underlying data. Over time these modifications can cause the information in the index to become scattered in the database (fragmented). Fragmentation exists when indexes have pages in which the logical ordering, based on the key value, does not match the physical ordering inside the data file. Heavily fragmented indexes can degrade query performance and cause your application to respond slowly.  
+  This topic describes how to reorganize or rebuild a fragmented index in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. The [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] automatically maintains indexes whenever insert, update, or delete operations are made to the underlying data. Over time these modifications can cause the information in the index to become scattered in the database (fragmented). Fragmentation exists when indexes have pages in which the logical ordering, based on the key value, does not match the physical ordering inside the data file. Heavily fragmented indexes can degrade query performance and cause your application to respond slowly.  
   
  You can remedy index fragmentation by reorganizing or rebuilding an index. For partitioned indexes built on a partition scheme, you can use either of these methods on a complete index or a single partition of an index. Rebuilding an index drops and re-creates the index. This removes fragmentation, reclaims disk space by compacting the pages based on the specified or existing fill factor setting, and reorders the index rows in contiguous pages. When ALL is specified, all indexes on the table are dropped and rebuilt in a single transaction. Reorganizing an index uses minimal system resources. It defragments the leaf level of clustered and nonclustered indexes on tables and views by physically reordering the leaf-level pages to match the logical, left to right, order of the leaf nodes. Reorganizing also compacts the index pages. Compaction is based on the existing fill factor value.  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Fragmentation"></a> Detecting Fragmentation  
- The first step in deciding which defragmentation method to use is to analyze the index to determine the degree of fragmentation. By using the system function [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md), you can detect fragmentation in a specific index, all indexes on a table or indexed view, all indexes in a database, or all indexes in all databases. For partitioned indexes, **sys.dm_db_index_physical_stats** also provides fragmentation information for each partition.  
+ The first step in deciding which defragmentation method to use is to analyze the index to determine the degree of fragmentation. By using the system function [sys.dm_db_index_physical_stats](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md), you can detect fragmentation in a specific index, all indexes on a table or indexed view, all indexes in a database, or all indexes in all databases. For partitioned indexes, **sys.dm_db_index_physical_stats** also provides fragmentation information for each partition.  
   
  The result set returned by the **sys.dm_db_index_physical_stats** function includes the following columns.  
   
@@ -101,7 +101,7 @@ manager: "jhubbard"
 -   Creating and rebuilding nonaligned indexes on a table with more than 1,000 partitions is possible, but is not supported. Doing so may cause degraded performance or excessive memory consumption during these operations.
   
 > [!NOTE]
->  Starting with [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)], statistics are not created by scanning all the rows in the table when a partitioned index is created or rebuilt. Instead, the query optimizer uses the default sampling algorithm to generate statistics. To obtain statistics on partitioned indexes by scanning all the rows in the table, use CREATE STATISTICS or UPDATE STATISTICS with the FULLSCAN clause.
+>  Starting with [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)], statistics are not created by scanning all the rows in the table when a partitioned index is created or rebuilt. Instead, the query optimizer uses the default sampling algorithm to generate statistics. To obtain statistics on partitioned indexes by scanning all the rows in the table, use CREATE STATISTICS or UPDATE STATISTICS with the FULLSCAN clause.
   
 ###  <a name="Security"></a> Security  
   
@@ -169,7 +169,7 @@ manager: "jhubbard"
   
 #### To check the fragmentation of an index  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -201,7 +201,7 @@ manager: "jhubbard"
     (6 row(s) affected)  
     ```  
   
- For more information, see  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md).  
+ For more information, see  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md).  
   
 ##  <a name="SSMSProcedureReorg"></a> Using SQL Server Management Studio  
   
@@ -261,7 +261,7 @@ manager: "jhubbard"
   
 #### To reorganize a defragmented index  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -279,7 +279,7 @@ manager: "jhubbard"
   
 #### To reorganize all indexes in a table  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -296,7 +296,7 @@ manager: "jhubbard"
   
 #### To rebuild a defragmented index  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -306,7 +306,7 @@ manager: "jhubbard"
   
 #### To rebuild all indexes in a table  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

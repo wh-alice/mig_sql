@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 ## Options  
  **Connection manager name**  
- Provide a unique name for the Multiple Flat Files connection manager in the workflow. The name provided will be displayed within the **Connection Managers** area of [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer.  
+ Provide a unique name for the Multiple Flat Files connection manager in the workflow. The name provided will be displayed within the **Connection Managers** area of [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer.  
   
  **Description**  
  Describe the connection manager. As a best practice, describe the connection manager in terms of its purpose, to make packages self-documenting and easier to maintain.  

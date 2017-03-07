@@ -19,9 +19,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Compatibility Level for Tabular models in Analysis Services
-  The *compatibility level* of a model or database refers to a set of release-specific behaviors in the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] engine. You can create models at any supported compatibility level to get behaviors of a particular release. For example, DirectQuery and tabular object metadata have different implementations depending on the compatibility level assignment.  
+  The *compatibility level* of a model or database refers to a set of release-specific behaviors in the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] engine. You can create models at any supported compatibility level to get behaviors of a particular release. For example, DirectQuery and tabular object metadata have different implementations depending on the compatibility level assignment.  
   
- **SQL Server 2016 RTM (1200)**, or 1200 compatibility level for short, is new in SQL Server 2016 and applies to Tabular models only.  Tabular models at 1200 compatibility level will run only on a [!INCLUDE[ssASCurrent](../../analysis-services/includes/ssascurrent-md.md)] Tabular instance.  
+ **SQL Server 2016 RTM (1200)**, or 1200 compatibility level for short, is new in SQL Server 2016 and applies to Tabular models only.  Tabular models at 1200 compatibility level will run only on a [!INCLUDE[ssASCurrent](../../a9notintoc/includes/ssascurrent-md.md)] Tabular instance.  
   
  To create or upgrade a Tabular model, use SQL Server Data Tools (SSDT) and set the **Compatibility Level** property when creating the project or on the **model.bim** file after the project is created.  
   

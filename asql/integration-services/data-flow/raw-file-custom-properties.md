@@ -50,6 +50,6 @@ manager: "jhubbard"
  For more information, see [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md).  
   
 ## See Also  
- [Common Properties](../Topic/Common%20Properties.md)  
+ [Common Properties](../../a9retired/common-properties.md)  
   
   

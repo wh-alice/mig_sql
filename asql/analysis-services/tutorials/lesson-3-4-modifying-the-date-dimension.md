@@ -57,7 +57,7 @@ After you create a named calculation in the data source view, you can use the na
   
 #### To use the named calculation for member names  
   
-1.  Open **Dimension Designer** for the Date dimension in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)]. To do this, double-click the **Date** dimension in the **Dimensions** node of **Solution Explorer**.  
+1.  Open **Dimension Designer** for the Date dimension in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)]. To do this, double-click the **Date** dimension in the **Dimensions** node of **Solution Explorer**.  
   
 2.  In the **Attributes** pane of the **Dimension Structure** tab, click the **Date Key** attribute.  
   
@@ -132,7 +132,7 @@ In this task, you will create user-friendly name columns that will be used by th
   
 #### To provide unique dimension member names  
   
-1.  To switch to the **[!INCLUDE[ssSampleDBCoShort](../../analysis-services/data-mining/includes/sssampledbcoshort-md.md)] DW 2012** data source view, double-click it in the **Data Source Views** folder in Solution Explorer.  
+1.  To switch to the **[!INCLUDE[ssSampleDBCoShort](../../a9notintoc/includes/sssampledbcoshort-md.md)] DW 2012** data source view, double-click it in the **Data Source Views** folder in Solution Explorer.  
   
 2.  In the **Tables** pane, right-click **Date**, and then click **New Named Calculation**.  
   
@@ -242,7 +242,7 @@ After you have changed attributes and hierarchies, you must deploy the changes a
   
 #### To deploy and view the changes  
   
-1.  On the **Build** menu of [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], click **Deploy Analysis Services Tutorial**.  
+1.  On the **Build** menu of [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], click **Deploy Analysis Services Tutorial**.  
   
 2.  After you have received the **Deployment Completed Successfully** message, click the **Browser** tab of **Dimension Designer** for the **Date** dimension, and then click the Reconnect button on the toolbar of the designer.  
   
@@ -283,7 +283,7 @@ In this task, you will change the sort order by changing the order of the keys t
   
     The members of the attribute hierarchy are now sorted first by year and then by month.  
   
-9. On the **Build** menu of [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], click **Deploy Analysis Services Tutorial**. When deployment has successfully completed, click the **Browser** tab in Dimension Designer for the **Date** dimension.  
+9. On the **Build** menu of [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], click **Deploy Analysis Services Tutorial**. When deployment has successfully completed, click the **Browser** tab in Dimension Designer for the **Date** dimension.  
   
 10. On the toolbar of the **Browser** tab, click the Reconnect button.  
   
@@ -293,10 +293,10 @@ In this task, you will change the sort order by changing the order of the keys t
   
 12. Review the members of the **English Month Name** attribute hierarchy.  
   
-    Notice that the members of the hierarchy are now sorted first by year and then alphabetically by month. This is because the data type for the EnglishCalendarMonth column in the data source view is a string column, based on the nvarchar data type in the underlying relational database. For information about how to enable the months to be sorted chronologically within each year, see [Sorting Attribute Members Based on a Secondary Attribute](../Topic/Sorting%20Attribute%20Members%20Based%20on%20a%20Secondary%20Attribute.md).  
+    Notice that the members of the hierarchy are now sorted first by year and then alphabetically by month. This is because the data type for the EnglishCalendarMonth column in the data source view is a string column, based on the nvarchar data type in the underlying relational database. For information about how to enable the months to be sorted chronologically within each year, see [Sorting Attribute Members Based on a Secondary Attribute](../../analysis-services/tutorials/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md).  
   
 ## Next Task in Lesson  
-[Browsing the Deployed Cube](../Topic/Browsing%20the%20Deployed%20Cube.md)  
+[Browsing the Deployed Cube](../../analysis-services/tutorials/lesson-3-5-browsing-the-deployed-cube.md)  
   
 ## See Also  
 [Dimensions in Multidimensional Models](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  

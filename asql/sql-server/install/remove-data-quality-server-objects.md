@@ -15,14 +15,14 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Remove Data Quality Server Objects
-  Uninstalling [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)] from an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], or completely removing an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that has [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)] does not delete some [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)] objects, including the DQS databases. This implies that you do not lose your DQS data if you uninstall [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)] using the SQL Server setup. You must manually delete these [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)] objects after the uninstall process is complete.  
+  Uninstalling [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)] from an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], or completely removing an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that has [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)] does not delete some [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)] objects, including the DQS databases. This implies that you do not lose your DQS data if you uninstall [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)] using the SQL Server setup. You must manually delete these [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)] objects after the uninstall process is complete.  
   
 > [!NOTE]  
 >  -   Before uninstalling [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)], consider backing up all your existing knowledge bases by exporting it to a .dqsb file, and use the file later to import all the knowledge bases back to a new [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)] installation. Exporting and importing of all DQS knowledge bases can only be done by running DQSInstaller.exe with appropriate command line parameters from the command prompt. For more information, see [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install/windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller.exe.md).  
 > -   Before deleting the DQS databases, consider backing up the databases if you want to preserve it, and use it later for restoring the data. For information about doing so, see [Manage DQS Databases](../../data-quality-services/manage-dqs-databases.md).  
   
 ## Uninstall Data Quality Server from a SQL Server Instance  
- If you are just uninstalling [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)] from an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you must manually delete the following [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)] objects from the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance after the [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)] uninstall process is complete:  
+ If you are just uninstalling [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)] from an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], you must manually delete the following [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)] objects from the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance after the [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)] uninstall process is complete:  
   
 -   DQS_MAIN, DQS_PROJECTS, and DQS_STAGING_DATA databases.  
   
@@ -37,10 +37,10 @@ manager: "jhubbard"
 > `dqsinstaller.exe -uninstall`  
   
 ## Uninstall SQL Server Instance Containing Data Quality Server  
- If you are completely uninstalling the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance that has [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)], you must manually delete the DQS_MAIN, DQS_PROJECTS, and DQS_STAGING_DATA databases from your computer after the uninstall process is complete. For a default [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] installation, the DQS_MAIN, DQS_PROJECTS, and DQS_STAGING_DATA databases files are available at C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA.  
+ If you are completely uninstalling the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance that has [!INCLUDE[ssDQSServer](../../data-quality-services/includes/ssdqsserver-md.md)], you must manually delete the DQS_MAIN, DQS_PROJECTS, and DQS_STAGING_DATA databases from your computer after the uninstall process is complete. For a default [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] installation, the DQS_MAIN, DQS_PROJECTS, and DQS_STAGING_DATA databases files are available at C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA.  
   
 ## See Also  
  [Uninstall an Existing Instance of SQL Server &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
- [Uninstall SQL Server 2016](../Topic/Uninstall%20SQL%20Server%202016.md)  
+ [Uninstall SQL Server 2016](../../sql-server/install/uninstall-sql-server.md)  
   
   

@@ -16,7 +16,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Altering Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Schema and index changes on memory-optimized tables can be performed by using the ALTER TABLE statement. The database application can continue to run, and any operation that is accessing the table is blocked until the alteration process is completed.  
   

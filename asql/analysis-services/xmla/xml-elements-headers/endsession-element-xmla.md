@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # EndSession Element (XMLA)
-  Uses the SOAP header in a SOAP request message to end an existing session on an instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].  
+  Uses the SOAP header in a SOAP request message to end an existing session on an instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -70,15 +70,15 @@ manager: "erikre"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|SessionId|Required **String** attribute that identifies the session to be ended. [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] uses a globally unique identifier (GUID) to identify a session.|  
+|SessionId|Required **String** attribute that identifies the session to be ended. [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] uses a globally unique identifier (GUID) to identify a session.|  
   
 ## Remarks  
- The **EndSession** header element is part of the SOAP request sent to an existing, explicitly started session on an [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance. If the **EndSession** header element is sent, but contains a session identifier that is no longer valid, a SOAP fault is returned that indicates that the session cannot be found.  
+ The **EndSession** header element is part of the SOAP request sent to an existing, explicitly started session on an [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance. If the **EndSession** header element is sent, but contains a session identifier that is no longer valid, a SOAP fault is returned that indicates that the session cannot be found.  
   
 ## See Also  
  [BeginSession Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)   
  [Session Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)   
  [Managing Connections and Sessions &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [Headers &#40;XMLA&#41;](../Topic/Headers%20\(XMLA\).md)  
+ [Headers &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   

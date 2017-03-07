@@ -17,7 +17,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Configure and View SharePoint and Diagnostic Logging
-  [!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] server operations, events, and messages are recorded in SharePoint log files. Use the information in this topic to configure logging levels and view log file information. You can control which [!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] server events are logged to the file. You can also control the severity of messages that are logged. For more information, see [Configure Usage Data Collection for &#40;Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+  [!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] server operations, events, and messages are recorded in SharePoint log files. Use the information in this topic to configure logging levels and view log file information. You can control which [!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] server events are logged to the file. You can also control the severity of messages that are logged. For more information, see [Configure Usage Data Collection for &#40;Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  In this topic:  
   
@@ -35,9 +35,9 @@ manager: "erikre"
  The LOGS folder contains log files (`.log`), data files (`.txt`), and usage files (`.usage`). The file naming convention for a SharePoint trace log is the server name followed by a date and time stamp. SharePoint trace logs are created at regular intervals and whenever there is an IISRESET. It is common to have many trace logs within a 24 hour period.  
   
 ##  <a name="bkmk_modifyloglevels"></a> Modify diagnostic logging levels for individual event categories  
- By default, ULS logging of [!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] events is set at *Medium*. This setting is new for SQL Server 2012. If you upgraded a server from the prior release, the logging level might still be set at *Verbose*, the default level in SQL Server 2008 R2. If you are accustomed to reviewing the ULS logs for [!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] server usage information, you will notice that as a result of this change, there is less information about [!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] server operations.  
+ By default, ULS logging of [!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] events is set at *Medium*. This setting is new for SQL Server 2012. If you upgraded a server from the prior release, the logging level might still be set at *Verbose*, the default level in SQL Server 2008 R2. If you are accustomed to reviewing the ULS logs for [!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] server usage information, you will notice that as a result of this change, there is less information about [!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] server operations.  
   
- Except for exceptions, which are of type *High*, all [!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] messages fall into the Verbose category. If you want log entries for routine server operations such as connections, requests, or query reporting, you must change the logging level to Verbose.  
+ Except for exceptions, which are of type *High*, all [!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] messages fall into the Verbose category. If you want log entries for routine server operations such as connections, requests, or query reporting, you must change the logging level to Verbose.  
   
  To modify diagnostic logging levels for individual event categories:  
   
@@ -45,15 +45,15 @@ manager: "erikre"
   
 2.  Click **Configure diagnostic logging**.  
   
-3.  Scroll to **[!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] Service**.  
+3.  Scroll to **[!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] Service**.  
   
 4.  Expand the category and select individual categories.  
   
-     **Application Page Request** specifies events triggered by the service application when locating a [!INCLUDE[ssGeminiSrv_md](../../analysis-services/instances/install/windows/includes/ssgeminisrv-md.md)] for loading a [!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] data source and communicating with other servers in the farm.  
+     **Application Page Request** specifies events triggered by the service application when locating a [!INCLUDE[ssGeminiSrv_md](../../analysis-services/instances/install/windows/includes/ssgeminisrv-md.md)] for loading a [!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] data source and communicating with other servers in the farm.  
   
-     **Request Processing** specifies events triggered by query requests against a [!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] database that is loaded on a server in the farm.  
+     **Request Processing** specifies events triggered by query requests against a [!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] database that is loaded on a server in the farm.  
   
-     **Usage** specifies an event related to [!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] usage data collection.  
+     **Usage** specifies an event related to [!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] usage data collection.  
   
 5.  In Least critical event to report to the event log, select **None** to disable event logging for the category, or **Error** to limit logging for just errors.  
   
@@ -69,13 +69,13 @@ manager: "erikre"
  Log files are text files. You can open them in any text editor. You can also use third-party log viewer applications.  
   
 #### Use a Text Editor  
- If you are using a text editor to troubleshoot a [!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] server error, the following tips can help you locate relevant information in the file:  
+ If you are using a text editor to troubleshoot a [!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] server error, the following tips can help you locate relevant information in the file:  
   
--   For errors related to publishing, viewing, or refreshing a [!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] workbook, search the log file for the name of the workbook.  
+-   For errors related to publishing, viewing, or refreshing a [!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] workbook, search the log file for the name of the workbook.  
   
 -   For errors that provide a correlation ID, copy the ID and use it as a search term in the log file.  
   
--   Search for error status "High" or "Exception". Search for “[!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] Service”.  
+-   Search for error status "High" or "Exception". Search for “[!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] Service”.  
   
 -   If you know when the error occurred, use the date and time information to narrow the scope of entries you must scroll through.  
   
@@ -113,15 +113,15 @@ manager: "erikre"
 13. Use the built-in filters to select records based on severity, process, category, or a user-defined text file. You can also click column headings to change the sort order.  
   
 #### Entries for Power Pivot Services  
- The following table describes entries for [!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] server operations most likely to be found in a SharePoint log file.  
+ The following table describes entries for [!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] server operations most likely to be found in a SharePoint log file.  
   
 |Process|Area|Category|Level|Message|Details|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] Service|Usage|Verbose|There are no current request statistics, nothing to log.|At predefined intervals, the service reports query response statistics as a usage event to the usage data collection system. This message indicates there were no query statistics to report.|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] Service|Web front end|Verbose|Starting to locate an application server for data source=\<*path*>|When it receives a connection request, the [!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] service identifies an available [!INCLUDE[ssGeminiSrv_md](../../analysis-services/instances/install/windows/includes/ssgeminisrv-md.md)] to handle the request. If there is only one server in the farm, the local server accepts the request in all cases.|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] Service|Web front end|Verbose|Locating the application server succeeded.|The request was allocated to a [!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] service application.|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] Service|Web front end|Verbose|Redirecting request for the \<*PowerPivotdata source*> to the [!INCLUDE[ssGeminiSrv_md](../../analysis-services/instances/install/windows/includes/ssgeminisrv-md.md)].|The request was forwarded to the [!INCLUDE[ssGeminiSrv_md](../../analysis-services/instances/install/windows/includes/ssgeminisrv-md.md)].|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] Service|Request Processing|Verbose|Redirecting request for UserName\<*SharePoint user*> to the database|An impersonated connection to the [!INCLUDE[ssGemini_md](../../analysis-services/includes/ssgemini-md.md)] data source was created on behalf of the SharePoint user.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] Service|Usage|Verbose|There are no current request statistics, nothing to log.|At predefined intervals, the service reports query response statistics as a usage event to the usage data collection system. This message indicates there were no query statistics to report.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] Service|Web front end|Verbose|Starting to locate an application server for data source=\<*path*>|When it receives a connection request, the [!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] service identifies an available [!INCLUDE[ssGeminiSrv_md](../../analysis-services/instances/install/windows/includes/ssgeminisrv-md.md)] to handle the request. If there is only one server in the farm, the local server accepts the request in all cases.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] Service|Web front end|Verbose|Locating the application server succeeded.|The request was allocated to a [!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] service application.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] Service|Web front end|Verbose|Redirecting request for the \<*PowerPivotdata source*> to the [!INCLUDE[ssGeminiSrv_md](../../analysis-services/instances/install/windows/includes/ssgeminisrv-md.md)].|The request was forwarded to the [!INCLUDE[ssGeminiSrv_md](../../analysis-services/instances/install/windows/includes/ssgeminisrv-md.md)].|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] Service|Request Processing|Verbose|Redirecting request for UserName\<*SharePoint user*> to the database|An impersonated connection to the [!INCLUDE[ssGemini_md](../../a9notintoc/includes/ssgemini-md.md)] data source was created on behalf of the SharePoint user.|  
   
 ## See Also  
  [Power Pivot Usage Data Collection](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)   

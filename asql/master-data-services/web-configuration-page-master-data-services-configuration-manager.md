@@ -24,22 +24,22 @@ manager: "jhubbard"
 |Control Name|Description|  
 |------------------|-----------------|  
 |**Website**|Either create a new website, select the default website, or select another available site (if listed). This list displays the websites that are defined in Internet Information Services (IIS) on the local computer. When you create a new website, a new web application is automatically created. When you select the default or another existing site, you must create an application manually.|  
-|**Web application**|Select a [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] web application for configuration. This box shows the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] web applications in the selected website only.<br /><br /> If nothing is displayed, click **Create** to create a website.|  
-|**Create**|Opens the **Create Web Application** dialog box from which you create a [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] web application in the selected site. This button is enabled only when the selected site has no root web application configured as the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] web application.|  
+|**Web application**|Select a [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] web application for configuration. This box shows the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] web applications in the selected website only.<br /><br /> If nothing is displayed, click **Create** to create a website.|  
+|**Create**|Opens the **Create Web Application** dialog box from which you create a [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] web application in the selected site. This button is enabled only when the selected site has no root web application configured as the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] web application.|  
   
 ## Associate Application with Database  
   
 |Control Name|Description|  
 |------------------|-----------------|  
-|**Select**|Opens the **Connect to Server** dialog box from which you connect to a [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance and select a [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] database to associate with the selected [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] web application.|  
-|**SQL Server instance**|Displays the name of the selected [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance that hosts the [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] database. This is blank until you connect to a [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance and select a database.|  
-|**Database**|Displays the name of the [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] database that is associated with the selected [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] web application. This is blank until you connect to a [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance and select a database.|  
+|**Select**|Opens the **Connect to Server** dialog box from which you connect to a [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] instance and select a [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] database to associate with the selected [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] web application.|  
+|**SQL Server instance**|Displays the name of the selected [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] instance that hosts the [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] database. This is blank until you connect to a [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] instance and select a database.|  
+|**Database**|Displays the name of the [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] database that is associated with the selected [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] web application. This is blank until you connect to a [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] instance and select a database.|  
   
 ## Enable DQS Integration  
   
 |Control Name|Description|  
 |------------------|-----------------|  
-|**Enable integration with Data Quality Services**|Select this option to enable the Data Quality functionality available in the [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../analysis-services/includes/ssmdsxls-md.md)]. For more information, see [Enable Data Quality Services Integration with Master Data Services](../master-data-services/install/windows/enable-data-quality-services-integration-with-master-data-services.md).|  
+|**Enable integration with Data Quality Services**|Select this option to enable the Data Quality functionality available in the [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../a9notintoc/includes/ssmdsxls-md.md)]. For more information, see [Enable Data Quality Services Integration with Master Data Services](../master-data-services/install/windows/enable-data-quality-services-integration-with-master-data-services.md).|  
   
 ## See Also  
 [Master Data Services Installation and Configuration](../master-data-services/master-data-services-installation-and-configuration.md) 

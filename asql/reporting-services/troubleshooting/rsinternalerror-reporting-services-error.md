@@ -23,10 +23,10 @@ manager: "erikre"
   
 |||  
 |-|-|  
-|Product Name|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|  
+|Product Name|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]|  
 |Event ID|rsInternalError|  
 |Event Source|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
-|Component|[!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]|  
+|Component|[!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]|  
 |Message Text|An internal error occurred on the report server. See the error log for more details.|  
   
 ## Explanation  

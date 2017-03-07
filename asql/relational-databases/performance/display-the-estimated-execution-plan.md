@@ -24,9 +24,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Display the Estimated Execution Plan
-  This topic describes how to generate graphical estimated execution plans by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. When estimated execution plans are generated, the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] queries or batches do not execute. Instead, the execution plan that is generated displays the query execution plan that [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] would most probably use if the queries were actually executed.  
+  This topic describes how to generate graphical estimated execution plans by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. When estimated execution plans are generated, the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] queries or batches do not execute. Instead, the execution plan that is generated displays the query execution plan that [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] would most probably use if the queries were actually executed.  
   
- To use this feature, users must have the appropriate permissions to execute the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] query for which a graphical execution plan is being generated, and they must be granted the SHOWPLAN permission for all databases referenced by the query.  
+ To use this feature, users must have the appropriate permissions to execute the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] query for which a graphical execution plan is being generated, and they must be granted the SHOWPLAN permission for all databases referenced by the query.  
   
 ### To display the estimated execution plan for a query  
   

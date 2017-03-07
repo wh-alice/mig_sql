@@ -19,7 +19,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Upgrading Mirrored Instances
-  When upgrading a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] mirrored  instance to a new [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] version, to a new [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]service pack or cumulative update, or to a new Windows service pack or cumulative update, you can reduce downtime for each mirrored database to only a single manual failover by performing a rolling upgrade (or two manual failovers if failing back to the original primary). A rolling upgrade is a multi-stage process that in its simplest form involves upgrading the [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] instance that is currently acting as the mirror server in a mirroring session, then manually failing over the mirrored database, upgrading the former principal [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] instance, and resuming mirroring. In practice, the exact process will depend on the operating mode and the number and layout of mirroring session running on the [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] instances that you are upgrading.  
+  When upgrading a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] mirrored  instance to a new [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] version, to a new [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]service pack or cumulative update, or to a new Windows service pack or cumulative update, you can reduce downtime for each mirrored database to only a single manual failover by performing a rolling upgrade (or two manual failovers if failing back to the original primary). A rolling upgrade is a multi-stage process that in its simplest form involves upgrading the [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] instance that is currently acting as the mirror server in a mirroring session, then manually failing over the mirrored database, upgrading the former principal [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] instance, and resuming mirroring. In practice, the exact process will depend on the operating mode and the number and layout of mirroring session running on the [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] instances that you are upgrading.  
   
 > [!NOTE]  
 >  For information on using database mirroring with log shipping during a migration, download this [Database Mirroring and Log Shipping whitepaper](https://t.co/RmO6ruCT4J).  
@@ -27,13 +27,13 @@ manager: "jhubbard"
 ## Prerequisites  
  Before you begin, review the following important information:  
   
--   [Supported Version and Edition Upgrades](../../database-engine/install/windows/supported-version-and-edition-upgrades.md): Verify that you can upgrade to SQL Server 2016 from your version of the Windows operating system and version of SQL Server. For example, you cannot upgrade directly from a SQL Server 2005 instance to [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+-   [Supported Version and Edition Upgrades](../../database-engine/install/windows/supported-version-and-edition-upgrades.md): Verify that you can upgrade to SQL Server 2016 from your version of the Windows operating system and version of SQL Server. For example, you cannot upgrade directly from a SQL Server 2005 instance to [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
 -   [Choose a Database Engine Upgrade Method](../../database-engine/install/windows/choose-a-database-engine-upgrade-method.md): Select the appropriate upgrade method and steps based on your review of supported version and edition upgrades and also based on other components installed in your environment to upgrade components in the correct order.  
   
 -   [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install/windows/plan-and-test-the-database-engine-upgrade-plan.md): Review the release notes and known upgrade issues, the pre-upgrade checklist, and develop and test the upgrade plan.  
   
--   [Hardware and Software Requirements for Installing SQL Server 2016](../Topic/Hardware%20and%20Software%20Requirements%20for%20Installing%20SQL%20Server%202016.md):  Review the software requirements for installing [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. If additional software is required, install it on each node before you begin the upgrade process to minimize any downtime.  
+-   [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Review the software requirements for installing [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. If additional software is required, install it on each node before you begin the upgrade process to minimize any downtime.  
   
 ## Recommended Preparation (Best Practices)  
  Before starting a rolling upgrade, we recommend that you:  
@@ -78,9 +78,9 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  If the mirror server is geographically distant from the principal server, a rolling upgrade might be inappropriate.  
   
-    -   In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]: Change the **Operating mode** option to **High safety without automatic failover (synchronous)** by using the [Mirroring Page](../../relational-databases/databases/database-properties-mirroring-page.md) of the **Database Properties** dialog box. For information about how to access this page, see [Start the Configuring Database Mirroring Security Wizard &#40;SQL Server Management Studio&#41;](../Topic/Start%20the%20Configuring%20Database%20Mirroring%20Security%20Wizard%20\(SQL%20Server%20Management%20Studio\).md).  
+    -   In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]: Change the **Operating mode** option to **High safety without automatic failover (synchronous)** by using the [Mirroring Page](../../relational-databases/databases/database-properties-mirroring-page.md) of the **Database Properties** dialog box. For information about how to access this page, see [Start the Configuring Database Mirroring Security Wizard &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   In [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]: Set transaction safety to FULL. For more information, see [Change Transaction Safety in a Database Mirroring Session &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
+    -   In [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]: Set transaction safety to FULL. For more information, see [Change Transaction Safety in a Database Mirroring Session &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
 ### To remove a witness from a session  
   
@@ -112,10 +112,10 @@ manager: "jhubbard"
   
      **Restrictions after you failover to an upgraded server instance.**  
   
-     After failing over from an earlier server instance to a [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] server instance, the database session is suspended. It cannot be resumed until the other partner has been upgraded. However, the principal server is still accepting connections and allowing data access and modifications on the principal database.  
+     After failing over from an earlier server instance to a [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] server instance, the database session is suspended. It cannot be resumed until the other partner has been upgraded. However, the principal server is still accepting connections and allowing data access and modifications on the principal database.  
   
     > [!NOTE]  
-    >  Establishing a new mirroring session requires that the server instances all be running the same version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+    >  Establishing a new mirroring session requires that the server instances all be running the same version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 3.  After you fail over, we recommend that you run the [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) command on the principal database.  
   
@@ -135,9 +135,9 @@ manager: "jhubbard"
   
 1.  Optionally, return to high-performance mode by using one of the following methods:  
   
-    -   In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]: Change the **Operating mode** option to **High performance (asynchronous)** by using the [Mirroring Page](../../relational-databases/databases/database-properties-mirroring-page.md) of the **Database Properties** dialog box.  
+    -   In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]: Change the **Operating mode** option to **High performance (asynchronous)** by using the [Mirroring Page](../../relational-databases/databases/database-properties-mirroring-page.md) of the **Database Properties** dialog box.  
   
-    -   In [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]: Use [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md)to set transaction safety to OFF.  
+    -   In [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]: Use [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)to set transaction safety to OFF.  
   
 ### To add a witness back into a mirroring session  
   
@@ -150,9 +150,9 @@ manager: "jhubbard"
     -   [Add a Database Mirroring Witness Using Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
 ## See Also  
- [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../Topic/Upgrade%20to%20SQL%20Server%202016%20Using%20the%20Installation%20Wizard%20\(Setup\).md)   
+ [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install/windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Install SQL Server 2016 from the Command Prompt](../../database-engine/install/windows/install-sql-server-2016-from-the-command-prompt.md)   
- [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md)   
+ [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [View the State of a Mirrored Database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   
  [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   

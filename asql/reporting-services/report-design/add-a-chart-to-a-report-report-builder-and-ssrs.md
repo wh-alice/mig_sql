@@ -16,14 +16,14 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Add a Chart to a Report (Report Builder and SSRS)
-  When you want to summarize data in a visual format in a [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report, use a Chart data region. It is important to choose an appropriate chart type for the type of data that you are presenting. This affects how well the data can be interpreted when put in chart form. For more information, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
+  When you want to summarize data in a visual format in a [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report, use a Chart data region. It is important to choose an appropriate chart type for the type of data that you are presenting. This affects how well the data can be interpreted when put in chart form. For more information, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  The simplest way to add a Chart data region to your report is to run the New Chart Wizard. The wizard offers column, line, pie, bar, and area charts. For these and other chart types, you can also add a chart manually.  
   
  After you add a Chart data region to the design surface, you can drag report dataset fields for numeric and non-numeric data to the Chart Data pane of the chart. Click the chart to display the Chart Data pane with its three areas: Series Groups, Category Groups, and Values.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## To add a chart to a report by using the Chart Wizard  
   
@@ -48,7 +48,7 @@ manager: "erikre"
   
      The **Select Chart Type** dialog box appears.  
   
-4.  Select the type of chart you want to add. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  Select the type of chart you want to add. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 5.  Click the chart to display the **Chart Data** pane.  
   
@@ -56,7 +56,7 @@ manager: "erikre"
   
 7.  Add a grouping field to the **Category Groups** area. When you add this field to the **Category Groups** area, a grouping field is automatically created for you. Each group represents a data point in your series.  
   
-8.  To summarize the data by category, right-click the data field and click **Series Properties**. In the **Category** box, select the category field from the drop-down list. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  To summarize the data by category, right-click the data field and click **Series Properties**. In the **Category** box, select the category field from the drop-down list. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 9. On the **Home** tab, click **Run** to see the rendered report.  
   

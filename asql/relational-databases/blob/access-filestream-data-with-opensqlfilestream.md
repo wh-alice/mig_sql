@@ -24,7 +24,7 @@ manager: "jhubbard"
 # Access FILESTREAM Data with OpenSqlFilestream
   The OpenSqlFilestream API obtains a Win32 compatible file handle for a FILESTREAM binary large object (BLOB) stored in the file system. The handle can be passed to any of the following Win32 APIs: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426), or [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). If you pass this handle to any other Win32 API, the error ERROR_ACCESS_DENIED is returned. The handle must be closed by passing it to the Win32 [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) API before the transaction is committed or rolled back. Failing to close the handle will cause server-side resource leaks.  
   
- You must perform All FILESTREAM data container access in a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] transaction. [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements can also be executed in the same transaction. This maintains consistency between the SQL data and FILESTREAM BLOB data.  
+ You must perform All FILESTREAM data container access in a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] transaction. [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements can also be executed in the same transaction. This maintains consistency between the SQL data and FILESTREAM BLOB data.  
   
  To access the FILESTREAM BLOB by using Win32, [Windows Authorization](../../relational-databases/security/choose-an-authentication-mode.md) must be enabled.  
   
@@ -46,7 +46,7 @@ HANDLE OpenSqlFilestream (
   
 #### Parameters  
  *FilestreamPath*  
- [in] Is the **nvarchar(max)** path that is returned by the [PathName](../../relational-databases/system-functions/pathname-transact-sql.md) function. PathName must be called from the context of an account that has [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] SELECT or UPDATE permissions on the FILESTREAM table and column.  
+ [in] Is the **nvarchar(max)** path that is returned by the [PathName](../../relational-databases/reference/system-functions/pathname-transact-sql.md) function. PathName must be called from the context of an account that has [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] SELECT or UPDATE permissions on the FILESTREAM table and column.  
   
  *DesiredAccess*  
  [in] Sets the mode used to access FILESTREAM BLOB data. This value is passed to the [DeviceIoControl Function](http://go.microsoft.com/fwlink/?LinkId=105527).  
@@ -94,7 +94,7 @@ HANDLE OpenSqlFilestream (
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../relational-databases/blob/codesnippet/cpp/access-filestream-data-w_0_3.cpp)]  
   
 ## Remarks  
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client must be installed to use this API. The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client is installed with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] client tools. For more information, see [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client must be installed to use this API. The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client is installed with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] client tools. For more information, see [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 ## See Also  
  [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   

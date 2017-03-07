@@ -19,12 +19,12 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 1-1 - Create SQL Server Data Objects using RxSqlServerData
-Now that you have created the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database and have the necessary permissions to work with the data, you'll create objects in R that let you work with the data — both on the server and on your workstation.  
+Now that you have created the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] database and have the necessary permissions to work with the data, you'll create objects in R that let you work with the data — both on the server and on your workstation.  
   
 ## Create the SQL Server Data Objects  
 In this step, you’ll use R to create and populate two tables. Both tables contain simulated credit card fraud data. One table is used for training the models, and the other table is used for scoring. 
 
-To create tables on the remote [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer, you'll use the `RxSqlServerData` function provided in the **RevoScaleR** package.  
+To create tables on the remote [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] computer, you'll use the `RxSqlServerData` function provided in the **RevoScaleR** package.  
 
 > [!TIP]
 > If you're using R Tools for Visual Studio, select **R Tools** from the toolbar and click **Windows** to see options for debugging and viewing R variables.
@@ -59,11 +59,11 @@ To create tables on the remote [!INCLUDE[ssNoVersion](../../../advanced-analytic
     sqlRowsPerRead = 5000   
     ```  
   
-    Although this parameter is optional, it is important for handling memory usage and efficient computations.  Most of the enhanced analytical functions in [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)] process data in chunks and accumulate intermediate results, returning the final computations after all of the data has been read.  
+    Although this parameter is optional, it is important for handling memory usage and efficient computations.  Most of the enhanced analytical functions in [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)] process data in chunks and accumulate intermediate results, returning the final computations after all of the data has been read.  
   
     If the value of this parameter is too large, data access might be slow because you don’t have enough memory to efficiently process such a large chunk of data.  On some systems, if the value of *rowsPerRead* is too small, performance might be slower.  
   
-    For this walkthrough, you'll use the batch process size defined by the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance to control the number of rows in each chunk, and save that value in the variable *sqlRowsPerRead*.  We recommend that you experiment with this setting on your system when you are working with a large data set.  
+    For this walkthrough, you'll use the batch process size defined by the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance to control the number of rows in each chunk, and save that value in the variable *sqlRowsPerRead*.  We recommend that you experiment with this setting on your system when you are working with a large data set.  
   
 4.  Finally, define a variable for the new data source object, and pass the arguments previously defined to the *RxSqlServerData* constructor. Note that this only creates the data source object and does not populate it.  
   
@@ -97,7 +97,7 @@ Because you've already defined the connection string and other parameters as var
 Later in this tutorial you'll learn how to create a data source object based on a SQL query.  
   
 ## Load Data into SQL Tables Using R  
-Now that you have created the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] tables, you can load data into them using the appropriate **Rx** function.  
+Now that you have created the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] tables, you can load data into them using the appropriate **Rx** function.  
   
 The **RevoScaleR** package contains functions that support many different data sources: For text data, you'll use *RxTextData* to generate the data source object. There are additional functions for creating data source objects from Hadoop data, ODBC data, and so forth.  
   
@@ -127,11 +127,11 @@ The **RevoScaleR** package contains functions that support many different data s
   
     The argument *colClasses* is important. You use it to indicate the data type to assign to each column of data loaded from the text file. In this example, all columns are handled as text, except for the named columns, which are handled as integers.  
   
-3.  At this point, you might want to pause for a moment and view your database in [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  Refresh the list of tables in the database.  
+3.  At this point, you might want to pause for a moment and view your database in [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)].  Refresh the list of tables in the database.  
   
-    You'll see that although the R data objects have been created in your local workspace, the tables have not been created in the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database yet. Nor has any data actually been loaded from the text file into the R variable. 
+    You'll see that although the R data objects have been created in your local workspace, the tables have not been created in the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] database yet. Nor has any data actually been loaded from the text file into the R variable. 
   
-4.  Now, call the function *rxDataStep* to insert the data into the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table.  
+4.  Now, call the function *rxDataStep* to insert the data into the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] table.  
   
     ```R  
     rxDataStep(inData = inTextData, outFile = sqlFraudDS, overwrite = TRUE)   
@@ -142,7 +142,7 @@ The **RevoScaleR** package contains functions that support many different data s
       *Total Rows written: 10000, Total time: 0.466*
       *Rows Read: 10000, Total Rows Processed: 10000, Total Chunk Time: 0.577 seconds*  
   
-5.  Using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], refresh the list of tables. To verify that  each variable has the correct data types and was imported successfully, you can also right-click the table in [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and select **Select Top 1000 Rows**.  
+5.  Using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], refresh the list of tables. To verify that  each variable has the correct data types and was imported successfully, you can also right-click the table in [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] and select **Select Top 1000 Rows**.  
   
 #### To load data into the scoring table  
   
@@ -173,7 +173,7 @@ The **RevoScaleR** package contains functions that support many different data s
   
     -   The *inData* argument defines the data source to use.  
   
-    -   The *outFile* argument specifies the table in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] where you want to save the data.  
+    -   The *outFile* argument specifies the table in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] where you want to save the data.  
   
     -   If the table already exists and you don't use the *overwrite* option, results will be inserted without truncation.  
   
@@ -183,12 +183,12 @@ Again, if the connection was successful, you should see a message indicating com
 *Rows Read: 10000, Total Rows Processed: 10000, Total Chunk Time: 0.456 seconds*  
   
 ## More about rxDataStep  
-*rxDataStep* is a powerful function in the **RevoScaleR** package that can perform multiple transformations on an R data frame, to convert the data into the representation required by the destination. In this case, the destination is [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+*rxDataStep* is a powerful function in the **RevoScaleR** package that can perform multiple transformations on an R data frame, to convert the data into the representation required by the destination. In this case, the destination is [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
 You can also specify transformations on the data, such as indicating that columns be excluded, add new columns, or change data types, by using R functions in the arguments to *rxDataStep*. You'll see examples of these operations in [Lesson 4](../../../advanced-analytics/r-services/tutorials/lesson-4-analyze-data-in-local-compute-context-data-science-deep-dive.md).  
   
 ## Next Step  
-[Query and Modify the SQL Server Data &#40;Data Science Deep Dive&#41;](../Topic/Query%20and%20Modify%20the%20SQL%20Server%20Data%20(Data%20Science%20Deep%20Dive).md)  
+[Query and Modify the SQL Server Data &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-1-2-query-and-modify-the-sql-server-data.md)  
   
 ## Previous Step  
 [Lesson 1: Work with SQL Server Data using R &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-1-work-with-sql-server-data-using-r-data-science-deep-dive.md)  

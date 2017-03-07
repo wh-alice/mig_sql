@@ -25,15 +25,15 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Removes query notification subscriptions from the instance. This statement can remove a specific subscription or all subscriptions.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -53,7 +53,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
 ## Remarks  
  The KILL QUERY NOTIFICATION SUBSCRIPTION statement removes query notification subscriptions without producing a notification message.  
   
- *subscription_id* is the id for the subscription as shown in the dynamic management view [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../Topic/sys.dm_qn_subscriptions%20\(Transact-SQL\).md).  
+ *subscription_id* is the id for the subscription as shown in the dynamic management view [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/query-notifications-sys.dm-qn-subscriptions.md).  
   
  If the specified subscription id does not exist, the statement produces an error.  
   
@@ -77,6 +77,6 @@ KILL QUERY NOTIFICATION SUBSCRIPTION 73 ;
 ```  
   
 ## See Also  
- [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../Topic/sys.dm_qn_subscriptions%20\(Transact-SQL\).md)  
+ [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/query-notifications-sys.dm-qn-subscriptions.md)  
   
   

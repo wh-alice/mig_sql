@@ -26,13 +26,13 @@ manager: "erikre"
   In a data-driven subscription, dynamic subscription data is provided by a query or command that retrieves data from an external data source. Subscription data can be retrieved from any supported data source that meets the requirements for data-driven subscription processing. The query or command syntax must be valid for a data processing extension installed with your report server.  
   
 ## Data Processing Requirements  
- [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] uses data processing extensions to retrieve subscription data. Recommended data source types include the following:  
+ [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] uses data processing extensions to retrieve subscription data. Recommended data source types include the following:  
   
--   [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] relational databases  
+-   [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] relational databases  
   
 -   Oracle databases  
   
--   [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] multidimensional and data mining data sources  
+-   [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] multidimensional and data mining data sources  
   
 -   XML data sources  
   

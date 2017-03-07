@@ -24,7 +24,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Monitor Performance with Replication Monitor
-  [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Replication Monitor allows you to monitor the performance of transactional replication and merge replication in the following ways:  
+  [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Replication Monitor allows you to monitor the performance of transactional replication and merge replication in the following ways:  
   
 -   Setting warnings and thresholds  
   
@@ -94,7 +94,7 @@ manager: "jhubbard"
  For transactional replication, Replication Monitor displays information about the number of transactions in the distribution database that have not yet been distributed to a Subscriber and the estimated time for distributing these transactions. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/fbb59d31-2424-4552-9195-0da8d83e755f.md).  
   
 ## See Also  
- [Monitoring Replication](../Topic/Monitoring%20Replication.md)   
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
  [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

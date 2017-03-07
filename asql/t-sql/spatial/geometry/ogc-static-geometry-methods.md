@@ -19,9 +19,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # OGC Static Geometry Methods
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] supports the static geometry methods of the Open Geospatial Consortium (OGC).  
+  [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] supports the static geometry methods of the Open Geospatial Consortium (OGC).  
   
  For more information on Open Geospatial Consortium (OGC) specifications, see the following Open Geospatial Consortium Specifications:  
   

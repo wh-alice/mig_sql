@@ -15,7 +15,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Grant DQS Roles to Users
-  This topic describes how to create SQL logins based on a Windows principal, and grant [!INCLUDE[ssDQSnoversion](../../../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS) roles on the DQS_MAIN database.  
+  This topic describes how to create SQL logins based on a Windows principal, and grant [!INCLUDE[ssDQSnoversion](../../../a9retired/includes/ssdqsnoversion-md.md)] (DQS) roles on the DQS_MAIN database.  
   
 ## Prerequisites  
   
@@ -25,9 +25,9 @@ manager: "jhubbard"
   
 ### To create SQL login and grant DQS roles  
   
-1.  Start [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+1.  Start [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
-2.  In [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], expand your SQL Server instance, and then expand **Security**.  
+2.  In [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], expand your SQL Server instance, and then expand **Security**.  
   
 3.  Right-click the **Security** folder, point to **New**, and then click **Login**.  
   

@@ -15,7 +15,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.remove_data_tap
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Removes a data tap from a component output that is in an execution. The unique identifier for the data tap is associated with an instance of the execution.  
   

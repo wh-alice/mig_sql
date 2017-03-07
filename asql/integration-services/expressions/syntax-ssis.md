@@ -18,10 +18,10 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Syntax (SSIS)
-  The [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] expression syntax is similar to the syntax that the C and C# languages use. Expressions include elements such as identifiers (columns and variables), literals, operators, and functions. This topic summarizes the unique requirements of the expression evaluator syntax as they apply to different expression elements.  
+  The [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] expression syntax is similar to the syntax that the C and C# languages use. Expressions include elements such as identifiers (columns and variables), literals, operators, and functions. This topic summarizes the unique requirements of the expression evaluator syntax as they apply to different expression elements.  
   
 > [!NOTE]  
->  In previous releases of [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)], there was a 4000-character limit on the evaluation result of an expression when the result had the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data type DT_WSTR or DT_STR. This limit has been removed.  
+>  In previous releases of [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)], there was a 4000-character limit on the evaluation result of an expression when the result had the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] data type DT_WSTR or DT_STR. This limit has been removed.  
   
  For sample expressions that use specific operators and functions, see the topic about each operator and function in the topics: [Operators &#40;SSIS Expression&#41;](../../integration-services/expressions/operators-ssis-expression.md) and [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
@@ -32,10 +32,10 @@ manager: "jhubbard"
 ## Identifiers  
  Expressions can include column and variable identifiers. The columns can originate in the data source or can be created by transformations in the data flow. Expressions can use lineage identifiers to refer to columns. Lineage identifiers are numbers that uniquely identify package elements. Lineage identifiers, referenced in an expression, must include the pound (#) prefix. For example, the lineage identifier 138 is referenced using #138.  
   
- Expressions can include the system variables that [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] provides and custom variables. Variables, when referenced in an expression, must include the @ prefix. For example, the `Counter` variable is referenced using @Counter. The @ character is not part of the variable name; it only indicates to the expression evaluator that the identifier is a variable. For more information, see [Identifiers &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md).  
+ Expressions can include the system variables that [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] provides and custom variables. Variables, when referenced in an expression, must include the @ prefix. For example, the `Counter` variable is referenced using @Counter. The @ character is not part of the variable name; it only indicates to the expression evaluator that the identifier is a variable. For more information, see [Identifiers &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md).  
   
 ## Literals  
- Expressions can include numeric, string, and Boolean literals. String literals used in expressions must be enclosed in quotation marks. Numeric and Boolean literals do not take quotation marks. The expression language includes escape sequences for characters that are frequently escaped. For more information, see [Literals &#40;SSIS&#41;](../Topic/Literals%20\(SSIS\).md).  
+ Expressions can include numeric, string, and Boolean literals. String literals used in expressions must be enclosed in quotation marks. Numeric and Boolean literals do not take quotation marks. The expression language includes escape sequences for characters that are frequently escaped. For more information, see [Literals &#40;SSIS&#41;](../../integration-services/expressions/numeric-string-and-boolean-literals.md).  
   
 ## Operators  
  The expression evaluator provides a set of operators that provides functionality similar to the set of operators in languages such as Transact-SQL, C++, and C#. However, the expression language includes additional operators and uses different symbols than those you may be familiar with. For more information, see [Operators &#40;SSIS Expression&#41;](../../integration-services/expressions/operators-ssis-expression.md).  
@@ -56,7 +56,7 @@ manager: "jhubbard"
  The conditional operator returns one of two expressions, based on the evaluation of a Boolean expression. The conditional operator provided by the expression language is similar to the one provided by the C and C# languages. In multidimensional expressions (MDX), the IIF function provides similar functionality.  
   
 ###### Logical Operators  
- The expression language supports the ! character for the logical NOT operator. In Transact-SQL, the ! operator is built into the set of relational operators. For example, Transact-SQL provides the > and the !> operators. The [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] expression language does not support the combination of the ! operator and other operators. For example, it is not valid to combine ! and > into !>. However, the expression language does support a built-in != combination of characters for the not-equal-to comparison.  
+ The expression language supports the ! character for the logical NOT operator. In Transact-SQL, the ! operator is built into the set of relational operators. For example, Transact-SQL provides the > and the !> operators. The [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] expression language does not support the combination of the ! operator and other operators. For example, it is not valid to combine ! and > into !>. However, the expression language does support a built-in != combination of characters for the not-equal-to comparison.  
   
 ###### Equality Operators  
  The expression evaluator grammar provides the == equality operator. This operator is the equivalent of the = operator in Transact-SQL and the == operator in C#.  
@@ -73,7 +73,7 @@ manager: "jhubbard"
  For more information, see [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
 ## Related Tasks  
- [Use an Expression in a Data Flow Component](../Topic/Use%20an%20Expression%20in%20a%20Data%20Flow%20Component.md)  
+ [Use an Expression in a Data Flow Component](../../a9retired/use-an-expression-in-a-data-flow-component.md)  
   
 ## Related Content  
   

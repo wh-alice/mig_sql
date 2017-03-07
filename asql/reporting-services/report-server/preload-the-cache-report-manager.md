@@ -25,7 +25,7 @@ manager: "erikre"
   
 1.  Create a cache refresh plan for the report. This is the preferred method.  
   
-2.  Use a data-driven subscription to preload the cache with instances of parameterized reports. This was the only way to preload the cache in versions of [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] earlier than [!INCLUDE[ssKilimanjaro](../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)]. For more information, see [Caching Reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
+2.  Use a data-driven subscription to preload the cache with instances of parameterized reports. This was the only way to preload the cache in versions of [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] earlier than [!INCLUDE[ssKilimanjaro](../../a9notintoc/includes/sskilimanjaro-md.md)]. For more information, see [Caching Reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
   
  The following conditions must be met before you can cache a report or a shared dataset:  
   
@@ -33,11 +33,11 @@ manager: "erikre"
   
 -   The shared data sources for the shared dataset or the report must be configured to use stored credentials or no credentials.  
   
--   The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent service must be running.  
+-   The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent service must be running.  
   
 ### To preload the cache by creating a cache refresh plan  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md).  
   
 2.  In Report Manager, navigate to the **Contents** page, and then navigate to the item that you want to cache.  
   
@@ -60,11 +60,11 @@ manager: "erikre"
   
 8.  Configure the schedule  
   
-9. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To preload the cache with a user-specific report by using a data-driven subscription  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md).  
   
 2.  In Report Manager, navigate to the **Contents** page, and then navigate to the report you want to create a subscription for.  
   
@@ -76,7 +76,7 @@ manager: "erikre"
   
 6.  Specify a data source type and then click **Next** to configure the data source.  
   
-7.  Specify the connection type, connection string, and credentials for accessing the data source that contains subscriber data. The following example illustrates a connection string used to connect to a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database called Subscribers:  
+7.  Specify the connection type, connection string, and credentials for accessing the data source that contains subscriber data. The following example illustrates a connection string used to connect to a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database called Subscribers:  
   
     ```  
     data source=<servername>; initial catalog=Subscribers  
@@ -101,7 +101,7 @@ manager: "erikre"
      Or, to create a custom schedule, click **On a schedule created for this subscription** and then click **Next**. Configure the schedule and then click **Finish**.  
   
     > [!NOTE]  
-    >  In order for the subscribers to receive the newest report, the schedule that you configure should be consistent with the report delivery schedule that you have defined for the subscribers. For more information, see [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+    >  In order for the subscribers to receive the newest report, the schedule that you configure should be consistent with the report delivery schedule that you have defined for the subscribers. For more information, see [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md).  
   
 14. Configure the Execution options for the report as follows. On the report page, click the **Properties** tab.  
   

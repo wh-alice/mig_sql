@@ -16,9 +16,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Connect to an Excel Workbook
-  To connect an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package to a Microsoft Office Excel workbook requires an Excel connection manager.  
+  To connect an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package to a Microsoft Office Excel workbook requires an Excel connection manager.  
   
- You can create these connection managers from either the Connection Managers area in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer or from the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard.  
+ You can create these connection managers from either the Connection Managers area in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer or from the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard.  
   
  **Providers and drivers for Microsoft Excel and Access files**  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 ### To create an Excel connection manager from the Connection Managers area  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the package.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the package.  
   
 2.  In the **Connections Managers** area, right-click anywhere in the area, and then select **New Connection**.  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 ### To create an Excel connection from the SQL Server Import and Export Wizard  
   
-1.  Start the 32-bit version of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard.  
+1.  Start the 32-bit version of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard.  
   
 2.  On the **Choose a Data Source** page, for **Data Source**, select **Microsoft Excel**, and then configure the Excel connection.  
   

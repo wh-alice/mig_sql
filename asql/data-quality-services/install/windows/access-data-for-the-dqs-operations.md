@@ -15,7 +15,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Access Data for the DQS Operations
-  To use your source data for [!INCLUDE[ssDQSnoversion](../../../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS) operations, and export your processed data, you can do either of the following:  
+  To use your source data for [!INCLUDE[ssDQSnoversion](../../../a9retired/includes/ssdqsnoversion-md.md)] (DQS) operations, and export your processed data, you can do either of the following:  
   
 -   Copy your source data to a table/view in the DQS_STAGING_DATA database, and then use it for DQS operations. You can also export the processed data to a new table in the DQS_STAGING_DATA database. To do so, your Windows user account must be granted read/write access to the DQS_STAGING_DATA database.  
   

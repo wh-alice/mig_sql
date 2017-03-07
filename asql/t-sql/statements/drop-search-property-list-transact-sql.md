@@ -25,7 +25,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # DROP SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Drops a property list from the current database if the search property list is currently not associated with any full-text index in the database.  
   
@@ -41,7 +41,7 @@ DROP SEARCH PROPERTY LIST property_list_name
  *property_list_name*  
  Is the name of the search property list to be dropped. *property_list_name* is an identifier.  
   
- To view the names of the existing property lists, use the [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys.registered-search-property-lists-transact-sql.md) catalog view, as follows:  
+ To view the names of the existing property lists, use the [sys.registered_search_property_lists](../../relational-databases/reference/system-catalog-views/sys.registered-search-property-lists-transact-sql.md) catalog view, as follows:  
   
 ```  
 SELECT name FROM sys.registered_search_property_lists;  
@@ -52,11 +52,11 @@ SELECT name FROM sys.registered_search_property_lists;
   
  **To view the property lists on a server instance**  
   
--   [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.registered-search-property-lists-transact-sql.md)  
+-   [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.registered-search-property-lists-transact-sql.md)  
   
  **To view the property lists associated with full-text indexes**  
   
--   [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-indexes-transact-sql.md)  
+-   [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-indexes-transact-sql.md)  
   
  **To remove a property list from a full-text index**  
   
@@ -66,7 +66,7 @@ SELECT name FROM sys.registered_search_property_lists;
  Requires CONTROL permission on the search property list.  
   
 > [!NOTE]  
->  The property list owner can grant CONTROL permissions on the list. By default, the user who creates a search property list is its owner. The owner can be changed by using the [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement.  
+>  The property list owner can grant CONTROL permissions on the list. By default, the user who creates a search property list is its owner. The owner can be changed by using the [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement.  
   
 ## Examples  
  The following example drops the `JobCandidateProperties` property list from the `AdventureWorks2012` database.  
@@ -80,8 +80,8 @@ GO
  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
  [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
  [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.registered-search-properties-transact-sql.md)   
- [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.registered-search-property-lists-transact-sql.md)   
- [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.registered-search-property-lists-transact-sql.md)  
+ [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.registered-search-properties-transact-sql.md)   
+ [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.registered-search-property-lists-transact-sql.md)   
+ [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.registered-search-property-lists-transact-sql.md)  
   
   

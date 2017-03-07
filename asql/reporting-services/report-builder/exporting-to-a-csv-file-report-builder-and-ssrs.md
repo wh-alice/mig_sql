@@ -18,14 +18,14 @@ manager: "erikre"
 # Exporting to a CSV File (Report Builder and SSRS)
   The Comma-Separated Value (CSV) rendering extension renders paginated reports as a flattened representation of data from a report in a standardized, plain-text format that is easily readable and exchangeable with many applications.  
   
- The CSV rendering extension uses a string character delimiter to separate fields and rows, with the string character delimiter configurable to be a character other than a comma. The resulting file can be opened in a spreadsheet program like [!INCLUDE[ofprexcel](../../analysis-services/data-mining/includes/ofprexcel-md.md)] or used as an import format for other programs. The exported report becomes a .csv file, and returns a MIME type of **text/csv**.  
+ The CSV rendering extension uses a string character delimiter to separate fields and rows, with the string character delimiter configurable to be a character other than a comma. The resulting file can be opened in a spreadsheet program like [!INCLUDE[ofprexcel](../../a9retired/includes/ofprexcel-md.md)] or used as an import format for other programs. The exported report becomes a .csv file, and returns a MIME type of **text/csv**.  
   
- If you want to work with data related to charts, data bars, sparklines, gauges, and indicators in [!INCLUDE[ofprexcel](../../analysis-services/data-mining/includes/ofprexcel-md.md)], export the report to a CSV file, and then open the file in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Excel.  
+ If you want to work with data related to charts, data bars, sparklines, gauges, and indicators in [!INCLUDE[ofprexcel](../../a9retired/includes/ofprexcel-md.md)], export the report to a CSV file, and then open the file in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Excel.  
   
  See [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) for details on how to export to CSV format.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ##  <a name="CSVRendering"></a> CSV Rendering  
  When rendered using the default settings, a CSV report has the following characteristics:  

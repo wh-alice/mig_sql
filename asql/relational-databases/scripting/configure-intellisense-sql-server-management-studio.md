@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Configure IntelliSense (SQL Server Management Studio)
-  Most [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] IntelliSense options are on by default. You can turn off an IntelliSense option and instead invoke it through a menu command or keystroke combination.  
+  Most [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] IntelliSense options are on by default. You can turn off an IntelliSense option and instead invoke it through a menu command or keystroke combination.  
   
 > [!IMPORTANT]  
 >  Some changes will not take effect in your current editor session.  You must open a new Transact-SQL editor session to see the change.
@@ -44,6 +44,6 @@ manager: "jhubbard"
   
 5.  To change the casing applied to function names in completion lists, select a casing specification from the **Casing for built-in function names** list.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
   

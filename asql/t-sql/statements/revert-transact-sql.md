@@ -33,9 +33,9 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -78,7 +78,7 @@ EXECUTE dbo.usp_myproc;
  When specified as a standalone statement, REVERT applies to EXECUTE AS statements defined within a batch or session. REVERT has no effect if the corresponding EXECUTE AS statement contains the WITH NO REVERT clause. In this case, the execution context remains in effect until the session is dropped.  
   
 ## Using REVERT WITH COOKIE  
- The EXECUTE AS statement that is used to set the execution context of a session can include the optional clause WITH NO REVERT COOKIE = @*varbinary_variabl*e. When this statement is run, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] passes the cookie to @*varbinary_variabl*e. The execution context set by that statement can only be reverted to the previous context if the calling REVERT WITH COOKIE = @*varbinary_variable* statement contains the correct *@varbinary_variable* value.  
+ The EXECUTE AS statement that is used to set the execution context of a session can include the optional clause WITH NO REVERT COOKIE = @*varbinary_variabl*e. When this statement is run, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] passes the cookie to @*varbinary_variabl*e. The execution context set by that statement can only be reverted to the previous context if the calling REVERT WITH COOKIE = @*varbinary_variable* statement contains the correct *@varbinary_variable* value.  
   
  This mechanism is useful in an environment in which connection pooling is used. Connection pooling is the maintenance of a group of database connections for reuse by applications across multiple end users. Because the value passed to *@varbinary_variable* is known only to the caller of the EXECUTE AS statement (in this case, the application), the caller can guarantee that the execution context they establish cannot be changed by the end user that invokes the application. After the execution context is reverted, the application can switch context to another principal.  
   
@@ -156,7 +156,7 @@ GO
 ## See Also  
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
- [EXECUTE &#40;Transact-SQL&#41;](../Topic/EXECUTE%20\(Transact-SQL\).md)   
+ [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)   
  [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   

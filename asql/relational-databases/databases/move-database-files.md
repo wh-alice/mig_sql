@@ -29,7 +29,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Move Database Files
-  In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you can move system and user databases by specifying the new file location in the FILENAME clause of the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement. Data, log, and full-text catalog files can be moved in this way. This may be useful in the following situations:  
+  In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], you can move system and user databases by specifying the new file location in the FILENAME clause of the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement. Data, log, and full-text catalog files can be moved in this way. This may be useful in the following situations:  
   
 -   Failure recovery. For example, the database is in suspect mode or has shut down, because of a hardware failure.  
   

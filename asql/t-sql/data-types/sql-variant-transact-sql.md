@@ -25,15 +25,15 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # sql_variant (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  A data type that stores values of various [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]-supported data types.  
+  A data type that stores values of various [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]-supported data types.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -62,7 +62,7 @@ sql_variant
  ODBC does not fully support **sql_variant**. Therefore, queries of **sql_variant** columns are returned as binary data when you use Microsoft OLE DB Provider for ODBC (MSDASQL). For example, a **sql_variant** column that contains the character string data 'PS2091' is returned as 0x505332303931.  
   
 ## Comparing sql_variant Values  
- The **sql_variant** data type belongs to the top of the data type hierarchy list for conversion. For **sql_variant** comparisons, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data type hierarchy order is grouped into data type families.  
+ The **sql_variant** data type belongs to the top of the data type hierarchy list for conversion. For **sql_variant** comparisons, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data type hierarchy order is grouped into data type families.  
   
 |Data type hierarchy|Data type family|  
 |-------------------------|----------------------|  
@@ -100,7 +100,7 @@ sql_variant
 -   When **sql_variant** values of the **char**, **varchar**, **nchar**, or **nvarchar** data types are compared, their collations are first compared based on the following criteria: LCID, LCID version, comparison flags, and sort ID. Each of these criteria are compared as integer values, and in the order listed. If all of these criteria are equal, then the actual string values are compared according to the collation.  
   
 ## Converting sql_variant Data  
- When handling the **sql_variant** data type, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports implicit conversions of objects with other data types to the **sql_variant** type. However, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not support implicit conversions from **sql_variant** data to an object with another data type.  
+ When handling the **sql_variant** data type, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports implicit conversions of objects with other data types to the **sql_variant** type. However, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not support implicit conversions from **sql_variant** data to an object with another data type.  
   
 ## Restrictions  
  The following table lists the types of values that cannot be stored by using **sql_variant**:  

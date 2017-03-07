@@ -22,12 +22,12 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # bit (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   An integer data type that can take a value of 1, 0, or NULL.  
   
 ## Remarks  
- The [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] optimizes storage of **bit** columns. If there are 8 or less **bit** columns in a table, the columns are stored as 1 byte. If there are from 9 up to 16 **bit** columns, the columns are stored as 2 bytes, and so on.  
+ The [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] optimizes storage of **bit** columns. If there are 8 or less **bit** columns in a table, the columns are stored as 1 byte. If there are from 9 up to 16 **bit** columns, the columns are stored as 2 bytes, and so on.  
   
  The string values TRUE and FALSE can be converted to **bit** values: TRUE is converted to 1 and FALSE is converted to 0.  
   
@@ -41,6 +41,6 @@ manager: "jhubbard"
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../Topic/DECLARE%20@local_variable%20\(Transact-SQL\).md)   
  [SET @local_variable &#40;Transact-SQL&#41;](../Topic/SET%20@local_variable%20\(Transact-SQL\).md)   
- [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.types-transact-sql.md)  
+ [sys.types &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.types-transact-sql.md)  
   
   

@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # NonEmptyCrossjoin (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns a set that contains the cross product of one or more sets, excluding empty tuples and tuples without associated fact table data.  
   

@@ -30,7 +30,7 @@ It contains the following topics:
 -   Viewing Tuning Reports  
   
 ## Next Task in Lesson  
-[Tuning a Workload](../Topic/Tuning%20a%20Workload.md)  
+[Tuning a Workload](../../../tools/dta/tutorials/lesson-1-1-tuning-a-workload.md)  
   
   
   

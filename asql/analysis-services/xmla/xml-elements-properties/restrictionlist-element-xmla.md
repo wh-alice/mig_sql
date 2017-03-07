@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # RestrictionList Element (XMLA)
-  Contains a collection of restriction columns and values used by the [Discover](../Topic/Discover%20Method%20\(XMLA\).md) method.  
+  Contains a collection of restriction columns and values used by the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method.  
   
 ## Syntax  
   
@@ -61,6 +61,6 @@ manager: "erikre"
  The **RestrictionList** element contains a collection of restriction columns on which the data returned by the **Discover** method can be filtered. Each restriction column in the **RestrictionList** element is defined by a separate XML element. The value of the restriction column is the data contained by the XML element, and the name of the restriction column corresponds to the name of the XML element.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

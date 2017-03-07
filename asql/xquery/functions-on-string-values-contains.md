@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Functions on String Values - contains
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns a value of type xs:boolean indicating whether the value of *$arg1* contains a string value specified by *$arg2*.  
   
@@ -47,12 +47,12 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
   
  The contains() function uses XQuery's default Unicode code point collation for the string comparison.  
   
- The substring value specified for *$arg2* has to be less than or equal to 4000 characters. If the value specified is greater than 4000 characters, a dynamic error condition occurs and the contains() function returns an empty sequence instead of a Boolean value of **True** or **False**. [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not raise dynamic errors on XQuery expressions.  
+ The substring value specified for *$arg2* has to be less than or equal to 4000 characters. If the value specified is greater than 4000 characters, a dynamic error condition occurs and the contains() function returns an empty sequence instead of a Boolean value of **True** or **False**. [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] does not raise dynamic errors on XQuery expressions.  
   
- In order to get case-insensitive comparisons, the [upper-case](../Topic/upper-case%20%20Function%20\(XQuery\).md) or lower-case functions can be used.  
+ In order to get case-insensitive comparisons, the [upper-case](../xquery/functions-on-string-values-upper-case.md) or lower-case functions can be used.  
   
 ## Supplementary Characters (Surrogate Pairs)  
- The behavior of surrogate pairs in XQuery functions depends on the database compatibility level and, in some cases, on the default namespace URI for functions. For more information, see the section "XQuery Functions Are Surrogate-Aware" in the topic [Breaking Changes to Database Engine Features in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Also see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md) and [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ The behavior of surrogate pairs in XQuery functions depends on the database compatibility level and, in some cases, on the default namespace URI for functions. For more information, see the section "XQuery Functions Are Surrogate-Aware" in the topic [Breaking Changes to Database Engine Features in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Also see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) and [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## Examples  
  This topic provides XQuery examples against XML instances stored in various xml-type columns in the AdventureWorks database.  

@@ -34,7 +34,7 @@ manager: "jhubbard"
 ```  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **geography**  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] return type: **geography**  
   
  CLR return type: **SqlGeography**  
   

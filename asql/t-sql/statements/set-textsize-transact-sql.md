@@ -28,14 +28,14 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SET TEXTSIZE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Specifies the size of **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext**, and **image** data returned by a SELECT statement.  
   
 > [!IMPORTANT]  
->  **ntext**, **text**, and **image** data types will be removed in a future version of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Avoid using these data types in new development work, and plan to modify applications that currently use them. Use **nvarchar(max)**, **varchar(max)**, and **varbinary(max)** instead.  
+>  **ntext**, **text**, and **image** data types will be removed in a future version of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Avoid using these data types in new development work, and plan to modify applications that currently use them. Use **nvarchar(max)**, **varchar(max)**, and **varbinary(max)** instead.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -49,9 +49,9 @@ SET TEXTSIZE { number }
  *number*  
  Is the length of **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext**, or **image** data, in bytes. *number* is an integer with a maximum value of 2147483647 (2 GB).  A value of -1 indicates unlimited size. A value of 0 resets the size to the default value of 4 KB.  
   
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client (10.0 and higher) and ODBC Driver for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] automatically specify `-1` (unlimited) when connecting.  
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client (10.0 and higher) and ODBC Driver for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] automatically specify `-1` (unlimited) when connecting.  
   
- **Drivers older than [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] 2008:** The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB Provider (version 9) for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] automatically set TEXTSIZE to 2147483647 when connecting.  
+ **Drivers older than [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] 2008:** The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB Provider (version 9) for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] automatically set TEXTSIZE to 2147483647 when connecting.  
   
 ## Remarks  
  Setting SET TEXTSIZE affects the @@TEXTSIZE function.  

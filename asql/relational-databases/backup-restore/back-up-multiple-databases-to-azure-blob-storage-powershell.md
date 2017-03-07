@@ -15,15 +15,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Back up Multiple Databases to Azure Blob Storage - PowerShell
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   This topic provides sample scripts that can be used to automate backups to Windows Azure Blob storage service using PowerShell cmdlets.  
   
 ## Overview of PowerShell cmdlets for Backup and Restore  
- The **Backup-SqlDatabase** and **Restore-SqlDatabase** are the two main cmdlets available to do backup and restore operations. In addition, there are other cmdlets that may be required to automate backups to Windows Azure Blob storage like the set of **SqlCredential** cmdlets  Following is a list of PowerShell cmdlets available in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] that are used in backup and restore operations:  
+ The **Backup-SqlDatabase** and **Restore-SqlDatabase** are the two main cmdlets available to do backup and restore operations. In addition, there are other cmdlets that may be required to automate backups to Windows Azure Blob storage like the set of **SqlCredential** cmdlets  Following is a list of PowerShell cmdlets available in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] that are used in backup and restore operations:  
   
  Backup-SqlDatabase  
- This cmdlet is used to create a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Backup.  
+ This cmdlet is used to create a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Backup.  
   
  Restore-SqlDatabase  
  Used to restore a database.  

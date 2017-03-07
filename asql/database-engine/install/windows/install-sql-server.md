@@ -38,7 +38,7 @@ manager: "jhubbard"
 
 ## Get the installation media
 
-The download location for [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] depends on the edition:
+The download location for [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] depends on the edition:
 
 - **SQL Server Enterprise, Standard, and Express Editions** are licensed for production use. For Enterprise and Standard Editions, contact your software vendor for the installation media. You can find purchasing information and a directory of Microsoft partners on the [Microsoft purchasing website](https://www.microsoft.com/en-us/server-cloud/products/sql-server/overview.aspx). 
 
@@ -57,29 +57,29 @@ The download location for [!INCLUDE[ssCurrent](../../../advanced-analytics/r-ser
  
 |Title|Description|  
 |-----------|-----------------|  
-|[Install SQL Server 2016 on Server Core](../Topic/Install%20SQL%20Server%202016%20on%20Server%20Core.md)|Review this topic to install [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] on Windows Server Core.|  
+|[Install SQL Server 2016 on Server Core](../../../database-engine/install/windows/install-sql-server-on-server-core.md)|Review this topic to install [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] on Windows Server Core.|  
 |[Check Parameters for the System Configuration Checker](../../../database-engine/install/windows/check-parameters-for-the-system-configuration-checker.md)|Discusses the function of the System Configuration Checker (SCC).|  
-|[Install SQL Server 2016 from the Installation Wizard &#40;Setup&#41;](../Topic/Install%20SQL%20Server%202016%20from%20the%20Installation%20Wizard%20\(Setup\).md)|Procedural topic for a typical [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] installation by using the Installation Wizard.|  
+|[Install SQL Server 2016 from the Installation Wizard &#40;Setup&#41;](../../../database-engine/install/windows/install-sql-server-from-the-installation-wizard-setup.md)|Procedural topic for a typical [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] installation by using the Installation Wizard.|  
 |[Install SQL Server 2016 from the Command Prompt](../../../database-engine/install/windows/install-sql-server-2016-from-the-command-prompt.md)|Procedural topic that provides sample syntax and installation parameters for running unattended Setup.|  
 |[Install SQL Server 2016 Using a Configuration File](../../../database-engine/install/windows/install-sql-server-2016-using-a-configuration-file.md)|Procedural topic that provides sample syntax and installation parameters for running Setup through a configuration file.|  
-|[Install SQL Server 2016 Using SysPrep](../Topic/Install%20SQL%20Server%202016%20Using%20SysPrep.md)|Procedural topic that provides sample syntax and installation parameters for running Setup through SysPrep.|  
-|[Add Features to an Instance of SQL Server 2016 &#40;Setup&#41;](../../../database-engine/install/windows/add-features-to-an-instance-of-sql-server-2016-setup.md)|Procedural topic for updating components of an existing instance of [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
-|[Repair a Failed SQL Server 2016 Installation](../Topic/Repair%20a%20Failed%20SQL%20Server%202016%20Installation.md)|Procedural topic for repairing a corrupt [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] installation.|  
+|[Install SQL Server 2016 Using SysPrep](../../../database-engine/install/windows/install-sql-server-using-sysprep.md)|Procedural topic that provides sample syntax and installation parameters for running Setup through SysPrep.|  
+|[Add Features to an Instance of SQL Server 2016 &#40;Setup&#41;](../../../database-engine/install/windows/add-features-to-an-instance-of-sql-server-2016-setup.md)|Procedural topic for updating components of an existing instance of [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)].|  
+|[Repair a Failed SQL Server 2016 Installation](../../../database-engine/install/windows/repair-a-failed-sql-server-installation.md)|Procedural topic for repairing a corrupt [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] installation.|  
 |[Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](../../../database-engine/install/windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|Procedural topic for updating system metadata that is stored in sys.servers.|  
-|[Install SQL Server 2016 Servicing Updates](../Topic/Install%20SQL%20Server%202016%20Servicing%20Updates.md)|Procedural topic for installing updates for SQL Server 2016.|  
+|[Install SQL Server 2016 Servicing Updates](../../../database-engine/install/windows/install-sql-server-servicing-updates.md)|Procedural topic for installing updates for SQL Server 2016.|  
 |[View and Read SQL Server Setup Log Files](../../../database-engine/install/windows/view-and-read-sql-server-setup-log-files.md)|Procedural topic for checking errors in setup log files.|  
-|[Validate a SQL Server Installation](../../../database-engine/install/windows/validate-a-sql-server-installation.md)|Review the use of the SQL Discovery report to verify the version of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] features installed on the computer.|  
+|[Validate a SQL Server Installation](../../../database-engine/install/windows/validate-a-sql-server-installation.md)|Review the use of the SQL Discovery report to verify the version of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] features installed on the computer.|  
   
   
 ## How to install individual components  
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Install SQL Server Database Engine](../../../database-engine/install/windows/install-sql-server-database-engine.md)|Describes how to install and configure the [!INCLUDE[ssDEnoversion](../../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)].|  
-|[Install SQL Server Replication](../../../database-engine/install/windows/install-sql-server-replication.md)|Describes how to install and configure [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Replication.|  
+|[Install SQL Server Database Engine](../../../database-engine/install/windows/install-sql-server-database-engine.md)|Describes how to install and configure the [!INCLUDE[ssDEnoversion](../../../a9notintoc/includes/ssdenoversion-md.md)].|  
+|[Install SQL Server Replication](../../../database-engine/install/windows/install-sql-server-replication.md)|Describes how to install and configure [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Replication.|  
 |[Install Distributed Replay - Overview](../../../tools/distributed-replay/install-distributed-replay-overview.md)|Lists down the topics to install the Distributed Replay feature.|  
-|[Install SQL Server Management Tools with SSMS](Install%20SQL%20Server%20Management%20Tools%20\(SSMS\).md)|Describes how to install and configure [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] management tools.|  
-|[Install SQL Server PowerShell](../../../database-engine/install/windows/install-sql-server-powershell.md)|Describes the considerations for installing [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] PowerShell components.|  
+|[Install SQL Server Management Tools with SSMS](../../../a9retired/install-sql-server-management-tools-ssms.md)|Describes how to install and configure [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] management tools.|  
+|[Install SQL Server PowerShell](../../../database-engine/install/windows/install-sql-server-powershell.md)|Describes the considerations for installing [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] PowerShell components.|  
   
 
 ## How to configure SQL Server  
@@ -87,20 +87,20 @@ The download location for [!INCLUDE[ssCurrent](../../../advanced-analytics/r-ser
 |Topic|Description|  
 |-----------|-----------------|  
 |[Configure the Windows Firewall to Allow SQL Server Access](../../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|This topic provides an overview of firewall configuration and how to configure the Windows firewall.|  
-|[Configure a Multi-Homed Computer for SQL Server Access](../../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|This topic describes how to configure [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and Windows Firewall with Advanced Security to provide for network connections to an instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in a multi-homed environment.|  
-|[Configure the Windows Firewall to Allow Analysis Services Access](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|You can follow the steps provided in this topic to configure both port and firewall settings to allow access to [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] or [!INCLUDE[ssGemini](../../../analysis-services/includes/ssgemini-md.md)] for SharePoint.|  
+|[Configure a Multi-Homed Computer for SQL Server Access](../../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|This topic describes how to configure [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] and Windows Firewall with Advanced Security to provide for network connections to an instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] in a multi-homed environment.|  
+|[Configure the Windows Firewall to Allow Analysis Services Access](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|You can follow the steps provided in this topic to configure both port and firewall settings to allow access to [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] or [!INCLUDE[ssGemini](../../../a9notintoc/includes/ssgemini-md.md)] for SharePoint.|  
   
 ## Related sections  
 [Editions and Supported Features for SQL Server 2016](../../../sql-server/editions-and-supported-features-for-sql-server-2016.md)  
-[Install SQL Server 2016 Business Intelligence Features](../Topic/Install%20SQL%20Server%202016%20Business%20Intelligence%20Features.md)  
+[Install SQL Server 2016 Business Intelligence Features](../../../sql-server/install/install-sql-server-business-intelligence-features.md)  
   [SQL Server Failover Cluster Installation](../../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
  
   
 ## See also  
 
 [Planning a SQL Server Installation](../../../sql-server/install/planning-a-sql-server-installation.md)   
- [Upgrade to SQL Server 2016](../Topic/Upgrade%20to%20SQL%20Server%202016.md)   
- [Uninstall SQL Server 2016](../Topic/Uninstall%20SQL%20Server%202016.md)   
+ [Upgrade to SQL Server 2016](../../../database-engine/install/windows/upgrade-sql-server.md)   
+ [Uninstall SQL Server 2016](../../../sql-server/install/uninstall-sql-server.md)   
  [High Availability Solutions &#40;SQL Server&#41;](../../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
   
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   Since SQL Server must connect to an external source to retrieve the backup files, SQL Credential is used to authenticate to the storage account. Consequently, the RESTORE statement requires WITH CREDENTIAL option. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
--   If you are using the [!INCLUDE[ss_smartbackup](../../relational-databases/backup-restore/includes/ss-smartbackup-md.md)] to manage your backups to the cloud, you can review all the available backups in the storage, by using the **smart_admin.fn_available_backups** system function. This system function returns all the available backups for a database in a table. As the results are returned in a table, you can filter or sort the results. For more information, see [managed_backup.fn_available_backups &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup.fn-available-backups-transact-sql.md).  
+-   If you are using the [!INCLUDE[ss_smartbackup](../../relational-databases/backup-restore/includes/ss-smartbackup-md.md)] to manage your backups to the cloud, you can review all the available backups in the storage, by using the **smart_admin.fn_available_backups** system function. This system function returns all the available backups for a database in a table. As the results are returned in a table, you can filter or sort the results. For more information, see [managed_backup.fn_available_backups &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/managed-backup.fn-available-backups-transact-sql.md).  
   
 ### Using SQL Server Management Studio  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 -   [Complete Database Restores &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)  
   
--   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 -   [Complete Database Restores &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)  
   

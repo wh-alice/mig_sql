@@ -19,10 +19,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View a Database Snapshot (SQL Server)
-  This topic explains how to view a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database snapshot using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+  This topic explains how to view a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database snapshot using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 > [!NOTE]  
->  To create, revert to, or delete a database snapshot, you must use [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+>  To create, revert to, or delete a database snapshot, you must use [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To view a database snapshot**  
   
-1.  In Object Explorer, connect to the instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] and then expand that instance.  
+1.  In Object Explorer, connect to the instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] and then expand that instance.  
   
 2.  Expand **Databases.**  
   
@@ -44,11 +44,11 @@ manager: "jhubbard"
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To view a database snapshot**  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  To list the database snapshots of the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], query the **source_database_id** column of the [sys.databases](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view for non-NULL values.  
+3.  To list the database snapshots of the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], query the **source_database_id** column of the [sys.databases](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view for non-NULL values.  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

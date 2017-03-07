@@ -23,12 +23,12 @@ manager: "jhubbard"
 # Deterministic and Nondeterministic Functions
   Deterministic functions always return the same result any time they are called with a specific set of input values and given the same state of the database. Nondeterministic functions may return different results each time they are called with a specific set of input values even if the database state that they access remains the same. For example, the function AVG always returns the same result given the qualifications stated above, but the GETDATE function, which returns the current datetime value, always returns a different result.  
   
- There are several properties of user-defined functions that determine the ability of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] to index the results of the function, either through indexes on computed columns that call the function, or through indexed views that reference the function. The determinism of a function is one such property. For example, a clustered index cannot be created on a view if the view references any nondeterministic functions. For more information about the properties of functions, including determinism, see [User-Defined Functions](../../relational-databases/user-defined-functions/user-defined-functions.md).  
+ There are several properties of user-defined functions that determine the ability of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] to index the results of the function, either through indexes on computed columns that call the function, or through indexed views that reference the function. The determinism of a function is one such property. For example, a clustered index cannot be created on a view if the view references any nondeterministic functions. For more information about the properties of functions, including determinism, see [User-Defined Functions](../../relational-databases/user-defined-functions/user-defined-functions.md).  
   
  This topic identifies the determinism of built-in system functions and the effect on the deterministic property of user-defined functions when it contains a call to extended stored procedures.  
   
 ## Built-in Function Determinism  
- You cannot influence the determinism of any built-in function. Each built-in function is deterministic or nondeterministic based on how the function is implemented by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For example, specifying an ORDER BY clause in a query does not change the determinism of a function that used in that query.  
+ You cannot influence the determinism of any built-in function. Each built-in function is deterministic or nondeterministic based on how the function is implemented by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For example, specifying an ORDER BY clause in a query does not change the determinism of a function that used in that query.  
   
  All of the string built-in functions are deterministic. For a list of these functions, see [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md).  
   
@@ -90,8 +90,8 @@ manager: "jhubbard"
   
  When called from inside a function, the extended stored procedure cannot return result sets to the client. Any Open Data Services API that returns result sets to the client will have a return code of FAIL.  
   
- The extended stored procedure can connect back to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. However, the procedure cannot join the same transaction as the original function that invoked the extended stored procedure.  
+ The extended stored procedure can connect back to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. However, the procedure cannot join the same transaction as the original function that invoked the extended stored procedure.  
   
- Similar to invocations from a batch or stored procedure, the extended stored procedure is executed in the context of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows security account under which [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running. The owner of the extended stored procedure should consider this when granting permissions to other users to execute the procedure.  
+ Similar to invocations from a batch or stored procedure, the extended stored procedure is executed in the context of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows security account under which [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running. The owner of the extended stored procedure should consider this when granting permissions to other users to execute the procedure.  
   
   

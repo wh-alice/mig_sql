@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Reorganize Index Task (Maintenance Plan)
-  Use the **ReorganizeIndex Task** dialog to move index pages into a more efficient search order. This task uses the `ALTER INDEX REORGANIZE` statement with [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] databases.  
+  Use the **ReorganizeIndex Task** dialog to move index pages into a more efficient search order. This task uses the `ALTER INDEX REORGANIZE` statement with [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] databases.  
   
 ## Options  
  **Connection**  
@@ -33,15 +33,15 @@ manager: "jhubbard"
   
 -   **All databases**  
   
-     Generate a maintenance plan that runs maintenance tasks against all [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases except tempdb.  
+     Generate a maintenance plan that runs maintenance tasks against all [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] databases except tempdb.  
   
 -   **All system databases**  
   
-     Generate a maintenance plan that runs maintenance tasks against each of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system databases except **tempdb**. No maintenance tasks are run against user-created databases.  
+     Generate a maintenance plan that runs maintenance tasks against each of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system databases except **tempdb**. No maintenance tasks are run against user-created databases.  
   
 -   **All user databases**  
   
-     Generate a maintenance plan that runs maintenance tasks against all user-created databases. No maintenance tasks are run against the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system databases.  
+     Generate a maintenance plan that runs maintenance tasks against all user-created databases. No maintenance tasks are run against the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system databases.  
   
 -   **These specific databases**  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
  Deallocate space for tables and views when possible. This option uses `ALTER INDEX LOB_COMPACTION = ON`.  
   
  **View T-SQL**  
- View the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements performed against the server for this task, based on the selected options.  
+ View the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements performed against the server for this task, based on the selected options.  
   
 > [!NOTE]  
 >  When the number of objects affected is large, this display can take a considerable amount of time.  
@@ -76,13 +76,13 @@ manager: "jhubbard"
  Specify how to authenticate against the server.  
   
  **Use Windows integrated security**  
- Connect to an instance of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] with [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows Authentication.  
+ Connect to an instance of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] with [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows Authentication.  
   
  **Use a specific user name and password**  
- Connect to an instance of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication. This option is not available.  
+ Connect to an instance of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication. This option is not available.  
   
  **User name**  
- Provide a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login to use when authenticating. This option is not available.  
+ Provide a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login to use when authenticating. This option is not available.  
   
  **Password**  
  Provide a password to use when authenticating. This option is not available.  

@@ -17,9 +17,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # What&#39;s New (Replication)
-  [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] has not introduced significant new features to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] replication.  
+  [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] has not introduced significant new features to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] replication.  
   
- [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] does not support replication to or from [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] or [!INCLUDE[ssEW](../../analysis-services/instances/includes/ssew-md.md)].  
+ [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] does not support replication to or from [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] or [!INCLUDE[ssEW](../../a9retired/includes/ssew-md.md)].  
   
 ## See Also  
  [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)  

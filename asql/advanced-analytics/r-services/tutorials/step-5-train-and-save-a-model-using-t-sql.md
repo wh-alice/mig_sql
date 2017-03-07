@@ -20,16 +20,16 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Step 5: Train and Save a Model using T-SQL
-In this step, you'll learn how to train a machine learning model by using R. The R  packages are already installed with [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)] so you can call the algorithm from a stored procedure. You'll train the model using the data features you just created, and then save the trained model in a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table.  
+In this step, you'll learn how to train a machine learning model by using R. The R  packages are already installed with [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)] so you can call the algorithm from a stored procedure. You'll train the model using the data features you just created, and then save the trained model in a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] table.  
   
 ## Building an R Model using Stored Procedures  
-All calls to the R runtime that is installed with [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)] are done by using the system stored procedure, [sp_execute_external_script](../../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). However, if you need to retrain a model, it is probably easier to encapsulate the call to  sp_execute_exernal_script in another stored procedure.  
+All calls to the R runtime that is installed with [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)] are done by using the system stored procedure, [sp_execute_external_script](../../../relational-databases/reference/system-stored-procedures/sp-execute-external-script-transact-sql.md). However, if you need to retrain a model, it is probably easier to encapsulate the call to  sp_execute_exernal_script in another stored procedure.  
   
 In this section, you'll create a stored procedure that can be used to build a model using the data you just prepared. This stored procedure defines the input data and uses an R package to create a logistic regression model.  
   
 #### To create the stored procedure  
   
-1.  In [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], open a new Query window and run the following statement to create the stored procedure _TrainTipPredictionModel_.  
+1.  In [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)], open a new Query window and run the following statement to create the stored procedure _TrainTipPredictionModel_.  
   
     Note that, because the stored procedure already includes a definition of the input data, you don't need to provide an input query.  
   
@@ -72,23 +72,23 @@ In this section, you'll create a stored procedure that can be used to build a mo
   
     -   The SELECT query uses the custom scalar function _fnCalculateDistance_ to calculate the direct distance between the pick-up and drop-off locations.  the results of the query are stored in the default R input variable, `InputDataset`.  
   
-    -   the R script calls the `rxLogit` function, which is one of the enhanced R functions included with [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)], to create the logistic regression model.  
+    -   the R script calls the `rxLogit` function, which is one of the enhanced R functions included with [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)], to create the logistic regression model.  
   
         The binary variable _tipped_ is used as the *label* or outcome column,  and the model is fit using these feature columns:  _passenger_count_, _trip_distance_, _trip_time_in_secs_, and _direct_distance_.  
   
-    -   The trained model, saved in the R variable `logitObj`, is serialized and put in a data frame for output to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. That output is inserted into the database table _nyc_taxi_models_, so that you can use it for future predictions.  
+    -   The trained model, saved in the R variable `logitObj`, is serialized and put in a data frame for output to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. That output is inserted into the database table _nyc_taxi_models_, so that you can use it for future predictions.  
   
 2.  Run the statement to create the stored procedure.  
   
 #### To create the R model using the stored procedure  
   
-1.  In [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], run this statement.  
+1.  In [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)], run this statement.  
   
     ```  
     EXEC TrainTipPredictionModel  
     ```  
   
-    Processing of the data and fitting the model  might take a while. Messages that would be piped to R's **stdout** stream are displayed in the **Messages** window of [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)]. For example:  
+    Processing of the data and fitting the model  might take a while. Messages that would be piped to R's **stdout** stream are displayed in the **Messages** window of [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)]. For example:  
   
   
 *STDOUT message(s) from external script: Rows Read: 1193025, Total Rows Processed: 1193025, Total Chunk Time: 0.093 seconds*       

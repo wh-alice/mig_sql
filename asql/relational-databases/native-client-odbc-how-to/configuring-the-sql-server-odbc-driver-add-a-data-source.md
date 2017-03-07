@@ -17,9 +17,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configuring the SQL Server ODBC Driver - Add a Data Source
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  Before using ODBC applications with [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] or later, you must know how to upgrade the version of the catalog stored procedures on earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and add, delete, and test data sources.  
+  Before using ODBC applications with [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] or later, you must know how to upgrade the version of the catalog stored procedures on earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and add, delete, and test data sources.  
   
   You can add a data source by using ODBC Administrator, programmatically (by using [SQLConfigDataSource](../../relational-databases/extended-stored-procedures-reference/sqlconfigdatasource.md)), or by creating a file.  
   
@@ -42,6 +42,6 @@ manager: "jhubbard"
 1.  Call [SQLDriverConnect](../../relational-databases/extended-stored-procedures-reference/sqldriverconnect.md) with a SAVEFILE=file_name parameter in the connect string. If the connect is successful, the ODBC driver creates a file data source with the connection parameters in the location pointed to by the SAVEFILE parameter.  
   
 ## See Also  
-[Delete a Data Source &#40;ODBC&#41;](../Topic/Delete%20a%20Data%20Source%20\(ODBC\).md)    
+[Delete a Data Source &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)    
   
   

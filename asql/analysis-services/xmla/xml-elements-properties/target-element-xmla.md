@@ -64,7 +64,7 @@ manager: "erikre"
  The **Target** element is an object reference to a single partition into which the contents of the source partitions, specified by the [Sources](../../../analysis-services/xmla/xml-elements-properties/sources-element-xmla.md) element of the parent **MergePartitions** element, are to be merged.  
   
 ## Example  
- The following example combines all four partitions of the Internet Sales measure group into the `Internet_Sales_2004` target partition. The example refers to the [!INCLUDE[ssSampleDBnormal](../../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] cube of the [!INCLUDE[ssSampleDBnormal](../../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] sample [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] database.  
+ The following example combines all four partitions of the Internet Sales measure group into the `Internet_Sales_2004` target partition. The example refers to the [!INCLUDE[ssSampleDBnormal](../../../a9notintoc/includes/sssampledbnormal-md.md)] cube of the [!INCLUDE[ssSampleDBnormal](../../../a9notintoc/includes/sssampledbnormal-md.md)] sample [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] database.  
   
 ```  
 <MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -94,6 +94,6 @@ manager: "erikre"
   
 ## See Also  
  [Source Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)   
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [current version](http://msdn.microsoft.com/library/bb500435.aspx)), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [current version](http://msdn.microsoft.com/library/bb500435.aspx)), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
 ## Syntax  
   
@@ -42,7 +42,7 @@ EnvelopeAggregate ( geography_operand )
  Is a **geography** type table column that holds the set of **geography** objects on which to perform an envelope aggregate operation.  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **geography**  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] return type: **geography**  
   
 ## Remarks  
  A **FullGlobe** object is returned when the resulting bounding object is bigger than a hemisphere. This method is not precise.  

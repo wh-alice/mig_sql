@@ -27,7 +27,7 @@ manager: "erikre"
   
 -   Drillthrough actions, which return the set of rows that represents the underlying data of the selected cells of the cube where the action occurs.  
   
--   Reporting actions, which return a report from [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] that is associated with the selected section of the cube where the action occurs.  
+-   Reporting actions, which return a report from [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] that is associated with the selected section of the cube where the action occurs.  
   
 -   Standard actions, which return the action element (URL, HTML, DataSet, RowSet, and other elements) that is associated with the selected section of the cube where the action occurs.  
   
@@ -41,7 +41,7 @@ manager: "erikre"
   
  The type is the kind of action to be executed. <xref:Microsoft.AnalysisServices.Action> is an abstract class, therefore, to use it you have to use any one of the derived classes. Two kinds of actions are predefined: drillthrough and reporting. These have corresponding derived classes: <xref:Microsoft.AnalysisServices.DrillThroughAction> and <xref:Microsoft.AnalysisServices.ReportAction>. Other actions are covered in the <xref:Microsoft.AnalysisServices.StandardAction> class.  
   
- In [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], an action is a stored MDX statement that can be presented to and employed by client applications. In other words, an action is a client command that is defined and stored on the server. An action also contains information that specifies when and how the MDX statement should be displayed and handled by the client application. The operation that is specified by the action can start an application, using the information in the action as a parameter, or can retrieve information based on criteria supplied by the action.  
+ In [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], an action is a stored MDX statement that can be presented to and employed by client applications. In other words, an action is a client command that is defined and stored on the server. An action also contains information that specifies when and how the MDX statement should be displayed and handled by the client application. The operation that is specified by the action can start an application, using the information in the action as a parameter, or can retrieve information based on criteria supplied by the action.  
   
  Actions enable business users to act upon the outcomes of their analyses. By saving and reusing actions, end users can go beyond traditional analysis, which typically ends with presentation of data, and initiate solutions to discovered problems and deficiencies, thereby extending the business intelligence application beyond the cube. Actions can transform the client application from a sophisticated data rendering tool into an integral part of the enterprise's operational system. Instead of focusing on  sending data as input to operational applications, end users can "close the loop" on the decision-making process. This ability to transform analytical data into decisions is crucial to the successful business intelligence application.  
   
@@ -53,7 +53,7 @@ manager: "erikre"
 >  In order for a business user to use actions, the client application employed by the business user must support actions.  
   
 ## Types of Actions  
- The following table lists the types of actions that are included in [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)]:  
+ The following table lists the types of actions that are included in [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)]:  
   
 |Action Type|Description|  
 |-----------------|-----------------|  

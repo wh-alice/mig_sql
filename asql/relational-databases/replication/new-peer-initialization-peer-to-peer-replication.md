@@ -29,20 +29,20 @@ manager: "jhubbard"
   
      When a publication is enabled for peer-to-peer replication, the **allow_initialize_from_backup** publication property is set. Replication immediately starts to track changes in the first publication database. Therefore, these changes can be delivered to a restored database at one or more peers if the **initialize with backup** option is selected. Click the **Browse** button to locate the backup used, and replication will read the log sequence number (LSN) from the backup. All changes in the first publication database that have a higher LSN will be delivered to each peer.  
   
-     This option might not be available if you are creating or adding to a topology that includes [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)]. The following table shows whether the option is available when you are adding a node to an existing topology.  
+     This option might not be available if you are creating or adding to a topology that includes [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)]. The following table shows whether the option is available when you are adding a node to an existing topology.  
   
     |New node|First node|Additional nodes|Option|  
     |--------------|----------------|----------------------|------------|  
-    |[!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)]|Disabled|  
-    |[!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)]|None|Disabled|  
-    |[!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)]|Disabled|  
-    |[!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)]|None|Enabled|  
-    |[!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)]|None|Enabled|  
-    |[!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)]|Enabled|  
-    |[!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)]|None|Enabled|  
+    |[!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)]|Disabled|  
+    |[!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)]|None|Disabled|  
+    |[!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)]|Disabled|  
+    |[!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)]|None|Enabled|  
+    |[!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)]|None|Enabled|  
+    |[!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)]|Enabled|  
+    |[!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)]|None|Enabled|  
   
 ## See Also  
  [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Peer-to-Peer Transactional Replication](../Topic/Peer-to-Peer%20Transactional%20Replication.md)  
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

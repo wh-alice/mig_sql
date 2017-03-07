@@ -26,11 +26,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # -- (Comment) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Indicates user-provided text. Comments can be inserted on a separate line, nested at the end of a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] command line, or within a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement. The server does not evaluate the comment.  
+  Indicates user-provided text. Comments can be inserted on a separate line, nested at the end of a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] command line, or within a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement. The server does not evaluate the comment.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

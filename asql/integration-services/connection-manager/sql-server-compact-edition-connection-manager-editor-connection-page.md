@@ -19,19 +19,19 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # SQL Server Compact Edition Connection Manager Editor (Connection Page)
-  Use the **SQL Server Compact Edition Connection Manager** dialog box to specify properties for connecting to a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Compact database.  
+  Use the **SQL Server Compact Edition Connection Manager** dialog box to specify properties for connecting to a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Compact database.  
   
- To learn more about the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Compact Edition connection manager, see [SQL Server Compact Edition Connection Manager](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md).  
+ To learn more about the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Compact Edition connection manager, see [SQL Server Compact Edition Connection Manager](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md).  
   
 ## Options  
  **Enter the database file name and path**  
- Enter the path and filename for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Compact database.  
+ Enter the path and filename for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Compact database.  
   
  **Browse**  
- Locate the desired [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Compact database file by using the **Select SQL Server Compact Edition database** dialog box.  
+ Locate the desired [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Compact database file by using the **Select SQL Server Compact Edition database** dialog box.  
   
  **Enter the database password**  
- Enter the password for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Compact database.  
+ Enter the password for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Compact database.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   

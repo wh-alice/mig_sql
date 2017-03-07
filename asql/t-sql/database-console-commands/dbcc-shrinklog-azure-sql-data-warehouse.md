@@ -17,11 +17,11 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # DBCC SHRINKLOG (Azure SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../a9retired/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Reduces the size of the transaction log *across the appliance* for the current [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)] database. The data is defragmented in order to shrink the transaction log. Over time, the database transaction log can become fragmented and inefficient. Use DBCC SHRINKLOG to reduce fragmentation and reduce the log size.  
+  Reduces the size of the transaction log *across the appliance* for the current [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)] database. The data is defragmented in order to shrink the transaction log. Over time, the database transaction log can become fragmented and inefficient. Use DBCC SHRINKLOG to reduce fragmentation and reduce the log size.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -51,7 +51,7 @@ DBCC SHRINKLOG
 ## General Remarks  
  DBCC SHRINKLOG does not change the log size stored in the metadata for the database. The metadata continues to contain the LOG_SIZE parameter that was specified in CREATE DATABASE or ALTER DATABASE statement.  
   
-## Examples: [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### A. Shrink the transaction log to the original size specified by CREATE DATABASE.  
  Suppose the transaction log for the Addresses database was set to 100 MB when the Addresses database was created. That is, the CREATE DATABASE statement for Addresses had LOG_SIZE = 100 MB. Now, suppose the log has grown to 150 MB and you want to shrink it back to 100 MB.  

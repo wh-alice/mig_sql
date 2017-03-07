@@ -56,7 +56,7 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- For more information about the **Binding** type, including tables of [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] Scripting Language (ASSL) objects of the **Binding** type and the inheritance hierarchy of **Binding** types, see [Binding Data Type &#40;ASSL&#41;](../../../analysis-services/scripting/data-type/binding-data-type-assl.md).  
+ For more information about the **Binding** type, including tables of [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] Scripting Language (ASSL) objects of the **Binding** type and the inheritance hierarchy of **Binding** types, see [Binding Data Type &#40;ASSL&#41;](../../../analysis-services/scripting/data-type/binding-data-type-assl.md).  
   
  For an overview of data bindings in ASSL, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   

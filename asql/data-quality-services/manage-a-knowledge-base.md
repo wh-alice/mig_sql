@@ -15,7 +15,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Manage a Knowledge Base
-  This topic describes how to perform management functions on a knowledge base in [!INCLUDE[ssDQSnoversion](../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS). You can delete a knowledge base, unlock it, discard your work on it, rename it, and display its properties.  
+  This topic describes how to perform management functions on a knowledge base in [!INCLUDE[ssDQSnoversion](../a9retired/includes/ssdqsnoversion-md.md)] (DQS). You can delete a knowledge base, unlock it, discard your work on it, rename it, and display its properties.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssDQSInitialStep](../data-quality-services/includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] home screen, click **Open knowledge base**.  
+2.  In the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] home screen, click **Open knowledge base**.  
   
 3.  Right-click a knowledge base in the knowledge base table.  
   

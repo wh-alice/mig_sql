@@ -48,7 +48,7 @@ manager: "erikre"
   
  System-level role assignments include a wide range of permissions, but they do not include permissions that are part of an item-level role assignment. In contrast with system permissions on a computer, system roles in Reporting Servers do not convey overarching permissions that include the full set of all possible operations. Instead, system-level role assignments are simply a set of tasks that are scoped to the report server site. Permissions that are conveyed through system role assignments determine whether users can view application properties (such as the image or title of the Home page), view or manage shared schedules, or use Report Builder.  
   
- For more information, see [Grant User Access to a Report Server &#40;Report Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md) and [Predefined Roles](../Topic/Predefined%20Roles.md).  
+ For more information, see [Grant User Access to a Report Server &#40;Report Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md) and [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
 ## Modifying a Role Assignment  
  You can modify a role assignment at any time. Your changes take effect when you save the role assignment. User sessions are not affected by role assignment changes. If a user has a report open, and you modify a role assignment to deny access, the user can continue using the report as long as the session is active.  
@@ -62,10 +62,10 @@ manager: "erikre"
   
 ## See Also  
  [Grant User Access to a Report Server &#40;Report Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modify or Delete a Role Assignment &#40;Report Manager&#41;](../Topic/Modify%20or%20Delete%20a%20Role%20Assignment%20\(Report%20Manager\).md)   
+ [Modify or Delete a Role Assignment &#40;Report Manager&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [Role Assignments](../../reporting-services/security/role-assignments.md)   
  [Role Definitions](../../reporting-services/security/role-definitions.md)   
- [Predefined Roles](../Topic/Predefined%20Roles.md)   
+ [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

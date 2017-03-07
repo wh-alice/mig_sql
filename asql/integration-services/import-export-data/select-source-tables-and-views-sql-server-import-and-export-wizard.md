@@ -17,7 +17,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Select Source Tables and Views (SQL Server Import and Export Wizard)
-  After you specify that you want to copy an entire table, or after you provide a query, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard shows **Select Source Tables and Views**. On this page, you select the existing tables and views that you want to copy. Then you map the source tables to new or existing destination tables. Optionally, you also review the mapping of individual columns and preview sample data.
+  After you specify that you want to copy an entire table, or after you provide a query, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard shows **Select Source Tables and Views**. On this page, you select the existing tables and views that you want to copy. Then you map the source tables to new or existing destination tables. Optionally, you also review the mapping of individual columns and preview sample data.
 
 > [!TIP]
 > If you have to copy more than one SQL Server database, or SQL Server database objects other than tables and views, use the Copy Database Wizard instead of the Import and Export Wizard. For more info, see [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
@@ -46,7 +46,7 @@ If you provided a query, the list contains only one item with the name `[Query]`
  Select a destination table from the list for each source table or query, or enter the name of a new table that you want the wizard to create. If you select an existing destination table, the table has to have columns with data types that are compatible with the source data.  
 
 > [!NOTE]
-> If you pause at this point in the wizard to create a new table manually in the destination database by using an external tool (such as  [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]), the new table is not immediately visible in the list of available destination tables. To refresh the list of destination tables, step back to the **Choose a Destination** page, re-select the destination database to refresh the list of available tables and views, and then step forward again to the **Select Source Tables and Views** page.  
+> If you pause at this point in the wizard to create a new table manually in the destination database by using an external tool (such as  [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]), the new table is not immediately visible in the list of available destination tables. To refresh the list of destination tables, step back to the **Choose a Destination** page, re-select the destination database to refresh the list of available tables and views, and then step forward again to the **Select Source Tables and Views** page.  
 
 ## Optionally edit column mappings and preview sample data
 **Edit mappings**   
@@ -101,7 +101,7 @@ When the wizard has to do explicit data type conversions to load from or to Exce
 -   If the destination table is created by the wizard, the **CREATE TABLE** statement must use **LONGTEXT** (or one of its synonyms) as the data type of the the memo column. Check the **CREATE TABLE** statement and revise it, if necessary, by clicking **Edit SQL** next to the **Create destination table** option on the **Column Mappings** page.
 
 ## What's next?  
- After you select the existing tables and views to copy and map them to their destinations, the next page is **Save and Run Package**. On this page, you specify whether you want to run the copy operation immediately. Depending on your configuration, you may also be able to save the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package created by the wizard to customize it and to reuse it later. For more info, see [Save and Run Package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
+ After you select the existing tables and views to copy and map them to their destinations, the next page is **Save and Run Package**. On this page, you specify whether you want to run the copy operation immediately. Depending on your configuration, you may also be able to save the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package created by the wizard to customize it and to reuse it later. For more info, see [Save and Run Package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
  ## See also
 [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)

@@ -20,37 +20,37 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Building Applications with SQL Server Native Client
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
-  When developing an application that uses the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client library, there are a number of issues that come into play. The topics in this section discuss many of these issues including upgrading from MDAC to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client, using the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client header and library files, and an overview of the various connection strings that can be used with [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client.  
+  When developing an application that uses the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client library, there are a number of issues that come into play. The topics in this section discuss many of these issues including upgrading from MDAC to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client, using the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client header and library files, and an overview of the various connection strings that can be used with [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client.  
   
 ## In This Section  
  [Installing SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
- Discusses how [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client is installed, the locations that various components are installed to, and how to uninstall [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client.  
+ Discusses how [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client is installed, the locations that various components are installed to, and how to uninstall [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client.  
   
  [Components of SQL Server Native Client](../../../relational-databases/native-client/applications/components-of-sql-server-native-client.md)  
- Discusses the components that make up [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client including library, resource, help, and header files.  
+ Discusses the components that make up [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client including library, resource, help, and header files.  
   
  [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
- Discusses the various types of connection strings that can be used when connecting to a database through [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client.  
+ Discusses the various types of connection strings that can be used when connecting to a database through [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client.  
   
  [Using the SQL Server Native Client Header and Library Files](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md)  
- Discusses how to use the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client header and library files within an application.  
+ Discusses how to use the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client header and library files within an application.  
   
  [Updating an Application to SQL Server Native Client from MDAC](../../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)  
- Discusses the differences between [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client and MDAC and issues that should be considered when upgrading from MDAC to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client.  
+ Discusses the differences between [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client and MDAC and issues that should be considered when upgrading from MDAC to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client.  
   
  [Updating an Application from SQL Server 2005 Native Client](../../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)  
- Discusses issues that should be considered when upgrading from [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)] Native Client to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)].  
+ Discusses issues that should be considered when upgrading from [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)] Native Client to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssSQL11](../../../a9notintoc/includes/sssql11-md.md)].  
   
  [Using ADO with SQL Server Native Client](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)  
- Discusses how ADO can use [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client to access and use [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] functionality.  
+ Discusses how ADO can use [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client to access and use [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] functionality.  
   
  [Support Policies for SQL Server Native Client](../../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md)  
- Discusses how various data-access components can be used with different versions of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client.  
+ Discusses how various data-access components can be used with different versions of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client.  
   
  [Connecting to a Windows Azure SQL Database Using SQL Server Native Client](../../../relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
- Discusses how to connect to a [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)] using [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client.  
+ Discusses how to connect to a [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)] using [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client.  
   
 ## See Also  
  [SQL Server Native Client Programming](../../../relational-databases/native-client/sql-server-native-client-programming.md)   

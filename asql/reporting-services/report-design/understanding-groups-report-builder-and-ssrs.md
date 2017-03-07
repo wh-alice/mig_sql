@@ -19,7 +19,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Understanding Groups (Report Builder and SSRS)
-  In a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report, a group is a named set of data from the report dataset that is bound to a data region. Basically, a group organizes a view of a report dataset. All groups in a data region specify different views of the same report dataset.  
+  In a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report, a group is a named set of data from the report dataset that is bound to a data region. Basically, a group organizes a view of a report dataset. All groups in a data region specify different views of the same report dataset.  
   
  To help visualize what a group is, refer to the following figure that shows the tablix data region in Preview. In this figure, the row groups categorize the dataset by product type and the column groups categorize the dataset by geographic region and year.  
   
@@ -28,7 +28,7 @@ manager: "erikre"
  The following sections help describe the various aspects of groups.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## What Makes a Group?  
  A group has a name and a set of group expressions that you specify. The set of group expressions can be a single dataset field reference or a combination of multiple expressions. At runtime, group expressions are combined, if the group has multiple expressions, and applied to data in a group. For example, you have a group that uses a date field to organize the data in the data region. At run time, data is organized by date, and then displayed with totals other dataset values for each date.  
@@ -69,7 +69,7 @@ manager: "erikre"
      Basically, the details group specifies the data that you would see when you run a dataset query in a query designer. For example, you have a query that retrieves all columns from a sales order table. Thus, the data in this detail group includes all the values for every row for all the columns in the table. The data in this detail group also includes values for any calculated dataset fields that you have created.  
   
     > [!NOTE]  
-    >  The data in a Detail group can also include server aggregates, which are aggregates that are calculated on the data source and retrieved in your query. By default, Report Builder and Report Designer treat server aggregates as detail data unless your report includes an expression that uses the Aggregate function. For more information, see [Aggregate](../Topic/Aggregate%20Function%20\(Report%20Builder%20and%20SSRS\).md).  
+    >  The data in a Detail group can also include server aggregates, which are aggregates that are calculated on the data source and retrieved in your query. By default, Report Builder and Report Designer treat server aggregates as detail data unless your report includes an expression that uses the Aggregate function. For more information, see [Aggregate](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
   
      By default, when you add a table or list to your report, Report Builder and Report Designer automatically create the Details group for you, and adds a row to display the detail data. By default, when you add dataset fields to cells in this row, you see simple expressions for the fields, for example, [Sales]. When you view the data region, the details row repeats once for every value in the result set.  
   
@@ -77,7 +77,7 @@ manager: "erikre"
   
      When you create a group for a data region, Report Builder and Report Designer automatically add rows or columns to the data region and use these rows or columns to display group data.  
   
--   **Recursive hierarchy groups** A recursive hierarchy group organizes data from a single report dataset that includes multiple levels. For example, a recursive hierarchy group could display an organization hierarchy, for example, [Employee] that reports to [Employee]. [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] provides group properties and built-in functions to enable you to create groups for this kind of report data. For more information, see [Creating Recursive Hierarchy Groups &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
+-   **Recursive hierarchy groups** A recursive hierarchy group organizes data from a single report dataset that includes multiple levels. For example, a recursive hierarchy group could display an organization hierarchy, for example, [Employee] that reports to [Employee]. [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] provides group properties and built-in functions to enable you to create groups for this kind of report data. For more information, see [Creating Recursive Hierarchy Groups &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
  The following list summarizes the way you work with groups for each data region:  
   

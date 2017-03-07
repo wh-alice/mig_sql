@@ -22,7 +22,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Delete or Disable DML Triggers
-  This topic describes how to delete or disable a DML trigger in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to delete or disable a DML trigger in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 #### To delete a DML trigger  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand the database that you want, expand **Tables**, and then expand the table that contains the trigger that you want to delete.  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
   
 #### To disable and enable a DML trigger  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand the database that you want, expand **Tables**, and then expand the table that contains the trigger that you want to disable.  
   
@@ -81,7 +81,7 @@ manager: "jhubbard"
   
 #### To delete a DML trigger  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -115,7 +115,7 @@ GO
   
 #### To disable and enable a DML trigger  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -162,15 +162,15 @@ GO
  [DISABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/disable-trigger-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Get Information About DML Triggers](../../relational-databases/triggers/get-information-about-dml-triggers.md)   
- [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
- [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.triggers-transact-sql.md)   
- [sys.trigger_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.trigger-events-transact-sql.md)   
- [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.sql-modules-transact-sql.md)   
- [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.assembly-modules-transact-sql.md)   
- [sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-triggers-transact-sql.md)   
- [sys.server_trigger_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-trigger-events-transact-sql.md)   
- [sys.server_sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-sql-modules-transact-sql.md)   
- [sys.server_assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-assembly-modules-transact-sql.md)  
+ [sp_help &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-help-transact-sql.md)   
+ [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-helptrigger-transact-sql.md)   
+ [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.triggers-transact-sql.md)   
+ [sys.trigger_events &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.trigger-events-transact-sql.md)   
+ [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.sql-modules-transact-sql.md)   
+ [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.assembly-modules-transact-sql.md)   
+ [sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-triggers-transact-sql.md)   
+ [sys.server_trigger_events &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-trigger-events-transact-sql.md)   
+ [sys.server_sql_modules &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-sql-modules-transact-sql.md)   
+ [sys.server_assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-assembly-modules-transact-sql.md)  
   
   

@@ -30,13 +30,13 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CREATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Creates query optimization statistics on one or more columns of a table, an indexed view, or an external table. For most queries, the query optimizer already generates the necessary statistics for a high-quality query plan; in a few cases, you need to create additional statistics with CREATE STATISTICS or modify the query design to improve query performance.  
   
  To learn more, see [Statistics](../../relational-databases/statistics/statistics.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -162,7 +162,7 @@ CREATE STATISTICS statistics_name
 > [!WARNING]  
 >  Using this option can produce suboptimal query plans. We recommend using this option sparingly, and then only by a qualified system administrator.  
   
- For more information about the AUTO_STATISTICS_UPDATE option, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md). For more information about disabling and re-enabling statistics updates, see [Statistics](../../relational-databases/statistics/statistics.md).  
+ For more information about the AUTO_STATISTICS_UPDATE option, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). For more information about disabling and re-enabling statistics updates, see [Statistics](../../relational-databases/statistics/statistics.md).  
   
  INCREMENTAL = { ON | OFF }  
  When **ON**, the statistics created are per partition statistics. When **OFF**, stats are combined for all partitions. The default is **OFF**.  
@@ -185,7 +185,7 @@ CREATE STATISTICS statistics_name
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ## Permissions  
  Requires one of these permissions:  
@@ -197,10 +197,10 @@ CREATE STATISTICS statistics_name
 -   Membership in the **db_ddladmin** fixed database role  
   
 ## General Remarks  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] can use tempdb to sort the sampled rows before building statistics.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] can use tempdb to sort the sampled rows before building statistics.  
   
 ### Statistics for external tables  
- When creating external table statistics, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] imports the external table into a temporary [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table, and then creates the statistics. For samples statistics, only the sampled rows are imported. If you have a large external table, it will be much faster to use the default sampling instead of the full scan option.  
+ When creating external table statistics, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] imports the external table into a temporary [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] table, and then creates the statistics. For samples statistics, only the sampled rows are imported. If you have a large external table, it will be much faster to use the default sampling instead of the full scan option.  
   
 ### Statistics with a filtered condition  
  Filtered statistics can improve query performance for queries that select from well-defined subsets of data. Filtered statistics use a filter predicate in the WHERE clause to select the subset of data that is included in the statistics.  
@@ -209,7 +209,7 @@ CREATE STATISTICS statistics_name
  For more information about when to use CREATE STATISTICS, see [Statistics](../../relational-databases/statistics/statistics.md).  
   
 ### Referencing Dependencies for Filtered Statistics  
- The [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md) catalog view tracks each column in the filtered statistics predicate as a referencing dependency. Consider the operations that you perform on table columns before creating filtered statistics because you cannot drop, rename, or alter the definition of a table column that is defined in a filtered statistics predicate.  
+ The [sys.sql_expression_dependencies](../../relational-databases/reference/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md) catalog view tracks each column in the filtered statistics predicate as a referencing dependency. Consider the operations that you perform on table columns before creating filtered statistics because you cannot drop, rename, or alter the definition of a table column that is defined in a filtered statistics predicate.  
   
 ## Limitations and Restrictions  
 *  Updating statistics is not supported on external tables. To update statistics on an external table, drop and re-create the statistics.  
@@ -218,7 +218,7 @@ CREATE STATISTICS statistics_name
 ## Examples  
   
 ### A. Using CREATE STATISTICS with SAMPLE number PERCENT  
- The following example creates the `ContactMail1` statistics, using a random sample of 5 percent of the `BusinessEntityID` and `EmailPromotion` columns of the `Contact` table of the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)]database.  
+ The following example creates the `ContactMail1` statistics, using a random sample of 5 percent of the `BusinessEntityID` and `EmailPromotion` columns of the `Contact` table of the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)]database.  
   
 ```  
 CREATE STATISTICS ContactMail1  
@@ -238,7 +238,7 @@ CREATE STATISTICS NamePurchase
 ```  
   
 ### C. Using CREATE STATISTICS to create filtered statistics  
- The following example creates the filtered statistics `ContactPromotion1`. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] samples 50 percent of the data and then selects the rows with `EmailPromotion` equal to 2.  
+ The following example creates the filtered statistics `ContactPromotion1`. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] samples 50 percent of the data and then selects the rows with `EmailPromotion` equal to 2.  
   
 ```  
 USE AdventureWorks2012;  
@@ -258,7 +258,7 @@ GO
 ### D. Create statistics on an external table  
  The only decision you need to make when you create statistics on an external table, besides providing the list of columns, is whether to create the statistics by sampling the rows or by scanning all of the rows.  
   
- Since [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] imports data from the external table into a temporary table to create statistics, the full scan option will take much longer. For a large table, the default sampling method is usually sufficient.  
+ Since [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] imports data from the external table into a temporary table to create statistics, the full scan option will take much longer. For a large table, the default sampling method is usually sufficient.  
   
 ```  
 --Create statistics on an external table and use default sampling.  
@@ -269,7 +269,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
   
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### E. Create statistics on two columns  
  The following example creates the `CustomerStats1` statistics, based on the `CustomerKey` and `EmailAddress` columns of the `DimCustomer` table. The statistics are created based on a statistically significant sampling of the rows in the `Customer` table.  
@@ -313,10 +313,10 @@ GO
 ## See Also  
  [Statistics](../../relational-databases/statistics/statistics.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
- [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
+ [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
- [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.stats-transact-sql.md)   
- [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.stats-columns-transact-sql.md)  
+ [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.stats-transact-sql.md)   
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.stats-columns-transact-sql.md)  
   
   

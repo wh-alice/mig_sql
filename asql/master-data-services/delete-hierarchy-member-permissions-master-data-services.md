@@ -19,7 +19,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Delete Hierarchy Member Permissions (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], delete model object permissions to remove any assignments that have been made.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], delete model object permissions to remove any assignments that have been made.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 ### To delete hierarchy member permissions  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **User and Group Permissions**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **User and Group Permissions**.  
   
 2.  On the **Users** or **Groups** page, select the row for the user or group that you want to edit.  
   

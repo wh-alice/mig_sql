@@ -15,7 +15,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Email a Shortcut Query File (MDS Add-in for Excel)
-  In the [!INCLUDE[ssMDSshort](../../analysis-services/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../analysis-services/includes/ssmdsxls-md.md)], email a shortcut query file to someone when you want to ensure they’re working with the same data that you are. You should share queries rather than saving the worksheet and emailing it.  
+  In the [!INCLUDE[ssMDSshort](../../a9notintoc/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../a9notintoc/includes/ssmdsxls-md.md)], email a shortcut query file to someone when you want to ensure they’re working with the same data that you are. You should share queries rather than saving the worksheet and emailing it.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 ## Next Steps  
   
--   To open the shortcut query file, the recipient of the email must have the MDS [!INCLUDE[ssMDSXLS](../../analysis-services/includes/ssmdsxls-md.md)] installed. The recipient can double-click the file to open it.  
+-   To open the shortcut query file, the recipient of the email must have the MDS [!INCLUDE[ssMDSXLS](../../a9notintoc/includes/ssmdsxls-md.md)] installed. The recipient can double-click the file to open it.  
   
 ## See Also  
  [Shortcut Query Files &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  

@@ -21,11 +21,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Validate Data at the Subscriber
-  This topic describes how to validate data at the Subscriber in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], or Replication Management Objects (RMO).  
+  This topic describes how to validate data at the Subscriber in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
  Validating data is a three-part process:  
   
-1.  A single subscription or all subscriptions to a publication are *marked* for validation. Mark subscriptions for validation in the **Validate Subscription**, **Validate Subscriptions**, and **Validate All Subscriptions** dialog boxes, which are available from the **Local Publications** folder and the **Local Subscriptions** folder in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. You can also mark subscriptions from the **All Subscriptions** tab, the **Subscription Watch List** tab, and the publications node in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+1.  A single subscription or all subscriptions to a publication are *marked* for validation. Mark subscriptions for validation in the **Validate Subscription**, **Validate Subscriptions**, and **Validate All Subscriptions** dialog boxes, which are available from the **Local Publications** folder and the **Local Subscriptions** folder in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. You can also mark subscriptions from the **All Subscriptions** tab, the **Subscription Watch List** tab, and the publications node in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 2.  A subscription is validated the next time it is synchronized by the Distribution Agent (for transactional replication) or the Merge Agent (for merge replication). The Distribution Agent typically runs continuously, in which case validation occurs immediately; the Merge Agent typically runs on demand, in which case validation occurs after you run the agent.  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
     -   In the detail windows in Replication Monitor: on the **Distributor to Subscriber History** tab for transactional replication and the **Synchronization History** tab for merge replication.  
   
-    -   In the **View Synchronization Status** dialog box in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)].  
+    -   In the **View Synchronization Status** dialog box in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)].  
   
  **In This Topic**  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 #### To validate data for subscriptions to a transactional publication (Management Studio)  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Publications** folder.  
   
@@ -75,7 +75,7 @@ manager: "jhubbard"
   
 5.  To specify the type of validation to perform (row count, or row count and checksum) click **Validation Options**, and then specify options in the **Subscription Validation Options** dialog box.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 7.  View validation results in Replication Monitor or the **View Synchronization Status** dialog box. For each subscription:  
   
@@ -87,7 +87,7 @@ manager: "jhubbard"
   
 #### To validate data for a single subscription to a merge publication (Management Studio)  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Publications** folder.  
   
@@ -97,7 +97,7 @@ manager: "jhubbard"
   
 5.  To specify the type of validation to perform (row count, or row count and checksum) click **Options**, and then specify options in the **Subscription Validation Options** dialog box.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 7.  View validation results in Replication Monitor or the **View Synchronization Status** dialog box:  
   
@@ -109,7 +109,7 @@ manager: "jhubbard"
   
 #### To validate data for all subscriptions to a merge publication (Management Studio)  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Publications** folder.  
   
@@ -117,7 +117,7 @@ manager: "jhubbard"
   
 4.  In the **Validate All Subscriptions** dialog box, specify the type of validation to perform (row count, or row count and checksum).  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 6.  View validation results in Replication Monitor or the **View Synchronization Status** dialog box. For each subscription:  
   
@@ -141,7 +141,7 @@ manager: "jhubbard"
   
 4.  To specify the type of validation to perform (row count, or row count and checksum) click **Validation Options**, and then specify options in the **Subscription Validation Options** dialog box.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 6.  Click the **All Subscriptions** tab.  
   
@@ -165,7 +165,7 @@ manager: "jhubbard"
   
 5.  To specify the type of validation to perform (row count, or row count and checksum) click **Options**, and then specify options in the **Subscription Validation Options** dialog box.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 7.  Click the **All Subscriptions** tab.  
   
@@ -185,7 +185,7 @@ manager: "jhubbard"
   
 3.  In the **Validate All Subscriptions** dialog box, specify the type of validation to perform (row count, or row count and checksum).  
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 5.  Click the **All Subscriptions** tab.  
   
@@ -201,14 +201,14 @@ manager: "jhubbard"
   
 #### To validate data for all articles in a transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md). Specify **@publication** and one of the following values for **@rowcount_only**:  
+1.  At the Publisher on the publication database, execute [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-publication-validation-transact-sql.md). Specify **@publication** and one of the following values for **@rowcount_only**:  
   
     -   **1** - rowcount check only (the default)  
   
     -   **2** - rowcount and binary checksum.  
   
     > [!NOTE]  
-    >  When you execute [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md), [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) is executed for each article in the publication. To successfully execute [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md), you must have SELECT permissions on all columns in the published base tables.  
+    >  When you execute [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-publication-validation-transact-sql.md), [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-article-validation-transact-sql.md) is executed for each article in the publication. To successfully execute [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-publication-validation-transact-sql.md), you must have SELECT permissions on all columns in the published base tables.  
   
 2.  (Optional) Start the Distribution Agent for each subscription if it is not already running. For more information, see [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
@@ -216,14 +216,14 @@ manager: "jhubbard"
   
 #### To validate data for a single article in a transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Specify **@publication**, the name of the article for **@article**, and one of the following values for **@rowcount_only**:  
+1.  At the Publisher on the publication database, execute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-article-validation-transact-sql.md). Specify **@publication**, the name of the article for **@article**, and one of the following values for **@rowcount_only**:  
   
     -   **1** - Rowcount check only (the default)  
   
     -   **2** - Rowcount and binary checksum.  
   
     > [!NOTE]  
-    >  To successfully execute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), you must have SELECT permissions on all columns in the published base table.  
+    >  To successfully execute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-article-validation-transact-sql.md), you must have SELECT permissions on all columns in the published base table.  
   
 2.  (Optional) Start the Distribution Agent for each subscription if it is not already running. For more information, see [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
@@ -233,18 +233,18 @@ manager: "jhubbard"
   
 1.  At the Publisher on the publication database, open an explicit transaction using [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../Topic/BEGIN%20TRANSACTION%20\(Transact-SQL\).md).  
   
-2.  At the Publisher on the publication database, execute [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md). Specify the publication for **@publication**, the name of the Subscriber for **@subscriber**, and the name of the subscription database for **@destination_db**.  
+2.  At the Publisher on the publication database, execute [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md). Specify the publication for **@publication**, the name of the Subscriber for **@subscriber**, and the name of the subscription database for **@destination_db**.  
   
 3.  (Optional) Repeat step 2 for each subscription being validated.  
   
-4.  At the Publisher on the publication database, execute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Specify **@publication**, the name of the article for **@article**, and one of the following values for **@rowcount_only**:  
+4.  At the Publisher on the publication database, execute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-article-validation-transact-sql.md). Specify **@publication**, the name of the article for **@article**, and one of the following values for **@rowcount_only**:  
   
     -   **1** - Rowcount check only (the default)  
   
     -   **2** - Rowcount and binary checksum.  
   
     > [!NOTE]  
-    >  To successfully execute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), you must have SELECT permissions on all columns in the published base table.  
+    >  To successfully execute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-article-validation-transact-sql.md), you must have SELECT permissions on all columns in the published base table.  
   
 5.  At the Publisher on the publication database, commit the transaction using [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../Topic/COMMIT%20TRANSACTION%20\(Transact-SQL\).md).  
   
@@ -256,7 +256,7 @@ manager: "jhubbard"
   
 #### To validate data in all subscriptions to a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Specify **@publication** and one of the following values for **@level**:  
+1.  At the Publisher on the publication database, execute [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Specify **@publication** and one of the following values for **@level**:  
   
     -   **1** - Rowcount-only validation.  
   
@@ -270,7 +270,7 @@ manager: "jhubbard"
   
 #### To validate data in selected subscriptions to a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Specify **@publication**, the name of the Subscriber for **@subscriber**, the name of the subscription database for **@subscriber_db**, and one of the following values for **@level**:  
+1.  At the Publisher on the publication database, execute [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Specify **@publication**, the name of the Subscriber for **@subscriber**, the name of the subscription database for **@subscriber_db**, and one of the following values for **@level**:  
   
     -   **1** - Rowcount-only validation.  
   
@@ -321,7 +321,7 @@ manager: "jhubbard"
   
      This marks the articles for validation.  
   
-5.  If not already running, start the Distribution Agent to synchronize each subscription. For more information, see [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md) or [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md). The result of the validation operation is written to the agent history. For more information, see [Monitoring Replication](../Topic/Monitoring%20Replication.md).  
+5.  If not already running, start the Distribution Agent to synchronize each subscription. For more information, see [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md) or [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md). The result of the validation operation is written to the agent history. For more information, see [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
   
 #### To validate data in all subscriptions to a merge publication  
   
@@ -333,7 +333,7 @@ manager: "jhubbard"
   
 4.  Call the <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A> method. Pass the desired <xref:Microsoft.SqlServer.Replication.ValidationOption>.  
   
-5.  Run the Merge Agent for each subscription to start validation, or wait for the next scheduled agent run. For more information, see [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md). The result of the validation operation is written to the agent history, which you view by using Replication Monitor. For more information, see [Monitoring Replication](../Topic/Monitoring%20Replication.md).  
+5.  Run the Merge Agent for each subscription to start validation, or wait for the next scheduled agent run. For more information, see [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md). The result of the validation operation is written to the agent history, which you view by using Replication Monitor. For more information, see [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
   
 #### To validate data in a single subscription to a merge publication  
   
@@ -345,19 +345,19 @@ manager: "jhubbard"
   
 4.  Call the <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> method. Pass the name of the Subscriber and subscription database being validated and the desired <xref:Microsoft.SqlServer.Replication.ValidationOption>.  
   
-5.  Run the Merge Agent for the subscription to start validation, or wait for the next scheduled agent run. For more information, see [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md). The result of the validation operation is written to the agent history, which you view by using Replication Monitor. For more information, see [Monitoring Replication](../Topic/Monitoring%20Replication.md).  
+5.  Run the Merge Agent for the subscription to start validation, or wait for the next scheduled agent run. For more information, see [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md). The result of the validation operation is written to the agent history, which you view by using Replication Monitor. For more information, see [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
   
 ###  <a name="RMOExample"></a> Example (RMO)  
  This example marks all subscriptions to a transactional publication for rowcount validation.  
   
- [!code-cs[HowTo#rmo_ValidateTranPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_validatetranpub)]  
+ [!code-cs[HowTo#rmo_ValidateTranPub](../../a9retired/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_validatetranpub)]  
   
- [!code-vb[HowTo#rmo_vb_ValidateTranPub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_validatetranpub)]  
+ [!code-vb[HowTo#rmo_vb_ValidateTranPub](../../a9retired/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_validatetranpub)]  
   
  This example marks a specific subscription to a merge publication for rowcount validation.  
   
- [!code-cs[HowTo#rmo_ValidateMergeSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_validatemergesub)]  
+ [!code-cs[HowTo#rmo_ValidateMergeSub](../../a9retired/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_validatemergesub)]  
   
- [!code-vb[HowTo#rmo_vb_ValidateMergeSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_validatemergesub)]  
+ [!code-vb[HowTo#rmo_vb_ValidateMergeSub](../../a9retired/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_validatemergesub)]  
   
   

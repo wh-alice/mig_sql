@@ -54,12 +54,12 @@ manager: "jhubbard"
 # CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Creates a new table in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].  
+  Creates a new table in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].  
   
 > [!NOTE]   
->  For [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] syntax, see [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
+>  For [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] syntax, see [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -357,7 +357,7 @@ column_name <data_type>
  AS FileTable 
   ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].| 
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].| 
  
  Creates the new table as a FileTable. You do not specify columns because a FileTable has a fixed schema. For more information about FileTables, see [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
@@ -378,10 +378,10 @@ column_name <data_type>
 > [!NOTE]  
 >  Each row in a table can have different values for columns that are involved in a computed column; therefore, the computed column may not have the same value for each row.  
   
- Based on the expressions that are used, the nullability of computed columns is determined automatically by the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)]. The result of most expressions is considered nullable even if only nonnullable columns are present, because possible underflows or overflows also produce NULL results. Use the COLUMNPROPERTY function with the **AllowsNull** property to investigate the nullability of any computed column in a table. An expression that is nullable can be turned into a nonnullable one by specifying ISNULL with the *check_expression* constant, where the constant is a nonnull value substituted for any NULL result. REFERENCES permission on the type is required for computed columns based on common language runtime (CLR) user-defined type expressions.  
+ Based on the expressions that are used, the nullability of computed columns is determined automatically by the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)]. The result of most expressions is considered nullable even if only nonnullable columns are present, because possible underflows or overflows also produce NULL results. Use the COLUMNPROPERTY function with the **AllowsNull** property to investigate the nullability of any computed column in a table. An expression that is nullable can be turned into a nonnullable one by specifying ISNULL with the *check_expression* constant, where the constant is a nonnull value substituted for any NULL result. REFERENCES permission on the type is required for computed columns based on common language runtime (CLR) user-defined type expressions.  
   
  PERSISTED  
- Specifies that the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] will physically store the computed values in the table, and update the values when any other columns on which the computed column depends are updated. Marking a computed column as PERSISTED lets you create an index on a computed column that is deterministic, but not precise. For more information, see [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). Any computed columns that are used as partitioning columns of a partitioned table must be explicitly marked PERSISTED. *computed_column_expression* must be deterministic when PERSISTED is specified.  
+ Specifies that the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] will physically store the computed values in the table, and update the values when any other columns on which the computed column depends are updated. Marking a computed column as PERSISTED lets you create an index on a computed column that is deterministic, but not precise. For more information, see [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). Any computed columns that are used as partitioning columns of a partitioned table must be explicitly marked PERSISTED. *computed_column_expression* must be deterministic when PERSISTED is specified.  
   
  ON { <partition_scheme> | *filegroup* | **"**default**"** }  
 
@@ -413,7 +413,7 @@ column_name <data_type>
  FILESTREAM_ON { *partition_scheme_name* | filegroup | **"**default**"** } 
   ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].| 
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].| 
  
  Specifies the filegroup for FILESTREAM data.  
   
@@ -438,13 +438,13 @@ column_name <data_type>
   
 -   A system data type.  
   
--   An alias type based on a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system data type. Alias data types are created with the CREATE TYPE statement before they can be used in a table definition. The NULL or NOT NULL assignment for an alias data type can be overridden during the CREATE TABLE statement. However, the length specification cannot be changed; the length for an alias data type cannot be specified in a CREATE TABLE statement.  
+-   An alias type based on a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system data type. Alias data types are created with the CREATE TYPE statement before they can be used in a table definition. The NULL or NOT NULL assignment for an alias data type can be overridden during the CREATE TABLE statement. However, the length specification cannot be changed; the length for an alias data type cannot be specified in a CREATE TABLE statement.  
   
 -   A CLR user-defined type. CLR user-defined types are created with the CREATE TYPE statement before they can be used in a table definition. To create a column on CLR user-defined type, REFERENCES permission is required on the type.  
   
- If *type_schema_name* is not specified, the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] references *type_name* in the following order:  
+ If *type_schema_name* is not specified, the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] references *type_name* in the following order:  
   
--   The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system data type.  
+-   The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system data type.  
   
 -   The default schema of the current user in the current database.  
   
@@ -471,7 +471,7 @@ column_name <data_type>
  Applies only to the **xml** data type for associating an XML schema collection with the type. Before typing an **xml** column to a schema, the schema must first be created in the database by using [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).  
   
  DEFAULT  
- Specifies the value provided for the column when a value is not explicitly supplied during an insert. DEFAULT definitions can be applied to any columns except those defined as **timestamp**, or those with the IDENTITY property. If a default value is specified for a user-defined type column, the type should support an implicit conversion from *constant_expression* to the user-defined type. DEFAULT definitions are removed when the table is dropped. Only a constant value, such as a character string; a scalar function (either a system, user-defined, or CLR function); or NULL can be used as a default. To maintain compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], a constraint name can be assigned to a DEFAULT.  
+ Specifies the value provided for the column when a value is not explicitly supplied during an insert. DEFAULT definitions can be applied to any columns except those defined as **timestamp**, or those with the IDENTITY property. If a default value is specified for a user-defined type column, the type should support an implicit conversion from *constant_expression* to the user-defined type. DEFAULT definitions are removed when the table is dropped. Only a constant value, such as a character string; a scalar function (either a system, user-defined, or CLR function); or NULL can be used as a default. To maintain compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], a constraint name can be assigned to a DEFAULT.  
   
  *constant_expression*  
  Is a constant, NULL, or a system function that is used as the default value for the column.  
@@ -480,7 +480,7 @@ column_name <data_type>
  Is a constant, NULL, or a system function that is supported in used as the default value for the column. Must be supported in natively compiled stored procedures. For more information about built-in functions in natively compiled stored procedures, see [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
  IDENTITY  
- Indicates that the new column is an identity column. When a new row is added to the table, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] provides a unique, incremental value for the column. Identity columns are typically used with PRIMARY KEY constraints to serve as the unique row identifier for the table. The IDENTITY property can be assigned to **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)**, or **numeric(p,0)** columns. Only one identity column can be created per table. Bound defaults and DEFAULT constraints cannot be used with an identity column. Both the seed and increment or neither must be specified. If neither is specified, the default is (1,1).  
+ Indicates that the new column is an identity column. When a new row is added to the table, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] provides a unique, incremental value for the column. Identity columns are typically used with PRIMARY KEY constraints to serve as the unique row identifier for the table. The IDENTITY property can be assigned to **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)**, or **numeric(p,0)** columns. Only one identity column can be created per table. Bound defaults and DEFAULT constraints cannot be used with an identity column. Both the seed and increment or neither must be specified. If neither is specified, the default is (1,1).  
   
  In a memory-optimized table, the only allowed value for both *seed* and *increment* is 1; (1,1) is the default for *seed* and *increment*.  
   
@@ -496,7 +496,7 @@ column_name <data_type>
  GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ]  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|
   
  Specifies that a specified datetime2 column will be used by the system to record either the start time for which a record is valid or the end time for which a record is valid. The column must be defined as NOT NULL. If you attempt to specify them as NULL, the system will throw an error. If you do not explicitly specify NOT NULL for a period column, the system will define the column as NOT NULL by default. Use this argument in conjunction with the PERIOD FOR SYSTEM_TIME and WITH SYSTEM_VERSIONING = ON arguments to enable system versioning on a table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
@@ -505,31 +505,31 @@ column_name <data_type>
  INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|
 
 Specifies to create an index on the table. This can be a clustered index, or a nonclustered index. The index will contain the columns listed, and will sort the data in either ascending or descending order.  
   
  INDEX *index_name* CLUSTERED COLUMNSTORE  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|
   
  Specifies to store the entire table in columnar format with a clustered columnstore index. This always includes all columns in the table. The data is not sorted in alphabetical or numeric order since the rows are organized to gain columnstore compression benefits.  
   
  INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE (*column_name* [ ,... *n* ] )  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|
   
  Specifies to create a nonclustered columnstore index on the table. The underlying table can be a rowstore heap or clustered index, or it can be a clustered columnstore index. In all cases, creating a nonclustered columnstore index on a table stores a second copy of the data for the columns in the index.  
   
  The nonclustered columnstore index is stored and managed as a clustered columnstore index. It is called a nonclustered columnstore index to because the columns can be limited and it exists as a secondary index on a table.  
   
  ON *partition_scheme_name***(***column_name***)**  
- Specifies the partition scheme that defines the filegroups onto which the partitions of a partitioned index will be mapped. The partition scheme must exist within the database by executing either [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) or [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* specifies the column against which a partitioned index will be partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using. *column_name* is not restricted to the columns in the index definition. Any column in the base table can be specified, except when partitioning a UNIQUE index, *column_name* must be chosen from among those used as the unique key. This restriction allows the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] to verify uniqueness of key values within a single partition only.  
+ Specifies the partition scheme that defines the filegroups onto which the partitions of a partitioned index will be mapped. The partition scheme must exist within the database by executing either [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) or [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* specifies the column against which a partitioned index will be partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using. *column_name* is not restricted to the columns in the index definition. Any column in the base table can be specified, except when partitioning a UNIQUE index, *column_name* must be chosen from among those used as the unique key. This restriction allows the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] to verify uniqueness of key values within a single partition only.  
   
 > [!NOTE]  
->  When you partition a non-unique, clustered index, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] by default adds the partitioning column to the list of clustered index keys, if it is not already specified. When partitioning a non-unique, nonclustered index, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] adds the partitioning column as a non-key (included) column of the index, if it is not already specified.  
+>  When you partition a non-unique, clustered index, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] by default adds the partitioning column to the list of clustered index keys, if it is not already specified. When partitioning a non-unique, nonclustered index, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] adds the partitioning column as a non-key (included) column of the index, if it is not already specified.  
   
  If *partition_scheme_name* or *filegroup* is not specified and the table is partitioned, the index is placed in the same partition scheme, using the same partitioning column, as the underlying table.  
   
@@ -588,13 +588,13 @@ Specifies to create an index on the table. This can be a clustered index, or a n
   
  For more information including feature constraints, see [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
- **Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
  SPARSE  
  Indicates that the column is a sparse column. The storage of sparse columns is optimized for null values. Sparse columns cannot be designated as NOT NULL. For additional restrictions and more information about sparse columns, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
  MASKED WITH ( FUNCTION = ' *mask_function* ')  
- **Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
  Specifies a dynamic data mask. *mask_function* is the name of the masking function with the appropriate parameters. Three functions are available:  
   
@@ -670,7 +670,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  Specifies what action happens to rows in the table created, if those rows have a referential relationship and the referenced row is deleted from the parent table. The default is NO ACTION.  
   
  NO ACTION  
- The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] raises an error and the delete action on the row in the parent table is rolled back.  
+ The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] raises an error and the delete action on the row in the parent table is rolled back.  
   
  CASCADE  
  Corresponding rows are deleted from the referencing table if that row is deleted from the parent table.  
@@ -685,17 +685,17 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  ON DELETE CASCADE cannot be defined if an INSTEAD OF trigger ON DELETE already exists on the table.  
   
- For example, in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database, the **ProductVendor** table has a referential relationship with the **Vendor** table. The **ProductVendor.BusinessEntityID** foreign key references the **Vendor.BusinessEntityID** primary key.  
+ For example, in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database, the **ProductVendor** table has a referential relationship with the **Vendor** table. The **ProductVendor.BusinessEntityID** foreign key references the **Vendor.BusinessEntityID** primary key.  
   
- If a DELETE statement is executed on a row in the **Vendor** table, and an ON DELETE CASCADE action is specified for **ProductVendor.BusinessEntityID**, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] checks for one or more dependent rows in the **ProductVendor** table. If any exist, the dependent rows in the **ProductVendor** table are deleted, and also the row referenced in the **Vendor** table.  
+ If a DELETE statement is executed on a row in the **Vendor** table, and an ON DELETE CASCADE action is specified for **ProductVendor.BusinessEntityID**, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] checks for one or more dependent rows in the **ProductVendor** table. If any exist, the dependent rows in the **ProductVendor** table are deleted, and also the row referenced in the **Vendor** table.  
   
- Conversely, if NO ACTION is specified, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] raises an error and rolls back the delete action on the **Vendor** row if there is at least one row in the **ProductVendor** table that references it.  
+ Conversely, if NO ACTION is specified, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] raises an error and rolls back the delete action on the **Vendor** row if there is at least one row in the **ProductVendor** table that references it.  
   
  ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
  Specifies what action happens to rows in the table altered when those rows have a referential relationship and the referenced row is updated in the parent table. The default is NO ACTION.  
   
  NO ACTION  
- The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] raises an error, and the update action on the row in the parent table is rolled back.  
+ The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] raises an error, and the update action on the row in the parent table is rolled back.  
   
  CASCADE  
  Corresponding rows are updated in the referencing table when that row is updated in the parent table.  
@@ -710,11 +710,11 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  ON UPDATE CASCADE, SET NULL, or SET DEFAULT cannot be defined if an INSTEAD OF trigger ON UPDATE already exists on the table that is being altered.  
   
- For example, in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database, the **ProductVendor** table has a referential relationship with the **Vendor** table: **ProductVendor.BusinessEntity** foreign key references the **Vendor.BusinessEntityID** primary key.  
+ For example, in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database, the **ProductVendor** table has a referential relationship with the **Vendor** table: **ProductVendor.BusinessEntity** foreign key references the **Vendor.BusinessEntityID** primary key.  
   
- If an UPDATE statement is executed on a row in the **Vendor** table, and an ON UPDATE CASCADE action is specified for **ProductVendor.BusinessEntityID**, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] checks for one or more dependent rows in the **ProductVendor** table. If any exist, the dependent rows in the **ProductVendor** table are updated, and also the row referenced in the **Vendor** table.  
+ If an UPDATE statement is executed on a row in the **Vendor** table, and an ON UPDATE CASCADE action is specified for **ProductVendor.BusinessEntityID**, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] checks for one or more dependent rows in the **ProductVendor** table. If any exist, the dependent rows in the **ProductVendor** table are updated, and also the row referenced in the **Vendor** table.  
   
- Conversely, if NO ACTION is specified, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] raises an error and rolls back the update action on the **Vendor** row if there is at least one row in the **ProductVendor** table that references it.  
+ Conversely, if NO ACTION is specified, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] raises an error and rolls back the update action on the **Vendor** row if there is at least one row in the **ProductVendor** table that references it.  
   
  CHECK  
  Is a constraint that enforces domain integrity by limiting the possible values that can be entered into a column or columns. CHECK constraints on computed columns must also be marked PERSISTED.  
@@ -738,7 +738,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
 >  We recommend that you specify NOT NULL on the partitioning column of partitioned tables, and also nonpartitioned tables that are sources or targets of ALTER TABLE...SWITCH operations. Doing this makes sure that any CHECK constraints on partitioning columns do not have to check for null values.  
   
  WITH FILLFACTOR **=***fillfactor*  
- Specifies how full the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] should make each index page that is used to store the index data. User-specified *fillfactor* values can be from 1 through 100. If a value is not specified, the default is 0. Fill factor values 0 and 100 are the same in all respects.  
+ Specifies how full the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] should make each index page that is used to store the index data. User-specified *fillfactor* values can be from 1 through 100. If a value is not specified, the default is 0. Fill factor values 0 and 100 are the same in all respects.  
   
 > [!IMPORTANT]  
 >  Documenting WITH FILLFACTOR = *fillfactor* as the only index option that applies to PRIMARY KEY or UNIQUE constraints is maintained for backward compatibility, but will not be documented in this manner in future releases.  
@@ -749,14 +749,14 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  PERIOD FOR SYSTEM_TIME (*system_start_time_column_name* , *system_end_time_column_name* )  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|
   
  Specifies the names of the columns that the system will use to record the period for which a record is valid. Use this argument in conjunction with the GENERATED ALWAYS AS ROW { START | END } and WITH SYSTEM_VERSIONING = ON arguments to enable system versioning on a table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
  COMPRESSION_DELAY  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|
   
  For a memory-optimized, delay specifies the minimum number of minutes a row must remain in the table, unchanged, before  it is eligible for compression into the columnstore index. SQL Server selects specific rows to compress according to their last update time. For example, if rows are changing frequently during a two-hour period of time, you could set COMPRESSION_DELAY = 120 Minutes to ensure updates are completed before SQL Server compresses the row.  
   
@@ -784,14 +784,14 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  COLUMNSTORE  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|
   
  Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE specifies to compress with the most performant columnstore compression. This is the typical choice.  
   
  COLUMNSTORE_ARCHIVE  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
  Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE_ARCHIVE will further compress the table or partition to a smaller size. This can be used for archival, or for other situations that require a smaller storage size and can afford more time for storage and retrieval.  
   
@@ -828,7 +828,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  When ON, the percentage of free space specified by FILLFACTOR is applied to the intermediate level pages of the index. When OFF or a FILLFACTOR value it not specified, the intermediate level pages are filled to near capacity leaving enough space for at least one row of the maximum size the index can have, considering the set of keys on the intermediate pages. The default is OFF.  
   
  FILLFACTOR **=***fillfactor*  
- Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] should make the leaf level of each index page during index creation or alteration. *fillfactor* must be an integer value from 1 to 100. The default is 0. Fill factor values 0 and 100 are the same in all respects.  
+ Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] should make the leaf level of each index page during index creation or alteration. *fillfactor* must be an integer value from 1 to 100. The default is 0. Fill factor values 0 and 100 are the same in all respects.  
   
  IGNORE_DUP_KEY = { ON | **OFF** }  
  Specifies the error response when an insert operation attempts to insert duplicate key values into a unique index. The IGNORE_DUP_KEY option applies only to insert operations after the index is created or rebuilt. The option has no effect when executing [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md), or [UPDATE](../../t-sql/queries/update-transact-sql.md). The default is OFF.  
@@ -841,7 +841,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  IGNORE_DUP_KEY cannot be set to ON for indexes created on a view, non-unique indexes, XML indexes, spatial indexes, and filtered indexes.  
   
- To view IGNORE_DUP_KEY, use [sys.indexes](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md).  
+ To view IGNORE_DUP_KEY, use [sys.indexes](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md).  
   
  In backward compatible syntax, WITH IGNORE_DUP_KEY is equivalent to WITH IGNORE_DUP_KEY = ON.  
   
@@ -849,22 +849,22 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  When ON, out-of-date index statistics are not automatically recomputed. When OFF, automatic statistics updating are enabled. The default is OFF.  
   
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
- When ON, row locks are allowed when you access the index. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] determines when row locks are used. When OFF, row locks are not used. The default is ON.  
+ When ON, row locks are allowed when you access the index. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] determines when row locks are used. When OFF, row locks are not used. The default is ON.  
   
  ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
- When ON, page locks are allowed when you access the index. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] determines when page locks are used. When OFF, page locks are not used. The default is ON.  
+ When ON, page locks are allowed when you access the index. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] determines when page locks are used. When OFF, page locks are not used. The default is ON.  
   
  FILETABLE_DIRECTORY = *directory_name*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].| 
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].| 
   
  Specifies the windows-compatible FileTable directory name. This name should be unique among all the FileTable directory names in the database. Uniqueness comparison is case-insensitive, regardless of collation settings. If this value is not specified, the name of the filetable is used.  
   
  FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].| 
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].| 
   
  Specifies the name of the collation to be applied to the **Name** column in the FileTable. The collation must be case-insensitive to comply with Windows file naming semantics. If this value is not specified, the database default collation is used. If the database default collation is case-sensitive, an error is raised and the CREATE TABLE operation fails.  
   
@@ -877,35 +877,35 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME = *constraint_name*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].| 
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].| 
   
  Specifies the name to be used for the primary key constraint that is automatically created on the FileTable. If this value is not specified, the system generates a name for the constraint.  
   
  FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME = *constraint_name*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].| 
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].| 
   
  Specifies the name to be used for the unique constraint that is automatically created on the **stream_id** column in the FileTable. If this value is not specified, the system generates a name for the constraint.  
   
  FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = *constraint_name*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].| 
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].| 
   
  Specifies the name to be used for the unique constraint that is automatically created on the **parent_path_locator** and **name** columns in the FileTable. If this value is not specified, the system generates a name for the constraint.  
   
  SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .  *history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ]  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|   
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|   
   
  Enables system versioning of the table if the datatype, nullability constraint, and primary key constraint requirements are met. If the **HISTORY_TABLE** argument is not used, the system generates a new history table matching the schema of the current table in the same filegroup as the current table, creating a link between the two tables and enables the system to record the history of each record in the current table in the history table. The name of this history table will be `MSSQL_TemporalHistoryFor<primary_table_object_id>`. By default, the history table is **PAGE** compressed. If the HISTORY_TABLE argument is used to create a link to and use an existing history table, the link is created between the current table and the specified table. If current table is partitioned, the history table is created on default file group because partitioning configuration is not replicated automatically from the current table to the history table. If the name of a history table is specified during history table creation, you must specify the schema and table name. When creating a link to an existing history table, you can choose to perform a data consistency check. This data consistency check ensures that existing records do not overlap. Performing the data consistency check is the default. Use this argument in conjunction with the PERIOD FOR SYSTEM_TIME and GENERATED ALWAYS AS ROW { START | END } arguments to enable system versioning on a table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
  REMOTE_DATA_ARCHIVE = { ON [ ( <table_stretch_options> [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Creates the new table with Stretch Database enabled or disabled. For more info, see [Stretch Database](../../sql-server/install/stretch-database.md).  
   
@@ -920,7 +920,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  [ FILTER_PREDICATE = { null | *predicate* } ]  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Optionally specifies a filter predicate to select rows to migrate from a table that contains both historical and current data. The predicate must call a deterministic inline table-valued function. For more info, see [Enable Stretch Database for a table](../../sql-server/install/enable-stretch-database-for-a-table.md) and [Select rows to migrate by using a filter function](../../sql-server/install/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). 
    
@@ -934,7 +934,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  MIGRATION_STATE = { OUTBOUND |  INBOUND | PAUSED }  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].| 
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].| 
   
 -   Specify `OUTBOUND` to migrate data from SQL Server to Azure.  
   
@@ -947,16 +947,16 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  MEMORY_OPTIMIZED  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
- The value  ON indicates that the table is memory optimized. Memory-optimized tables are part of the In-Memory OLTP feature, which is used to optimized the performance of transaction processing. To get started with In-Memory OLTP see [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../Topic/Quick%20Start%201:%20In-Memory%20OLTP%20Technologies%20for%20Faster%20Transact-SQL%20Performance.md). For more in-depth information about memory-optimized tables see [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ The value  ON indicates that the table is memory optimized. Memory-optimized tables are part of the In-Memory OLTP feature, which is used to optimized the performance of transaction processing. To get started with In-Memory OLTP see [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). For more in-depth information about memory-optimized tables see [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  The default value OFF indicates that the table is disk-based.  
   
  DURABILITY  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|   
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|   
   
  The value of SCHEMA_AND_DATA indicates that the table is durable, meaning that changes are persisted on disk and survive restart or failover.  SCHEMA_AND_DATA is the default value.  
   
@@ -968,7 +968,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  BUCKET_COUNT  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].| 
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].| 
   
  Indicates the number of buckets that should be created in the hash index. The maximum value for BUCKET_COUNT in hash indexes is 1,073,741,824. For more information about bucket counts, see [Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
   
@@ -977,14 +977,14 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  INDEX  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].| 
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].| 
   
 Column and table indexes can be specified as part of the CREATE TABLE statement. For details about adding and removing indexes on memory-optimized tables see: [Altering Memory-Optimized Tables](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
   
  HASH  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].| 
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].| 
   
  Indicates that a HASH index is created.  
   
@@ -993,9 +993,9 @@ Column and table indexes can be specified as part of the CREATE TABLE statement.
 ## Remarks  
  For information about the number of allowed tables, columns, constraints and indexes, see [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
   
- Space is generally allocated to tables and indexes in increments of one extent at a time. When the SET MIXED_PAGE_ALLOCATION  option of ALTER DATABASE is set to TRUE, or always prior to [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)], when a table or index is created, it is allocated pages from mixed extents until it has enough pages to fill a uniform extent. After it has enough pages to fill a uniform extent, another extent is allocated every time the currently allocated extents become full. For a report about the amount of space allocated and used by a table, execute **sp_spaceused**.  
+ Space is generally allocated to tables and indexes in increments of one extent at a time. When the SET MIXED_PAGE_ALLOCATION  option of ALTER DATABASE is set to TRUE, or always prior to [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)], when a table or index is created, it is allocated pages from mixed extents until it has enough pages to fill a uniform extent. After it has enough pages to fill a uniform extent, another extent is allocated every time the currently allocated extents become full. For a report about the amount of space allocated and used by a table, execute **sp_spaceused**.  
   
- The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] does not enforce an order in which DEFAULT, IDENTITY, ROWGUIDCOL, or column constraints are specified in a column definition.  
+ The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] does not enforce an order in which DEFAULT, IDENTITY, ROWGUIDCOL, or column constraints are specified in a column definition.  
   
  When a table is created, the QUOTED IDENTIFIER option is always stored as ON in the metadata for the table, even if the option is set to OFF when the table is created.  
   
@@ -1014,7 +1014,7 @@ INSERT INTO #MyTempTable VALUES (1);
   
  If more than one temporary table is created inside a single stored procedure or batch, they must have different names.  
   
- If a local temporary table is created in a stored procedure or application that can be executed at the same time by several users, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] must be able to distinguish the tables created by the different users. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] does this by internally appending a numeric suffix to each local temporary table name. The full name of a temporary table as stored in the **sysobjects** table in **tempdb** is made up of the table name specified in the CREATE TABLE statement and the system-generated numeric suffix. To allow for the suffix, *table_name* specified for a local temporary name cannot exceed 116 characters.  
+ If a local temporary table is created in a stored procedure or application that can be executed at the same time by several users, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] must be able to distinguish the tables created by the different users. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] does this by internally appending a numeric suffix to each local temporary table name. The full name of a temporary table as stored in the **sysobjects** table in **tempdb** is made up of the table name specified in the CREATE TABLE statement and the system-generated numeric suffix. To allow for the suffix, *table_name* specified for a local temporary name cannot exceed 116 characters.  
   
  Temporary tables are automatically dropped when they go out of scope, unless explicitly dropped by using DROP TABLE:  
   
@@ -1022,7 +1022,7 @@ INSERT INTO #MyTempTable VALUES (1);
   
 -   All other local temporary tables are dropped automatically at the end of the current session.  
   
--   Global temporary tables are automatically dropped when the session that created the table ends and all other tasks have stopped referencing them. The association between a task and a table is maintained only for the life of a single [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement. This means that a global temporary table is dropped at the completion of the last [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement that was actively referencing the table when the creating session ended.  
+-   Global temporary tables are automatically dropped when the session that created the table ends and all other tasks have stopped referencing them. The association between a task and a table is maintained only for the life of a single [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement. This means that a global temporary table is dropped at the completion of the last [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement that was actively referencing the table when the creating session ended.  
   
  A local temporary table created within a stored procedure or trigger can have the same name as a temporary table that was created before the stored procedure or trigger is called. However, if a query references a temporary table and two temporary tables with the same name exist at that time, it is not defined which table the query is resolved against. Nested stored procedures can also create temporary tables with the same name as a temporary table that was created by the stored procedure that called it. However, for modifications to resolve to the table that was created in the nested procedure, the table must have the same structure, with the same column names, as the table created in the calling procedure. This is shown in the following example.  
   
@@ -1114,9 +1114,9 @@ GO
   
 -   CASCADE, SET NULL or SET DEFAULT cannot be specified if a column of type **timestamp** is part of either the foreign key or the referenced key.  
   
--   CASCADE, SET NULL, SET DEFAULT and NO ACTION can be combined on tables that have referential relationships with each other. If the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] encounters NO ACTION, it stops and rolls back related CASCADE, SET NULL and SET DEFAULT actions. When a DELETE statement causes a combination of CASCADE, SET NULL, SET DEFAULT and NO ACTION actions, all the CASCADE, SET NULL and SET DEFAULT actions are applied before the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] checks for any NO ACTION.  
+-   CASCADE, SET NULL, SET DEFAULT and NO ACTION can be combined on tables that have referential relationships with each other. If the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] encounters NO ACTION, it stops and rolls back related CASCADE, SET NULL and SET DEFAULT actions. When a DELETE statement causes a combination of CASCADE, SET NULL, SET DEFAULT and NO ACTION actions, all the CASCADE, SET NULL and SET DEFAULT actions are applied before the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] checks for any NO ACTION.  
   
--   The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] does not have a predefined limit on either the number of FOREIGN KEY constraints a table can contain that reference other tables, or the number of FOREIGN KEY constraints that are owned by other tables that reference a specific table.  
+-   The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] does not have a predefined limit on either the number of FOREIGN KEY constraints a table can contain that reference other tables, or the number of FOREIGN KEY constraints that are owned by other tables that reference a specific table.  
   
      Nevertheless, the actual number of FOREIGN KEY constraints that can be used is limited by the hardware configuration and by the design of the database and application. We recommend that a table contain no more than 253 FOREIGN KEY constraints, and that it be referenced by no more than 253 FOREIGN KEY constraints. The effective limit for you may be more or less depending on the application and hardware. Consider the cost of enforcing FOREIGN KEY constraints when you design your database and applications.  
   
@@ -1170,11 +1170,11 @@ GO
   
 -   When a constraint is violated in an INSERT, UPDATE, or DELETE statement, the statement is ended. However, when SET XACT_ABORT is set to OFF, the transaction, if the statement is part of an explicit transaction, continues to be processed. When SET XACT_ABORT is set to ON, the whole transaction is rolled back. You can also use the ROLLBACK TRANSACTION statement with the transaction definition by checking the @@ERROR system function.  
   
--   When ALLOW_ROW_LOCKS = ON and ALLOW_PAGE_LOCK = ON, row-, page-, and table-level locks are allowed when you access the index. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] chooses the appropriate lock and can escalate the lock from a row or page lock to a table lock. When ALLOW_ROW_LOCKS = OFF and ALLOW_PAGE_LOCK = OFF, only a table-level lock is allowed when you access the index.  
+-   When ALLOW_ROW_LOCKS = ON and ALLOW_PAGE_LOCK = ON, row-, page-, and table-level locks are allowed when you access the index. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] chooses the appropriate lock and can escalate the lock from a row or page lock to a table lock. When ALLOW_ROW_LOCKS = OFF and ALLOW_PAGE_LOCK = OFF, only a table-level lock is allowed when you access the index.  
   
 -   If a table has FOREIGN KEY or CHECK CONSTRAINTS and triggers, the constraint conditions are evaluated before the trigger is executed.  
   
- For a report on a table and its columns, use **sp_help** or **sp_helpconstraint**. To rename a table, use **sp_rename**. For a report on the views and stored procedures that depend on a table, use [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys.dm-sql-referenced-entities-transact-sql.md) and [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys.dm-sql-referencing-entities-transact-sql.md).  
+ For a report on a table and its columns, use **sp_help** or **sp_helpconstraint**. To rename a table, use **sp_rename**. For a report on the views and stored procedures that depend on a table, use [sys.dm_sql_referenced_entities](../../relational-databases/reference/system-dynamic-management-views/sys.dm-sql-referenced-entities-transact-sql.md) and [sys.dm_sql_referencing_entities](../../relational-databases/reference/system-dynamic-management-views/sys.dm-sql-referencing-entities-transact-sql.md).  
   
 ## Nullability Rules Within a Table Definition  
  The nullability of a column determines whether that column can allow a null value (NULL) as the data in that column. NULL is not zero or blank: NULL means no entry was made or an explicit NULL was supplied, and it typically implies that the value is either unknown or not applicable.  
@@ -1185,13 +1185,13 @@ GO
   
 |Column data type|Rule|  
 |----------------------|----------|  
-|Alias data type|The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] uses the nullability that is specified when the data type was created. To determine the default nullability of the data type, use **sp_help**.|  
+|Alias data type|The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] uses the nullability that is specified when the data type was created. To determine the default nullability of the data type, use **sp_help**.|  
 |CLR user-defined type|Nullability is determined according to the column definition.|  
 |System-supplied data type|If the system-supplied data type has only one option, it takes precedence. **timestamp** data types must be NOT NULL. When any session settings are set ON by using SET:<br />**ANSI_NULL_DFLT_ON** = ON, NULL is assigned.  <br />**ANSI_NULL_DFLT_OFF** = ON, NOT NULL is assigned.<br /><br /> When any database settings are configured by using ALTER DATABASE:<br />**ANSI_NULL_DEFAULT_ON** = ON, NULL is assigned.  <br />**ANSI_NULL_DEFAULT_OFF** = ON, NOT NULL is assigned.<br /><br /> To view the database setting for ANSI_NULL_DEFAULT, use the **sys.databases** catalog view|  
   
  When neither of the ANSI_NULL_DFLT options is set for the session and the database is set to the default (ANSI_NULL_DEFAULTis OFF), the default of NOT NULL is assigned.  
   
- If the column is a computed column, its nullability is always automatically determined by the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)]. To find out the nullability of this type of column, use the COLUMNPROPERTY function with the **AllowsNull** property.  
+ If the column is a computed column, its nullability is always automatically determined by the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)]. To find out the nullability of this type of column, use the COLUMNPROPERTY function with the **AllowsNull** property.  
   
 > [!NOTE]  
 >  The SQL Server ODBC driver and Microsoft OLE DB Provider for SQL Server both default to having ANSI_NULL_DFLT_ON set to ON. ODBC and OLE DB users can configure this in ODBC data sources, or with connection attributes or properties set by the application.  
@@ -1199,7 +1199,7 @@ GO
 ## Data Compression  
  System tables cannot be enabled for compression. When you are creating a table, data compression is set to NONE, unless specified otherwise. If you specify a list of partitions or a partition that is out of range, an error will be generated. For a more information about data compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
- To evaluate how changing the compression state will affect a table, an index, or a partition, use the [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) stored procedure.  
+ To evaluate how changing the compression state will affect a table, an index, or a partition, use the [sp_estimate_data_compression_savings](../../relational-databases/reference/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) stored procedure.  
   
 ## Permissions  
  Requires CREATE TABLE permission in the database and ALTER permission on the schema in which the table is being created.  
@@ -1234,7 +1234,7 @@ REFERENCES SalesPerson(SalesPersonID)
 FOREIGN KEY (SalesPersonID) REFERENCES SalesPerson(SalesPersonID)  
 ```  
   
- Multicolumn key constraints are created as table constraints. In the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database, the `SpecialOfferProduct` table includes a multicolumn PRIMARY KEY. The following example shows how to reference this key from another table; an explicit constraint name is optional.  
+ Multicolumn key constraints are created as table constraints. In the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database, the `SpecialOfferProduct` table includes a multicolumn PRIMARY KEY. The following example shows how to reference this key from another table; an explicit constraint name is optional.  
   
 ```  
 CONSTRAINT FK_SpecialOfferProduct_SalesOrderDetail FOREIGN KEY  
@@ -1251,7 +1251,7 @@ UNIQUE NONCLUSTERED
 ```  
   
 ### D. Using DEFAULT definitions  
- Defaults supply a value (with the INSERT and UPDATE statements) when no value is supplied. For example, the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database could include a lookup table listing the different jobs employees can fill in the company. Under a column that describes each job, a character string default could supply a description when an actual description is not entered explicitly.  
+ Defaults supply a value (with the INSERT and UPDATE statements) when no value is supplied. For example, the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database could include a lookup table listing the different jobs employees can fill in the company. Under a column that describes each job, a character string default could supply a description when an actual description is not entered explicitly.  
   
 ```  
 DEFAULT 'New Position - title not formalized yet'  
@@ -1292,7 +1292,7 @@ OR emp_id LIKE '99[0-9][0-9]')
 ```  
   
 ### F. Showing the complete table definition  
- The following example shows the complete table definitions with all constraint definitions for table `PurchaseOrderDetail` created in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database. Note that to run the sample, the table schema is changed to `dbo`.  
+ The following example shows the complete table definitions with all constraint definitions for table `PurchaseOrderDetail` created in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database. Note that to run the sample, the table schema is changed to `dbo`.  
   
 ```  
 CREATE TABLE dbo.PurchaseOrderDetail  
@@ -1438,7 +1438,7 @@ CREATE TABLE T1
 ### P. Creating a system-versioned disk-based temporal table  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|
   
  The following examples show how to create a temporal table linked to a new history table, and how to create a temporal table linked to an existing history table. Note that the temporal table must have a primary key defined to be enabled for the table to be enabled for system versioning. For examples showing how to add or remove system versioning on an existing table, see System Versioning in [Examples](../../t-sql/statements/alter-table-transact-sql.md#Example_Top). For use cases, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
@@ -1492,7 +1492,7 @@ WITH
 ### Q. Creating a system-versioned memory-optimized temporal table  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|
   
  The following example shows how to create a system-versioned memory-optimized temporal table linked to a new disk-based history table.  
   
@@ -1592,16 +1592,16 @@ Creates a tables with an inline filtered index.
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
- [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-sql-referenced-entities-transact-sql.md)   
- [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-sql-referencing-entities-transact-sql.md)   
+ [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-sql-referenced-entities-transact-sql.md)   
+ [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-sql-referencing-entities-transact-sql.md)   
  [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [sp_helpconstraint &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpconstraint-transact-sql.md)   
- [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
+ [sp_help &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-help-transact-sql.md)   
+ [sp_helpconstraint &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-helpconstraint-transact-sql.md)   
+ [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-rename-transact-sql.md)   
+ [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   

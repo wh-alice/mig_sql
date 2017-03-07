@@ -21,9 +21,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # HTTP Connection Manager
-  An HTTP connection enables a package to access a Web server by using HTTP to send or receive files. The Web Service task that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] includes uses this connection manager.  
+  An HTTP connection enables a package to access a Web server by using HTTP to send or receive files. The Web Service task that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] includes uses this connection manager.  
   
- When you add an HTTP connection manager to a package, [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] creates a connection manager that will resolve to an HTTP connection at run time, sets the connection manager properties, and adds the connection manager to the **Connections** collection on the package.  
+ When you add an HTTP connection manager to a package, [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] creates a connection manager that will resolve to an HTTP connection at run time, sets the connection manager properties, and adds the connection manager to the **Connections** collection on the package.  
   
  The **ConnectionManagerType** property of the connection manager is set to **HTTP.**  
   
@@ -41,9 +41,9 @@ manager: "jhubbard"
 -   Use a proxy server. The proxy server can also be configured to use credentials and to bypass the proxy server and use local addresses instead.  
   
 ## Configuration of the HTTP Connection Manager  
- You can set properties through [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click one of the following topics:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [HTTP Connection Manager Editor &#40;Server Page&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   

@@ -17,7 +17,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Device Information Settings for Rendering Extensions (Reporting Services)
-  In [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], device information settings are used to pass rendering parameters to a rendering extension. Each rendering extension accepts a specific set of settings.  
+  In [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)], device information settings are used to pass rendering parameters to a rendering extension. Each rendering extension accepts a specific set of settings.  
   
 ## In This Section  
   

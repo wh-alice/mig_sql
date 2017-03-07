@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 -   If a conflict occurs between two Subscribers using server subscriptions (the default type for push subscriptions), the change from the Subscriber with the highest priority value is kept, and the change from the second Subscriber is discarded. If the priority values are equal, the change from the first Subscriber to synchronize with the Publisher is kept.  
   
- For more information about conflict detection and resolution for merge replication, see [Advanced Merge Replication Conflict Detection and Resolution](../Topic/Advanced%20Merge%20Replication%20Conflict%20Detection%20and%20Resolution.md).  
+ For more information about conflict detection and resolution for merge replication, see [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ## See Also  
  [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   

@@ -31,14 +31,14 @@ manager: "jhubbard"
   
 -   A linked server that replication creates; the connection is made with the credentials of the user making the change at the Subscriber.  
   
- The first two options can be specified in this wizard. The last option can only be specified using [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md); specify a value of **1** for the parameter **@security_mode**.  
+ The first two options can be specified in this wizard. The last option can only be specified using [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-link-publication-transact-sql.md); specify a value of **1** for the parameter **@security_mode**.  
   
 ## Options  
  **Create a linked server that connects using the following SQL Server Authentication login:**  
  Replication creates a linked server using the credentials specified in the **Login** and **Password** fields.  
   
  **Login**  
- Enter a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login that has only the permissions described in this topic.  
+ Enter a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login that has only the permissions described in this topic.  
   
  **Password**  
  Enter a strong password for the login specified in **Login**.  
@@ -49,7 +49,7 @@ manager: "jhubbard"
 ## See also  
  [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx)   
  [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Updatable Subscriptions for Transactional Replication](../Topic/Updatable%20Subscriptions%20for%20Transactional%20Replication.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

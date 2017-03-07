@@ -25,17 +25,17 @@ manager: "jhubbard"
 > [!NOTE]  
 >  You can also pass values to a child package by configuring the Execute Package Task to map parent package variables or parameters, or project parameters, to child package parameters. For more information, see [Execute Package Task](../../integration-services/control-flow/execute-package-task.md).  
   
- It is not necessary to create the variable in the parent package before you create the package configuration in the child package. You can add the variable to the parent package at any time, but you must use the exact name of the parent variable in the package configuration. However, before you can create a parent variable configuration, there must be an existing variable in the child package that the configuration can update. For more information about adding and configuring variables, see [Add, Delete, Change Scope of User-Defined Variable in a Package](../Topic/Add,%20Delete,%20Change%20Scope%20of%20User-Defined%20Variable%20in%20a%20Package.md).  
+ It is not necessary to create the variable in the parent package before you create the package configuration in the child package. You can add the variable to the parent package at any time, but you must use the exact name of the parent variable in the package configuration. However, before you can create a parent variable configuration, there must be an existing variable in the child package that the configuration can update. For more information about adding and configuring variables, see [Add, Delete, Change Scope of User-Defined Variable in a Package](../../a9retired/add-delete-change-scope-of-user-defined-variable-in-a-package.md).  
   
  The scope of the variable in the parent package that is used in a parent variable configuration can be set to the Execute Package task, to the container that has the task, or to the package. If multiple variables with the same name are defined in a package, the variable that is closest in scope to the Execute Package task is used. The closest scope to the Execute Package task is the task itself.  
   
 ### To add a variable to a parent package  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package to which you want to add a variable to pass to a child package.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package to which you want to add a variable to pass to a child package.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
-3.  In [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, to define the scope of the variable, do one of the following:  
+3.  In [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, to define the scope of the variable, do one of the following:  
   
     -   To set the scope to the package, click anywhere on the design surface of the **Control Flow** tab.  
   
@@ -52,11 +52,11 @@ manager: "jhubbard"
   
 ### To add a variable to a child package  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package to which you want to add a parent variable configuration.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package to which you want to add a parent variable configuration.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
-3.  In [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, to set the scope to the package, click anywhere on the design surface of the **Control Flow** tab.  
+3.  In [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, to set the scope to the package, click anywhere on the design surface of the **Control Flow** tab.  
   
 4.  Add and configure a variable.  
   
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 ### To add a parent package configuration to a child package  
   
-1.  If it is not already open, open the child package in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+1.  If it is not already open, open the child package in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
 2.  Click anywhere on the design surface of the **Control Flow** tab.  
   
@@ -104,6 +104,6 @@ manager: "jhubbard"
  [Package Configurations](../../integration-services/packages/package-configurations.md)   
  [Create Package Configurations](../../integration-services/packages/create-package-configurations.md)   
  [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md)   
- [Use Variables in Packages](../Topic/Use%20Variables%20in%20Packages.md)  
+ [Use Variables in Packages](../../a9retired/use-variables-in-packages.md)  
   
   

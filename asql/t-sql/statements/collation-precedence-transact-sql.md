@@ -30,7 +30,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Collation Precedence (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Collation precedence, also known as collation coercion rules, determines the following:  
   
@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 |Collation label|Types of objects|  
 |---------------------|----------------------|  
-|Coercible-default|Any [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] character string variable, parameter, literal, or the output of a catalog built-in function, or a built-in function that does not take string inputs but produces a string output.<br /><br /> If the object is declared in a user-defined function, stored procedure, or trigger, the object is assigned the default collation of the database in which the function, stored procedure, or trigger is created. If the object is declared in a batch, the object is assigned the default collation of the current database for the connection.|  
+|Coercible-default|Any [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] character string variable, parameter, literal, or the output of a catalog built-in function, or a built-in function that does not take string inputs but produces a string output.<br /><br /> If the object is declared in a user-defined function, stored procedure, or trigger, the object is assigned the default collation of the database in which the function, stored procedure, or trigger is created. If the object is declared in a batch, the object is assigned the default collation of the current database for the connection.|  
 |Implicit X|A column reference. The collation of the expression (X) is taken from the collation defined for the column in the table or view.<br /><br /> Even if the column was explicitly assigned a collation by using a COLLATE clause in the CREATE TABLE or CREATE VIEW statement, the column reference is classified as implicit.|  
 |Explicit X|An expression that is explicitly cast to a specific collation (X) by using a COLLATE clause in the expression.|  
 |No-collation|Indicates that the value of an expression is the result of an operation between two strings that have conflicting collations of the implicit collation label. The expression result is defined as not having a collation.|  

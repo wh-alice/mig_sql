@@ -18,9 +18,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Service Broker with Always On Availability Groups (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  This topic contains information about configuring Service Broker to work with [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  This topic contains information about configuring Service Broker to work with [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)].  
   
  **In This Topic:**  
   
@@ -36,14 +36,14 @@ manager: "jhubbard"
   
 2.  **Ensure that the Service Broker endpoint exists and is correctly configured.**  
   
-     On every instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that hosts an availability replica for the availability group, configure the Service Broker endpoint, as follows:  
+     On every instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] that hosts an availability replica for the availability group, configure the Service Broker endpoint, as follows:  
   
     -   Set LISTENER_IP to 'ALL'. This setting enables connections on any valid IP address that is bound to the availability group listener.  
   
     -   Set the Service Broker PORT to the same port number on all the host server instances.  
   
         > [!TIP]  
-        >  To view the port number of the Service Broker endpoint on a given server instance, query the **port** column of the [sys.tcp_endpoints](../../../relational-databases/system-catalog-views/sys.tcp-endpoints-transact-sql.md) catalog view, where **type_desc** = 'SERVICE_BROKER'.  
+        >  To view the port number of the Service Broker endpoint on a given server instance, query the **port** column of the [sys.tcp_endpoints](../../../relational-databases/reference/system-catalog-views/sys.tcp-endpoints-transact-sql.md) catalog view, where **type_desc** = 'SERVICE_BROKER'.  
   
      The following example creates a Windows authenticated Service Broker endpoint that uses the default Service Broker port (4022) and listens to all valid IP addresses.  
   
@@ -73,7 +73,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  By default, each user database, including **msdb**, contains the route **AutoCreatedLocal**. This route matches any service name and broker instance and specifies that the message should be delivered within the current instance. **AutoCreatedLocal** has lower priority than routes that explicitly specify a specific service that communicates with a remote instance.  
   
-     For information about creating routes, see [Service Broker Routing Examples](http://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (in the [!INCLUDE[ssKilimanjaro](../../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)] version of Books Online) and [CREATE ROUTE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-route-transact-sql.md).  
+     For information about creating routes, see [Service Broker Routing Examples](http://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (in the [!INCLUDE[ssKilimanjaro](../../../a9notintoc/includes/sskilimanjaro-md.md)] version of Books Online) and [CREATE ROUTE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-route-transact-sql.md).  
   
 ##  <a name="SendRemoteMessages"></a> Requirements for Sending Messages to a Remote Service in an Availability Group  
   
@@ -110,11 +110,11 @@ manager: "jhubbard"
   
 -   [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [Set Up Login Accounts for Database Mirroring or Always On Availability Groups &#40;SQL Server&#41;](../Topic/Set%20Up%20Login%20Accounts%20for%20Database%20Mirroring%20or%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md)  
+-   [Set Up Login Accounts for Database Mirroring or Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../Topic/Availability%20Group%20Listeners,%20Client%20Connectivity,%20and%20Application%20Failover%20\(SQL%20Server\).md)   
+ [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [SQL Server Service Broker](../../../database-engine/configure/windows/sql-server-service-broker.md)  
   
   

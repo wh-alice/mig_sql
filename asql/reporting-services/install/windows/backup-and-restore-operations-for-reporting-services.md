@@ -25,15 +25,15 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Backup and Restore Operations for Reporting Services
-  This topic provides an overview of all data files used in a [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] installation and describes when and how you should back up the files. Developing a backup and restore plan for the report server database files is the most important part of a recovery strategy. However, a more comprehensive recovery strategy would include backups of the encryption keys, custom assemblies or extensions, configuration files, and source files for reports and models.  
+  This topic provides an overview of all data files used in a [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] installation and describes when and how you should back up the files. Developing a backup and restore plan for the report server database files is the most important part of a recovery strategy. However, a more comprehensive recovery strategy would include backups of the encryption keys, custom assemblies or extensions, configuration files, and source files for reports and models.  
   
- **[!INCLUDE[applies](../../../analysis-services/includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] SharePoint Mode  
+ **[!INCLUDE[applies](../../../a9retired/includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] SharePoint Mode  
   
- Backup and restore operations are often used to move all or part of a [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] installation:  
+ Backup and restore operations are often used to move all or part of a [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] installation:  
   
--   If you are moving just the report server databases, you can use backup and restore or attach and detach to relocate the databases on a different [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. For more information, see [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+-   If you are moving just the report server databases, you can use backup and restore or attach and detach to relocate the databases on a different [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance. For more information, see [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
--   Moving a [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] installation to a new computer is called a migration. When you migrate an installation, you run Setup to install a new report server instance and then copy instance data to the new computer. For more information about migrating a [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] installation, see the following topics:  
+-   Moving a [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] installation to a new computer is called a migration. When you migrate an installation, you run Setup to install a new report server instance and then copy instance data to the new computer. For more information about migrating a [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] installation, see the following topics:  
   
     -   [Upgrade and Migrate Reporting Services](../../../reporting-services/install/windows/upgrade-and-migrate-reporting-services.md)  
   
@@ -42,7 +42,7 @@ manager: "erikre"
     -   [Migrate a Reporting Services Installation &#40;Native Mode&#41;](../../../reporting-services/install/windows/migrate-a-reporting-services-installation-native-mode.md)  
   
 ## Backing Up the Report Server Databases  
- Because a report server is a stateless server, all application data is stored in the **reportserver** and **reportservertempdb** databases that run on a [!INCLUDE[ssDEnoversion](../../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] instance. You can backup the **reportserver** and **reportservertempdb** databases using one of the supported methods for backing up [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases. Recommendations that are specific to the report server databases include the following:  
+ Because a report server is a stateless server, all application data is stored in the **reportserver** and **reportservertempdb** databases that run on a [!INCLUDE[ssDEnoversion](../../../a9notintoc/includes/ssdenoversion-md.md)] instance. You can backup the **reportserver** and **reportservertempdb** databases using one of the supported methods for backing up [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] databases. Recommendations that are specific to the report server databases include the following:  
   
 -   Use the full recovery model to backup the **reportserver** database.  
   
@@ -50,16 +50,16 @@ manager: "erikre"
   
 -   You can use different backup schedules for each database. The only reason to backup the **reportservertempdb** is to avoid having to recreate it if there is a hardware failure. In the event of hardware failure, it is not necessary to recover the data in **reportservertempdb**, but you do need the table structure. If you lose **reportservertempdb**, the only way to get it back is to recreate the report server database. If you recreate the **reportservertempdb**, it is important that it have the same name as the primary report server database.  
   
- For more information about backup and recovery of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] relational databases, see [Back Up and Restore of SQL Server Databases](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+ For more information about backup and recovery of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] relational databases, see [Back Up and Restore of SQL Server Databases](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
 > [!IMPORTANT]  
->  If your [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] report server is in SharePoint mode, there are additional databases to be concerned with, including SharePoint configuration databases and the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] alerting database. In SharePoint mode, three databases are created for each [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] service application. The **reportserver**, **reportservertempdb**, and **dataalerting** databases. For more information see [Backup and Restore Reporting Services SharePoint Service Applications](../../../reporting-services/report-server/sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
+>  If your [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] report server is in SharePoint mode, there are additional databases to be concerned with, including SharePoint configuration databases and the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] alerting database. In SharePoint mode, three databases are created for each [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] service application. The **reportserver**, **reportservertempdb**, and **dataalerting** databases. For more information see [Backup and Restore Reporting Services SharePoint Service Applications](../../../reporting-services/report-server/sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
   
 ## Backing Up the Encryption Keys  
- You should backup the encryption keys when you configure a [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] installation for the first time. You should also backup the keys any time you change the identity of the service accounts or rename the computer. For more information, see [Back Up and Restore Reporting Services Encryption Keys](../Topic/Back%20Up%20and%20Restore%20Reporting%20Services%20Encryption%20Keys.md). For SharePoint mode report servers, see the “Key Management” section of [Manage a Reporting Services SharePoint Service Application](../../../reporting-services/report-server/sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
+ You should backup the encryption keys when you configure a [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] installation for the first time. You should also backup the keys any time you change the identity of the service accounts or rename the computer. For more information, see [Back Up and Restore Reporting Services Encryption Keys](../../../reporting-services/install/windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). For SharePoint mode report servers, see the “Key Management” section of [Manage a Reporting Services SharePoint Service Application](../../../reporting-services/report-server/sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
 ## Backing Up the Configuration Files  
- [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] uses configuration files to store application settings. You should backup the files when you first configure the server and after you deploy any custom extensions. Files to back up include:  
+ [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] uses configuration files to store application settings. You should backup the files when you first configure the server and after you deploy any custom extensions. Files to back up include:  
   
 -   Rsreportserver.config  
   
@@ -86,6 +86,6 @@ manager: "erikre"
  [rskeymgmt Utility &#40;SSRS&#41;](../../../reporting-services/tools/rskeymgmt-utility-ssrs.md)   
  [Copy Databases with Backup and Restore](../../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
  [Administer a Report Server Database &#40;SSRS Native Mode&#41;](../../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
- [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../Topic/Configure%20and%20Manage%20Encryption%20Keys%20\(SSRS%20Configuration%20Manager\).md)  
+ [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

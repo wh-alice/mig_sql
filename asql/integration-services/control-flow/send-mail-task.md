@@ -62,9 +62,9 @@ manager: "jhubbard"
 |**SendMailTaskInfo**|Provides descriptive information about the task.|  
   
 ## Configuring the Send Mail Task  
- You can set properties through [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer or programmatically.  
   
- For information about the properties that you can set in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click one of the following topics:  
+ For information about the properties that you can set in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [Send Mail Task Editor &#40;General Page&#41;](../../integration-services/control-flow/send-mail-task-editor-general-page.md)  
   
@@ -77,7 +77,7 @@ manager: "jhubbard"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
 ## Related Tasks  
- For information about how to set these properties in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click [Set the Properties of a Task or Container](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md).  
+ For information about how to set these properties in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, click [Set the Properties of a Task or Container](../../a9retired/set-the-properties-of-a-task-or-container.md).  
   
 ## Related Content  
   

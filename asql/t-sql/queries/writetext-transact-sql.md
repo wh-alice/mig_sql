@@ -28,14 +28,14 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # WRITETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Permits minimally logged, interactive updating of an existing **text**, **ntext**, or **image** column. WRITETEXT overwrites any existing data in the column it affects. WRITETEXT cannot be used on **text**, **ntext**, and **image** columns in views.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)] Use the large-value data types and the **.**WRITE clause of the [UPDATE](../../t-sql/queries/update-transact-sql.md) statement instead.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -51,7 +51,7 @@ WRITETEXT [BULK]
  Enables upload tools to upload a binary data stream. The stream must be provided by the tool at the TDS protocol level. When the data stream is not present the query processor ignores the BULK option.  
   
 > [!IMPORTANT]  
->  We recommend that the BULK option not be used in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]-based applications. This option might be changed or removed in a future version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+>  We recommend that the BULK option not be used in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]-based applications. This option might be changed or removed in a future version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  *table* **.column**  
  Is the name of the table and **text**, **ntext**, or **image** column to update. Table and column names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). Specifying the database name and owner names is optional.  
@@ -60,7 +60,7 @@ WRITETEXT [BULK]
  Is a value that stores the pointer to the **text**, **ntext**, or **image** data. *text_ptr* must be **binary(16)**.To create a text pointer, execute an [INSERT](../../t-sql/statements/insert-transact-sql.md) or [UPDATE](../../t-sql/queries/update-transact-sql.md) statement with data that is not null for the **text**, **ntext**, or **image** column.  
   
  WITH LOG  
- Ignored by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Logging is determined by the recovery model in effect for the database.  
+ Ignored by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Logging is determined by the recovery model in effect for the database.  
   
  *data*  
  Is the actual **text**, **ntext** or **image** data to store. *data* can be a literal or a parameter. The maximum length of text that can be inserted interactively with WRITETEXT is approximately 120 KB for **text**, **ntext**, and **image** data.  
@@ -77,11 +77,11 @@ WRITETEXT [BULK]
   
  For WRITETEXT to work correctly, the column must already contain a valid text pointer.  
   
- If the table does not have in row text, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] saves space by not initializing **text** columns when explicit or implicit null values are added in **text** columns with INSERT, and no text pointer can be obtained for such nulls. To initialize **text** columns to NULL, use the UPDATE statement. If the table has in row text, you do not have to initialize the text column for nulls and you can always get a text pointer.  
+ If the table does not have in row text, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] saves space by not initializing **text** columns when explicit or implicit null values are added in **text** columns with INSERT, and no text pointer can be obtained for such nulls. To initialize **text** columns to NULL, use the UPDATE statement. If the table has in row text, you do not have to initialize the text column for nulls and you can always get a text pointer.  
   
  The ODBC SQLPutData function is faster and uses less dynamic memory than WRITETEXT. This function can insert up to 2 gigabytes of **text**, **ntext**, or **image** data.  
   
- In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], in row text pointers to **text**, **ntext**, or **image** data may exist but may not be valid. For information about the text in row option, see [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). For information about invalidating text pointers, see [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], in row text pointers to **text**, **ntext**, or **image** data may exist but may not be valid. For information about the text in row option, see [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-tableoption-transact-sql.md). For information about invalidating text pointers, see [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
 ## Permissions  
  Requires UPDATE permission on the specified table. Permission is transferable when UPDATE permission is transferred.  

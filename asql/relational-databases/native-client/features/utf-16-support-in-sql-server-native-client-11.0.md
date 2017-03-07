@@ -15,9 +15,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # UTF-16 Support in SQL Server Native Client 11.0
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
-  Beginning in [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)], if you supply a fixed-length buffer when binding a column result or output parameter and if the **wchar** character written into the buffer before the terminating character is a high surrogate code point of a surrogate pair, and if the next **wchar** character is a low surrogate code point, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client will not add the high surrogate code point to the buffer.  
+  Beginning in [!INCLUDE[ssSQL11](../../../a9notintoc/includes/sssql11-md.md)], if you supply a fixed-length buffer when binding a column result or output parameter and if the **wchar** character written into the buffer before the terminating character is a high surrogate code point of a surrogate pair, and if the next **wchar** character is a low surrogate code point, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client will not add the high surrogate code point to the buffer.  
   
 ## See Also  
  [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

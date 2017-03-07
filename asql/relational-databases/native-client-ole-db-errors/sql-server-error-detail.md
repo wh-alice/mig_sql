@@ -22,9 +22,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Error Detail
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider defines the provider-specific error interface [ISQLServerErrorInfo](../Topic/ISQLServerErrorInfo%20\(OLE%20DB\).md). The interface returns more detail about a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error and is valuable when command execution or rowset operations fail.  
+  The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider defines the provider-specific error interface [ISQLServerErrorInfo](../../a9retired/isqlservererrorinfo-ole-db.md). The interface returns more detail about a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error and is valuable when command execution or rowset operations fail.  
   
  There are two ways to obtain access to **ISQLServerErrorInfo** interface.  
   
@@ -45,16 +45,16 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
 |Member|Description|  
 |------------|-----------------|  
-|*pwszMessage*|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error message. Identical to the string returned in **IErrorInfo::GetDescription**.|  
-|*pwszServer*|Name of the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] for the session.|  
+|*pwszMessage*|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error message. Identical to the string returned in **IErrorInfo::GetDescription**.|  
+|*pwszServer*|Name of the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] for the session.|  
 |*pwszProcedure*|If appropriate, the name of the procedure in which the error originated. An empty string otherwise.|  
-|*lNative*|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] native error number. Identical to the value returned in the *plNativeError* parameter of **ISQLErrorInfo::GetSQLInfo**.|  
-|*bState*|State of a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error message.|  
-|*bClass*|Severity of a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error message.|  
+|*lNative*|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] native error number. Identical to the value returned in the *plNativeError* parameter of **ISQLErrorInfo::GetSQLInfo**.|  
+|*bState*|State of a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error message.|  
+|*bClass*|Severity of a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error message.|  
 |*wLineNumber*|When applicable, the line number of a stored procedure on which the error occurred.|  
   
 ## See Also  
  [Errors](../../relational-databases/native-client-ole-db-errors/errors.md)   
- [RAISERROR &#40;Transact-SQL&#41;](../Topic/RAISERROR%20\(Transact-SQL\).md)  
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

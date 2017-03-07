@@ -18,17 +18,17 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Reporting Services in SQL Server Management Studio (SSRS)
-  Report server administrators can use [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to:  
+  Report server administrators can use [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] to:  
   
 -   Enable features, set server defaults, and manage running jobs.  
   
--   View and create custom reports. In Object Explorer, many nodes display a set of standard reports that are installed with [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)]. You must have administrator permissions. The schema of a custom report must match the schema of the installed reports. For more information, see [Custom Reports in Management Studio](../Topic/Custom%20Reports%20in%20Management%20Studio.md) and [Find the Report Definition Schema Version &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+-   View and create custom reports. In Object Explorer, many nodes display a set of standard reports that are installed with [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)]. You must have administrator permissions. The schema of a custom report must match the schema of the installed reports. For more information, see [Custom Reports in Management Studio](../Topic/Custom%20Reports%20in%20Management%20Studio.md) and [Find the Report Definition Schema Version &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
- Report authors can use [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] to:  
+ Report authors can use [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] to:  
   
 -   Visualize spatial data from a query result set for a map report. After you run the query, use the **Spatial results** tab in the result set pane. For more information, see [View Spatial Data in Object Explorer](../../relational-databases/scripting/view-spatial-data-in-object-explorer.md).  
   
- This section contains step-by-step instructions for performing various reporting tasks using [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)]. Creating and managing shared schedules can also be performed using Report Manager.  
+ This section contains step-by-step instructions for performing various reporting tasks using [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)]. Creating and managing shared schedules can also be performed using Report Manager.  
   
 ## In This Section  
   
@@ -36,7 +36,7 @@ manager: "erikre"
   
 -   [Set Report Server Properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)  
   
--   [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Role%20\(Management%20Studio\).md)  
+-   [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)  
   
 -   [Cancel Report Server Jobs &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)  
   

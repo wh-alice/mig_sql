@@ -20,9 +20,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # View the Dependencies of a Table
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
 
-  You can view a table’s dependencies in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  You can view a table’s dependencies in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 #### To view the objects that depend on a table  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -76,7 +76,7 @@ manager: "jhubbard"
   
 #### To view the objects on which a table depends  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -91,6 +91,6 @@ manager: "jhubbard"
   
     ```  
   
- For additional information, see [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md)  
+ For additional information, see [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md)  
   
   

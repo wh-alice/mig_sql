@@ -17,7 +17,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Tutorial: Introducing Expressions
-In this [!INCLUDE[ssRBnoversion_md](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] tutorial, you use expressions with common functions and operators to create powerful and flexible [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports. 
+In this [!INCLUDE[ssRBnoversion_md](../../a9notintoc/includes/ssrbnoversion-md.md)] tutorial, you use expressions with common functions and operators to create powerful and flexible [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports. 
 
 You will write expressions that concatenate name values, look up values in a separate dataset, display different colors based on field values, and so on.  
   
@@ -40,7 +40,7 @@ In this section, you create a table report, a data source, and a dataset. When y
   
 ### To create a table report  
   
-1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
+1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
   
     The **New Report or Dataset** dialog box opens.  
   
@@ -133,7 +133,7 @@ In this section, you create a table report, a data source, and a dataset. When y
   
 3.  In the **Name** box, type **ExpressionsDataSource**  
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To update the default name of the dataset  
   
@@ -145,7 +145,7 @@ In this section, you create a table report, a data source, and a dataset. When y
   
 3.  In the **Name** box, type **Expressions**  
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## <a name="Concatenate"></a>3. Display First Initial and Last Name  
 In this section, you use the **Left** function and the **Concatenate** (**&**) operator in an expression that evaluates to a name that includes an initial and a last name. You can build the expression step by step or skip ahead in the procedure and copy/paste the expression from the tutorial into the **Expression** dialog box.   
@@ -188,7 +188,7 @@ In this section, you use the **Left** function and the **Concatenate** (**&**) o
     
     ![report-builder-expression-tutorial-complete-name-expression](../../reporting-services/tutorials/media/report-builder-expression-tutorial-complete-name-expression.png)
   
-11. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+11. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 12. Click **Run** to preview the report.  
 
@@ -351,7 +351,7 @@ In this section, you create the CountryRegion dataset and use the **Lookup** fun
   
     The query results are the country/region identifiers and names.  
   
-10. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 11. Click **OK** again to close the **Dataset Properties** dialog box.  
 
@@ -377,7 +377,7 @@ In this section, you create the CountryRegion dataset and use the **Lookup** fun
   
     The syntax of the **Lookup** function specifies a lookup between CountryRegionID in the Expressions dataset and ID in the CountryRegion dataset that returns the CountryRegion value from the CountryRegion dataset.  
   
-10. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 11. Click **Run** to preview the report.  
   
@@ -409,7 +409,7 @@ In this section, you add a column and then use the **Now** function or the `Exec
 13. In the **Category** list, click **Date & Time** again, and in the **Item** list, double-click **Now**.  
   
     > [!WARNING]  
-    > In production reports you should not use the **Now** function in expressions that are evaluated multiple times as the report renders (for example, in the detail rows of a report). The value of **Now** changes from row to row and the different values affect the evaluation results of expressions, which leads to results that are subtly inconsistent. Instead, use the `ExecutionTime` global variable that [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] provides.  
+    > In production reports you should not use the **Now** function in expressions that are evaluated multiple times as the report renders (for example, in the detail rows of a report). The value of **Now** changes from row to row and the different values affect the evaluation results of expressions, which leads to results that are subtly inconsistent. Instead, use the `ExecutionTime` global variable that [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] provides.  
   
 15. Delete the left parenthesis after `Now(`, and then type a right parenthesis **)**  
   
@@ -417,7 +417,7 @@ In this section, you add a column and then use the **Now** function or the `Exec
     
     ![report-builder-expression-tutorial-date-since-last-purchase](../../reporting-services/tutorials/media/report-builder-expression-tutorial-date-since-last-purchase.png)
   
-17. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+17. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
 
 11. Click **Run** to preview the report.  
   
@@ -444,7 +444,7 @@ Configuring the indicator and its states takes many steps. If you want, you can 
 
     ![report-builder-expression-tutorial-select-indicator](../../reporting-services/tutorials/media/report-builder-expression-tutorial-select-indicator.png)
   
-3.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To configure the indicator  
   
@@ -468,7 +468,7 @@ Configuring the indicator and its states takes many steps. If you want, you can 
   
     The completed expression is: `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions"))`  
   
-15. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+15. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 16. In the **States Measurement Unit** box, select **Numeric**.  
   
@@ -492,7 +492,7 @@ Configuring the indicator and its states takes many steps. If you want, you can 
   
     The completed expression: `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) < 0`  
   
-30. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+30. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 31. In the text box for the **End** value, type **0**  
   
@@ -508,7 +508,7 @@ Configuring the indicator and its states takes many steps. If you want, you can 
   
 35. In the **Expression** dialog box, delete **100** and create the expression: `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
   
-36. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+36. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 37. Click **OK** again to close the **Indicator properties** dialog box.  
   
@@ -561,7 +561,7 @@ Create a parameter so report readers can specify the color to apply to alternati
 
     ![report-builder-expression-tutorial-parameter-available](../../reporting-services/tutorials/media/report-builder-expression-tutorial-parameter-available.png)
   
-19. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+19. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To apply alternating colors to detail rows  
   
@@ -595,7 +595,7 @@ Create a parameter so report readers can specify the color to apply to alternati
     
     ![report-builder-expression-tutorial-banded-color-expressn](../../reporting-services/tutorials/media/report-builder-expression-tutorial-banded-color-expressn.png)
   
-24. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+24. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### Run the Report  
   
@@ -651,7 +651,7 @@ In this tutorial, you save the report to a report server. If you do not have acc
   
 The report is saved to the report server. The name of report server that you are connected to appears in the status bar at the bottom of the window.
 
-Now your report readers can view your report in the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal.
+Now your report readers can view your report in the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal.
 
 ![report-builder-expression-tutorial-final-in-browser](../../reporting-services/tutorials/media/report-builder-expression-tutorial-final-in-browser.png)
 

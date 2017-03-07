@@ -26,18 +26,18 @@ manager: "jhubbard"
  A public key does not have a particular format like a certificate would have, and you cannot export it to a file.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] contains features that enable you to create and manage certificates and keys for use with the server and database. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] cannot be used to create and manage certificates and keys with other applications or in the operating system.  
+>  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] contains features that enable you to create and manage certificates and keys for use with the server and database. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] cannot be used to create and manage certificates and keys with other applications or in the operating system.  
   
 ## Certificates  
- A certificate is a digitally signed security object that contains a public (and optionally a private) key for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. You can use externally generated certificates or [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] can generate certificates.  
+ A certificate is a digitally signed security object that contains a public (and optionally a private) key for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. You can use externally generated certificates or [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] can generate certificates.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] certificates comply with the IETF X.509v3 certificate standard.  
+>  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] certificates comply with the IETF X.509v3 certificate standard.  
   
  Certificates are useful because of the option of both exporting and importing keys to X.509 certificate files. The syntax for creating certificates allows for creation options for certificates such as an expiry date.  
   
 ### Using a Certificate in SQL Server  
- Certificates can be used to help secure connections, in database mirroring, to sign packages and other objects, or to encrypt data or connections. The following table lists additional resources for certificates in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Certificates can be used to help secure connections, in database mirroring, to sign packages and other objects, or to encrypt data or connections. The following table lists additional resources for certificates in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 |Topic|Description|  
 |-----------|-----------------|  
@@ -51,7 +51,7 @@ manager: "jhubbard"
  Asymmetric keys can be imported from strong name key files, but they cannot be exported. They also do not have expiry options. Asymmetric keys cannot encrypt connections.  
   
 ### Using an Asymmetric Key in SQL Server  
- Asymmetric keys can be used to help secure data or sign plaintext. The following table lists additional resources for asymmetric keys in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Asymmetric keys can be used to help secure data or sign plaintext. The following table lists additional resources for asymmetric keys in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 |Topic|Description|  
 |-----------|-----------------|  
@@ -59,7 +59,7 @@ manager: "jhubbard"
 |[SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)|Displays the options for signing objects.|  
   
 ## Tools  
- [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] provides tools and utilities that will generate certificates and strong name key files. These tools offer a richer amount of flexibility in the key generation process than the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] syntax. You can use these tools to create RSA keys with more complex key lengths and then import them into [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The following table explains shows where to find these tools.  
+ [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] provides tools and utilities that will generate certificates and strong name key files. These tools offer a richer amount of flexibility in the key generation process than the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] syntax. You can use these tools to create RSA keys with more complex key lengths and then import them into [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The following table explains shows where to find these tools.  
   
 |||  
 |-|-|  
@@ -75,7 +75,7 @@ manager: "jhubbard"
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
   
 ## See Also  
- [sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.certificates-transact-sql.md)   
+ [sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.certificates-transact-sql.md)   
  [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
   
   

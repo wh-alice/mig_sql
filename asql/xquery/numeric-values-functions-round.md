@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Numeric Values Functions - round
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns the number not having a fractional part that is closest to the argument. If there is more than one number like that, the one that is closest to positive infinity is returned. For example:  
   
@@ -55,7 +55,7 @@ fn:round ( $arg as numeric?) as numeric?
 ## Examples  
  This topic provides XQuery examples against XML instances stored in various **xml** type columns in the AdventureWorks database.  
   
- You can use the working sample in the [ceiling function (XQuery)](../Topic/ceiling%20Function%20\(XQuery\).md) for the **round()** XQuery function. All you have to do is replace the **ceiling()** function in the query with the **round()** function.  
+ You can use the working sample in the [ceiling function (XQuery)](../xquery/numeric-values-functions-ceiling.md) for the **round()** XQuery function. All you have to do is replace the **ceiling()** function in the query with the **round()** function.  
   
 ## Implementation Limitations  
  These are the limitations:  
@@ -65,7 +65,7 @@ fn:round ( $arg as numeric?) as numeric?
 -   The **round()** function of xs:double and xs:float values between -0.5e0 and -0e0 are mapped to 0e0 instead of -0e0.  
   
 ## See Also  
- [floor Function &#40;XQuery&#41;](../Topic/floor%20Function%20\(XQuery\).md)   
- [ceiling Function &#40;XQuery&#41;](../Topic/ceiling%20Function%20\(XQuery\).md)  
+ [floor Function &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
+ [ceiling Function &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)  
   
   

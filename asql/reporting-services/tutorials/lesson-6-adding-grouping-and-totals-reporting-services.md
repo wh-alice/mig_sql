@@ -17,7 +17,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Lesson 6: Adding Grouping and Totals (Reporting Services)
-In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report to organize and summarize your data.  
+In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] report to organize and summarize your data.  
   
   
 ## <a name="bkmk_groupdata"></a>To group data in a report  
@@ -48,7 +48,7 @@ In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRS
   
 8.  In the **Type** box, select **January 31, 2000**.  
   
-9.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)].  
+9.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)].  
   
 10.  Switch to the **Preview** tab to preview the report. It should look similar to the following illustration:  
     ![rs_BasicTableGroupsPreview](../../reporting-services/report-design/media/rs-basictablegroupspreview.png) 
@@ -136,13 +136,13 @@ In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRS
     > ========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========  
     > ========== Deploy: 1 succeeded, 0 failed, 0 skipped ==========  
   
-    If you see an error message similar to the following, verify you have permissions on the report server and you have started [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)] with administrator privileges.  
+    If you see an error message similar to the following, verify you have permissions on the report server and you have started [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)] with administrator privileges.  
   
     > "The permissions granted to user 'XXXXXXXX\\[your user name]' are insufficient for performing this operation"  
   
 7.  Browse to the web portal with administrator privileges, for example, right-click the icon for Internet Explorer and click **Run as administrator**.  
   
-    Browse to [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal URL.   
+    Browse to [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal URL.   
     **Note:** The *portal* URL is "Reports", not the Report *Server* URL of "Reportserver".  For example:   
     - `http://<server name>/reports`.  
      - `http://localhost/reports` works if your designing the report on the report server.  

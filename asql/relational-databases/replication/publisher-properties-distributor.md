@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   The Snapshot Agent and Log Reader Agent for Oracle publications.  
   
- Select **Impersonate agent process account** to make connections to the Publisher using the context of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows account under which these agents run, or specify **SQL Server Authentication**, and then enter a value for **Login** and **Password**. It is recommended that you select **Impersonate agent process account**. For more information on agent security, see [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Select **Impersonate agent process account** to make connections to the Publisher using the context of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows account under which these agents run, or specify **SQL Server Authentication**, and then enter a value for **Login** and **Password**. It is recommended that you select **Impersonate agent process account**. For more information on agent security, see [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
  The Windows accounts under which these agents run are specified in the New Publication Wizard. These accounts can be changed:  
   

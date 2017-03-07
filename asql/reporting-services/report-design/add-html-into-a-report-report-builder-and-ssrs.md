@@ -19,13 +19,13 @@ manager: "erikre"
   Using a placeholder, you can import HTML from a field in your dataset for use in the report. By default, a placeholder represents plain text, so you will need to change the placeholder mark-up type to HTML. For more information, see [Importing HTML into a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ### To add HTML from a field in your dataset into a text box  
   
 1.  On the **Insert** tab, click **List**. Click the design surface, and then drag to create a box that is the size you want.  
   
-     The **Dataset Properties** dialog box opens. You can use a shared dataset or a dataset embedded in your report. For more information, click [Dataset Properties Dialog Box, Query &#40;Report Builder&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md) or [Dataset Properties Dialog Box, Query](../Topic/Dataset%20Properties%20Dialog%20Box,%20Query.md).  
+     The **Dataset Properties** dialog box opens. You can use a shared dataset or a dataset embedded in your report. For more information, click [Dataset Properties Dialog Box, Query &#40;Report Builder&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md) or [Dataset Properties Dialog Box, Query](../../a9retired/dataset-properties-dialog-box-query.md).  
   
 2.  On the **Insert** tab, click **Text Box**. Click in the list, and then drag to create a box that is the size you want.  
   
@@ -37,11 +37,11 @@ manager: "erikre"
   
 6.  Click **HTML - Interpret HTML tags as styles**. This causes the field to be evaluated as HTML.  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## See Also  
  [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Formatting Lines, Colors, and Images &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
- [Placeholder Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](../Topic/Placeholder%20Properties%20Dialog%20Box,%20General%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Placeholder Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](../../a9retired/placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Functions on String Values - substring
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns part of the value of *$sourceString*, starting at the position indicated by the value of *$startingLoc,* and continues for the number of characters indicated by the value of *$length*.  
   
@@ -60,7 +60,7 @@ fn:substring($sourceString as xs:string?,
  If the value of *$sourceString* is the empty sequence, it is handled as the zero-length string. Otherwise, if either *$startingLoc* or *$length* is the empty sequence, the empty sequence is returned.  
   
 ## Supplementary Characters (Surrogate Pairs)  
- The behavior of surrogate pairs in XQuery functions depends on the database compatibility level and, in some cases, on the default namespace URI for functions. For more information, see the section "XQuery Functions Are Surrogate-Aware" in the topic [Breaking Changes to Database Engine Features in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Also see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md) and [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ The behavior of surrogate pairs in XQuery functions depends on the database compatibility level and, in some cases, on the default namespace URI for functions. For more information, see the section "XQuery Functions Are Surrogate-Aware" in the topic [Breaking Changes to Database Engine Features in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Also see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) and [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## Implementation Limitations  
  SQL Server requires the *$startingLoc* and *$length parameters* to be of type xs:decimal instead of xs:double.  
@@ -68,7 +68,7 @@ fn:substring($sourceString as xs:string?,
  SQL Server allows *$startingLoc* and *$length* to be the empty sequence, because the empty sequence is a possible value as a result of dynamic errors being mapped to ().  
   
 ## Examples  
- This topic provides XQuery examples against XML instances stored in various **xml** type columns in the [!INCLUDE[ssSampleDBobject](../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+ This topic provides XQuery examples against XML instances stored in various **xml** type columns in the [!INCLUDE[ssSampleDBobject](../a9retired/includes/sssampledbobject-md.md)] database.  
   
 ### A. Using the substring() XQuery function to retrieve partial summary product-model descriptions  
  The query retrieves the first 50 characters of the text that describes the product model, the <`Summary`> element in the document.  

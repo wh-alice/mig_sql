@@ -18,7 +18,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Add a New or Existing Report to a Report Project (SSRS)
-  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], you can add a new [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report by using the Report Wizard or by adding a new blank report to your project. You can also add an existing report. After you add a report, you can see the report name listed under the **Reports** folder in your project.  
+  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], you can add a new [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report by using the Report Wizard or by adding a new blank report to your project. You can also add an existing report. After you add a report, you can see the report name listed under the **Reports** folder in your project.  
   
 > [!NOTE]  
 >  To preview a report with existing data sources, you must have permissions to the data source from your report authoring client. For more information, see [Data Connections, Data Sources, and Connection Strings](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
@@ -33,14 +33,14 @@ manager: "erikre"
   
     -   **Select a Data Source.** The first step in creating a report is to define a data source. Report Wizard provides a list of all shared data sources in the report project, in addition to an option to create a new data source.  
   
-    -   **Design a Query.** The next step is to design a query. You can type the query string, build it using Query Designer, or import a query from another report. For information about Query Designers, see [Reporting Services Query Designers](../Topic/Reporting%20Services%20Query%20Designers.md).  
+    -   **Design a Query.** The next step is to design a query. You can type the query string, build it using Query Designer, or import a query from another report. For information about Query Designers, see [Reporting Services Query Designers](../../a9retired/reporting-services-query-designers.md).  
   
     -   **Choose a Report Type.** The next step is to select the type of report you want. You can choose a tabular or matrix report. A tabular report has a fixed number of columns. A matrix, or crosstab, report has a variable number of columns based on the results of the query. A map report displays analytical against a geographic background.  
   
     -   **Choose a Style.** The next step is to apply a style to the report using a style template. Select a template to apply styles such as font, color, and border style to the report. Report Designer provides six style templates: Slate, Forest, Corporate, Bold, Ocean, and Generic. You can also add additional style templates.  
   
         > [!NOTE]  
-        >  You can alter existing templates or add new ones by editing the StyleTemplates.xml file in the \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles\\<lang\> folder, where \<lang> is the language you are using (for example, if you are using the English language version of [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)], the folder name is "EN"). This folder is located on the computer on which Report Designer is installed. There are two copies of the StyleTemplates.xml file. To modify the styles that are applied through the Report Wizard, edit the file that is in the folder created for the language you are using.  
+        >  You can alter existing templates or add new ones by editing the StyleTemplates.xml file in the \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles\\<lang\> folder, where \<lang> is the language you are using (for example, if you are using the English language version of [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)], the folder name is "EN"). This folder is located on the computer on which Report Designer is installed. There are two copies of the StyleTemplates.xml file. To modify the styles that are applied through the Report Wizard, edit the file that is in the folder created for the language you are using.  
   
     -   **Name the Report.**  The final step is to name the report and verify the fields that will be included in the report. When all steps are completed, Report Designer creates the report and adds it to the report server project.  
   

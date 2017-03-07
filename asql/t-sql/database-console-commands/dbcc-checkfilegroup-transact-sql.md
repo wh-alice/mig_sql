@@ -31,11 +31,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Checks the allocation and structural integrity of all tables and indexed views in the specified filegroup of the current database.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -99,7 +99,7 @@ DBCC CHECKFILEGROUP
  MAXDOP  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] 2014 SP2 through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658).|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] 2014 SP2 through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658).|  
   
  Overrides the **max degree of parallelism** configuration option of **sp_configure** for the statement. The MAXDOP can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the Database Engine uses the Resource Governor MAXDOP value, described in ALTER WORKLOAD GROUP (Transact-SQL). All semantic rules used with the max degree of parallelism configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure/windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
@@ -126,9 +126,9 @@ DBCC CHECKFILEGROUP
 >  Running DBCC CHECKFILEGROUP against tempdb does not perform any allocation checks and must acquire shared table locks to perform table checks. This is because, for performance reasons, database snapshots are not available on tempdb. This means that the required transactional consistency cannot be obtained.  
   
 ## Checking Objects in Parallel  
- By default, DBCC CHECKFILEGROUP performs parallel checking of objects. The degree of parallelism is automatically determined by the query processor. The maximum degree of parallelism is configured just like parallel queries. To restrict the maximum number of processors available for DBCC checking, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure/windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ By default, DBCC CHECKFILEGROUP performs parallel checking of objects. The degree of parallelism is automatically determined by the query processor. The maximum degree of parallelism is configured just like parallel queries. To restrict the maximum number of processors available for DBCC checking, use [sp_configure](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md). For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure/windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
- Parallel checking can be disabled by using trace flag 2528. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md).  
+ Parallel checking can be disabled by using trace flag 2528. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
 ## Nonclustered Indexes on Separate Filegroups  
  If a nonclustered index in the specified filegroup is associated with a table in another filegroup, the index is not checked because the base table is not available for validation.  
@@ -145,7 +145,7 @@ DBCC CHECKFILEGROUP
  When a partitioned table exists on multiple filegroups, DBCC CHECKFILEGROUP checks the partition rowsets that exist on the specified filegroup and ignores the rowsets in the other filegroups. Informational message 2594 indicates the partitions that were not checked. Nonclustered indexes not resident on the specified filegroup are not checked.  
   
 ## Understanding DBCC Error Messages  
- After the DBCC CHECKFILEGROUP command finishes, a message is written to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log. If the DBCC command successfully executes, the message indicates a successful completion and the amount of time that the command ran. If the DBCC command stops before completing the check because of an error, the message indicates the command was terminated, a state value, and the amount of time the command ran. The following table lists and describes the state values that can be included in the message.  
+ After the DBCC CHECKFILEGROUP command finishes, a message is written to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error log. If the DBCC command successfully executes, the message indicates a successful completion and the amount of time that the command ran. If the DBCC command stops before completing the check because of an error, the message indicates the command was terminated, a state value, and the amount of time the command ran. The following table lists and describes the state values that can be included in the message.  
   
 |State|Description|  
 |-----------|-----------------|  
@@ -157,9 +157,9 @@ DBCC CHECKFILEGROUP
 |5|An unknown error occurred that terminated the DBCC command.|  
   
 ## Error Reporting  
- A mini-dump file (SQLDUMP*nnnn*.txt) is created in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] LOG directory whenever DBCC CHECKFILEGROUP detects a corruption error. When the Feature Usage data collection and Error Reporting features are enabled for the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the file is automatically forwarded to [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)]. The collected data is used to improve [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] functionality.  
+ A mini-dump file (SQLDUMP*nnnn*.txt) is created in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] LOG directory whenever DBCC CHECKFILEGROUP detects a corruption error. When the Feature Usage data collection and Error Reporting features are enabled for the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], the file is automatically forwarded to [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)]. The collected data is used to improve [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] functionality.  
   
- The dump file contains the results of the DBCC CHECKFILEGROUP command and additional diagnostic output. The file has restricted discretionary access-control lists (DACLs). Access is limited to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service account and members of the **sysadmin** role. By default, the **sysadmin** role contains all members of the Windows BUILTIN\Administrators group and the local administrator's group. The DBCC command does not fail if the data collection process fails.  
+ The dump file contains the results of the DBCC CHECKFILEGROUP command and additional diagnostic output. The file has restricted discretionary access-control lists (DACLs). Access is limited to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service account and members of the **sysadmin** role. By default, the **sysadmin** role contains all members of the Windows BUILTIN\Administrators group and the local administrator's group. The DBCC command does not fail if the data collection process fails.  
   
 ## Resolving Errors  
  If any errors are reported by DBCC CHECKFILEGROUP, we recommend restoring the database from the database backup. Note that repair options cannot be specified to DBCC CHECKFILEGROUP.  
@@ -250,9 +250,9 @@ WITH ESTIMATEONLY;
 ## See Also  
  [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
  [FILEGROUP_ID &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-id-transact-sql.md)   
- [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
- [sys.sysfilegroups &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys.sysfilegroups-transact-sql.md)   
+ [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
+ [sys.sysfilegroups &#40;Transact-SQL&#41;](../../relational-databases/reference/system-compatibility-views/sys.sysfilegroups-transact-sql.md)   
  [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [DBCC CHECKALLOC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)   
  [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)  

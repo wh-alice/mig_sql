@@ -58,7 +58,7 @@ In this task, you will save all this information about the failed rows to a deli
 15. Click **OK**.  
   
 ## Next Steps  
-[Step 5: Testing the Lesson 4 Tutorial Package](../Topic/Step%205:%20Testing%20the%20Lesson%204%20Tutorial%20Package.md)  
+[Step 5: Testing the Lesson 4 Tutorial Package](../../integration-services/tutorials/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   
   

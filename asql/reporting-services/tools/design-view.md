@@ -20,7 +20,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Design View
-In [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Report Designer, use Design view to arrange report items in the report. Design view is sometimes called the design surface or layout view.  
+In [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] Report Designer, use Design view to arrange report items in the report. Design view is sometimes called the design surface or layout view.  
   ![ssrs_ssdt_preview](../../reporting-services/reports/media/ssrs-ssdt-preview.png)
 ## Report Design Surface  
 The design surface consists of three sections: 

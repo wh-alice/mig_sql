@@ -25,7 +25,7 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # Get started with PolyBase
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   This topic contains the basics about running PolyBase. For more information see [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md).  
   
@@ -93,7 +93,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 ### External data source configuration  
   
-1.  Run [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ and set an appropriate value. By Default, the hadoop connectivity is set to 7. To find the value, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure/windows/polybase-connectivity-configuration-transact-sql.md).  
+1.  Run [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ and set an appropriate value. By Default, the hadoop connectivity is set to 7. To find the value, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure/windows/polybase-connectivity-configuration-transact-sql.md).  
   
     ```tsql  
     -- Values map to various external data sources.  
@@ -138,7 +138,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 2.  Select one SQL Server as head node.  
   
-3.  Add other instances as compute nodes by running [sp_polybase_join_group](../Topic/sp_polybase_join_group.md).  
+3.  Add other instances as compute nodes by running [sp_polybase_join_group](../../relational-databases/reference/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
   
     ```  
     -- Enter head node details:   
@@ -351,12 +351,12 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
  After upgrading from SQL Server 2016 RC1 to RC2 or RC3, queries may fail. For details and a remedy, see [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) and search for "PolyBase."  
   
 ## Next steps  
- To understand the scale-out feature, see [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).  To monitor PolyBase, see [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md). To trouble shoot PolyBase perfomance, see [PolyBase troubleshooting with dynamic management views](../Topic/PolyBase%20troubleshooting%20with%20dynamic%20management%20views.md).  
+ To understand the scale-out feature, see [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).  To monitor PolyBase, see [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md). To trouble shoot PolyBase perfomance, see [PolyBase troubleshooting with dynamic management views](../../a9retired/polybase-troubleshooting-with-dynamic-management-views.md).  
   
 ## See Also  
  [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)   
  [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)   
- [PolyBase stored procedures](../Topic/PolyBase%20stored%20procedures.md)   
+ [PolyBase stored procedures](../../a9retired/polybase-stored-procedures.md)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  

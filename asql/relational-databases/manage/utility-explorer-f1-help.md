@@ -24,21 +24,21 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Utility Explorer F1 Help
-  The following sections document [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility functionality and associated operations.  
+  The following sections document [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility functionality and associated operations.  
   
   ## Utility Dashboard (SQL Server Utility)
- To see data in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility dashboard, select the top node in the Utility Explorer tree - labeled "Utility<UCP_Name>\\(ComputerName\UCP)." The dashboard includes summary and detail data from all managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and all data-tier applications in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility. To refresh data in the dashboard, right-click the top node in the Utility Explorer tree, and select **Refresh**.  
+ To see data in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility dashboard, select the top node in the Utility Explorer tree - labeled "Utility<UCP_Name>\\(ComputerName\UCP)." The dashboard includes summary and detail data from all managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and all data-tier applications in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility. To refresh data in the dashboard, right-click the top node in the Utility Explorer tree, and select **Refresh**.  
   
- For more information about how to create a utility control point, see [Create a SQL Server Utility Control Point &#40;SQL Server Utility&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md). For more information about how to add an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility, see [Enroll an Instance of SQL Server &#40;SQL Server Utility&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md).  
+ For more information about how to create a utility control point, see [Create a SQL Server Utility Control Point &#40;SQL Server Utility&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md). For more information about how to add an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility, see [Enroll an Instance of SQL Server &#40;SQL Server Utility&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md).  
  
   
 ### UIElement List  
  Managed Instance Health  
- Health status for managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is displayed on the left side of the Utility Explorer content pane.  
+ Health status for managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is displayed on the left side of the Utility Explorer content pane.  
   
  Managed Instance Health parameters are as follows:  
   
--   CPU utilization for the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   CPU utilization for the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 -   Database file utilization.  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
 -   Status for each parameter is divided into three categories:  
   
--   Well-utilized - Number of managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] which are not violating resource utilization policies.  
+-   Well-utilized - Number of managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] which are not violating resource utilization policies.  
   
 -   Underutilized - Number of managed resources which are violating resource underutilization policies.  
   
@@ -58,21 +58,21 @@ manager: "jhubbard"
   
  Detailed status for each health parameter is listed in sliding indicators. The fraction to the right of the sliding indicators shows how many managed instances are in each status category.  
   
- To create a filtered view of a managed instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or a data-tier application, click on the link for a utilization category next to its sliding indicator in the Utility dashboard. For example, if you click on **Overutilized Instance CPU** in the **Utility Explorer Content** pane, SSMS creates a filtered list view of managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that have overutilized CPU based on current policy settings.  
+ To create a filtered view of a managed instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] or a data-tier application, click on the link for a utilization category next to its sliding indicator in the Utility dashboard. For example, if you click on **Overutilized Instance CPU** in the **Utility Explorer Content** pane, SSMS creates a filtered list view of managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that have overutilized CPU based on current policy settings.  
   
  Notice that when you click on a link for a utilization category, the corresponding node in the Utility Explorer navigation pane is appended with **(filtered)** - that is, **Managed Instances** is labeled **Managed Instances (filtered)**. To view filter settings, right-click on the node in the navigation pane and select **Filter**, then click on **Filter Settings**. To clear filter settings, right-click on the node in the navigation pane and select **Filter**, then click on **Remove Filter**.  
   
- For more information about viewing health status for individual instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], or to view or change policy configuration settings, see [Managed Instance Details &#40;SQL Server Utility&#41;](../Topic/Managed%20Instance%20Details%20\(SQL%20Server%20Utility\).md).  
+ For more information about viewing health status for individual instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], or to view or change policy configuration settings, see [Managed Instance Details &#40;SQL Server Utility&#41;](../../a9retired/managed-instance-details-sql-server-utility.md).  
   
  Utility Summary  
- Displays the number of managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and the number of data-tier applications managed by the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility.  
+ Displays the number of managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and the number of data-tier applications managed by the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility.  
   
  Data-tier Application Health  
  Health status for data-tier applications is displayed on the right side of the Utility Explorer content pane.  
   
  Data-tier Application Health parameters are as follows:  
   
--   CPU utilization for the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   CPU utilization for the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 -   Database file utilization.  
   
@@ -90,10 +90,10 @@ manager: "jhubbard"
   
 -   No Data Available - Data is not available for data-tier applications because the managed instance of SQL Server that contains the data-tier application is not reporting data.  
   
- Detailed status for each health parameter is listed in sliding indicators. The fraction to the right of the sliding indicators shows how many data-tier applications are in each status category. For more information about viewing health status for individual data-tier applications, or to view or change policy configuration settings, see [Deployed Data-tier Application Details &#40;SQL Server Utility&#41;](../Topic/Deployed%20Data-tier%20Application%20Details%20\(SQL%20Server%20Utility\).md).  
+ Detailed status for each health parameter is listed in sliding indicators. The fraction to the right of the sliding indicators shows how many data-tier applications are in each status category. For more information about viewing health status for individual data-tier applications, or to view or change policy configuration settings, see [Deployed Data-tier Application Details &#40;SQL Server Utility&#41;](../../a9retired/deployed-data-tier-application-details-sql-server-utility.md).  
   
  Utility Storage Utilization History  
- Utilization history is shown in a time graph at the bottom of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility dashboard. Note that time data show the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) topic. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) topic.  
+ Utilization history is shown in a time graph at the bottom of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility dashboard. Note that time data show the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) topic. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) topic.  
   
  Use the radio buttons to the left of the display area to change the reporting period for the graph.  
   
@@ -110,7 +110,7 @@ manager: "jhubbard"
  After you make a change to the reporting interval, the data refreshes automatically.  
   
  Utility Storage Utilization  
- In the bottom right of the dashboard, the storage utilization pie chart displays the ratio of used space to free space on volumes residing on computers that contain managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Data for this display are refreshed every 15 minutes.  
+ In the bottom right of the dashboard, the storage utilization pie chart displays the ratio of used space to free space on volumes residing on computers that contain managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Data for this display are refreshed every 15 minutes.  
  
  ## Deployed Data-tier Application Details (SQL Server Utility)
   Information in the Deployed Data-tier Applications view of Utility Explorer provides utilization data for individual data-tier applications, CPU utilization history, storage utilization details at the file level, and the ability to view and update policy thresholds. Policy thresholds can be controlled at the data-tier application level for CPU utilization and for database data files and log files. You can also view property details for individual data-tier applications.  
@@ -119,15 +119,15 @@ manager: "jhubbard"
  List view  
  The list view in the top pane displays data about individual data-tier applications. Health state icons provide summary status for each data-tier application by utilization category:  
   
--   Green check - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Number of data-tier application which are not violating resource utilization policies. Resources are well-utilized.  
+-   Green check - ![](../../a9retired/media/well-utilized.gif "Well_utilized") - Number of data-tier application which are not violating resource utilization policies. Resources are well-utilized.  
   
--   Green down arrow - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Resources are underutilized.  
+-   Green down arrow - ![](../../a9retired/media/utility-down-arrow.gif "Utility_down_arrow") - Resources are underutilized.  
   
--   Red up arrow - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Resources are overutilized.  
+-   Red up arrow - ![](../../a9retired/media/utility-up-arrow.gif "Utility_up_arrow") - Resources are overutilized.  
   
  The sequence of columns in the list view can be changed by dragging them to the left or the right. Columns in the list view can be added or deleted by right-clicking on the column headings and selecting or unselecting columns. The right-click menu also provides sort options. Sorting can also be activated by clicking at the top of a column name.  
   
- To access filter options for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility list view, right-click on the **Deployed Data-tier applications** node in the Utility Explorer navigation pane, and select **Filter**. After filter settings have been implemented, the **Deployed Data-tier Applications** node in Utility Explorer will be labeled **Deployed Data-tier Applications (filtered)**. For more information, see [Filter Settings &#40;Object Explorer and Utility Explorer&#41;](../Topic/Filter%20Settings%20\(Object%20Explorer%20and%20Utility%20Explorer\).md).  
+ To access filter options for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility list view, right-click on the **Deployed Data-tier applications** node in the Utility Explorer navigation pane, and select **Filter**. After filter settings have been implemented, the **Deployed Data-tier Applications** node in Utility Explorer will be labeled **Deployed Data-tier Applications (filtered)**. For more information, see [Filter Settings &#40;Object Explorer and Utility Explorer&#41;](../Topic/Filter%20Settings%20\(Object%20Explorer%20and%20Utility%20Explorer\).md).  
   
  By default, the following columns display health state information about each data-tier application.  
   
@@ -155,7 +155,7 @@ manager: "jhubbard"
   
 -   Policy Type - Indicates whether "Global" default policies or "Override" custom policies are in effect for the data-tier application.  
   
--   Instance Name - Displays the name of the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that hosts the data-tier application.  
+-   Instance Name - Displays the name of the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that hosts the data-tier application.  
   
  Other columns that can be displayed using the right-click menu in the column heading area of the list view:  
   
@@ -253,39 +253,39 @@ manager: "jhubbard"
 -   Last Reported Time: This column shows the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) topic. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) topic.
 
 ## Managed Instance Details (SQL Server Utility)
- Information in the Managed Instances view of Utility Explorer provides utilization data for individual instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], CPU utilization history, storage utilization details at the file level, and the ability to view and update policy thresholds. Policy thresholds can be controlled at the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance level, for a computer, for database files and log files, and at the level of storage volumes. You can also view property details for individual managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Information in the Managed Instances view of Utility Explorer provides utilization data for individual instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], CPU utilization history, storage utilization details at the file level, and the ability to view and update policy thresholds. Policy thresholds can be controlled at the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance level, for a computer, for database files and log files, and at the level of storage volumes. You can also view property details for individual managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ### UIElement List  
  List view  
- The list view in the top pane displays data about individual instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] listed in rows by ComputerName\InstanceName.  
+ The list view in the top pane displays data about individual instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] listed in rows by ComputerName\InstanceName.  
   
- Health state icons provide summary status for each instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] by utilization category:  
+ Health state icons provide summary status for each instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] by utilization category:  
   
--   Green check - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Number of managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] which are not violating resource utilization policies. Resources are well-utilized.  
+-   Green check - ![](../../a9retired/media/well-utilized.gif "Well_utilized") - Number of managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] which are not violating resource utilization policies. Resources are well-utilized.  
   
--   Green down arrow - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Resources are underutilized.  
+-   Green down arrow - ![](../../a9retired/media/utility-down-arrow.gif "Utility_down_arrow") - Resources are underutilized.  
   
--   Red up arrow - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Resources are overutilized.  
+-   Red up arrow - ![](../../a9retired/media/utility-up-arrow.gif "Utility_up_arrow") - Resources are overutilized.  
   
  The sequence of columns in the list view can be changed by dragging them to the left or the right. Columns in the list view can be added or deleted by right-clicking on the column headings and selecting or unselecting columns. The right-click menu also provides sort options. Sorting can also be activated by clicking at the top of a column name.  
   
  To access filter options for the Utility list view, right-click on the **Managed Instances** node in the Utility Explorer navigation pane, and select **Filter**. After filter settings have been implemented, the **Managed Instances** node in Utility Explorer will be labeled **Managed Instances (filtered)**. For more information, see [Filter Settings &#40;Object Explorer and Utility Explorer&#41;](../Topic/Filter%20Settings%20\(Object%20Explorer%20and%20Utility%20Explorer\).md).  
   
- By default, the following columns display health state information about each managed instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ By default, the following columns display health state information about each managed instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
--   Instance CPU - Displays the health state of processor utilization allocated to this instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The health state for this parameter is determined according to CPU utilization policy set for the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and the configuration setting for volatile resource evaluation policy. For more information, see [Reduce Noise in CPU Utilization Policies &#40;SQL Server Utility&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   Instance CPU - Displays the health state of processor utilization allocated to this instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The health state for this parameter is determined according to CPU utilization policy set for the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and the configuration setting for volatile resource evaluation policy. For more information, see [Reduce Noise in CPU Utilization Policies &#40;SQL Server Utility&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
-     To view the processor utilization history for this instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], or to view or change the policy limits, click on the **CPU Utilization** tab.  
+     To view the processor utilization history for this instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], or to view or change the policy limits, click on the **CPU Utilization** tab.  
   
 -   Computer CPU - Displays the health state of computer processor utilization. The health state for this parameter is determined according to CPU utilization policy set for the computer and the configuration setting for volatile resource evaluation policy. For more information, see [Reduce Noise in CPU Utilization Policies &#40;SQL Server Utility&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
-     To view the processor utilization history for this instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], or to view or change the policy limits, click on the **CPU Utilization** tab.  
+     To view the processor utilization history for this instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], or to view or change the policy limits, click on the **CPU Utilization** tab.  
   
--   File Space - Displays a summary of health states of file space utilization for all databases that belong to the selected instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. If the health state of any database is overutilized, then the file space health state will be reported in the list view as overutilized. If the health state of any database is underutilized, and no database is overutilized, then the file space health state will be reported in the list view as underutilized. Otherwise, the file space health state will be reported in the list view as well-utilized. To view or change the policy limits, click on the **Storage Utilization** tab.  
+-   File Space - Displays a summary of health states of file space utilization for all databases that belong to the selected instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. If the health state of any database is overutilized, then the file space health state will be reported in the list view as overutilized. If the health state of any database is underutilized, and no database is overutilized, then the file space health state will be reported in the list view as underutilized. Otherwise, the file space health state will be reported in the list view as well-utilized. To view or change the policy limits, click on the **Storage Utilization** tab.  
   
--   Volume Space - Displays a summary of the health states of volume space utilization for all volumes that contain databases belonging to the selected instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. If the health state of any volume is overutilized, then the volume space health state will be reported in the list view as overutilized. If the health state of any volume is underutilized, and no volume is overutilized, then the volume space health state will be reported in the list view as underutilized. Otherwise, the volume space health state will be reported in the list view as well-utilized. To view or change the policy limits, click on the **Storage Utilization** tab.  
+-   Volume Space - Displays a summary of the health states of volume space utilization for all volumes that contain databases belonging to the selected instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. If the health state of any volume is overutilized, then the volume space health state will be reported in the list view as overutilized. If the health state of any volume is underutilized, and no volume is overutilized, then the volume space health state will be reported in the list view as underutilized. Otherwise, the volume space health state will be reported in the list view as well-utilized. To view or change the policy limits, click on the **Storage Utilization** tab.  
   
--   Policy Type - Indicates whether "Global" default policies or "Override" custom policies are in effect for the managed instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   Policy Type - Indicates whether "Global" default policies or "Override" custom policies are in effect for the managed instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  Other columns that can be displayed using the right-click menu in the column heading area of the list view:  
   
@@ -316,7 +316,7 @@ manager: "jhubbard"
 -   Last Reported Time: This column shows the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) topic. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) topic.  
   
  CPU Utilization tab  
- The CPU utilization tab shows side-by-side graphs of historical data for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance and computer CPU utilization.  
+ The CPU utilization tab shows side-by-side graphs of historical data for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance and computer CPU utilization.  
   
  The graph displays the processor utilization history for the interval specified in the radio buttons on the right side of the display area. To change the display interval and refresh the data set, select a radio button from the list.  
   
@@ -333,7 +333,7 @@ manager: "jhubbard"
  Storage Utilization tab  
  The Storage Utilization tab has a tree view that displays storage utilization details. Note that time data show the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) topic. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) topic.  
   
- Display can be grouped by database or by volume. To use the database tree view, select the **Database** radio button in the **Group files by:** selection. To view storage utilization status for individual database files, click on the plus sign next to a database name in the tree view. The database files listed include all system and user databases that belong to the managed instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] you selected in the list view.  
+ Display can be grouped by database or by volume. To use the database tree view, select the **Database** radio button in the **Group files by:** selection. To view storage utilization status for individual database files, click on the plus sign next to a database name in the tree view. The database files listed include all system and user databases that belong to the managed instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] you selected in the list view.  
   
  The tree structure corresponds to the storage hierarchy. The root node in the tree view is the database. The next level of the tree view contains a filegroup node or nodes that belong to the database, and a log file node for the logs that belong to the database. The next level contains the data files that belong to the filegroup.  
   
@@ -384,7 +384,7 @@ manager: "jhubbard"
  For more information about changing the tolerance for policy violations, see [Reduce Noise in CPU Utilization Policies &#40;SQL Server Utility&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
  Property Details tab  
- Property details listed for instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] include the following categories:  
+ Property details listed for instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] include the following categories:  
   
 -   Processor Name:  
   
@@ -411,7 +411,7 @@ manager: "jhubbard"
 -   Language:  
 
 ## Utility Administration (SQL Server Utility)
-Use the Utility Administration tabs to manage policy, security, and data warehouse settings for a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility. For more information about [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility concepts, see [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+Use the Utility Administration tabs to manage policy, security, and data warehouse settings for a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility. For more information about [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility concepts, see [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 ### UIElement List
  **Policy tab** - Use the policy tab to view or specify global monitoring policies.  
@@ -430,25 +430,25 @@ Use the Utility Administration tabs to manage policy, security, and data warehou
 -   The default minimum value for file space utilization is 0%.  
   
  Set global SQL Server managed instance application monitoring policies. To expand the list of values for this option, click on the arrow next to the policy name, or click on the policy title.  
- When is a managed instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] running out of processor capacity? To change this policy, use the control to the right of the policy description, then click **Apply**. You can also restore default values or discard changes using buttons at the bottom of the display.  
+ When is a managed instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] running out of processor capacity? To change this policy, use the control to the right of the policy description, then click **Apply**. You can also restore default values or discard changes using buttons at the bottom of the display.  
   
 -   The default maximum value for instance processor utilization is 70%.  
   
 -   The default minimum value for instance processor utilization is 0%.  
   
- When is a managed instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer running out of processor capacity? To change this policy, use the control to the right of the policy description, then click **Apply**. You can also restore default values or discard changes using buttons at the bottom of the display.  
+ When is a managed instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] computer running out of processor capacity? To change this policy, use the control to the right of the policy description, then click **Apply**. You can also restore default values or discard changes using buttons at the bottom of the display.  
   
 -   The default maximum value for computer processor utilization is 70%.  
   
 -   The default minimum value for computer processor utilization is 0%.  
   
- When is a managed instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] running out of file space? To change the policy for data file or log file space utilization , use the control to the right of the policy description, then click **Apply**. You can also restore default values or discard changes using buttons at the bottom of the display.  
+ When is a managed instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] running out of file space? To change the policy for data file or log file space utilization , use the control to the right of the policy description, then click **Apply**. You can also restore default values or discard changes using buttons at the bottom of the display.  
   
 -   The default maximum value for file space utilization is 70%.  
   
 -   The default minimum value for file space utilization is 0%.  
   
- When is a managed instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer running out of storage volume space? To change this policy, use the control to the right of the policy description, then click **Apply**. You can also restore default values or discard changes using buttons at the bottom of the display.  
+ When is a managed instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] computer running out of storage volume space? To change this policy, use the control to the right of the policy description, then click **Apply**. You can also restore default values or discard changes using buttons at the bottom of the display.  
   
 -   The default maximum value for computer volume space utilization is 70%.  
   
@@ -463,7 +463,7 @@ Use the Utility Administration tabs to manage policy, security, and data warehou
  Select the logins from the UCP that will be added to the Utility Reader role.  
  The Utility Reader privilege allows the user account to:  
   
--   Connect to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility.  
+-   Connect to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility.  
   
 -   See all viewpoints in the Utility Explorer in SSMS.  
   
@@ -471,16 +471,16 @@ Use the Utility Administration tabs to manage policy, security, and data warehou
   
  Utility administrators can enroll instances of SQL Server into and remove instances of SQL Server from a SQL Server Utility, as well as modify policies on managed instances and modify administration settings on the UCP.  
   
- To be a Utility administrator, you must have sysadmin privileges on the instance of SQL Server. To add or change user accounts for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] UCP, use Object Explorer in SSMS to add the user to the server logins of the UCP instance of SQL Server. For more information, see [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md).  
+ To be a Utility administrator, you must have sysadmin privileges on the instance of SQL Server. To add or change user accounts for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] UCP, use Object Explorer in SSMS to add the user to the server logins of the UCP instance of SQL Server. For more information, see [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addlogin-transact-sql.md).  
   
  
 **Data Warehouse** tab - Displays configuration details for the utility management data warehouse.  
   
  Data Retention  
- Specify the data retention period for utilization information collected for managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The default time period is 1 year. The minimum value is 1 month. The longest supported value is 2 years.  
+ Specify the data retention period for utilization information collected for managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The default time period is 1 year. The minimum value is 1 month. The longest supported value is 2 years.  
   
  Utility Data Warehouse Configuration Information  
- The following configuration settings are not configurable in this release of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]:  
+ The following configuration settings are not configurable in this release of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]:  
   
 -   UMDW name: Sysutility_mdw_\<GUID>_DATA.  
   
@@ -507,6 +507,6 @@ Use the Utility Administration tabs to manage policy, security, and data warehou
   
 ## See Also  
  [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Troubleshoot the SQL Server Utility](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md)  
+ [Troubleshoot the SQL Server Utility](../../a9retired/troubleshoot-the-sql-server-utility.md)  
   
   

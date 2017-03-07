@@ -16,13 +16,13 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Migration Issues for Natively Compiled Stored Procedures
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   This section presents several issues related to creating natively compiled stored procedures.  
   
  For more information about natively compiled stored procedures, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
--   [Creating and Accessing Tables in TempDB from Natively Compiled Stored Procedures](../Topic/Creating%20and%20Accessing%20Tables%20in%20TempDB%20from%20Natively%20Compiled%20Stored%20Procedures.md)  
+-   [Creating and Accessing Tables in TempDB from Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)  
   
 -   [Simulating an IF-WHILE EXISTS Statement in a Natively Compiled Module](../../relational-databases/in-memory-oltp/simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md)  
   

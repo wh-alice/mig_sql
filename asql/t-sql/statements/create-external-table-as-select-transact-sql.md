@@ -25,9 +25,9 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../a9retired/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Creates an external table and then exports, in parallel, the results of a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] SELECT statement to Hadoop or Azure Storage Blob.  
+  Creates an external table and then exports, in parallel, the results of a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] SELECT statement to Hadoop or Azure Storage Blob.  
   
  Use the CREATE EXTERNAL TABLE AS SELECT (CETAS) statement to:  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
  For more information, see [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -161,7 +161,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
  The database will report any Java errors that occur on the external data source during the data export.  
   
 ##  <a name="GeneralRemarks"></a> General Remarks  
- After the CETAS statement finishes, you can run [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] queries on the external table. These operations will import data into the database for the duration of the query unless you import by using the CREATE TABLE AS SELECT statement.  
+ After the CETAS statement finishes, you can run [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] queries on the external table. These operations will import data into the database for the duration of the query unless you import by using the CREATE TABLE AS SELECT statement.  
   
  The external table name and definition are stored in the database metadata. The data is stored in the external data source.  
   
@@ -177,7 +177,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   External partition move  
   
- **APPLIES TO:**  [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]As a prerequisite for creating an external table, the appliance administrator needs to configure hadoop connectivity. For more information, see Configure Connectivity to External Data (Analytics Platform System) in the APS documentation which you can download from [here](http://www.microsoft.com/download/details.aspx?id=48241).  
+ **APPLIES TO:**  [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]As a prerequisite for creating an external table, the appliance administrator needs to configure hadoop connectivity. For more information, see Configure Connectivity to External Data (Analytics Platform System) in the APS documentation which you can download from [here](http://www.microsoft.com/download/details.aspx?id=48241).  
   
 ## Limitations and Restrictions  
  Since external table data resides outside of the database, backup and restore operations will only operate on data stored in the database. This means only the metadata will be backed up and restored.  
@@ -186,11 +186,11 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  The database does not guarantee data consistency between the databaseand the external data. You, the customer, are solely responsible to maintain consistency between the external data and the database.  
   
- Data manipulation language (DML) operations are not supported on external tables. For example, you cannot use the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] update, insert, or delete [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]statements to modify the external data.  
+ Data manipulation language (DML) operations are not supported on external tables. For example, you cannot use the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] update, insert, or delete [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]statements to modify the external data.  
   
  CREATE TABLE, DROP TABLE, CREATE STATISTICS, DROP STATISTICS, CREATE VIEW, and DROP VIEW are the only data definition language (DDL) operations allowed on external tables.  
   
- PolyBase can consume a maximum of 33k files per folder when running 32 concurrent PolyBase queries. This maximum number includes both files and subfolders in each HDFS folder. If the degree of concurrency is less than 32, a user can run PolyBase queries against folders in HDFS which contain more than 33k files. [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] recommends users of Hadoop and PolyBase keep file paths short and use no more than 30k files per HDFS folder. When too many files are referenced a JVM out-of-memory exception occurs.  
+ PolyBase can consume a maximum of 33k files per folder when running 32 concurrent PolyBase queries. This maximum number includes both files and subfolders in each HDFS folder. If the degree of concurrency is less than 32, a user can run PolyBase queries against folders in HDFS which contain more than 33k files. [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] recommends users of Hadoop and PolyBase keep file paths short and use no more than 30k files per HDFS folder. When too many files are referenced a JVM out-of-memory exception occurs.  
   
  [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) has no effect on this CREATE EXTERNAL TABLE AS SELECT. To achieve a similar behavior, use [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   

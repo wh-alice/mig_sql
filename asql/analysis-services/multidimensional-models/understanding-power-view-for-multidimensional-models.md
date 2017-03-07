@@ -21,7 +21,7 @@ manager: "erikre"
   
  Multidimensional models provide industry leading OLAP data modeling, storage, and analysis solutions. Multidimensional models in SQL Server support ad-hoc data analysis, exploration, and visualization by using Microsoft Power View.  
   
- Power View is a thin web client that launches in the browser from a shared Report Data Source (.rsds) file in a SharePoint library. The Report Data Source acts as a bridge between the client and the back-end data source. The back-end data source can be a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbook in SharePoint, a Tabular model on an Analysis Services server running in Tabular mode, or a Multidimensional model on an Analysis Services server running in Multidimensional mode. Power View reports can then be saved to a SharePoint library or gallery and shared with other members in your organization.  
+ Power View is a thin web client that launches in the browser from a shared Report Data Source (.rsds) file in a SharePoint library. The Report Data Source acts as a bridge between the client and the back-end data source. The back-end data source can be a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbook in SharePoint, a Tabular model on an Analysis Services server running in Tabular mode, or a Multidimensional model on an Analysis Services server running in Multidimensional mode. Power View reports can then be saved to a SharePoint library or gallery and shared with other members in your organization.  
   
  **Power View for Multidimensional Models architecture**  
   

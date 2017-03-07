@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # XML Elements - Objects - DiscoverResponse
-  Contains the information returned by an instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] in response to a [Discover](../Topic/Discover%20Method%20\(XMLA\).md) method call.  
+  Contains the information returned by an instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] in response to a [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) method call.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -61,7 +61,7 @@ manager: "erikre"
  The **DiscoverResponse** element is the topmost element within the body of a SOAP response for the **Discover** method.  
   
 ## See Also  
- [ExecuteResponse Element &#40;XMLA&#41;](../Topic/ExecuteResponse%20Element%20\(XMLA\).md)   
- [Objects &#40;XMLA&#41;](../Topic/Objects%20\(XMLA\).md)  
+ [ExecuteResponse Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-objects-executeresponse.md)   
+ [Objects &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-objects.md)  
   
   

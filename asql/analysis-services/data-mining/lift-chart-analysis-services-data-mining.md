@@ -25,7 +25,7 @@ manager: "jhubbard"
 # Lift Chart (Analysis Services - Data Mining)
   A *lift chart* graphically represents the improvement that a mining model provides when compared against a random guess, and measures the change in terms of a *lift* score. By comparing the lift scores for different models, you can determine which model is best. You can also determine the point at which the model’s predictions become less useful. For example, by reviewing the lift chart, you might realize that a promotional campaign is likely to be effective against only 30% of your customers, and use that figure to limit the scope of the campaign.  
   
- In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Data Mining, the lift chart can compare the accuracy of multiple models that have the same predictable attribute. You can also assess the accuracy of prediction either for a single outcome (a single value of the predictable attribute), or for all outcomes (all values of the specified attribute).  
+ In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Data Mining, the lift chart can compare the accuracy of multiple models that have the same predictable attribute. You can also assess the accuracy of prediction either for a single outcome (a single value of the predictable attribute), or for all outcomes (all values of the specified attribute).  
   
  A profit chart is a related chart type that contains the same information as a lift chart, but also displays the projected increase in profit that is associated with using each model.  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
  [Back to Top](#bkmk_Top)  
   
 ### Lift Chart with Target Value  
- The following chart shows a lift chart for the **Targeted Mailing** model that you create in the [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md). In this chart, the target attribute is [Bike Buyer] and the target value is 1, meaning that the customer is predicted to buy a bike. The lift chart thus shows the improvement the model provides when identifying these potential customers.  
+ The following chart shows a lift chart for the **Targeted Mailing** model that you create in the [Basic Data Mining Tutorial](../../a9notintoc/basic-data-mining-tutorial.md). In this chart, the target attribute is [Bike Buyer] and the target value is 1, meaning that the customer is predicted to buy a bike. The lift chart thus shows the improvement the model provides when identifying these potential customers.  
   
  This chart contains multiple models based on the same data. One of these models has been customized to target specific customers. You can customize a model by adding filters on the data used to train the mode. This filter restricts the cases used in both training and evaluation to customers who are under the age of 30. Notice that one effect of filtering is that the basic model and the filtered model use different data sets, and therefore the number of cases used for evaluation in the lift chart is different as well. This point is important to remember when you interpret the prediction results and other statistics.  
   

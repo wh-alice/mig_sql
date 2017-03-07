@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Data Modification - Using Cube Writebacks
-  You update a cube by using the [UPDATE CUBE](../Topic/UPDATE%20CUBE%20Statement%20\(MDX\).md) statement. This statement lets you update a tuple with a specific value. To effectively use the UPDATE CUBE statement to update a cube, you have to understand the syntax for the statement, the error conditions that can occur, and the affect that updates can have on a cube.  
+  You update a cube by using the [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) statement. This statement lets you update a tuple with a specific value. To effectively use the UPDATE CUBE statement to update a cube, you have to understand the syntax for the statement, the error conditions that can occur, and the affect that updates can have on a cube.  
   
 ## UPDATE CUBE Statement Syntax  
  The following syntax describes the UPDATE CUBE statement:  
@@ -116,6 +116,6 @@ USE_EQUAL_ALLOCATION
 -   Changing the dimension granularity for a dimension included in the writeback.  
   
 ## See Also  
- [Modifying Data &#40;MDX&#41;](../Topic/Modifying%20Data%20\(MDX\).md)  
+ [Modifying Data &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   

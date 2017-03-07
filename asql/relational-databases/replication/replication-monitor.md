@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Replication Monitor
-  This section of the documentation includes information on the Replication Monitor. The pages and dialog boxes displayed in the monitor differ depending on the type of replication and the version of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that is monitored.  
+  This section of the documentation includes information on the Replication Monitor. The pages and dialog boxes displayed in the monitor differ depending on the type of replication and the version of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that is monitored.  
   
 -   [Replication Monitor, Main Page](../../relational-databases/replication/replication-monitor-main-page.md)  
   
@@ -93,7 +93,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Monitoring Replication](../Topic/Monitoring%20Replication.md)   
+ [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
  [Properties Reference &#40;Replication&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   
   

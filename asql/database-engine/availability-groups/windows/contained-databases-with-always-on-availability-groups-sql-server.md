@@ -18,9 +18,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Contained Databases with Always On Availability Groups (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  This topic contains information about the using a contained database with [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  This topic contains information about the using a contained database with [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)].  
   
  **In this Topic:**  
   

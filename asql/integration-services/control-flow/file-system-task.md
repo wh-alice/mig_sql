@@ -55,24 +55,24 @@ manager: "jhubbard"
 |**FileSystemOperation**|Reports the operation that the task performs. The log entry is written when the file system operation starts and includes information about the source and destination.|  
   
 ## Configuring the File System Task  
- You can set properties through [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, see the following topics:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, see the following topics:  
   
 -   [File System Task Editor &#40;General Page&#41;](../../integration-services/control-flow/file-system-task-editor-general-page.md)  
   
 -   [Expressions Page](../../integration-services/expressions/expressions-page.md)  
   
- For more information about how to set these properties in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, see the following topic:  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, see the following topic:  
   
--   [Set the Properties of a Task or Container](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Set the Properties of a Task or Container](../../a9retired/set-the-properties-of-a-task-or-container.md)  
   
  For more information about how to set these properties programmatically, see the following topic:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
 ## Related Tasks  
- [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] includes a task that downloads and uploads data files and manages directories on servers. For more information, see [FTP Task](../../integration-services/control-flow/ftp-task.md).  
+ [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] includes a task that downloads and uploads data files and manages directories on servers. For more information, see [FTP Task](../../integration-services/control-flow/ftp-task.md).  
   
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   

@@ -23,11 +23,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # OPEN SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Decrypts a symmetric key and makes it available for use.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -65,7 +65,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  Is the password that was used to protect the symmetric key.  
   
 ## Remarks  
- Open symmetric keys are bound to the session not to the security context. An open key will continue to be available until it is either explicitly closed or the session is terminated. If you open a symmetric key and then switch context, the key will remain open and be available in the impersonated context. Information about open symmetric keys is visible in the [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.openkeys-transact-sql.md) catalog view.  
+ Open symmetric keys are bound to the session not to the security context. An open key will continue to be available until it is either explicitly closed or the session is terminated. If you open a symmetric key and then switch context, the key will remain open and be available in the impersonated context. Information about open symmetric keys is visible in the [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.openkeys-transact-sql.md) catalog view.  
   
  If the symmetric key was encrypted with another key, that key must be opened first.  
   

@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Use OPENJSON with the Default Schema (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Use **OPENJSON** with the default schema to returns a table with one row for each property of the object or for each element in the array.  
   

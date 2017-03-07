@@ -39,7 +39,7 @@ public class MSReportServer_Instance
 ```  
   
 ## Thread Safety  
- Any public static (**Shared** in [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)]) members of this type are safe for multithreaded operations. Any instance members are not guaranteed to be thread-safe.  
+ Any public static (**Shared** in [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)]) members of this type are safe for multithreaded operations. Any instance members are not guaranteed to be thread-safe.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspc](../../reporting-services/wmi-provider-library-reference/includes/ssrswminmspc-md.md)]  

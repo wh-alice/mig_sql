@@ -15,9 +15,9 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # catalog.set_worker_agent_property (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-Sets the property of a [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] Scale Out Worker.
+Sets the property of a [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] Scale Out Worker.
 
 ## Syntax
 

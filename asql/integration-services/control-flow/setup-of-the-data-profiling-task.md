@@ -17,10 +17,10 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Setup of the Data Profiling Task
-  Before you can review a profile of the source data, the first step is to set up and run the Data Profiling task. You create this task inside an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package. To configure the Data Profiling task, you use the Data Profiling Task Editor. This editor enables you to select where to output the profiles, and which profiles to compute. After you set up the task, you run the package to compute the data profiles.  
+  Before you can review a profile of the source data, the first step is to set up and run the Data Profiling task. You create this task inside an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package. To configure the Data Profiling task, you use the Data Profiling Task Editor. This editor enables you to select where to output the profiles, and which profiles to compute. After you set up the task, you run the package to compute the data profiles.  
   
 ## Requirements and Limitations  
- The Data Profiling task works only with data that is stored in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. It does not work with third-party or file-based data sources.  
+ The Data Profiling task works only with data that is stored in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. It does not work with third-party or file-based data sources.  
   
  Furthermore, to run a package that contains the Data Profiling task, you must use an account that has read/write permissions, including CREATE TABLE permissions, on the tempdb database.  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   To implement conditional logic that is based on the task's output file, in the control flow of the package, put a Script task after the Data Profiling task. You can then use this Script task to query the output file.  
   
--   To profile data in the data flow after the data has been loaded and transformed, you have to save the changed data temporarily to a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table. Then, you can profile the saved data.  
+-   To profile data in the data flow after the data has been loaded and transformed, you have to save the changed data temporarily to a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] table. Then, you can profile the saved data.  
   
  For more information, see [Incorporate a Data Profiling Task in Package Workflow](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md).  
   
@@ -88,7 +88,7 @@ manager: "jhubbard"
 -   [Value Inclusion Profile Request Options &#40;Data Profiling Task&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## Execution of the Package that Contains the Data Profiling Task  
- After you have set up the Data Profiling task, you can run the task. The task then computes the data profiles and outputs this information in XML format to a file or a package variable. The structure of this XML follows the DataProfile.xsd schema. You can open the schema in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] or another schema editor, in an XML editor, or in a text editor such as Notepad. This schema for data quality information could be useful for the following purposes:  
+ After you have set up the Data Profiling task, you can run the task. The task then computes the data profiles and outputs this information in XML format to a file or a package variable. The structure of this XML follows the DataProfile.xsd schema. You can open the schema in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] or another schema editor, in an XML editor, or in a text editor such as Notepad. This schema for data quality information could be useful for the following purposes:  
   
 -   To exchange data quality information within and across organizations.  
   

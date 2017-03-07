@@ -18,7 +18,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # ConfigurationSetting Method - ListInstalledSharePointVersions
-  Returns a set of tokens that represent the versions of Microsoft [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../reporting-services/includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../reporting-services/report-data/includes/spf2010-md.md)], or [!INCLUDE[SPS2010](../../database-engine/install/windows/includes/sps2010-md.md)] that are installed on the same computer as the report server.  
+  Returns a set of tokens that represent the versions of Microsoft [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../a9retired/includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../a9retired/includes/spf2010-md.md)], or [!INCLUDE[SPS2010](../../a9retired/includes/sps2010-md.md)] that are installed on the same computer as the report server.  
   
 ## Syntax  
   
@@ -46,15 +46,15 @@ public void ListReportServersInDatabase (out string[] VersionTokens,
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
   
 ## Remarks  
- Each token that is returned represents a version of [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)] or [!INCLUDE[SPF2010](../../reporting-services/report-data/includes/spf2010-md.md)] that is compatible with the currently installed report server. If a particular version of SharePoint is compatible with previous SharePoint versions, tokens for each compatible SharePoint version are returned.  
+ Each token that is returned represents a version of [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)] or [!INCLUDE[SPF2010](../../a9retired/includes/spf2010-md.md)] that is compatible with the currently installed report server. If a particular version of SharePoint is compatible with previous SharePoint versions, tokens for each compatible SharePoint version are returned.  
   
  The following is a table of the SharePoint tokens that are returned.  
   
 |**Version Tokens**|**Description**|  
 |------------------------|---------------------|  
-|WSS_V2_Compatible|A [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)], [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../reporting-services/includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../reporting-services/report-data/includes/spf2010-md.md)], or [!INCLUDE[SPS2010](../../database-engine/install/windows/includes/sps2010-md.md)] installation is installed that is compatible with [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)] 2.0.|  
-|WSS_V3_Compatible|A [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)], [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../reporting-services/includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../reporting-services/report-data/includes/spf2010-md.md)], or [!INCLUDE[SPS2010](../../database-engine/install/windows/includes/sps2010-md.md)] installation is installed that is compatible with [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)] 3.0.|  
-|WSS_V4_Compatible|A [!INCLUDE[SPF2010](../../reporting-services/report-data/includes/spf2010-md.md)] or [!INCLUDE[SPS2010](../../database-engine/install/windows/includes/sps2010-md.md)] installation is installed that is compatible with Office 14.|  
+|WSS_V2_Compatible|A [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)], [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../a9retired/includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../a9retired/includes/spf2010-md.md)], or [!INCLUDE[SPS2010](../../a9retired/includes/sps2010-md.md)] installation is installed that is compatible with [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)] 2.0.|  
+|WSS_V3_Compatible|A [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)], [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../a9retired/includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../a9retired/includes/spf2010-md.md)], or [!INCLUDE[SPS2010](../../a9retired/includes/sps2010-md.md)] installation is installed that is compatible with [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)] 3.0.|  
+|WSS_V4_Compatible|A [!INCLUDE[SPF2010](../../a9retired/includes/spf2010-md.md)] or [!INCLUDE[SPS2010](../../a9retired/includes/sps2010-md.md)] installation is installed that is compatible with Office 14.|  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../reporting-services/wmi-provider-library-reference/includes/ssrswminmspca-md.md)]  

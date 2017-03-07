@@ -15,7 +15,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Advanced Viewing of Target Data from Extended Events in SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
 This article illustrates how you can use the advanced features of SQL Server Management Studio (SSMS.exe) to view the target data from extended events in rich detail. The article explains how to:
@@ -163,7 +163,7 @@ The data display is updated at an interval you can specify. See **Maximum dispat
 
 For batch processing, the following system function can generate XML for the records in a .XEL file:
 
-- [sys.fn\_xe\_file\_target\_read\_file](../../relational-databases/system-functions/sys.fn-xe-file-target-read-file-transact-sql.md)
+- [sys.fn\_xe\_file\_target\_read\_file](../../relational-databases/reference/system-functions/sys.fn-xe-file-target-read-file-transact-sql.md)
 
 
 

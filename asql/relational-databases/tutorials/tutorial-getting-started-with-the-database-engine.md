@@ -21,27 +21,27 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Tutorial: Getting Started with the Database Engine
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Welcome to the Getting Started with the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] tutorial. This tutorial is intended for users who are new to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and who have installed [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or [!INCLUDE[ssExpress](../../database-engine/configure/windows/includes/ssexpress-md.md)]. This brief tutorial helps you get started using the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+Welcome to the Getting Started with the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] tutorial. This tutorial is intended for users who are new to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and who have installed [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] or [!INCLUDE[ssExpress](../../a9notintoc/includes/ssexpress-md.md)]. This brief tutorial helps you get started using the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 ## What You Will Learn  
-This tutorial shows you how to connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] on both the local computer and from another computer.  
+This tutorial shows you how to connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] on both the local computer and from another computer.  
   
 This tutorial is divided into two lessons:  
   
 [Lesson 1: Connecting to the Database Engine](../../relational-databases/tutorials/lesson-1-connecting-to-the-database-engine.md)  
-In this lesson, you will learn how to connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] and enable additional people to connect.  
+In this lesson, you will learn how to connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] and enable additional people to connect.  
   
 [Lesson 2: Connecting from Another Computer](../../relational-databases/tutorials/lesson-2-connecting-from-another-computer.md)  
-In this lesson, you will learn how to connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] from a second computer, including enabling protocols, configuring ports, and configuring firewall settings.  
+In this lesson, you will learn how to connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] from a second computer, including enabling protocols, configuring ports, and configuring firewall settings.  
   
 ## Requirements  
 This tutorial has no knowledge prerequisites.  
   
 Your system must have the following installed to use this tutorial:  
   
--   [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] can be installed by running [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup or by downloading and installing from [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] can be installed by running [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] setup or by downloading and installing from [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=144346).  
   
 ## See Also  
 [Tutorial: SQL Server Management Studio](../../tools/sql-server-management-studio/tutorials/tutorial-sql-server-management-studio.md)  

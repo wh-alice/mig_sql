@@ -96,7 +96,7 @@ Now that the HumanResources.EmployeeOrg table is fully populated, this task will
 The next task will reorganize the hierarchy.  
   
 ## Next Task in Lesson  
-[Reordering Data in a Hierarchical Table Using Hierarchical Methods](../Topic/Reordering%20Data%20in%20a%20Hierarchical%20Table%20Using%20Hierarchical%20Methods.md)  
+[Reordering Data in a Hierarchical Table Using Hierarchical Methods](../../../relational-databases/data-types/tutorials/lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md)  
   
   
   

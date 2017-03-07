@@ -15,7 +15,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Create a Master Data Services Database
-  Create a [!INCLUDE[ssMDSshort](../../../analysis-services/includes/ssmdsshort-md.md)] database when you need a new database to support the [!INCLUDE[ssMDSmdm](../../../database-engine/install/windows/includes/ssmdsmdm-md.md)] web application and [!INCLUDE[ssMDSshort](../../../analysis-services/includes/ssmdsshort-md.md)] web service.  
+  Create a [!INCLUDE[ssMDSshort](../../../a9notintoc/includes/ssmdsshort-md.md)] database when you need a new database to support the [!INCLUDE[ssMDSmdm](../../../a9notintoc/includes/ssmdsmdm-md.md)] web application and [!INCLUDE[ssMDSshort](../../../a9notintoc/includes/ssmdsshort-md.md)] web service.  
   
 ## Prerequisites  
   
@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 ### To create a Master Data Services database  
   
-1.  Open [!INCLUDE[ssMDScfgmgr](../../../database-engine/install/windows/includes/ssmdscfgmgr-md.md)].  
+1.  Open [!INCLUDE[ssMDScfgmgr](../../../a9retired/includes/ssmdscfgmgr-md.md)].  
   
 2.  In the left pane, click **Database Configuration**.  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   Configure system settings for the database and web application. For more information, see [System Settings &#40;Master Data Services&#41;](../../../master-data-services/system-settings-master-data-services.md).  
   
--   Create a [!INCLUDE[ssMDSmdm](../../../database-engine/install/windows/includes/ssmdsmdm-md.md)] web application to associate with this database. For more information, see [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](../../../master-data-services/install/windows/create-a-master-data-manager-web-application-master-data-services.md).  
+-   Create a [!INCLUDE[ssMDSmdm](../../../a9notintoc/includes/ssmdsmdm-md.md)] web application to associate with this database. For more information, see [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](../../../master-data-services/install/windows/create-a-master-data-manager-web-application-master-data-services.md).  
   
 -   Configure a maintenance plan to back up the database and transaction logs. For more information, see [Database Requirements &#40;Master Data Services&#41;](../../../master-data-services/install/windows/database-requirements-master-data-services.md).  
   

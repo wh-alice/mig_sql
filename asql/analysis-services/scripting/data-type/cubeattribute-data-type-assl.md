@@ -59,13 +59,13 @@ manager: "erikre"
 |Derived elements|[Attribute](../../../analysis-services/scripting/objects/attribute-element-assl.md) ([Attributes](../../../analysis-services/scripting/collections/attributes-element-assl.md) collection of [CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md))|  
   
 ## Remarks  
- The *AttributeHierarchyOptimizedState* element is not supported when running the service in DeploymentMode configuration property values of 1 or 2 (SharePoint or Tabular modes, used to run [!INCLUDE[ssGemini](../../../analysis-services/includes/ssgemini-md.md)] and tabular model databases).  
+ The *AttributeHierarchyOptimizedState* element is not supported when running the service in DeploymentMode configuration property values of 1 or 2 (SharePoint or Tabular modes, used to run [!INCLUDE[ssGemini](../../../a9notintoc/includes/ssgemini-md.md)] and tabular model databases).  
   
  An attribute cannot be added as a level of a hierarchy when the property, *AtttributeHierarchyEnabled*, is set to FALSE and the instance is operating under DeploymentMode 1 or 2 (SharePoint or Tabular server mode).  
   
- Attributes in the [CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md) element that are not explicitly included in the [Attributes](../../../analysis-services/scripting/collections/attributes-element-assl.md) collection become part of the collection with default values assigned to them. After attributes are added to the collection, the attributes can be returned by the [Discover](../Topic/Discover%20Method%20\(XMLA\).md) method.  
+ Attributes in the [CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md) element that are not explicitly included in the [Attributes](../../../analysis-services/scripting/collections/attributes-element-assl.md) collection become part of the collection with default values assigned to them. After attributes are added to the collection, the attributes can be returned by the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method.  
   
- The [AggregationUsage](../../../analysis-services/scripting/properties/aggregationusage-element-assl.md) element controls how [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] automatically designs aggregations for the attribute. The **AggregationUsage** element does not constrain any aggregations that are manually created for the cube.  
+ The [AggregationUsage](../../../analysis-services/scripting/properties/aggregationusage-element-assl.md) element controls how [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] automatically designs aggregations for the attribute. The **AggregationUsage** element does not constrain any aggregations that are manually created for the cube.  
   
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.CubeAttribute>.  
   

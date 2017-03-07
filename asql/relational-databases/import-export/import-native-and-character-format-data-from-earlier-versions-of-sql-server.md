@@ -20,19 +20,19 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Import Native and Character Format Data from Earlier Versions of SQL Server
-  In [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], you can use **bcp** to import native and character format data from [!INCLUDE[ssVersion2000](../../analysis-services/multidimensional-models/includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)], or [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] by using the **-V** switch. The **-V** switch causes [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] to use data types from the specified earlier version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and the data file format are the same as the format in that earlier version.  
+  In [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], you can use **bcp** to import native and character format data from [!INCLUDE[ssVersion2000](../../a9notintoc/includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../a9notintoc/includes/sskilimanjaro-md.md)], or [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] by using the **-V** switch. The **-V** switch causes [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] to use data types from the specified earlier version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], and the data file format are the same as the format in that earlier version.  
   
- To specify an earlier [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] version for a data file, use the **-V** switch with one of the following qualifiers:  
+ To specify an earlier [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] version for a data file, use the **-V** switch with one of the following qualifiers:  
   
 |SQL Server version|Qualifier|  
 |------------------------|---------------|  
-|[!INCLUDE[ssVersion2000](../../analysis-services/multidimensional-models/includes/ssversion2000-md.md)]|**-V80**|  
-|[!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)]|**-V90**|  
-|[!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)]|**-V100**|  
-|[!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)]|**-V 110**|  
+|[!INCLUDE[ssVersion2000](../../a9notintoc/includes/ssversion2000-md.md)]|**-V80**|  
+|[!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)]|**-V90**|  
+|[!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)]|**-V100**|  
+|[!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)]|**-V 110**|  
   
 ## Interpretation of Data Types  
- [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] and later versions have support for some new types. When you want to import a new data type into an earlier [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] version, the data type must be stored in a format that readable by the older **bcp** clients. The following table summarizes how the new data types are converted for compatibility with the earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] and later versions have support for some new types. When you want to import a new data type into an earlier [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] version, the data type must be stored in a format that readable by the older **bcp** clients. The following table summarizes how the new data types are converted for compatibility with the earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 |New data types in SQL Server 2005|Compatible data types in version 6*x*|Compatible data types in version 70|Compatible data types in version 80|  
 |---------------------------------------|-------------------------------------------|-----------------------------------------|-----------------------------------------|  
@@ -49,10 +49,10 @@ manager: "jhubbard"
  **UDT indicates a user defined type.  
   
 ## Exporting using –V 80  
- When you bulk export data by using the **–V80** switch, **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, XML, and UDT data in native mode are stored with a 4-byte prefix, like **text**, **image**, and **ntext** data, rather than with an 8-byte prefix, which is the default for [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] and later versions.  
+ When you bulk export data by using the **–V80** switch, **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, XML, and UDT data in native mode are stored with a 4-byte prefix, like **text**, **image**, and **ntext** data, rather than with an 8-byte prefix, which is the default for [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] and later versions.  
   
 ## Copying Date Values  
- **bcp** uses the ODBC bulk copy API. Therefore, to import date values into [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], **bcp** uses the ODBC date format (*yyyy-mm-dd hh:mm:ss*[*.f...*]).  
+ **bcp** uses the ODBC bulk copy API. Therefore, to import date values into [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], **bcp** uses the ODBC date format (*yyyy-mm-dd hh:mm:ss*[*.f...*]).  
   
  The **bcp** command exports character format data files using the ODBC default format for **datetime** and **smalldatetime** values. For example, a **datetime** column containing the date `12 Aug 1998` is bulk copied to a data file as the character string `1998-08-12 00:00:00.000`.  
   

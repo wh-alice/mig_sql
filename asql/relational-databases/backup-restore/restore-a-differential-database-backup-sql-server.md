@@ -21,9 +21,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Restore a Differential Database Backup (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes how to restore a differential database backup in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to restore a differential database backup in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -49,9 +49,9 @@ manager: "jhubbard"
   
 -   RESTORE is not allowed in an explicit or implicit transaction.  
   
--   Backups that are created by more recent version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] cannot be restored in earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   Backups that are created by more recent version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] cannot be restored in earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
--   In [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], you can restore a user database from a database backup that was created by using [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] or a later version.  
+-   In [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], you can restore a user database from a database backup that was created by using [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] or a later version.  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 #### To restore a differential database backup  
   
-1.  After you connect to the appropriate instance of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
+1.  After you connect to the appropriate instance of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
   
 2.  Expand **Databases**. Depending on the database, either select a user database or expand **System Databases**, and then select a system database.  
   
@@ -124,13 +124,13 @@ manager: "jhubbard"
   
      For descriptions of the options, see [Restore Database &#40;Options Page&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).  
   
-9. Restore operations will fail if there are active connections to the database. Check the **Close existing connections option** to ensure that all active connections between [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] and the database are closed.  
+9. Restore operations will fail if there are active connections to the database. Check the **Close existing connections option** to ensure that all active connections between [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] and the database are closed.  
   
 10. Select **Prompt before restoring each backup** if you wish to be prompted between each restore operation. This is not usually necessary unless the database is large and you wish to monitor the status of the restore operation.  
   
 11. Optionally, use the **Files** page to restore the database to a new location. For help with moving a database, see [Restore a Database to a New Location &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md).  
   
-12. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+12. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
@@ -208,6 +208,6 @@ GO
   
 ## See Also  
  [Differential Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

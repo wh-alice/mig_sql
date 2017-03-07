@@ -27,19 +27,19 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Create Profiler Traces for Replay (Analysis Services)
-  To replay queries, discovers, and commands that are submitted by users to [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] must gather the required events. In order to initiate collection of these events, appropriate event classes must be selected in the **Event Selection** tab of the **Trace Properties** dialog box. For example if the Query Begin event class is selected, events that contain queries are collected and used for replay. Also, the trace file contains sufficient information to support replaying server transactions in a distributed environment in the original sequence of transactions.  
+  To replay queries, discovers, and commands that are submitted by users to [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] must gather the required events. In order to initiate collection of these events, appropriate event classes must be selected in the **Event Selection** tab of the **Trace Properties** dialog box. For example if the Query Begin event class is selected, events that contain queries are collected and used for replay. Also, the trace file contains sufficient information to support replaying server transactions in a distributed environment in the original sequence of transactions.  
   
 ## Replay for Queries  
- To replay queries, [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] must capture the following events:  
+ To replay queries, [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] must capture the following events:  
   
 -   Audit Login event class with all its data columns. This event class provides information about which user logged in and about the session settings. The server process ID (SPID) provides the reference to the user session. For more information, see [Security Audit Data Columns](../../analysis-services/trace-events/security-audit-data-columns.md).  
   
--   Query Begin event class with all its data columns. This event class provides information about the query that was submitted to [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)]. The Event Subclass column provides information about the type of query. The TextData column provides the actual text of the query. The RequestParameters column provides the parameters for parameterized queries, and the RequestProperties column provides the properties of an XML for Analysis (XMLA) request. For more information, see [Queries Events Data Columns](../../analysis-services/trace-events/queries-events-data-columns.md).  
+-   Query Begin event class with all its data columns. This event class provides information about the query that was submitted to [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)]. The Event Subclass column provides information about the type of query. The TextData column provides the actual text of the query. The RequestParameters column provides the parameters for parameterized queries, and the RequestProperties column provides the properties of an XML for Analysis (XMLA) request. For more information, see [Queries Events Data Columns](../../analysis-services/trace-events/queries-events-data-columns.md).  
   
 -   Query End event class with all its data columns. This event class verifies the status of the query execution. For more information, see [Queries Events Data Columns](../../analysis-services/trace-events/queries-events-data-columns.md).  
   
 ## Replay for Discovers  
- To replay discovers, [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] must capture the following events:  
+ To replay discovers, [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] must capture the following events:  
   
 -   Audit Login event class with all its data columns. This event class provides information about which user logged in and about the session settings. The SPID provides the reference to the user session. For more information, see [Security Audit Data Columns](../../analysis-services/trace-events/security-audit-data-columns.md).  
   
@@ -48,7 +48,7 @@ manager: "erikre"
 -   Discover End event class with all its data columns. This event class verifies the status of the discover request. For more information, see [Discover Events Data Columns](../../analysis-services/trace-events/discover-events-data-columns.md).  
   
 ## Replay for Commands  
- To replay commands, [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] must capture the following events:  
+ To replay commands, [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] must capture the following events:  
   
 -   Command Begin event class with all its data columns. The TextData column provides the command details, such as the process type, database ID, and cube ID. The RequestParameters column provides the parameters for parameterized command, and the RequestProperties column provides the properties of an XMLA request. For more information, see [Command Events Data Columns](../../analysis-services/trace-events/command-events-data-columns.md).  
   

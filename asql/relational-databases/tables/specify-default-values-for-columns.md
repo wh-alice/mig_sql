@@ -18,9 +18,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Specify Default Values for Columns
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
 
-  You can specify a default value that will be entered in the column in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. If you do not assign a default value and the user leaves the column blank, then:  
+  You can specify a default value that will be entered in the column in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. If you do not assign a default value and the user leaves the column blank, then:  
   
 -   If you set the option to allow null values, NULL will be inserted into the column.  
   
@@ -76,7 +76,7 @@ manager: "jhubbard"
   
 #### To specify a default value for a column  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

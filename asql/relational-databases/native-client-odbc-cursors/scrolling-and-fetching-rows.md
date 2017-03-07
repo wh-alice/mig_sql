@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Scrolling and Fetching Rows
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   To use a scrollable cursor, an ODBC application must:  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [Bookmarking Rows in ODBC](../Topic/Bookmarking%20Rows%20in%20ODBC.md)  
+-   [Bookmarking Rows in ODBC](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
   
 ## See Also  
  [Using Cursors &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  

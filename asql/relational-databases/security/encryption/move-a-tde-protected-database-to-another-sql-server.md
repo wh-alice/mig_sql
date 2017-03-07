@@ -18,7 +18,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Move a TDE Protected Database to Another SQL Server
-  This topic describes how to to protect a database by using transparent data encryption (TDE), and then move the database to another instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]. TDE performs real-time I/O encryption and decryption of the data and log files. The encryption uses a database encryption key (DEK), which is stored in the database boot record for availability during recovery. The DEK is a symmetric key secured by using a certificate stored in the **master** database of the server or an asymmetric key protected by an EKM module.  
+  This topic describes how to to protect a database by using transparent data encryption (TDE), and then move the database to another instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]. TDE performs real-time I/O encryption and decryption of the data and log files. The encryption uses a database encryption key (DEK), which is stored in the database boot record for availability during recovery. The DEK is a symmetric key secured by using a certificate stored in the **master** database of the server or an asymmetric key protected by an EKM module.  
   
  **In This Topic**  
   
@@ -44,11 +44,11 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   When moving a TDE protected database, you must also move the certificate or asymmetric key that is used to open the DEK. The certificate or asymmetric key must be installed in the **master** database of the destination server, so that [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] can access the database files. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+-   When moving a TDE protected database, you must also move the certificate or asymmetric key that is used to open the DEK. The certificate or asymmetric key must be installed in the **master** database of the destination server, so that [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] can access the database files. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
   
 -   You must retain copies of both the certificate file and the private key file in order to recover the certificate. The password for the private key does not have to be the same as the database master key password.  
   
--   [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] stores the files created here in **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** by default. Your file names and locations might be different.  
+-   [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] stores the files created here in **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** by default. Your file names and locations might be different.  
   
 ###  <a name="Security"></a> Security  
   
@@ -96,7 +96,7 @@ manager: "jhubbard"
   
 ###  <a name="TsqlCreate"></a> Using Transact-SQL  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -178,7 +178,7 @@ manager: "jhubbard"
      By default, the detach operation retains any out-of-date optimization statistics when detaching the database; to update the existing optimization statistics, click this check box.  
   
      **Keep Full-Text Catalogs**  
-     By default, the detach operation keeps any full-text catalogs that are associated with the database. To remove them, clear the **Keep Full-Text Catalogs** check box. This option appears only when you are upgrading a database from [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)].  
+     By default, the detach operation keeps any full-text catalogs that are associated with the database. To remove them, clear the **Keep Full-Text Catalogs** check box. This option appears only when you are upgrading a database from [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)].  
   
      **Status**  
      Displays one of the following states: **Ready** or **Not ready**.  
@@ -198,11 +198,11 @@ manager: "jhubbard"
   
 4.  Using Windows Explorer, move or copy the backup of the server certificate and the private key file from the source server to the same location on the destination server.  
   
-5.  Create a database master key on the destination instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information, see **Using Transact-SQL** below.  
+5.  Create a database master key on the destination instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. For more information, see **Using Transact-SQL** below.  
   
 6.  Recreate the server certificate by using the original server certificate backup file. For more information, see **Using Transact-SQL** below.  
   
-7.  In Object Explorer in [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], right-click the **Databases** folder and select **Attach…**.  
+7.  In Object Explorer in [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], right-click the **Databases** folder and select **Attach…**.  
   
 8.  In the **Attach Databases** dialog box, under **Databases to attach**, click **Add**.  
   
@@ -269,7 +269,7 @@ manager: "jhubbard"
   
 ###  <a name="TsqlMove"></a> Using Transact-SQL  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -310,7 +310,7 @@ manager: "jhubbard"
   
  For more information, see:  
   
--   [sp_detach_db &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
+-   [sp_detach_db &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-detach-db-transact-sql.md)  
   
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)  
   

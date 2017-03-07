@@ -126,7 +126,7 @@ manager: "erikre"
   
  To use this parameter, first create a PSCredential object using Get-Credential to specify the username and password (for example, `$Cred=Get-Credential “adventure-works\admin”`. You can then pipe this object to the –Credential parameter `(-Credential:$Cred`).  
   
- For more information about authentication and credential usage, see [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md). For more information about HTTP access, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../Topic/Configure%20HTTP%20Access%20to%20Analysis%20Services%20on%20Internet%20Information%20Services%20\(IIS\)%208.0.md).  
+ For more information about authentication and credential usage, see [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md). For more information about HTTP access, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8.0.md).  
   
 |||  
 |-|-|  

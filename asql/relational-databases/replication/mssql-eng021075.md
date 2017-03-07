@@ -25,7 +25,7 @@ manager: "jhubbard"
 |Product Name|SQL Server|  
 |Event ID|21075|  
 |Event Source|MSSQLSERVER|  
-|Component|[!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]|  
+|Component|[!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)]|  
 |Symbolic Name||  
 |Message Text|The initial snapshot for publication '%s' is not yet available.|  
   

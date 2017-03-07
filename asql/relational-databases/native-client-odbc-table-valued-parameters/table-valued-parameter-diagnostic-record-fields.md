@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Table-Valued Parameter Diagnostic Record Fields
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   Two new diagnostic fields, SQL_DIAG_SS_TABLE_COLUMN_NUMBER and SQL_DIAG_SS_TABLE_ROW_NUMBER, have been added to diagnostic records. These fields help you to determine which table-valued parameter column values are associated with errors and warnings.  
   

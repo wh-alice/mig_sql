@@ -23,7 +23,7 @@ manager: "erikre"
 # ADOMD.NET Server Functionality
   All ADOMD.NET server objects provide read-only access to the data and metadata on the server. To retrieve data and metadata, you use the ADOMD.NET server object model as the server object model does not support schema rowsets.  
   
- With ADOMD.NET server objects, you can create a user defined function (UDF) or a stored procedure for [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)]. These in-process methods are called through query statements created in languages such as Multidimensional Expressions (MDX), Data Mining Extensions (DMX), or SQL. These in-process methods also provide added functionality without the latencies associated with network communications.  
+ With ADOMD.NET server objects, you can create a user defined function (UDF) or a stored procedure for [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)]. These in-process methods are called through query statements created in languages such as Multidimensional Expressions (MDX), Data Mining Extensions (DMX), or SQL. These in-process methods also provide added functionality without the latencies associated with network communications.  
   
 > [!NOTE]  
 >  The <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> object only supports DMX.  
@@ -48,7 +48,7 @@ FROM SalesModel
 ## What is a Stored Procedure?  
  A *stored procedure* is a method that has the following characteristics:  
   
--   You call a stored procedure on its own with the MDX [CALL](../Topic/CALL%20Statement%20\(MDX\).md) statement.  
+-   You call a stored procedure on its own with the MDX [CALL](../../mdx/mdx-data-manipulation-call.md) statement.  
   
 -   A stored procedure can take any number of parameters.  
   

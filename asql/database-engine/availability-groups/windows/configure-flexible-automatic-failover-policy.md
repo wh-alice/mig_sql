@@ -19,9 +19,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Configure Flexible Automatic Failover Policy
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes how to configure the flexible failover policy for an Always On availability group by using [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] or PowerShell in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)]. A flexible failover policy provides granular control over the conditions that cause automatic failover for an availability group. By changing the failure conditions that trigger an automatic failover and the frequency of health checks, you can increase or decrease the likelihood of an automatic failover to support your SLA for high availability.  
+  This topic describes how to configure the flexible failover policy for an Always On availability group by using [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] or PowerShell in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)]. A flexible failover policy provides granular control over the conditions that cause automatic failover for an availability group. By changing the failure conditions that trigger an automatic failover and the frequency of health checks, you can increase or decrease the likelihood of an automatic failover to support your SLA for high availability.  
   
 -   **Before you begin:**  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
      [PowerShell](#PowerShellProcedure)  
   
     > [!NOTE]  
-    >  The flexible failover policy of an availability group cannot be configured by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+    >  The flexible failover policy of an availability group cannot be configured by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -68,11 +68,11 @@ manager: "jhubbard"
   
 1.  Connect to the server instance that hosts the primary replica.  
   
-2.  For a new availability group, use the [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)[!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statement. If you are modifying an existing availability group, use the [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)[!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statement.  
+2.  For a new availability group, use the [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)[!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statement. If you are modifying an existing availability group, use the [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)[!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statement.  
   
     -   To set the failover condition level, use the FAILURE_CONDITION_LEVEL = *n* option, where, *n* is an integer from 1 to 5.  
   
-         For example, the following [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statement changes the failure-condition level of an existing availability group, `AG1`, to level one:  
+         For example, the following [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statement changes the failure-condition level of an existing availability group, `AG1`, to level one:  
   
         ```  
   
@@ -81,7 +81,7 @@ manager: "jhubbard"
   
          The relationship of these integer values to the failure condition levels is as follows:  
   
-        |[!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] Value|Level|Automatic Is Failover Initiated When…|  
+        |[!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] Value|Level|Automatic Is Failover Initiated When…|  
         |------------------------------|-----------|-------------------------------------------|  
         |1|One|On server down. The SQL Server service stops because of a failover or restart.|  
         |2|Two|On server unresponsive. Any condition of lower value is satisfied, the SQL Server service is connected to the cluster and the health check timeout threshold is exceeded, or the current primary replica is in a failed state.|  
@@ -89,11 +89,11 @@ manager: "jhubbard"
         |4|Four|On moderate server error. Any condition of lower value is satisfied or a moderate Server error occurs.|  
         |5|Five|On any qualified failure conditions. Any condition of lower value is satisfied or a qualifying failure condition occurs.|  
   
-         For more information about the failover condition levels, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](../Topic/Flexible%20Failover%20Policy%20for%20Automatic%20Failover%20of%20an%20Availability%20Group%20\(SQL%20Server\).md).  
+         For more information about the failover condition levels, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
     -   To configure the health check timeout threshold, use the HEALTH_CHECK_TIMEOUT = *n* option, where, *n* is an integer from 15000 milliseconds (15 seconds) to 4294967295 milliseconds. The default value is 30000 milliseconds (30 seconds)  
   
-         For example, the following [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statement changes the health-check timeout threshold of an existing availability group, `AG1`, to 60,000 milliseconds (one minute).  
+         For example, the following [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statement changes the health-check timeout threshold of an existing availability group, `AG1`, to 60,000 milliseconds (one minute).  
   
         ```  
   
@@ -117,7 +117,7 @@ manager: "jhubbard"
         |**OnModerateServerError**|Four|On moderate server error. Any condition of lower value is satisfied or a moderate Server error occurs.|  
         |**OnAnyQualifiedFailureConditions**|Five|On any qualified failure conditions. Any condition of lower value is satisfied or a qualifying failure condition occurs.|  
   
-         For more information about the failover condition levels, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](../Topic/Flexible%20Failover%20Policy%20for%20Automatic%20Failover%20of%20an%20Availability%20Group%20\(SQL%20Server\).md).  
+         For more information about the failover condition levels, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
          For example, the following command changes the failure-condition level of an existing availability group, `AG1`, to level one.  
   
@@ -138,7 +138,7 @@ manager: "jhubbard"
         ```  
   
 > [!NOTE]  
->  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+>  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
@@ -152,6 +152,6 @@ manager: "jhubbard"
  [Failover and Failover Modes &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
  [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
- [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)  
+ [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-server-diagnostics-transact-sql.md)  
   
   

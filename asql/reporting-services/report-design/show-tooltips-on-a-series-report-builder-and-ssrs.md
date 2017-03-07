@@ -21,7 +21,7 @@ manager: "erikre"
  You cannot add a ToolTip to a calculated series.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## To specify a ToolTip on each data point  
   
@@ -31,7 +31,7 @@ manager: "erikre"
   
 ## See Also  
  [Formatting Data Points on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](../Topic/Change%20the%20Text%20of%20a%20Legend%20Item%20\(Report%20Builder%20and%20SSRS\).md)   
+ [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
  [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Add a Drillthrough Action on a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   

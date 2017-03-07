@@ -23,7 +23,7 @@ manager: "erikre"
  You can also create a URL to a report that overrides the display of the document map, so that you can run the report without displaying the document map, and then click the **Show/Hide Document Map** button on the report viewer toolbar to toggle the display.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ##  <a name="DocMapRenderExtensions"></a> Document Maps and Rendering Extensions  
  The document map is intended for use in the HTML rendering extension—for example, in Preview and the Report Viewer. Other rendering extensions have different ways of articulating a document map:  
@@ -67,7 +67,7 @@ manager: "erikre"
   
 4.  In the **Document map** list box, type or select an expression that matches the group expression.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 6.  Repeat steps 1-4 for every group that you want to appear in the document map.  
   
@@ -78,7 +78,7 @@ manager: "erikre"
   
 1.  In Report Manager, browse to the report that has the document map.  
   
-     For example, for the [!INCLUDE[ssSampleDBUserInputNonLocal](../../integration-services/control-flow/includes/sssampledbuserinputnonlocal-md.md)] sample reports, the following URL specifies the report named Product Catalog.  
+     For example, for the [!INCLUDE[ssSampleDBUserInputNonLocal](../../a9retired/includes/sssampledbuserinputnonlocal-md.md)] sample reports, the following URL specifies the report named Product Catalog.  
   
     ```  
     http://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
@@ -107,7 +107,7 @@ manager: "erikre"
 4.  Paste the URL in Report Manager, and then press ENTER. The report runs, and the document map is hidden.  
   
 > [!NOTE]  
->  For more information about downloading sample reports, see [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+>  For more information about downloading sample reports, see [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
 >  For more information, see "URL Access" in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
   

@@ -70,28 +70,28 @@ manager: "jhubbard"
 -   To transmit **hierarchyid** parameters through SOAP first cast them as strings.  
   
 ## Upgrading Databases  
- When a database is upgraded to [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], the new assembly and the **hierarchyid** data type will automatically be installed. Upgrade advisor rules detect any user type or assemblies with conflicting names. The upgrade advisor will advise renaming of any conflicting assembly, and either renaming any conflicting type, or using two-part names in the code to refer to that preexisting user type.  
+ When a database is upgraded to [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], the new assembly and the **hierarchyid** data type will automatically be installed. Upgrade advisor rules detect any user type or assemblies with conflicting names. The upgrade advisor will advise renaming of any conflicting assembly, and either renaming any conflicting type, or using two-part names in the code to refer to that preexisting user type.  
   
  If a database upgrade detects a user assembly with conflicting name, it will automatically rename that assembly and put the database into suspect mode.  
   
  If a user type with conflicting name exists during the upgrade, no special steps are taken. After the upgrade, both the old user type, and the new system type, will exist. The user type will be available only through two-part names.  
   
 ## Using hierarchyid Columns in Replicated Tables  
- Columns of type **hierarchyid** can be used on any replicated table. The requirements for your application depend on whether replication is one directional or bidirectional, and on the versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that are used.  
+ Columns of type **hierarchyid** can be used on any replicated table. The requirements for your application depend on whether replication is one directional or bidirectional, and on the versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that are used.  
   
 ### One-Directional Replication  
- One-directional replication includes snapshot replication, transactional replication, and merge replication in which changes are not made at the Subscriber. How **hierachyid** columns work with one directional replication depends on the version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] the Subscriber is running.  
+ One-directional replication includes snapshot replication, transactional replication, and merge replication in which changes are not made at the Subscriber. How **hierachyid** columns work with one directional replication depends on the version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] the Subscriber is running.  
   
--   A [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] Publisher can replicate **hierachyid** columns to a [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] Subscriber without any special considerations.  
+-   A [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] Publisher can replicate **hierachyid** columns to a [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] Subscriber without any special considerations.  
   
--   A [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] Publisher must convert **hierarchyid** columns to replicate them to a Subscriber that is running [!INCLUDE[ssEW](../../analysis-services/instances/includes/ssew-md.md)] or an earlier version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. [!INCLUDE[ssEW](../../analysis-services/instances/includes/ssew-md.md)] and earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] do not support **hierarchyid** columns. If you are using one of these versions, you can still replicate data to a Subscriber. To do this, you must set a schema option or the publication compatibility level (for merge replication) so the column can be converted to a compatible data type.  
+-   A [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] Publisher must convert **hierarchyid** columns to replicate them to a Subscriber that is running [!INCLUDE[ssEW](../../a9retired/includes/ssew-md.md)] or an earlier version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. [!INCLUDE[ssEW](../../a9retired/includes/ssew-md.md)] and earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] do not support **hierarchyid** columns. If you are using one of these versions, you can still replicate data to a Subscriber. To do this, you must set a schema option or the publication compatibility level (for merge replication) so the column can be converted to a compatible data type.  
   
  Column filtering is supported in both of these scenarios. This includes filtering out **hierarchyid** columns. Row filtering is supported as long as the filter does not include a **hierarchyid** column.  
   
 ### Bi-Directional Replication  
  Bi-directional replication includes transactional replication with updating subscriptions, peer-to-peer transactional replication, and merge replication in which changes are made at the Subscriber. Replication lets you configure a table with **hierarchyid** columns for bi-directional replication. Note the following requirements and considerations.  
   
--   The Publisher and all Subscribers must be running [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+-   The Publisher and all Subscribers must be running [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
 -   Replication replicates the data as bytes and does not perform any validation to assure the integrity of the hierarchy.  
   
@@ -107,6 +107,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Hierarchical Data &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)   
- [hierarchyid Data Type Method Reference](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
+ [hierarchyid Data Type Method Reference](../../a9retired/hierarchyid-data-type-method-reference.md)  
   
   

@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # Unlock Element (XMLA)
-  Unlocks a specified lock on a [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance.  
+  Unlocks a specified lock on a [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance.  
   
 ## Syntax  
   
@@ -64,6 +64,6 @@ manager: "erikre"
   
 ## See Also  
  [Lock Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)   
- [Commands &#40;XMLA&#41;](../Topic/Commands%20\(XMLA\).md)  
+ [Commands &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

@@ -19,7 +19,7 @@ manager: "jhubbard"
 # Set Up a SQL Server Database Alert (Windows)
   Using System Monitor, you can create an alert to be raised when a threshold value for a System Monitor counter has been reached. In response to the alert, System Monitor can launch an application, such as a custom application written to handle the alert condition. For example, you can create an alert that is raised when the number of deadlocks exceeds a specific value.  
   
- Alerts also can be defined using Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent. For more information, see [Alerts](../Topic/Alerts.md).  
+ Alerts also can be defined using Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent. For more information, see [Alerts](../Topic/Alerts.md).  
   
 ### To set up a SQL Server database alert  
   

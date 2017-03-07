@@ -33,14 +33,14 @@ manager: "jhubbard"
 ```  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] type: **bit**  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] type: **bit**  
   
  CLR type: **SqlBoolean**  
   
 ## Remarks  
  `IsNull` can be used to test whether a **geography** instance is null. This can produce somewhat confusing results, returning 0 if the instance is not null, but null if the instance is null.  
   
- This method is primarily used by the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] infrastructure; it is recommended that you use the T-SQL predicate IS NULL to test whether a **geography** instance is null. For more information on the T-SQL predicate IS NULL, see [IS NULL &#40;Transact-SQL&#41;](../Topic/IS%20NULL%20\(Transact-SQL\).md).  
+ This method is primarily used by the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] infrastructure; it is recommended that you use the T-SQL predicate IS NULL to test whether a **geography** instance is null. For more information on the T-SQL predicate IS NULL, see [IS NULL &#40;Transact-SQL&#41;](../Topic/IS%20NULL%20\(Transact-SQL\).md).  
   
 ## Examples  
   

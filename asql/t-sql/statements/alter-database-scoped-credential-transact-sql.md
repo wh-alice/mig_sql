@@ -21,11 +21,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Changes the properties of a database scoped credential.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -53,7 +53,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
  The secret is encrypted by using the service master key. If the service master key is regenerated, the secret is reencrypted by using the new service master key.  
   
- Information about database scoped credentials is visible in the [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys.database-scoped-credentials-transact-sql.md) catalog view.  
+ Information about database scoped credentials is visible in the [sys.database_scoped_credentials](../../relational-databases/reference/system-catalog-views/sys.database-scoped-credentials-transact-sql.md) catalog view.  
   
 ## Permissions  
  Requires `ALTER` permission on the credential.  
@@ -81,8 +81,8 @@ GO
  [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
  [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
- [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys.database-scoped-credentials-transact-sql.md)   
+ [sys.database_scoped_credentials](../../relational-databases/reference/system-catalog-views/sys.database-scoped-credentials-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.credentials-transact-sql.md)  
+ [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.credentials-transact-sql.md)  
   
   

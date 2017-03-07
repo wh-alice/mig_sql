@@ -17,7 +17,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Add BI Semantic Model Connection Content Type to Library
-  A BI semantic model connection is created in SharePoint and provides redirection to business intelligence semantic model data in a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbook or Analysis Services tabular model database on a network server. Before you can create a BI semantic model connection in SharePoint, you must extend a document library to allow the creation of a .bism file. This step only needs to be performed once for each library, but you will need to repeat it for any library from which you want to create .bism files. Best practices recommend that you create a centralized library for storing .bism files so that you can manage permissions in one place.  
+  A BI semantic model connection is created in SharePoint and provides redirection to business intelligence semantic model data in a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbook or Analysis Services tabular model database on a network server. Before you can create a BI semantic model connection in SharePoint, you must extend a document library to allow the creation of a .bism file. This step only needs to be performed once for each library, but you will need to repeat it for any library from which you want to create .bism files. Best practices recommend that you create a centralized library for storing .bism files so that you can manage permissions in one place.  
   
 > [!NOTE]  
 >  If you already use SharePoint Data Connection Libraries, the BI Semantic Model Connection content type is automatically added to that library template. You can skip the steps in this section if you use a data connection library that already lets you create new BI semantic model connection documents.  
@@ -25,7 +25,7 @@ manager: "erikre"
 ##  <a name="bkmk_addtype"></a> Add the content type to a document library  
  You must have at least the Manage Lists permission to add and configure a content type. This permission is built into the Design permission level and above.  
   
- The site that contains the document library must have feature activation for [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint. For more information, see [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../Topic/Activate%20Power%20Pivot%20Feature%20Integration%20for%20Site%20Collections%20in%20Central%20Administration.md).  
+ The site that contains the document library must have feature activation for [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint. For more information, see [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 1.  Open the document library for which you want to enable the BI Semantic Model Connection content type.  
   
@@ -53,7 +53,7 @@ manager: "erikre"
   
      ![New Document submenu in a SharePoint library](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "New Document submenu in a SharePoint library")  
   
- After you enable the BI semantic model connection content type for a library, you can create a connection that provides redirection to business semantic model data that can be used by Excel or [!INCLUDE[ssCrescent](../../analysis-services/includes/sscrescent-md.md)] reports. Choose from the following links to learn more about this next step:  
+ After you enable the BI semantic model connection content type for a library, you can create a connection that provides redirection to business semantic model data that can be used by Excel or [!INCLUDE[ssCrescent](../../a9notintoc/includes/sscrescent-md.md)] reports. Choose from the following links to learn more about this next step:  
   
  [Create a BI Semantic Model Connection to a Power Pivot Workbook](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   

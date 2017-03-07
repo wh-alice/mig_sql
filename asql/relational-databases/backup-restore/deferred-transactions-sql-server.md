@@ -20,10 +20,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Deferred Transactions (SQL Server)
-  In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Enterprise, a corrupted transaction can become deferred if data required by rollback (undo) is offline during database startup. A *deferred transaction* is a transaction that is uncommitted when the roll forward phase finishes and that has encountered an error that prevents it from being rolled back. Because the transaction cannot be rolled back, it is deferred.  
+  In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Enterprise, a corrupted transaction can become deferred if data required by rollback (undo) is offline during database startup. A *deferred transaction* is a transaction that is uncommitted when the roll forward phase finishes and that has encountered an error that prevents it from being rolled back. Because the transaction cannot be rolled back, it is deferred.  
   
 > [!NOTE]  
->  Corrupted transactions are deferred only in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Enterprise. In other editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], a corrupted transaction causes startup to fail.  
+>  Corrupted transactions are deferred only in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Enterprise. In other editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], a corrupted transaction causes startup to fail.  
   
  Generally, a deferred transaction occurs because, while the database was being rolled forward, an I/O error prevented reading a page that was required by the transaction. However, an error at the file level can also cause deferred transactions. A deferred transaction can also occur when a partial restore sequence stops at a point at which transaction rollback is necessary and a transaction requires data that is offline.  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 -   If the transactions were deferred because a filegroup was offline, bring the filegroup back online.  
   
-     To bring an offline filegroup back online, use the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement:  
+     To bring an offline filegroup back online, use the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement:  
   
     ```  
     RESTORE DATABASE database_name FILEGROUP=<filegroup_name>  
@@ -73,7 +73,7 @@ manager: "jhubbard"
   
 -   If transactions were deferred because of a bad page and if a good backup of the database does not exist, use the following process to repair the database:  
   
-    -   First put the database into emergency mode by executing the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement:  
+    -   First put the database into emergency mode by executing the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement:  
   
         ```  
         ALTER DATABASE <database_name> SET EMERGENCY  
@@ -93,6 +93,6 @@ manager: "jhubbard"
  [Restore Pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [Piecemeal Restores &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

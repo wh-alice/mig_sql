@@ -22,7 +22,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Role Assignments
-  In [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], *role assignments* determine access to stored items and to the report server itself. A role assignment has the following parts:  
+  In [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)], *role assignments* determine access to stored items and to the report server itself. A role assignment has the following parts:  
   
 -   A securable item for which you want to control access. Examples of securable items include folders, reports, and resources.  
   
@@ -38,7 +38,7 @@ manager: "erikre"
 Role assignments diagram  
   
 ## System-Level and Item-Level Role Assignments  
- Role-based security in [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] is organized into the following levels:  
+ Role-based security in [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] is organized into the following levels:  
   
 -   Item-level role assignments control access to reports, folders, report models, shared data sources, and resources in the report server folder hierarchy. Item-level role assignments are defined when create a role assignment on a specific item or on the Home folder.  
   
@@ -47,7 +47,7 @@ Role assignments diagram
  A system role assignment does not authorize access to items in the folder hierarchy. System and item security are mutually exclusive. For any given user or group, you might need to create both a system-level and item-level role assignment to provide sufficient access to a report server.  
   
 ## Users and Groups in Role Assignments  
- The users or group accounts that you specify in role assignments are domain accounts. The report server references, but does not create or manage, users and groups from a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows domain (or another security model if you are using a custom security extension).  
+ The users or group accounts that you specify in role assignments are domain accounts. The report server references, but does not create or manage, users and groups from a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows domain (or another security model if you are using a custom security extension).  
   
  Of all the role assignments that apply to any given item, no two can specify the same user or group. If a user account is also a member of a group account, and you have role assignments for both, the combined set of tasks for both role assignments are available to the user.  
   
@@ -56,12 +56,12 @@ Role assignments diagram
 ## Predefined Role Assignments  
  By default, predefined role assignments are implemented that allow local administrators to manage the report server. You must add additional role assignments to grant access to other users.  
   
- For more information about the predefined role assignments that provide default security, see [Predefined Roles](../Topic/Predefined%20Roles.md).  
+ For more information about the predefined role assignments that provide default security, see [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
 ## See Also  
- [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Role%20\(Management%20Studio\).md)   
+ [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [Grant User Access to a Report Server &#40;Report Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modify or Delete a Role Assignment &#40;Report Manager&#41;](../Topic/Modify%20or%20Delete%20a%20Role%20Assignment%20\(Report%20Manager\).md)   
+ [Modify or Delete a Role Assignment &#40;Report Manager&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/security/2467c657-a3bf-4ec3-a88c-8877df19823d.md)   
  [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   

@@ -18,11 +18,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create, Construct, and Query geometry Instances
-  The planar spatial data type, **geometry**, represents data in a Euclidean (flat) coordinate system. This type is implemented as a common language runtime (CLR) data type in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  The planar spatial data type, **geometry**, represents data in a Euclidean (flat) coordinate system. This type is implemented as a common language runtime (CLR) data type in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  The **geometry** type is predefined and available in each database. You can create table columns of type **geometry** and operate on **geometry** data in the same manner as you would use other CLR types.  
   
- The **geometry** data type (planar) supported by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] conforms to the Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0.  
+ The **geometry** data type (planar) supported by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] conforms to the Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0.  
   
  For more information on OGC specifications, see the following:  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports a subset of the existing GML 3.1 standard which is defined in the following schema: [http://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](http://go.microsoft.com/fwlink/?LinkId=230959).  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports a subset of the existing GML 3.1 standard which is defined in the following schema: [http://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](http://go.microsoft.com/fwlink/?LinkId=230959).  
   
 ##  <a name="creating"></a> Creating or constructing a new geometry instance  
   
@@ -123,7 +123,7 @@ manager: "jhubbard"
   
   
 ###  <a name="gml"></a> Constructing a geometry Instance from GML Text Input  
- The **geometry** data type provides a method that generates a **geometry** instance from GML, an XML representation of geometric objects. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports a subset of GML.  
+ The **geometry** data type provides a method that generates a **geometry** instance from GML, an XML representation of geometric objects. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports a subset of GML.  
   
  **To construct any type of geometry instance from GML input**  
  [GeomFromGml &#40;geometry Data Type&#41;](../../t-sql/data-types/geomfromgml-geometry-data-type.md)  
@@ -148,7 +148,7 @@ manager: "jhubbard"
   
   
 ##  <a name="querying"></a> Querying the Properties and Behaviors of geometry Instances  
- All **geometry** instances have a number of properties that can be retrieved through methods that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provides. The following topics define the properties and behaviors of geometry types, and the methods for querying each one.  
+ All **geometry** instances have a number of properties that can be retrieved through methods that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] provides. The following topics define the properties and behaviors of geometry types, and the methods for querying each one.  
   
 ###  <a name="valid"></a> Validity, Instance Type, and GeometryCollection Information  
  Once a **geometry** instance is constructed, you can use the following methods to determine if it is well-formed, return the instance type, or, if it is a collection instance, return a specific **geometry** instance.  
@@ -336,7 +336,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ##  <a name="defaultsrid"></a> geometry Instances Default to Zero SRID  
- The default SRID for **geometry** instances in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is 0. With **geometry** spatial data, the specific SRID of the spatial instance is not required to perform calculations; thus, instances can reside in undefined planar space. To indicate undefined planar space in the calculations of **geometry** data type methods, the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] uses SRID 0.  
+ The default SRID for **geometry** instances in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is 0. With **geometry** spatial data, the specific SRID of the spatial instance is not required to perform calculations; thus, instances can reside in undefined planar space. To indicate undefined planar space in the calculations of **geometry** data type methods, the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] uses SRID 0.  
   
 ##  <a name="examples"></a> Examples  
  The following two examples show how to add and query geometry data.  

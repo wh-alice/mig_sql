@@ -25,10 +25,10 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # OLE DB Destination
-  The OLE DB destination loads data into a variety of OLE DB-compliant databases using a database table or view or an SQL command. For example, the OLE DB source can load data into tables in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Office Access and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases.  
+  The OLE DB destination loads data into a variety of OLE DB-compliant databases using a database table or view or an SQL command. For example, the OLE DB source can load data into tables in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Office Access and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] databases.  
   
 > [!NOTE]  
->  If the data source is [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
+>  If the data source is [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
   
  The OLE DB destination provides five different data access modes for loading data:  
   
@@ -45,17 +45,17 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The OLE DB destination does not support parameters. If you need to execute a parameterized INSERT statement, consider the OLE DB Command transformation. For more information, see [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
   
- When the OLE DB destination loads data that uses a double-byte character set (DBCS), the data may be corrupted if the data access mode does not use the fast load option and if the OLE DB connection manager uses the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (SQLOLEDB). To ensure the integrity of DBCS data you should configure the OLE DB connection manager to use the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client, or use one of the fast-load access modes: **Table or view - fast load** or **Table name or view name variable - fast load**. Both options are available from the **OLE DB Destination Editor** dialog box. When programming the [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] object model, you should set the AccessMode property to **OpenRowset Using FastLoad**, or **OpenRowset Using FastLoad From Variable**.  
+ When the OLE DB destination loads data that uses a double-byte character set (DBCS), the data may be corrupted if the data access mode does not use the fast load option and if the OLE DB connection manager uses the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] (SQLOLEDB). To ensure the integrity of DBCS data you should configure the OLE DB connection manager to use the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client, or use one of the fast-load access modes: **Table or view - fast load** or **Table name or view name variable - fast load**. Both options are available from the **OLE DB Destination Editor** dialog box. When programming the [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] object model, you should set the AccessMode property to **OpenRowset Using FastLoad**, or **OpenRowset Using FastLoad From Variable**.  
   
 > [!NOTE]  
->  If you use the **OLE DB Destination Editor** dialog box in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer to create the destination table into which the OLE DB destination inserts data, you may have to select the newly created table manually. The need for manual selection occurs when an OLE DB provider, such as the OLE DB provider for DB2, automatically adds schema identifiers to the table name.  
+>  If you use the **OLE DB Destination Editor** dialog box in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer to create the destination table into which the OLE DB destination inserts data, you may have to select the newly created table manually. The need for manual selection occurs when an OLE DB provider, such as the OLE DB provider for DB2, automatically adds schema identifiers to the table name.  
   
 > [!NOTE]  
 >  The CREATE TABLE statement that the **OLE DB Destination Editor** dialog box generates may require modification depending on the destination type. For example, some destinations do not support the data types that the CREATE TABLE statement uses.  
   
  This destination uses an OLE DB connection manager to connect to a data source and the connection manager specifies the OLE DB provider to use. For more information, see [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
- An [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project also provides the data source object from which you can create an OLE DB connection manager, to make data sources and data source views available to the OLE DB destination.  
+ An [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project also provides the data source object from which you can create an OLE DB connection manager, to make data sources and data source views available to the OLE DB destination.  
   
  An OLE DB destination includes mappings between input columns and columns in the destination data source. You do not have to map input columns to all destination columns, but depending on the properties of the destination columns, errors can occur if no input columns are mapped to the destination columns. For example, if a destination column does not allow null values, an input column must be mapped to that column. In addition, the data types of mapped columns must be compatible. For example, you cannot map an input column with a string data type to a destination column with a numeric data type.  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
 ## Fast Load Options  
  If the OLE DB destination uses a fast-load data access mode, you can specify the following fast load options in the user interface, **OLE DB Destination Editor**, for the destination:  
   
--   Keep identity values from the imported data file or use unique values assigned by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   Keep identity values from the imported data file or use unique values assigned by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 -   Retain a null value during the bulk load operation.  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
 |FIRE_TRIGGERS|Specifies whether triggers fire on the insert table. The option has the form **FIRE_TRIGGERS**. The presence of the option indicates that triggers fire.|  
 |ORDER|Specifies how the input data is sorted. The option has the form ORDER \<column name> ASC&#124;DESC. Any number of columns may be listed and it is optional to include the sort order. If sort order is omitted, the insert operation assumes the data is unsorted.<br /><br /> Note: Performance can be improved if you use the ORDER option to sort the input data according to the clustered index on the table.|  
   
- The [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] keywords are traditionally typed using uppercase letters, but the keywords are not case sensitive.  
+ The [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] keywords are traditionally typed using uppercase letters, but the keywords are not case sensitive.  
   
  To learn more about fast load options, see [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
@@ -97,7 +97,7 @@ manager: "jhubbard"
  You can log the calls that the OLE DB destination makes to external data providers. You can use this logging capability to troubleshoot the saving of data to external data sources that the OLE DB destination performs. To log the calls that the OLE DB destination makes to external data providers, enable package logging and select the **Diagnostic** event at the package level. For more information, see [Troubleshooting Tools for Package Execution](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## Configuring the OLE DB Destination  
- You can set properties through [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **OLE DB Destination Editor** dialog box, click one of the following topics:  
   
@@ -109,7 +109,7 @@ manager: "jhubbard"
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](../Topic/Common%20Properties.md)  
+-   [Common Properties](../../a9retired/common-properties.md)  
   
 -   [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)  
   

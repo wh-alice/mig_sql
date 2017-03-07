@@ -22,17 +22,17 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Legacy Package Deployment (SSIS)
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] includes tools and wizards that make it simple to deploy packages from the development computer to the production server or to other computers.  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] includes tools and wizards that make it simple to deploy packages from the development computer to the production server or to other computers.  
   
  There are four steps in the package deployment process:  
   
 1.  The first optional step is optional and involves creating package configurations that update properties of package elements at run time. The configurations are automatically included when you deploy the packages.  
   
-2.  The second step is to build the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project to create a package deployment utility. The deployment utility for the project contains the packages that you want to deploy  
+2.  The second step is to build the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project to create a package deployment utility. The deployment utility for the project contains the packages that you want to deploy  
   
-3.  The third step is to copy the deployment folder that was created when you built the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project to the target computer.  
+3.  The third step is to copy the deployment folder that was created when you built the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project to the target computer.  
   
-4.  The fourth step is to run, on the target computer, the Package Installation Wizard to install the packages to the file system or to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+4.  The fourth step is to run, on the target computer, the Package Installation Wizard to install the packages to the file system or to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## Related Tasks  
  For information about how to create a deployment utility, see [Create a Deployment Utility](../../integration-services/packages/create-a-deployment-utility.md).  

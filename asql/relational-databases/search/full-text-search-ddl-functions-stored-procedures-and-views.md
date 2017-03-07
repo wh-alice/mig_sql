@@ -15,7 +15,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Full-Text Search DDL, Functions, Stored Procedures, and Views
-  Lists the Transact-SQL statements and the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database objects that support full-text search, including the property search feature.  
+  Lists the Transact-SQL statements and the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database objects that support full-text search, including the property search feature.  
   
  This list does not include deprecated objects.  
   
@@ -51,11 +51,11 @@ manager: "jhubbard"
   
 -   [CONTAINS &#40;Transact-SQL&#41;](../Topic/CONTAINS%20\(Transact-SQL\).md)  
   
--   [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)  
+-   [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/containstable-transact-sql.md)  
   
 -   [FREETEXT &#40;Transact-SQL&#41;](../Topic/FREETEXT%20\(Transact-SQL\).md)  
   
--   [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)  
+-   [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/freetexttable-transact-sql.md)  
   
 ##  <a name="meta"></a> System Metadata Functions  
   
@@ -75,64 +75,64 @@ manager: "jhubbard"
   
 ##  <a name="proc"></a> System Stored Procedures  
   
--   [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)  
+-   [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)  
   
--   [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)  
+-   [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)  
   
--   [sp_fulltext_pendingchanges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-pendingchanges-transact-sql.md)  
+-   [sp_fulltext_pendingchanges &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-fulltext-pendingchanges-transact-sql.md)  
   
--   [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
+-   [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
   
--   [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)  
+-   [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)  
   
 ##  <a name="cat"></a> System Views – Catalog Views  
   
--   [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-catalogs-transact-sql.md)  
+-   [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-catalogs-transact-sql.md)  
   
--   [sys.fulltext_document_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-document-types-transact-sql.md)  
+-   [sys.fulltext_document_types &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-document-types-transact-sql.md)  
   
--   [sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-index-catalog-usages-transact-sql.md)  
+-   [sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-index-catalog-usages-transact-sql.md)  
   
--   [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-index-columns-transact-sql.md)  
+-   [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-index-columns-transact-sql.md)  
   
--   [sys.fulltext_index_fragments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-index-fragments-transact-sql.md)  
+-   [sys.fulltext_index_fragments &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-index-fragments-transact-sql.md)  
   
--   [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-indexes-transact-sql.md)  
+-   [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-indexes-transact-sql.md)  
   
--   [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-languages-transact-sql.md)  
+-   [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-languages-transact-sql.md)  
   
--   [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-stoplists-transact-sql.md)  
+-   [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-stoplists-transact-sql.md)  
   
--   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-stopwords-transact-sql.md)  
+-   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-stopwords-transact-sql.md)  
   
--   [sys.fulltext_system_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-system-stopwords-transact-sql.md)  
+-   [sys.fulltext_system_stopwords &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-system-stopwords-transact-sql.md)  
   
--   [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.registered-search-properties-transact-sql.md)  
+-   [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.registered-search-properties-transact-sql.md)  
   
--   [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.registered-search-property-lists-transact-sql.md)  
+-   [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.registered-search-property-lists-transact-sql.md)  
   
 ##  <a name="dmv"></a> System Views – Dynamic Management Views  
   
--   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-active-catalogs-transact-sql.md)  
+-   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-active-catalogs-transact-sql.md)  
   
--   [sys.dm_fts_fdhosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-fdhosts-transact-sql.md)  
+-   [sys.dm_fts_fdhosts &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-fdhosts-transact-sql.md)  
   
--   [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-index-keywords-transact-sql.md)  
+-   [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-index-keywords-transact-sql.md)  
   
--   [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-index-keywords-by-document-transact-sql.md)  
+-   [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-index-keywords-by-document-transact-sql.md)  
   
--   [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-index-keywords-by-property-transact-sql.md)  
+-   [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-index-keywords-by-property-transact-sql.md)  
   
--   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-index-population-transact-sql.md)  
+-   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-index-population-transact-sql.md)  
   
--   [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-memory-buffers-transact-sql.md)  
+-   [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-memory-buffers-transact-sql.md)  
   
--   [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-memory-pools-transact-sql.md)  
+-   [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-memory-pools-transact-sql.md)  
   
--   [sys.dm_fts_outstanding_batches &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-outstanding-batches-transact-sql.md)  
+-   [sys.dm_fts_outstanding_batches &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-outstanding-batches-transact-sql.md)  
   
--   [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-parser-transact-sql.md)  
+-   [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-parser-transact-sql.md)  
   
--   [sys.dm_fts_population_ranges &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-population-ranges-transact-sql.md)  
+-   [sys.dm_fts_population_ranges &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-population-ranges-transact-sql.md)  
   
   

@@ -20,10 +20,10 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # URL Access Parameter Reference
-  You can use the following parameters as part of a URL to configure the look and feel of your [!INCLUDE[ssRSCurrent](../reporting-services/includes/ssrscurrent-md.md)]reports. The most common parameters are listed in this section. Parameters are case-insensitive and begin with the parameter prefix *rs:* if directed to the report server and *rc:* if directed to an HTML Viewer. You can also specify parameters that are specific to devices or rendering extensions. For more information about device-specific parameters, see [Specify Device Information Settings in a URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
+  You can use the following parameters as part of a URL to configure the look and feel of your [!INCLUDE[ssRSCurrent](../a9notintoc/includes/ssrscurrent-md.md)]reports. The most common parameters are listed in this section. Parameters are case-insensitive and begin with the parameter prefix *rs:* if directed to the report server and *rc:* if directed to an HTML Viewer. You can also specify parameters that are specific to devices or rendering extensions. For more information about device-specific parameters, see [Specify Device Information Settings in a URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
   
 > [!IMPORTANT]  
->  For a SharePoint mode report server it  is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds context to the HTTP reques that is required to ensure proper execution of the report for SharePoint mode report servers. For examples, see [Access Report Server Items Using URL Access](../reporting-services/access-report-server-items-using-url-access.md).  
+>  For a SharePoint mode report server it  is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds context to the HTTP reques that is required to ensure proper execution of the report for SharePoint mode report servers. For examples, see [Access Report Server Items Using URL Access](../reporting-services/access-report-server-items-using-url-access.md).  
 >   
 >  For information about including report parameters in a URL, and examples, see [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
@@ -58,7 +58,7 @@ manager: "erikre"
     http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
--   *Zoom* : Sets the report zoom value as an integer percentage or a string constant. Standard string values include **Page Width** and **Whole Page**. This parameter is ignored by versions of Internet Explorer earlier than Internet Explorer 5.0 and all non-[!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] browsers. The default value of this parameter is **100**.  
+-   *Zoom* : Sets the report zoom value as an integer percentage or a string constant. Standard string values include **Page Width** and **Whole Page**. This parameter is ignored by versions of Internet Explorer earlier than Internet Explorer 5.0 and all non-[!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] browsers. The default value of this parameter is **100**.  
   
      For example in **Native** mode:  
   
@@ -277,7 +277,7 @@ manager: "erikre"
                   Toggles the show and hide state of a section of the report. Specify a positive integer to represent the section to toggle.  
   
 ##  <a name="bkmk_webpart"></a> Report Viewer Web Part Commands (rv:)  
- The following [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] reserved report parameter names are used to target the Report Viewer Web Part that is integrated with SharePoint. These parameter names are prefixed with *rv:*. The Report Viewer Web Part also accepts the *rs:ParameterLanguage* parameter.  
+ The following [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] reserved report parameter names are used to target the Report Viewer Web Part that is integrated with SharePoint. These parameter names are prefixed with *rv:*. The Report Viewer Web Part also accepts the *rs:ParameterLanguage* parameter.  
   
 -   *Toolbar*: Controls the toolbar display for the Report Viewer Web Part. The default value is **Full**. Values can be:  
   

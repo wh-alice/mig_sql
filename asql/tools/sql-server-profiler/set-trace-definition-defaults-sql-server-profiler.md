@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Set Trace Definition Defaults (SQL Server Profiler)
-  The trace definition default is the default trace template that is used for each provider or server. You can set default trace templates for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or for [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)].  
+  The trace definition default is the default trace template that is used for each provider or server. You can set default trace templates for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] or for [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)].  
   
 ### To set trace definition defaults  
   

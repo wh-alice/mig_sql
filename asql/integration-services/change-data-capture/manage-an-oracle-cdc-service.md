@@ -45,7 +45,7 @@ manager: "jhubbard"
   
  **Note**: If the service is running when deleting the service, the service is stopped before being deleted.  
   
- To delete the Oracle CDC Windows Service definition, the program needs update access to the MSXDBCDC database in the associated [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. When you click OK to delete the service, the program attempts to delete the Oracle CDC Service registration in the MSXDBCDC database. If the program cannot delete the Oracle CDC Service registration because it does not have the proper permissions, it prompts the user to enter a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login with update permissions to the MSXDBCDC database.  
+ To delete the Oracle CDC Windows Service definition, the program needs update access to the MSXDBCDC database in the associated [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. When you click OK to delete the service, the program attempts to delete the Oracle CDC Service registration in the MSXDBCDC database. If the program cannot delete the Oracle CDC Service registration because it does not have the proper permissions, it prompts the user to enter a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login with update permissions to the MSXDBCDC database.  
   
  For information about the data you must enter in the Connect to SQL Server dialog box, see [Connection to SQL Server for Delete](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md).  
   

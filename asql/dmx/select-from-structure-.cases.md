@@ -24,13 +24,13 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # SELECT FROM &lt;structure&gt;.CASES
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the cases that were used to create the mining structure.  
   
  If drillthrough is not enabled on the structure, the statement will fail. Also, the statement will fail if the user does not have drillthrough permissions on the mining structure.  
   
- In [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)], drillthrough on new mining structures is enabled by default. To verify whether drillthrough is enabled for a particular structure, check whether the value of the **CacheMode** property is set to **KeepTrainingCases**.  
+ In [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)], drillthrough on new mining structures is enabled by default. To verify whether drillthrough is enabled for a particular structure, check whether the value of the **CacheMode** property is set to **KeepTrainingCases**.  
   
  If the value of **CacheMode** is changed to **ClearAfterProcessing**, the structure cases are cleared from the cache and you cannot use drillthrough.  
   
@@ -73,7 +73,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  Therefore, to protect sensitive data or personal information, you should construct your data source view to mask personal information, and grant **AllowDrillthrough** permission on a mining structure or mining model only when necessary.  
   
 ## Examples  
- The following examples are based on the mining structure, Targeted Mailing, which is based on the [!INCLUDE[ssAWDWsp](../analysis-services/includes/ssawdwsp-md.md)] database, and the associated mining models. For more information, see [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md).  
+ The following examples are based on the mining structure, Targeted Mailing, which is based on the [!INCLUDE[ssAWDWsp](../a9notintoc/includes/ssawdwsp-md.md)] database, and the associated mining models. For more information, see [Basic Data Mining Tutorial](../a9notintoc/basic-data-mining-tutorial.md).  
   
 ### Example 1: Drill through to Structure Cases  
  The following example returns a list of the 500 oldest customers in the mining structure, Targeted Mailing. The query returns all the columns in the mining model, but restricts the rows to those who purchased a bike, and orders them by age. You can also edit the expression list to return only the columns that you need.  
@@ -98,8 +98,8 @@ WHERE IsTestCase();
   
 ## See Also  
  [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Definition%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Manipulation%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)  
+ [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

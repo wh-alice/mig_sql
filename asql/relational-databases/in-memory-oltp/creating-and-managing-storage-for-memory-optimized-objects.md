@@ -16,9 +16,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Creating and Managing Storage for Memory-Optimized Objects
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  The [!INCLUDE[hek_2](../../relational-databases/in-memory-oltp/includes/hek-2-md.md)] engine is integrated into [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], which lets you have both memory-optimized tables and (traditional) disk-based tables in the same database. However, the storage structure for memory-optimized tables is different from disk-based tables.  
+  The [!INCLUDE[hek_2](../../a9retired/includes/hek-2-md.md)] engine is integrated into [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], which lets you have both memory-optimized tables and (traditional) disk-based tables in the same database. However, the storage structure for memory-optimized tables is different from disk-based tables.  
   
  Storage for disk-based table has following key attributes:  
   

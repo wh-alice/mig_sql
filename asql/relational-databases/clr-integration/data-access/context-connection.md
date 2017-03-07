@@ -48,10 +48,10 @@ End Using
 ```  
   
 ## In This Section  
- [Regular vs. Context Connections](../Topic/Regular%20vs.%20Context%20Connections.md)  
+ [Regular vs. Context Connections](../../../relational-databases/clr-integration/data-access/context-connections-vs.-regular-connections.md)  
  Describes the differences between regular and context connections.  
   
- [Restrictions on Regular and Context Connections](../Topic/Restrictions%20on%20Regular%20and%20Context%20Connections.md)  
+ [Restrictions on Regular and Context Connections](../../../relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md)  
  Describes the restrictions on regular and context connections.  
   
   

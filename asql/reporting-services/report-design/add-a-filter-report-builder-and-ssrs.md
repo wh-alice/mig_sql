@@ -25,7 +25,7 @@ manager: "erikre"
  For more information about filtering embedded and shared datasets, see [Add a Filter to a Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ### To set a filter on a data region  
   
@@ -50,7 +50,7 @@ manager: "erikre"
   
      For examples of filter equations, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-9. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To set a filter on a Tablix row or column group  
   
@@ -74,7 +74,7 @@ manager: "erikre"
   
      For examples of filter equations, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-10. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To set a filter on a Chart category group  
   
@@ -98,7 +98,7 @@ manager: "erikre"
   
      For examples of filter equations, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-10. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To set a filter on a Chart series group  
   
@@ -122,7 +122,7 @@ manager: "erikre"
   
      For examples of filter equations, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-10. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## See Also  
  [Add Dataset Filters, Data Region Filters, and Group Filters &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/fcca7243-a702-4725-8e6f-cf118e988acf.md)   

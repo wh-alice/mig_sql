@@ -62,6 +62,6 @@ manager: "erikre"
  All object references in the **Sources** and **Target** elements must point to distinct partitions in the same measure group. Otherwise, an error occurs.  
   
 ## See Also  
- [Commands &#40;XMLA&#41;](../Topic/Commands%20\(XMLA\).md)  
+ [Commands &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

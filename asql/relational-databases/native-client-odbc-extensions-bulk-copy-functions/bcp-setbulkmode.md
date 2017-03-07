@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # bcp_setbulkmode
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   bcp_setbulkmode lets you specify the column format in a bulk copy operation, setting all the column attributes in a single function call.  
   
@@ -281,6 +281,6 @@ int main() {
 ```  
   
 ## See Also  
- [Bulk Copy Functions](../Topic/Bulk%20Copy%20Functions.md)  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

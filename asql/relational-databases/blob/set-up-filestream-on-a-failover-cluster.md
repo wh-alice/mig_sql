@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 3.  To add more passive nodes, repeat step 2.  
   
-4.  After all the nodes are added, complete the process by executing the sp_configure stored procedure on each instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+4.  After all the nodes are added, complete the process by executing the sp_configure stored procedure on each instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 5.  To add and enable additional nodes to the cluster at any time, you can repeat steps 2, 3, and 4.  
   

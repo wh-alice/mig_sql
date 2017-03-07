@@ -21,15 +21,15 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Set Deployment Properties (Reporting Services)
-  In[!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], you must specify the report server and optionally the folders for reports and shared data sources so that you can publish the items in a Report Server project to a report server. The properties and values that [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] needs to build, preview an deploy reports are stored in project configurations of the Report Server project. You can create multiple named sets for these project properties, so that you can conveniently switch between property sets. Each set of properties is a configuration. For example, you can have a configuration for publishing reports to a test server and a different configuration for publishing reports to a production server.  
+  In[!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], you must specify the report server and optionally the folders for reports and shared data sources so that you can publish the items in a Report Server project to a report server. The properties and values that [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] needs to build, preview an deploy reports are stored in project configurations of the Report Server project. You can create multiple named sets for these project properties, so that you can conveniently switch between property sets. Each set of properties is a configuration. For example, you can have a configuration for publishing reports to a test server and a different configuration for publishing reports to a production server.  
   
- Use Configuration Manager to create and manage sets of project properties in project configurations. Configuration Manager is a feature supported by [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)], on which [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)] is based.  
+ Use Configuration Manager to create and manage sets of project properties in project configurations. Configuration Manager is a feature supported by [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)], on which [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)] is based.  
   
 > [!NOTE]  
 >  Do not confuse this feature with the Reporting Services Configuration Manager, which is used to configure Reporting Services after installation. For more information, see [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
   
 > [!NOTE]  
->  In [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], the action of publishing reports from a Report Server project or solution is known as *deploying reports*.  
+>  In [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], the action of publishing reports from a Report Server project or solution is known as *deploying reports*.  
   
 ### To set deployment properties  
   
@@ -44,13 +44,13 @@ manager: "erikre"
   
 4.  In the **ErrorLevel**  text box, type the severity of the build issues that are reported as errors. Issues occurring when building reports, data sources, or other project resources with severity levels less than or equal to the value of **ErrorLevel**  are reported as errors; otherwise, the issues are reported as warnings. Any error will cause the build task to fail. The valid severity levels are 0 through 4 inclusive. The default value is 2.  
   
-     **ErrorLevel** can be used to increase or decrease the sensitivity of the build. For example, when a report with a map is built during deployment to a [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] report server an error displays by default and building the report fails. If you lower **ErrorLevel** the map is removed from the report, a warning displays, and building the report continues.  
+     **ErrorLevel** can be used to increase or decrease the sensitivity of the build. For example, when a report with a map is built during deployment to a [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] report server an error displays by default and building the report fails. If you lower **ErrorLevel** the map is removed from the report, a warning displays, and building the report continues.  
   
 5.  In the **StartItem**  list, select a report to display in the preview window or in a browser window when the report project is run.  
   
 6.  In the **OverwriteDataSources** list, select **True** to overwrite the shared data source on the server each time shared data sources are published, or select **False** to keep the data source on the server.  
   
-7.  In the **TargetServerVersion** list, select SQL Server 2016 version of [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] or select **Detect Version** to automatically determine the version installed on the server identified by the **TargetServer URL** property. The default value is **SQL Server 2016 or later**.  
+7.  In the **TargetServerVersion** list, select SQL Server 2016 version of [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] or select **Detect Version** to automatically determine the version installed on the server identified by the **TargetServer URL** property. The default value is **SQL Server 2016 or later**.  
   
      Use **TargetServerVersion** to customize the built reports, placed in the path specified in OutputPath, for the version of the report server specified in **TargetServer URL**.  
   

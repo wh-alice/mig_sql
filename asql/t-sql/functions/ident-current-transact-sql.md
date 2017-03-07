@@ -29,7 +29,7 @@ manager: "jhubbard"
 
   Returns the last identity value generated for a specified table or view. The last identity value generated can be for any session and any scope.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -48,10 +48,10 @@ IDENT_CURRENT( 'table_name' )
 ## Exceptions  
  Returns NULL on error or if a caller does not have permission to view the object.  
   
- In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], a user can only view the metadata of securables that the user owns or on which the user has been granted permission. This means that metadata-emitting, built-in functions such as IDENT_CURRENT may return NULL if the user does not have any permission on the object. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], a user can only view the metadata of securables that the user owns or on which the user has been granted permission. This means that metadata-emitting, built-in functions such as IDENT_CURRENT may return NULL if the user does not have any permission on the object. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## Remarks  
- IDENT_CURRENT is similar to the [!INCLUDE[ssVersion2000](../../analysis-services/multidimensional-models/includes/ssversion2000-md.md)] identity functions SCOPE_IDENTITY and @@IDENTITY. All three functions return last-generated identity values. However, the scope and session on which *last* is defined in each of these functions differ:  
+ IDENT_CURRENT is similar to the [!INCLUDE[ssVersion2000](../../a9notintoc/includes/ssversion2000-md.md)] identity functions SCOPE_IDENTITY and @@IDENTITY. All three functions return last-generated identity values. However, the scope and session on which *last* is defined in each of these functions differ:  
   
 -   IDENT_CURRENT returns the last identity value generated for a specific table in any session and any scope.  
   
@@ -140,6 +140,6 @@ SELECT IDENT_CURRENT('t7');
  [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
  [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-transact-sql.md)  
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/system-functions-transact-sql.md)  
   
   

@@ -17,7 +17,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Lesson 3-2 - Adding and Configuring Logging
-In this task, you will enable logging for the data flow in the Lesson 3.dtsx package. Then, you will configure a Text File log provider to log the PipelineExecutionPlan and PipelineExecuteTrees events. The Text Files log provider creates logs that are easy to view and easily transportable. The simplicity of these log files makes these files especially useful during the basic testing phase of a package. You can also view the log entries in the Log Events window of [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer.  
+In this task, you will enable logging for the data flow in the Lesson 3.dtsx package. Then, you will configure a Text File log provider to log the PipelineExecutionPlan and PipelineExecuteTrees events. The Text Files log provider creates logs that are easy to view and easily transportable. The simplicity of these log files makes these files especially useful during the basic testing phase of a package. You can also view the log entries in the Log Events window of [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer.  
   
 ### To add logging to the package  
   
@@ -57,5 +57,5 @@ In this task, you will enable logging for the data flow in the Lesson 3.dtsx pac
 14. Click **OK**.  
   
 ## Next Steps  
-[Step 3: Testing the Lesson 3 Tutorial Package](../Topic/Step%203:%20Testing%20the%20Lesson%203%20Tutorial%20Package.md)  
+[Step 3: Testing the Lesson 3 Tutorial Package](../../integration-services/tutorials/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   

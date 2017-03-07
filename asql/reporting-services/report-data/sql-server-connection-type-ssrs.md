@@ -16,14 +16,14 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # SQL Server Connection Type (SSRS)
-  To include data from a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database in your report, you must have a dataset that is based on a report data source of type [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. This built-in data source type is based on the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data extension. Use this data source type to connect to and retrieve data from the current version and earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases.  
+  To include data from a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database in your report, you must have a dataset that is based on a report data source of type [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. This built-in data source type is based on the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data extension. Use this data source type to connect to and retrieve data from the current version and earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] databases.  
   
  This data extension supports multivalue parameters, server aggregates, and credentials managed separately from the connection string.  
   
  Use the information in this topic to build a data source. For step-by-step instructions, see [Add and Verify a Data Connection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Connection String  
- When you connect to a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database, you are connecting to the database object in an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] on a server. The database might have multiple schemas that have multiple tables, views, and stored procedures. You specify the database object to use in the query designer. If you do not specify a database in the connection string, you connect to the default database that the database administrator assigned to you.  
+ When you connect to a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database, you are connecting to the database object in an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] on a server. The database might have multiple schemas that have multiple tables, views, and stored procedures. You specify the database object to use in the query designer. If you do not specify a database in the connection string, you connect to the default database that the database administrator assigned to you.  
   
  Contact your database administrator for connection information and for the credentials to use to connect to the data source. The following connection string example specifies a sample database on the local client:  
   
@@ -31,7 +31,7 @@ manager: "erikre"
 Data Source=<server>;Initial Catalog=AdventureWorks  
 ```  
   
- For more information about connection string examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md).  
+ For more information about connection string examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../../a9retired/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
 ##  <a name="Credentials"></a> Credentials  
  Credentials are required to run queries, to preview the report locally, and to preview the report from the report server.  
@@ -48,7 +48,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   No credentials are required. To use this option, you must have the unattended execution account configured on the report server. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in on msdn.microsoft.com.  
   
- For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) or [Specify Credentials in Report Builder](../Topic/Specify%20Credentials%20in%20Report%20Builder.md).  
+ For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) or [Specify Credentials in Report Builder](../../a9retired/specify-credentials-in-report-builder.md).  
   
   
 ##  <a name="Query"></a> Queries  
@@ -58,7 +58,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   Build a query interactively. Use the relational query designer that displays a hierarchical view of tables, views, stored procedures, and other database items, organized by database schema. Select columns from tables or views, or specify stored procedures or table-valued functions. Limit the number of rows of data to retrieve by specifying filter criteria. Customize the filter when the report runs by setting the parameter option.  
   
--   Type or paste a query. Use the text-based query designer to enter [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] text directly, to paste query text from another source, to enter complex queries that cannot be built by using the relational query designer, or to enter query-based expressions.  
+-   Type or paste a query. Use the text-based query designer to enter [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] text directly, to paste query text from another source, to enter complex queries that cannot be built by using the relational query designer, or to enter query-based expressions.  
   
 -   Import an existing query from a file or report. Use the **Import** query button from either query designer to browse to a .sql file or .rdl file and import a query.  
   
@@ -66,12 +66,12 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
  The following query modes are supported:  
   
--   [Text](#QueryText) Type in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] commands.  
+-   [Text](#QueryText) Type in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] commands.  
   
 -   [Stored Procedure](#QueryStoredProcedure) Choose from a list of stored procedures.  
   
 ###  <a name="QueryText"></a> Using Query Type Text  
- In the text-based query designer, you can type [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] commands to define the data in a dataset. For example, the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] query selects the names of all employees who are marketing assistants:  
+ In the text-based query designer, you can type [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] commands to define the data in a dataset. For example, the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] query selects the names of all employees who are marketing assistants:  
   
 ```  
 SELECT  
@@ -134,10 +134,10 @@ WHERE EmployeeID = (@EmpID)
   
   
 ##  <a name="Remarks"></a> Remarks  
- You can also retrieve data from a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database by using an OLE DB or ODBC data source type. For more information, see [OLE DB Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md) or [ODBC Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md).  
+ You can also retrieve data from a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database by using an OLE DB or ODBC data source type. For more information, see [OLE DB Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md) or [ODBC Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md).  
   
 ###### Platform and Version Information  
- For more information about platform and version support, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ For more information about platform and version support, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
   
 ##  <a name="HowTo"></a> How-To Topics  
@@ -156,7 +156,7 @@ WHERE EmployeeID = (@EmpID)
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Provides an overview of accessing data for your report.  
   
- [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)  
+ [Data Connections, Data Sources, and Connection Strings in Report Builder](../../a9retired/data-connections-data-sources-and-connection-strings-in-report-builder.md)  
  Provides information about data connections and data sources.  
   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -165,7 +165,7 @@ WHERE EmployeeID = (@EmpID)
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Provides information about the dataset field collection generated by the query.  
   
- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
  Provides in-depth information about platform and version support for each data extension.  
   
   

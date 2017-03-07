@@ -45,26 +45,26 @@ manager: "erikre"
  To determine the valid scopes for a function, see the individual function reference topic. For more information and for examples, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/a8d24287-8557-4b03-bea7-ca087f449b62.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ##  <a name="CalculatingAggregates"></a> Built-in Aggregate Functions  
  The following built-in functions calculate summary values for a set of non-null numeric data in the default scope or the named scope.  
   
 |**Function**|**Description**|  
 |------------------|---------------------|  
-|[Avg](../Topic/Avg%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns the average of all non-null numeric values specified by the expression, evaluated in the given scope.|  
-|[Count](../Topic/Count%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns a count of non-null values specified by the expression, evaluated in the context of the given scope.|  
-|[CountDistinct](../Topic/CountDistinct%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns a count of all distinct non-null values specified by the expression, evaluated in the context of the given scope.|  
-|[Max](../Topic/Max%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns the maximum value of all non-null numeric values specified by the expression, in the context of the given scope. You can use this for specifying a chart axis maximum value to control the scale.|  
-|[Min](../Topic/Min%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns the minimum value of all non-null numeric values specified by the expression, in the context of the given scope. You can use this for specifying a chart axis minimum value to control the scale.|  
-|[StDev](../Topic/StDev%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns the standard deviation of all non-null numeric values specified by the expression, evaluated in the given scope.|  
-|[StDevP](../Topic/StDevP%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns the population standard deviation of all non-null numeric values specified by the expression, evaluated in the context of the given scope.|  
-|[Sum](../Topic/Sum%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns the sum of all the non-null numeric values specified by the expression, evaluated in the given scope.|  
-|[Union](../Topic/Union%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns the union of all the non-null spatial data values of type **SqlGeometry** or **SqlGeography** that are specified by the expression, evaluated in the given scope.|  
-|[Var](../Topic/Var%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns the variance of all non-null numeric values specified by the expression, evaluated in the given scope.|  
-|[VarP](../Topic/VarP%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns the population variance of all non-null numeric values specified by the expression, evaluated in the context of the given scope.|  
+|[Avg](../../reporting-services/report-design/report-builder-functions-avg-function.md)|Returns the average of all non-null numeric values specified by the expression, evaluated in the given scope.|  
+|[Count](../../reporting-services/report-design/report-builder-functions-count-function.md)|Returns a count of non-null values specified by the expression, evaluated in the context of the given scope.|  
+|[CountDistinct](../../reporting-services/report-design/report-builder-functions-countdistinct-function.md)|Returns a count of all distinct non-null values specified by the expression, evaluated in the context of the given scope.|  
+|[Max](../../reporting-services/report-design/report-builder-functions-max-function.md)|Returns the maximum value of all non-null numeric values specified by the expression, in the context of the given scope. You can use this for specifying a chart axis maximum value to control the scale.|  
+|[Min](../../reporting-services/report-design/report-builder-functions-min-function.md)|Returns the minimum value of all non-null numeric values specified by the expression, in the context of the given scope. You can use this for specifying a chart axis minimum value to control the scale.|  
+|[StDev](../../reporting-services/report-design/report-builder-functions-stdev-function.md)|Returns the standard deviation of all non-null numeric values specified by the expression, evaluated in the given scope.|  
+|[StDevP](../../reporting-services/report-design/report-builder-functions-stdevp-function.md)|Returns the population standard deviation of all non-null numeric values specified by the expression, evaluated in the context of the given scope.|  
+|[Sum](../../reporting-services/report-design/report-builder-functions-sum-function.md)|Returns the sum of all the non-null numeric values specified by the expression, evaluated in the given scope.|  
+|[Union](../../reporting-services/report-design/report-builder-functions-union-function.md)|Returns the union of all the non-null spatial data values of type **SqlGeometry** or **SqlGeography** that are specified by the expression, evaluated in the given scope.|  
+|[Var](../../reporting-services/report-design/report-builder-functions-var-function.md)|Returns the variance of all non-null numeric values specified by the expression, evaluated in the given scope.|  
+|[VarP](../../reporting-services/report-design/report-builder-functions-varp-function.md)|Returns the population variance of all non-null numeric values specified by the expression, evaluated in the context of the given scope.|  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
   
 ##  <a name="Restrictions"></a> Restrictions on Built-in Fields, Collections, and Aggregate Functions  
  The following table summarizes restrictions in report locations on where you can add expressions that contain references to global built-in collections.  
@@ -101,7 +101,7 @@ manager: "erikre"
   
 -   **Note 8.** Data type for all aggregates except Count and CountDistinct must be the same data type, or null, for all values.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
   
 ##  <a name="NestedRestrictions"></a> Restrictions on Nested Aggregates  
  The following table summarizes restrictions on which aggregates functions can specify other aggregate functions as nested aggregates.  
@@ -118,75 +118,75 @@ manager: "erikre"
   
 -   **Note 1.** Aggregate functions are only allowed inside the *Source* expression of a Lookup function if the Lookup function is not contained in an aggregate. Aggregate functions are not allowed inside the *Destination* or *Result* expressions of a Lookup function.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
   
 ##  <a name="CalculatingRunningValues"></a> Calculating Running Values  
  The following built-in functions calculate running values for a set of data. **RowNumber** is like **RunningValue** in that it returns the running value of a count that increments for each row within the containing scope. The scope parameter for these functions must specify a containing scope, which controls when the count restarts.  
   
 |**Function**|**Description**|  
 |------------------|---------------------|  
-|[RowNumber](../Topic/RowNumber%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns a running count of the number of rows for the specified scope. The **RowNumber** function restarts counting at 1, not 0.|  
-|[RunningValue](../Topic/RunningValue%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns a running aggregate of all non-null numeric values specified by the expression, evaluated for the given scope.|  
+|[RowNumber](../../reporting-services/report-design/report-builder-functions-rownumber-function.md)|Returns a running count of the number of rows for the specified scope. The **RowNumber** function restarts counting at 1, not 0.|  
+|[RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md)|Returns a running aggregate of all non-null numeric values specified by the expression, evaluated for the given scope.|  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
   
 ##  <a name="RetrievingRowCounts"></a> Retrieving Row Counts  
  The following built-in function calculates the number of rows in the given scope. Use this function to count all rows, including rows with null values.  
   
 |**Function**|**Description**|  
 |------------------|---------------------|  
-|[CountRows](../Topic/CountRows%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns the number of rows in the specified scope, including rows with null values.|  
+|[CountRows](../../reporting-services/report-design/report-builder-functions-countrows-function.md)|Returns the number of rows in the specified scope, including rows with null values.|  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
   
 ##  <a name="LookupFunctions"></a> Looking Up Values from Another Dataset  
  The following lookup functions retrieve values from a specified dataset.  
   
 |**Function**|**Description**|  
 |------------------|---------------------|  
-|[Lookup Function](../Topic/Lookup%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns a value from a dataset for a specified expression.|  
-|[LookupSet Function](../Topic/LookupSet%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns a set of values from a dataset for a specified expression.|  
-|[Multilookup Function](../Topic/Multilookup%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns the set of first-match values for a set of names from a dataset that contains name/value pairs.|  
+|[Lookup Function](../../reporting-services/report-design/report-builder-functions-lookup-function.md)|Returns a value from a dataset for a specified expression.|  
+|[LookupSet Function](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)|Returns a set of values from a dataset for a specified expression.|  
+|[Multilookup Function](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)|Returns the set of first-match values for a set of names from a dataset that contains name/value pairs.|  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
   
 ##  <a name="RetrievingPostsortValues"></a> Retrieving Sort-Dependent Values  
  The following built-in functions return the first, last, or previous value within a given scope. These functions depend on the sort order of the data values. Use these functions, for example, to find the first and last values on a page to create a dictionary-style page header. Use **Previous** to compare a value in one row to the previous row's value within a specific scope, for example, to find percentage year over year values in a table.  
   
 |**Function**|**Description**|  
 |------------------|---------------------|  
-|[First](../Topic/First%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns the first value in the given scope of the specified expression.|  
-|[Last](../Topic/Last%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns the last value in the given scope of the specified expression.|  
-|[Previous](../Topic/Previous%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns the value or the specified aggregate value for the previous instance of an item within the specified scope.|  
+|[First](../../reporting-services/report-design/report-builder-functions-first-function.md)|Returns the first value in the given scope of the specified expression.|  
+|[Last](../../reporting-services/report-design/report-builder-functions-last-function.md)|Returns the last value in the given scope of the specified expression.|  
+|[Previous](../../reporting-services/report-design/report-builder-functions-previous-function.md)|Returns the value or the specified aggregate value for the previous instance of an item within the specified scope.|  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
   
 ##  <a name="RetrievingServerAggregates"></a> Retrieving Server Aggregates  
- The following built-in function retrieves custom aggregates from the data provider. For example, using an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] data source type, you can retrieve aggregates calculated on the data source server for use in a group header.  
+ The following built-in function retrieves custom aggregates from the data provider. For example, using an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] data source type, you can retrieve aggregates calculated on the data source server for use in a group header.  
   
 |**Function**|**Description**|  
 |------------------|---------------------|  
-|[Aggregate](../Topic/Aggregate%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns a custom aggregate of the specified expression, as defined by the data provider.|  
+|[Aggregate](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)|Returns a custom aggregate of the specified expression, as defined by the data provider.|  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
   
 ##  <a name="TestingforScope"></a> Testing for Scope  
  The following built-in function tests the current context of a report item to see if it is a member of a specific scope.  
   
 |Function|Description|  
 |--------------|-----------------|  
-|[InScope](../Topic/InScope%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Indicates whether the current instance of an item is within the specified scope.|  
+|[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|Indicates whether the current instance of an item is within the specified scope.|  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
   
 ##  <a name="RetrievingRecursiveLevel"></a> Retrieving Recursive Level  
  The following built-in function retrieves the current level when a recursive hierarchy is processed. Use the result of this function with the **Padding** property in a text box to control the indent level of a visual hierarchy for a recursive group. For more information, see [Creating Recursive Hierarchy Groups &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 |Function|Description|  
 |--------------|-----------------|  
-|[Level](../Topic/Level%20Function%20\(Report%20Builder%20and%20SSRS\).md)|Returns the current level of depth in a recursive hierarchy.|  
+|[Level](../../reporting-services/report-design/report-builder-functions-level-function.md)|Returns the current level of depth in a recursive hierarchy.|  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Back to Top  
   
 ## See Also  
  [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   

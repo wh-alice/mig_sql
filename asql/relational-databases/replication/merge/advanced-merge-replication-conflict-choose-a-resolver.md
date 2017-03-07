@@ -39,8 +39,8 @@ manager: "jhubbard"
 |Conflict outcome data needs to be different from original conflict data.|Use an article resolver that calculates new values.|  
   
 ## See Also  
- [Detecting and Resolving Conflicts in Logical Records](../Topic/Detecting%20and%20Resolving%20Conflicts%20in%20Logical%20Records.md)   
- [Advanced Merge Replication Conflict Detection and Resolution](../Topic/Advanced%20Merge%20Replication%20Conflict%20Detection%20and%20Resolution.md)   
+ [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Republish Data](../../../relational-databases/replication/republish-data.md)  
   
   

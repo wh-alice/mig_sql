@@ -21,11 +21,11 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Parent-Child Dimension Attributes - Unary Operators
-  In a dimension that contains a parent-child relationship in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], you specify a unary (or custom rollup) operator column that determines the custom rollup for all noncalculated members of the parent attribute. The unary operator is applied to members whenever the values of the parent members are evaluated. The **UnaryOperatorColumn** on a parent attribute (**Usage**=Parent) specifies the column of a table in the data source view that contains unary operators. Values for the custom rollup operators that are stored in this column are applied to each member of the attribute.  
+  In a dimension that contains a parent-child relationship in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], you specify a unary (or custom rollup) operator column that determines the custom rollup for all noncalculated members of the parent attribute. The unary operator is applied to members whenever the values of the parent members are evaluated. The **UnaryOperatorColumn** on a parent attribute (**Usage**=Parent) specifies the column of a table in the data source view that contains unary operators. Values for the custom rollup operators that are stored in this column are applied to each member of the attribute.  
   
  You can create and specify a named calculation on a dimension table in the data source view as a unary operator column. The simplest expression, such as '+', returns the same operator for all members. But you can use any expression as long as it returns an operator for every member.  
   
- You can change the **UnaryOperatorColumn** property setting manually on a parent attribute or use the Define Custom Aggregation enhancement of the Business Intelligence Wizard to replace the default aggregation that is associated with members of a dimension. For more information about how to use the Business Intelligence Wizard to perform this configuration, see [Add a Custom Aggregation to a Dimension](../Topic/Add%20a%20Custom%20Aggregation%20to%20a%20Dimension.md).  
+ You can change the **UnaryOperatorColumn** property setting manually on a parent attribute or use the Define Custom Aggregation enhancement of the Business Intelligence Wizard to replace the default aggregation that is associated with members of a dimension. For more information about how to use the Business Intelligence Wizard to perform this configuration, see [Add a Custom Aggregation to a Dimension](../../analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md).  
   
  The default setting for the **UnaryOperatorColumn** property on a parent attribute is (none), which disables the custom rollup operators. The following table lists the unary operators and describes how they behave when they are applied to a level.  
   
@@ -37,7 +37,7 @@ manager: "erikre"
 |/ (slash mark)|The value of the member is divided by the aggregate value of the sibling members that occur before the member.|  
 |~ (tilde)|The value of the member is ignored.|  
   
- Blank values and any other values not found in the table are treated the same as the plus sign (+) unary operator. There is no operator precedence, so the order of members as stored in the unary operator column determines the order of evaluation. To change the order of evaluation, create a new attribute, set its **Type** property to **Sequence**, and then assign sequence numbers that correspond to the order of evaluation in its **Source Column** property. You must also order members of the attribute by that attribute. For information about how to use the Business Intelligence Wizard to order members of an attribute, see [Define the Ordering for a Dimension](../Topic/Define%20the%20Ordering%20for%20a%20Dimension.md).  
+ Blank values and any other values not found in the table are treated the same as the plus sign (+) unary operator. There is no operator precedence, so the order of members as stored in the unary operator column determines the order of evaluation. To change the order of evaluation, create a new attribute, set its **Type** property to **Sequence**, and then assign sequence numbers that correspond to the order of evaluation in its **Source Column** property. You must also order members of the attribute by that attribute. For information about how to use the Business Intelligence Wizard to order members of an attribute, see [Define the Ordering for a Dimension](../../analysis-services/multidimensional-models/bi-wizard-define-the-ordering-for-a-dimension.md).  
   
  You can use the **UnaryOperatorColumn** property to specify a named calculation that returns a unary operator as a literal character for all members of the attribute. This could be as simple as typing a literal character such as `'*'` in the named calculation. This would replace the default operator, the plus sign (+), with the multiplication operator, the asterisk (*), for all members of the attribute. For more information, see [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
@@ -45,7 +45,7 @@ manager: "erikre"
   
 ## See Also  
  [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
- [Custom Rollup Operators in Parent-Child Dimensions](../Topic/Custom%20Rollup%20Operators%20in%20Parent-Child%20Dimensions.md)   
- [Start the Business Intelligence Wizard in Dimension Designer](../Topic/Start%20the%20Business%20Intelligence%20Wizard%20in%20Dimension%20Designer.md)  
+ [Custom Rollup Operators in Parent-Child Dimensions](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md)   
+ [Start the Business Intelligence Wizard in Dimension Designer](../../analysis-services/multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md)  
   
   

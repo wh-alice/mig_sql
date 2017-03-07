@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Functions on Nodes - local-name
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns the local part of the name of *$arg* as an xs:string that will either be the zero-length string or will have the lexical form of an xs:NCName. If the argument is not provided, the default is the context node.  
   
@@ -83,7 +83,7 @@ WHERE ProductModelID=7
  The query returns all the <`Location`> element children of the <`root`> element.  
   
 ## See Also  
- [Functions on Nodes](../Topic/Functions%20on%20Nodes.md)   
- [namespace-uri Function &#40;XQuery&#41;](../Topic/namespace-uri%20Function%20\(XQuery\).md)  
+ [Functions on Nodes](../a9retired/functions-on-nodes.md)   
+ [namespace-uri Function &#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
   
   

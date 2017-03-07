@@ -17,14 +17,14 @@ ms.author: "mblythe"
 manager: "erikre"
 ---
 # Replication Language Reference
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Replication Language Reference contains the following sections.  
   
- [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/reference/system-views/replication-views-transact-sql.md)  
   
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
+ [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/reference/system-tables/replication-tables-transact-sql.md)  
   
- [Replication Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [Replication Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

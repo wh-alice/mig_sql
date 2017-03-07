@@ -17,9 +17,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Configure the locks Server Configuration Option
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes how to configure the **locks** server configuration option in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]. The **locks** option sets the maximum number of available locks, thereby limiting the amount of memory the [!INCLUDE[ssDEnoversion](../../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] uses for them. The default setting is 0, which allows the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] to allocate and deallocate lock structures dynamically, based on changing system requirements.  
+  This topic describes how to configure the **locks** server configuration option in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]. The **locks** option sets the maximum number of available locks, thereby limiting the amount of memory the [!INCLUDE[ssDEnoversion](../../../a9notintoc/includes/ssdenoversion-md.md)] uses for them. The default setting is 0, which allows the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] to allocate and deallocate lock structures dynamically, based on changing system requirements.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../../database-engine/availability-groups/windows/includes/ssnotedepfuturedontuse-md.md)]  
@@ -44,15 +44,15 @@ manager: "jhubbard"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] technician.  
+-   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] technician.  
   
--   When the server is started with **locks** set to 0, the lock manager acquires sufficient memory from the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] for an initial pool of 2,500 lock structures. As the lock pool is exhausted, additional memory is acquired for the pool.  
+-   When the server is started with **locks** set to 0, the lock manager acquires sufficient memory from the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] for an initial pool of 2,500 lock structures. As the lock pool is exhausted, additional memory is acquired for the pool.  
   
-     Generally, if more memory is required for the lock pool than is available in the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] memory pool, and more computer memory is available (the **max server memory** threshold has not been reached), the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] allocates memory dynamically to satisfy the request for locks. However, if allocating that memory would cause paging at the operating system level (for example, if another application is running on the same computer as an instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and using that memory), more lock space is not allocated. The dynamic lock pool does not acquire more than 60 percent of the memory allocated to the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)]. After the lock pool has reached 60 percent of the memory acquired by an instance of the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)], or no more memory is available on the computer, further requests for locks generate an error.  
+     Generally, if more memory is required for the lock pool than is available in the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] memory pool, and more computer memory is available (the **max server memory** threshold has not been reached), the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] allocates memory dynamically to satisfy the request for locks. However, if allocating that memory would cause paging at the operating system level (for example, if another application is running on the same computer as an instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] and using that memory), more lock space is not allocated. The dynamic lock pool does not acquire more than 60 percent of the memory allocated to the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)]. After the lock pool has reached 60 percent of the memory acquired by an instance of the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)], or no more memory is available on the computer, further requests for locks generate an error.  
   
-     Allowing [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to use locks dynamically is the recommended configuration. However, you can set **locks** and override the ability of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to allocate lock resources dynamically. When **locks** is set to a value other than 0, the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] cannot allocate more locks than the value specified in **locks**. Increase this value if [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] displays a message that you have exceeded the number of available locks. Because each lock consumes memory (96 bytes per lock), increasing this value can require increasing the amount of memory dedicated to the server.  
+     Allowing [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] to use locks dynamically is the recommended configuration. However, you can set **locks** and override the ability of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] to allocate lock resources dynamically. When **locks** is set to a value other than 0, the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] cannot allocate more locks than the value specified in **locks**. Increase this value if [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] displays a message that you have exceeded the number of available locks. Because each lock consumes memory (96 bytes per lock), increasing this value can require increasing the amount of memory dedicated to the server.  
   
--   The **locks** option also affects when lock escalation occurs. When **locks** is set to 0, lock escalation occurs when the memory used by the current lock structures reaches 40 percent of the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] memory pool. When **locks** is not set to 0, lock escalation occurs when the number of locks reaches 40 percent of the value specified for **locks**.  
+-   The **locks** option also affects when lock escalation occurs. When **locks** is set to 0, lock escalation occurs when the memory used by the current lock structures reaches 40 percent of the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] memory pool. When **locks** is not set to 0, lock escalation occurs when the number of locks reaches 40 percent of the value specified for **locks**.  
   
 ###  <a name="Security"></a> Security  
   
@@ -69,17 +69,17 @@ manager: "jhubbard"
   
 3.  Under **Parallelism**, type the desired value for the **locks** option.  
   
-     Use the **locks** option to set the maximum number of available locks, thereby limiting the amount of memory [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses for them.  
+     Use the **locks** option to set the maximum number of available locks, thereby limiting the amount of memory [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] uses for them.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To configure the locks option  
   
-1.  Connect to the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `locks` option to set the number of locks available for all users to `20000`.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `locks` option to set the number of locks available for all users to `20000`.  
   
 ```tsql  
 Use AdventureWorks2012 ;  
@@ -102,6 +102,6 @@ GO
 ## See Also  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../../database-engine/configure/windows/server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+ [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md)  
   
   

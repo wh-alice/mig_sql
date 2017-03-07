@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  **To reinitialize a subscription**  
   
- To reinitialize all articles in a subscription, use [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], stored procedures or Replication Management Objects (RMO). To reinitialize individual articles in snapshot and transactional publications, you must use stored procedures. For more information, see [Reinitialize a Subscription](../../relational-databases/replication/reinitialize-a-subscription.md).  
+ To reinitialize all articles in a subscription, use [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], stored procedures or Replication Management Objects (RMO). To reinitialize individual articles in snapshot and transactional publications, you must use stored procedures. For more information, see [Reinitialize a Subscription](../../relational-databases/replication/reinitialize-a-subscription.md).  
   
 ## See Also  
  [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)   

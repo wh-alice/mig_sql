@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ServerName Property (SqlServerAlias Class)
-  Gets the name of the instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] specified by the server connection alias.  
+  Gets the name of the instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] specified by the server connection alias.  
   
 ## Syntax  
   
@@ -33,10 +33,10 @@ object.ServerName [= value]
   
 ## Parts  
  *object*  
- A [SqlServerAlias Class](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sqlserveralias-class.md) object that represents a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] alias.  
+ A [SqlServerAlias Class](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sqlserveralias-class.md) object that represents a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] alias.  
   
 ## Property Value/Return Value  
- A string value that specifies the name of the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] referenced by the server connection alias.  
+ A string value that specifies the name of the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] referenced by the server connection alias.  
   
 ## Remarks  
   

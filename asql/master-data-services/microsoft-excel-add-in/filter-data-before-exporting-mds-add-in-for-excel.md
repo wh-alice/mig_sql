@@ -15,7 +15,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Filter Data before Exporting (MDS Add-in for Excel)
-  In [!INCLUDE[ssMDSshort](../../analysis-services/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../analysis-services/includes/ssmdsxls-md.md)], filter data when you want to limit the size or scope of data that you are exporting to Excel.  
+  In [!INCLUDE[ssMDSshort](../../a9notintoc/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../a9notintoc/includes/ssmdsxls-md.md)], filter data when you want to limit the size or scope of data that you are exporting to Excel.  
   
 ## Prerequisites  
  To perform this procedure:  

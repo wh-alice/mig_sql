@@ -61,7 +61,7 @@ manager: "erikre"
 |Child elements|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
 ## Remarks  
- Under the **Axes** element, the **Axis** elements are listed in the order that they occur in the dataset, starting at zero. The **AxisFormat** XMLA property setting determines how **Axis** elements are formatted. For more information about the **AxisFormat** property, see [Supported XMLA Properties &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md).  
+ Under the **Axes** element, the **Axis** elements are listed in the order that they occur in the dataset, starting at zero. The **AxisFormat** XMLA property setting determines how **Axis** elements are formatted. For more information about the **AxisFormat** property, see [Supported XMLA Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
  An axis represents a set of tuples, in which all tuples in the set have the same dimensionality. A set can be represented in different ways with different advantages. For example, the following set of four tuples can be represented as a collection of two-dimensional tuples or a Cartesian product of two one-dimensional sets.  
   
@@ -118,6 +118,6 @@ CrossProduct (
   
 ## See Also  
  [MDDataSet Data Type &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

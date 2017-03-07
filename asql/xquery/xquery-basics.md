@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # XQuery Basics
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   This section describes the fundamentals of XQuery.  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
  Describes how to add comments in XQuery by using the "`(:`" and "`:)`" delimiters  
   
  [XQuery and Static Typing](../xquery/xquery-and-static-typing.md)  
- Describes XQuery in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] as a statically typed language  
+ Describes XQuery in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] as a statically typed language  
   
 ## See Also  
  [XQuery Language Reference &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

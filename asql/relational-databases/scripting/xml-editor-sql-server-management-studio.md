@@ -95,7 +95,7 @@ manager: "jhubbard"
  XML view provides an editor for editing raw XML and provides IntelliSense and color coding. Statement completion is available when working on .xsd files and .xml files that have an associated schema. Type \< to initiate a tag and you will be presented with a list of elements that are valid at that location. After you type the element name and press the SPACEBAR, you will be presented with a list of attributes that the element supports.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] IntelliSense options are not available on the toolbar. When in the XML Editor, to access the options, on the **Edit** menu, click **IntelliSense**.  
+>  [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] IntelliSense options are not available on the toolbar. When in the XML Editor, to access the options, on the **Edit** menu, click **IntelliSense**.  
   
 ## SHOWPLAN view  
  Query plans can be saved in XML format when created using SET SHOWPLAN_XML ON option. Double-click a file with the .showplan extension to open the query plan.  

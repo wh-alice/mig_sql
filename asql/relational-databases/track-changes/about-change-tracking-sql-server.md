@@ -41,15 +41,15 @@ manager: "jhubbard"
 >  If an application requires information about all the changes that were made and the intermediate values of the changed data, using change data capture, instead of change tracking, might be appropriate. For more information, see [About Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md).  
   
 ## One-Way and Two-Way Synchronization Applications  
- Applications that have to synchronize data with an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] must be able to query for changes. Change tracking can be used as a foundation for both one-way and two-way synchronization applications.  
+ Applications that have to synchronize data with an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] must be able to query for changes. Change tracking can be used as a foundation for both one-way and two-way synchronization applications.  
   
 ### One-Way Synchronization Applications  
- One-way synchronization applications, such as a client or mid-tier caching application, can be built that use change tracking. As shown in the following illustration, a caching application requires data to be stored in the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] and to be cached in other data stores. The application must be able to keep the cache up-to-date with any changes that have been made to the database tables. There are no changes to pass back to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+ One-way synchronization applications, such as a client or mid-tier caching application, can be built that use change tracking. As shown in the following illustration, a caching application requires data to be stored in the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] and to be cached in other data stores. The application must be able to keep the cache up-to-date with any changes that have been made to the database tables. There are no changes to pass back to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
  ![Shows one-way synchronization applications](../../relational-databases/track-changes/media/one-waysync.gif "Shows one-way synchronization applications")  
   
 ### Two-Way Synchronization Applications  
- Two-way synchronization applications can also be built that use change tracking. In this scenario, the data in an instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] is synchronized with one or more data stores. The data in those stores can be updated and the changes must be synchronized back to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+ Two-way synchronization applications can also be built that use change tracking. In this scenario, the data in an instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] is synchronized with one or more data stores. The data in those stores can be updated and the changes must be synchronized back to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
  ![Shows two-way synchronization applications](../../relational-databases/track-changes/media/two-waysync.gif "Shows two-way synchronization applications")  
   
@@ -58,9 +58,9 @@ manager: "jhubbard"
  The two-way synchronization applications must be able to detect conflicts. A conflict would occur if the same data was changed in both data stores in the time between synchronizations. With the ability to detect conflicts, an application can make sure that changes are not lost.  
   
 ## How Change Tracking Works  
- To configure change tracking, you can use DDL statements or [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. For more information, see [Enable and Disable Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md). To track changes, change tracking must first be enabled for the database and then enabled for the tables that you want to track within that database. The table definition does not have to be changed in any way, and no triggers are created.  
+ To configure change tracking, you can use DDL statements or [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. For more information, see [Enable and Disable Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md). To track changes, change tracking must first be enabled for the database and then enabled for the tables that you want to track within that database. The table definition does not have to be changed in any way, and no triggers are created.  
   
- After change tracking is configured for a table, any DML statement that affects rows in the table will cause change tracking information for each modified row to be recorded. To query for the rows that have changed and to obtain information about the changes, you can use [change tracking functions](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md).  
+ After change tracking is configured for a table, any DML statement that affects rows in the table will cause change tracking information for each modified row to be recorded. To query for the rows that have changed and to obtain information about the changes, you can use [change tracking functions](../../relational-databases/reference/system-functions/change-tracking-functions-transact-sql.md).  
   
  The values of the primary key column is only information from the tracked table that is recorded with the change information. These values identify the rows that have been changed. To obtain the latest data for those rows, an application can use the primary key column values to join the source table with the tracked table.  
   
@@ -71,7 +71,7 @@ Change tracking information for all tables (enabled for Change Tracking) is stor
 
 Each table that is enabled for Change Tracking has an internal on-disk table which is used by Change Tracking functions to determine the change version and the rows that have changed since a particular version. Every time the **auto cleanup** thread wakes up, it scans all the user databases on the SQL Server instance to identify the change tracking enabled databases. Based on the retention period setting of the database, each internal on-disk table is purged of its expired records.
 
-A stored procedure was added in Service Packs for [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] and [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] for performing manual cleanup for the internal Change Tracking internal tables. More information about the stored procedure is available in [KB173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking-side-table-in-sql-server-2014-sp2-or-2016-sp1). 
+A stored procedure was added in Service Packs for [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] and [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] for performing manual cleanup for the internal Change Tracking internal tables. More information about the stored procedure is available in [KB173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking-side-table-in-sql-server-2014-sp2-or-2016-sp1). 
   
 ## See Also  
  [Enable and Disable Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)   

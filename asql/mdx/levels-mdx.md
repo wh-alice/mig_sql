@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Levels (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the level whose position in a dimension or hierarchy is specified by a numeric expression or whose name is specified by a string expression.  
   

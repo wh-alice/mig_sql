@@ -17,22 +17,22 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # URLs in Configuration Files  (SSRS Configuration Manager)
-  [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] stores application settings in a RSReportServer.config file. Within this file, there are configuration settings for both URLs and URL reservations. These configuration settings have very different purposes and rules for modification. If you are accustomed to modifying configuration files to tune a deployment, this topic can help you understand how each URL setting is used.  
+  [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] stores application settings in a RSReportServer.config file. Within this file, there are configuration settings for both URLs and URL reservations. These configuration settings have very different purposes and rules for modification. If you are accustomed to modifying configuration files to tune a deployment, this topic can help you understand how each URL setting is used.  
   
 ## URL Settings in RSReportServer.config File  
- [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] stores URLs for application and report access, and to connect Web front-end components to a back-end report server.  
+ [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] stores URLs for application and report access, and to connect Web front-end components to a back-end report server.  
   
 #### URLs for Application Access  
  URLs are used to access the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../../reporting-services/includes/ssrswebportal.md)]. To configure the URLs, you must use the Reporting Services Configuration tool. The tool creates the URL reservations for each application in HTTP.SYS and adds entries for the URLs in the **URLReservations** section of RSReportServer.config.  
   
--   To view descriptions of each element in the **URLReservations** section, see [RsReportServer.config Configuration File](../../../reporting-services/report-server/rsreportserver.config-configuration-file.md) in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Books Online.  
+-   To view descriptions of each element in the **URLReservations** section, see [RsReportServer.config Configuration File](../../../reporting-services/report-server/rsreportserver.config-configuration-file.md) in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Books Online.  
   
 -   For more information about the syntax of just the **UrlString** element, see [URL Reservation Syntax  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/url-reservation-syntax-ssrs-configuration-manager.md).  
   
 -   For instructions on how to configure URLs for application access, see [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/configure-a-url-ssrs-configuration-manager.md).  
   
 #### URLs for Report Access  
- [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] includes a report server e-mail delivery extension that you can use to send report links or attachments. A report link is constructed when the report is delivered. The report server e-mail delivery extension uses the **UrlRoot** setting in the configuration file to create the link. **UrlRoot** is also used to resolve links in a rendered report that is generated through unattended report processing.  
+ [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] includes a report server e-mail delivery extension that you can use to send report links or attachments. A report link is constructed when the report is delivered. The report server e-mail delivery extension uses the **UrlRoot** setting in the configuration file to create the link. **UrlRoot** is also used to resolve links in a rendered report that is generated through unattended report processing.  
   
  **UrlRoot** is specified automatically in the RSReportServer.config file when you configure URLs for application access. If you modify this value in the configuration file, you must specify a valid URL address to a Report Server Web service that is connected to a report server database that contains the reports you want to deliver. You can only specify one **UrlRoot** for a single report server instance; only one **UrlRoot** entry can exist in the RSReportServer.config file for any given report server instance. If you have multiple URLs reserved for the Report Server Web service, you must choose one of the available values for **UrlRoot**.  
   
@@ -46,9 +46,9 @@ manager: "erikre"
 -   **ReportServerExternalUrl** (used by Web Parts)  
   
 > [!NOTE]  
->  Previous versions of Reporting Services included the **ReportServerVirtualDirectory** element. This value is obsolete in [!INCLUDE[ssKatmai](../../../analysis-services/data-mining/includes/sskatmai-md.md)] and later versions. If you upgraded an existing installation and are using a configuration file that contains this setting, the report server no longer reads this value.  
+>  Previous versions of Reporting Services included the **ReportServerVirtualDirectory** element. This value is obsolete in [!INCLUDE[ssKatmai](../../../a9notintoc/includes/sskatmai-md.md)] and later versions. If you upgraded an existing installation and are using a configuration file that contains this setting, the report server no longer reads this value.  
   
- The following table provides a summary of all the URLs that can be specified in a [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] configuration file.  
+ The following table provides a summary of all the URLs that can be specified in a [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] configuration file.  
   
 |Setting|Usage|Description|  
 |-------------|-----------|-----------------|  

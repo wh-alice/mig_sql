@@ -15,7 +15,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Export a Knowledge Base to a .dqs File
-  This topic describes how to export an entire knowledge base to a .dqs data file in [!INCLUDE[ssDQSnoversion](../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS). You can export a domain or an entire knowledge base to a data file. For information about exporting a domain, see [Export a Domain to a .dqs File](../data-quality-services/export-a-domain-to-a-.dqs-file.md).  
+  This topic describes how to export an entire knowledge base to a .dqs data file in [!INCLUDE[ssDQSnoversion](../a9retired/includes/ssdqsnoversion-md.md)] (DQS). You can export a domain or an entire knowledge base to a data file. For information about exporting a domain, see [Export a Domain to a .dqs File](../data-quality-services/export-a-domain-to-a-.dqs-file.md).  
   
  Exporting a knowledge base to a .dqs file, and then importing it as another knowledge base simplifies the knowledge generation process, saving time and effort. It enables you to share a knowledge base and its knowledge with others. The .dqs file will contain all knowledge base information, including domains and the matching policy, except for the attached reference data information. You must attach the required domains to appropriate reference data services again, if required, after importing the .dqs file. Both published and unpublished data in a knowledge base is exported.  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssDQSInitialStep](../data-quality-services/includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] home screen, open a knowledge base in the Domain Management activity.  
+2.  In the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] home screen, open a knowledge base in the Domain Management activity.  
   
 3.  In the Domain Management page (with any tab selected), click the **Export Knowledge Base data** icon above the Domain list, and then click **Export Knowledge Base**. Alternatively, you can also right-click in the **Domain** list, hover over **Export**, and then click **Export Knowledge Base**.  
   

@@ -24,7 +24,7 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # CREATE EXTERNAL DATA SOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
 
   Creates an external data source for PolyBase, Elastic Database queries, or Azure Blob storage. Depending on the scenario, the syntax differs significantly. A data source created for PolyBase cannot be used for Elastic Database queries.  Similarly, a data source created for Elastic Database queries cannot be used for PolyBase, etc. 
   
@@ -33,11 +33,11 @@ manager: "jhubbard"
   
  For PolyBase scenarios, the external data source is either a Hadoop File System (HDFS), an Azure storage blob container, or Azure Data Lake Store. For more information, see [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
   
- For Elastic Database query scenarios, the external source is either a shard map manager (on Azure SQL Database), or a remote database (on Azure SQL Database).  Use [sp_execute_remote &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-execute-remote-azure-sql-database.md) after creating an external data source. For more information, see  [Elastic Database query](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
+ For Elastic Database query scenarios, the external source is either a shard map manager (on Azure SQL Database), or a remote database (on Azure SQL Database).  Use [sp_execute_remote &#40;Azure SQL Database&#41;](../../relational-databases/reference/system-stored-procedures/sp-execute-remote-azure-sql-database.md) after creating an external data source. For more information, see  [Elastic Database query](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
 
   The Azure Blob storage external data source supports `BULK INSERT` and `OPENROWSET` syntax, and is different than Azure Blob storage for PolyBase.
     
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -514,6 +514,6 @@ To see this example in use, see [BULK INSERT](../../t-sql/statements/bulk-insert
 [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
 [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
 [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
-[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys.external-data-sources-transact-sql.md)  
+[sys.external_data_sources (Transact-SQL)](../../relational-databases/reference/system-catalog-views/sys.external-data-sources-transact-sql.md)  
   
   

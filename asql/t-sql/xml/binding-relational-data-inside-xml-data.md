@@ -30,13 +30,13 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
  To bind the non-XML relational data inside XML, the SQL Server Database Engine provides the following pseudo-functions:  
   
--   [sql:column&#40;&#41; Function &#40;XQuery&#41;](../Topic/sql:column\(\)%20Function%20\(XQuery\).md) Lets you use the values from a relational column in your XQuery or XML DML expression.  
+-   [sql:column&#40;&#41; Function &#40;XQuery&#41;](../../xquery/xquery-extension-functions-sql-column.md) Lets you use the values from a relational column in your XQuery or XML DML expression.  
   
--   [sql:variable&#40;&#41; Function &#40;XQuery&#41;](../Topic/sql:variable\(\)%20Function%20\(XQuery\).md) . Lets you use the value of a SQL variable in your XQuery or XML DML expression.  
+-   [sql:variable&#40;&#41; Function &#40;XQuery&#41;](../../xquery/xquery-extension-functions-sql-variable.md) . Lets you use the value of a SQL variable in your XQuery or XML DML expression.  
   
  You can use these functions with **xml** data type methods whenever you want to expose a relational value inside XML.  
   

@@ -55,7 +55,7 @@ manager: "jhubbard"
         > [!CAUTION]  
         >  Selecting this option indicates that the relationship between the child and parent tables in a join filter is one to one or one to many. Only select this option if you have a constraint on the joining column in the parent table that guarantees uniqueness. If the option is set incorrectly, non-convergence of data can occur.  
   
-    -   [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] and later versions only. By default, merge replication processes changes on a row-by-row basis during synchronization. To have related changes processed as a unit, select **Logical record**. This option is available only if the article and publication requirements for using logical records are met. For more information, see the section "Considerations for Using Logical Records" in [Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
+    -   [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] and later versions only. By default, merge replication processes changes on a row-by-row basis during synchronization. To have related changes processed as a unit, select **Logical record**. This option is available only if the article and publication requirements for using logical records are met. For more information, see the section "Considerations for Using Logical Records" in [Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
  After you have added or edited a filter, click **OK** to save changes and close the dialog box. The filter you specified is parsed and run against the table in the SELECT clause. If the filter statement contains syntax errors or other problems, you will be notified and will be able to edit the filter statement.  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
  [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filter Published Data](../../relational-databases/replication/publish/filter-published-data.md)   
  [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
- [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md)   
+ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

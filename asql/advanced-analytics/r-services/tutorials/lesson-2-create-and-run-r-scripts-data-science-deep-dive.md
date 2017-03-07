@@ -20,7 +20,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 2: Create and Run R Scripts (Data Science Deep Dive)
-Now that you’ve set up your data sources and established one or several compute contexts, you’re ready to run some high-powered R scripts using [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  In this lesson, you'll use the server compute context to do some common machine learning tasks:  
+Now that you’ve set up your data sources and established one or several compute contexts, you’re ready to run some high-powered R scripts using [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  In this lesson, you'll use the server compute context to do some common machine learning tasks:  
   
 -   Visualize data and generate some summary statistics    
 -   Create a linear regression model    
@@ -36,7 +36,7 @@ Before you run any R code, you need to specify the *current* or *active* compute
     rxSetComputeContext(sqlCompute)   
     ```  
   
-    As soon as you run this statement, all subsequent computations will take place on the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer specified in the *sqlCompute* parameter.  
+    As soon as you run this statement, all subsequent computations will take place on the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] computer specified in the *sqlCompute* parameter.  
   
   
 2.  If you decide that you'd rather run the R code on your workstation, you can switch the compute context back to the local computer by using the  **local** keyword.  
@@ -64,7 +64,7 @@ To see how the compute context works, try generating some summary statistics usi
   
     ```  
   
-    The R language provides many summary functions, but *rxSummary* supports execution on various remote compute contexts, including  [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] .  For more information about similar functions, see [Data Summaries](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-data-summaries) in the [ScaleR reference](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
+    The R language provides many summary functions, but *rxSummary* supports execution on various remote compute contexts, including  [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] .  For more information about similar functions, see [Data Summaries](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-data-summaries) in the [ScaleR reference](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
   
 2.  When processing is done, you can print the contents of the *sumOut* variable to the console.  
   
@@ -73,7 +73,7 @@ To see how the compute context works, try generating some summary statistics usi
     ```  
   
     > [!NOTE]  
-    > Don't try to print the results before they have returned from the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer, or you might get an error.  
+    > Don't try to print the results before they have returned from the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] computer, or you might get an error.  
   
   
 **Results**  
@@ -97,7 +97,7 @@ To see how the compute context works, try generating some summary statistics usi
 ## Add Maximum and Minimum Values  
 Based on the computed summary statistics, you've discovered some useful information about the data that you want to put into the data source for use in further computations. For example, the minimum and maximum values can be used to compute histograms, so you decide to add the high and low values to the *RxSqlServerData* data source.  
   
-Fortunately [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)] includes optimized functions that can very efficiently convert integer data to categorical factor data.  
+Fortunately [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)] includes optimized functions that can very efficiently convert integer data to categorical factor data.  
   
 1.  Start by setting up some temporary variables.  
   
@@ -131,7 +131,7 @@ Fortunately [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/i
   
     ```  
   
-3.  Having updated the column collection, you can apply the following statement to create an updated version of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data source that you defined earlier.  
+3.  Having updated the column collection, you can apply the following statement to create an updated version of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data source that you defined earlier.  
   
     ```R  
     sqlFraudDS <- RxSqlServerData(  
@@ -149,10 +149,10 @@ These modifications affect only the data source object in R; no new data has bee
 > If you forget which compute context you're using, use `rxGetComputeContext()`.  If the return value is `RxLocalSeq Compute Context`, you're using the local compute context.
   
 ## Next Step  
-[Visualize SQL Server Data using R &#40;Data Science Deep Dive&#41;](../Topic/Visualize%20SQL%20Server%20Data%20using%20R%20(Data%20Science%20Deep%20Dive).md)  
+[Visualize SQL Server Data using R &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-2-1-visualize-sql-server-data-using-r.md)  
   
 ## Previous Step  
-[Define and Use Compute Contexts &#40;Data Science Deep Dive&#41;](../Topic/Define%20and%20Use%20Compute%20Contexts%20(Data%20Science%20Deep%20Dive).md)  
+[Define and Use Compute Contexts &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-1-3-define-and-use-compute-contexts.md)  
   
   
   

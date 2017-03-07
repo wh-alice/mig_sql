@@ -35,7 +35,7 @@ manager: "erikre"
  To create additional configurations, click **Configuration Manager** on the toolbar.  
   
  **Configuration Manager**  
- Manage configurations for the entire solution or to add additional configurations. For more information, see the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] documentation.  
+ Manage configurations for the entire solution or to add additional configurations. For more information, see the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] documentation.  
   
  **OutputPath**  
  Type or paste the path to store the report definition used in build verification, deployment, and preview of reports. The path must be different than the path that you use for the project and a relative path that is a child folder under the path of the project.  
@@ -53,7 +53,7 @@ manager: "erikre"
  Select **True** to overwrite the data source on the server with the data source in the project when the reports are published. Select **False** to leave the existing data source on the server.  
   
  **TargetServerVersion**  
- Select either the appropriate version of [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] or select **Detect Version** to automatically determine the version installed on the server identified by the **TargetServer URL** property. The default value is **[!INCLUDE[ssCurrent_md](../../advanced-analytics/r-services/includes/sscurrent-md.md)]**.  
+ Select either the appropriate version of [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] or select **Detect Version** to automatically determine the version installed on the server identified by the **TargetServer URL** property. The default value is **[!INCLUDE[ssCurrent_md](../../a9notintoc/includes/sscurrent-md.md)]**.  
   
  **TargetDataSourceFolder**  
  The name of the folder in which to store the published shared data sources. If you do not specify a folder, the data source is published to the same folder as the report. If the folder does not exist on the report server, Report Designer creates the folder when the reports are published.  
@@ -80,7 +80,7 @@ manager: "erikre"
 + `http:\\<servername>\<site>\<subsite>`.  
   
 ## See Also  
- [Publish Reports](../Topic/Publish%20Reports.md)   
+ [Publish Reports](../../a9retired/publish-reports.md)   
  [Publish a Report to a SharePoint Library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [Set Deployment Properties &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
  [Report Designer F1 Help](../../reporting-services/tools/report-designer-f1-help.md)  

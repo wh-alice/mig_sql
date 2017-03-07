@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Complete Database Restores (Full Recovery Model)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In a complete database restore, the goal is to restore the whole database. The whole database is offline for the duration of the restore. Before any part of the database can come online, all data is recovered to a consistent point in which all parts of the database are at the same point in time and no uncommitted transactions exist.  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
  When restoring a database, particularly under the full recovery model or bulk-logged recovery model, you should use a single restore sequence. A *restore sequence* consists of one or more restore operations that move data through one or more of the phases of restore.  
   
 > [!IMPORTANT]  
->  We recommend that you do not attach or restore databases from unknown or untrusted sources. These databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database on a nonproduction server and also examine the code, such as stored procedures or other user-defined code, in the database.  
+>  We recommend that you do not attach or restore databases from unknown or untrusted sources. These databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database on a nonproduction server and also examine the code, such as stored procedures or other user-defined code, in the database.  
   
  **In this Topic:**  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
 -   [Related Tasks](#RelatedTasks)  
   
 > [!NOTE]  
->  For information about support for backups from earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see the "Compatibility Support" section of [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+>  For information about support for backups from earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see the "Compatibility Support" section of [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 ##  <a name="PointOfFailure"></a> Restoring a Database to the Point of Failure  
  Typically, recovering a database to the point of failure involves the following basic steps:  
@@ -72,7 +72,7 @@ manager: "jhubbard"
 >  When you restore a database backup onto a different server instance, see [Copy Databases with Backup and Restore](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
 ###  <a name="TsqlSyntax"></a> Basic Transact-SQL RESTORE Syntax  
- The basic [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] syntax for the restore sequence in the preceding illustration is as follows:  
+ The basic [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] syntax for the restore sequence in the preceding illustration is as follows:  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
   
@@ -85,10 +85,10 @@ manager: "jhubbard"
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
 ###  <a name="ExampleToPoFTsql"></a> Example: Recovering to the Point of Failure (Transact-SQL)  
- The following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] example shows the essential options in a restore sequence that restores the database to the point of failure. The example creates a tail-log backup of the database. Next, the example restores a full database backup and log backup and then restores the tail-log backup. The example recovers the database in a separate, final step.  
+ The following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] example shows the essential options in a restore sequence that restores the database to the point of failure. The example creates a tail-log backup of the database. Next, the example restores a full database backup and log backup and then restores the tail-log backup. The example recovers the database in a separate, final step.  
   
 > [!NOTE]  
->  This example uses a database backup and log backup that is created in the "Using Database Backups Under the Full Recovery Model" section in [Full Database Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md). Before the database backup, the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] sample database was set to use the full recovery model.  
+>  This example uses a database backup and log backup that is created in the "Using Database Backups Under the Full Recovery Model" section in [Full Database Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md). Before the database backup, the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] sample database was set to use the full recovery model.  
   
 ```  
 USE master;  
@@ -175,10 +175,10 @@ GO
 -   [Recover to a Log Sequence Number &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)  
   
 ## See Also  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [Full Database Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   
  [Differential Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   

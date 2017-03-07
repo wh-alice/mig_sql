@@ -25,18 +25,18 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SETUSER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Allows a member of the **sysadmin** fixed server role or the owner of a database to impersonate another user.  
   
 > [!IMPORTANT]  
->  SETUSER is included for backward compatibility only. SETUSER may not be supported in a future release of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. We recommend that you use [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) instead.  
+>  SETUSER is included for backward compatibility only. SETUSER may not be supported in a future release of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. We recommend that you use [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) instead.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -47,7 +47,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
   
 ## Arguments  
  **'** *username* **'**  
- Is the name of a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or Windows user in the current database that is impersonated. When *username* is not specified, the original identity of the system administrator or database owner impersonating the user is reset.  
+ Is the name of a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] or Windows user in the current database that is impersonated. When *username* is not specified, the original identity of the system administrator or database owner impersonating the user is reset.  
   
  WITH NORESET  
  Specifies that subsequent SETUSER statements (with no specified *username*) should not reset the user identity to system administrator or database owner.  
@@ -55,7 +55,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
 ## Remarks  
  SETUSER can be used by a member of the **sysadmin** fixed server role or the owner of a database to adopt the identity of another user to test the permissions of the other user. Membership in the db_owner fixed database role is not sufficient.  
   
- Only use SETUSER with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] users. SETUSER is not supported with Windows users. When SETUSER has been used to assume the identity of another user, any objects that the impersonating user creates are owned by the user being impersonated. For example, if the database owner assumes the identity of user **Margaret** and creates a table called **orders**, the **orders** table is owned by **Margaret**, not the system administrator.  
+ Only use SETUSER with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] users. SETUSER is not supported with Windows users. When SETUSER has been used to assume the identity of another user, any objects that the impersonating user creates are owned by the user being impersonated. For example, if the database owner assumes the identity of user **Margaret** and creates a table called **orders**, the **orders** table is owned by **Margaret**, not the system administrator.  
   
  SETUSER remains in effect until another SETUSER statement is issued or until the current database is changed with the USE statement.  
   

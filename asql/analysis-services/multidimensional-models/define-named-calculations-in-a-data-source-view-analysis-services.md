@@ -56,7 +56,7 @@ FROM
   
 ## Add or Edit a Named Calculation  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the project or connect to the database that contains the data source view in which you wish to define a named calculation.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the project or connect to the database that contains the data source view in which you wish to define a named calculation.  
   
 2.  In Solution Explorer, expand the **Data Source Views** folder, then double-click the data source view.  
   

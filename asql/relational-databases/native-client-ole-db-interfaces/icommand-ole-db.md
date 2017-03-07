@@ -17,14 +17,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ICommand (OLE DB)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  This topic discusses OLE DB behavior that is specific to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client.  
+  This topic discusses OLE DB behavior that is specific to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client.  
   
 ## ICommand::Execute  
  Inserting data that is greater than the size of a column typically results in an error. However, there are situations where S_OK will be returned but the *dwStatus* will be set to DBSTATUS_S_TRUNCATED. This generally occurs when inserting data with parameters, where the column is not large enough to hold the data, and **ICommandWithParameters::SetParameterInfo** has not been called.  
   
 ## See Also  
- [Interfaces &#40;OLE DB&#41;](../Topic/Interfaces%20\(OLE%20DB\).md)  
+ [Interfaces &#40;OLE DB&#41;](../../a9retired/interfaces-ole-db.md)  
   
   

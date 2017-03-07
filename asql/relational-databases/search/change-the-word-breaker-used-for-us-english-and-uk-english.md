@@ -15,16 +15,16 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Change the Word Breaker Used for US English and UK English
-  [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] installs a new version (version 14.0.4999.1038) of the word breaker and stemmer for the English language, replacing the previous version of these components (version 12.0.6828.0). For information about the changed behavior of the new components, see [Behavior Changes to Full-Text Search](../Topic/Behavior%20Changes%20to%20Full-Text%20Search.md). This topic describes how to switch from the new version of these components to the previous version, or to switch back from the previous version to the new version. For cluster installations, these changes should be made on all the primary and passive nodes.  
+  [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] installs a new version (version 14.0.4999.1038) of the word breaker and stemmer for the English language, replacing the previous version of these components (version 12.0.6828.0). For information about the changed behavior of the new components, see [Behavior Changes to Full-Text Search](../../a9retired/behavior-changes-to-full-text-search.md). This topic describes how to switch from the new version of these components to the previous version, or to switch back from the previous version to the new version. For cluster installations, these changes should be made on all the primary and passive nodes.  
   
- Previous versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] used different word breakers represented by different CLSIDs for US English (LCID 1033) and UK English (LCID 2057). In this release, both LCIDs use the same components with the same CLSIDs, as shown in the following table:  
+ Previous versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] used different word breakers represented by different CLSIDs for US English (LCID 1033) and UK English (LCID 2057). In this release, both LCIDs use the same components with the same CLSIDs, as shown in the following table:  
   
 |LCID|Word breaker installed by previous versions<br /><br /> version 12.0.6828.0|Stemmer installed by previous versions|Word breaker installed by this version<br /><br /> version 14.0.4999.1038|Stemmer installed by this version|  
 |----------|-------------------------------------------------------------------------|--------------------------------------------|-----------------------------------------------------------------------|---------------------------------------|  
 |1033<br />(US English)|188D6CC5-CB03-4C01-912E-47D21295D77E|EEED4C20-7F1B-11CE-BE57-00AA0051FE20|9faed859-0b30-4434-ae65-412e14a16fb8|e1e5ef84-c4a6-4e50-8188-99aef3de2659|  
 |2057<br />(UK English)|173C97E2-AEBE-437C-9445-01B237ABF2F6|D99F7670-7F1A-11CE-BE57-00AA0051FE20|9faed859-0b30-4434-ae65-412e14a16fb8|e1e5ef84-c4a6-4e50-8188-99aef3de2659|  
   
- The components described in this topic are DLL files that are installed in the `MSSQL\Binn` folder for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. The full path is typically `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`.  
+ The components described in this topic are DLL files that are installed in the `MSSQL\Binn` folder for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. The full path is typically `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`.  
   
  For more information about word breakers and stemmers, see [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 5.  Update the **StemmerClass** key value to **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}**.  
   
-6.  Restart [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+6.  Restart [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 #### To switch from the current version of the UK English word breaker to the previous version  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
 5.  Update the **StemmerClass** key value to **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}**.  
   
-6.  Restart [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+6.  Restart [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## Switching back from the previous English word breakers to the current English word breaker  
   
@@ -96,7 +96,7 @@ manager: "jhubbard"
   
 5.  Update the **StemmerClass** key value to **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}**.  
   
-6.  Restart [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+6.  Restart [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 #### To switch back from the previous version of the UK English word breaker to the current version  
   
@@ -118,10 +118,10 @@ manager: "jhubbard"
   
 5.  Update the **StemmerClass** key value to **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}**.  
   
-6.  Restart [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+6.  Restart [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## See Also  
  [Revert the Word Breakers Used by Search to the Previous Version](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [Behavior Changes to Full-Text Search](../Topic/Behavior%20Changes%20to%20Full-Text%20Search.md)  
+ [Behavior Changes to Full-Text Search](../../a9retired/behavior-changes-to-full-text-search.md)  
   
   

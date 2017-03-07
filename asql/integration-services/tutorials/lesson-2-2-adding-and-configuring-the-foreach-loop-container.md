@@ -32,7 +32,7 @@ The procedures in this task show you how to create and modify the Foreach Loop c
 After you have made these modifications to the package, when the package is run, the Foreach Loop Container will iterate through the collection of files in the Sample Data folder. Each time a file is found that matches the criteria, the Foreach Loop Container will populate the user-defined variable with the file name, map the user-defined variable to the **ConnectionString** property of the Sample Currency Data Flat File connection manager, and then run the data flow against that file. Therefore, in each iteration of the Foreach Loop the Data Flow task will consume a different flat file.  
   
 > [!NOTE]  
-> Because [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] separates control flow from data flow, any looping that you add to the control flow will not require modification to the data flow. Therefore, the data flow that you created in Lesson 1 does not have to be changed.  
+> Because [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] separates control flow from data flow, any looping that you add to the control flow will not require modification to the data flow. Therefore, the data flow that you created in Lesson 1 does not have to be changed.  
   
 ### To add a Foreach Loop container  
   
@@ -58,7 +58,7 @@ After you have made these modifications to the package, when the package is run,
   
 5.  In the **Browse for Folder** dialog box, locate the folder on your machine that contains the Currency_*.txt files.  
   
-    This sample data is included with the [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] lesson packages. To download the sample data and the lesson packages, do the following.  
+    This sample data is included with the [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] lesson packages. To download the sample data and the lesson packages, do the following.  
   
     1.  Navigate to [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=275027)  
   
@@ -88,11 +88,11 @@ After you have made these modifications to the package, when the package is run,
 -   Drag the **Extract Sample Currency Data** data flow task onto the Foreach Loop container now renamed **Foreach File in Folder**.  
   
 ## Next Lesson Task  
-[Step 3: Modifying the Flat File Connection Manager](../Topic/Step%203:%20Modifying%20the%20Flat%20File%20Connection%20Manager.md)  
+[Step 3: Modifying the Flat File Connection Manager](../../integration-services/tutorials/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## See Also  
-[Configure a Foreach Loop Container](../Topic/Configure%20a%20Foreach%20Loop%20Container.md)  
-[Use Variables in Packages](../Topic/Use%20Variables%20in%20Packages.md)  
+[Configure a Foreach Loop Container](../../a9retired/configure-a-foreach-loop-container.md)  
+[Use Variables in Packages](../../a9retired/use-variables-in-packages.md)  
   
   
   

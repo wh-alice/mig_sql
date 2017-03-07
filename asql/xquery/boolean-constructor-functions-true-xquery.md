@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Boolean Constructor Functions - true (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the xs:boolean value True. This is equivalent to `xs:boolean("1")`.  
   
@@ -88,6 +88,6 @@ go
 ```  
   
 ## See Also  
- [Boolean Constructor Functions &#40;XQuery&#41;](../Topic/Boolean%20Constructor%20Functions%20\(XQuery\).md)  
+ [Boolean Constructor Functions &#40;XQuery&#41;](../a9retired/boolean-constructor-functions-xquery.md)  
   
   

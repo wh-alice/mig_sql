@@ -29,13 +29,13 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # OPENROWSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Includes all connection information that is required to access remote data from an OLE DB data source. This method is an alternative to accessing tables in a linked server and is a one-time, ad hoc method of connecting and accessing remote data by using OLE DB. For more frequent references to OLE DB data sources, use linked servers instead. For more information, see [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md). The OPENROWSET function can be referenced in the FROM clause of a query as if it were a table name. The OPENROWSET function can also be referenced as the target table of an INSERT, UPDATE, or DELETE statement, subject to the capabilities of the OLE DB provider. Although the query might return multiple result sets, OPENROWSET returns only the first one.  
   
  OPENROWSET also supports bulk operations through a built-in BULK provider that enables data from a file to be read and returned as a rowset.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -84,7 +84,7 @@ OPENROWSET
  Is a string constant that is the user password to be passed to the OLE DB provider. *password* is passed in as the DBPROP_AUTH_PASSWORD property when initializing the provider. *password* cannot be a Microsoft Windows  password.  
   
  '*provider_string*'  
- Is a provider-specific connection string that is passed in as the DBPROP_INIT_PROVIDERSTRING property to initialize the OLE DB provider. *provider_string* typically encapsulates all the connection information required to initialize the provider. For a list of keywords that are recognized by the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider, see [Initialization and Authorization Properties](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Is a provider-specific connection string that is passed in as the DBPROP_INIT_PROVIDERSTRING property to initialize the OLE DB provider. *provider_string* typically encapsulates all the connection information required to initialize the provider. For a list of keywords that are recognized by the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider, see [Initialization and Authorization Properties](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
  *catalog*  
  Is the name of the catalog or database in which the specified object resides.  
@@ -96,10 +96,10 @@ OPENROWSET
  Is the object name that uniquely identifies the object to work with.  
   
  '*query*'  
- Is a string constant sent to and executed by the provider. The local instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not process this query, but processes query results returned by the provider, a pass-through query. Pass-through queries are useful when used on providers that do not make available their tabular data through table names, but only through a command language. Pass-through queries are supported on the remote server, as long as the query provider supports the OLE DB Command object and its mandatory interfaces. For more information, see [SQL Server Native Client &#40;OLE DB&#41; Reference](../Topic/SQL%20Server%20Native%20Client%20\(OLE%20DB\)%20Reference.md).  
+ Is a string constant sent to and executed by the provider. The local instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not process this query, but processes query results returned by the provider, a pass-through query. Pass-through queries are useful when used on providers that do not make available their tabular data through table names, but only through a command language. Pass-through queries are supported on the remote server, as long as the query provider supports the OLE DB Command object and its mandatory interfaces. For more information, see [SQL Server Native Client &#40;OLE DB&#41; Reference](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md).  
   
  BULK  
- Uses the BULK rowset provider for OPENROWSET to read data from a file. In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], OPENROWSET can read from a data file without loading the data into a target table. This lets you use OPENROWSET with a simple SELECT statement.  
+ Uses the BULK rowset provider for OPENROWSET to read data from a file. In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], OPENROWSET can read from a data file without loading the data into a target table. This lets you use OPENROWSET with a simple SELECT statement.  
   
  The arguments of the BULK option allow for significant control over where to start and end reading data, how to deal with errors, and how data is interpreted. For example, you can specify that the data file be read as a single-row, single-column rowset of type **varbinary**, **varchar**, or **nvarchar**. The default behavior is described in the argument descriptions that follow.  
   
@@ -126,10 +126,10 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../advanced-analytics/r-services/includ
   
 |CODEPAGE value|Description|  
 |--------------------|-----------------|  
-|ACP|Converts columns of **char**, **varchar**, or **text** data type from the ANSI/[!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows code page (ISO 1252) to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] code page.|  
-|OEM (default)|Converts columns of **char**, **varchar**, or **text** data type from the system OEM code page to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] code page.|  
+|ACP|Converts columns of **char**, **varchar**, or **text** data type from the ANSI/[!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows code page (ISO 1252) to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] code page.|  
+|OEM (default)|Converts columns of **char**, **varchar**, or **text** data type from the system OEM code page to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] code page.|  
 |RAW|No conversion occurs from one code page to another. This is the fastest option.|  
-|*code_page*|Indicates the source code page on which the character data in the data file is encoded; for example, 850.<br /><br /> **\*\* Important \*\*** Versions prior to [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] do not support code page 65001 (UTF-8 encoding).|  
+|*code_page*|Indicates the source code page on which the character data in the data file is encoded; for example, 850.<br /><br /> **\*\* Important \*\*** Versions prior to [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] do not support code page 65001 (UTF-8 encoding).|  
   
  ERRORFILE ='*file_name*'  
  Specifies the file used to collect rows that have formatting errors and cannot be converted to an OLE DB rowset. These rows are copied into this error file from the data file "as is."  
@@ -199,7 +199,7 @@ FORMAT **=** 'CSV'
 Specifies a comma separated values file compliant to the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
 
  FORMATFILE ='*format_file_path*'  
- Specifies the full path of a format file. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports two types of format files: XML and non-XML.  
+ Specifies the full path of a format file. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports two types of format files: XML and non-XML.  
   
  A format file is required to define column types in the result set. The only exception is when SINGLE_CLOB, SINGLE_BLOB, or SINGLE_NCLOB is specified; in which case, the format file is not required.  
   
@@ -218,14 +218,14 @@ Specifies a character that will be used as the quote character in the CSV file. 
   
  When accessing remote OLE DB data sources, the login identity of trusted connections is not automatically delegated from the server on which the client is connected to the server that is being queried. Authentication delegation must be configured.  
   
- Catalog and schema names are required if the OLE DB provider supports multiple catalogs and schemas in the specified data source. Values for *catalog* and *schema* can be omitted when the OLE DB provider does not support them. If the provider supports only schema names, a two-part name of the form *schema***.***object* must be specified. If the provider supports only catalog names, a three-part name of the form *catalog***.***schema***.***object* must be specified. Three-part names must be specified for pass-through queries that use the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider. For more information, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md).  
+ Catalog and schema names are required if the OLE DB provider supports multiple catalogs and schemas in the specified data source. Values for *catalog* and *schema* can be omitted when the OLE DB provider does not support them. If the provider supports only schema names, a two-part name of the form *schema***.***object* must be specified. If the provider supports only catalog names, a three-part name of the form *catalog***.***schema***.***object* must be specified. Three-part names must be specified for pass-through queries that use the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider. For more information, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  OPENROWSET does not accept variables for its arguments.  
   
  Any call to OPENDATASOURCE, OPENQUERY, or OPENROWSET in the FROM clause is evaluated separately and independently from any call to these functions used as the target of the update, even if identical arguments are supplied to the two calls. In particular, filter or join conditions applied on the result of one of those calls have no effect on the results of the other.  
   
 ## Using OPENROWSET with the BULK Option  
- The following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] enhancements support the OPENROWSET(BULK...) function:  
+ The following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] enhancements support the OPENROWSET(BULK...) function:  
   
 -   A FROM clause that is used with SELECT can call OPENROWSET(BULK...) instead of a table name, with full SELECT functionality.  
   
@@ -241,14 +241,14 @@ Specifies a character that will be used as the quote character in the CSV file. 
   
 -   A SELECT...FROM OPENROWSET(BULK...) statement queries the data in a file directly, without importing the data into a table. SELECT…FROM OPENROWSET(BULK...) statements can also list bulk-column aliases by using a format file to specify column names, and also data types.  
   
--   Using OPENROWSET(BULK...) as a source table in an INSERT or MERGE statement bulk imports data from a data file into a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table. For more information, see [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk...-sql-server.md) .  
+-   Using OPENROWSET(BULK...) as a source table in an INSERT or MERGE statement bulk imports data from a data file into a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] table. For more information, see [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk...-sql-server.md) .  
   
--   When the OPENROWSET BULK option is used with an INSERT statement, the BULK clause supports table hints. In addition to the regular table hints, such as TABLOCK, the BULK clause can accept the following specialized table hints: IGNORE_CONSTRAINTS (ignores only the CHECK and FOREIGN KEY constraints), IGNORE_TRIGGERS, KEEPDEFAULTS, and KEEPIDENTITY. For more information, see [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+-   When the OPENROWSET BULK option is used with an INSERT statement, the BULK clause supports table hints. In addition to the regular table hints, such as TABLOCK, the BULK clause can accept the following specialized table hints: IGNORE_CONSTRAINTS (ignores only the CHECK and FOREIGN KEY constraints), IGNORE_TRIGGERS, KEEPDEFAULTS, and KEEPIDENTITY. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  For information about how to use INSERT...SELECT * FROM OPENROWSET(BULK...) statements, see [Bulk Import and Export of Data &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md). For information about when row-insert operations that are performed by bulk import are logged in the transaction log, see [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 > [!NOTE]  
->  When you use OPENROWSET, it is important to understand how [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] handles impersonation. For information about security considerations, see [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk...-sql-server.md).  
+>  When you use OPENROWSET, it is important to understand how [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] handles impersonation. For information about security considerations, see [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk...-sql-server.md).  
   
 ### Bulk Importing SQLCHAR, SQLNCHAR or SQLBINARY Data  
  OPENROWSET(BULK...) assumes that, if not specified, the maximum length of SQLCHAR, SQLNCHAR or SQLBINARY data does not exceed 8000 bytes. If the data being imported is in a LOB data field that contains any **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** objects that exceed 8000 bytes, you must use an XML format file that defines the maximum length for the data field. To specify the maximum length, edit the format file and declare the MAX_LENGTH attribute.  
@@ -271,7 +271,7 @@ Specifies a character that will be used as the quote character in the CSV file. 
 ## Examples  
   
 ### A. Using OPENROWSET with SELECT and the SQL Server Native Client OLE DB Provider  
- The following example uses the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider to access the `HumanResources.Department` table in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database on the remote server `Seattle1`. (Use SQLNCLI and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will redirect to the latest version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB Provider.) A `SELECT` statement is used to define the row set returned. The provider string contains the `Server` and `Trusted_Connection` keywords. These keywords are recognized by the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider.  
+ The following example uses the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider to access the `HumanResources.Department` table in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database on the remote server `Seattle1`. (Use SQLNCLI and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will redirect to the latest version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB Provider.) A `SELECT` statement is used to define the row set returned. The provider string contains the `Server` and `Trusted_Connection` keywords. These keywords are recognized by the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider.  
   
 ```tsql  
 SELECT a.*  
@@ -282,7 +282,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
 ```  
   
 ### B. Using the Microsoft OLE DB Provider for Jet  
- The following example accesses the `Customers` table in the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Access `Northwind` database through the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] OLE DB Provider for Jet.  
+ The following example accesses the `Customers` table in the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Access `Northwind` database through the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] OLE DB Provider for Jet.  
   
 > [!NOTE]  
 >  This example assumes that Access is installed. To run this example, you must install the Northwind database.  
@@ -296,7 +296,7 @@ GO
 ```  
   
 ### C. Using OPENROWSET and another table in an INNER JOIN  
- The following example selects all data from the `Customers` table from the local instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] `Northwind` database and from the `Orders` table from the Access `Northwind` database stored on the same computer.  
+ The following example selects all data from the `Customers` table from the local instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] `Northwind` database and from the `Orders` table from the Access `Northwind` database stored on the same computer.  
   
 > [!NOTE]  
 >  This example assumes that Access is installed. To run this example, you must install the Northwind database.  
@@ -421,8 +421,8 @@ For complete `OPENROWSET` examples including configuring the credential and exte
  [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [Rowset Functions &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

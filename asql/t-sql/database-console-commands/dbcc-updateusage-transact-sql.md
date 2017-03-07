@@ -38,11 +38,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # DBCC UPDATEUSAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Reports and corrects pages and row count inaccuracies in the catalog views. These inaccuracies may cause incorrect space usage reports returned by the sp_spaceused system stored procedure.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -104,7 +104,7 @@ GO
 ```  
   
 ### B. Updating page or row counts or both for AdventureWorks, and suppressing informational messages  
- The following example specifies [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] as the database name and suppresses all informational messages.  
+ The following example specifies [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] as the database name and suppresses all informational messages.  
   
 ```  
   
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### C. Updating page or row counts or both for the Employee table  
- The following example reports updated page or row count information for the `Employee` table in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+ The following example reports updated page or row count information for the `Employee` table in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database.  
   
 ```  
   
@@ -132,7 +132,7 @@ GO
   
 ## See Also  
  [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
- [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
+ [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
   
   

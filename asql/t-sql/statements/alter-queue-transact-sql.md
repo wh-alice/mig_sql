@@ -28,11 +28,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ALTER QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Changes the properties of a queue.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -110,30 +110,30 @@ WITH
  REBUILD [ WITH <queue_rebuild_options> ]  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Rebuilds all indexes on the queue internal table. Use this capability when you are experiencing fragmentation problems due to high load. MAXDOP is the only supported queue rebuild option. REBUILD is always an offline operation.  
   
  REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Reorganize all indexes on the queue internal table.   
 Unlike REORGANIZE on user tables, REORGANIZE on a queue is always performed as an offline operation because page level locks are explicitly disabled on queues.  
   
 > [!TIP]  
->  For general guidance  regarding index fragmentation, when fragmentation is between 5% and 30%, reorganize the index. When fragmentation is above 30%, rebuild the index. However, these numbers are only for general guidance as a starting point for your environment. To determine the amount of index  fragmentation, use [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md) - see example G in that article for examples.  
+>  For general guidance  regarding index fragmentation, when fragmentation is between 5% and 30%, reorganize the index. When fragmentation is above 30%, rebuild the index. However, these numbers are only for general guidance as a starting point for your environment. To determine the amount of index  fragmentation, use [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md) - see example G in that article for examples.  
   
  MOVE TO { *file_group* | "default" }  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Moves the queue internal table (with its indexes) to a user-specified filegroup.  The new filegroup  must not be read-only.  
   
  PROCEDURE_NAME = \<procedure>  
- Specifies the name of the stored procedure to activate when the queue contains messages to be processed. This value must be a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] identifier.  
+ Specifies the name of the stored procedure to activate when the queue contains messages to be processed. This value must be a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] identifier.  
   
  *database_name* (procedure)  
  Is the name of the database that contains the stored procedure.  
@@ -148,13 +148,13 @@ Unlike REORGANIZE on user tables, REORGANIZE on a queue is always performed as a
  Specifies the maximum number of instances of the activation stored procedure that the queue starts simultaneously. The value of *max_readers* must be a number between 0 and 32767.  
   
  EXECUTE AS  
- Specifies the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database user account under which the activation stored procedure runs. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] must be able to check the permissions for this user at the time that the queue activates the stored procedure. For Windows domain user, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] must be connected to the domain and able to validate the permissions of the specified user when the procedure is activated or activation fails. For a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] user, the server can always check permissions.  
+ Specifies the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database user account under which the activation stored procedure runs. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] must be able to check the permissions for this user at the time that the queue activates the stored procedure. For Windows domain user, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] must be connected to the domain and able to validate the permissions of the specified user when the procedure is activated or activation fails. For a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] user, the server can always check permissions.  
   
  SELF  
  Specifies that the stored procedure executes as the current user. (The database principal executing this ALTER QUEUE statement.)  
   
  '*user_name*'  
- Is the name of the user that the stored procedure executes as. *user_name* must be a valid [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] user specified as a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] identifier. The current user must have IMPERSONATE permission for the *user_name* specified.  
+ Is the name of the user that the stored procedure executes as. *user_name* must be a valid [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] user specified as a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] identifier. The current user must have IMPERSONATE permission for the *user_name* specified.  
   
  OWNER  
  Specifies that the stored procedure executes as the owner of the queue.  
@@ -174,9 +174,9 @@ Unlike REORGANIZE on user tables, REORGANIZE on a queue is always performed as a
   
  [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] checks the maximum number of queue readers for a queue as part of the activation process. Therefore, altering a queue to increase the maximum number of queue readers allows [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] to immediately start more instances of the activation stored procedure. Altering a queue to decrease the maximum number of queue readers does not affect instances of the activation stored procedure currently running. However, [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] does not start a new instance of the stored procedure until the number of instances for the activation stored procedure falls below the configured maximum number.  
   
- When a queue is unavailable, [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] holds messages for services that use the queue in the transmission queue for the database. The [sys.transmission_queue](../../relational-databases/system-catalog-views/sys.transmission-queue-transact-sql.md) catalog view provides a view of the transmission queue.  
+ When a queue is unavailable, [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] holds messages for services that use the queue in the transmission queue for the database. The [sys.transmission_queue](../../relational-databases/reference/system-catalog-views/sys.transmission-queue-transact-sql.md) catalog view provides a view of the transmission queue.  
   
- If a RECEIVE statement or a GET CONVERSATION GROUP statement specifies an unavailable queue, that statement fails with a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] error.  
+ If a RECEIVE statement or a GET CONVERSATION GROUP statement specifies an unavailable queue, that statement fails with a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] error.  
   
 ## Permissions  
  Permission for altering a queue defaults to the owner of the queue, members of the db_ddladmin or db_owner fixed database roles, and members of the sysadmin fixed server role.  
@@ -235,7 +235,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  The following example rebuilds queue indexes'  
   
@@ -247,7 +247,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  The following example reorganizes queue indexes  
   
@@ -259,7 +259,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   
@@ -269,6 +269,6 @@ ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md)  
+ [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md)  
   
   

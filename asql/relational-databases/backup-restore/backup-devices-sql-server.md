@@ -30,7 +30,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Backup Devices (SQL Server)
-  During a backup operation on a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database, the backed up data (the *backup*) is written to a physical backup device. This physical backup device is initialized when the first backup in a media set is written to it. Backups on a set of one or more backup devices compose a single media set.  
+  During a backup operation on a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database, the backed up data (the *backup*) is written to a physical backup device. This physical backup device is initialized when the first backup in a media set is written to it. Backups on a set of one or more backup devices compose a single media set.  
    
 ##  <a name="TermsAndDefinitions"></a> Terms and definitions  
  backup disk  
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
  A disk backup device could be a simple disk device, such as an ATA drive. Alternatively, you could use a hot-swappable disk drive that would let you transparently replace a full disk on the drive with an empty disk. A backup disk can be a local disk on the server or a remote disk that is a shared network resource. For information about how to use a remote disk, see [Backing Up to a File on a Network Share](#NetworkShare), later in this topic.  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] management tools are very flexible at handling disk backup devices because they automatically generate a time-stamped name on the disk file.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] management tools are very flexible at handling disk backup devices because they automatically generate a time-stamped name on the disk file.  
   
 > **IMPORTANT!** We recommend that a backup disk be a different disk than the database data and log disks. This is necessary to make sure that you can access the backups if the data or log disk fails. 
 >
@@ -72,7 +72,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
- To specify a physical disk device in a [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) statement, the basic syntax is:  
+ To specify a physical disk device in a [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statement, the basic syntax is:  
   
  RESTORE { DATABASE | LOG } *database_name*  
   
@@ -89,7 +89,7 @@ RESTORE DATABASE AdventureWorks2012
 ##  <a name="BackupFileDiskPath"></a> Specify the disk backup file path 
  When you are specifying a backup file, you should enter its full path and file name. If you specify only the file name or a relative path when you are backing up to a file, the backup file is put in the default backup directory. The default backup directory is C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, where *n* is the number of the server instance. Therefore, for the default server instance, the default backup directory is: C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup.  
   
- To avoid ambiguity, especially in scripts, we recommend that you explicitly specify the path of the backup directory in every DISK clause. However, this is less important when you are using Query Editor. In that case, if you are sure that the backup file resides in the default backup directory, you can omit the path from a DISK clause. For example, the following `BACKUP` statement backs up the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database to the default backup directory.  
+ To avoid ambiguity, especially in scripts, we recommend that you explicitly specify the path of the backup directory in every DISK clause. However, this is less important when you are using Query Editor. In that case, if you are sure that the backup file resides in the default backup directory, you can omit the path from a DISK clause. For example, the following `BACKUP` statement backs up the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database to the default backup directory.  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -101,15 +101,15 @@ GO
   
    
 ###  <a name="NetworkShare"></a> Back up to a network share file  
- For [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to access a remote disk file, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service account must have access to the network share. This includes having the permissions needed for backup operations to write to the network share and for restore operations to read from it. The availability of network drives and permissions depends on the context is which [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service is running:  
+ For [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to access a remote disk file, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service account must have access to the network share. This includes having the permissions needed for backup operations to write to the network share and for restore operations to read from it. The availability of network drives and permissions depends on the context is which [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service is running:  
   
--   To back up to a network drive when [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running in a domain user account, the shared drive must be mapped as a network drive in the session where [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running. If you start Sqlservr.exe from command line, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] sees any network drives you have mapped in your login session.  
+-   To back up to a network drive when [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running in a domain user account, the shared drive must be mapped as a network drive in the session where [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running. If you start Sqlservr.exe from command line, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] sees any network drives you have mapped in your login session.  
   
--   When you run Sqlservr.exe as a service, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] runs in a separate session that has no relation to your login session. The session in which a service runs can have its own mapped drives, although it usually does not.  
+-   When you run Sqlservr.exe as a service, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] runs in a separate session that has no relation to your login session. The session in which a service runs can have its own mapped drives, although it usually does not.  
   
 -   You can connect with the network service account by using the computer account instead of a domain user. To enable backups from specific computers to a shared drive, grant access to the computer accounts. As long as the Sqlservr.exe process that is writing the backup has access, it is irrelevant whether the user sending the BACKUP command has access.  
   
-    > **IMPORTANT!** Backing up data over a network can be subject to network errors; therefore, we recommend that when you are using a remote disk you verify the backup operation after it finishes. For more information, see [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+    > **IMPORTANT!** Backing up data over a network can be subject to network errors; therefore, we recommend that when you are using a remote disk you verify the backup operation after it finishes. For more information, see [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
 ## Specify a Universal Naming Convention (UNC) name  
  To specify a network share in a backup or restore command, use the fully qualified universal naming convention (UNC) name of the file for the backup device. A UNC name has the form **\\\\***Systemname***\\***ShareName***\\***Path***\\***FileName*.  
@@ -125,17 +125,17 @@ GO
  
 ##  <a name="TapeDevices"></a> Using tape devices  
   
-> **NOTE:** Support for tape backup devices will be removed in a future version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
+> **NOTE:** Support for tape backup devices will be removed in a future version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
    
- Backing up [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data to tape requires that the tape drive or drives be supported by the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows operating system. Additionally, for the given tape drive, we recommend that you use only tapes recommended by the drive manufacturer. For more information about how to install a tape drive, see the documentation for the Windows operating system.  
+ Backing up [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data to tape requires that the tape drive or drives be supported by the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows operating system. Additionally, for the given tape drive, we recommend that you use only tapes recommended by the drive manufacturer. For more information about how to install a tape drive, see the documentation for the Windows operating system.  
   
- When a tape drive is used, a backup operation may fill one tape and continue onto another tape. Each tape contains a media header. The first media used is called the *initial tape*. Each successive tape is known as a *continuation tape* and has a media sequence number that is one higher than the previous tape. For example, a media set associated with four tape devices contains at least four initial tapes (and, if the database does not fit, four series of continuation tapes). When appending a backup set, you must mount the last tape in the series. If the last tape is not mounted, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] scans forward to the end of the mounted tape and then requires that you change the tape. At that point, mount the last tape.  
+ When a tape drive is used, a backup operation may fill one tape and continue onto another tape. Each tape contains a media header. The first media used is called the *initial tape*. Each successive tape is known as a *continuation tape* and has a media sequence number that is one higher than the previous tape. For example, a media set associated with four tape devices contains at least four initial tapes (and, if the database does not fit, four series of continuation tapes). When appending a backup set, you must mount the last tape in the series. If the last tape is not mounted, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] scans forward to the end of the mounted tape and then requires that you change the tape. At that point, mount the last tape.  
   
  Tape backup devices are used like disk devices, with the following exceptions:  
   
--   The tape device must be connected physically to the computer that is running an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Backing up to remote tape devices is not supported.  
+-   The tape device must be connected physically to the computer that is running an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Backing up to remote tape devices is not supported.  
   
--   If a tape backup device is filled during the backup operation, but more data still must be written, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] prompts for a new tape and continues the backup operation after a new tape is loaded.  
+-   If a tape backup device is filled during the backup operation, but more data still must be written, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] prompts for a new tape and continues the backup operation after a new tape is loaded.  
   
 ##  <a name="BackupTapeUsingPhysicalName"></a> Specify a backup tape using its physical name (Transact-SQL)  
  The basic [BACKUP](../../t-sql/statements/backup-transact-sql.md) syntax for specifying a backup tape using the physical device name of the tape drive is:  
@@ -152,7 +152,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
- To specify a physical tape device in a [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) statement, the basic syntax is:  
+ To specify a physical tape device in a [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statement, the basic syntax is:  
   
  RESTORE { DATABASE | LOG } *database_name*  
   
@@ -167,14 +167,14 @@ GO
   
 -   { **REWIND** | NOREWIND }  
   
-     You can control whether [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] keeps the tape remains open after the backup or restore operation or releases and rewinds the tape after it fills. The default behavior is to rewind the tape (REWIND).  
+     You can control whether [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] keeps the tape remains open after the backup or restore operation or releases and rewinds the tape after it fills. The default behavior is to rewind the tape (REWIND).  
   
-> **NOTE:** For more information about the BACKUP syntax and arguments, see [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). For more information about the RESTORE syntax and arguments, see [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) and [RESTORE Arguments &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md), respectively.  
+> **NOTE:** For more information about the BACKUP syntax and arguments, see [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). For more information about the RESTORE syntax and arguments, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) and [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md), respectively.  
   
 ###  <a name="OpenTapes"></a> Managing open tapes  
- To view a list of open tape devices and the status of mount requests, query the [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys.dm-io-backup-tapes-transact-sql.md) dynamic management view. This view shows all the open tapes. These include in-use tapes that are temporarily idle while they wait for the next BACKUP or RESTORE operation.  
+ To view a list of open tape devices and the status of mount requests, query the [sys.dm_io_backup_tapes](../../relational-databases/reference/system-dynamic-management-views/sys.dm-io-backup-tapes-transact-sql.md) dynamic management view. This view shows all the open tapes. These include in-use tapes that are temporarily idle while they wait for the next BACKUP or RESTORE operation.  
   
- If a tape has been accidentally left open, the fastest way to release the tape is by using the following command: RESTORE REWINDONLY FROM TAPE **=***backup_device_name*. For more information, see [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20REWINDONLY%20\(Transact-SQL\).md).  
+ If a tape has been accidentally left open, the fastest way to release the tape is by using the following command: RESTORE REWINDONLY FROM TAPE **=***backup_device_name*. For more information, see [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
   
   
 ## Using the Windows Azure Blob Storage service  
@@ -185,7 +185,7 @@ GO
   
  Defining a logical backup device involves assigning a logical name to a physical device. For example, a logical device, AdventureWorksBackups, could be defined to point to the Z:\SQLServerBackups\AdventureWorks2012.bak file or the \\\\.\tape0 tape drive. Backup and restore commands can then specify AdventureWorksBackups as the backup device, instead of DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' or TAPE = '\\\\.\tape0'.  
   
- The logical device name must be unique among all the logical backup devices on the server instance. To view the existing logical device names, query the [sys.backup_devices](../../relational-databases/system-catalog-views/sys.backup-devices-transact-sql.md) catalog view. This view displays the name of each logical backup device and describes the type and physical file name or path of the corresponding physical backup device.  
+ The logical device name must be unique among all the logical backup devices on the server instance. To view the existing logical device names, query the [sys.backup_devices](../../relational-databases/reference/system-catalog-views/sys.backup-devices-transact-sql.md) catalog view. This view displays the name of each logical backup device and describes the type and physical file name or path of the corresponding physical backup device.  
   
  After a logical backup device is defined, in a BACKUP or RESTORE command, you can specify the logical backup device instead of the physical name of the device. For example, the following statement backs up the `AdventureWorks2012` database to the `AdventureWorksBackups` logical backup device.  
   
@@ -215,7 +215,7 @@ GO
 ##  <a name="Archiving"></a> Archive SQL Server backups  
  We recommend that you use a file system backup utility to archive the disk backups and that you store the archives off-site. Using disk has the advantage that you use the network to write the archived backups onto an off-site disk. The Windows Azure Blob storage service can be used as off-site archival option.  You can either upload your disk backups, or directly write the backups to the Windows Azure Blob storage service.  
   
- Another common archiving approach is to write [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backups onto a local backup disk, archive them to tape, and then store the tapes off-site.  
+ Another common archiving approach is to write [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] backups onto a local backup disk, archive them to tape, and then store the tapes off-site.  
 
   
 ##  <a name="RelatedTasks"></a> Related tasks  
@@ -229,7 +229,7 @@ GO
   
  **To define a logical backup device**  
   
--   [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)  
+-   [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addumpdevice-transact-sql.md)  
   
 -   [Define a Logical Backup Device for a Disk File &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
@@ -245,7 +245,7 @@ GO
   
 -   [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
--   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  **To View Information About Backup Devices**  
   
@@ -257,7 +257,7 @@ GO
   
  **To delete a logical backup device**  
   
--   [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)  
+-   [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-dropdevice-transact-sql.md)  
   
 -   [Delete a Backup Device &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)  
   
@@ -266,10 +266,10 @@ GO
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)   
- [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.backup-devices-transact-sql.md)   
- [sys.dm_io_backup_tapes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-io-backup-tapes-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   
+ [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.backup-devices-transact-sql.md)   
+ [sys.dm_io_backup_tapes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-io-backup-tapes-transact-sql.md)   
  [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)  
   
   

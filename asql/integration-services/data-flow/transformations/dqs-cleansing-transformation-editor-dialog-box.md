@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 ##  <a name="open"></a> Open the DQS Cleansing Transformation Editor  
   
-1.  Add the DQS Cleansing Transformation to [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package, in [!INCLUDE[ssBIDevStudioFull](../../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+1.  Add the DQS Cleansing Transformation to [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] package, in [!INCLUDE[ssBIDevStudioFull](../../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
 2.  Right-click the component and then click **Edit**.  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
  Select an existing DQS knowledge base for the connected data source. For more information about the DQS knowledge base, see [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Encrypt connection**  
- Specifiy whether to encrypt the connection, in order to encrypt the data transfer between the DQS Server and [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)].  
+ Specifiy whether to encrypt the connection, in order to encrypt the data transfer between the DQS Server and [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)].  
   
  **Available domains**  
  Lists the available domains for the selected knowledge base. There are two types of domains: single domains, and composite domains that contain two or more single domains.  
@@ -119,7 +119,7 @@ manager: "jhubbard"
   
  You can also open the **DQS Cleansing Connection Manager** dialog box from the connections area, by doing the following:  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../analysis-services/includes/ssbidevstudiofull-md.md)], open an existing [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project or create a new one.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../../a9notintoc/includes/ssbidevstudiofull-md.md)], open an existing [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] project or create a new one.  
   
 2.  Right-click in the connections area, click **New Connection**, and then click **DQS**.  
   

@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Create or Customize a Data Feed Library (Power Pivot for SharePoint)
-  A *data feed library* is a special-purpose SharePoint library that enables you to register and share Atom data service documents (.atomsvc). These documents provide XML data feeds to [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbooks or other client applications that support the Atom data feed format. A data feed library is different from other SharePoint libraries because it gives you the ability to:  
+  A *data feed library* is a special-purpose SharePoint library that enables you to register and share Atom data service documents (.atomsvc). These documents provide XML data feeds to [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbooks or other client applications that support the Atom data feed format. A data feed library is different from other SharePoint libraries because it gives you the ability to:  
   
 -   Create or edit a *data service document*, used to specify an HTTP connection to a specific feed.  
   
@@ -39,12 +39,12 @@ manager: "erikre"
  [Add the Data Feed Content Type to Any Library](#addtolib)  
   
 ##  <a name="prereq"></a> Prerequisites  
- [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] feature integration must be activated for the sites for which you are creating the data feed library. If the data feed library template type is not available, the most likely cause is that this prerequisite has not been met. For more information, see [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../Topic/Activate%20Power%20Pivot%20Feature%20Integration%20for%20Site%20Collections%20in%20Central%20Administration.md).  
+ [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] feature integration must be activated for the sites for which you are creating the data feed library. If the data feed library template type is not available, the most likely cause is that this prerequisite has not been met. For more information, see [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
  You must be a site owner to create the library.  
   
 ##  <a name="createlib"></a> Create a New Data Feed Library  
- Creating a data feed library is the first step to enabling data feeds for [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbooks. Because a data feed library provides application and management pages for data service documents, you must have this library in place before you can create a new document.  
+ Creating a data feed library is the first step to enabling data feeds for [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbooks. Because a data feed library provides application and management pages for data service documents, you must have this library in place before you can create a new document.  
   
  A data feed library is based on a built-in template and a preconfigured *data service document content type* that defines properties and behaviors for a data service document.  
   

@@ -18,7 +18,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Set or Change the Database Collation
-  This topic describes how set and change the database collation in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. If no collation is specified, the server collation is used.  
+  This topic describes how set and change the database collation in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. If no collation is specified, the server collation is used.  
   
  **In This Topic**  
   
@@ -42,11 +42,11 @@ manager: "jhubbard"
   
 -   Windows Unicode-only collations can only be used with the COLLATE clause to apply collations to the **nchar**, **nvarchar**, and **ntext** data types on column level and expression-level data. They cannot be used with the COLLATE clause to change the collation of a database or server instance.  
   
--   If the specified collation or the collation used by the referenced object uses a code page that is not supported by Windows, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] displays an error.  
+-   If the specified collation or the collation used by the referenced object uses a code page that is not supported by Windows, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] displays an error.  
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   You can find the supported collation names in [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) and [SQL Server Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md); or you can use the [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-helpcollations-transact-sql.md) system function.  
+-   You can find the supported collation names in [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) and [SQL Server Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md); or you can use the [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-helpcollations-transact-sql.md) system function.  
   
 -   When you change the database collation, you change the following:  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
 #### To set or change the database collation  
   
-1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)], expand that instance, and then expand **Databases**.  
+1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)], expand that instance, and then expand **Databases**.  
   
 2.  If you are creating a new database, right-click **Databases** and then click **New Database**. If you do not want the default collation, click the **Options** page, and select a collation from the **Collation** drop-down list.  
   
@@ -83,7 +83,7 @@ manager: "jhubbard"
   
 #### To set the database collation  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -109,7 +109,7 @@ GO
   
 #### To change the database collation  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -132,8 +132,8 @@ GO
   
 ## See Also  
  [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)   
- [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-helpcollations-transact-sql.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md)   
+ [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-helpcollations-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md)   
  [SQL Server Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)   
  [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)   
  [COLLATE &#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md)   

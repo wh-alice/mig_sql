@@ -18,9 +18,9 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Converting R Code for Use in R Services
-When you move R code from R Studio or another environment to SQL Server, often the code will work without further modification when added to the *@script* parameter of [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). This is particularly true if you have developed your solution using the ScaleR functions, making it relatively simple to change execution contexts.    
+When you move R code from R Studio or another environment to SQL Server, often the code will work without further modification when added to the *@script* parameter of [sp_execute_external_script](../../relational-databases/reference/system-stored-procedures/sp-execute-external-script-transact-sql.md). This is particularly true if you have developed your solution using the ScaleR functions, making it relatively simple to change execution contexts.    
     
-However, typically you will want to modify your R code to run in SQL Server, both to take advantage of the tighter integration with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and to avoid expensive transfer of data.   
+However, typically you will want to modify your R code to run in SQL Server, both to take advantage of the tighter integration with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], and to avoid expensive transfer of data.   
    
    
 ## Resources  
@@ -49,11 +49,11 @@ When you are working in [!INCLUDE[rsql_rtvs_md](../../advanced-analytics/r-servi
   
 + Make a note of dependencies, such as required packages, in advance. In a development and testing environment, it might be okay to install packages as part of your code, but this is a bad practice in a production environment. Notify the administrator so that packages can be installed and tested in advance of deploying your code.  
 + Make a checklist of possible data type issues. Document the schemas of the results expected in each section of the code.  
-+ Identify primary data sources such as model training data, or input data for predictions vs. secondary sources such as factors, additional grouping variables, and so forth. Map your largest dataset to the input parameter of [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
++ Identify primary data sources such as model training data, or input data for predictions vs. secondary sources such as factors, additional grouping variables, and so forth. Map your largest dataset to the input parameter of [sp_execute_external_script](../../relational-databases/reference/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
 + Change your input data statements to work directly in the database. Rather than moving data to a local CSV file, or making repeated ODBC calls, you'll get better performance by using SQL queries or views that can be run directly against the database, avoiding data movement.  
 + Use SQL Server query plans to identify tasks that can be performed in parallel. If the input query can be parallelized, set `@parallel=1` as part of your arguments to sp_execute_external_script. Parallel processing with this flag is typically possible any time that SQL Server can work with partitioned tables or distribute a query among multiple processes and aggregate the results at the end. 
    Parallel processing with this flag is typically not possible if you are training models using algorithms that require all data to be read, or if you need to create aggregates. 
-+ Where possible, replace conventional R functions with **ScaleR** functions that support distributed execution. For more information, see [Comparison of Functions in Scale R and CRAN R](Summary%20of%20rx%20Functions.md).
++ Where possible, replace conventional R functions with **ScaleR** functions that support distributed execution. For more information, see [Comparison of Functions in Scale R and CRAN R](../../a9retired/summary-of-rx-functions.md).
 + Review your R code to determine if there are steps that can be performed independently, or performed more efficiently, by using a separate stored procedure call. For example, you might decide to perform feature engineering or feature extraction separately and add the values in a new column. Use T-SQL  rather than R code for set-based computations. For one example of an R solution that compares performance of UDFs and R for feature engineering tasks, see this tutorial: [Data Science End-to-End Walkthrough](../../advanced-analytics/r-services/tutorials/data-science-end-to-end-walkthrough.md).  
   
     
@@ -61,7 +61,7 @@ When you are working in [!INCLUDE[rsql_rtvs_md](../../advanced-analytics/r-servi
  Keep in mind the following restrictions when converting your R code:    
    
 **Data types**    
--   All R data types are supported. However, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports a greater variety of data types than does R, so some implicit data type conversions are performed when sending [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data to R and vice versa. You might also need to explicitly cast or covert some data.    
+-   All R data types are supported. However, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports a greater variety of data types than does R, so some implicit data type conversions are performed when sending [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data to R and vice versa. You might also need to explicitly cast or covert some data.    
     
 - NULL values are supported. R uses the `na` data construct to represent missing values, which is similar to nulls.    
     
@@ -80,9 +80,9 @@ When you are working in [!INCLUDE[rsql_rtvs_md](../../advanced-analytics/r-servi
     
      An error will be raised if the input dataset does not contains columns with the matching names ArrDelay, CRSDepTime, DayOfWeek, CRSDepHour, and DayOfWeek.    
 
-+ You can also provide multiple scalar parameters as input. However, any variables that you pass in as parameters of the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) must be mapped to variables in the R code. By default, variables are mapped by name.
++ You can also provide multiple scalar parameters as input. However, any variables that you pass in as parameters of the stored procedure [sp_execute_external_script](../../relational-databases/reference/system-stored-procedures/sp-execute-external-script-transact-sql.md) must be mapped to variables in the R code. By default, variables are mapped by name.
 + To include scalar input variables in the output of the R code, just append the **OUTPUT** keyword when you define the variable.             
-+ In [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)], your R code is limited to outputting a single dataset as a data.frame object. However, you can also output multiple scalar outputs, including plots in binary format, and models in varbinary format.    
++ In [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)], your R code is limited to outputting a single dataset as a data.frame object. However, you can also output multiple scalar outputs, including plots in binary format, and models in varbinary format.    
     
 + You can usually output the dataset returned by the R script without having to specify names of the output columns, by using the WITH RESULT SETS UNDEFINED option. However, any variables in the R script that you want to output must be mapped to SQL output parameters.
     

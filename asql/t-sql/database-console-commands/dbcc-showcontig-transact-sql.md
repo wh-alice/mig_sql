@@ -29,18 +29,18 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # DBCC SHOWCONTIG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Displays fragmentation information for the data and indexes of the specified table or view.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../database-engine/availability-groups/windows/includes/ssnotedepfuturedontuse-md.md)] Use [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md) instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../database-engine/availability-groups/windows/includes/ssnotedepfuturedontuse-md.md)] Use [sys.dm_db_index_physical_stats](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md) instead.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -67,7 +67,7 @@ DBCC SHOWCONTIG
  Is the table or view to check for fragmentation information. If not specified, all tables and indexed views in the current database are checked. To obtain the table or view ID, use the [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) function.  
   
  *index_name* | *index_id*  
- Is the index to check for fragmentation information. If not specified, the statement processes the base index for the specified table or view. To obtain the index ID, use the [sys.indexes](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md) catalog view.  
+ Is the index to check for fragmentation information. If not specified, the statement processes the base index for the specified table or view. To obtain the index ID, use the [sys.indexes](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md) catalog view.  
   
  WITH  
  Specifies options for the type of information returned by the DBCC statement.  
@@ -163,7 +163,7 @@ DBCC SHOWCONTIG
   
 -   Spatial indexes are not supported by DBCC SHOWCONTIG.  
   
- All new features are fully supported by the [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md) dynamic management view.  
+ All new features are fully supported by the [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md) dynamic management view.  
   
 ## Table Fragmentation  
  DBCC SHOWCONTIG determines whether the table is heavily fragmented. Table fragmentation occurs through the process of data modifications (INSERT, UPDATE, and DELETE statements) made against the table. Because these modifications are not ordinarily distributed equally among the rows of the table, the fullness of each page can vary over time. For queries that scan part or all of a table, such table fragmentation can cause additional page reads. This hinders parallel scanning of data.  
@@ -219,7 +219,7 @@ GO
 ```  
   
 ### B. Using OBJECT_ID to obtain the table ID and sys.indexes to obtain the index ID  
- The following example uses `OBJECT`_`ID` and the `sys.indexes` catalog view to obtain the table ID and index ID for the `AK_Product_Name` index of the `Production.Product` table in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+ The following example uses `OBJECT`_`ID` and the `sys.indexes` catalog view to obtain the table ID and index ID for the `AK_Product_Name` index of the `Production.Product` table in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -235,7 +235,7 @@ GO
 ```  
   
 ### C. Displaying an abbreviated result set for a table  
- The following example returns an abbreviated result set for the `Product` table in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+ The following example returns an abbreviated result set for the `Product` table in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -245,7 +245,7 @@ GO
 ```  
   
 ### D. Displaying the full result set for every index on every table in a database  
- The following example returns a full table result set for every index on every table in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+ The following example returns a full table result set for every index on every table in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -366,8 +366,8 @@ GO
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md)   
+ [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md)   
  [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md)  
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md)  
   
   

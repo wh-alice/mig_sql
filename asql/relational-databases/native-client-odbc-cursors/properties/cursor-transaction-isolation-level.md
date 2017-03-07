@@ -21,11 +21,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Cursor Transaction Isolation Level
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
   The complete locking behavior of cursors is based on an interaction between concurrency attributes and the transaction isolation level set by the client. ODBC clients set the transaction isolation level using the [SQLSetConnectAttr](../../../relational-databases/extended-stored-procedures-reference/sqlsetconnectattr.md) SQL_ATTR_TXN_ISOLATION or SQL_COPT_SS_TXN_ISOLATION attributes. The locking behavior of a specific cursor environment is determined by combining the locking behaviors of the concurrency and transaction isolation level options.  
   
- The following cursor transaction isolation levels are supported by the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver:  
+ The following cursor transaction isolation levels are supported by the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver:  
   
 -   Read committed (SQL_TXN_READ_COMMITTED)  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 -   Snapshot (SQL_TXN_SS_SNAPSHOT)  
   
- Note that the ODBC API specifies additional transaction isolation levels, but these are not supported by [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver.  
+ Note that the ODBC API specifies additional transaction isolation levels, but these are not supported by [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] or the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver.  
   
 ## See Also  
  [Cursor Properties](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  

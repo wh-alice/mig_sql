@@ -15,12 +15,12 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Create a Standalone R Server
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup includes the option to install **Microsoft R Server (Standalone)**. This option lets you develop high performance R solutions on Windows. You can still connect to the database or data source of your choice, and use remote compute contexts. For example, you might use Microsoft R Server (Standalone) to develop an R solution that you run locally, but later decide to deploy it to an instance of SQL Server that is running SQL Server R Services, or run the solution using ScaleR on a Hadoop or Spark cluster. 
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] setup includes the option to install **Microsoft R Server (Standalone)**. This option lets you develop high performance R solutions on Windows. You can still connect to the database or data source of your choice, and use remote compute contexts. For example, you might use Microsoft R Server (Standalone) to develop an R solution that you run locally, but later decide to deploy it to an instance of SQL Server that is running SQL Server R Services, or run the solution using ScaleR on a Hadoop or Spark cluster. 
   
 > [!NOTE]
 > Microsoft R Server is available only in Enterprise Edition.  
   
- When you install Microsoft R Server, you get the same enhanced R packages and connectivity tools that are provided in [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)], but an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is not required and the execution of R scripts is performed using a separate set of the R binaries, not in database.  
+ When you install Microsoft R Server, you get the same enhanced R packages and connectivity tools that are provided in [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)], but an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is not required and the execution of R scripts is performed using a separate set of the R binaries, not in database.  
   
 Microsoft R Server is now also available through a simplified setup that enrolls the instance in the [Modern Lifecycle](https://support.microsoft.com/help/447912) policy. This support offering ensures that you are always using the most current version of R. For more information about using the new licensing plan and standalone Windows installer, see [Run Microsoft R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows).
 
@@ -58,7 +58,7 @@ If you have already installed Microsoft R Server (Standalone) you can upgrade th
 For more information about the changes in R Server, and where to get the installer, see [Run Microsoft R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows#howtoinstall).
   
 ## What is Installed and Where to Find R Packages  
- Microsoft R Server includes the R base packages and a set of enhanced R packages that support parallel processing, improved performance, and connectivity to data sources including [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and Hadoop.  
+ Microsoft R Server includes the R base packages and a set of enhanced R packages that support parallel processing, improved performance, and connectivity to data sources including [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and Hadoop.  
   
 -   **R  packages**  
   
@@ -80,7 +80,7 @@ For more information about the changes in R Server, and where to get the install
 > [!IMPORTANT]  
 >  If you have installed an instance of SQL Server with R Services (In-Database) on the same computer, the R libraries and tools are installed into a different folder:  `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES`  
 >   
->  Do not directly call the R packages or utilities associated with the [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. Always use the R tools and packages in the R_SERVER folder. 
+>  Do not directly call the R packages or utilities associated with the [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] instance. Always use the R tools and packages in the R_SERVER folder. 
  
 ## Troubleshooting  
 

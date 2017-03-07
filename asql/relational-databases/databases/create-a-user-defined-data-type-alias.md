@@ -20,7 +20,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create a User-Defined Data Type Alias
-  This topic describes how to create a new user-defined data type alias in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to create a new user-defined data type alias in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -103,13 +103,13 @@ manager: "jhubbard"
   
 6.  Check **Allow NULLs** if the new data type alias can permit NULL values.  
   
-7.  In the **Binding** area, complete the **Default** or **Rule** boxes if you want to bind a default or rule to the new data type alias. Defaults and rules cannot be created in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. Use [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. Example code for creating defaults and rules are available in Template Explorer.  
+7.  In the **Binding** area, complete the **Default** or **Rule** boxes if you want to bind a default or rule to the new data type alias. Defaults and rules cannot be created in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. Use [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. Example code for creating defaults and rules are available in Template Explorer.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To create a user-defined data type alias  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   

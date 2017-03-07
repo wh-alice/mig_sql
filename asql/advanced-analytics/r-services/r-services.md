@@ -16,15 +16,15 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # R Services
-  Microsoft R Services provides two server platforms for integrating the popular open source R language with business applications: **SQL Server R Services (In-Database)**, for integration with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and **Microsoft R Server**, for enterprise-level R deployments on Windows and Linux servers.  
+  Microsoft R Services provides two server platforms for integrating the popular open source R language with business applications: **SQL Server R Services (In-Database)**, for integration with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], and **Microsoft R Server**, for enterprise-level R deployments on Windows and Linux servers.  
   
 -   **R Services (In-Database)**  
   
-     The goal of [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] is to enable rapid development, deployment, and operationalization of R solutions based on the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] platform and related services.  
+     The goal of [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] is to enable rapid development, deployment, and operationalization of R solutions based on the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] platform and related services.  
   
-     [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] brings the compute to the data by allowing R to run on the same computer as the database. It includes a database service that runs outside the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] process and communicates securely with the R runtime. You can train R models, generate R plots, perform scoring, and easily move data between R and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Data scientists who are testing and developing solutions can communicate with the server from a remote development computer to run R code on the server, and deploy completed solutions to SQL Server by embedding calls to R in stored procedures.  
+     [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] brings the compute to the data by allowing R to run on the same computer as the database. It includes a database service that runs outside the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] process and communicates securely with the R runtime. You can train R models, generate R plots, perform scoring, and easily move data between R and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Data scientists who are testing and developing solutions can communicate with the server from a remote development computer to run R code on the server, and deploy completed solutions to SQL Server by embedding calls to R in stored procedures.  
   
-     This download includes a distribution of the open source R language, as well as ScaleR, a set of high-performance, scalable R packages. It also includes providers for easier, faster connectivity with all [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] technologies.  
+     This download includes a distribution of the open source R language, as well as ScaleR, a set of high-performance, scalable R packages. It also includes providers for easier, faster connectivity with all [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] technologies.  
   
      For more information, see [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md). For sample scenarios, see  [SQL Server R Services Tutorials](../../advanced-analytics/r-services/tutorials/sql-server-r-services-tutorials.md).  
   

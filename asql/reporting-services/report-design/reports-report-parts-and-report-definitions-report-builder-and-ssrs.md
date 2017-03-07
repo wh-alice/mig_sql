@@ -19,10 +19,10 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Reports, Report Parts, and Report Definitions (Report Builder and SSRS)
-  [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] uses a variety of terms to describe a paginated report in different states, including the initial definition, the published report, and the viewed report as it appears to the user.  
+  [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] uses a variety of terms to describe a paginated report in different states, including the initial definition, the published report, and the viewed report as it appears to the user.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Report Definition (.rdl) Files  
  A report definition is a file that you create in Report Builder or Report Designer. It provides a complete description of data source connections, queries used to retrieve data, expressions, parameters, images, text boxes, tables, and any other design-time elements that you might include in a report. Although report definitions can be complex, at a minimum they specify a query and other report content, report properties, and a report layout.  
@@ -42,9 +42,9 @@ manager: "erikre"
  For more information, see [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) and [Report Parts in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
 ## Published Reports  
- After you create an .rdl file, you can save it locally, or save it to a personal folder (such as the My Reports folder) on the report server. When the report is ready for others to see, you publish it by saving it from Report Builder to a public folder on the report server, uploading it through the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, or deploying a report project solution from Report Designer. A published report is an item that is stored in a report server database and managed on a report server or SharePoint site.  
+ After you create an .rdl file, you can save it locally, or save it to a personal folder (such as the My Reports folder) on the report server. When the report is ready for others to see, you publish it by saving it from Report Builder to a public folder on the report server, uploading it through the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, or deploying a report project solution from Report Designer. A published report is an item that is stored in a report server database and managed on a report server or SharePoint site.  
   
- A published report is secured through role assignments using the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] role-based security model. Published reports are accessed through URLs, SharePoint Web parts, or the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, or you can navigate to and open them in Report Builder.  
+ A published report is secured through role assignments using the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] role-based security model. Published reports are accessed through URLs, SharePoint Web parts, or the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, or you can navigate to and open them in Report Builder.  
   
 ### Report Snapshots  
  A report can also be published as a snapshot that contains both layout information and data as of the time the report was initially run. Report snapshots are not saved in a particular rendering format. Instead, report snapshots are rendered in a final viewing format (such as HTML) only when a user or an application requests it. For more information, see [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx).  
@@ -54,9 +54,9 @@ manager: "erikre"
   
 -   Create or open a report in Report Builder or Report Designer and run it.  
   
--   Find and run a report in the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal.  
+-   Find and run a report in the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal.  
   
--   Find and run a report on a SharePoint site that is integrated with a [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report server.  
+-   Find and run a report on a SharePoint site that is integrated with a [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] report server.  
   
 -   Subscribe to a report, which is delivered to an e-mail inbox or a file share in an output format that you specify.  
   

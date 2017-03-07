@@ -26,7 +26,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Data Definition - ALTER CUBE
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Alters the structure of a specified cube, typically used to support dimension writeback. For more information about using writeback in an application, see this blog post: [Building a Writeback Application with Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977)  
   
@@ -127,7 +127,7 @@ CELL CALCULATION Calculation_Name
  If the WITH DESCENDANTS clause is not used, children of a dropped member become children of the dropped member's parent. If the WITH DESCENDANTS clause is used, all descendants and their rows in the dimension table are also dropped.  
   
 > [!NOTE]  
->  For information about dropping calculated members, named sets, actions, and cell calculations, see [DROP MEMBER Statement &#40;MDX&#41;](../Topic/DROP%20MEMBER%20Statement%20\(MDX\).md), [DROP SET Statement &#40;MDX&#41;](../Topic/DROP%20SET%20Statement%20\(MDX\).md), [DROP ACTION Statement &#40;MDX&#41;](../Topic/DROP%20ACTION%20Statement%20\(MDX\).md), and [DROP CELL CALCULATION Statement &#40;MDX&#41;](../Topic/DROP%20CELL%20CALCULATION%20Statement%20\(MDX\).md).  
+>  For information about dropping calculated members, named sets, actions, and cell calculations, see [DROP MEMBER Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [DROP SET Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [DROP ACTION Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), and [DROP CELL CALCULATION Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## Updating the Default Dimension Member  
  This clause updates the default member of a cube and is used in the MDX calculation script to define a default member. The default member can be specified for the database dimension, a cube dimension, or for a user's login. The default member can also be changed during a session.  
@@ -171,7 +171,7 @@ CELL CALCULATION Calculation_Name
  A valid MDX scalar expression that defines the calculated member property's value.  
   
 ## Creating a Cell Calculation  
- For more information about creating a cell calculation using the ALTER CUBE statement, see [DROP CELL CALCULATION Statement &#40;MDX&#41;](../Topic/DROP%20CELL%20CALCULATION%20Statement%20\(MDX\).md).  
+ For more information about creating a cell calculation using the ALTER CUBE statement, see [DROP CELL CALCULATION Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## See Also  
  [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  

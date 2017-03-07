@@ -20,9 +20,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Change Server Authentication Mode
-  This topic describes how to change the server authentication mode in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]. During installation, [!INCLUDE[ssDEnoversion](../../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] is set to either **Windows Authentication mode** or **SQL Server and Windows Authentication mode**. After installation, you can change the authentication mode at any time.  
+  This topic describes how to change the server authentication mode in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]. During installation, [!INCLUDE[ssDEnoversion](../../../a9notintoc/includes/ssdenoversion-md.md)] is set to either **Windows Authentication mode** or **SQL Server and Windows Authentication mode**. After installation, you can change the authentication mode at any time.  
   
- If **Windows Authentication mode** is selected during installation, the sa login is disabled and a password is assigned by setup. If you later change authentication mode to **SQL Server and Windows Authentication mode**, the sa login remains disabled. To use the sa login, use the ALTER LOGIN statement to enable the sa login and assign a new password. The sa login can only connect to the server by using [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication.  
+ If **Windows Authentication mode** is selected during installation, the sa login is disabled and a password is assigned by setup. If you later change authentication mode to **SQL Server and Windows Authentication mode**, the sa login remains disabled. To use the sa login, use the ALTER LOGIN statement to enable the sa login and assign a new password. The sa login can only connect to the server by using [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Authentication.  
   
  **In This Topic**  
   
@@ -39,19 +39,19 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Security"></a> Security  
- The sa account is a well-known [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] account and it is often targeted by malicious users. Do not enable the sa account unless your application requires it. It is very important that you use a strong password for the sa login.  
+ The sa account is a well-known [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] account and it is often targeted by malicious users. Do not enable the sa account unless your application requires it. It is very important that you use a strong password for the sa login.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 #### To change security authentication mode  
   
-1.  In [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] Object Explorer, right-click the server, and then click **Properties**.  
+1.  In [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] Object Explorer, right-click the server, and then click **Properties**.  
   
 2.  On the **Security** page, under **Server authentication**, select the new server authentication mode, and then click **OK**.  
   
-3.  In the [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] dialog box, click **OK** to acknowledge the requirement to restart [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+3.  In the [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] dialog box, click **OK** to acknowledge the requirement to restart [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
-4.  In Object Explorer, right-click your server, and then click **Restart**. If [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent is running, it must also be restarted.  
+4.  In Object Explorer, right-click your server, and then click **Restart**. If [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Agent is running, it must also be restarted.  
   
 #### To enable the sa login  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To enable the sa login**  
   
-1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

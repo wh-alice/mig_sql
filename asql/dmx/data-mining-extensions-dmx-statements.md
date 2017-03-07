@@ -26,9 +26,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Data Mining Extensions (DMX) Statements
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Working with data mining models in [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] involves the following primary tasks:  
+  Working with data mining models in [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] involves the following primary tasks:  
   
 -   Creating mining structures and mining models  
   
@@ -59,7 +59,7 @@ manager: "erikre"
  Use the [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md) statement to copy the structure of an existing mining model into a new mining model and to train the new model with the same data.  
   
  Browsing mining models  
- Use the [SELECT &#40;DMX&#41;](../dmx/select-dmx.md) statement to browse the information that the data mining algorithm calculates and stores in the data mining model during model training. Much like with [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)], you can use several clauses with the SELECT statement, to extend its power. These clauses include [DISTINCT FROM \<model>](../dmx/select-distinct-from-model-dmx.md), [FROM \<model>.CASES](../dmx/select-from-model-.cases-dmx.md), [FROM \<model>.SAMPLE_CASES](../dmx/select-from-model-.sample-cases-dmx.md), [FROM \<model>.CONTENT](../dmx/select-from-model-.content-dmx.md) and [FROM \<model>.DIMENSION_CONTENT](../dmx/select-from-model-.dimension-content-dmx.md).  
+ Use the [SELECT &#40;DMX&#41;](../dmx/select-dmx.md) statement to browse the information that the data mining algorithm calculates and stores in the data mining model during model training. Much like with [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)], you can use several clauses with the SELECT statement, to extend its power. These clauses include [DISTINCT FROM \<model>](../dmx/select-distinct-from-model-dmx.md), [FROM \<model>.CASES](../dmx/select-from-model-.cases-dmx.md), [FROM \<model>.SAMPLE_CASES](../dmx/select-from-model-.sample-cases-dmx.md), [FROM \<model>.CONTENT](../dmx/select-from-model-.content-dmx.md) and [FROM \<model>.DIMENSION_CONTENT](../dmx/select-from-model-.dimension-content-dmx.md).  
   
  Predicting against mining models  
  Use the [PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) clause of the SELECT statement to create predictions that are based on an existing mining model.  
@@ -70,8 +70,8 @@ manager: "erikre"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Definition%20Statements.md)|Part of the data definition language (DDL). Used to define a new mining model (including training) or to drop an existing mining model from a database.|  
-|[Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Manipulation%20Statements.md)|Part of the data manipulation language (DML). Used to work with existing mining models, including browsing a model or creating predictions.|  
+|[Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)|Part of the data definition language (DDL). Used to define a new mining model (including training) or to drop an existing mining model from a database.|  
+|[Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)|Part of the data manipulation language (DML). Used to work with existing mining models, including browsing a model or creating predictions.|  
   
 ## See Also  
  [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   

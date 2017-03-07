@@ -20,13 +20,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ISSAbort::Abort (OLE DB)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   Cancels the current rowset plus any batched commands associated with the current command.  
   
-The **ISSAbort** interface, which is exposed in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider, provides the **ISSAbort::Abort** method that is used to cancel the current rowset plus any commands batched with the command that initially generated the rowset, and that have not yet completed execution.  
+The **ISSAbort** interface, which is exposed in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider, provides the **ISSAbort::Abort** method that is used to cancel the current rowset plus any commands batched with the command that initially generated the rowset, and that have not yet completed execution.  
   
- **ISSAbort** is a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client provider-specific interface available by using **QueryInterface** on the **IMultipleResults** object returned by **ICommand::Execute** or **IOpenRowset::OpenRowset**.  
+ **ISSAbort** is a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client provider-specific interface available by using **QueryInterface** on the **IMultipleResults** object returned by **ICommand::Execute** or **IOpenRowset::OpenRowset**.  
   
 ## Syntax  
   
@@ -41,7 +41,7 @@ HRESULT Abort(void);
  After **ISSAbort::Abort** returns S_OK, the associated **IMultipleResults** interface enters a unusable state and returns DB_E_CANCELED to all method calls (except for methods defined by the **IUnknown** interface) until it is released. If an **IRowset** had been obtained from **IMultipleResults** prior to a call to **Abort**, it also enters an unusable state and returns DB_E_CANCELED to all method calls (except for methods defined by the **IUnknown** interface and **IRowset::ReleaseRows**) until it is released after a successful call to **ISSAbort::Abort**.  
   
 > [!NOTE]  
->  Beginning with [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)], if the server XACT_ABORT state is ON, executing **ISSAbort::Abort** will terminate and roll back any current implicit or explicit transaction when connected to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will not abort the current transaction.  
+>  Beginning with [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)], if the server XACT_ABORT state is ON, executing **ISSAbort::Abort** will terminate and roll back any current implicit or explicit transaction when connected to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will not abort the current transaction.  
   
 ## Arguments  
  None.  
@@ -57,7 +57,7 @@ HRESULT Abort(void);
  The batch was not canceled.  
   
  E_FAIL  
- A provider specific error occurred; for detailed information, use the [ISQLServerErrorInfo](../Topic/ISQLServerErrorInfo%20\(OLE%20DB\).md) interface.  
+ A provider specific error occurred; for detailed information, use the [ISQLServerErrorInfo](../../a9retired/isqlservererrorinfo-ole-db.md) interface.  
   
  E_UNEXPECTED  
  The call to the method was unexpected. For example, the object is in a zombie state because **ISSAbort::Abort** has already been called.  
@@ -66,6 +66,6 @@ HRESULT Abort(void);
  Out of memory error.  
   
 ## See Also  
- [ISSAbort &#40;OLE DB&#41;](../Topic/ISSAbort%20\(OLE%20DB\).md)  
+ [ISSAbort &#40;OLE DB&#41;](../../a9retired/issabort-ole-db.md)  
   
   

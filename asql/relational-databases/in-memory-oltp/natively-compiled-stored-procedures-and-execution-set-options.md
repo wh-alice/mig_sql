@@ -21,7 +21,7 @@ manager: "jhubbard"
   
  **SHOWPLAN_XML** is supported for natively compiled stored procedures. **SHOWPLAN_ALL** and **SHOWPLAN_TEXT** are not supported with natively compiled stored procedures.  
   
- **SET FMTONLY** in not supported with natively compiled stored procedures. Use [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) instead.  
+ **SET FMTONLY** in not supported with natively compiled stored procedures. Use [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) instead.  
   
 ## See Also  
  [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  

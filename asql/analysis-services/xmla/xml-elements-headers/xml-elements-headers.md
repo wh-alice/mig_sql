@@ -26,18 +26,18 @@ manager: "erikre"
   The XML for Analysis (XMLA) protocol uses XML elements within the SOAP header to manage protocol-level features, such as session support and the negotiation of supported features.  
   
 ## In This Section  
- The following topics describe the XMLA header elements implemented by [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].  
+ The following topics describe the XMLA header elements implemented by [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].  
   
 |Method|Description|  
 |------------|-----------------|  
-|[BeginSession Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)|Uses a SOAP header in a SOAP request message to start a new session on an instance of [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].|  
-|[EndSession Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)|Uses the SOAP header in a SOAP request message to end an existing session on an instance of [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].|  
-|[Session Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)|Uses the SOAP header in a SOAP request message to identify an existing, explicit session on an instance of [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].|  
-|[ProtocolCapabilities Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/protocolcapabilities-element-xmla.md)|Uses the SOAP header in a SOAP request message to identify protocol capabilities between an instance of [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] and a client application.|  
+|[BeginSession Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)|Uses a SOAP header in a SOAP request message to start a new session on an instance of [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].|  
+|[EndSession Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)|Uses the SOAP header in a SOAP request message to end an existing session on an instance of [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].|  
+|[Session Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)|Uses the SOAP header in a SOAP request message to identify an existing, explicit session on an instance of [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].|  
+|[ProtocolCapabilities Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/protocolcapabilities-element-xmla.md)|Uses the SOAP header in a SOAP request message to identify protocol capabilities between an instance of [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] and a client application.|  
   
 ## See Also  
- [XML Elements &#40;XMLA&#41;](../Topic/XML%20Elements%20\(XMLA\).md)   
+ [XML Elements &#40;XMLA&#41;](../../../a9retired/xml-elements-xmla.md)   
  [XML Data Types &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
- [XML Elements &#40;XMLA&#41;](../Topic/XML%20Elements%20\(XMLA\).md)  
+ [XML Elements &#40;XMLA&#41;](../../../a9retired/xml-elements-xmla.md)  
   
   

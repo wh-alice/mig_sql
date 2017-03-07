@@ -20,11 +20,11 @@ manager: "erikre"
 # Tabular Models (SSAS)
   Tabular models are Analysis Services databases that run in-memory or in DirectQuery mode, accessing data directly from backend relational data sources.  
   
- In-memory is the default. Using state-of-the-art compression algorithms and multi-threaded query processor, the in-memory analytics engine delivers fast access to tabular model objects and data by reporting client applications such as Microsoft Excel and Microsoft [!INCLUDE[ssCrescent](../../analysis-services/includes/sscrescent-md.md)].  
+ In-memory is the default. Using state-of-the-art compression algorithms and multi-threaded query processor, the in-memory analytics engine delivers fast access to tabular model objects and data by reporting client applications such as Microsoft Excel and Microsoft [!INCLUDE[ssCrescent](../../a9notintoc/includes/sscrescent-md.md)].  
   
  DirectQuery is an alternative query mode for models that  are either too big to fit in memory, or when data volatility precludes  a reasonable processing strategy. In this release, DirectQuery achieves greater parity with in-memory models through support for additional data sources, ability to handle calculated tables and columns in a DirectQuery model, row level security via DAX expressions that reach the backend database, and query optimizations that result in faster throughput than in previous versions. Taking advantage of recent enhancements requires compatibility level 1200, introduced in this release.  
   
- Tabular models are authored in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] using the Tabular model project template that provides a design surface for creating a model, tables, relationships, and DAX expressions. You can import data from multiple sources, and then enrich the model by adding relationships, calculated tables and columns, measures, KPIs, hierarchies, and translations.  
+ Tabular models are authored in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] using the Tabular model project template that provides a design surface for creating a model, tables, relationships, and DAX expressions. You can import data from multiple sources, and then enrich the model by adding relationships, calculated tables and columns, measures, KPIs, hierarchies, and translations.  
   
  Models can then be deployed to an instance of Analysis Services configured for Tabular server mode, where client reporting applications can connect to them. Deployed models can be managed in SQL Server Management Studio just like multidimensional models. They can also be partitioned for optimized processing and secured to the row-level by using role based security.  
   

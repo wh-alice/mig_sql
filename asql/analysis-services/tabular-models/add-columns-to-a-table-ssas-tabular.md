@@ -39,7 +39,7 @@ manager: "erikre"
 2.  In the **Edit Table Properties** dialog box, in the table preview window, select the source column you want to add, and then click OK. Columns already included in the table definition will already be checked.  
   
 ## Add a Calculated Column  
- In a calculated column, a DAX formula is used to define a value for each row. For example, you can create a calculated column with a simple formula (=1) that adds a value of 1 to each row. Calculated columns can also have more complex formulas that calculate values based on other data in the model. Calculated columns are covered in more detail in other topics. For more information, see [Calculated Columns &#40;SSAS Tabular&#41;](../Topic/Calculated%20Columns%20\(SSAS%20Tabular\).md).  
+ In a calculated column, a DAX formula is used to define a value for each row. For example, you can create a calculated column with a simple formula (=1) that adds a value of 1 to each row. Calculated columns can also have more complex formulas that calculate values based on other data in the model. Calculated columns are covered in more detail in other topics. For more information, see [Calculated Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md).  
   
 #### To create a calculated column  
   
@@ -50,7 +50,7 @@ manager: "erikre"
 2.  In the formula bar, type a DAX formula to add attributes for each row.  
   
 ## Add a Blank Column  
- You can create a named, blank column in a model table. Blank columns can be useful if you want to paste data from another source. Keep in-mind that pasted data is stored differently than imported data. For more information, see [Copy and Paste Data &#40;SSAS Tabular&#41;](../Topic/Copy%20and%20Paste%20Data%20\(SSAS%20Tabular\).md).  
+ You can create a named, blank column in a model table. Blank columns can be useful if you want to paste data from another source. Keep in-mind that pasted data is stored differently than imported data. For more information, see [Copy and Paste Data &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md).  
   
 #### To create a named, blank column  
   
@@ -61,7 +61,7 @@ manager: "erikre"
 2.  Click on the top cell, then type a name, and then press ENTER.  
   
 ## See Also  
- [Edit Table Properties Dialog Box &#40;SSAS&#41;](../Topic/Edit%20Table%20Properties%20Dialog%20Box%20\(SSAS\).md)   
+ [Edit Table Properties Dialog Box &#40;SSAS&#41;](../../a9retired/edit-table-properties-dialog-box-ssas.md)   
  [Change table, column, or row filter mappings &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

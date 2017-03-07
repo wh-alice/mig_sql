@@ -20,13 +20,13 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Tutorial: Ownership Chains and Context Switching
-This tutorial uses a scenario to illustrate [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] security concepts involving ownership chains and user context switching.  
+This tutorial uses a scenario to illustrate [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] security concepts involving ownership chains and user context switching.  
   
 > [!NOTE]  
-> To run the code in this tutorial you must have both Mixed Mode security configured and the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database installed. For more information about Mixed Mode security, see [Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md).  
+> To run the code in this tutorial you must have both Mixed Mode security configured and the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database installed. For more information about Mixed Mode security, see [Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md).  
   
 ## Scenario  
-In this scenario, two users need accounts to access purchase order data stored in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database. The requirements are as follows:  
+In this scenario, two users need accounts to access purchase order data stored in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database. The requirements are as follows:  
   
 -   The first account (TestManagerUser) must be able to see all details in every purchase order.  
   
@@ -47,7 +47,7 @@ To fulfill the requirements of this scenario, the example is broken into four pa
 Each code block in this example is explained in line. To copy the complete example, see [Complete Example](#CompleteExample) at the end of this tutorial.  
   
 ## 1. Configure the Environment  
-Use [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and the following code to open the `AdventureWorks2012` database, and use the `CURRENT_USER` [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement to check that the dbo user is displayed as the context.  
+Use [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] and the following code to open the `AdventureWorks2012` database, and use the `CURRENT_USER` [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement to check that the dbo user is displayed as the context.  
   
 ```  
 USE AdventureWorks2012;  
@@ -58,7 +58,7 @@ GO
   
 For more information about the CURRENT_USER statement, see [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md).  
   
-Use this code as the dbo user to create two users on the server and in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+Use this code as the dbo user to create two users on the server and in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database.  
   
 ```  
 CREATE LOGIN TestManagerUser   
@@ -94,7 +94,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
-For more information about the GRANT statement, see [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md). For more information about stored procedures, see [Stored Procedures &#40;Database Engine&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md). For a poster of all [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] permissions, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+For more information about the GRANT statement, see [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md). For more information about stored procedures, see [Stored Procedures &#40;Database Engine&#41;](../../relational-databases/reference/stored-procedures/stored-procedures-database-engine.md). For a poster of all [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] permissions, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
 ## 2. Create a Stored Procedure to Access Data  
 To switch context within a database, use the EXECUTE AS statement. EXECUTE AS requires IMPERSONATE permissions.  
@@ -155,7 +155,7 @@ GO
 For more information about the REVERT statement, see [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
 ## 3. Access Data Through the Stored Procedure  
-`TestEmployeeUser` has no permissions on the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database objects other than a login and the rights assigned to the public database role. The following code returns an error when `TestEmployeeUser` attempts to access base tables.  
+`TestEmployeeUser` has no permissions on the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database objects other than a login and the rights assigned to the public database role. The following code returns an error when `TestEmployeeUser` attempts to access base tables.  
   
 ```  
 EXECUTE AS LOGIN = 'TestEmployeeUser'  

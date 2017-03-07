@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Delete a Backup Device (SQL Server)
-  This topic describes how to delete a backup device in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to delete a backup device in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 #### To delete a backup device  
   
-1.  After connecting to the appropriate instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
+1.  After connecting to the appropriate instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
   
 2.  Expand **Server Objects**, and then expand **Backup Devices**.  
   
@@ -60,11 +60,11 @@ manager: "jhubbard"
   
 #### To delete a backup device  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query. This example shows how to use [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) to delete a backup device. Execute the first example to create the `mybackupdisk` backup device and the physical name `c:\backup\backup1.bak`. Execute **sp_dropdevice** to delete the `mybackupdisk` backup device. The `delfile` parameter deletes the physical name.  
+3.  Copy and paste the following example into the query. This example shows how to use [sp_dropdevice](../../relational-databases/reference/system-stored-procedures/sp-dropdevice-transact-sql.md) to delete a backup device. Execute the first example to create the `mybackupdisk` backup device and the physical name `c:\backup\backup1.bak`. Execute **sp_dropdevice** to delete the `mybackupdisk` backup device. The `delfile` parameter deletes the physical name.  
   
 ```tsql  
 --Define a backup device and physical name.   
@@ -82,9 +82,9 @@ GO
   
 ## See Also  
  [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
- [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.backup-devices-transact-sql.md)   
+ [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.backup-devices-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
- [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)  
+ [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addumpdevice-transact-sql.md)  
   
   

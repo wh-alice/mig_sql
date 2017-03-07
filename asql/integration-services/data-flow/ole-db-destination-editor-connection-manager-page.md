@@ -22,7 +22,7 @@ manager: "jhubbard"
   Use the **Connection Manager** page of the **OLE DB Destination Editor** dialog box to select the OLE DB connection for the destination. This page also lets you select a table or view from the database.  
   
 > [!NOTE]  
->  If the data source is [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
+>  If the data source is [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
   
 > [!NOTE]  
 >  The **CommandTimeout** property of the OLE DB destination is not available in the **OLE DB Destination Editor**, but can be set by using the **Advanced Editor**. In addition, certain fast load options are available only in the **Advanced Editor**. For more information on these properties, see the OLE DB Destination section of [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
@@ -43,7 +43,7 @@ manager: "jhubbard"
 |------------|-----------------|  
 |Table or view|Load data into a table or view in the OLE DB destination.|  
 |Table or view - fast load|Load data into a table or view in the OLE DB destination and use the fast load option. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
-|Table name or view name variable|Specify the table or view name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](../Topic/Use%20Variables%20in%20Packages.md)|  
+|Table name or view name variable|Specify the table or view name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](../../a9retired/use-variables-in-packages.md)|  
 |Table name or view name variable - fast load|Specify the table or view name in a variable, and use the fast load option to load the data. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
 |SQL command|Load data into the OLE DB destination by using a SQL query.|  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
  Create a new table by using the **Create Table** dialog box.  
   
 > [!NOTE]  
->  When you click **New**, [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  When you click **New**, [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
 ### Data access mode = Table or view – fast load  
  **Name of the table or view**  
@@ -71,7 +71,7 @@ manager: "jhubbard"
  Create a new table by using the **Create Table** dialog box.  
   
 > [!NOTE]  
->  When you click **New**, [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  When you click **New**, [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  **Keep identity**  
  Specify whether to copy identity values when data is loaded. This property is available only with the fast load option. The default value of this property is **false**.  
@@ -114,7 +114,7 @@ manager: "jhubbard"
  Create a new table by using the **Create Table** dialog box.  
   
 > [!NOTE]  
->  When you click **New**, [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  When you click **New**, [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  **Keep identity**  
  Specify whether to copy identity values when data is loaded. This property is available only with the fast load option. The default value of this property is **false**.  

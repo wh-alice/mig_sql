@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Add a Hyperlink to a URL (Report Builder and SSRS)
-Learn how to add hyperlink actions to text boxes, images, charts, and gauges in [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]  paginated reports. Links can go to other reports, to bookmarks in a report, or to  static or dynamic URLs. 
+Learn how to add hyperlink actions to text boxes, images, charts, and gauges in [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)]  paginated reports. Links can go to other reports, to bookmarks in a report, or to  static or dynamic URLs. 
 
  You can add a hyperlink action to any item that has an **Action** property, for example, a text box, an image, or a calculated series in a chart. When the user clicks that report item, the action that you define takes place.  
   
@@ -51,7 +51,7 @@ Try adding hyperlinks with sample data in [Tutorial: Format Text &#40;Report Bui
   
    See [Add a Drillthrough Action on a Report](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md) for more information. 
    
-6. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
    
 ## ... add a bookmark
 
@@ -65,7 +65,7 @@ You can link to bookmarks to a location in the current report. To link to a book
    
    See [Add a Bookmark to a Report](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md) for more information.
    
-3. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+3. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
 
 ## ... add a hyperlink 
   
@@ -77,7 +77,7 @@ You can link to bookmarks to a location in the current report. To link to a book
     
     For an item published to a report server configured in SharePoint integrated mode, use a fully qualified URL. For example, `http://<SharePointservername>/<site>/Documents/images/image1.jpg`.
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
 
 ## After you add a hyperlink
   

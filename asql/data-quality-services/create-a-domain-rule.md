@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Domain Rule
-  This topic describes how to create a domain rule in [!INCLUDE[ssDQSnoversion](../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS). A domain rule is a condition that is used to validate, correct, and standardize domain values. A domain rule must hold true across a domain in order for domain values to be considered accurate and conformant to business requirements. Domain rules can include validation rules that are used to validate domain values, but are not used to correct data in a data quality projects. Rules also include standardization rules that are applied against valid data and are used in data correction.  
+  This topic describes how to create a domain rule in [!INCLUDE[ssDQSnoversion](../a9retired/includes/ssdqsnoversion-md.md)] (DQS). A domain rule is a condition that is used to validate, correct, and standardize domain values. A domain rule must hold true across a domain in order for domain values to be considered accurate and conformant to business requirements. Domain rules can include validation rules that are used to validate domain values, but are not used to correct data in a data quality projects. Rules also include standardization rules that are applied against valid data and are used in data correction.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssDQSInitialStep](../data-quality-services/includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] home screen, open or create a knowledge base. Select **Domain Management** as the activity, and then click **Open** or **Create**. For more information, see [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) or [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+2.  In the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] home screen, open or create a knowledge base. Select **Domain Management** as the activity, and then click **Open** or **Create**. For more information, see [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) or [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
     > [!NOTE]  
     >  Domain management is performed in a page of the Data Quality Service client that contains five tabs for separate domain management operations. It is not a wizard-driven process; any management operation can be performed separately.  
@@ -92,7 +92,7 @@ manager: "jhubbard"
   
 2.  Click **Discard All Changes** to remove any changes that you have made to domain rules, reverting to the previously applied rules, with the result that any changes made after the last application of the rules will no longer apply. The validity of each value in the domain will be updated to be in accordance with the previously applied rules, not the discarded changes.  
   
-3.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md).  
+3.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](../a9retired/end-the-domain-management-activity.md).  
   
 ##  <a name="FollowUp"></a> Follow Up: After Creating a Domain Rule  
  After you create a domain rule, you can perform other domain management tasks on the domain, you can perform knowledge discovery to add knowledge to the domain, or you can add a matching policy to the domain. For more information, see [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md), [Managing a Domain](../data-quality-services/managing-a-domain.md), or [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  

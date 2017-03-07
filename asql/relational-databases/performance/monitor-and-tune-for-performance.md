@@ -39,11 +39,11 @@ manager: "jhubbard"
  Ongoing evaluation of the database performance helps you minimize response times and maximize throughput, yielding optimal performance. Efficient network traffic, disk I/O, and CPU usage are key to peak performance. You need to thoroughly analyze the application requirements, understand the logical and physical structure of the data, assess database usage, and negotiate tradeoffs between conflicting uses such as online transaction processing (OLTP) versus decision support.  
   
 ## Monitoring and tuning databases for performance  
- Microsoft [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and the Microsoft Windows operating system provide utilities to view the current condition of the database and track performance as conditions change. There are a variety of tools and techniques you can use to monitor [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Monitoring [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] helps you:  
+ Microsoft [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and the Microsoft Windows operating system provide utilities to view the current condition of the database and track performance as conditions change. There are a variety of tools and techniques you can use to monitor [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Monitoring [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] helps you:  
   
 -   Determine whether you can improve performance. For example, by monitoring the response times for frequently used queries, you can determine whether changes to the query or indexes on the tables are required.  
   
--   Evaluate user activity. For example, by monitoring users trying to connect to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you can determine whether security is set up adequately and test applications or development systems. For example, by monitoring SQL queries as they are executed, you can determine whether they are written correctly and producing the expected results.  
+-   Evaluate user activity. For example, by monitoring users trying to connect to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], you can determine whether security is set up adequately and test applications or development systems. For example, by monitoring SQL queries as they are executed, you can determine whether they are written correctly and producing the expected results.  
   
 -   Troubleshoot problems or debug application components, such as stored procedures.  
   
@@ -52,9 +52,9 @@ Changing conditions result in changing performance. In your evaluations, you can
   
 -   By monitoring the response times for frequently used queries, you can determine whether changes to the query or indexes on the tables where the queries execute are required.  
   
--   By monitoring [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] queries as they are executed, you can determine whether the queries are written correctly and producing the expected results.  
+-   By monitoring [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] queries as they are executed, you can determine whether the queries are written correctly and producing the expected results.  
   
--   By monitoring users that try to connect to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you can determine whether security is set up adequately and test applications or development systems.  
+-   By monitoring users that try to connect to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], you can determine whether security is set up adequately and test applications or development systems.  
   
  Response time is the length of time required for the first row of the result set to be returned to the user in the form of visual confirmation that a query is being processed. Throughput is the total number of queries handled by the server during a specified period of time.  
   
@@ -69,7 +69,7 @@ Changing conditions result in changing performance. In your evaluations, you can
 |[Establish a Performance Baseline](../../relational-databases/performance/establish-a-performance-baseline.md)|How to establish a performance baseline.|  
 |[Isolate Performance Problems](../../relational-databases/performance/isolate-performance-problems.md)|Isolate database performance problems.|  
 |[Identify Bottlenecks](../../relational-databases/performance/identify-bottlenecks.md)|Monitor and track server performance to identify bottlenecks.|  
-|[Server Performance and Activity Monitoring](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Use [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and Windows performance and activity monitoring tools.|  
+|[Server Performance and Activity Monitoring](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Use [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and Windows performance and activity monitoring tools.|  
 |[Display and Save Execution Plans](../../relational-databases/performance/display-and-save-execution-plans.md)|Display and save execution plans to a file in XML format.|  
 |[Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)|Display real-time statistics about query execution steps.|  
 |[Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|Use Query Store to automatically capture a history of queries, plans, and runtime statistics, and retain these for your review.|  

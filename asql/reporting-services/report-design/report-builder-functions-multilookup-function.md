@@ -19,7 +19,7 @@ manager: "erikre"
   Returns the set of first-match values for the specified set of names from a dataset that contains name/value pairs.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Syntax  
   
@@ -51,11 +51,11 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   Evaluates the source expression in the current scope and generates an array of variant objects.  
   
--   For each object in the array, calls [Lookup Function &#40;Report Builder and SSRS&#41;](../Topic/Lookup%20Function%20\(Report%20Builder%20and%20SSRS\).md) and adds the result to the return array.  
+-   For each object in the array, calls [Lookup Function &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md) and adds the result to the return array.  
   
 -   Returns the set of results.  
   
- To retrieve a single value from a dataset with name-value pairs for a specified name where there is a 1-to-1 relationship, use [Lookup Function &#40;Report Builder and SSRS&#41;](../Topic/Lookup%20Function%20\(Report%20Builder%20and%20SSRS\).md). To retrieve multiple values from a dataset with name-value pairs for a name where there is a 1-to-many relationship, use [LookupSet Function &#40;Report Builder and SSRS&#41;](../Topic/LookupSet%20Function%20\(Report%20Builder%20and%20SSRS\).md).  
+ To retrieve a single value from a dataset with name-value pairs for a specified name where there is a 1-to-1 relationship, use [Lookup Function &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md). To retrieve multiple values from a dataset with name-value pairs for a name where there is a 1-to-many relationship, use [LookupSet Function &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md).  
   
  The following restrictions apply:  
   
@@ -81,7 +81,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
     -   The Report.Language property.  
   
- For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../Topic/Aggregate%20Functions%20Reference%20\(Report%20Builder%20and%20SSRS\).md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/a8d24287-8557-4b03-bea7-ca087f449b62.md).  
+ For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/a8d24287-8557-4b03-bea7-ca087f449b62.md).  
   
 ## Example  
  Assume a dataset called "Category" contains the field CategoryList, which is a field that contains a comma-separated list of category identifers, for example, "2, 4, 2, 1".  

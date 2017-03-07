@@ -15,11 +15,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SMO and DMO XPs Server Configuration Option
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Use the SMO and DMO XPs option to enable [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Management Object (SMO) extended stored procedures on this server.  
+  Use the SMO and DMO XPs option to enable [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Management Object (SMO) extended stored procedures on this server.  
   
- Note than beginning in [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)], DMO has been removed from [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Note than beginning in [!INCLUDE[ssSQL11](../../../a9notintoc/includes/sssql11-md.md)], DMO has been removed from [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
  The possible values are described in the following table:  
   

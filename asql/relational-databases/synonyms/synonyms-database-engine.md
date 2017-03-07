@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 -   Provides a layer of abstraction that protects a client application from changes made to the name or location of the base object.  
   
- For example, consider the **Employee** table of [!INCLUDE[ssSampleDBCoShort](../../analysis-services/data-mining/includes/sssampledbcoshort-md.md)], located on a server named **Server1**. To reference this table from another server, **Server2**, a client application would have to use the four-part name **Server1.AdventureWorks.Person.Employee**. Also, if the location of the table were to change, for example, to another server, the client application would have to be modified to reflect that change.  
+ For example, consider the **Employee** table of [!INCLUDE[ssSampleDBCoShort](../../a9notintoc/includes/sssampledbcoshort-md.md)], located on a server named **Server1**. To reference this table from another server, **Server2**, a client application would have to use the four-part name **Server1.AdventureWorks.Person.Employee**. Also, if the location of the table were to change, for example, to another server, the client application would have to be modified to reflect that change.  
   
  To address both these issues, you can create a synonym, **EmpTable**, on **Server2** for the **Employee** table on **Server1**. Now, the client application only has to use the single-part name, **EmpTable**, to reference the **Employee** table. Also, if the location of the **Employee** table changes, you will have to modify the synonym, **EmpTable**, to point to the new location of the **Employee** table. Because there is no ALTER SYNONYM statement, you first have to drop the synonym, **EmpTable**, and then re-create the synonym with the same name, but point the synonym to the new location of **Employee**.  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
  A synonym cannot be the base object for another synonym, and a synonym cannot reference a user-defined aggregate function.  
   
- The binding between a synonym and its base object is by name only. All existence, type, and permissions checking on the base object is deferred until run time. Therefore, the base object can be modified, dropped, or dropped and replaced by another object that has the same name as the original base object. For example, consider a synonym, **MyContacts**, that references the **Person.Contact** table in [!INCLUDE[ssSampleDBCoShort](../../analysis-services/data-mining/includes/sssampledbcoshort-md.md)]. If the **Contact** table is dropped and replaced by a view named **Person.Contact**, **MyContacts** now references the **Person.Contact** view.  
+ The binding between a synonym and its base object is by name only. All existence, type, and permissions checking on the base object is deferred until run time. Therefore, the base object can be modified, dropped, or dropped and replaced by another object that has the same name as the original base object. For example, consider a synonym, **MyContacts**, that references the **Person.Contact** table in [!INCLUDE[ssSampleDBCoShort](../../a9notintoc/includes/sssampledbcoshort-md.md)]. If the **Contact** table is dropped and replaced by a view named **Person.Contact**, **MyContacts** now references the **Person.Contact** view.  
   
  References to synonyms are not schema-bound. Therefore, a synonym can be dropped at any time. However, by dropping a synonym, you run the risk of leaving dangling references to the synonym that was dropped. These references will only be found at run time.  
   
@@ -109,9 +109,9 @@ EXEC ('ALTER TABLE dbo.MyProduct
  For more information about schema-bound functions, see [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
 ## Getting Information About Synonyms  
- The sys.synonyms catalog view contains an entry for each synonym in a given database. This catalog view exposes synonym metadata such as the name of the synonym and the name of the base object. For more information about the **sys.synonyms** catalog view, see [sys.synonyms &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.synonyms-transact-sql.md).  
+ The sys.synonyms catalog view contains an entry for each synonym in a given database. This catalog view exposes synonym metadata such as the name of the synonym and the name of the base object. For more information about the **sys.synonyms** catalog view, see [sys.synonyms &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.synonyms-transact-sql.md).  
   
- By using extended properties, you can add descriptive or instructional text, input masks, and formatting rules as properties of a synonym. Because the property is stored in the database, all applications that read the property can evaluate the object in the same way. For more information, see [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md).  
+ By using extended properties, you can add descriptive or instructional text, input masks, and formatting rules as properties of a synonym. Because the property is stored in the database, all applications that read the property can evaluate the object in the same way. For more information, see [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addextendedproperty-transact-sql.md).  
   
  To find the base type of the base object of a synonym, use the OBJECTPROPERTYEX function. For more information, see [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md).  
   

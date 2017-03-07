@@ -69,14 +69,14 @@ manager: "jhubbard"
   
  **To delete a push subscription**  
   
- [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]: [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]: [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  Deleting a subscription does not remove published objects from the Subscriber.  
   
  **To create a pull subscription**  
   
- [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]: [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]: [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)  
   
  **To view or modify pull subscription properties**  
   

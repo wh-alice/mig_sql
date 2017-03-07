@@ -23,10 +23,10 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Replication Backward Compatibility
-  Topics in the backward compatibility section describe changes in behavior between versions of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] replication. It is important to understand backward compatibility if you are upgrading or if you have more than one version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in a replication topology.  
+  Topics in the backward compatibility section describe changes in behavior between versions of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] replication. It is important to understand backward compatibility if you are upgrading or if you have more than one version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] in a replication topology.  
   
  [Deprecated Features in SQL Server Replication](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
- Replication features that have been retained in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] for backward compatibility, but which will be removed in a future version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Replication features that have been retained in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] for backward compatibility, but which will be removed in a future version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  [Breaking Changes in SQL Server Replication](../../relational-databases/replication/breaking-changes-in-sql-server-replication.md)  
  Replication feature changes that might require changes to applications.  

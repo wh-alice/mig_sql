@@ -17,7 +17,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Tabular Model Scripting Language (TMSL) Reference
-  Tabular Model Scripting Language (TMSL) is the command and object model definition syntax for tabular databases at compatibility level 1200, created for the SQL Server 2016 version of Analysis Services. TMSL communicates to Analysis Services  through the XMLA protocol, where the [XMLA.Execute](../Topic/Execute%20Method%20\(XMLA\).md) method accepts both JSON-based **statement** scripts in TMSL as well as the traditional XML-based scripts in [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+  Tabular Model Scripting Language (TMSL) is the command and object model definition syntax for tabular databases at compatibility level 1200, created for the SQL Server 2016 version of Analysis Services. TMSL communicates to Analysis Services  through the XMLA protocol, where the [XMLA.Execute](../analysis-services/xmla/xml-elements-methods-execute.md) method accepts both JSON-based **statement** scripts in TMSL as well as the traditional XML-based scripts in [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
  Key elements of TMSL include the following:  
   
@@ -32,9 +32,9 @@ manager: "erikre"
 ## How to use TMSL  
  The easiest way to  explore TMSL scripting is using the CREATE, ALTER, DELETE, or Process commands in SQL Server Management Studio on a model you already know. Assuming you're using an existing model, remember to upgrade it to compatibility level 1200 first. See [Upgrade Analysis Services](../database-engine/install/windows/upgrade-analysis-services.md) for help with this step.  
   
-1.  Find the command you want to use: [Commands in Tabular Model Scripting Language &#40;TMSL&#41;](../Topic/Commands%20in%20Tabular%20Model%20Scripting%20Language%20\(TMSL\).md)  
+1.  Find the command you want to use: [Commands in Tabular Model Scripting Language &#40;TMSL&#41;](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)  
   
-2.  Check the object definition reference for objects used in the command: [Object Definitions in Tabular Model Scripting Language &#40;TMSL&#41;](../Topic/Object%20Definitions%20in%20Tabular%20Model%20Scripting%20Language%20\(TMSL\).md)  
+2.  Check the object definition reference for objects used in the command: [Object Definitions in Tabular Model Scripting Language &#40;TMSL&#41;](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)  
   
 3.  Choose a method for submitting TMSL script:  
   

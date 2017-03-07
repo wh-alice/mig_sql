@@ -16,7 +16,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Business Rules Extension (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], you can apply user-defined SQL scripts as an extension of  pre-defined conditions and actions.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], you can apply user-defined SQL scripts as an extension of  pre-defined conditions and actions.  
   
 > [!NOTE]  
 >  All scripts  have to be defined under  [usr] schema.  
@@ -72,7 +72,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 -   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
--   User defined scripts had been added to the [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] database.  
+-   User defined scripts had been added to the [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] database.  
   
 ## Create a business rule to take a user-defined script as a condition or as an action  
   

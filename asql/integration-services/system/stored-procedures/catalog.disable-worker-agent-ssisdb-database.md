@@ -15,9 +15,9 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # catalog.disable_worker_agent (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Disable a Scale Out Worker for Scale Out Master working with this [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog.
+Disable a Scale Out Worker for Scale Out Master working with this [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] catalog.
 
 ## Syntax
 

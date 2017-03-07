@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Min (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the minimum value of a numeric expression that is evaluated over a set.  
   
@@ -43,7 +43,7 @@ Min( Set_Expression [ , Numeric_Expression ] )
  If a numeric expression is specified, the specified numeric expression is evaluated across the set and then returns the minimum value from that evaluation. If a numeric expression is not specified, the specified set is evaluated in the current context of the members of the set and then returns the minimum value from that evaluation.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] ignores nulls when calculating the minimum value in a set of numbers.  
+>  [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] ignores nulls when calculating the minimum value in a set of numbers.  
   
 ## Example  
  The following example returns the minimum quarterly sales for each subcategory and each country in the Adventure Works cube.  

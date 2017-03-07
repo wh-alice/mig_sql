@@ -28,11 +28,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # DROP ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Removes an assembly and all its associated files from the current database. Assemblies are created by using [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) and modified by using [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -47,7 +47,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
  *IF EXISTS*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  Conditionally drops the assembly only if it already exists.  
   
@@ -70,7 +70,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
  Requires ownership of the assembly, or CONTROL permission on it.  
   
 ## Examples  
- The following example assumes the assembly `HelloWorld` is already created in the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ The following example assumes the assembly `HelloWorld` is already created in the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ```  
 DROP ASSEMBLY Helloworld ;  
@@ -80,6 +80,6 @@ DROP ASSEMBLY Helloworld ;
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Getting Information About Assemblies](../Topic/Getting%20Information%20About%20Assemblies.md)  
+ [Getting Information About Assemblies](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   
   

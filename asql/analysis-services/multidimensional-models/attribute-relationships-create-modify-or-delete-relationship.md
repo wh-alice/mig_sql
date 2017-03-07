@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Attribute Relationships - Create, Modify, or Delete Relationship
-  You can create, modify, or delete an attribute relationship between attributes in a dimension by using the **Attribute Relationships** tab of Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+  You can create, modify, or delete an attribute relationship between attributes in a dimension by using the **Attribute Relationships** tab of Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
 ### To create an Attribute Relationship  
   

@@ -19,21 +19,21 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 1: Publishing Data Using Merge Replication
-In this lesson, you will create a merge publication using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to publish a subset of the **Employee**, **SalesOrderHeader**, and **SalesOrderDetail** tables in the [!INCLUDE[ssSampleDBobject](../../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] sample database. These tables are filtered with parameterized row filters so that each subscription contains a unique partition of the data. You will also add the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login used by the Merge Agent to the publication access list (PAL). This tutorial requires that you have completed the previous tutorial, [Preparing the Server for Replication](../../../relational-databases/replication/tutorials/tutorial-preparing-the-server-for-replication.md).  
+In this lesson, you will create a merge publication using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] to publish a subset of the **Employee**, **SalesOrderHeader**, and **SalesOrderDetail** tables in the [!INCLUDE[ssSampleDBobject](../../../a9retired/includes/sssampledbobject-md.md)] sample database. These tables are filtered with parameterized row filters so that each subscription contains a unique partition of the data. You will also add the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] login used by the Merge Agent to the publication access list (PAL). This tutorial requires that you have completed the previous tutorial, [Preparing the Server for Replication](../../../relational-databases/replication/tutorials/tutorial-preparing-the-server-for-replication.md).  
   
 ### To create a publication and define articles  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, right-click **Local Publications**, and click **New Publication**.  
   
     The Publication Configuration Wizard launches.  
   
-3.  On the Publication Database page, select [!INCLUDE[ssSampleDBobject](../../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)], and then click **Next**.  
+3.  On the Publication Database page, select [!INCLUDE[ssSampleDBobject](../../../a9retired/includes/sssampledbobject-md.md)], and then click **Next**.  
   
 4.  On the Publication Type page, select **Merge publication**, and then click **Next**.  
   
-5.  On the Subscriber Types page, ensure that only [!INCLUDE[ssKatmai](../../../analysis-services/data-mining/includes/sskatmai-md.md)] or later is selected, and then click **Next**.  
+5.  On the Subscriber Types page, ensure that only [!INCLUDE[ssKatmai](../../../a9notintoc/includes/sskatmai-md.md)] or later is selected, and then click **Next**.  
   
 6.  On the Articles page, expand the **Tables** node, select **SalesOrderHeader** and **SalesOrderDetail**, then expand **Employee**, select **EmployeeID** or **LoginID**, and then click **Next**.  
   
@@ -90,7 +90,7 @@ In this lesson, you will create a merge publication using [!INCLUDE[ssManStudioF
   
 ### To view the status of snapshot generation  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
   
 2.  In the Local Publications folder, right-click **AdvWorksSalesOrdersMerge**, and then click **View Snapshot Agent Status**.  
   
@@ -98,7 +98,7 @@ In this lesson, you will create a merge publication using [!INCLUDE[ssManStudioF
   
 ### To add the Merge Agent login to the PAL  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
   
 2.  In the Local Publications folder, right-click **AdvWorksSalesOrdersMerge**, and then click **Properties**.  
   
@@ -113,7 +113,7 @@ You have successfully created the merge publication. Next, you will subscribe to
   
 ## See Also  
 [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md)  
-[Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md)  
+[Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)  
   
   

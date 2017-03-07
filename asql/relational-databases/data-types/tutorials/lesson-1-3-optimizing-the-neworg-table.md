@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 1-3 - Optimizing the NewOrg Table
-The **NewOrd** table that you created in the [Populating a Table with Existing Hierarchical Data](../Topic/Populating%20a%20Table%20with%20Existing%20Hierarchical%20Data.md) task contains all the employee information, and represents the hierarchical structure by using a **hierarchyid** data type. This task adds new indexes to support searches on the **hierarchyid** column.  
+The **NewOrd** table that you created in the [Populating a Table with Existing Hierarchical Data](../../../relational-databases/data-types/tutorials/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) task contains all the employee information, and represents the hierarchical structure by using a **hierarchyid** data type. This task adds new indexes to support searches on the **hierarchyid** column.  
   
 ## Clustered Index  
 The **hierarchyid** column (**OrgNode**) is the primary key for the **NewOrg** table. When the table was created, it contained a clustered index named **PK_NewOrg_OrgNode** to enforce the uniqueness of the **OrgNode** column. This clustered index also supports a depth-first search of the table.  
@@ -158,7 +158,7 @@ This step creates two nonclustered indexes to support typical searches.
     ```  
   
 ## Next Task in Lesson  
-[Summary: Converting a Table to a Hierarchical Structure](../Topic/Summary:%20Converting%20a%20Table%20to%20a%20Hierarchical%20Structure.md)  
+[Summary: Converting a Table to a Hierarchical Structure](../../../relational-databases/data-types/tutorials/lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
   
   

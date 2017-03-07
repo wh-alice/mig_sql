@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Setting Properties - SMO
-  Properties are values that store descriptive information about the object. For example, [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] configuration options are represented by the <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> object's properties. Properties can be accessed either directly or indirectly by using the property collection. Accessing properties directly uses the following syntax:  
+  Properties are values that store descriptive information about the object. For example, [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] configuration options are represented by the <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> object's properties. Properties can be accessed either directly or indirectly by using the property collection. Accessing properties directly uses the following syntax:  
   
  `objInstance.PropertyName`  
   
@@ -32,9 +32,9 @@ manager: "jhubbard"
   
  Sometimes a property is not available for the following reasons:  
   
--   The server version does not support the property, such as if you try to access a property that represents a new [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] feature on an older version of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   The server version does not support the property, such as if you try to access a property that represents a new [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] feature on an older version of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
--   The server does not provide data for the property, such as if you try to access a property that represents a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] component that is not installed.  
+-   The server does not provide data for the property, such as if you try to access a property that represents a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] component that is not installed.  
   
  You can handle these circumstances by catching the <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException> and the <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException> SMO exceptions.  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
  The <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> method sets the property loading behavior for the rest of application or until it is reset. You can save the original behavior by using the <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> method and restore it as required.  
   
 ## Examples  
-To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20Basic%20SMO%20Project%20in%20Visual%20Studio%20.NET.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20C%23%20SMO%20Project%20in%20Visual%20Studio%20.NET.md).  
+To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-.net.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-.net.md).  
 
   
 ## Getting and Setting a Property in Visual Basic  
@@ -148,9 +148,9 @@ tb.Create();
 ```  
   
 ## Iterating Through All Properties of an Object in Visual Basic  
- This code example iterates through the **Properties** collection of the <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> object and displays them on the [!INCLUDE[vsprvs](../../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] Output screen.  
+ This code example iterates through the **Properties** collection of the <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> object and displays them on the [!INCLUDE[vsprvs](../../../a9retired/includes/vsprvs-md.md)] Output screen.  
   
- In the example, the <xref:Microsoft.SqlServer.Management.Smo.Property> object has been put in square parentheses because it is also a [!INCLUDE[vbprvb](../../../analysis-services/data-mining/includes/vbprvb-md.md)] keyword.  
+ In the example, the <xref:Microsoft.SqlServer.Management.Smo.Property> object has been put in square parentheses because it is also a [!INCLUDE[vbprvb](../../../a9retired/includes/vbprvb-md.md)] keyword.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -172,7 +172,7 @@ Next
 ```
   
 ## Iterating Through All Properties of an Object in Visual C#  
- This code example iterates through the **Properties** collection of the <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> object and displays them on the [!INCLUDE[vsprvs](../../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] Output screen.  
+ This code example iterates through the **Properties** collection of the <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> object and displays them on the [!INCLUDE[vsprvs](../../../a9retired/includes/vsprvs-md.md)] Output screen.  
   
 ```c#  
 {   
@@ -197,7 +197,7 @@ sp.QuotedIdentifierStatus = false;
 ## Setting Default Initialization Fields in Visual Basic  
  This code example shows how to minimize the number of object properties initialized in an SMO program. You have to include the `using System.Collections.Specialized`; statement to use the <xref:System.Collections.Specialized.StringCollection> object.  
   
- [!INCLUDE[ssSqlProfiler](../../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] can be used to compare the number statements sent to the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] with this optimization.  
+ [!INCLUDE[ssSqlProfiler](../../../a9retired/includes/sssqlprofiler-md.md)] can be used to compare the number statements sent to the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] with this optimization.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -229,7 +229,7 @@ srv.SetDefaultInitFields(typ, sc)
 ## Setting Default Initialization Fields in Visual C#  
  This code example shows how to minimize the number of object properties initialized in an SMO program. You have to include the `using System.Collections.Specialized`; statement to use the <xref:System.Collections.Specialized.StringCollection> object.  
   
- [!INCLUDE[ssSqlProfiler](../../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] can be used to compare the number statements sent to the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] with this optimization.  
+ [!INCLUDE[ssSqlProfiler](../../../a9retired/includes/sssqlprofiler-md.md)] can be used to compare the number statements sent to the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] with this optimization.  
   
 ```c#  
 {   

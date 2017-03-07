@@ -21,7 +21,7 @@ manager: "erikre"
  Another easy way to include data in a report is to use a shared dataset. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ##  <a name="Adding"></a> Adding a Report Part with Dependent Datasets to Your Report  
  When you add a report part to your report, the dependent datasets that it contains are also added to your report. Because a report part might include a rectangle that contains many other report items, it can add multiple dependent datasets to your report. Each shared dataset is an independent reference; the shared data source that it depends on is not added to your report. Each embedded dataset also adds the embedded or shared data source that it depends on.  

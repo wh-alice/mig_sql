@@ -16,7 +16,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Create a Shared Dataset or Embedded Dataset (Report Builder and SSRS)
-Embedded datasets are for use in a single [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report. Shared datasets on a report server can be used by multiple reports, both mobile and paginated. To create a dataset, you need an embedded or shared data source.  
+Embedded datasets are for use in a single [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] report. Shared datasets on a report server can be used by multiple reports, both mobile and paginated. To create a dataset, you need an embedded or shared data source.  
   
  Use **Report Builder** for the following tasks:  
   
@@ -26,7 +26,7 @@ Embedded datasets are for use in a single [!INCLUDE[ssRSnoversion_md](../../adva
   
 3.   Save the dataset directly to the report server or SharePoint site.  
   
- Use **Report Designer** in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] for the following tasks:  
+ Use **Report Designer** in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] for the following tasks:  
   
 1.  Create a shared dataset in Solution Explorer. Shared datasets must use data sources from the Shared Data Sources folder in Solution Explorer.  
   
@@ -37,7 +37,7 @@ Embedded datasets are for use in a single [!INCLUDE[ssRSnoversion_md](../../adva
  For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## To open Report Builder and create a shared dataset  
   
@@ -76,7 +76,7 @@ Embedded datasets are for use in a single [!INCLUDE[ssRSnoversion_md](../../adva
   
 7.  Click **Parameters**. On this page, set a default value to a constant or an expression, mark the parameter as read-only, nullable, or **Omit From Query**. For more information, see [Report Parameters](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
 
   
 ## To create a dataset from a SQL Server relational database  
@@ -104,7 +104,7 @@ Embedded datasets are for use in a single [!INCLUDE[ssRSnoversion_md](../../adva
   
 6.  In **Timeout**, type the number of seconds that the report server waits for a response from the database. The default value is 0 seconds. When the time out value is 0 seconds, the query does not time out.  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
      The dataset and its field collection appear in the Report Data pane under the data source node.  
   
@@ -112,7 +112,7 @@ Embedded datasets are for use in a single [!INCLUDE[ssRSnoversion_md](../../adva
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)   
+ [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../a9retired/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

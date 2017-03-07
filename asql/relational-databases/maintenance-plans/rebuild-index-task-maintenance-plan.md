@@ -36,15 +36,15 @@ manager: "jhubbard"
   
 -   **All databases**  
   
-     Generate a maintenance plan that runs maintenance tasks against all [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases except tempdb.  
+     Generate a maintenance plan that runs maintenance tasks against all [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] databases except tempdb.  
   
 -   **All system databases**  
   
-     Generate a maintenance plan that runs maintenance tasks against each of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system databases except tempdb. No maintenance tasks are run against user-created databases.  
+     Generate a maintenance plan that runs maintenance tasks against each of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system databases except tempdb. No maintenance tasks are run against user-created databases.  
   
 -   **All user databases**  
   
-     Generate a maintenance plan that runs maintenance tasks against all user-created databases. No maintenance tasks are run against the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system databases.  
+     Generate a maintenance plan that runs maintenance tasks against all user-created databases. No maintenance tasks are run against the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system databases.  
   
 -   **These specific databases**  
   
@@ -75,7 +75,7 @@ manager: "jhubbard"
  Use the `ONLINE` option which allows users to access the underlying table or clustered index data and any associated nonclustered indexes during index operations.  
   
 > [!NOTE]  
->  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+>  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
   
  **Do not rebuild indexes | Rebuild indexes offline**  
  Specify what to do for index types that cannot be rebuilt while they are online.  
@@ -93,7 +93,7 @@ manager: "jhubbard"
  Specify how long to wait for low priority locks.  
   
  **View T-SQL**  
- View the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements performed against the server for this task, based on the selected options.  
+ View the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements performed against the server for this task, based on the selected options.  
   
 > [!NOTE]  
 >  When the number of objects affected is large, this display can take a considerable amount of time.  
@@ -112,13 +112,13 @@ manager: "jhubbard"
  Specify how to authenticate against the server.  
   
  **Use Windows integrated security**  
- Connect to an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] with Windows Authentication.  
+ Connect to an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] with Windows Authentication.  
   
  **Use a specific user name and password**  
- Connect to an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication. This option is not available.  
+ Connect to an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication. This option is not available.  
   
  **User name**  
- Provide a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login to use when authenticating. This option is not available.  
+ Provide a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login to use when authenticating. This option is not available.  
   
  **Password**  
  Provide a password to use when authenticating. This option is not available.  

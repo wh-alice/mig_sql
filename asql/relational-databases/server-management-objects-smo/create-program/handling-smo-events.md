@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Handling SMO Events
   There are server event types that can be subscribed to by using an event handler and the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> object.  
   
- Many of the instance classes in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Management Objects (SMO) can trigger events when certain actions on the server occur.  
+ Many of the instance classes in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Management Objects (SMO) can trigger events when certain actions on the server occur.  
   
  These events can be handled programmatically by setting up an event handler and subscribing to the associated events. This type of event handling is transient because all the subscriptions are removed when the SMO client program exits.  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
  The types of database and server events that can be handled are listed in the <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> class and the <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>class.  
   
 ## Example  
-To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20Basic%20SMO%20Project%20in%20Visual%20Studio%20.NET.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20C%23%20SMO%20Project%20in%20Visual%20Studio%20.NET.md).  
+To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-.net.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-.net.md).  
 
   
 ## Registering Event Handlers and Subscribing to Event Handling in Visual Basic  

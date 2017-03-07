@@ -20,9 +20,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Delete Columns from a Table
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
 
-  This topic describes how to delete table columns in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to delete table columns in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
 > [!CAUTION]  
 >  When you delete a column from a table, it and all the data it contains are deleted from the database. This action cannot be undone.  
@@ -46,7 +46,7 @@ manager: "jhubbard"
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
  You cannot delete a column that has a CHECK constraint. You must first delete the constraint.  
   
- You cannot delete a column that has PRIMARY KEY or FOREIGN KEY constraints or other dependencies except when using the Table Designer. When using Object Explorer or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], you must first remove all dependencies on the column.  
+ You cannot delete a column that has PRIMARY KEY or FOREIGN KEY constraints or other dependencies except when using the Table Designer. When using Object Explorer or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], you must first remove all dependencies on the column.  
   
 ###  <a name="Security"></a> Security  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 #### To delete columns by using Object Explorer  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  In **Object Explorer**, right-click the table from which you want to delete columns and choose **Delete**.  
   
@@ -77,7 +77,7 @@ manager: "jhubbard"
   
 #### To delete columns  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

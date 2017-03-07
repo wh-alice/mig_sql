@@ -31,7 +31,7 @@ manager: "jhubbard"
 
   Changes the properties of a full-text catalog.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -46,10 +46,10 @@ ALTER FULLTEXT CATALOG catalog_name
   
 ## Arguments  
  *catalog_name*  
- Specifies the name of the catalog to be modified. If a catalog with the specified name does not exist, [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns an error and does not perform the ALTER operation.  
+ Specifies the name of the catalog to be modified. If a catalog with the specified name does not exist, [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns an error and does not perform the ALTER operation.  
   
  REBUILD  
- Tells [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to rebuild the entire catalog. When a catalog is rebuilt, the existing catalog is deleted and a new catalog is created in its place. All the tables that have full-text indexing references are associated with the new catalog. Rebuilding resets the full-text metadata in the database system tables.  
+ Tells [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to rebuild the entire catalog. When a catalog is rebuilt, the existing catalog is deleted and a new catalog is created in its place. All the tables that have full-text indexing references are associated with the new catalog. Rebuilding resets the full-text metadata in the database system tables.  
   
  WITH ACCENT_SENSITIVITY = {ON|OFF}  
  Specifies if the catalog to be altered is accent-sensitive or accent-insensitive for full-text indexing and querying.  
@@ -59,7 +59,7 @@ ALTER FULLTEXT CATALOG catalog_name
  The catalog and database default accent sensitivity are the same.  
   
  REORGANIZE  
- Tells [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to perform a *master merge*, which involves merging the smaller indexes created in the process of indexing into one large index. Merging the full-text index fragments can improve performance and free up disk and memory resources. If there are frequent changes to the full-text catalog, use this command periodically to reorganize the full-text catalog.  
+ Tells [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to perform a *master merge*, which involves merging the smaller indexes created in the process of indexing into one large index. Merging the full-text index fragments can improve performance and free up disk and memory resources. If there are frequent changes to the full-text catalog, use this command periodically to reorganize the full-text catalog.  
   
  REORGANIZE also optimizes internal index and catalog structures.  
   
@@ -91,7 +91,7 @@ GO
 ```  
   
 ## See Also  
- [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-catalogs-transact-sql.md)   
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-catalogs-transact-sql.md)   
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
  [Full-Text Search](../../relational-databases/search/full-text-search.md)  

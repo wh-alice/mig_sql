@@ -30,9 +30,9 @@ manager: "jhubbard"
 # SET NOCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx_md](../../t-sql/functions/includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Stops the message that shows the count of the number of rows affected by a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement or stored procedure from being returned as part of the result set.  
+  Stops the message that shows the count of the number of rows affected by a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement or stored procedure from being returned as part of the result set.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -46,7 +46,7 @@ SET NOCOUNT { ON | OFF }
   
  The @@ROWCOUNT function is updated even when SET NOCOUNT is ON.  
   
- SET NOCOUNT ON prevents the sending of DONE_IN_PROC messages to the client for each statement in a stored procedure. For stored procedures that contain several statements that do not return much actual data, or for procedures that contain [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] loops, setting SET NOCOUNT to ON can provide a significant performance boost, because network traffic is greatly reduced.  
+ SET NOCOUNT ON prevents the sending of DONE_IN_PROC messages to the client for each statement in a stored procedure. For stored procedures that contain several statements that do not return much actual data, or for procedures that contain [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] loops, setting SET NOCOUNT to ON can provide a significant performance boost, because network traffic is greatly reduced.  
   
  The setting specified by SET NOCOUNT is in effect at execute or run time and not at parse time.  
   

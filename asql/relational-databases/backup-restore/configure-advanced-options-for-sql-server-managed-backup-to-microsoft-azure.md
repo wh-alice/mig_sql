@@ -19,13 +19,13 @@ manager: "jhubbard"
   
  In each scenario, the backup is specified using the `database_name` parameter. When `database_name` is NUL or *, then the changes affect the default settings at an Instance level. Instance level settings also affect new databases created after the change.  
   
- Once you have specified these settings, you can then enable managed backup for the database or instance using the system stored procedure [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup.sp-backup-config-basic-transact-sql.md). For more information, see [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
+ Once you have specified these settings, you can then enable managed backup for the database or instance using the system stored procedure [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/reference/system-stored-procedures/managed-backup.sp-backup-config-basic-transact-sql.md). For more information, see [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
 > [!WARNING]  
->  You should always configure the advanced options and custom scheduling options before enabling [!INCLUDE[ss_smartbackup](../../relational-databases/backup-restore/includes/ss-smartbackup-md.md)] with [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup.sp-backup-config-basic-transact-sql.md). Otherwise, it is possible that unwanted backup operations will occur during the window of time between enabling [!INCLUDE[ss_smartbackup](../../relational-databases/backup-restore/includes/ss-smartbackup-md.md)] and configuring these settings.  
+>  You should always configure the advanced options and custom scheduling options before enabling [!INCLUDE[ss_smartbackup](../../relational-databases/backup-restore/includes/ss-smartbackup-md.md)] with [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/reference/system-stored-procedures/managed-backup.sp-backup-config-basic-transact-sql.md). Otherwise, it is possible that unwanted backup operations will occur during the window of time between enabling [!INCLUDE[ss_smartbackup](../../relational-databases/backup-restore/includes/ss-smartbackup-md.md)] and configuring these settings.  
   
 ## Configure Encryption  
- The following steps describe how to specify encryption settings using the stored procedure  [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup.sp-backup-config-advanced-transact-sql.md).  
+ The following steps describe how to specify encryption settings using the stored procedure  [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/managed-backup.sp-backup-config-advanced-transact-sql.md).  
   
 1.  **Determine the Encryption Algorithm:** First determine the name of the encryption algorithm to use. Select from one of the following algorithms.  
   
@@ -77,7 +77,7 @@ manager: "jhubbard"
     >  If `@database_name` is NULL in the previous example, the settings apply to the SQL Server Instance.  
   
 ## Configure a Custom Backup Schedule  
- The following steps describe how to set a custom schedule with the stored procedure [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup.sp-backup-config-schedule-transact-sql.md).  
+ The following steps describe how to set a custom schedule with the stored procedure [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/managed-backup.sp-backup-config-schedule-transact-sql.md).  
   
 1.  **Determine the frequency for full backups:** Determine how often to take full backups of the database. You can choose between 'Daily' and 'Weekly' full backups.  
   

@@ -16,13 +16,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.startup
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Performs maintenance of the state of operations for the SSISDB catalog.  
   
- The stored procedure fixes the status of any packages there were running if and when the [!INCLUDE[ssIS](../../../analysis-services/instances/includes/ssis-md.md)] server instance goes down.  
+ The stored procedure fixes the status of any packages there were running if and when the [!INCLUDE[ssIS](../../../a9retired/includes/ssis-md.md)] server instance goes down.  
   
- You have the option of enabling the stored procedure to run automatically each time the [!INCLUDE[ssIS](../../../analysis-services/instances/includes/ssis-md.md)] server instance is restarted, by selecting the **Enable automatic execution of Integration Services stored procedure at SQL Server startup** option in the **Create Catalog** dialog box.  
+ You have the option of enabling the stored procedure to run automatically each time the [!INCLUDE[ssIS](../../../a9retired/includes/ssis-md.md)] server instance is restarted, by selecting the **Enable automatic execution of Integration Services stored procedure at SQL Server startup** option in the **Create Catalog** dialog box.  
   
 ## Syntax  
   

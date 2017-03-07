@@ -17,9 +17,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Extended Methods on Geography Instances
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports a number of extended methods on Open Geospatial Consortium (OGC) geography instances.  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports a number of extended methods on Open Geospatial Consortium (OGC) geography instances.  
   
  For more information on OGC specifications, see the following resources:  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 -   [AsBinaryZM &#40;geography Data Type&#41;](../../t-sql/data-types/asbinaryzm-geography-data-type.md)  
   
--   [AsGml](../Topic/AsGml%20\(geography%20Data%20Type\).md)  
+-   [AsGml](../../t-sql/data-types/asgml-geography-data-type.md)  
   
 -   [AsTextZM](../../t-sql/data-types/astextzm-geography-data-type.md)  
   

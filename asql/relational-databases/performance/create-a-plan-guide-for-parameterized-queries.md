@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Create a Plan Guide for Parameterized Queries
   A TEMPLATE plan guide matches stand-alone queries that parameterize to a specified form.  
   
- The following example creates a plan guide that matches any query that parameterizes to a specified form, and directs [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to force parameterization of the query. The following two queries are syntactically equivalent, but differ only in their constant literal values.  
+ The following example creates a plan guide that matches any query that parameterizes to a specified form, and directs [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to force parameterization of the query. The following two queries are syntactically equivalent, but differ only in their constant literal values.  
   
 ```  
 SELECT * FROM AdventureWorks2012.Sales.SalesOrderHeader AS h  
@@ -49,7 +49,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION(PARAMETERIZATION FORCED)';  
 ```  
   
- In the previous example, the value for the `@stmt` parameter is the parameterized form of the query. The only reliable way to obtain this value for use in sp_create_plan_guide is to use the [sp_get_query_template](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md) system stored procedure. The following script can be used both to obtain the parameterized query and then create a plan guide on it.  
+ In the previous example, the value for the `@stmt` parameter is the parameterized form of the query. The only reliable way to obtain this value for use in sp_create_plan_guide is to use the [sp_get_query_template](../../relational-databases/reference/system-stored-procedures/sp-get-query-template-transact-sql.md) system stored procedure. The following script can be used both to obtain the parameterized query and then create a plan guide on it.  
   
 ```  
 DECLARE @stmt nvarchar(max);  

@@ -21,7 +21,7 @@ manager: "erikre"
 TOM exposes native tabular metadata, such as **model**, **tables**, **columns**, and **relationships** objects.  A high-level view of the object model tree, provided below, illustrates how the component parts are related.  
   
  Because TOM is an extension of AMO, all classes representing new Tabular objects introduced in SQL Server 2016 are implemented in a new Microsoft.AnalysisServices.Tabular.dll assembly. General-purpose classes of AMO were moved to Microsoft.AnalysisServices.Core assembly. Your code will need to reference both assemblies.
- See [Install, distribute, and reference the Tabular Object Model &#40;Microsoft.AnalysisServices.Tabular&#41;](../Topic/Install,%20distribute,%20and%20reference%20the%20Tabular%20Object%20Model%20\(Microsoft.AnalysisServices.Tabular\).md) for details.  
+ See [Install, distribute, and reference the Tabular Object Model &#40;Microsoft.AnalysisServices.Tabular&#41;](../../analysis-services/tabular-model-programming-compatibility-level-1200/install-distribute-and-reference-the-tabular-object-model.md) for details.  
   
  Currently, the API is available only for managed code over the .NET framework. To review the full list of programming options, including script and query language support, see [Tabular Model Programming for Compatibility Level 1200](../../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md).  
   

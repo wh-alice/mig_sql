@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Change a Server&#39;s Registration (SQL Server Management Studio)
-  This topic describes how to change a server's registration in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. You can change the connection information for a registered server at any time.  
+  This topic describes how to change a server's registration in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. You can change the connection information for a registered server at any time.  
   
 ##  <a name="SSMSProcedure"></a>  
   

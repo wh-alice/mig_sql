@@ -31,11 +31,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Controls the locking and row versioning behavior of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements issued by a connection to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Controls the locking and row versioning behavior of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements issued by a connection to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -65,21 +65,21 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  Transactions running at the READ UNCOMMITTED level do not issue shared locks to prevent other transactions from modifying data read by the current transaction. READ UNCOMMITTED transactions are also not blocked by exclusive locks that would prevent the current transaction from reading rows that have been modified but not committed by other transactions. When this option is set, it is possible to read uncommitted modifications, which are called dirty reads. Values in the data can be changed and rows can appear or disappear in the data set before the end of the transaction. This option has the same effect as setting NOLOCK on all tables in all SELECT statements in a transaction. This is the least restrictive of the isolation levels.  
   
- In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you can also minimize locking contention while protecting transactions from dirty reads of uncommitted data modifications using either:  
+ In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], you can also minimize locking contention while protecting transactions from dirty reads of uncommitted data modifications using either:  
   
 -   The READ COMMITTED isolation level with the READ_COMMITTED_SNAPSHOT database option set to ON.  
   
 -   The SNAPSHOT isolation level.  
   
  READ COMMITTED  
- Specifies that statements cannot read data that has been modified but not committed by other transactions. This prevents dirty reads. Data can be changed by other transactions between individual statements within the current transaction, resulting in nonrepeatable reads or phantom data. This option is the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] default.  
+ Specifies that statements cannot read data that has been modified but not committed by other transactions. This prevents dirty reads. Data can be changed by other transactions between individual statements within the current transaction, resulting in nonrepeatable reads or phantom data. This option is the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] default.  
   
  The behavior of READ COMMITTED depends on the setting of the READ_COMMITTED_SNAPSHOT database option:  
   
--   If READ_COMMITTED_SNAPSHOT is set to OFF (the default), the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] uses shared locks to prevent other transactions from modifying rows while the current transaction is running a read operation. The shared locks also block the statement from reading rows modified by other transactions until the other transaction is completed. The shared lock type determines when it will be released. Row locks are released before the next row is processed. Page locks are released when the next page is read, and table locks are released when the statement finishes.  
+-   If READ_COMMITTED_SNAPSHOT is set to OFF (the default), the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] uses shared locks to prevent other transactions from modifying rows while the current transaction is running a read operation. The shared locks also block the statement from reading rows modified by other transactions until the other transaction is completed. The shared lock type determines when it will be released. Row locks are released before the next row is processed. Page locks are released when the next page is read, and table locks are released when the statement finishes.  
   
     > [!NOTE]  
-    >  If READ_COMMITTED_SNAPSHOT is set to ON, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] uses row versioning to present each statement with a transactionally consistent snapshot of the data as it existed at the start of the statement. Locks are not used to protect the data from updates by other transactions.  
+    >  If READ_COMMITTED_SNAPSHOT is set to ON, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] uses row versioning to present each statement with a transactionally consistent snapshot of the data as it existed at the start of the statement. Locks are not used to protect the data from updates by other transactions.  
     >   
     >  Snapshot isolation supports FILESTREAM data. Under snapshot isolation mode, FILESTREAM data read by any statement in a transaction will be the transactionally consistent version of the data that existed at the start of the transaction.  
   
@@ -132,7 +132,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
  If you issue SET TRANSACTION ISOLATION LEVEL in a stored procedure or trigger, when the object returns control the isolation level is reset to the level in effect when the object was invoked. For example, if you set REPEATABLE READ in a batch, and the batch then calls a stored procedure that sets the isolation level to SERIALIZABLE, the isolation level setting reverts to REPEATABLE READ when the stored procedure returns control to the batch.  
   
 > [!NOTE]  
->  User-defined functions and common language runtime (CLR) user-defined types cannot execute SET TRANSACTION ISOLATION LEVEL. However, you can override the isolation level by using a table hint. For more information, see [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+>  User-defined functions and common language runtime (CLR) user-defined types cannot execute SET TRANSACTION ISOLATION LEVEL. However, you can override the isolation level by using a table hint. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  When you use sp_bindsession to bind two sessions, each session retains its isolation level setting. Using SET TRANSACTION ISOLATION LEVEL to change the isolation level setting of one session does not affect the setting of any other sessions bound to it.  
   
@@ -152,15 +152,15 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 |Isolation level|Transact SQL access|File system access|  
 |---------------------|-------------------------|------------------------|  
-|Read uncommitted|[!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]|Unsupported|  
-|Read committed|[!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]|  
-|Repeatable read|[!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]|Unsupported|  
-|Serializable|[!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]|Unsupported|  
-|Read committed snapshot|[!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]|  
-|Snapshot|[!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]|  
+|Read uncommitted|[!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]|Unsupported|  
+|Read committed|[!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]|  
+|Repeatable read|[!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]|Unsupported|  
+|Serializable|[!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]|Unsupported|  
+|Read committed snapshot|[!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]|  
+|Snapshot|[!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]|  
   
 ## Examples  
- The following example sets the `TRANSACTION ISOLATION LEVEL` for the session. For each [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement that follows, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] holds all of the shared locks until the end of the transaction.  
+ The following example sets the `TRANSACTION ISOLATION LEVEL` for the session. For each [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement that follows, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] holds all of the shared locks until the end of the transaction.  
   
 ```  
 USE AdventureWorks2012;  
@@ -184,6 +184,6 @@ GO
  [DBCC USEROPTIONS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)  
+ [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  
   
   

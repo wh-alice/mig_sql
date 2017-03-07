@@ -31,11 +31,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # WITH common_table_expression (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Specifies a temporary named result set, known as a common table expression (CTE). This is derived from a simple query and defined within the execution scope of a single SELECT, INSERT, UPDATE, or DELETE statement. This clause can also be used in a CREATE VIEW statement as part of its defining SELECT statement. A common table expression can include references to itself. This is referred to as a recursive common table expression.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -130,7 +130,7 @@ manager: "jhubbard"
   
 -   All columns returned by the recursive CTE are nullable regardless of the nullability of the columns returned by the participating SELECT statements.  
   
--   An incorrectly composed recursive CTE may cause an infinite loop. For example, if the recursive member query definition returns the same values for both the parent and child columns, an infinite loop is created. To prevent an infinite loop, you can limit the number of recursion levels allowed for a particular statement by using the MAXRECURSION hint and a value between 0 and 32,767 in the OPTION clause of the INSERT, UPDATE, DELETE, or SELECT statement. This lets you control the execution of the statement until you resolve the code problem that is creating the loop. The server-wide default is 100. When 0 is specified, no limit is applied. Only one MAXRECURSION value can be specified per statement. For more information, see [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).  
+-   An incorrectly composed recursive CTE may cause an infinite loop. For example, if the recursive member query definition returns the same values for both the parent and child columns, an infinite loop is created. To prevent an infinite loop, you can limit the number of recursion levels allowed for a particular statement by using the MAXRECURSION hint and a value between 0 and 32,767 in the OPTION clause of the INSERT, UPDATE, DELETE, or SELECT statement. This lets you control the execution of the statement until you resolve the code problem that is creating the loop. The server-wide default is 100. When 0 is specified, no limit is applied. Only one MAXRECURSION value can be specified per statement. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 -   A view that contains a recursive common table expression cannot be used to update data.  
   
@@ -140,8 +140,8 @@ manager: "jhubbard"
   
 -   Analytic and aggregate functions in the recursive part of the CTE are applied to the set for the current recursion level and not to the set for the CTE. Functions like ROW_NUMBER operate only on the subset of data passed to them by the current recursion level and not the entire set of data pased to the recursive part of the CTE. For more information, see example K. Using analytical functions in a recursive CTE that follows.  
   
-## Features and Limitations of Common Table Expressions in [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
- The current implementation of CTEs in [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)] have the following features and limitations:  
+## Features and Limitations of Common Table Expressions in [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
+ The current implementation of CTEs in [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)] have the following features and limitations:  
   
 -   A CTE can be specified in a **SELECT** statement.  
   
@@ -169,12 +169,12 @@ manager: "jhubbard"
   
 -   When a CTE is used in a statement that is part of a batch, the statement before it must be followed by a semicolon.  
   
--   When used in statements prepared by **sp_prepare**, CTEs will behave the same way as other **SELECT** statements in PDW. However, if CTEs are used as part of CETAS prepared by **sp_prepare**, the behavior can defer from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and other PDW statements because of the way binding is implemented for **sp_prepare**. If **SELECT** that references CTE is using a wrong column that does not exist in CTE, the **sp_prepare** will pass without detecting the error, but the error will be thrown during **sp_execute** instead.  
+-   When used in statements prepared by **sp_prepare**, CTEs will behave the same way as other **SELECT** statements in PDW. However, if CTEs are used as part of CETAS prepared by **sp_prepare**, the behavior can defer from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and other PDW statements because of the way binding is implemented for **sp_prepare**. If **SELECT** that references CTE is using a wrong column that does not exist in CTE, the **sp_prepare** will pass without detecting the error, but the error will be thrown during **sp_execute** instead.  
   
 ## Examples  
   
 ### A. Creating a simple common table expression  
- The following example shows the total number of sales orders per year for each sales representative at [!INCLUDE[ssSampleDBCoFull](../../analysis-services/data-mining/includes/sssampledbcofull-md.md)].  
+ The following example shows the total number of sales orders per year for each sales representative at [!INCLUDE[ssSampleDBCoFull](../../a9notintoc/includes/sssampledbcofull-md.md)].  
   
 ```  
   
@@ -593,10 +593,10 @@ Lvl  N
   
  `N` returns 1 for each pass of the recursive part of the CTE because only the subset of data for that recursion level is passed to `ROWNUMBER`. For each of the iterations of the recursive part of the query, only one row is passed to `ROWNUMBER`.  
   
-## Examples: [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### L. Creating a simple common table expression  
- The following example shows the total number of sales orders per year for each sales representative at [!INCLUDE[ssSampleDBCoFull](../../analysis-services/data-mining/includes/sssampledbcofull-md.md)].  
+ The following example shows the total number of sales orders per year for each sales representative at [!INCLUDE[ssSampleDBCoFull](../../a9notintoc/includes/sssampledbcofull-md.md)].  
   
 ```  
 -- Uses AdventureWorks  
@@ -637,7 +637,7 @@ GO
 ```  
   
 ### N. Using a common table expression within a CTAS statement  
- The following example creates a new table containing the total number of sales orders per year for each sales representative at [!INCLUDE[ssSampleDBCoFull](../../analysis-services/data-mining/includes/sssampledbcofull-md.md)].  
+ The following example creates a new table containing the total number of sales orders per year for each sales representative at [!INCLUDE[ssSampleDBCoFull](../../a9notintoc/includes/sssampledbcofull-md.md)].  
   
 ```  
 -- Uses AdventureWorks  
@@ -666,7 +666,7 @@ GO
 ```  
   
 ### O. Using a common table expression within a CETAS statement  
- The following example creates a new external table containing the total number of sales orders per year for each sales representative at [!INCLUDE[ssSampleDBCoFull](../../analysis-services/data-mining/includes/sssampledbcofull-md.md)].  
+ The following example creates a new external table containing the total number of sales orders per year for each sales representative at [!INCLUDE[ssSampleDBCoFull](../../a9notintoc/includes/sssampledbcofull-md.md)].  
   
 ```  
 -- Uses AdventureWorks  

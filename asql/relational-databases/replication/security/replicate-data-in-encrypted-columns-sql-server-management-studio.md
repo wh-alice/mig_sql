@@ -73,14 +73,14 @@ manager: "jhubbard"
 ## Example  
  This example creates a symmetric key, a certificate that is used to help secure the symmetric key, and a master key. These keys are created in the publication database. They are then used to create an encrypted column (EncryptedCreditCardApprovalCode) in the `SalesOrderHeader` table. This column is published in the AdvWorksSalesOrdersMerge publication instead of the unencrypted CreditCardApprovalCode column. When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
- [!code-sql[HowTo#sp_PublishEncryptedColumn](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_1.sql)]  
+ [!code-sql[HowTo#sp_PublishEncryptedColumn](../../../a9retired/codesnippet/tsql/replicate-data-in-encryp_1.sql)]  
   
- [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_2.sql)]  
+ [!code-sql[HowTo#sp_AddMergeArticle](../../../a9retired/codesnippet/tsql/replicate-data-in-encryp_2.sql)]  
   
 ## Example  
  This example recreates the same symmetric key in the subscription database using the same values for ALGORITHM, KEY_SOURCE, and IDENTITY_VALUE from the first example. This example assumes that you have already initialized a subscription to the AdvWorksSalesOrdersMerge publication to replicate the encrypted column. When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file during storage and transport to prevent unauthorized access.  
   
- [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_3.sql)]  
+ [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../a9retired/codesnippet/tsql/replicate-data-in-encryp_3.sql)]  
   
 ## See Also  
  [Security Overview &#40;Replication&#41;](../../../relational-databases/replication/security/security-overview-replication.md)   

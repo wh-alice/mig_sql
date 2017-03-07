@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # InstanceName Property (ClientSettingsGeneralFlag Class)
-  Gets the name of the instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] client.  
+  Gets the name of the instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] client.  
   
 ## Syntax  
   
@@ -36,7 +36,7 @@ object.InstanceName [= value]
  A [ClientSettingsGeneralFlag Class](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) object that represents a general flag for the server settings.  
   
 ## Property Value/Return Value  
- A string value that specifies the name of the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] client.  
+ A string value that specifies the name of the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] client.  
   
 ## Remarks  
   

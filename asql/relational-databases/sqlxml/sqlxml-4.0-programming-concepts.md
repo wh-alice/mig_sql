@@ -20,7 +20,7 @@ manager: "jhubbard"
 # SQLXML 4.0 Programming Concepts
   SQLXML 3.0 was offered as a Web release to provide additional client-side XML functionality and enhancements to existing features, such as annotated XSD schemas, XML bulk load, Web services (SOAP) support, and updategrams.  
   
- [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] introduced SQLXML 4.0, which continues to deliver the same functionality as SQLXML 3.0 plus additional updates provided to accommodate new features introduced with [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)].  
+ [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] introduced SQLXML 4.0, which continues to deliver the same functionality as SQLXML 3.0 plus additional updates provided to accommodate new features introduced with [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)].  
   
  This section provides information about SQLXML 4.0.  
   
@@ -54,10 +54,10 @@ manager: "jhubbard"
  [Performing Bulk Load of XML Data &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4.0.md)  
  Describes how to bulk load XML in SQLXML 4.0.  
   
- [SQLXML 4.0 Data Access Components](../Topic/SQLXML%204.0%20Data%20Access%20Components.md)  
+ [SQLXML 4.0 Data Access Components](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4.0-data-access-components-sqlxmloledb-provider.md)  
  Documents the SQLXMLOLEDB Provider and provides links to other SQLXML 4.0 data access components.  
   
- [SQLXML 4.0 .NET Framework Support](../Topic/SQLXML%204.0%20.NET%20Framework%20Support.md)  
+ [SQLXML 4.0 .NET Framework Support](../../a9retired/sqlxml-4.0-.net-framework-support.md)  
  Describes the SQLXML 4.0 support for the .NET Framework.  
   
  [Caching Templates, XSL, and Schemas &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4.0.md)  

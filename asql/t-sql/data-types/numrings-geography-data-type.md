@@ -24,7 +24,7 @@ manager: "jhubbard"
 # NumRings (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns the total number of rings in a **Polygon** instance. In the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] **geography** type, external and internal rings are not distinguished, as any ring can be taken to be the external ring.  
+  Returns the total number of rings in a **Polygon** instance. In the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] **geography** type, external and internal rings are not distinguished, as any ring can be taken to be the external ring.  
   
 ## Syntax  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
 ```  
   
 ## Return Type  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **int**  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] return type: **int**  
   
  CLR return type: **SqlInt32**  
   

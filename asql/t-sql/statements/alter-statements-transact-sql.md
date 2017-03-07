@@ -21,9 +21,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # ALTER Statements (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] contains the following ALTER statements. Use ALTER statements to modify the definition of existing entities. For example, use ALTER TABLE to add a new column to a table, or use ALTER DATABASE to set database options.  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] contains the following ALTER statements. Use ALTER statements to modify the definition of existing entities. For example, use ALTER TABLE to add a new column to a table, or use ALTER DATABASE to set database options.  
   
 ## In This Section  
   
@@ -41,13 +41,13 @@ manager: "jhubbard"
 |[ALTER CRYPTOGRAPHIC PROVIDER](../../t-sql/statements/alter-cryptographic-provider-transact-sql.md)|[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)|[ALTER SERVICE](../../t-sql/statements/alter-service-transact-sql.md)|  
 |[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)|[ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md)|[ALTER SERVICE MASTER KEY](../../t-sql/statements/alter-service-master-key-transact-sql.md)|  
 |[ALTER DATABASE AUDIT SPECIFICATION](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|[ALTER MESSAGE TYPE](../../t-sql/statements/alter-message-type-transact-sql.md)|[ALTER SYMMETRIC KEY](../../t-sql/statements/alter-symmetric-key-transact-sql.md)|  
-|[ALTER DATABASE Compatibility Level](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)|[ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md)|[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)|  
-|[ALTER DATABASE Database Mirroring](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md)|[ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)|[ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md)|  
+|[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)|[ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md)|[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)|  
+|[ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)|[ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)|[ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md)|  
 |[ALTER DATABASE ENCRYPTION KEY](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)|[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|[ALTER USER](../../t-sql/statements/alter-user-transact-sql.md)|  
 |[ALTER ENDPOINT](../../t-sql/statements/alter-endpoint-transact-sql.md)|[ALTER QUEUE](../../t-sql/statements/alter-queue-transact-sql.md)|[ALTER VIEW](../../t-sql/statements/alter-view-transact-sql.md)|  
-|[ALTER DATABASE File and Filegroup Options](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md)|[ALTER REMOTE SERVICE BINDING](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)|[ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)|  
-|[ALTER DATABASE SET HADR](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md)|[ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md)|[ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)|  
-|[ALTER DATABASE SET Options](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)|[ALTER RESOURCE POOL](../../t-sql/statements/alter-resource-pool-transact-sql.md)||  
+|[ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)|[ALTER REMOTE SERVICE BINDING](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)|[ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)|  
+|[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)|[ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md)|[ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)|  
+|[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md)|[ALTER RESOURCE POOL](../../t-sql/statements/alter-resource-pool-transact-sql.md)||  
 |[ALTER DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)|[ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md)||  
   
 ## See Also  

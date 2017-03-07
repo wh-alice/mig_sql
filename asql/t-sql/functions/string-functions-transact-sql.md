@@ -22,7 +22,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # String Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   The following scalar functions perform an operation on a string input value and return a string or numeric value:  
   

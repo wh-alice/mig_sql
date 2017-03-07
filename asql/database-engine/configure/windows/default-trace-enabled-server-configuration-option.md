@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # default trace enabled Server Configuration Option
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Use the **default trace enabled** option to enable or disable the default trace log files. The default trace functionality provides a rich, persistent log of activity and changes primarily related to the configuration options.  
   
@@ -30,9 +30,9 @@ manager: "jhubbard"
  Default trace provides troubleshooting assistance to database administrators by ensuring that they have the log data necessary to diagnose problems the first time they occur.  
   
 ## Viewing  
- The default trace logs can be opened and examined by [!INCLUDE[ssSqlProfiler](../../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] or queried with [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] by using the `fn_trace_gettable` system function. [!INCLUDE[ssSqlProfiler](../../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] can open the default trace log files just as it does normal trace output files. The default trace log is stored by default in the `\MSSQL\LOG` directory using a rollover trace file. The base file name for the default trace log file is `log.trc`. In a typical installation of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the default trace is enabled and thus becomes TraceID 1. If enabled after installation and after creating other traces, the TraceID can become a larger number.  
+ The default trace logs can be opened and examined by [!INCLUDE[ssSqlProfiler](../../../a9retired/includes/sssqlprofiler-md.md)] or queried with [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] by using the `fn_trace_gettable` system function. [!INCLUDE[ssSqlProfiler](../../../a9retired/includes/sssqlprofiler-md.md)] can open the default trace log files just as it does normal trace output files. The default trace log is stored by default in the `\MSSQL\LOG` directory using a rollover trace file. The base file name for the default trace log file is `log.trc`. In a typical installation of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], the default trace is enabled and thus becomes TraceID 1. If enabled after installation and after creating other traces, the TraceID can become a larger number.  
   
- For more information about using [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Profiler to view this trace file, see [Open a Trace File &#40;SQL Server Profiler&#41;](../../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
+ For more information about using [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Profiler to view this trace file, see [Open a Trace File &#40;SQL Server Profiler&#41;](../../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
 ### Example:  
  The following statement opens the default trace log in the default location:  
@@ -53,6 +53,6 @@ GO
 ## See Also  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../../database-engine/configure/windows/server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+ [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md)  
   
   

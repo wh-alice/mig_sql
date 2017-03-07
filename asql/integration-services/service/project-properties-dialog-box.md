@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Project Properties Dialog Box
-  An [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project is a unit of deployment. Each project can contain packages, parameters, and environment references. A project is a securable object and can define permissions for database principals. When a project is re-deployed, the previous version of the project can be stored in the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog.  
+  An [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project is a unit of deployment. Each project can contain packages, parameters, and environment references. A project is a securable object and can define permissions for database principals. When a project is re-deployed, the previous version of the project can be stored in the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] catalog.  
   
  Project parameters and package parameters can be used to assign values to properties within packages at the time of execution. Some parameters require values before the package can be executed. Parameter values that reference environment variables require that the project has the corresponding environment reference prior to execution.  
   
@@ -32,9 +32,9 @@ manager: "jhubbard"
   
 ##  <a name="open_dialog"></a> Open the Project Properties dialog box  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] server.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] server.  
   
-     You’re connecting to the instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] that hosts the SSISDB database.  
+     You’re connecting to the instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] that hosts the SSISDB database.  
   
 2.  In Object Explorer, expand the tree to display the **Integration Services Catalogs** node.  
   

@@ -30,7 +30,7 @@ manager: "erikre"
  When you preview reports in Report Builder and Report Designer, or view reports in Report Manager or a SharePoint site, the data is refreshed and the reports display the current data from the data source that the report uses. If you want to view a report without refreshing its data, you can use report history and cached data with published reports. You cannot use these features when previewing reports in Report Builder and Report Designer.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ##  <a name="FindingAndViewingReportsRB30"></a> Finding and Viewing Reports in Report Builder  
  To find a report that you want to work with or to select a shared data source, image, or subreport to use in a report, browse your computer, folders on a report server, or SharePoint site integrated with Reporting Services.  
@@ -74,10 +74,10 @@ manager: "erikre"
  ![Report toolbar in Report Manager](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "Report toolbar in Report Manager")  
 Report Manager window  
   
- ![Report toolbar](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
+ ![Report toolbar](../../a9retired/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
 Report toolbar  
   
- After you run a report, you can export it to another format, such as [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Excel or PDF. You can also export the report using a data rendering extension such as the Comma-Separated Value (CSV) rendering extension and then use the CSV data file as input to another application. For more information about exporting reports, see [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) and [Export a Report as Another File Type &#40;Report Builder and SSRS&#41;](../Topic/Export%20a%20Report%20as%20Another%20File%20Type%20\(Report%20Builder%20and%20SSRS\).md).  
+ After you run a report, you can export it to another format, such as [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Excel or PDF. You can also export the report using a data rendering extension such as the Comma-Separated Value (CSV) rendering extension and then use the CSV data file as input to another application. For more information about exporting reports, see [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) and [Export a Report as Another File Type &#40;Report Builder and SSRS&#41;](../../a9retired/export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
  The easiest way to select and run a report is to open Report Manager and then search for or browse to the report that you want to view. For step-by-step instruction on how to open reports, see [Open and Close a Report &#40;Report Manager&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
@@ -88,7 +88,7 @@ Report toolbar
   
 |Option|Result|  
 |------------|------------|  
-|**Refresh** button on the browser window|Displays the report stored in the session cache. A session cache is created when a user opens a report. [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] uses browser sessions to maintain a consistent viewing experience while a report is open.|  
+|**Refresh** button on the browser window|Displays the report stored in the session cache. A session cache is created when a user opens a report. [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] uses browser sessions to maintain a consistent viewing experience while a report is open.|  
 |![Browser refresh button on report toolbar](../../reporting-services/media/htmlviewer-refresh.GIF "Browser refresh button on report toolbar")|When you click the **Refresh** button on the report toolbar, the report server re-runs the query and updates report data if the report runs on-demand. If the report is cached or is a snapshot, **Refresh** displays the report that is stored in the report server database.|  
 |CTRL+F5 keyboard combination|Produces the same result as clicking the **Refresh** button on the report toolbar.|  
   
@@ -96,11 +96,11 @@ Report toolbar
 ##  <a name="ViewingAndManagingSharePointSite"></a> Viewing and Managing Report Server Items from a SharePoint Site  
  When the system administrator configures a report server to run in SharePoint integrated mode, you can view and manage reports and other report server items from a SharePoint site.  
   
- The SharePoint site includes pages to set data source properties, report history, report processing options, schedules, subscriptions, report parameters, and create shared schedules. You can manage report server items on a SharePoint site the same way you create and manage them from other tools in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ The SharePoint site includes pages to set data source properties, report history, report processing options, schedules, subscriptions, report parameters, and create shared schedules. You can manage report server items on a SharePoint site the same way you create and manage them from other tools in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  To access the application pages, select item-specific actions from a drop-down menu on a report or other report server item that you previously added to a SharePoint library. Depending on the item and your permissions, you might also be able to create reports in Report Builder, generate models, and set model item security.  
   
- For more information about Reporting Services and SharePoint technology, see [Configuration and Administration of a Report Server &#40;Reporting Services SharePoint Mode&#41;](../../reporting-services/report-server/sharepoint/846e86d0-fbbb-426c-97f9-f179cd42b390.md) in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
+ For more information about Reporting Services and SharePoint technology, see [Configuration and Administration of a Report Server &#40;Reporting Services SharePoint Mode&#41;](../../reporting-services/report-server/sharepoint/846e86d0-fbbb-426c-97f9-f179cd42b390.md) in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
   
 ### Finding Report Server Items on a SharePoint Site  
  Before you can set properties, you must first be able to locate the item. Report server items are always stored in libraries or in a folder within a library.  
@@ -123,11 +123,11 @@ Report toolbar
   
   
 ##  <a name="DeskTop"></a> Viewing Reports in a Desktop Application  
- You can bypass browser viewing entirely and use a desktop application (such as [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Excel) as your report viewer instead. To do this, define a subscription that specifies a desktop application format and a shared folder destination. The report server generates your report as an application file, appends a file name extension, and saves the report as a file on your hard disk. You can then use [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Excel (or another application) instead of a browser to view your report.  
+ You can bypass browser viewing entirely and use a desktop application (such as [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Excel) as your report viewer instead. To do this, define a subscription that specifies a desktop application format and a shared folder destination. The report server generates your report as an application file, appends a file name extension, and saves the report as a file on your hard disk. You can then use [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Excel (or another application) instead of a browser to view your report.  
   
   
 ##  <a name="AboutUserSessions"></a> About User Sessions  
- [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] uses browser sessions to maintain consistency while viewing reports. Sessions are based on browser connections, not authenticated users. A new session is created every time that a user opens a report in a new browser window. Once a browser session is established, you continue to work with the version of the report that was opened when the session began, even if the report is modified on the report server. For example, if you open a report at 11:00 P.M., and a report author republishes the same report at 11:01 P.M., your session will contain the version that you opened for the duration of the session.  
+ [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] uses browser sessions to maintain consistency while viewing reports. Sessions are based on browser connections, not authenticated users. A new session is created every time that a user opens a report in a new browser window. Once a browser session is established, you continue to work with the version of the report that was opened when the session began, even if the report is modified on the report server. For example, if you open a report at 11:00 P.M., and a report author republishes the same report at 11:01 P.M., your session will contain the version that you opened for the duration of the session.  
   
  If you refresh a report within the same session using the browser's **Refresh** button, the original session version of the report is displayed. If you refresh an on-demand report using the **Refresh** button on the report toolbar, the report is re-run and new data, if any, is displayed.  
   
@@ -154,6 +154,6 @@ Report toolbar
 ## See Also  
  [Saving Reports &#40;Report Builder&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Install and Uninstall Report Builder](../Topic/Install%20and%20Uninstall%20Report%20Builder.md)  
+ [Install and Uninstall Report Builder](../../a9retired/install-and-uninstall-report-builder.md)  
   
   

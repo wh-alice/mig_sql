@@ -20,9 +20,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Modify Check Constraints
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
 
-  You can modify a check constraint in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] when you want to change the constraint expression or the options that enable or disable the constraint for specific conditions.  
+  You can modify a check constraint in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] when you want to change the constraint expression or the options that enable or disable the constraint for specific conditions.  
   
  **In This Topic**  
   
@@ -73,6 +73,6 @@ manager: "jhubbard"
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To modify a check constraint**  
   
- To modify a `CHECK` constraint using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], you must first delete the existing `CHECK` constraint and then re-create it with the new definition. For more information, see [Delete Check Constraints](../../relational-databases/tables/delete-check-constraints.md) and [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md).  
+ To modify a `CHECK` constraint using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], you must first delete the existing `CHECK` constraint and then re-create it with the new definition. For more information, see [Delete Check Constraints](../../relational-databases/tables/delete-check-constraints.md) and [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md).  
   
 ###  <a name="TsqlExample"></a>  

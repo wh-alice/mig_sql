@@ -19,7 +19,7 @@ manager: "erikre"
   An operator is a symbol that represents actions applied to one or more terms in an expression. The following categories of operators are supported in an expression: arithmetic, comparison, concatenation, logical or bitwise, and bit shift.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ### Arithmetic  
  Arithmetic operators perform mathematical operations on two numeric terms in an expression.  
@@ -77,10 +77,10 @@ manager: "erikre"
 |>>|Performs an arithmetic right-shift on a bit pattern.|  
   
 ## See Also  
- [Expression Dialog Box](../Topic/Expression%20Dialog%20Box.md)   
+ [Expression Dialog Box](../../a9retired/expression-dialog-box.md)   
  [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Expression Dialog Box &#40;Report Builder&#41;](../Topic/Expression%20Dialog%20Box%20\(Report%20Builder\).md)  
+ [Expression Dialog Box &#40;Report Builder&#41;](../../a9retired/expression-dialog-box-report-builder.md)  
   
   

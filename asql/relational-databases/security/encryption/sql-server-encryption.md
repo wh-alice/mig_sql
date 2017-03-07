@@ -22,7 +22,7 @@ manager: "jhubbard"
 # SQL Server Encryption
   Encryption is the process of obfuscating data by the use of a key or password. This can make the data useless without the corresponding decryption key or password. Encryption does not solve access control problems. However, it enhances security by limiting data loss even if access controls are bypassed. For example, if the database host computer is misconfigured and a hacker obtains sensitive data, that stolen information might be useless if it is encrypted.  
   
- You can use encryption in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] for connections, data, and stored procedures. The following table contains more information about encryption in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ You can use encryption in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] for connections, data, and stored procedures. The following table contains more information about encryption in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  Although encryption is a valuable tool to help ensure security, it should not be considered for all data or connections. When you are deciding whether to implement encryption, consider how users will access data. If users access data over a public network, data encryption might be required to increase security. However, if all access involves a secure intranet configuration, encryption might not be required. Any use of encryption should also include a maintenance strategy for passwords, keys, and certificates.  
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 ## In This Section  
  [Encryption Hierarchy](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
- Information about the encryption hierarchy in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Information about the encryption hierarchy in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
  [Choose an Encryption Algorithm](../../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
  Information about how to select an effective encrypting algorithm.  
@@ -41,7 +41,7 @@ manager: "jhubbard"
  General information about how to encrypt data transparently.  
   
  [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
- In [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], encryption keys include a combination of public, private, and symmetric keys that are used to protect sensitive data. This section explains how to implement and manage encryption keys.  
+ In [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], encryption keys include a combination of public, private, and symmetric keys that are used to protect sensitive data. This section explains how to implement and manage encryption keys.  
   
  [Always Encrypted &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
  Ensuring on-premises database administrators, cloud database operators, or other high-privileged, but unauthorized users, cannot access the encrypted data.  
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 ## Related Content  
  [Securing SQL Server](../../../relational-databases/security/securing-sql-server.md)  
- Overview of how to help secure the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] platform, and how to work with users and securable objects.  
+ Overview of how to help secure the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] platform, and how to work with users and securable objects.  
   
  [Cryptographic Functions &#40;Transact-SQL&#41;](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
  Information about how to implement cryptographic functions.  
@@ -73,11 +73,11 @@ manager: "jhubbard"
   
 ## External Resources  
  [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 Security and Protection](https://msdn.microsoft.com/sqlserver/bb895847.aspx)  
- Current information about [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] security.  
+ Current information about [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] security.  
   
 ## See Also  
- [sys.key_encryptions &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.key-encryptions-transact-sql.md)   
+ [sys.key_encryptions &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.key-encryptions-transact-sql.md)   
  [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
- [Back Up and Restore Reporting Services Encryption Keys](../Topic/Back%20Up%20and%20Restore%20Reporting%20Services%20Encryption%20Keys.md)  
+ [Back Up and Restore Reporting Services Encryption Keys](../../../reporting-services/install/windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

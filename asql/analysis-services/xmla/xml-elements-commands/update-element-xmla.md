@@ -68,6 +68,6 @@ manager: "erikre"
 ## See Also  
  [Drop Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
  [Insert Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [Commands &#40;XMLA&#41;](../Topic/Commands%20\(XMLA\).md)  
+ [Commands &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

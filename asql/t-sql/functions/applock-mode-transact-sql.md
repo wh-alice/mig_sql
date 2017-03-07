@@ -29,7 +29,7 @@ manager: "jhubbard"
 
   Returns the lock mode held by the lock owner on a particular application resource. APPLOCK_MODE is an application lock function, and it operates on the current database. The scope of application locks is the database.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -43,7 +43,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
  Is the user, role, or application role that can be granted permissions to objects in the database. The caller of the function must be a member of *database_principal*, dbo, or the db_owner fixed database role in order to call the function successfully.  
   
  '*resource_name*'  
- Is a lock resource name specified by the client application. The application must ensure that the resource name is unique. The specified name is hashed internally into a value that can be stored in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] lock manager. *resource_name*is **nvarchar(255)** with no default. *resource_name* is binary compared, and is case-sensitive regardless of the collation settings of the current database.  
+ Is a lock resource name specified by the client application. The application must ensure that the resource name is unique. The specified name is hashed internally into a value that can be stored in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] lock manager. *resource_name*is **nvarchar(255)** with no default. *resource_name* is binary compared, and is case-sensitive regardless of the collation settings of the current database.  
   
  '*lock_owner*'  
  Is the owner of the lock, which is the *lock_owner* value when the lock was requested. *lock_owner* is **nvarchar(32)**, and the value can be either **Transaction** (the default) or **Session**.  
@@ -70,7 +70,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
  **Nonparallelizable**  
   
 ## Examples  
- Two users (User A and User B) with separate sessions run the following sequence of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements.  
+ Two users (User A and User B) with separate sessions run the following sequence of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements.  
   
  User A runs:  
   
@@ -129,7 +129,7 @@ GO
   
 ## See Also  
  [APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)   
- [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
+ [sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-getapplock-transact-sql.md)   
+ [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

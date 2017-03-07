@@ -15,7 +15,7 @@ ms.author: "mikeray"
 manager: "erikre"
 ---
 # Analysis Services with Always On Availability Groups
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   An Always On availability group is a predefined collection of SQL Server relational databases that failover together when conditions trigger a failover in any one database, redirecting requests to a mirrored database on another instance in the same availability group. If you are using availability groups as your high availability solution, you can use a database in that group as a data source in an Analysis Services tabular or multidimensional solution. All of the following Analysis Services operations work as expected when using an availability database: processing or importing data, querying relational data directly (using ROLAP storage or DirectQuery mode), and writeback.  
   
@@ -78,7 +78,7 @@ manager: "erikre"
     > [!NOTE]  
     >  These steps are taken from [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md), which provides additional information and alternative instructions for performing this task.  
   
-2.  Open a query window and paste in the following script. This script does three things: enables readable connections to a secondary replica (which is off by default), sets the read-only routing URL, and creates the routing list that prioritizes how connection requests are directed.  The first statement, allowing readable connections, is redundant if you already set the properties in [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], but are included for completeness.  
+2.  Open a query window and paste in the following script. This script does three things: enables readable connections to a secondary replica (which is off by default), sets the read-only routing URL, and creates the routing list that prioritizes how connection requests are directed.  The first statement, allowing readable connections, is redundant if you already set the properties in [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)], but are included for completeness.  
   
     ```  
     ALTER AVAILABILITY GROUP [AG1]  
@@ -119,7 +119,7 @@ manager: "erikre"
   
     -   Replace ‘Computer02’ with the name of the server instance that hosts the secondary replica.  
   
-    -   Replace ‘contoso.com’ with the name of your domain, or omit it from the script if all computers are in the same domain. Keep the port number if the listener is using the default port. The port that is actually used by the listener is listed in the properties page in [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)].  
+    -   Replace ‘contoso.com’ with the name of your domain, or omit it from the script if all computers are in the same domain. Keep the port number if the listener is using the default port. The port that is actually used by the listener is listed in the properties page in [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)].  
   
 4.  Execute the script.  
   
@@ -128,7 +128,7 @@ manager: "erikre"
 ##  <a name="bkmk_ssasAODB"></a> Create an Analysis Services data source using an Always On availability database  
  This section explains how to create an Analysis Services data source that connects to a database in an availability group. You can use these instructions to configure a connection to either a primary replica (default) or a readable secondary replica that you configured based on steps in a previous section. Always On configuration settings, plus the connection properties set in the client, will determine whether a primary or secondary replica is used.  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../../analysis-services/includes/ssbidevstudio-md.md)], in an Analysis Services Multidimensional and Data Mining Model project, right-click **Data Sources** and select **New Data Source**. Click **New** to create a new data source.  
+1.  In [!INCLUDE[ssBIDevStudio](../../../a9notintoc/includes/ssbidevstudio-md.md)], in an Analysis Services Multidimensional and Data Mining Model project, right-click **Data Sources** and select **New Data Source**. Click **New** to create a new data source.  
   
      Alternatively, for a tabular model project, click the Model menu, and then click **Import from Data Source**.  
   
@@ -167,11 +167,11 @@ manager: "erikre"
   
      As the trace runs, the **SQL:BatchStarting** and **SQL:BatchCompleting** events will show the queries issued from Analysis Services that are executing on the database engine instance. These events are selected by default so all you need to do is start the trace.  
   
-2.  In [!INCLUDE[ssBIDevStudio](../../../analysis-services/includes/ssbidevstudio-md.md)], open the Analysis Services project or solution containing a data source connection you want to test. Be sure that the data source specifies the availability group listener and not an instance in the group.  
+2.  In [!INCLUDE[ssBIDevStudio](../../../a9notintoc/includes/ssbidevstudio-md.md)], open the Analysis Services project or solution containing a data source connection you want to test. Be sure that the data source specifies the availability group listener and not an instance in the group.  
   
      This step is important. Routing to the secondary replica will not occur if you specify a server instance name.  
   
-3.  Arrange the application windows so that you can view SQL Server Profiler and [!INCLUDE[ssBIDevStudio](../../../analysis-services/includes/ssbidevstudio-md.md)] side by side.  
+3.  Arrange the application windows so that you can view SQL Server Profiler and [!INCLUDE[ssBIDevStudio](../../../a9notintoc/includes/ssbidevstudio-md.md)] side by side.  
   
 4.  Deploy the solution, and when it completes, stop the trace.  
   
@@ -179,7 +179,7 @@ manager: "erikre"
   
 #### Step 2: Perform a planned failover to test the configuration  
   
-1.  In [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] check the primary and secondary replicas to ensure that both are configured for synchronous-commit mode and are currently synchronized.  
+1.  In [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)] check the primary and secondary replicas to ensure that both are configured for synchronous-commit mode and are currently synchronized.  
   
      The following steps assume a secondary replica is configured for synchronous commit.  
   
@@ -192,7 +192,7 @@ manager: "erikre"
   
 3.  Execute a processing or query command from within Analysis Services. Because you configured the data source for a read-only connection, you should see the command execute on the secondary replica.  
   
-4.  In [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], connect to the secondary replica.  
+4.  In [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)], connect to the secondary replica.  
   
 5.  Expand the **Always On High Availability** node and the **Availability Groups** node.  
   
@@ -200,7 +200,7 @@ manager: "erikre"
   
 7.  Confirm that failover succeeded:  
   
-    -   In [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], expand the availability groups to view the (primary) and (secondary) designations. The instance that was previously a primary replica should now be a secondary replica.  
+    -   In [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)], expand the availability groups to view the (primary) and (secondary) designations. The instance that was previously a primary replica should now be a secondary replica.  
   
     -   View the dashboard to determine if any health issues were detected. Right-click the availability group and select **Show Dashboard**.  
   
@@ -227,10 +227,10 @@ manager: "erikre"
  To do this, create an additional data source in an Analysis Services model to support the read-write connection. When creating the additional data source, use the same listener name and database that you specified in the read-only connection, but instead of modifying **Application Intent**, keep the default that supports READWRITE connections. You can now add new fact or dimension tables to your data source view that are based on the read-write data source, and then enable writeback on the new tables.  
   
 ## See Also  
- [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../Topic/Availability%20Group%20Listeners,%20Client%20Connectivity,%20and%20Application%20Failover%20\(SQL%20Server\).md)   
+ [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Active Secondaries: Readable Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../Topic/Always%20On%20Policies%20for%20Operational%20Issues%20with%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md)   
+ [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [Create a Data Source &#40;SSAS Multidimensional&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Enable Dimension Writeback](../Topic/Enable%20Dimension%20Writeback.md)  
+ [Enable Dimension Writeback](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
   

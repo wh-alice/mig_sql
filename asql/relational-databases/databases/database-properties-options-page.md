@@ -18,9 +18,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Database Properties (Options Page)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Use this page to view or modify options for the selected database. For more information about the options available on this page, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) and [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
+  Use this page to view or modify options for the selected database. For more information about the options available on this page, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) and [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
 ## Page Header  
  **Collation**  
@@ -30,13 +30,13 @@ manager: "jhubbard"
  Specify one of the following models for recovering the database: **Full**, **Bulk-Logged**, or **Simple**. For more information about recovery models, see [Recovery Models &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Compatibility level**  
- Specify the latest version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that the database supports. Possible values are  **SQL Server 2014 (120)**,  **SQL Server 2012 (110)**, and **SQL Server 2008 (100)**. When a SQL Server 2005 database is upgraded to SQL Server 2014, the compatibility level for that database is changed from 90 to 100.  The 90 compatibility level is not supported in SQL Server 2014. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ Specify the latest version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that the database supports. Possible values are  **SQL Server 2014 (120)**,  **SQL Server 2012 (110)**, and **SQL Server 2008 (100)**. When a SQL Server 2005 database is upgraded to SQL Server 2014, the compatibility level for that database is changed from 90 to 100.  The 90 compatibility level is not supported in SQL Server 2014. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
  **Containment type**  
  Specify none or partial to designate if this is a contained database. For more information about contained databases, see [Contained Databases](../../relational-databases/databases/contained-databases.md). The server property **Enable Contained Databases** must be set to **TRUE** before a database can be configured as contained.  
   
 > [!IMPORTANT]  
->  Enabling partially contained databases delegates control over access to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to the owners of the database. For more information, see [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+>  Enabling partially contained databases delegates control over access to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to the owners of the database. For more information, see [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
 ## Automatic  
  **Auto Close**  
@@ -65,7 +65,7 @@ manager: "jhubbard"
  In a contained databases, some settings usually configured at the server level can be configured at the database level.  
   
  **Default Fulltext Language LCID**  
- Specifies a default language for full-text indexed columns. Linguistic analysis of full-text indexed data is dependent on the language of the data. The default value of this option is the language of the server. For the language that corresponds to the displayed setting, see [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-languages-transact-sql.md).  
+ Specifies a default language for full-text indexed columns. Linguistic analysis of full-text indexed data is dependent on the language of the data. The default value of this option is the language of the server. For the language that corresponds to the displayed setting, see [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-languages-transact-sql.md).  
   
  **Default Language**  
  The default language for all new contained database users, unless otherwise specified.  
@@ -86,7 +86,7 @@ manager: "jhubbard"
  Specify whether cursors close after the transaction opening the cursor has committed. Possible values are **True** and **False**. When **True**, any cursors that are open when a transaction is committed or rolled back are closed. When **False**, such cursors remain open when a transaction is committed. When **False**, rolling back a transaction closes any cursors except those defined as INSENSITIVE or STATIC. For more information, see [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md).  
   
  **Default Cursor**  
- Specify default cursor behavior. When **True**, cursor declarations default to LOCAL. When **False**, [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] cursors default to GLOBAL.  
+ Specify default cursor behavior. When **True**, cursor declarations default to LOCAL. When **False**, [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] cursors default to GLOBAL.  
   
 ## Database Scoped Configurations  
  In SQL Server 2016 and in Azure SQL Database, there are a number of configuration properties that can be scoped to the database level. For more information for all of these settings, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
@@ -145,7 +145,7 @@ manager: "jhubbard"
  This read-only value indicates if cross-database ownership chaining has been enabled. When **True**, the database can be the source or target of a cross-database ownership chain. Use the ALTER DATABASE statement to set this property.  
   
  **Date Correlation Optimization Enabled**  
- When **True**, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] maintains correlation statistics between any two tables in the database that are linked by a FOREIGN KEY constraint and have **datetime** columns.  
+ When **True**, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] maintains correlation statistics between any two tables in the database that are linked by a FOREIGN KEY constraint and have **datetime** columns.  
   
  When **False**, correlation statistics are not maintained.  
   
@@ -153,16 +153,16 @@ manager: "jhubbard"
  Specify how the database handles rounding errors. Possible values are **True** and **False**. When **True**, an error is generated when loss of precision occurs in an expression. When **False**, losses of precision do not generate error messages, and the result is rounded to the precision of the column or variable storing the result. For more information, see [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md).  
   
  **Parameterization**  
- When **SIMPLE**, queries are parameterized based on the default behavior of the database. When **FORCED**, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] parameterizes all queries in the database.  
+ When **SIMPLE**, queries are parameterized based on the default behavior of the database. When **FORCED**, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] parameterizes all queries in the database.  
   
  **Quoted Identifiers Enabled**  
- Specify whether [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] keywords can be used as identifiers (an object or variable name) if enclosed in quotation marks. Possible values are **True** and **False**. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ Specify whether [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] keywords can be used as identifiers (an object or variable name) if enclosed in quotation marks. Possible values are **True** and **False**. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  **Recursive Triggers Enabled**  
  Specify whether triggers can be fired by other triggers. Possible values are **True** and **False**. When set to **True**, this enables recursive firing of triggers. When set to **False**, only direct recursion is prevented. To disable indirect recursion, set the nested triggers server option to 0 using sp_configure. For more information, see [Create Nested Triggers](../../relational-databases/triggers/create-nested-triggers.md).  
   
  **Trustworthy**  
- When displaying **True**, this read-only option indicates that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] allows access to resources outside the database under an impersonation context established within the database. Impersonation contexts can be established within the database using the EXECUTE AS user statement or the EXECUTE AS clause on database modules.  
+ When displaying **True**, this read-only option indicates that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] allows access to resources outside the database under an impersonation context established within the database. Impersonation contexts can be established within the database using the EXECUTE AS user statement or the EXECUTE AS clause on database modules.  
   
  To have access, the owner of the database also needs to have the AUTHENTICATE SERVER permission at the server level.  
   
@@ -177,7 +177,7 @@ manager: "jhubbard"
  To set this property, use the ALTER DATABASE statement.  
   
  **VarDecimal Storage Format Enabled**  
- This option is read-only starting with [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)]. When **True**, this database is enabled for the vardecimal storage format. Vardecimal storage format cannot be disabled while any tables in the database are using it. In [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] and later versions, all databases are enabled for the vardecimal storage format. This option uses [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).  
+ This option is read-only starting with [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)]. When **True**, this database is enabled for the vardecimal storage format. Vardecimal storage format cannot be disabled while any tables in the database are using it. In [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] and later versions, all databases are enabled for the vardecimal storage format. This option uses [sp_db_vardecimal_storage_format](../../relational-databases/reference/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).  
   
 ## Recovery  
  **Page Verify**  

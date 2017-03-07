@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Back Up a Transaction Log (SQL Server)
-  This topic describes how to back up a transaction log in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], or PowerShell.  
+  This topic describes how to back up a transaction log in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], or PowerShell.  
   
    
 ##  <a name="Restrictions"></a> Limitations and restrictions  
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   If a database uses either the full or bulk-logged [recovery model](https://msdn.microsoft.com/library/ms189275.aspx), you must back up the transaction log regularly enough to protect your data, and to prevent the [transaction log from filling](https://msdn.microsoft.com/library/ms175495.aspx). This truncates the log and supports restoring the database to a specific point in time. 
   
--   By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log and in the system event log. If you back up the log frequently, these success messages accumulate quickly, resulting in huge error logs, making finding other messages difficult. In such cases you can suppress these log entries by using trace flag 3226, if none of your scripts depend on those entries. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md).  
+-   By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error log and in the system event log. If you back up the log frequently, these success messages accumulate quickly, resulting in huge error logs, making finding other messages difficult. In such cases you can suppress these log entries by using trace flag 3226, if none of your scripts depend on those entries. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
   
 ##  <a name="Permissions"></a> Permissions  
@@ -38,12 +38,12 @@ manager: "jhubbard"
 
 The BACKUP DATABASE and BACKUP LOG permissions needed are granted by default to members of the **sysadmin** fixed server role, and the **db_owner** and **db_backupoperator** fixed database roles.  
   
- Ownership and permission problems on the backup device's physical file can interfere with a backup operation. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] must be able to read and write to the device; the account under which the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service runs must have write permissions. However, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, does not check file access permissions. Permissions problems on the backup device's physical file may not become obvious to you until you attemt to access the [physical resource](https://msdn.microsoft.com/library/ms179313.aspx) when you try to backup or restore. So again, check permissions before you begin!
+ Ownership and permission problems on the backup device's physical file can interfere with a backup operation. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] must be able to read and write to the device; the account under which the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service runs must have write permissions. However, [sp_addumpdevice](../../relational-databases/reference/system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, does not check file access permissions. Permissions problems on the backup device's physical file may not become obvious to you until you attemt to access the [physical resource](https://msdn.microsoft.com/library/ms179313.aspx) when you try to backup or restore. So again, check permissions before you begin!
   
   
 ## Back up using SSMS  
   
-1.  After connecting to the appropriate instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
+1.  After connecting to the appropriate instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
   
 2.  Expand **Databases**, and, depending on the database, either select a user database or expand **System Databases** and select a system database.  
   
@@ -55,7 +55,7 @@ The BACKUP DATABASE and BACKUP LOG permissions needed are granted by default to 
   
 6.  In the **Backup type** list box, select **Transaction Log**.  
   
-7.  Optionally, you can select **Copy Only Backup** to create a copy-only backup. A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backups. For more information, see [Copy-Only Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
+7.  Optionally, you can select **Copy Only Backup** to create a copy-only backup. A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] backups. For more information, see [Copy-Only Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   
     >** NOTE!** When the **Differential** option is selected, you cannot create a copy-only backup.  
   
@@ -138,9 +138,9 @@ The BACKUP DATABASE and BACKUP LOG permissions needed are granted by default to 
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
   
-> **IMPORTANT!!!** This example uses the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database, which uses the simple recovery model. To permit log backups, before taking a full database backup, the database was set to use the full recovery model. For more information, see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
+> **IMPORTANT!!!** This example uses the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database, which uses the simple recovery model. To permit log backups, before taking a full database backup, the database was set to use the full recovery model. For more information, see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
- This example creates a transaction log backup for the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database to the previously created named backup device, `MyAdvWorks_FullRM_log1`.  
+ This example creates a transaction log backup for the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database to the previously created named backup device, `MyAdvWorks_FullRM_log1`.  
   
 ```tsql  
 BACKUP LOG AdventureWorks2012  

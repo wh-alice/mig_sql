@@ -22,7 +22,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # STDistance (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns the shortest distance between a point in a **geography** instance and a point in another **geography** instance.  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
  Is another **geography** instance from which to measure the distance between the instance on which STDistance() is invoked. If *other_geography* is an empty set, STDistance() returns null.  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **float**  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] return type: **float**  
   
  CLR return type: **SqlDouble**  
   

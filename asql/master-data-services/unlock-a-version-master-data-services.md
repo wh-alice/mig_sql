@@ -18,7 +18,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Unlock a Version (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], unlock a version of a model to enable changes to the model's members and their attributes.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], unlock a version of a model to enable changes to the model's members and their attributes.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 ### To unlock a version  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **Version Management**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **Version Management**.  
   
 2.  On the **Manage Versions** page, select the row for the version you want to unlock.  
   

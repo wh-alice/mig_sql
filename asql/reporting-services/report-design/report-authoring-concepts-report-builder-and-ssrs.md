@@ -22,7 +22,7 @@ manager: "erikre"
   This section briefly defines some key concepts used to describe paginated reports  in the Report Builder and Report Designer documentation. For definitions of specific words or terms, see the [Glossary &#40;Report Builder&#41;](../../reporting-services/report-builder/glossary-report-builder.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## In This Section  
  [Reports, Report Parts, and Report Definitions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  

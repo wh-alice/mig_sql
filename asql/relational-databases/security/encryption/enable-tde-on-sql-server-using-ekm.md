@@ -20,9 +20,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Enable TDE on SQL Server Using EKM
-  This topic describes how to enable transparent data encryption (TDE) in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] to protect a database encryption key by using an asymmetric key stored in an extensible key management (EKM) module with [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to enable transparent data encryption (TDE) in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] to protect a database encryption key by using an asymmetric key stored in an extensible key management (EKM) module with [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)].  
   
- TDE encrypts the storage of an entire database by using a symmetric key called the database encryption key. The database encryption key can also be protected using a certificate which is protected by the database master key of the master database. For more information about protecting the database encryption key by using the database master key, see [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md). For information about configuring TDE when [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running on an Azure VM, see [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md). For information about configuring TDE using a key in the Azure key vault, see [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md). 
+ TDE encrypts the storage of an entire database by using a symmetric key called the database encryption key. The database encryption key can also be protected using a certificate which is protected by the database master key of the master database. For more information about protecting the database encryption key by using the database master key, see [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md). For information about configuring TDE when [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is running on an Azure VM, see [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md). For information about configuring TDE using a key in the Azure key vault, see [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md). 
 
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
@@ -31,9 +31,9 @@ manager: "jhubbard"
   
 -   You must be a high privileged user (such as a system administrator) to create a database encryption key and encrypt a database. That user must be able to be authenticated by the EKM module.  
   
--   Upon start up the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] must open the database. To do this, you should create a credential that will be authenticated by the EKM, and add it to a login that is based on an asymmetric key. Users cannot login using that login, but the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] will be able to authenticate itself with the EKM device.  
+-   Upon start up the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] must open the database. To do this, you should create a credential that will be authenticated by the EKM, and add it to a login that is based on an asymmetric key. Users cannot login using that login, but the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] will be able to authenticate itself with the EKM device.  
   
--   If the asymmetric key stored in the EKM module is lost, the database will not be able to be opened by [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. If the EKM provider lets you back up the asymmetric key, you should create a back up and store it in a secure location.  
+-   If the asymmetric key stored in the EKM module is lost, the database will not be able to be opened by [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. If the EKM provider lets you back up the asymmetric key, you should create a back up and store it in a secure location.  
   
 -   The options and parameters required by your EKM provider can differ from what is provided in the code example below. For more information, see your EKM provider.  
   
@@ -56,14 +56,14 @@ manager: "jhubbard"
   
 #### To enable TDE using EKM  
   
-1.  Copy the files supplied by the EKM provider to an appropriate location on the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer. In this example, we use the **C:\EKM** folder.  
+1.  Copy the files supplied by the EKM provider to an appropriate location on the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] computer. In this example, we use the **C:\EKM** folder.  
   
 2.  Install certificates to the computer as required by your EKM provider.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not supply an EKM provider. Each EKM provider can have different procedures for installing, configuring and authorizing users.  Consult your EKM provider documentation to complete this step.  
+    >  [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] does not supply an EKM provider. Each EKM provider can have different procedures for installing, configuring and authorizing users.  Consult your EKM provider documentation to complete this step.  
   
-3.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+3.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 4.  On the Standard bar, click **New Query**.  
   
@@ -137,7 +137,7 @@ manager: "jhubbard"
   
  For more information, see the following:  
   
--   [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+-   [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md)  
   
 -   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-cryptographic-provider-transact-sql.md)  
   

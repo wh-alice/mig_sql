@@ -19,21 +19,21 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Use Annotations in Packages
-  The [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer provides annotations, which you can use to make packages self-documenting and easier to understand and maintain. You can add annotations to the control flow, data flow, and event handler design surfaces of [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer. The annotations can contain any type of text, and they are useful for adding labels, comments, and other descriptive information to a package. Annotations are a design-time feature only. For example, they are not written to logs.  
+  The [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer provides annotations, which you can use to make packages self-documenting and easier to understand and maintain. You can add annotations to the control flow, data flow, and event handler design surfaces of [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer. The annotations can contain any type of text, and they are useful for adding labels, comments, and other descriptive information to a package. Annotations are a design-time feature only. For example, they are not written to logs.  
   
  When you press ENTER, the text wraps to the next line. The annotation box automatically increases in size as you add additional lines of text. Package annotations are persisted as clear text in the CDATA section of the package file.  
   
- For more information about changes to the format of the package file, see [SSIS Package Format](../Topic/SSIS%20Package%20Format.md).  
+ For more information about changes to the format of the package file, see [SSIS Package Format](../a9retired/ssis-package-format.md).  
   
- When you save the package, [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer saves the annotations in the package.  
+ When you save the package, [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer saves the annotations in the package.  
   
 ## Add an annotation to a package  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package to which you want to add an annotation.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package to which you want to add an annotation.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
-3.  In [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer, right-click anywhere on the design surface of the **Control Flow**, **Data Flow**, or **Event Handler** tab, and then click **Add Annotation**. A text block appears on the design surface of the tab.  
+3.  In [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer, right-click anywhere on the design surface of the **Control Flow**, **Data Flow**, or **Event Handler** tab, and then click **Add Annotation**. A text block appears on the design surface of the tab.  
   
 4.  Add text.  
   

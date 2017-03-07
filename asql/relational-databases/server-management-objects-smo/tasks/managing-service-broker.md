@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Broker.RemoteServiceBinding> objects represent the settings that [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] uses for security and authentication when communicating with a remote service.  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceRoute> objects represents a [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] route, which contains the location information for the service and the database on which it is defined. A route is required for message delivery. By default, each database contains a route that specifies the location as the current instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceRoute> objects represents a [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] route, which contains the location information for the service and the database on which it is defined. A route is required for message delivery. By default, each database contains a route that specifies the location as the current instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## See Also  
  <xref:Microsoft.SqlServer.Management.Smo.Broker>   

@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Execute a Statement Directly (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
     
 ### To execute a statement directly and one time only  

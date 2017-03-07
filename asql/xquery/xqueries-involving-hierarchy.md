@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # XQueries Involving Hierarchy
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Most **xml** type columns in the **AdventureWorks** database are semi-structured documents. Therefore, documents stored in each row may look different. The query samples in this topic illustrate how to extract information from these various documents.  
   
@@ -54,7 +54,7 @@ WHERE ProductModelID=7
   
  Note the following from the previous query:  
   
--   The **namespace** keyword in the [XQuery Prolog](../Topic/XQuery%20Prolog.md) defines a namespace prefix. This prefix is used later in the query body.  
+-   The **namespace** keyword in the [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md) defines a namespace prefix. This prefix is used later in the query body.  
   
 -   The context switching tokens, {) and (}, are used to switch the query from XML construction to query evaluation.  
   

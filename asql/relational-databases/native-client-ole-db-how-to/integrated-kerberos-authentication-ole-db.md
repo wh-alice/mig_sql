@@ -15,14 +15,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Integrated Kerberos Authentication (OLE DB)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  This sample shows how to get mutual Kerberos authentication by using OLE DB in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client. This sample works with [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] or later.  
+  This sample shows how to get mutual Kerberos authentication by using OLE DB in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client. This sample works with [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] or later.  
   
  For more information about SPNs and Kerberos authentication, see [Service Principal Name &#40;SPN&#41; Support in Client Connections](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## Example  
- You must specify a server. In the .cpp file, change "MyServer" to a machine name that has an instance of [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] (or later).  
+ You must specify a server. In the .cpp file, change "MyServer" to a machine name that has an instance of [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] (or later).  
   
  You will also have to specify a customer-provided SPN. In the .cpp file, change "CPSPN" to a customer-provided SPN.  
   

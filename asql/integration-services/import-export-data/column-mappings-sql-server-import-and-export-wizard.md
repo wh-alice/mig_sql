@@ -17,7 +17,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Column Mappings (SQL Server Import and Export Wizard)
-  After you select the existing tables and views to copy or review the query that you provided, if you click **Edit mappings**, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard shows the **Column Mappings** dialog box. On this page you specify and configure destination columns to receive the copied data. Often you don't have to change anything on this page.
+  After you select the existing tables and views to copy or review the query that you provided, if you click **Edit mappings**, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard shows the **Column Mappings** dialog box. On this page you specify and configure destination columns to receive the copied data. Often you don't have to change anything on this page.
   
 If you don't want to copy all the columns in the table you selected, one thing you can do on this page is exclude the columns you don't want. Select **ignore** in the **Destination** column of the **Mappings** list for columns that you don't want to copy.
  

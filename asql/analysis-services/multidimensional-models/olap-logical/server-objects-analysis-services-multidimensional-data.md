@@ -22,9 +22,9 @@ manager: "erikre"
 # Server Objects (Analysis Services - Multidimensional Data)
     
 ## Introducing Server Objects  
- The <xref:Microsoft.AnalysisServices.Server> object represents the server and the instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] that you want to work with.  
+ The <xref:Microsoft.AnalysisServices.Server> object represents the server and the instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] that you want to work with.  
   
- As soon as you have a connected instance of [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)], you will be able to see:  
+ As soon as you have a connected instance of [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)], you will be able to see:  
   
 -   All databases that you can access, as a collection.  
   

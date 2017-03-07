@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # IMDEmbeddedData Interface
-  The IMDEmbeddedData interface is a public interface used to manage an embedded [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] database or a tabular model database. The interface inherits from the **IPersistStream** interface. The interface allows for the following operations:  
+  The IMDEmbeddedData interface is a public interface used to manage an embedded [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] database or a tabular model database. The interface inherits from the **IPersistStream** interface. The interface allows for the following operations:  
   
 -   Get an identifier to the embedded stream in the container document.  
   

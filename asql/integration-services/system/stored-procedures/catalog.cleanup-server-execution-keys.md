@@ -15,7 +15,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.cleanup_server_execution_keys
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Drops certificates and symmetric keys from the SSISDB database.  
   

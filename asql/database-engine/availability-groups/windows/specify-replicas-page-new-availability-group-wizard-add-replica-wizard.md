@@ -19,11 +19,11 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard)
-  This topic describes the options of the **Specify Replicas** page. This page applies to the [!INCLUDE[ssAoNewAgWiz](../../../database-engine/availability-groups/windows/includes/ssaonewagwiz-md.md)] and the [!INCLUDE[ssAoAddRepWiz](../../../database-engine/availability-groups/windows/includes/ssaoaddrepwiz-md.md)] of [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)]. Use the **Specify Replicas** page to specify and configure one or more availability replicas to add the availability group. This page contains four tabs, which are introduced in the following table. Click the name of a tab in the table to go to the corresponding section, later in this topic.  
+  This topic describes the options of the **Specify Replicas** page. This page applies to the [!INCLUDE[ssAoNewAgWiz](../../../database-engine/availability-groups/windows/includes/ssaonewagwiz-md.md)] and the [!INCLUDE[ssAoAddRepWiz](../../../database-engine/availability-groups/windows/includes/ssaoaddrepwiz-md.md)] of [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)]. Use the **Specify Replicas** page to specify and configure one or more availability replicas to add the availability group. This page contains four tabs, which are introduced in the following table. Click the name of a tab in the table to go to the corresponding section, later in this topic.  
   
 |Tab|Brief Description|  
 |---------|-----------------------|  
-|[Replicas](#ReplicasTab)|Use this tab to specify each instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that will host or currently hosts a secondary replica. Note that the server instance to which you are currently connected must host the primary replica.<br /><br /> Finish specifying all the replicas on the **Replicas** tab before starting the other tabs.|  
+|[Replicas](#ReplicasTab)|Use this tab to specify each instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] that will host or currently hosts a secondary replica. Note that the server instance to which you are currently connected must host the primary replica.<br /><br /> Finish specifying all the replicas on the **Replicas** tab before starting the other tabs.|  
 |[Endpoints](#EndpointsTab)|Use this tab to verify any existing database mirroring endpoints and also, if this endpoint is lacking on a server instance whose service accounts use Windows Authentication, to create the endpoint automatically.|  
 |[Backup Preferences](#BackupPreferencesTab)|Use this tab to specify your backup preference for the availability group as a whole and your backup priorities for the individual availability replicas.|  
 |[Listener](#Listener)|Use this tab, if available, to create an availability group listener. By default, a listener is not created.<br /><br /> This tab is available only if you are running the [!INCLUDE[ssAoNewAgWiz](../../../database-engine/availability-groups/windows/includes/ssaonewagwiz-md.md)].|  
@@ -75,7 +75,7 @@ manager: "jhubbard"
  Displays the name of a server instance that will host an availability replica.  
   
  **Endpoint URL**  
- Displays the actual or proposed URL of the database mirroring endpoint. For a proposed new endpoint, you can change this value. For information the format of these URLs, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../Topic/Specify%20the%20Endpoint%20URL%20When%20Adding%20or%20Modifying%20an%20Availability%20Replica%20\(SQL%20Server\).md).  
+ Displays the actual or proposed URL of the database mirroring endpoint. For a proposed new endpoint, you can change this value. For information the format of these URLs, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
  **Port Number**  
  Displays the actual or proposed port number of the endpoint. For a proposed new endpoint, you can change this value.  
@@ -87,9 +87,9 @@ manager: "jhubbard"
  Indicates whether data sent over this endpoint is encrypted. For a proposed new endpoint, you can change this setting.  
   
  **SQL Server Service Account**  
- Username of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service account.  
+ Username of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] service account.  
   
- For a server instance to use an endpoint that uses Windows Authentication, its [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service account must be a domain account.  
+ For a server instance to use an endpoint that uses Windows Authentication, its [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] service account must be a domain account.  
   
  This requirement determines your next configuration step, as follows:  
   
@@ -97,9 +97,9 @@ manager: "jhubbard"
   
 -   If any server instance is running under a non-domain service account, you need to do make a manual change to your server instance before you can proceed in the wizard. In this case, clicking **Next** brings up a warning dialog box; you should click **No**, which returns you to the**Endpoints** tab. While leaving the wizard on the **Specify Replicas** page, make one of the following changes to each server instance for which the **SQL Server Service Account** column displays a nondomain service account, either:  
   
-    -   Use the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager to change the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service account to a domain account. For more information, see [Change the Service Startup Account for SQL Server &#40;SQL Server Configuration Manager&#41;](../Topic/Change%20the%20Service%20Startup%20Account%20for%20SQL%20Server%20\(SQL%20Server%20Configuration%20Manager\).md).  
+    -   Use the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager to change the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] service account to a domain account. For more information, see [Change the Service Startup Account for SQL Server &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure/windows/scm-services-change-the-service-startup-account.md).  
   
-    -   Use [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] or PowerShell to manually create a database mirroring endpoint that uses a certificate. For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md) or [Create a Database Mirroring Endpoint for Always On Availability Groups &#40;SQL Server PowerShell&#41;](../Topic/Create%20a%20Database%20Mirroring%20Endpoint%20for%20Always%20On%20Availability%20Groups%20\(SQL%20Server%20PowerShell\).md).  
+    -   Use [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] or PowerShell to manually create a database mirroring endpoint that uses a certificate. For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md) or [Create a Database Mirroring Endpoint for Always On Availability Groups &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md).  
   
      If you leave the **Specify Availability Replicas** page open while you configure endpoints, return to the **Endpoints** tab and click **Refresh** to update the **Endpoint values** grid.  
   
@@ -125,7 +125,7 @@ manager: "jhubbard"
  Use the **Replica backup priorities** grid to specify your backup priorities for each of replicas of the availability group. This grid contains the following columns:  
   
  **Server Instance**  
- Displays the name of the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that hosts the availability replica.  
+ Displays the name of the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] that hosts the availability replica.  
   
  **Backup Priority (Lowest=1, Highest=100)**  
  Assign the priority for backups being performed on this replica relative to the other replicas in the same availability group. The default value is 50. You can select any other integer in the range of 0..100. 1 indicates the lowest priority, and 100 indicates the highest priority. If you set **Backup Priority** to 1, the availability replica will be choosen for performing backups only if no higher priority availability replica is currently available.  
@@ -134,7 +134,7 @@ manager: "jhubbard"
  To prevent this availability replica from ever being be chosen for performing backups. This is useful, for example, for a remote availability replica to which you never want backups to fail over.  
   
 ##  <a name="Listener"></a> Listener Tab  
- Specify your preference for an[availability group listener](../Topic/Availability%20Group%20Listeners,%20Client%20Connectivity,%20and%20Application%20Failover%20\(SQL%20Server\).md)that will provide a client connection point, one of:  
+ Specify your preference for an[availability group listener](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)that will provide a client connection point, one of:  
   
  **Do not create an availability group listener now.**  
  Select to skip this step. You can create a listener later. For more information, see [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
@@ -203,11 +203,11 @@ manager: "jhubbard"
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  
   
--   [Create a Database Mirroring Endpoint for Always On Availability Groups &#40;SQL Server PowerShell&#41;](../Topic/Create%20a%20Database%20Mirroring%20Endpoint%20for%20Always%20On%20Availability%20Groups%20\(SQL%20Server%20PowerShell\).md)  
+-   [Create a Database Mirroring Endpoint for Always On Availability Groups &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
- [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../Topic/Prerequisites,%20Restrictions,%20and%20Recommendations%20for%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md)  
+ [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

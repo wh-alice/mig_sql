@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Performing Transactions in ODBC
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
   Transactions in ODBC are managed at the connection level. When an application completes a transaction, it commits or rolls back all work completed through all statement handles on that connection. To commit or roll back a transaction, applications should call [SQLEndTran](../../../relational-databases/extended-stored-procedures-reference/sqlendtran.md) instead of submitting a COMMIT or ROLLBACK statement.  
   
@@ -40,6 +40,6 @@ manager: "jhubbard"
  ODBC applications should not use Transact-SQL transaction statements such as BEGIN TRANSACTION, COMMIT TRANSACTION, or ROLLBACK TRANSACTION because this can cause indeterminate behavior in the driver. An ODBC application should run in autocommit mode and not use any transaction management functions or statements, or run in manual-commit mode and use the ODBC **SQLEndTran** function to either commit or roll back transactions.  
   
 ## See Also  
- [Performing Transactions &#40;ODBC&#41;](../Topic/Performing%20Transactions%20\(ODBC\).md)  
+ [Performing Transactions &#40;ODBC&#41;](../../../a9retired/performing-transactions-odbc.md)  
   
   

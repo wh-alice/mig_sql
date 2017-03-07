@@ -18,7 +18,7 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../a9retired/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 CREATE TABLE AS SELECT (CTAS) is one of the most important T-SQL features available. It is a fully parallelized operation that creates a new table based on the output of a SELECT statement. CTAS is the simplest and fastest way to create a copy of a table.   
  
@@ -31,7 +31,7 @@ CREATE TABLE AS SELECT (CTAS) is one of the most important T-SQL features availa
 > [!NOTE]  
 > Since CTAS adds to the capabilities of creating a table, this topic tries not to repeat the CREATE TABLE topic. Instead, it describes the differences between the CTAS and CREATE TABLE statements. For the CREATE TABLE details, see [CREATE TABLE (Azure SQL Data Warehouse)](https://msdn.microsoft.com/library/mt203953/) statement. 
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 <a name="syntax-bk"></a>
 
@@ -360,7 +360,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
 ### E. Use a Query Hint with CREATE TABLE AS SELECT (CTAS)  
 Applies to: Azure SQL Data Warehouse and Parallel Data Warehouse
   
-This query shows the basic syntax for using a query join hint with the CTAS statement. After the query is submitted, [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] applies the hash join strategy when it generates the query plan for each individual distribution. For more information on the hash join query hint, see [OPTION Clause &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
+This query shows the basic syntax for using a query join hint with the CTAS statement. After the query is submitted, [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] applies the hash join strategy when it generates the query plan for each individual distribution. For more information on the hash join query hint, see [OPTION Clause &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
 ```  
 CREATE TABLE dbo.FactInternetSalesNew  
@@ -383,9 +383,9 @@ OPTION ( HASH JOIN );
 ### F. Use CTAS to import data from Azure Blob storage  
 Applies to: Azure SQL Data Warehouse and Parallel Data Warehouse  
 
-To import data from an external table, simply use CREATE TABLE AS SELECT to select from the external table. The syntax to select data from an external table into [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] is the same as the syntax for selecting data from a regular table.  
+To import data from an external table, simply use CREATE TABLE AS SELECT to select from the external table. The syntax to select data from an external table into [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] is the same as the syntax for selecting data from a regular table.  
   
- The following example defines an external table on data in an Azure blob storage account. It then uses CREATE TABLE AS SELECT to select from the external table. This imports the data from Azure blob storage text-delimited files and stores the data into a new [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] table.  
+ The following example defines an external table on data in an Azure blob storage account. It then uses CREATE TABLE AS SELECT to select from the external table. This imports the data from Azure blob storage text-delimited files and stores the data into a new [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] table.  
   
 ```  
 --Use your own processes to create the text-delimited files on Azure blob storage.  
@@ -416,11 +416,11 @@ AS SELECT * FROM ClickStreamExt
 <a name="ctas-import-Hadoop-bk"></a>
   
 ### G. Use CTAS to import Hadoop data from an external table  
-Applies to: [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+Applies to: [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
-To import data from an external table, simply use CREATE TABLE AS SELECT to select from the external table. The syntax to select data from an external table into [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)] is the same as the syntax for selecting data from a regular table.  
+To import data from an external table, simply use CREATE TABLE AS SELECT to select from the external table. The syntax to select data from an external table into [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)] is the same as the syntax for selecting data from a regular table.  
   
- The following example defines an external table on a Hadoop cluster. It then uses CREATE TABLE AS SELECT to select from the external table. This imports the data from Hadoop text-delimited files and stores the data into a new [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)] table.  
+ The following example defines an external table on a Hadoop cluster. It then uses CREATE TABLE AS SELECT to select from the external table. This imports the data from Hadoop text-delimited files and stores the data into a new [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)] table.  
   
 ```  
 -- Create the external table called ClickStream.  
@@ -800,7 +800,7 @@ You can see therefore that type consistency and maintaining nullability properti
  [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](../Topic/ALTER%20EXTERNAL%20TABLE%20\(Transact-SQL\).md)  
+ [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](../../a9retired/alter-external-table-transact-sql.md)  
   
   
 

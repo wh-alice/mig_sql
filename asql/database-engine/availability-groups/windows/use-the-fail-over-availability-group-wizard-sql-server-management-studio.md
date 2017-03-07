@@ -25,7 +25,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Use the Fail Over Availability Group Wizard (SQL Server Management Studio)
-  This topic describes how to perform a planned manual failover or forced manual failover (forced failover) on an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)]. An availability group fails over at the level of an availability replica. If you fail over to a secondary replica in the SYNCHRONIZED state, the wizard performs a planned manual failover (without data loss). If you fail over to a secondary replica in the UNSYNCHRONIZED or NOT SYNCHRONIZING state, the wizard performs a forced manual failover—also known as a *forced failover* (with possible data loss). Both forms of manual failover transition the secondary replica to which you are connected to the primary role. A planned manual failover currently transitions the former primary replica to the secondary role. After a forced failover, when the former primary replAica comes online, it transitions to the secondary role.  
+  This topic describes how to perform a planned manual failover or forced manual failover (forced failover) on an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)]. An availability group fails over at the level of an availability replica. If you fail over to a secondary replica in the SYNCHRONIZED state, the wizard performs a planned manual failover (without data loss). If you fail over to a secondary replica in the UNSYNCHRONIZED or NOT SYNCHRONIZING state, the wizard performs a forced manual failover—also known as a *forced failover* (with possible data loss). Both forms of manual failover transition the secondary replica to which you are connected to the primary role. A planned manual failover currently transitions the former primary replica to the secondary role. After a forced failover, when the former primary replAica comes online, it transitions to the secondary role.  
   
 -   **Before you begin:**  
   
@@ -65,7 +65,7 @@ manager: "jhubbard"
 -   Cross-database consistency across databases within the availability group might not be maintained on failover.  
   
     > [!NOTE]  
-    >  Support for cross-database and distributed transactions vary by SQL Server and operating system versions. For more information, see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring &#40;SQL Server&#41;](../Topic/Cross-Database%20Transactions%20and%20Distributed%20Transactions%20for%20Always%20On%20Availability%20Groups%20and%20Database%20Mirroring%20\(SQL%20Server\).md).  
+    >  Support for cross-database and distributed transactions vary by SQL Server and operating system versions. For more information, see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
 ###  <a name="Prerequisites"></a> Prerequisites for Using the Failover Availability Group Wizard  
   

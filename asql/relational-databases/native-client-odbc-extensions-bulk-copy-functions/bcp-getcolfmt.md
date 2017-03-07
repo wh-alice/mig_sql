@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # bcp_getcolfmt
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   Used to find the column format property value.  
   
@@ -64,7 +64,7 @@ RETCODE bcp_getcolfmt (
 ## Remarks  
  Column format property values are listed in the [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) topic. The column format property values are set by calling the **bcp_setcolfmt** function, and the **bcp_getcolfmt** function is used to find the column format property value.  
   
- Behavior changes may be observed when connecting to a [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] (or later) server computer, compared to earlier [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] versions. For more information, see [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Behavior changes may be observed when connecting to a [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] (or later) server computer, compared to earlier [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] versions. For more information, see [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 ## bcp_getcolfmt Support for Enhanced Date and Time Features  
  The types used with the **BCP_FMT_TYPE** property for date/time types are as specified in [Bulk Copy Changes for Enhanced Date and Time Types &#40;OLE DB and ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
@@ -72,6 +72,6 @@ RETCODE bcp_getcolfmt (
  For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## See Also  
- [Bulk Copy Functions](../Topic/Bulk%20Copy%20Functions.md)  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

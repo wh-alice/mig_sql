@@ -25,12 +25,12 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../database-engine/availability-groups/windows/includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead. For more information, see [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
- The [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Extended Stored Procedure API provides a server-based application programming interface (API) for extending [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] functionality. The API consists of C and C++ functions and macros used to build applications in the following categories: extended stored procedures and gateway applications.  
+ The [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Extended Stored Procedure API provides a server-based application programming interface (API) for extending [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] functionality. The API consists of C and C++ functions and macros used to build applications in the following categories: extended stored procedures and gateway applications.  
   
  Extended stored procedures allow you to create your own external routines in a programming language such as C. The extended stored procedures appear to users as typical stored procedures and are executed in the same way. Parameters can be passed to extended stored procedures, and they can return results and return status.  
   
 ## In This Section  
- [Programming Extended Stored Procedures](../Topic/Programming%20Extended%20Stored%20Procedures.md)  
+ [Programming Extended Stored Procedures](../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)  
  Explains how to create, manage, and use extended stored procedures.  
   
  [Extended Stored Procedures Programmer's Reference](../Topic/Extended%20Stored%20Procedures%20Programmer's%20Reference.md)  

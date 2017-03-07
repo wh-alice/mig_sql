@@ -38,7 +38,7 @@ manager: "jhubbard"
 
   Creates a DML, DDL, or logon trigger. A trigger is a special kind of stored procedure that automatically executes when an event occurs in the database server. DML triggers execute when a user tries to modify data through a data manipulation language (DML) event. DML events are INSERT, UPDATE, or DELETE statements on a table or view. These triggers fire when any valid event is fired, regardless of whether or not any table rows are affected. For more information, see [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
- DDL triggers execute in response to a variety of data definition language (DDL) events. These events primarily correspond to [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] CREATE, ALTER, and DROP statements, and certain system stored procedures that perform DDL-like operations. Logon triggers fire in response to the LOGON event that is raised when a user sessions is being established. Triggers can be created directly from [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements or from methods of assemblies that are created in the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] common language runtime (CLR) and uploaded to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] allows for creating multiple triggers for any specific statement.  
+ DDL triggers execute in response to a variety of data definition language (DDL) events. These events primarily correspond to [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] CREATE, ALTER, and DROP statements, and certain system stored procedures that perform DDL-like operations. Logon triggers fire in response to the LOGON event that is raised when a user sessions is being established. Triggers can be created directly from [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements or from methods of assemblies that are created in the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] common language runtime (CLR) and uploaded to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] allows for creating multiple triggers for any specific statement.  
   
 > [!IMPORTANT]  
 >  Malicious code inside triggers can run under escalated privileges. For more information on how to mitigate this threat, see [Manage Trigger Security](../../relational-databases/triggers/manage-trigger-security.md).  
@@ -46,7 +46,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The integration of .NET Framework CLR into SQL Server is discussed in this topic. CLR integration does not apply to Azure SQL Database.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -157,7 +157,7 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
 OR ALTER  
  ||  
 |-|  
-|**Applies to**: Azure [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] SP1).| 
+|**Applies to**: Azure [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] SP1).| 
   
  Conditionally alters the trigger only if it already exists. 
   
@@ -176,19 +176,19 @@ OR ALTER
  ALL SERVER  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Applies the scope of a DDL or logon trigger to the current server. If specified, the trigger fires whenever *event_type* or *event_group* occurs anywhere in the current server.  
   
  WITH ENCRYPTION  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
- Obfuscates the text of the CREATE TRIGGER statement. Using WITH ENCRYPTION prevents the trigger from being published as part of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] replication. WITH ENCRYPTION cannot be specified for CLR triggers.  
+ Obfuscates the text of the CREATE TRIGGER statement. Using WITH ENCRYPTION prevents the trigger from being published as part of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] replication. WITH ENCRYPTION cannot be specified for CLR triggers.  
   
  EXECUTE AS  
- Specifies the security context under which the trigger is executed. Enables you to control which user account the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses to validate permissions on any database objects that are referenced by the trigger.  
+ Specifies the security context under which the trigger is executed. Enables you to control which user account the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses to validate permissions on any database objects that are referenced by the trigger.  
   
  This option is required for triggers on memory-optimized tables.  
   
@@ -216,7 +216,7 @@ OR ALTER
   
  At most, one INSTEAD OF trigger per INSERT, UPDATE, or DELETE statement can be defined on a table or view. However, you can define views on views where each view has its own INSTEAD OF trigger.  
   
- INSTEAD OF triggers are not allowed on updatable views that use WITH CHECK OPTION. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] raises an error when an INSTEAD OF trigger is added to an updatable view WITH CHECK OPTION specified. The user must remove that option by using ALTER VIEW before defining the INSTEAD OF trigger.  
+ INSTEAD OF triggers are not allowed on updatable views that use WITH CHECK OPTION. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] raises an error when an INSTEAD OF trigger is added to an updatable view WITH CHECK OPTION specified. The user must remove that option by using ALTER VIEW before defining the INSTEAD OF trigger.  
   
  { [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }  
  Specifies the data modification statements that activate the DML trigger when it is tried against this table or view. At least one option must be specified. Any combination of these options in any order is allowed in the trigger definition.  
@@ -226,31 +226,31 @@ OR ALTER
  WITH APPEND  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../a9notintoc/includes/sskilimanjaro-md.md)].|  
   
  Specifies that an additional trigger of an existing type should be added. WITH APPEND cannot be used with INSTEAD OF triggers or if AFTER trigger is explicitly stated. WITH APPEND can be used only when FOR is specified, without INSTEAD OF or AFTER, for backward compatibility reasons. WITH APPEND cannot be specified if EXTERNAL NAME is specified (that is, if the trigger is a CLR trigger).  
   
  *event_type*  
- Is the name of a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] language event that, after execution, causes a DDL trigger to fire. Valid events for DDL triggers are listed in [DDL Events](../../relational-databases/triggers/ddl-events.md).  
+ Is the name of a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] language event that, after execution, causes a DDL trigger to fire. Valid events for DDL triggers are listed in [DDL Events](../../relational-databases/triggers/ddl-events.md).  
   
  *event_group*  
- Is the name of a predefined grouping of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] language events. The DDL trigger fires after execution of any [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] language event that belongs to *event_group*. Valid event groups for DDL triggers are listed in [DDL Event Groups](../../relational-databases/triggers/ddl-event-groups.md).  
+ Is the name of a predefined grouping of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] language events. The DDL trigger fires after execution of any [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] language event that belongs to *event_group*. Valid event groups for DDL triggers are listed in [DDL Event Groups](../../relational-databases/triggers/ddl-event-groups.md).  
   
  After the CREATE TRIGGER has finished running, *event_group* also acts as a macro by adding the event types it covers to the sys.trigger_events catalog view.  
   
  NOT FOR REPLICATION  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Indicates that the trigger should not be executed when a replication agent modifies the table that is involved in the trigger.  
   
  *sql_statement*  
  Is the trigger conditions and actions. Trigger conditions specify additional criteria that determine whether the tried DML, DDL, or logon events cause the trigger actions to be performed.  
   
- The trigger actions specified in the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements go into effect when the operation is tried.  
+ The trigger actions specified in the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements go into effect when the operation is tried.  
   
- Triggers can include any number and kind of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements, with exceptions. For more information, see Remarks. A trigger is designed to check or change data based on a data modification or definition statement; it should not return data to the user. The [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements in a trigger frequently include [control-of-flow language](../Topic/Control-of-Flow%20Language%20\(Transact-SQL\).md).  
+ Triggers can include any number and kind of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements, with exceptions. For more information, see Remarks. A trigger is designed to check or change data based on a data modification or definition statement; it should not return data to the user. The [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements in a trigger frequently include [control-of-flow language](../Topic/Control-of-Flow%20Language%20\(Transact-SQL\).md).  
   
  DML triggers use the deleted and inserted logical (conceptual) tables. They are structurally similar to the table on which the trigger is defined, that is, the table on which the user action is tried. The deleted and inserted tables hold the old values or new values of the rows that may be changed by the user action. For example, to retrieve all values in the `deleted` table, use:  
   
@@ -262,27 +262,27 @@ SELECT * FROM deleted;
   
  DDL and logon triggers capture information about the triggering event by using the [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md) function. For more information, see [Use the EVENTDATA Function](../../relational-databases/triggers/use-the-eventdata-function.md).  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] allows for the update of **text**, **ntext**, or **image** columns through the INSTEAD OF trigger on tables or views.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] allows for the update of **text**, **ntext**, or **image** columns through the INSTEAD OF trigger on tables or views.  
   
 > [!IMPORTANT]  
->  **ntext**, **text**, and **image** data types will be removed in a future version of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Avoid using these data types in new development work, and plan to modify applications that currently use them. Use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md), and [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) instead. Both AFTER and INSTEAD OF triggers support **varchar(MAX)**, **nvarchar(MAX)**, and **varbinary(MAX)** data in the inserted and deleted tables.  
+>  **ntext**, **text**, and **image** data types will be removed in a future version of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Avoid using these data types in new development work, and plan to modify applications that currently use them. Use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md), and [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) instead. Both AFTER and INSTEAD OF triggers support **varchar(MAX)**, **nvarchar(MAX)**, and **varbinary(MAX)** data in the inserted and deleted tables.  
   
  For triggers on memory-optimized tables, the only *sql_statement* allowed at the top level is an ATOMIC block. The T-SQL allowed inside the ATOMIC block is limited by the T-SQL allowed inside native procs.  
   
  \< method_specifier >  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
- For a CLR trigger, specifies the method of an assembly to bind with the trigger. The method must take no arguments and return void. *class_name* must be a valid [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] identifier and must exist as a class in the assembly with assembly visibility. If the class has a namespace-qualified name that uses '.' to separate namespace parts, the class name must be delimited by using [ ] or " " delimiters. The class cannot be a nested class.  
+ For a CLR trigger, specifies the method of an assembly to bind with the trigger. The method must take no arguments and return void. *class_name* must be a valid [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] identifier and must exist as a class in the assembly with assembly visibility. If the class has a namespace-qualified name that uses '.' to separate namespace parts, the class name must be delimited by using [ ] or " " delimiters. The class cannot be a nested class.  
   
 > [!NOTE]  
->  By default, the ability of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to run CLR code is off. You can create, modify, and drop database objects that reference managed code modules, but these references will not execute in an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] unless the [clr enabled Option](../../database-engine/configure/windows/clr-enabled-server-configuration-option.md) is enabled by using [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+>  By default, the ability of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to run CLR code is off. You can create, modify, and drop database objects that reference managed code modules, but these references will not execute in an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] unless the [clr enabled Option](../../database-engine/configure/windows/clr-enabled-server-configuration-option.md) is enabled by using [sp_configure](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md).  
   
 ## Remarks  
   
 ## DML Triggers  
- DML triggers are frequently used for enforcing business rules and data integrity. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provides declarative referential integrity (DRI) through the ALTER TABLE and CREATE TABLE statements. However, DRI does not provide cross-database referential integrity. Referential integrity refers to the rules about the relationships between the primary and foreign keys of tables. To enforce referential integrity, use the PRIMARY KEY and FOREIGN KEY constraints in ALTER TABLE and CREATE TABLE. If constraints exist on the trigger table, they are checked after the INSTEAD OF trigger execution and before the AFTER trigger execution. If the constraints are violated, the INSTEAD OF trigger actions are rolled back and the AFTER trigger is not fired.  
+ DML triggers are frequently used for enforcing business rules and data integrity. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] provides declarative referential integrity (DRI) through the ALTER TABLE and CREATE TABLE statements. However, DRI does not provide cross-database referential integrity. Referential integrity refers to the rules about the relationships between the primary and foreign keys of tables. To enforce referential integrity, use the PRIMARY KEY and FOREIGN KEY constraints in ALTER TABLE and CREATE TABLE. If constraints exist on the trigger table, they are checked after the INSTEAD OF trigger execution and before the AFTER trigger execution. If the constraints are violated, the INSTEAD OF trigger actions are rolled back and the AFTER trigger is not fired.  
   
  The first and last AFTER triggers to be executed on a table can be specified by using sp_settriggerorder. Only one first and one last AFTER trigger for each INSERT, UPDATE, and DELETE operation can be specified on a table. If there are other AFTER triggers on the same table, they are randomly executed.  
   
@@ -297,7 +297,7 @@ SELECT * FROM deleted;
  For example, if a trigger is defined as an INSTEAD OF UPDATE trigger for a view, and the trigger executes an UPDATE statement referencing the same view, the UPDATE statement executed by the INSTEAD OF trigger does not call the trigger again. The UPDATE executed by the trigger is processed against the view as if the view did not have an INSTEAD OF trigger. The columns changed by the UPDATE must be resolved to a single base table. Each modification to an underlying base table starts the chain of applying constraints and firing AFTER triggers defined for the table.  
   
 ### Testing for UPDATE or INSERT Actions to Specific Columns  
- You can design a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] trigger to perform certain actions based on UPDATE or INSERT modifications to specific columns. Use [UPDATE()](../../t-sql/functions/update-transact-sql.md) or [COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md) in the body of the trigger for this purpose. UPDATE() tests for UPDATE or INSERT tries on one column. COLUMNS_UPDATED tests for UPDATE or INSERT actions that are performed on multiple columns and returns a bit pattern that indicates which columns were inserted or updated.  
+ You can design a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] trigger to perform certain actions based on UPDATE or INSERT modifications to specific columns. Use [UPDATE()](../../t-sql/functions/update-transact-sql.md) or [COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md) in the body of the trigger for this purpose. UPDATE() tests for UPDATE or INSERT tries on one column. COLUMNS_UPDATED tests for UPDATE or INSERT actions that are performed on multiple columns and returns a bit pattern that indicates which columns were inserted or updated.  
   
 ### Trigger Limitations  
  CREATE TRIGGER must be the first statement in the batch and can apply to only one table.  
@@ -318,14 +318,14 @@ SELECT * FROM deleted;
   
  The WRITETEXT statement, whether logged or unlogged, does not activate a trigger.  
   
- The following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements are not allowed in a DML trigger:  
+ The following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements are not allowed in a DML trigger:  
   
 ||||  
 |-|-|-|  
 |ALTER DATABASE|CREATE DATABASE|DROP DATABASE|  
 |RESTORE DATABASE|RESTORE LOG|RECONFIGURE|  
   
- Additionally, the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements are not allowed inside the body of a DML trigger when it is used against the table or view that is the target of the triggering action.  
+ Additionally, the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements are not allowed inside the body of a DML trigger when it is used against the table or view that is the target of the triggering action.  
   
 ||||  
 |-|-|-|  
@@ -334,7 +334,7 @@ SELECT * FROM deleted;
 |ALTER TABLE when used to do the following:<br /><br /> Add, modify, or drop columns.<br /><br /> Switch partitions.<br /><br /> Add or drop PRIMARY KEY or UNIQUE constraints.|||  
   
 > [!NOTE]  
->  Because [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not support user-defined triggers on system tables, we recommend that you do not create user-defined triggers on system tables.  
+>  Because [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not support user-defined triggers on system tables, we recommend that you do not create user-defined triggers on system tables.  
   
 ## DDL Triggers  
  DDL triggers, like standard triggers, execute stored procedures in response to an event. But unlike standard triggers, they do not execute in response to UPDATE, INSERT, or DELETE statements on a table or view. Instead, they primarily execute in response to data definition language (DDL) statements. These include CREATE, ALTER, DROP, GRANT, DENY, REVOKE, and UPDATE STATISTICS statements. Certain system stored procedures that perform DDL-like operations can also fire DDL triggers.  
@@ -349,17 +349,17 @@ SELECT * FROM deleted;
  Unlike DML triggers, DDL triggers are not scoped to schemas. Therefore, functions such as OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY, and OBJECTPROPERTYEX cannot be used for querying metadata about DDL triggers. Use the catalog views instead. For more information, see [Get Information About DDL Triggers](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
   
 > [!NOTE]  
->  Server-scoped DDL triggers appear in the [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] Object Explorer in the **Triggers** folder. This folder is located under the **Server Objects** folder. Database-scoped DDL Triggers appear in the **Database Triggers** folder. This folder is located under the **Programmability** folder of the corresponding database.  
+>  Server-scoped DDL triggers appear in the [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] Object Explorer in the **Triggers** folder. This folder is located under the **Server Objects** folder. Database-scoped DDL Triggers appear in the **Database Triggers** folder. This folder is located under the **Programmability** folder of the corresponding database.  
   
 ## Logon Triggers  
- Logon triggers execute stored procedures in response to a LOGON event. This event is raised when a user session is established with an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Logon triggers fire after the authentication phase of logging in finishes, but before the user session is actually established. Therefore, all messages originating inside the trigger that would typically reach the user, such as error messages and messages from the PRINT statement, are diverted to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log. For more information, see [Logon Triggers](../../relational-databases/triggers/logon-triggers.md).  
+ Logon triggers execute stored procedures in response to a LOGON event. This event is raised when a user session is established with an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Logon triggers fire after the authentication phase of logging in finishes, but before the user session is actually established. Therefore, all messages originating inside the trigger that would typically reach the user, such as error messages and messages from the PRINT statement, are diverted to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error log. For more information, see [Logon Triggers](../../relational-databases/triggers/logon-triggers.md).  
   
  Logon triggers do not fire if authentication fails.  
   
  Distributed transactions are not supported in a logon trigger. Error 3969 is returned when a logon trigger containing a distributed transaction is fired.  
   
 ### Disabling a Logon Trigger  
- A logon trigger can effectively prevent successful connections to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] for all users, including members of the **sysadmin** fixed server role. When a logon trigger is preventing connections, members of the **sysadmin** fixed server role can connect by using the dedicated administrator connection, or by starting the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] in minimal configuration mode (-f). For more information, see [Database Engine Service Startup Options](../../database-engine/configure/windows/database-engine-service-startup-options.md).  
+ A logon trigger can effectively prevent successful connections to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] for all users, including members of the **sysadmin** fixed server role. When a logon trigger is preventing connections, members of the **sysadmin** fixed server role can connect by using the dedicated administrator connection, or by starting the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] in minimal configuration mode (-f). For more information, see [Database Engine Service Startup Options](../../database-engine/configure/windows/database-engine-service-startup-options.md).  
   
 ## General Trigger Considerations  
   
@@ -369,10 +369,10 @@ SELECT * FROM deleted;
  Logon triggers always disallow results sets to be returned and this behavior is not configurable. If a logon trigger does generate a result set, the trigger fails to execute and the login attempt that fired the trigger is denied.  
   
 ### Multiple Triggers  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] allows for multiple triggers to be created for each DML, DDL, or LOGON event. For example, if CREATE TRIGGER FOR UPDATE is executed for a table that already has an UPDATE trigger, an additional update trigger is created. In earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], only one trigger for each INSERT, UPDATE, or DELETE data modification event is allowed for each table.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] allows for multiple triggers to be created for each DML, DDL, or LOGON event. For example, if CREATE TRIGGER FOR UPDATE is executed for a table that already has an UPDATE trigger, an additional update trigger is created. In earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], only one trigger for each INSERT, UPDATE, or DELETE data modification event is allowed for each table.  
   
 ### Recursive Triggers  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] also allows for recursive invocation of triggers when the RECURSIVE_TRIGGERS setting is enabled using ALTER DATABASE.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] also allows for recursive invocation of triggers when the RECURSIVE_TRIGGERS setting is enabled using ALTER DATABASE.  
   
  Recursive triggers enable the following types of recursion to occur:  
   
@@ -394,14 +394,14 @@ SELECT * FROM deleted;
  If any one of the triggers performs a ROLLBACK TRANSACTION, regardless of the nesting level, no more triggers are executed.  
   
 ### Nested Triggers  
- Triggers can be nested to a maximum of 32 levels. If a trigger changes a table on which there is another trigger, the second trigger is activated and can then call a third trigger, and so on. If any trigger in the chain sets off an infinite loop, the nesting level is exceeded and the trigger is canceled. When a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] trigger executes managed code by referencing a CLR routine, type, or aggregate, this reference counts as one level against the 32-level nesting limit. Methods invoked from within managed code do not count against this limit  
+ Triggers can be nested to a maximum of 32 levels. If a trigger changes a table on which there is another trigger, the second trigger is activated and can then call a third trigger, and so on. If any trigger in the chain sets off an infinite loop, the nesting level is exceeded and the trigger is canceled. When a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] trigger executes managed code by referencing a CLR routine, type, or aggregate, this reference counts as one level against the 32-level nesting limit. Methods invoked from within managed code do not count against this limit  
   
  To disable nested triggers, set the nested triggers option of sp_configure to 0 (off). The default configuration allows for nested triggers. If nested triggers is off, recursive triggers is also disabled, regardless of the RECURSIVE_TRIGGERS setting set by using ALTER DATABASE.  
   
  The first AFTER trigger nested inside an INSTEAD OF trigger fires even if the **nested triggers** server configuration option is set to 0. However, under this setting, later AFTER triggers do not fire. We recommend that you review your applications for nested triggers to determine whether the applications comply with your business rules with regard to this behavior when the **nested triggers** server configuration option is set to 0, and then make appropriate modifications.  
   
 ### Deferred Name Resolution  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] allows for [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] stored procedures, triggers, and batches to refer to tables that do not exist at compile time. This ability is called deferred name resolution.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] allows for [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] stored procedures, triggers, and batches to refer to tables that do not exist at compile time. This ability is called deferred name resolution.  
   
 ## Permissions  
  To create a DML trigger requires ALTER permission on the table or view on which the trigger is being created.  
@@ -411,7 +411,7 @@ SELECT * FROM deleted;
 ## Examples  
   
 ### A. Using a DML trigger with a reminder message  
- The following DML trigger prints a message to the client when anyone tries to add or change data in the `Customer` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following DML trigger prints a message to the client when anyone tries to add or change data in the `Customer` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 CREATE TRIGGER reminder1  
@@ -503,11 +503,11 @@ GO
 ```  
   
 ### E. Using a server-scoped DDL trigger  
- The following example uses a DDL trigger to print a message if any CREATE DATABASE event occurs on the current server instance, and uses the `EVENTDATA` function to retrieve the text of the corresponding [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement. For more examples that use EVENTDATA in DDL triggers, see [Use the EVENTDATA Function](../../relational-databases/triggers/use-the-eventdata-function.md).  
+ The following example uses a DDL trigger to print a message if any CREATE DATABASE event occurs on the current server instance, and uses the `EVENTDATA` function to retrieve the text of the corresponding [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement. For more examples that use EVENTDATA in DDL triggers, see [Use the EVENTDATA Function](../../relational-databases/triggers/use-the-eventdata-function.md).  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 CREATE TRIGGER ddl_trig_database   
@@ -523,11 +523,11 @@ GO
 ```  
   
 ### F. Using a logon trigger  
- The following logon trigger example denies an attempt to log in to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] as a member of the *login_test* login if there are already three user sessions running under that login.  
+ The following logon trigger example denies an attempt to log in to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] as a member of the *login_test* login if there are already three user sessions running under that login.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 USE master;  
@@ -552,7 +552,7 @@ END;
 ```  
   
 ### G. Viewing the events that cause a trigger to fire  
- The following example queries the `sys.triggers` and `sys.trigger_events` catalog views to determine which [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] language events cause trigger `safety` to fire. `safety` is created in the previous example.  
+ The following example queries the `sys.triggers` and `sys.trigger_events` catalog views to determine which [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] language events cause trigger `safety` to fire. `safety` is created in the previous example.  
   
 ```  
 SELECT TE.*  
@@ -572,24 +572,24 @@ GO
  [DISABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/disable-trigger-transact-sql.md)   
  [TRIGGER_NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/trigger-nestlevel-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-sql-referenced-entities-transact-sql.md)   
- [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-sql-referencing-entities-transact-sql.md)   
- [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md)   
- [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
- [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_settriggerorder &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md)   
+ [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-sql-referenced-entities-transact-sql.md)   
+ [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-sql-referencing-entities-transact-sql.md)   
+ [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md)   
+ [sp_help &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-help-transact-sql.md)   
+ [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-helptrigger-transact-sql.md)   
+ [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-helptext-transact-sql.md)   
+ [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-rename-transact-sql.md)   
+ [sp_settriggerorder &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-settriggerorder-transact-sql.md)   
  [UPDATE&#40;&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/update-transact-sql.md)   
  [Get Information About DML Triggers](../../relational-databases/triggers/get-information-about-dml-triggers.md)   
  [Get Information About DDL Triggers](../../relational-databases/triggers/get-information-about-ddl-triggers.md)   
- [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.triggers-transact-sql.md)   
- [sys.trigger_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.trigger-events-transact-sql.md)   
- [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.sql-modules-transact-sql.md)   
- [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.assembly-modules-transact-sql.md)   
- [sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-triggers-transact-sql.md)   
- [sys.server_trigger_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-trigger-events-transact-sql.md)   
- [sys.server_sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-sql-modules-transact-sql.md)   
- [sys.server_assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-assembly-modules-transact-sql.md)  
+ [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.triggers-transact-sql.md)   
+ [sys.trigger_events &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.trigger-events-transact-sql.md)   
+ [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.sql-modules-transact-sql.md)   
+ [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.assembly-modules-transact-sql.md)   
+ [sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-triggers-transact-sql.md)   
+ [sys.server_trigger_events &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-trigger-events-transact-sql.md)   
+ [sys.server_sql_modules &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-sql-modules-transact-sql.md)   
+ [sys.server_assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-assembly-modules-transact-sql.md)  
   
   

@@ -16,7 +16,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Install Additional R Packages on SQL Server
-This topic describes how to install new R packages to an instance of [!INCLUDE[rsql_productname_md](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] on a computer that has access to the Internet.
+This topic describes how to install new R packages to an instance of [!INCLUDE[rsql_productname_md](../../a9notintoc/includes/rsql-productname-md.md)] on a computer that has access to the Internet.
 
 ## 1. Locate the Windows binaries in ZIP file format
 
@@ -35,7 +35,7 @@ For example, to obtain the [FISHalyseR](http://bioconductor.org/packages/release
   
 ## 2. Open the default R package library for SQL Server R Services 
 
-Navigate to the folder on the server where the R packages associated with [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] have been installed. It is important that you install packages to the default library that is associated with the current instance. 
+Navigate to the folder on the server where the R packages associated with [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] have been installed. It is important that you install packages to the default library that is associated with the current instance. 
 
 For instructions on how to locate this library, see [Installing and Managing R Packages](../../advanced-analytics/r-services/installing-and-managing-r-packages.md).
 
@@ -50,7 +50,7 @@ Open R as an administrator.  You can do this by using the Windows command p,ropt
 
 1. Open a Windows command prompt as administrator, and navigate to the directory where the RTerm.Exe or RGui.exe files are located.  
   
-    In a default install, this is the R **\bin** directory. For example, in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], the R tools are located here: 
+    In a default install, this is the R **\bin** directory. For example, in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], the R tools are located here: 
 
     **Default instance**
 
@@ -87,7 +87,7 @@ The R command to install the package depends on whether you are getting the pack
     lib.SQL <- "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\R_SERVICES\\library"    
     ```
 
-    Note that for [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)], currently only one package library is allowed. Do not install packages to a user library, or you will not be able to run the package from [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].   
+    Note that for [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)], currently only one package library is allowed. Do not install packages to a user library, or you will not be able to run the package from [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)].   
      
 3.  Having defined the library location, the following statement installs the popular e1070 package into the package library used by R Services.  
   
@@ -131,7 +131,7 @@ The R command to install the package depends on whether you are getting the pack
 3.  If you have previously modified the R environment on the computer, you should ensure that the R environment variable `.libPath` uses just one path, which points to the R_SERVICES folder for the instance.  
   
 > [!NOTE]
-> If you have installed Microsoft R Server (Standalone) in addition to SQL Server R Services, your computer will have a separate installation of R with all the R tools and libraries. Packages that are installed to the R_SERVER library are used only by Microsoft R Server and cannot be accessed by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+> If you have installed Microsoft R Server (Standalone) in addition to SQL Server R Services, your computer will have a separate installation of R with all the R tools and libraries. Packages that are installed to the R_SERVER library are used only by Microsoft R Server and cannot be accessed by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
 > 
 >  Be sure to use the R_SERVICES library when installing packages that you want to use in SQL Server.
 

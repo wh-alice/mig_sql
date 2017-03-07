@@ -15,11 +15,11 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # SQL Server Configuration (R Services)
-The information in this section provides general guidance on the hardware and network configuration of the computer that is used to host [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)]. It should be considered in addition to the general [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] performance tuning information provided in the [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
+The information in this section provides general guidance on the hardware and network configuration of the computer that is used to host [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)]. It should be considered in addition to the general [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] performance tuning information provided in the [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
 
 ## Processor
 
-[!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] can perform tasks in parallel by using the available cores on the machine; the more cores that are available, the better the performance. Since [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is normally used by multiple users simultaneously, the database administrator should determine the ideal number of cores that are needed to support peak workload computations. While the number of cores may not help for IO bound operations, CPU bound algorithms will benefit from faster CPUs with many cores.
+[!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] can perform tasks in parallel by using the available cores on the machine; the more cores that are available, the better the performance. Since [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] is normally used by multiple users simultaneously, the database administrator should determine the ideal number of cores that are needed to support peak workload computations. While the number of cores may not help for IO bound operations, CPU bound algorithms will benefit from faster CPUs with many cores.
 
 ## Memory
 
@@ -29,18 +29,18 @@ A minimum of 32GB is highly recommended. If you have more than 32GB available, y
 
 ## Power Options
 
-On the Windows operating system, the __High Performance__ power option should be used. Using a different power setting will result in decreased or inconsistent performance when using [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)].
+On the Windows operating system, the __High Performance__ power option should be used. Using a different power setting will result in decreased or inconsistent performance when using [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)].
 
 ## Disk IO
 
-Training and prediction jobs using [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] are inherently IO bound, and depend on the speed of the disk(s) that the database is stored on. Faster drives, such as solid state drives (SSD) may help. 
+Training and prediction jobs using [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] are inherently IO bound, and depend on the speed of the disk(s) that the database is stored on. Faster drives, such as solid state drives (SSD) may help. 
 
-Disk IO is also affected by other applications accessing the disk: for example, read operations against a database by other clients. Disk IO performance can also be affected by settings on the file system in use, such as the block size used by the file system. If multiple drives are available, store the databases on a different drive than [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] so that requests for [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] are not hitting the same disk as requests for data stored in the database.
+Disk IO is also affected by other applications accessing the disk: for example, read operations against a database by other clients. Disk IO performance can also be affected by settings on the file system in use, such as the block size used by the file system. If multiple drives are available, store the databases on a different drive than [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] so that requests for [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] are not hitting the same disk as requests for data stored in the database.
 
-Disk IO can also greatly impact performance when running RevoScaleR analytic functions that use multiple iterations during training. For example, `rxLogit`, `rxDTree`, `rxDForest` and `rxBTrees` all use multiple iterations. When the data source is [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], these algorithms use temporary files that are optimized to capture the data. These files are automatically cleaned up after the session completes. Having a high performance disk for read/write operations can significantly improve the overall elapsed time for these algorithms.
+Disk IO can also greatly impact performance when running RevoScaleR analytic functions that use multiple iterations during training. For example, `rxLogit`, `rxDTree`, `rxDForest` and `rxBTrees` all use multiple iterations. When the data source is [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)], these algorithms use temporary files that are optimized to capture the data. These files are automatically cleaned up after the session completes. Having a high performance disk for read/write operations can significantly improve the overall elapsed time for these algorithms.
 
 > [!NOTE]
-> [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] requires 8.3 filename support on Windows operating systems. You can use fsutil.exe to determine whether a drive supports 8.3 filenames, or to enable support if it does not. For more information on using fsutil.exe with 8.3 filenames, see [Fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx).
+> [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] requires 8.3 filename support on Windows operating systems. You can use fsutil.exe to determine whether a drive supports 8.3 filenames, or to enable support if it does not. For more information on using fsutil.exe with 8.3 filenames, see [Fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx).
 
 ### Table Compression
 
@@ -66,15 +66,15 @@ See [How to determine the appropriate page file size for 64-bit versions of Wind
 
 ## Resource Governance
 
-[!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports resource governance for controlling the various resources used by [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)]. For example, the default value for memory consumption by R is limited to 20% of the total memory available for [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. This is done to ensure that [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] workflows are not severely affected by long running R jobs. However, these limits can be changed by the database administrator. 
+[!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] supports resource governance for controlling the various resources used by [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)]. For example, the default value for memory consumption by R is limited to 20% of the total memory available for [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)]. This is done to ensure that [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] workflows are not severely affected by long running R jobs. However, these limits can be changed by the database administrator. 
 
-The resources limited are __MAX_CPU_PERCENT__, __MAX_MEMORY_PERCENT__, and __MAX_PROCESSES__. To view the current settings, use this [!INCLUDE[tsql_md](../../advanced-analytics/r-services/includes/tsql-md.md)] statement:
+The resources limited are __MAX_CPU_PERCENT__, __MAX_MEMORY_PERCENT__, and __MAX_PROCESSES__. To view the current settings, use this [!INCLUDE[tsql_md](../../a9notintoc/includes/tsql-md.md)] statement:
 
 ```T-SQL
 SELECT * FROM sys.resource_governor_external_resource_pools
 ``` 
 
-If [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is primarily used for R Services, it might be helpful to increase MAX_CPU_PERCENT to 40% or 60%. If there many R sessions using the same [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] at the same time, all three will be increased. To change the allocated resource values, use [!INCLUDE[tsql_md](../../advanced-analytics/r-services/includes/tsql-md.md)] statements. 
+If [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] is primarily used for R Services, it might be helpful to increase MAX_CPU_PERCENT to 40% or 60%. If there many R sessions using the same [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] at the same time, all three will be increased. To change the allocated resource values, use [!INCLUDE[tsql_md](../../a9notintoc/includes/tsql-md.md)] statements. 
 
 This example sets the memory usage to 40%:
 

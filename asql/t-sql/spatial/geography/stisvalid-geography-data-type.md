@@ -33,14 +33,14 @@ manager: "jhubbard"
 ```  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **bit**  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] return type: **bit**  
   
  CLR return type: **SqlBoolean**  
   
 ## Remarks  
  The OGC type of a **geography** instance can be determined by invoking [STGeometryType()](../../../t-sql/data-types/stgeometrytype-geography-data-type.md).  
   
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] produces only valid **geography** instances, but allows for the storage and retrieval of invalid instances. A valid instance representing the same point set of an invalid instance can be retrieved using the `MakeValid()` method.  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] produces only valid **geography** instances, but allows for the storage and retrieval of invalid instances. A valid instance representing the same point set of an invalid instance can be retrieved using the `MakeValid()` method.  
   
 ## Examples  
  The following example creates a `geography` instance and uses `STIsValid()` to test if the instance is valid.  

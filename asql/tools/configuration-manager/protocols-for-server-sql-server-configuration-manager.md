@@ -15,6 +15,6 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Protocols for &lt;server&gt; (SQL Server Configuration Manager)
-  To configure the protocols used by the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)], select **Protocols** for the desired server instance in the console pane, right-click the appropriate protocol in the details pane, and then click **Properties**.  
+  To configure the protocols used by the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)], select **Protocols** for the desired server instance in the console pane, right-click the appropriate protocol in the details pane, and then click **Properties**.  
   
   

@@ -20,12 +20,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Database Engine Backward Compatibility
-  Topics in the backward compatibility section describe changes in behavior between versions of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Topics in the backward compatibility section describe changes in behavior between versions of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)].  
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Deprecated Database Engine Features in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)|Deprecated [!INCLUDE[ssDE](../analysis-services/instances/install/windows/includes/ssde-md.md)] features in this release.|  
-|[Discontinued Database Engine Functionality in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)|Discontinued [!INCLUDE[ssDE](../analysis-services/instances/install/windows/includes/ssde-md.md)] features in this release.|  
-|[Breaking Changes to Database Engine Features in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)|[!INCLUDE[ssDE](../analysis-services/instances/install/windows/includes/ssde-md.md)] feature changes that might require changes to applications.|  
+|[Deprecated Database Engine Features in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)|Deprecated [!INCLUDE[ssDE](../a9notintoc/includes/ssde-md.md)] features in this release.|  
+|[Discontinued Database Engine Functionality in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)|Discontinued [!INCLUDE[ssDE](../a9notintoc/includes/ssde-md.md)] features in this release.|  
+|[Breaking Changes to Database Engine Features in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)|[!INCLUDE[ssDE](../a9notintoc/includes/ssde-md.md)] feature changes that might require changes to applications.|  
   
   

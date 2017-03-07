@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # NonEmpty (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the set of tuples that are not empty from a specified set, based on the cross product of the specified set with a second set.  
   

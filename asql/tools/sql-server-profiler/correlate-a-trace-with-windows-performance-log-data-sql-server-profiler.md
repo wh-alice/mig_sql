@@ -17,16 +17,16 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Correlate a Trace with Windows Performance Log Data (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] can correlate Microsoft Windows System Monitor counters with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] events. Windows System Monitor logs system activity for specified counters in performance logs.  
+  [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] can correlate Microsoft Windows System Monitor counters with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] events. Windows System Monitor logs system activity for specified counters in performance logs.  
   
 > [!NOTE]  
 >  For information about sharing logs among different versions of Windows, see the procedure at the end of this topic.  
   
 ### To correlate a trace with performance log data  
   
-1.  In [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)], open a saved trace file or trace table. You cannot correlate a running trace that is still collecting event data. For accurate correlation with System Monitor data, the trace must contain both **StartTime** and **EndTime** data columns.  
+1.  In [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)], open a saved trace file or trace table. You cannot correlate a running trace that is still collecting event data. For accurate correlation with System Monitor data, the trace must contain both **StartTime** and **EndTime** data columns.  
   
-2.  On the [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] **File** menu, click **Import Performance Data**.  
+2.  On the [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] **File** menu, click **Import Performance Data**.  
   
 3.  In the **Open** dialog box, select a file that contains a performance log. The performance log data must have been captured during the same time period in which the trace data is captured.  
   
@@ -46,9 +46,9 @@ manager: "jhubbard"
   
 4.  On the **General** tab, click **Add Counters**.  
   
-5.  In the **Performance object** list, select a performance object you want to monitor. The names of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] performance objects for default instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] start with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and named instances start with MSSQL$*instanceName*.  
+5.  In the **Performance object** list, select a performance object you want to monitor. The names of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] performance objects for default instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] start with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and named instances start with MSSQL$*instanceName*.  
   
-6.  Add as many counters as necessary for your [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance and other important values, such as processor time and disk time.  
+6.  Add as many counters as necessary for your [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance and other important values, such as processor time and disk time.  
   
 7.  When you have finished adding counters, click **Close**.  
   

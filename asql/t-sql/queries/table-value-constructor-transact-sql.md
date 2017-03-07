@@ -24,9 +24,9 @@ manager: "jhubbard"
 # Table Value Constructor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Specifies a set of row value expressions to be constructed into a table. The [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] table value constructor allows multiple rows of data to be specified in a single DML statement. The table value constructor can be specified in the VALUES clause of the INSERT statement, in the USING \<source table> clause of the MERGE statement, and in the definition of a derived table in the FROM clause.  
+  Specifies a set of row value expressions to be constructed into a table. The [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] table value constructor allows multiple rows of data to be specified in a single DML statement. The table value constructor can be specified in the VALUES clause of the INSERT statement, in the USING \<source table> clause of the MERGE statement, and in the definition of a derived table in the FROM clause.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -48,7 +48,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
  The number of values specified in each list must be the same and the values must be in the same order as the columns in the table. A value for each column in the table must be specified or the column list must explicitly specify the columns for each incoming value.  
   
  DEFAULT  
- Forces the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] to insert the default value defined for a column. If a default does not exist for the column and the column allows null values, NULL is inserted. DEFAULT is not valid for an identity column. When specified in a table value constructor, DEFAULT is allowed only in an INSERT statement.  
+ Forces the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] to insert the default value defined for a column. If a default does not exist for the column and the column allows null values, NULL is inserted. DEFAULT is not valid for an identity column. When specified in a table value constructor, DEFAULT is allowed only in an INSERT statement.  
   
  *expression*  
  Is a constant, a variable, or an expression. The expression cannot contain an EXECUTE statement.  
@@ -100,7 +100,7 @@ INSERT INTO dbo.t VALUES (1,'a'), (2, 1);
 GO  
 ```  
   
- When the INSERT statement is run, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] tries to convert 'a' to an integer because the data type precedence indicates that an integer is of a higher type than a character. The conversion fails and an error is returned. You can avoid the error by explicitly converting values as appropriate. For example, the previous statement can be written as follows.  
+ When the INSERT statement is run, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] tries to convert 'a' to an integer because the data type precedence indicates that an integer is of a higher type than a character. The conversion fails and an error is returned. You can avoid the error by explicitly converting values as appropriate. For example, the previous statement can be written as follows.  
   
 ```  
 INSERT INTO dbo.t VALUES (1,'a'), (2, CONVERT(CHAR,1));  
@@ -153,7 +153,7 @@ ON a.Name = b.Name;
 ```  
   
 ### D. Specifying multiple values as a derived source table in a MERGE statement  
- The following example uses MERGE to modify the `SalesReason` table by either updating or inserting rows. When the value of `NewName` in the source table matches a value in the `Name` column of the target table, (`SalesReason`), the `ReasonType` column is updated in the target table. When the value of `NewName` does not match, the source row is inserted into the target table. The source table is a derived table that uses the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] table value constructor to specify multiple rows for the source table.  
+ The following example uses MERGE to modify the `SalesReason` table by either updating or inserting rows. When the value of `NewName` in the source table matches a value in the `Name` column of the target table, (`SalesReason`), the `ReasonType` column is updated in the target table. When the value of `NewName` does not match, the source row is inserted into the target table. The source table is a derived table that uses the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] table value constructor to specify multiple rows for the source table.  
   
 ```  
 USE AdventureWorks2012;  

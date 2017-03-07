@@ -25,9 +25,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ALTER RESOURCE GOVERNOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  This statement is used to perform the following Resource Governor actions in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]:  
+  This statement is used to perform the following Resource Governor actions in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]:  
   
 -   Apply the configuration changes specified when the CREATE|ALTER|DROP WORKLOAD GROUP or CREATE|ALTER|DROP RESOURCE POOL or CREATE|ALTER|DROP EXTERNAL RESOURCE POOL statements are issued.  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 -   Sets the maximum I/O operations per disk volume.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -73,7 +73,7 @@ ALTER RESOURCE GOVERNOR
   
 -   Configuration changes can be made, but the changes do not take effect until Resource Governor is enabled.  
   
--   Upon restarting [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the Resource Governor will not load its configuration, but instead will have only the default and internal groups and pools.  
+-   Upon restarting [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], the Resource Governor will not load its configuration, but instead will have only the default and internal groups and pools.  
   
  RECONFIGURE  
  When the Resource Governor is not enabled, RECONFIGURE enables the Resource Governor. Enabling Resource Governor has the following results:  
@@ -93,12 +93,12 @@ ALTER RESOURCE GOVERNOR
  Registers the classification function specified by *schema_name.function_name*. This function classifies every new session and assigns the session requests and queries to a workload group. When NULL is used, new sessions are automatically assigned to the default workload group.  
   
  RESET STATISTICS  
- Resets statistics on all workload groups and resource pools. For more information, see [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-resource-governor-workload-groups-transact-sql.md) and [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-resource-governor-resource-pools-transact-sql.md).  
+ Resets statistics on all workload groups and resource pools. For more information, see [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-resource-governor-workload-groups-transact-sql.md) and [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-resource-governor-resource-pools-transact-sql.md).  
   
  MAX_OUTSTANDING_IO_PER_VOLUME = *value*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Sets the maximum queued I/O operations per disk volume. These I/O operations can be reads or writes of any size.  The maximum value for MAX_OUTSTANDING_IO_PER_VOLUME is 100. It is not a percent. This setting is designed to tune IO resource governance to the IO characteristics of a disk volume. We recommend that you experiment with different values and consider using a calibration tool such as IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223),     or SQLIO (deprecated) to identify the max value for your storage subsystem. This setting provides a system-level safety check that allows SQL Server to meet the minimum IOPS for resource pools even if other pools have the MAX_IOPS_PER_VOLUME set to unlimited. For more information about MAX_IOPS_PER_VOLUME, see [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).  
   
@@ -115,7 +115,7 @@ ALTER RESOURCE GOVERNOR
 ## Examples  
   
 ### A. Starting the Resource Governor  
- When [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is first installed Resource Governor is disabled. The following example starts Resource Governor. After the statement executes, Resource Governor is running and can use the predefined workload groups and resource pools.  
+ When [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is first installed Resource Governor is disabled. The following example starts Resource Governor. After the statement executes, Resource Governor is running and can use the predefined workload groups and resource pools.  
   
 ```  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
@@ -201,7 +201,7 @@ WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
- [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-resource-governor-workload-groups-transact-sql.md)   
- [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-resource-governor-resource-pools-transact-sql.md)  
+ [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-resource-governor-resource-pools-transact-sql.md)  
   
   

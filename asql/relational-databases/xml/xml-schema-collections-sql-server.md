@@ -45,7 +45,7 @@ manager: "jhubbard"
  You can also use the XML schema collection to type XML variables, parameters, and columns.  
   
 ##  <a name="ddl"></a> DDL for Managing Schema Collections  
- You can create XML schema collections in the database and associate them with variables and columns of **xml** type. To manage schema collections in the database, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provides the following DDL statements:  
+ You can create XML schema collections in the database and associate them with variables and columns of **xml** type. To manage schema collections in the database, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] provides the following DDL statements:  
   
 -   [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) Imports schema components into a database.  
   
@@ -116,7 +116,7 @@ manager: "jhubbard"
   
 -   **Customer** is an ELEMENT component.  
   
- When you import a schema into the database, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not store the schema itself. Instead, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] stores the various individual components. That is, the \<Schema> tag is not stored, only the components that are defined within it are preserved. All schema elements are not preserved. If the \<Schema> tag contains attributes that specify default behavior of its components, these attributes are moved to the schema components within it during the import process, as shown in the following table.  
+ When you import a schema into the database, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not store the schema itself. Instead, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] stores the various individual components. That is, the \<Schema> tag is not stored, only the components that are defined within it are preserved. All schema elements are not preserved. If the \<Schema> tag contains attributes that specify default behavior of its components, these attributes are moved to the schema components within it during the import process, as shown in the following table.  
   
 |Attribute name|Behavior|  
 |--------------------|--------------|  

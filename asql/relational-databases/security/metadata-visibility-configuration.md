@@ -40,7 +40,7 @@ GO
   
 |||  
 |-|-|  
-|Catalog views|[!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] **sp_help** stored procedures|  
+|Catalog views|[!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] **sp_help** stored procedures|  
 |Metadata exposing built-in functions|Information schema views|  
 |Compatibility views|Extended properties|  
   
@@ -48,9 +48,9 @@ GO
   
 |||  
 |-|-|  
-|Log shipping system tables|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent system tables|  
+|Log shipping system tables|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent system tables|  
 |Database maintenance plan system tables|Backup system tables|  
-|Replication system tables|Replication and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent **sp_help** stored procedures|  
+|Replication system tables|Replication and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent **sp_help** stored procedures|  
   
  Limited metadata accessibility means the following:  
   
@@ -60,9 +60,9 @@ GO
   
 -   Metadata-emitting, built-in functions such as OBJECTPROPERTYEX may return NULL.  
   
--   The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] **sp_help** stored procedures might return only a subset of rows, or NULL.  
+-   The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] **sp_help** stored procedures might return only a subset of rows, or NULL.  
   
- SQL modules, such as stored procedures and triggers, run under the security context of the caller and, therefore, have limited metadata accessibility. For example, in the following code, when the stored procedure tries to access metadata for the table `myTable` on which the caller has no rights, an empty result set is returned. In earlier releases of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], a row is returned.  
+ SQL modules, such as stored procedures and triggers, run under the security context of the caller and, therefore, have limited metadata accessibility. For example, in the following code, when the stored procedure tries to access metadata for the table `myTable` on which the caller has no rights, an empty result set is returned. In earlier releases of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], a row is returned.  
   
 ```  
 CREATE PROCEDURE assumes_caller_can_access_metadata  
@@ -79,7 +79,7 @@ GO
  You can also modify the stored procedure so that it executes under the credentials of the owner. When the procedure owner and the table owner are the same owner, ownership chaining applies, and the security context of the procedure owner enables access to the metadata for `myTable`. Under this scenario, the following code returns a row of metadata to the caller.  
   
 > [!NOTE]  
->  The following example uses the [sys.objects](../../relational-databases/system-catalog-views/sys.objects-transact-sql.md) catalog view instead of the [sys.sysobjects](../../relational-databases/system-compatibility-views/sys.sysobjects-transact-sql.md) compatibility view.  
+>  The following example uses the [sys.objects](../../relational-databases/reference/system-catalog-views/sys.objects-transact-sql.md) catalog view instead of the [sys.sysobjects](../../relational-databases/reference/system-compatibility-views/sys.sysobjects-transact-sql.md) compatibility view.  
   
 ```  
 CREATE PROCEDURE does_not_assume_caller_can_access_metadata  
@@ -99,7 +99,7 @@ GO
 ## Benefits and Limits of Metadata Visibility Configuration  
  Metadata visibility configuration can play an important role in your overall security plan. However, there are cases in which a skilled and determined user can force the disclosure of some metadata. We recommend that you deploy metadata permissions as one of many defenses-in-depth.  
   
- It is theoretically possible to force the emission of metadata in error messages by manipulating the order of predicate evaluation in queries. The possibility of such *trial-and-error attacks* is not specific to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. It is implied by the associative and commutative transformations permitted in relational algebra. You can mitigate this risk by limiting the information returned in error messages. To further restrict the visibility of metadata in this way, you can start the server with trace flag 3625. This trace flag limits the amount of information shown in error messages. In turn, this helps to prevent forced disclosures. The tradeoff is that error messages will be terse and might be difficult to use for debugging purposes. For more information, see [Database Engine Service Startup Options](../../database-engine/configure/windows/database-engine-service-startup-options.md) and [Trace Flags &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md).  
+ It is theoretically possible to force the emission of metadata in error messages by manipulating the order of predicate evaluation in queries. The possibility of such *trial-and-error attacks* is not specific to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. It is implied by the associative and commutative transformations permitted in relational algebra. You can mitigate this risk by limiting the information returned in error messages. To further restrict the visibility of metadata in this way, you can start the server with trace flag 3625. This trace flag limits the amount of information shown in error messages. In turn, this helps to prevent forced disclosures. The tradeoff is that error messages will be terse and might be difficult to use for debugging purposes. For more information, see [Database Engine Service Startup Options](../../database-engine/configure/windows/database-engine-service-startup-options.md) and [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
  The following metadata is not subject to forced disclosure:  
   
@@ -189,7 +189,7 @@ GO
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
- [Catalog Views &#40;Transact-SQL&#41;](../Topic/Catalog%20Views%20\(Transact-SQL\).md)   
+ [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/catalog-views-transact-sql.md)   
  [Compatibility Views &#40;Transact-SQL&#41;](../Topic/Compatibility%20Views%20\(Transact-SQL\).md)  
   
   

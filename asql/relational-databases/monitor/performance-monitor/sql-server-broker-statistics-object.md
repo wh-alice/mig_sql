@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server, Broker Statistics Object
-  The SQLServer:Broker Statistics performance object contains performance counters that report general [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] information for an instance of the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)]. The following table lists the counters that this object contains:  
+  The SQLServer:Broker Statistics performance object contains performance counters that report general [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] information for an instance of the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)]. The following table lists the counters that this object contains:  
   
 |SQL Server Broker Statistics counters|Description|  
 |-------------------------------------------|-----------------|  
@@ -55,10 +55,10 @@ manager: "jhubbard"
 |**Forwarded Msg Discarded/sec**|The number of messages per second that this computer received for forwarding, but did not successfully forward.|  
 |**Forwarded Pending Msg Bytes**|The total size of the messages currently held for forwarding.|  
 |**Forwarded Pending Msg Count**|The total number of messages currently held for forwarding.|  
-|**SQL RECEIVE Total**|The total number of [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] RECEIVE statements processed.|  
-|**SQL RECEIVEs/sec**|The number of [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] RECEIVE statements processed per second.|  
-|**SQL SEND Total**|The total number of [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] SEND statements executed.|  
-|**SQL SENDs/sec**|The number of [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] SEND statements executed per second.|  
+|**SQL RECEIVE Total**|The total number of [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] RECEIVE statements processed.|  
+|**SQL RECEIVEs/sec**|The number of [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] RECEIVE statements processed per second.|  
+|**SQL SEND Total**|The total number of [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] SEND statements executed.|  
+|**SQL SENDs/sec**|The number of [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] SEND statements executed per second.|  
   
 ## See Also  
  [SQL Server Service Broker](../../../database-engine/configure/windows/sql-server-service-broker.md)   

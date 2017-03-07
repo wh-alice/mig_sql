@@ -38,7 +38,7 @@ manager: "jhubbard"
  Is a **float** indicating the maximum distance that points forming the buffer can be from the geography instance.  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **geography**  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] return type: **geography**  
   
  CLR return type: **SqlGeography**  
   

@@ -18,7 +18,7 @@ manager: "jhubbard"
     
 ### To create a user-defined role  
   
-1.  Open [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+1.  Open [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 2.  Click **Object Explorer** on the **View** menu.  
   

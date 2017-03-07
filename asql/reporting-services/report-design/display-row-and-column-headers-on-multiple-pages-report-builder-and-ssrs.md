@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Display Row and Column Headers on Multiple Pages (Report Builder and SSRS)
-  You can control whether to repeat row and column headers on every page of a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report for a tablix data region (a table, matrix, or list) that spans multiple pages.
+  You can control whether to repeat row and column headers on every page of a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report for a tablix data region (a table, matrix, or list) that spans multiple pages.
   
  How you control the rows and columns depends on whether the tablix data region has group headers. When you click in a tablix data region that has group headers, a dotted line shows the tablix areas, as shown in the following figure:  
   
@@ -32,7 +32,7 @@ manager: "erikre"
   
 2.  In **Row Headers**, select **Repeat header rows on each page**.  
   
-3.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## To display column headers on multiple pages  
   
@@ -40,7 +40,7 @@ manager: "erikre"
   
 2.  In **Column Headers**, select **Repeat header columns on each page**.  
   
-3.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## To display a static row or column on multiple pages  
   

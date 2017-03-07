@@ -23,14 +23,14 @@ manager: "erikre"
   
 ### To import data from a text file  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Import from Data Source**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Import from Data Source**.  
   
 2.  On the **Connect to a Data Source** page, under **Text Files**, select **Excel File** or **Text File**, and then click **Next**.  
   
 3.  Follow the steps in the Table Import Wizard. On subsequent pages, you will be able to select specific tables and apply filters by using the **Select Tables and Views** page.  
   
 ## See Also  
- [Import Data &#40;SSAS Tabular&#41;](../Topic/Import%20Data%20\(SSAS%20Tabular\).md)   
+ [Import Data &#40;SSAS Tabular&#41;](../../a9retired/import-data-ssas-tabular.md)   
  [Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

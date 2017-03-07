@@ -41,7 +41,7 @@ manager: "jhubbard"
 # Manage Metadata When Making a Database Available on Another Server
   This topic is relevant in the following situations:  
   
--   Configuring the availability replicas of an [!INCLUDE[ssHADR](../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] availability group.  
+-   Configuring the availability replicas of an [!INCLUDE[ssHADR](../../a9notintoc/includes/sshadr-md.md)] availability group.  
   
 -   Setting up database mirroring for a database.  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 -   Attaching a copy of a database on another server instance.  
   
- Some applications depend on information, entities, and/or objects that are outside of the scope of a single user database. Typically, an application has dependencies on the **master** and **msdb** databases, and also on the user database. Anything stored outside of a user database that is required for the correct functioning of that database must be made available on the destination server instance. For example, the logins for an application are stored as metadata in the **master** database, and they must be re-created on the destination server. If an application or database maintenance plan depends on [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent jobs, whose metadata is stored in the **msdb** database, you must re-create those jobs on the destination server instance. Similarly, the metadata for a server-level trigger is stored in **master**.  
+ Some applications depend on information, entities, and/or objects that are outside of the scope of a single user database. Typically, an application has dependencies on the **master** and **msdb** databases, and also on the user database. Anything stored outside of a user database that is required for the correct functioning of that database must be made available on the destination server instance. For example, the logins for an application are stored as metadata in the **master** database, and they must be re-created on the destination server. If an application or database maintenance plan depends on [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent jobs, whose metadata is stored in the **msdb** database, you must re-create those jobs on the destination server instance. Similarly, the metadata for a server-level trigger is stored in **master**.  
   
  When you move the database for an application to another server instance, you must re-create all the metadata of the dependant entities and objects in **master** and **msdb** on the destination server instance. For example, if a database application uses server-level triggers, just attaching or restoring the database on the new system is not enough. The database will not work as expected unless you manually re-create the metadata for those triggers in the **master** database.  
   
@@ -93,17 +93,17 @@ manager: "jhubbard"
 -   [Triggers (at server level)](#triggers)  
   
 ##  <a name="server_configuration_settings"></a> Server Configuration Settings  
- [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] and later versions selectively install and starts key services and features. This helps reduce the attackable surface area of a system. In the default configuration of new installations, many features are not enabled. If the database relies on any service or feature that is off by default, this service or feature must be enabled on the destination server instance.  
+ [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] and later versions selectively install and starts key services and features. This helps reduce the attackable surface area of a system. In the default configuration of new installations, many features are not enabled. If the database relies on any service or feature that is off by default, this service or feature must be enabled on the destination server instance.  
   
  For more information about these settings and enabling or disabling them, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure/windows/server-configuration-options-sql-server.md).  
   
   
 ##  <a name="credentials"></a> Credentials  
- A credential is a record that contains the authentication information that is required to connect to a resource outside [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Most credentials consist of a Windows login and password.  
+ A credential is a record that contains the authentication information that is required to connect to a resource outside [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Most credentials consist of a Windows login and password.  
   
  For more information about this feature, see [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
-> **NOTE:** [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent Proxy accounts use credentials. To learn the credential ID of a proxy account, use the [sysproxies](../../relational-databases/system-tables/dbo.sysproxies-transact-sql.md) system table.  
+> **NOTE:** [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent Proxy accounts use credentials. To learn the credential ID of a proxy account, use the [sysproxies](../../relational-databases/reference/system-tables/dbo.sysproxies-transact-sql.md) system table.  
   
   
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
@@ -115,18 +115,18 @@ manager: "jhubbard"
   
   
 ##  <a name="database_ownership"></a> Database Ownership  
- When a database is restored on another computer, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login or Windows user who initiated the restore operation becomes the owner of the new database automatically. When the database is restored, the system administrator or the new database owner can change database ownership.  
+ When a database is restored on another computer, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login or Windows user who initiated the restore operation becomes the owner of the new database automatically. When the database is restored, the system administrator or the new database owner can change database ownership.  
   
 ##  <a name="distributed_queries_and_linked_servers"></a> Distributed Queries and Linked Servers  
- Distributed queries and linked servers are supported for OLE DB applications. Distributed queries access data from multiple heterogeneous data sources on either the same or different computers. A linked server configuration enables [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to execute commands against OLE DB data sources on remote servers. For more information about these features, see [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
+ Distributed queries and linked servers are supported for OLE DB applications. Distributed queries access data from multiple heterogeneous data sources on either the same or different computers. A linked server configuration enables [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to execute commands against OLE DB data sources on remote servers. For more information about these features, see [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
   
 ##  <a name="encrypted_data"></a> Encrypted Data  
  If the database you are making available on another server instance contains encrypted data and if the database master key is protected by the service master key on the original server, it might be necessary to re-create the service master key encryption. The *database master key* is a symmetric key that is used to protect the private keys of certificates and asymmetric keys in an encrypted database. When created, the database master key is encrypted by using the Triple DES algorithm and a user-supplied password.  
   
- To enable the automatic decryption of the database master key on a server instance, a copy of this key is encrypted by using the service master key. This encrypted copy is stored in both the database and in **master**. Typically, the copy stored in **master** is silently updated whenever the master key is changed. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] first tries to decrypt the database master key with the service master key of the instance. If that decryption fails, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] searches the credential store for master key credentials that have the same family GUID as the database for which it requires the master key. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] then tries to decrypt the database master key with each matching credential until the decryption succeeds or there are no more credentials. A master key that is not encrypted by the service master key must be opened by using the OPEN MASTER KEY statement and a password.  
+ To enable the automatic decryption of the database master key on a server instance, a copy of this key is encrypted by using the service master key. This encrypted copy is stored in both the database and in **master**. Typically, the copy stored in **master** is silently updated whenever the master key is changed. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] first tries to decrypt the database master key with the service master key of the instance. If that decryption fails, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] searches the credential store for master key credentials that have the same family GUID as the database for which it requires the master key. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] then tries to decrypt the database master key with each matching credential until the decryption succeeds or there are no more credentials. A master key that is not encrypted by the service master key must be opened by using the OPEN MASTER KEY statement and a password.  
   
- When an encrypted database is copied, restored, or attached to a new instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], a copy of the database master key encrypted by the service master key is not stored in **master** on the destination server instance. On the destination server instance, you must open the master key of the database. To open the master key, execute the following statement: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'**. We recommend that you then enable automatic decryption of the database master key by executing the following statement: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. This ALTER MASTER KEY statement provisions the server instance with a copy of the database master key that is encrypted with the service master key. For more information, see [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) and [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ When an encrypted database is copied, restored, or attached to a new instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], a copy of the database master key encrypted by the service master key is not stored in **master** on the destination server instance. On the destination server instance, you must open the master key of the database. To open the master key, execute the following statement: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'**. We recommend that you then enable automatic decryption of the database master key by executing the following statement: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. This ALTER MASTER KEY statement provisions the server instance with a copy of the database master key that is encrypted with the service master key. For more information, see [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) and [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  For information about how to enable automatic decryption of the database master key of a mirror database, see [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -140,18 +140,18 @@ manager: "jhubbard"
   
   
 ##  <a name="user_defined_error_messages"></a> User-defined Error Messages  
- User-defined error messages reside in the [sys.messages](../Topic/sys.messages%20\(Transact-SQL\).md) catalog view. This catalog view is stored in **master**. If a database application depends on user-defined error messages and the database is made available on another server instance, use [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) to add those user-defined messages on the destination server instance.  
+ User-defined error messages reside in the [sys.messages](../../relational-databases/reference/system-catalog-views/messages-for-errors-catalog-views-sys.messages.md) catalog view. This catalog view is stored in **master**. If a database application depends on user-defined error messages and the database is made available on another server instance, use [sp_addmessage](../../relational-databases/reference/system-stored-procedures/sp-addmessage-transact-sql.md) to add those user-defined messages on the destination server instance.  
 
   
 ##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
   
 ### Server-Level Event Notifications  
- Server-level event notifications are stored in **msdb**. Therefore, if a database application relies on a server-level event notifications, that event notification must be re-created on the destination server instance. To view the event notifications on a server instance, use the [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys.server-event-notifications-transact-sql.md) catalog view. For more information, see [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
+ Server-level event notifications are stored in **msdb**. Therefore, if a database application relies on a server-level event notifications, that event notification must be re-created on the destination server instance. To view the event notifications on a server instance, use the [sys.server_event_notifications](../../relational-databases/reference/system-catalog-views/sys.server-event-notifications-transact-sql.md) catalog view. For more information, see [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
   
  Additionally, event notifications are delivered by using [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)]. Routes for incoming messages are not included in the database that contains a service. Instead, explicit routes are stored in **msdb**. If your service uses an explicit route in the **msdb** database to route incoming messages to the service, when you attach a database in a different instance, you must re-create this route.  
   
 ### Windows Management Instrumentation (WMI) Events  
- The WMI Provider for Server Events lets you use the Windows Management Instrumentation (WMI) to monitor events in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Any application that relies on server-level events exposed through the WMI provider on which a database relies must be defined the computer of the destination server instance. WMI Event provider creates event notifications with a target service that is defined in **msdb**.  
+ The WMI Provider for Server Events lets you use the Windows Management Instrumentation (WMI) to monitor events in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Any application that relies on server-level events exposed through the WMI provider on which a database relies must be defined the computer of the destination server instance. WMI Event provider creates event notifications with a target service that is defined in **msdb**.  
   
 > **NOTE:** For more information, see [WMI Provider for Server Events Concepts](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md).  
   
@@ -173,11 +173,11 @@ manager: "jhubbard"
   
 ##  <a name="extended_stored_procedures"></a> Extended Stored Procedures  
   
-> **IMPORTANT!** [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)] Use [CLR Integration](../Topic/Common%20Language%20Runtime%20\(CLR\)%20Integration%20Overview.md) instead.  
+> **IMPORTANT!** [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)] Use [CLR Integration](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) instead.  
   
- Extended stored procedures are programmed by using the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Extended Stored Procedure API. A member of the **sysadmin** fixed server role can register an extended stored procedure with an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and grant permission to users to execute the procedure. Extended stored procedures can be added only to the **master** database.  
+ Extended stored procedures are programmed by using the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Extended Stored Procedure API. A member of the **sysadmin** fixed server role can register an extended stored procedure with an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and grant permission to users to execute the procedure. Extended stored procedures can be added only to the **master** database.  
   
- Extended stored procedures run directly in the address space of an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and they may produce memory leaks or other problems that reduce the performance and reliability of the server. You should consider storing extended stored procedures in an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that is separate from the instance that contains the referenced data. You should also consider using distributed queries to access the database.  
+ Extended stored procedures run directly in the address space of an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], and they may produce memory leaks or other problems that reduce the performance and reliability of the server. You should consider storing extended stored procedures in an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that is separate from the instance that contains the referenced data. You should also consider using distributed queries to access the database.  
   
 > **IMPORTANT!!** Before adding extended stored procedures to the server and granting EXECUTE permissions to other users, the system administrator should thoroughly review each extended stored procedure to make sure that it does not contain harmful or malicious code.  
   
@@ -185,11 +185,11 @@ manager: "jhubbard"
   
   
 ##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
- Properties are set on the Full-Text Engine by [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md). Make sure that the destination server instance has the required settings for these properties. For more information about these properties, see [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md).  
+ Properties are set on the Full-Text Engine by [sp_fulltext_service](../../relational-databases/reference/system-stored-procedures/sp-fulltext-service-transact-sql.md). Make sure that the destination server instance has the required settings for these properties. For more information about these properties, see [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md).  
   
  Additionally, if the [word breakers and stemmers](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) component or [full-text search filters](../../relational-databases/search/configure-and-manage-filters-for-search.md) component have different versions on the original and destination server instances, full-text index and queries may behave differently. Also, the [thesaurus](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) is stored in instance-specific files. You must either transfer a copy of those files to an equivalent location on the destination server instance or re-create them on new instance.  
   
-> **NOTE:** When you attach a [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] database that contains full-text catalog files onto a [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] server instance, the catalog files are attached from their previous location along with the other database files, the same as in [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)]. For more information, see [Upgrade Full-Text Search](../../relational-databases/search/upgrade-full-text-search.md).  
+> **NOTE:** When you attach a [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] database that contains full-text catalog files onto a [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] server instance, the catalog files are attached from their previous location along with the other database files, the same as in [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)]. For more information, see [Upgrade Full-Text Search](../../relational-databases/search/upgrade-full-text-search.md).  
   
  For more information, see also:  
   
@@ -199,26 +199,26 @@ manager: "jhubbard"
 
   
 ##  <a name="jobs"></a> Jobs  
- If the database relies on [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent jobs, you will have to re-create them on the destination server instance. Jobs depend on their environments. If you plan to re-create an existing job on the destination server instance, the destination server instance might have to be modified to match the environment of that job on the original server instance. The following environmental factors are significant:  
+ If the database relies on [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent jobs, you will have to re-create them on the destination server instance. Jobs depend on their environments. If you plan to re-create an existing job on the destination server instance, the destination server instance might have to be modified to match the environment of that job on the original server instance. The following environmental factors are significant:  
   
 -   The login used by the job  
   
-     To create or execute [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent jobs, you must first add any [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] logins required by the job to the destination server instance. For more information, see [Configure a User to Create and Manage SQL Server Agent Jobs](../Topic/Configure%20a%20User%20to%20Create%20and%20Manage%20SQL%20Server%20Agent%20Jobs.md).  
+     To create or execute [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent jobs, you must first add any [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] logins required by the job to the destination server instance. For more information, see [Configure a User to Create and Manage SQL Server Agent Jobs](../Topic/Configure%20a%20User%20to%20Create%20and%20Manage%20SQL%20Server%20Agent%20Jobs.md).  
   
--   [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent service startup account  
+-   [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent service startup account  
   
-     The service startup account defines the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows account in which [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent runs and its network permissions. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent runs as a specified user account. The context of the Agent service affects the settings for the job and its run environment. The account must have access to the resources, such as network shares, required by the job. For information about how to select and modify the service startup account, see [Select an Account for the SQL Server Agent Service](../Topic/Select%20an%20Account%20for%20the%20SQL%20Server%20Agent%20Service.md).  
+     The service startup account defines the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows account in which [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent runs and its network permissions. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent runs as a specified user account. The context of the Agent service affects the settings for the job and its run environment. The account must have access to the resources, such as network shares, required by the job. For information about how to select and modify the service startup account, see [Select an Account for the SQL Server Agent Service](../Topic/Select%20an%20Account%20for%20the%20SQL%20Server%20Agent%20Service.md).  
   
      To operate correctly, the service startup account must be configured to have the correct domain, file system, and registry permissions. Also, a job might require a shared network resource that must be configured for the service account. For information, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure/windows/configure-windows-service-accounts-and-permissions.md).  
   
--   [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent service, which is associated with a specific instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], has its own registry hive, and its jobs typically have dependencies on one or more of the settings in this registry hive. To behave as intended, a job requires those registry settings. If you use a script to re-create a job in another [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent service, its registry might not have the correct settings for that job. For re-created jobs to behave correctly on a destination server instance, the original and destination [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent services should have the same registry settings.  
+-   [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent service, which is associated with a specific instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], has its own registry hive, and its jobs typically have dependencies on one or more of the settings in this registry hive. To behave as intended, a job requires those registry settings. If you use a script to re-create a job in another [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent service, its registry might not have the correct settings for that job. For re-created jobs to behave correctly on a destination server instance, the original and destination [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent services should have the same registry settings.  
   
     > [!CAUTION]  
-    >  Changing registry settings on the destination [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent service to handle a re-created job could be problematic if the current settings are required by other jobs. Furthermore, incorrectly editing the registry can severely damage your system. Before you make changes to the registry, we recommend that you back up any valued data on the computer.  
+    >  Changing registry settings on the destination [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent service to handle a re-created job could be problematic if the current settings are required by other jobs. Furthermore, incorrectly editing the registry can severely damage your system. Before you make changes to the registry, we recommend that you back up any valued data on the computer.  
   
--   [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent Proxies  
+-   [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent Proxies  
   
-     A [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent proxy defines the security context for a specified job step. For a job to run on the destination server instance, all the proxies it requires must be manually re-created on that instance. For more information, see [Create a SQL Server Agent Proxy](../Topic/Create%20a%20SQL%20Server%20Agent%20Proxy.md) and [Troubleshoot Multiserver Jobs That Use Proxies](../Topic/Troubleshoot%20Multiserver%20Jobs%20That%20Use%20Proxies.md).  
+     A [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent proxy defines the security context for a specified job step. For a job to run on the destination server instance, all the proxies it requires must be manually re-created on that instance. For more information, see [Create a SQL Server Agent Proxy](../Topic/Create%20a%20SQL%20Server%20Agent%20Proxy.md) and [Troubleshoot Multiserver Jobs That Use Proxies](../Topic/Troubleshoot%20Multiserver%20Jobs%20That%20Use%20Proxies.md).  
   
  For more information, see also:  
   
@@ -226,9 +226,9 @@ manager: "jhubbard"
   
 -   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (for database mirroring)  
   
--   [Configure Windows Service Accounts and Permissions](../../database-engine/configure/windows/configure-windows-service-accounts-and-permissions.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)])  
+-   [Configure Windows Service Accounts and Permissions](../../database-engine/configure/windows/configure-windows-service-accounts-and-permissions.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)])  
   
--   [Configure SQL Server Agent](../Topic/Configure%20SQL%20Server%20Agent.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)])  
+-   [Configure SQL Server Agent](../Topic/Configure%20SQL%20Server%20Agent.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)])  
   
 -   [Implement SQL Server Agent Security](../Topic/Implement%20SQL%20Server%20Agent%20Security.md)  
   
@@ -236,11 +236,11 @@ manager: "jhubbard"
   
 -   [Monitor Job Activity](../Topic/Monitor%20Job%20Activity.md)  
   
--   [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
+-   [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-help-job-transact-sql.md)  
   
 -   [View Job Step Information](../Topic/View%20Job%20Step%20Information.md)  
   
--   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo.sysjobs-transact-sql.md)  
+-   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/reference/system-tables/dbo.sysjobs-transact-sql.md)  
   
  **To create a job**  
   
@@ -249,15 +249,15 @@ manager: "jhubbard"
 -   [Create a Job](../Topic/Create%20a%20Job.md)  
   
 #### Best Practices for Using a Script to Re-create a Job  
- We recommend that you start by scripting a simple job, re-creating the job on the other [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent service, and running the job to see whether it works as intended. This will let you to identify incompatibilities and try to resolve them. If a scripted job does not work as intended in its new environment, we recommend that you create an equivalent job that works correctly in that environment.  
+ We recommend that you start by scripting a simple job, re-creating the job on the other [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent service, and running the job to see whether it works as intended. This will let you to identify incompatibilities and try to resolve them. If a scripted job does not work as intended in its new environment, we recommend that you create an equivalent job that works correctly in that environment.  
   
 
 ##  <a name="logins"></a> Logins  
- Logging into an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] requires a valid [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login. This login is used in the authentication process that verifies whether the principal can connect to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. A database user for which the corresponding [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login is undefined or is incorrectly defined on a server instance cannot log in to the instance. Such a user is said to be an *orphaned user* of the database on that server instance. A database user can become orphaned if after a database is restored, attached, or copied to a different instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Logging into an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] requires a valid [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login. This login is used in the authentication process that verifies whether the principal can connect to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. A database user for which the corresponding [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login is undefined or is incorrectly defined on a server instance cannot log in to the instance. Such a user is said to be an *orphaned user* of the database on that server instance. A database user can become orphaned if after a database is restored, attached, or copied to a different instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  To generate a script for some or all the objects in the original copy of the database, you can use the Generate Scripts Wizard, and in the **Choose Script Options** dialog box, set the **Script Logins** option to **True**.  
   
-> **NOTE:** For information about how to set up logins for a mirrored database, see [Set Up Login Accounts for Database Mirroring or Always On Availability Groups (SQL Server)](../Topic/Set%20Up%20Login%20Accounts%20for%20Database%20Mirroring%20or%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md) and [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+> **NOTE:** For information about how to set up logins for a mirrored database, see [Set Up Login Accounts for Database Mirroring or Always On Availability Groups (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) and [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
   
 ##  <a name="permissions"></a> Permissions  
@@ -272,12 +272,12 @@ manager: "jhubbard"
   
  To generate a script for some or all the objects in the original copy of the database, you can use the Generate Scripts Wizard, and in the **Choose Script Options** dialog box, set the **Script Object-Level Permissions** option to **True**.  
   
-> **IMPORTANT!!** If you script logins, the passwords are not scripted. If you have logins that use [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication, you have to modify the script on the destination.  
+> **IMPORTANT!!** If you script logins, the passwords are not scripted. If you have logins that use [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication, you have to modify the script on the destination.  
   
- System objects are visible in the [sys.system_objects](../../relational-databases/system-catalog-views/sys.system-objects-transact-sql.md) catalog view. The permissions on system objects are visible in the [sys.database_permissions](../../relational-databases/system-catalog-views/sys.database-permissions-transact-sql.md) catalog view in the **master** database. For information about querying these catalog views and granting system-object permissions, see [GRANT System Object Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20System%20Object%20Permissions%20\(Transact-SQL\).md). For more information, see [REVOKE System Object Permissions &#40;Transact-SQL&#41;](../Topic/REVOKE%20System%20Object%20Permissions%20\(Transact-SQL\).md) and [DENY System Object Permissions &#40;Transact-SQL&#41;](../Topic/DENY%20System%20Object%20Permissions%20\(Transact-SQL\).md).  
+ System objects are visible in the [sys.system_objects](../../relational-databases/reference/system-catalog-views/sys.system-objects-transact-sql.md) catalog view. The permissions on system objects are visible in the [sys.database_permissions](../../relational-databases/reference/system-catalog-views/sys.database-permissions-transact-sql.md) catalog view in the **master** database. For information about querying these catalog views and granting system-object permissions, see [GRANT System Object Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20System%20Object%20Permissions%20\(Transact-SQL\).md). For more information, see [REVOKE System Object Permissions &#40;Transact-SQL&#41;](../Topic/REVOKE%20System%20Object%20Permissions%20\(Transact-SQL\).md) and [DENY System Object Permissions &#40;Transact-SQL&#41;](../Topic/DENY%20System%20Object%20Permissions%20\(Transact-SQL\).md).  
   
 ### GRANT, REVOKE, and DENY Permissions on a Server Instance  
- Permissions at the server scope are stored in the **master** database and must be configured on the destination server instance. For information about the server permissions of a server instance, query the [sys.server_permissions](../../relational-databases/system-catalog-views/sys.server-permissions-transact-sql.md) catalog view, for information about server principals query the [sys.server_principals](../../relational-databases/system-catalog-views/sys.server-principals-transact-sql.md)s catalog view, and for information about membership of server roles query the [sys.server_role_members](../../relational-databases/system-catalog-views/sys.server-role-members-transact-sql.md) catalog view.  
+ Permissions at the server scope are stored in the **master** database and must be configured on the destination server instance. For information about the server permissions of a server instance, query the [sys.server_permissions](../../relational-databases/reference/system-catalog-views/sys.server-permissions-transact-sql.md) catalog view, for information about server principals query the [sys.server_principals](../../relational-databases/reference/system-catalog-views/sys.server-principals-transact-sql.md)s catalog view, and for information about membership of server roles query the [sys.server_role_members](../../relational-databases/reference/system-catalog-views/sys.server-role-members-transact-sql.md) catalog view.  
   
  For more information, see [GRANT Server Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Server%20Permissions%20\(Transact-SQL\).md), [REVOKE Server Permissions &#40;Transact-SQL&#41;](../Topic/REVOKE%20Server%20Permissions%20\(Transact-SQL\).md), and [DENY Server Permissions &#40;Transact-SQL&#41;](../Topic/DENY%20Server%20Permissions%20\(Transact-SQL\).md).  
   
@@ -316,11 +316,11 @@ manager: "jhubbard"
   
   
 ##  <a name="startup_procedures"></a> Startup Procedures  
- A startup procedure is a stored procedure that is marked for automatic execution and is executed every time [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] starts. If the database depends on any startup procedures, they must be defined on the destination server instance and be configured to be automatically executed at startup.  
+ A startup procedure is a stored procedure that is marked for automatic execution and is executed every time [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] starts. If the database depends on any startup procedures, they must be defined on the destination server instance and be configured to be automatically executed at startup.  
 
   
 ##  <a name="triggers"></a> Triggers (at Server Level)  
- DDL triggers fire stored procedures in response to a variety of Data Definition Language (DDL) events. These events primarily correspond to [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements that start with the keywords CREATE, ALTER, and DROP. Certain system stored procedures that perform DDL-like operations can also fire DDL triggers.  
+ DDL triggers fire stored procedures in response to a variety of Data Definition Language (DDL) events. These events primarily correspond to [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements that start with the keywords CREATE, ALTER, and DROP. Certain system stored procedures that perform DDL-like operations can also fire DDL triggers.  
   
  For more information about this feature, see [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   

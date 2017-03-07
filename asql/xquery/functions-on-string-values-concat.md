@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Functions on String Values - concat
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Accepts zero or more strings as arguments and returns a string created by concatenating the values of each of these arguments.  
   
@@ -43,7 +43,7 @@ fn:concat ($string as xs:string?
  The function requires at least two arguments. If an argument is an empty sequence, it is treated as the zero-length string.  
   
 ## Supplementary Characters (Surrogate Pairs)  
- The behavior of surrogate pairs in XQuery functions depends on the database compatibility level and, in some cases, on the default namespace URI for functions. For more information, see the section "XQuery Functions Are Surrogate-Aware" in the topic [Breaking Changes to Database Engine Features in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Also see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md) and [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ The behavior of surrogate pairs in XQuery functions depends on the database compatibility level and, in some cases, on the default namespace URI for functions. For more information, see the section "XQuery Functions Are Surrogate-Aware" in the topic [Breaking Changes to Database Engine Features in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Also see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) and [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## Examples  
  This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the AdventureWorks sample database.  
@@ -74,7 +74,7 @@ WHERE  PD.ProductModelID=28
   
 -   In the SELECT clause, CatalogDescription is an **xml** type column. Therefore, the [query() method (XML data type)](../t-sql/data-types/query-method-xml-data-type.md), Instructions.query(), is used. The XQuery statement is specified as the argument to the query method.  
   
--   The document against which the query is executed uses namespaces. Therefore, the **namespace** keyword is used to define the prefix for the namespace. For more information, see [XQuery Prolog](../Topic/XQuery%20Prolog.md).  
+-   The document against which the query is executed uses namespaces. Therefore, the **namespace** keyword is used to define the prefix for the namespace. For more information, see [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md).  
   
  This is the result:  
   

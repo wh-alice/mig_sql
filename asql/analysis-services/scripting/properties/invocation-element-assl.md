@@ -56,7 +56,7 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- The invocation of an action depends on the client application. The **Invocation** element suggests to a client application how an action should be handled, and does not indicate to the instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] how to invoke an action.  
+ The invocation of an action depends on the client application. The **Invocation** element suggests to a client application how an action should be handled, and does not indicate to the instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] how to invoke an action.  
   
  The value of this element is limited to one of the strings in the following table.  
   

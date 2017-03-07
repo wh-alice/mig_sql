@@ -32,7 +32,7 @@ This tutorial is intended for users familiar with fundamental database operation
   
 To use this tutorial, your system must have the following components installed:  
   
--   [!INCLUDE[ssDEnoversion](../../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] with the [!INCLUDE[ssSampleDBobject](../../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+-   [!INCLUDE[ssDEnoversion](../../../a9notintoc/includes/ssdenoversion-md.md)] with the [!INCLUDE[ssSampleDBobject](../../../a9retired/includes/sssampledbobject-md.md)] database.  
   
 **Estimated time to complete this tutorial: 30 minutes.**  
   

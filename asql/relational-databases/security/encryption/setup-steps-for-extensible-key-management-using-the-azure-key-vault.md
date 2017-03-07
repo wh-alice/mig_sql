@@ -19,9 +19,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Setup Steps for Extensible Key Management Using the Azure Key Vault
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  The following steps walkthrough the installation and configuration of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]Connector for Azure Key Vault.  
+  The following steps walkthrough the installation and configuration of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]Connector for Azure Key Vault.  
   
 ## Before You Start  
  To use Azure Key Vault with your SQL Server, there are a few prerequisites:  
@@ -49,7 +49,7 @@ SQL Server Version  |Redistributable Install Link
   
 2.  Register an application with Azure Active Directory. For detailed step-by-step instructions to register an application, see the **Get an identity for the application** section  of the [Azure Key Vault blog post](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/).  
   
-3.  Copy the **Client ID** and **Client Secret** for a later step, where they will be used to grant [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] access to your key vault.  
+3.  Copy the **Client ID** and **Client Secret** for a later step, where they will be used to grant [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] access to your key vault.  
   
  ![ekm-client-id](../../../relational-databases/security/encryption/media/ekm-client-id.png "ekm-client-id")  
   
@@ -144,7 +144,7 @@ SQL Server Version  |Redistributable Install Link
 4.  **Grant Permission for the Azure Active Directory Service Principal to Access the Key Vault**  
   
      You can authorize other users and applications to use your key vault.   
-    In this case, let’s use the Azure Active Directory service principal created in Part I to authorize the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance.  
+    In this case, let’s use the Azure Active Directory service principal created in Part I to authorize the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance.  
   
     > [!IMPORTANT]  
     >  The Azure Active Directory service principal must have at least the `get`, `list`, `wrapKey`, and `unwrapKey` permissions for the key vault.  
@@ -185,7 +185,7 @@ SQL Server Version  |Redistributable Install Link
   
         > [!IMPORTANT]  
         >  The SQL Server Connector requires the key name to only use the characters “a-z”, “A-Z”, “0-9”, and “-“, with a 26-character limit.   
-        > Different key versions under the same key name in Azure Key Vault will not work with [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector. To rotate an Azure Key Vault key that’s being used by [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], please refer to the Key Rollover steps in the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
+        > Different key versions under the same key name in Azure Key Vault will not work with [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector. To rotate an Azure Key Vault key that’s being used by [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], please refer to the Key Rollover steps in the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
 
     ### Import an Existing Key   
   
@@ -231,11 +231,11 @@ SQL Server Version  |Redistributable Install Link
     ```  
 
     > [!IMPORTANT]  
-    >  The key vault supports multiple versions of the same named key, but keys to be used by [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector should not be versioned or rolled. If the administrator wants to roll the key used for [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] encryption, a new key with a different name should be created in the vault and used to encrypt the DEK.  
+    >  The key vault supports multiple versions of the same named key, but keys to be used by [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector should not be versioned or rolled. If the administrator wants to roll the key used for [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] encryption, a new key with a different name should be created in the vault and used to encrypt the DEK.  
    
   
-## Part III: Install the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector  
- Download the SQL Server Connector from the [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=521700). (This should be done by the administrator of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer.)  
+## Part III: Install the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector  
+ Download the SQL Server Connector from the [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=521700). (This should be done by the administrator of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] computer.)  
 
 > [!NOTE]  
 >  Versions 1.0.0.440 and older have been replaced and are no longer supported in production environments. Upgrade to version 1.0.1.0 or later by visiting the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) page under “Upgrade of SQL Server Connector.”
@@ -244,7 +244,7 @@ SQL Server Version  |Redistributable Install Link
   
  By default, the connector installs at C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault. This location can be changed during setup. (If changed, adjust the scripts below.)  
   
- There is no interface for the Connector, but if it is installed successfully, the **Microsoft.AzureKeyVaultService.EKM.dll** is installed on the machine. This is the cryptographic EKM provider DLL that needs to be registered with [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] by using the `CREATE CRYPTOGRAPHIC PROVIDER` statement.  
+ There is no interface for the Connector, but if it is installed successfully, the **Microsoft.AzureKeyVaultService.EKM.dll** is installed on the machine. This is the cryptographic EKM provider DLL that needs to be registered with [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] by using the `CREATE CRYPTOGRAPHIC PROVIDER` statement.  
   
  The SQL Server Connector installation also allows you to optionally download sample scripts for SQL Server encryption.  
   
@@ -255,14 +255,14 @@ SQL Server Version  |Redistributable Install Link
 -   [C. Error Code Explanations for SQL Server Connector](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
   
-## Part IV: Configure [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]  
+## Part IV: Configure [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]  
  Please refer to [B. Frequently Asked Questions](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB) to see a note about the minimum permission levels needed for each action in this section.  
   
-1.  **Launch sqlcmd.exe or [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Management Studio**  
+1.  **Launch sqlcmd.exe or [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Management Studio**  
   
-2.  **Configure [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to use EKM**  
+2.  **Configure [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] to use EKM**  
   
-     Execute the following [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] script to configure the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] to use an EKM provider.  
+     Execute the following [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] script to configure the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] to use an EKM provider.  
   
     ```tsql  
     -- Enable advanced options.  
@@ -280,9 +280,9 @@ SQL Server Version  |Redistributable Install Link
     RECONFIGURE;  
     ```  
   
-3.  **Register (create) the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector as an EKM provider with [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]**  
+3.  **Register (create) the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector as an EKM provider with [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]**  
   
-     -- Create a cryptographic provider, using the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector which is an EKM provider for the Azure Key Vault.    
+     -- Create a cryptographic provider, using the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector which is an EKM provider for the Azure Key Vault.    
     This example uses the name `AzureKeyVault_EKM_Prov`.  
   
     ```tsql  
@@ -295,17 +295,17 @@ SQL Server Version  |Redistributable Install Link
     >  The file path length cannot exceed 256 characters.  
   
   
-4.  **Setup a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] credential for a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login to use the key vault**  
+4.  **Setup a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] credential for a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] login to use the key vault**  
   
      A credential must be added to each login that will be performing encryption using a key from the Key Vault. This might include:  
   
-    -   A [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] administrator login who will use key vault in order to setup and manage [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] encryption scenarios.  
+    -   A [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] administrator login who will use key vault in order to setup and manage [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] encryption scenarios.  
   
-    -   Other [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] logins who might enable Transparent Data Encryption (TDE), or other [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] encryption features.  
+    -   Other [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] logins who might enable Transparent Data Encryption (TDE), or other [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] encryption features.  
   
      There is one-to-one mapping between credentials and logins. That is, each login must have a unique credential.  
   
-     Modify the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] script below in the following ways:  
+     Modify the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] script below in the following ways:  
   
     -   Edit the `IDENTITY` argument (`ContosoDevKeyVault`) to point to your Azure Key Vault.
         - If you're using **public Azure**, replace the `IDENTITY` argument with the name of your Azure Key Vault from Part II.
@@ -334,11 +334,11 @@ SQL Server Version  |Redistributable Install Link
   
      For an example of using variables for the **CREATE CREDENTIAL** arguments and programmatically removing the hyphens from the Client ID, see [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../../t-sql/statements/create-credential-transact-sql.md).  
   
-5.  **Open your Azure Key Vault key in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]**  
+5.  **Open your Azure Key Vault key in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]**  
   
-     If you imported an asymmetric key as described in Part II, open the key by providing your key name in the following [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] script.  
+     If you imported an asymmetric key as described in Part II, open the key by providing your key name in the following [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] script.  
   
-    -   Replace `CONTOSO_KEY` with the name you’d like the key to have in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+    -   Replace `CONTOSO_KEY` with the name you’d like the key to have in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
     -   Replace `ContosoRSAKey0` with the name of your key in Azure Key Vault.  
   

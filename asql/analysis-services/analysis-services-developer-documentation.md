@@ -78,6 +78,6 @@ Analysis Services provides many ways to customize a solution through code, but m
   
 ## See Also  
  [Technical Reference &#40;SSAS&#41;](../analysis-services/powershell/technical-reference-ssas.md)   
- [Query and Expression Language Reference &#40;Analysis Services&#41;](../Topic/Query%20and%20Expression%20Language%20Reference%20\(Analysis%20Services\).md)  
+ [Query and Expression Language Reference &#40;Analysis Services&#41;](../a9retired/query-and-expression-language-reference-analysis-services.md)  
   
   

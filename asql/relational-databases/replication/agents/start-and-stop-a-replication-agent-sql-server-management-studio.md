@@ -18,7 +18,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Start and Stop a Replication Agent (SQL Server Management Studio)
-  Start and stop agents from the **Jobs** folder and the **Replication** folder in [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and from Replication Monitor. Start and stop the following agents and jobs:  
+  Start and stop agents from the **Jobs** folder and the **Replication** folder in [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] and from Replication Monitor. Start and stop the following agents and jobs:  
   
 -   The Snapshot Agent, which is used by all publications.  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 ### To start and stop a Snapshot Agent or Log Reader Agent from Management Studio  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], and then expand the server node and the **Replication** folder.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)], and then expand the server node and the **Replication** folder.  
   
 2.  Expand the **Local Publications** folder, and then right-click a publication.  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
 ### To start and stop a Queue Reader Agent from Management Studio  
   
-1.  Connect to the Distributor in [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Distributor in [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **SQL Server Agent** folder, and then expand the **Jobs** folder.  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
 3.  Right-click an agent, and then click **Start Agent** or **Stop Agent**.  
   
 ## See Also  
- [Monitoring Replication](../Topic/Monitoring%20Replication.md)   
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
  [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
  [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s new in SQL Server Analysis Services vNext | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "03/07/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,7 +15,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # What&#39;s new in SQL Server Analysis Services vNext
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../analysis-services/includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../a9notintoc/includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
 
 ## SQL Server Analysis Services on Windows CTP 1.3

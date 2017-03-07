@@ -27,27 +27,27 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Service Broker
-  [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] provides native support for messaging and queuing applications in the [!INCLUDE[ssDEnoversion](../../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]. This makes it easier for developers to create sophisticated applications that use the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] components to communicate between disparate databases. Developers can use [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] to easily build distributed and reliable applications.  
+  [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] provides native support for messaging and queuing applications in the [!INCLUDE[ssDEnoversion](../../../a9notintoc/includes/ssdenoversion-md.md)]. This makes it easier for developers to create sophisticated applications that use the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] components to communicate between disparate databases. Developers can use [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] to easily build distributed and reliable applications.  
   
  Application developers who use [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] can distribute data workloads across several databases without programming complex communication and messaging internals. This reduces development and test work because [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] handles the communication paths in the context of a conversation. It also improves performance. For example, front-end databases supporting Web sites can record information and send process intensive tasks to queue in back-end databases. [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] ensures that all tasks are managed in the context of transactions to assure reliability and technical consistency.  
   
 ## Where is the documentation for Service Broker?  
- The reference documentation for [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] is included in the [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] documentation. This reference documentation includes the following sections:  
+ The reference documentation for [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] is included in the [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] documentation. This reference documentation includes the following sections:  
   
 -   [Data Definition Language &#40;DDL&#41; Statements &#40;Transact-SQL&#41;](../Topic/Data%20Definition%20Language%20\(DDL\)%20Statements%20\(Transact-SQL\).md) for CREATE, ALTER, and DROP statements  
   
 -   [Service Broker Statements](../../../t-sql/statements/service-broker-statements.md)  
   
--   [Service Broker Catalog Views &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)  
+-   [Service Broker Catalog Views &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/service-broker-catalog-views-transact-sql.md)  
   
--   [Service Broker Related Dynamic Management Views &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+-   [Service Broker Related Dynamic Management Views &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
 -   [ssbdiagnose Utility &#40;Service Broker&#41;](../../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
- See the [previously published documentation](http://go.microsoft.com/fwlink/?LinkId=231312) for [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] concepts and for development and management tasks. This documentation is not reproduced in the [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] documentation due to the small number of changes in [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+ See the [previously published documentation](http://go.microsoft.com/fwlink/?LinkId=231312) for [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] concepts and for development and management tasks. This documentation is not reproduced in the [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] documentation due to the small number of changes in [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)].  
   
 ## What's new in Service Broker  
- No significant changes are introduced in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)].  The following changes were introduced in [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)].  
+ No significant changes are introduced in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)].  The following changes were introduced in [!INCLUDE[ssSQL11](../../../a9notintoc/includes/sssql11-md.md)].  
   
 ### Messages can be sent to multiple target services (multicast)  
  The syntax of the [SEND &#40;Transact-SQL&#41;](../../../t-sql/statements/send-transact-sql.md) statement has been extended to enable multicast by supporting multiple conversation handles.  

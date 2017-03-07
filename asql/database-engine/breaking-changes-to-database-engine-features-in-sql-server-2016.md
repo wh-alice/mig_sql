@@ -19,11 +19,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Breaking Changes to Database Engine Features in SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes breaking changes in the [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)][!INCLUDE[ssDE](../analysis-services/instances/install/windows/includes/ssde-md.md)] and earlier versions of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade.  
+  This topic describes breaking changes in the [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)][!INCLUDE[ssDE](../a9notintoc/includes/ssde-md.md)] and earlier versions of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade.  
   
-##  <a name="SQL15"></a> Breaking Changes in [!INCLUDE[ssSQL15](../analysis-services/powershell/includes/sssql15-md.md)]  
+##  <a name="SQL15"></a> Breaking Changes in [!INCLUDE[ssSQL15](../a9notintoc/includes/sssql15-md.md)]  
   
 -   The sample_ms column of sys.dm_io_virtual_file_stats has expanded from an **int** to a **bigint** data type.  
   
@@ -46,6 +46,6 @@ manager: "jhubbard"
  [Deprecated Database Engine Features in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Discontinued Database Engine Functionality in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [SQL Server Database Engine Backward Compatibility](../database-engine/sql-server-database-engine-backward-compatibility.md)   
- [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)  
+ [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

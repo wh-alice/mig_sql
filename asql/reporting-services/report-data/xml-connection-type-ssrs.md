@@ -33,7 +33,7 @@ manager: "erikre"
 |XML document|`http://localhost/XML/Customers.xml`|  
 |Embedded XML document|*Empty*|  
   
- For more connection string examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md).  
+ For more connection string examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../../a9retired/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
 ##  <a name="Credentials"></a> Credentials  
  Credentials are required to run queries, to preview the report locally, and to preview the report from the report server.  
@@ -44,11 +44,11 @@ manager: "erikre"
   
 -   Current Windows user (also known as integrated security).  
   
--   No credentials are required. If you select no credentials, Anonymous access is used. Make sure that you have defined the unattended execution account for the report server to connect to an external data source. The XML data processing extension does not pass credentials to the target URL or the Web service; the connection will be unsuccessful unless you have defined the unattended execution account. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312) on msdn.microsoft.com.  
+-   No credentials are required. If you select no credentials, Anonymous access is used. Make sure that you have defined the unattended execution account for the report server to connect to an external data source. The XML data processing extension does not pass credentials to the target URL or the Web service; the connection will be unsuccessful unless you have defined the unattended execution account. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312) on msdn.microsoft.com.  
   
  Stored and prompted credentials are not supported. Remember that if you disable Windows integrated security, you cannot use it to retrieve data. If you specify stored or prompted credentials, an error will occur at run time.  
   
- For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) or [Specify Credentials in Report Builder](../Topic/Specify%20Credentials%20in%20Report%20Builder.md).  
+ For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) or [Specify Credentials in Report Builder](../../a9retired/specify-credentials-in-report-builder.md).  
   
 ##  <a name="Query"></a> Queries  
  A query specifies which data to retrieve for a report dataset. The columns in the result set for a query populate the field collection for a dataset. A report processes only the first result set retrieved by a query.  
@@ -113,7 +113,7 @@ manager: "erikre"
   
          `<ElementPath IgnoreNamespaces="true">`  *element path*  `</ElementPath>`  
   
- For more information about query syntax, see [XML Query Syntax for XML Report Data &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312) on msdn.microsoft.com.  
+ For more information about query syntax, see [XML Query Syntax for XML Report Data &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312) on msdn.microsoft.com.  
   
  For examples, see [Reporting Services: Using XML and Web Service Data Sources](http://go.microsoft.com/fwlink/?LinkId=81654).  
   
@@ -129,17 +129,17 @@ manager: "erikre"
   
  You can provide an element path using XML syntax similar to XQuery.  
   
- For more information, see [Element Path Syntax for XML Report Data &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312) on msdn.microsoft.com.  
+ For more information, see [Element Path Syntax for XML Report Data &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312) on msdn.microsoft.com.  
   
 ##  <a name="Parameters"></a> Parameters  
  The query is not analyzed to identify parameters.  
   
- To add parameters, you must create them manually through the **Parameter** page on the [Dataset Properties](../Topic/Dataset%20Properties%20Dialog%20Box,%20Parameters%20\(Report%20Builder\).md) dialog box.  
+ To add parameters, you must create them manually through the **Parameter** page on the [Dataset Properties](../../a9retired/dataset-properties-dialog-box-parameters-report-builder.md) dialog box.  
   
 ##  <a name="Remarks"></a> Remarks  
  The XML data extension supports reporting from XML data that is tabular and not hierarchical. For more information, see [Add Data from External Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
- There is no built-in support for retrieving XML documents from a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database.  
+ There is no built-in support for retrieving XML documents from a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database.  
   
 ##  <a name="HowTo"></a> How-To Topics  
  This section contains step-by-step instructions for working with data connections, data sources, and datasets.  
@@ -156,7 +156,7 @@ manager: "erikre"
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Provides an overview of accessing data for your report.  
   
- [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)  
+ [Data Connections, Data Sources, and Connection Strings in Report Builder](../../a9retired/data-connections-data-sources-and-connection-strings-in-report-builder.md)  
  Provides information about data connections and data sources.  
   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -165,7 +165,7 @@ manager: "erikre"
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Provides information about the dataset field collection generated by the query.  
   
- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
  Provides in-depth information about platform and version support for each data extension.  
   
 ## See Also  

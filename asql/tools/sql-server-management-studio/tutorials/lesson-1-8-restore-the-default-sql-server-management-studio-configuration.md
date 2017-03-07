@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 1-8 - Restore the Default SQL Server Management Studio Configuration
-Users new to [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] might have inadvertently closed or hidden windows and might have trouble restoring [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] to the original layout. The following steps restore [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] to the default environment layout.  
+Users new to [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] might have inadvertently closed or hidden windows and might have trouble restoring [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)] to the original layout. The following steps restore [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)] to the default environment layout.  
   
 ## Restoring Components  
   
@@ -26,7 +26,7 @@ Users new to [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/i
 1.  To restore windows to their original locations, on the **Window** menu, click **Reset Window Layout**.  
   
 ## Next Task in Lesson  
-[Summary: Basic Navigation](../Topic/Summary:%20Basic%20Navigation.md)  
+[Summary: Basic Navigation](../../../tools/sql-server-management-studio/tutorials/lesson-1-9-summary-basic-navigation.md)  
   
 ## See Also  
 [Use SQL Server Management Studio](../Topic/Use%20SQL%20Server%20Management%20Studio.md)  

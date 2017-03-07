@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # CommitTransaction Element (XMLA)
-  Commits a transaction on the current session with a [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance.  
+  Commits a transaction on the current session with a [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance.  
   
 ## Syntax  
   
@@ -56,12 +56,12 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- The **CommitTransaction** command commits an active transaction, explicitly defined using the **BeginTransaction** element, on the current session. If an active transaction does not already exist, an error occurs. If an active transaction already exists, the [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance decrements the reference count of transactions for the current session. If the reference count of explicitly defined active transactions reaches zero, the [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance commits the transaction.  
+ The **CommitTransaction** command commits an active transaction, explicitly defined using the **BeginTransaction** element, on the current session. If an active transaction does not already exist, an error occurs. If an active transaction already exists, the [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance decrements the reference count of transactions for the current session. If the reference count of explicitly defined active transactions reaches zero, the [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance commits the transaction.  
   
 ## See Also  
  [BeginTransaction Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)   
  [Cancel Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)   
  [RollbackTransaction Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/rollbacktransaction-element-xmla.md)   
- [Commands &#40;XMLA&#41;](../Topic/Commands%20\(XMLA\).md)  
+ [Commands &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

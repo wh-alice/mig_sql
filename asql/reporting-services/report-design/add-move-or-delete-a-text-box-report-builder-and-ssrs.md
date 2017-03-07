@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Add, Move, or Delete a Text Box (Report Builder and SSRS)
-  Text boxes are the most commonly used report item in [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports. You can add a text box to the report body to display information such as titles, parameter choices, built-in fields, and dates.  
+  Text boxes are the most commonly used report item in [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports. You can add a text box to the report body to display information such as titles, parameter choices, built-in fields, and dates.  
   
  Every cell in a table or matrix is really a text box. Almost all report data displayed in a report with tables and matrices is the result of the report processor evaluating the contents of each text box in the report. As such, you can format cells in the same way you would format other text boxes outside the data region.  
   

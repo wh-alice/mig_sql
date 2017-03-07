@@ -25,7 +25,7 @@ manager: "jhubbard"
 |Product Name|SQL Server|  
 |Event ID|20574|  
 |Event Source|MSSQLSERVER|  
-|Component|[!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]|  
+|Component|[!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)]|  
 |Symbolic Name||  
 |Message Text|Subscriber '%s' subscription to article '%s' in publication '%s' failed data validation.|  
   

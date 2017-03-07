@@ -15,11 +15,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Extended Events for Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Stretch Database provides a set of extended events for troubleshooting.  
   
-For more info, see [Extended Events](../../relational-databases/extended-events/extended-events.md). For info about how to start an extended events session for troubleshooting, see [Create an Extended Events Session](Create%20an%20Extended%20Events%20Session.md)  
+For more info, see [Extended Events](../../relational-databases/extended-events/extended-events.md). For info about how to start an extended events session for troubleshooting, see [Create an Extended Events Session](../../a9retired/create-an-extended-events-session.md)  
   
 ## List of extended events for Stretch Database  
   

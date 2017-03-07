@@ -33,7 +33,7 @@ object.GetCurrentCertificate(SHA)
   
 ## Parts  
  *object*  
- A **ServerSettings** object that represents the server settings on an instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ A **ServerSettings** object that represents the server settings on an instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
 #### Parameters  
   

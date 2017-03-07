@@ -17,7 +17,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Tutorial: Add a Column Chart to Your Report (Report Builder)
-In this tutorial, you create a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report with a column chart displaying a series as a set of vertical bars grouped by category. 
+In this tutorial, you create a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report with a column chart displaying a series as a set of vertical bars grouped by category. 
 
 Column charts are useful to:  
   
@@ -44,7 +44,7 @@ In this section, you go through the Chart Wizard to create an embedded dataset, 
   
 ### To create a chart report  
   
-1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
+1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
   
     The **New Report or Dataset** dialog box opens.  
   
@@ -126,7 +126,7 @@ By default, the horizontal axis displays values in a general format that is auto
   
 5.  In the **Type** box, select **31 Jan 2000**.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 7.  On the Home tab, click **Run** to preview the report.  
   
@@ -148,7 +148,7 @@ You can customize the label display by rotating the labels and specifying the in
   
 7.  In **Label rotation angle**, select **-90**.  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
     The sample text for the horizontal axis rotates by 90 degrees.  
     
@@ -171,7 +171,7 @@ The legend is automatically created from category and series data. You can move 
   
     When the legend is placed at the top or bottom of a chart, the layout of the legend changes from vertical to horizontal. You can select a different layout in the **Layout** box.  
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 5.  (Optional) Because there is only one category in this tutorial, the chart doesn't need a legend. To remove it, right-click the legend > **Delete Legend**.  
   
@@ -202,7 +202,7 @@ By default, the vertical axis displays values in a general format that is automa
   
 7.  Check **Show Values in**. **Thousands** is already selected.  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 9. Right-click the vertical axis > **Show Axis Title**. 
 
@@ -210,7 +210,7 @@ By default, the vertical axis displays values in a general format that is automa
   
 10. Replace the text in the **Title text** field with **Sales Total (in Thousands)**. You can also specify a variety of options related to how the title is formatted.  
   
-11. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+11. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 12. Click **Run** to preview the report.  
 
@@ -254,7 +254,7 @@ A moving average is an average of the data in your series, calculated over time.
   
 6.  On the **Border** tab, in **Line width**, select **3pt**.  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 9. Click **Run** to preview the report.  
   

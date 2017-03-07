@@ -17,9 +17,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # OGC Static Geography Methods
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports the static geography methods of the Open Geospatial Consortium (OGC).  
+  [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] supports the static geography methods of the Open Geospatial Consortium (OGC).  
   
  For more information on OGC specifications, see the following resources:  
   

@@ -29,7 +29,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Quantified Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Existential and universal quantifiers specify different semantics for Boolean operators that are applied to two sequences. This is shown in the following table.  
   
@@ -45,7 +45,7 @@ manager: "jhubbard"
 ( some | every ) <variable> in <Expression> (,…) satisfies <Expression>  
 ```  
   
- You can use these expressions in a query to explicitly apply either existential or universal quantification to an expression over one or several sequences. In [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], the expression in the `satisfies` clause has to result in one of the following: a node sequence, an empty sequence, or a Boolean value. The effective Boolean value of the result of that expression will be used in the quantification. The existential quantification that uses **some** will return True if at least one of the values bound by the quantifier has a True result in the satisfy expression. The universal quantification that uses **every** must have True for all values bound by the quantifier.  
+ You can use these expressions in a query to explicitly apply either existential or universal quantification to an expression over one or several sequences. In [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], the expression in the `satisfies` clause has to result in one of the following: a node sequence, an empty sequence, or a Boolean value. The effective Boolean value of the result of that expression will be used in the quantification. The existential quantification that uses **some** will return True if at least one of the values bound by the quantifier has a True result in the satisfy expression. The universal quantification that uses **every** must have True for all values bound by the quantifier.  
   
  For example, the following query checks every \<Location> element to see whether it has a LocationID attribute.  
   

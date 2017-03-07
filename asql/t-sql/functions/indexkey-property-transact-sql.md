@@ -26,14 +26,14 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # INDEXKEY_PROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns information about the index key. Returns NULL for XML indexes.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)] Instead, use [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.index-columns-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)] Instead, use [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.index-columns-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -94,8 +94,8 @@ Column ID   Asc or Desc order
 ## See Also  
  [INDEX_COL &#40;Transact-SQL&#41;](../../t-sql/functions/index-col-transact-sql.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.objects-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md)   
- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.index-columns-transact-sql.md)  
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.objects-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md)   
+ [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.index-columns-transact-sql.md)  
   
   

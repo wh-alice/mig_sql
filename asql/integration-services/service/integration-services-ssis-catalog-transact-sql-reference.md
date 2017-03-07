@@ -19,4 +19,4 @@ manager: "jhubbard"
   
  [Stored Procedures &#40;Integration Services Catalog&#41;](../../integration-services/system/stored-procedures/stored-procedures-integration-services-catalog.md)  
   
- [Functions &#40;Integration Services Catalog&#41;](../Topic/Functions%20\(Integration%20Services%20Catalog\).md) 
+ [Functions &#40;Integration Services Catalog&#41;](../../a9retired/functions-integration-services-catalog.md) 

@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Enumeration Facets
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] rejects XML schemas with types that have pattern facets or enumerations that violate those facets.  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] rejects XML schemas with types that have pattern facets or enumerations that violate those facets.  
   
 ## Example  
  The following schema would be rejected, because the featured enumeration value includes a mixed-case value. It would also be rejected because this value violates the pattern value that limits values to only lowercase letters.  

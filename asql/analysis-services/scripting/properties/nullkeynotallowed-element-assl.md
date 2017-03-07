@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # NullKeyNotAllowed Element (ASSL)
-  Determines how the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] processing engine handles a null key error encountered during processing.  
+  Determines how the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] processing engine handles a null key error encountered during processing.  
   
 ## Syntax  
   

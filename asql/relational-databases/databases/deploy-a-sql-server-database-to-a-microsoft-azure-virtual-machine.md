@@ -38,7 +38,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Deploy a SQL Server Database to a Microsoft Azure Virtual Machine
-  Use the **Deploy a Database to a Windows Azure VM** wizard to deploy a database from an instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in a Windows Azure Virtual Machine (VM). The wizard uses a full database backup operation, so it always copies the complete database schema and the data from a SQL Server user database. The wizard also does all of the Azure VM configuration for you, so no pre-configuration of the VM is required.  
+  Use the **Deploy a Database to a Windows Azure VM** wizard to deploy a database from an instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] in a Windows Azure Virtual Machine (VM). The wizard uses a full database backup operation, so it always copies the complete database schema and the data from a SQL Server user database. The wizard also does all of the Azure VM configuration for you, so no pre-configuration of the VM is required.  
   
  You cannot use the wizard for differential backups. The wizard will not overwrite an existing database that has the same database name. To replace an existing database on the VM, you must first drop the existing database or change the database name. If there is a naming conflict between the database name for an in-flight deploy operation and an existing database on the VM, the wizard will suggest an appended database name for the in-flight database to enable you to complete the operation.  
   
@@ -84,13 +84,13 @@ manager: "jhubbard"
    
   -   The management certificate saved into the personal certificate store on the computer where the wizard is running.  
   
--   You must have a temporary storage location that is available to the computer where the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database is hosted. The temporary storage location must also be available to the computer where the wizard is running.  
+-   You must have a temporary storage location that is available to the computer where the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database is hosted. The temporary storage location must also be available to the computer where the wizard is running.  
   
--   If you are deploying the database to an existing VM, the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] must be configured to listen on a TCP/IP port.  
+-   If you are deploying the database to an existing VM, the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] must be configured to listen on a TCP/IP port.  
   
--   Either a Windows Azure VM or Gallery image you plan to use for creation of the VM must have the [Cloud Adapter for SQL Server](Cloud%20Adapter%20for%20SQL%20Server.md) configured and running.  
+-   Either a Windows Azure VM or Gallery image you plan to use for creation of the VM must have the [Cloud Adapter for SQL Server](../../a9retired/cloud-adapter-for-sql-server.md) configured and running.  
   
--   You must configure an open endpoint for your [Cloud Adapter for SQL Server](Cloud%20Adapter%20for%20SQL%20Server.md) on the Windows Azure gateway with private port 11435.  
+-   You must configure an open endpoint for your [Cloud Adapter for SQL Server](../../a9retired/cloud-adapter-for-sql-server.md) on the Windows Azure gateway with private port 11435.  
   
  In addition, if you plan to deploy your database into an existing Windows Azure VM, you must also be able to provide:  
   
@@ -98,7 +98,7 @@ manager: "jhubbard"
   
 -   Administrator credentials for the VM.  
   
--   Credentials with Backup operator privileges on the database you plan to deploy, from the source instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   Credentials with Backup operator privileges on the database you plan to deploy, from the source instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  For more information about running SQL Server in Windows Azure virtual machines, see [Provision a SQL Server virtual machine in the Azure Portal](https://msdn.microsoft.com/library/dn133141.aspx) and [Migrate a SQL Server database to SQL Server in an Azure VM](http://msdn.microsoft.com/library/dn133142.aspx).  
   
@@ -113,7 +113,7 @@ This deployment feature is for use only with an Azure Storage Account created th
 
  The database size limitation for this operation is 1 TB.  
   
- This deployment feature is available in SQL Server Management Studio for [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)].  
+ This deployment feature is available in SQL Server Management Studio for [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)].  
   
  This deployment feature is for use only with user databases; deploying system databases is not supported.  
   
@@ -127,24 +127,24 @@ This deployment feature is for use only with an Azure Storage Account created th
   
 -   SQL Server 2012  
   
--   [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)]  
+-   [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)]  
 
-- [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]
+- [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]
   
  SQL Server database versions running in a Windows Azure VM database can be deployed to:  
   
 -   SQL Server 2012  
   
--   [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)]  
+-   [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)]  
 
-- [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]
+- [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]
   
  If there is a naming conflict between the database name for an in-flight deploy operation and an existing database on the VM, the wizard will suggest an appended database name for the in-flight database to enable you to complete the operation.  
   
 ###  <a name="filestream"></a> Considerations for Deploying a FILESTREAM-enabled Database to an Azure VM  
  Note the following guidelines and restrictions when deploying databases that have BLOBS stored in FILESTREAM objects:  
   
--   The deployment feature cannot deploy a FILESTREAM-enabled database into a new VM. If FILESTREAM is not enabled in the VM before you run the wizard, the database restore operation will fail and the wizard operation will not be able to complete successfully. To successfully deploy a database that uses FILESTREAM, enable FILESTREAM in the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] on the host VM before launching the wizard. For more information, see [FILESTREAM (SQL Server)](http://msdn.microsoft.com/library/gg471497.aspx).  
+-   The deployment feature cannot deploy a FILESTREAM-enabled database into a new VM. If FILESTREAM is not enabled in the VM before you run the wizard, the database restore operation will fail and the wizard operation will not be able to complete successfully. To successfully deploy a database that uses FILESTREAM, enable FILESTREAM in the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] on the host VM before launching the wizard. For more information, see [FILESTREAM (SQL Server)](http://msdn.microsoft.com/library/gg471497.aspx).  
   
 -   If your database utilizes In-Memory OLTP, you can deploy the database to an Azure VM without any modifications to the database. For more information, see [In-Memory OLTP (In-Memory Optimization)](http://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
   
@@ -160,7 +160,7 @@ This deployment feature is for use only with an Azure Storage Account created th
  If the assets listed above are not co-located, the wizard will not be able to complete successfully.  
   
 ###  <a name="configuration_settings"></a> Wizard Configuration Settings  
- Use the following configuration details to modify settings for a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database deployment to an Azure VM.  
+ Use the following configuration details to modify settings for a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database deployment to an Azure VM.  
   
 -   **Default path for the configuration file** - %LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM\DeploymentSettings.xml  
   
@@ -196,7 +196,7 @@ This deployment feature is for use only with an Azure Storage Account created th
 ##  <a name="launch_wizard"></a> Using the Deploy Database to Microsoft Azure VM Wizard  
  **To launch the wizard, use the following steps:**  
   
-1.  Use SQL Server Management Studio to connect to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] with the database you want to deploy.  
+1.  Use SQL Server Management Studio to connect to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] with the database you want to deploy.  
   
 2.  In **Object Explorer**, expand the instance name, then expand the **Databases** node.  
   
@@ -233,10 +233,10 @@ Proceeds to the **Source Settings** page.
 Launches the MSDN Help topic for the wizard.  
   
 ##  <a name="Source_settings"></a> Source Settings  
- Use this page to connect to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that hosts the database you want to deploy to the Microsoft Azure VM. You will also specify a temporary location for files to be saved from the local machine before they are transferred to Microsoft Azure. This can be a shared, network location.  
+ Use this page to connect to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that hosts the database you want to deploy to the Microsoft Azure VM. You will also specify a temporary location for files to be saved from the local machine before they are transferred to Microsoft Azure. This can be a shared, network location.  
  
 - **SQL Server**    
-Click **Connect** and then specify connection details for the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that hosts the database to deploy.  
+Click **Connect** and then specify connection details for the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that hosts the database to deploy.  
   
 -   **Select Database**  
 Use the drop-down list to specify the database to deploy.  
@@ -283,7 +283,7 @@ Specify or confirm the name of a new database. If the database name already exis
  Click **Finish** to close the wizard.  
   
 ## See Also  
- [Cloud Adapter for SQL Server](../Topic/Cloud%20Adapter%20for%20SQL%20Server.md)   
+ [Cloud Adapter for SQL Server](../../a9retired/cloud-adapter-for-sql-server.md)   
  [Database Lifecycle Management](../../relational-databases/database-lifecycle-management.md)   
  [Export a Data-tier Application](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Import a BACPAC File to Create a New User Database](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   

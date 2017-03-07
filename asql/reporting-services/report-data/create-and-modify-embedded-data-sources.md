@@ -33,9 +33,9 @@ manager: "erikre"
   
     2.  Specify a connection string using one of the following alternatives:  
   
-        -   Type the connection string directly in the **Connection string** text box. For a list of example connection strings, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md) or [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+        -   Type the connection string directly in the **Connection string** text box. For a list of example connection strings, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../../a9retired/data-connections-data-sources-and-connection-strings-in-report-builder.md) or [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-        -   Click the expression (**fx)** button to create an expression that evaluates to a connection string. In the **Expression** dialog box, type the expression in the Expression pane. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+        -   Click the expression (**fx)** button to create an expression that evaluates to a connection string. In the **Expression** dialog box, type the expression in the Expression pane. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
         -   Click **Edit** to open the **Connection Properties** dialog box for the data source type you chose in step 2.  
   
@@ -59,9 +59,9 @@ manager: "erikre"
   
     2.  Specify a connection string by using one of the following alternatives:  
   
-        -   Type the connection string directly in the **Connection string** text box. For a list of example connection strings, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md).  
+        -   Type the connection string directly in the **Connection string** text box. For a list of example connection strings, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../../a9retired/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
-        -   Click the expression (**fx)** button to create an expression that evaluates to a connection string. In the **Expression** dialog box, type the expression in the Expression pane. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+        -   Click the expression (**fx)** button to create an expression that evaluates to a connection string. In the **Expression** dialog box, type the expression in the Expression pane. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
         -   Click **Build** to open the **Connection Properties** dialog box for the data source type that you chose in step 2.  
   
@@ -69,14 +69,14 @@ manager: "erikre"
   
 4.  Click **Credentials**.  
   
-     Specify the credentials to use for this data source. The owner of the data source chooses the type of credentials that are supported. For more information, see [Specify Credentials in Report Builder](../Topic/Specify%20Credentials%20in%20Report%20Builder.md).  
+     Specify the credentials to use for this data source. The owner of the data source chooses the type of credentials that are supported. For more information, see [Specify Credentials in Report Builder](../../a9retired/specify-credentials-in-report-builder.md).  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
      The data source appears in the Report Data pane.  
   
 ## See Also  
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Specify Credentials in Report Builder](../Topic/Specify%20Credentials%20in%20Report%20Builder.md)  
+ [Specify Credentials in Report Builder](../../a9retired/specify-credentials-in-report-builder.md)  
   
   

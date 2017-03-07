@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ##  <a name="HowToMonitorStatus"></a> Check the status of semantic indexing  
 ### Is the first phase of semantic indexing complete?
- Query the dynamic management view, [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-index-population-transact-sql.md), and check the **status** and **status_description** columns.  
+ Query the dynamic management view, [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-index-population-transact-sql.md), and check the **status** and **status_description** columns.  
   
  The first phase of indexing includes the population of the full-text keyword index and the semantic key phrase index, as well as the extraction of document similarity data.  
   
@@ -35,7 +35,7 @@ GO
 ```  
   
 ### Is the second phase of semantic indexing complete?
- Query the dynamic management view, [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-semantic-similarity-population-transact-sql.md), and check the **status** and **status_description** columns..  
+ Query the dynamic management view, [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-semantic-similarity-population-transact-sql.md), and check the **status** and **status_description** columns..  
   
  The second phase of indexing includes the population of the semantic document similarity index.  
   
@@ -49,7 +49,7 @@ GO
   
 ##  <a name="HowToCheckSize"></a> Check the size of the semantic indexes  
 ### What is the logical size of a semantic key phrase index or a semantic document similarity index?
- Query the dynamic management view, [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-fts-index-physical-stats-transact-sql.md).  
+ Query the dynamic management view, [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-fts-index-physical-stats-transact-sql.md).  
   
  The logical size is displayed in number of index pages.  
   

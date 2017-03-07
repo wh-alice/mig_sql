@@ -20,7 +20,7 @@ ms.author: "carlasab"
 manager: "erikre"
 ---
 # Custom Report Item Architecture
-  A custom report item is an extension to the Report Definition Language (RDL) that allows developers to add functionality that’s not natively supported in RDL or extend the functionality of existing controls. There are two main components to a custom report item: the run-time component and the design-time component. These components are implemented as [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] assemblies, and can be written in any CLS-compliant language.  
+  A custom report item is an extension to the Report Definition Language (RDL) that allows developers to add functionality that’s not natively supported in RDL or extend the functionality of existing controls. There are two main components to a custom report item: the run-time component and the design-time component. These components are implemented as [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] assemblies, and can be written in any CLS-compliant language.  
   
 ## The Run-Time Component  
  The run-time component for a custom report item is called by the report processor at run time. The run-time component accepts data passed by the report processor at run time, processes this data, and returns an image containing the rendered custom report item.  
@@ -28,7 +28,7 @@ manager: "erikre"
  ![Custom report item run-time component](../../reporting-services/custom-report-items/media/customreportitemrun-timecomponentarchitecture.gif "Custom report item run-time component")  
   
 ## The Design-Time Component  
- The design-time component allows the custom report item to be defined and manipulated in the Report Designer interface in [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)]. The design-time component consists of several sub-controls that control the appearance and properties of the custom report item in the design environment.  
+ The design-time component allows the custom report item to be defined and manipulated in the Report Designer interface in [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)]. The design-time component consists of several sub-controls that control the appearance and properties of the custom report item in the design environment.  
   
  ![Custom report item design-time component](../../reporting-services/custom-report-items/media/customreportitemdesign-timecomponentarchitecture.gif "Custom report item design-time component")  
   

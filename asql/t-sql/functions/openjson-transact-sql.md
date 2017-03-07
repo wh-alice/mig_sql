@@ -23,9 +23,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # OPENJSON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  **OPENJSON** is a table-value function that parses JSON text and returns objects and properties in JSON as rows and columns. **OPENJSON** provides a rowset view over a JSON document, with the ability to explicitly specify the columns in the rowset and the property paths to use  to populate the columns. Since **OPENJSON** returns a set of rows, you can use **OPENJSON** function in FROM clause of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements like any other table, view, or table-value function.  
+  **OPENJSON** is a table-value function that parses JSON text and returns objects and properties in JSON as rows and columns. **OPENJSON** provides a rowset view over a JSON document, with the ability to explicitly specify the columns in the rowset and the property paths to use  to populate the columns. Since **OPENJSON** returns a set of rows, you can use **OPENJSON** function in FROM clause of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements like any other table, view, or table-value function.  
   
 > [!NOTE]  
 >  The **OPENJSON** function is available only under compatibility level 130. If your database compatibility level is lower than 130, SQL Server will not be able to find and execute OPENJSON function. Other JSON functions are available at all compatibility levels. You can check compatibility level in sys.databases view or in database properties. You can change a compatibility level of database using the following command:  
@@ -33,10 +33,10 @@ manager: "jhubbard"
 >   
 >  Note that compatibility level 120 might be default even in new Azure SQL Databases.  
   
- Use OPENJSON to import JSON data into [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], or to convert JSON data to relational format for an app or service that can't consume JSON directly.  
+ Use OPENJSON to import JSON data into [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], or to convert JSON data to relational format for an app or service that can't consume JSON directly.  
   
  You can call **OPENJSON** with or without an explicit schema that defines the structure of the output. For more info, see the Remarks and examples on this page.  
-      ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon")[Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+      ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon")[Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -64,7 +64,7 @@ OPENJSON( jsonExpression [ , path ] )
   
  For example, if you want to open an array of **comments** that is found under the **feedback** key in the JSON expression, you can specify the following path - `'$.feedback.comments'` - to extract the array of comments from the JSON expression. See more examples later in this topic.  
   
-In [!INCLUDE[ssSQLv14_md](../../advanced-analytics/r-services/includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDSfull_md](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)], you can provide a variable as the value of *path*.
+In [!INCLUDE[ssSQLv14_md](../../advanced-analytics/r-services/includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDSfull_md](../../a9retired/includes/sssdsfull-md.md)], you can provide a variable as the value of *path*.
 
 By default, OPENJSON returns elements or properties from the root object in the JSON expression. Provide a path  if you want to open a JSON object nested within the JSON expression.  If you don't specify a path, OPENJSON parses the root object using lax path mode (that is, as if you had specified the **lax** option in the path expression).  
   
@@ -328,7 +328,7 @@ CROSS APPLY OPENJSON(SalesReasons)
 ```  
   
 > [!TIP] 
-> When you have to expand JSON arrays stored in individual fields and join them with their parent rows, you typically use the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] CROSS APPLY operator. For more info about CROSS APPLY, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
+> When you have to expand JSON arrays stored in individual fields and join them with their parent rows, you typically use the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] CROSS APPLY operator. For more info about CROSS APPLY, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
  The same query can be re-written using OPENJSON with explicitly defined return schema:  
   
@@ -360,7 +360,7 @@ CROSS APPLY OPENJSON(store.jsonCol, 'lax $.location')
 |Sears|148th Ave NE|WA  98052|47.63024|-122.141246,17|  
   
 ### Example 5 - Import JSON data into SQL Server  
- The following example loads an entire JSON object into a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table.  
+ The following example loads an entire JSON object into a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] table.  
   
 ```tsql  
 DECLARE @json NVARCHAR(max)

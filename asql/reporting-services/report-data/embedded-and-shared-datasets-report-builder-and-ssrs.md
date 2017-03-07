@@ -25,7 +25,7 @@ manager: "erikre"
  The difference between the two is in how they are created, stored, and managed.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Shared Datasets  
  Use a shared dataset to provide a query that can be used by more than one report. Shared datasets are stored on the report server and managed separately from reports or shared data sources. For example, a report server administrator might update the query to take advantage of improved indexing or other query performance optimization.  
@@ -57,11 +57,11 @@ manager: "erikre"
  To create or edit an embedded dataset, use the Report Data pane. After you create a dataset, you can configure the properties in the **Dataset Properties** dialog box.  
   
 ## See Also  
- [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md)   
+ [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../a9retired/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)   
+ [Data Connections, Data Sources, and Connection Strings in Report Builder](../../a9retired/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

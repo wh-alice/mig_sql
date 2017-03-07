@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Registered Servers F1 Help
-  This section contains the F1 Help for the Registered Servers component in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. It describes the various options.
+  This section contains the F1 Help for the Registered Servers component in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. It describes the various options.
   
  To learn about Registered Servers and get links to what to do with them, go to the [Register Servers](../../tools/sql-server-management-studio/register-servers.md) topic. 
  
@@ -27,7 +27,7 @@ manager: "jhubbard"
  Click to save the Registered Servers settings. 
  
  ## Reporting Services New or Edit Server Registration (General Tab) 
-  Use this tab to specify options when registering an instance of [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)].  
+  Use this tab to specify options when registering an instance of [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)].  
   
  To access this page, in Registered Servers, click **Reporting Services** on the **Registered Servers** toolbar, right-click any registered servers group such as **Reporting Services**, point to **New**, and then click **Server Registration**.  
   
@@ -36,13 +36,13 @@ manager: "jhubbard"
  When a server is registered from Registered Servers, the **Server type** box is read-only, and it matches the type of server displayed in the **Registered Servers** pane. To register a different type of server, click the server you want on the **Registered Servers** toolbar before starting to register a new server.  
   
  **Server name**  
- Specify the report server instance to connect to. In [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], you can access a report server through its instance name. You can have one report server instance for each SQL Server instance that you install. If you are using the default instance, type the name of the SQL Server instance. If you are using a named instance, specify the named instance to connect to the report server in the format MSSQL$InstanceName.  
+ Specify the report server instance to connect to. In [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], you can access a report server through its instance name. You can have one report server instance for each SQL Server instance that you install. If you are using the default instance, type the name of the SQL Server instance. If you are using a named instance, specify the named instance to connect to the report server in the format MSSQL$InstanceName.  
   
  **Authentication**  
  Authentication to a report server is made through Internet Information Services (IIS). Select from one of the following authentication modes when connecting to Reporting Services:  
   
  **Windows Authentication Mode (Windows Authentication)**  
- Connect to the report server instance using your [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows credentials.  
+ Connect to the report server instance using your [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows credentials.  
   
  **Basic Authentication**  
  Connect using **Basic Authentication** if your Reporting Services installation is configured to use Basic Authentication.  
@@ -73,7 +73,7 @@ manager: "jhubbard"
  
  ## Analysis Services - Multidimensional Data New or Edit Server Registration (General Tab)
  
-  Use this tab to specify options when registering an instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)].  
+  Use this tab to specify options when registering an instance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)].  
   
  To access this page, in Registered Servers click **Analysis Services** on the Registered Servers toolbar, right-click any registered servers group, such as **Analysis Services**, point to **New**, and then click **Server Registration**.  
   
@@ -85,7 +85,7 @@ manager: "jhubbard"
  Select the server instance to connect to. The server instance last connected to is displayed by default.  
   
  **Authentication**  
- Windows Authentication allows a user to connect using their [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows credentials, as a Windows user or as a member of a Windows group.  
+ Windows Authentication allows a user to connect using their [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows credentials, as a Windows user or as a member of a Windows group.  
   
  **User name**  
  This option is not available in this release.  
@@ -107,7 +107,7 @@ manager: "jhubbard"
  
  ## SSIS New or Edit Server Registration (General Tab) 
  
- Use this tab to specify options when registering [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)].  
+ Use this tab to specify options when registering [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)].  
   
  To access this page, in Registered Servers, click **Integration Services** on the **Registered Servers** toolbar, right-click any registered servers group, point to **New**, and then click **Server Registration**.  
   
@@ -119,7 +119,7 @@ manager: "jhubbard"
  Select the server to which to connect. The server last connected to is displayed by default.  
   
  **Authentication**  
- Windows Authentication mode allows a user to connect through a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows user account.  
+ Windows Authentication mode allows a user to connect through a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows user account.  
   
  **User name**  
  This option is not available in this release.  

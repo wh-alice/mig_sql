@@ -21,11 +21,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Transaction Isolation Levels
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not guarantee that lock hints will be honored in queries that access metadata through catalog views, compatibility views, information schema views, metadata-emitting built-in functions.  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not guarantee that lock hints will be honored in queries that access metadata through catalog views, compatibility views, information schema views, metadata-emitting built-in functions.  
   
- Internally, the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] only honors the READ COMMITTED isolation level for metadata access. If a transaction has an isolation level that is, for example, SERIALIZABLE and within the transaction, an attempt is made to access metadata by using catalog views or metadata-emitting built-in functions, those queries will run until they are completed as READ COMMITTED. However, under snapshot isolation, access to metadata might fail because of concurrent DDL operations. This is because metadata is not versioned. Therefore, accessing the following under snapshot isolation might fail:  
+ Internally, the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] only honors the READ COMMITTED isolation level for metadata access. If a transaction has an isolation level that is, for example, SERIALIZABLE and within the transaction, an attempt is made to access metadata by using catalog views or metadata-emitting built-in functions, those queries will run until they are completed as READ COMMITTED. However, under snapshot isolation, access to metadata might fail because of concurrent DDL operations. This is because metadata is not versioned. Therefore, accessing the following under snapshot isolation might fail:  
   
 -   Catalog views  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 -   **sp_help** group of stored procedures  
   
--   [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client catalog procedures  
+-   [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client catalog procedures  
   
 -   Dynamic management views and functions  
   

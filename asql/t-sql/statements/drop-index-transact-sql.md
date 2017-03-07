@@ -37,16 +37,16 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # DROP INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Removes one or more relational, spatial, filtered, or XML indexes from the current database. You can drop a clustered index and move the resulting table to another filegroup or partition scheme in a single transaction by specifying the MOVE TO option.  
   
  The DROP INDEX statement does not apply to indexes created by defining PRIMARY KEY or UNIQUE constraints. To remove the constraint and corresponding index, use [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) with the DROP CONSTRAINT clause.  
   
 > [!IMPORTANT]  
->  The syntax defined in `<drop_backward_compatible_index>` will be removed in a future version of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Avoid using this syntax in new development work, and plan to modify applications that currently use the feature. Use the syntax specified under `<drop_relational_or_xml_index>` instead. XML indexes cannot be dropped using backward compatible syntax.  
+>  The syntax defined in `<drop_backward_compatible_index>` will be removed in a future version of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Avoid using this syntax in new development work, and plan to modify applications that currently use the feature. Use the syntax specified under `<drop_relational_or_xml_index>` instead. XML indexes cannot be dropped using backward compatible syntax.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -113,7 +113,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  *IF EXISTS*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  Conditionally drops the index only if it already exists.  
   
@@ -129,21 +129,21 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  *table_or_view_name*  
  Is the name of the table or view associated with the index. Spatial indexes are supported only on tables.  
   
- To display a report of the indexes on an object, use the [sys.indexes](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md) catalog view.  
+ To display a report of the indexes on an object, use the [sys.indexes](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md) catalog view.  
   
  Windows Azure SQL Database supports the three-part name format database_name.[schema_name].object_name when the database_name is the current database or the database_name is tempdb and the object_name starts with #.  
   
  <drop_clustered_index_option>  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
  Controls clustered index options. These options cannot be used with other index types.  
   
  MAXDOP = *max_degree_of_parallelism*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)] (Performance Levels P2 and P3 only).|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)] (Performance Levels P2 and P3 only).|  
   
  Overrides the **max degree of parallelism** configuration option for the duration of the index operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure/windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
   
@@ -164,12 +164,12 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]  
->  Parallel index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Parallel index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ONLINE = ON | **OFF**  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
  Specifies whether underlying tables and associated indexes are available for queries and data modification during the index operation. The default is OFF.  
   
@@ -182,12 +182,12 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  The ONLINE option can only be specified when you drop clustered indexes. For more information, see the Remarks section.  
   
 > [!NOTE]  
->  Online index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Online index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  MOVE TO { *partition_scheme_name***(***column_name***)** | *filegroup_name* | **"**default**"**  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)] supports "default" as the filegroup name.|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)] supports "default" as the filegroup name.|  
   
  Specifies a location to move the data rows that currently are in the leaf level of the clustered index. The data is moved to the new location in the form of a heap. You can specify either a partition scheme or filegroup as the new location, but the partition scheme or filegroup must already exist. MOVE TO is not valid for indexed views or nonclustered indexes. If a partition scheme or filegroup is not specified, the resulting table will be located in the same partition scheme or filegroup as was defined for the clustered index.  
   
@@ -196,7 +196,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  *partition_scheme_name* **(** *column_name* **)**  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
  Specifies a partition scheme as the location for the resulting table. The partition scheme must have already been created by executing either [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) or [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). If no location is specified and the table is partitioned, the table is included in the same partition scheme as the existing clustered index.  
   
@@ -205,7 +205,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  *filegroup_name*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Specifies a filegroup as the location for the resulting table. If no location is specified and the table is not partitioned, the resulting table is included in the same filegroup as the clustered index. The filegroup must already exist.  
   
@@ -218,7 +218,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"**default**"** }  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Specifies a location to move the FILESTREAM table that currently is in the leaf level of the clustered index. The data is moved to the new location in the form of a heap. You can specify either a partition scheme or filegroup as the new location, but the partition scheme or filegroup must already exist. FILESTREAM ON is not valid for indexed views or nonclustered indexes. If a partition scheme is not specified, the data will be located in the same partition scheme as was defined for the clustered index.  
   
@@ -245,7 +245,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  The syntax*table_or_view_name***.***index_name* is maintained for backward compatibility. An XML index or spatial index cannot be dropped by using the backward compatible syntax.  
   
- When indexes with 128 extents or more are dropped, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] defers the actual page deallocations, and their associated locks, until after the transaction commits.  
+ When indexes with 128 extents or more are dropped, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] defers the actual page deallocations, and their associated locks, until after the transaction commits.  
   
  Sometimes indexes are dropped and re-created to reorganize or rebuild the index, such as to apply a new fill factor value or to reorganize data after a bulk load. To do this, using [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)is more efficient, especially for clustered indexes. ALTER INDEX REBUILD has optimizations to prevent the overhead of rebuilding the nonclustered indexes.  
   
@@ -270,7 +270,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
 2.  Modify the table by using an ALTER TABLE ... REBUILD ... option specifying the compression option.  
   
- When a clustered index is dropped OFFLINE, only the upper levels of clustered indexes are removed; therefore, the operation is quite fast. When a clustered index is dropped ONLINE, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] rebuilds the heap two times, once for step 1 and once for step 2. For more information about data compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
+ When a clustered index is dropped OFFLINE, only the upper levels of clustered indexes are removed; therefore, the operation is quite fast. When a clustered index is dropped ONLINE, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] rebuilds the heap two times, once for step 1 and once for step 2. For more information about data compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
 ## XML Indexes  
  Options cannot be specified when you drop anXML index. Also, you cannot use the *table_or_view_name***.***index_name* syntax. When a primary XML index is dropped, all associated secondary XML indexes are automatically dropped. For more information, see [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
@@ -288,7 +288,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 ## Examples  
   
 ### A. Dropping an index  
- The following example deletes the index `IX_ProductVendor`_`VendorID` on the `ProductVendor` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example deletes the index `IX_ProductVendor`_`VendorID` on the `ProductVendor` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 DROP INDEX IX_ProductVendor_BusinessEntityID   
@@ -298,7 +298,7 @@ GO
 ```  
   
 ### B. Dropping multiple indexes  
- The following example deletes two indexes in a single transaction in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example deletes two indexes in a single transaction in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 DROP INDEX  
@@ -309,11 +309,11 @@ GO
 ```  
   
 ### C. Dropping a clustered index online and setting the MAXDOP option  
- The following example deletes a clustered index with the `ONLINE` option set to `ON` and `MAXDOP` set to `8`. Because the MOVE TO option was not specified, the resulting table is stored in the same filegroup as the index. This examples uses the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database  
+ The following example deletes a clustered index with the `ONLINE` option set to `ON` and `MAXDOP` set to `8`. Because the MOVE TO option was not specified, the resulting table is stored in the same filegroup as the index. This examples uses the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
 ```  
 DROP INDEX AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   
@@ -323,11 +323,11 @@ GO
 ```  
   
 ### D. Dropping a clustered index online and moving the table to a new filegroup  
- The following example deletes a clustered index online and moves the resulting table (heap) to the filegroup `NewGroup` by using the `MOVE TO` clause. The `sys.indexes`, `sys.tables`, and `sys.filegroups` catalog views are queried to verify the index and table placement in the filegroups before and after the move. (Beginning with [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] you can use the DROP INDEX IF EXISTS syntax.)  
+ The following example deletes a clustered index online and moves the resulting table (heap) to the filegroup `NewGroup` by using the `MOVE TO` clause. The `sys.indexes`, `sys.tables`, and `sys.filegroups` catalog views are queried to verify the index and table placement in the filegroups before and after the move. (Beginning with [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] you can use the DROP INDEX IF EXISTS syntax.)  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 --Create a clustered index on the PRIMARY filegroup if the index does not exist.  
@@ -394,7 +394,7 @@ WITH (ONLINE = ON);
 ```  
   
 ### F. Dropping an XML index  
- The following example drops an XML index on the `ProductModel` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example drops an XML index on the `ProductModel` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 DROP INDEX PXML_ProductModel_CatalogDescription   
@@ -407,7 +407,7 @@ DROP INDEX PXML_ProductModel_CatalogDescription
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 USE MyDatabase;  
@@ -419,7 +419,7 @@ DROP INDEX PK_MyClusteredIndex
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### H. Dropping an index on a table  
  The following example deletes the index `VendorIDIndex` on the `ProductVendor` table.  
@@ -437,10 +437,10 @@ DROP INDEX VendorIDIndex ON ProductVendor;
  [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
  [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md)   
- [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.tables-transact-sql.md)   
- [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.filegroups-transact-sql.md)   
- [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md)   
+ [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.tables-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.filegroups-transact-sql.md)   
+ [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
 

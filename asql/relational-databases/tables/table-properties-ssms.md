@@ -21,9 +21,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Table Properties - SSMS
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
 
-  This topic describes the table properties that are displayed in the Table Properties dialog box in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. For more information about how to display these properties, see [View the Table Definition](../../relational-databases/tables/view-the-table-definition.md).  
+  This topic describes the table properties that are displayed in the Table Properties dialog box in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. For more information about how to display these properties, see [View the Table Definition](../../relational-databases/tables/view-the-table-definition.md).  
   
  **In This Topic**  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
  The schema that owns the table.  
   
  **System object**  
- Indicates this table is a system table, used by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to contain internal information. Users should not directly change or reference system tables.  
+ Indicates this table is a system table, used by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to contain internal information. Users should not directly change or reference system tables.  
   
  **ANSI NULLs**  
  Indicates if the object was created with the ANSI NULLs option set to ON. For more information, see [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)  
@@ -67,7 +67,7 @@ manager: "jhubbard"
  Indicates the lock escalation granularity of the table. For more information about locking in the Database Engine, see [SQL Server Transaction Locking and Row Versioning Guide](http://msdn.microsoft.com/library/jj856598.aspx). Possible values are:  
   
  AUTO  
- This option allows the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] to select the lock escalation granularity that is appropriate for the table schema.  
+ This option allows the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] to select the lock escalation granularity that is appropriate for the table schema.  
   
 -   If the table is partitioned, lock escalation will be allowed to the heap or B-tree (HoBT) granularity. After the lock is escalated to the HoBT level, the lock will not be escalated later to TABLE granularity.  
   
@@ -77,10 +77,10 @@ manager: "jhubbard"
  Lock escalation will be done at table-level granularity regardless of whether the table is partitioned or not partitioned. TABLE is the default value.  
   
  DISABLE  
- Prevents lock escalation in most cases. Table-level locks are not completely disallowed. For example, when you are scanning a table that has no clustered index under the serializable isolation level, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] must take a table lock to protect data integrity.  
+ Prevents lock escalation in most cases. Table-level locks are not completely disallowed. For example, when you are scanning a table that has no clustered index under the serializable isolation level, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] must take a table lock to protect data integrity.  
   
  **Table is replicated**  
- Indicates when the table is replicated to another database using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] replication. Possible values are **True** or **False**.  
+ Indicates when the table is replicated to another database using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] replication. Possible values are **True** or **False**.  
   
 ##  <a name="ChangeTracking"></a> Change Tracking Page  
  **Change Tracking**  
@@ -91,7 +91,7 @@ manager: "jhubbard"
  To enable change tracking, the table must have a primary key, and you must have permission to modify the table. You can configure change tracking by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
  **Track Columns Updated**  
- Indicates whether the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] tracks which columns were updated.  
+ Indicates whether the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] tracks which columns were updated.  
   
  For more information about Change Tracking, see [About Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).  
   
@@ -140,10 +140,10 @@ manager: "jhubbard"
   
 ### General  
  **Vardecimal storage format is enabled**  
- When **True**, this read-only value indicates that **decimal** and **numeric** data types are stored by using the vardecimal storage format. To change this option, use the **vardecimal storage format** option of [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Vardecimal storage format is deprecated. Use ROW compression instead.  
+ When **True**, this read-only value indicates that **decimal** and **numeric** data types are stored by using the vardecimal storage format. To change this option, use the **vardecimal storage format** option of [sp_tableoption](../../relational-databases/reference/system-stored-procedures/sp-tableoption-transact-sql.md). Vardecimal storage format is deprecated. Use ROW compression instead.  
   
  **Index space**  
- The amount of space in megabytes that the indexes occupy in the table. This value does not include XML index space usage for the table. If XML indexes belong to the table, use [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) instead.  
+ The amount of space in megabytes that the indexes occupy in the table. This value does not include XML index space usage for the table. If XML indexes belong to the table, use [sp_spaceused](../../relational-databases/reference/system-stored-procedures/sp-spaceused-transact-sql.md) instead.  
   
  **Row count**  
  The number of rows in the table.  

@@ -15,13 +15,13 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Application Pattern for Partitioning Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[hek_2](../../relational-databases/in-memory-oltp/includes/hek-2-md.md)] supports a pattern where a limited amount of active data is kept in a memory-optimized table, while less-frequently accessed data is processed on disk. Typically, this would be a scenario where data is stored based on a **datetime** key.  
+  [!INCLUDE[hek_2](../../a9retired/includes/hek-2-md.md)] supports a pattern where a limited amount of active data is kept in a memory-optimized table, while less-frequently accessed data is processed on disk. Typically, this would be a scenario where data is stored based on a **datetime** key.  
   
  You can emulate partitioned tables with memory-optimized tables by maintaining a partitioned table and a memory-optimized table with a common schema. Current data would be inserted and updated in the memory-optimized table, while less-frequently accessed data would be maintained in the traditional partitioned table.  
   
- An application that knows that the active data is in a memory-optimized table can use natively compiled stored procedures to access the data. Operations that need to access the entire span of data, or which may not know which table holds relevant data, use interpreted [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] to join the memory-optimized table with the partitioned table.  
+ An application that knows that the active data is in a memory-optimized table can use natively compiled stored procedures to access the data. Operations that need to access the entire span of data, or which may not know which table holds relevant data, use interpreted [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] to join the memory-optimized table with the partitioned table.  
   
  This partition switch is described as follows:  
   

@@ -17,16 +17,16 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 1-2 - Creating a Table
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
 To create a table, you must provide a name for the table, and the names and data types of each column in the table. It is also a good practice to indicate whether null values are allowed in each column. To create a table, you must have the `CREATE TABLE` permission, and the `ALTER SCHEMA` permission on the schema that will contain the table. The `db_ddladmin` fixed database role has these permissions.  
   
-Most tables have a primary key, made up of one or more columns of the table. A primary key is always unique. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] will enforce the restriction that any primary key value cannot be repeated in the table.  
+Most tables have a primary key, made up of one or more columns of the table. A primary key is always unique. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] will enforce the restriction that any primary key value cannot be repeated in the table.  
   
 For a list of data types and links for a description of each, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
 > [!NOTE]  
-> The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] can be installed as case sensitive or non-case sensitive. If the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] is installed as case sensitive, object names must always have the same case. For example, a table named OrderData is a different table from a table named ORDERDATA. If the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] is installed as non-case sensitive, those two table names are considered to be the same table, and that name can only be used one time.  
+> The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] can be installed as case sensitive or non-case sensitive. If the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] is installed as case sensitive, object names must always have the same case. For example, a table named OrderData is a different table from a table named ORDERDATA. If the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] is installed as non-case sensitive, those two table names are considered to be the same table, and that name can only be used one time.  
   
 ### To create a database to contain the new table  
   
@@ -70,7 +70,7 @@ For a list of data types and links for a description of each, see [Data Types &#
     ```  
   
 ## Next Task in Lesson  
-[Inserting and Updating Data in a Table &#40;Tutorial&#41;](../Topic/Inserting%20and%20Updating%20Data%20in%20a%20Table%20(Tutorial).md)  
+[Inserting and Updating Data in a Table &#40;Tutorial&#41;](../../t-sql/tutorials/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
 ## See Also  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

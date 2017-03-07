@@ -21,9 +21,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Caching, Refresh, and Replication Monitor Performance
-  [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Replication Monitor is designed to efficiently monitor a large number of computers in a production system. The queries that Replication Monitor uses to perform calculations and gather data are cached and refreshed on a periodic basis. Caching reduces the number of queries and calculations required as you view different pages in Replication Monitor and allows monitoring to scale well for multiple users.  
+  [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Replication Monitor is designed to efficiently monitor a large number of computers in a production system. The queries that Replication Monitor uses to perform calculations and gather data are cached and refreshed on a periodic basis. Caching reduces the number of queries and calculations required as you view different pages in Replication Monitor and allows monitoring to scale well for multiple users.  
   
- Cache refresh is handled by a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent job, the **Replication monitoring refresher for distribution**. The job runs continuously, but the cache refresh schedule is based on waiting a certain amount time after the previous refresh:  
+ Cache refresh is handled by a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Agent job, the **Replication monitoring refresher for distribution**. The job runs continuously, but the cache refresh schedule is based on waiting a certain amount time after the previous refresh:  
   
 -   If there were agent history changes since the cache was last created, the wait time is the minimum of: 4 seconds; or the amount of time taken to create the previous cache.  
   
@@ -51,6 +51,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
- [Monitoring Replication](../Topic/Monitoring%20Replication.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

@@ -26,11 +26,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # DBCC PROCCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Displays information in a table format about the procedure cache.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -57,7 +57,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
   
 -   Extended procedures  
   
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Performance Monitor uses DBCC PROCCACHE to obtain information about the procedure cache.  
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Performance Monitor uses DBCC PROCCACHE to obtain information about the procedure cache.  
   
 ## Result Sets  
  The following table describes the columns of the result set.  

@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Median (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the median value of a numeric expression that is evaluated over a set.  
   
@@ -45,7 +45,7 @@ Median(Set_Expression [ ,Numeric_Expression ] )
  The median value is the middle value in a set of ordered numbers. (The medial value is unlike the mean value, which is the sum of a set of numbers divided by the count of numbers in the set). The median value is determined by choosing the smallest value such that at least half of the values in the set are no greater than the chosen value. If the number of values within the set is odd, the median value corresponds to a single value. If the number of values within the set is even, the median value corresponds to the sum of the two middle values divided by two.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] ignores nulls when calculating the median value in a set of ordered numbers.  
+>  [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] ignores nulls when calculating the median value in a set of ordered numbers.  
   
 ## Example  
  The following example returns the median monthly sales for each quarter, each subcategory, and each country in the Adventure Works cube.  

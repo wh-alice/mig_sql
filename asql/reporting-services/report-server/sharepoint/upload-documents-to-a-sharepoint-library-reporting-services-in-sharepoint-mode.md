@@ -25,7 +25,7 @@ manager: "erikre"
  You cannot upload a data source (.rds) file. However, you can publish .rds files from a design tool, such as Report Designer, to a SharePoint library. During publication, a new .rsds file is created from the original .rds file in the solution. You can also create a new .rsds file in a SharePoint library and then set data source connection properties in the uploaded reports and models to use the new connection.  
   
 > [!NOTE]  
->  The report server must be configured for SharePoint mode, and the instance of the SharePoint product must have the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Add-in that provides program files for storing and accessing report server items from a SharePoint site.  
+>  The report server must be configured for SharePoint mode, and the instance of the SharePoint product must have the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Add-in that provides program files for storing and accessing report server items from a SharePoint site.  
   
  To upload a document to a library, you must have the "Add Items" permission at the site level. If you are using default security settings, this permission is granted to members of the **Owners** group who have the Full Control level of permission and to the **Members** group who have the Contribute level of permission.  
   
@@ -39,7 +39,7 @@ manager: "erikre"
   
      If the report definition uses a shared data source (.rsds) file to store connection information to an external data source, you can upload the .rdl and the .rsds file at the same time. To do this, click **Upload Multiple Documents**, specify both files, and then click **OK**.  
   
- If you upload a report that contains references to shared data sources, report models, or subreports, the references will be broken in the report when the files are uploaded. For more information about how to reset the references, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](../Topic/Create%20and%20Manage%20Shared%20Data%20Sources%20\(Reporting%20Services%20in%20SharePoint%20Integrated%20Mode\).md).  
+ If you upload a report that contains references to shared data sources, report models, or subreports, the references will be broken in the report when the files are uploaded. For more information about how to reset the references, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../../a9retired/2d3428e4-a810-4e66-a287-ff18e57fad76.md).  
   
  When you upload a report, it runs on demand when you open it, retrieving live data from the data source. You can configure the report to retrieve data on a schedule or use cached data. For more information, see [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../../reporting-services/report-server/sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   

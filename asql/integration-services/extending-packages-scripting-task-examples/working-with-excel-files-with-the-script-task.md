@@ -23,7 +23,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Working with Excel Files with the Script Task
-  [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] provides the Excel connection manager, Excel source, and Excel destination for working with data stored in spreadsheets in the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Excel file format. The techniques described in this topic use the Script task to obtain information about available Excel databases (workbook files) and tables (worksheets and named ranges). These samples can easily be modified to work with any of the other file-based data sources supported by the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Jet OLE DB Provider.  
+  [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] provides the Excel connection manager, Excel source, and Excel destination for working with data stored in spreadsheets in the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Excel file format. The techniques described in this topic use the Script task to obtain information about available Excel databases (workbook files) and tables (worksheets and named ranges). These samples can easily be modified to work with any of the other file-based data sources supported by the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Jet OLE DB Provider.  
   
  [Configuring a Package to Test the Samples](#configuring)  
   
@@ -41,11 +41,11 @@ manager: "jhubbard"
 >  If you want to create a task that you can more easily reuse across multiple packages, consider using the code in this Script task sample as the starting point for a custom task. For more information, see [Developing a Custom Task](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ##  <a name="configuring"></a> Configuring a Package to Test the Samples  
- You can configure a single package to test all the samples in this topic. The samples use many of the same package variables and the same [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] classes.  
+ You can configure a single package to test all the samples in this topic. The samples use many of the same package variables and the same [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] classes.  
   
 #### To configure a package for use with the examples in this topic  
   
-1.  Create a new [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] and open the default package for editing.  
+1.  Create a new [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] and open the default package for editing.  
   
 2.  **Variables**. Open the **Variables** window and define the following variables:  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
     -   `ExcelTables`, of type **Object**.  
   
-3.  **Imports statements**. Most of the code samples require you to import one or both of the following [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] namespaces at the top of your script file:  
+3.  **Imports statements**. Most of the code samples require you to import one or both of the following [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] namespaces at the top of your script file:  
   
     -   **System.IO**, for file system operations.  
   

@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Replay Options (SQL Server Profiler)
-  Before replaying a captured trace with [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)], specify replay options in the **Replay Configuration** dialog box. To launch this dialog box, open the replay trace file or table in [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)], and on the **Replay** menu, click **Start**. For information about what permissions are required to replay a trace, see [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
+  Before replaying a captured trace with [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)], specify replay options in the **Replay Configuration** dialog box. To launch this dialog box, open the replay trace file or table in [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)], and on the **Replay** menu, click **Start**. For information about what permissions are required to replay a trace, see [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
   
  This topic describes the options specified with the **Replay Configuration** dialog box.  
   
@@ -29,10 +29,10 @@ manager: "jhubbard"
   
 ## Basic Replay Options  
  **Replay server**  
- The server is the name of the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] against which you want to replay the trace. The server must adhere to the replay requirements described in [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)."  
+ The server is the name of the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] against which you want to replay the trace. The server must adhere to the replay requirements described in [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)."  
   
  **Save to file**  
- The output file where the result of replaying the trace is written for later viewing. By default, [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] displays only the results of replaying the trace on the screen.  
+ The output file where the result of replaying the trace is written for later viewing. By default, [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] displays only the results of replaying the trace on the screen.  
   
  **Save to table**  
  The database table where the result of replaying the trace is written for later viewing.  

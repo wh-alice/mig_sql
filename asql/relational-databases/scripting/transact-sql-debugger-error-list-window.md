@@ -22,12 +22,12 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Transact-SQL Debugger - Error List Window
-  The [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] **Error List** displays the syntax and semantic errors that are generated from the IntelliSense code in the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Query Editor.  
+  The [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] **Error List** displays the syntax and semantic errors that are generated from the IntelliSense code in the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Query Editor.  
   
 ## Features of the Error List  
  The **Error List** provides the following functionality:  
   
--   As you edit scripts, the **Error List** displays the errors and warnings produced by IntelliSense in the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Query Editor.  
+-   As you edit scripts, the **Error List** displays the errors and warnings produced by IntelliSense in the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Query Editor.  
   
 -   You can double-click any error message entry to focus on the tab for the script file that generated the error, and move to the error location.  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   After you fix an error, the error entry is removed from the **Error List**.  
   
--   When you close the tab for a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] script file, the errors for that file are removed from the **Error List**.  
+-   When you close the tab for a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] script file, the errors for that file are removed from the **Error List**.  
   
 ## Working with the Error List  
  To display the **Error List**, do one of the following:  
@@ -55,16 +55,16 @@ manager: "jhubbard"
  The **Error List** does not link to additional information about specific errors.  
   
 ## Transact-SQL Errors in Management Studio  
- [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] displays errors for [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] scripts in the following locations:  
+ [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] displays errors for [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] scripts in the following locations:  
   
--   The **Error List** contains all syntax and semantic errors found by IntelliSense in the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Editor. This list of errors is dynamically updated as you edit [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] scripts. The list includes all errors that the editor has found in each [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] script. The editor does not stop parsing a file after encountering errors in a script. In [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)], IntelliSense in the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Editor does not support all [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] syntax elements. The **Error List** contains only errors from the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] syntax that is supported by IntelliSense.  
+-   The **Error List** contains all syntax and semantic errors found by IntelliSense in the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Editor. This list of errors is dynamically updated as you edit [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] scripts. The list includes all errors that the editor has found in each [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] script. The editor does not stop parsing a file after encountering errors in a script. In [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)], IntelliSense in the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Editor does not support all [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] syntax elements. The **Error List** contains only errors from the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] syntax that is supported by IntelliSense.  
   
--   The **Messages** tab at the bottom of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Query Editor window displays all errors and messages that are returned by the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] when a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] script is executed. This list does not change until you execute the script again. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] stops parsing a batch after it finds one or two compile errors; therefore, the **Messages** tab might not list all errors in a script.  
+-   The **Messages** tab at the bottom of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Query Editor window displays all errors and messages that are returned by the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] when a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] script is executed. This list does not change until you execute the script again. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] stops parsing a batch after it finds one or two compile errors; therefore, the **Messages** tab might not list all errors in a script.  
   
- Sometimes errors are listed in both locations. For example, a script file might have a syntax error that is listed in the **Error List**. If you execute the script before you correct the error, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] parser can detect the same condition and return another copy of the error message in the **Messages** tab.  
+ Sometimes errors are listed in both locations. For example, a script file might have a syntax error that is listed in the **Error List**. If you execute the script before you correct the error, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] parser can detect the same condition and return another copy of the error message in the **Messages** tab.  
   
 > [!NOTE]  
->  The **Error List** only displays errors from the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Query Editor; it does not display errors from the MDX, DMX, or XML/A Editors. All MDX, DMX, and XML/A errors are displayed in the **Messages** tab in those editors.  
+>  The **Error List** only displays errors from the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Query Editor; it does not display errors from the MDX, DMX, or XML/A Editors. All MDX, DMX, and XML/A errors are displayed in the **Messages** tab in those editors.  
   
 ## UIElement List  
  When the **Error List** is open, the information is displayed in the following columns:  

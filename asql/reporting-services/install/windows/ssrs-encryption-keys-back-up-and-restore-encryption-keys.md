@@ -20,11 +20,11 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # SSRS Encryption Keys - Back Up and Restore Encryption Keys
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   An important part of report server configuration is creating a backup copy of the symmetric key used for encrypting sensitive information. A backup copy of the key is required for many routine operations, and enables you to reuse an existing report server database in a new installation.  
   
- **[!INCLUDE[applies](../../../analysis-services/includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] SharePoint mode  
+ **[!INCLUDE[applies](../../../a9retired/includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] SharePoint mode  
   
  It is necessary to restore the backup copy of the encryption key when any of the following events occur:  
   
@@ -33,7 +33,7 @@ manager: "erikre"
     > [!NOTE]
     > Resetting the password is not the same as changing the password. A password reset requires permission to overwrite account information on the domain controller. Password resets are performed by a system administrator when you forget or do not know a particular password. Only password resets require symmetric key restoration. Periodically changing an account password does not require you to reset the symmetric key.  
   
--   Renaming the computer or instance that hosts the report server (a report server instance is based on a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance name).  
+-   Renaming the computer or instance that hosts the report server (a report server instance is based on a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance name).  
   
 -   Migrating a report server installation or configuring a report server to use a different report server database.  
   
@@ -48,7 +48,7 @@ manager: "erikre"
  **SharePoint mode:** SharePoint Central Administration pages or PowerShell.  
   
 ##  <a name="bkmk_backup_sharepoint"></a> Backup SharePoint Mode Report Servers  
- For SharePoint mode report servers you can either use PowerShell commands or use the management pages for the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] service application. For more information, see the “Key Management” section of [Manage a Reporting Services SharePoint Service Application](../../../reporting-services/report-server/sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
+ For SharePoint mode report servers you can either use PowerShell commands or use the management pages for the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] service application. For more information, see the “Key Management” section of [Manage a Reporting Services SharePoint Service Application](../../../reporting-services/report-server/sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
 ##  <a name="bkmk_backup_configuration_manager"></a> Back up encryption keys -Reporting Services Configuration Manager (Native Mode)  
   
@@ -58,7 +58,7 @@ manager: "erikre"
   
 3.  Type a strong password.  
   
-4.  Specify a file to contain the stored key. [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] appends a .snk file extension to the file. Consider storing the file on a disk separate from the report server.  
+4.  Specify a file to contain the stored key. [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] appends a .snk file extension to the file. Consider storing the file on a disk separate from the report server.  
   
 5.  Select **OK**.  
   
@@ -81,7 +81,7 @@ manager: "erikre"
   
 -   The previously stored symmetric key data (for example, key information that was already in the report server database from a previous deployment) is deleted.  
   
- To restore the encryption key, you must have a copy of the encryption key on file. You must also know the password that unlocks the stored copy. If you have the key and the password, you can run the Reporting Services Configuration tool or **rskeymgmt** utility to restore the key. The symmetric key must be the same one that locks and unlocks encrypted data currently stored in the report server database. If you restore a copy that is not valid, the report server cannot access the encrypted data currently stored in the report server database. If this occurs, you might need to delete all encrypted values if you cannot restore a valid key. If for some reason you cannot restore the encryption key (for example, if you do not have a backup copy), you must delete the existing key and encrypted content. For more information, see [Delete and Re-create Encryption Keys  &#40;SSRS Configuration Manager&#41;](../Topic/Delete%20and%20Re-create%20Encryption%20Keys%20%20\(SSRS%20Configuration%20Manager\).md). For more information about creating symmetric keys, see [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../Topic/Initialize%20a%20Report%20Server%20\(SSRS%20Configuration%20Manager\).md).  
+ To restore the encryption key, you must have a copy of the encryption key on file. You must also know the password that unlocks the stored copy. If you have the key and the password, you can run the Reporting Services Configuration tool or **rskeymgmt** utility to restore the key. The symmetric key must be the same one that locks and unlocks encrypted data currently stored in the report server database. If you restore a copy that is not valid, the report server cannot access the encrypted data currently stored in the report server database. If this occurs, you might need to delete all encrypted values if you cannot restore a valid key. If for some reason you cannot restore the encryption key (for example, if you do not have a backup copy), you must delete the existing key and encrypted content. For more information, see [Delete and Re-create Encryption Keys  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). For more information about creating symmetric keys, see [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ###  <a name="bkmk_restore_configuration_manager"></a> Restore encryption keys -Reporting Services Configuration Manager (Native Mode)  
   
@@ -104,6 +104,6 @@ manager: "erikre"
     ```  
   
 ## See Also  
- [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../Topic/Configure%20and%20Manage%20Encryption%20Keys%20\(SSRS%20Configuration%20Manager\).md)  
+ [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Align the Data in a Chart in a Table or Matrix (Report Builder and SSRS)
-  Sparklines and data bars are small, simple charts that convey a lot of information with little extraneous detail. In a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report, when you check this option the values in your sparklines and data bars will align across the different cells in the table or matrix, even if there are missing values in the data they are based on.  
+  Sparklines and data bars are small, simple charts that convey a lot of information with little extraneous detail. In a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report, when you check this option the values in your sparklines and data bars will align across the different cells in the table or matrix, even if there are missing values in the data they are based on.  
   
  ![rs_SparklineAlignData](../../reporting-services/report-design/media/rs-sparklinealigndata.gif "rs_SparklineAlignData")  
   
@@ -30,7 +30,7 @@ manager: "erikre"
   
 2.  On the **Axis Options** tab, check the **Align axes in** box, and then in the dropdown box, select the group on which to align the axis.  
   
-3.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## See Also  
  [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

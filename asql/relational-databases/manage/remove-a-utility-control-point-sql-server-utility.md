@@ -15,7 +15,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Remove a Utility Control Point (SQL Server Utility)
-  This topic describes how to remove a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] utility control point (UCP) from the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to remove a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] utility control point (UCP) from the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -32,13 +32,13 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
- Before you use this procedure to remove the UCP from the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility, note the following requirements. The stored procedure will run prerequisite checks as part of the operation.  
+ Before you use this procedure to remove the UCP from the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility, note the following requirements. The stored procedure will run prerequisite checks as part of the operation.  
   
--   Before you run this procedure, all managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] must be removed from the UCP. Note that the UCP is a managed instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. From more information, see [Remove an Instance of SQL Server from the SQL Server Utility](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md).  
+-   Before you run this procedure, all managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] must be removed from the UCP. Note that the UCP is a managed instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. From more information, see [Remove an Instance of SQL Server from the SQL Server Utility](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md).  
   
 -   This procedure must be run on a computer that is a UCP.  
   
--   If the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] where the UCP was removed has a non-Utility data collection set, the UMDW database (sysutility_mdw) will not be dropped by the procedure. If this is the case, the UMDW database (sysutility_mdw) must be dropped manually before the UCP can be created again.  
+-   If the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] where the UCP was removed has a non-Utility data collection set, the UMDW database (sysutility_mdw) will not be dropped by the procedure. If this is the case, the UMDW database (sysutility_mdw) must be dropped manually before the UCP can be created again.  
   
 ###  <a name="Security"></a> Security  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 #### To remove a Utility Control Point  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -62,6 +62,6 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ## See Also  
  [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Use Utility Explorer to Manage the SQL Server Utility](../../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
- [Troubleshoot the SQL Server Utility](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md)  
+ [Troubleshoot the SQL Server Utility](../../a9retired/troubleshoot-the-sql-server-utility.md)  
   
   

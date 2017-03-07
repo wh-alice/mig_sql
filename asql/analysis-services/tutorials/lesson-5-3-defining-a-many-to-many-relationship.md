@@ -19,7 +19,7 @@ manager: "erikre"
 # Lesson 5-3 - Defining a Many-to-Many Relationship
 When you define a dimension, typically each fact joins to one and only one dimension member, whereas a single dimension member can be associated with many different facts. For example, each customer can have many orders but each order belongs to a single customer. In relational database terminology, this is referred to as a *one-to-many relationship*. However, sometimes a single fact can join to multiple dimension members. In relational database terminology, this is referred to as a *many-to-many relationship*. For example, a customer may have multiple reasons for making a purchase, and a purchase reason can be associated with multiple purchases. A join table is used to define the sales reasons that relate to each purchase. A Sales Reason dimension constructed from such relationships would then have multiple members that relate to a single sales transaction. Many-to-many dimensions expand the dimensional model beyond the classic star schema and support complex analytics when dimensions are not directly related to a fact table.  
   
-In [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], you define a many-to-many relationship between a dimension and a measure group by specifying an intermediate fact table that is joined to the dimension table. An intermediate fact table is joined, in turn, to an intermediate dimension table to which the fact table is joined. The many-to-many relationships between the intermediate fact table and both the dimension tables in the relationship and the intermediate dimension creates the many-to-many relationships between members of the primary dimension and measures in the measure group that is specified by the relationship. In order to define a many-to-many relationship between a dimension and a measure group through an intermediate measure group, the intermediate measure group must share one or more dimensions with the original measure group.  
+In [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], you define a many-to-many relationship between a dimension and a measure group by specifying an intermediate fact table that is joined to the dimension table. An intermediate fact table is joined, in turn, to an intermediate dimension table to which the fact table is joined. The many-to-many relationships between the intermediate fact table and both the dimension tables in the relationship and the intermediate dimension creates the many-to-many relationships between members of the primary dimension and measures in the measure group that is specified by the relationship. In order to define a many-to-many relationship between a dimension and a measure group through an intermediate measure group, the intermediate measure group must share one or more dimensions with the original measure group.  
   
 With a many-to-many dimension, values are distinct summed, which means that they do not aggregate more than once to the All member.  
   
@@ -64,7 +64,7 @@ In the tasks in this topic, you define the Sales Reasons dimension and the Sales
   
 ## Defining the Intermediate Measure Group  
   
-1.  Switch to Cube Designer for the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial cube, and then click the **Cube Structure** tab.  
+1.  Switch to Cube Designer for the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial cube, and then click the **Cube Structure** tab.  
   
 2.  Right-click anywhere in the **Measures** pane, and then click **New Measure Group**. For more information, see [Create Measures and Measure Groups in Multidimensional Models](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).  
   
@@ -78,7 +78,7 @@ In the tasks in this topic, you define the Sales Reasons dimension and the Sales
   
 5.  Select **Internet Sales Reason Count** and review the properties of this measure in the Properties window.  
   
-    Notice that the **AggregateFunction** property for this measure is defined as **Count** instead of **Sum**. [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] chose **Count** because the underlying data type is a string data type. The other two columns in the underlying fact table were not selected as measures because [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] detected them as numeric keys instead of as actual measures. For more information, see [Define Semiadditive Behavior](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
+    Notice that the **AggregateFunction** property for this measure is defined as **Count** instead of **Sum**. [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] chose **Count** because the underlying data type is a string data type. The other two columns in the underlying fact table were not selected as measures because [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] detected them as numeric keys instead of as actual measures. For more information, see [Define Semiadditive Behavior](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
   
 6.  In the Properties window, change the **Visible** property of the **Internet Sales Reason Count** measure to **False**.  
   
@@ -96,7 +96,7 @@ In the tasks in this topic, you define the Sales Reasons dimension and the Sales
   
 3.  On the **Select Creation Method** page, verify that the **Use an existing table** option is selected, and then click **Next**.  
   
-4.  On the **Specify Source Information** page, verify that the [!INCLUDE[ssSampleDBCoShort](../../analysis-services/data-mining/includes/sssampledbcoshort-md.md)] DW 2012 data source view is selected.  
+4.  On the **Specify Source Information** page, verify that the [!INCLUDE[ssSampleDBCoShort](../../a9notintoc/includes/sssampledbcoshort-md.md)] DW 2012 data source view is selected.  
   
 5.  In the **Main table** list, select **SalesReason**.  
   
@@ -120,7 +120,7 @@ In the tasks in this topic, you define the Sales Reasons dimension and the Sales
   
 15. Define **All Sales Reasons** as the value for **AttributeAllMemberName** property of the Sales Reason dimension.  
   
-16. To add the newly created dimension to the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial cube as a cube dimension, switch to **Cube Designer**. On the **Cube Structure** tab, right-click in the **Dimensions** pane and select **Add Cube Dimension**.  
+16. To add the newly created dimension to the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial cube as a cube dimension, switch to **Cube Designer**. On the **Cube Structure** tab, right-click in the **Dimensions** pane and select **Add Cube Dimension**.  
   
 17. In the **Add Cube Dimension** dialog box, select **Sales Reason** and then click **OK**.  
   
@@ -128,7 +128,7 @@ In the tasks in this topic, you define the Sales Reasons dimension and the Sales
   
 ## Defining the Many to Many Relationship  
   
-1.  Switch to Cube Designer for the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial cube, and then click the **Dimension Usage** tab.  
+1.  Switch to Cube Designer for the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial cube, and then click the **Dimension Usage** tab.  
   
     Notice that the **Sales Reason** dimension has a regular relationship defined with the **Internet Sales Reason** measure group, but has no relationship defined with the **Internet Sales** or **Reseller Sales** measure groups. Notice also that the **Internet Sales Order Details** dimension has a regular relationship defined with the **Internet Sales Reason** dimension, which in turn has a **Fact Relationship** with the **Internet Sales** measure group. If this dimension was not present (or another dimension with a relationship with both the **Internet Sales Reason** and the **Internet Sales** measure group were not present), you would not be able to define the many-to-many relationship.  
   
@@ -152,7 +152,7 @@ In the tasks in this topic, you define the Sales Reasons dimension and the Sales
   
 1.  On the **Build** menu, click **Deploy Analysis Services Tutorial**.  
   
-2.  When deployment has successfully completed, switch to the **Browser** tab in Cube Designer for the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial cube, and then click **Reconnect**.  
+2.  When deployment has successfully completed, switch to the **Browser** tab in Cube Designer for the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial cube, and then click **Reconnect**.  
   
 3.  Add the **Internet Sales-Sales Amount** measure to the data area of the data pane.  
   
@@ -160,7 +160,7 @@ In the tasks in this topic, you define the Sales Reasons dimension and the Sales
   
 5.  In the metadata pane, expand **Customer**, expand **Location**, expand **Customer Geography**, expand **Members**, expand **All Customers**, expand **Australia**, right-click **Queensland**, and then click **Add to Filter**.  
   
-6.  Expand each member of the **Sales Reason Type** level to review the dollar values that are associated with each reason a customer in Queensland gave for their purchase of an [!INCLUDE[ssSampleDBCoShort](../../analysis-services/data-mining/includes/sssampledbcoshort-md.md)] product over the Internet.  
+6.  Expand each member of the **Sales Reason Type** level to review the dollar values that are associated with each reason a customer in Queensland gave for their purchase of an [!INCLUDE[ssSampleDBCoShort](../../a9notintoc/includes/sssampledbcoshort-md.md)] product over the Internet.  
   
     Notice that the totals that are associated with each sales reason add up to more than the total sales. This is because some customers cited multiple reasons for their purchase.  
   
@@ -169,7 +169,7 @@ In the tasks in this topic, you define the Sales Reasons dimension and the Sales
     ![Filter and Data panes of Cube Designer](../../analysis-services/tutorials/media/l5-many-to-many-5.gif "Filter and Data panes of Cube Designer")  
   
 ## Next Task in Lesson  
-[Defining Dimension Granularity within a Measure Group](../Topic/Defining%20Dimension%20Granularity%20within%20a%20Measure%20Group.md)  
+[Defining Dimension Granularity within a Measure Group](../../analysis-services/tutorials/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## See Also  
 [Work with Diagrams in Data Source View Designer &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  

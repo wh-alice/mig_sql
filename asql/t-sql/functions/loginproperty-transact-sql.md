@@ -37,11 +37,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # LOGINPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns information about login policy settings.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -52,7 +52,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 ## Arguments  
  *login_name*  
- Is the name of a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login for which login property status will be returned.  
+ Is the name of a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login for which login property status will be returned.  
   
  *propertyname*  
  Is an expression that contains the property information to be returned for the login. *propertyname* can be one of the following values.  
@@ -62,13 +62,13 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 |**BadPasswordCount**|Returns the number of consecutive attempts to log in with an incorrect password.|  
 |**BadPasswordTime**|Returns the time of the last attempt to log in with an incorrect password.|  
 |**DaysUntilExpiration**|Returns the number of days until the password expires.|  
-|**DefaultDatabase**|Returns the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login default database as stored in metadata or **master** if no database is specified. Returns NULL for non-[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provisioned users (for example, Windows authenticated users).|  
-|**DefaultLanguage**|Returns the login default language as stored in metadata. Returns NULL for non-[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provisioned users, for example, Windows authenticated users.|  
+|**DefaultDatabase**|Returns the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login default database as stored in metadata or **master** if no database is specified. Returns NULL for non-[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] provisioned users (for example, Windows authenticated users).|  
+|**DefaultLanguage**|Returns the login default language as stored in metadata. Returns NULL for non-[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] provisioned users, for example, Windows authenticated users.|  
 |**HistoryLength**|Returns the number of passwords tracked for the login, using the password-policy enforcement mechanism. 0 if the password policy is not enforced. Resuming password policy enforcement restarts at 1.|  
 |**IsExpired**|Indicates whether the login has expired.|  
 |**IsLocked**|Indicates whether the login is locked.|  
 |**IsMustChange**|Indicates whether the login must change its password the next time it connects.|  
-|**LockoutTime**|Returns the date when the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login was locked out because it had exceeded the permitted number of failed login attempts.|  
+|**LockoutTime**|Returns the date when the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login was locked out because it had exceeded the permitted number of failed login attempts.|  
 |**PasswordHash**|Returns the hash of the password.|  
 |**PasswordLastSetTime**|Returns the date when the current password was set.|  
 |**PasswordHashAlgorithm**|Returns the algorithm used to hash the password.|  
@@ -88,7 +88,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
  **PasswordHash** is of type **varbinary**.  
   
- NULL if the login is not a valid [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login.  
+ NULL if the login is not a valid [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login.  
   
  **DaysUntilExpiration** is of type **int**.  
   
@@ -109,7 +109,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 -   NULL if the login is not a valid SQL Server login  
   
 ## Remarks  
- This built-in function returns information about the password policy settings of a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login. The names of the properties are not case sensitive, so property names such as **BadPasswordCount** and **badpasswordcount** are equivalent. The values of the **PasswordHash, PasswordHashAlgorithm**, and **PasswordLastSetTime** properties are available on all supported configurations of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], but the other properties are only available when [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running on [!INCLUDE[winxpsvr](../../database-engine/configure/windows/includes/winxpsvr-md.md)] and both CHECK_POLICY and CHECK_EXPIRATION are enabled. For more information, see [Password Policy](../../relational-databases/security/password-policy.md).  
+ This built-in function returns information about the password policy settings of a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login. The names of the properties are not case sensitive, so property names such as **BadPasswordCount** and **badpasswordcount** are equivalent. The values of the **PasswordHash, PasswordHashAlgorithm**, and **PasswordLastSetTime** properties are available on all supported configurations of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], but the other properties are only available when [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running on [!INCLUDE[winxpsvr](../../database-engine/configure/windows/includes/winxpsvr-md.md)] and both CHECK_POLICY and CHECK_EXPIRATION are enabled. For more information, see [Password Policy](../../relational-databases/security/password-policy.md).  
   
 ## Permissions  
  Requires VIEW permission on the login. When requesting the password hash, also requires CONTROL SERVER permission.  
@@ -117,7 +117,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## Examples  
   
 ### A. Checking whether a login must change its password  
- The following example checks whether [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login `John3` must change its password the next time it connects to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ The following example checks whether [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login `John3` must change its password the next time it connects to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsMustChange');  
@@ -125,7 +125,7 @@ GO
 ```  
   
 ### B. Checking whether a login is locked out  
- The following example checks whether [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login `John3` is locked.  
+ The following example checks whether [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login `John3` is locked.  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsLocked');  
@@ -134,6 +134,6 @@ GO
   
 ## See Also  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-principals-transact-sql.md)  
+ [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-principals-transact-sql.md)  
   
   

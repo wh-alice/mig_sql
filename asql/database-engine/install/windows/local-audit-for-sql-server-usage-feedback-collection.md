@@ -68,10 +68,10 @@ Create a new folder (Local Audit Directory) where the Local Audit will write the
 
   ||Design Decision|Recommendation|  
   |------|-----------------|----------|  
-  |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Space availability |On moderate workload with about 10 databases, plan on about 2 MB of disk space per day per instance.|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate directories | Create a directory for each instance. For example, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* for a SQL Server instance named `MSSQLSERVER`. This simplifies file management.
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate folders |Use a specific folder for each service. For example for a given instance name, have one folder for the database engine. If an instance of SSAS uses the same instance name, create a separate folder for SSAS. Having both Database Engine and Analysis Services instances configured to the same folder will cause all the Local Audit to write to the same log file from both instances.| 
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Grant permissions to the SQL Server CIEP Telemetry service logon account|Enable **List folder contents**, **Read** and **Write** access to the SQL Server CEIP Telemetry service logon account|
+  |![Checkbox](../../../a9notintoc/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Space availability |On moderate workload with about 10 databases, plan on about 2 MB of disk space per day per instance.|  
+|![Checkbox](../../../a9notintoc/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate directories | Create a directory for each instance. For example, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* for a SQL Server instance named `MSSQLSERVER`. This simplifies file management.
+|![Checkbox](../../../a9notintoc/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate folders |Use a specific folder for each service. For example for a given instance name, have one folder for the database engine. If an instance of SSAS uses the same instance name, create a separate folder for SSAS. Having both Database Engine and Analysis Services instances configured to the same folder will cause all the Local Audit to write to the same log file from both instances.| 
+|![Checkbox](../../../a9notintoc/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Grant permissions to the SQL Server CIEP Telemetry service logon account|Enable **List folder contents**, **Read** and **Write** access to the SQL Server CEIP Telemetry service logon account|
 
 
 ### Grant permissions to the SQL Server CIEP Telemetry service logon account

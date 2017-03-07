@@ -15,13 +15,13 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Database Engine Events and Errors
-  This topic provides information about errors and events for the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)].  
+  This topic provides information about errors and events for the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)].  
   
 ## In This Section  
  [Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)  
- Describes the format of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] error messages and explains how to view error messages and return error messages to applications.  
+ Describes the format of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] error messages and explains how to view error messages and return error messages to applications.  
   
- [Cause and Resolution of Database Engine Errors](../Topic/Cause%20and%20Resolution%20of%20Database%20Engine%20Errors.md)  
+ [Cause and Resolution of Database Engine Errors](../../a9notintoc/cause-and-resolution-of-database-engine-errors.md)  
  Provides an explanation of system error messages, possible causes, and any actions you can take.  
   
   

@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # row Element (XMLA)
-  Contains a single row of data for a [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) element that contains tabular data returned by a [Discover](../Topic/Discover%20Method%20\(XMLA\).md) or [Execute](../Topic/Execute%20Method%20\(XMLA\).md) method call.  
+  Contains a single row of data for a [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) element that contains tabular data returned by a [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) or [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method call.  
   
 ## Syntax  
   
@@ -96,6 +96,6 @@ manager: "erikre"
  For more information about column naming and schema information for tabular data, see [Rowset Data Type &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

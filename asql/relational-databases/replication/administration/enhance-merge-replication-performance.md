@@ -30,9 +30,9 @@ manager: "jhubbard"
   
 -   Index columns used in row filters and join filters.  
   
-     When you use a row filter on a published article, create an index on each of the columns that is used in the filter's WHERE clause. Without an index, [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] has to read each row in the table to determine whether the row should be included in the partition. With an index, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] can quickly locate which rows should be included. The fastest processing takes place if replication can fully resolve the WHERE clause of the filter from the index alone.  
+     When you use a row filter on a published article, create an index on each of the columns that is used in the filter's WHERE clause. Without an index, [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] has to read each row in the table to determine whether the row should be included in the partition. With an index, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] can quickly locate which rows should be included. The fastest processing takes place if replication can fully resolve the WHERE clause of the filter from the index alone.  
   
-     Indexing all the columns used in join filters is also important. Each time the Merge Agent runs, it searches the base table to determine which rows in a parent table and which rows in related tables are included in a partition. Creating an index on the joined columns avoids having [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] read each row in the table every time the Merge Agent runs.  
+     Indexing all the columns used in join filters is also important. Each time the Merge Agent runs, it searches the base table to determine which rows in a parent table and which rows in related tables are included in a partition. Creating an index on the joined columns avoids having [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] read each row in the table every time the Merge Agent runs.  
   
      For more information on filtering, see [Filter Published Data for Merge Replication](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md).  
   
@@ -42,9 +42,9 @@ manager: "jhubbard"
   
 ## Publication Design  
   
--   Use a publication compatibility level of 90RTM ([!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)] or a later version).  
+-   Use a publication compatibility level of 90RTM ([!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)] or a later version).  
   
-     Unless one or more Subscribers use a different version of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], specify that the publication must support only [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)] or a later version. This allows the publication to take advantage of new features and performance optimizations.  
+     Unless one or more Subscribers use a different version of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], specify that the publication must support only [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)] or a later version. This allows the publication to take advantage of new features and performance optimizations.  
   
 -   Use appropriate publication retention settings.  
   
@@ -58,13 +58,13 @@ manager: "jhubbard"
   
      Limiting the complexity of the filtering criteria helps improve performance when the Merge Agent is evaluating row changes to send to Subscribers. Avoid using sub-selects within merge row filter clauses. Instead, consider using join filters, which are generally more efficient when used to partition data in one table based on the row filter clause in another table. For more information about filtering, see [Filter Published Data for Merge Replication](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md).  
   
--   Use precomputed partitions with parameterized filters (this feature is used by default). For more information, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../Topic/Optimize%20Parameterized%20Filter%20Performance%20with%20Precomputed%20Partitions.md).  
+-   Use precomputed partitions with parameterized filters (this feature is used by default). For more information, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
-     Precomputed partitions impose a number of limits on filtering behavior. If your application cannot adhere to these limitations, set the **keep_partition_changes** option to **True**, which provides a performance benefit. For more information, see [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md).  
+     Precomputed partitions impose a number of limits on filtering behavior. If your application cannot adhere to these limitations, set the **keep_partition_changes** option to **True**, which provides a performance benefit. For more information, see [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Use nonoverlapping partitions if data is filtered but not shared among users.  
   
-     Replication can optimize performance for data that is not shared between partitions or subscriptions. For more information, see [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md).  
+     Replication can optimize performance for data that is not shared between partitions or subscriptions. For more information, see [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Do not create complex join filter hierarchies.  
   
@@ -93,13 +93,13 @@ manager: "jhubbard"
 ## Merge Agent Parameters  
  For information about the Merge Agent and its parameters, see [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md).  
   
--   Upgrade all Subscribers for pull subscriptions to [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)] or a later version.  
+-   Upgrade all Subscribers for pull subscriptions to [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)] or a later version.  
   
-     Upgrading the Subscriber to [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)] or a later version upgrades the Merge Agent used by the subscriptions at that Subscriber. To take advantage of many of the new features and performance optimizations, the Merge Agent from [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)] or a later version is required.  
+     Upgrading the Subscriber to [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)] or a later version upgrades the Merge Agent used by the subscriptions at that Subscriber. To take advantage of many of the new features and performance optimizations, the Merge Agent from [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)] or a later version is required.  
   
 -   If a subscription is synchronized over a fast connection and changes are sent from the Publisher and Subscriber, use the **–ParallelUploadDownload** parameter for the Merge Agent.  
   
-     [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)] introduced a new Merge Agent parameter: **–ParallelUploadDownload**. Setting this parameter allows the Merge Agent to process in parallel the changes uploaded to the Publisher and those downloaded to the Subscriber. This is useful in high volume environments with high network bandwidth. Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
+     [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)] introduced a new Merge Agent parameter: **–ParallelUploadDownload**. Setting this parameter allows the Merge Agent to process in parallel the changes uploaded to the Publisher and those downloaded to the Subscriber. This is useful in high volume environments with high network bandwidth. Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   
     -   [Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

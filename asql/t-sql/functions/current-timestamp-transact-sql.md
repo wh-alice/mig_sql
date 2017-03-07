@@ -35,18 +35,18 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CURRENT_TIMESTAMP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns the current database system timestamp as a **datetime** value without the database time zone offset. This value is derived from the operating system of the computer on which the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running.  
+  Returns the current database system timestamp as a **datetime** value without the database time zone offset. This value is derived from the operating system of the computer on which the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running.  
   
 > [!NOTE]  
 >  SYSDATETIME and SYSUTCDATE have more fractional seconds precision than GETDATE and GETUTCDATE. SYSDATETIMEOFFSET includes the system time zone offset. SYSDATETIME, SYSUTCDATE, and SYSDATETIMEOFFSET can be assigned to a variable of any of the date and time types.  
   
  This function is the ANSI SQL equivalent to [GETDATE](../../t-sql/functions/getdate-transact-sql.md).  
   
- For an overview of all [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] date and time data types and functions, see [Date and Time Data Types and Functions](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ For an overview of all [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] date and time data types and functions, see [Date and Time Data Types and Functions](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -63,12 +63,12 @@ CURRENT_TIMESTAMP
  **datetime**  
   
 ## Remarks  
- [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements can refer to CURRENT_TIMESTAMP anywhere they can refer to a **datetime** expression.  
+ [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements can refer to CURRENT_TIMESTAMP anywhere they can refer to a **datetime** expression.  
   
  CURRENT_TIMESTAMP is a nondeterministic function. Views and expressions that reference this column cannot be indexed.  
   
 ## Examples  
- The following examples use the six [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system functions that return current date and time to return the date, the time, or both. The values are returned in series so their fractional seconds might differ.  
+ The following examples use the six [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system functions that return current date and time to return the date, the time, or both. The values are returned in series so their fractional seconds might differ.  
   
 ### A. Get the Current System Date and Time  
   
@@ -128,7 +128,7 @@ GETUTCDATE()       20:18:45.3470000
 */  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ```  
 SELECT CURRENT_TIMESTAMP;  

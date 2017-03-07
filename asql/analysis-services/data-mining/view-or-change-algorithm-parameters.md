@@ -21,7 +21,7 @@ manager: "jhubbard"
 # View or Change Algorithm Parameters
   You can change the parameters provided with the algorithms that you use to build data mining models to customize the results of the model.  
   
- The algorithm parameters provided in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] change much more than just properties on the model: they can be used to fundamentally alter the way that data is processed, grouped, and displayed. For example, you can use algorithm parameters to do the following:  
+ The algorithm parameters provided in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] change much more than just properties on the model: they can be used to fundamentally alter the way that data is processed, grouped, and displayed. For example, you can use algorithm parameters to do the following:  
   
 -   Change the method of analysis, such as the clustering method.  
   
@@ -37,13 +37,13 @@ manager: "jhubbard"
   
 ### Change an algorithm parameter  
   
-1.  On the **Mining Models** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], right-click the algorithm type of the mining model for which you want to tune the algorithm, and select **Set Algorithm Parameters**.  
+1.  On the **Mining Models** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], right-click the algorithm type of the mining model for which you want to tune the algorithm, and select **Set Algorithm Parameters**.  
   
      The **Algorithm Parameters** dialog box opens.  
   
 2.  In the **Value** column, set a new value for the algorithm that you want to change.  
   
-     If you do not enter a value in the **Value** column, [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] uses the default parameter value. The **Range** column describes the possible values that you can enter.  
+     If you do not enter a value in the **Value** column, [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] uses the default parameter value. The **Range** column describes the possible values that you can enter.  
   
 3.  Click **OK**.  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 ### View the parameters used in an existing model  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], open a DMX Query window.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], open a DMX Query window.  
   
 2.  Type a query like this one:  
   

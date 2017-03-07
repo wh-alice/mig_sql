@@ -19,11 +19,11 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 5: Create a Simple Simulation (Data Science Deep Dive)
-Until now you've been using R functions provided by SQL Server R Services that are designed specifically for moving data between [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and a local compute context. However, suppose you write a custom R function of your own, and want to run it in the server context?  
+Until now you've been using R functions provided by SQL Server R Services that are designed specifically for moving data between [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] and a local compute context. However, suppose you write a custom R function of your own, and want to run it in the server context?  
   
-You can call an arbitrary function in the context of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer, by using the *rxExec* function. You can also use *rxExec* to explicitly distribute work across cores in a single server node.  
+You can call an arbitrary function in the context of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] computer, by using the *rxExec* function. You can also use *rxExec* to explicitly distribute work across cores in a single server node.  
   
-In this lesson, you'll use the remote server to create a simple simulation. The simulation doesn't require any [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data; the example only demonstrates how to design a custom function and then call it using the *rxExec* function.  
+In this lesson, you'll use the remote server to create a simple simulation. The simulation doesn't require any [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data; the example only demonstrates how to design a custom function and then call it using the *rxExec* function.  
   
 For a more complex example of using *rxExec*, see this article: [http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html](http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)  
   
@@ -78,7 +78,7 @@ The game is easily simulated in R, by creating a custom function, and then runni
 Now let's see how you can  run the function multiple times, to create a simulation that helps determine the probability of a win.  
   
 ## Create the Simulation  
-To run an arbitrary function in the context of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer, you call the *rxExec* function. Although *rxExec*  also supports  distributed execution of a function in parallel across nodes or cores in a server context, here you'll use it just to run your custom function on the server.  
+To run an arbitrary function in the context of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] computer, you call the *rxExec* function. Although *rxExec*  also supports  distributed execution of a function in parallel across nodes or cores in a server context, here you'll use it just to run your custom function on the server.  
   
 1.  Call the custom function as an argument to *rxExec*, along with some other parameters that modify the simulation.  
   
@@ -109,11 +109,11 @@ To run an arbitrary function in the context of the [!INCLUDE[ssNoVersion](../../
 ## Conclusions  
 In this tutorial, you have become proficient with these tasks:  
   
--   Getting [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data to use in analyses  
+-   Getting [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data to use in analyses  
   
 -   Creating and modifying data sources in R  
   
--   Passing models, data, and plots between your workstation and the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] server  
+-   Passing models, data, and plots between your workstation and the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] server  
   
 >  [!TIP]
 > 
@@ -125,7 +125,7 @@ In this tutorial, you have become proficient with these tasks:
 >  -   Change the name of the table referenced in *sqlScoreTable* to *ccFraudScore10*   
   
 ## Previous Step  
-[Move Data between SQL Server and XDF File &#40;Data Science Deep Dive&#41;](Move%20Data%20between%20SQL%20Server%20and%20XDF%20File%20\(Data%20Science%20Deep%20Dive\).md)  
+[Move Data between SQL Server and XDF File &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-4-1-move-data-between-sql-server-and-xdf-file.md)  
   
   
   

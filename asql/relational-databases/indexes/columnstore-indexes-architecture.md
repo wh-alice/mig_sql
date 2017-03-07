@@ -15,7 +15,7 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # Columnstore indexes - architecture
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Learn how a columnstore index is architected. Knowing these basics will make it easier to understand other columnstore articles that explain how to use them effectively.
 
@@ -87,9 +87,9 @@ Each partition can have more than one delta rowgroups. When the columnstore inde
 ## You can combine columnstore and rowstore indexes on the same table
 A nonclustered index contains a copy of part or all of the rows and columns in the underlying table. The index is defined as one or more columns of the table, and has an optional condition that filters the rows. 
 
-Beginning with [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)], you can  create an updatable  nonclustered columnstore index on a rowstore table. The columnstore index stores a copy of the data so you do need extra storage. However, the data in the columnstore index will compress to a smaller size than the rowstore table requires.  By doing this, you can run analytics on the columnstore index and transactions on the rowstore index at the same time. The column store is updated when data changes in the rowstore table, so both indexes are working against the same data.  
+Beginning with [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)], you can  create an updatable  nonclustered columnstore index on a rowstore table. The columnstore index stores a copy of the data so you do need extra storage. However, the data in the columnstore index will compress to a smaller size than the rowstore table requires.  By doing this, you can run analytics on the columnstore index and transactions on the rowstore index at the same time. The column store is updated when data changes in the rowstore table, so both indexes are working against the same data.  
   
- Beginning with [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)], you can have one or more nonclustered rowstore indexes on a columnstore index. By doing this, you can perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Since an non-unique value will fail to insert into the rowstore table, SQL Server cannot insert the value into the columnstore.  
+ Beginning with [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)], you can have one or more nonclustered rowstore indexes on a columnstore index. By doing this, you can perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Since an non-unique value will fail to insert into the rowstore table, SQL Server cannot insert the value into the columnstore.  
  
 
 ## Metadata  
@@ -97,31 +97,31 @@ Use these metadata views to see attributes of columnstore indexes. More architec
 
 Note, all of the columns in a columnstore index are stored in the metadata as included columns. The columnstore index does not have key columns.  
   
--   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md)  
+-   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md)  
   
--   [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.index-columns-transact-sql.md)  
+-   [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.index-columns-transact-sql.md)  
   
--   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.partitions-transact-sql.md)  
+-   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.partitions-transact-sql.md)  
   
--   [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.internal-partitions-transact-sql.md)  
+-   [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.internal-partitions-transact-sql.md)  
   
--   [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.column-store-segments-transact-sql.md)  
+-   [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.column-store-segments-transact-sql.md)  
   
--   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.column-store-dictionaries-transact-sql.md)  
+-   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.column-store-dictionaries-transact-sql.md)  
   
--   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.column-store-row-groups-transact-sql.md)  
+-   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.column-store-row-groups-transact-sql.md)  
   
--   [sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-column-store-row-group-operational-stats-transact-sql.md)  
+-   [sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-column-store-row-group-operational-stats-transact-sql.md)  
   
--   [sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-column-store-row-group-physical-stats-transact-sql.md)  
+-   [sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-column-store-row-group-physical-stats-transact-sql.md)  
   
--   [sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-column-store-object-pool-transact-sql.md)  
+-   [sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-column-store-object-pool-transact-sql.md)  
   
--   [sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-column-store-row-group-operational-stats-transact-sql.md)  
+-   [sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-column-store-row-group-operational-stats-transact-sql.md)  
   
--   [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-index-operational-stats-transact-sql.md)  
+-   [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-index-operational-stats-transact-sql.md)  
   
--   [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md)  
+-   [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md)  
   
 |  
 

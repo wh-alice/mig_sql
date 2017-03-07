@@ -39,7 +39,7 @@ Before you test the package you should verify that the control and data flows in
 2.  After the package has completed running, on the Debug menu, and then click Stop Debugging.  
   
 ## Next Task in Lesson  
-[Step 4: Deploying the Lesson 6 Package](../Topic/Step%204:%20Deploying%20the%20Lesson%206%20Package.md)  
+[Step 4: Deploying the Lesson 6 Package](../../integration-services/tutorials/lesson-6-4-deploying-the-lesson-6-package.md)  
   
   
   

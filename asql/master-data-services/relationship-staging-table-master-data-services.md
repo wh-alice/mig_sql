@@ -18,7 +18,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Relationship Staging Table (Master Data Services)
-  Use the relationship staging table (stg.name_Relationship) in the [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] database to change the location of members in an explicit hierarchy, based on the relationship the members have to one another.  
+  Use the relationship staging table (stg.name_Relationship) in the [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] database to change the location of members in an explicit hierarchy, based on the relationship the members have to one another.  
   
 ##  <a name="TableColumns"></a> Table Columns  
  The following table explains what each of the fields in the Relationship staging table are used for.  
@@ -28,7 +28,7 @@ manager: "jhubbard"
 |**ID**|An automatically assigned identifier.|Do not enter a value in this field. If the batch has not been processed, this field is blank.|  
 |**RelationshipType**|Required<br /><br /> The type of relationship that’s being set.|Possible values are:<br /><br /> **1**:Parent<br /><br /> **2**: Sibling (at the same level)|  
 |**ImportStatus_ID**|Required<br /><br /> The status of the import process.|Possible values are:<br /><br /> **0**, which you specify to indicate that the record is ready for staging.<br /><br /> **1**, which is automatically assigned and indicates that the staging process for the record has succeeded.<br /><br /> **2**, which is automatically assigned and indicates that the staging process for the record has failed.|  
-|**Batch_ID**|Required by web service only<br /><br /> An automatically assigned identifier that groups records for staging.<br /><br /> If the batch has not been processed, this field is blank.|All members in the batch are assigned this identifier, which is displayed in the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] user interface in the **ID** column.|  
+|**Batch_ID**|Required by web service only<br /><br /> An automatically assigned identifier that groups records for staging.<br /><br /> If the batch has not been processed, this field is blank.|All members in the batch are assigned this identifier, which is displayed in the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] user interface in the **ID** column.|  
 |**BatchTag**|Required, except by web service<br /><br /> A unique name for the batch, up to 50 characters.||  
 |**HierarchyName**|Required<br /><br /> The explicit hierarchy name. Each consolidated member can belong to one hierarchy only.||  
 |**ParentCode**|Required<br /><br /> For parent-child relationships, the code of the consolidated member that will be the parent of the child leaf or consolidated member.<br /><br /> For sibling relationships, the code of one of the siblings.||  

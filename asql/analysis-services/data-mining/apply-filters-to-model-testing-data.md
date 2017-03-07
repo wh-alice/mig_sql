@@ -83,7 +83,7 @@ manager: "jhubbard"
   
 11. Verify that the completed filter conditions are correct by viewing the text in the **Expression** pane.  
   
-12. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+12. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
      The filter condition is applied to the data source when you create the accuracy chart.  
   

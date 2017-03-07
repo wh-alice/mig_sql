@@ -30,12 +30,12 @@ manager: "jhubbard"
  Specifies an upper limit on the time within which a query can run. Query cost refers to the estimated elapsed time, in seconds, required to execute a query on a specific hardware configuration. By default, the query governor is turned off and all queries are allowed to run. If this option is selected, you must enter a time limit in the text box below. If you specify a nonzero, nonnegative value, the query governor disallows execution of any query that has an estimated cost exceeding that value.  
   
  **Interpret a two-digit year as falling between**  
- Specifies the 100-year date range for interpreting two-digit year values. [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will interpret two-digit date values to refer to the year ending in those digits that falls within the specified range.  
+ Specifies the 100-year date range for interpreting two-digit year values. [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] will interpret two-digit date values to refer to the year ending in those digits that falls within the specified range.  
   
- Set the right box with the ending year. When the ending year is saved, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will automatically populate the left box with the beginning year.  
+ Set the right box with the ending year. When the ending year is saved, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] will automatically populate the left box with the beginning year.  
   
  **Configured Values**  
- Displays the configured values for the options on this pane. If you change these values, click **Running Values** to see whether the changes have taken effect. If the changes have not taken effect, the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] must be restated first.  
+ Displays the configured values for the options on this pane. If you change these values, click **Running Values** to see whether the changes have taken effect. If the changes have not taken effect, the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] must be restated first.  
   
  **Running Values**  
  View the currently running values for the options on this pane. These values are read-only.  

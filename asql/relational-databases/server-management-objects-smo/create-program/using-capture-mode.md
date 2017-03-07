@@ -19,14 +19,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using Capture Mode
-  SMO programs can capture and record the equivalent [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statements issued by the program in place of, or in addition to, the statements that are executed by the program. You enable capture mode by using the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> object, or by using the <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> property of the <xref:Microsoft.SqlServer.Management.Smo.Server> object.  
+  SMO programs can capture and record the equivalent [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statements issued by the program in place of, or in addition to, the statements that are executed by the program. You enable capture mode by using the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> object, or by using the <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> property of the <xref:Microsoft.SqlServer.Management.Smo.Server> object.  
   
 ## Example  
-To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20Basic%20SMO%20Project%20in%20Visual%20Studio%20.NET.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20C%23%20SMO%20Project%20in%20Visual%20Studio%20.NET.md).  
+To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-.net.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-.net.md).  
 
   
 ## Enabling Capture Mode in Visual Basic  
- This code example enables capture mode, and then displays the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] commands held in the capture buffer.  
+ This code example enables capture mode, and then displays the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] commands held in the capture buffer.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -49,7 +49,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql
 ```
   
 ## Enabling Capture Mode in Visual C#  
- This code example enables capture mode, and then displays the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] commands held in the capture buffer.  
+ This code example enables capture mode, and then displays the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] commands held in the capture buffer.  
   
 ```C#  
 {   

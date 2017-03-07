@@ -16,7 +16,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Purge Version Members (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], deleting a member only deactivates, or soft-deletes, it. The  data still resides in the database. This topic describes how to purge (permanently delete) all soft-deleted members in a model version.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], deleting a member only deactivates, or soft-deletes, it. The  data still resides in the database. This topic describes how to purge (permanently delete) all soft-deleted members in a model version.  
   
 ## Prerequisites  
  To perform this procedure.  
@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 ## To purge soft-deleted members  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **Version Management**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **Version Management**.  
   
 2.  On the **Manage Versions** page, select the model that has the version that you want to purge. The list of model versions is displayed.  
   

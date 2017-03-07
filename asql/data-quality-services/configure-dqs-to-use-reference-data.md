@@ -19,12 +19,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure DQS to Use Reference Data
-  This topic describes how to configure [!INCLUDE[ssDQSnoversion](../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS) to use reference data for cleansing your data. You could either use reference data from Windows Azure Marketplace or from direct online third-party reference data providers.  
+  This topic describes how to configure [!INCLUDE[ssDQSnoversion](../a9retired/includes/ssdqsnoversion-md.md)] (DQS) to use reference data for cleansing your data. You could either use reference data from Windows Azure Marketplace or from direct online third-party reference data providers.  
   
 ## Before You Begin  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
- To use reference data from Marketplace, you must have a valid Marketplace account key. For detailed information about creating a Marketplace account key, see [Create Your Account](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936). You can also create a Marketplace account key from within [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] by clicking **Configuration** under **Administration** in the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] home screen, and then clicking **Create a DataMarket Account ID** under the **Reference Data** tab.  
+ To use reference data from Marketplace, you must have a valid Marketplace account key. For detailed information about creating a Marketplace account key, see [Create Your Account](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936). You can also create a Marketplace account key from within [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] by clicking **Configuration** under **Administration** in the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] home screen, and then clicking **Create a DataMarket Account ID** under the **Reference Data** tab.  
   
 ###  <a name="Security"></a> Security  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssDQSInitialStep](../data-quality-services/includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] home screen, under **Administration**, click **Configuration**.  
+2.  In the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] home screen, under **Administration**, click **Configuration**.  
   
 3.  In the **Reference Data** tab, under the **Network Settings** area, type appropriate values in the **Proxy Server** and **Port** boxes if you or your organization uses proxy server to connect to the Internet.  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssDQSInitialStep](../data-quality-services/includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] home screen, under **Administration**, click **Configuration**.  
+2.  In the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] home screen, under **Administration**, click **Configuration**.  
   
 3.  In the **Reference Data** tab, under the **Network Settings** area, type appropriate values in the **Proxy Server** and **Port** boxes if you or your organization uses proxy server to connect to the Internet.  
   

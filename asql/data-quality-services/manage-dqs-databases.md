@@ -18,7 +18,7 @@ manager: "jhubbard"
   This section provides information about database management activities that can be performed on the DQS databases such as backup/restore or detach/attach.  
   
 ##  <a name="BackupRestore"></a> Backup and Restore the DQS Databases  
- Backup and restore of SQL Server databases are common operations that database administrators perform for preventing loss of data in a case of disaster by recovering data from the backup databases. [!INCLUDE[ssDQSServer](../data-quality-services/includes/ssdqsserver-md.md)] is primarily implemented by two SQL Server databases: DQS_MAIN and DQS_PROJECTS. The backup and restore procedures of the [!INCLUDE[ssDQSnoversion](../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS) databases are similar to any other SQL Server databases.There are three challenges that are associated with backup and restore of the DQS databases:  
+ Backup and restore of SQL Server databases are common operations that database administrators perform for preventing loss of data in a case of disaster by recovering data from the backup databases. [!INCLUDE[ssDQSServer](../data-quality-services/includes/ssdqsserver-md.md)] is primarily implemented by two SQL Server databases: DQS_MAIN and DQS_PROJECTS. The backup and restore procedures of the [!INCLUDE[ssDQSnoversion](../a9retired/includes/ssdqsnoversion-md.md)] (DQS) databases are similar to any other SQL Server databases.There are three challenges that are associated with backup and restore of the DQS databases:  
   
 -   The backup and restore operations of the DQS databases must be synchronized. Otherwise the restored [!INCLUDE[ssDQSServer](../data-quality-services/includes/ssdqsserver-md.md)] will not be functional.  
   

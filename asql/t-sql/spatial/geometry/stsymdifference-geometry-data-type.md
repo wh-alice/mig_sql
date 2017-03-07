@@ -22,7 +22,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # STSymDifference (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns an object that represents all points that are either in one **geometry** instance or another **geometry** instance, but not those points that lie in both instances.  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
  Is another **geometry** instance in addition to the instance on which `STSymDistance()` is being invoked.  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **geometry**  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] return type: **geometry**  
   
  CLR return type: **SqlGeometry**  
   

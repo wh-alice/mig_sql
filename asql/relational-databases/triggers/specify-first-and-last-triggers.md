@@ -54,6 +54,6 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
 ## See Also  
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [sp_settriggerorder &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md)  
+ [sp_settriggerorder &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-settriggerorder-transact-sql.md)  
   
   

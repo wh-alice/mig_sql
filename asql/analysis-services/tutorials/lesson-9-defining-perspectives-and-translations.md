@@ -24,10 +24,10 @@ In this lesson, you learn to define perspectives and translations. You can defin
   
 This lesson contains the following tasks:  
   
-[Defining and Browsing Perspectives](../Topic/Defining%20and%20Browsing%20Perspectives.md)  
+[Defining and Browsing Perspectives](../../analysis-services/tutorials/lesson-9-1-defining-and-browsing-perspectives.md)  
 In this task, you define and browse perspectives to simplify the view of the cube for specific users or uses.  
   
-[Defining and Browsing Translations](../Topic/Defining%20and%20Browsing%20Translations.md)  
+[Defining and Browsing Translations](../../analysis-services/tutorials/lesson-9-2-defining-and-browsing-translations.md)  
 In this task, you define and browse translations of specific metadata to certain languages.  
   
 ## Next Lesson  

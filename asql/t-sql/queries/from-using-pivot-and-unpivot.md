@@ -28,7 +28,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # FROM - Using PIVOT and UNPIVOT
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   You can use the PIVOT and UNPIVOT relational operators to change a table-valued expression into another table. PIVOT rotates a table-valued expression by turning the unique values from one column in the expression into multiple columns in the output, and performs aggregations where they are required on any remaining column values that are wanted in the final output. UNPIVOT performs the opposite operation to PIVOT by rotating columns of a table-valued expression into column values.  
   
@@ -151,7 +151,7 @@ FROM PurchaseOrderHeader;
 > [!IMPORTANT]  
 >  When aggregate functions are used with PIVOT, the presence of any null values in the value column are not considered when computing an aggregation.  
   
- UNPIVOT performs almost the reverse operation of PIVOT, by rotating columns into rows. Suppose the table produced in the previous example is stored in the database as `pvt`, and you want to rotate the column identifiers `Emp1`, `Emp2`, `Emp3`, `Emp4`, and `Emp5` into row values that correspond to a particular vendor. This means that you must identify two additional columns. The column that will contain the column values that you are rotating (`Emp1`, `Emp2`,...) will be called `Employee`, and the column that will hold the values that currently reside under the columns being rotated will be called `Orders`. These columns correspond to the *pivot_column* and *value_column*, respectively, in the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] definition. Here is the query.  
+ UNPIVOT performs almost the reverse operation of PIVOT, by rotating columns into rows. Suppose the table produced in the previous example is stored in the database as `pvt`, and you want to rotate the column identifiers `Emp1`, `Emp2`, `Emp3`, `Emp4`, and `Emp5` into row values that correspond to a particular vendor. This means that you must identify two additional columns. The column that will contain the column values that you are rotating (`Emp1`, `Emp2`,...) will be called `Employee`, and the column that will hold the values that currently reside under the columns being rotated will be called `Orders`. These columns correspond to the *pivot_column* and *value_column*, respectively, in the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] definition. Here is the query.  
   
 ```  
 --Create the table and insert values as portrayed in the previous example.  
@@ -206,7 +206,7 @@ GO
   
  Notice that UNPIVOT is not the exact reverse of PIVOT. PIVOT performs an aggregation and, therefore, merges possible multiple rows into a single row in the output. UNPIVOT does not reproduce the original table-valued expression result because rows have been merged. Besides, null values in the input of UNPIVOT disappear in the output, whereas there may have been original null values in the input before the PIVOT operation.  
   
- The Sales.vSalesPersonSalesByFiscalYears view in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] sample database uses PIVOT to return the total sales for each salesperson, for each fiscal year. To script the view in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], in **Object Explorer**, locate the view under the **Views** folder for the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database. Right-click the view name, and then select **Script View as**.  
+ The Sales.vSalesPersonSalesByFiscalYears view in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] sample database uses PIVOT to return the total sales for each salesperson, for each fiscal year. To script the view in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], in **Object Explorer**, locate the view under the **Views** folder for the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database. Right-click the view name, and then select **Script View as**.  
   
 ## See Also  
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   

@@ -17,7 +17,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Use Power Pivot Gallery
-  [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery is a special SharePoint document library that provides rich preview and document management for published Excel workbooks and Reporting Services reports that contain [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data.  
+  [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery is a special SharePoint document library that provides rich preview and document management for published Excel workbooks and Reporting Services reports that contain [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data.  
   
 > [!NOTE]  
 >  Depending on how your server is configured, you might see warning or error messages in the preview area for specific documents. Messages can appear when an Excel workbook is set to automatically refresh its data whenever it is opened. Data refresh warning messages will appear as the preview image if Excel Services is configured to show Warn on data refresh error messages. Farm or service administrators can modify configuration settings to allow a preview of the actual worksheet to appear. For more information, see [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
@@ -57,13 +57,13 @@ manager: "erikre"
 |Icon|Description|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|The hourglass icon appears when a thumbnail image of each page in the document is being generated. Refresh the page to display the update the image.|  
-|![GMNI_PowerPivotGalleryIcon_Truncated](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|The pages icon appears when a workbook or report has more pages than can be displayed in [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery. To view all the pages, you must use a client application.|  
-|![GMNI_PowerPivotGalleryIcon_Error](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-error.gif "GMNI_PowerPivotGalleryIcon_Error")|The error icon appears when a thumbnail image could not be rendered for the document. The document is published to the library, but it cannot be rendered in the custom [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery views. You should be able to view the document in a client application, such as the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for Excel add-in.|  
-|![GMNI_PowerPivotGalleryIcon_badtype](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-badtype.gif "GMNI_PowerPivotGalleryIcon_badtype")|The unavailable content icon appears when the document you uploaded cannot be rendered in [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery. Supported document types include [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbooks and reports created in SQL Server 2008 R2 Reporting Services Report Builder.<br /><br /> This icon also appears if you recycle a document from Recycle Bin.<br /><br /> If you are getting this icon for a document that previously presented a valid preview image, you can refresh the image by editing a document property and then saving your changes.|  
-|![GMNI_PowerPivotGalleryIcon_Locked](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")|The locked content icon appears when thumbnail images are purposely disabled for this document. [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery does not generate thumbnail images for Excel workbooks that contain no [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data, or for [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbooks or Reporting Services reports that do not meet the requirements for snapshot generation. For more information, see the Prerequisites section in this topic.|  
+|![GMNI_PowerPivotGalleryIcon_Truncated](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|The pages icon appears when a workbook or report has more pages than can be displayed in [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery. To view all the pages, you must use a client application.|  
+|![GMNI_PowerPivotGalleryIcon_Error](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-error.gif "GMNI_PowerPivotGalleryIcon_Error")|The error icon appears when a thumbnail image could not be rendered for the document. The document is published to the library, but it cannot be rendered in the custom [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery views. You should be able to view the document in a client application, such as the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for Excel add-in.|  
+|![GMNI_PowerPivotGalleryIcon_badtype](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-badtype.gif "GMNI_PowerPivotGalleryIcon_badtype")|The unavailable content icon appears when the document you uploaded cannot be rendered in [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery. Supported document types include [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbooks and reports created in SQL Server 2008 R2 Reporting Services Report Builder.<br /><br /> This icon also appears if you recycle a document from Recycle Bin.<br /><br /> If you are getting this icon for a document that previously presented a valid preview image, you can refresh the image by editing a document property and then saving your changes.|  
+|![GMNI_PowerPivotGalleryIcon_Locked](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")|The locked content icon appears when thumbnail images are purposely disabled for this document. [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery does not generate thumbnail images for Excel workbooks that contain no [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data, or for [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbooks or Reporting Services reports that do not meet the requirements for snapshot generation. For more information, see the Prerequisites section in this topic.|  
   
 ##  <a name="add"></a> Save an Excel Workbook to Power Pivot Gallery  
- You can publish [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbooks to the library using all of the sharing techniques that Excel 2010 provides. For example, in Excel 2010, you can use Save As to specify all or part of a SharePoint path to a library.  
+ You can publish [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbooks to the library using all of the sharing techniques that Excel 2010 provides. For example, in Excel 2010, you can use Save As to specify all or part of a SharePoint path to a library.  
   
 1.  Save the file.  
   
@@ -77,47 +77,47 @@ manager: "erikre"
   
     2.  Click **Browser View Options** if you want to use Excel Services Options to select individual sheets or parameters that you want to publish. For example, the Parameters tab in Excel Services Options lets you choose which slicers appear in the published workbook.  
   
-3.  In the Save As dialog box, in File name, enter a full or partial URL to [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery. If you enter a portion of the URL address, such as the server name, you can browse the site to find the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery. To do this, click **Save** to open a connection to the server you specified.  
+3.  In the Save As dialog box, in File name, enter a full or partial URL to [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery. If you enter a portion of the URL address, such as the server name, you can browse the site to find the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery. To do this, click **Save** to open a connection to the server you specified.  
   
      ![GMNI_ExcelSaveAs](../../analysis-services/power-pivot-sharepoint/media/gmni-excelsaveas.gif "GMNI_ExcelSaveAs")  
   
-1.  Using the Save As dialog box, select [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery on your site.  
+1.  Using the Save As dialog box, select [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery on your site.  
   
 2.  Click **Open** to open the library.  
   
 3.  Click **Save** to publish the workbook to the library.  
   
- In a browser window, verify that the document appears in [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery. Newly published documents will appear in the list. Library settings determine where the document appears (for example, sorted in ascending order by date, or alphabetically by name). You might need to refresh the browser window to view the most recent additions.  
+ In a browser window, verify that the document appears in [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery. Newly published documents will appear in the list. Library settings determine where the document appears (for example, sorted in ascending order by date, or alphabetically by name). You might need to refresh the browser window to view the most recent additions.  
   
 #### Upload a workbook into Power Pivot Gallery  
  You can also upload a workbook if you want to start from SharePoint and select from your computer which file to publish.  
   
-1.  In a SharePoint site, open [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery.  
+1.  In a SharePoint site, open [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery.  
   
 2.  In Library ribbon, click **Documents**.  
   
 3.  In **Upload Document**, select an upload option and then enter the name and location of the file you want to upload. Library settings determine where the document appears. You might need to refresh the browser window to view the latest addition.  
   
 ##  <a name="newdocs"></a> Create new reports or workbooks based on a published Power Pivot workbook  
- For [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbooks that you publish to [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery, you can create additional workbooks or Reporting Services reports that use the published workbook as a connected data source.  
+ For [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbooks that you publish to [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery, you can create additional workbooks or Reporting Services reports that use the published workbook as a connected data source.  
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDocReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdocreportgallery.gif "GMNI_btn_NewDocReportGallery")|Click the downward arrow portion of the New Report button to launch Report Builder or Excel 2010. [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery must use one of the predesigned views (Theater, Gallery, or Carousel) in order for the New Report button to be available.|  
+|![GMNI_btn_NewDocReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdocreportgallery.gif "GMNI_btn_NewDocReportGallery")|Click the downward arrow portion of the New Report button to launch Report Builder or Excel 2010. [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery must use one of the predesigned views (Theater, Gallery, or Carousel) in order for the New Report button to be available.|  
   
 #### Create Report Builder Report  
- Creating a new report based on an existing [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbook in the library requires that Reporting Services is configured for SharePoint integration for the same sites that contain [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery. When you select the Create Report Builder Report option, Report Builder is downloaded from the report server and installed on the local workstation on first use. A placeholder report file is created for the new report and saved to [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery. Connection information to the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbook is created for you as a new data source in the report. As a next step, you can build the datasets and report layout in the design workspace. As you use Report Builder to assemble your report, you can save your changes and the final result to the report document in the gallery. To avoid data disconnections later, be sure to keep the report and workbook files together in the same library.  
+ Creating a new report based on an existing [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbook in the library requires that Reporting Services is configured for SharePoint integration for the same sites that contain [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery. When you select the Create Report Builder Report option, Report Builder is downloaded from the report server and installed on the local workstation on first use. A placeholder report file is created for the new report and saved to [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery. Connection information to the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbook is created for you as a new data source in the report. As a next step, you can build the datasets and report layout in the design workspace. As you use Report Builder to assemble your report, you can save your changes and the final result to the report document in the gallery. To avoid data disconnections later, be sure to keep the report and workbook files together in the same library.  
   
 #### Open New Excel Workbook  
- To create a new Excel workbook from an existing workbook, you must already have Excel and [!INCLUDE[ssGeminiClient](../../analysis-services/includes/ssgeminiclient-md.md)] on the local computer. Choosing Open New Excel Workbook starts Excel, opens a blank workbook (.xlsx) file, and loads [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data in the background as a connected data source. Only the data from the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] window in the original workbook is used in the new workbook. PivotTables or PivotCharts from the original workbook are excluded. The new workbook links to data in the original workbook. The data is not copied to the new workbook itself.  
+ To create a new Excel workbook from an existing workbook, you must already have Excel and [!INCLUDE[ssGeminiClient](../../a9notintoc/includes/ssgeminiclient-md.md)] on the local computer. Choosing Open New Excel Workbook starts Excel, opens a blank workbook (.xlsx) file, and loads [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data in the background as a connected data source. Only the data from the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] window in the original workbook is used in the new workbook. PivotTables or PivotCharts from the original workbook are excluded. The new workbook links to data in the original workbook. The data is not copied to the new workbook itself.  
   
 ##  <a name="view"></a> Open a workbook or report in full page mode  
- Click on any visible thumbnail image of the previewed document to open it in full page mode independent of [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery preview. [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbooks will open in a browser. Reporting Services reports will open in the ReportViewer web part that is part of Reporting Services deployment on a SharePoint server.  
+ Click on any visible thumbnail image of the previewed document to open it in full page mode independent of [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery preview. [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbooks will open in a browser. Reporting Services reports will open in the ReportViewer web part that is part of Reporting Services deployment on a SharePoint server.  
   
- An alternative approach to viewing the workbook in a browser is to open it in Excel on a client workstation. You must have Excel 2013 or Excel 2010 and the [!INCLUDE[ssGeminiClient](../../analysis-services/includes/ssgeminiclient-md.md)] add-in to view the file. You can use Excel 2007 to open the file but you cannot use it to pivot on the data. For this reason, Excel 2013 or Excel 2010 are recommended for both viewing and creating [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data. If you do not have the required applications, you must use a browser to view the workbook from SharePoint.  
+ An alternative approach to viewing the workbook in a browser is to open it in Excel on a client workstation. You must have Excel 2013 or Excel 2010 and the [!INCLUDE[ssGeminiClient](../../a9notintoc/includes/ssgeminiclient-md.md)] add-in to view the file. You can use Excel 2007 to open the file but you cannot use it to pivot on the data. For this reason, Excel 2013 or Excel 2010 are recommended for both viewing and creating [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data. If you do not have the required applications, you must use a browser to view the workbook from SharePoint.  
   
 ##  <a name="newdr"></a> Schedule data refresh for Power Pivot workbooks in Power Pivot Gallery  
- [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data in a published Excel workbook can be refreshed at scheduled intervals.  
+ [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data in a published Excel workbook can be refreshed at scheduled intervals.  
   
 |||  
 |-|-|  
@@ -126,7 +126,7 @@ manager: "erikre"
 ##  <a name="delete"></a> Delete a workbook or report in Power Pivot Gallery  
  To delete a document from the library, switch to the All Documents view first.  
   
-1.  In a SharePoint site, open [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery.  
+1.  In a SharePoint site, open [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery.  
   
 2.  In the ribbon, click **Library**.  
   
@@ -137,9 +137,9 @@ manager: "erikre"
 5.  In Documents (Files), in Manage, click the **Delete Document** button.  
   
 ##  <a name="image"></a> Refresh a thumbnail image  
- Use the following steps to regenerate a thumbnail image for a document in [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery.  
+ Use the following steps to regenerate a thumbnail image for a document in [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery.  
   
-1.  Switch [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery to All Documents view. To do this, click **Library** in the ribbon and change the **Current View** to **All Documents**.  
+1.  Switch [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery to All Documents view. To do this, click **Library** in the ribbon and change the **Current View** to **All Documents**.  
   
 2.  Select the workbook or report for which you want to refresh the thumbnail image..  
   
@@ -150,13 +150,13 @@ manager: "erikre"
 ##  <a name="bkmk_known_issues"></a> Known Issues  
   
 ### Document Type is Not Supported  
- The **[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery Document** content type is not supported. If you enable the **[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery Document** content type for a document library, and attempt to create a new document of that type, you will see an error message similar to one of the following:  
+ The **[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery Document** content type is not supported. If you enable the **[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery Document** content type for a document library, and attempt to create a new document of that type, you will see an error message similar to one of the following:  
   
 -   ‘New Document’ requires a Microsoft Sharepoint Foundation-compatible application and web browser. To add a document to this document library, click the ‘Upload Document’ button.  
   
 -   "The Internet address 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' is not valid."“Microsoft Excel cannot access the file 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. There are several possible reasons:  
   
- The **[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery Document** content type is not automatically added to document libraries,  You will not encounter this issue unless you manually enable the unsupported content type.  
+ The **[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery Document** content type is not automatically added to document libraries,  You will not encounter this issue unless you manually enable the unsupported content type.  
   
 ## See Also  
  [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   

@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 2.  Enter a value in the **Store replication performance history at least** box.  
   
-3.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## See Also  
  [Configure Distribution](../../relational-databases/replication/configure-distribution.md)  

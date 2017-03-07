@@ -49,7 +49,7 @@ manager: "jhubbard"
 |Sequence Clustering|Not used|Feature selection is not invoked; however, you can control the behavior of the algorithm by setting the value of the parameters MINIMUM_SUPPORT and MINIMUM_PROBABILIITY.|  
 |Clustering|Interestingness score|Although the clustering algorithm may use discrete or discretized algorithms, the score of each attribute is calculated as a distance and is continuous; therefore the interestingness score is used.|  
   
- For more information, see [Feature Selection](../Topic/Feature%20Selection.md).  
+ For more information, see [Feature Selection](../../a9retired/feature-selection.md).  
   
 ### Optimizing Performance  
  The Microsoft Sequence Clustering algorithm supports various ways to optimize processing:  
@@ -71,7 +71,7 @@ manager: "jhubbard"
  A complete discussion of these methods is beyond the scope of this topic.  
   
 ## Customizing the Sequence Clustering Algorithm  
- The [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Sequence Clustering algorithm supports parameters that affect the behavior, performance, and accuracy of the resulting mining model. You can also modify the behavior of the completed model by setting modeling flags that control the way the algorithm processes training data.  
+ The [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Sequence Clustering algorithm supports parameters that affect the behavior, performance, and accuracy of the resulting mining model. You can also modify the behavior of the completed model by setting modeling flags that control the way the algorithm processes training data.  
   
 ### Setting Algorithm Parameters  
  The following table describes the parameters that can be used with the Microsoft Sequence Clustering algorithm.  
@@ -102,7 +102,7 @@ manager: "jhubbard"
  The default is 100.  
   
 ### Modeling Flags  
- The following modeling flags are supported for use with the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Sequence Clustering algorithm.  
+ The following modeling flags are supported for use with the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Sequence Clustering algorithm.  
   
  NOT NULL  
  Indicates that the column cannot contain a null. An error will result if Analysis Services encounters a null during model training.  
@@ -125,7 +125,7 @@ manager: "jhubbard"
 >  If you create a model that uses the Microsoft Sequence algorithm but do not use a sequence column, the resulting model will not contain any sequences, but will simply cluster cases based on other attributes that are included in the model.  
   
 ### Input and Predictable Columns  
- The [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Sequence Clustering algorithm supports the specific input columns and predictable columns that are listed in the following table. For more information about what the content types mean when used in a mining model, see [Content Types &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
+ The [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Sequence Clustering algorithm supports the specific input columns and predictable columns that are listed in the following table. For more information about what the content types mean when used in a mining model, see [Content Types &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
 |Column|Content types|  
 |------------|-------------------|  
@@ -134,15 +134,15 @@ manager: "jhubbard"
   
 ## Remarks  
   
--   Use the [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) function for Prediction of Sequences. For more information about the editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that support Sequence Prediction, see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+-   Use the [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) function for Prediction of Sequences. For more information about the editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that support Sequence Prediction, see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
--   The [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Sequence Clustering algorithm does not support using the Predictive Model Markup Language (PMML) to create mining models.  
+-   The [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Sequence Clustering algorithm does not support using the Predictive Model Markup Language (PMML) to create mining models.  
   
--   The [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Sequence Clustering algorithm supports drillthrough, the use of OLAP mining models, and the use of data mining dimensions.  
+-   The [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Sequence Clustering algorithm supports drillthrough, the use of OLAP mining models, and the use of data mining dimensions.  
   
 ## See Also  
  [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Mining Model Content for Sequence Clustering Models &#40;Analysis Services - Data Mining&#41;](../Topic/Mining%20Model%20Content%20for%20Sequence%20Clustering%20Models%20\(Analysis%20Services%20-%20Data%20Mining\).md)  
+ [Mining Model Content for Sequence Clustering Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

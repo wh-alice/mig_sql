@@ -15,9 +15,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.validations (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Displays the details of all project and package validations in the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog.  
+  Displays the details of all project and package validations in the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] catalog.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -41,12 +41,12 @@ manager: "jhubbard"
 |process_id|**int**|The process ID of the external process, if applicable.|  
 |stopped_by_sid|**varbinary(85)**|The SID of the user who stopped the operation.|  
 |stopped_by_name|**nvarchar(128)**|The name of the user who stopped the operation.|  
-|server_name|**nvarchar(128)**|The Windows server and instance information for a specified instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].|  
+|server_name|**nvarchar(128)**|The Windows server and instance information for a specified instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].|  
 |machine_name|**nvarchar(128)**|The computer name on which the server instance is running.|  
 |dump_id|**uniqueidentifier**|The ID of the execution dump.|  
   
 ## Remarks  
- This view displays one row for each validation in the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog.  
+ This view displays one row for each validation in the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] catalog.  
   
 ## Permissions  
  This view requires one of the following permissions:  

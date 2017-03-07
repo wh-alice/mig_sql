@@ -15,7 +15,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Run DQSInstaller.exe to Complete Data Quality Server Installation
-  To complete the [!INCLUDE[ssDQSServer](../../../data-quality-services/includes/ssdqsserver-md.md)] installation, you must run the DQSInstaller.exe file after installing [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)]. This topic describes how to run the DQSInstaller.exe from the **Start** screen, **Start** menu, Windows Explorer, or Command Prompt; you can choose any of the ways to run the DQSInstaller.exe file.  
+  To complete the [!INCLUDE[ssDQSServer](../../../data-quality-services/includes/ssdqsserver-md.md)] installation, you must run the DQSInstaller.exe file after installing [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)]. This topic describes how to run the DQSInstaller.exe from the **Start** screen, **Start** menu, Windows Explorer, or Command Prompt; you can choose any of the ways to run the DQSInstaller.exe file.  
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
     -   **Start screen**: On the **Start** screen, click **Data Quality Server Installer.**  
   
-    -   **Start menu**: On the taskbar, click **Start**, point to **All Programs**, click [!INCLUDE[ssCurrentUI](../../../analysis-services/instances/install/windows/includes/sscurrentui-md.md)]. Under [!INCLUDE[ssCurrentUI](../../../analysis-services/instances/install/windows/includes/sscurrentui-md.md)], click **Data Quality Services**, and then click **Data Quality Server Installer.**  
+    -   **Start menu**: On the taskbar, click **Start**, point to **All Programs**, click [!INCLUDE[ssCurrentUI](../../../a9notintoc/includes/sscurrentui-md.md)]. Under [!INCLUDE[ssCurrentUI](../../../a9notintoc/includes/sscurrentui-md.md)], click **Data Quality Services**, and then click **Data Quality Server Installer.**  
   
     -   **Windows Explorer**: Locate the DQSInstaller.exe file. If you installed the default instance of SQL Server, the DQSInstaller.exe file will be available at C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn. Double-click the DQSInstaller.exe file.  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
     3.  The installer checks for any pending restarts on your computer owing to any updates that have been recently installed on your computer. If any pending restarts are found, a message appears to notify you about the same, and you can choose to continue or abort the installation by pressing Y or N respectively. We recommend that if there are any pending restarts, you must abort the installation, restart your computer, and then run the DQSInstaller.exe again.  
   
-3.  You are prompted to type a password for the database master key. The database master key is required to encrypt the reference data service provider keys that will be stored in the DQS_MAIN database when you set up reference data providers in [!INCLUDE[ssDQSnoversion](../../../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS) later.  
+3.  You are prompted to type a password for the database master key. The database master key is required to encrypt the reference data service provider keys that will be stored in the DQS_MAIN database when you set up reference data providers in [!INCLUDE[ssDQSnoversion](../../../a9retired/includes/ssdqsnoversion-md.md)] (DQS) later.  
   
     > [!IMPORTANT]  
     >  The password must be at least 8 characters long, and must contain characters from three of the following four categories: English upper case letter (A, B, C,… Z), English lowercase letter (a, b, c,… z), Numeral (0, 1, 2,… 9), and nonalphanumeric or special character (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/). For example: P@ssword. The installer will prompt you to enter another password if the current password does not match the requirement.  
@@ -66,7 +66,7 @@ manager: "jhubbard"
 |DQSInstaller.exe Parameter|Description|Sample Syntax|  
 |--------------------------------|-----------------|-------------------|  
 |-collation|The server collation to be used for installing [!INCLUDE[ssDQSServer](../../../data-quality-services/includes/ssdqsserver-md.md)].<br /><br /> DQS supports only case-insensitive collation. If you specify a case-sensitive collation, the installer attempts to use the case-insensitive version of the specified collation. If there is no case-insensitive version, or if the collation is unsupported by SQL, the [!INCLUDE[ssDQSServer](../../../data-quality-services/includes/ssdqsserver-md.md)] installation fails.<br /><br /> If a server collation is not specified, the default collation, SQL_Latin1_General_CP1_CI_AS, is used.|`dqsinstaller.exe –collation <collation_name>`|  
-|-upgradedlls|Skips recreating the DQS databases (DQS_MAIN, DQS_PROJECTS, and DQS_STAGING_DATA), and only updates the SQL Common Language Runtime (SQLCLR) assemblies used by DQS in the [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] database.<br /><br /> For more information, see [Upgrade SQLCLR Assemblies After .NET Framework Update](../../../data-quality-services/install/windows/upgrade-sqlclr-assemblies-after-.net-framework-update.md)|`dqsinstaller.exe -upgradedlls`|  
+|-upgradedlls|Skips recreating the DQS databases (DQS_MAIN, DQS_PROJECTS, and DQS_STAGING_DATA), and only updates the SQL Common Language Runtime (SQLCLR) assemblies used by DQS in the [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] database.<br /><br /> For more information, see [Upgrade SQLCLR Assemblies After .NET Framework Update](../../../data-quality-services/install/windows/upgrade-sqlclr-assemblies-after-.net-framework-update.md)|`dqsinstaller.exe -upgradedlls`|  
 |-exportkbs|Export all the knowledge bases to a DQS backup file (.dqsb). You must also specify the full path and file name where you want to export all the knowledge bases.<br /><br /> For more information, see [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../../data-quality-services/install/windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller.exe.md).|`dqsinstaller.exe –exportkbs <path><filename>`<br /><br /> For example, `dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb`|  
 |-importkbs|Import all the knowledge bases from a DQS backup file (.dqsb) after completing the [!INCLUDE[ssDQSServer](../../../data-quality-services/includes/ssdqsserver-md.md)] installation. You must also specify the full path and file name from where you want to import all the knowledge bases.<br /><br /> For more information, see [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../../data-quality-services/install/windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller.exe.md).|`dqsinstaller.exe –importkbs <path><filename>`<br /><br /> For example, `dqsinstaller.exe –importkbs c:\DQSBackup.dqsb`|  
 |-upgrade|Upgrades DQS databases schema. You must use this parameter after you have installed a SQL Server update on a previously configured DQS instance. For more information, see [Upgrade DQS Databases Schema After Installing SQL Server Update](../../../data-quality-services/install/windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md).|`dqsinstaller.exe -upgrade`|  
@@ -94,7 +94,7 @@ manager: "jhubbard"
   
 -   Grant appropriate DQS roles to users based on their work profile. See [Grant DQS Roles to Users](../../../data-quality-services/install/windows/grant-dqs-roles-to-users.md).  
   
--   If [!INCLUDE[ssDQSServer](../../../data-quality-services/includes/ssdqsserver-md.md)] will be accessed remotely from [!INCLUDE[ssDQSClient](../../../data-quality-services/includes/ssdqsclient-md.md)], enable the TCP/IP protocol using SQL Server Configuration Manager on this computer.  
+-   If [!INCLUDE[ssDQSServer](../../../data-quality-services/includes/ssdqsserver-md.md)] will be accessed remotely from [!INCLUDE[ssDQSClient](../../../a9retired/includes/ssdqsclient-md.md)], enable the TCP/IP protocol using SQL Server Configuration Manager on this computer.  
   
 -   Make sure that you can access your source data for the DQS operations, and can export the processed data to a table in a database. See [Access Data for the DQS Operations](../../../data-quality-services/install/windows/access-data-for-the-dqs-operations.md).  
   

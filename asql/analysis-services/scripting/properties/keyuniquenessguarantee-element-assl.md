@@ -56,7 +56,7 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] uses the **KeyUniquenessGuarantee** element to optimize query construction when it retrieves members from the underlying data source for this attribute.  
+ [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] uses the **KeyUniquenessGuarantee** element to optimize query construction when it retrieves members from the underlying data source for this attribute.  
   
  The element that corresponds to the parent of **KeyUniquenessGuarantee** in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   

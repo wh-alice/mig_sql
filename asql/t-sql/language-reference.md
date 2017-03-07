@@ -15,7 +15,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Language Reference
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Microsoft SQL Shared Language Reference contains language reference content for the following areas.  
   
@@ -30,14 +30,14 @@ manager: "jhubbard"
  [Analysis Services Language Reference](../mdx/analysis-services-language-reference.md)  
   
 ## Version and platform-inclusive documentation  
-At the top of each [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] topic in this SQL Shared Language Reference library you can see to which versions and platforms of SQL the function applies.
+At the top of each [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] topic in this SQL Shared Language Reference library you can see to which versions and platforms of SQL the function applies.
   
- By using this information you can easily identify the [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] statements, commands, and system objects that apply to the versions and platforms for which you develop applications or administer and support. In addition, the consolidated topics provide a single "master" content set that will be maintained for all of the specified versions and platforms. That is, you can rely on this single content set for the most accurate and up-to-date product information regardless of version or platform.  
+ By using this information you can easily identify the [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] statements, commands, and system objects that apply to the versions and platforms for which you develop applications or administer and support. In addition, the consolidated topics provide a single "master" content set that will be maintained for all of the specified versions and platforms. That is, you can rely on this single content set for the most accurate and up-to-date product information regardless of version or platform.  
   
 ## Identifying Version and platform applicability  
  Version and platform applicability is provided in the top section of each topic in a single "applies to" statement. This statement identifies the applicable versions and platforms for the topic as a whole. The following examples demonstrate this statement.  
   
- **Example A**. Indicates that the topic applies to all the SQLs!  [!INCLUDE[ssKatmai](../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)], to both the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] platforms, and to Azure SQL Data Warehouse and Parallel Data Warehouse.
+ **Example A**. Indicates that the topic applies to all the SQLs!  [!INCLUDE[ssKatmai](../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)], to both the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../a9retired/includes/sssdsfull-md.md)] platforms, and to Azure SQL Data Warehouse and Parallel Data Warehouse.
  
  ![Applies to all](../t-sql/media/applies-to-all.png)
   
@@ -46,18 +46,18 @@ At the top of each [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsq
  ![SQL Server from 2008 only](../t-sql/media/sql-server-from-2008-only.png)
     
 ## Exceptions  
- For most of the [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] topics, the applies to banner statement is all that is required to identify version and platform applicability. However, some statements and system objects have changed over time to support new features in the product. These additions do not apply to the older versions. For example, the statement [ORDER BY Clause](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md) applies to all SQL Server versions and to SQL Database, but a new OFFSET…FETCH argument was added in [!INCLUDE[ssSQL11](../analysis-services/includes/sssql11-md.md)] that applies only to that version and higher versions and to SQL Database. Such exceptions to the top-level applies to statement are identified in the **Arguments** section of the topic in the definition of the new syntax. For example, in the ORDER BY topic, the following statement is added to the definitions of OFFSET and FETCH. This statement indicates that these keywords cannot be used in versions of SQL Server earlier than [!INCLUDE[ssSQL11](../analysis-services/includes/sssql11-md.md)].  
+ For most of the [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] topics, the applies to banner statement is all that is required to identify version and platform applicability. However, some statements and system objects have changed over time to support new features in the product. These additions do not apply to the older versions. For example, the statement [ORDER BY Clause](../t-sql/queries/select-order-by-clause-transact-sql.md) applies to all SQL Server versions and to SQL Database, but a new OFFSET…FETCH argument was added in [!INCLUDE[ssSQL11](../a9notintoc/includes/sssql11-md.md)] that applies only to that version and higher versions and to SQL Database. Such exceptions to the top-level applies to statement are identified in the **Arguments** section of the topic in the definition of the new syntax. For example, in the ORDER BY topic, the following statement is added to the definitions of OFFSET and FETCH. This statement indicates that these keywords cannot be used in versions of SQL Server earlier than [!INCLUDE[ssSQL11](../a9notintoc/includes/sssql11-md.md)].  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../a9retired/includes/sssdsfull-md.md)].|  
   
- Exceptions to the top-level applies to statement can also occur when the topic is applicable to both the SQL Server and [!INCLUDE[ssSDSfull](../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] but only some of the syntax is supported by [!INCLUDE[ssSDSfull](../analysis-services/multidimensional-models/includes/sssdsfull-md.md)]. For example, the [DROP INDEX](../t-sql/statements/drop-index-transact-sql.md) statement applies to both platforms, however, [!INCLUDE[ssSDSfull](../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] does not support all of the options and clauses that SQL Server provides. These exceptions are identified in the Arguments section. For example, in the definition of MAXDOP, the following statement is added to specify the versions and platforms that can specify this option.  
+ Exceptions to the top-level applies to statement can also occur when the topic is applicable to both the SQL Server and [!INCLUDE[ssSDSfull](../a9retired/includes/sssdsfull-md.md)] but only some of the syntax is supported by [!INCLUDE[ssSDSfull](../a9retired/includes/sssdsfull-md.md)]. For example, the [DROP INDEX](../t-sql/statements/drop-index-transact-sql.md) statement applies to both platforms, however, [!INCLUDE[ssSDSfull](../a9retired/includes/sssdsfull-md.md)] does not support all of the options and clauses that SQL Server provides. These exceptions are identified in the Arguments section. For example, in the definition of MAXDOP, the following statement is added to specify the versions and platforms that can specify this option.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)].|  
   
- Exceptions to the top-level applies to statement can also occur in system objects such as catalog views. For these objects, new columns can be added or new values returned by existing columns. When a new column is added, the version/platform applicability is included in the definition of the column. When new values are returned by an existing column, the applicability of the new values are identified in the description of the values. For example, the values returned in the **type** column of the [sys.indexes](../relational-databases/system-catalog-views/sys.indexes-transact-sql.md) catalog view have changed from release to release. In the definition of that column, the applicability of the values are defined for each value that does not conform to the top-level "applies to" statement.  
+ Exceptions to the top-level applies to statement can also occur in system objects such as catalog views. For these objects, new columns can be added or new values returned by existing columns. When a new column is added, the version/platform applicability is included in the definition of the column. When new values are returned by an existing column, the applicability of the new values are identified in the description of the values. For example, the values returned in the **type** column of the [sys.indexes](../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md) catalog view have changed from release to release. In the definition of that column, the applicability of the values are defined for each value that does not conform to the top-level "applies to" statement.  
   
   

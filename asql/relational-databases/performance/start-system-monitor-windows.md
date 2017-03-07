@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Start System Monitor (Windows)
-  Use System Monitor to monitor the utilization of system resources. Collect and view real-time performance data in the form of counters, for server resources such as processor and memory use, and for many Microsoft [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] resources such as locks and transactions.  
+  Use System Monitor to monitor the utilization of system resources. Collect and view real-time performance data in the form of counters, for server resources such as processor and memory use, and for many Microsoft [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] resources such as locks and transactions.  
   
 ### To start System Monitor in Windows  
   

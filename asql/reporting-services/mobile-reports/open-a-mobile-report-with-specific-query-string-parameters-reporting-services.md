@@ -15,7 +15,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Open a mobile report with specific query string parameters | Reporting Services
-If you have a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] mobile report with parameters and a [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or [!INCLUDE[ssASnoversion_md](../../analysis-services/includes/ssasnoversion-md.md)] data source, you can include query string parameters in the report URL so it opens automatically with values you’ve specified. 
+If you have a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] mobile report with parameters and a [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] or [!INCLUDE[ssASnoversion_md](../../a9notintoc/includes/ssasnoversion-md.md)] data source, you can include query string parameters in the report URL so it opens automatically with values you’ve specified. 
 1.	Create a [mobile report with parameters](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
 
 2. Open the report in Mobile Report Publisher and select the Data tab. 

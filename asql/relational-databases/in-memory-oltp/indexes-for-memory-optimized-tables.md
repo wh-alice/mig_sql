@@ -18,7 +18,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Indexes for Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   
 This article describes the types of indexes that are available for a memory-optimized table. The article:  

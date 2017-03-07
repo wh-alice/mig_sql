@@ -24,7 +24,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Monitor Replication Agents
-  [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Replication Monitor provides a systemic view of replication activity, but also makes it straightforward to find information on a specific agent. The following list includes each agent, the tabs in the Replication Monitor on which it can be found, and a link to a topic that explains how to access these tabs:  
+  [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Replication Monitor provides a systemic view of replication activity, but also makes it straightforward to find information on a specific agent. The following list includes each agent, the tabs in the Replication Monitor on which it can be found, and a link to a topic that explains how to access these tabs:  
   
 -   The following agents are associated with publications in Replication Monitor:  
   
@@ -45,7 +45,7 @@ manager: "jhubbard"
      Access information and tasks associated with these agents through the following tabs: **Subscription Watch List** (available for each Publisher) or the **All Subscriptions** tab (available for each publication). For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/fbb59d31-2424-4552-9195-0da8d83e755f.md).  
   
 ## Using SQL Server Management Studio to Monitor Replication Agents  
- [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] provides the following dialog boxes for monitoring replication agents:  
+ [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] provides the following dialog boxes for monitoring replication agents:  
   
 -   **View Snapshot Agent Status** (for all publications)  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 #### To monitor the Snapshot Agent and Log Reader Agent  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Publications** folder.  
   
@@ -75,7 +75,7 @@ manager: "jhubbard"
   
 #### To monitor the Distribution Agent and Merge Agent (from the Publisher)  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Publications** folder.  
   
@@ -97,7 +97,7 @@ manager: "jhubbard"
   
 #### To monitor the Distribution Agent and Merge Agent (from the Subscriber)  
   
-1.  Connect to the Subscriber in [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Subscriber in [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Subscriptions** folder.  
   
@@ -114,7 +114,7 @@ manager: "jhubbard"
 5.  Click **Close**.  
   
 ## See Also  
- [Monitoring Replication](../Topic/Monitoring%20Replication.md)   
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
  [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

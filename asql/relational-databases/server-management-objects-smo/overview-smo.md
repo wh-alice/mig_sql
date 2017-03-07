@@ -15,29 +15,29 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Overview (SMO)
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Management Objects (SMO) are objects designed for programmatic management of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. You can use SMO to build customized [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] management applications. Although [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] is a powerful and extensive application for managing [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], there might be times when you would be better served by an SMO application.  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Management Objects (SMO) are objects designed for programmatic management of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. You can use SMO to build customized [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] management applications. Although [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] is a powerful and extensive application for managing [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], there might be times when you would be better served by an SMO application.  
   
- For example, the user applications that control the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] management tasks might have to be simplified to meet the needs of new users and to reduce training costs. You might have to create customized [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases, or create an application for creating and monitoring the efficiency of indexes. An SMO application might also be used to include third-party hardware or software seamlessly into the database management application.  
+ For example, the user applications that control the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] management tasks might have to be simplified to meet the needs of new users and to reduce training costs. You might have to create customized [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] databases, or create an application for creating and monitoring the efficiency of indexes. An SMO application might also be used to include third-party hardware or software seamlessly into the database management application.  
   
- The SMO object model extends and supersedes the Distributed Management Objects (SQL-DMO) object model. Compared to SQL-DMO, SMO increases performance, control, and ease of use. Most SQL-DMO functionality is included in SMO, and there are various new classes that support new features in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The object model is intuitive and uses SQL-DMO terminology, where it is possible, to help transfer your skills.  
+ The SMO object model extends and supersedes the Distributed Management Objects (SQL-DMO) object model. Compared to SQL-DMO, SMO increases performance, control, and ease of use. Most SQL-DMO functionality is included in SMO, and there are various new classes that support new features in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The object model is intuitive and uses SQL-DMO terminology, where it is possible, to help transfer your skills.  
   
- Because SMO is compatible with [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] and later versions, you can easily manage a multi-version environment.  
+ Because SMO is compatible with [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] and later versions, you can easily manage a multi-version environment.  
   
  New features in SMO include the following:  
   
 -   Cached object model and optimized object instance creation. Objects are loaded only when specifically referenced. Object properties are only partially loaded when the object is created. The remaining objects and properties are loaded when they are referenced directly.  
   
--   Batched execution of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements. Statements are batched to improve network performance.  
+-   Batched execution of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements. Statements are batched to improve network performance.  
   
--   Capture [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements. Allows any operation to be captured into a script. [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] uses this capability to script an operation instead of executing it immediately.  
+-   Capture [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements. Allows any operation to be captured into a script. [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] uses this capability to script an operation instead of executing it immediately.  
   
--   Management of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] services with the WMI Provider. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] services can be started, stopped, and paused programmatically.  
+-   Management of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] services with the WMI Provider. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] services can be started, stopped, and paused programmatically.  
   
--   Advanced Scripting. [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] scripts can be generated to re-create [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] objects that describe relationships to other objects on the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   Advanced Scripting. [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] scripts can be generated to re-create [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] objects that describe relationships to other objects on the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 -   Use of Unique Resource Names (URNs). A URN allows you to create instances of and reference SMO objects.  
   
- SMO also represents as new objects or properties many features and components that were introduced in [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)]. These new features and components include the following:  
+ SMO also represents as new objects or properties many features and components that were introduced in [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)]. These new features and components include the following:  
   
 -   Table and index partitioning for storage of data on a partition scheme. For more information, see [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
@@ -51,28 +51,28 @@ manager: "jhubbard"
   
 -   [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] support for message-based communication. For more information, see [SQL Server Service Broker](../../database-engine/configure/windows/sql-server-service-broker.md).  
   
--   Synonym support for multiple names of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database objects. For more information, see [Synonyms &#40;Database Engine&#41;](../../relational-databases/synonyms/synonyms-database-engine.md).  
+-   Synonym support for multiple names of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database objects. For more information, see [Synonyms &#40;Database Engine&#41;](../../relational-databases/synonyms/synonyms-database-engine.md).  
   
--   The management of Database Mail that lets you create e-mail servers, e-mail profiles, and e-mail accounts in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information, see [Database Mail](../../relational-databases/database-mail/database-mail.md).  
+-   The management of Database Mail that lets you create e-mail servers, e-mail profiles, and e-mail accounts in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For more information, see [Database Mail](../../relational-databases/database-mail/database-mail.md).  
   
 -   Registered Servers support for registering connection information. For more information, see [Register Servers](../../tools/sql-server-management-studio/register-servers.md).  
   
--   Trace and replay of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] events. For more information, see [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [SQL Trace](../../relational-databases/sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md), and [Extended Events](../../relational-databases/extended-events/extended-events.md).  
+-   Trace and replay of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] events. For more information, see [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [SQL Trace](../../relational-databases/sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md), and [Extended Events](../../relational-databases/extended-events/extended-events.md).  
   
 -   Support for certificates and keys for security control. For more information, see [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
 -   DDL triggers for adding functionality when DDL events occur. For more information, see [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
- The SMO namespace is <xref:Microsoft.SqlServer.Management.Smo>. SMO is implemented as a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] assembly. This means that the common language runtime from the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] version 2.0 must be installed before using the SMO objects. The SMO assemblies are installed by default into the Global Assembly Cache (GAC) with the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] SDK option. The assemblies are located in C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. For more information, see the [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] documentation.  
+ The SMO namespace is <xref:Microsoft.SqlServer.Management.Smo>. SMO is implemented as a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] assembly. This means that the common language runtime from the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] version 2.0 must be installed before using the SMO objects. The SMO assemblies are installed by default into the Global Assembly Cache (GAC) with the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] SDK option. The assemblies are located in C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. For more information, see the [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] documentation.  
   
 ## SMO Classes  
  SMO classes include two categories: instance classes and utility classes.  
   
  **Instance Classes**  
   
- The instance classes represent [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] objects such as servers, databases, tables, triggers, and stored procedures. The <xref:Microsoft.SqlServer.Management.Common.ServerConnection> class is used to establish a connection to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and control the capture mode of commands sent to it.  
+ The instance classes represent [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] objects such as servers, databases, tables, triggers, and stored procedures. The <xref:Microsoft.SqlServer.Management.Common.ServerConnection> class is used to establish a connection to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and control the capture mode of commands sent to it.  
   
- The SMO instance objects form a hierarchy that represents the hierarchy of a database server. At the top are the instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], under which are the databases, and following on with tables, columns, triggers and so on. If it is logical that there is a one parent to many children relationship, such as a table having one or more columns, then the child is represented by a collection of objects. Otherwise the child is just represented by an object.  
+ The SMO instance objects form a hierarchy that represents the hierarchy of a database server. At the top are the instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], under which are the databases, and following on with tables, columns, triggers and so on. If it is logical that there is a one parent to many children relationship, such as a table having one or more columns, then the child is represented by a collection of objects. Otherwise the child is just represented by an object.  
   
  **Utility Classes**  
   
@@ -97,13 +97,13 @@ manager: "jhubbard"
   
  **Capture Execution**  
   
- Direct execution is the usual method of execution. Statements are sent to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] directly as they are incurred. Capture execution is the alternative to this.  
+ Direct execution is the usual method of execution. Statements are sent to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] directly as they are incurred. Capture execution is the alternative to this.  
   
- Capture execution lets you capture [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] batches that would typically be executed. This lets the SMO programmer defer the script, store it for later execution, or provide a preview for the end-user. For example, a **create database**, a **create table**, and a **create index** statement can be sent in one batch and then run as three sequential steps. This functionality is controlled by the user by using the <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> object.  
+ Capture execution lets you capture [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] batches that would typically be executed. This lets the SMO programmer defer the script, store it for later execution, or provide a preview for the end-user. For example, a **create database**, a **create table**, and a **create index** statement can be sent in one batch and then run as three sequential steps. This functionality is controlled by the user by using the <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> object.  
   
  **WMI Provider**  
   
- The WMI Provider objects are wrapped by SMO. This provides the SMO programmer with a simple object model that is similar to SMO classes very closely, without the requirement to understand the programming model that is represented by the namespace and the details of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] WMI Provider. The WMI Provider lets you configure [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] services, aliases, and client and server network libraries.  
+ The WMI Provider objects are wrapped by SMO. This provides the SMO programmer with a simple object model that is similar to SMO classes very closely, without the requirement to understand the programming model that is represented by the namespace and the details of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] WMI Provider. The WMI Provider lets you configure [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] services, aliases, and client and server network libraries.  
   
  **Scripting**  
   
@@ -168,14 +168,14 @@ manager: "jhubbard"
   
  **Index Enhancements**  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] index enhancements are represented by new properties in the <xref:Microsoft.SqlServer.Management.Smo.Index> object.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] index enhancements are represented by new properties in the <xref:Microsoft.SqlServer.Management.Smo.Index> object.  
   
 ## SMO and SQL-DMO  
- The SMO object model supersedes and replaces SQL-DMO. SMO supports [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] and later versions. It supports more [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] management tasks and contains many new features in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. SMO is designed to be more efficient and provide more control.  
+ The SMO object model supersedes and replaces SQL-DMO. SMO supports [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] and later versions. It supports more [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] management tasks and contains many new features in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. SMO is designed to be more efficient and provide more control.  
   
- The DMO library is a COM object model, whereas SMO is implemented as a [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] assembly. COM components are libraries that provide re-usable functionality to applications and in unmanaged application programming. The [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] assemblies provide reusable functionality for the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] to write managed code applications.  
+ The DMO library is a COM object model, whereas SMO is implemented as a [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] assembly. COM components are libraries that provide re-usable functionality to applications and in unmanaged application programming. The [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] assemblies provide reusable functionality for the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] to write managed code applications.  
   
- During the transition to [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] technology it is possible to have applications written partly in managed code and partly in unmanaged code. The [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] lets you interface with COM components, which requires a Primary Interop Assembly. A runtime wrapper is required for SQL-DMO so that it can be called from a [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)]-based application.  
+ During the transition to [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] technology it is possible to have applications written partly in managed code and partly in unmanaged code. The [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] lets you interface with COM components, which requires a Primary Interop Assembly. A runtime wrapper is required for SQL-DMO so that it can be called from a [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)]-based application.  
   
 ## See Also  
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  

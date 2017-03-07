@@ -19,7 +19,7 @@ manager: "erikre"
   Returns a running aggregate of all non-null numeric values specified by the expression, evaluated for the given scope.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Syntax  
   
@@ -36,7 +36,7 @@ RunningValue(expression, function, scope)
  (**Enum**) The name of the aggregate function to apply to the expression, for example, **Sum**. This function cannot be **RunningValue**, **RowNumber**, or **Aggregate**.  
   
  *scope*  
- (**String**) A string constant that is the name of a dataset, data region, or group, or null (**Nothing** in [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)]), that specifies the context in which to evaluate the aggregation. **Nothing** specifies the outermost context, usually the report dataset.  
+ (**String**) A string constant that is the name of a dataset, data region, or group, or null (**Nothing** in [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)]), that specifies the context in which to evaluate the aggregation. **Nothing** specifies the outermost context, usually the report dataset.  
   
 ## Return Type  
  Determined by the aggregate function that is specified in the *function* parameter.  
@@ -60,9 +60,9 @@ RunningValue(expression, function, scope)
   
 -   *Expression* must not contain nested aggregates that specify *recursive*.  
   
- To calculate the running value of the number of rows, use **RowNumber**. For more information, see [RowNumber Function &#40;Report Builder and SSRS&#41;](../Topic/RowNumber%20Function%20\(Report%20Builder%20and%20SSRS\).md).  
+ To calculate the running value of the number of rows, use **RowNumber**. For more information, see [RowNumber Function &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-rownumber-function.md).  
   
- For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../Topic/Aggregate%20Functions%20Reference%20\(Report%20Builder%20and%20SSRS\).md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/a8d24287-8557-4b03-bea7-ca087f449b62.md).  
+ For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/a8d24287-8557-4b03-bea7-ca087f449b62.md).  
   
  For more information about recursive aggregates, see [Creating Recursive Hierarchy Groups &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   

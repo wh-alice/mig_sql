@@ -18,7 +18,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Assign Hierarchy Member Permissions (Master Data Services)
-  Assign permissions to hierarchy members to give users or groups access to view data in the **Explorer** functional area of [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)].  
+  Assign permissions to hierarchy members to give users or groups access to view data in the **Explorer** functional area of [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)].  
   
  Hierarchy member permissions are optional. They provide added granularity to model object permissions, which are required.  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 ### To assign hierarchy member permissions  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **User and Group Permissions**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **User and Group Permissions**.  
   
 2.  On the **Users** or **Groups** page, select the row for the user or group that you want to edit.  
   

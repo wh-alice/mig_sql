@@ -28,7 +28,7 @@ manager: "jhubbard"
 
   Indicates whether a specified database principle is a member of the specified database role.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -56,24 +56,24 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ## Remarks  
  Use IS_ROLEMEMBER to determine whether the current user can perform an action that requires the database role's permissions.  
   
- If *database_principal* is based on a Windows login, such as Contoso\Mary5, IS_ROLEMEMBER returns NULL, unless the *database_principal* has been granted or denied direct access to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ If *database_principal* is based on a Windows login, such as Contoso\Mary5, IS_ROLEMEMBER returns NULL, unless the *database_principal* has been granted or denied direct access to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- If the optional *database_principal* parameter is not provided and if the *database_principal* is based on a Windows domain login, it may be a member of a database role through membership in a Windows group. To resolve such indirect memberships, IS_ROLEMEMBER requests Windows group membership information from the domain controller. If the domain controller is inaccessible or does not respond, IS_ROLEMEMBER returns role membership information by accounting for the user and its local groups only. If the user specified is not the current user, the value returned by IS_ROLEMEMBER might differ from the authenticator's (such as Active Directory) last data update to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ If the optional *database_principal* parameter is not provided and if the *database_principal* is based on a Windows domain login, it may be a member of a database role through membership in a Windows group. To resolve such indirect memberships, IS_ROLEMEMBER requests Windows group membership information from the domain controller. If the domain controller is inaccessible or does not respond, IS_ROLEMEMBER returns role membership information by accounting for the user and its local groups only. If the user specified is not the current user, the value returned by IS_ROLEMEMBER might differ from the authenticator's (such as Active Directory) last data update to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  If the optional *database_principal* parameter is provided, the database principal that is being queried must be present in sys.database_principals, or IS_ROLEMEMBER will return NULL. This indicates that the *database_principal* is not valid in this database.  
   
  When the *database_principal* parameter is a based on a domain login or based on a Windows group and the domain controller is inaccessible, calls to IS_ROLEMEMBER will fail and might return incorrect or incomplete data.  
   
- If the domain controller is not available, the call to IS_ROLEMEMBER will return accurate information when the Windows principle can be authenticated locally, such as a local Windows account or a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login.  
+ If the domain controller is not available, the call to IS_ROLEMEMBER will return accurate information when the Windows principle can be authenticated locally, such as a local Windows account or a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login.  
   
  **IS_ROLEMEMBER** always returns 0 when a Windows group is used as the database principal argument, and this Windows group is a member of another Windows group which is, in turn, a member of the specified database role.  
   
- The User Account Control (UAC) found in [!INCLUDE[wiprlhext](../../relational-databases/security/auditing/includes/wiprlhext-md.md)] and Windows Server 2008 might also return different results. This would depend on whether the user accessed the server as a Windows group member or as a specific [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] user.  
+ The User Account Control (UAC) found in [!INCLUDE[wiprlhext](../../a9retired/includes/wiprlhext-md.md)] and Windows Server 2008 might also return different results. This would depend on whether the user accessed the server as a Windows group member or as a specific [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] user.  
   
  This function evaluates role membership, not the underlying permission. For example, the **db_owner** fixed database role has the **CONTROL DATABASE** permission. If the user has the **CONTROL DATABASE** permission but is not a member of the role, this function will correctly report that the user is not a member of the **db_owner** role, even though the user has the same permissions.  
   
 ## Related Functions  
- To determine whether the current user is a member of the specified Windows group or [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database role, use [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md). To determine whether a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login is a member of a server role, use [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
+ To determine whether the current user is a member of the specified Windows group or [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database role, use [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md). To determine whether a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login is a member of a server role, use [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
   
 ## Permissions  
  Requires VIEW DEFINITION permission on the database role.  

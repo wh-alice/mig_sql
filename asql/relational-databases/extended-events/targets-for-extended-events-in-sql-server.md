@@ -16,7 +16,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Targets for Extended Events in SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
 This article explains when and how to use the package0 targets for extended events in SQL Server. For each target, the present article explains:
@@ -205,7 +205,7 @@ CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
 #### sys.fn_xe_file_target_read_file function
 
 
-The event_file target stores the data it receives in a binary format that is not human readable. Transact-SQL can report the contents of the .xel file by SELECTing FROM the [**sys.fn_xe_file_target_read_file**](../../relational-databases/system-functions/sys.fn-xe-file-target-read-file-transact-sql.md) function.
+The event_file target stores the data it receives in a binary format that is not human readable. Transact-SQL can report the contents of the .xel file by SELECTing FROM the [**sys.fn_xe_file_target_read_file**](../../relational-databases/reference/system-functions/sys.fn-xe-file-target-read-file-transact-sql.md) function.
 
 
 For SQL Server **2016** and later, the following T-SQL SELECT reported the data. The *.xel suffix in the 

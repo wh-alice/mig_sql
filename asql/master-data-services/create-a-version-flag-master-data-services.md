@@ -19,7 +19,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Create a Version Flag (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], create a version flag to assign to a version. The flag can indicate the version that users or subscribing systems should use.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], create a version flag to assign to a version. The flag can indicate the version that users or subscribing systems should use.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 ### To create a version flag  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **Version Management**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **Version Management**.  
   
 2.  On the **Manage Versions** page, from the menu bar, point to **Manage** and then click **Flags**.  
   

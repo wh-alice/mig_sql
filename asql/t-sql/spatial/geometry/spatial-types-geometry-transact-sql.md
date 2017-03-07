@@ -24,16 +24,16 @@ manager: "jhubbard"
 # Spatial Types - geometry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  The planar spatial data type, **geometry**, is implemented as a common language runtime (CLR) data type in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. This type represents data in a Euclidean (flat) coordinate system.  
+  The planar spatial data type, **geometry**, is implemented as a common language runtime (CLR) data type in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. This type represents data in a Euclidean (flat) coordinate system.  
   
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports a set of methods for the **geometry** spatial data type. These methods include methods on **geometry** that are defined by the Open Geospatial Consortium (OGC) standard and a set of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] extensions to that standard.  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] supports a set of methods for the **geometry** spatial data type. These methods include methods on **geometry** that are defined by the Open Geospatial Consortium (OGC) standard and a set of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] extensions to that standard.  
  
  The error tolerance for the geometry methods can be as large as 1.0e-7 * extents. The extents refer to the approximate maximal distance between points of the **geometry**object.
   
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../../a9retired/includes/sssdsfull-md.md)].|  
   
 ## Registering the geometry Type  
  The **geometry** type is predefined and available in each database. You can create table columns of type **geometry** and operate on **geometry** data in the same manner as you would use other CLR types. Can be used in persisted and non-persisted computed columns.  

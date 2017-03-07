@@ -15,7 +15,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Modify a Partition Scheme
-  You can modify a partition scheme in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by designating a filegroup to hold the next partition that is added to a partitioned table using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. You do this by assigning the NEXT USED property to a filegroup. You can assign the NEXT USED property to an empty filegroup or to one that already holds a partition. In other words, a filegroup can hold more than one partition.  
+  You can modify a partition scheme in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by designating a filegroup to hold the next partition that is added to a partitioned table using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. You do this by assigning the NEXT USED property to a filegroup. You can assign the NEXT USED property to an empty filegroup or to one that already holds a partition. In other words, a filegroup can hold more than one partition.  
   
  **In This Topic**  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To modify a partition scheme:**  
   
- This specific action cannot be performed using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. In order to modify a partition scheme, you must first delete the scheme and then create a new one with the desired properties using the Create Partition Wizard. For more information, see [Create Partitioned Tables and Indexes](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)[Using SQL Server Management Studio](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md#SSMSProcedure) under **Create Partitioned Tables and Indexes**.  
+ This specific action cannot be performed using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. In order to modify a partition scheme, you must first delete the scheme and then create a new one with the desired properties using the Create Partition Wizard. For more information, see [Create Partitioned Tables and Indexes](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)[Using SQL Server Management Studio](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md#SSMSProcedure) under **Create Partitioned Tables and Indexes**.  
   
 #### To delete a partition scheme  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 #### To modify a partition scheme  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

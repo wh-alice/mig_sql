@@ -25,11 +25,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # ALTER TABLE column_definition (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Specifies the properties of a column that are added to a table by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -87,15 +87,15 @@ manager: "jhubbard"
   
  *type_name* can be:  
   
--   A [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system data type.  
+-   A [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system data type.  
   
--   An alias data type based on a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system data type. Alias data types must be created by using CREATE TYPE before they can be used in a table definition.  
+-   An alias data type based on a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system data type. Alias data types must be created by using CREATE TYPE before they can be used in a table definition.  
   
--   A [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] user-defined type and the schema to which it belongs. A [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] user-defined type must be created by using CREATE TYPE before it can be used in a table definition.  
+-   A [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] user-defined type and the schema to which it belongs. A [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] user-defined type must be created by using CREATE TYPE before it can be used in a table definition.  
   
- If *type_schema_name* is not specified, the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] references *type_name* in the following order:  
+ If *type_schema_name* is not specified, the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] references *type_name* in the following order:  
   
--   The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system data type.  
+-   The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system data type.  
   
 -   The default schema of the current user in the current database.  
   
@@ -119,7 +119,7 @@ manager: "jhubbard"
  *xml_schema_collection*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Applies only to the **xml** data type for associating an XML schema collection with the type. Before typing an **xml** column to a schema, the schema must first be created in the database by using [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).  
   
@@ -145,19 +145,19 @@ manager: "jhubbard"
  Determines whether null values are allowed in the column. NULL is not strictly a constraint but can be specified just like NOT NULL.  
   
  [ CONSTRAINT *constraint_name* ]  
- Specifies the start of a DEFAULT value definition. To maintain compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], a constraint name can be assigned to a DEFAULT. *constraint_name* must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md), except that the name cannot start with a number sign (#). If *constraint_name* is not specified, a system-generated name is assigned to the DEFAULT definition.  
+ Specifies the start of a DEFAULT value definition. To maintain compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], a constraint name can be assigned to a DEFAULT. *constraint_name* must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md), except that the name cannot start with a number sign (#). If *constraint_name* is not specified, a system-generated name is assigned to the DEFAULT definition.  
   
  DEFAULT  
  Is a keyword that specifies the default value for the column. DEFAULT definitions can be used to provide values for a new column in the existing rows of data. DEFAULT definitions cannot be applied to **timestamp** columns, or columns with an IDENTITY property. If a default value is specified for a user-defined type column, the type must support an implicit conversion from *constant_expression* to the user-defined type.  
   
  *constant_expression*  
- Is a literal value, a NULL, or a system function used as the default column value. If used in conjunction with a column defined to be of a [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] user-defined type, the implementation of the type must support an implicit conversion from the *constant_expression* to the user-defined type.  
+ Is a literal value, a NULL, or a system function used as the default column value. If used in conjunction with a column defined to be of a [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] user-defined type, the implementation of the type must support an implicit conversion from the *constant_expression* to the user-defined type.  
   
  WITH VALUES  
  Specifies that the value given in DEFAULT *constant_expression* is stored in a new column added to existing rows. If the added column allows null values and WITH VALUES is specified, the default value is stored in the new column, added to existing rows. If WITH VALUES is not specified for columns that allow nulls, the value NULL is stored in the new column in existing rows. If the new column does not allow nulls, the default value is stored in new rows regardless of whether WITH VALUES is specified.  
   
  IDENTITY  
- Specifies that the new column is an identity column. The [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] provides a unique, incremental value for the column. When you add identifier columns to existing tables, the identity numbers are added to the existing rows of the table with the seed and increment values. The order in which the rows are updated is not guaranteed. Identity numbers are also generated for any new rows that are added.  
+ Specifies that the new column is an identity column. The [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] provides a unique, incremental value for the column. When you add identifier columns to existing tables, the identity numbers are added to the existing rows of the table with the seed and increment values. The order in which the rows are updated is not guaranteed. Identity numbers are also generated for any new rows that are added.  
   
  Identity columns are commonly used in conjunction with PRIMARY KEY constraints to serve as the unique row identifier for the table. The IDENTITY property can be assigned to a **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)**, or **numeric(p,0)** column. Only one identity column can be created per table. The DEFAULT keyword and bound defaults cannot be used with an identity column. Either both the seed and increment must be specified, or neither. If neither are specified, the default is (1,1).  
   
@@ -177,14 +177,14 @@ manager: "jhubbard"
  NOT FOR REPLICATION  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Can be specified for the IDENTITY property. If this clause is specified for the IDENTITY property, values are not incremented in identity columns when replication agents perform insert operations.  
   
  ROWGUIDCOL  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Specifies that the column is a row globally unique identifier column. ROWGUIDCOL can only be assigned to a **uniqueidentifier** column, and only one **uniqueidentifier** column per table can be designated as the ROWGUIDCOL column. ROWGUIDCOL cannot be assigned to columns of user-defined data types.  
   
@@ -194,7 +194,7 @@ manager: "jhubbard"
  Indicates that the column is a sparse column. The storage of sparse columns is optimized for null values. Sparse columns cannot be designated as NOT NULL. For additional restrictions and more information about sparse columns, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
  <column_constraint>  
- For the definitions of the column constraint arguments, see [column_constraint &#40;Transact-SQL&#41;](../Topic/column_constraint%20\(Transact-SQL\).md).  
+ For the definitions of the column constraint arguments, see [column_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-constraint-transact-sql.md).  
   
  ENCRYPTED WITH  
  Specifies encrypting columns by using the [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature.  
@@ -218,12 +218,12 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].|  
   
  ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
  Specifies a dynamic data mask. *mask_function* is the name of the masking function with the appropriate parameters. The following functions are available:  
   
@@ -240,7 +240,7 @@ manager: "jhubbard"
 ## Remarks  
  If a column is added having a **uniqueidentifier** data type, it can be defined with a default that uses the NEWID() function to supply the unique identifier values in the new column for each existing row in the table.  
   
- The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] does not enforce an order for specifying DEFAULT, IDENTITY, ROWGUIDCOL, or column constraints in a column definition.  
+ The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] does not enforce an order for specifying DEFAULT, IDENTITY, ROWGUIDCOL, or column constraints in a column definition.  
   
  ALTER TABLE statement will fail if adding the column will cause the data row size to exceed 8060 bytes.  
   

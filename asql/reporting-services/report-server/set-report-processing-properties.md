@@ -25,7 +25,7 @@ manager: "erikre"
 # Set Report Processing Properties
   Report execution properties control how a report is processed. Execution properties must be set for each report individually.  
   
- To set report execution properties, open the report in Report Manager, and then navigate to the Execution properties page. For more information, see [Processing Options Properties Page &#40;Report Manager&#41;](../Topic/Processing%20Options%20Properties%20Page%20\(Report%20Manager\).md). You can also set properties using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)]; see [Processing Options Properties Page &#40;Report Manager&#41;](../Topic/Processing%20Options%20Properties%20Page%20\(Report%20Manager\).md).  
+ To set report execution properties, open the report in Report Manager, and then navigate to the Execution properties page. For more information, see [Processing Options Properties Page &#40;Report Manager&#41;](../../a9retired/processing-options-properties-page-report-manager.md). You can also set properties using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)]; see [Processing Options Properties Page &#40;Report Manager&#41;](../../a9retired/processing-options-properties-page-report-manager.md).  
   
 ## Report Execution Modes  
  You can run a report either on demand or as a snapshot. The following section describes each approach.  

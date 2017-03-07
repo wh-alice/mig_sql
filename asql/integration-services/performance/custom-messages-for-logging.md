@@ -26,7 +26,7 @@ SQL Server Integration Services provides a rich set of custom events for writing
   
  All log entries include date and time information, including the log entries that are automatically written when a package begins and finishes. Many of the log events write multiple entries to the log. This typically occurs when the event has different phases. For example, the **ExecuteSQLExecutingQuery** log event writes three entries: one entry after the task acquires a connection to the database, another after the task starts to prepare the SQL statement, and one more after the execution of the SQL statement is completed.  
   
- The following [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] objects have custom log entries:  
+ The following [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] objects have custom log entries:  
   
  [Package](#Package)  
   
@@ -197,8 +197,8 @@ SQL Server Integration Services provides a rich set of custom events for writing
   
 |Log entry|Description|  
 |---------------|-----------------|  
-|**TransferJobsTaskFinishedTransferringObjects**|Indicates that the task finished transferring [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent jobs.|  
-|**TransferJobsTaskStartTransferringObjects**|Indicates that the task started to transfer [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent jobs.|  
+|**TransferJobsTaskFinishedTransferringObjects**|Indicates that the task finished transferring [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent jobs.|  
+|**TransferJobsTaskStartTransferringObjects**|Indicates that the task started to transfer [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent jobs.|  
   
 ###  <a name="TransferLogins"></a> Transfer Logins Task  
  The following table lists the custom log entries for the Transfer Logins task.  
@@ -217,12 +217,12 @@ SQL Server Integration Services provides a rich set of custom events for writing
 |**TransferStoredProceduresTaskStartTransferringObjects**|Indicates that the task started to transfer user-defined stored procedures that are stored in the **master** database.|  
   
 ###  <a name="TransferSQLServerObjects"></a> Transfer SQL Server Objects Task  
- The following table lists the custom log entries for the Transfer [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Objects task.  
+ The following table lists the custom log entries for the Transfer [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Objects task.  
   
 |Log entry|Description|  
 |---------------|-----------------|  
-|**TransferSqlServerObjectsTaskFinishedTransferringObjects**|Indicates that the task finished transferring [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database objects.|  
-|**TransferSqlServerObjectsTaskStartTransferringObjects**|Indicates that the task started to transfer [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database objects.|  
+|**TransferSqlServerObjectsTaskFinishedTransferringObjects**|Indicates that the task finished transferring [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database objects.|  
+|**TransferSqlServerObjectsTaskStartTransferringObjects**|Indicates that the task started to transfer [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database objects.|  
   
 ###  <a name="WebServices"></a> Web Services Task  
  The following table lists the custom log entries that you can enable for the Web Services task.  

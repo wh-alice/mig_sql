@@ -23,9 +23,9 @@ manager: "jhubbard"
   
 ### To create a table to store FILESTREAM data  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], click **New Query** to display the Query Editor.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], click **New Query** to display the Query Editor.  
   
-2.  Copy the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] code from the following example into the Query Editor. This [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] code creates a FILESTREAM-enabled table called Records.  
+2.  Copy the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] code from the following example into the Query Editor. This [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] code creates a FILESTREAM-enabled table called Records.  
   
 3.  To create the table, click **Execute**.  
   

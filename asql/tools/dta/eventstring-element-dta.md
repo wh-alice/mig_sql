@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # EventString Element (DTA)
-  Specifies a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] script workload directly in the XML input file.  
+  Specifies a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] script workload directly in the XML input file.  
   
 ## Syntax  
   

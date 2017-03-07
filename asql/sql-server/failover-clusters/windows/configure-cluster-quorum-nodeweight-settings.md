@@ -18,7 +18,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Configure Cluster Quorum NodeWeight Settings
-  This topic describes how to configure NodeWeight settings for a member node in a Windows Server Failover Clustering (WSFC) cluster. NodeWeight settings are used during quorum voting to support disaster recovery and multi-subnet scenarios for [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] and [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Failover Cluster Instances.  
+  This topic describes how to configure NodeWeight settings for a member node in a Windows Server Failover Clustering (WSFC) cluster. NodeWeight settings are used during quorum voting to support disaster recovery and multi-subnet scenarios for [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] and [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Failover Cluster Instances.  
   
 -   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   

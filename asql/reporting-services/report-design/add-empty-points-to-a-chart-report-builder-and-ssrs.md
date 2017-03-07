@@ -16,14 +16,14 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Add Empty Points to a Chart (Report Builder and SSRS)
-Null values are shown on the chart as empty spaces or gaps between data points in a series. In [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports, empty points are data points that can be inserted in the empty space created by null values.  
+Null values are shown on the chart as empty spaces or gaps between data points in a series. In [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports, empty points are data points that can be inserted in the empty space created by null values.  
   
  By default, empty points are calculated by taking the average of the previous and next data points that contain a value. You can change this so that all empty points are inserted at zero.  
   
  For more information, see [Empty and Null Data Points in Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## To specify empty points on a chart  
   

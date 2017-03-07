@@ -20,14 +20,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Calling Methods
-  Methods perform specific tasks related to the object, such as issuing a **Checkpoint** on a database or requesting an enumerated list of logons for the instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Methods perform specific tasks related to the object, such as issuing a **Checkpoint** on a database or requesting an enumerated list of logons for the instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
  Methods perform an operation on an object. Methods can take parameters and often have a return value. The return value can be a simple data type, a complex object, or a structure that contains many members.  
   
  Use exception handling to detect whether the method has been successful. For more information, see [Handling SMO Exceptions](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md).  
   
 ## Examples  
-To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20Basic%20SMO%20Project%20in%20Visual%20Studio%20.NET.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20C%23%20SMO%20Project%20in%20Visual%20Studio%20.NET.md).  
+To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-.net.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-.net.md).  
  
   
 ## Using a Simple SMO Method in Visual Basic  
@@ -88,7 +88,7 @@ tb.RebuildIndexes(70);
 ## Using an Enumeration Method that Returns a DataTable Object in Visual Basic  
  This section describes how to call an enumeration method and how to handle the data in the returned <xref:System.Data.DataTable> object.  
   
- The <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> method returns a <xref:System.Data.DataTable> object, which requires further navigation to access all available collation information about the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ The <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> method returns a <xref:System.Data.DataTable> object, which requires further navigation to access all available collation information about the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.  
@@ -112,7 +112,7 @@ Next
 ## Using an Enumeration Method that Returns a DataTable Object in Visual C#  
  This section describes how to call an enumeration method and how to handle the data in the returned <xref:System.Data.DataTable> object.  
   
- The <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> method returns a system <xref:System.Data.DataTable> object. The <xref:System.Data.DataTable> object requires further navigation to access all available collation information about the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ The <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> method returns a system <xref:System.Data.DataTable> object. The <xref:System.Data.DataTable> object requires further navigation to access all available collation information about the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ```c#  
 //Connect to the local, default instance of SQL Server.   
@@ -173,7 +173,7 @@ Console.WriteLine(d.Name);
 ```  
   
 ## Copying an SMO Object in Visual Basic  
- This code example uses the <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> method to create a copy of the <xref:Microsoft.SqlServer.Management.Smo.Server> object. The <xref:Microsoft.SqlServer.Management.Smo.Server> object represents a connection to an instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ This code example uses the <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> method to create a copy of the <xref:Microsoft.SqlServer.Management.Smo.Server> object. The <xref:Microsoft.SqlServer.Management.Smo.Server> object represents a connection to an instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ```VBNET  
 'Connect to the local, default instance of SQL Server.
@@ -189,7 +189,7 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString)
 ```
   
 ## Copying an SMO Object in Visual C#  
- This code example uses the <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> method to create a copy of the <xref:Microsoft.SqlServer.Management.Smo.Server> object. The <xref:Microsoft.SqlServer.Management.Smo.Server> object represents a connection to an instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ This code example uses the <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> method to create a copy of the <xref:Microsoft.SqlServer.Management.Smo.Server> object. The <xref:Microsoft.SqlServer.Management.Smo.Server> object represents a connection to an instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ```c#  
 {   
@@ -207,7 +207,7 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString);
 ```  
   
 ## Monitoring Server Processes in Visual Basic  
- You can obtain the current status type information about the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] through enumeration methods. The code example uses the <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> method to discover information about the current processes. It also demonstrates how to work with the columns and rows in the returned <xref:System.Data.DataTable> object.  
+ You can obtain the current status type information about the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] through enumeration methods. The code example uses the <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> method to discover information about the current processes. It also demonstrates how to work with the columns and rows in the returned <xref:System.Data.DataTable> object.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -229,7 +229,7 @@ Next
 ```
   
 ## Monitoring Server Processes in Visual C#  
- You can obtain the current status type information about the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] through enumeration methods. The code example uses the <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> method to discover information about the current processes. It also demonstrates how to work with the columns and rows in the returned <xref:System.Data.DataTable> object.  
+ You can obtain the current status type information about the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] through enumeration methods. The code example uses the <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> method to discover information about the current processes. It also demonstrates how to work with the columns and rows in the returned <xref:System.Data.DataTable> object.  
   
 ```c#  
 //Connect to the local, default instance of SQL Server.   

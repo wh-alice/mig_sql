@@ -15,9 +15,9 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Determine Which Packages are Installed on SQL Server
-  This topic describes how you can determine which R packages are installed on the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance.  
+  This topic describes how you can determine which R packages are installed on the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance.  
   
-By default, installation of [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] creates an R package library associated with each instance. Therefore, to know which packages are installed on a computer, you must run this query on each separate instance where R Services is installed. Note that package libraries are **not** shared across instances, so it is possible for different packages to be installed on different instances.
+By default, installation of [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] creates an R package library associated with each instance. Therefore, to know which packages are installed on a computer, you must run this query on each separate instance where R Services is installed. Note that package libraries are **not** shared across instances, so it is possible for different packages to be installed on different instances.
 
 For information about how to determine the default library location for an instance, see [Installing and Managing R Packages](../../advanced-analytics/r-services/installing-and-managing-r-packages.md).   
    
@@ -43,7 +43,7 @@ sqlServerCompute <- RxInSqlServer(connectionString =
      sqlPackages
 ~~~~
 
- The following example uses the base R function `installed.packages()` in a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] stored procedure to get a matrix of packages that have been installed in the R_SERVICES library for the current instance. To avoid parsing the fields in the DESCRIPTION file, only the name is returned.  
+ The following example uses the base R function `installed.packages()` in a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] stored procedure to get a matrix of packages that have been installed in the R_SERVICES library for the current instance. To avoid parsing the fields in the DESCRIPTION file, only the name is returned.  
   
 ```  
 EXECUTE sp_execute_external_script  

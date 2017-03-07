@@ -62,7 +62,7 @@ manager: "jhubbard"
   
      Setting the agents to run continuously rather than creating frequent schedules (such as every minute) improves replication performance, because the agent does not have to start and stop. When you set the Distribution Agent to run continuously, changes are propagated with low latency to the other servers that are connected in the topology. For more information, see:  
   
-    -   [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]: [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)]: [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
 ## Distribution Agent and Log Reader Agent Parameters  
   
@@ -77,7 +77,7 @@ manager: "jhubbard"
   
      The **–SubscriptionStreams** parameter can greatly improve aggregate replication throughput. It allows multiple connections to a Subscriber to apply batches of changes in parallel, while maintaining many of the transactional characteristics present when using a single thread. If one of the connections fails to execute or commit, all connections will abort the current batch, and the agent will use a single stream to retry the failed batches. Before this retry phase completes, there can be temporary transactional inconsistencies at the Subscriber. After the failed batches are successfully committed, the Subscriber is brought back to a state of transactional consistency.  
   
-     A value for this agent parameter can be specified using the **@subscriptionstreams** of [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
+     A value for this agent parameter can be specified using the **@subscriptionstreams** of [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-addsubscription-transact-sql.md).  
   
 -   Increase the value of the **-ReadBatchSize** parameter for the Log Reader Agent.  
   

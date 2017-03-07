@@ -23,7 +23,7 @@ manager: "erikre"
  ![Line chart](../../reporting-services/report-design/media/rs-linechart.gif "Line chart")  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Variations  
   

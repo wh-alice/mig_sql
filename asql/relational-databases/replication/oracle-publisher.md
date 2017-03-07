@@ -17,12 +17,12 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Oracle Publisher
-  Beginning with [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] allows you to publish data from an Oracle database using snapshot and transactional replication. For more information, see [Oracle Publishing Overview](../../relational-databases/replication/non-sql/oracle-publishing-overview.md).  
+  Beginning with [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] allows you to publish data from an Oracle database using snapshot and transactional replication. For more information, see [Oracle Publishing Overview](../../relational-databases/replication/non-sql/oracle-publishing-overview.md).  
   
- The Oracle Publisher must use a remote [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Distributor; this wizard must be run on that server after the necessary Oracle networking software has been installed and tested. For more information, see [Configure an Oracle Publisher](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
+ The Oracle Publisher must use a remote [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Distributor; this wizard must be run on that server after the necessary Oracle networking software has been installed and tested. For more information, see [Configure an Oracle Publisher](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 > [!IMPORTANT]  
->  If another administrator configured the Oracle database as a Publisher, after clicking **Next** you will be prompted to enter the password for the replication login used to connect to the Oracle database. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will then create a mapping between your login and the linked server connection to the Oracle database. You will not be required to enter a password for subsequent connections to the Oracle database.  
+>  If another administrator configured the Oracle database as a Publisher, after clicking **Next** you will be prompted to enter the password for the replication login used to connect to the Oracle database. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will then create a mapping between your login and the linked server connection to the Oracle database. You will not be required to enter a password for subsequent connections to the Oracle database.  
   
 ## Options  
  **Oracle Publishers**  

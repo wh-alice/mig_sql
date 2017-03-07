@@ -19,11 +19,11 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Using Tuple Functions
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   A tuple function retrieves a tuple from a set or retrieves a tuple by resolving the string representation of a tuple.  
   
- Tuple functions, like member functions and set functions, are essential to negotiating the multidimensional structures found in [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)].  
+ Tuple functions, like member functions and set functions, are essential to negotiating the multidimensional structures found in [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)].  
   
  There are three tuple functions in MDX, [Current &#40;MDX&#41;](../mdx/current-mdx.md), [Item &#40;Tuple&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md) and [StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md). The following example query shows how to use of each of them:  
   

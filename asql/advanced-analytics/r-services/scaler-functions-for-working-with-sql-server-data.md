@@ -22,11 +22,11 @@ This topic provides an overview of the main ScaleR functions for use with SQL Se
 For a complete list of ScaleR functions and how to use them, see the [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/index#) reference in the MSDN library. 
 
 ## Functions for working with SQL Server Data Sources
-The following functions let you define a [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data source. A data source object is a container that specifies a connection string together with the set of data that you want, defined either as a table, view, or query. Stored procedure calls are not supported.  
+The following functions let you define a [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] data source. A data source object is a container that specifies a connection string together with the set of data that you want, defined either as a table, view, or query. Stored procedure calls are not supported.  
 
 In addition to defining a data source, you can execute DDL statements from R, if you have the necessary permissions on the instance and database. 
-+ [RxSqlServerData](https://msdn.microsoft.com/microsoft-r/scaler/RxSqlServerData) - Define a [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data source object
-+ [rxSqlServerDropTable](https://msdn.microsoft.com/microsoft-r/scaler/rxSqlServerDropTable) - Drop a [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table
++ [RxSqlServerData](https://msdn.microsoft.com/microsoft-r/scaler/RxSqlServerData) - Define a [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] data source object
++ [rxSqlServerDropTable](https://msdn.microsoft.com/microsoft-r/scaler/rxSqlServerDropTable) - Drop a [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] table
 + [rxSqlServerTableExists](https://msdn.microsoft.com/microsoft-r/scaler/rxSqlServerTableExists) - Check for the existence of a database table or object
 + [rxExecuteSQLDDL](https://msdn.microsoft.com/microsoft-r/scaler/rxExecuteSQLDDL) - Execute a command to define, manipulate, or control SQL data, but not return data  
 
@@ -45,7 +45,7 @@ After you have created a data source object, you can open it to get data, or wri
 + [rxWriteNext](https://msdn.microsoft.com/microsoft-r/scaler/rxWriteNext) - Write data to the target
 + [rxClose](https://msdn.microsoft.com/microsoft-r/scaler/rxclose) - Close a data source
 
-For more information about working with these ScaleR functions, which can work with data sources other than [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [ Microsoft R Server - Getting Started](https://msdn.microsoft.com/microsoft-r/rserver).
+For more information about working with these ScaleR functions, which can work with data sources other than [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)], see [ Microsoft R Server - Getting Started](https://msdn.microsoft.com/microsoft-r/rserver).
 
 ## Functions that work with XDF Files
 The following functions can be used to create a local data cache in the XDF format. This file can be useful when working with more data than can be transferred from the database in one batch, or more data than can fit in memory.

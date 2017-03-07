@@ -19,7 +19,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Create an Explicit Hierarchy (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], create an explicit hierarchy when you need a ragged hierarchy in which members can exist at any level. Explicit hierarchies contain members from a single entity.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], create an explicit hierarchy when you need a ragged hierarchy in which members can exist at any level. Explicit hierarchies contain members from a single entity.  
   
  After you create an explicit hierarchy, you can add members to it in the **Explorer** functional area.  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 ### To create an explicit hierarchy  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **System Administration**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **System Administration**.  
   
 2.  On the **Manage Model** page, select a model from the grid and then click **Entities**.  
   

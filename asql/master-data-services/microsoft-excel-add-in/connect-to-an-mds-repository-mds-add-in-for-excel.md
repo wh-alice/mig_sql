@@ -15,7 +15,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Connect to an MDS Repository (MDS Add-in for Excel)
-  In the [!INCLUDE[ssMDSshort](../../analysis-services/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../analysis-services/includes/ssmdsxls-md.md)], you must connect to an MDS repository before you can load or publish data.  
+  In the [!INCLUDE[ssMDSshort](../../a9notintoc/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../a9notintoc/includes/ssmdsxls-md.md)], you must connect to an MDS repository before you can load or publish data.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ### To connect to an MDS repository  
   
-1.  In the MDS [!INCLUDE[ssMDSXLS](../../analysis-services/includes/ssmdsxls-md.md)], on the **Master Data** tab, in the **Connect and Load** group, click the arrow under the **Connect** button and click **Manage Connections**.  
+1.  In the MDS [!INCLUDE[ssMDSXLS](../../a9notintoc/includes/ssmdsxls-md.md)], on the **Master Data** tab, in the **Connect and Load** group, click the arrow under the **Connect** button and click **Manage Connections**.  
   
 2.  On the **Manage Connections** dialog box, in the **New connection** section, click **Create a new connection**.  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 4.  On the **Add New Connection** dialog box, in the **Description** field, type a description for your connection. This connection will be displayed when you click the arrow under the **Connect** button on the toolbar.  
   
-5.  In the **MDS server address** box, type the URL of the [!INCLUDE[ssMDSmdm](../../database-engine/install/windows/includes/ssmdsmdm-md.md)] web application, for example http://contoso/mds.  
+5.  In the **MDS server address** box, type the URL of the [!INCLUDE[ssMDSmdm](../../a9notintoc/includes/ssmdsmdm-md.md)] web application, for example http://contoso/mds.  
   
     > [!NOTE]  
     >  Ensure that you use the computer name; do not use “localhost”.  

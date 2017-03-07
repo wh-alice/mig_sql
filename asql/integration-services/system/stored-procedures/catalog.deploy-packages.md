@@ -15,9 +15,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.deploy_packages
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Deploys one or more packages to a folder in the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog or updates an existing package that has been deployed previously.  
+  Deploys one or more packages to a folder in the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] catalog or updates an existing package that has been deployed previously.  
   
 ## Syntax  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
  The name of the project in the folder. The *project_name* is **nvarchar(128)**.  
   
  [ @packages_table = ] *packages_table*  
- The binary contents of [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package (.dtsx) file(s). The *packages_table* is **[catalog].[Package_Table_Type]**  
+ The binary contents of [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] package (.dtsx) file(s). The *packages_table* is **[catalog].[Package_Table_Type]**  
   
  [ @operation_id = ] *operation_id*  
  Returns the unique identifier for the deployment operation. The *operation_id* is **bigint**.  

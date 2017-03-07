@@ -63,6 +63,6 @@ manager: "erikre"
  The **AxesInfo** element contains one **AxisInfo** element for each axis within the multidimensional dataset returned by a **root** element using the **MDDataSet** data type.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

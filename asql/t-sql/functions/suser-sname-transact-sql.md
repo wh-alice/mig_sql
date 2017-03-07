@@ -30,11 +30,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SUSER_SNAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the login name associated with a security identification number (SID).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -48,9 +48,9 @@ SUSER_SNAME ( [ server_user_sid ] )
  *server_user_sid*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
- Is the optional login security identification number. *server_user_sid* is **varbinary(85)**. *server_user_sid* can be the security identification number of any [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login or [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows user or group. If *server_user_sid* is not specified, information about the current user is returned. If the parameter contains the word NULL will return NULL.  
+ Is the optional login security identification number. *server_user_sid* is **varbinary(85)**. *server_user_sid* can be the security identification number of any [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login or [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows user or group. If *server_user_sid* is not specified, information about the current user is returned. If the parameter contains the word NULL will return NULL.  
   
 ## Return Types  
  **nvarchar(128)**  
@@ -60,7 +60,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
  When called without an argument, SUSER_SNAME returns the name of the current security context. When called without an argument within a batch that has switched context by using EXECUTE AS, SUSER_SNAME returns the name of the impersonated context. When called from an impersonated context, ORIGINAL_LOGIN returns the name of the original context.  
   
-## [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] Remarks  
+## [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)] Remarks  
  SUSER_NAME always return the login name for the current security context.  
   
  The SUSER_SNAME statement does not support execution using an impersonated security context through EXECUTE AS.  
@@ -80,7 +80,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 SELECT SUSER_SNAME(0x010500000000000515000000a065cf7e784b9b5fe77c87705a2e0000);  
@@ -109,7 +109,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 SELECT SUSER_SNAME();  
@@ -131,7 +131,7 @@ GO
   
  `sa`  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### E. Using SUSER_SNAME  
  The following example returns the login name for the security identification number with a value of `0x01`.  
@@ -152,7 +152,7 @@ GO
 ## See Also  
  [SUSER_SID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
  [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-principals-transact-sql.md)   
+ [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-principals-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

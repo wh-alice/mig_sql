@@ -65,6 +65,6 @@ manager: "jhubbard"
  For more information, see [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
   
 ## See Also  
- [Common Properties](../Topic/Common%20Properties.md)  
+ [Common Properties](../../a9retired/common-properties.md)  
   
   

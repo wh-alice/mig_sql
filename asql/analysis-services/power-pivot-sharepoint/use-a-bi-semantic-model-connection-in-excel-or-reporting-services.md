@@ -44,7 +44,7 @@ manager: "erikre"
   
 5.  On the last page, you can provide a friendly name and description. Click **Finish**, and then click **OK** on the Import Data dialog box to import the data.  
   
- For connections to succeed you must have Excel 2010 and the MSOLAP.5.dll installed on the client computer. You can get the provider by installing the version of [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for Excel that is current for this release or you can download just the Analysis Services OLE DB provider from the [Feature Pack download page](http://go.microsoft.com/fwlink/?linkid=214066).  
+ For connections to succeed you must have Excel 2010 and the MSOLAP.5.dll installed on the client computer. You can get the provider by installing the version of [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for Excel that is current for this release or you can download just the Analysis Services OLE DB provider from the [Feature Pack download page](http://go.microsoft.com/fwlink/?linkid=214066).  
   
  To confirm that MSOLAP.5.dll is the current version, check **HKEY_CLASSES_ROOT\MSOLAP** in the registry. **CurVer** should be set to MSOLAP.5.  
   
@@ -53,7 +53,7 @@ manager: "erikre"
  If you are connecting to a tabular model database that runs on an Analysis Services server, SharePoint permissions are not sufficient. You must also have database read permissions on the server. This step should have been performed when you created the BI semantic model connection. For more information, see [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 ##  <a name="bkmk_use"></a> Connect from Reporting Services in SharePoint  
- You can use a BI semantic model connection the same way you use most data sources, by specifying the file as a data source in the document or tool that uses the data. Although a BI semantic model connection points to a physical database on another server, you use the connection file as if it were the data source. The SharePoint URL of the BI semantic model connection is a valid data source location for [!INCLUDE[ssCrescent](../../analysis-services/includes/sscrescent-md.md)] reports that use BI semantic model data.  
+ You can use a BI semantic model connection the same way you use most data sources, by specifying the file as a data source in the document or tool that uses the data. Although a BI semantic model connection points to a physical database on another server, you use the connection file as if it were the data source. The SharePoint URL of the BI semantic model connection is a valid data source location for [!INCLUDE[ssCrescent](../../a9notintoc/includes/sscrescent-md.md)] reports that use BI semantic model data.  
   
  For ad hoc report design in SharePoint, the user who creates the report must have SharePoint permissions on the BI semantic model connection (.bism) file and on the business intelligence semantic model database. The security context of the connection is the interactive user who is creating the report.  
   

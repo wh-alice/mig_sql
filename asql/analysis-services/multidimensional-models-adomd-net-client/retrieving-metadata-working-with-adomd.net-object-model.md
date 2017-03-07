@@ -32,7 +32,7 @@ manager: "erikre"
  Whenever possible, you should use the <xref:Microsoft.AnalysisServices.AdomdClient.CubeDef> object to represent metadata in client applications designed to support multiple OLAP servers, or for general metadata display and access purposes.  
   
 > [!NOTE]  
->  For provider specific metadata, or for detailed metadata display and access, use schema rowsets to retrieve metadata. For more information, see [Working with Schema Rowsets in ADOMD.NET](../Topic/Working%20with%20Schema%20Rowsets%20in%20ADOMD.NET.md).  
+>  For provider specific metadata, or for detailed metadata display and access, use schema rowsets to retrieve metadata. For more information, see [Working with Schema Rowsets in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets.md).  
   
  The following example uses the <xref:Microsoft.AnalysisServices.AdomdClient.CubeDef> object to retrieve the visible cubes and their dimensions from the local server:  
   

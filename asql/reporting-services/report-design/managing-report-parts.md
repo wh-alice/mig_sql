@@ -19,15 +19,15 @@ manager: "erikre"
   Report parts can be reused in paginated reports, by multiple users and in multiple reports. Users can search for report parts on the server and add them to a report.  Users can also be informed of updates to the report part on the server, and republish new versions of a report part. Those report authoring actions can be affected by and controlled by reporting services security permissions.  This topic reviews report part properties and behavior after they are on the server.  
   
 ## Managing Report Parts  
- To manage report parts, you can use the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal for a report server in native mode, or application pages for a report server in SharePoint integrated mode.  
+ To manage report parts, you can use the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal for a report server in native mode, or application pages for a report server in SharePoint integrated mode.  
   
 ### Server-side interaction and search  
- Report parts can be published to a report server in either native mode or SharePoint integrated mode. Users can use the report part gallery feature in a report authoring application such as [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Report Builder to find and add report parts to their reports. When a user searches for a report part, the search looks at the report server catalog regardless of which mode the server was installed for.  
+ Report parts can be published to a report server in either native mode or SharePoint integrated mode. Users can use the report part gallery feature in a report authoring application such as [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Report Builder to find and add report parts to their reports. When a user searches for a report part, the search looks at the report server catalog regardless of which mode the server was installed for.  
   
  When report parts are published from a report authoring application such as Report Builder to a report server in SharePoint integrated mode, the report server catalog is also updated, and searches from the gallery to accurately reflect the new or update report part.  
   
 #### Directly uploading report parts to a SharePoint folder  
- If a report part is uploaded directly to a SharePoint document folder instead of being published from a report authoring application, the report server catalog is not updated. Searches from the report part gallery will not find the uploaded report part. To help keep your SharePoint folders and report server catalog synchronized, you can activate the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] file sync feature on the SharePoint server. For more information, see [Activate the Report Server File Sync Feature in SharePoint Central Administration](../Topic/Activate%20the%20Report%20Server%20File%20Sync%20Feature%20in%20SharePoint%20Central%20Administration.md).  
+ If a report part is uploaded directly to a SharePoint document folder instead of being published from a report authoring application, the report server catalog is not updated. Searches from the report part gallery will not find the uploaded report part. To help keep your SharePoint folders and report server catalog synchronized, you can activate the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] file sync feature on the SharePoint server. For more information, see [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server/sharepoint/site-settings-and-features-server-file-sync-in-sharepoint.md).  
   
  The files can also be synchronized by calling some of the reporting services management APIs such as GetProperties and SetProperties.  
   
@@ -43,7 +43,7 @@ manager: "erikre"
  The exception is subfolders. The search will always search subfolders, so if you manually move a report part to a subfolder, a search from the report gallery will find the report part. it will still be found in a search from the report part gallery.  
   
 ### Report server catalog properties  
- The following table describes how existing report server catalog fields relate to a report part, and to new fields that are added to the catalog for report parts. These are exposed in the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal and SharePoint libraries, and in report authoring applications such as Report Builder.  
+ The following table describes how existing report server catalog fields relate to a report part, and to new fields that are added to the catalog for report parts. These are exposed in the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal and SharePoint libraries, and in report authoring applications such as Report Builder.  
   
  (*) indicates it is new for this release.  
   

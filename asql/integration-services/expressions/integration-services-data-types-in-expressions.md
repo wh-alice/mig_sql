@@ -18,15 +18,15 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Integration Services Data Types in Expressions
-  The expression evaluator uses [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data types. When data first enters a data flow in an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package, the data flow engine converts all column data to an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data type, and the column data that an expression uses already has an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data type. Expressions used in the Conditional Split and the Derived Column transformations can reference columns because they are part of a data flow that includes column data.  
+  The expression evaluator uses [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] data types. When data first enters a data flow in an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package, the data flow engine converts all column data to an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] data type, and the column data that an expression uses already has an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] data type. Expressions used in the Conditional Split and the Derived Column transformations can reference columns because they are part of a data flow that includes column data.  
   
 ## Variables  
- Expressions can also use variables. Variables have a Variant data type and the expression evaluator converts the data type of a variable from a Variant subtype to an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data type before it evaluates the expression. Variables can use only a subset of the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data types. For example, a variable cannot use a Binary Large Object Block (BLOB) data type.  
+ Expressions can also use variables. Variables have a Variant data type and the expression evaluator converts the data type of a variable from a Variant subtype to an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] data type before it evaluates the expression. Variables can use only a subset of the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] data types. For example, a variable cannot use a Binary Large Object Block (BLOB) data type.  
   
- For more information about [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data types and the mapping of Variant data types to [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data types, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ For more information about [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] data types and the mapping of Variant data types to [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] data types, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## Literals  
- In addition, expressions can include string, Boolean, and numeric literals. For more information about converting numeric literals to numeric [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data types, see [Literals &#40;SSIS&#41;](../Topic/Literals%20\(SSIS\).md).  
+ In addition, expressions can include string, Boolean, and numeric literals. For more information about converting numeric literals to numeric [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] data types, see [Literals &#40;SSIS&#41;](../../integration-services/expressions/numeric-string-and-boolean-literals.md).  
   
 ## Strings  
  You can use either DT_STR or DT_WSTR as the return type of an expression. Inside an expression, however, only DT_WSTR is supported, and DT_STR values are converted to DT_WSTR values. This behavior has several implications when you're writing an expression.  
@@ -68,12 +68,12 @@ manager: "jhubbard"
   
  The intersection of a signed and an unsigned integer is a signed integer that is potentially larger than either argument.  
   
- Operators compare strings, dates, Booleans, and other data types. Before an operator compares two values, the expression evaluator performs certain implicit conversions. The expression evaluator always converts string literals to the DT_WSTR data type and converts Boolean literals to the DT_BOOL data type. The expression evaluator interprets all values enclosed in quotation marks as strings. Numeric literals are converted to one of the numeric [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data types.  
+ Operators compare strings, dates, Booleans, and other data types. Before an operator compares two values, the expression evaluator performs certain implicit conversions. The expression evaluator always converts string literals to the DT_WSTR data type and converts Boolean literals to the DT_BOOL data type. The expression evaluator interprets all values enclosed in quotation marks as strings. Numeric literals are converted to one of the numeric [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] data types.  
   
 > [!NOTE]  
 >  Boolean values are logical values, not numbers. Although Boolean values may be displayed as numbers in some environments, they are not stored as numbers, and various programming languages represent Boolean values as numeric values differently, as do the .NET Framework methods.  
 >   
->  For example, the conversion functions available in Visual Basic convert **True** to -1; however, the **System.Convert.ToInt32** method in the .NET Framework converts **True** to +1. The [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] Expression Language converts **True** to -1.  
+>  For example, the conversion functions available in Visual Basic convert **True** to -1; however, the **System.Convert.ToInt32** method in the .NET Framework converts **True** to +1. The [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] Expression Language converts **True** to -1.  
 >   
 >  To avoid errors or unexpected results, you should not write code that relies on particular numeric values for **True** and **False**. Wherever possible, you should restrict usage of Boolean variables to the logical values for which they are designed.  
   
@@ -95,14 +95,14 @@ manager: "jhubbard"
   
 -   DAY, MONTH, and YEAR accept a date and return an integer (DT_I4) result.  
   
--   ISNULL accepts an expression of any [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] data type and returns a Boolean (DT_BOOL) result.  
+-   ISNULL accepts an expression of any [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] data type and returns a Boolean (DT_BOOL) result.  
   
 -   SQUARE and SQRT accept a numeric expression and return a non-integral numeric (DT_R8) result.  
   
  If the arguments have the same data type, the result is of that type. The only exception is the result of a binary operation on two values with the DT_DECIMAL data type, which returns a result with the DT_NUMERIC data type.  
   
 ## Requirements for Data Used in Expressions  
- The expression evaluator supports all [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data types. However, depending on the operation or the function, the operands and arguments require certain data types. The expression evaluator imposes the following data type requirements on data used in expressions:  
+ The expression evaluator supports all [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] data types. However, depending on the operation or the function, the operands and arguments require certain data types. The expression evaluator imposes the following data type requirements on data used in expressions:  
   
 -   Operands used in **logical** operations must evaluate to a Boolean. For example, ColumnA > 1&&ColumnB < 2.  
   
@@ -127,7 +127,7 @@ manager: "jhubbard"
  Results of many operations and functions have predetermined data types. This can be the data type of the argument or the data type to which the expression evaluator casts the result. For example, the result of a logical OR operator (||) is always a Boolean, the result of the ABS function is the numeric data type of the argument, and the result of multiplication is the smallest numeric data type that can hold the result without loss. For more information about the data types of results, see [Operators &#40;SSIS Expression&#41;](../../integration-services/expressions/operators-ssis-expression.md) and [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
 ## Related Tasks  
- [Use an Expression in a Data Flow Component](../Topic/Use%20an%20Expression%20in%20a%20Data%20Flow%20Component.md)  
+ [Use an Expression in a Data Flow Component](../../a9retired/use-an-expression-in-a-data-flow-component.md)  
   
 ## Related Content  
   

@@ -61,6 +61,6 @@ manager: "erikre"
 ## See Also  
  [Measures &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [KPIs &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Calculated Columns &#40;SSAS Tabular&#41;](../Topic/Calculated%20Columns%20\(SSAS%20Tabular\).md)  
+ [Calculated Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

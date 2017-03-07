@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 1-4 - Reading the Data in a Table
-Use the SELECT statement to read the data in a table. The SELECT statement is one of the most important [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements, and there are many variations in the syntax. For this tutorial, you will work with five simple versions.  
+Use the SELECT statement to read the data in a table. The SELECT statement is one of the most important [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements, and there are many variations in the syntax. For this tutorial, you will work with five simple versions.  
   
 ### To read the data in a table  
   
@@ -80,10 +80,10 @@ For information about some functions that you can use to work with data in SELEC
 |||  
 |-|-|  
 |[String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)|[Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
-|[Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)|[Text and Image Functions &#40;Transact-SQL&#41;](../Topic/Text%20and%20Image%20Functions%20(Transact-SQL).md)|  
+|[Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)|[Text and Image Functions &#40;Transact-SQL&#41;](../../a9retired/text-and-image-functions-transact-sql.md)|  
   
 ## Next Task in Lesson  
-[Summary: Creating Database Objects](../Topic/Summary:%20Creating%20Database%20Objects.md)  
+[Summary: Creating Database Objects](../../t-sql/tutorials/lesson-1-5-summary-creating-database-objects.md)  
   
 ## See Also  
 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  

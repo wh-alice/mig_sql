@@ -16,10 +16,10 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Create an Entity Administrator (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], create an entity administrator when you want a group or user to have all permissions to all objects in one or more entities, or have the permission to approve pending change sets.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], create an entity administrator when you want a group or user to have all permissions to all objects in one or more entities, or have the permission to approve pending change sets.  
   
 > [!TIP]  
->  To simplify administration, create a Windows or local group and configure it as an entity administrator. You can then add and remove users from the group without accessing [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)].  
+>  To simplify administration, create a Windows or local group and configure it as an entity administrator. You can then add and remove users from the group without accessing [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)].  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 ## To create an Entity Administrator  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **User and Group Permissions**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **User and Group Permissions**.  
   
 2.  Select the row for the user or group that you want to edit, and then click **Edit selected user**.  
   

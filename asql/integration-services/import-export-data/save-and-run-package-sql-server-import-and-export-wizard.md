@@ -17,7 +17,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Save and Run Package (SQL Server Import and Export Wizard)
-  After you specify and configure your data source and destination, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard shows **Save and Run Package**. On this page, you specify whether you want to run the copy operation immediately. Depending on your configuration, you may also be able to save your settings as a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] (SSIS) package to customize it and to reuse it later.
+  After you specify and configure your data source and destination, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard shows **Save and Run Package**. On this page, you specify whether you want to run the copy operation immediately. Depending on your configuration, you may also be able to save your settings as a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] (SSIS) package to customize it and to reuse it later.
   
 **What's a package?** The Wizard uses SQL Server Integration Services (SSIS) to copy data. In SSIS, the basic unit is the package. The wizard creates an SSIS package in memory as you move through the pages of the wizard and specify options.
   
@@ -35,7 +35,7 @@ The following screen shot shows the **Save and Run Package** page of the wizard.
  **Save SSIS Package**  
  Save your settings as an SSIS package. Later you can optionally customize the package and run it again. If you choose to save the package, there are additional options on the next page, **Save SSIS Package**.
  
-The option to save the package is available only if you have [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Standard Edition or a higher edition installed.   
+The option to save the package is available only if you have [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Standard Edition or a higher edition installed.   
   
 > [!NOTE]
 > If you finish the wizard, run the operation, but stop the operation before it finishes running, the package is not saved, even if you selected the **Save SSIS Package** check box.  

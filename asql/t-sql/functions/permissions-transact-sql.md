@@ -33,9 +33,9 @@ manager: "jhubbard"
 
   Returns a value containing a bitmap that indicates the statement, object, or column permissions of the current user.  
   
- **Important** [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)] Use [fn_my_permissions](../../relational-databases/system-functions/sys.fn-my-permissions-transact-sql.md) and [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md) instead. Continued use of the PERMISSIONS function may result in slower performance.  
+ **Important** [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)] Use [fn_my_permissions](../../relational-databases/reference/system-functions/sys.fn-my-permissions-transact-sql.md) and [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md) instead. Continued use of the PERMISSIONS function may result in slower performance.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -144,7 +144,7 @@ ELSE
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
- [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-transact-sql.md)  
+ [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-helprotect-transact-sql.md)   
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/system-functions-transact-sql.md)  
   
   

@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Tablix Data Region Areas (Report Builder and SSRS)
- In a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report, a tablix data region has four areas that contain tablix cells:   
+ In a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report, a tablix data region has four areas that contain tablix cells:   
 * The corner  
 * The row group area  
 * The column group area  

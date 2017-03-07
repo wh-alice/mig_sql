@@ -17,7 +17,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Tutorial: Add a Bar Chart to Your Report (Report Builder)
-In this tutorial, you use a wizard in [!INCLUDE[ssRBnoversion_md](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] to create a bar chart in a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report. Then you add a filter and enhance the chart. 
+In this tutorial, you use a wizard in [!INCLUDE[ssRBnoversion_md](../../a9notintoc/includes/ssrbnoversion-md.md)] to create a bar chart in a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report. Then you add a filter and enhance the chart. 
 
 A bar chart displays category data horizontally. This can help to:  
   
@@ -44,7 +44,7 @@ In which you create an embedded dataset, choose a shared data source, and create
 > [!NOTE]  
 > In this tutorial, the query contains the data values so that it does not need an external data source. This makes the query quite long. In a business environment, a query would not contain the data. This is for learning purposes only.  
   
-1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) from the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, from the report server in SharePoint integrated mode, or from your computer.  
+1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) from the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, from the report server in SharePoint integrated mode, or from your computer.  
   
      The **Getting Started** dialog box appears.  
   
@@ -123,7 +123,7 @@ By default, only some of the values on the vertical axis appear. You can change 
   
 3.  Under **Axis range and interval**, in the **Interval** box, type **1**.  
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 5.  Click **Run** to preview the report.  
   
@@ -145,9 +145,9 @@ You can change the category expression to include last name followed by first na
   
     This expression concatenates the last name, a comma, and the first name.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 8.  Click **Run** to preview the report.  
   
@@ -171,7 +171,7 @@ When you sort the data on a chart, you are changing the order of values on the c
   
 6.  in the **Order** list, select **A to Z** so that the names appear in order from largest to smallest 2015 sales.
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 10. Click **Run** to preview the report.  
   
@@ -192,7 +192,7 @@ To improve the readability of the chart values, you might want to move the chart
   
     When the legend is placed at the top or bottom of a chart, the layout of the legend changes from vertical to horizontal. You can select a different layout from the **Layout** drop-down list.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 6.  Click **Run** to preview the report.  
   
@@ -221,7 +221,7 @@ By default, the horizontal axis displays values in a general format that is auto
   
 5.  On the **Number** tab, select **Show values in Thousands**.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
 
 8.  Right-click the horizontal axis, and select **Show Axis Title**.
   
@@ -254,7 +254,7 @@ You can add a filter to the chart to specify which data from the dataset to incl
   
 9. In **Value**, type the following expression: **=5**  
   
-10. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 11. Click **Run** to preview the report.  
   

@@ -18,9 +18,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Configure the max worker threads Server Configuration Option
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes how to configure the **max worker threads** server configuration option in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]. The **max worker threads** option configures the number of worker threads that are available to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] processes. [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses the native thread services of the operating systems so that one or more threads support each network that [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports simultaneously, another thread handles database checkpoints, and a pool of threads handles all users. The default value for **max worker threads** is 0. This enables [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to automatically configure the number of worker threads at startup. The default setting is best for most systems. However, depending on your system configuration, setting **max worker threads** to a specific value sometimes improves performance.  
+  This topic describes how to configure the **max worker threads** server configuration option in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]. The **max worker threads** option configures the number of worker threads that are available to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] processes. [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] uses the native thread services of the operating systems so that one or more threads support each network that [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] supports simultaneously, another thread handles database checkpoints, and a pool of threads handles all users. The default value for **max worker threads** is 0. This enables [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] to automatically configure the number of worker threads at startup. The default setting is best for most systems. However, depending on your system configuration, setting **max worker threads** to a specific value sometimes improves performance.  
   
  **In This Topic**  
   
@@ -44,15 +44,15 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   When the actual number of query requests is less than the amount set in **max worker threads**, one thread handles each query request. However, if the actual number of query request exceeds the amount set in **max worker threads**, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] pools the worker threads so that the next available worker thread can handle the request.  
+-   When the actual number of query requests is less than the amount set in **max worker threads**, one thread handles each query request. However, if the actual number of query request exceeds the amount set in **max worker threads**, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] pools the worker threads so that the next available worker thread can handle the request.  
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] technician.  
+-   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] technician.  
   
--   Thread pooling helps optimize performance when large numbers of clients are connected to the server. Usually, a separate operating system thread is created for each query request. However, with hundreds of connections to the server, using one thread per query request can consume large amounts of system resources. The **max worker threads** option enables [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to create a pool of worker threads to service a larger number of query requests, which improves performance.  
+-   Thread pooling helps optimize performance when large numbers of clients are connected to the server. Usually, a separate operating system thread is created for each query request. However, with hundreds of connections to the server, using one thread per query request can consume large amounts of system resources. The **max worker threads** option enables [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] to create a pool of worker threads to service a larger number of query requests, which improves performance.  
   
--   The following table shows the automatically configured number of max worker threads for various combinations of CPUs and versions of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   The following table shows the automatically configured number of max worker threads for various combinations of CPUs and versions of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
     |Number of CPUs|32-bit computer|64-bit computer|  
     |--------------------|----------------------|----------------------|  
@@ -65,12 +65,12 @@ manager: "jhubbard"
     |256 processors|8320|8576|  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] can no longer be installed on a 32-bit operating system. 32-bit computer values are listed for the assistance of customers running [!INCLUDE[ssSQL14](../../../analysis-services/includes/sssql14-md.md)] and earlier.   We recommend 1024 as the maximum number of worker threads for an instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that is running on a 32-bit computer.  
+    >  [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] can no longer be installed on a 32-bit operating system. 32-bit computer values are listed for the assistance of customers running [!INCLUDE[ssSQL14](../../../a9notintoc/includes/sssql14-md.md)] and earlier.   We recommend 1024 as the maximum number of worker threads for an instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] that is running on a 32-bit computer.  
   
     > [!NOTE]  
     >  For recommendations on using more than 64 CPUs, refer to [Best Practices for Running SQL Server on Computers That Have More Than 64 CPUs](http://technet.microsoft.com/library/ee210547\(SQL.105\).aspx).  
   
--   When all worker threads are active with long running queries, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] might appear unresponsive until a worker thread completes and becomes available. Although this is not a defect, it can sometimes be undesirable. If a process appears to be unresponsive and no new queries can be processed, then connect to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] using the dedicated administrator connection (DAC), and kill the process. To prevent this, increase the number of max worker threads.  
+-   When all worker threads are active with long running queries, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] might appear unresponsive until a worker thread completes and becomes available. Although this is not a defect, it can sometimes be undesirable. If a process appears to be unresponsive and no new queries can be processed, then connect to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] using the dedicated administrator connection (DAC), and kill the process. To prevent this, increase the number of max worker threads.  
   
  The**max worker threads** server configuration option does not take into account threads that are required for all the system tasks such as Availibility Groups, Service Broker, Lock Manager, and others.  If the number of threads configured are being exceeded, the following query will provide information about the system tasks that have spawned the additional threads.  
   
@@ -114,17 +114,17 @@ WHERE s.is_user_process = 0;
   
 3.  In the **Max worker threads** box, type or select a value from 128 through 32767.  
   
-     Use the **max worker threads** option to configure the number of worker threads available to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] processes. The default setting for **max worker threads** is best for most systems. However, depending on your system configuration, setting **max worker threads** to a smaller value sometimes improves performance.  
+     Use the **max worker threads** option to configure the number of worker threads available to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] processes. The default setting for **max worker threads** is best for most systems. However, depending on your system configuration, setting **max worker threads** to a smaller value sometimes improves performance.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To configure the max worker threads option  
   
-1.  Connect to the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to configure the `max worker threads` option to `900`.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md) to configure the `max worker threads` option to `900`.  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -143,12 +143,12 @@ GO
  For more information, see [Server Configuration Options &#40;SQL Server&#41;](../../../database-engine/configure/windows/server-configuration-options-sql-server.md).  
   
 ##  <a name="FollowUp"></a> Follow Up: After you configure the max worker threads option  
- The change will take effect immediately without requiring the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] to restart.  
+ The change will take effect immediately without requiring the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] to restart.  
   
 ## See Also  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../../database-engine/configure/windows/server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md)   
  [Diagnostic Connection for Database Administrators](../../../database-engine/configure/windows/diagnostic-connection-for-database-administrators.md)  
   
   

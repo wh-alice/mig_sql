@@ -21,12 +21,12 @@ Some types of Policy-Based Management policies can create triggers to enforce fu
   
 This lesson contains the following topics:  
   
--   [Create the Finance Name Policy](../Topic/Create%20the%20Finance%20Name%20Policy.md)  
+-   [Create the Finance Name Policy](../../../relational-databases/policy-based-management/tutorials/lesson-2-1-create-the-finance-name-policy.md)  
   
--   [Subscribe to and Check the Finance Name Policy](../Topic/Subscribe%20to%20and%20Check%20the%20Finance%20Name%20Policy.md)  
+-   [Subscribe to and Check the Finance Name Policy](../../../relational-databases/policy-based-management/tutorials/lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md)  
   
 ## Next Task in Lesson  
-[Create the Finance Name Policy](../Topic/Create%20the%20Finance%20Name%20Policy.md)  
+[Create the Finance Name Policy](../../../relational-databases/policy-based-management/tutorials/lesson-2-1-create-the-finance-name-policy.md)  
   
   
   

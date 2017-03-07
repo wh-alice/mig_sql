@@ -17,7 +17,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Add IP Address Dialog Box (SQL Server Management Studio)
-  This F1 help topic describes the options of the **Add IP Address** dialog box. This dialog box accessed from the **New Availability Group Listener** dialog box and the **Listener** tab of the **Specify Replicas** page of the [!INCLUDE[ssAoNewAgWiz](../../../database-engine/availability-groups/windows/includes/ssaonewagwiz-md.md)] or the [!INCLUDE[ssAoAddRepWiz](../../../database-engine/availability-groups/windows/includes/ssaoaddrepwiz-md.md)] of [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  This F1 help topic describes the options of the **Add IP Address** dialog box. This dialog box accessed from the **New Availability Group Listener** dialog box and the **Listener** tab of the **Specify Replicas** page of the [!INCLUDE[ssAoNewAgWiz](../../../database-engine/availability-groups/windows/includes/ssaonewagwiz-md.md)] or the [!INCLUDE[ssAoAddRepWiz](../../../database-engine/availability-groups/windows/includes/ssaoaddrepwiz-md.md)] of [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)].  
   
 ## Prerequisites  
  Before you begin to add subnets to an availability group listener, ensure that know the IP address for each subnet and, for an IPv4 address, the subnet mask.  
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../Topic/Availability%20Group%20Listeners,%20Client%20Connectivity,%20and%20Application%20Failover%20\(SQL%20Server\).md)   
+ [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Always On Client Connectivity &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)  
   
   

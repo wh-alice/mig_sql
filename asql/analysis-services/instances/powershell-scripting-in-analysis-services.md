@@ -18,13 +18,13 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # PowerShell scripting in Analysis Services
-  [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] includes PowerShell components to navigate, administer, and query [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] server, tabular, and multidimensional objects:  
+  [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] includes PowerShell components to navigate, administer, and query [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] server, tabular, and multidimensional objects:  
   
 -   **SQLAS** provider, used for navigation of the object hierarchy, is available when you have any local instance of Analysis Services (server mode is irrelevant).  
   
 -   **SQLASCMDLETS** module provides task-specific cmdlets, such as backup, restore, process, as well as the general purpose [Invoke-ASCmd cmdlet](../../analysis-services/powershell/invoke-ascmd-cmdlet.md) that accepts any ASSL/XMLA or Tabular Model Scripting Language (TMSL) query or script input file.  
   
- Both components implement a subset of the Analysis Services Management Object ([Microsoft.AnalysisServices Namespace](http://msdn.microsoft.com/library/ms146720\(SQL.130\).aspx)) administrative interface, providing cmdlets for managing and creating [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] objects.  Both  are extensions of the **SQLPS** root module for SQL Server. To use [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] PowerShell components, you start by importing **SQLPS**. Syntax and examples for all cmdlets can be found in the [Analysis Services PowerShell Reference](../../analysis-services/powershell/analysis-services-powershell-reference.md).  For an example of how to use AMO types in PowerShell to create a Tabular database, see [AMO PowerShell Example](../../analysis-services/powershell/amo-powershell-example.md).  
+ Both components implement a subset of the Analysis Services Management Object ([Microsoft.AnalysisServices Namespace](http://msdn.microsoft.com/library/ms146720\(SQL.130\).aspx)) administrative interface, providing cmdlets for managing and creating [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] objects.  Both  are extensions of the **SQLPS** root module for SQL Server. To use [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] PowerShell components, you start by importing **SQLPS**. Syntax and examples for all cmdlets can be found in the [Analysis Services PowerShell Reference](../../analysis-services/powershell/analysis-services-powershell-reference.md).  For an example of how to use AMO types in PowerShell to create a Tabular database, see [AMO PowerShell Example](../../analysis-services/powershell/amo-powershell-example.md).  
   
 ##  <a name="bkmk_prereq"></a> Step 1: Install PowerShell components  
  The recommended approach for getting PowerShell components is by installing  SQL Server Management Studio (SSMS). This approach provides the PowerShell modules for SQL Server and the Analysis Services Management (AMO) data provider. Having SSMS also gives you a tool for easily generating XMLA and TMSL inputs for use in your PowerShell script.  
@@ -132,10 +132,10 @@ manager: "erikre"
 |-------------|-------------------------------------|  
 |Multidimensional instances and databases|Supported for local and remote administration.<br /><br /> Merge-partition requires a local connection.|  
 |Tabular instances and databases|Supported for local and remote administration, at all compatibility levels.<br /><br /> SQLAS cmdlets for Tabular models at the 1200 compatibility level using Tabular Model Scripting Language (TMSL) in JSON instead of XMLA.|  
-|[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint instances and databases|Limited support. You can use HTTP connections and the SQLAS provider to view instance and database information.<br /><br /> However, using the cmdlets is not supported. You can't use Analysis Services PowerShell to backup and restore an in-memory [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] database, nor should you add or remove roles, process data, or run arbitrary XMLA script.<br /><br /> For configuration purposes, [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint has built-in PowerShell support that is provided separately. For more information, see [PowerShell Reference for Power Pivot for SharePoint](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md).|  
+|[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint instances and databases|Limited support. You can use HTTP connections and the SQLAS provider to view instance and database information.<br /><br /> However, using the cmdlets is not supported. You can't use Analysis Services PowerShell to backup and restore an in-memory [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] database, nor should you add or remove roles, process data, or run arbitrary XMLA script.<br /><br /> For configuration purposes, [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint has built-in PowerShell support that is provided separately. For more information, see [PowerShell Reference for Power Pivot for SharePoint](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md).|  
 |Native connections to local cubes<br /><br /> “Data Source=c:\backup\test.cub”|Not supported.|  
 |HTTP connections to BI semantic model (.bism) connection files in SharePoint<br /><br /> “Data Source=http://server/shared_docs/name.bism”|Not supported.|  
-|Embedded connections to [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] databases<br /><br /> “Data Source=$Embedded$”|Not supported.|  
+|Embedded connections to [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] databases<br /><br /> “Data Source=$Embedded$”|Not supported.|  
 |Local server context in Analysis Services stored procedures<br /><br /> “Data Source=*”|Not supported.|  
   
 ## Examples of server administration tasks with PowerShell  
@@ -213,6 +213,6 @@ $port | select *
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [Install SQL Server PowerShell](../../database-engine/install/windows/install-sql-server-powershell.md)   
  [Manage Tabular Models Using PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)   
- [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../Topic/Configure%20HTTP%20Access%20to%20Analysis%20Services%20on%20Internet%20Information%20Services%20\(IIS\)%208.0.md)  
+ [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8.0.md)  
   
   

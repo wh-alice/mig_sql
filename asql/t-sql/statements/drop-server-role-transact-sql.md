@@ -27,9 +27,9 @@ manager: "jhubbard"
 
   Removes a user-defined server role.  
   
- User-defined server roles are new in [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)].  
+ User-defined server roles are new in [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -50,7 +50,7 @@ DROP SERVER ROLE role_name
   
  Fixed server roles cannot be removed.  
   
- You can view information about role membership by querying the [sys.server_role_members](../../relational-databases/system-catalog-views/sys.server-role-members-transact-sql.md) catalog view.  
+ You can view information about role membership by querying the [sys.server_role_members](../../relational-databases/reference/system-catalog-views/sys.server-role-members-transact-sql.md) catalog view.  
   
 ## Permissions  
  Requires CONTROL permission on the server role or ALTER ANY SERVER ROLE permission.  
@@ -66,7 +66,7 @@ GO
 ```  
   
 ### B. To view role membership  
- To view role membership, use the **Server Role (Members**) page in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or execute the following query:  
+ To view role membership, use the **Server Role (Members**) page in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or execute the following query:  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
@@ -96,8 +96,8 @@ ORDER BY SP1.name ;
  [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-role-members-transact-sql.md)   
- [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-principals-transact-sql.md)  
+ [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-role-members-transact-sql.md)   
+ [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-principals-transact-sql.md)  
   
   

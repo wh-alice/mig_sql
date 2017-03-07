@@ -17,13 +17,13 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Properties (SSAS Tabular)
-  Tabular model projects in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] have various properties that define behaviors for the project, model, reporting, and deployment. Property settings are stored in XML format in the Model.bim file, however, all of the properties described in this section can be configured in the **Properties** windows in [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)].  
+  Tabular model projects in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] have various properties that define behaviors for the project, model, reporting, and deployment. Property settings are stored in XML format in the Model.bim file, however, all of the properties described in this section can be configured in the **Properties** windows in [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)].  
   
 ## Related Tasks  
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Power View Reporting Properties &#40;SSAS Tabular&#41;](../Topic/Power%20View%20Reporting%20Properties%20\(SSAS%20Tabular\).md)|Topics in this section provide descriptions and configuration options for tabular models that will be connected to and browsed from [!INCLUDE[ssCrescent](../../analysis-services/includes/sscrescent-md.md)].|  
+|[Power View Reporting Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)|Topics in this section provide descriptions and configuration options for tabular models that will be connected to and browsed from [!INCLUDE[ssCrescent](../../a9notintoc/includes/sscrescent-md.md)].|  
 |[Project Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)|Provides descriptions for project properties. Project properties include project file and deployment options settings.|  
 |[Model Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)|Provides descriptions for model properties. Model properties affect the model project's build actions, backup, and workspace database during model authoring.|  
 |[Table Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/table-properties-ssas-tabular.md)|Provides descriptions for basic table properties. Table properties described here are different from those in the Edit Table Properties dialog box, which display and allow selection and filtering of columns from the source,|  

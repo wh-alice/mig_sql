@@ -54,9 +54,9 @@ manager: "jhubbard"
   
  **To view and resolve synchronization conflicts**  
   
--   [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/aeee9546-4480-49f9-8b1e-c71da1f056c7.md)  
+-   [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/aeee9546-4480-49f9-8b1e-c71da1f056c7.md)  
   
--   [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ## Executing Code During Synchronization  
  Replication supports two methods of executing code during synchronization  
@@ -66,6 +66,6 @@ manager: "jhubbard"
 -   Business logic handlers are supported for merge replication. Using the business logic handler framework you can write a managed code assembly that is called during the merge synchronization process. The assembly includes business logic that can respond to a number of conditions during synchronization: data changes, conflicts, and errors. For more information, see [Execute Business Logic During Merge Synchronization](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
 ## See Also  
- [Detect and Resolve Merge Replication Conflicts](../Topic/Detect%20and%20Resolve%20Merge%20Replication%20Conflicts.md)  
+ [Detect and Resolve Merge Replication Conflicts](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
   
   

@@ -15,7 +15,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Technical Reference (Master Data Services)
-  Find technical reference information on [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] components.  
+  Find technical reference information on [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] components.  
   
  
 -   [Master Data Services Database](../master-data-services/master-data-services-database.md)  

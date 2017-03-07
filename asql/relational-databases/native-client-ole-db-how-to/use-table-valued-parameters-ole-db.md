@@ -15,9 +15,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use Table-Valued Parameters (OLE DB)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  This sample works with [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] or later. This sample does the following:  
+  This sample works with [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] or later. This sample does the following:  
   
 -   Creates table-valued parameters by using dynamic discovery though IOpenRowset::OpenRowset.  
   
@@ -32,15 +32,15 @@ manager: "jhubbard"
  For more information about table-valued parameters, see [Table-Valued Parameters &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
   
 ## Example  
- The first ([!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]) code listing creates the database used by the sample.  
+ The first ([!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]) code listing creates the database used by the sample.  
   
  Put the second code listing into a file called stdafx.h.  
   
  Put the third code listing into a file called OLEDBUtils.hpp.  
   
- Compile with ole32.lib oleaut32.lib and execute the fourth (C++) code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
+ Compile with ole32.lib oleaut32.lib and execute the fourth (C++) code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   
- The fifth ([!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]) code listing creates the database used by the sample.  
+ The fifth ([!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]) code listing creates the database used by the sample.  
   
 ```  
 create database testdb  

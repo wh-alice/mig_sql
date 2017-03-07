@@ -15,7 +15,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Management Objects Support for In-Memory OLTP
-  This topic describes changes in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Management Objects (SMO) for In-Memory OLTP.  
+  This topic describes changes in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Management Objects (SMO) for In-Memory OLTP.  
   
  The following types and members support In-Memory OLTP:  
   

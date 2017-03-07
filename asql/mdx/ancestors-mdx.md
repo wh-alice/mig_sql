@@ -21,9 +21,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Ancestors (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  A function that returns the set of all ancestors of a specified member at a specified level or at a specified distance from the member. With [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)], the set returned will always consist of a single member - [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] does not support multiple parents for a single member.  
+  A function that returns the set of all ancestors of a specified member at a specified level or at a specified distance from the member. With [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)], the set returned will always consist of a single member - [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] does not support multiple parents for a single member.  
   
 ## Syntax  
   

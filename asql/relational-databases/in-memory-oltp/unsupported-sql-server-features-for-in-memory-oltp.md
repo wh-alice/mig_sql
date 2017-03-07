@@ -15,12 +15,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Unsupported SQL Server Features for In-Memory OLTP
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  This topic discusses [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] features that are not supported for use with memory-optimized objects.  
+  This topic discusses [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] features that are not supported for use with memory-optimized objects.  
   
-## [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Features Not Supported for In-Memory OLTP  
- The following [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] features are not supported on a database that has memory-optimized objects (including memory-optimized data filegroup).  
+## [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Features Not Supported for In-Memory OLTP  
+ The following [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] features are not supported on a database that has memory-optimized objects (including memory-optimized data filegroup).  
   
 |Unsupported Feature|Feature Description|  
 |-------------------------|-------------------------|  

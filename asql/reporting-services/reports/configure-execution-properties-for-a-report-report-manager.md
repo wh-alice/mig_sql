@@ -28,7 +28,7 @@ manager: "erikre"
   
 ### To configure report processing options  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md).  
   
 2.  Navigate to and open the report for which you want to set processing options.  
   
@@ -47,8 +47,8 @@ manager: "erikre"
 ## See Also  
  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Open and Close a Report &#40;Report Manager&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [Contents Page &#40;Report Manager&#41;](../Topic/Contents%20Page%20\(Report%20Manager\).md)   
+ [Contents Page &#40;Report Manager&#41;](../../a9retired/contents-page-report-manager.md)   
  [Report Server Content Management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Processing Options Properties Page &#40;Report Manager&#41;](../Topic/Processing%20Options%20Properties%20Page%20\(Report%20Manager\).md)  
+ [Processing Options Properties Page &#40;Report Manager&#41;](../../a9retired/processing-options-properties-page-report-manager.md)  
   
   

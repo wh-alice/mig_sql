@@ -21,7 +21,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Pause or Resume a Database Mirroring Session (SQL Server)
-  This topic describes how to pause or resume database mirroring in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to pause or resume database mirroring in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -71,17 +71,17 @@ manager: "jhubbard"
   
 #### To pause database mirroring  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] for either partner.  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] for either partner.  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Issue the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement:  
+3.  Issue the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement:  
   
      ALTER DATABASE *database_name* SET PARTNER SUSPEND  
   
      where *database_name* is the mirrored database whose session you want to you want to suspend.  
   
-     The following example pauses the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] sample database.  
+     The following example pauses the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] sample database.  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET PARTNER SUSPEND;  
@@ -89,7 +89,7 @@ manager: "jhubbard"
   
 ##### To resume database mirroring  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] for either partner.  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] for either partner.  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -99,7 +99,7 @@ manager: "jhubbard"
   
      where *database_name* is the mirrored database whose session you want to resume.  
   
-     The following example pauses the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] sample database.  
+     The following example pauses the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] sample database.  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  

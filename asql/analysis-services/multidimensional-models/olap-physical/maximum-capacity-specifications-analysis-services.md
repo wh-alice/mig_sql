@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Maximum Capacity Specifications (Analysis Services)
-  The following tables specify the maximum sizes and numbers of various objects defined in [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] components under different server deployment modes.  
+  The following tables specify the maximum sizes and numbers of various objects defined in [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] components under different server deployment modes.  
   
  This topic contains the following sections:  
   

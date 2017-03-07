@@ -15,7 +15,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Create a Reporting Services mobile report
-With [!INCLUDE[SS_MobileReptPub_Long](../../reporting-services/mobile-reports/includes/ss-mobilereptpub-long.md)], you can quickly create [!INCLUDE[PRODUCT_NAME](../../reporting-services/mobile-reports/includes/sscurrent.md)] [!INCLUDE[ssRSnoversion](../../reporting-services/mobile-reports/includes/ssrsnoversion.md)] mobile reports that scale well to any screen size, on a design surface with adjustable grid rows and columns, and flexible mobile report elements.  
+With [!INCLUDE[SS_MobileReptPub_Long](../../a9retired/includes/ss-mobilereptpub-long.md)], you can quickly create [!INCLUDE[PRODUCT_NAME](../../reporting-services/mobile-reports/includes/sscurrent.md)] [!INCLUDE[ssRSnoversion](../../reporting-services/mobile-reports/includes/ssrsnoversion.md)] mobile reports that scale well to any screen size, on a design surface with adjustable grid rows and columns, and flexible mobile report elements.  
   
 The first time you create a mobile report, you can install [!INCLUDE[SS_MobileReptPub_Long](../../reporting-services/mobile-reports/includes/ss-mobilereptpub-short.md)] on your local machine from the [!INCLUDE[ssRSnoversion](../../reporting-services/mobile-reports/includes/ssrsnoversion.md)] web portal. Or you can install it from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=733527). After the first time, you can start it either from the web portal or locally.   
     

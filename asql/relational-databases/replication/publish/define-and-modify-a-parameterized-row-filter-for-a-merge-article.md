@@ -23,9 +23,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Define and Modify a Parameterized Row Filter for a Merge Article
-  This topic describes how to define and modify a parameterized row filter in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to define and modify a parameterized row filter in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)].  
   
- When creating table articles, you can use parameterized row filters. These filters use a [WHERE](../../../t-sql/queries/where-transact-sql.md) clause to select the appropriate data to be published. Rather than specifying a literal value in the clause (as you do with a static row filter), you specify one or both of the following system functions: [SUSER_SNAME](../../../t-sql/functions/suser-sname-transact-sql.md) and [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md). For more information, see [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md).  
+ When creating table articles, you can use parameterized row filters. These filters use a [WHERE](../../../t-sql/queries/where-transact-sql.md) clause to select the appropriate data to be published. Rather than specifying a literal value in the clause (as you do with a static row filter), you specify one or both of the following system functions: [SUSER_SNAME](../../../t-sql/functions/suser-sname-transact-sql.md) and [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md). For more information, see [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **In This Topic**  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   For performance reasons, we recommend that you not apply functions to column names in parameterized row filter clauses, such as `LEFT([MyColumn]) = SUSER_SNAME()`. If you use HOST_NAME in a filter clause and override the HOST_NAME value, it might be necessary to convert data types using CONVERT. For more information about best practices for this case, see the section "Overriding the HOST_NAME() Value" in the topic [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md).  
+-   For performance reasons, we recommend that you not apply functions to column names in parameterized row filter clauses, such as `LEFT([MyColumn]) = SUSER_SNAME()`. If you use HOST_NAME in a filter clause and override the HOST_NAME value, it might be necessary to convert data types using CONVERT. For more information about best practices for this case, see the section "Overriding the HOST_NAME() Value" in the topic [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Define, modify, and delete parameterized row filters on the **Filter Table Rows** page of the New Publication Wizard or the **Filter Rows** page of the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) and [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
@@ -80,9 +80,9 @@ manager: "jhubbard"
   
     -   **A row from this table will go to only one subscription**  
   
-     If you select **A row from this table will go to only one subscription**, merge replication can optimize performance by storing and processing less metadata. However, you must ensure that the data is partitioned in such a way that a row cannot be replicated to more than one Subscriber. For more information, see the section "Setting 'partition options'" in the topic [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md).  
+     If you select **A row from this table will go to only one subscription**, merge replication can optimize performance by storing and processing less metadata. However, you must ensure that the data is partitioned in such a way that a row cannot be replicated to more than one Subscriber. For more information, see the section "Setting 'partition options'" in the topic [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-5.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 6.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
   
@@ -92,7 +92,7 @@ manager: "jhubbard"
   
 2.  In the **Edit Filter** dialog box, modify the filter.  
   
-3.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 #### To delete a parameterized row filter  
   
@@ -103,7 +103,7 @@ manager: "jhubbard"
   
 #### To define a parameterized row filter for an article in a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify **@publication**, a name for the article for **@article**, the table being published for **@source_object**, the WHERE clause that defines the parameterized filter for **@subset_filterclause** (not including `WHERE`), and one of the following values for **@partition_options**, which describes the type of partitioning that will result from the parameterized row filter:  
+1.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify **@publication**, a name for the article for **@article**, the table being published for **@source_object**, the WHERE clause that defines the parameterized filter for **@subset_filterclause** (not including `WHERE`), and one of the following values for **@partition_options**, which describes the type of partitioning that will result from the parameterized row filter:  
   
     -   **0** - Filtering for the article either is static or does not yield a unique subset of data for each partition (an "overlapping" partition).  
   
@@ -115,9 +115,9 @@ manager: "jhubbard"
   
 #### To change a parameterized row filter for an article in a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify **@publication**, **@article**, a value of **subset_filterclause** for **@property**, the expression that defines the parameterized filter for **@value** (not including `WHERE`), and a value of **1** for both **@force_invalidate_snapshot** and **@force_reinit_subscription**.  
+1.  At the Publisher on the publication database, execute [sp_changemergearticle](../../../relational-databases/reference/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify **@publication**, **@article**, a value of **subset_filterclause** for **@property**, the expression that defines the parameterized filter for **@value** (not including `WHERE`), and a value of **1** for both **@force_invalidate_snapshot** and **@force_reinit_subscription**.  
   
-2.  If this change results in different partitioning behavior, then execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) again. Specify **@publication**, **@article**, a value of **partition_options** for **@property**, and the most appropriate partitioning option for **@value**, which can be one of the following:  
+2.  If this change results in different partitioning behavior, then execute [sp_changemergearticle](../../../relational-databases/reference/system-stored-procedures/sp-changemergearticle-transact-sql.md) again. Specify **@publication**, **@article**, a value of **partition_options** for **@property**, and the most appropriate partitioning option for **@value**, which can be one of the following:  
   
     -   **0** - Filtering for the article either is static or does not yield a unique subset of data for each partition (an "overlapping" partition).  
   
@@ -128,14 +128,14 @@ manager: "jhubbard"
     -   **3** - Filtering for the article yields nonoverlapping partitions that are unique for each subscription.  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
- This example defines a group of articles in a merge publication where the articles are filtered with a series of join filters against the `Employee` table that is itself filtered using a parameterized row filter on the **LoginID** column. During synchronization, the value returned by the [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md) function is overridden. For more information, see Overriding the HOST_NAME() Value in the topic [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md).  
+ This example defines a group of articles in a merge publication where the articles are filtered with a series of join filters against the `Employee` table that is itself filtered using a parameterized row filter on the **LoginID** column. During synchronization, the value returned by the [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md) function is overridden. For more information, see Overriding the HOST_NAME() Value in the topic [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
- [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-para_1.sql)]  
+ [!code-sql[HowTo#sp_MergeDynamicPub1](../../../a9retired/codesnippet/tsql/define-and-modify-a-para_1.sql)]  
   
 ## See Also  
  [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
- [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md)  
+ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

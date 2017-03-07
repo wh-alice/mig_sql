@@ -19,9 +19,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Using Member Functions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  A member function is an Multidimensional Expressions (MDX) function that returns a member. Member functions, like tuple functions and set functions, are essential to negotiating the multidimensional structures found in [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)].  
+  A member function is an Multidimensional Expressions (MDX) function that returns a member. Member functions, like tuple functions and set functions, are essential to negotiating the multidimensional structures found in [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)].  
   
  Of the many member functions in MDX, the most important is the **CurrentMember** function, which is used to determine the current member on a hierarchy. The following query illustrates how to use it, along with the **Parent**, **Ancestor**, and **Prevmember** functions:  
   

@@ -25,7 +25,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # NotificationTechnique Element (ASSL)
-  Specifies whether [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or an external client application processes the notifications.  
+  Specifies whether [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] or an external client application processes the notifications.  
   
 ## Syntax  
   
@@ -57,7 +57,7 @@ manager: "erikre"
 |Value|Description|  
 |-----------|-----------------|  
 |*Client*|External client application processes the notification.|  
-|*Server*|[!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] processes the notification.|  
+|*Server*|[!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] processes the notification.|  
   
  The element that corresponds to the parent of **NotificationTechnique** in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.ProactiveCachingBinding>.  
   

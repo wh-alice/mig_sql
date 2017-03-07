@@ -18,9 +18,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SQL Server, Query Store Object
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  The Query Store object provides counters to monitor resource utilization of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to store query texts, execution plans and runtime stats for objects such as stored procedures, ad hoc and prepared [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statements, and triggers.  
+  The Query Store object provides counters to monitor resource utilization of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] to store query texts, execution plans and runtime stats for objects such as stored procedures, ad hoc and prepared [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statements, and triggers.  
   
  This table describes are the **SQLServer:Query Store**counters.  
   
@@ -35,13 +35,13 @@ manager: "jhubbard"
   
 |Query Store instance|Description|  
 |--------------------------|-----------------|  
-|**_Total**|Information for the Query Store for this instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].|  
+|**_Total**|Information for the Query Store for this instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].|  
 |\<database name>|Query Store information for this database.|  
   
 ## See Also  
  [Monitoring Performance By Using the Query Store](../../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [Query Store Catalog Views &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
+ [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [Query Store Catalog Views &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../../relational-databases/monitor/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

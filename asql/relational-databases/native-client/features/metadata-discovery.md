@@ -15,16 +15,16 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Metadata Discovery
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
-  The metadata discovery improvement in [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)] allows [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client applications to ensure that column or parameter metadata returned from the execution of a query is identical to or compatible with the metadata format you specified before you executed the query. You will receive an error if the metadata returned after query execution is not compatible with the metadata format you specified before query execution.  
+  The metadata discovery improvement in [!INCLUDE[ssSQL11](../../../a9notintoc/includes/sssql11-md.md)] allows [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client applications to ensure that column or parameter metadata returned from the execution of a query is identical to or compatible with the metadata format you specified before you executed the query. You will receive an error if the metadata returned after query execution is not compatible with the metadata format you specified before query execution.  
   
  In bcp and ODBC functions, and IBCPSession and IBCPSession2 interfaces, you can now specify a delayed read (delayed metadata discovery) to avoid metadata discovery for query out operations. This improves performance and eliminates metadata discovery failures.  
   
- If you develop an application using [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)] but connect to a server version earlier than [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)], metadata discovery functionality will correspond to the version of the server.  
+ If you develop an application using [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssSQL11](../../../a9notintoc/includes/sssql11-md.md)] but connect to a server version earlier than [!INCLUDE[ssSQL11](../../../a9notintoc/includes/sssql11-md.md)], metadata discovery functionality will correspond to the version of the server.  
   
 ## Remarks  
- The following bcp functions have been enhanced in [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)] to provide improved metadata discovery:  
+ The following bcp functions have been enhanced in [!INCLUDE[ssSQL11](../../../a9notintoc/includes/sssql11-md.md)] to provide improved metadata discovery:  
   
 -   [bcp_columns](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
  [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) has a new *eOption* to control the behavior of bcp_readfmt: **BCPDELAYREADFMT**.  
   
- The following ODBC functions have been enhanced in [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)] to provide improved metadata discovery:  
+ The following ODBC functions have been enhanced in [!INCLUDE[ssSQL11](../../../a9notintoc/includes/sssql11-md.md)] to provide improved metadata discovery:  
   
 -   [SQLNumResultCols](../../../relational-databases/extended-stored-procedures-reference/sqlnumresultcols.md)  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 -   [SQLDescribeParam](../../../relational-databases/extended-stored-procedures-reference/sqldescribeparam.md)  
   
- The following OLE DB member functions have been enhanced in [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)] to provide improved metadata discovery:  
+ The following OLE DB member functions have been enhanced in [!INCLUDE[ssSQL11](../../../a9notintoc/includes/sssql11-md.md)] to provide improved metadata discovery:  
   
 -   IColumnsInfo::GetColumnInfo  
   
@@ -60,7 +60,7 @@ manager: "jhubbard"
   
  You will also see a performance improvement when specifying metadata format using IBCPSession::BCPSetBulkMode  
   
- The improved metadata discovery in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client is possible because of the addition of two stored procedures in [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)]:  
+ The improved metadata discovery in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client is possible because of the addition of two stored procedures in [!INCLUDE[ssSQL11](../../../a9notintoc/includes/sssql11-md.md)]:  
   
 -   sp_describe_first_result_set  
   

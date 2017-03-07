@@ -32,7 +32,7 @@ object.ConnectionString [= value]
   
 ## Parts  
  *object*  
- A [SqlServerAlias Class](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sqlserveralias-class.md) object that represents a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] alias.  
+ A [SqlServerAlias Class](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sqlserveralias-class.md) object that represents a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] alias.  
   
 ## Property Value/Return Value  
  A string that specifies the connection string that is used to establish the connection for the server connection alias.  

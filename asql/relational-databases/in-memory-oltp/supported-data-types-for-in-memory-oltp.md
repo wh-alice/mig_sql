@@ -15,7 +15,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Supported Data Types for In-Memory OLTP
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   This article lists the data types that are unsupported for the In-Memory OLTP features of:  
   
@@ -28,8 +28,8 @@ manager: "jhubbard"
   
 ||||  
 |-|-|-|  
-|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)|[geography &#40;Transact-SQL&#41;](../Topic/geography%20\(Transact-SQL\).md)|[geometry &#40;Transact-SQL&#41;](../Topic/geometry%20\(Transact-SQL\).md)|  
-|[hierarchyid &#40;Transact-SQL&#41;](../Topic/hierarchyid%20\(Transact-SQL\).md)|[rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md)|[xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md)|  
+|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)|[geography &#40;Transact-SQL&#41;](../../t-sql/spatial/geography/spatial-types-geography.md)|[geometry &#40;Transact-SQL&#41;](../../t-sql/spatial/geometry/spatial-types-geometry-transact-sql.md)|  
+|[hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md)|[xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md)|  
 |[sql_variant &#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)|User-Defined Types|.|  
   
 ## Notable Supported Data Types  
@@ -87,7 +87,7 @@ These LOBs can be the return type from a natively compiled scalar UDF (user-defi
 
 |Other Types|For more information|  
 |-----------------|--------------------------|  
-|table types|[Memory-Optimized Table Variables](../Topic/Memory-Optimized%20Table%20Variables.md)|  
+|table types|[Memory-Optimized Table Variables](../../a9retired/memory-optimized-table-variables.md)|  
   
 ## See Also  
  [Transact-SQL Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   

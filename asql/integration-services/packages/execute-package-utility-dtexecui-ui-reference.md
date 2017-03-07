@@ -28,7 +28,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Execute Package Utility (DtExecUI) UI Reference
-  Use the **Execute Package Utility** to run [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] packages. The utility runs packages that are stored in one of three locations: [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database, the [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Package Store, and the file system. This user interface, which can be opened from [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or by typing **dtexecui** at a command prompt, is an alternative to running packages by using the **DTExec** command prompt tool.  
+  Use the **Execute Package Utility** to run [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] packages. The utility runs packages that are stored in one of three locations: [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database, the [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Package Store, and the file system. This user interface, which can be opened from [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or by typing **dtexecui** at a command prompt, is an alternative to running packages by using the **DTExec** command prompt tool.  
   
  Packages execute in the same process as the **dtexecui.exe** utility. Because this utility is a 32-bit tool, packages run by using **dtexecui.exe** in a 64-bit environment run in Windows on Win32 (WOW). When developing and testing commands by using the dtexecui.exe utility on a 64-bit computer, you should test the commands in 64-bit mode by using the 64-bit version of **dtexec.exe** before deploying or scheduling the commands on a production server.  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 ### To open Execute Package Utility in SQL Server Management Studio  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], on the **View** menu, click **Object Explorer**.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], on the **View** menu, click **Object Explorer**.  
   
 2.  In Object Explorer, click **Connect**, and then click **Integration Services**.  
   
@@ -64,9 +64,9 @@ manager: "jhubbard"
 |||  
 |-|-|  
 |Value|Description|  
-|**SQL Server**|Select this option when the package resides in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Specify an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and provide a user name and password for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication. Each user name and password adds the **/USER** *username* and **/PASSWORD** *password* options to the command prompt.|  
+|**SQL Server**|Select this option when the package resides in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Specify an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and provide a user name and password for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication. Each user name and password adds the **/USER** *username* and **/PASSWORD** *password* options to the command prompt.|  
 |**File system**|Select this option when the package resides in the file system.|  
-|**SSIS Package Store**|Select this option when the package resides in the [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Package Store.|  
+|**SSIS Package Store**|Select this option when the package resides in the [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Package Store.|  
   
  Each of these selections has the following set of options.  
   
@@ -83,13 +83,13 @@ manager: "jhubbard"
  Type the name of the server where the package resides, or select a server from the list.  
   
  **Log on to the server**  
- Specify whether the package should use Windows Authentication or [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication to connect to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Windows Authentication is recommended for better security. With Windows Authentication you do not have to specify a user name and password.  
+ Specify whether the package should use Windows Authentication or [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication to connect to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Windows Authentication is recommended for better security. With Windows Authentication you do not have to specify a user name and password.  
   
  **Use Windows Authentication**  
- Select this option to use Windows Authentication and log on using a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows user account.  
+ Select this option to use Windows Authentication and log on using a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows user account.  
   
  **Use SQL Server Authentication**  
- Select this option to use [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication. When a user connects with a specified login name and password from a non-trusted connection, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] performs the authentication by checking to see if a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login account has been set up and if the specified password matches the one previously recorded. If [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] cannot find the login account, authentication fails, and the user receives an error message.  
+ Select this option to use [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication. When a user connects with a specified login name and password from a non-trusted connection, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] performs the authentication by checking to see if a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login account has been set up and if the specified password matches the one previously recorded. If [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] cannot find the login account, authentication fails, and the user receives an error message.  
   
 > [!IMPORTANT]  
 >  When possible, use Windows Authentication.  

@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   Avoid or reduce conflicts if Subscribers are updating data, because different data partitions can be sent to different Subscribers (no two Subscribers will be updating the same data values).  
   
--   Avoid transmitting sensitive data. Row filters and column filters can be used to restrict a Subscriber's access to data. For merge replication, there are security considerations if you use a parameterized filter that includes HOST_NAME(). For more information, see the section "Filtering with HOST_NAME()" in [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md).  
+-   Avoid transmitting sensitive data. Row filters and column filters can be used to restrict a Subscriber's access to data. For merge replication, there are security considerations if you use a parameterized filter that includes HOST_NAME(). For more information, see the section "Filtering with HOST_NAME()" in [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  Replication offers four types of filters:  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 -   Parameterized row filters, which are available only with merge replication.  
   
-     Using parameterized row filters, you can choose a subset of rows to be published. Unlike static filters that send the same subset of rows to every Subscriber, parameterized row filters use a data value supplied by the Subscriber to send Subscribers different subsets of rows. For more information, see [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md).  
+     Using parameterized row filters, you can choose a subset of rows to be published. Unlike static filters that send the same subset of rows to every Subscriber, parameterized row filters use a data value supplied by the Subscriber to send Subscribers different subsets of rows. For more information, see [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Join filters, which are available only with merge replication.  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  Row filters in transactional publications can add significant overhead because the article filter clause is evaluated for each log row written for a published table, to determine whether the row should be replicated. Row filters in transactional publications should be avoided if each replication node can support the full data load, and the overall data set is reasonably small.  
   
--   With merge replication, use parameterized row filters rather than creating multiple publications with static row filters. For more information, see [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md).  
+-   With merge replication, use parameterized row filters rather than creating multiple publications with static row filters. For more information, see [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  To define or modify a static row filter, see [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
@@ -126,7 +126,7 @@ manager: "jhubbard"
   
 -   Transactional replication allows you to replicate an indexed view as a view or as a table. If you replicate the view as a table, you cannot filter columns from the table.  
   
- Row filters are not designed to work across databases. [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] intentionally restricts the execution of **sp_replcmds** (which filters execute under) to the database owner (**dbo**). The **dbo** does not have cross database privileges. With the addition of CDC (Change Data Capture) in [!INCLUDE[ssKatmai](../../../analysis-services/data-mining/includes/sskatmai-md.md)] the **sp_replcmds** logic populates the change tracking tables with information that the user can return to and query. For security reasons, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] restricts the execution of this logic so that a malicious **dbo** can’t highjack this execution path. For example, a malicious **dbo** could add triggers on CDC tables which would then get executed under the context of the user calling **sp_replcmds**, in this case the logreader agent.  If the account the agent is running under has higher privilege the malicious **dbo** could escalate his privileges.  
+ Row filters are not designed to work across databases. [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] intentionally restricts the execution of **sp_replcmds** (which filters execute under) to the database owner (**dbo**). The **dbo** does not have cross database privileges. With the addition of CDC (Change Data Capture) in [!INCLUDE[ssKatmai](../../../a9notintoc/includes/sskatmai-md.md)] the **sp_replcmds** logic populates the change tracking tables with information that the user can return to and query. For security reasons, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] restricts the execution of this logic so that a malicious **dbo** can’t highjack this execution path. For example, a malicious **dbo** could add triggers on CDC tables which would then get executed under the context of the user calling **sp_replcmds**, in this case the logreader agent.  If the account the agent is running under has higher privilege the malicious **dbo** could escalate his privileges.  
   
 ## See Also  
  [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

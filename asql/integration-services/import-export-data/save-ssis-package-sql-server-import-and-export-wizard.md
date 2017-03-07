@@ -17,7 +17,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Save SSIS Package (SQL Server Import and Export Wizard)
-  If you specified on the **Save and Run Package** page that you want to save your settings as a SQL Server Integration Services (SSIS) package, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard shows **Save SSIS Package**. On this page, you specify additional options for saving the package created by the wizard.  
+  If you specified on the **Save and Run Package** page that you want to save your settings as a SQL Server Integration Services (SSIS) package, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard shows **Save SSIS Package**. On this page, you specify additional options for saving the package created by the wizard.  
 
 The options that you see on the **Save SSIS Package** page depend on the choice that you made previously on the **Save and Run Package** page to save the package to SQL Server or to the file system. To take another look at the **Save and Run Package** page, see [Save and Run Package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
@@ -36,7 +36,7 @@ The following screen shot shows the first part of the **Save SSIS Package** page
  Provide a description for the package. As a best practice, describe the purpose of the package, to make packages self-documenting and easier to maintain.  
   
  **Target**  
- The destination ([!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or File system) that you previously specified for the package. If you want to save the package to a different destination, go back to the **Save and Run Package** page.
+ The destination ([!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] or File system) that you previously specified for the package. If you want to save the package to a different destination, go back to the **Save and Run Package** page.
 
 ## Screen shot - Save the package in SQL Server
 

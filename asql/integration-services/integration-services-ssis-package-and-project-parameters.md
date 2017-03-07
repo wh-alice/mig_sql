@@ -18,9 +18,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Integration Services (SSIS) Package and Project Parameters
-  [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] (SSIS) parameters allow you to assign values to properties within packages at the time of package execution. You can create *project parameters* at the project level and *package parameters* at the package level. Project parameters are used to supply any external input the project receives to one or more packages in the project. Package parameters allow you to modify package execution without having to edit and redeploy the package.  
+  [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] (SSIS) parameters allow you to assign values to properties within packages at the time of package execution. You can create *project parameters* at the project level and *package parameters* at the package level. Project parameters are used to supply any external input the project receives to one or more packages in the project. Package parameters allow you to modify package execution without having to edit and redeploy the package.  
   
- In [!INCLUDE[ssBIDevStudio](../analysis-services/includes/ssbidevstudio-md.md)] you create, modify, or delete project parameters by using the **Project.params** window. You create, modify, and delete package parameters by using the **Parameters** tab in the [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer. You associate a new or an existing parameter with a task property by using the **Parameterize** dialog box. For more about using the **Project.params** window and the **Parameters** tab, see [Create Parameters](../Topic/Create%20Parameters.md). For more information about the **Parameterize** dialog box, see [Parameterize Dialog Box](../Topic/Parameterize%20Dialog%20Box.md).  
+ In [!INCLUDE[ssBIDevStudio](../a9notintoc/includes/ssbidevstudio-md.md)] you create, modify, or delete project parameters by using the **Project.params** window. You create, modify, and delete package parameters by using the **Parameters** tab in the [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer. You associate a new or an existing parameter with a task property by using the **Parameterize** dialog box. For more about using the **Project.params** window and the **Parameters** tab, see [Create Parameters](../a9retired/create-parameters.md). For more information about the **Parameterize** dialog box, see [Parameterize Dialog Box](../a9retired/parameterize-dialog-box.md).  
   
 ## Parameters and Package Deployment Model  
  In general, if you are deploying a package using the package deployment model, you should use configurations instead of parameters.  
@@ -28,7 +28,7 @@ manager: "jhubbard"
  When you deploy a package that contains parameters using the package deployment model and then execute the package, the parameters are not called during execution. If the package contains package parameters and expressions within the package use the parameters, the resulting values are applied at runtime. If the package contains project parameters, the package execution may fail.  
   
 ## Parameters and Project Deployment Model  
- When you deploy a project to the Integration Services (SSIS) server, you use views, stored procedures, and the [!INCLUDE[ssManStudioFull](../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] UI to manage project and package parameters. For more information, see the following topics.  
+ When you deploy a project to the Integration Services (SSIS) server, you use views, stored procedures, and the [!INCLUDE[ssManStudioFull](../a9notintoc/includes/ssmanstudiofull-md.md)] UI to manage project and package parameters. For more information, see the following topics.  
   
 -   [Views &#40;Integration Services Catalog&#41;](../integration-services/system/views/views-integration-services-catalog.md)  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
 |----------------|-----------------|-------------------|  
 |Execution Value|The value that is assigned to a specific instance of package execution. This assignment overrides all other values, but applies to only a single instance of package execution.|Literal|  
 |Server Value|The value assigned to the parameter within the scope of the project, after the project is deployed to the Integration Services server. This value overrides the design default.|Literal or Environment Variable Reference|  
-|Design Value|The value assigned to the parameter when the project is created or edited in [!INCLUDE[ssBIDevStudio](../analysis-services/includes/ssbidevstudio-md.md)]. This value persists with the project.|Literal|  
+|Design Value|The value assigned to the parameter when the project is created or edited in [!INCLUDE[ssBIDevStudio](../a9notintoc/includes/ssbidevstudio-md.md)]. This value persists with the project.|Literal|  
   
  You can use a single parameter to assign a value to multiple package properties. A single package property can be assigned a value only from a single parameter.  
   
@@ -75,41 +75,41 @@ manager: "jhubbard"
  Resolves and shows the actual values for the specified package and environment reference  
   
  [catalog.object_parameters &#40;SSISDB Database&#41;](../integration-services/system/views/catalog.object-parameters-ssisdb-database.md) (view)  
- Displays the parameters and properties for all packages and projects in the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog, including the design default and server default values.  
+ Displays the parameters and properties for all packages and projects in the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] catalog, including the design default and server default values.  
   
  [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](../integration-services/system/stored-procedures/catalog.set-execution-parameter-value-ssisdb-database.md)  
- Sets the value of a parameter for an instance of execution in the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog.  
+ Sets the value of a parameter for an instance of execution in the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] catalog.  
   
- You can also use the **Execute Package** dialog box in [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)] modify the parameter value. For more information, see [Execute Package Dialog Box](../integration-services/packages/execute-package-dialog-box.md).  
+ You can also use the **Execute Package** dialog box in [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)] modify the parameter value. For more information, see [Execute Package Dialog Box](../integration-services/packages/execute-package-dialog-box.md).  
   
  You can also use the dtexec **/Parameter** option to modify a parameter value. For more information, see [dtexec Utility](../integration-services/packages/dtexec-utility.md).  
   
 ### Parameter Validation  
- If parameter values cannot be resolved, the corresponding package execution will fail. To help avoid failures, you can validate projects and packages by using the **Validate** dialog box in [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)]. Validation allows you to confirm that all parameters have the necessary values or can resolve the necessary values with specific environment references. Validation also checks for other common package issues.  
+ If parameter values cannot be resolved, the corresponding package execution will fail. To help avoid failures, you can validate projects and packages by using the **Validate** dialog box in [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)]. Validation allows you to confirm that all parameters have the necessary values or can resolve the necessary values with specific environment references. Validation also checks for other common package issues.  
   
  For more information, see [Validate Dialog Box](../integration-services/service/validate-dialog-box.md).  
   
 ### Parameter Example  
  This example describes a parameter named **pkgOptions** that is used to specify options for the package in which it resides.  
   
- During design time, when the parameter was created in [!INCLUDE[ssBIDevStudio](../analysis-services/includes/ssbidevstudio-md.md)], a default value of 1 was assigned to the parameter. This default value is referred to as the design default. If the project was deployed to the SSISDB catalog and no other values were assigned to this parameter, the package property corresponding to the **pkgOptions** parameter would be assigned the value of 1 during package execution. The design default persists with the project throughout its life cycle.  
+ During design time, when the parameter was created in [!INCLUDE[ssBIDevStudio](../a9notintoc/includes/ssbidevstudio-md.md)], a default value of 1 was assigned to the parameter. This default value is referred to as the design default. If the project was deployed to the SSISDB catalog and no other values were assigned to this parameter, the package property corresponding to the **pkgOptions** parameter would be assigned the value of 1 during package execution. The design default persists with the project throughout its life cycle.  
   
  While preparing a specific instance of package execution, a value of 5 is assigned to the **pkgOptions** parameter. This value is referred to as the execution value because it applies to the parameter only for that particular instance of execution. When execution starts, the package property corresponding to the **pkgOptions** parameter is assigned the value of 5.  
   
 ## Create parameters
-You use [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)] to create project parameters and package parameters. The following procedures provide step-by-step instructions for creating package/project parameters.  
+You use [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)] to create project parameters and package parameters. The following procedures provide step-by-step instructions for creating package/project parameters.  
   
-> **NOTE:** If you are converting a project that you created using an earlier version of [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] to the project deployment model, you can use the **Integration Services Project Conversion Wizard** to create parameters based on configurations. For more information, see [Deploy Projects to Integration Services Server](../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+> **NOTE:** If you are converting a project that you created using an earlier version of [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] to the project deployment model, you can use the **Integration Services Project Conversion Wizard** to create parameters based on configurations. For more information, see [Deploy Projects to Integration Services Server](../integration-services/packages/deploy-projects-to-integration-services-server.md).  
   
 ### Create package parameters  
   
-1.  Open the package in [!INCLUDE[ssBIDevStudio](../analysis-services/includes/ssbidevstudio-md.md)], and then click the **Parameters** tab in the SSIS Designer.  
+1.  Open the package in [!INCLUDE[ssBIDevStudio](../a9notintoc/includes/ssbidevstudio-md.md)], and then click the **Parameters** tab in the SSIS Designer.  
   
-     ![Package Parameters Tab](../integration-services/media/denali-package-parameters.gif "Package Parameters Tab")  
+     ![Package Parameters Tab](../a9retired/media/denali-package-parameters.gif "Package Parameters Tab")  
   
 2.  Click the **Add Parameter** button on the toolbar.  
   
-     ![Add Toolbar Button](../integration-services/media/denali-parameter-add.gif "Add Toolbar Button")  
+     ![Add Toolbar Button](../a9retired/media/denali-parameter-add.gif "Add Toolbar Button")  
   
 3.  Enter values for the **Name**, **Data Type**, **Value**, **Sensitive**, and **Required** properties in the list itself or in the **Properties** window. The following table describes these properties.  
   
@@ -120,27 +120,27 @@ You use [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudio
     |Default value|The default value for the parameter assigned at design time. This is also known as the design default.|  
     |Sensitive|Sensitive parameter values are encrypted in the catalog and appear as a NULL value when viewed with Transact-SQL or SQL Server Management Studio.|  
     |Required|Requires that a value, other than the design default, is specified before the package can execute.|  
-    |Description|For maintainability, the description of the parameter. In [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], set the parameter description in the Visual Studio Properties window when the parameter is selected in the applicable parameters window.|  
+    |Description|For maintainability, the description of the parameter. In [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], set the parameter description in the Visual Studio Properties window when the parameter is selected in the applicable parameters window.|  
   
     > **NOTE:** When you deploy a project to the catalog, several more properties become associated with the project. To see all properties for all parameters in the catalog, use the [catalog.object_parameters &#40;SSISDB Database&#41;](../integration-services/system/views/catalog.object-parameters-ssisdb-database.md) view.  
   
 4.  Save the project to save changes to parameters. Parameter values are stored in the project file.  
   
-    > **WARNING!!** You can in-place edit in the list or use the **Properties** window to modify the values of parameter properties. You can delete a parameter by using the **Delete (X)** toolbar button. Using the last toolbar button, you can specify a value for a parameter that is used only when you execute the package in [!INCLUDE[ssBIDevStudio](../analysis-services/includes/ssbidevstudio-md.md)].  
+    > **WARNING!!** You can in-place edit in the list or use the **Properties** window to modify the values of parameter properties. You can delete a parameter by using the **Delete (X)** toolbar button. Using the last toolbar button, you can specify a value for a parameter that is used only when you execute the package in [!INCLUDE[ssBIDevStudio](../a9notintoc/includes/ssbidevstudio-md.md)].  
   
-    > **NOTE:** If you re-open the package file without opening the project in [!INCLUDE[ssBIDevStudio](../analysis-services/includes/ssbidevstudio-md.md)], the **Parameters** tab will be empty and disabled.  
+    > **NOTE:** If you re-open the package file without opening the project in [!INCLUDE[ssBIDevStudio](../a9notintoc/includes/ssbidevstudio-md.md)], the **Parameters** tab will be empty and disabled.  
   
 ### Create project parameters  
   
-1.  Open the project in [!INCLUDE[ssBIDevStudio](../analysis-services/includes/ssbidevstudio-md.md)].  
+1.  Open the project in [!INCLUDE[ssBIDevStudio](../a9notintoc/includes/ssbidevstudio-md.md)].  
   
 2.  Right-click **Project.params** in Solution Explorer, and then click **Open** (OR) double-click **Project.params** to open it.  
   
-     ![Project Parameters Window](../integration-services/media/denali-project-parameters.gif "Project Parameters Window")  
+     ![Project Parameters Window](../a9retired/media/denali-project-parameters.gif "Project Parameters Window")  
   
 3.  Click the **Add Parameter** button on the toolbar.  
   
-     ![Add Toolbar Button](../integration-services/media/denali-parameter-add.gif "Add Toolbar Button")  
+     ![Add Toolbar Button](../a9retired/media/denali-parameter-add.gif "Add Toolbar Button")  
   
 4.  Enter values for the **Name**, **Data Type**, **Value**, **Sensitive**, and **Required** properties.  
   
@@ -151,14 +151,14 @@ You use [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudio
     |Default value|The default value for the parameter assigned at design time. This is also known as the design default.|  
     |Sensitive|Sensitive parameter values are encrypted in the catalog and appear as a NULL value when viewed with Transact-SQL or SQL Server Management Studio.|  
     |Required|Requires that a value, other than the design default, is specified before the package can execute.|  
-    |Description|For maintainability, the description of the parameter. In [!INCLUDE[ssBIDevStudio](../analysis-services/includes/ssbidevstudio-md.md)], set the parameter description in the Visual Studio Properties window when the parameter is selected in the applicable parameters window.|  
+    |Description|For maintainability, the description of the parameter. In [!INCLUDE[ssBIDevStudio](../a9notintoc/includes/ssbidevstudio-md.md)], set the parameter description in the Visual Studio Properties window when the parameter is selected in the applicable parameters window.|  
   
 5.  Save the project to save changes to parameters. Parameter values are stored in configurations in the project file. Save the project file to commit to disk any changes in the parameter values.  
   
-    > **WARNING!!!** You can in-place edit in the list or use the **Properties** window to modify the values of parameter properties. You can delete a parameter by using the **Delete (X)** toolbar button. Using the last toolbar button to open the **Manage Parameter Values** dialog box, you can specify a value for a parameter that is used only when you execute the package in [!INCLUDE[ssBIDevStudio](../analysis-services/includes/ssbidevstudio-md.md)].  
+    > **WARNING!!!** You can in-place edit in the list or use the **Properties** window to modify the values of parameter properties. You can delete a parameter by using the **Delete (X)** toolbar button. Using the last toolbar button to open the **Manage Parameter Values** dialog box, you can specify a value for a parameter that is used only when you execute the package in [!INCLUDE[ssBIDevStudio](../a9notintoc/includes/ssbidevstudio-md.md)].  
     
 ## Parameterize Dialog Box
-The **Parameterize** dialog box lets you associate a new or an existing parameter with a property of a task. You open the dialog box by right-clicking a task or the Control Flow tab in [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer and then by clicking **Parameterize**. The following list describes UI elements in the dialog box. For more information about parameters, see [Integration Services (SSIS) Parameters](https://msdn.microsoft.com/library/hh213214.aspx).
+The **Parameterize** dialog box lets you associate a new or an existing parameter with a property of a task. You open the dialog box by right-clicking a task or the Control Flow tab in [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer and then by clicking **Parameterize**. The following list describes UI elements in the dialog box. For more information about parameters, see [Integration Services (SSIS) Parameters](https://msdn.microsoft.com/library/hh213214.aspx).
   
 ### Options  
  **Property**  

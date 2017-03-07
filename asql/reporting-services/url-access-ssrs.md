@@ -40,7 +40,7 @@ manager: "erikre"
  For the complete list of commands and settings available through URL access, see [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md).  
   
 ## URL Access Concepts  
- URL requests to the report server contain parameters that are processed by the report server. The way in which the report server handles URL requests depends on the parameters, parameter prefixes, and types of items that are included in the URL. Report server URLs adhere to the URL formatting guidelines as proposed by the joint World Wide Web Consortium W3C/IETF draft standard. [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] URL functionality is compatible with most Internet browsers or applications that support standard URL addressing.  
+ URL requests to the report server contain parameters that are processed by the report server. The way in which the report server handles URL requests depends on the parameters, parameter prefixes, and types of items that are included in the URL. Report server URLs adhere to the URL formatting guidelines as proposed by the joint World Wide Web Consortium W3C/IETF draft standard. [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] URL functionality is compatible with most Internet browsers or applications that support standard URL addressing.  
   
 ### URL Access Syntax  
  URL requests can contain multiple parameters that are listed in any order. Parameters are separated by an ampersand (&) and name/value pairs are separated by an equal sign (=).  
@@ -63,14 +63,14 @@ http://myrshost/reportserver
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
- For SharePoint integrated mode, it is the URL of the [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] proxy at a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]. For example:  
+ For SharePoint integrated mode, it is the URL of the [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] proxy at a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)]. For example:  
   
 ```  
 http://myspsite/subsite/_vti_bin/reportserver  
 ```  
   
 > [!TIP]  
->  It is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers.  
+>  It is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers.  
   
  *pathinfo*  
  The relative path name of the item in the native mode report server database, or the fully qualified URL of the item in a SharePoint catalog.  

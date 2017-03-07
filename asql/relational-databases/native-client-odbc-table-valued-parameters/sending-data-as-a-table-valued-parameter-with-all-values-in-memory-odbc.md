@@ -17,12 +17,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Sending Data as a Table-Valued Parameter with All Values in Memory (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   This topic describes how to send data to a stored procedure as a table-valued parameter when all values are in memory. For another sample demonstrating table-valued parameters, see [Use Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## Prerequisite  
- This procedure assumes that the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] has been executed on the server:  
+ This procedure assumes that the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] has been executed on the server:  
   
 ```  
 create type TVParam as table(ProdCode integer, Qty integer)  
@@ -125,6 +125,6 @@ from @Items
     ```  
   
 ## See Also  
- [ODBC Table-Valued Parameter Programming Examples](../Topic/ODBC%20Table-Valued%20Parameter%20Programming%20Examples.md)  
+ [ODBC Table-Valued Parameter Programming Examples](../../a9retired/odbc-table-valued-parameter-programming-examples.md)  
   
   

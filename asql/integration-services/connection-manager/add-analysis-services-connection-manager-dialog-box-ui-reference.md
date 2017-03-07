@@ -19,25 +19,25 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Add Analysis Services Connection Manager Dialog Box UI Reference
-  Use the **Add Analysis Services Connection Manager** dialog box to create a connection to a server running [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], or to edit connection properties.  
+  Use the **Add Analysis Services Connection Manager** dialog box to create a connection to a server running [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], or to edit connection properties.  
   
  To learn more about the Analysis Services connection manager, see [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
 ## Options  
  **Create a connection to a computer running Analysis Services**  
- Use the default connection to a server that is running an instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], or create a new connection by clicking **Edit**.  
+ Use the default connection to a server that is running an instance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], or create a new connection by clicking **Edit**.  
   
  **Edit**  
- Use the **Connection Manager** dialog box to create a connection to a server that is running an instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], and to edit connection properties.  
+ Use the **Connection Manager** dialog box to create a connection to a server that is running an instance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], and to edit connection properties.  
   
  **Create a connection to an Analysis Services project in this solution**  
- Specify that the connection will use an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] project in the open solution.  
+ Specify that the connection will use an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] project in the open solution.  
   
 > [!NOTE]  
 >  Analysis Services tabular model projects are not supported for this scenario.  
   
  **Analysis Services project**  
- Select an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] project from the list.  
+ Select an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] project from the list.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   

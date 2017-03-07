@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # DrilldownMemberTop (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Drills down the members in a specified set that are present in a second specified set, limiting the result set to a specified number of members. Alternatively, this function drills down on a set of tuples by using the first tuple hierarchy or the optionally specified hierarchy.  
   
@@ -65,7 +65,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
   
  The **DrilldownMemberTop** function is similar to the [DrilldownMember](../mdx/drilldownmember-mdx.md) function, but instead of including all children for each member in the first set that is also present in the second set, the **DrilldownMemberTop** function returns the topmost number of child members for each member.  
   
- Querying the XMLA property MdpropMdxDrillFunctions enables you to verify the level of support that the server provides for the drilling functions; see [Supported XMLA Properties &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md) for details.  
+ Querying the XMLA property MdpropMdxDrillFunctions enables you to verify the level of support that the server provides for the drilling functions; see [Supported XMLA Properties &#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) for details.  
   
 ## Example  
  The following example drills down into the clothing category to return the three subcategories of clothing with the top quantity of orders shipped.  

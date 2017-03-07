@@ -41,7 +41,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CREATE VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Creates a virtual table whose contents (columns and rows) are defined by a query. Use this statement to create a view of the data in one or more tables in the database. For example, a view can be used for the following purposes:  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 -   To provide a backward compatible interface to emulate a table whose schema has changed.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -88,7 +88,7 @@ AS <select_statement>
 OR ALTER  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] SP1).|   
+|**Applies to**: [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] SP1).|   
   
  Conditionally alters the view only if it already exists. 
  
@@ -142,17 +142,17 @@ OR ALTER
  ENCRYPTION  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
- Encrypts the entries in [sys.syscomments](../../relational-databases/system-compatibility-views/sys.syscomments-transact-sql.md) that contain the text of the CREATE VIEW statement. Using WITH ENCRYPTION prevents the view from being published as part of SQL Server replication.  
+ Encrypts the entries in [sys.syscomments](../../relational-databases/reference/system-compatibility-views/sys.syscomments-transact-sql.md) that contain the text of the CREATE VIEW statement. Using WITH ENCRYPTION prevents the view from being published as part of SQL Server replication.  
   
  SCHEMABINDING  
  Binds the view to the schema of the underlying table or tables. When SCHEMABINDING is specified, the base table or tables cannot be modified in a way that would affect the view definition. The view definition itself must first be modified or dropped to remove dependencies on the table that is to be modified. When you use SCHEMABINDING, the *select_statement* must include the two-part names (*schema***.***object*) of tables, views, or user-defined functions that are referenced. All referenced objects must be in the same database.  
   
- Views or tables that participate in a view created with the SCHEMABINDING clause cannot be dropped unless that view is dropped or changed so that it no longer has schema binding. Otherwise, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] raises an error. Also, executing ALTER TABLE statements on tables that participate in views that have schema binding fail when these statements affect the view definition.  
+ Views or tables that participate in a view created with the SCHEMABINDING clause cannot be dropped unless that view is dropped or changed so that it no longer has schema binding. Otherwise, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] raises an error. Also, executing ALTER TABLE statements on tables that participate in views that have schema binding fail when these statements affect the view definition.  
   
  VIEW_METADATA  
- Specifies that the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will return to the DB-Library, ODBC, and OLE DB APIs the metadata information about the view, instead of the base table or tables, when browse-mode metadata is being requested for a query that references the view. Browse-mode metadata is additional metadata that the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns to these client-side APIs. This metadata enables the client-side APIs to implement updatable client-side cursors. Browse-mode metadata includes information about the base table that the columns in the result set belong to.  
+ Specifies that the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will return to the DB-Library, ODBC, and OLE DB APIs the metadata information about the view, instead of the base table or tables, when browse-mode metadata is being requested for a query that references the view. Browse-mode metadata is additional metadata that the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns to these client-side APIs. This metadata enables the client-side APIs to implement updatable client-side cursors. Browse-mode metadata includes information about the base table that the columns in the result set belong to.  
   
  For views created with VIEW_METADATA, the browse-mode metadata returns the view name and not the base table names when it describes columns from the view in the result set.  
   
@@ -161,17 +161,17 @@ OR ALTER
 ## Remarks  
  A view can be created only in the current database. The CREATE VIEW must be the first statement in a query batch. A view can have a maximum of 1,024 columns.  
   
- When querying through a view, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] checks to make sure that all the database objects referenced anywhere in the statement exist and that they are valid in the context of the statement, and that data modification statements do not violate any data integrity rules. A check that fails returns an error message. A successful check translates the action into an action against the underlying table or tables.  
+ When querying through a view, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] checks to make sure that all the database objects referenced anywhere in the statement exist and that they are valid in the context of the statement, and that data modification statements do not violate any data integrity rules. A check that fails returns an error message. A successful check translates the action into an action against the underlying table or tables.  
   
- If a view depends on a table or view that was dropped, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] produces an error message when anyone tries to use the view. If a new table or view is created and the table structure does not change from the previous base table to replace the one dropped, the view again becomes usable. If the new table or view structure changes, the view must be dropped and re-created.  
+ If a view depends on a table or view that was dropped, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] produces an error message when anyone tries to use the view. If a new table or view is created and the table structure does not change from the previous base table to replace the one dropped, the view again becomes usable. If the new table or view structure changes, the view must be dropped and re-created.  
   
- If a view is not created with the SCHEMABINDING clause, [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) should be run when changes are made to the objects underlying the view that affect the definition of the view. Otherwise, the view might produce unexpected results when it is queried.  
+ If a view is not created with the SCHEMABINDING clause, [sp_refreshview](../../relational-databases/reference/system-stored-procedures/sp-refreshview-transact-sql.md) should be run when changes are made to the objects underlying the view that affect the definition of the view. Otherwise, the view might produce unexpected results when it is queried.  
   
- When a view is created, information about the view is stored in the following catalog views: [sys.views](../../relational-databases/system-catalog-views/sys.views-transact-sql.md), [sys.columns](../../relational-databases/system-catalog-views/sys.columns-transact-sql.md), and [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md). The text of the CREATE VIEW statement is stored in the [sys.sql_modules](../../relational-databases/system-catalog-views/sys.sql-modules-transact-sql.md) catalog view.  
+ When a view is created, information about the view is stored in the following catalog views: [sys.views](../../relational-databases/reference/system-catalog-views/sys.views-transact-sql.md), [sys.columns](../../relational-databases/reference/system-catalog-views/sys.columns-transact-sql.md), and [sys.sql_expression_dependencies](../../relational-databases/reference/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md). The text of the CREATE VIEW statement is stored in the [sys.sql_modules](../../relational-databases/reference/system-catalog-views/sys.sql-modules-transact-sql.md) catalog view.  
   
  A query that uses an index on a view defined with **numeric** or **float** expressions may have a result that is different from a similar query that does not use the index on the view. This difference may be caused by rounding errors during INSERT, DELETE, or UPDATE actions on underlying tables.  
   
- The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] saves the settings of SET QUOTED_IDENTIFIER and SET ANSI_NULLS when a view is created. These original settings are used to parse the view when the view is used. Therefore, any client-session settings for SET QUOTED_IDENTIFIER and SET ANSI_NULLS do not affect the view definition when the view is accessed.  
+ The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] saves the settings of SET QUOTED_IDENTIFIER and SET ANSI_NULLS when a view is created. These original settings are used to parse the view when the view is used. Therefore, any client-session settings for SET QUOTED_IDENTIFIER and SET ANSI_NULLS do not affect the view definition when the view is accessed.  
   
 ## Updatable Views  
  You can modify the data of an underlying base table through a view, as long as the following conditions are true:  
@@ -188,7 +188,7 @@ OR ALTER
   
 -   TOP is not used anywhere in the *select_statement* of the view together with the WITH CHECK OPTION clause.  
   
- The previous restrictions apply to any subqueries in the FROM clause of the view, just as they apply to the view itself. Generally, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] must be able to unambiguously trace modifications from the view definition to one base table. For more information, see [Modify Data Through a View](../../relational-databases/views/modify-data-through-a-view.md).  
+ The previous restrictions apply to any subqueries in the FROM clause of the view, just as they apply to the view itself. Generally, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] must be able to unambiguously trace modifications from the view definition to one base table. For more information, see [Modify Data Through a View](../../relational-databases/views/modify-data-through-a-view.md).  
   
  If the previous restrictions prevent you from modifying data directly through a view, consider the following options:  
   
@@ -198,10 +198,10 @@ OR ALTER
   
 -   **Partitioned Views**  
   
-     If the view is a partitioned view, the view is updatable, subject to certain restrictions. When it is needed, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] distinguishes local partitioned views as the views in which all participating tables and the view are on the same instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and distributed partitioned views as the views in which at least one of the tables in the view resides on a different or remote server.  
+     If the view is a partitioned view, the view is updatable, subject to certain restrictions. When it is needed, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] distinguishes local partitioned views as the views in which all participating tables and the view are on the same instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], and distributed partitioned views as the views in which at least one of the tables in the view resides on a different or remote server.  
   
 ## Partitioned Views  
- A partitioned view is a view defined by a UNION ALL of member tables structured in the same way, but stored separately as multiple tables in either the same instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or in a group of autonomous instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] servers, called federated database servers.  
+ A partitioned view is a view defined by a UNION ALL of member tables structured in the same way, but stored separately as multiple tables in either the same instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] or in a group of autonomous instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] servers, called federated database servers.  
   
 > [!NOTE]  
 >  The preferred method for partitioning data local to one server is through partitioned tables. For more information, see [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
@@ -286,7 +286,7 @@ FROM Tn;
   
 3.  Member tables, or underlying tables `T1, ..., Tn`  
   
-    -   The tables can be either local tables or tables from other computers that are running [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that are referenced either through a four-part name or an OPENDATASOURCE- or OPENROWSET-based name. The OPENDATASOURCE and OPENROWSET syntax can specify a table name, but not a pass-through query. For more information, see [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md) and [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
+    -   The tables can be either local tables or tables from other computers that are running [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that are referenced either through a four-part name or an OPENDATASOURCE- or OPENROWSET-based name. The OPENDATASOURCE and OPENROWSET syntax can specify a table name, but not a pass-through query. For more information, see [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md) and [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
          If one or more of the member tables are remote, the view is called distributed partitioned view, and additional conditions apply. They are described later in this section.  
   
@@ -329,13 +329,13 @@ FROM Tn;
   
 -   Any columns in remote tables of type **smallmoney** that are referenced in a partitioned view are mapped as **money**. Therefore, the corresponding columns (in the same ordinal position in the select list) in the local tables must also be of type **money**.  
   
--   Under database compatibility level 110 and higher, any columns in remote tables of type **smalldatetime** that are referenced in a partitioned view are mapped as **smalldatetime**. Corresponding columns (in the same ordinal position in the select list) in the local tables must be **smalldatetime**. This is a change in behavior from earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in which any columns in remote tables of type **smalldatetime** that are referenced in a partitioned view are mapped as **datetime** and corresponding columns in local tables must be of type **datetime**. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+-   Under database compatibility level 110 and higher, any columns in remote tables of type **smalldatetime** that are referenced in a partitioned view are mapped as **smalldatetime**. Corresponding columns (in the same ordinal position in the select list) in the local tables must be **smalldatetime**. This is a change in behavior from earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] in which any columns in remote tables of type **smalldatetime** that are referenced in a partitioned view are mapped as **datetime** and corresponding columns in local tables must be of type **datetime**. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
--   Any linked server in the partitioned view cannot be a loopback linked server. This is a linked server that points to the same instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   Any linked server in the partitioned view cannot be a loopback linked server. This is a linked server that points to the same instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  The setting of the SET ROWCOUNT option is ignored for INSERT, UPDATE, and DELETE actions that involve updatable partitioned views and remote tables.  
   
- When the member tables and partitioned view definition are in place, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] query optimizer builds intelligent plans that use queries efficiently to access data from member tables. With the CHECK constraint definitions, the query processor maps the distribution of key values across the member tables. When a user issues a query, the query processor compares the map to the values specified in the WHERE clause, and builds an execution plan with a minimal amount of data transfer between member servers. Therefore, although some member tables may be located in remote servers, the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] resolves distributed queries so that the amount of distributed data that has to be transferred is minimal.  
+ When the member tables and partitioned view definition are in place, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] query optimizer builds intelligent plans that use queries efficiently to access data from member tables. With the CHECK constraint definitions, the query processor maps the distribution of key values across the member tables. When a user issues a query, the query processor compares the map to the values specified in the WHERE clause, and builds an execution plan with a minimal amount of data transfer between member servers. Therefore, although some member tables may be located in remote servers, the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] resolves distributed queries so that the amount of distributed data that has to be transferred is minimal.  
   
 ## Considerations for Replication  
  To create partitioned views on member tables that are involved in replication, the following considerations apply:  
@@ -352,7 +352,7 @@ FROM Tn;
 ## Examples  
   
 ### A. Using a simple CREATE VIEW  
- The following example creates a view by using a simple `SELECT` statement. A simple view is helpful when a combination of columns is queried frequently. The data from this view comes from the `HumanResources.Employee` and `Person.Person` tables of the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. The data provides name and hire date information for the employees of [!INCLUDE[ssSampleDBCoFull](../../analysis-services/data-mining/includes/sssampledbcofull-md.md)]. The view could be created for the person in charge of tracking work anniversaries but without giving this person access to all the data in these tables.  
+ The following example creates a view by using a simple `SELECT` statement. A simple view is helpful when a combination of columns is queried frequently. The data from this view comes from the `HumanResources.Employee` and `Person.Person` tables of the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database. The data provides name and hire date information for the employees of [!INCLUDE[ssSampleDBCoFull](../../a9notintoc/includes/sssampledbcofull-md.md)]. The view could be created for the person in charge of tracking work anniversaries but without giving this person access to all the data in these tables.  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -374,7 +374,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].|  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -485,7 +485,7 @@ FROM dbo.SUPPLY4;
   
 ```  
   
-## Examples: [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### F. Creating a simple view  
  The following example creates a view by selecting only some of the columns from the source table.  
@@ -517,14 +517,14 @@ ON (fis.SalesTerritoryKey=dst.SalesTerritoryKey);
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-sql-referenced-entities-transact-sql.md)   
- [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-sql-referencing-entities-transact-sql.md)   
- [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sys.views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.views-transact-sql.md)   
+ [Create a Stored Procedure](../../relational-databases/reference/stored-procedures/create-a-stored-procedure.md)   
+ [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-sql-referenced-entities-transact-sql.md)   
+ [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-sql-referencing-entities-transact-sql.md)   
+ [sp_help &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-help-transact-sql.md)   
+ [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-helptext-transact-sql.md)   
+ [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-rename-transact-sql.md)   
+ [sys.views &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.views-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

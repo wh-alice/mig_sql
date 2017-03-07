@@ -18,9 +18,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Check the ODBC SQL Server Driver Version (Windows)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Your computer may contain a variety of ODBC drivers, from [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] and from other companies. This topic describes how to use the Windows **ODBC Data Source Administrator** to check the version of the installed ODBC drivers.  
+  Your computer may contain a variety of ODBC drivers, from [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] and from other companies. This topic describes how to use the Windows **ODBC Data Source Administrator** to check the version of the installed ODBC drivers.  
   
 ##  <a name="SSMSProcedure"></a>  
   
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 -   In the **ODBC Data Source Administrator**, click the **Drivers** tab.  
   
-     Information for the Microsoft [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] entry is displayed in the **Version** column.  
+     Information for the Microsoft [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] entry is displayed in the **Version** column.  
 
 
 > [!NOTE]  

@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 -   A graph of links between Web pages  
   
- Use [hierarchyid](../Topic/hierarchyid%20\(Transact-SQL\).md) as a data type to create tables with a hierarchical structure, or to describe the hierarchical structure of data that is stored in another location. Use the [hierarchyid functions](../t-sql/data-types/hierarchyid-data-type-method-reference.md) in [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] to query and manage hierarchical data.  
+ Use [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) as a data type to create tables with a hierarchical structure, or to describe the hierarchical structure of data that is stored in another location. Use the [hierarchyid functions](../a9retired/hierarchyid-data-type-method-reference.md) in [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] to query and manage hierarchical data.  
   
 ##  <a name="keyprops"></a> Key Properties of hierarchyid  
  A value of the **hierarchyid** data type represents a position in a tree hierarchy. Values for **hierarchyid** have the following properties:  
@@ -119,7 +119,7 @@ GO
   
   
 ### XML  
- An XML document is a tree, and therefore a single XML data type instance can represent a complete hierarchy. In [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] when an XML index is created, **hierarchyid** values are used internally to represent the position in the hierarchy.  
+ An XML document is a tree, and therefore a single XML data type instance can represent a complete hierarchy. In [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] when an XML index is created, **hierarchyid** values are used internally to represent the position in the hierarchy.  
   
  Using XML data type can be superior when all the following are true:  
   
@@ -386,7 +386,7 @@ GO
   
   
 ###  <a name="findclr"></a> Finding Ancestors by Using the CLR  
- A common operation involving two nodes in a hierarchy is to find the lowest common ancestor. This can be written in either [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] or CLR, because the **hierarchyid** type is available in both. CLR is recommended because performance will be faster.  
+ A common operation involving two nodes in a hierarchy is to find the lowest common ancestor. This can be written in either [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] or CLR, because the **hierarchyid** type is available in both. CLR is recommended because performance will be faster.  
   
  Use the following CLR code to list ancestors and to find the lowest common ancestor:  
   
@@ -423,7 +423,7 @@ public partial class HierarchyId_Operations
 }  
 ```  
   
- To use the **ListAncestor** and **CommonAncestor** methods in the following [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] examples, build the DLL and create the **HierarchyId_Operations** assembly in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] by executing code similar to the following:  
+ To use the **ListAncestor** and **CommonAncestor** methods in the following [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] examples, build the DLL and create the **HierarchyId_Operations** assembly in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] by executing code similar to the following:  
   
 ```  
 CREATE ASSEMBLY HierarchyId_Operations   
@@ -435,7 +435,7 @@ GO
 ###  <a name="ancestors"></a> Listing Ancestors  
  Creating a list of ancestors of a node is a common operation, for instance to show position in an organization. One way of doing this is by using a table-valued-function using the **HierarchyId_Operations** class defined above:  
   
- Using [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)]:  
+ Using [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)]:  
   
 ```  
 CREATE FUNCTION ListAncestors (@node hierarchyid)  
@@ -462,7 +462,7 @@ GO
   
   
 ###  <a name="lowestcommon"></a> Finding the Lowest Common Ancestor  
- Using the **HierarchyId_Operations** class defined above, create the following [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] function to find the lowest common ancestor involving two nodes in a hierarchy:  
+ Using the **HierarchyId_Operations** class defined above, create the following [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] function to find the lowest common ancestor involving two nodes in a hierarchy:  
   
 ```  
 CREATE FUNCTION CommonAncestor (@node1 hierarchyid, @node2 hierarchyid)  
@@ -521,8 +521,8 @@ GO
   
   
 ## See Also  
- [hierarchyid Data Type Method Reference](../t-sql/data-types/hierarchyid-data-type-method-reference.md)   
+ [hierarchyid Data Type Method Reference](../a9retired/hierarchyid-data-type-method-reference.md)   
  [Tutorial: Using the hierarchyid Data Type](../relational-databases/data-types/tutorials/tutorial-using-the-hierarchyid-data-type.md)   
- [hierarchyid &#40;Transact-SQL&#41;](../Topic/hierarchyid%20\(Transact-SQL\).md)  
+ [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

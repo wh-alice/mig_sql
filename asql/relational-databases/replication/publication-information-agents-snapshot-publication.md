@@ -59,6 +59,6 @@ manager: "jhubbard"
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
  [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/2a420da2-66f4-4650-9bdd-1992221ed3fd.md)   
- [Monitoring Replication](../Topic/Monitoring%20Replication.md)  
+ [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

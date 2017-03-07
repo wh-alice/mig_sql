@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Invoke-Sqlcmd cmdlet
-  **Invoke-Sqlcmd** is a [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] cmdlet that runs scripts that CONTAIN statements from the languages ([!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] and XQuery) and commands supported by the **sqlcmd** utility.  
+  **Invoke-Sqlcmd** is a [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] cmdlet that runs scripts that CONTAIN statements from the languages ([!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] and XQuery) and commands supported by the **sqlcmd** utility.  
   
 ## Using Invoke-Sqlcmd  
  The **Invoke-Sqlcmd** cmdlet lets you run your **sqlcmd** script files in a Windows PowerShell environment. Much of what you can do with **sqlcmd** can also be done using **Invoke-Sqlcmd**.  
@@ -44,7 +44,7 @@ $MyArray = "MyVar1 = 'String1'", "MyVar2 = 'String2'"
 Invoke-Sqlcmd -Query "SELECT `$(MyVar1) AS Var1, `$(MyVar2) AS Var2;" -Variable $MyArray  
 ```  
   
- This is an example of using the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] provider for Windows PowerShell to navigate to an instance of the [!INCLUDE[ssDE](../analysis-services/instances/install/windows/includes/ssde-md.md)], and then using the Windows PowerShell **Get-Item** cmdlet to retrieve the SMO Server object for the instance and passing it to **Invoke-Sqlcmd**:  
+ This is an example of using the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] provider for Windows PowerShell to navigate to an instance of the [!INCLUDE[ssDE](../a9notintoc/includes/ssde-md.md)], and then using the Windows PowerShell **Get-Item** cmdlet to retrieve the SMO Server object for the instance and passing it to **Invoke-Sqlcmd**:  
   
 ```  
 Set-Location SQLSERVER:\SQL\MyComputer\MyInstance  
@@ -76,7 +76,7 @@ Set-Location SQLSERVER:\SQL
 Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"  
 ```  
   
- The following commands would return [!INCLUDE[ssSampleDBobject](../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)]:  
+ The following commands would return [!INCLUDE[ssSampleDBobject](../a9retired/includes/sssampledbobject-md.md)]:  
   
 ```  
 Set-Location SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Person.Person  
@@ -105,8 +105,8 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Server and instance name.|-S|-ServerInstance|  
 |The initial database to use.|-d|-Database|  
 |Run the specified query and exit.|-Q|-Query|  
-|[!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication login ID.|-U|-Username|  
-|[!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication password.|-P|-Password|  
+|[!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Authentication login ID.|-U|-Username|  
+|[!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Authentication password.|-P|-Password|  
 |Variable definition.|-v|-Variable|  
 |Query timeout interval.|-t|-QueryTimeout|  
 |Stop running on an error|-b|-AbortOnError|  
@@ -146,6 +146,6 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 ## See also  
  [Use the Database Engine cmdlets](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
  [sqlcmd Utility](../tools/sqlcmd-utility.md)   
- [Use the sqlcmd Utility](../Topic/Use%20the%20sqlcmd%20Utility.md)  
+ [Use the sqlcmd Utility](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
   

@@ -16,13 +16,13 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Modify the User Account Pool for SQL Server R Services
-  As part of the installation process for [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)], a new Windows *user account pool* is created to support execution of tasks by the [!INCLUDE[rsql_launchpad](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)] service. The purpose of these worker accounts is to isolate concurrent execution of R scripts by different SQL users. 
+  As part of the installation process for [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)], a new Windows *user account pool* is created to support execution of tasks by the [!INCLUDE[rsql_launchpad](../../a9notintoc/includes/rsql-launchpad-md.md)] service. The purpose of these worker accounts is to isolate concurrent execution of R scripts by different SQL users. 
 
 This topic describes the default configuration, security and capacity for the worker accounts, and how to change the default configuration.
 
 ## Worker Accounts Used by R Services   
 
-The Windows account group is created by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup for  each instance on which R Services is installed. Therefore, if you have installed multiple instance that support R, there will be multiple user groups.
+The Windows account group is created by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] setup for  each instance on which R Services is installed. Therefore, if you have installed multiple instance that support R, there will be multiple user groups.
 
 -   In a default instance, the group name is **SQLRUserGroup**. 
 -   In a named instance, the default group name is suffixed with the instance name: for example, **SQLRUserGroupMyInstanceName**. 
@@ -33,7 +33,7 @@ By default, the user account pool contains 20 user accounts. In most cases, 20 i
 
 ### <a name = "HowToChangeGroup"> </a>How to change the number of R worker accounts
 
-To modify the number of users in the account pool, you must edit the properties of the [!INCLUDE[rsql_launchpad](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)] service as described below.  
+To modify the number of users in the account pool, you must edit the properties of the [!INCLUDE[rsql_launchpad](../../a9notintoc/includes/rsql-launchpad-md.md)] service as described below.  
   
 Passwords associated with each user account are generated at random, but you can change them later, after the accounts have been created.  
   
@@ -63,7 +63,7 @@ For additional information about managing R script capacity, see these articles:
 
 ## Security
 
-Each user group is associated with the [!INCLUDE[rsql_launchpad](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)] service on a specific instance and cannot support R jobs that run on other instances.
+Each user group is associated with the [!INCLUDE[rsql_launchpad](../../a9notintoc/includes/rsql-launchpad-md.md)] service on a specific instance and cannot support R jobs that run on other instances.
 
 For each worker account, while the session is active, a temporary folder is created to store the script objects, intermediate results, and other information used by R and SQL Server during R script execution. These working files, located under the ExtensibilityData folder, are access-restricted to administrators, and are cleaned up by SQL Server after the script completes. 
 
@@ -79,7 +79,7 @@ To reset passwords at regular intervals, you can either set this flag manually o
 
 ### Additional permission required to support remote compute contexts
 
-By default, the group of R worker accounts does **not** have login permissions on the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance with which it is associated. This can be a problem if any R users connect to SQL Server from a remote client to run R scripts, or if a script uses ODBC to get additional data. 
+By default, the group of R worker accounts does **not** have login permissions on the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance with which it is associated. This can be a problem if any R users connect to SQL Server from a remote client to run R scripts, or if a script uses ODBC to get additional data. 
 
 To ensure that these scenarios are supported, the database administrator must provide the group of R worker accounts with permission to log into the SQL Server instance where R scripts will be run (**Connect to** permissions). This is referred to as *implied authentication*, and enables SQL Server to run the R scripts using the credentials of he remote user.
 

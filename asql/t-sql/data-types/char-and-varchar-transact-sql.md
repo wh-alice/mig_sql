@@ -27,7 +27,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # char and varchar (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Are string data types of either fixed length or variable length.  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
  When a character expression is converted to a character expression of a different data type or size, such as from **char(5)** to **varchar(5)**, or **char(20)** to **char(15)**, the collation of the input value is assigned to the converted value. If a noncharacter expression is converted to a character data type, the default collation of the current database is assigned to the converted value. In either case, you can assign a specific collation by using the [COLLATE](../Topic/COLLATE%20\(Transact-SQL\).md) clause.  
   
 > [!NOTE]  
->  Code page translations are supported for **char** and **varchar** data types, but not for **text** data type. As with earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], data loss during code page translations is not reported.  
+>  Code page translations are supported for **char** and **varchar** data types, but not for **text** data type. As with earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], data loss during code page translations is not reported.  
   
  Character expressions that are being converted to an approximate **numeric** data type can include optional exponential notation (a lowercase e or uppercase E followed by an optional plus (+) or minus (-) sign and then a number).  
   

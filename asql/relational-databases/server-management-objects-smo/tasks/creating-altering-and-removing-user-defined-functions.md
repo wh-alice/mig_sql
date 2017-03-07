@@ -17,19 +17,19 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Creating, Altering, and Removing User-Defined Functions
-  The <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> object provides functionality that lets users programmatically manage user-defined functions in [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. User-defined functions support input and output parameters, and also support direct references to table columns.  
+  The <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> object provides functionality that lets users programmatically manage user-defined functions in [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. User-defined functions support input and output parameters, and also support direct references to table columns.  
   
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] requires assemblies to be registered within a database before these can be used inside stored procedures, user defined functions, triggers, and user defined data types. SMO supports this feature with the <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> object.  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] requires assemblies to be registered within a database before these can be used inside stored procedures, user defined functions, triggers, and user defined data types. SMO supports this feature with the <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> object.  
   
  The <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> object references the .NET assembly with the <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.AssemblyName%2A>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.ClassName%2A>, and <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.MethodName%2A> properties.  
   
  When the <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> object references a .NET assembly, you must register the assembly by creating a <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> object and adding it to the <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection> object, which belongs to the <xref:Microsoft.SqlServer.Management.Smo.Database> object.  
   
 ## Example  
- To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20Basic%20SMO%20Project%20in%20Visual%20Studio%20.NET.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20C%23%20SMO%20Project%20in%20Visual%20Studio%20.NET.md).  
+ To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-.net.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-.net.md).  
   
 ## Creating a Scalar User-Defined Function in Visual Basic  
- This code example shows how to create and remove a scalar user-defined function that has an input <xref:System.DateTime> object parameter and an integer return type in [!INCLUDE[vbprvb](../../../analysis-services/data-mining/includes/vbprvb-md.md)]. The user-defined function is created on the [!INCLUDE[ssSampleDBnormal](../../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. The example creates a user-defined function, ISOweek, which takes a date argument and calculates the ISO week number. For this function to calculate correctly, the database DATEFIRST option must be set to 1 before the function is called.  
+ This code example shows how to create and remove a scalar user-defined function that has an input <xref:System.DateTime> object parameter and an integer return type in [!INCLUDE[vbprvb](../../../a9retired/includes/vbprvb-md.md)]. The user-defined function is created on the [!INCLUDE[ssSampleDBnormal](../../../a9notintoc/includes/sssampledbnormal-md.md)] database. The example creates a user-defined function, ISOweek, which takes a date argument and calculates the ISO week number. For this function to calculate correctly, the database DATEFIRST option must be set to 1 before the function is called.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -60,7 +60,7 @@ udf.Drop()
 ``` 
   
 ## Creating a Scalar User-Defined Function in Visual C#  
- This code example shows how to create and remove a scalar user-defined function that has an input <xref:System.DateTime> object parameter and an integer return type in [!INCLUDE[csprcs](../../../integration-services/includes/csprcs-md.md)]. The user-defined function is created on the [!INCLUDE[ssSampleDBnormal](../../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. The example creates the user-defined function. `ISOweek`. This function takes a date argument and calculates the ISO week number. For this function to calculate correctly, the database `DATEFIRST` option must be set to `1` before the function is called.  
+ This code example shows how to create and remove a scalar user-defined function that has an input <xref:System.DateTime> object parameter and an integer return type in [!INCLUDE[csprcs](../../../a9retired/includes/csprcs-md.md)]. The user-defined function is created on the [!INCLUDE[ssSampleDBnormal](../../../a9notintoc/includes/sssampledbnormal-md.md)] database. The example creates the user-defined function. `ISOweek`. This function takes a date argument and calculates the ISO week number. For this function to calculate correctly, the database `DATEFIRST` option must be set to `1` before the function is called.  
   
 ```C#  
 {  
@@ -96,7 +96,7 @@ udf.Drop()
 ```  
   
 ## Creating a Scalar User-Defined Function in PowerShell  
- This code example shows how to create and remove a scalar user-defined function that has an input <xref:System.DateTime> object parameter and an integer return type in [!INCLUDE[csprcs](../../../integration-services/includes/csprcs-md.md)]. The user-defined function is created on the [!INCLUDE[ssSampleDBnormal](../../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. The example creates the user-defined function. `ISOweek`. This function takes a date argument and calculates the ISO week number. For this function to calculate correctly, the database `DATEFIRST` option must be set to `1` before the function is called.  
+ This code example shows how to create and remove a scalar user-defined function that has an input <xref:System.DateTime> object parameter and an integer return type in [!INCLUDE[csprcs](../../../a9retired/includes/csprcs-md.md)]. The user-defined function is created on the [!INCLUDE[ssSampleDBnormal](../../../a9notintoc/includes/sssampledbnormal-md.md)] database. The example creates the user-defined function. `ISOweek`. This function takes a date argument and calculates the ISO week number. For this function to calculate correctly, the database `DATEFIRST` option must be set to `1` before the function is called.  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

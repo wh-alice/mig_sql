@@ -30,11 +30,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # DBCC CHECKTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Checks the integrity of all the pages and structures that make up the table or indexed view.    
     
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)    
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## Syntax    
     
@@ -90,7 +90,7 @@ DBCC CHECKTABLE
  Displays an unlimited number of errors. All error messages are displayed by default. Specifying or omitting this option has no effect.    
     
  EXTENDED_LOGICAL_CHECKS    
- If the compatibility level is 100 ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)]) or higher, performs logical consistency checks on an indexed view, XML indexes, and spatial indexes, where present.    
+ If the compatibility level is 100 ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)]) or higher, performs logical consistency checks on an indexed view, XML indexes, and spatial indexes, where present.    
     
  For more information, see "Performing Logical Consistency Checks on Indexes" in the "Remarks" section later in this topic.    
     
@@ -120,7 +120,7 @@ DBCC CHECKTABLE
  DATA_PURITY    
  Causes DBCC CHECKTABLE to check the table for column values that are not valid or out-of-range. For example, DBCC CHECKTABLE detects columns with date and time values that are larger than or less than the acceptable range for the **datetime** data type; or **decimal** or approximate-numeric data type columns with scale or precision values that are not valid.    
     
- Column-value integrity checks are enabled by default and do not require the DATA_PURITY option. For databases upgraded from earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you can use DBCC CHECKTABLE WITH DATA_PURITY to find and correct errors on a specific table; however, column-value checks on the table are not enabled by default until DBCC CHECKDB WITH DATA_PURITY has been run error free on the database. After this, DBCC CHECKDB and DBCC CHECKTABLE check column-value integrity by default.    
+ Column-value integrity checks are enabled by default and do not require the DATA_PURITY option. For databases upgraded from earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], you can use DBCC CHECKTABLE WITH DATA_PURITY to find and correct errors on a specific table; however, column-value checks on the table are not enabled by default until DBCC CHECKDB WITH DATA_PURITY has been run error free on the database. After this, DBCC CHECKDB and DBCC CHECKTABLE check column-value integrity by default.    
     
  Validation errors reported by this option cannot be fixed by using DBCC repair options. For information about manually correcting these errors, see Knowledge Base article 923247: [Troubleshooting DBCC error 2570 in SQL Server 2005 and later versions](http://support.microsoft.com/kb/923247).    
     
@@ -129,7 +129,7 @@ DBCC CHECKTABLE
  MAXDOP    
  ||    
 |-|    
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] 2014 SP2 through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658).|    
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] 2014 SP2 through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658).|    
     
  Overrides the **max degree of parallelism** configuration option of **sp_configure** for the statement. The MAXDOP can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the Database Engine uses the Resource Governor MAXDOP value, described in ALTER WORKLOAD GROUP (Transact-SQL). All semantic rules used with the max degree of parallelism configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure/windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).    
     
@@ -162,7 +162,7 @@ DBCC CHECKTABLE
 ## Performing Logical Consistency Checks on Indexes    
  Logical consistency checking on indexes varies according to the compatibility level of the database, as follows:    
     
--   If the compatibility level is 100 ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)]) or higher:    
+-   If the compatibility level is 100 ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)]) or higher:    
     
     -   Unless NOINDEX is specified, DBCC CHECKTABLE performs both physical and logical consistency checks on a single table and on all its nonclustered indexes. However, on XML indexes, spatial indexes, and indexed views only physical consistency checks are performed by default.    
     
@@ -193,15 +193,15 @@ DBCC CHECKTABLE
  For example, if a table contains a **varbinary(max)** column that uses the FILESTREAM attribute, DBCC CHECKTABLE will check that there is a one-to-one mapping between file system directories and files and table rows, columns, and column values. DBCC CHECKTABLE can repair corruption if you specify the REPAIR_ALLOW_DATA_LOSS option. To repair FILESTREAM corruption, DBCC will delete any table rows that are missing file system data and will delete any directories and files that do not map to a table row, column, or column value.    
     
 ## Checking Objects in Parallel    
- By default, DBCC CHECKTABLE performs parallel checking of objects. The degree of parallelism is automatically determined by the query processor. The maximum degree of parallelism is configured in the same manner as that of parallel queries. To restrict the maximum number of processors available for DBCC checking, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure/windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).    
+ By default, DBCC CHECKTABLE performs parallel checking of objects. The degree of parallelism is automatically determined by the query processor. The maximum degree of parallelism is configured in the same manner as that of parallel queries. To restrict the maximum number of processors available for DBCC checking, use [sp_configure](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md). For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure/windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).    
     
- Parallel checking can be disabled by using trace flag 2528. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md).    
+ Parallel checking can be disabled by using trace flag 2528. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).    
     
 > [!NOTE]    
 >  During a DBCC CHECKTABLE operation, the bytes that are stored in a byte-ordered user-defined type column must be equal to the computed serialization of the user-defined type value. If this is not true, the DBCC CHECKTABLE routine will report a consistency error.    
     
 ## Understanding DBCC Error Messages    
- After the DBCC CHECKTABLE command finishes, a message is written to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log. If the DBCC command successfully executes, the message indicates a successful completion and the amount of time that the command ran. If the DBCC command stops before completing the check because of an error, the message indicates the command was terminated, a state value, and the amount of time the command ran. The following table lists and describes the state values that can be included in the message.    
+ After the DBCC CHECKTABLE command finishes, a message is written to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error log. If the DBCC command successfully executes, the message indicates a successful completion and the amount of time that the command ran. If the DBCC command stops before completing the check because of an error, the message indicates the command was terminated, a state value, and the amount of time the command ran. The following table lists and describes the state values that can be included in the message.    
     
 |State|Description|    
 |-----------|-----------------|    
@@ -213,9 +213,9 @@ DBCC CHECKTABLE
 |5|An unknown error occurred that terminated the DBCC command.|    
     
 ## Error Reporting    
- A mini-dump file (SQLDUMP*nnnn*.txt) is created in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] LOG directory whenever DBCC CHECKTABLE detects a corruption error. When the Feature Usage data collection and Error Reporting features are enabled for the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the file is automatically forwarded to [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)]. The collected data is used to improve [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] functionality.    
+ A mini-dump file (SQLDUMP*nnnn*.txt) is created in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] LOG directory whenever DBCC CHECKTABLE detects a corruption error. When the Feature Usage data collection and Error Reporting features are enabled for the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], the file is automatically forwarded to [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)]. The collected data is used to improve [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] functionality.    
     
- The dump file contains the results of the DBCC CHECKTABLE command and additional diagnostic output. The file has restricted discretionary access-control lists (DACLs). Access is limited to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service account and members of the sysadmin role. By default, the sysadmin role contains all members of the Windows BUILTIN\Administrators group and the local administrator's group. The DBCC command does not fail if the data collection process fails.    
+ The dump file contains the results of the DBCC CHECKTABLE command and additional diagnostic output. The file has restricted discretionary access-control lists (DACLs). Access is limited to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service account and members of the sysadmin role. By default, the sysadmin role contains all members of the Windows BUILTIN\Administrators group and the local administrator's group. The DBCC command does not fail if the data collection process fails.    
     
 ## Resolving Errors    
  If DBCC CHECKTABLE reports any errors, we recommend restoring the database from the database backup instead of running REPAIR with one of the REPAIR options. If no backup exists, running REPAIR can correct the errors that are reported. The REPAIR option to use is specified at the end of the list of reported errors. However, that correcting the errors by using the REPAIR_ALLOW_DATA_LOSS option might require that some pages, and therefore data, be deleted.    
@@ -247,7 +247,7 @@ User must own the table, or be a member of the sysadmin fixed server role, the d
 ## Examples    
     
 ### A. Checking a specific table    
- The following example checks the data page integrity of the `HumanResources.Employee` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.    
+ The following example checks the data page integrity of the `HumanResources.Employee` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.    
     
 ```tsql    
 DBCC CHECKTABLE ('HumanResources.Employee');    
@@ -255,7 +255,7 @@ GO
 ```    
     
 ### B. Performing a low-overhead check of the table    
- The following example performs a low overhead check of the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.    
+ The following example performs a low overhead check of the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.    
     
 ```tsql    
     

@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Start a Trace Automatically after Connecting to a Server (SQL Server Profiler)
-  This topic describes how to start traces automatically after connecting to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] by using [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)].  
+  This topic describes how to start traces automatically after connecting to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] by using [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)].  
   
 ### To start a trace automatically after connecting to a server with SQL Server Profiler  
   

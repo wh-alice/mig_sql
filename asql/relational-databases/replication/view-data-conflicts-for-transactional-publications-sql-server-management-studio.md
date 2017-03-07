@@ -19,21 +19,21 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # View Data Conflicts for Transactional Publications (SQL Server Management Studio)
-  You can view conflicts for peer-to-peer transactional replication and transactional replication with queued updating subscriptions in the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Replication Conflict Viewer. For information about how conflicts are detected and resolved, see [Conflict Detection in Peer-to-Peer Replication](../Topic/Conflict%20Detection%20in%20Peer-to-Peer%20Replication.md) and [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md).  
+  You can view conflicts for peer-to-peer transactional replication and transactional replication with queued updating subscriptions in the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Replication Conflict Viewer. For information about how conflicts are detected and resolved, see [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) and [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md).  
   
  The availability of conflict data depends on the type of replication and the conflict retention period:  
   
--   For peer-to-peer replication, by default, the Distribution Agent fails when it detects a conflict. A conflict error is logged into the error log, but no conflict data is logged into the conflict table; therefore it is not available for viewing. If the Distribution Agent is allowed to continue, a conflict is logged locally on each node where it was detected. For more information, see "Handling Conflicts" in [Conflict Detection in Peer-to-Peer Replication](../Topic/Conflict%20Detection%20in%20Peer-to-Peer%20Replication.md).  
+-   For peer-to-peer replication, by default, the Distribution Agent fails when it detects a conflict. A conflict error is logged into the error log, but no conflict data is logged into the conflict table; therefore it is not available for viewing. If the Distribution Agent is allowed to continue, a conflict is logged locally on each node where it was detected. For more information, see "Handling Conflicts" in [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
 -   For queued updating subscriptions, data is available for every conflict. Conflict data is available in the Replication Conflict Viewer for the amount of time specified for the conflict retention period, with a default of 14 days. To set the conflict retention period, perform either of the following:  
   
-    -   Specify a retention value for the @conflict_retention parameter of [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md).  
+    -   Specify a retention value for the @conflict_retention parameter of [sp_addpublication](../../relational-databases/reference/system-stored-procedures/sp-addpublication-transact-sql.md).  
   
-    -   Specify a value of **'conflict_retention'** for the @property parameter and a retention value for the @value parameter of [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md).  
+    -   Specify a value of **'conflict_retention'** for the @property parameter and a retention value for the @value parameter of [sp_changepublication](../../relational-databases/reference/system-stored-procedures/sp-changepublication-transact-sql.md).  
   
 ### To view conflicts  
   
-1.  Connect to the appropriate server in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], and then expand the server node:  
+1.  Connect to the appropriate server in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], and then expand the server node:  
   
     -   For peer-to-peer replication, this is the node at which the conflict occurred.  
   
@@ -60,7 +60,7 @@ manager: "jhubbard"
 6.  Close the Replication Conflict Viewer.  
   
 ## See Also  
- [Peer-to-Peer Transactional Replication](../Topic/Peer-to-Peer%20Transactional%20Replication.md)   
- [Queued Updating Conflict Detection and Resolution](../Topic/Queued%20Updating%20Conflict%20Detection%20and%20Resolution.md)  
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Queued Updating Conflict Detection and Resolution](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   
   

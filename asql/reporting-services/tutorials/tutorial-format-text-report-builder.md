@@ -17,7 +17,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Tutorial: Format Text (Report Builder)
-In this tutorial, you practice formatting text in various ways in a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report. You can experiment with different formats. 
+In this tutorial, you practice formatting text in various ways in a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report. You can experiment with different formats. 
 
 After you set up the blank report with the data source and dataset, you can pick the formats you want to explore. The following illustration shows a report similar to the one you will create.  
   
@@ -34,7 +34,7 @@ For information about requirements, see [Prerequisites for Tutorials &#40;Report
   
 ### To create a blank report  
   
-1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
+1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
   
     The **New Report or Dataset** dialog box opens.  
   
@@ -57,9 +57,9 @@ For information about requirements, see [Prerequisites for Tutorials &#40;Report
 4.  Verify that the connection type is Microsoft SQL Server, and then in the **Connection string** box type: `Data Source = <servername>`  
   
     > [!NOTE]  
-    > The expression `<servername>`, for example Report001, specifies a computer on which an instance of the SQL Server Database Engine is installed. This tutorial does not need specific data; it just needs a connection to a [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] database. If you already have a data source connection listed under **Data Source Connections**, you can select it and go to the next procedure, "To create a dataset." For more information, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../../reporting-services/tutorials/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > The expression `<servername>`, for example Report001, specifies a computer on which an instance of the SQL Server Database Engine is installed. This tutorial does not need specific data; it just needs a connection to a [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] database. If you already have a data source connection listed under **Data Source Connections**, you can select it and go to the next procedure, "To create a dataset." For more information, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../../reporting-services/tutorials/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To create a dataset  
   
@@ -115,9 +115,9 @@ For information about requirements, see [Prerequisites for Tutorials &#40;Report
   
     The query results are the data available to display in your report.  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]
 
-9.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+9.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## <a name="AddField"></a>Add a Field to the Report Design Surface  
 If you want a field from your dataset to appear in a report, your first impulse may be to drag it directly to the design surface. This exercise points out why that doesn't work and what to do instead.  

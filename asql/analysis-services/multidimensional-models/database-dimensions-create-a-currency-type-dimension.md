@@ -20,9 +20,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Database Dimensions - Create a Currency type Dimension
-  In [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], a currency type dimension is a dimension whose attributes represent a list of currencies for financial reporting purposes.  
+  In [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], a currency type dimension is a dimension whose attributes represent a list of currencies for financial reporting purposes.  
   
- A currency dimension lets you add currency conversion capabilities to a cube in [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)]. To add currency conversion to a cube, you use the Business Intelligence Wizard define a Multidimensional Expressions (MDX) script command that converts currency measures to values that are appropriate for the locale of the client application. To create this MDX script, the Business Intelligence Wizard needs the following information:  
+ A currency dimension lets you add currency conversion capabilities to a cube in [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)]. To add currency conversion to a cube, you use the Business Intelligence Wizard define a Multidimensional Expressions (MDX) script command that converts currency measures to values that are appropriate for the locale of the client application. To create this MDX script, the Business Intelligence Wizard needs the following information:  
   
 -   A currency dimension that represents source currencies. (This dimension is the source currency dimension.)  
   
@@ -53,14 +53,14 @@ manager: "erikre"
   
      To identify an attribute as a currency ISO code attribute, set the **Type** property of the attribute to **CurrencyIsoCode**.  
   
- For more information about attribute types, see [Configure Attribute Types](../Topic/Configure%20Attribute%20Types.md).  
+ For more information about attribute types, see [Configure Attribute Types](../../analysis-services/multidimensional-models/attribute-properties-configure-attribute-types.md).  
   
 ## Defining Account Intelligence with the Business Intelligence Wizard  
- After you have defined an account dimension and added that dimension to a cube, you can use the Business Intelligence Wizard to add account intelligence functionality, such as identifying and mapping account types, to the dimension. For more information, see [Add Account Intelligence to a Dimension](../Topic/Add%20Account%20Intelligence%20to%20a%20Dimension.md).  
+ After you have defined an account dimension and added that dimension to a cube, you can use the Business Intelligence Wizard to add account intelligence functionality, such as identifying and mapping account types, to the dimension. For more information, see [Add Account Intelligence to a Dimension](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
 ## See Also  
  [Attributes and Attribute Hierarchies](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Business Intelligence Wizard F1 Help](../Topic/Business%20Intelligence%20Wizard%20F1%20Help.md)   
- [Dimension Types](../Topic/Dimension%20Types.md)  
+ [Business Intelligence Wizard F1 Help](../../a9retired/business-intelligence-wizard-f1-help.md)   
+ [Dimension Types](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

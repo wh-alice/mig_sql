@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure Resource Governor Using a Template
-  You can configure Resource Governor by using a template that is provided in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+  You can configure Resource Governor by using a template that is provided in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 -   **Before you begin:**  [Permissions](#Permissions)  
   
@@ -27,12 +27,12 @@ manager: "jhubbard"
  Use the following steps to open and modify a template that creates a resource pool and a workload group for the pool. In addition, this template enables you to create a classifier user-defined function that routes new connections to either the default group or the workload group that you create.  
   
 ###  <a name="Permissions"></a> Permissions  
- The resource governor [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements in the template require CONTROL SERVER permission.  
+ The resource governor [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements in the template require CONTROL SERVER permission.  
   
 ##  <a name="ConfRGTemplate"></a> Configure Resource Governor Using a Template  
- **To configure resource governor by using a template in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]**  
+ **To configure resource governor by using a template in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]**  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], on the **View** menu, click **Template Explorer**.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], on the **View** menu, click **Template Explorer**.  
   
 2.  In **Template Explorer**, expand **Resource Governor**, and then double-click **Configure Resource Governor**.  
   

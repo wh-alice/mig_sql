@@ -26,11 +26,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # ORIGINAL_LOGIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns the name of the login that connected to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. You can use this function to return the identity of the original login in sessions in which there are many explicit or implicit context switches.  
+  Returns the name of the login that connected to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. You can use this function to return the identity of the original login in sessions in which there are many explicit or implicit context switches.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -43,9 +43,9 @@ ORIGINAL_LOGIN( )
  **sysname**  
   
 ## Remarks  
- This function can be useful in auditing the identity of the original connecting context. Whereas functions such as [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) and [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) return the current executing context, ORIGINAL_LOGIN returns the identity of the login that first connected to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in that session.  
+ This function can be useful in auditing the identity of the original connecting context. Whereas functions such as [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) and [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) return the current executing context, ORIGINAL_LOGIN returns the identity of the login that first connected to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] in that session.  
   
- Returns NULL on [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].  
+ Returns NULL on [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].  
   
 ## Examples  
  The following example switches the execution context of the current session from the caller of the statements to `login1`. The functions `SUSER_SNAME` and `ORIGINAL_LOGIN` are used to return the current session user (the user to whom the context was switched), and the original login account.  

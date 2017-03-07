@@ -19,7 +19,7 @@ manager: "jhubbard"
 # Set the Properties of a Data Flow Component
   To set the properties of data flow components, which include sources, destinations, and transformations, use one of the following features:  
   
--   The component editors that [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] provides. These editors include only the custom properties of each data flow component.  
+-   The component editors that [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] provides. These editors include only the custom properties of each data flow component.  
   
 -   The **Properties** window lists the component-level custom properties of each element, as well as the properties common to all data flow elements.  
   
@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 ## Set the properties of a data flow component with a component editor  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 ## Set the properties of a data flow component in the Properties window  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -58,7 +58,7 @@ manager: "jhubbard"
   
 ## Set the properties of a data flow component with the Advanced Editor  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -67,7 +67,7 @@ manager: "jhubbard"
 4.  In the data flow designer, right-click the data flow component, and then click **Show Advanced Editor**.  
   
     > [!NOTE]  
-    >  In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], data flow components that support multiple inputs cannot use the **Advanced Editor**.  
+    >  In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], data flow components that support multiple inputs cannot use the **Advanced Editor**.  
   
 5.  In the **Advanced Editor** dialog box, do any of the following steps:  
   
@@ -100,7 +100,7 @@ manager: "jhubbard"
 8.  To save the updated package, on the **File** menu, click **Save Selected Items**.  
 
 ## Common properties of data flow components
-The data flow objects in the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] object model have common properties and custom properties at the component, input and output, and input column and output column levels. Many properties have read-only values that are assigned at run time by the data flow engine.  
+The data flow objects in the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] object model have common properties and custom properties at the component, input and output, and input column and output column levels. Many properties have read-only values that are assigned at run time by the data flow engine.  
   
  This topic lists and describes the common properties of data flow objects.  
   
@@ -116,7 +116,7 @@ The data flow objects in the [!INCLUDE[msCoName](../../advanced-analytics/r-serv
   
  
 ###  <a name="components"></a> Component properties  
- In the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] object model, a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface.  
+ In the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] object model, a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface.  
   
  The following table describes the properties of the components in a data flow. Some properties have read-only values that are assigned at run time by the data flow engine.  
   
@@ -136,7 +136,7 @@ The data flow objects in the [!INCLUDE[msCoName](../../advanced-analytics/r-serv
 |Version|Integer|The version of a component.|  
   
 ###  <a name="inputs"></a> Input properties  
- In the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] object model, transformations and destinations have inputs. An input of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> interface.  
+ In the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] object model, transformations and destinations have inputs. An input of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> interface.  
   
  The following table describes the properties of the inputs of components in a data flow. Some properties have read-only values that are assigned at run time by the data flow engine.  
   
@@ -156,7 +156,7 @@ The data flow objects in the [!INCLUDE[msCoName](../../advanced-analytics/r-serv
  Destinations and some transformations do not support error outputs, and the ErrorRowDisposition and TruncationRowDisposition properties of these components are read-only.  
   
 ###  <a name="inputcolumns"></a> Input column properties  
- In the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] object model, an input contains a collection of input columns. An input column of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100> interface.  
+ In the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] object model, an input contains a collection of input columns. An input column of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100> interface.  
   
  The following table describes the properties of the input columns of components in a data flow. Some properties have read-only values that are assigned at run time by the data flow engine.  
   
@@ -180,7 +180,7 @@ The data flow objects in the [!INCLUDE[msCoName](../../advanced-analytics/r-serv
  Input columns also have the data type properties described under "Data Type Properties."  
   
 ###  <a name="outputs"></a> Output properties  
- In the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] object model, sources and transformations have outputs. An output of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> interface.  
+ In the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] object model, sources and transformations have outputs. An output of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> interface.  
   
  The following table describes the properties of the outputs of components in a data flow. Some properties have read-only values that are assigned at run time by the data flow engine.  
   
@@ -201,7 +201,7 @@ The data flow objects in the [!INCLUDE[msCoName](../../advanced-analytics/r-serv
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|A value that determines how the component handles truncations that occur when processing rows. The values are **Fail component**, **Ignore failure**, and **Redirect row**.|  
   
 ###  <a name="outputcolumns"></a> Output column properties  
- In the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] object model, an output contains a collection of output columns. An output column of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100> interface.  
+ In the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] object model, an output contains a collection of output columns. An output column of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100> interface.  
   
  The following table describes the properties of the output columns of components in a data flow. Some properties have read-only values that are assigned at run time by the data flow engine.  
   
@@ -224,7 +224,7 @@ The data flow objects in the [!INCLUDE[msCoName](../../advanced-analytics/r-serv
  Output columns also include a set of data type properties.  
   
 ### External metadata column properties  
- In the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] object model, inputs and outputs can contain a collection of external metadata columns. An external metadata column of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> interface.  
+ In the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] object model, inputs and outputs can contain a collection of external metadata columns. An external metadata column of a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> interface.  
   
  The following table describes the properties of the external metadata columns of components in a data flow. Some properties have read-only values that are assigned at run time by the data flow engine.  
   
@@ -245,7 +245,7 @@ The data flow objects in the [!INCLUDE[msCoName](../../advanced-analytics/r-serv
 |Property|Data Type|Description|  
 |--------------|---------------|-----------------|  
 |CodePage|Integer|Specifies the code page for string data that is not Unicode.|  
-|DataType|Integer (enumeration)|The [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data type of the column. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
+|DataType|Integer (enumeration)|The [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] data type of the column. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
 |Length|Integer|The length, measured in characters, of a column.|  
 |Precision|Integer|The precision of a numeric column.|  
 |Scale|Integer|The scale of a numeric column.|  
@@ -294,11 +294,11 @@ This procedure describes how to add an expression to the Conditional Split trans
   
  To implement an expression in a transformation, the package must already include at least one Data Flow task and a source. 
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
-3.  In [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click the **Control Flow** tab, and then click the Data Flow task that contains the data flow in which you want to implement an expression.  
+3.  In [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, click the **Control Flow** tab, and then click the Data Flow task that contains the data flow in which you want to implement an expression.  
   
 4.  Click the **Data Flow** tab, and drag either a Conditional Split or Derived Column transformation from the **Toolbox** to the design surface.  
   
@@ -367,6 +367,6 @@ The values of certain properties of data flow objects can be specified by using 
 |----------------------|--------------|  
 |ADO NET Destination|TableOrViewName property<br /><br /> BatchSize property<br /><br /> CommandTimeout property|  
 |Flat File destination|Header property|  
-|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Compact destination|TableName property|  
-|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] destination|BulkInsertTableName property<br /><br /> BulkInsertFirstRow property<br /><br /> BulkInsertLastRow property<br /><br /> BulkInsertOrder property<br /><br /> Timeout property|  
+|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Compact destination|TableName property|  
+|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] destination|BulkInsertTableName property<br /><br /> BulkInsertFirstRow property<br /><br /> BulkInsertLastRow property<br /><br /> BulkInsertOrder property<br /><br /> Timeout property|  
 

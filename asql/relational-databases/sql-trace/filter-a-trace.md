@@ -28,7 +28,7 @@ manager: "jhubbard"
  To filter the event data captured within a trace, select trace event criteria that return only relevant data from the trace. For example, you can include or exclude monitoring the activity of a specific application from the trace.  
   
 > [!NOTE]  
->  When [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] creates traces, it filters out its own activity by default.  
+>  When [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] creates traces, it filters out its own activity by default.  
   
  As an additional example, if you monitor queries to determine the batches that take the longest time to execute, set the trace event criteria to monitor only those batches that take longer than 30 seconds to execute (a CPU minimum value of 30,000 milliseconds).  
   
@@ -75,7 +75,7 @@ manager: "jhubbard"
 |**ApplicationName**|LIKE, NOT LIKE|  
 |**BigintData1**|=, <>, >=, <=|  
 |**BigintData2**|=, <>, >=, <=|  
-|**BinaryData**|Use [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
+|**BinaryData**|Use [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**ClientProcessID**|=, <>, >=, <=|  
 |**ColumnPermissions**|=, <>, >=, <=|  
 |**CPU**|=, <>, >=, <=|  
@@ -87,7 +87,7 @@ manager: "jhubbard"
 |**Error**|=, <>, >=, <=|  
 |**EventSubClass**|=, <>, >=, <=|  
 |**FileName**|LIKE, NOT LIKE|  
-|**GUID**|Use [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
+|**GUID**|Use [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**Handle**|=, <>, >=, <=|  
 |**HostName**|LIKE, NOT LIKE|  
 |**IndexID**|=, <>, >=, <=|  
@@ -97,7 +97,7 @@ manager: "jhubbard"
 |**LineNumber**|=, <>, >=, <=|  
 |**LinkedServerName**|LIKE, NOT LIKE|  
 |**LoginName**|LIKE, NOT LIKE|  
-|**LoginSid**|Use [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
+|**LoginSid**|Use [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**MethodName**|LIKE, NOT LIKE|  
 |**Mode**|=, <>, >=, <=|  
 |**NestLevel**|=, <>, >=, <=|  
@@ -121,12 +121,12 @@ manager: "jhubbard"
 |**Severity**|=, <>, >=, <=|  
 |**SourceDatabaseID**|=, <>, >=, <=|  
 |**SPID**|=, <>, >=, \<=|  
-|**SqlHandle**|Use [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
+|**SqlHandle**|Use [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**StartTime**|>=, <=|  
 |**State**|=, <>, >=, <=|  
 |**Success**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
-|**TargetLoginSid**|Use [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
+|**TargetLoginSid**|Use [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**TargetUserName**|LIKE, NOT LIKE|  
 |**TextData** *|LIKE, NOT LIKE|  
 |**TransactionID**|=, <>, >=, <=|  
@@ -136,46 +136,46 @@ manager: "jhubbard"
   
  \* If tracing events from the **osql** utility or the **sqlcmd** utility, always append **%** to filters on the **TextData** data column.  
   
- As a security precaution, SQL Trace automatically omits from the trace any information from security-related stored procedures that affect passwords. This security mechanism is nonconfigurable and is always in effect. It prevents users, who otherwise have permissions to trace all activity on [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], from capturing passwords.  
+ As a security precaution, SQL Trace automatically omits from the trace any information from security-related stored procedures that affect passwords. This security mechanism is nonconfigurable and is always in effect. It prevents users, who otherwise have permissions to trace all activity on [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], from capturing passwords.  
   
  The following security-related stored procedures are monitored, but no output is written to the **TextData** data column:  
   
- [sp_addapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)  
+ [sp_addapprole &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addapprole-transact-sql.md)  
   
- [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)  
+ [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-adddistpublisher-transact-sql.md)  
   
- [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)  
+ [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-adddistributiondb-transact-sql.md)  
   
- [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)  
+ [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-adddistributor-transact-sql.md)  
   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
   
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
   
- [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)  
+ [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addlogin-transact-sql.md)  
   
- [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)  
+ [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)  
   
- [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)  
+ [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)  
   
- [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
+ [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
- [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)  
+ [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addsubscriber-transact-sql.md)  
   
- [sp_approlepassword &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-approlepassword-transact-sql.md)  
+ [sp_approlepassword &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-approlepassword-transact-sql.md)  
   
- [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)  
+ [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-changedistpublisher-transact-sql.md)  
   
- [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)  
+ [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-changesubscriber-transact-sql.md)  
   
- [sp_dsninfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dsninfo-transact-sql.md)  
+ [sp_dsninfo &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-dsninfo-transact-sql.md)  
   
- [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
- [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md)  
+ [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-link-publication-transact-sql.md)  
   
- [sp_password &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)  
+ [sp_password &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-password-transact-sql.md)  
   
- [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)  
+ [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-setapprole-transact-sql.md)  
   
   

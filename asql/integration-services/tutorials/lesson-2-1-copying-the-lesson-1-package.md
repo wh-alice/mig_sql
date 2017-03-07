@@ -21,7 +21,7 @@ In this task, you will create a copy of the Lesson 1.dtsx package that you creat
   
 ### To create the Lesson 2 package  
   
-1.  If [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Data Tools is not already open, click **Start**, point to **All Programs**, point to **Microsoft SQL Server 2012**, and then click **SQL Server Data Tools**.  
+1.  If [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Data Tools is not already open, click **Start**, point to **All Programs**, point to **Microsoft SQL Server 2012**, and then click **SQL Server Data Tools**.  
   
 2.  On the **File** menu, click **Open**, click **Project/Solution**, click the **SSIS Tutorial** folder and click **Open**, and then double-click **SSIS Tutorial.sln**.  
   
@@ -41,7 +41,7 @@ In this task, you will create a copy of the Lesson 1.dtsx package that you creat
   
 ### To add the completed Lesson 1 package  
   
-1.  Open [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Data Tools and open the SSIS Tutorial project.  
+1.  Open [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Data Tools and open the SSIS Tutorial project.  
   
 2.  In Solution Explorer, right-click **SSIS Packages**, and click **Add Existing Package**.  
   
@@ -60,5 +60,5 @@ In this task, you will create a copy of the Lesson 1.dtsx package that you creat
 5.  Copy and paste the Lesson 1 package as described in steps 3-8 in the previous procedure.  
   
 ## Next Task in Lesson  
-[Step 2: Adding and Configuring the Foreach Loop Container](../Topic/Step%202:%20Adding%20and%20Configuring%20the%20Foreach%20Loop%20Container.md)  
+[Step 2: Adding and Configuring the Foreach Loop Container](../../integration-services/tutorials/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   

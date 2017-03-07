@@ -15,7 +15,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Lay out a Reporting Services mobile report for phone or tablet
-Now that you've [created your Reporting Services mobile report](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) in [!INCLUDE[SS_MobileReptPub_Short](../../reporting-services/mobile-reports/includes/ss-mobilereptpub-long.md)], you can lay out a phone and tablet version of it.  
+Now that you've [created your Reporting Services mobile report](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) in [!INCLUDE[SS_MobileReptPub_Short](../../a9retired/includes/ss-mobilereptpub-long.md)], you can lay out a phone and tablet version of it.  
   
 ![SSMRP_SalesTrendRptLayout](../../reporting-services/mobile-reports/media/ssmrp-salestrendrptlayout.png)   
 *The master layout for the mobile report.*  

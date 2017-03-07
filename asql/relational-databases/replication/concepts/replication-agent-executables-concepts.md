@@ -23,7 +23,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Replication Agent Executables Concepts
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Replication agents can be controlled programmatically in the following ways:  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   Invoking agent executable files from the command prompt with a supplied set of parameters.  
   
- Directly invoking replication agents from the command prompt enables agents to be programmatically accessed from command-line scripting in batch files. When an agent is invoked from the command prompt, it runs under the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows security account of the user that invoked the agent or started the batch file.  
+ Directly invoking replication agents from the command prompt enables agents to be programmatically accessed from command-line scripting in batch files. When an agent is invoked from the command prompt, it runs under the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Windows security account of the user that invoked the agent or started the batch file.  
   
  Instances of the following replication agents can be run using executable files.  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
 >  Line breaks in these examples were added to improve readability. In a batch file, commands must be made in a single line.  
   
 ### Running the Snapshot Agent  
- This example batch file invokes the Snapshot Agent from the command prompt to generate a snapshot for the **AdvWorksSalesOrdersMerge** publication. (The scripts below use the path to [!INCLUDE[ssSQL15_md](../../../analysis-services/powershell/includes/sssql15-md.md)] files (version 130). You should adjust the scripts to point to the files for your version of [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].)  
+ This example batch file invokes the Snapshot Agent from the command prompt to generate a snapshot for the **AdvWorksSalesOrdersMerge** publication. (The scripts below use the path to [!INCLUDE[ssSQL15_md](../../../a9notintoc/includes/sssql15-md.md)] files (version 130). You should adjust the scripts to point to the files for your version of [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)].)  
   
 ```  
 REM -- Declare variables  

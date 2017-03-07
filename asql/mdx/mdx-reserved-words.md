@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Reserved Words
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   The following table contains words reserved for use by Multidimensional Expressions (MDX). You should not use these words as part of any identifier, such as a cube name, or user-defined function name, in MDX.  
   

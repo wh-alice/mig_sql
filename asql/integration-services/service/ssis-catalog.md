@@ -15,7 +15,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # SSIS Catalog
-  The **SSISDB** catalog is the central point for working with [!INCLUDE[ssISnoversion_md](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] (SSIS) projects that you’ve deployed to the [!INCLUDE[ssISnoversion_md](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] server. For example, you set project and package parameters, configure environments to specify runtime values for packages, execute and troubleshoot packages, and manage [!INCLUDE[ssISnoversion_md](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] server operations.  
+  The **SSISDB** catalog is the central point for working with [!INCLUDE[ssISnoversion_md](../../a9notintoc/includes/ssisnoversion-md.md)] (SSIS) projects that you’ve deployed to the [!INCLUDE[ssISnoversion_md](../../a9notintoc/includes/ssisnoversion-md.md)] server. For example, you set project and package parameters, configure environments to specify runtime values for packages, execute and troubleshoot packages, and manage [!INCLUDE[ssISnoversion_md](../../a9notintoc/includes/ssisnoversion-md.md)] server operations.  
   
  The objects that are stored in the **SSISDB** catalog include projects, packages, parameters, environments, and operational history.  
   
@@ -27,15 +27,15 @@ manager: "jhubbard"
   
  For more information about viewing operations data, see [Monitor Running Package and Other Operations](../../integration-services/performance/monitor-running-packages-and-other-operations.md).  
   
- You access the **SSISDB** catalog in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] by connecting to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Database Engine and then expanding the **Integration Services Catalogs** node in Object Explorer. You access the **SSISDB** database in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] by expanding the Databases node in Object Explorer.  
+ You access the **SSISDB** catalog in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] by connecting to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Database Engine and then expanding the **Integration Services Catalogs** node in Object Explorer. You access the **SSISDB** database in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] by expanding the Databases node in Object Explorer.  
   
 > [!NOTE]
 > You cannot rename the **SSISDB** database.  
   
 > [!NOTE]
-> If the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance that the **SSISDB** database is attached to, stops or does not respond, the ISServerExec.exe process ends. A message is written to a Windows Event log.  
+> If the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance that the **SSISDB** database is attached to, stops or does not respond, the ISServerExec.exe process ends. A message is written to a Windows Event log.  
 >   
->  If the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] resources failover as part of a cluster failover, the running packages do not restart. You can use checkpoints to restart packages. For more information, see [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+>  If the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] resources failover as part of a cluster failover, the running packages do not restart. You can use checkpoints to restart packages. For more information, see [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## In this topic  
   
@@ -62,7 +62,7 @@ manager: "jhubbard"
 -   [Related Content](../../integration-services/service/ssis-catalog.md#RelatedContent)  
   
 ##  <a name="CatalogObjectIdentifiers"></a> Catalog Object Identifiers  
- When you create a new object in the catalog, assign a name to the object. The object name is an identifier. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] defines rules for which characters can be used in an identifier. Names for the following objects must follow identifier rules.  
+ When you create a new object in the catalog, assign a name to the object. The object name is an identifier. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] defines rules for which characters can be used in an identifier. Names for the following objects must follow identifier rules.  
   
 -   Folder  
   
@@ -111,13 +111,13 @@ manager: "jhubbard"
  You fine-tune how the catalog behaves by adjusting the catalog properties. Catalog properties define how sensitive data is encrypted, and how operations and project versioning data is retained. To set catalog properties, use the **Catalog Properties** dialog box or call the [catalog.configure_catalog &#40;SSISDB Database&#41;](../../integration-services/system/stored-procedures/catalog.configure-catalog-ssisdb-database.md) stored procedure. To view the properties, use the dialog box or query [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system/views/catalog.catalog-properties-ssisdb-database.md). You access the dialog box by right-clicking **SSISDB** in Object Explorer.  
   
 ###  <a name="Cleanup"></a> Operations and Project Version Cleanup  
- Status data for many of the operations in the catalog is stored in internal database tables. For example, the catalog tracks the status of package executions and project deployments. To maintain the size of the operations data, the **SSIS Server Maintenance Job** in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] is used to remove old data. This [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent job is created when [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] is installed.  
+ Status data for many of the operations in the catalog is stored in internal database tables. For example, the catalog tracks the status of package executions and project deployments. To maintain the size of the operations data, the **SSIS Server Maintenance Job** in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] is used to remove old data. This [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent job is created when [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] is installed.  
   
- You can update or redeploy an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project by deploying it with the same name to the same folder in the catalog. By default, each time you redeploy a project, the **SSISDB** catalog retains the previous version of the project. To maintain the size of the operations data, the **SSIS Server Maintenance Job** is used to remove old versions of projects.  
+ You can update or redeploy an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project by deploying it with the same name to the same folder in the catalog. By default, each time you redeploy a project, the **SSISDB** catalog retains the previous version of the project. To maintain the size of the operations data, the **SSIS Server Maintenance Job** is used to remove old versions of projects.  
  
 To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **##MS_SSISServerCleanupJobLogin##**. This login is only for internal use by SSIS.
   
- The following **SSISDB** catalog properties define how this [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent job behaves. You can view and modify the properties by using the **Catalog Properties** dialog box or by using [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system/views/catalog.catalog-properties-ssisdb-database.md) and [catalog.configure_catalog &#40;SSISDB Database&#41;](../../integration-services/system/stored-procedures/catalog.configure-catalog-ssisdb-database.md).  
+ The following **SSISDB** catalog properties define how this [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent job behaves. You can view and modify the properties by using the **Catalog Properties** dialog box or by using [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system/views/catalog.catalog-properties-ssisdb-database.md) and [catalog.configure_catalog &#40;SSISDB Database&#41;](../../integration-services/system/stored-procedures/catalog.configure-catalog-ssisdb-database.md).  
   
  **Clean Logs Periodically**  
  The job step for operations cleanup runs when this property is set to **True**.  
@@ -125,7 +125,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
  **Retention Period (days)**  
  Defines the maximum age of allowable operations data (in days). Older data are removed.  
   
- The minimum value is one day. The maximum value is limited only by the maximum value of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] **int** data. For information about this data type, see [int, bigint, smallint, and tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).  
+ The minimum value is one day. The maximum value is limited only by the maximum value of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] **int** data. For information about this data type, see [int, bigint, smallint, and tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).  
   
  **Periodically Remove Old Versions**  
  The job step for project version cleanup runs when this property is set to **True**.  
@@ -150,13 +150,13 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 -   DES  
   
- When you deploy an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project to the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)]server, the catalog automatically encrypts the package data and sensitive values. The catalog also automatically decrypts the data when you retrieve it. The SSISDB catalog uses the **ServerStorage** protection level. For more information, see [Access Control for Sensitive Data in Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md).  
+ When you deploy an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project to the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)]server, the catalog automatically encrypts the package data and sensitive values. The catalog also automatically decrypts the data when you retrieve it. The SSISDB catalog uses the **ServerStorage** protection level. For more information, see [Access Control for Sensitive Data in Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md).  
   
- Changing the encryption algorithm is a time-intensive operation. First, the server has to use the previously specified algorithm to decrypt all configuration values. Then, the server has to use the new algorithm to re-encrypt the values. During this time, there cannot be other [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] operations on the server. Thus, to enable [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] operations to continue uninterrupted, the encryption algorithm is a read-only value in the  dialog box in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)].  
+ Changing the encryption algorithm is a time-intensive operation. First, the server has to use the previously specified algorithm to decrypt all configuration values. Then, the server has to use the new algorithm to re-encrypt the values. During this time, there cannot be other [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] operations on the server. Thus, to enable [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] operations to continue uninterrupted, the encryption algorithm is a read-only value in the  dialog box in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)].  
   
  To change the **Encryption Algorithm** property setting, set the **SSISDB** database to the single-user mode and then call the catalog.configure_catalog stored procedure. Use ENCRYPTION_ALGORITHM for the *property_name* argument. For the supported property values, see [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system/views/catalog.catalog-properties-ssisdb-database.md). For more information about the stored procedure, see [catalog.configure_catalog &#40;SSISDB Database&#41;](../../integration-services/system/stored-procedures/catalog.configure-catalog-ssisdb-database.md).  
   
- For more information about single-user mode, see [Set a Database to Single-user Mode](../../relational-databases/databases/set-a-database-to-single-user-mode.md). For information about encryption and encryption algorithms in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see the topics in the section, [SQL Server Encryption](../../relational-databases/security/encryption/sql-server-encryption.md).  
+ For more information about single-user mode, see [Set a Database to Single-user Mode](../../relational-databases/databases/set-a-database-to-single-user-mode.md). For information about encryption and encryption algorithms in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see the topics in the section, [SQL Server Encryption](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
  A database master key is used for the encryption. The key is created when you create the catalog. For more information, see [Create the SSIS Catalog](../../integration-services/service/create-the-ssis-catalog.md).  
   
@@ -172,7 +172,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 |Server-wide Default Logging Level|SERVER_LOGGING_LEVEL|  
   
 ##  <a name="Permissions"></a> Permissions  
- Projects, environments, and packages are contained in folders that are securable objects. You can grant permissions to a folder, including the MANAGE_OBJECT_PERMISSIONS permission. MANAGE_OBJECT_PERMISSIONS enables you to delegate the administration of folder contents to a user without having to grant the user membership to the ssis_admin role. You can also grant permissions to projects, environments, and operations. Operations include initializing [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)], deploying projects, creating and starting executions, validating projects and packages, and configuring the **SSISDB** catalog.  
+ Projects, environments, and packages are contained in folders that are securable objects. You can grant permissions to a folder, including the MANAGE_OBJECT_PERMISSIONS permission. MANAGE_OBJECT_PERMISSIONS enables you to delegate the administration of folder contents to a user without having to grant the user membership to the ssis_admin role. You can also grant permissions to projects, environments, and operations. Operations include initializing [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)], deploying projects, creating and starting executions, validating projects and packages, and configuring the **SSISDB** catalog.  
   
  For more information about database roles, see [Database-Level Roles](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
@@ -183,9 +183,9 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
  It is recommended that the trigger is not disabled because it ensures that are no orphaned permission records after a database principal is dropped from the **SSISDB** database.  
   
 ### Managing Permissions  
- You can manage permissions by using the [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] UI, stored procedures, and the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace.  
+ You can manage permissions by using the [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] UI, stored procedures, and the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace.  
   
- To manage permissions using the [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] UI, use the following dialog boxes.  
+ To manage permissions using the [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] UI, use the following dialog boxes.  
   
 -   For a folder, use the **Permissions** page of the [Folder Properties Dialog Box](../../integration-services/service/folder-properties-dialog-box.md).  
   
@@ -239,7 +239,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 -   [catalog.execution_parameter_values &#40;SSISDB Database&#41;](../../integration-services/system/views/catalog.execution-parameter-values-ssisdb-database.md)  
   
 ##  <a name="ServerEnvironments"></a> Server Environments, Server Variables, and Server Environment References  
- Server environments contain server variables. The variable values can be used when a package is executed or validated on the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] server.  
+ Server environments contain server variables. The variable values can be used when a package is executed or validated on the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] server.  
   
  The following stored procedures enable you to perform many other management tasks for environments and variables.  
   
@@ -303,7 +303,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 ##  <a name="AlwaysOn"></a> AlwaysOn Support  
  The AlwaysOn Availability Groups feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. An availability group supports a failover environment for a discrete set of user databases, known as availability databases that fail over together. For more information, please see [AlwaysOn Availability Groups](https://msdn.microsoft.com/library/hh510230.aspx).  
   
- In [!INCLUDE[ssCurrent_md](../../advanced-analytics/r-services/includes/sscurrent-md.md)], SQL Server Integration Services (SSIS) introduces new capabilities that allow you to easily deploy to a centralized SSIS Catalog (i.e. SSISDB user database). In order to provide the high-availability for the SSISDB database and its contents (projects, packages, execution logs, etc.), you can add the SSISDB database (just the same as any other user database) to an AlwaysOn Availability Group. When a failover occurs, one of the secondary nodes automatically becomes the new primary node.  
+ In [!INCLUDE[ssCurrent_md](../../a9notintoc/includes/sscurrent-md.md)], SQL Server Integration Services (SSIS) introduces new capabilities that allow you to easily deploy to a centralized SSIS Catalog (i.e. SSISDB user database). In order to provide the high-availability for the SSISDB database and its contents (projects, packages, execution logs, etc.), you can add the SSISDB database (just the same as any other user database) to an AlwaysOn Availability Group. When a failover occurs, one of the secondary nodes automatically becomes the new primary node.  
   
  For detailed overview and step-by-step instructions for enabling AlwaysOn for SSISDB, see [Always On for SSIS Catalog &#40;SSISDB&#41;](../../integration-services/service/always-on-for-ssis-catalog-ssisdb.md).  
   

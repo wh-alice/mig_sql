@@ -16,7 +16,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Automatically Generate Code Attribute Values (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], automatically generate values for an entity’s Code attribute when you want an integer to be automatically assigned to the Code value each time a new member is created.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], automatically generate values for an entity’s Code attribute when you want an integer to be automatically assigned to the Code value each time a new member is created.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 ### To automatically generate Code values  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **System Administration**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **System Administration**.  
   
 2.  On the **Manage Model** page, select the row for the model that contains the entity that you want to edit and then click **Entities**.  
   

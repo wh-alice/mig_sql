@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Variables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 A Transact-SQL local variable is an object that can hold a single data value of a specific type. Variables in batches and scripts are typically used: 
 
@@ -26,7 +26,7 @@ A Transact-SQL local variable is an object that can hold a single data value of 
 * To save a data value to be returned by a stored procedure return code or function return value.
 
 > [!NOTE]
-> The names of some Transact-SQL system functions begin with two *at* signs (@@). Although in earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the @@functions are referred to as global variables, they are not variables and do not have the same behaviors as variables. The @@functions are system functions, and their syntax usage follows the rules for functions.
+> The names of some Transact-SQL system functions begin with two *at* signs (@@). Although in earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], the @@functions are referred to as global variables, they are not variables and do not have the same behaviors as variables. The @@functions are system functions, and their syntax usage follows the rules for functions.
 
 The following script creates a small test table and populates it with 26 rows. The script uses a variable to do three things: 
 

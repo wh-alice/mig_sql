@@ -35,11 +35,11 @@ manager: "jhubbard"
   
     -   The Queue Reader Agent, which is used by transactional publications that have queued updating subscriptions.  
   
--   **Warnings** (for Distributors running [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)] and later)  
+-   **Warnings** (for Distributors running [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)] and later)  
   
     -   This tab allows you to specify warnings and alerts for agents.  
   
--   **Tracer Tokens** (transactional replication only, for Distributors running [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)] and later)  
+-   **Tracer Tokens** (transactional replication only, for Distributors running [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)] and later)  
   
      This tab allows you to measure latency, the amount of time that elapses between a transaction being committed at the Publisher and the corresponding transaction being committed at the Subscriber.  
   
@@ -63,6 +63,6 @@ manager: "jhubbard"
   
 ## See Also  
  [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Monitoring Replication](../Topic/Monitoring%20Replication.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

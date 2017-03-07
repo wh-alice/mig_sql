@@ -25,7 +25,7 @@ manager: "erikre"
  ![Funnel chart](../../reporting-services/report-design/media/rs-funnelchart.gif "Funnel chart")  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Variations  
   

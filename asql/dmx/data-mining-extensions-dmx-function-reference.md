@@ -22,9 +22,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Data Mining Extensions (DMX) Function Reference
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] supports several functions in the Data Mining Extensions (DMX) language. Functions expand the results of a prediction query to include information that further describes the prediction. Functions also provide more control over how the results of the prediction are returned. The following table provides links to resources to help you understand how to use functions in DMX.  
+  [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] supports several functions in the Data Mining Extensions (DMX) language. Functions expand the results of a prediction query to include information that further describes the prediction. Functions also provide more control over how the results of the prediction are returned. The following table provides links to resources to help you understand how to use functions in DMX.  
   
 |Function|Description|  
 |--------------|-----------------|  
@@ -69,7 +69,7 @@ manager: "erikre"
   
 ## See Also  
  [Data Mining Extensions &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40;DMX&#41; Syntax Conventions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Data Mining Extensions &#40;DMX&#41; Syntax Elements](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   

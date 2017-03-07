@@ -19,12 +19,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Resource Governor Resource Pool
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  In the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Resource Governor, a resource pool represents a subset of the physical resources of an instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)]. Resource Governor enables you to specify limits on the amount of CPU, physical IO, and memory that incoming application requests can use within the resource pool. Each resource pool can contain one or more workload groups. When a session is started, the Resource Governor classifier assigns the session to a specific workload group, and the session must run using the resources assigned to the workload group.  
+  In the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Resource Governor, a resource pool represents a subset of the physical resources of an instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)]. Resource Governor enables you to specify limits on the amount of CPU, physical IO, and memory that incoming application requests can use within the resource pool. Each resource pool can contain one or more workload groups. When a session is started, the Resource Governor classifier assigns the session to a specific workload group, and the session must run using the resources assigned to the workload group.  
   
 ## Resource Pool Concepts  
- A resource pool, or pool, represents the physical resources of the server. You can think of a pool as a virtual [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance inside of a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. A pool has two parts. One part does not overlap with other pools, which enables minimum resource reservation. The other part is shared with other pools, which supports maximum possible resource consumption. The pool resources are defined by specifying one or more of the following settings for each resource (CPU, memory, and physical IO):  
+ A resource pool, or pool, represents the physical resources of the server. You can think of a pool as a virtual [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance inside of a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. A pool has two parts. One part does not overlap with other pools, which enables minimum resource reservation. The other part is shared with other pools, which supports maximum possible resource consumption. The pool resources are defined by specifying one or more of the following settings for each resource (CPU, memory, and physical IO):  
   
 -   **MIN_CPU_PERCENT and MAX_CPU_PERCENT**  
   
@@ -91,14 +91,14 @@ manager: "jhubbard"
   
  **Internal Pool**  
   
- The internal pool represents the resources consumed by the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] itself. This pool always contains only the internal group, and the pool is not alterable in any way. Resource consumption by the internal pool is not restricted. Any workloads in the pool are considered critical for server function, and Resource Governor allows the internal pool to pressure other pools even if it means the violation of limits set for the other pools.  
+ The internal pool represents the resources consumed by the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] itself. This pool always contains only the internal group, and the pool is not alterable in any way. Resource consumption by the internal pool is not restricted. Any workloads in the pool are considered critical for server function, and Resource Governor allows the internal pool to pressure other pools even if it means the violation of limits set for the other pools.  
   
 > [!NOTE]  
 >  The internal pool and internal group resource usage is not subtracted from the overall resource usage. Percentages are calculated from the overall resources available.  
   
  **Default Pool**  
   
- The default pool is the first predefined user pool. Prior to any configuration the default pool only contains the default group. The default pool cannot be created or dropped but it can be altered. The default pool can contain user-defined groups in addition to the default group. Beginning with [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] there is a default resource pool for routine [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] operations, and a default external resource pool for external processes, such as executing R scripts.  
+ The default pool is the first predefined user pool. Prior to any configuration the default pool only contains the default group. The default pool cannot be created or dropped but it can be altered. The default pool can contain user-defined groups in addition to the default group. Beginning with [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] there is a default resource pool for routine [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] operations, and a default external resource pool for external processes, such as executing R scripts.  
   
 > [!NOTE]  
 >  The default group is alterable but it cannot be moved out of the default pool.  

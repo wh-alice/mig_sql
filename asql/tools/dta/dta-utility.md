@@ -27,7 +27,7 @@ manager: "jhubbard"
 # dta Utility
   The **dta** utility is the command prompt version of Database Engine Tuning Advisor. The **dta** utility is designed to allow you to use Database Engine Tuning Advisor functionality in applications and scripts.  
   
- Like Database Engine Tuning Advisor, the **dta** utility analyzes a workload and recommends physical design structures to improve server performance for that workload. The workload can be a plan cache, a [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] trace file or table, or a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] script. Physical design structures include indexes, indexed views, and partitioning. After analyzing a workload, the **dta** utility produces a recommendation for the physical design of databases and can generate the necessary script to implement the recommendation. Workloads can be specified from the command prompt with the **-if** or the **-it** argument. You can also specify an XML input file from the command prompt with the **-ix** argument. In that case, the workload is specified in the XML input file.  
+ Like Database Engine Tuning Advisor, the **dta** utility analyzes a workload and recommends physical design structures to improve server performance for that workload. The workload can be a plan cache, a [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] trace file or table, or a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] script. Physical design structures include indexes, indexed views, and partitioning. After analyzing a workload, the **dta** utility produces a recommendation for the physical design of databases and can generate the necessary script to implement the recommendation. Workloads can be specified from the command prompt with the **-if** or the **-it** argument. You can also specify an XML input file from the command prompt with the **-ix** argument. In that case, the workload is specified in the XML input file.  
   
 ## Syntax  
   
@@ -177,7 +177,7 @@ dta -d AdventureWorks2012 ...
 [Columnstore index recommendations in Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
 
   
  **-fk** *keep_existing_option*  
@@ -216,11 +216,11 @@ dta -d AdventureWorks2012 ...
  [Tuning Database Using Workload from Query Store](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) for more information.
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
      
   
  **-if** *workload_file*  
- Specifies the path and name of the workload file to use as input for tuning. The file must be in one of these formats: .trc (SQL Server Profiler trace file), .sql (SQL file), or .log ([!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] trace file). Either one workload file or one workload table must be specified.  
+ Specifies the path and name of the workload file to use as input for tuning. The file must be in one of these formats: .trc (SQL Server Profiler trace file), .sql (SQL file), or .log ([!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] trace file). Either one workload file or one workload table must be specified.  
   
  **-it** *workload_trace_table_name*  
  Specifies the name of a table containing the workload trace for tuning. The name is specified in the format: [*database_name*]**.**[*owner_name*]**.***table_name*.  
@@ -270,12 +270,12 @@ dta -iq -I 48
 In this case, DTA will use Query Store as the source of workload and only consider queries that have executed with the past 48 hours.  
   ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
 
 
   
  **-of** *output_script_file_name*  
- Specifies that **dta** writes the recommendation as a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] script to the file name and destination specified.  
+ Specifies that **dta** writes the recommendation as a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] script to the file name and destination specified.  
   
  You can use **-F** with this option. Make sure that the file name is unique, especially if you are also using **-or** and **-ox**.  
   
@@ -324,7 +324,7 @@ In this case, DTA will use Query Store as the source of workload and only consid
 ```  
   
  **-S** *server_name*[ *\instance*]  
- Specifies the name of the computer and instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to connect to. If no *server_name* is specified, **dta** connects to the default instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] on the local computer. This option is required when connecting to a named instance or when executing **dta** from a remote computer on the network.  
+ Specifies the name of the computer and instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to connect to. If no *server_name* is specified, **dta** connects to the default instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] on the local computer. This option is required when connecting to a named instance or when executing **dta** from a remote computer on the network.  
   
  **-s** *session_name*  
  Specifies the name of the tuning session. This is required if **-ID** is not specified.  
@@ -350,7 +350,7 @@ In this case, DTA will use Query Store as the source of workload and only consid
  This argument is an alternative to using a table list file (**-Tf**). If both **-Tl** and **-Tf** are used, **dta** fails and returns an error.  
   
  **-U** *login_id*  
- Specifies the login ID used to connect to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Specifies the login ID used to connect to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  **-u**  
  Launches the Database Engine Tuning Advisor GUI. All parameters are treated as the initial settings for the user interface.  

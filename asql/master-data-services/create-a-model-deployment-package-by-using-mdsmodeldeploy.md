@@ -16,13 +16,13 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Create a Model Deployment Package by Using MDSModelDeploy
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], use the MDSModelDeploy tool to create a package. Depending on the commands you specify, the package can contain either:  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], use the MDSModelDeploy tool to create a package. Depending on the commands you specify, the package can contain either:  
   
 -   Model objects only.  
   
 -   Model objects and data.  
   
- If you want to deploy a package that contains model objects only, you can use the model deployment wizard in the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] web application instead. For more information, see [Create a Model Deployment Package by Using the Wizard](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
+ If you want to deploy a package that contains model objects only, you can use the model deployment wizard in the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] web application instead. For more information, see [Create a Model Deployment Package by Using the Wizard](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
   
 ## Prerequisites  
  To perform this procedure:  

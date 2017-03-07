@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Lock Manager Properties
-  [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] supports the lock manager server properties listed in the following table. For more information about additional server properties and how to set them, see [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+  [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] supports the lock manager server properties listed in the following table. For more information about additional server properties and how to set them, see [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Applies to:** Multidimensional and Tabular server mode  
   
@@ -31,10 +31,10 @@ manager: "erikre"
  The default value for this property is -1, which indicates there is no timeout for internal lock requests.  
   
  **LockWaitGranularityMS**  
- An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support.  
+ An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support.  
   
  **DeadlockDetectionGranularityMS**  
- An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support.  
+ An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support.  
   
 ## See Also  
  [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   

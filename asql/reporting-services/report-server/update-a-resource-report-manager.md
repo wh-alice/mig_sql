@@ -23,7 +23,7 @@ manager: "erikre"
   
 ### To update a resource  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md).  
   
 2.  In Report Manager, navigate to or search for the resource you want to update.  
   
@@ -42,9 +42,9 @@ manager: "erikre"
  If the resource you are updating contains an image that is used in a report, you need to refresh the report to see the updated image.  
   
 ## See Also  
- [Contents Page &#40;Report Manager&#41;](../Topic/Contents%20Page%20\(Report%20Manager\).md)   
- [Upload File Page &#40;Report Manager&#41;](../Topic/Upload%20File%20Page%20\(Report%20Manager\).md)   
+ [Contents Page &#40;Report Manager&#41;](../../a9retired/contents-page-report-manager.md)   
+ [Upload File Page &#40;Report Manager&#41;](../../a9retired/upload-file-page-report-manager.md)   
  [Upload Files to a Folder](../../reporting-services/report-server/upload-files-to-a-folder.md)   
- [Report Manager F1 Help](../Topic/Report%20Manager%20F1%20Help.md)  
+ [Report Manager F1 Help](../../a9retired/report-manager-f1-help.md)  
   
   

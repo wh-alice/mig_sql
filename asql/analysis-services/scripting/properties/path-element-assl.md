@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Path Element (ASSL)
-  Contains the path, as provided by an instance of [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], of a report used by the [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) element.  
+  Contains the path, as provided by an instance of [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)], of a report used by the [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) element.  
   
 ## Syntax  
   

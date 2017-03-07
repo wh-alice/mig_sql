@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Set Domain Properties
-  This topic describes how to set domain properties in [!INCLUDE[ssDQSnoversion](../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS).  
+  This topic describes how to set domain properties in [!INCLUDE[ssDQSnoversion](../a9retired/includes/ssdqsnoversion-md.md)] (DQS).  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 2.  Set properties on a new domain after creating it as described in [Create a Domain](../data-quality-services/create-a-domain.md).  
   
-3.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md).  
+3.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](../a9retired/end-the-domain-management-activity.md).  
   
 ##  <a name="FollowUp"></a> Follow Up: After Setting Domain Properties  
  After you set domain properties, you can perform other domain management tasks on the domain, you can perform knowledge discovery to add knowledge to the domain, or you can add a matching policy to the domain. For more information, see [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md), [Managing a Domain](../data-quality-services/managing-a-domain.md), or [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  

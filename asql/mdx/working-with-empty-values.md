@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Working with Empty Values
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   An empty value indicates that a specific member, tuple, or cell is empty. An empty cell value indicates either that the data for the specified cell cannot be found in the underlying fact table, or that the tuple for the specified cell represents a combination of members that is not applicable for the cube.  
   

@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Data Definition - CREATE GLOBAL CUBE
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates and populates a locally persisted cube, based on a subcube from a cube on the server. A connection to the server is not required to connect to the locally persisted cube. For more information about local cubes, see [Local Cubes &#40;Analysis Services - Multidimensional Data&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
   
@@ -209,6 +209,6 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
   
 ## See Also  
  [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [CREATE SESSION CUBE Statement  &#40;MDX&#41;](../Topic/CREATE%20SESSION%20CUBE%20Statement%20%20\(MDX\).md)  
+ [CREATE SESSION CUBE Statement  &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

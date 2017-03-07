@@ -25,7 +25,7 @@ manager: "jhubbard"
 |Product Name|SQL Server|  
 |Event ID|27183|  
 |Event Source|MSSQLSERVER|  
-|Component|[!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]|  
+|Component|[!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)]|  
 |Symbolic Name||  
 |Message Text|The merge process failed to enumerate changes in articles with parameterized row filters. If this failure continues, increase the query timeout for this process, reduce the retention period for the publication, and improve indexes on published tables.|  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
     -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
--   Use the precomputed partitions optimization if possible. This optimization is used by default if a number of publication requirements are met. For more information about these requirements, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../Topic/Optimize%20Parameterized%20Filter%20Performance%20with%20Precomputed%20Partitions.md). If the publication does not meet these requirements, consider redesigning the publication.  
+-   Use the precomputed partitions optimization if possible. This optimization is used by default if a number of publication requirements are met. For more information about these requirements, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md). If the publication does not meet these requirements, consider redesigning the publication.  
   
 -   Specify the lowest setting possible for the publication retention period, because replication cannot clean up metadata in the publication and subscription databases until the retention period is reached. For more information, see [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   

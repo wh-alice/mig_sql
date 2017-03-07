@@ -21,7 +21,7 @@ manager: "jhubbard"
 # Lesson 3: Using the dta Command Prompt Utility
 The **dta** command-prompt utility offers functionality in addition to that provided by the Database Engine Tuning Advisor.  
   
-You can use your favorite XML tools to create input files for the utility by using the Database Engine Tuning Advisor XML schema. This schema is installed when you install [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and can be found at: C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
+You can use your favorite XML tools to create input files for the utility by using the Database Engine Tuning Advisor XML schema. This schema is installed when you install [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] and can be found at: C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
   
 The Database Engine Tuning Advisor XML schema is also available online at [this Microsoft Web site](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
@@ -38,7 +38,7 @@ It contains the following topic:
 -   Starting the **dta** Command Prompt Utility and Tuning a Workload  
   
 ## Next Task in Lesson  
-[Starting the dta Command Prompt Utility and Tuning a Workload](../Topic/Starting%20the%20dta%20Command%20Prompt%20Utility%20and%20Tuning%20a%20Workload.md)  
+[Starting the dta Command Prompt Utility and Tuning a Workload](../../../tools/dta/tutorials/lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md)  
   
   
   

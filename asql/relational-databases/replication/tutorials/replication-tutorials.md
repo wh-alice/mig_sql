@@ -21,9 +21,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Replication Tutorials
-Replication includes tutorials that you can use to learn how to set up and run replication topologies using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+Replication includes tutorials that you can use to learn how to set up and run replication topologies using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
-In the replication tutorials, "Publisher" refers to the server that contains that source data being replicated and "Subscriber" refers to the destination server. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], but it is not a requirement. For more information, see [Replication Publishing Model Overview](../../../relational-databases/replication/publish/replication-publishing-model-overview.md).  
+In the replication tutorials, "Publisher" refers to the server that contains that source data being replicated and "Subscriber" refers to the destination server. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], but it is not a requirement. For more information, see [Replication Publishing Model Overview](../../../relational-databases/replication/publish/replication-publishing-model-overview.md).  
   
 > [!NOTE]  
 > Most of the tasks shown in these tutorials can be performed programmatically. For more information, see [Replication Developer Documentation](../../../relational-databases/replication/concepts/replication-developer-documentation.md).  

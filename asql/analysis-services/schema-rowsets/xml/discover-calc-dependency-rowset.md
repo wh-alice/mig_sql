@@ -43,7 +43,7 @@ manager: "erikre"
 ## Example  
  **Basic syntax**  
   
- The following query is a simple DMV query that returns values for all of the columns in this rowset, using the default database on the current connection. You can run this query in an MDX query window and view its results in [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)]. You can also follow the techniques described in [Querying Power Pivot DMVs from Excel](http://go.microsoft.com/fwlink/?LinkID=235146) to view DMV query results in Excel.  
+ The following query is a simple DMV query that returns values for all of the columns in this rowset, using the default database on the current connection. You can run this query in an MDX query window and view its results in [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)]. You can also follow the techniques described in [Querying Power Pivot DMVs from Excel](http://go.microsoft.com/fwlink/?LinkID=235146) to view DMV query results in Excel.  
   
 ```  
 SELECT * FROM $System.DISCOVER_CALC_DEPENDENCY  
@@ -114,7 +114,7 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
 ```  
   
 ## Using ADOMD.NET to return the rowset  
- When using ADOMD.NET and the schema rowset to retrieve metadata, you can use either the GUID or string to reference a schema rowset object in the GetSchemaDataSet method. For more information, see [Working with Schema Rowsets in ADOMD.NET](../Topic/Working%20with%20Schema%20Rowsets%20in%20ADOMD.NET.md).  
+ When using ADOMD.NET and the schema rowset to retrieve metadata, you can use either the GUID or string to reference a schema rowset object in the GetSchemaDataSet method. For more information, see [Working with Schema Rowsets in ADOMD.NET](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets.md).  
   
  The following table provides the GUID and string values that identify this rowset.  
   

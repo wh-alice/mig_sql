@@ -19,7 +19,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Delete an Attribute (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], delete an attribute when you want to permanently delete the attribute and all associated attribute values.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], delete an attribute when you want to permanently delete the attribute and all associated attribute values.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 ### To delete an attribute  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **System Administration**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **System Administration**.  
   
 2.  On the **Manage Model** page, select a model from the grid and then click **Entities**.  
   

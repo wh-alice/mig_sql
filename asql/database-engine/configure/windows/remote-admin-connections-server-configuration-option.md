@@ -21,11 +21,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # remote admin connections Server Configuration Option
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provides a dedicated administrator connection (DAC). The DAC lets an administrator access a running server to execute diagnostic functions or [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statements, or to troubleshoot problems on the server, even when the server is locked or running in an abnormal state and not responding to a [!INCLUDE[ssDEnoversion](../../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] connection. By default, the DAC is only available from a client on the server. To enable client applications on remote computers to use the DAC, use the remote admin connections option of sp_configure.  
+  [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] provides a dedicated administrator connection (DAC). The DAC lets an administrator access a running server to execute diagnostic functions or [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statements, or to troubleshoot problems on the server, even when the server is locked or running in an abnormal state and not responding to a [!INCLUDE[ssDEnoversion](../../../a9notintoc/includes/ssdenoversion-md.md)] connection. By default, the DAC is only available from a client on the server. To enable client applications on remote computers to use the DAC, use the remote admin connections option of sp_configure.  
   
- By default, the DAC only listens on the loop-back IP address (127.0.0.1), port 1434. If TCP port 1434 is not available, a TCP port is dynamically assigned when the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] starts up. When more than one instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is installed on a computer, check the error log for the TCP port number.  
+ By default, the DAC only listens on the loop-back IP address (127.0.0.1), port 1434. If TCP port 1434 is not available, a TCP port is dynamically assigned when the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] starts up. When more than one instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is installed on a computer, check the error log for the TCP port number.  
   
  The following table lists the possible values for the remote admin connections option.  
   

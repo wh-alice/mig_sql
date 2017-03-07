@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # AMO Classes - Introduction
-  Analysis Management Objects (AMO) is a library of classes designed to manage an instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] from a client application. AMO classes are classes that you will use to administer [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] objects such as databases, dimensions, cubes, mining structures and models, roles and permissions, exceptions, and others  
+  Analysis Management Objects (AMO) is a library of classes designed to manage an instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] from a client application. AMO classes are classes that you will use to administer [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] objects such as databases, dimensions, cubes, mining structures and models, roles and permissions, exceptions, and others  
   
  The following illustration shows the relationship of the classes that are explained in this topic.  
   
@@ -32,14 +32,14 @@ manager: "erikre"
 |Topic|Description|  
 |-----------|-----------------|  
 |[AMO Fundamental Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)|Describes classes that are required in order to work with any other set of classes.|  
-|[AMO OLAP Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)|Describes classes that let you manage the OLAP objects in [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].|  
-|[AMO Data Mining Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|Describes classes that let you manage the data mining objects in [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].|  
+|[AMO OLAP Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)|Describes classes that let you manage the OLAP objects in [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].|  
+|[AMO Data Mining Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|Describes classes that let you manage the data mining objects in [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].|  
 |[AMO Security Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|Describes classes that let you control access to other objects and maintain security.|  
 |[AMO Other Classes and Methods](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Describes classes and methods that help OLAP or Data Mining administrators to complete their daily tasks.|  
   
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
- [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../Topic/Logical%20Architecture%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
+ [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Developing with Analysis Management Objects &#40;AMO&#41;](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   

@@ -22,9 +22,9 @@ manager: "jhubbard"
   In SMO, the Database Mail subsystem is represented by the <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> object that is referenced by the <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> property. By using the SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> object, you can configure the Database Mail subsystem and manage profiles and mail accounts. The SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> object belongs to the **Server** object, meaning that scope of the mail accounts is at the server level.  
   
 ## Examples  
- To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20Basic%20SMO%20Project%20in%20Visual%20Studio%20.NET.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20C%23%20SMO%20Project%20in%20Visual%20Studio%20.NET.md).  
+ To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-.net.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-.net.md).  
   
- For programs that use [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Database Mail, you must include the **Imports** statement to qualify the Mail namespace. Insert the statement after the other **Imports** statements, before any declarations in the application, such as:  
+ For programs that use [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Database Mail, you must include the **Imports** statement to qualify the Mail namespace. Insert the statement after the other **Imports** statements, before any declarations in the application, such as:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

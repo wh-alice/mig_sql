@@ -16,16 +16,16 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Manage Shared Datasets
-  In [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], shared datasets retrieve data from shared data sources that connect to external data sources. A shared dataset provides a way to share a query to help provide a consistent set of data for multiple reports. The dataset query can include dataset parameters. You can configure a shared dataset to cache query results for specific parameter combinations on first use or by specifying a schedule. You can use shared dataset caching in combination with report caching and report data feeds to help manage access to a data source.  
+  In [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)], shared datasets retrieve data from shared data sources that connect to external data sources. A shared dataset provides a way to share a query to help provide a consistent set of data for multiple reports. The dataset query can include dataset parameters. You can configure a shared dataset to cache query results for specific parameter combinations on first use or by specifying a schedule. You can use shared dataset caching in combination with report caching and report data feeds to help manage access to a data source.  
   
- Shared datasets use only shared data sources, not embedded data sources. A shared dataset can be based on any data source for a supported [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] data extension or on a report model.  
+ Shared datasets use only shared data sources, not embedded data sources. A shared dataset can be based on any data source for a supported [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] data extension or on a report model.  
   
 ## Creating and Using Shared Datasets  
  To create a shared dataset, you must use an application that creates a shared dataset definition file (.rsd). You can use one of the following applications to create a shared dataset:  
   
 -   Report Builder   Use shared dataset design mode and save the shared dataset to a report server or SharePoint site.  
   
--   Report Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] Create shared datasets under the Shared Dataset folder in Solution Explorer. To publish a shared dataset, deploy it to a report server or SharePoint site.  
+-   Report Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] Create shared datasets under the Shared Dataset folder in Solution Explorer. To publish a shared dataset, deploy it to a report server or SharePoint site.  
   
 -   Upload a shared dataset definition (.rsd) file   You can upload a file to the report server or SharePoint site. On a SharePoint site. An uploaded file is not validated against the schema until the shared dataset is cached or used in a report.  
   
@@ -86,13 +86,13 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 |Task|Tool|Link|  
 |----------|----------|----------|  
-|Add a shared dataset or change shared dataset definition properties.|Save in Report Builder.<br /><br /> Deploy in Report Designer.<br /><br /> Upload an .rsd file in Report Manager|[Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) in the [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com<br /><br /> [Upload File Page &#40;Report Manager&#41;](../Topic/Upload%20File%20Page%20\(Report%20Manager\).md)<br /><br /> If you upload a shared dataset before the shared data source that it depends is published, you must manually bind the shared dataset to the shared data source. For more information, see [General Properties Page, Shared Datasets &#40;Report Manager&#41;](../Topic/General%20Properties%20Page,%20Shared%20Datasets%20\(Report%20Manager\).md).|  
-|Change shared dataset item properties.|Report Manager|[General Properties Page, Shared Datasets &#40;Report Manager&#41;](../Topic/General%20Properties%20Page,%20Shared%20Datasets%20\(Report%20Manager\).md)|  
-|Specify additional shared dataset properties for a shared dataset instance in a report.|Report Builder Report Designer|[Dataset Properties Dialog Box, Query](../Topic/Dataset%20Properties%20Dialog%20Box,%20Query.md)|  
-|Bind to a different shared data source for a shared dataset.|Report Manager|[Data Source Selection Page &#40;Report Manager&#41;](../Topic/Data%20Source%20Selection%20Page%20\(Report%20Manager\).md)|  
+|Add a shared dataset or change shared dataset definition properties.|Save in Report Builder.<br /><br /> Deploy in Report Designer.<br /><br /> Upload an .rsd file in Report Manager|[Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) in the [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com<br /><br /> [Upload File Page &#40;Report Manager&#41;](../../a9retired/upload-file-page-report-manager.md)<br /><br /> If you upload a shared dataset before the shared data source that it depends is published, you must manually bind the shared dataset to the shared data source. For more information, see [General Properties Page, Shared Datasets &#40;Report Manager&#41;](../../a9retired/general-properties-page-shared-datasets-report-manager.md).|  
+|Change shared dataset item properties.|Report Manager|[General Properties Page, Shared Datasets &#40;Report Manager&#41;](../../a9retired/general-properties-page-shared-datasets-report-manager.md)|  
+|Specify additional shared dataset properties for a shared dataset instance in a report.|Report Builder Report Designer|[Dataset Properties Dialog Box, Query](../../a9retired/dataset-properties-dialog-box-query.md)|  
+|Bind to a different shared data source for a shared dataset.|Report Manager|[Data Source Selection Page &#40;Report Manager&#41;](../../a9retired/data-source-selection-page-report-manager.md)|  
 |Verify default values for dataset parameters.|Open in Report Builder or use URL access syntax.|For example:<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
-|Enable caching|Report Manager|[Cache Shared Datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Caching Page, Shared Datasets &#40;Report Manager&#41;](../Topic/Caching%20Page,%20Shared%20Datasets%20\(Report%20Manager\).md)|  
-|Create or edit a cache refresh plan|Report Manager|[Cache Refresh Options &#40;Report Manager&#41;](../Topic/Cache%20Refresh%20Options%20\(Report%20Manager\).md)|  
+|Enable caching|Report Manager|[Cache Shared Datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Caching Page, Shared Datasets &#40;Report Manager&#41;](../../a9retired/caching-page-shared-datasets-report-manager.md)|  
+|Create or edit a cache refresh plan|Report Manager|[Cache Refresh Options &#40;Report Manager&#41;](../../a9retired/cache-refresh-options-report-manager.md)|  
 |View the shared dataset definition schema.|Report Manager|`http://<reportserver>/shareddatasetdefinition.xsd`|  
 |In SharePoint integrated mode, synchronize the shared dataset definition between the report server and the SharePoint site|SharePoint application pages|Change shared dataset item properties<br /><br /> Change cache options<br /><br /> Change the shared data source|  
   

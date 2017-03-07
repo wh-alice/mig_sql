@@ -26,11 +26,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # @@CONNECTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns the number of attempted connections, either successful or unsuccessful since [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] was last started.  
+  Returns the number of attempted connections, either successful or unsuccessful since [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] was last started.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -43,9 +43,9 @@ manager: "jhubbard"
  **integer**  
   
 ## Remarks  
- Connections are different from users. Applications, for example, can open multiple connections to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] without the user observing the connections.  
+ Connections are different from users. Applications, for example, can open multiple connections to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] without the user observing the connections.  
   
- To display a report containing several [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] statistics, including connection attempts, run **sp_monitor**.  
+ To display a report containing several [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] statistics, including connection attempts, run **sp_monitor**.  
   
  @@MAX_CONNECTIONS is the maximum number of connections allowed simultaneously to the server. @@CONNECTIONS is incremented with each login attempt, therefore @@CONNECTIONS can be greater than @@MAX_CONNECTIONS.  
   
@@ -68,6 +68,6 @@ Today's Date and Time  Login Attempts
   
 ## See Also  
  [System Statistical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)   
- [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)  
+ [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-monitor-transact-sql.md)  
   
   

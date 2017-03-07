@@ -58,7 +58,7 @@ manager: "erikre"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[AlgorithmParameter](../../../analysis-services/scripting/objects/algorithmparameter-element-assl.md), [Annotation](../../../analysis-services/scripting/objects/annotation-element-assl.md), [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md), [ReportFormatParameter](../Topic/ReportFormatParameter%20Element%20\(ASSL\).md), [ReportParameter](../Topic/ReportParameter%20Element%20\(ASSL\).md), [ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md)|  
+|Parent elements|[AlgorithmParameter](../../../analysis-services/scripting/objects/algorithmparameter-element-assl.md), [Annotation](../../../analysis-services/scripting/objects/annotation-element-assl.md), [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md), [ReportFormatParameter](../../../analysis-services/scripting/objects/reportformatparameter-element-asl.md), [ReportParameter](../../../analysis-services/scripting/objects/reportparameter-element-assl.md), [ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md)|  
 |Child elements|None|  
   
 ## Remarks  
@@ -69,8 +69,8 @@ manager: "erikre"
 |[AlgorithmParameter](../../../analysis-services/scripting/objects/algorithmparameter-element-assl.md)|The value of the algorithm parameter.|  
 |[Annotation](../../../analysis-services/scripting/objects/annotation-element-assl.md)|The value of the annotation.|  
 |[Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md)|A Multidimensional Expressions (MDX) expression used to calculate the value of the key performance indicator (KPI).|  
-|[ReportFormatParameter](../Topic/ReportFormatParameter%20Element%20\(ASSL\).md)|The value of the report format parameter.|  
-|[ReportParameter](../Topic/ReportParameter%20Element%20\(ASSL\).md)|An MDX expression used to calculate the value of the report parameter.|  
+|[ReportFormatParameter](../../../analysis-services/scripting/objects/reportformatparameter-element-asl.md)|The value of the report format parameter.|  
+|[ReportParameter](../../../analysis-services/scripting/objects/reportparameter-element-assl.md)|An MDX expression used to calculate the value of the report parameter.|  
 |[ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md)|The value of the server property for the currently running instance.|  
   
  The elements that correspond to the parents of **Value** in the Analysis Management Objects (AMO) object model are <xref:Microsoft.AnalysisServices.AlgorithmParameter>, <xref:Microsoft.AnalysisServices.Annotation>, <xref:Microsoft.AnalysisServices.Kpi>, <xref:Microsoft.AnalysisServices.ReportParameter>, and <xref:Microsoft.AnalysisServices.ServerProperty>.  

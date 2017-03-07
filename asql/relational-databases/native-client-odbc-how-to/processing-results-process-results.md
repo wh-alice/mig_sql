@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Processing Results - Process Results
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
 Processing results in an ODBC application involves first determining the characteristics of the result set, then retrieving the data into program variables by using either [SQLBindCol](../../relational-databases/extended-stored-procedures-reference/sqlbindcol.md) or [SQLGetData](../../relational-databases/extended-stored-procedures-reference/sqlgetdata.md).  
   
@@ -58,6 +58,6 @@ Processing results in an ODBC application involves first determining the charact
 >  To cancel processing a result set before [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) returns SQL_NO_DATA, call [SQLCloseCursor](../../relational-databases/extended-stored-procedures-reference/sqlclosecursor.md).  
   
 ## See Also  
-[Retrieve Result Set Information &#40;ODBC&#41;](../Topic/Retrieve%20Result%20Set%20Information%20\(ODBC\).md)   
+[Retrieve Result Set Information &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

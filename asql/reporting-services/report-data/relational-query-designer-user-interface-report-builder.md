@@ -22,7 +22,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Relational Query Designer User Interface (Report Builder)
-  Report Builder, and Report Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], provide both a graphical query designer and a text-based query designer to help you create a query that specifies the data to retrieve from [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] relational databases and [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../reporting-services/report-data/includes/ssdwcurrentfull-md.md)] for a report dataset. Use the graphical query designer to explore the metadata, interactively build a query, and view the results for your query. Use the text-based query designer to view the query that was built by the graphical query designer or to modify a query. You can also import an existing query from a file or report.  
+  Report Builder, and Report Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], provide both a graphical query designer and a text-based query designer to help you create a query that specifies the data to retrieve from [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] relational databases and [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../reporting-services/report-data/includes/ssdwcurrentfull-md.md)] for a report dataset. Use the graphical query designer to explore the metadata, interactively build a query, and view the results for your query. Use the text-based query designer to view the query that was built by the graphical query designer or to modify a query. You can also import an existing query from a file or report.  
   
 > [!NOTE]  
 >  In Report Builder, to specify a query for data source types Oracle, OLE DB, ODBC, and Teradata, you must use the text-based query designer. For more information, see [Text-based Query Designer User Interface &#40;Report Builder&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
@@ -40,11 +40,11 @@ manager: "erikre"
   
  The following figure shows the graphical query designer when it is used with tables or views.  
   
- ![Graphical designer for queries](../../reporting-services/report-data/media/rsqd-relational-graphical.gif "Graphical designer for queries")  
+ ![Graphical designer for queries](../../a9retired/media/rsqd-relational-graphical.gif "Graphical designer for queries")  
   
  The following figure shows the graphical query designer when it is used with stored procedures or table-valued functions.  
   
- ![Stored procedure in graphical query designer](../../reporting-services/report-data/media/rs-relational-graphical-sp.gif "Stored procedure in graphical query designer")  
+ ![Stored procedure in graphical query designer](../../a9retired/media/rs-relational-graphical-sp.gif "Stored procedure in graphical query designer")  
   
  The following table describes the function of each pane.  
   
@@ -87,9 +87,9 @@ manager: "erikre"
   
  Aggregates provide summaries of data and the data is grouped to support the aggregate that deliver the summary data. When you use an aggregate in the query, the other fields returned by the query are automatically grouped and the query includes the SQL GROUP BY clause. You can summarize data without adding an aggregate by using only the **Grouped by** option in the **Group and Aggregate** list. Many of the aggregates include a version that uses the DISTINCT keyword. Including DISTINCT eliminates duplicate values.  
   
- [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] and [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../reporting-services/report-data/includes/ssdwcurrentfull-md.md)] uses [!INCLUDE[DWsql](../../reporting-services/report-data/includes/dwsql-md.md)]. Both dialects of the SQL language support the clause, keyword, and aggregates that the query designer provides.  
+ [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] and [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../reporting-services/report-data/includes/ssdwcurrentfull-md.md)] uses [!INCLUDE[DWsql](../../a9retired/includes/dwsql-md.md)]. Both dialects of the SQL language support the clause, keyword, and aggregates that the query designer provides.  
   
- For more information about [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], see [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md)in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
+ For more information about [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], see [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md)in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
   
  The following table list the aggregates and provides brief descriptions of them.  
   
@@ -153,7 +153,7 @@ manager: "erikre"
   
 -   **Left Table** Displays the name of the first table that is part of a join relationship.  
   
--   **Join Type** Displays the type of SQL JOIN statement that is used in the automatically generated query. By default, if a foreign key constraint is detected, INNER JOIN is used. Other joins types can be LEFT JOIN or RIGHT JOIN. If none of these join types apply, the **Join Type** column displays **Unrelated**. No CROSS JOIN joins are created for unrelated tables; instead, you must manually create relationships by joining columns in the left and right tables. For more information about types of JOINs, see "JOIN Fundamentals" in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com..  
+-   **Join Type** Displays the type of SQL JOIN statement that is used in the automatically generated query. By default, if a foreign key constraint is detected, INNER JOIN is used. Other joins types can be LEFT JOIN or RIGHT JOIN. If none of these join types apply, the **Join Type** column displays **Unrelated**. No CROSS JOIN joins are created for unrelated tables; instead, you must manually create relationships by joining columns in the left and right tables. For more information about types of JOINs, see "JOIN Fundamentals" in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com..  
   
 -   **Right Table** Displays the name of the second table in the join relationship.  
   
@@ -195,6 +195,6 @@ manager: "erikre"
  For the most control over your query, use the text-based query designer. To switch to the text-based query designer, in the toolbar, click **Edit As Text**. After you edit a query in the text-based query designer, you can no longer use the relational query designer. The query will then always open in the text-based query designer. For more information, see [Text-based Query Designer User Interface &#40;Report Builder&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## See Also  
- [Query Designers &#40;Report Builder&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+ [Query Designers &#40;Report Builder&#41;](../../a9retired/query-designers-report-builder.md)  
   
   

@@ -36,20 +36,20 @@ object.SetBoolValue(NumValue)
  A [SqlServiceAdvancedProperty Class](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) object that represents an advanced property.  
   
 ## Property Value/Return Value  
- A uint32 value that specifies the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Service type.  
+ A uint32 value that specifies the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Service type.  
   
 ## Remarks  
  Return values can be one of the following:  
   
 |Type|Definition|  
 |----------|----------------|  
-|*1*|MSSQLSERVER is the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service.|  
-|*2*|SQLSERVERAGENT is the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent service.|  
-|*3*|MSFTESQL is the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Full-text Search Engine service.|  
-|*4*|MsDtsServer is the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] service.|  
-|*5*|MSSQLServerOLAPService is the [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] service.|  
-|*6*|ReportServer is the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] service.|  
-|*7*|SQLBrowser is the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Browser service.|  
+|*1*|MSSQLSERVER is the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] service.|  
+|*2*|SQLSERVERAGENT is the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Agent service.|  
+|*3*|MSFTESQL is the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Full-text Search Engine service.|  
+|*4*|MsDtsServer is the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] service.|  
+|*5*|MSSQLServerOLAPService is the [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] service.|  
+|*6*|ReportServer is the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] service.|  
+|*7*|SQLBrowser is the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Browser service.|  
   
 ## See Also  
  [Starting and Stopping Services](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

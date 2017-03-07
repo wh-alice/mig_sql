@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Export a Trace Template (SQL Server Profiler)
-  This topic describes how to export an existing trace template to save as a template file (.tdf) by using [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)]. When you export a trace template and save it as a file, you can use the template with another instance of [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)].  
+  This topic describes how to export an existing trace template to save as a template file (.tdf) by using [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)]. When you export a trace template and save it as a file, you can use the template with another instance of [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)].  
   
 ### To export a trace template  
   

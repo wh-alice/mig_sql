@@ -26,11 +26,11 @@ manager: "jhubbard"
   
 -   Load data into the memory-optimized table and update statistics after loading the data and before creating the compiled stored procedures. For more information, see [Statistics for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md).  
   
--   Create natively compiled stored procedures to access data in memory-optimized tables. For more information, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md). You can also use a traditional, interpreted [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] to access data in memory-optimized tables.  
+-   Create natively compiled stored procedures to access data in memory-optimized tables. For more information, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md). You can also use a traditional, interpreted [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] to access data in memory-optimized tables.  
   
 -   As needed, migrate data from existing tables to memory-optimized tables.  
   
- For information on how to use [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to create memory-optimized tables, see [SQL Server Management Studio Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md).  
+ For information on how to use [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] to create memory-optimized tables, see [SQL Server Management Studio Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md).  
   
  The following code sample requires a directory called c:\Data.  
   

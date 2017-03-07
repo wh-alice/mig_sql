@@ -54,7 +54,7 @@
 # [Database Mirroring History](database-mirroring-history.md)
 # [Start the Configuring Database Mirroring Security Wizard](start-the-configuring-database-mirroring-security-wizard.md)
 # [Set Warning Thresholds](set-warning-thresholds.md)
-# [Establish a Database Mirroring Session Using Windows Authentication (Transact-SQL)](143c68a5-589f-4e7f-be59-02707e1a430a.md)
+# [Database Mirroring - Establish Session - Windows Authentication](database-mirroring-establish-session-windows-authentication.md)
 # [Upgrading Mirrored Instances](upgrading-mirrored-instances.md)
 # [Connect Clients to a Database Mirroring Session (SQL Server)](connect-clients-to-a-database-mirroring-session-sql-server.md)
 # [Database Mirroring and Database Snapshots (SQL Server)](database-mirroring-and-database-snapshots-sql-server.md)

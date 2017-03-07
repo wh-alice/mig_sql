@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Value (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the value of the current member of the Measures dimension that intersects with the current member of the attribute hierarchies in the context of the query.  
   
@@ -37,7 +37,7 @@ Member_Expression[.Value]
  A valid Multidimensional Expressions (MDX) expression that returns a member.  
   
 ## Remarks  
- The **Value** function returns the value of the specified member as a string. The **Value** argument is optional because the value of a member is the default property of a member, and is value that is returned for a member if no other value is specified. For more information about properties of members, see [Intrinsic Member Properties &#40;MDX&#41;](../Topic/Intrinsic%20Member%20Properties%20\(MDX\).md) and [User-Defined Member Properties &#40;MDX&#41;](../Topic/User-Defined%20Member%20Properties%20\(MDX\).md).  
+ The **Value** function returns the value of the specified member as a string. The **Value** argument is optional because the value of a member is the default property of a member, and is value that is returned for a member if no other value is specified. For more information about properties of members, see [Intrinsic Member Properties &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) and [User-Defined Member Properties &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
   
 ## Examples  
  The following example returns the value of a member as well explicitly returning the name of the member.  

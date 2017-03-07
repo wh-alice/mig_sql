@@ -19,7 +19,7 @@ manager: "jhubbard"
 # How to Create a Visual C# SMO Project in Visual Studio .NET
   This section describes how to build a simple SMO console application.  
   
- This example imports namespaces, which enables the program to reference SMO types. The import of the **Agent** namespace is optional. Use it when you are writing a program that uses [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent. The **Common** namespace is required to establish a secure connection to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The **SqlClient** namespace is used to process SQL exception errors.  
+ This example imports namespaces, which enables the program to reference SMO types. The import of the **Agent** namespace is optional. Use it when you are writing a program that uses [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent. The **Common** namespace is required to establish a secure connection to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The **SqlClient** namespace is used to process SQL exception errors.  
   
 ### Creating a Visual C# SMO project in Visual Studio.NET  
   
@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 2.  On the **File** menu, click **New** and then **Project**.  The **New Project** dialog box appears.   
   
-3.  In the [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] **Installed** pane, navigate to **Templates**\\**Visual C#**\\**Windows** and select **Console Application**.  
+3.  In the [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] **Installed** pane, navigate to **Templates**\\**Visual C#**\\**Windows** and select **Console Application**.  
   
 4.  (Optional) In the **Name** text box, type the name of the new application.  
 

@@ -26,14 +26,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # RESTORE Statements - FILELISTONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns a result set containing a list of the database and log files contained in the backup set in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Returns a result set containing a list of the database and log files contained in the backup set in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  For the descriptions of the arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+>  For the descriptions of the arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -73,7 +73,7 @@ FROM <backup_device>
 ```  
   
 ## Arguments  
- For descriptions of the RESTORE FILELISTONLY arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+ For descriptions of the RESTORE FILELISTONLY arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 ## Result Sets  
  A client can use RESTORE FILELISTONLY to obtain a list of the files contained in a backup set. This information is returned as a result set containing one row for each file.  
@@ -82,7 +82,7 @@ FROM <backup_device>
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|Logical name of the file.|  
 |PhysicalName|**nvarchar(260)**|Physical or operating-system name of the file.|  
-|Type|**char(1)**|The type of file, one of:<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] log file<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data file<br /><br /> **F** = Full Text Catalog<br /><br /> **S** = FileStream, FileTable, or [!INCLUDE[hek_2](../../relational-databases/in-memory-oltp/includes/hek-2-md.md)] container|  
+|Type|**char(1)**|The type of file, one of:<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] log file<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data file<br /><br /> **F** = Full Text Catalog<br /><br /> **S** = FileStream, FileTable, or [!INCLUDE[hek_2](../../a9retired/includes/hek-2-md.md)] container|  
 |FileGroupName|**nvarchar(128)**|Name of the filegroup that contains the file.|  
 |Size|**numeric(20,0)**|Current size in bytes.|  
 |MaxSize|**numeric(20,0)**|Maximum allowed size in bytes.|  
@@ -104,13 +104,13 @@ FROM <backup_device>
 |SnapshotURL|**nvarchar(360)**|The URL for the Azure snapshot of the database file contained in the FILE_SNAPSHOT backup. Returns NULL if no FILE_SNAPSHOT backup.|  
   
 ## Security  
- A backup operation may optionally specify passwords for a media set, a backup set, or both. When a password has been defined on a media set or backup set, you must specify the correct password or passwords in the RESTORE statement. These passwords prevent unauthorized restore operations and unauthorized appends of backup sets to media using [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] tools. However, a password does not prevent overwrite of media using the BACKUP statement's FORMAT option.  
+ A backup operation may optionally specify passwords for a media set, a backup set, or both. When a password has been defined on a media set or backup set, you must specify the correct password or passwords in the RESTORE statement. These passwords prevent unauthorized restore operations and unauthorized appends of backup sets to media using [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] tools. However, a password does not prevent overwrite of media using the BACKUP statement's FORMAT option.  
   
 > [!IMPORTANT]  
->  The protection provided by this password is weak. It is intended to prevent an incorrect restore using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] tools by authorized or unauthorized users. It does not prevent the reading of the backup data by other means or the replacement of the password. [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)] The best practice for protecting backups is to store backup tapes in a secure location or back up to disk files that are protected by adequate access control lists (ACLs). The ACLs should be set on the directory root under which backups are created.  
+>  The protection provided by this password is weak. It is intended to prevent an incorrect restore using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] tools by authorized or unauthorized users. It does not prevent the reading of the backup data by other means or the replacement of the password. [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)] The best practice for protecting backups is to store backup tapes in a secure location or back up to disk files that are protected by adequate access control lists (ACLs). The ACLs should be set on the directory root under which backups are created.  
   
 ### Permissions  
- Beginning in [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)], obtaining information about a backup set or backup device requires CREATE DATABASE permission. For more information, see [GRANT Database Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Database%20Permissions%20\(Transact-SQL\).md).  
+ Beginning in [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)], obtaining information about a backup set or backup device requires CREATE DATABASE permission. For more information, see [GRANT Database Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Database%20Permissions%20\(Transact-SQL\).md).  
   
 ## Examples  
  The following example returns the information from a backup device named `AdventureWorksBackups`. The example uses the `FILE` option to specify the second backup set on the device.  
@@ -124,9 +124,9 @@ GO
 ## See Also  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20REWINDONLY%20\(Transact-SQL\).md)   
- [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
+ [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Backup History and Header Information &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

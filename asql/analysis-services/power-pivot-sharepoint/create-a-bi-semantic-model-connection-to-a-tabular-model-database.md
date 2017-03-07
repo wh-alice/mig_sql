@@ -19,7 +19,7 @@ manager: "erikre"
 # Create a BI Semantic Model Connection to a Tabular Model Database
   Use the information in this topic to set up a BI semantic model connection that redirects to a tabular model database running on an Analysis Services instance outside the SharePoint farm.  
   
- After you create a BI semantic model connection and configure SharePoint and Analysis Services permissions, people can use it as a data source for Excel or [!INCLUDE[ssCrescent](../../analysis-services/includes/sscrescent-md.md)] reports.  
+ After you create a BI semantic model connection and configure SharePoint and Analysis Services permissions, people can use it as a data source for Excel or [!INCLUDE[ssCrescent](../../a9notintoc/includes/sscrescent-md.md)] reports.  
   
  This topic includes the following sections. Perform each task in the order given.  
   
@@ -38,22 +38,22 @@ manager: "erikre"
 ##  <a name="bkmk_prereq"></a> Review Prerequisites  
  You must have Contribute permissions or above to create a BI semantic model connection file.  
   
- You must have a library that supports the BI semantic model connection content type. For more information, see [Add a BI Semantic Model Connection Content Type to a Library &#40;Power Pivot for SharePoint&#41;](../Topic/Add%20a%20BI%20Semantic%20Model%20Connection%20Content%20Type%20to%20a%20Library%20\(Power%20Pivot%20for%20SharePoint\).md).  
+ You must have a library that supports the BI semantic model connection content type. For more information, see [Add a BI Semantic Model Connection Content Type to a Library &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md).  
   
  You must know the server and database name for which you are setting up a BI semantic model connection. Analysis Services must be configured for tabular mode. Databases running on the server must be tabular model databases. For instructions on how to check for server mode, see [Determine the Server Mode of an Analysis Services Instance](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
- In certain scenarios, the shared services in a SharePoint environment must have administrative permissions on the Analysis Services instance. These services include [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service applications, Reporting Services service applications, and PerformancePoint service applications. Before you can grant administrative permissions, you must know the identity of these service applications. You can use Central Administration to determine the identity.  
+ In certain scenarios, the shared services in a SharePoint environment must have administrative permissions on the Analysis Services instance. These services include [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service applications, Reporting Services service applications, and PerformancePoint service applications. Before you can grant administrative permissions, you must know the identity of these service applications. You can use Central Administration to determine the identity.  
   
  You must be a SharePoint service administrator to view security information in Central Administration.  
   
  You must be an Analysis Services system administrator to grant administrative rights in Management Studio.  
   
- [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint must be accessed via web applications that use classic authentication mode. BI semantic model connections to external data sources have a dependency on classic mode sign-in. For more information, see [Power Pivot Authentication and Authorization](../../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md).  
+ [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint must be accessed via web applications that use classic authentication mode. BI semantic model connections to external data sources have a dependency on classic mode sign-in. For more information, see [Power Pivot Authentication and Authorization](../../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md).  
   
  All computers and users that participate in the connection sequence must be in the same domain or trusted domain (two-way trust).  
   
 ##  <a name="bkmk_ssas"></a> Grant Analysis Services Administrative Permissions to Shared Service Applications  
- Connections that originate from SharePoint to a tabular model database on an Analysis Services server are sometimes made by a shared service on behalf of the user requesting the data. The service making the request might be a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application, a Reporting Services service application, or a PerformancePoint service application. In order for the connection to succeed, the service must have administrative permissions on the Analysis Services server. In Analysis Services, only an administrator is allowed to make an impersonated connection on behalf of another user.  
+ Connections that originate from SharePoint to a tabular model database on an Analysis Services server are sometimes made by a shared service on behalf of the user requesting the data. The service making the request might be a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application, a Reporting Services service application, or a PerformancePoint service application. In order for the connection to succeed, the service must have administrative permissions on the Analysis Services server. In Analysis Services, only an administrator is allowed to make an impersonated connection on behalf of another user.  
   
  Administrative permissions are necessary when the connection is used under these conditions:  
   
@@ -78,11 +78,11 @@ manager: "erikre"
 ##  <a name="bkmk_BISM"></a> Grant Read Permissions on the Tabular Model Database  
  Because the database is running on a server that is external to the farm, part of setting up your connections will include granting database user permissions on the backend Analysis Services server. Analysis Services uses a role-based permission model. Users who connect to model databases must do so with Read permissions or higher, through a role that grants read access to its members.  
   
- Roles, and sometimes role membership, are defined when the model is created in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)]. You cannot use SQL Server Management Studio to create roles, but you can use it to add members to a role that is already defined. For more information about creating roles, see [Create and Manage Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
+ Roles, and sometimes role membership, are defined when the model is created in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)]. You cannot use SQL Server Management Studio to create roles, but you can use it to add members to a role that is already defined. For more information about creating roles, see [Create and Manage Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
   
 #### Assign role membership  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], connect to the instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], expand the database in Object Explorer, and then expand **Roles**. You should see a role that is already defined. If a role does not exist, contact the author of the model and request the addition or a role. The model must be redeployed before the role is visible in Management Studio.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], connect to the instance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], expand the database in Object Explorer, and then expand **Roles**. You should see a role that is already defined. If a role does not exist, contact the author of the model and request the addition or a role. The model must be redeployed before the role is visible in Management Studio.  
   
 2.  Right-click the role, and select **Properties**.  
   
@@ -99,11 +99,11 @@ manager: "erikre"
   
      **Server name** is either the network name of the server, the IP address, or the fully qualified domain name (for example, myserver.mydomain.corp.adventure-works.com). If the server is installed as a named instance, enter the server name in this format: computername\instancename.  
   
-     **Database** must be a tabular database that is currently available on the server. Do not specify another BI semantic model connection file, an Office Data Connection (.odc) file, an Analysis Services OLAP database, or a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbook. To get the database name, you can use Management Studio to connect to the server and view the list of available databases. Use the property page of the database to ensure you have the correct name.  
+     **Database** must be a tabular database that is currently available on the server. Do not specify another BI semantic model connection file, an Office Data Connection (.odc) file, an Analysis Services OLAP database, or a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbook. To get the database name, you can use Management Studio to connect to the server and view the list of available databases. Use the property page of the database to ensure you have the correct name.  
   
-4.  Click **OK** to save the page. At this point, the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application will verify the connection.  
+4.  Click **OK** to save the page. At this point, the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application will verify the connection.  
   
-     Verification succeeds if the connection information is correct, and you have granted administrative permissions to the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application so that it can connect to Analysis Services as the current user.  
+     Verification succeeds if the connection information is correct, and you have granted administrative permissions to the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application so that it can connect to Analysis Services as the current user.  
   
      Verification fails if the connection information is wrong, or the service application lacks permissions. A validation message will appear on the page asking whether you want to save the file. If you know that the connection is valid, you should save the file anyway, because the error is the result of missing permissions rather than invalid connection information.  
   

@@ -18,7 +18,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Open the ODBC Data Source Administrator
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   This topic describes how to open the ODBC Data Source Administrator. The ODBC Data Source Administrator is a Windows component. Use the ODBC Data Source Administrator to create and manage ODBC data sources.  
   

@@ -18,9 +18,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.operations (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Displays the details of all operations in the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog.  
+  Displays the details of all operations in the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] catalog.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -38,17 +38,17 @@ manager: "jhubbard"
 |process_id|**int**|The process ID of the external process, if applicable.|  
 |stopped_by_sid|**varbinary(85)**|The SID of the user who stopped the operation.|  
 |stopped_by_name|**nvarchar(128)**|The name of the user who stopped the operation.|  
-|server_name|**nvarchar(128)**|The Windows server and instance information for a specified instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].|  
+|server_name|**nvarchar(128)**|The Windows server and instance information for a specified instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].|  
 |machine_name|**nvarchar(128)**|The computer name on which the server instance is running.|  
   
 ## Remarks  
- This view displays one row for each operation in the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog. It allows the administrator to enumerate all the logical operations that were performed on the server, such as deploying a project or executing a package.  
+ This view displays one row for each operation in the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] catalog. It allows the administrator to enumerate all the logical operations that were performed on the server, such as deploying a project or executing a package.  
   
  This view displays the following operation types, as listed in the **operation_type** column:  
   
 |**operation_type** Value|**operation_type** Description|**object_id** Description|**object_name** Description|  
 |-------------------------------|-------------------------------------|--------------------------------|----------------------------------|  
-|`1`|[!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] initialization|**NULL**|**NULL**|  
+|`1`|[!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] initialization|**NULL**|**NULL**|  
 |`2`|Retention window<br /><br /> (SQL Agent job)|**NULL**|**NULL**|  
 |`3`|MaxProjectVersion<br /><br /> (SQL Agent job)|**NULL**|**NULL**|  
 |`101`|**deploy_project**<br /><br /> (Stored procedure)|Project ID|Project name|  

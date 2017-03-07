@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Constructor Functions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   From a specified input, the constructor functions create instances of any of the XSD built-in or user-defined atomic types.  
   

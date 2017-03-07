@@ -30,11 +30,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CREATE SECURITY POLICY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Creates a security policy for row level security.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -141,7 +141,7 @@ CREATE SECURITY POLICY rls.SecPol
  [Row-Level Security](../../relational-databases/security/row-level-security.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
- [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.security-policies-transact-sql.md)   
- [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.security-predicates-transact-sql.md)  
+ [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.security-policies-transact-sql.md)   
+ [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.security-predicates-transact-sql.md)  
   
   

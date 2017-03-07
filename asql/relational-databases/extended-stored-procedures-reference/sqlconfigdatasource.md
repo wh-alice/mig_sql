@@ -18,11 +18,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLConfigDataSource
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver supports various [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]-specific keyword/value pairs for data source configuration attribute strings.  
+  The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver supports various [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]-specific keyword/value pairs for data source configuration attribute strings.  
   
- For a list of the keywords available in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver, see [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ For a list of the keywords available in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver, see [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## See Also  
  [SQLConfigDataSource Function](http://go.microsoft.com/fwlink/?LinkId=59337)   

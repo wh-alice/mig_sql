@@ -25,8 +25,8 @@ manager: "jhubbard"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[DTCTransaction Event Class](../../relational-databases/event-classes/dtctransaction-event-class.md)|Tracks transactions coordinated by the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC). These are transactions distributed between two or more databases or instances of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)].|  
-|[SQLTransaction Event Class](../../relational-databases/event-classes/sqltransaction-event-class.md)|Tracks [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] BEGIN TRAN, COMMIT TRAN, SAVE TRAN, and ROLLBACK TRAN statements.|  
+|[DTCTransaction Event Class](../../relational-databases/event-classes/dtctransaction-event-class.md)|Tracks transactions coordinated by the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC). These are transactions distributed between two or more databases or instances of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)].|  
+|[SQLTransaction Event Class](../../relational-databases/event-classes/sqltransaction-event-class.md)|Tracks [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] BEGIN TRAN, COMMIT TRAN, SAVE TRAN, and ROLLBACK TRAN statements.|  
 |[TM: Begin Tran Completed Event Class](../../relational-databases/event-classes/tm-begin-tran-completed-event-class.md)|Indicates that a BEGIN TRANSACTION request has completed.|  
 |[TM: Begin Tran Starting Event Class](../../relational-databases/event-classes/tm-begin-tran-starting-event-class.md)|Indicates that a BEGIN TRANSACTION request is starting.|  
 |[TM: Commit Tran Completed Event Class](../../relational-databases/event-classes/tm-commit-tran-completed-event-class.md)|Indicates that a COMMIT TRANSACTION request has completed.|  

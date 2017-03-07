@@ -17,11 +17,11 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # CREATE FUNCTION (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../a9retired/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Creates a user-defined function in [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. The return value must be a scalar (single) value. Use this statement to create a reusable routine that can be used in these ways:  
+  Creates a user-defined function in [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. The return value must be a scalar (single) value. Use this statement to create a reusable routine that can be used in these ways:  
   
--   In [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements such as SELECT  
+-   In [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements such as SELECT  
   
 -   In applications calling the function  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   To replace a stored procedure  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -83,7 +83,7 @@ RETURNS return_data_type
 >  ANSI_WARNINGS is not honored when you pass parameters in a stored procedure, user-defined function, or when you declare and set variables in a batch statement. For example, if a variable is defined as **char(3)**, and then set to a value larger than three characters, the data is truncated to the defined size and the INSERT or UPDATE statement succeeds.  
   
  *parameter_data_type*  
- Is the parameter data type. For [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] functions, all scalar data types supported in [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] are allowed. The timestamp (rowversion) data type is not a supported type.  
+ Is the parameter data type. For [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] functions, all scalar data types supported in [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] are allowed. The timestamp (rowversion) data type is not a supported type.  
   
  [ =*default* ]  
  Is a default value for the parameter. If a *default* value is defined, the function can be executed without specifying a value for that parameter.  
@@ -91,12 +91,12 @@ RETURNS return_data_type
  When a parameter of the function has a default value, the keyword DEFAULT must be specified when the function is called to retrieve the default value. This behavior is different from using parameters with default values in stored procedures in which omitting the parameter also implies the default value.  
   
  *return_data_type*  
- Is the return value of a scalar user-defined function. For [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] functions, all scalar data types supported in [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] are allowed. The timestamp (rowversion) data type is not a supported type. The cursor and table nonscalar types are not allowed.  
+ Is the return value of a scalar user-defined function. For [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] functions, all scalar data types supported in [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] are allowed. The timestamp (rowversion) data type is not a supported type. The cursor and table nonscalar types are not allowed.  
   
  *function_body*  
- Series of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements.  The function_body cannot contain a SELECT statement and cannot reference database data.  The function_body cannot reference tables or views. The function body can call other deterministic functions but cannot call nondeterministic functions. 
+ Series of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements.  The function_body cannot contain a SELECT statement and cannot reference database data.  The function_body cannot reference tables or views. The function body can call other deterministic functions but cannot call nondeterministic functions. 
   
- In scalar functions, *function_body* is a series of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements that together evaluate to a scalar value.  
+ In scalar functions, *function_body* is a series of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements that together evaluate to a scalar value.  
   
  *scalar_expression*  
  Specifies the scalar value that the scalar function returns.  
@@ -151,7 +151,7 @@ RETURNS return_data_type
 ## Metadata  
  This section lists the system catalog views that you can use to return metadata about user-defined functions.  
   
- [sys.sql_modules](../../relational-databases/system-catalog-views/sys.sql-modules-transact-sql.md) : Displays the definition of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] user-defined functions. For example:  
+ [sys.sql_modules](../../relational-databases/reference/system-catalog-views/sys.sql-modules-transact-sql.md) : Displays the definition of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] user-defined functions. For example:  
   
 ```  
 SELECT definition, type   
@@ -163,14 +163,14 @@ GO
   
 ```  
   
- [sys.parameters](../../relational-databases/system-catalog-views/sys.parameters-transact-sql.md) : Displays information about the parameters defined in user-defined functions.  
+ [sys.parameters](../../relational-databases/reference/system-catalog-views/sys.parameters-transact-sql.md) : Displays information about the parameters defined in user-defined functions.  
   
- [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md) : Displays the underlying objects referenced by a function.  
+ [sys.sql_expression_dependencies](../../relational-databases/reference/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md) : Displays the underlying objects referenced by a function.  
   
 ## Permissions  
  Requires CREATE FUNCTION permission in the database and ALTER permission on the schema in which the function is being created.  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### A. Using a scalar-valued user-defined function to change a data type  
  This simple function takes a **int** data type as an input, and returns a **decimal(10,2)** data type as an output.  

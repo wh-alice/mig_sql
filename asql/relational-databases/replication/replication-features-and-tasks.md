@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 -   [Maintaining an Always On Publication Database &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Replication, Change Tracking, Change Data Capture, and Always On Availability Groups &#40;SQL Server&#41;](../Topic/Replication,%20Change%20Tracking,%20Change%20Data%20Capture,%20and%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md)  
+-   [Replication, Change Tracking, Change Data Capture, and Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
 -   [Log Shipping and Replication &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   

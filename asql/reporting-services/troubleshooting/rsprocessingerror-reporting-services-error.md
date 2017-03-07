@@ -23,10 +23,10 @@ manager: "erikre"
   
 |||  
 |-|-|  
-|Product Name|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|  
+|Product Name|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]|  
 |Event ID|rsProcessingError|  
 |Event Source|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources|  
-|Component|[!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]|  
+|Component|[!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]|  
 |Message Text|Errors have occurred in report processing.|  
   
 ## Explanation  
@@ -49,7 +49,7 @@ manager: "erikre"
   
 -   An expression referenced a non-existing parameter in the Report Parameters collection.  
   
--   A custom assembly or a [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] assembly that was incorrectly deployed failed to load.  
+-   A custom assembly or a [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] assembly that was incorrectly deployed failed to load.  
   
 -   A parameter that has the Nullable property set to **False** has detected a null value in the parameter.  
   
@@ -76,20 +76,20 @@ manager: "erikre"
  Custom assemblies must have strong name signing and the attribute AllowPartiallyTrustedCallers set. For more information, see [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md) and [Understanding Security Policies](../../reporting-services/extensions/secure-development/understanding-security-policies.md).  
   
 ### A Built-in Global Name Does Not Exist  
- Check the spelling in expressions. Built-in globals, parameters, and field names are case-sensitive. In the expression causing the error, check that the name actually exists in the report and that it is spelled correctly. For more information, see [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../Topic/Built-in%20Collections%20in%20Expressions%20\(Report%20Builder%20and%20SSRS\).md).  
+ Check the spelling in expressions. Built-in globals, parameters, and field names are case-sensitive. In the expression causing the error, check that the name actually exists in the report and that it is spelled correctly. For more information, see [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ### Parameter Properties and Null  
  A multivalue parameter cannot be Null. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### Main Report with Subreport Could Not Be Processed  
- A report with subreports must be processed by the same version of the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report processor. When upgrading reports to the current version of the report definition schema, the main report and the subreports may or may not be updated at the same time. If the version is not compatible between a report and its subreports, the following message is displayed: "Subreport could not be processed."  
+ A report with subreports must be processed by the same version of the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] report processor. When upgrading reports to the current version of the report definition schema, the main report and the subreports may or may not be updated at the same time. If the version is not compatible between a report and its subreports, the following message is displayed: "Subreport could not be processed."  
   
  You must change either the main report or the subreports so that all the reports can be processed by the same version of the report processor. For information about why a report fails to upgrade, see [Upgrade Reports](../../reporting-services/install/windows/upgrade-reports.md).  
   
 ### Verify Function Calls are Visual Basic and Not SQL  
- You can use SQL functions in query text on a relational database. You cannot use [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] functions in query text.  
+ You can use SQL functions in query text on a relational database. You cannot use [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] functions in query text.  
   
- In [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], expressions can use [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] functions, System.Math or System.String functions, fully qualified [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] functions, or custom functions that you provide in custom code or a custom assembly. You cannot use SQL functions in an expression.  
+ In [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)], expressions can use [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] functions, System.Math or System.String functions, fully qualified [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] functions, or custom functions that you provide in custom code or a custom assembly. You cannot use SQL functions in an expression.  
   
  Verify that the function calls made in the query and in the expressions are valid.  
   
@@ -117,19 +117,19 @@ manager: "erikre"
   
 -   **Previous**, **RunningValue** or **RowNumber** aggregate functions used in the data cells of the *\<report item type>* '*\<report item name>*' refer to grouping scopes in both the columns and rows of the *\<report item type>*. The scope parameters of all **Previous**, **RunningValue** and **RowNumber** aggregate functions within a *\<report item type>* can refer to row groupings or data column groupings, but not both.  
   
- For more information, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/a8d24287-8557-4b03-bea7-ca087f449b62.md) and [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../Topic/Built-in%20Collections%20in%20Expressions%20\(Report%20Builder%20and%20SSRS\).md).  
+ For more information, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/a8d24287-8557-4b03-bea7-ca087f449b62.md) and [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ### Default Dataset Scope for a Top Level Text Box  
  Do not use a default scope for a text box added to the report design surface when the report has more than one dataset. Use an expression that includes the name of the dataset as the scope, and an aggregate function. For example, `=First(Fields!FieldName.Value, "DataSet2")`.  
   
 ## See Also  
  [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../Topic/Aggregate%20Functions%20Reference%20\(Report%20Builder%20and%20SSRS\).md)   
+ [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Commonly Used Filters &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Parameters Collection References &#40;Report Builder and SSRS&#41;](../Topic/Parameters%20Collection%20References%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Parameters Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

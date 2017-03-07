@@ -19,7 +19,7 @@ manager: "jhubbard"
   
 ### To extract data using an ODBC source  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent](../../analysis-services/data-mining/includes/ssiscurrent-md.md)] package you want.  
+1.  In [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent](../../a9retired/includes/ssiscurrent-md.md)] package you want.  
   
 2.  Click the **Data Flow** tab, and then, from the **Toolbox**, drag the ODBC source to the design surface.  
   

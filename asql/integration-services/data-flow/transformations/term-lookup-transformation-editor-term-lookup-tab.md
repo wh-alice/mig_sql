@@ -37,7 +37,7 @@ manager: "jhubbard"
  Type an alias for each output column. The default is the name of the column; however, you can choose any unique, descriptive name.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](../Topic/Configure%20Error%20Output.md) dialog box to specify error handling options for rows that cause errors.  
+ Use the [Configure Error Output](../../../a9retired/configure-error-output.md) dialog box to specify error handling options for rows that cause errors.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   

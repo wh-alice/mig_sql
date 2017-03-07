@@ -30,11 +30,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Creates a cryptographic provider within [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from an Extensible Key Management (EKM) provider.  
+  Creates a cryptographic provider within [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] from an Extensible Key Management (EKM) provider.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -49,12 +49,12 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  Is the name of the Extensible Key Management provider.  
   
  *path_of_DLL*  
- Is the path of the .dll file that implements the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Extensible Key Management interface. When using the **SQL Server Connector for Microsoft Azure Key Vault** the default location is **'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'**.  
+ Is the path of the .dll file that implements the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Extensible Key Management interface. When using the **SQL Server Connector for Microsoft Azure Key Vault** the default location is **'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'**.  
   
 ## Remarks  
  All keys created by a provider will reference the provider by its GUID. The GUID is retained across all versions of the DLL.  
   
- The DLL that implements SQLEKM interface must be digitally signed by using any certificate. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will verify the signature. This includes its certificate chain, which must have its root installed at the **Trusted Root Cert Authorities** location on a Windows system. If the signature is not verified correctly, the CREATE CRYPTOGRAPHIC PROVIDER statement will fail. For more information about certificates and certificate chains, see [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
+ The DLL that implements SQLEKM interface must be digitally signed by using any certificate. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will verify the signature. This includes its certificate chain, which must have its root installed at the **Trusted Root Cert Authorities** location on a Windows system. If the signature is not verified correctly, the CREATE CRYPTOGRAPHIC PROVIDER statement will fail. For more information about certificates and certificate chains, see [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
  When an EKM provider dll does not implement all of the necessary methods, CREATE CRYPTOGRAPHIC PROVIDER can return error 33085:  
   
@@ -68,7 +68,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  Requires CONTROL SERVER permission or membership in the **sysadmin** fixed server role.  
   
 ## Examples  
- The following example creates a cryptographic provider called `SecurityProvider` in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from a .dll file. The .dll file is named `c:\SecurityProvider\SecurityProvider_v1.dll` and it is installed on the server. The provider's certificate must first be installed on the server.  
+ The following example creates a cryptographic provider called `SecurityProvider` in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] from a .dll file. The .dll file is named `c:\SecurityProvider\SecurityProvider_v1.dll` and it is installed on the server. The provider's certificate must first be installed on the server.  
   
 ```  
 -- Install the provider  

@@ -21,7 +21,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Report Server Service Trace Log
-  The [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report server trace log is an ASCII text file that contains detailed information for Report Server service operations.  Ther information in the file includes operations performed by the Report Server Web service, the web portal, and background processing. The trace log file includes redundant information that is recorded in other log files, plus additional information that is not otherwise available. Trace log information is useful if you are debugging an application that includes a report server or investigating a specific problem that was written to the event log or execution log. For example, when trouble shooting issues with subscriptions.  
+  The [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] report server trace log is an ASCII text file that contains detailed information for Report Server service operations.  Ther information in the file includes operations performed by the Report Server Web service, the web portal, and background processing. The trace log file includes redundant information that is recorded in other log files, plus additional information that is not otherwise available. Trace log information is useful if you are debugging an application that includes a report server or investigating a specific problem that was written to the event log or execution log. For example, when trouble shooting issues with subscriptions.  
  
 ##  <a name="bkmk_view_log"></a> Where are the Report Server log files?  
  The trace log files are `ReportServerService_<timestamp>.log` and are located in the following folder:  
@@ -30,7 +30,7 @@ manager: "erikre"
   
  The trace log is created daily, starting with the first entry that occurs after midnight (local time), and whenever the service is restarted. The timestamp is based on Coordinated Universal Time (UTC). The file is in EN-US format. By default, trace logs are limited to 32 megabytes and by default they are deleted after 14 days.  
   
- View a short video that demonstrates the use of Microsoft Power Query to view [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] log files.  
+ View a short video that demonstrates the use of Microsoft Power Query to view [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] log files.  
   
 [![see a video demonstrating power query and ssrs log files](../../reporting-services/report-server/media/generic-video-thumbnail.png)](https://technet.microsoft.com/library/sql-server-reporting-services-log-files-and-microsoft-power-query.aspx)  [Use Microsoft Power Query to view Reporting Services log files](https://technet.microsoft.com/library/sql-server-reporting-services-log-files-and-microsoft-power-query.aspx)
   
@@ -80,14 +80,14 @@ manager: "erikre"
 <add name="Directory" value="U:\logs\" />  
 ```  
   
- For more information, see [Knowledge Base Article 913046](http://support.microsoft.com/?kbid=913046) on the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Web site.  
+ For more information, see [Knowledge Base Article 913046](http://support.microsoft.com/?kbid=913046) on the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Web site.  
   
 ##  <a name="bkmk_log_file_fields"></a> Log File Fields  
  The following fields can be found in a trace log:  
   
 -   System information, including operating system, version, number of processors, and memory.  
   
--   [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] component and version information.  
+-   [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] component and version information.  
   
 -   Events logged the Application log.  
   
@@ -102,7 +102,7 @@ manager: "erikre"
  You can review trace log information to determine whether a report delivery occurred, who received the report, and how many delivery attempts were made. Trace logs also record report execution activity and the environment variables that are in effect during report processing. Errors and exceptions are also entered into trace logs. For example, you may find report time-out errors (indicated as a **ThreadAbortExceptions** entry).  
 
 ## Previous Versions
-In previous releases of [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], there were multiple trace log files, one for each application. The following files are obsolete and are no longer created in [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] and later versions:
+In previous releases of [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)], there were multiple trace log files, one for each application. The following files are obsolete and are no longer created in [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] and later versions:
 + ReportServerWebApp_*\<timestamp>*.log
 + ReportServer_*\<timestamp>*.log
 + ReportServerService_main_*\<timestamp>*.log

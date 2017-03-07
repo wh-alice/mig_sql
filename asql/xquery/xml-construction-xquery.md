@@ -28,7 +28,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # XML Construction (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   In XQuery, you can use the **direct** and **computed** constructors to construct XML structures within a query.  
   
@@ -313,7 +313,7 @@ where ProductModelID=7;
         <a attr="Item 5" />  
         ```  
   
-    -   Use the [concat function](../Topic/concat%20Function%20\(XQuery\).md) to concatenate the two string arguments into the resulting attribute value:  
+    -   Use the [concat function](../xquery/functions-on-string-values-concat.md) to concatenate the two string arguments into the resulting attribute value:  
   
         ```  
         SELECT @x.query( '<a attr="{concat(''Item'', /x[1])}"/>' )   
@@ -629,7 +629,7 @@ text{"Some text "},
                } ')  
 ```  
   
- Note that the computed element and attribute constructors, as defined in the XQuery specification, allow you to compute the node names. When you are using direct constructors in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], the node names, such as element and attribute, must be specified as constant literals. Therefore, there is no difference in the direct constructors and computed constructors for elements and attributes.  
+ Note that the computed element and attribute constructors, as defined in the XQuery specification, allow you to compute the node names. When you are using direct constructors in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], the node names, such as element and attribute, must be specified as constant literals. Therefore, there is no difference in the direct constructors and computed constructors for elements and attributes.  
   
  In the following example, the content for the constructed nodes is obtained from the XML manufacturing instructions stored in the Instructions column of the **xml** data type in the ProductModel table.  
   
@@ -659,7 +659,7 @@ where ProductModelID=7
 ```  
   
 ## Additional Implementation Limitations  
- Computed attribute constructors cannot be used to declare a new namespace. Also, the following computed constructors are not supported in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]:  
+ Computed attribute constructors cannot be used to declare a new namespace. Also, the following computed constructors are not supported in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]:  
   
 -   Computed document node constructors  
   

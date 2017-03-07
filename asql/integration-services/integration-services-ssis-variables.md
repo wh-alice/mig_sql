@@ -23,9 +23,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Integration Services (SSIS) Variables
-  Variables store values that a [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package and its containers, tasks, and event handlers can use at run time. The scripts in the Script task and the Script component can also use variables. The precedence constraints that sequence tasks and containers into a workflow can use variables when their constraint definitions include expressions.  
+  Variables store values that a [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] package and its containers, tasks, and event handlers can use at run time. The scripts in the Script task and the Script component can also use variables. The precedence constraints that sequence tasks and containers into a workflow can use variables when their constraint definitions include expressions.  
   
- You can use variables in [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] packages for the following purposes:  
+ You can use variables in [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] packages for the following purposes:  
   
 -   Updating properties of package elements at run time. For example, you can dynamically set the number of concurrent executables that a Foreach Loop container allows.  
   
@@ -40,16 +40,16 @@ manager: "jhubbard"
 -   Building expressions that include variable values. For example, the Derived Column transformation can populate a column with the result obtained by multiplying a variable value by a column value.  
   
 ## System and user-defined variables  
- [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] supports two types of variables: user-defined variables and system variables. User-defined variables are defined by package developers, and system variables are defined by [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)]. You can create as many user-defined variables as a package requires, but you cannot create additional system variables.  
+ [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] supports two types of variables: user-defined variables and system variables. User-defined variables are defined by package developers, and system variables are defined by [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)]. You can create as many user-defined variables as a package requires, but you cannot create additional system variables.  
   
- All variables—system and user-defined—can be used in the parameter bindings that the Execute SQL task uses to map variables to parameters in SQL statements. For more information, see [Execute SQL Task](../integration-services/control-flow/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](../Topic/Parameters%20and%20Return%20Codes%20in%20the%20Execute%20SQL%20Task.md).  
+ All variables—system and user-defined—can be used in the parameter bindings that the Execute SQL task uses to map variables to parameters in SQL statements. For more information, see [Execute SQL Task](../integration-services/control-flow/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](../a9retired/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 > [!NOTE]  
 >  The names of user-defined and system variables are case sensitive.  
   
- You can create user-defined variables for all [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] container types: packages, Foreach Loop containers, For Loop containers, Sequence containers, tasks, and event handlers. User-defined variables are members of the Variables collection of the container.  
+ You can create user-defined variables for all [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] container types: packages, Foreach Loop containers, For Loop containers, Sequence containers, tasks, and event handlers. User-defined variables are members of the Variables collection of the container.  
   
- If you create the package using [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer, you can see the members of the Variables collections in the **Variables** folders on the **Package Explorer** tab of [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer. The folders list user-defined variables and system variables.  
+ If you create the package using [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer, you can see the members of the Variables collections in the **Variables** folders on the **Package Explorer** tab of [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer. The folders list user-defined variables and system variables.  
   
  You can configure user-defined variables in the following ways:  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
  A different set of system variables is available for different container types. For more information about the system variables used by packages and their elements, see [System Variables](../integration-services/system-variables.md).  
   
- For more information about real-life use scenarios for variables, see [Use Variables in Packages](../Topic/Use%20Variables%20in%20Packages.md).  
+ For more information about real-life use scenarios for variables, see [Use Variables in Packages](../a9retired/use-variables-in-packages.md).  
   
 ## Properties of variables  
  You can configure user-defined variables by setting the following properties in either the **Variables** window or the **Properties** window. Certain properties are available only in the Properties window.  
@@ -92,7 +92,7 @@ manager: "jhubbard"
  Specifies the variable name.  
   
  **Namespace**  
- [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] provides two namespaces, **User** and **System**. By default, custom variables are in the **User** namespace, and system variables are in the **System** namespace. You can create additional namespaces for user-defined variables and change the name of the **User** namespace, but you cannot change the name of the **System** namespace, add variables to the **System** namespace, or assign system variables to a different namespace.  
+ [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] provides two namespaces, **User** and **System**. By default, custom variables are in the **User** namespace, and system variables are in the **System** namespace. You can create additional namespaces for user-defined variables and change the name of the **User** namespace, but you cannot change the name of the **System** namespace, add variables to the **System** namespace, or assign system variables to a different namespace.  
   
 **RaiseChangedEvent**  
  When the property is set to **True**, the **OnVariableValueChanged** event is raised when the variable changes value.  
@@ -126,7 +126,7 @@ manager: "jhubbard"
 **Value**    
  The value of a user-defined variable can be a literal or an expression. A variable includes options for setting the variable value and the data type of the value. The two properties must be compatible: for example, the use of a string value together with an integer data type is not valid.  
   
- If the variable is configured to evaluate as an expression, you must provide an expression. At run time, the expression is evaluated, and the variable is set to the evaluation result. For example, if a variable uses the expression `DATEPART("month", GETDATE())` the value of the variable is the number equivalent of the month for the current date. The expression must be a valid expression that uses the [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] expression grammar syntax. When an expression is used with variables, the expression can use literals and the operators and functions that the expression grammar provides, but the expression cannot reference the columns from a data flow in the package. The maximum length of an expression is 4000 characters. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../integration-services/expressions/integration-services-ssis-expressions.md).  
+ If the variable is configured to evaluate as an expression, you must provide an expression. At run time, the expression is evaluated, and the variable is set to the evaluation result. For example, if a variable uses the expression `DATEPART("month", GETDATE())` the value of the variable is the number equivalent of the month for the current date. The expression must be a valid expression that uses the [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] expression grammar syntax. When an expression is used with variables, the expression can use literals and the operators and functions that the expression grammar provides, but the expression cannot reference the columns from a data flow in the package. The maximum length of an expression is 4000 characters. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
 **ValueType**    
  > [!NOTE]  
@@ -135,15 +135,15 @@ manager: "jhubbard"
  Specifies the data type of the variable value.  
 
 ## Scenarios for using variables  
- Variables are used in many different ways in [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] packages. You will probably find that package development does not progress far before you have to add a user-defined variable to your package to implement the flexibility and manageability your solution requires. Depending on the scenario, system variables are also commonly used.  
+ Variables are used in many different ways in [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] packages. You will probably find that package development does not progress far before you have to add a user-defined variable to your package to implement the flexibility and manageability your solution requires. Depending on the scenario, system variables are also commonly used.  
   
  **Property Expressions** Use variables to provide values in the property expressions that set the properties of packages and package objects. For example, the expression, `SELECT * FROM @varTableName` includes the variable `varTableName` that updates the SQL statement that an Execute SQL task runs. The expression, `DATEPART("d", GETDATE()) == 1? @[User::varPackageFirst]:@[User::varPackageOther]`", updates the package that the Execute Package task runs, by running the package specified in the `varPackageFirst` variable on the first day of the month and running the package specified in the `varPackageOther` variable on other days. For more information, see [Use Property Expressions in Packages](../integration-services/expressions/use-property-expressions-in-packages.md).  
   
  **Data Flow Expressions** Use variables to provide values in the expressions that the Derived Column and Conditional Split transformations use to populate columns, or to direct data rows to different transformation outputs. For example, the expression, `@varSalutation + LastName`, concatenates the value in the `VarSalutation` variable and the `LastName` column. The expression, `Income < @HighIncome`, directs data rows in which the value of the `Income` column is less than the value in the `HighIncome` variable to an output. For more information, see [Derived Column Transformation](../integration-services/data-flow/transformations/derived-column-transformation.md), [Conditional Split Transformation](../integration-services/data-flow/transformations/conditional-split-transformation.md), and [Integration Services &#40;SSIS&#41; Expressions](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
- **Precedence Constraint Expressions** Provide values to use in precedence constraints to determine whether a constrained executable runs. The expressions can be used either together with an execution outcome (success, failure, completion), or instead of an execution outcome. For example, if the expression, `@varMax > @varMin`, evaluates to **true**, the executable runs. For more information, see [Add Expressions to Precedence Constraints](../Topic/Add%20Expressions%20to%20Precedence%20Constraints.md).  
+ **Precedence Constraint Expressions** Provide values to use in precedence constraints to determine whether a constrained executable runs. The expressions can be used either together with an execution outcome (success, failure, completion), or instead of an execution outcome. For example, if the expression, `@varMax > @varMin`, evaluates to **true**, the executable runs. For more information, see [Add Expressions to Precedence Constraints](../a9retired/add-expressions-to-precedence-constraints.md).  
   
- **Parameters and Return Codes** Provide values to input parameters, or store the values of output parameters and return codes. You do this by mapping the variables to parameters and return values. For example, if you set the variable `varProductId` to 23 and run the SQL statement, `SELECT * from Production.Product WHERE ProductID = ?`, the query retrieves the product with a `ProductID` of 23. For more information, see [Execute SQL Task](../integration-services/control-flow/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](../Topic/Parameters%20and%20Return%20Codes%20in%20the%20Execute%20SQL%20Task.md).  
+ **Parameters and Return Codes** Provide values to input parameters, or store the values of output parameters and return codes. You do this by mapping the variables to parameters and return values. For example, if you set the variable `varProductId` to 23 and run the SQL statement, `SELECT * from Production.Product WHERE ProductID = ?`, the query retrieves the product with a `ProductID` of 23. For more information, see [Execute SQL Task](../integration-services/control-flow/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](../a9retired/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
  **For Loop Expressions** Provide values to use in the initialization, evaluation, and assignment expressions of the For Loop. For example, if the variable `varCount` is 2 and `varMaxCount` is 10, the initialization expression is `@varCount`, the evaluation expression is  `@varCount < @varMaxCount`, and the assignment expression is `@varCount =@varCount +1`, then the loop repeats 8 times. For more information, see [For Loop Container](../integration-services/control-flow/for-loop-container.md).  
   
@@ -153,11 +153,11 @@ manager: "jhubbard"
 
 ## Add a variable  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package you want to work with.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] package you want to work with.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
-3.  In [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer, to define the scope of the variable, do one of the following:  
+3.  In [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer, to define the scope of the variable, do one of the following:  
   
     -   To set the scope to the package, click anywhere on the design surface of the **Control Flow** tab.  
   
@@ -171,7 +171,7 @@ manager: "jhubbard"
   
 6.  Optionally, click the **Grid Options** icon, select additional columns to show in the **Variables Grid Options** dialog box, and then click **OK**.  
   
-7.  Optionally, set the variable properties. For more information, see [Set the Properties of a User-Defined Variable](../Topic/Set%20the%20Properties%20of%20a%20User-Defined%20Variable.md).  
+7.  Optionally, set the variable properties. For more information, see [Set the Properties of a User-Defined Variable](../a9retired/set-the-properties-of-a-user-defined-variable.md).  
   
 8.  To save the updated package, click **Save Selected Items** on the **File** menu.  
 
@@ -199,7 +199,7 @@ Use the **Add Variable** dialog box to specify the properties of a new variable.
    
 ## Delete a variable  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, right-click the package to open it.  
   
@@ -215,7 +215,7 @@ Use the **Add Variable** dialog box to specify the properties of a new variable.
   
 ## Change the scope of a variable  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, right-click the package to open it.  
   
@@ -230,14 +230,14 @@ Use the **Add Variable** dialog box to specify the properties of a new variable.
 6.  To save the updated package, click **Save Selected Items** on the **File** menu.  
 
 ## Set the properties of a user-defined variable
- To set the properties of a user-defined variable in [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)], you can use one of the following features:  
+ To set the properties of a user-defined variable in [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)], you can use one of the following features:  
   
 -   Variables window.  
   
 -   Properties window. The **Properties** window lists properties for configuring variables that are not available in the **Variables** window: Description, EvaluateAsExpression, Expression, ReadOnly, ValueType, and IncludeInDebugDump.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] also provides a set of system variables whose properties cannot be updated, with the exception of the RaiseChangedEvent property.  
+>  [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] also provides a set of system variables whose properties cannot be updated, with the exception of the RaiseChangedEvent property.  
   
 ### Set expressions on variables  
   
@@ -265,7 +265,7 @@ Use the **Add Variable** dialog box to specify the properties of a new variable.
   
 ### Set Variable Properties in the Variables Window   
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, right-click the package to open it.  
   
@@ -283,13 +283,13 @@ Use the **Add Variable** dialog box to specify the properties of a new variable.
   
 ### Set Variable Properties in the Properties Window  
 
-1.  In [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, right-click the package to open it.  
   
 3.  On the **View** menu, click **Properties Window**.  
   
-4.  In [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer, click the **Package Explorer** tab and expand the Package node.  
+4.  In [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer, click the **Package Explorer** tab and expand the Package node.  
   
 5.  To modify variables with package scope, expand the Variables node; otherwise, expand the Event Handlers or Executables nodes until you locate the Variables node that contains the variable that you want to modify.  
   

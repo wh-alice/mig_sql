@@ -78,7 +78,7 @@ To set up full-text search by using a wizard, see [Use the Full-Text Indexing Wi
  For information about choosing the column language, see [Choose a Language When Creating a Full-Text Index](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
   
 ### Choose a filegroup  
- The process of building a full-text index is fairly I/O intensive. In summary, it consists of reading data from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and then propagating the filtered data to the full-text index. As a best practice, locate a full-text index in the database filegroup that is best for maximizing I/O performance or locate the full-text indexes in a different filegroup on another volume.
+ The process of building a full-text index is fairly I/O intensive. In summary, it consists of reading data from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], and then propagating the filtered data to the full-text index. As a best practice, locate a full-text index in the database filegroup that is best for maximizing I/O performance or locate the full-text indexes in a different filegroup on another volume.
   
 ### Choose a full-text catalog   
  
@@ -91,19 +91,19 @@ To set up full-text search by using a wizard, see [Use the Full-Text Indexing Wi
 -   Consider the amount of change occurring in the tables being full-text indexed, as well as the total number of rows. If the total number of rows being changed, together with the number of rows in the table present during the last full-text population, represents millions of rows, assign the table to its own full-text catalog.  
 
 ### Associate a unique index
-Always select the smallest unique index available for your full-text unique key. (A 4-byte, integer-based index is optimal.) This significantly reduces the resources required by [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Search service in the file system. If the primary key is large (over 100 bytes), consider choosing another unique index in the table (or creating another unique index) as the full-text unique key. Otherwise, if the full-text unique key size exceeds the maximum size allowed (900 bytes), full-text population will not be able to proceed.  
+Always select the smallest unique index available for your full-text unique key. (A 4-byte, integer-based index is optimal.) This significantly reduces the resources required by [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Search service in the file system. If the primary key is large (over 100 bytes), consider choosing another unique index in the table (or creating another unique index) as the full-text unique key. Otherwise, if the full-text unique key size exceeds the maximum size allowed (900 bytes), full-text population will not be able to proceed.  
  
 ### Associate a stoplist   
   A *stoplist* is a list of stopwords, also known as noise words. A stoplist is associated with each full-text index, and the words in that stoplist are applied to full-text queries on that index. By default, the system stoplist is associated with a new full-text index. You can create and use your own stoplist too.   
   
- For example, the following [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement creates a new full-text stoplist named myStoplist by copying from the system stoplist:  
+ For example, the following [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement creates a new full-text stoplist named myStoplist by copying from the system stoplist:  
   
 ```tsql  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- The following [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement alters a stoplist named myStoplist, adding the word 'en', first for Spanish and then for French:  
+ The following [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement alters a stoplist named myStoplist, adding the word 'en', first for Spanish and then for French:  
   
 ```tsql  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'Spanish';  
@@ -113,7 +113,7 @@ GO
 For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).
 
 ## Update a full-text index  
- Like regular [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] indexes, full-text indexes can be automatically updated as data is modified in the associated tables. This is the default behavior. Alternatively, you can keep your full-text indexes up-to-date manually, or at specified scheduled intervals. Populating a full-text index can be time-consuming and resource-intensive. Therefore, index updating is usually performed as an asynchronous process that runs in the background and keeps the full-text index up to date after modifications in the base table. 
+ Like regular [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] indexes, full-text indexes can be automatically updated as data is modified in the associated tables. This is the default behavior. Alternatively, you can keep your full-text indexes up-to-date manually, or at specified scheduled intervals. Populating a full-text index can be time-consuming and resource-intensive. Therefore, index updating is usually performed as an asynchronous process that runs in the background and keeps the full-text index up to date after modifications in the base table. 
  
 Updating a full-text index immediately after each change in the base table is also resource-intensive. Therefore, if you have a high update/insert/delete rate, you may experience some degradation in query performance. If this occurs, consider scheduling manual change tracking updates to keep up with the numerous changes from time to time, rather than competing with queries for resources.  
   

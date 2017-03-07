@@ -20,9 +20,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # IBCPSession::BCPColFmt (OLE DB)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  Creates a binding between program variables and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] columns.  
+  Creates a binding between program variables and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] columns.  
   
 ## Syntax  
   
@@ -39,7 +39,7 @@ HRESULT BCPColFmt(
 ```  
   
 ## Remarks  
- The **BCPColFmt** method is used to create a binding between BCP data file fields and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] columns. It takes in the length, type, terminator, and prefix length of a column as parameters and sets each of these properties for individual fields.  
+ The **BCPColFmt** method is used to create a binding between BCP data file fields and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] columns. It takes in the length, type, terminator, and prefix length of a column as parameters and sets each of these properties for individual fields.  
   
  If the user chooses interactive mode, this method is called twice; once to set the column format according to the default values (which are according to the type of the server column), and once to set the format according to the column type of the choice of the client chosen during interactive mode, for each column.  
   
@@ -64,7 +64,7 @@ HRESULT BCPColFmt(
 > [!NOTE]  
 >  The [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) method must be called before any calls to **BCPColFmt**. You must call **BCPColFmt** once for each column in the user file. Calling **BCPColFmt** more than once for any user-file column causes an error.  
   
- You do not have to copy all of the data in a user file to a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table. To skip a column, specify the format of the data for the column setting the idxServerCol parameter to 0. In order to skip a field, you still need all the information for the method to work correctly.  
+ You do not have to copy all of the data in a user file to a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] table. To skip a column, specify the format of the data for the column setting the idxServerCol parameter to 0. In order to skip a field, you still need all the information for the method to work correctly.  
   
  **Note** The [IBCPSession::BCPWriteFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) function can be used to persist the format specification provided through **BCPColFmt**.  
   
@@ -73,7 +73,7 @@ HRESULT BCPColFmt(
  Index of field in the user's data file.  
   
  *eUserDataType*[in]  
- The data type of field in the user's data file. The data types available are listed in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client header file (sqlncli.h) with BCP_TYPE_XXX format, for example, BCP_TYPE_SQLINT4. If the BCP_TYPE_DEFAULT value is specified, the provider tries to use the same type as the table or view column type. For bulk copy operations out of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and into a file when the **eUserDataType** argument is BCP_TYPE_SQLDECIMAL or BCP_TYPE_SQLNUMERIC:  
+ The data type of field in the user's data file. The data types available are listed in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client header file (sqlncli.h) with BCP_TYPE_XXX format, for example, BCP_TYPE_SQLINT4. If the BCP_TYPE_DEFAULT value is specified, the provider tries to use the same type as the table or view column type. For bulk copy operations out of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and into a file when the **eUserDataType** argument is BCP_TYPE_SQLDECIMAL or BCP_TYPE_SQLNUMERIC:  
   
 -   If the source column is not decimal or numeric, the default precision and scale are used.  
   
@@ -85,9 +85,9 @@ HRESULT BCPColFmt(
  *cbUserData*[in]  
  The maximum length, in bytes, of this field's data in the user file, not including the length of any length indicator or terminator.  
   
- Setting **cbUserData** to BCP_LENGTH_NULL indicates that all values in the data file fields are, or should be set to NULL. Setting **cbUserData** to BCP_LENGTH_VARIABLE indicates that the system should determine the length of data for each field. For some fields, this could mean that a length/null indicator is generated to precede data on a copy from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], or that the indicator is expected in data copied to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Setting **cbUserData** to BCP_LENGTH_NULL indicates that all values in the data file fields are, or should be set to NULL. Setting **cbUserData** to BCP_LENGTH_VARIABLE indicates that the system should determine the length of data for each field. For some fields, this could mean that a length/null indicator is generated to precede data on a copy from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], or that the indicator is expected in data copied to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- For [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] character and binary data types, **cbUserData** can be BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0, or some positive value. If **cbUserData** is BCP_LENGTH_VARIABLE, the system uses either the length indicator, if present, or a terminator sequence to determine the length of the data. If both a length indicator and a terminator sequence are supplied, bulk copy uses the one that results in the least amount of data being copied. If **cbUserData** is BCP_LENGTH_VARIABLE, the data type is a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] character or binary type, and if neither a length indicator nor a terminator sequence is specified, the system returns an error message.  
+ For [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] character and binary data types, **cbUserData** can be BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0, or some positive value. If **cbUserData** is BCP_LENGTH_VARIABLE, the system uses either the length indicator, if present, or a terminator sequence to determine the length of the data. If both a length indicator and a terminator sequence are supplied, bulk copy uses the one that results in the least amount of data being copied. If **cbUserData** is BCP_LENGTH_VARIABLE, the data type is a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] character or binary type, and if neither a length indicator nor a terminator sequence is specified, the system returns an error message.  
   
  If **cbUserData** is 0 or a positive value, the system uses **cbUserData** as the maximum data length. However, if, in addition to a positive **cbUserData**, a length indicator or terminator sequence is provided, the system determines the data length by using the method that results in the least amount of data being copied.  
   
@@ -113,7 +113,7 @@ HRESULT BCPColFmt(
  The method succeeded.  
   
  E_FAIL  
- A provider specific error occurred, for detailed information use the [ISQLServerErrorInfo](../Topic/ISQLServerErrorInfo%20\(OLE%20DB\).md) interface.  
+ A provider specific error occurred, for detailed information use the [ISQLServerErrorInfo](../../a9retired/isqlservererrorinfo-ole-db.md) interface.  
   
  E_UNEXPECTED  
  The call to the method was unexpected. For example, the [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) method was not called before calling this method.  

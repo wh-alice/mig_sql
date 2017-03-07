@@ -18,9 +18,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create Foreign Key Relationships
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
 
-  This topic describes how to create foreign key relationships in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. You create a relationship between two tables when you want to associate rows of one table with rows of another.    
+  This topic describes how to create foreign key relationships in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. You create a relationship between two tables when you want to associate rows of one table with rows of another.    
      
 ##  <a name="BeforeYouBegin"></a> Before You Begin! Limits and Restrictions
  
@@ -36,7 +36,7 @@ manager: "jhubbard"
     
 -   A FOREIGN KEY constraint specified at the table level must have the same number of reference columns as the number of columns in the constraint column list. The data type of each reference column must also be the same as the corresponding column in the column list.    
     
--   The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] does not have a predefined limit on either the number of FOREIGN KEY constraints a table can contain that reference other tables, or the number of FOREIGN KEY constraints that are owned by other tables that reference a specific table. Nevertheless, the actual number of FOREIGN KEY constraints that can be used is limited by the hardware configuration and by the design of the database and application.  A table can reference a maximum of 253 other tables and columns as foreign keys (outgoing references). [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] increases the limit for the number of other table and columns that can reference columns in a single table (incoming references), from 253 to 10,000.  (Requires at least 130 compatibility level.) The increase has the following restrictions:    
+-   The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] does not have a predefined limit on either the number of FOREIGN KEY constraints a table can contain that reference other tables, or the number of FOREIGN KEY constraints that are owned by other tables that reference a specific table. Nevertheless, the actual number of FOREIGN KEY constraints that can be used is limited by the hardware configuration and by the design of the database and application.  A table can reference a maximum of 253 other tables and columns as foreign keys (outgoing references). [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] increases the limit for the number of other table and columns that can reference columns in a single table (incoming references), from 253 to 10,000.  (Requires at least 130 compatibility level.) The increase has the following restrictions:    
     
     -   Greater than 253 foreign key references are supported for DELETE and UPDATE DML operations. MERGE operations are not supported.    
     
@@ -86,7 +86,7 @@ manager: "jhubbard"
 ## Create a foreign key in a new table  
 ####  Using Transact-SQL   
     
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].    
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].    
     
 2.  On the Standard bar, click **New Query**.    
     
@@ -108,7 +108,7 @@ manager: "jhubbard"
 ## Create a foreign key in an existing table 
 #### Using Transasct-SQL   
     
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].    
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].    
     
 2.  On the Standard bar, click **New Query**.    
     
@@ -127,6 +127,6 @@ manager: "jhubbard"
     
     ```    
     
-     For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md), and [table_constraint &#40;Transact-SQL&#41;](../Topic/table_constraint%20\(Transact-SQL\).md).    
+     For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md), and [table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).    
     
   

@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # PredictHistogram (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns a table that represents a histogram for the prediction of a given column.  
   
@@ -34,7 +34,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ```  
   
 ## Applies To  
- A scalar column reference or a cluster column reference. Can be used with all algorithm types except the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Association algorithm.  
+ A scalar column reference or a cluster column reference. Can be used with all algorithm types except the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Association algorithm.  
   
 ## Return Type  
  A table.  
@@ -53,15 +53,15 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$ProbabilityVariance**  
   
-     [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] data mining algorithms do not support **$ProbabilityVariance**. This column always contains 0 for [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] algorithms.  
+     [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] data mining algorithms do not support **$ProbabilityVariance**. This column always contains 0 for [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] algorithms.  
   
 -   **$ProbabilityStdev**  
   
-     [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] data mining algorithms do not support **$ProbabilityStdev**. This column always contains 0 for [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] algorithms.  
+     [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] data mining algorithms do not support **$ProbabilityStdev**. This column always contains 0 for [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] algorithms.  
   
 -   **$AdjustedProbability**  
   
-     The **$AdjustedProbability** column is an [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] extension to the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] OLE DB for Data Mining specification.  
+     The **$AdjustedProbability** column is an [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] extension to the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] OLE DB for Data Mining specification.  
   
 ## Cluster Columns  
  The histogram that the **PredictHistogram** function returns for a \<cluster column reference> consists of the following columns:  

@@ -44,9 +44,9 @@ manager: "jhubbard"
   
     -   The number of folds into which to partition the structure or model data.  
   
--   [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] creates and trains as many models as there are folds.  
+-   [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] creates and trains as many models as there are folds.  
   
--   [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] returns a set of accuracy metrics for each fold in each model, or for the data set as a whole.  
+-   [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] returns a set of accuracy metrics for each fold in each model, or for the data set as a whole.  
   
 ## Configuring Cross-Validation  
  You can customize the way that cross-validation works to control the number of cross-sections, the models that are tested, and the accuracy bar for predictions. If you use the cross-validation stored procedures, you can also specify the data set that is used for validating the models. This wealth of choices means that you can easily produce many sets of different results that must then be compared and analyzed.  
@@ -54,7 +54,7 @@ manager: "jhubbard"
  This section provides information to help you configure cross-validation appropriately.  
   
 ### Setting the Number of Partitions  
- When you specify the number of partitions, you determine how many temporary models will be created. For each partition, a cross-section of the data is flagged for use as the test set, and a new model is created by training on the remaining data not in the partition. This process is repeated until [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] has created and tested the specified number of models. The data that you specified as being available for cross-validation is distributed evenly among all partitions.  
+ When you specify the number of partitions, you determine how many temporary models will be created. For each partition, a cross-section of the data is flagged for use as the test set, and a new model is created by training on the remaining data not in the partition. This process is repeated until [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] has created and tested the specified number of models. The data that you specified as being available for cross-validation is distributed evenly among all partitions.  
   
  The example in the diagram illustrates the usage of data if three folds are specified.  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
  You can also specify the amount of data that is used during cross-validation, by specifying the number of overall cases to use. The cases are distributed evenly across all folds.  
   
- For mining structures stored in an instance of SQL Server [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], the maximum value that you can set for the number of folds is 256, or the number of cases, whichever is less. If you are using a session mining structure, the maximum number of folds is 10.  
+ For mining structures stored in an instance of SQL Server [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], the maximum value that you can set for the number of folds is 256, or the number of cases, whichever is less. If you are using a session mining structure, the maximum number of folds is 10.  
   
 > [!NOTE]  
 >  As you increase the number of folds, the time required to perform cross-validation increases accordingly, because a model must be generated and tested for each fold. You may experience performance problems if the number of folds is too high.  
@@ -82,11 +82,11 @@ manager: "jhubbard"
   
  To choose a predictable attribute, click **Target Attribute** and select the column from the list. If the target attribute is a nested column, or a column in a nested table, you must type the name of the nested column using the format \<Nested Table Name>(key).\<Nested Column>. If the only column used from the nested table is the key column, you can use \<Nested Table Name>(key).  
   
- After you select the predictable attribute, [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] automatically tests all models that use the same predictable attribute. If the target attribute contains discrete values, after you have selected the predictable column, you can optionally type a target state, if there is a specific value that you want to predict.  
+ After you select the predictable attribute, [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] automatically tests all models that use the same predictable attribute. If the target attribute contains discrete values, after you have selected the predictable column, you can optionally type a target state, if there is a specific value that you want to predict.  
   
  The selection of the target state affects the measures that are returned. If you specify a target attribute—that is, a column name—and do not pick a specific value that you want the model to predict, by default the model will be evaluated on its prediction of the most probable state.  
   
- When you use cross-validation with clustering models, there is no predictable column; instead, you select **#Cluster** from the list in the **Target Attribute** list box. After you have selected this option, other options that are not relevant to clustering models, such as **Target State**, are disabled. [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] will then test all clustering models that are associated with the mining structure.  
+ When you use cross-validation with clustering models, there is no predictable column; instead, you select **#Cluster** from the list in the **Target Attribute** list box. After you have selected this option, other options that are not relevant to clustering models, such as **Target State**, are disabled. [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] will then test all clustering models that are associated with the mining structure.  
   
 ## Tools for Cross-Validation  
  You can use cross-validation from the Data Mining Designer, or you can perform cross-validation by running stored procedures.  
@@ -94,12 +94,12 @@ manager: "jhubbard"
  If you use the Data Mining Designer tools to perform cross-validation, you can configure the training and accuracy results parameters in a single dialog box. This makes it easier to set up and view results. You can measure the accuracy of all mining models that are related to a single mining structure and then immediately view the results in an HTML report. However, the stored procedures offer some advantages, such as added customizations and the ability to script the process.  
   
 ### Cross-Validation in Data Mining Designer  
- You can perform cross-validation by using the **Cross-Validation** tab of the Mining Accuracy Chart view in either [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or SQL Server Development Studio.  
+ You can perform cross-validation by using the **Cross-Validation** tab of the Mining Accuracy Chart view in either [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or SQL Server Development Studio.  
   
  To see an example of how to create a cross-validation report using the user interface, see [Create a Cross-Validation Report](../../analysis-services/data-mining/create-a-cross-validation-report.md).  
   
 ### Cross-Validation Stored Procedures  
- For advanced users, cross-validation is also available in the form of fully parameterized system stored procedures. You can run the stored procedures by connecting to an instance of [!INCLUDE[ssASCurrent](../../analysis-services/includes/ssascurrent-md.md)] from [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], or from any managed code application.  
+ For advanced users, cross-validation is also available in the form of fully parameterized system stored procedures. You can run the stored procedures by connecting to an instance of [!INCLUDE[ssASCurrent](../../a9notintoc/includes/ssascurrent-md.md)] from [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], or from any managed code application.  
   
  The stored procedures are grouped by mining model type. One set of stored procedures works with clustering models only. The other set of stored procedures works with other mining models.  
   
@@ -179,7 +179,7 @@ manager: "jhubbard"
   
 |Topics|Links|  
 |------------|-----------|  
-|Describes how to set cross-validation parameters in SQL Server Development Studio.|[Cross-Validation Tab &#40;Mining Accuracy Chart View&#41;](../Topic/Cross-Validation%20Tab%20\(Mining%20Accuracy%20Chart%20View\).md)|  
+|Describes how to set cross-validation parameters in SQL Server Development Studio.|[Cross-Validation Tab &#40;Mining Accuracy Chart View&#41;](../../a9retired/cross-validation-tab-mining-accuracy-chart-view.md)|  
 |Describes the metrics that are provided by cross-validation|[Cross-Validation Formulas](../../analysis-services/data-mining/cross-validation-formulas.md)|  
 |Explains the cross-validation report format and defines the statistical measures provided for each model type.|[Measures in the Cross-Validation Report](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)|  
 |Lists the stored procedures for computing cross-validation statistics.|[Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)|  

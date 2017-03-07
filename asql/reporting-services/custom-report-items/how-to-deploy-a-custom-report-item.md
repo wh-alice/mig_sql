@@ -20,7 +20,7 @@ ms.author: "carlasab"
 manager: "erikre"
 ---
 # How to: Deploy a Custom Report Item
-  To deploy a custom report item in [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], you must modify the report server configuration files and copy the design-time and run-time component assemblies into the appropriate application folders for both Report Designer and the report server.  
+  To deploy a custom report item in [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)], you must modify the report server configuration files and copy the design-time and run-time component assemblies into the appropriate application folders for both Report Designer and the report server.  
   
 ### To deploy a custom report item  
   

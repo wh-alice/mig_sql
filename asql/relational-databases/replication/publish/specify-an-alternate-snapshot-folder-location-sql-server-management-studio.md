@@ -34,7 +34,7 @@ manager: "jhubbard"
   
      To compress the snapshot files, select **Compress snapshot files in this location**. Compression is typically used for low bandwidth connections and alternate snapshot locations on removable media, such as a CD-ROM.  
   
-2.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+2.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 ## See Also  
  [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)   

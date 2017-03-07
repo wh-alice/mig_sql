@@ -26,7 +26,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # smalldatetime (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Defines a date that is combined with a time of day. The time is based on a 24-hour day, with seconds always zero (:00) and without fractional seconds.  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
  **smalldatetime** is not ANSI or ISO 8601 compliant.  
   
 ##  <a name="_datetime"></a> Converting Date and Time Data  
- When you convert to date and time data types, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] rejects all values it cannot recognize as dates or times. For information about using the CAST and CONVERT functions with date and time data, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+ When you convert to date and time data types, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] rejects all values it cannot recognize as dates or times. For information about using the CAST and CONVERT functions with date and time data, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ### Converting smalldatetime to Other Date and Time Types  
  This section describes what occurs when a **smalldatetime** data type is converted to other date and time data types.  

@@ -38,7 +38,7 @@ manager: "jhubbard"
  Is an **int** expression between 1 and the number of points in the **geography** instance.  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **geography**  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] return type: **geography**  
   
  CLR return type: **SqlGeography**  
   

@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Create a Dimension by Using an Existing Table
-  In [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], you can use the Dimension Wizard in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] to create a dimension from an existing table. You do this by selecting the **Use an existing table** option on the **Select Creation Method** page of the wizard. If you select this option, the wizard bases the dimension structure on the dimension tables, their columns, and any relationships between those columns in an existing data source view. The wizard samples the data in the source table and related tables. It uses this data to define attribute columns that are based on the columns in the dimension tables, and to define hierarchies of attributes (called *user-defined* hierarchies). After you use the Dimension Wizard to create your dimension, you can use Dimension Designer to add, remove, and configure attributes and hierarchies in the dimension.  
+  In [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], you can use the Dimension Wizard in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] to create a dimension from an existing table. You do this by selecting the **Use an existing table** option on the **Select Creation Method** page of the wizard. If you select this option, the wizard bases the dimension structure on the dimension tables, their columns, and any relationships between those columns in an existing data source view. The wizard samples the data in the source table and related tables. It uses this data to define attribute columns that are based on the columns in the dimension tables, and to define hierarchies of attributes (called *user-defined* hierarchies). After you use the Dimension Wizard to create your dimension, you can use Dimension Designer to add, remove, and configure attributes and hierarchies in the dimension.  
   
  When you are using an existing table to create a dimension, the Dimension Wizard guides you through the following:  
   
@@ -52,21 +52,21 @@ manager: "erikre"
 ## Selecting Dimension Attributes  
  After selecting the dimension tables, you use the **Select Dimension Attributes** page to select the attributes that you want to include in the dimension from these tables. All of the underlying columns from all these tables are available as potential dimension attributes. The dimension key attribute must be selected and enabled for browsing.  
   
- By default, the wizard sets the type of an attribute to **Regular**. However, you might want to map specific attributes to a different attribute type that better represents the data. For example, the dbo.DimAccount table in the [!INCLUDE[ssSampleDBCoShort](../../analysis-services/data-mining/includes/sssampledbcoshort-md.md)] DW sample database contains an AccountCodeAlternateKey column that provides the account number. Instead of setting the type to **Regular** for this attribute, you might want to map this attribute to the **Account Number** type.  
+ By default, the wizard sets the type of an attribute to **Regular**. However, you might want to map specific attributes to a different attribute type that better represents the data. For example, the dbo.DimAccount table in the [!INCLUDE[ssSampleDBCoShort](../../a9notintoc/includes/sssampledbcoshort-md.md)] DW sample database contains an AccountCodeAlternateKey column that provides the account number. Instead of setting the type to **Regular** for this attribute, you might want to map this attribute to the **Account Number** type.  
   
 > [!NOTE]  
->  If the dimension type and standard attribute types are not set when you create the dimension, use the Business Intelligence Wizard to set these values after you create the dimension. For more information, see [Add Dimension Intelligence to a Dimension](../Topic/Add%20Dimension%20Intelligence%20to%20a%20Dimension.md) or (for an Accounts type dimension) [Add Account Intelligence to a Dimension](../Topic/Add%20Account%20Intelligence%20to%20a%20Dimension.md).  
+>  If the dimension type and standard attribute types are not set when you create the dimension, use the Business Intelligence Wizard to set these values after you create the dimension. For more information, see [Add Dimension Intelligence to a Dimension](../../analysis-services/multidimensional-models/bi-wizard-add-dimension-intelligence-to-a-dimension.md) or (for an Accounts type dimension) [Add Account Intelligence to a Dimension](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
  The wizard automatically sets the dimension type based on the attribute types that are specified. The attribute types specified in the wizard set the **Type** property for the attributes. The **Type** property settings for the dimension and its attributes provide information about the contents of a dimension to server and client applications. In some cases, these **Type** property settings only provide guidance for client applications and are optional. In other cases, as for Accounts, Time, or Currency dimensions, these **Type** property settings determine specific server-based behavior and might be required to implement certain cube behavior.  
   
- For more information about dimension and attribute types, see [Dimension Types](../Topic/Dimension%20Types.md), [Configure Attribute Types](../Topic/Configure%20Attribute%20Types.md).  
+ For more information about dimension and attribute types, see [Dimension Types](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md), [Configure Attribute Types](../../analysis-services/multidimensional-models/attribute-properties-configure-attribute-types.md).  
   
 ## Defining Account Intelligence  
   
 > [!NOTE]  
 >  The Dimension Wizard displays this step only if you defined an **Account Type** dimension attribute on the **Select Dimension Attributes** page of the wizard.  
   
- You use the **Define Account Intelligence** page to create an Account type dimension. If you are creating an Account type dimension, you have to map standard account types supported by [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] to members of the account type attribute in the dimension. The server uses these mappings to provide separate aggregation functions and aliases for each type of account data.  
+ You use the **Define Account Intelligence** page to create an Account type dimension. If you are creating an Account type dimension, you have to map standard account types supported by [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] to members of the account type attribute in the dimension. The server uses these mappings to provide separate aggregation functions and aliases for each type of account data.  
   
  To map these account types, the wizard provides a table with the following columns:  
   
@@ -75,12 +75,12 @@ manager: "erikre"
 -   The **Built-In Account Types** column lists the corresponding standard account types supported by the server. If the source data uses standard names, the wizard automatically maps the source type to the server type, and populates the **Built-In Account Types** column with this information. If the server does not map the account types or you want to change the mapping, select a different type from the list in the **Built-In Account Types** column.  
   
 > [!NOTE]  
->  If the account types are not mapped when the wizard creates an Accounts dimension, use the Business Intelligence Wizard to configure these mappings after you create the dimension. For more information, see [Add Account Intelligence to a Dimension](../Topic/Add%20Account%20Intelligence%20to%20a%20Dimension.md).  
+>  If the account types are not mapped when the wizard creates an Accounts dimension, use the Business Intelligence Wizard to configure these mappings after you create the dimension. For more information, see [Add Account Intelligence to a Dimension](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
 ## Completing the Wizard  
  The wizard scans dimension tables to detect relationships. The wizard will create attribute relationships between key attributes in snowflake dimensions automatically.  
   
- The wizard also automatically detects if a parent-child relationship exists in the dimension. A parent-child relationship exists when a parent attribute references members of the key attribute of the dimension. This relationship defines hierarchical relationships and aggregation paths between leaf members of the dimension. For more information about parent-child hierarchies, see [Attributes in Parent-Child Hierarchies](../Topic/Attributes%20in%20Parent-Child%20Hierarchies.md).  
+ The wizard also automatically detects if a parent-child relationship exists in the dimension. A parent-child relationship exists when a parent attribute references members of the key attribute of the dimension. This relationship defines hierarchical relationships and aggregation paths between leaf members of the dimension. For more information about parent-child hierarchies, see [Attributes in Parent-Child Hierarchies](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
   
  On the **Completing the Wizard** page, you complete the wizard by typing a name for the new dimension and reviewing the dimension structure.  
   

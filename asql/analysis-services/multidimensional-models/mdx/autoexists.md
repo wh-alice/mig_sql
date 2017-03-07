@@ -62,7 +62,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Notice that 0 is used to designate the column axis, which is shorthand for axis(0) - which is the column axis.  
   
- The previous query only returns cells for members from each attribute hierarchy in the query that exist with each other. The previous query can also be written using the new * variant of the [* (Crossjoin) (MDX)](../Topic/*%20\(Crossjoin\)%20\(MDX\).md) function.  
+ The previous query only returns cells for members from each attribute hierarchy in the query that exist with each other. The previous query can also be written using the new * variant of the [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx-operator-reference.md) function.  
   
 ```  
 SELECT   
@@ -85,7 +85,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  The cells values returned will be identical, although the metadata in the result set will be different. For example, with the previous query, the Country hierarchy was moved to the slicer axis (in the WHERE clause) and therefore does not appear explicitly in the result set.  
   
- Each of these three previous queries demonstrates the effect of the auto-exists behavior in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].  
+ Each of these three previous queries demonstrates the effect of the auto-exists behavior in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].  
   
 ## Deep and Shallow Autoexists  
  Autoexists can be applied to the expressions as Deep or Shallow. **Deep Autoexists** means that all expressions will be evaluated to meet the deepest possible space after applying the slicer expressions, the sub select expressions in the axis, and so on. **Shallow Autoexists** means that external expressions are evaluated before the current expression and those results are passed to the current expression. The default setting is deep autoexists.  
@@ -308,7 +308,7 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists behavior can be modified by using the AUTOEXISTS=[1|2|3] parameter in the connection string; see [Supported XMLA Properties &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md) and <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> for parameter usage.  
+ Autoexists behavior can be modified by using the AUTOEXISTS=[1|2|3] parameter in the connection string; see [Supported XMLA Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) and <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> for parameter usage.  
   
 ## See Also  
  [Key Concepts in MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   

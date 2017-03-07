@@ -16,20 +16,20 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Generate Data Feeds from a Report (Report Builder and SSRS)
-  You can generate Atom-compliant data feeds from paginated reports, and then use the data feeds in applications, such as the [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] client, that can consume data feeds.  
+  You can generate Atom-compliant data feeds from paginated reports, and then use the data feeds in applications, such as the [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] client, that can consume data feeds.  
   
- The [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Atom rendering extension generates an Atom service document that lists the data feeds available from a report. The document lists at least one data feed for each data region in the report. Depending on the type of data region and the data that the data region displays, [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] might generate multiple data feeds from a data region.  
+ The [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] Atom rendering extension generates an Atom service document that lists the data feeds available from a report. The document lists at least one data feed for each data region in the report. Depending on the type of data region and the data that the data region displays, [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] might generate multiple data feeds from a data region.  
   
  Atom service document contains a unique identifier for each the data feed and you use the identifier in a URL to view the content of the data feed.  
   
  For more information, see [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ### To generate an Atom service document  
   
-1.  on the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, navigate to the report for which you want to generate data feeds.  
+1.  on the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, navigate to the report for which you want to generate data feeds.  
   
 2.  Click the report.  
   

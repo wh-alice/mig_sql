@@ -17,7 +17,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # How Permissions Are Determined (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], the simplest way to configure security is to assign model object permissions to a group that the user is a member of.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], the simplest way to configure security is to assign model object permissions to a group that the user is a member of.  
   
  Security becomes more complex when:  
   

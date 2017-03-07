@@ -43,7 +43,7 @@ manager: "erikre"
  To maximize performance while also reducing latency, caching can also be used without dropping the current MOLAP objects. Queries then continue against the MOLAP objects while data is read into and processed in a new cache. This method provides better performance but may result in queries returning old data while the new cache is being built.  
   
 ## See Also  
- [Dimension Storage](../Topic/Dimension%20Storage.md)   
+ [Dimension Storage](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
  [Set Partition Storage &#40;Analysis Services - Multidimensional&#41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   
   

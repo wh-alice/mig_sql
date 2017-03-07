@@ -20,18 +20,18 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Scripting and PowerShell with Reporting Services
-  [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] supports a wide range of development and management scenarios through script, including the rs.exe command line utility, PowerShell cmdlets for SharePoint mode report servers, and leveraging the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] object model from PowerShell for both Native and SharePoint mode.  
+  [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] supports a wide range of development and management scenarios through script, including the rs.exe command line utility, PowerShell cmdlets for SharePoint mode report servers, and leveraging the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] object model from PowerShell for both Native and SharePoint mode.  
   
--   Administrators can write script in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] to automate how they deploy and manage a report server installation. Administrators can also generate and run [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] scripts that create, configure, and update a report server database. Administrators can also use the record and playback script features in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] to automate routine maintenance tasks.  
+-   Administrators can write script in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] to automate how they deploy and manage a report server installation. Administrators can also generate and run [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] scripts that create, configure, and update a report server database. Administrators can also use the record and playback script features in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] to automate routine maintenance tasks.  
   
 -   Developers can create custom applications that include script. You can run script that makes calls to the Report Server Web service. Almost any operation that you can write in managed code can also be written in script.  
   
--   [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] supports [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] .NET script as the script language that can be processed by the RS.exe utility, a script host that runs on the report server.  
+-   [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] supports [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] .NET script as the script language that can be processed by the RS.exe utility, a script host that runs on the report server.  
   
 ## Reporting Services SharePoint mode PowerShell cmdlets and samples  
  ![PowerShell related content](../../analysis-services/instances/install/windows/media/rs-powershellicon.jpg "PowerShell related content")  
   
- [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] SharePoint mode includes [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] cmdlets for report server administration.  
+ [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] SharePoint mode includes [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] cmdlets for report server administration.  
   
 -   [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server/sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md) Includes the following examples:  
   

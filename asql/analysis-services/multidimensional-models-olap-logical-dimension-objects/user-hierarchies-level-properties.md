@@ -32,6 +32,6 @@ manager: "erikre"
 |SourceAttribute|Contains the name of the source attribute on which the level is based.|  
   
 ## See Also  
- [User Hierarchy Properties](../Topic/User%20Hierarchy%20Properties.md)  
+ [User Hierarchy Properties](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   
   

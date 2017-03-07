@@ -33,7 +33,7 @@ manager: "erikre"
  To quickly get started, see [Tutorial: Format Text &#40;Report Builder&#41;](../../reporting-services/tutorials/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## In This Section  
  [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
@@ -43,7 +43,7 @@ manager: "erikre"
  Describes how to insert and use HTML in a report.  
   
  [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
- Describes how to use standard and custom formatting strings that are supported by [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)].  
+ Describes how to use standard and custom formatting strings that are supported by [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)].  
   
  [Formatting Lines, Colors, and Images &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)  
  Describes how to format lines, gridlines, colors, and images within report items and data regions.  

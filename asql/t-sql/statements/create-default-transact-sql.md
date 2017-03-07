@@ -33,7 +33,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)] Instead, use default definitions created using the DEFAULT keyword of ALTER TABLE or CREATE TABLE.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -56,15 +56,15 @@ AS constant_expression [ ; ]
 ## Remarks  
  A default name can be created only in the current database. Within a database, default names must be unique by schema. When a default is created, use **sp_bindefault** to bind it to a column or to an alias data type.  
   
- If the default is not compatible with the column to which it is bound, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] generates an error message when trying to insert the default value. For example, N/A cannot be used as a default for a **numeric** column.  
+ If the default is not compatible with the column to which it is bound, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] generates an error message when trying to insert the default value. For example, N/A cannot be used as a default for a **numeric** column.  
   
  If the default value is too long for the column to which it is bound, the value is truncated.  
   
- CREATE DEFAULT statements cannot be combined with other [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements in a single batch.  
+ CREATE DEFAULT statements cannot be combined with other [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements in a single batch.  
   
  A default must be dropped before creating a new one of the same name, and the default must be unbound by executing **sp_unbindefault** before it is dropped.  
   
- If a column has both a default and a rule associated with it, the default value must not violate the rule. A default that conflicts with a rule is never inserted, and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] generates an error message each time it attempts to insert the default.  
+ If a column has both a default and a rule associated with it, the default value must not violate the rule. A default that conflicts with a rule is never inserted, and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] generates an error message each time it attempts to insert the default.  
   
  When bound to a column, a default value is inserted when:  
   
@@ -98,7 +98,7 @@ CREATE DEFAULT phonedflt AS 'unknown';
 ### B. Binding a default  
  The following example binds the default created in example A. The default takes effect only if no entry is specified for the `Phone` column of the `Contact` table. Note that omitting any entry is different from explicitly stating NULL in an INSERT statement.  
   
- Because a default named `phonedflt` does not exist, the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement fails. This example is for illustration only.  
+ Because a default named `phonedflt` does not exist, the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement fails. This example is for illustration only.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -114,10 +114,10 @@ sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';
  [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [sp_bindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
- [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
+ [sp_bindefault &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [sp_help &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-help-transact-sql.md)   
+ [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-helptext-transact-sql.md)   
+ [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-rename-transact-sql.md)   
+ [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-unbindefault-transact-sql.md)  
   
   

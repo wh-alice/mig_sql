@@ -27,7 +27,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Disable or Pause Report and Subscription Processing
-  There are several approaches you can use to disable or pause [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report and subscription processing. The approaches in this topic range from disabling a subscription to interrupting the data source connection. Not all approaches are possible with both [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] server modes.The following tables summaries the methods and supported [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] server modes:  
+  There are several approaches you can use to disable or pause [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] report and subscription processing. The approaches in this topic range from disabling a subscription to interrupting the data source connection. Not all approaches are possible with both [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] server modes.The following tables summaries the methods and supported [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] server modes:  
   
 ##  <a name="bkmk_top"></a> In this topic  
   
@@ -43,13 +43,13 @@ manager: "erikre"
 ##  <a name="bkmk_disable_subscription"></a> Enable and disable subscriptions  
   
 > [!TIP]  
->  New in [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)]! **Enable and disable subscriptions**. New user interface options allow you to quickly disable and enable subscriptions. The disabled subscriptions maintain their other configuration properties such as schedule and can be easily enabled. You can also programmatically enable and disable subscriptions or audit which subscriptions are disabled.  
+>  New in [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)]! **Enable and disable subscriptions**. New user interface options allow you to quickly disable and enable subscriptions. The disabled subscriptions maintain their other configuration properties such as schedule and can be easily enabled. You can also programmatically enable and disable subscriptions or audit which subscriptions are disabled.  
   
  ![reporting services subscription ribbon](../../reporting-services/subscriptions/media/ssrs-subscription-ribbon.png "reporting services subscription ribbon")  
   
  In Native mode Report Manager, browse to the subscription from either the **My Subscriptions** page or the **Manage** page of an individual subscription. Select one or more subscriptions and then click either the disable ![disable a reporting services subscription](../../reporting-services/subscriptions/media/ssrs-disable-subscription.png "disable a reporting services subscription") button or enable button ![enable a reporting services subscription](../../reporting-services/subscriptions/media/ssrs-enable-subscription.png "enable a reporting services subscription") on the ribbon. Disabled subscriptions are flagged with a warning icon ![status warning of a reporting services subscriptio](../../reporting-services/subscriptions/media/ssrs-subscription-warning.png "status warning of a reporting services subscriptio") and the status is listed as **Disabled**.  
   
- [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] writes a row in the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] log when a subscription is disabled and another entry when the subscription is enabled. For example, in report server log file:  
+ [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] writes a row in the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] log when a subscription is disabled and another entry when the subscription is enabled. For example, in report server log file:  
   
  `C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__10_16_2014_00_02_18.log`  
   
@@ -120,7 +120,7 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="bkmk_pause_schedule"></a> Pause a shared schedule  
  If a report or subscription runs from a shared schedule, you can pause the schedule to prevent processing. All report and subscription processing driven by the schedule is deferred until the schedule is resumed.  
   
--   **SharePoint mode:** ![SharePoint Settings](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") In **Site settings**, select **Manage shared schedules**. Select the schedule and click **Pause selected schedules**.  
+-   **SharePoint mode:** ![SharePoint Settings](../../a9retired/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") In **Site settings**, select **Manage shared schedules**. Select the schedule and click **Pause selected schedules**.  
   
 -   **Native mode:** In report manager, click **Site Settings**. Select the schedule and then click **Pause**.  
   
@@ -129,7 +129,7 @@ ForEach ($subscription in $subscriptions)
   
  Note the report still loads even if the data source is unavailable. The report does not contain data, but users with appropriate permissions can access the property pages, security settings, report history, and subscription information associated with the report.  
   
--   **SharePoint mode:** To disable a shared data source in a SharePoint mode report server, browse to the document library that contains the data source. ![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon") Click the data source and then clear the **Enable this data source** check box.  
+-   **SharePoint mode:** To disable a shared data source in a SharePoint mode report server, browse to the document library that contains the data source. ![Shared data source icon](../../a9retired/media/hlp-16datasource.png "Shared data source icon") Click the data source and then clear the **Enable this data source** check box.  
   
 -   **Native mode:** To disable a shared data source in a Native mode report server, open the data source in Report Manager and clear the **Enable this data source** check box.  
   
@@ -141,9 +141,9 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="bkmk_remove_manage_subscriptions_permission"></a> Remove manage subscription permissions from role (Native mode)  
  To prevent users from creating subscriptions, clear the **Manage individual subscriptions** task from the role. When you remove this task, the Subscription pages are not available. In Report Manager, the My Subscriptions page appears to be empty (it cannot be deleted), even if it previously contained subscriptions. Removing subscription-related tasks prevents users from creating and modifying subscriptions, but does not delete existing subscriptions. Existing subscriptions continues to execute until you delete them. To remove the permission:  
   
-1.  Open [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and con  
+1.  Open [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] and con  
   
-2.  Connect to the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report server.  
+2.  Connect to the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] report server.  
   
 3.  Expand the **Security** node.  
   
@@ -167,7 +167,7 @@ ForEach ($subscription in $subscriptions)
  [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Configure Report Manager &#40;Native Mode&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
- [Security Properties Page, Items &#40;Report Manager&#41;](../Topic/Security%20Properties%20Page,%20Items%20\(Report%20Manager\).md)  
+ [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md)   
+ [Security Properties Page, Items &#40;Report Manager&#41;](../../a9retired/security-properties-page-items-report-manager.md)  
   
   

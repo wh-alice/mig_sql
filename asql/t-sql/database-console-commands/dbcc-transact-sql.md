@@ -41,9 +41,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # DBCC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  The [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] programming language provides DBCC statements that act as Database Console Commands for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  The [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] programming language provides DBCC statements that act as Database Console Commands for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  Database Console Command statements are grouped into the following categories.  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
  DBCC commands take input parameters and return values. All DBCC command parameters can accept both Unicode and DBCS literals.  
   
 ## DBCC Internal Database Snapshot Usage  
- The following DBCC commands operate on an internal read-only database snapshot that the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] creates. This prevents blocking and concurrency problems when these commands are executed. For more information, see [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
+ The following DBCC commands operate on an internal read-only database snapshot that the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] creates. This prevents blocking and concurrency problems when these commands are executed. For more information, see [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
 |||  
 |-|-|  
@@ -65,13 +65,13 @@ manager: "jhubbard"
 |DBCC CHECKCATALOG|DBCC CHECKFILEGROUP|  
 |DBCC CHECKTABLE||  
   
- When you execute one of these DBCC commands, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] creates a database snapshot and brings it to a transactionally consistent state. The DBCC command then runs the checks against this snapshot. After the DBCC command is completed, this snapshot is dropped.  
+ When you execute one of these DBCC commands, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] creates a database snapshot and brings it to a transactionally consistent state. The DBCC command then runs the checks against this snapshot. After the DBCC command is completed, this snapshot is dropped.  
   
  Sometimes an internal database snapshot is not required or cannot be created. When this occurs, the DBCC command executes against the actual database. If the database is online, the DBCC command uses table-locking to ensure the consistency of the objects that it is checking. This behavior is the same as if the WITH TABLOCK option were specified.  
   
  An internal database snapshot is not created when a DBCC command is executed:  
   
--   Against **master**, and the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running in single-user mode.  
+-   Against **master**, and the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running in single-user mode.  
   
 -   Against a database other than **master**, but the database has been put in single-user mode by using the ALTER DATABASE statement.  
   
@@ -112,7 +112,7 @@ manager: "jhubbard"
 |DBCC ALLOC REPAIR|Database repairs are performed during this phase if REPAIR_FAST, REPAIR_REBUILD, or REPAIR_ALLOW_DATA_LOSS is specified, and there are allocation errors that must be repaired.|Progress is not reported.|  
 |DBCC SYS CHECK|Database system tables are checked during this phase.|Progress reported at the database page level.<br /><br /> The progress reporting value is updated for every 1000 database pages that are checked.|  
 |DBCC SYS REPAIR|Database repairs are performed during this phase if REPAIR_FAST, REPAIR_REBUILD, or REPAIR_ALLOW_DATA_LOSS is specified, and there are system table errors that must be repaired.|Progress reported at the individual repair level.<br /><br /> The counter is updated for each repair that is completed.|  
-|DBCC SSB CHECK|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Service Broker objects are checked during this phase.<br /><br /> Note: This phase is not executed when DBCC CHECKTABLE is executed.|Progress is not reported.|  
+|DBCC SSB CHECK|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Service Broker objects are checked during this phase.<br /><br /> Note: This phase is not executed when DBCC CHECKTABLE is executed.|Progress is not reported.|  
 |DBCC CHECKCATALOG|The consistency of database catalogs are checked during this phase.<br /><br /> Note: This phase is not executed when DBCC CHECKTABLE is executed.|Progress is not reported.|  
 |DBCC IVIEW CHECK|The logical consistency of any indexed views present in the database is checked during this phase.|Progress reported at the level of the individual database view that is being checked.|  
   
@@ -151,6 +151,6 @@ manager: "jhubbard"
 |[DBCC dllname (FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
 |[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)|[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)|  
 |[DBCC FREESESSIONCACHE](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
-|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](https://support.microsoft.com/en-us/kb/3177838) <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] Service Pack 2.|  
+|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](https://support.microsoft.com/en-us/kb/3177838) <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] Service Pack 2.|  
   
   

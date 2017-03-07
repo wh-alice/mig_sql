@@ -184,7 +184,7 @@ manager: "erikre"
   
 ## See Also  
  [Dimension Relationships](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../Topic/Install%20Sample%20Data%20and%20Projects%20for%20the%20Analysis%20Services%20Multidimensional%20Modeling%20Tutorial.md)   
+ [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../../analysis-services/tutorials/install-sample-data-and-projects.md)   
  [Deploy Analysis Services Projects &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
  [Perspectives in Multidimensional Models](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   

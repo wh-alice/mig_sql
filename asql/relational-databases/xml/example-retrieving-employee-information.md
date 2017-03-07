@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Example: Retrieving Employee Information
-  This example retrieves an employee ID and employee name for each employee. In the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database, the employeeID can be obtained from the BusinessEntityID column in the Employee table. Employee names can be obtained from the Person table. The BusinessEntityID column can be used to join the tables.  
+  This example retrieves an employee ID and employee name for each employee. In the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database, the employeeID can be obtained from the BusinessEntityID column in the Employee table. Employee names can be obtained from the Person table. The BusinessEntityID column can be used to join the tables.  
   
  Assume that you want FOR XML EXPLICIT transformation to generate XML as shown in the following:  
   

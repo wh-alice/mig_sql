@@ -35,7 +35,7 @@ manager: "jhubbard"
 ## Examples  
  To create working samples using these examples, you need to have the following installed:  
   
--   Microsoft [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client  
+-   Microsoft [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client  
   
 -   MDAC 2.6 or later  
   

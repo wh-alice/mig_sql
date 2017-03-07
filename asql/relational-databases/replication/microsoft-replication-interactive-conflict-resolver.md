@@ -45,9 +45,9 @@ manager: "jhubbard"
  Logs the details of the conflict in system tables.  
   
 ## See Also  
- [Interactive Conflict Resolution](../Topic/Interactive%20Conflict%20Resolution.md)   
+ [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/aeee9546-4480-49f9-8b1e-c71da1f056c7.md)   
  [Synchronize a Subscription Using Windows Synchronization Manager &#40;Windows Synchronization Manager&#41;](../../relational-databases/replication/80f15dd6-e84d-4f96-9866-5b34ea531f1e.md)   
- [Advanced Merge Replication Conflict Detection and Resolution](../Topic/Advanced%20Merge%20Replication%20Conflict%20Detection%20and%20Resolution.md)  
+ [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

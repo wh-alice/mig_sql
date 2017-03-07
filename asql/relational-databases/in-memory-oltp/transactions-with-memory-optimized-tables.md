@@ -18,7 +18,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Transactions with Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
 This article describes all the aspects of transactions that are specific to memory-optimized tables and natively compiled stored procedures.  
@@ -143,7 +143,7 @@ The following table lists the possible levels of transaction isolation, in seque
   
 When a memory-optimized table is involved, the lifetime of a transaction progresses through the phases as displayed in the following image.  
   
-![hekaton_transactions](../../relational-databases/in-memory-oltp/media/hekaton-transactions.gif)  
+![hekaton_transactions](../../a9retired/media/hekaton-transactions.gif)  
   
 Descriptions of the phases follow.  
   
@@ -327,7 +327,7 @@ In the following Transact-SQL code example:
   
 - [SET IMPLICIT_TRANSACTIONS](../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
   
-- [sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+- [sp_getapplock (Transact-SQL)](../../relational-databases/reference/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
 - [Row Versioning-based Isolation Levels in the Database Engine](http://msdn.microsoft.com/library/ms177404.aspx)  
   

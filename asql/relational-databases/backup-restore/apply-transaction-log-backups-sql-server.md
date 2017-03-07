@@ -23,7 +23,7 @@ manager: "jhubbard"
 # Apply Transaction Log Backups (SQL Server)
   The topic is relevant only for the full recovery model or bulk-logged recovery model.  
   
- This topic describes applying transaction log backups as part of restoring a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database.  
+ This topic describes applying transaction log backups as part of restoring a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database.  
  
   
 ##  <a name="Requirements"></a> Requirements for restoring transaction log backups  
@@ -40,7 +40,7 @@ manager: "jhubbard"
 ##  <a name="RecoveryAndTlogs"></a> Recovery and transaction logs  
  When you finish the restore operation and recover the database, recovery rolls back all incomplete transactions. This is known as the *undo phase*. Rolling back is required to restore the integrity of the database. After rollback, the database goes online, and no more transaction log backups can be applied to the database.  
   
- For example, a series of transaction log backups contain a long-running transaction. The start of the transaction is recorded in the first transaction log backup, but the end of the transaction is recorded in the second transaction log backup. There is no record of a commit or rollback operation in the first transaction log backup. If a recovery operation runs when the first transaction log backup is applied, the long-running transaction is treated as incomplete, and data modifications recorded in the first transaction log backup for the transaction are rolled back. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not allow for the second transaction log backup to be applied after this point.  
+ For example, a series of transaction log backups contain a long-running transaction. The start of the transaction is recorded in the first transaction log backup, but the end of the transaction is recorded in the second transaction log backup. There is no record of a commit or rollback operation in the first transaction log backup. If a recovery operation runs when the first transaction log backup is applied, the long-running transaction is treated as incomplete, and data modifications recorded in the first transaction log backup for the transaction are rolled back. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not allow for the second transaction log backup to be applied after this point.  
   
 > **NOTE:** In some circumstances, you can explicitly add a file during log restore.  
   
@@ -85,7 +85,7 @@ manager: "jhubbard"
   
  **To restore to your recovery point**  
   
--   [Restore a Database to the Point of Failure Under the Full Recovery Model &#40;Transact-SQL&#41;](../Topic/Restore%20a%20Database%20to%20the%20Point%20of%20Failure%20Under%20the%20Full%20Recovery%20Model%20\(Transact-SQL\).md)  
+-   [Restore a Database to the Point of Failure Under the Full Recovery Model &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery-model.md)  
   
 -   [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   

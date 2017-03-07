@@ -20,11 +20,11 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # ALTER DATABASE (Azure SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx_md](../../relational-databases/system-stored-procedures/includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx_md](../../relational-databases/reference/system-stored-procedures/includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 Modifies the name, maximum size, or service objective for a database.  
   
-![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -52,7 +52,7 @@ MAXSIZE
 The maximum size the database may grow to. Setting this value prevents the growth of the database size beyond the size set. The default *MAXSIZE* when not specified is 10240 GB (10 TB). Other possible values range from 250 GB up to 240 TB.  
   
 SERVICE_OBJECTIVE  
-Specifies the performance level. For more information about service objectives for [!INCLUDE[ssSDW_md](../../database-engine/configure/windows/includes/sssdw-md.md)], see [Scale Performance on SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-manage-compute-overview/).  
+Specifies the performance level. For more information about service objectives for [!INCLUDE[ssSDW_md](../../a9retired/includes/sssdw-md.md)], see [Scale Performance on SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-manage-compute-overview/).  
   
 ## Permissions  
 Requires these permissions:  

@@ -19,12 +19,12 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Perform Index Operations Online
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  This topic describes how to create, rebuild, or drop indexes online in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. The ONLINE option allows concurrent user access to the underlying table or clustered index data and any associated nonclustered indexes during these index operations. For example, while a clustered index is being rebuilt by one user, that user and others can continue to update and query the underlying data. When you perform data definition language (DDL) operations offline, such as building or rebuilding a clustered index; these operations hold exclusive locks on the underlying data and associated indexes. This prevents modifications and queries to the underlying data until the index operation is complete.  
+  This topic describes how to create, rebuild, or drop indexes online in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. The ONLINE option allows concurrent user access to the underlying table or clustered index data and any associated nonclustered indexes during these index operations. For example, while a clustered index is being rebuilt by one user, that user and others can continue to update and query the underlying data. When you perform data definition language (DDL) operations offline, such as building or rebuilding a clustered index; these operations hold exclusive locks on the underlying data and associated indexes. This prevents modifications and queries to the underlying data until the index operation is complete.  
   
 > [!NOTE]  
->  Online index operations are not available in every [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] edition. For more information, see Features Supported by the Editions of SQL Server 2016.  
+>  Online index operations are not available in every [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] edition. For more information, see Features Supported by the Editions of SQL Server 2016.  
   
  **In This Topic**  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 -   We recommend performing online index operations for business environments that operate 24 hours a day, seven days a week, in which the need for concurrent user activity during index operations is vital.  
   
--   The ONLINE option is available in the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements.  
+-   The ONLINE option is available in the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements.  
   
     -   [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)  
   
@@ -91,7 +91,7 @@ manager: "jhubbard"
   
 #### To create, rebuild, or drop an index online  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

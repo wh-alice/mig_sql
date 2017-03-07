@@ -33,7 +33,7 @@ manager: "jhubbard"
 |**Backup/Restore Throughput/sec**|Read/write throughput for backup and restore operations of a database per second. For example, you can measure how the performance of the database backup operation changes when more backup devices are used in parallel or when faster devices are used. Throughput of a database backup or restore operation allows you to determine the progress and performance of your backup and restore operations.|  
 |**Bulk Copy Rows/sec**|Number of rows bulk copied per second.|  
 |**Bulk Copy Throughput/sec**|Amount of data bulk copied (in kilobytes) per second.|  
-|**Commit table entries**|The size of the in-memory portion of the commit table for the database. For more information, see [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_commit_table%20\(Transact-SQL\).md).|  
+|**Commit table entries**|The size of the in-memory portion of the commit table for the database. For more information, see [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-dynamic-management-views/change-tracking-sys.dm-tran-commit-table.md).|  
 |**Data File(s) Size (KB)**|Cumulative size (in kilobytes) of all the data files in the database including any automatic growth. Monitoring this counter is useful, for example, for determining the correct size of **tempdb**.|  
 |**DBCC Logical Scan Bytes/sec**|Number of logical read scan bytes per second for database console commands (DBCC).|  
 |**Group Commit Time/sec**|Group stall time (microseconds) per second.|
@@ -48,7 +48,7 @@ manager: "jhubbard"
 |**Log Flush Write Time (ms)**|Time in milliseconds for performing writes of log flushes that were completed in the last second.|  
 |**Log Flushes/sec**|Number of log flushes per second.|  
 |**Log Growths**|Total number of times the transaction log for the database has been expanded.|  
-|**Log Pool Cache Misses/sec**|Number of requests for which the log block was not available in the log pool. The *log pool* is an in-memory cache of the transaction log. This cache is used to optimize reading the log for recovery, transaction replication, rollback, and [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)].|  
+|**Log Pool Cache Misses/sec**|Number of requests for which the log block was not available in the log pool. The *log pool* is an in-memory cache of the transaction log. This cache is used to optimize reading the log for recovery, transaction replication, rollback, and [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)].|  
 |**Log Pool Disk Reads/sec**|Number of disk reads that the log pool issued to fetch log blocks.|  
 |**Log Pool Hash Deletes/sec**|Rate of raw hash entry deletes from the Log Pool.|
 |**Log Pool Hash Inserts/sec**|Rate of raw hash entry inserts into the Log Pool.|

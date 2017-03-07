@@ -24,11 +24,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # OPENXML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  OPENXML provides a rowset view over an XML document. Because OPENXML is a rowset provider, OPENXML can be used in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements in which rowset providers such as a table, view, or the OPENROWSET function can appear.  
+  OPENXML provides a rowset view over an XML document. Because OPENXML is a rowset provider, OPENXML can be used in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements in which rowset providers such as a table, view, or the OPENROWSET function can appear.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -62,7 +62,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  Is the column name in the rowset.  
   
  *ColType*  
- Is the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data type of the column in the rowset. If the column types differ from the underlying **xml** data type of the attribute, type coercion occurs.  
+ Is the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data type of the column in the rowset. If the column types differ from the underlying **xml** data type of the attribute, type coercion occurs.  
   
  *ColPattern*  
  Is an optional, general XPath pattern that describes how the XML nodes should be mapped to the columns. If *ColPattern* is not specified, the default mapping (**attribute-centric** or **element-centric** mapping as specified by *flags*) takes place.  

@@ -24,17 +24,17 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Managing Scope and Context (MDX)
-  In [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)], a Multidimensional Expressions (MDX) script can apply to the entire cube, or to specific portions of the cube, at specific points within the execution of the script. The MDX script can take a layered approach to calculations within a cube through the use of calculation passes.  
+  In [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)], a Multidimensional Expressions (MDX) script can apply to the entire cube, or to specific portions of the cube, at specific points within the execution of the script. The MDX script can take a layered approach to calculations within a cube through the use of calculation passes.  
   
 > [!NOTE]  
->  For more information on how calculation passes can affect calculations, see [Understanding Pass Order and Solve Order &#40;MDX&#41;](../Topic/Understanding%20Pass%20Order%20and%20Solve%20Order%20\(MDX\).md).  
+>  For more information on how calculation passes can affect calculations, see [Understanding Pass Order and Solve Order &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md).  
   
  To control the calculation pass, scope, and context within an MDX script, you specifically use the CACULATE statement, the **This** function, and the SCOPE statement.  
   
 ## Using the CALCULATE Statement  
  The CALCULATE statement populates each cell in the cube with aggregated data. For example, the default MDX script has a single CALCULATE statement at the beginning of the script.  
   
- For more information on the syntax of the CALCULATE statement, see [CALCULATE Statement &#40;MDX&#41;](../Topic/CALCULATE%20Statement%20\(MDX\).md).  
+ For more information on the syntax of the CALCULATE statement, see [CALCULATE Statement &#40;MDX&#41;](../../../mdx/mdx-scripting-calculate.md).  
   
 > [!NOTE]  
 >  If the script contains a SCOPE statement that contains a CALCULATE statement, MDX evaluates the CALCULATE statement within the context of the subcube defined by the SCOPE statement, not against the whole cube.  
@@ -46,7 +46,7 @@ manager: "erikre"
 >  If the script contains a SCOPE statement that contains a **This** function, MDX evaluates the **This** function within the context of the subcube defined by the SCOPE statement, not against the whole cube.  
   
 ### This Function Example  
- The following MDX script command example uses the **This** function to increase the value of the Amount measure, in the Finance measure group of the [!INCLUDE[ssAWDWsp](../../../analysis-services/includes/ssawdwsp-md.md)] sample cube, to 10% higher for the children of the Redmond member in the Customer dimension:  
+ The following MDX script command example uses the **This** function to increase the value of the Amount measure, in the Finance measure group of the [!INCLUDE[ssAWDWsp](../../../a9notintoc/includes/ssawdwsp-md.md)] sample cube, to 10% higher for the children of the Redmond member in the Customer dimension:  
   
 ```  
 /* This SCOPE statement defines the current subcube */  
@@ -97,7 +97,7 @@ END SCOPE;
  A SCOPE statement can be nested within another SCOPE statement. However, as the SCOPE statement is not iterative, the primary purpose for nesting SCOPE statements is to further subdivide a subcube for special treatment.  
   
 ### SCOPE Statement Example  
- The following MDX script example uses a SCOPE statement to sets the value of the Amount measure, in the Finance measure group of the [!INCLUDE[ssAWDWsp](../../../analysis-services/includes/ssawdwsp-md.md)] sample cube, to 10% higher for the children of the Redmond member in the Customer dimension. However, another SCOPE statement changes the subcube to include the Amount measure for the children of the 2002 calendar year. Finally, the Amount measure is then aggregated only for that subcube, leaving the aggregated values for the Amount measure in other calendar years unchanged.  
+ The following MDX script example uses a SCOPE statement to sets the value of the Amount measure, in the Finance measure group of the [!INCLUDE[ssAWDWsp](../../../a9notintoc/includes/ssawdwsp-md.md)] sample cube, to 10% higher for the children of the Redmond member in the Customer dimension. However, another SCOPE statement changes the subcube to include the Amount measure for the children of the 2002 calendar year. Finally, the Amount measure is then aggregated only for that subcube, leaving the aggregated values for the Amount measure in other calendar years unchanged.  
   
 ```  
 /* Calculate the entire cube first. */  
@@ -110,7 +110,7 @@ SCOPE([Customer].&[Redmond].MEMBERS,
 END SCOPE;  
 ```  
   
- For more information on the syntax of the SCOPE statement, see [SCOPE Statement &#40;MDX&#41;](../Topic/SCOPE%20Statement%20\(MDX\).md).  
+ For more information on the syntax of the SCOPE statement, see [SCOPE Statement &#40;MDX&#41;](../../../mdx/mdx-scripting-scope.md).  
   
 ## See Also  
  [MDX Language Reference &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   

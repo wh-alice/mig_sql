@@ -35,7 +35,7 @@ manager: "jhubbard"
     -   [Specifying a Directory for FileTables at the Database Level](#BasicsDirectory)  
   
 ##  <a name="BasicsFilestream"></a> Enabling FILESTREAM at the Instance Level  
- FileTables extend the capabilities of the FILESTREAM feature of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Therefore you have to enable FILESTREAM for file I/O access at the Windows level and on the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] before you can create and use FileTables.  
+ FileTables extend the capabilities of the FILESTREAM feature of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Therefore you have to enable FILESTREAM for file I/O access at the Windows level and on the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] before you can create and use FileTables.  
   
 ###  <a name="HowToFilestream"></a> How To: Enable FILESTREAM at the Instance Level  
  For information about how to enable FILESTREAM, see [Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md).  
@@ -49,10 +49,10 @@ manager: "jhubbard"
  Before you can create FileTables in a database, the database must have a FILESTREAM filegroup. For more information about this prerequisite, see [Create a FILESTREAM-Enabled Database](../../relational-databases/blob/create-a-filestream-enabled-database.md).  
   
 ##  <a name="BasicsNTAccess"></a> Enabling Non-Transactional Access at the Database Level  
- FileTables let Windows applications obtain a Windows file handle to FILESTREAM data without requiring a transaction. To allow this non-transactional access to files stored in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you have to specify the desired level of non-transactional access at the database level for each database that will contain FileTables.  
+ FileTables let Windows applications obtain a Windows file handle to FILESTREAM data without requiring a transaction. To allow this non-transactional access to files stored in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], you have to specify the desired level of non-transactional access at the database level for each database that will contain FileTables.  
   
 ###  <a name="HowToCheckAccess"></a> How To: Check Whether Non-Transactional Access Is Enabled on Databases  
- Query the catalog view [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-filestream-options-transact-sql.md) and check the **non_transacted_access** and **non_transacted_access_desc** columns.  
+ Query the catalog view [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-filestream-options-transact-sql.md) and check the **non_transacted_access** and **non_transacted_access_desc** columns.  
   
 ```tsql  
 SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc  
@@ -114,7 +114,7 @@ GO
     GO  
     ```  
   
--   When you **restore a database**, call the [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) statement with the **DIRECTORY_NAME** FILESTREAM option.  
+-   When you **restore a database**, call the [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) statement with the **DIRECTORY_NAME** FILESTREAM option.  
   
     ```tsql  
     RESTORE DATABASE database_name  
@@ -126,7 +126,7 @@ GO
  You can specify a directory name in the **FILESTREAM Directory Name** field of the **Options** page of the **Database Properties** dialog box. For more information about this dialog box, see [Database Properties &#40;Options Page&#41;](../../relational-databases/databases/database-properties-options-page.md).  
   
 ###  <a name="viewnames"></a> How to: View Existing Directory Names for the Instance  
- To view the list of existing directory names for the instance, query the catalog view [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-filestream-options-transact-sql.md) and check the **filestream_database_directory_name** column.  
+ To view the list of existing directory names for the instance, query the catalog view [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-filestream-options-transact-sql.md) and check the **filestream_database_directory_name** column.  
   
 ```tsql  
 SELECT DB_NAME ( database_id ), directory_name  
@@ -144,7 +144,7 @@ GO
   
 -   When you attach or restore a database, the operation fails if the new database has a value for **DIRECTORY_NAME** that already exists in the target instance. Specify a unique value for **DIRECTORY_NAME** when you call **CREATE DATABASE FOR ATTACH** or **RESTORE DATABASE**.  
   
--   When you upgrade an existing database to [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], the value of **DIRECTORY_NAME** is null.  
+-   When you upgrade an existing database to [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], the value of **DIRECTORY_NAME** is null.  
   
 -   When you enable or disable non-transactional access at the database level, the operation does not check whether the directory name has been specified or whether it is unique.  
   

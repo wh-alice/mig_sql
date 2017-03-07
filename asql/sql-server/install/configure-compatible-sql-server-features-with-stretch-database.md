@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Configure compatible SQL Server features with Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Take simple steps to configure the following SQL Server features to work with Stretch Database.
 -   Always On
@@ -27,7 +27,7 @@ Take simple steps to configure the following SQL Server features to work with St
 ## Configure Always On with Stretch Database
 If you're using Always On with Stretch Database, you have to make sure that the database master key is available on the secondary replicas. Stretch Database uses the database master key to secure the credentials that it uses to connect to the remote Azure database.
 
-After you set up the Always On availability group, run the stored procedure **sp_control_dbmasterkey_password** on each secondary replica and provide the password for the Stretch-enabled database. For more info and examples, see [sp_control_dbmasterkey_password](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md). 
+After you set up the Always On availability group, run the stored procedure **sp_control_dbmasterkey_password** on each secondary replica and provide the password for the Stretch-enabled database. For more info and examples, see [sp_control_dbmasterkey_password](../../relational-databases/reference/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md). 
 
 ## Configure Always Encrypted with Stretch Database
 If you want to use Always Encrypted and Stretch Database together, you have to configure encryption on the selected columns before you enable Stretch Database on the table.

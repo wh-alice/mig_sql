@@ -39,7 +39,7 @@ manager: "jhubbard"
  **StandardInputVariable**  
  Select a variable to provide the input to the process, or click \<**New variable...**> to create a new variable:  
   
- **Related Topics:** [Add Variable](../Topic/Add%20Variable.md)  
+ **Related Topics:** [Add Variable](../../a9retired/add-variable.md)  
   
  **StandardOutputVariable**  
  Select a variable to capture the output of the process, or click \<**New variable...**> to create a new variable.  

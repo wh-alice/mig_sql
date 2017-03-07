@@ -29,11 +29,11 @@ manager: "jhubbard"
 # CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Generates a symmetric key and specifies its properties in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Generates a symmetric key and specifies its properties in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  This feature is incompatible with database export using Data Tier Application Framework (DACFx). You must drop all symmetric keys before exporting.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -100,13 +100,13 @@ CREATE SYMMETRIC KEY key_name
  Creates a new key can on the Extensible Key Management device.  If a key already exists on the device, the statement fails with error.  
   
  CREATION_DISPOSITION **=** OPEN_EXISTING  
- Maps a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] symmetric key to an existing Extensible Key Management key. If CREATION_DISPOSITION = OPEN_EXISTING is not provided, this defaults to CREATE_NEW.  
+ Maps a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] symmetric key to an existing Extensible Key Management key. If CREATION_DISPOSITION = OPEN_EXISTING is not provided, this defaults to CREATE_NEW.  
   
  *certificate_name*  
  Specifies the name of the certificate that will be used to encrypt the symmetric key. The certificate must already exist in the database.  
   
  **'** *password* **'**  
- Specifies a password from which to derive a TRIPLE_DES key with which to secure the symmetric key. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. You should always use strong passwords.  
+ Specifies a password from which to derive a TRIPLE_DES key with which to secure the symmetric key. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. You should always use strong passwords.  
   
  *symmetric_key_name*  
  Specifies a symmetric key to be used to encrypt the key that is being created. The specified key must already exist in the database, and the key must be open.  
@@ -115,7 +115,7 @@ CREATE SYMMETRIC KEY key_name
  Specifies an asymmetric key to be used to encrypt the key that is being created. This asymmetric key must already exist in the database.  
   
  \<algorithm>  
- Beginning with [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)], all algorithms other than AES_128, AES_192, and AES_256 are deprecated. To use older algorithms (not recommended) you must set the database to database compatibility level 120 or lower.  
+ Beginning with [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)], all algorithms other than AES_128, AES_192, and AES_256 are deprecated. To use older algorithms (not recommended) you must set the database to database compatibility level 120 or lower.  
   
 ## Remarks  
  When a symmetric key is created, the symmetric key must be encrypted by using at least one of the following: certificate, password, symmetric key, asymmetric key, or PROVIDER. The key can have more than one encryption of each type. In other words, a single symmetric key can be encrypted by using multiple certificates, passwords, symmetric keys, and asymmetric keys at the same time.  
@@ -132,9 +132,9 @@ CREATE SYMMETRIC KEY key_name
  There is no default encryption algorithm.  
   
 > [!IMPORTANT]  
->  We do not recommend using the RC4 and RC4_128 stream ciphers to protect sensitive data. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not further encode the encryption performed with such keys.  
+>  We do not recommend using the RC4 and RC4_128 stream ciphers to protect sensitive data. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not further encode the encryption performed with such keys.  
   
- Information about symmetric keys is visible in the [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys.symmetric-keys-transact-sql.md) catalog view.  
+ Information about symmetric keys is visible in the [sys.symmetric_keys](../../relational-databases/reference/system-catalog-views/sys.symmetric-keys-transact-sql.md) catalog view.  
   
  Symmetric keys cannot be encrypted by symmetric keys created from the encryption provider.  
   
@@ -148,13 +148,13 @@ CREATE SYMMETRIC KEY key_name
   
  **Deprecation of the RC4 algorithm:**  
   
- Repeated use of the same RC4 or RC4_128 KEY_GUID on different blocks of data will result in the same RC4 key because [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not provide a salt automatically. Using the same RC4 key repeatedly is a well known error that will result in very weak encryption. Therefore we have deprecated the RC4 and RC4_128 keywords. [!INCLUDE[ssNoteDepFutureDontUse](../../database-engine/availability-groups/windows/includes/ssnotedepfuturedontuse-md.md)]  
+ Repeated use of the same RC4 or RC4_128 KEY_GUID on different blocks of data will result in the same RC4 key because [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not provide a salt automatically. Using the same RC4 key repeatedly is a well known error that will result in very weak encryption. Therefore we have deprecated the RC4 and RC4_128 keywords. [!INCLUDE[ssNoteDepFutureDontUse](../../database-engine/availability-groups/windows/includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!WARNING]  
->  The RC4 algorithm is only supported for backward compatibility. New material can only be encrypted using RC4 or RC4_128 when the database is in compatibility level 90 or 100. (Not recommended.) Use a newer algorithm such as one of the AES algorithms instead. In [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] material encrypted using RC4 or RC4_128 can be decrypted in any compatibility level.  
+>  The RC4 algorithm is only supported for backward compatibility. New material can only be encrypted using RC4 or RC4_128 when the database is in compatibility level 90 or 100. (Not recommended.) Use a newer algorithm such as one of the AES algorithms instead. In [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] material encrypted using RC4 or RC4_128 can be decrypted in any compatibility level.  
   
 ## Permissions  
- Requires ALTER ANY SYMMETRIC KEY permission on the database. If AUTHORIZATION is specified, requires IMPERSONATE permission on the database user or ALTER permission on the application role. If encryption is by certificate or asymmetric key, requires VIEW DEFINITION permission on the certificate or asymmetric key. Only Windows logins, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] logins, and application roles can own symmetric keys. Groups and roles cannot own symmetric keys.  
+ Requires ALTER ANY SYMMETRIC KEY permission on the database. If AUTHORIZATION is specified, requires IMPERSONATE permission on the database user or ALTER permission on the application role. If encryption is by certificate or asymmetric key, requires VIEW DEFINITION permission on the certificate or asymmetric key. Only Windows logins, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] logins, and application roles can own symmetric keys. Groups and roles cannot own symmetric keys.  
   
 ## Examples  
   
@@ -183,7 +183,7 @@ GO
 ```  
   
 ### C. Creating a symmetric key using an Extensible Key Management (EKM) device  
- The following example creates a symmetric key called `MySymKey` by using a provider called `MyEKMProvider` and a key name of `KeyForSensitiveData`. It assigns authorization to `User1` and assumes that the system administrator has already registered the provider called `MyEKMProvider` in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ The following example creates a symmetric key called `MySymKey` by using a provider called `MyEKMProvider` and a key name of `KeyForSensitiveData`. It assigns authorization to `User1` and assumes that the system administrator has already registered the provider called `MyEKMProvider` in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ```  
 CREATE SYMMETRIC KEY MySymKey  
@@ -200,7 +200,7 @@ GO
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.symmetric-keys-transact-sql.md)   
  [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   

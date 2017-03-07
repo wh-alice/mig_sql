@@ -15,9 +15,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server XTP Cursors
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  The SQL Server XTP Cursors performance object contains counters related to internal In-Memory OLTP engine cursors. Cursors are the low-level building blocks the In-Memory OLTP engine uses to process [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] queries. As such, you do not typically have direct control over them.  
+  The SQL Server XTP Cursors performance object contains counters related to internal In-Memory OLTP engine cursors. Cursors are the low-level building blocks the In-Memory OLTP engine uses to process [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] queries. As such, you do not typically have direct control over them.  
   
  This table describes the **SQL Server XTP Cursors** counters.  
   

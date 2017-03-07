@@ -15,9 +15,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Upgrading Always On Availability Group Replica Instances
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  When upgrading a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Always On Availability Group to a new [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] version, to a new [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]service pack or cumulative update, or when installing to a new Windows service pack or cumulative update, you can reduce downtime for the primary replica to only a single manual failover by performing a rolling upgrade (or two manual failovers if failing back to the original primary). During the upgrade process, a secondary replica will not be available for failover or for read-only operations, and, after the upgrade, it may take some time for the secondary replica to catch up with the primary replica node depending upon the volume of activity on the primary replica node (so expect high network traffic).  
+  When upgrading a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Always On Availability Group to a new [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] version, to a new [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]service pack or cumulative update, or when installing to a new Windows service pack or cumulative update, you can reduce downtime for the primary replica to only a single manual failover by performing a rolling upgrade (or two manual failovers if failing back to the original primary). During the upgrade process, a secondary replica will not be available for failover or for read-only operations, and, after the upgrade, it may take some time for the secondary replica to catch up with the primary replica node depending upon the volume of activity on the primary replica node (so expect high network traffic).  
   
 > [!NOTE]  
 >  This topic limits the discussion to the upgrade of SQL Server itself. It does not cover upgrading the operating system containing the Windows Server Failover Clusting (WSFC) cluster. Upgrading the Windows operating system hosting the failover cluster is not supported for operating systems before Windows Server 2012 R2. To upgrade a cluster node running on Windows Server 2012 R2, see [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx)  
@@ -25,13 +25,13 @@ manager: "jhubbard"
 ## Prerequisites  
  Before you begin, review the following important information:  
   
--   [Supported Version and Edition Upgrades](../../../database-engine/install/windows/supported-version-and-edition-upgrades.md): Verify that you can upgrade to SQL Server 2016 from your version of the Windows operating system and version of SQL Server. For example, you cannot upgrade directly from a SQL Server 2005 instance to [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+-   [Supported Version and Edition Upgrades](../../../database-engine/install/windows/supported-version-and-edition-upgrades.md): Verify that you can upgrade to SQL Server 2016 from your version of the Windows operating system and version of SQL Server. For example, you cannot upgrade directly from a SQL Server 2005 instance to [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)].  
   
 -   [Choose a Database Engine Upgrade Method](../../../database-engine/install/windows/choose-a-database-engine-upgrade-method.md): Select the appropriate upgrade method and steps based on your review of supported version and edition upgrades and also based on other components installed in your environment to upgrade components in the correct order.  
   
 -   [Plan and Test the Database Engine Upgrade Plan](../../../database-engine/install/windows/plan-and-test-the-database-engine-upgrade-plan.md): Review the release notes and known upgrade issues, the pre-upgrade checklist, and develop and test the upgrade plan.  
   
--   [Hardware and Software Requirements for Installing SQL Server 2016](../Topic/Hardware%20and%20Software%20Requirements%20for%20Installing%20SQL%20Server%202016.md):  Review the software requirements for installing [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)]. If additional software is required, install it on each node before you begin the upgrade process to minimize any downtime.  
+-   [Hardware and Software Requirements for Installing SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Review the software requirements for installing [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)]. If additional software is required, install it on each node before you begin the upgrade process to minimize any downtime.  
   
 ## Rolling Upgrade Best Practices for Always On Availability Groups  
  The following best practices should be observed when performing server upgrades or updates in order to minimize downtime and data loss for your availability groups:  
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 -   Always fail over the availability group to a synchronous-commit secondary replica instance. If you fail over to an asynchronous-commit secondary replica instance, the databases will suffer data loss, and data movement is automatically suspended until you manually resume data movement.  
   
--   Do not upgrade the primary replica instance before upgrading or updating any other secondary replica instance. An upgraded primary replica can no longer ship logs to any secondary replica whose [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] instance that has not yet been upgraded to the same version. When data movement to a secondary replica is suspended, no automatic failover can occur for that replica, and your availability databases are vulnerable to data loss.  
+-   Do not upgrade the primary replica instance before upgrading or updating any other secondary replica instance. An upgraded primary replica can no longer ship logs to any secondary replica whose [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] instance that has not yet been upgraded to the same version. When data movement to a secondary replica is suspended, no automatic failover can occur for that replica, and your availability databases are vulnerable to data loss.  
   
 -   Before failing over an availability group, verify that the synchronization state of the failover target is SYNCHRONIZED.  
   
@@ -104,7 +104,7 @@ manager: "jhubbard"
   
 -   Carefully select a maintenance window during low client traffic  
   
--   While upgrading or updating [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] on the primary site, change the availability mode back to asynchronous commit, then revert to synchronous commit when you are ready to fail over to the primary site again  
+-   While upgrading or updating [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] on the primary site, change the availability mode back to asynchronous commit, then revert to synchronous commit when you are ready to fail over to the primary site again  
   
 ## Availability Group with Failover Cluster Instance Nodes  
  If an availability group contains failover cluster instance (FCI) nodes, you should upgrade the inactive nodes before you upgrade the active nodes. The figure below illustrates a common availability group scenario with FCIs for local high availability and asynchronous commit between the FCIs for remote disaster recovery, and the upgrade sequence.  
@@ -162,7 +162,7 @@ manager: "jhubbard"
 >  In many cases, after the rolling upgrade is completed, you will failback to the original primary replica.  
   
 ## See Also  
- [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../Topic/Upgrade%20to%20SQL%20Server%202016%20Using%20the%20Installation%20Wizard%20\(Setup\).md)   
+ [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../../database-engine/install/windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Install SQL Server 2016 from the Command Prompt](../../../database-engine/install/windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   

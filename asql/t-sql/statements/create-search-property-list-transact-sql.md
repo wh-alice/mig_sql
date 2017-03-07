@@ -28,11 +28,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CREATE SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Creates a new search property list. A search property list is used to specify one or more search properties that you want to include in a full-text index.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -60,7 +60,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
  Specifies the name of a user or role to own of the property list. *owner_name* must either be the name of a role of which the current user is a member, or the current user must have IMPERSONATE permission on *owner_name*. If not specified, ownership is given to the current user.  
   
 > [!NOTE]  
->  The owner can be changed by using the [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement.  
+>  The owner can be changed by using the [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement.  
   
 ## Remarks  
   
@@ -124,9 +124,9 @@ GO
 ## See Also  
  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
  [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)   
- [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.registered-search-properties-transact-sql.md)   
- [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.registered-search-property-lists-transact-sql.md)   
- [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-index-keywords-by-property-transact-sql.md)   
+ [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.registered-search-properties-transact-sql.md)   
+ [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.registered-search-property-lists-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-index-keywords-by-property-transact-sql.md)   
  [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)  
   

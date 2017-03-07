@@ -17,14 +17,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Large CLR User-Defined Types (OLE DB)
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
-  This topic discusses the changes to OLE DB in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client to support large common language runtime (CLR) user-defined types (UDTs).  
+  This topic discusses the changes to OLE DB in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client to support large common language runtime (CLR) user-defined types (UDTs).  
   
- For more information about support for large CLR UDTs in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client, see [Large CLR User-Defined Types](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). For a sample, see [Use Large CLR UDTs &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ For more information about support for large CLR UDTs in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client, see [Large CLR User-Defined Types](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). For a sample, see [Use Large CLR UDTs &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## Data Format  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client uses ~0 to represent the length of values that are of unlimited size for large object (LOB) types. ~0 also represents the size of CLR UDTs that are larger than 8,000 bytes.  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client uses ~0 to represent the length of values that are of unlimited size for large object (LOB) types. ~0 also represents the size of CLR UDTs that are larger than 8,000 bytes.  
   
  The following table shows data type mapping in parameters and rowsets:  
   

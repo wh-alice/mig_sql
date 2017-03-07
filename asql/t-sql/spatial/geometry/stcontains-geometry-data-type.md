@@ -22,13 +22,13 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # STContains (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-asdw-xxx_md](../../../relational-databases/system-stored-procedures/includes/tsql-appliesto-ss2012-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-asdw-xxx_md](../../../relational-databases/reference/system-stored-procedures/includes/tsql-appliesto-ss2012-xxxx-asdw-xxx-md.md)]
 
   Returns 1 if a **geometry** instance completely contains another **geometry** instance. Returns 0 if it does not.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)] through [current version](http://msdn.microsoft.com/library/bb500435.aspx)), [!INCLUDE[ssSDSfull](../../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../../a9notintoc/includes/sssql11-md.md)] through [current version](http://msdn.microsoft.com/library/bb500435.aspx)), [!INCLUDE[ssSDSfull](../../../a9retired/includes/sssdsfull-md.md)].|  
   
 ## Syntax  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
  Is another **geometry** instance to compare against the instance on which `STContains()` is invoked.  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **bit**  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] return type: **bit**  
   
  CLR return type: **SqlBoolean**  
   

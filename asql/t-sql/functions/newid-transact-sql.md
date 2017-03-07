@@ -23,11 +23,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # NEWID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx_md](../../relational-databases/system-dynamic-management-views/includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx_md](../../relational-databases/reference/system-dynamic-management-views/includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
   Creates a unique value of type **uniqueidentifier**.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -67,7 +67,7 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../analysis-services/includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|  
+|[!INCLUDE[applies](../../a9retired/includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]|  
   
  The following example creates the `cust` table with a **uniqueidentifier** data type, and uses NEWID to fill the table with a default value. In assigning the default value of `NEWID()`, each new and existing row has a unique value for the `CustomerID` column.  
   
@@ -122,7 +122,7 @@ GO
  [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-transact-sql.md)   
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/system-functions-transact-sql.md)   
  [uniqueidentifier &#40;Transact-SQL&#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
  [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   

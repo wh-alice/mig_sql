@@ -29,11 +29,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SET QUOTED_IDENTIFIER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Causes [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to follow the ISO rules regarding quotation mark delimiting identifiers and literal strings. Identifiers delimited by double quotation marks can be either [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] reserved keywords or can contain characters not generally allowed by the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] syntax rules for identifiers.  
+  Causes [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to follow the ISO rules regarding quotation mark delimiting identifiers and literal strings. Identifiers delimited by double quotation marks can be either [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] reserved keywords or can contain characters not generally allowed by the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] syntax rules for identifiers.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -50,9 +50,9 @@ SET QUOTED_IDENTIFIER ON
 ```  
   
 ## Remarks  
- When SET QUOTED_IDENTIFIER is ON, identifiers can be delimited by double quotation marks, and literals must be delimited by single quotation marks. When SET QUOTED_IDENTIFIER is OFF, identifiers cannot be quoted and must follow all [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] rules for identifiers. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md). Literals can be delimited by either single or double quotation marks.  
+ When SET QUOTED_IDENTIFIER is ON, identifiers can be delimited by double quotation marks, and literals must be delimited by single quotation marks. When SET QUOTED_IDENTIFIER is OFF, identifiers cannot be quoted and must follow all [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] rules for identifiers. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md). Literals can be delimited by either single or double quotation marks.  
   
- When SET QUOTED_IDENTIFIER is ON (default), all strings delimited by double quotation marks are interpreted as object identifiers. Therefore, quoted identifiers do not have to follow the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] rules for identifiers. They can be reserved keywords and can include characters not generally allowed in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] identifiers. Double quotation marks cannot be used to delimit literal string expressions; single quotation marks must be used to enclose literal strings. If a single quotation mark (**'**) is part of the literal string, it can be represented by two single quotation marks (**"**). SET QUOTED_IDENTIFIER must be ON when reserved keywords are used for object names in the database.  
+ When SET QUOTED_IDENTIFIER is ON (default), all strings delimited by double quotation marks are interpreted as object identifiers. Therefore, quoted identifiers do not have to follow the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] rules for identifiers. They can be reserved keywords and can include characters not generally allowed in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] identifiers. Double quotation marks cannot be used to delimit literal string expressions; single quotation marks must be used to enclose literal strings. If a single quotation mark (**'**) is part of the literal string, it can be represented by two single quotation marks (**"**). SET QUOTED_IDENTIFIER must be ON when reserved keywords are used for object names in the database.  
   
  When SET QUOTED_IDENTIFIER is OFF, literal strings in expressions can be delimited by single or double quotation marks. If a literal string is delimited by double quotation marks, the string can contain embedded single quotation marks, such as apostrophes.  
   
@@ -62,7 +62,7 @@ SET QUOTED_IDENTIFIER ON
   
  SET QUOTED_IDENTIFIER must be ON when you invoke XML data type methods.  
   
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] automatically set QUOTED_IDENTIFIER to ON when connecting. This can be configured in ODBC data sources, in ODBC connection attributes, or OLE DB connection properties. The default for SET QUOTED_IDENTIFIER is OFF for connections from DB-Library applications.  
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] automatically set QUOTED_IDENTIFIER to ON when connecting. This can be configured in ODBC data sources, in ODBC connection attributes, or OLE DB connection properties. The default for SET QUOTED_IDENTIFIER is OFF for connections from DB-Library applications.  
   
  When a table is created, the QUOTED IDENTIFIER option is always stored as ON in the table's metadata even if the option is set to OFF when the table is created.  
   
@@ -201,10 +201,10 @@ GO
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [EXECUTE &#40;Transact-SQL&#41;](../Topic/EXECUTE%20\(Transact-SQL\).md)   
+ [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
- [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)  
+ [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-rename-transact-sql.md)  
   
   

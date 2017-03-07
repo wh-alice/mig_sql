@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Table-Valued Parameters (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   ODBC support for table-valued parameters lets a client application send parameterized data to the server more efficiently, by sending multiple rows to the server with one call.  
   
@@ -68,12 +68,12 @@ manager: "jhubbard"
  Describes how to process errors on table-valued parameter column values.  
   
  [Cross-Version Compatibility](../../relational-databases/native-client-odbc-table-valued-parameters/cross-version-compatibility.md)  
- Describes conflicts that can occur when table-valued parameters are used by a client or server of a version earlier than [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)].  
+ Describes conflicts that can occur when table-valued parameters are used by a client or server of a version earlier than [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)].  
   
  [ODBC Table-Valued Parameter API Summary](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-table-valued-parameter-api-summary.md)  
  Lists the ODBC functions that support table-valued parameters.  
   
- [ODBC Table-Valued Parameter Programming Examples](../Topic/ODBC%20Table-Valued%20Parameter%20Programming%20Examples.md)  
+ [ODBC Table-Valued Parameter Programming Examples](../../a9retired/odbc-table-valued-parameter-programming-examples.md)  
  Describes how to perform common tasks.  
   
 ## See Also  

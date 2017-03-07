@@ -18,13 +18,13 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../a9retired/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Displays the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] execution plan for a query running on a specific [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)] Compute node or Control node. Use this to troubleshoot query performance problems while queries are running on the Compute nodes and Control node.  
+  Displays the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] execution plan for a query running on a specific [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)] Compute node or Control node. Use this to troubleshoot query performance problems while queries are running on the Compute nodes and Control node.  
   
- Once query performance problems are understood for SMP [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] queries running on the Compute nodes, there are several ways to improve performance. Possible ways to improve query performance on the Compute nodes include creating multi-column statistics, creating non-clustered indexes, or using query hints.  
+ Once query performance problems are understood for SMP [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] queries running on the Compute nodes, there are several ways to improve performance. Possible ways to improve query performance on the Compute nodes include creating multi-column statistics, creating non-clustered indexes, or using query hints.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -44,23 +44,23 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
   
 ## Arguments  
  *distribution_id*  
- Identifier for the distribution that is running the query plan. This is an integer and cannot be NULL. Used when targeting [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)].  
+ Identifier for the distribution that is running the query plan. This is an integer and cannot be NULL. Used when targeting [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)].  
   
  *pdw_node_id*  
  Identifier for the node that is running the query plan. This is an integer and cannot be NULL. Used when targeting an Appliance.  
   
  *spid*  
- Identifier for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] session that is running the query plan. This is an integer and cannot be NULL.  
+ Identifier for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] session that is running the query plan. This is an integer and cannot be NULL.  
   
 ## Permissions  
- Requires CONTROL permission on [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)].  
+ Requires CONTROL permission on [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)].  
   
  Requires VIEW-SERVER-STATE permission on the Appliance.  
   
-## Examples: [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)]  
+## Examples: [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)]  
   
 ### A. DBCC PDW_SHOWEXECUTIONPLAN Basic Syntax  
- When running on a [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] instance, modify the above query to also select the distribution_id.  
+ When running on a [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] instance, modify the above query to also select the distribution_id.  
   
 ```  
 SELECT [sql_spid], [pdw_node_id], [request_id], [dms_step_index], [type], [start_time], [end_time], [status], [distribution_id]  
@@ -75,7 +75,7 @@ order by request_id, [dms_step_index];
 DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );  
 ```  
   
-## Examples: [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### B. DBCC PDW_SHOWEXECUTIONPLAN Basic Syntax  
  The query that is running too long is either running a DMS query plan operation or a SQL query plan operation.  

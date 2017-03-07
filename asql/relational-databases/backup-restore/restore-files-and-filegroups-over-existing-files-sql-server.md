@@ -23,9 +23,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Restore Files and Filegroups over Existing Files (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes how to restore files and filegroups over existing files in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to restore files and filegroups over existing files in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 #### To restore files and filegroups over existing files  
   
-1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)], expand that instance, and then expand **Databases**.  
+1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)], expand that instance, and then expand **Databases**.  
   
 2.  Right-click the database that you want, point to **Tasks**, point to **Restore**, and then click **Files and Filegroups**.  
   
@@ -102,7 +102,7 @@ manager: "jhubbard"
   
 7.  In the **Restore options** panel, select **Overwrite the existing database (WITH REPLACE)**. The restore operation overwrites any existing databases and their related files, even if another database or file already exists with the same name.  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
@@ -165,7 +165,7 @@ GO
   
 ## See Also  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restore Files and Filegroups &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)   
  [Copy Databases with Backup and Restore](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)  
   

@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # KeyNotFound Element (ASSL)
-  Specifies how [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] responds when it encounters a referential integrity error.  
+  Specifies how [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] responds when it encounters a referential integrity error.  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- Referential integrity errors occur when a foreign key value in a dependent table does not have a corresponding entry in the parent table. This error occurs when [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] processes a dimension in which the fact table references a foreign key value that does not exist in the dimension table for that dimension, or when [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] processes a partition when the dimension main table for a dimension that is included in the partition references a key value that does not exist in another associated dimension table. (In the case of dimensions with parent-child hierarchies and parent attributes, this can also occur when the dimension main table for a dimension that is included in the partition references a key value that does not exist in the same dimension table.)  
+ Referential integrity errors occur when a foreign key value in a dependent table does not have a corresponding entry in the parent table. This error occurs when [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] processes a dimension in which the fact table references a foreign key value that does not exist in the dimension table for that dimension, or when [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] processes a partition when the dimension main table for a dimension that is included in the partition references a key value that does not exist in another associated dimension table. (In the case of dimensions with parent-child hierarchies and parent attributes, this can also occur when the dimension main table for a dimension that is included in the partition references a key value that does not exist in the same dimension table.)  
   
  The value of this element is limited to one of the strings in the following table.  
   

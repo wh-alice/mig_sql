@@ -48,7 +48,7 @@ manager: "erikre"
   
      Mining structures can be processed, and when they are processed, the children mining models are processed or retrained.  
   
- The following sample code creates a mining structure to forecast sales in a time series. Before running the sample code, make sure that the database *db*, passed as parameter for `CreateSalesForecastingMiningStructure`, contains in `db.DataSourceViews[0]` a reference to the view *dbo.vTimeSeries* in the [!INCLUDE[ssAWDWsp](../../../analysis-services/includes/ssawdwsp-md.md)] sample database.  
+ The following sample code creates a mining structure to forecast sales in a time series. Before running the sample code, make sure that the database *db*, passed as parameter for `CreateSalesForecastingMiningStructure`, contains in `db.DataSourceViews[0]` a reference to the view *dbo.vTimeSeries* in the [!INCLUDE[ssAWDWsp](../../../a9notintoc/includes/ssawdwsp-md.md)] sample database.  
   
 ```  
 public static MiningStructure CreateSalesForecastingMiningStructure(Database db)  
@@ -139,9 +139,9 @@ public static MiningModel CreateSalesForecastingMiningModel(MiningStructure ms)
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
  [AMO Fundamental Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
- [Introducing AMO Classes](../Topic/Introducing%20AMO%20Classes.md)   
+ [Introducing AMO Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO Data Mining Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)   
- [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../Topic/Logical%20Architecture%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
+ [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

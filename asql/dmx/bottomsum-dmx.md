@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # BottomSum (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns, in order of increasing rank, the bottom-most rows of a table whose cumulative total is at least a specified value.  
   
@@ -43,7 +43,7 @@ BottomSum(<table expression>, <rank expression>, <sum>)
  The **BottomSum** function returns the bottom-most rows in increasing order of rank. The rank is based on the evaluated value of the \<rank expression> argument for each row, such that the sum of the \<rank expression> values is at least the given total that is specified by the \<sum> argument. **BottomSum** returns the smallest number of elements possible while still meeting the specified sum value.  
   
 ## Examples  
- The following example creates a prediction query against the Association model that you build by using the [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md).  
+ The following example creates a prediction query against the Association model that you build by using the [Basic Data Mining Tutorial](../a9notintoc/basic-data-mining-tutorial.md).  
   
  To understand how BottomSum works, it might be helpful to first execute a prediction query that returns only the nested table.  
   

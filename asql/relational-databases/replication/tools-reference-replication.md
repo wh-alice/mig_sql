@@ -18,7 +18,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Tools Reference (Replication)
-  [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provides several tools for implementing, administering, and troubleshooting replication. These include [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], programming interfaces, and other [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows components.  
+  [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] provides several tools for implementing, administering, and troubleshooting replication. These include [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], programming interfaces, and other [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows components.  
   
 ## See Also  
  [Technical Reference &#40;Replication&#41;](../../relational-databases/replication/technical-reference-replication.md)  

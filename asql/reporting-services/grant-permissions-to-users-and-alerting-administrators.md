@@ -16,7 +16,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Grant Permissions to Users and Alerting Administrators
-  Before users and alerting administrators can create, edit, delete, and view data alerts they must be granted SharePoint permissions. There are no special permissions to use with the [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] data alerting feature, you use the built-in SharePoint permissions.  
+  Before users and alerting administrators can create, edit, delete, and view data alerts they must be granted SharePoint permissions. There are no special permissions to use with the [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] data alerting feature, you use the built-in SharePoint permissions.  
   
  **Information workers**—Permissions must include the Create Alert and View Items SharePoint permissions. The built-in SharePoint permission levels named Design, Contribute, Read, and View Only include the Create Alert and View Items SharePoint permissions. You can also create a custom permission level with the permissions required to support users that create, edit, run, and view data alerts.  
   
@@ -42,7 +42,7 @@ manager: "erikre"
   
     -   If you selected **Grant users permissions directly**, select a permission level.  
   
-6.  [!INCLUDE[clickOK](../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../a9notintoc/includes/clickok-md.md)]  
   
 ## See Also  
  [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](../reporting-services/security/2467c657-a3bf-4ec3-a88c-8877df19823d.md)   

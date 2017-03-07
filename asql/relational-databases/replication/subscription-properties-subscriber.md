@@ -32,7 +32,7 @@ manager: "jhubbard"
  If an option is displayed as read-only, it can only be set when the subscription is created. If you want to set options that are not available in the New Subscription Wizard, create the subscription with stored procedures. For more information, see [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) and [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   
 > [!NOTE]  
->  If a Distribution Agent or Merge Agent job has not yet been created for the subscription, many subscription properties are not displayed. To create an agent job for a pull subscription, Execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (for a subscription to a snapshot or transactional publication) or [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (for a subscription to a merge publication).  
+>  If a Distribution Agent or Merge Agent job has not yet been created for the subscription, many subscription properties are not displayed. To create an agent job for a pull subscription, Execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (for a subscription to a snapshot or transactional publication) or [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (for a subscription to a merge publication).  
   
 ## Options for all subscriptions  
  **Initialize published data from a snapshot**  
@@ -53,7 +53,7 @@ manager: "jhubbard"
  If you select any value other than **Default location** for the **Snapshot Location** option, you must specify a path to the snapshot folder.  
   
  **Use Windows Synchronization Manager**  
- Determines whether this subscription can be synchronized using [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows Synchronization Manager.  
+ Determines whether this subscription can be synchronized using [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows Synchronization Manager.  
   
  **Security**  
  Click the **Agent process account** row, and then click the properties button (**...**) to change the account under which the Distribution Agent or Merge Agent runs at the Subscriber. The security options related to connections depend on the type of subscription:  
@@ -68,11 +68,11 @@ manager: "jhubbard"
   
 ## Options for transactional subscriptions  
  **Updatable subscription**  
- Determines whether Subscriber changes are replicated back to the Publisher. Changes can be replicated using queued updating or immediate updating. The option **Subscriber update method** determines which method to use. For more information, see [Updatable Subscriptions for Transactional Replication](../Topic/Updatable%20Subscriptions%20for%20Transactional%20Replication.md).  
+ Determines whether Subscriber changes are replicated back to the Publisher. Changes can be replicated using queued updating or immediate updating. The option **Subscriber update method** determines which method to use. For more information, see [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
 ## Options for merge subscriptions  
  **Partition definition (HOST_NAME)**  
- For a publication that uses parameterized filters, merge replication evaluates one of two system functions (or both if the filter references both functions) during synchronization to determine the data that a Subscriber should receive: **SUSER_SNAME()** or **HOST_NAME()**. By default, **HOST_NAME()** returns the name of the computer on which the Merge Agent is running, but you can override this value in the New Subscription Wizard. For more information on parameterized filters and overriding **HOST_NAME()**, see [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md).  
+ For a publication that uses parameterized filters, merge replication evaluates one of two system functions (or both if the filter references both functions) during synchronization to determine the data that a Subscriber should receive: **SUSER_SNAME()** or **HOST_NAME()**. By default, **HOST_NAME()** returns the name of the computer on which the Merge Agent is running, but you can override this value in the New Subscription Wizard. For more information on parameterized filters and overriding **HOST_NAME()**, see [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Subscription type** and **Priority**  
  Displays whether the subscription is a client or server subscription (this cannot be changed after the subscription has been created). Server subscriptions can republish data to other Subscribers and can be assigned a priority for conflict resolution.  
@@ -80,10 +80,10 @@ manager: "jhubbard"
  If you selected a subscription type of server in the New Subscription Wizard, the Subscriber is given a priority that is used during conflict resolution  
   
  **Resolve conflicts interactively**  
- Determines whether to use the Interactive Resolver user interface to resolve conflicts during merge synchronization. This requires a value of **Enable** for **Use Windows Synchronization Manager**. For more information, see [Interactive Conflict Resolution](../Topic/Interactive%20Conflict%20Resolution.md).  
+ Determines whether to use the Interactive Resolver user interface to resolve conflicts during merge synchronization. This requires a value of **Enable** for **Use Windows Synchronization Manager**. For more information, see [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
  **Web Synchronization**  
- **Use Web Synchronization** determines whether to connect to a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Internet Information Services (IIS) server to synchronize the subscription. This option is available only if the publication is enabled for Web synchronization. For more information, see [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
+ **Use Web Synchronization** determines whether to connect to a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Internet Information Services (IIS) server to synchronize the subscription. This option is available only if the publication is enabled for Web synchronization. For more information, see [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
  If you select **True** for **Use Web Synchronization**:  
   

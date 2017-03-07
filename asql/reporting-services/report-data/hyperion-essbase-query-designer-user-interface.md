@@ -25,21 +25,21 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Hyperion Essbase Query Designer User Interface
-  [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] provides a graphical query designer for building Multidimensional Expression (MDX) queries for a [!INCLUDE[extEssbase](../../reporting-services/report-data/includes/extessbase-md.md)] data source. The MDX graphical query designer has two modes: Design mode and Query mode. Each mode provides a Metadata pane from which you can drag members from a cube defined on the data source to build an MDX query that retrieves data when the report is processed.  
+  [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] provides a graphical query designer for building Multidimensional Expression (MDX) queries for a [!INCLUDE[extEssbase](../../a9retired/includes/extessbase-md.md)] data source. The MDX graphical query designer has two modes: Design mode and Query mode. Each mode provides a Metadata pane from which you can drag members from a cube defined on the data source to build an MDX query that retrieves data when the report is processed.  
   
 > [!IMPORTANT]  
 >  Users access data sources when they create and run queries. You should grant minimal permissions on the data sources, such as read-only permissions.  
   
- For more information about working with a [!INCLUDE[extEssbase](../../reporting-services/report-data/includes/extessbase-md.md)] multidimensional data source, see [Hyperion Essbase Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md).  
+ For more information about working with a [!INCLUDE[extEssbase](../../a9retired/includes/extessbase-md.md)] multidimensional data source, see [Hyperion Essbase Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md).  
   
  This section describes the toolbar buttons and query designer panes for each mode of the graphical query designer.  
   
 ## Graphical Query Designer in Design Mode  
- When you edit an MDX query for a dataset that uses a [!INCLUDE[extEssbase](../../reporting-services/report-data/includes/extessbase-md.md)] data source, the graphical query designer opens in Design mode.  
+ When you edit an MDX query for a dataset that uses a [!INCLUDE[extEssbase](../../a9retired/includes/extessbase-md.md)] data source, the graphical query designer opens in Design mode.  
   
  The following figure labels the panes for Design mode.  
   
- ![Query Designer for Hyperion Essbase data source](../../reporting-services/report-data/media/rsqd-dshyperionessbase-mdx-designmode.gif "Query Designer for Hyperion Essbase data source")  
+ ![Query Designer for Hyperion Essbase data source](../../a9retired/media/rsqd-dshyperionessbase-mdx-designmode.gif "Query Designer for Hyperion Essbase data source")  
   
  The following table lists the panes in this mode.  
   
@@ -62,19 +62,19 @@ manager: "erikre"
 |------------|-----------------|  
 |**Edit As Text**|Toggle between the text-based query designer and the graphical query designer. Not available for this data source type.|  
 |**Import**|Import an existing query from a report definition (.rdl) file on the file system. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Refresh dataset fields](../../reporting-services/report-data/media/rsqdicon-refreshfields.gif "Refresh dataset fields")|Refresh metadata from the data source.|  
-|![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Display the **Calculated Member Builder** dialog box. Use this to create or edit expressions for a calculated member, including setting the **Solve Order** property.|  
-|![Toggle for show empty cells](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|Switch between showing and not showing empty cells in the Data pane. (This is the equivalent to using the NON EMPTY clause in MDX).|  
-|![AutoExecute the query](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "AutoExecute the query")|Automatically run the query and show the result every time a change is made, for example, deleting a column in the Data pane. Results are shown in the Data pane.|  
-|![Delete](../../reporting-services/report-data/media/rsqdicon-delete.gif "Delete")|Delete the selected item from the query. Use this button to delete selected rows in the Filter pane.|  
-|![Run the query](../../reporting-services/report-data/media/rsqdicon-run.gif "Run the query")|Run the query and display the results in the Data pane.|  
-|![Cancel the query](../../reporting-services/report-data/media/rsqdicon-cancel.gif "Cancel the query")|Cancel the query.|  
-|![Switch to Design mode](../../reporting-services/report-data/media/rsqdicon-designmode.gif "Switch to Design mode")|Switch between Design mode and Query mode.|  
+|![Refresh dataset fields](../../a9retired/media/rsqdicon-refreshfields.gif "Refresh dataset fields")|Refresh metadata from the data source.|  
+|![Add calculated member](../../a9retired/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Display the **Calculated Member Builder** dialog box. Use this to create or edit expressions for a calculated member, including setting the **Solve Order** property.|  
+|![Toggle for show empty cells](../../a9retired/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|Switch between showing and not showing empty cells in the Data pane. (This is the equivalent to using the NON EMPTY clause in MDX).|  
+|![AutoExecute the query](../../a9retired/media/rsqdicon-autoexecute.gif "AutoExecute the query")|Automatically run the query and show the result every time a change is made, for example, deleting a column in the Data pane. Results are shown in the Data pane.|  
+|![Delete](../../a9retired/media/rsqdicon-delete.gif "Delete")|Delete the selected item from the query. Use this button to delete selected rows in the Filter pane.|  
+|![Run the query](../../a9retired/media/rsqdicon-run.gif "Run the query")|Run the query and display the results in the Data pane.|  
+|![Cancel the query](../../a9retired/media/rsqdicon-cancel.gif "Cancel the query")|Cancel the query.|  
+|![Switch to Design mode](../../a9retired/media/rsqdicon-designmode.gif "Switch to Design mode")|Switch between Design mode and Query mode.|  
   
 ## Graphical Query Designer in Query Mode  
  To change the graphical query designer to Query mode, click the **Design Mode** toggle button on the toolbar. The following figure indicates the parts of the query designer in Query mode.  
   
- ![Query Designer in Query Mode for Hyperion](../../reporting-services/report-data/media/rsqd-hyperionessbase-mdx-querymode.gif "Query Designer in Query Mode for Hyperion")  
+ ![Query Designer in Query Mode for Hyperion](../../a9retired/media/rsqd-hyperionessbase-mdx-querymode.gif "Query Designer in Query Mode for Hyperion")  
   
  The following table describes the function of each pane.  
   
@@ -92,11 +92,11 @@ manager: "erikre"
   
 -   **Edit As Text**  
   
--   **Add Calculated Member** (![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **Add Calculated Member** (![Add calculated member](../../a9retired/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
--   **Show Empty Cells** (![Toggle for show empty cells](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Toggle for show empty cells"))  
+-   **Show Empty Cells** (![Toggle for show empty cells](../../a9retired/media/rsqdicon-showemptycells.gif "Toggle for show empty cells"))  
   
--   **AutoExecute** (![AutoExecute the query](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "AutoExecute the query"))  
+-   **AutoExecute** (![AutoExecute the query](../../a9retired/media/rsqdicon-autoexecute.gif "AutoExecute the query"))  
   
 ## See Also  
  [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   

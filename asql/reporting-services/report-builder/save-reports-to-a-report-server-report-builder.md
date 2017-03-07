@@ -50,6 +50,6 @@ manager: "erikre"
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Saving Reports &#40;Report Builder&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
- [Export a Report as Another File Type &#40;Report Builder and SSRS&#41;](../Topic/Export%20a%20Report%20as%20Another%20File%20Type%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Export a Report as Another File Type &#40;Report Builder and SSRS&#41;](../../a9retired/export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   
   

@@ -285,7 +285,7 @@ COMMIT TRAN
 >  Choosing the approach that will work for the application when you are using change tracking (or any custom tracking mechanism), requires significant analysis. Therefore, it is much simpler to use snapshot isolation.  
   
 ##  <a name="Handles"></a> How Change Tracking Handles Changes to a Database  
- Some applications that use change tracking perform two-way synchronization with another data store. That is, changes that are made in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database are updated in the other data store, and changes that are made in the other store are updated in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database.  
+ Some applications that use change tracking perform two-way synchronization with another data store. That is, changes that are made in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database are updated in the other data store, and changes that are made in the other store are updated in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database.  
   
  When an application updates the local database with changes from another data store, the application must perform the following operations:  
   
@@ -435,9 +435,9 @@ COMMIT TRAN
  [About Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Manage Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)   
  [Enable and Disable Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)   
- [CHANGETABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
- [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
- [WITH CHANGE_TRACKING_CONTEXT &#40;Transact-SQL&#41;](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)  
+ [CHANGETABLE &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/changetable-transact-sql.md)   
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/change-tracking-min-valid-version-transact-sql.md)   
+ [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/change-tracking-current-version-transact-sql.md)   
+ [WITH CHANGE_TRACKING_CONTEXT &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/with-change-tracking-context-transact-sql.md)  
   
   

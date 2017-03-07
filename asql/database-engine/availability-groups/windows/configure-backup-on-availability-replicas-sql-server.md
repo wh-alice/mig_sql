@@ -23,7 +23,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Configure Backup on Availability Replicas (SQL Server)
-  This topic describes how to configure backup on secondary replicas for an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  This topic describes how to configure backup on secondary replicas for an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)].  
   
 > [!NOTE]  
 >  For an introduction to backup on secondary replicas, see [Active Secondaries: Backup on Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
@@ -96,7 +96,7 @@ manager: "jhubbard"
 6.  Use the **Replica backup priorities** grid to change the backup priority of the availability replicas. This grid displays the current backup priority of each server instance that hosts a replica for the availability group. The grid columns are as follows:  
   
      **Server Instance**  
-     The name of the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that hosts the availability replica.  
+     The name of the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] that hosts the availability replica.  
   
      **Backup Priority (Lowest=1, Highest=100)**  
      Specifies your priority for performing backups on this replica relative to the other replicas in the same availability group. The value is an integer in the range of 0..100. 1 indicates the lowest priority, and 100 indicates the highest priority. If **Backup Priority** = 1, the availability replica would be chosen for performing backups only if no higher priority availability replicas are currently available.  
@@ -170,7 +170,7 @@ manager: "jhubbard"
     ```  
   
 > [!NOTE]  
->  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+>  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
@@ -179,7 +179,7 @@ manager: "jhubbard"
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 ##  <a name="FollowUp"></a> Follow Up: After Configuring Backup on Secondary Replicas  
- To take the automated backup preference into account for a given availability group, on each server instance that hosts an availability replica whose backup priority is greater than zero (>0), you need to script backup jobs for the databases in the availability group. To determine whether the current replica is the preferred backup replica, use the [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys.fn-hadr-backup-is-preferred-replica-transact-sql.md) function in your backup script. If the availability replica that is hosted by the current server instance is the preferred replica for backups, this function returns 1. If not, the function returns 0. By running a simple script on each availability replica that queries this function, you can determine which replica should run a given backup job. For example, a typical snippet of a backup-job script would look like:  
+ To take the automated backup preference into account for a given availability group, on each server instance that hosts an availability replica whose backup priority is greater than zero (>0), you need to script backup jobs for the databases in the availability group. To determine whether the current replica is the preferred backup replica, use the [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/reference/system-functions/sys.fn-hadr-backup-is-preferred-replica-transact-sql.md) function in your backup script. If the availability replica that is hosted by the current server instance is the preferred replica for backups, this function returns 1. If not, the function returns 0. By running a simple script on each availability replica that queries this function, you can determine which replica should run a given backup job. For example, a typical snippet of a backup-job script would look like:  
   
 ```  
 IF (NOT sys.fn_hadr_backup_is_preferred_replica(@DBNAME))  
@@ -201,10 +201,10 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 |View|Information|Relevant Columns|  
 |----------|-----------------|----------------------|  
-|[sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys.fn-hadr-backup-is-preferred-replica-transact-sql.md)|Is the current replica the preferred backup replica?|Not applicable.|  
-|[sys.availability_groups](../../../relational-databases/system-catalog-views/sys.availability-groups-transact-sql.md)|Automated backup preference|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
-|[sys.availability_replicas](../../../relational-databases/system-catalog-views/sys.availability-replicas-transact-sql.md)|Backup priority of a given availability replica|**backup_priority**|  
-|[sys.dm_hadr_availability_replica_states](../../../relational-databases/system-dynamic-management-views/sys.dm-hadr-availability-replica-states-transact-sql.md)|Is replica local to the server instance?<br /><br /> Current role<br /><br /> Operational state<br /><br /> Connected state<br /><br /> Synchronization health of an availability replica|**is_local**<br /><br /> **role**, **role_desc**<br /><br /> **operational_state**, **operational_state_desc**<br /><br /> **connected_state**, **connected_state_desc**<br /><br /> **synchronization_health**, **synchronization_health_desc**|  
+|[sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/reference/system-functions/sys.fn-hadr-backup-is-preferred-replica-transact-sql.md)|Is the current replica the preferred backup replica?|Not applicable.|  
+|[sys.availability_groups](../../../relational-databases/reference/system-catalog-views/sys.availability-groups-transact-sql.md)|Automated backup preference|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
+|[sys.availability_replicas](../../../relational-databases/reference/system-catalog-views/sys.availability-replicas-transact-sql.md)|Backup priority of a given availability replica|**backup_priority**|  
+|[sys.dm_hadr_availability_replica_states](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-hadr-availability-replica-states-transact-sql.md)|Is replica local to the server instance?<br /><br /> Current role<br /><br /> Operational state<br /><br /> Connected state<br /><br /> Synchronization health of an availability replica|**is_local**<br /><br /> **role**, **role_desc**<br /><br /> **operational_state**, **operational_state_desc**<br /><br /> **connected_state**, **connected_state_desc**<br /><br /> **synchronization_health**, **synchronization_health_desc**|  
   
 ##  <a name="RelatedContent"></a> Related Content  
   

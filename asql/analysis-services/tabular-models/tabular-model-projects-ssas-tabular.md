@@ -17,7 +17,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Tabular Model Projects (SSAS Tabular)
-  To create a new tabular model, you must first create a new tabular model project in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)]. When you install [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], three new Business Intelligence project templates are provided for creating tabular model projects. Each project template provides a framework on which you can begin authoring your model. Topics in this section describe how to create a new tabular model project by using the project templates.  
+  To create a new tabular model, you must first create a new tabular model project in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)]. When you install [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], three new Business Intelligence project templates are provided for creating tabular model projects. Each project template provides a framework on which you can begin authoring your model. Topics in this section describe how to create a new tabular model project by using the project templates.  
   
 ## Related Tasks  
   
@@ -25,6 +25,6 @@ manager: "erikre"
 |-----------|-----------------|  
 |[Create a New Tabular Model Project &#40;Analysis Services&#41;](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)|This topic describes how to create a new, blank tabular model project.|  
 |[Import from Analysis Services &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)|This topic describes how to create a new tabular model project based on an existing model already in Analysis Services. Metadata from the existing model is extracted and used to create the new model.|  
-|[Import from Power Pivot &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)|This topic describes how to create a new tabular model project by extracting the metadata and data from a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for Excel file (.xlsx).|  
+|[Import from Power Pivot &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)|This topic describes how to create a new tabular model project by extracting the metadata and data from a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for Excel file (.xlsx).|  
   
   

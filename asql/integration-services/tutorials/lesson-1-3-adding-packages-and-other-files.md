@@ -21,7 +21,7 @@ In this task, you will add existing packages, ancillary files that support indiv
   
 When you deploy packages to a test or production environment, you typically do not include the data files in the deployment, but instead use configurations to update the paths of the data sources to access test or production versions of the data files or databases. For instructional purposes, this tutorial includes data files in the package deployment.  
   
-The packages and the sample data that the packages use are installed when you install the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] samples. You will add the following packages to the Deployment Tutorial project:  
+The packages and the sample data that the packages use are installed when you install the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] samples. You will add the following packages to the Deployment Tutorial project:  
   
 -   **DataTransfer.** Basic package that extracts data from a flat file, evaluates column values to conditionally keep rows in the dataset, and loads data into a table in the AdventureWorks database.  
   
@@ -36,13 +36,13 @@ To support the deployment of these packages, you will add the following ancillar
   
 You will also add a Readme, which is a text file that provides information about the Deployment Tutorial project.  
   
-The paths used in the following procedures assume that the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] samples were installed in the default location, [!INCLUDE[ssSampPathIS](../../integration-services/tutorials/includes/sssamppathis-md.md)]. If you installed the samples to a different location, you should use that location instead in the procedures.  
+The paths used in the following procedures assume that the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] samples were installed in the default location, [!INCLUDE[ssSampPathIS](../../integration-services/tutorials/includes/sssamppathis-md.md)]. If you installed the samples to a different location, you should use that location instead in the procedures.  
   
 In the next task, you will add configurations to the DataTransfer and LoadXMLData packages. All configurations are stored in XML files, and you will use a system environment variable to specify the location of the files. After you create the configuration files, you will add them to the project.  
   
 ### To add packages to the Deployment Tutorial project  
   
-1.  If [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] is not already open, click **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then click **SQL Server Data Tools**.  
+1.  If [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] is not already open, click **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then click **SQL Server Data Tools**.  
   
 2.  On the **File** menu, click **Open**, click **Project/Solution**, click the **Deployment Tutorial** folder and click **Open**, and then double-click **Deployment Tutorial.sln**.  
   
@@ -67,7 +67,7 @@ In the next task, you will add configurations to the DataTransfer and LoadXMLDat
 4.  On the File menu, click **Save All**.  
   
 ## Next Task in Lesson  
-[Step 4: Adding Package Configurations](../Topic/Step%204:%20Adding%20Package%20Configurations.md)  
+[Step 4: Adding Package Configurations](../../integration-services/tutorials/lesson-1-4-adding-package-configurations.md)  
   
   
   

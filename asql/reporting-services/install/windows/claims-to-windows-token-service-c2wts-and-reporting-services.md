@@ -20,7 +20,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Claims to Windows Token Service (c2WTS) and Reporting Services
-  The SharePoint Claims to Windows Token Service (c2WTS) is required with [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] SharePoint mode if you want to use Windows Authentication for data sources that are outside the SharePoint farm. This is true even if the user accesses the data sources with Windows Authentication because the communication between the web front-end (WFE) and the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] shared service will always be Claims Authentication.  
+  The SharePoint Claims to Windows Token Service (c2WTS) is required with [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] SharePoint mode if you want to use Windows Authentication for data sources that are outside the SharePoint farm. This is true even if the user accesses the data sources with Windows Authentication because the communication between the web front-end (WFE) and the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] shared service will always be Claims Authentication.  
   
  c2WTS is needed even if your data source(s) are on the same computer as the shared service. However in this scenario, constrained delegation is not needed.  
   
@@ -32,7 +32,7 @@ manager: "erikre"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../analysis-services/includes/applies-md.md)]**  SharePoint 2016 &#124; SharePoint 2013|  
+|**[!INCLUDE[applies](../../../a9retired/includes/applies-md.md)]**  SharePoint 2016 &#124; SharePoint 2013|  
   
 ## Prerequisites  
   
@@ -44,7 +44,7 @@ manager: "erikre"
 >
 > - [Deploying SQL Server 2016 PowerPivot and Power View in SharePoint 2016](../../../analysis-services/instances/install/windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md)
 > 
-> - [Deploying SQL Server 2016 PowerPivot and Power View in a Multi-Tier SharePoint 2016 Farm](Deploying%20SQL%20Server%202016%20PowerPivot%20and%20Power%20View%20in%20a%20Multi-Tier%20SharePoint%202016%20Farm.md)
+> - [Deploying SQL Server 2016 PowerPivot and Power View in a Multi-Tier SharePoint 2016 Farm](../../../analysis-services/instances/install/windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md)
   
 ### Basic steps needed to configure c2WTS  
   
@@ -105,7 +105,7 @@ manager: "erikre"
       </windowsTokenService>  
     </configuration>  
     ```    
-4.  Start the SharePoint ‘Claims to Windows Token Service’: Start the Claims to Windows Token Service through SharePoint Central Administration on the **Manage Services on Server** page. The service should be started on the server that will be performing the action. For example if you have a server that is a WFE and another server that is an Application Server that has the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] shared service running, you only need to start c2WTS on the Application Server. c2WTS is not needed on the WFE.  
+4.  Start the SharePoint ‘Claims to Windows Token Service’: Start the Claims to Windows Token Service through SharePoint Central Administration on the **Manage Services on Server** page. The service should be started on the server that will be performing the action. For example if you have a server that is a WFE and another server that is an Application Server that has the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] shared service running, you only need to start c2WTS on the Application Server. c2WTS is not needed on the WFE.  
   
 ## See Also  
  [Claims to Windows Token Service (c2WTS) Overview](http://msdn.microsoft.com/library/ee517278.aspx)   

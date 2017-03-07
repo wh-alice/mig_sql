@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Tablix Data Region (Report Builder and SSRS)
-  In [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], the tablix data region is a generalized layout report item that displays paginated report data in cells that are organized into rows and columns. Report data can be detail data as it is retrieved from the data source, or aggregated detail data organized into groups that you specify. Each tablix cell can contain any report item, such as a text box or an image, or another data region, such as a tablix region, chart, or gauge. To add multiple report items to a cell, first add a rectangle to act as a container. Then, add the report items to the rectangle.  
+  In [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)], the tablix data region is a generalized layout report item that displays paginated report data in cells that are organized into rows and columns. Report data can be detail data as it is retrieved from the data source, or aggregated detail data organized into groups that you specify. Each tablix cell can contain any report item, such as a text box or an image, or another data region, such as a tablix region, chart, or gauge. To add multiple report items to a cell, first add a rectangle to act as a container. Then, add the report items to the rectangle.  
   
  The table, matrix, and list data regions are represented on the ribbon by templates for the underlying tablix data region. When you add one of these templates to a report, you are actually adding a tablix data region that is optimized for a specific data layout. By default, a table template displays detail data in a grid layout, a matrix displays group data in a grid layout, and a list displays detail data in a free-form layout.  
   
@@ -37,7 +37,7 @@ manager: "erikre"
  This article spells out these concepts to explain the structure that Report Builder and Report Designer add for you when you add templates and create groups, so you can modify the structure to suit your own needs. Report Builder and Report Designer provide multiple visual indicators to help you recognize tablix data region structure. For more information, see [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Understanding Detail and Grouped Data  
  Detail data is all the data from a report dataset as it comes back from the data source. Detail data is essentially what you see in the query designer results pane when you run a dataset query. The actual detail data includes calculated fields that you create, and is restricted by filters set on the dataset, data region, and details group. You display detail data on a detail row by using a simple expression such as [Quantity]. When the report runs, the detail row repeats once for each row in the query results at run time.  

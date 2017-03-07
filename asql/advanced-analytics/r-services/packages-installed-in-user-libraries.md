@@ -26,12 +26,12 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 ## Problems with packages in user libraries
 
-However, in  [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)], this workaround is **not** supported; packages must be installed to the default library. If the package is not installed in the default library, you might get this error when you try to call the package:
+However, in  [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)], this workaround is **not** supported; packages must be installed to the default library. If the package is not installed in the default library, you might get this error when you try to call the package:
 
 *Error in library(xxx) : there is no package called 'xxx'*
  
 
-Therefore, when you migrate R solutions to run in [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], it is important that you do the following:
+Therefore, when you migrate R solutions to run in [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)], it is important that you do the following:
 + Install any packages that you need to the default library.
 + Edit code to ensure that packages are loaded from the default library,  not from ad hoc directories or user libraries.
 + Check your code to make sure that there are no calls to uninstalled packages.

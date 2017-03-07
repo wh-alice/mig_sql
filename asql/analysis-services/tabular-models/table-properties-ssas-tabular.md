@@ -35,12 +35,12 @@ manager: "erikre"
 |**Hidden**|False|Specifies whether the table is hidden from reporting client field lists.|  
 |**Partitions**||Partitions for the table cannot be displayed in the **Properties** window. To view, create, or edit partitions, click the button to open the Partition Manager.|  
 |**Source Data**||Source data for the table cannot be displayed in the **Properties** window. To view or edit the source data, click the button to open the Edit Table Properties dialog box.|  
-|**Table Description**||A text description for the table.<br /><br /> In [!INCLUDE[ssGeminiClient](../../analysis-services/includes/ssgeminiclient-md.md)], if an end-user places the cursor over this table in the field list, the description appears as a tooltip.|  
-|**Table Name**|\<friendly name>|Specifies the table’s friendly name. The table name can be specified when a table is imported using the Table Import Wizard or at any time after import. The table name in the model can be different from the associated table at the source. The table friendly name appears in the reporting client application field list as well as in the model database in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].|  
+|**Table Description**||A text description for the table.<br /><br /> In [!INCLUDE[ssGeminiClient](../../a9notintoc/includes/ssgeminiclient-md.md)], if an end-user places the cursor over this table in the field list, the description appears as a tooltip.|  
+|**Table Name**|\<friendly name>|Specifies the table’s friendly name. The table name can be specified when a table is imported using the Table Import Wizard or at any time after import. The table name in the model can be different from the associated table at the source. The table friendly name appears in the reporting client application field list as well as in the model database in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].|  
   
  **Reporting Properties**  
   
- For detailed descriptions and configuration information for reporting properties, see [Power View Reporting Properties &#40;SSAS Tabular&#41;](../Topic/Power%20View%20Reporting%20Properties%20\(SSAS%20Tabular\).md).  
+ For detailed descriptions and configuration information for reporting properties, see [Power View Reporting Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md).  
   
 |Property|Default Setting|Description|  
 |--------------|---------------------|-----------------|  

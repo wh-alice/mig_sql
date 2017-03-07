@@ -24,9 +24,9 @@ manager: "jhubbard"
 # Spatial Types - geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  The geography spatial data type, **geography**, is implemented as a .NET common language runtime (CLR) data type in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. This type represents data in a round-earth coordinate system. The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] **geography** data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  
+  The geography spatial data type, **geography**, is implemented as a .NET common language runtime (CLR) data type in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. This type represents data in a round-earth coordinate system. The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] **geography** data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  
   
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports a set of methods for the **geography** spatial data type. This includes methods on **geography** that are defined by the Open Geospatial Consortium (OGC) standard and a set of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] extensions to that standard.  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] supports a set of methods for the **geography** spatial data type. This includes methods on **geography** that are defined by the Open Geospatial Consortium (OGC) standard and a set of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] extensions to that standard.  
  
  The error tolerance for the **geography** methods can be as large as 1.0e-7 * extents. The extents refer to the approximate maximal distance between points of the **geography**object.
   

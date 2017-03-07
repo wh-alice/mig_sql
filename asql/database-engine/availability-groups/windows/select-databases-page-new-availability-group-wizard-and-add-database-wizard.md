@@ -18,7 +18,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Select Databases Page (New Availability Group Wizard and Add Database Wizard)
-  This help topic describes the options of the **Specify Databases** page. This topic applies to the [!INCLUDE[ssAoNewAgWiz](../../../database-engine/availability-groups/windows/includes/ssaonewagwiz-md.md)] and [!INCLUDE[ssAoAddDbWiz](../../../database-engine/availability-groups/windows/includes/ssaoadddbwiz-md.md)] of [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  This help topic describes the options of the **Specify Databases** page. This topic applies to the [!INCLUDE[ssAoNewAgWiz](../../../database-engine/availability-groups/windows/includes/ssaonewagwiz-md.md)] and [!INCLUDE[ssAoAddDbWiz](../../../database-engine/availability-groups/windows/includes/ssaoadddbwiz-md.md)] of [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)].  
   
 ##  <a name="PageOptions"></a> Select Databases Options  
  The **User databases on this instance of SQL Server** grid lists every local user database. The columns are as follows:  
@@ -44,10 +44,10 @@ manager: "jhubbard"
   
 -   [Use the New Availability Group Dialog Box &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [Use the Add Database to Availability Group Wizard &#40;SQL Server Management Studio&#41;](../Topic/Use%20the%20Add%20Database%20to%20Availability%20Group%20Wizard%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [Use the Add Database to Availability Group Wizard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../Topic/Prerequisites,%20Restrictions,%20and%20Recommendations%20for%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md)  
+ [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

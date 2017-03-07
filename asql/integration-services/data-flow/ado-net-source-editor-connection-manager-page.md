@@ -17,13 +17,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # ADO NET Source Editor (Connection Manager Page)
-  Use the **Connection Manager** page of the **ADO NET Source Editor** dialog box to select the [!INCLUDE[vstecado](../../analysis-services/data-mining/includes/vstecado-md.md)] connection manager for the source. This page also lets you select a table or view from the database.  
+  Use the **Connection Manager** page of the **ADO NET Source Editor** dialog box to select the [!INCLUDE[vstecado](../../a9retired/includes/vstecado-md.md)] connection manager for the source. This page also lets you select a table or view from the database.  
   
  To learn more about the ADO NET source, see [ADO NET Source](../../integration-services/data-flow/ado-net-source.md).  
   
  **To open the Connection Manager page**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package that has the ADO NET source.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package that has the ADO NET source.  
   
 2.  On the **Data Flow** tab, double-click the ADO NET source.  
   
@@ -41,14 +41,14 @@ manager: "jhubbard"
   
 |Option|Description|  
 |------------|-----------------|  
-|Table or view|Retrieve data from a table or view in the [!INCLUDE[vstecado](../../analysis-services/data-mining/includes/vstecado-md.md)] data source.|  
-|SQL command|Retrieve data from the [!INCLUDE[vstecado](../../analysis-services/data-mining/includes/vstecado-md.md)] data source by using a SQL query.|  
+|Table or view|Retrieve data from a table or view in the [!INCLUDE[vstecado](../../a9retired/includes/vstecado-md.md)] data source.|  
+|SQL command|Retrieve data from the [!INCLUDE[vstecado](../../a9retired/includes/vstecado-md.md)] data source by using a SQL query.|  
   
  **Preview**  
  Preview results by using the **Data View** dialog box. **Preview** can display up to 200 rows.  
   
 > [!NOTE]  
->  When you preview data, columns with a CLR user-defined type do not contain data. Instead the values \<value too big to display> or System.Byte[] display. The former displays when the data source is accessed by using the [!INCLUDE[vstecado](../../analysis-services/data-mining/includes/vstecado-md.md)] provider, the latter when using the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client provider.  
+>  When you preview data, columns with a CLR user-defined type do not contain data. Instead the values \<value too big to display> or System.Byte[] display. The former displays when the data source is accessed by using the [!INCLUDE[vstecado](../../a9retired/includes/vstecado-md.md)] provider, the latter when using the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client provider.  
   
 ## Data Access Mode Dynamic Options  
   

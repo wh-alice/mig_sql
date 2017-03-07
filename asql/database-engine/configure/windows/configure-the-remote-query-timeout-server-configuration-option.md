@@ -18,9 +18,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure the remote query timeout Server Configuration Option
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes how to configure the **remote query timeout** server configuration option in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]. The **remote query timeout** option specifies how long, in seconds, a remote operation can take before [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] times out. The default value for this option is 600, which allows a 10-minute wait. This value applies to an outgoing connection initiated by the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] as a remote query. This value has no effect on queries received by the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)]. To disable the time-out, set the value to 0. A query will wait until it is canceled.  
+  This topic describes how to configure the **remote query timeout** server configuration option in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]. The **remote query timeout** option specifies how long, in seconds, a remote operation can take before [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] times out. The default value for this option is 600, which allows a 10-minute wait. This value applies to an outgoing connection initiated by the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] as a remote query. This value has no effect on queries received by the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)]. To disable the time-out, set the value to 0. A query will wait until it is canceled.  
   
  For heterogeneous queries, **remote query timeout** specifies the number of seconds (initialized in the command object using the DBPROP_COMMANDTIMEOUT rowset property) that a remote provider should wait for result sets before the query times out. This value is also used to set DBPROP_GENERALTIMEOUT if supported by the remote provider. This will cause any other operations to time out after the specified number of seconds.  
   
@@ -61,17 +61,17 @@ manager: "jhubbard"
   
 2.  Click the **Connections** node.  
   
-3.  Under **Remote server connections**, in the **Remote query timeout** box, type or select a value from 0 through 2,147,483,647 to set the maximum number seconds for [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to wait before timing out.  
+3.  Under **Remote server connections**, in the **Remote query timeout** box, type or select a value from 0 through 2,147,483,647 to set the maximum number seconds for [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] to wait before timing out.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To configure the remote query timeout option  
   
-1.  Connect to the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `remote query timeout` option to `0` to disable the time-out.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `remote query timeout` option to `0` to disable the time-out.  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -92,6 +92,6 @@ GO
  [RECONFIGURE &#40;Transact-SQL&#41;](../../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Rowset Properties and Behaviors](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../../database-engine/configure/windows/server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+ [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md)  
   
   

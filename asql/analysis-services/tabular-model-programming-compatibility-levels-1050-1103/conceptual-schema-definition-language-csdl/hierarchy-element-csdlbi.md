@@ -81,8 +81,8 @@ manager: "erikre"
 ```  
   
 ## See Also  
- [Understanding the Tabular Object Model at Compatibility Levels 1050 through 1103](../Topic/Understanding%20the%20Tabular%20Object%20Model%20at%20Compatibility%20Levels%201050%20through%201103.md)   
+ [Understanding the Tabular Object Model at Compatibility Levels 1050 through 1103](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
  [Understanding Functions for Parent-Child Hierarchies in DAX](http://msdn.microsoft.com/en-us/b11f0cff-cee4-4ae7-a5b3-ebe288fc42d3)   
- [Configure the &#40;All&#41; Level for Attribute Hierarchies](../Topic/Configure%20the%20\(All\)%20Level%20for%20Attribute%20Hierarchies.md)  
+ [Configure the &#40;All&#41; Level for Attribute Hierarchies](../../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Excel Destination Editor (Connection Manager Page)
-  Use the **Connection Manager** page of the **Excel Destination Editor** dialog box to specify data source information, and to preview the results. The Excel destination loads data into a worksheet or a named range in a [!INCLUDE[ofprexcel](../../analysis-services/data-mining/includes/ofprexcel-md.md)] workbook.  
+  Use the **Connection Manager** page of the **Excel Destination Editor** dialog box to specify data source information, and to preview the results. The Excel destination loads data into a worksheet or a named range in a [!INCLUDE[ofprexcel](../../a9retired/includes/ofprexcel-md.md)] workbook.  
   
 > [!NOTE]  
 >  The **CommandTimeout** property of the Excel destination is not available in the **Excel Destination Editor**, but can be set by using the **Advanced Editor**. In addition, certain Fast Load options are available only in the **Advanced Editor**. For more information on these properties, see the Excel Destination section of [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md).  
@@ -39,7 +39,7 @@ manager: "jhubbard"
 |Option|Description|  
 |------------|-----------------|  
 |Table or view|Loads data into a worksheet or named range in the Excel data source.|  
-|Table name or view name variable|Specify the worksheet or range name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](../Topic/Use%20Variables%20in%20Packages.md)|  
+|Table name or view name variable|Specify the worksheet or range name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](../../a9retired/use-variables-in-packages.md)|  
 |SQL command|Load data into the Excel destination by using an SQL query.|  
   
  **Name of the Excel sheet**  

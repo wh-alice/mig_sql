@@ -17,7 +17,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Provide a Source Query (SQL Server Import and Export Wizard)
-If you specified that you want to provide a query to select the data to copy, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard shows **Provide a Source Query**. On this page, you write and test the SQL query that selects the data to copy from the data source to the destination. You can also paste the text of a saved query, or load the query text from a file.
+If you specified that you want to provide a query to select the data to copy, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard shows **Provide a Source Query**. On this page, you write and test the SQL query that selects the data to copy from the data source to the destination. You can also paste the text of a saved query, or load the query text from a file.
 
 ## Screen shot of the Source Query page  
 The following screen shot shows the **Provide a Source Query** page of the Wizard.

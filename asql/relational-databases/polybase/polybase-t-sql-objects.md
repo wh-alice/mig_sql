@@ -20,7 +20,7 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # PolyBase T-SQL objects
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   To use  PolyBase, you must create external tables to reference your external data.  
   

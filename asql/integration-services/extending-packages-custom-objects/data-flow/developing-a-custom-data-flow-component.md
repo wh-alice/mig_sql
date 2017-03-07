@@ -25,7 +25,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Developing a Custom Data Flow Component
-  The data flow task consists of components that connect to a variety of data sources and then transform and route that data at high speed. [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] provides an extensible object model that lets developers create custom sources, transformations, and destinations that you can use in [!INCLUDE[ssBIDevStudioFull](../../../analysis-services/includes/ssbidevstudiofull-md.md)] and in deployed packages. This section contains topics that will guide you in developing custom data flow components.  
+  The data flow task consists of components that connect to a variety of data sources and then transform and route that data at high speed. [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] provides an extensible object model that lets developers create custom sources, transformations, and destinations that you can use in [!INCLUDE[ssBIDevStudioFull](../../../a9notintoc/includes/ssbidevstudiofull-md.md)] and in deployed packages. This section contains topics that will guide you in developing custom data flow components.  
   
 ## In This Section  
  [Creating a Custom Data Flow Component](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
@@ -41,7 +41,7 @@ manager: "jhubbard"
  Describes the data flow execution plan and the allocation of data buffers.  
   
  [Working with Data Types in the Data Flow](../../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)  
- Explains how the data flow maps [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data types to .NET Framework managed data types.  
+ Explains how the data flow maps [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] data types to .NET Framework managed data types.  
   
  [Validating a Data Flow Component](../../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)  
  Explains the methods used to validate component configuration and to reconfigure component metadata.  
@@ -78,15 +78,15 @@ manager: "jhubbard"
  Contains the classes and interfaces used to create the user interface for data flow components.  
   
  [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)  
- Lists the predefined [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] error codes with their symbolic names and descriptions.  
+ Lists the predefined [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] error codes with their symbolic names and descriptions.  
   
 ## Related Sections  
   
 ### Information Common to All Custom Objects  
- For information that is common to all the type of custom objects that you can create in [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)], see the following topics:  
+ For information that is common to all the type of custom objects that you can create in [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)], see the following topics:  
   
  [Developing Custom Objects for Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)  
- Describes the basic steps in implementing all types of custom objects for [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)].  
+ Describes the basic steps in implementing all types of custom objects for [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)].  
   
  [Persisting Custom Objects](../../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)  
  Describes custom persistence and explains when it is necessary.  
@@ -95,7 +95,7 @@ manager: "jhubbard"
  Describes the techniques for building, signing, deploying, and debugging custom objects.  
   
 ### Information about Other Custom Objects  
- For information on the other types of custom objects that you can create in [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)], see the following topics:  
+ For information on the other types of custom objects that you can create in [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)], see the following topics:  
   
  [Developing a Custom Task](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
  Discusses how to program custom tasks.  

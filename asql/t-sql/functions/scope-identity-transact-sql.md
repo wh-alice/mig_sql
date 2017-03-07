@@ -29,7 +29,7 @@ manager: "jhubbard"
 
   Returns the last identity value inserted into an identity column in the same scope. A scope is a module: a stored procedure, trigger, function, or batch. Therefore, two statements are in the same scope if they are in the same stored procedure, function, or batch.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -142,7 +142,7 @@ GO
  `/*@@IDENTITY returned the last identity value inserted to TY by the trigger. This fired because of an earlier insert on TZ.*/`  
   
 ### B. Using @@IDENTITY and SCOPE_IDENTITY() with replication  
- The following examples show how to use `@@IDENTITY` and `SCOPE_IDENTITY()` for inserts in a database that is published for merge replication. Both tables in the examples are in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] sample database: `Person.ContactType` is not published, and `Sales.Customer` is published. Merge replication adds triggers to tables that are published. Therefore, `@@IDENTITY` can return the value from the insert into a replication system table instead of the insert into a user table.  
+ The following examples show how to use `@@IDENTITY` and `SCOPE_IDENTITY()` for inserts in a database that is published for merge replication. Both tables in the examples are in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] sample database: `Person.ContactType` is not published, and `Sales.Customer` is published. Merge replication adds triggers to tables that are published. Therefore, `@@IDENTITY` can return the value from the insert into a replication system table instead of the insert into a user table.  
   
  The `Person.ContactType` table has a maximum identity value of 20. If you insert a row into the table, `@@IDENTITY` and `SCOPE_IDENTITY()` return the same value.  
   

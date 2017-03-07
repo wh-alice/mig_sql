@@ -25,15 +25,15 @@ manager: "jhubbard"
 # Monitoring (Replication)
   Monitoring a replication topology is an important aspect of deploying replication. Because replication activity is distributed, it is essential to track activity and status across all computers involved in replication. The following tools can be used to monitor replication:  
   
--   [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Replication Monitor  
+-   [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Replication Monitor  
   
-     Replication Monitor is the most important tool for monitoring replication, presenting a Publisher-focused view of all replication activity. For more information, see [Monitoring Replication](../Topic/Monitoring%20Replication.md).  
+     Replication Monitor is the most important tool for monitoring replication, presenting a Publisher-focused view of all replication activity. For more information, see [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
   
--   [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]  
+-   [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)]  
   
-     [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] provides access to Replication Monitor. It also allows you to view the current status and last message logged by the following agents and allows you start and stop each agent: Log Reader Agent, Snapshot Agent, Merge Agent, and Distribution Agent. For more information, see [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md).  
+     [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)] provides access to Replication Monitor. It also allows you to view the current status and last message logged by the following agents and allows you start and stop each agent: Log Reader Agent, Snapshot Agent, Merge Agent, and Distribution Agent. For more information, see [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md).  
   
--   [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] and Replication Management Objects (RMO)  
+-   [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] and Replication Management Objects (RMO)  
   
      Both interfaces allow you to monitor all types of replication from the Distributor. Merge replication also provides the ability to monitor replication from the Subscriber.  
   
@@ -48,6 +48,6 @@ manager: "jhubbard"
 ## See Also  
  [Administration &#40;Replication&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
- [Monitoring Replication](../Topic/Monitoring%20Replication.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

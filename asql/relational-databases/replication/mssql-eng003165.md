@@ -25,7 +25,7 @@ manager: "jhubbard"
 |Product Name|SQL Server|  
 |Event ID|3165|  
 |Event Source|MSSQLSERVER|  
-|Component|[!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]|  
+|Component|[!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)]|  
 |Symbolic Name||  
 |Message Text|Database '%ls' was restored; however, an error was encountered while replication was being restored/removed. The database has been left offline. See the topic MSSQL_ENG003165 in SQL Server Books Online.|  
   
@@ -43,9 +43,9 @@ manager: "jhubbard"
   
 1.  Execute ALTER DATABASE to bring the database online; for example: `ALTER DATABASE AdventureWorks SET ONLINE`. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md). If you want to preserve replication settings, go to step 2. If not, go to step 3.  
   
-2.  Execute [sp_restoredbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-restoredbreplication-transact-sql.md). If this stored procedure executes successfully, the restore is complete. If it does not execute successfully, go to step 3.  
+2.  Execute [sp_restoredbreplication &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-restoredbreplication-transact-sql.md). If this stored procedure executes successfully, the restore is complete. If it does not execute successfully, go to step 3.  
   
-3.  Execute [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) to remove all replication settings.  
+3.  Execute [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-removedbreplication-transact-sql.md) to remove all replication settings.  
   
      Reconfigure replication if necessary. If you have scripted the replication topology as recommended, use scripts to reconfigure the topology.  
   

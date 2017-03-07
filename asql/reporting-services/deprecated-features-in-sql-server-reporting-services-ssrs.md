@@ -21,10 +21,10 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Deprecated features in SQL Server Reporting Services (SSRS)
-  This topic describes the deprecated [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] features. The features are still available in the release in which they are deprecated; however the features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Don't use deprecated features in new applications.  
+  This topic describes the deprecated [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] features. The features are still available in the release in which they are deprecated; however the features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]. Don't use deprecated features in new applications.  
   
 ## Features Not Supported in the Next Version of SQL Server Reporting Services  
- The following [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] features won't be supported in the next version of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Don't use these features in new development work, and modify applications that currently use these features as soon as possible.  
+ The following [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] features won't be supported in the next version of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]. Don't use these features in new development work, and modify applications that currently use these features as soon as possible.  
   
 |Category|Deprecated feature|
 |--------------|------------------------| 

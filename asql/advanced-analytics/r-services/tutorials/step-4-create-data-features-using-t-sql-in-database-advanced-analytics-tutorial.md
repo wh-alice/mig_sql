@@ -22,19 +22,19 @@ manager: "jhubbard"
 # Step 4: Create Data Features using T-SQL (In-Database Advanced Analytics Tutorial)
 After several rounds of data exploration, you have collected some insights from the data, and are ready to move on to *feature engineering*. This process of creating features from the raw data is a critical step in advanced analytics modeling.  
   
-In this step, you'll learn how to create features from raw data by using a [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] function. You'll then call that function from a stored procedure to create a table that contains the feature values.  
+In this step, you'll learn how to create features from raw data by using a [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] function. You'll then call that function from a stored procedure to create a table that contains the feature values.  
   
 ## Define the Function  
-The distance values reported in the original data are based on the reported meter distance, and don't necessarily represent geographical distance or distance traveled. Therefore, you'll need to calculate the direct distance between the pick-up and drop-off points, by using the coordinates available in the source NYC Taxi dataset. You can do this by using the [Haversine formula](https://en.wikipedia.org/wiki/Haversine_formula) in a custom [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] function.  
+The distance values reported in the original data are based on the reported meter distance, and don't necessarily represent geographical distance or distance traveled. Therefore, you'll need to calculate the direct distance between the pick-up and drop-off points, by using the coordinates available in the source NYC Taxi dataset. You can do this by using the [Haversine formula](https://en.wikipedia.org/wiki/Haversine_formula) in a custom [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] function.  
   
 You'll use one custom T-SQL function, _fnCalculateDistance_, to compute the distance using the Haversine formula, and use a second custom T-SQL function, _fnEngineerFeatures_, to create a table containing all the features.  
   
 #### To calculate trip distance using  fnCalculateDistance  
   
-1.  The function _fnCalculateDistance_ should have been downloaded and registered with [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] as part of the preparation for this walkthrough. Take a minute to review the code  
+1.  The function _fnCalculateDistance_ should have been downloaded and registered with [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] as part of the preparation for this walkthrough. Take a minute to review the code  
   
-    In [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], expand **Programmability**, expand **Functions** and then **Scalar-valued functions**.   
-    Right-click _fnCalculateDistance_, and select **Modify** to open the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] script in a new query window.  
+    In [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)], expand **Programmability**, expand **Functions** and then **Scalar-valued functions**.   
+    Right-click _fnCalculateDistance_, and select **Modify** to open the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] script in a new query window.  
   
     ```  
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
@@ -114,7 +114,7 @@ To add the computed value to a table that can be used for training the model, yo
 In the next step, you'll learn how to use these data features to train a machine learning model using R.  
   
 ## Next Step  
-[Step 5: Train and Save a Model using T-SQL](../Topic/Step%205:%20Train%20and%20Save%20a%20Model%20using%20T-SQL%20(In-Database%20Advanced%20Analytics%20Tutorial).md)  
+[Step 5: Train and Save a Model using T-SQL](../../../advanced-analytics/r-services/tutorials/step-5-train-and-save-a-model-using-t-sql.md)  
   
 ## Previous Step  
 [Step 3: Explore and Visualize the Data](../../../advanced-analytics/r-services/tutorials/step-3-explore-and-visualize-the-data-in-database-advanced-analytics-tutorial.md)  

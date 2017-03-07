@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 ### To modify a filter  
   
-1.  In [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)], open the template for the trace filter that you want to modify. On the **File** menu, click **Templates**, and then choose **Edit Template**.  
+1.  In [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)], open the template for the trace filter that you want to modify. On the **File** menu, click **Templates**, and then choose **Edit Template**.  
   
 2.  In the **General** tab of the **Trace Template Properties** dialog, select a template from the **Select template name** list.  
   

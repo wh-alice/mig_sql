@@ -20,7 +20,7 @@ ms.author: "carlasab"
 manager: "erikre"
 ---
 # Best Practices for Reporting Services Exception Handling
-  When developing [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] applications, there are several methodologies you can use to eliminate or reduce the occurrence of exceptions. When exceptions do occur, provide clear and concise error messages to the user, and add adequate exception handling to prevent your applications from ending unexpectedly.  
+  When developing [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] applications, there are several methodologies you can use to eliminate or reduce the occurrence of exceptions. When exceptions do occur, provide clear and concise error messages to the user, and add adequate exception handling to prevent your applications from ending unexpectedly.  
   
  An application that sends requests to the Report Server Web service should do the following:  
   
@@ -36,7 +36,7 @@ manager: "erikre"
 |-----------|-----------------|  
 |[Preventing Invalid Requests](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/preventing-invalid-requests.md)|Describes techniques for preventing requests that are not valid from being sent to the report server.|  
 |[Using Try and Catch Blocks](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-try-and-catch-blocks.md)|Describes how to further enhance the reliability of your application with try/catch blocks.|  
-|[Handling Warnings and Cases That Do Not Cause Exceptions](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/handling-warnings-and-cases-that-do-not-cause-exceptions.md)|Explains how to handle errors that do not result in an exception being thrown by [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)].|  
+|[Handling Warnings and Cases That Do Not Cause Exceptions](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/handling-warnings-and-cases-that-do-not-cause-exceptions.md)|Explains how to handle errors that do not result in an exception being thrown by [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)].|  
 |[Using the Detail Property to Handle Specific Errors](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)|Explains how to programmatically handle specific errors by using the **Detail** property of the **SoapException** object.|  
   
 ## See Also  

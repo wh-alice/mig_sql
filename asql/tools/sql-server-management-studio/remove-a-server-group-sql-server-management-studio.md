@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Remove a Server Group (SQL Server Management Studio)
-  This topic describes how to remove a server group in Registered Servers in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. You can delete a server group at any time. If the server group is not empty, any servers or server groups contained in the deleted server group will also be deleted. Before deleting a server group, move any servers or server groups that you want to retain to a new server group.  
+  This topic describes how to remove a server group in Registered Servers in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. You can delete a server group at any time. If the server group is not empty, any servers or server groups contained in the deleted server group will also be deleted. Before deleting a server group, move any servers or server groups that you want to retain to a new server group.  
   
 ##  <a name="SSMSProcedure"></a>  
   

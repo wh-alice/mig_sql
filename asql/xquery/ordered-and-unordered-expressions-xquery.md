@@ -24,9 +24,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Ordered and Unordered Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  By default, the ordering mode for all operations in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] is **ordered**. Therefore, the node sequences returned by the path expressions and the FLWOR expressions, without the **order by** clause, are in document order.  
+  By default, the ordering mode for all operations in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] is **ordered**. Therefore, the node sequences returned by the path expressions and the FLWOR expressions, without the **order by** clause, are in document order.  
   
  The additional **ordered** and **unordered** syntax described in the XQuery specification is not supported.  
   

@@ -21,7 +21,7 @@ manager: "jhubbard"
 
  In Solution Explorer, right-click on an Integration Services project and select **Properties** to open the property pages for the project. On the **General** tab of **Configuration Properties**, select the **TargetServerVersion** property,  and then choose SQL Server 2016, SQL Server 2014, or SQL Server 2012.  
    
- ![TargetServerVersion property in project properties dialog box](../../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
+ ![TargetServerVersion property in project properties dialog box](../../a9retired/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
  
  ## Multiple version support and multi-targeting for custom components
  

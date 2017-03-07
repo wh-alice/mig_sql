@@ -22,9 +22,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Constructing SQL Statements for Cursors
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver uses server cursors to implement the cursor functionality defined in the ODBC specification. An ODBC application controls the cursor behavior by using [SQLSetStmtAttr](../../relational-databases/extended-stored-procedures-reference/sqlsetstmtattr.md) to set different statement attributes. These are the attributes and their defaults.  
+  The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver uses server cursors to implement the cursor functionality defined in the ODBC specification. An ODBC application controls the cursor behavior by using [SQLSetStmtAttr](../../relational-databases/extended-stored-procedures-reference/sqlsetstmtattr.md) to set different statement attributes. These are the attributes and their defaults.  
   
 |Attribute|Default|  
 |---------------|-------------|  
@@ -34,11 +34,11 @@ manager: "jhubbard"
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- When these options are set to their defaults at the time an SQL statement is executed, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver does not use a server cursor to implement the result set; instead, it uses a default result set. If any of these options are changed from their defaults at the time an SQL statement is executed, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver attempts to use a server cursor to implement the result set.  
+ When these options are set to their defaults at the time an SQL statement is executed, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver does not use a server cursor to implement the result set; instead, it uses a default result set. If any of these options are changed from their defaults at the time an SQL statement is executed, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver attempts to use a server cursor to implement the result set.  
   
- Default result sets support all of the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements. There are no restrictions on the types of SQL statements that can be executed when using a default result set.  
+ Default result sets support all of the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements. There are no restrictions on the types of SQL statements that can be executed when using a default result set.  
   
- Server cursors do not support all [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements. Server cursors do not support any SQL statement that generates multiple result sets.  
+ Server cursors do not support all [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements. Server cursors do not support any SQL statement that generates multiple result sets.  
   
  The following types of statements are not supported by server cursors:  
   
@@ -58,12 +58,12 @@ manager: "jhubbard"
   
      SQL statements containing the keywords FOR BROWSE, or INTO.  
   
- In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], if an SQL statement that matches any of these conditions is executed with a server cursor, the server cursor is implicitly converted to a default result set. After **SQLExecDirect** or **SQLExecute** returns SQL_SUCCESS_WITH_INFO, the cursor attributes will be set back to their default settings.  
+ In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], if an SQL statement that matches any of these conditions is executed with a server cursor, the server cursor is implicitly converted to a default result set. After **SQLExecDirect** or **SQLExecute** returns SQL_SUCCESS_WITH_INFO, the cursor attributes will be set back to their default settings.  
   
  SQL statements that do not fit the categories above can be executed with any statement attribute settings; they work equally well with either a default result set or a server cursor.  
   
 ## Errors  
- In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] 7.0 and later, an attempt to execute a statement that produces multiple result sets generates SQL_SUCCESS_WITH INFO and the following message:  
+ In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] 7.0 and later, an attempt to execute a statement that produces multiple result sets generates SQL_SUCCESS_WITH INFO and the following message:  
   
 ```  
 SqlState: 01S02"  

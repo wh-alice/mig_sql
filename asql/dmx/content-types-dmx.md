@@ -22,13 +22,13 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Content Types (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Data mining algorithms require additional information beyond the data type to function correctly, such as the content type. The content type helps the algorithm determine how to work with the data in the column.  
   
- Each algorithm supports specific content types. For example, the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Naive Bayes algorithm cannot use continuous columns. To use a continuous column in a [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Naive Bayes model, you must discretize the data in the column. Some algorithms require certain content types in order to function correctly. For example, the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Time Series algorithm requires a key time column to identify the time over which the data was collected.  
+ Each algorithm supports specific content types. For example, the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Naive Bayes algorithm cannot use continuous columns. To use a continuous column in a [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Naive Bayes model, you must discretize the data in the column. Some algorithms require certain content types in order to function correctly. For example, the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Time Series algorithm requires a key time column to identify the time over which the data was collected.  
   
- For a complete description of the content types that [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] supports, see [Content Types &#40;Data Mining&#41;](../analysis-services/data-mining/content-types-data-mining.md).  
+ For a complete description of the content types that [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] supports, see [Content Types &#40;Data Mining&#41;](../analysis-services/data-mining/content-types-data-mining.md).  
   
 ## See Also  
  [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
@@ -36,7 +36,7 @@ manager: "erikre"
  [Data Mining Extensions &#40;DMX&#41; Syntax Elements](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40;DMX&#41; Syntax Conventions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Structure and Usage of DMX Prediction Queries](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

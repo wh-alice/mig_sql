@@ -17,7 +17,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Apply the Changes to the Destination
-  In the data flow of an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the third and final task is to apply the changes to your destination. You will need one component to apply inserts, one to apply updates, and one to apply deletes.  
+  In the data flow of an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the third and final task is to apply the changes to your destination. You will need one component to apply inserts, one to apply updates, and one to apply deletes.  
   
 > [!NOTE]  
 >  The second task in designing the data flow of a package that performs an incremental load of change data is to separate inserts, updates, and deletes. For more information about this component, see [Process Inserts, Updates, and Deletes](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md). For a description of the overall process for creating a package that performs an incremental load of change data, see [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  

@@ -21,15 +21,15 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Execute Scripts During Synchronization (Replication Transact-SQL Programming)
-  Replication supports on demand script execution for Subscribers to transactional and merge publications. This functionality copies the script to the replication working directory and then uses **sqlcmd** to apply the script at the Subscriber. By default, if there is a failure when applying the script for a subscription to a transactional publication, the Distribution Agent will stop. You can specify a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] script to execute programmatically using replication stored procedures.  
+  Replication supports on demand script execution for Subscribers to transactional and merge publications. This functionality copies the script to the replication working directory and then uses **sqlcmd** to apply the script at the Subscriber. By default, if there is a failure when applying the script for a subscription to a transactional publication, the Distribution Agent will stop. You can specify a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] script to execute programmatically using replication stored procedures.  
   
 ### To specify a script to run for all Subscribers to a snapshot, transactional or merge publication  
   
-1.  Compose and test the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] script that will be executed on demand.  
+1.  Compose and test the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] script that will be executed on demand.  
   
 2.  Save the script file to a location where it can be accessed by the Snapshot Agent for the publication.  
   
-3.  At the Publisher on the publication database, execute [sp_addscriptexec &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md). Specify **@publication**, the name of the script file with full UNC path created in step 2 for **@scriptfile**, and one of the following values for **@skiperror**:  
+3.  At the Publisher on the publication database, execute [sp_addscriptexec &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addscriptexec-transact-sql.md). Specify **@publication**, the name of the script file with full UNC path created in step 2 for **@scriptfile**, and one of the following values for **@skiperror**:  
   
     -   **0** - the agent will stop executing the script if an error is encountered.  
   

@@ -140,4 +140,4 @@ This example removes the **ggplot2** package and its dependencies from the compu
 
 ## See Also
 
-[How to Enable or Disable R package Management](How%20to%20Enable%20or%20Disable%20R%20Package%20Management.md)
+[How to Enable or Disable R package Management](../../advanced-analytics/r-services/r-package-how-to-enable-or-disable.md)

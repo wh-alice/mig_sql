@@ -56,7 +56,7 @@ manager: "erikre"
 ## Remarks  
  The value of the **Password** element, as well as the value of the [Account](../../../analysis-services/scripting/properties/account-element-impersonationinfo-assl.md) element, is used for impersonation purposes if the value of the [ImpersonationMode](../../../analysis-services/scripting/properties/impersonationmode-element-assl.md) element for any element derived from the **ImpersonationInfo** data type is set to *ImpersonateAccount*.  
   
- Only members of the server administrator role for the [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance can provide a blank value for the **Password** element  
+ Only members of the server administrator role for the [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance can provide a blank value for the **Password** element  
   
 ## See Also  
  [DataSourceImpersonationInfo Element &#40;ASSL&#41;](../../../analysis-services/scripting/properties/datasourceimpersonationinfo-element-assl.md)   

@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Context Functions - position (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns an integer value that indicates the position of the context item within the sequence of items currently being processed.  
   
@@ -32,10 +32,10 @@ fn:position() as xs:integer
 ```  
   
 ## Remarks  
- In [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], **fn:position()** can only be used in the context of a context-dependent predicate. Specifically, it can only be used inside brackets ([ ]).Comparing against this function does not reduce the cardinality during static type inference.  
+ In [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], **fn:position()** can only be used in the context of a context-dependent predicate. Specifically, it can only be used inside brackets ([ ]).Comparing against this function does not reduce the cardinality during static type inference.  
   
 ## Examples  
- This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the [!INCLUDE[ssSampleDBobject](../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+ This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the [!INCLUDE[ssSampleDBobject](../a9retired/includes/sssampledbobject-md.md)] database.  
   
 ### A. Using the position() XQuery function to retrieve the first two product features  
  The following query retrieves the first two features, the first two child elements of the <`Features`> element, from the product model catalog description. If there are more features, it adds a <`there-is-more/`> element to the result.  
@@ -64,7 +64,7 @@ WHERE CatalogDescription is not null
   
  Note the following from the previous query:  
   
--   The **namespace** keyword in the [XQuery Prolog](../Topic/XQuery%20Prolog.md) defines a namespace prefix that is used in the query body.  
+-   The **namespace** keyword in the [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md) defines a namespace prefix that is used in the query body.  
   
 -   The query body constructs XML that has a \<Product> element with **ProductModelID** and **ProductModelName** attributes, and has product features returned as child elements.  
   

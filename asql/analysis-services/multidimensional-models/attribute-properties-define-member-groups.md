@@ -21,9 +21,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Attribute Properties - Define Member Groups
-  If an attribute has a large number of members, you can choose to group those members into buckets, reducing the number of members that users see when they browse the data in a hierarchy. You can also determine the number of buckets in which the members are groups and set a naming scheme for the buckets. For more information, see [Group Attribute Members &#40;Discretization&#41;](../Topic/Group%20Attribute%20Members%20\(Discretization\).md).  
+  If an attribute has a large number of members, you can choose to group those members into buckets, reducing the number of members that users see when they browse the data in a hierarchy. You can also determine the number of buckets in which the members are groups and set a naming scheme for the buckets. For more information, see [Group Attribute Members &#40;Discretization&#41;](../../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   
- You group members by setting the **DiscretizationMethod** property, which is accessed through the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+ You group members by setting the **DiscretizationMethod** property, which is accessed through the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
  When you create member groups, your changes are not available to users until you process the dimension. For more information, see [Processing a multidimensional model &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
@@ -33,6 +33,6 @@ manager: "erikre"
   
 2.  In **Attributes**, right-click the attribute whose members you want to group, and then click **Properties**.  
   
-3.  From the drop-down list next to **DiscretizationMethod**, select a method by which to group the members. For more information about **DiscretizationMethod** settings, see [Group Attribute Members &#40;Discretization&#41;](../Topic/Group%20Attribute%20Members%20\(Discretization\).md).  
+3.  From the drop-down list next to **DiscretizationMethod**, select a method by which to group the members. For more information about **DiscretizationMethod** settings, see [Group Attribute Members &#40;Discretization&#41;](../../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   
   

@@ -20,13 +20,13 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Using Stored Procedures (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  You can extend the functionality of [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] and Multidimensional Expressions (MDX) by writing .NET stored procedures or user-defined functions. For more information, see [ADOMD.NET Server Programming](../analysis-services/multidimensional-models-adomd-net-server/adomd.net-server-programming.md)  
+  You can extend the functionality of [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] and Multidimensional Expressions (MDX) by writing .NET stored procedures or user-defined functions. For more information, see [ADOMD.NET Server Programming](../analysis-services/multidimensional-models-adomd-net-server/adomd.net-server-programming.md)  
   
  When you reference or call a stored procedure, you specify the function name followed by parentheses. Within the parentheses, you can specify expressions called arguments that provide the data to be passed into the parameters. When you call a function, you must supply argument values for all of the parameters, and you must specify the argument values in the same sequence in which the parameters are defined in the user-defined function.  
   
- The following example query assumes that you have an assembly named SampleAssembly registered on your [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] Server:  
+ The following example query assumes that you have an assembly named SampleAssembly registered on your [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] Server:  
   
 ```  
 SELECT SampleAssembly.RandomSample([Geography].[State-Province].Members, 5) on ROWS,   
@@ -36,10 +36,10 @@ WHERE [Measures].[Reseller Freight Cost]
 ```  
   
 > [!NOTE]  
->  *Stored procedure* is the terminology used in [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] for these types of functions. Earlier versions of [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] called these types of functions as *user-defined functions*.  
+>  *Stored procedure* is the terminology used in [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] for these types of functions. Earlier versions of [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] called these types of functions as *user-defined functions*.  
   
 ## Types of stored procedures  
- [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] supports both COM and CLR assemblies. CLR assemblies are recommended because of the enhanced security available to CLR assemblies. If Microsoft Office Excel is installed on the server, Excel functions are also available.  
+ [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] supports both COM and CLR assemblies. CLR assemblies are recommended because of the enhanced security available to CLR assemblies. If Microsoft Office Excel is installed on the server, Excel functions are also available.  
   
 > [!NOTE]  
 >  Microsoft Visual Basic for Applications (VBA) COM Assemblies are registered automatically.  

@@ -15,8 +15,8 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Report Server &lt;server&gt; (SQL Server Configuration Manager)
-  This is the service that supports [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.  
+  This is the service that supports [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.  
   
- For information about [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], see Books Online.  
+ For information about [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)], see Books Online.  
   
   

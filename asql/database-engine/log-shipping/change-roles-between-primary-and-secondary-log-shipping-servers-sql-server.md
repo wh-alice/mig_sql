@@ -1,7 +1,7 @@
 ---
 title: "Change Roles Between Primary and Secondary Log Shipping Servers (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,7 +22,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Change Roles Between Primary and Secondary Log Shipping Servers (SQL Server)
-  After you have failed over a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] log shipping configuration to a secondary server, you can configure your secondary database to act as the primary database. Then, you will be able to swap primary and secondary databases as needed.  
+  After you have failed over a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] log shipping configuration to a secondary server, you can configure your secondary database to act as the primary database. Then, you will be able to swap primary and secondary databases as needed.  
   
 ## Performing the Initial Role Change  
  The first time you want to fail over to the secondary database and make it your new primary database, there is a series of steps you must take. After you have followed these initial steps, you will be able to swap roles between the primary database and the secondary database easily.  
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 2.  Disable the log shipping backup job on the original primary server, and the copy and restore jobs on the original secondary server.  
   
-3.  On your secondary database (the database you want to be the new primary), configure log shipping using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md). Include the following steps:  
+3.  On your secondary database (the database you want to be the new primary), configure log shipping using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md). Include the following steps:  
   
     1.  Use the same share for creating backups that you created for the original primary server.  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
     1.  **On the new primary server**  
   
-         Execute the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements:  
+         Execute the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements:  
   
         ```  
         -- Statement to execute on the new primary server  
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
     2.  **On the new secondary server**  
   
-         Execute the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements:  
+         Execute the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements:  
   
         ```  
         -- Statement to execute on the new secondary server  
@@ -75,7 +75,7 @@ manager: "jhubbard"
 3.  Enable the log shipping backup job on the secondary server (the new primary server), and the copy and restore jobs on the primary server (the new secondary server).  
   
 > [!IMPORTANT]  
->  When you change a secondary database to the primary database, to provide a consistent experience to users and applications, you might have to re-create some or all of the metadata for the database, such as logins and jobs, on the new primary server instance. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../Topic/Manage%20Metadata%20When%20Making%20a%20Database%20Available%20on%20Another%20Server%20Instance%20\(SQL%20Server\).md).  
+>  When you change a secondary database to the primary database, to provide a consistent experience to users and applications, you might have to re-create some or all of the metadata for the database, such as logins and jobs, on the new primary server instance. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

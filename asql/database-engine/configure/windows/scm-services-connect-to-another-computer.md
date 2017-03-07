@@ -17,12 +17,12 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SCM Services - Connect to Another Computer
-  This topic describes how to connect to another computer in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)]. Follow the first procedure to open the Windows Computer Management [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Management Console (mmc), connect to the computer, and expand the Services and Applications tree. Follow the second procedure to create a file with a link to the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager on a remote computer.  
+  This topic describes how to connect to another computer in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)]. Follow the first procedure to open the Windows Computer Management [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Management Console (mmc), connect to the computer, and expand the Services and Applications tree. Follow the second procedure to create a file with a link to the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager on a remote computer.  
   
 > [!NOTE]  
 >  Some actions cannot be performed by Configuration Manager when connecting remotely.  
   
- To start, stop, pause, or resume services on another computer, you can also connect to the server with [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], right-click the server or [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent and then click the desired action.  
+ To start, stop, pause, or resume services on another computer, you can also connect to the server with [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], right-click the server or [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Agent and then click the desired action.  
   
 ##  <a name="SSMSProcedure"></a>  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 1.  On the **Start** menu, click **Run**.  
   
-2.  In the **Open** box, type **mmc -a** to open the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Management Console in author mode.  
+2.  In the **Open** box, type **mmc -a** to open the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Management Console in author mode.  
   
 3.  On the **File** menu, click **Add/Remove Snap-in**.  
   
@@ -62,12 +62,12 @@ manager: "jhubbard"
   
 11. On the **Window** menu, click **Console Root**, to switch back to the first widow, and delete the window.  
   
-12. On the **File** menu, click **Save As**, and save the file in the desired folder, with an appropriate name with the **.msc** file extension. Close the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Management Console.  
+12. On the **File** menu, click **Save As**, and save the file in the desired folder, with an appropriate name with the **.msc** file extension. Close the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Management Console.  
   
-13. To open [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager on the target computer, double-click the file. If desired, save a link to the file on the desktop or in the **Start** menu.  
+13. To open [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager on the target computer, double-click the file. If desired, save a link to the file on the desktop or in the **Start** menu.  
   
 > [!CAUTION]  
->  When using [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager on a remote computer, the computer name is not obvious and it is possible to mistakenly stop or configure the wrong computer. On the **Service** tab, check the **Host Name** box to confirm the computer name before modifying a service.  
+>  When using [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager on a remote computer, the computer name is not obvious and it is possible to mistakenly stop or configure the wrong computer. On the **Service** tab, check the **Host Name** box to confirm the computer name before modifying a service.  
   
 ## See Also  
  [Configure WMI to Show Server Status in SQL Server Tools](../Topic/Configure%20WMI%20to%20Show%20Server%20Status%20in%20SQL%20Server%20Tools.md)  

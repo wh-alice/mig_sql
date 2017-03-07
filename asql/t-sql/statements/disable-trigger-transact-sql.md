@@ -32,7 +32,7 @@ manager: "jhubbard"
 
   Disables a trigger.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -53,7 +53,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
  Indicates that all triggers defined at the scope of the ON clause are disabled.  
   
 > [!CAUTION]  
->  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] creates triggers in databases that are published for merge replication. Specifying ALL in published databases disables these triggers, which disrupts replication. Verify that the current database is not published for merge replication before specifying ALL.  
+>  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] creates triggers in databases that are published for merge replication. Specifying ALL in published databases disables these triggers, which disrupts replication. Verify that the current database is not published for merge replication before specifying ALL.  
   
  *object_name*  
  Is the name of the table or view on which the DML trigger *trigger_name* was created to execute.  
@@ -64,7 +64,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
  ALL SERVER  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  For a DDL trigger, indicates that *trigger_name* was created or modified to execute with server scope. ALL SERVER also applies to logon triggers.  
   
@@ -72,7 +72,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 >  This option is not available in a contained database.  
   
 ## Remarks  
- Triggers are enabled by default when they are created. Disabling a trigger does not drop it. The trigger still exists as an object in the current database. However, the trigger does not fire when any [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements on which it was programmed are executed. Triggers can be re-enabled by using [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md). DML triggers defined on tables can be also be disabled or enabled by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+ Triggers are enabled by default when they are created. Disabling a trigger does not drop it. The trigger still exists as an object in the current database. However, the trigger does not fire when any [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements on which it was programmed are executed. Triggers can be re-enabled by using [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md). DML triggers defined on tables can be also be disabled or enabled by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
  Changing the trigger by using the **ALTER TRIGGER** statement enables the trigger.  
   
@@ -130,6 +130,6 @@ GO
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
- [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.triggers-transact-sql.md)  
+ [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.triggers-transact-sql.md)  
   
   

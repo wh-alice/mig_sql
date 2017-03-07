@@ -18,9 +18,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Transaction Lifetimes
-  There is an important difference between transactions started in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] stored procedures and those started in managed code: common language runtime (CLR) code cannot unbalance the transaction state on entry or exit of a CLR invocation. Be aware of the following implications of this difference:  
+  There is an important difference between transactions started in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] stored procedures and those started in managed code: common language runtime (CLR) code cannot unbalance the transaction state on entry or exit of a CLR invocation. Be aware of the following implications of this difference:  
   
--   A transaction started inside a CLR frame must be committed or rolled back, or else [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] generates an error when the frame is exited.  
+-   A transaction started inside a CLR frame must be committed or rolled back, or else [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] generates an error when the frame is exited.  
   
 -   An outer transaction cannot be committed or rolled back inside the CLR code.  
   

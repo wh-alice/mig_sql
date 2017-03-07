@@ -23,7 +23,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using Statement Parameters
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   A parameter is a variable in an SQL statement that can enable an ODBC application to:  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   Enhance user interaction in constructing query criteria.  
   
--   Manage **text**, **ntext**, and **image** data and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]-specific C data types.  
+-   Manage **text**, **ntext**, and **image** data and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]-specific C data types.  
   
  For example, a **Parts** table has columns named **PartID**, **Description**, and **Price**. To add a part without parameters requires constructing an SQL statement such as:  
   
@@ -51,7 +51,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
 ## In This Section  
   
--   [Binding Parameters](../Topic/Binding%20Parameters.md)  
+-   [Binding Parameters](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
 ## See Also  
  [Executing Queries &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  

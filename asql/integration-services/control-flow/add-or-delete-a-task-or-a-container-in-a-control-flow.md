@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Add or Delete a Task or a Container in a Control Flow
-  When you are working in the control flow designer, the Toolbox in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer lists the tasks that [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] provides for building control flow in a package. For more information about the Toolbox, see [SSIS Toolbox](../../integration-services/ssis-toolbox.md).  
+  When you are working in the control flow designer, the Toolbox in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer lists the tasks that [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] provides for building control flow in a package. For more information about the Toolbox, see [SSIS Toolbox](../../integration-services/ssis-toolbox.md).  
   
  A package can include multiple instances of the same task. Each instance of a task is uniquely identified in the package, and you can configure each instance differently.  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 ## Add a task or a container to a control flow  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
 ## Delete a task or a container from a control flow  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it. Do one of the following:  
   
@@ -65,7 +65,7 @@ You can set most properties of tasks and containers by using the **Properties** 
   
 ### Set the properties of a task or container with the Properties window  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -84,7 +84,7 @@ You can set most properties of tasks and containers by using the **Properties** 
   
 ### Set the properties of a task or container with the task or container editor  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -92,9 +92,9 @@ You can set most properties of tasks and containers by using the **Properties** 
   
 4.  On the design surface of the **Control Flow** tab, right-click the task or container, and then click **Edit** to open the corresponding task or container editor.  
   
-     For information about how to configure the For Loop container, see [Configure a For Loop Container](../Topic/Configure%20a%20For%20Loop%20Container.md).  
+     For information about how to configure the For Loop container, see [Configure a For Loop Container](../../a9retired/configure-a-for-loop-container.md).  
   
-     For information about how to configure the Foreach Loop container, see [Configure a Foreach Loop Container](../Topic/Configure%20a%20Foreach%20Loop%20Container.md).  
+     For information about how to configure the Foreach Loop container, see [Configure a Foreach Loop Container](../../a9retired/configure-a-foreach-loop-container.md).  
   
     > [!NOTE]  
     >  The Sequence container has no custom editor.  

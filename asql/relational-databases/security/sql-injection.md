@@ -51,7 +51,7 @@ Redmond'; drop table OrdersTable--
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'  
 ```  
   
- The semicolon (;) denotes the end of one query and the start of another. The double hyphen (--) indicates that the rest of the current line is a comment and should be ignored. If the modified code is syntactically correct, it will be executed by the server. When [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] processes this statement, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will first select all records in `OrdersTable` where `ShipCity` is `Redmond`. Then, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will drop `OrdersTable`.  
+ The semicolon (;) denotes the end of one query and the start of another. The double hyphen (--) indicates that the rest of the current line is a comment and should be ignored. If the modified code is syntactically correct, it will be executed by the server. When [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] processes this statement, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will first select all records in `OrdersTable` where `ShipCity` is `Redmond`. Then, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will drop `OrdersTable`.  
   
  As long as injected SQL code is syntactically correct, tampering cannot be detected programmatically. Therefore, you must validate all user input and carefully review code that executes constructed SQL commands in the server that you are using. Coding best practices are described in the following sections in this topic.  
   
@@ -70,7 +70,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
 -   When you are working with XML documents, validate all data against its schema as it is entered.  
   
--   Never build [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements directly from user input.  
+-   Never build [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements directly from user input.  
   
 -   Use stored procedures to validate user input.  
   
@@ -94,7 +94,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |**xp_**|Used at the start of the name of catalog-extended stored procedures, such as `xp_cmdshell`.|  
   
 ### Use Type-Safe SQL Parameters  
- The **Parameters** collection in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provides type checking and length validation. If you use the **Parameters** collection, input is treated as a literal value instead of as executable code. An additional benefit of using the **Parameters** collection is that you can enforce type and length checks. Values outside the range will trigger an exception. The following code fragment shows using the **Parameters** collection:  
+ The **Parameters** collection in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] provides type checking and length validation. If you use the **Parameters** collection, input is treated as a literal value instead of as executable code. An additional benefit of using the **Parameters** collection is that you can enforce type and length checks. Values outside the range will trigger an exception. The following code fragment shows using the **Parameters** collection:  
   
 ```  
 SqlDataAdapter myCommand = new SqlDataAdapter("AuthorLogin", conn);  
@@ -185,7 +185,7 @@ SET @temp = N'SELECT * FROM authors WHERE au_lname = '''
 ```  
   
 ### Injection Enabled by Data Truncation  
- Any dynamic [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] that is assigned to a variable will be truncated if it is larger than the buffer allocated for that variable. An attacker who is able to force statement truncation by passing unexpectedly long strings to a stored procedure can manipulate the result. For example, the stored procedure that is created by the following script is vulnerable to injection enabled by truncation.  
+ Any dynamic [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] that is assigned to a variable will be truncated if it is larger than the buffer allocated for that variable. An attacker who is able to force statement truncation by passing unexpectedly long strings to a stored procedure can manipulate the result. For example, the stored procedure that is created by the following script is vulnerable to injection enabled by truncation.  
   
 ```  
 CREATE PROCEDURE sp_MySetPassword  
@@ -222,7 +222,7 @@ EXEC sp_MySetPassword 'sa', 'dummy',
 '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012'''''''''''''''''''''''''''''''''''''''''''''''''''   
 ```  
   
- For this reason, you should use a large buffer for a command variable or directly execute the dynamic [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] inside the `EXECUTE` statement.  
+ For this reason, you should use a large buffer for a command variable or directly execute the dynamic [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] inside the `EXECUTE` statement.  
   
 ### Truncation When QUOTENAME(@variable, '''') and REPLACE() Are Used  
  Strings that are returned by QUOTENAME() and REPLACE() will be silently truncated if they exceed the space that is allocated. The stored procedure that is created in the following example shows what can happen.  
@@ -305,7 +305,7 @@ EXEC (@command);
 GO  
 ```  
   
- As with QUOTENAME(), string truncation by REPLACE() can be avoided by declaring temporary variables that are large enough for all cases. When possible, you should call QUOTENAME() or REPLACE() directly inside the dynamic [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. Otherwise, you can calculate the required buffer size as follows. For `@outbuffer = QUOTENAME(@input)`, the size of `@outbuffer` should be `2*(len(@input)+1)`. When you use `REPLACE()` and doubling quotation marks, as in the previous example, a buffer of `2*len(@input)` is enough.  
+ As with QUOTENAME(), string truncation by REPLACE() can be avoided by declaring temporary variables that are large enough for all cases. When possible, you should call QUOTENAME() or REPLACE() directly inside the dynamic [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. Otherwise, you can calculate the required buffer size as follows. For `@outbuffer = QUOTENAME(@input)`, the size of `@outbuffer` should be `2*(len(@input)+1)`. When you use `REPLACE()` and doubling quotation marks, as in the previous example, a buffer of `2*len(@input)` is enough.  
   
  The following calculation covers all cases:  
   
@@ -316,7 +316,7 @@ ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)
 ```  
   
 ### Truncation When QUOTENAME(@variable, ']') Is Used  
- Truncation can occur when the name of a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] securable is passed to statements that use the form `QUOTENAME(@variable, ']')`. The following example shows this.  
+ Truncation can occur when the name of a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] securable is passed to statements that use the form `QUOTENAME(@variable, ']')`. The following example shows this.  
   
 ```  
 CREATE PROCEDURE sp_MyProc  
@@ -332,13 +332,13 @@ SET @objectname = QUOTENAME(@schemaname)+'.'+ QUOTENAME(@tablename)
 GO  
 ```  
   
- When you are concatenating values of type sysname, you should use temporary variables large enough to hold the maximum 128 characters per value. If possible, call `QUOTENAME()` directly inside the dynamic [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. Otherwise, you can calculate the required buffer size as explained in the previous section.  
+ When you are concatenating values of type sysname, you should use temporary variables large enough to hold the maximum 128 characters per value. If possible, call `QUOTENAME()` directly inside the dynamic [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. Otherwise, you can calculate the required buffer size as explained in the previous section.  
   
 ## See Also  
- [EXECUTE &#40;Transact-SQL&#41;](../Topic/EXECUTE%20\(Transact-SQL\).md)   
+ [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)   
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)   
- [sp_executesql &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)   
+ [sp_executesql &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-executesql-transact-sql.md)   
  [Securing SQL Server](../../relational-databases/security/securing-sql-server.md)  
   
   

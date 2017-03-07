@@ -16,27 +16,27 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Data Exploration and Predictive Modeling with R
-  Data scientists often use R to explore data and build predictive models. This is typically an iterative process of trial and error until a good predictive model is reached. As an experienced data scientist, you  might connect to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database and fetch the data to your local workstation using the RODBC package, explore your data, and build a predictive model using standard R packages.  
+  Data scientists often use R to explore data and build predictive models. This is typically an iterative process of trial and error until a good predictive model is reached. As an experienced data scientist, you  might connect to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database and fetch the data to your local workstation using the RODBC package, explore your data, and build a predictive model using standard R packages.  
   
  However, this  approach has drawbacks. Data movement can be slow, inefficient, or insecure, and R itself has performance and scale limitations. These drawbacks become more apparent when you need to move and analyze large amounts of data, or use data sets that don’t fit into the memory available on your computer.  
   
- You can overcome these challenges by using the new scalable packages and R functions included with [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)]. The **RevoScaleR** package contains implementations of some of the most popular R functions, which have been redesigned to provide parallelism and scale. The RevoScaleR package also provides support for changing *execution context*. What this means is that, for an entire solution or for just one function, you can indicate that computations should be performed using the resources of the computer that hosts the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance, rather than your local workstation. There are multiple advantages to doing this: you avoid unnecessary data movement, and you can leverage greater computation resources on the server computer.  
+ You can overcome these challenges by using the new scalable packages and R functions included with [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)]. The **RevoScaleR** package contains implementations of some of the most popular R functions, which have been redesigned to provide parallelism and scale. The RevoScaleR package also provides support for changing *execution context*. What this means is that, for an entire solution or for just one function, you can indicate that computations should be performed using the resources of the computer that hosts the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance, rather than your local workstation. There are multiple advantages to doing this: you avoid unnecessary data movement, and you can leverage greater computation resources on the server computer.  
   
- This section provides guidance for the data scientists on how to use [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] and how to perform tasks related to developing and testing R solutions.  
+ This section provides guidance for the data scientists on how to use [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] and how to perform tasks related to developing and testing R solutions.  
   
 ##  <a name="bkmk_RDevTools"></a> R Development Tools  
  Microsoft R Client gives the data scientist a complete environment for developing and testing predictive models. R Client includes:  
   
--  **[!INCLUDE[rsql_rro-noversion](../../advanced-analytics/r-services/includes/rsql-rro-noversion-md.md)]:** A distribution of the R runtime and a set of packages, such as the Intel math kernel library, that boost the performance of standard R operations.  
+-  **[!INCLUDE[rsql_rro-noversion](../../a9notintoc/includes/rsql-rro-noversion-md.md)]:** A distribution of the R runtime and a set of packages, such as the Intel math kernel library, that boost the performance of standard R operations.  
   
--   **RevoScaleR:** An R package that lets you push computations to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. [!INCLUDE[rsql_rre-noversion](../../advanced-analytics/r-services/includes/rsql-rre-noversion-md.md)]. It also includes a set of common R functions that have been redesigned to provide better performance and scalability. You can identify these improved functions  by the **rx** prefix. It also includes enhanced data providers for a variety of sources; these functions are prefixed with **Rx**.  
+-   **RevoScaleR:** An R package that lets you push computations to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. [!INCLUDE[rsql_rre-noversion](../../a9notintoc/includes/rsql-rre-noversion-md.md)]. It also includes a set of common R functions that have been redesigned to provide better performance and scalability. You can identify these improved functions  by the **rx** prefix. It also includes enhanced data providers for a variety of sources; these functions are prefixed with **Rx**.  
   
--   **Free choice of development tools:** You can use any Windows-based code editor that supports R, such as [!INCLUDE[rsql_rtvs](../../advanced-analytics/r-services/includes/rsql-rtvs-md.md)] or RStudio. The download of [!INCLUDE[rsql_rro-noversion](../../advanced-analytics/r-services/includes/rsql-rro-noversion-md.md)] also includes common command-line tools for R such as RGui.exe.  
+-   **Free choice of development tools:** You can use any Windows-based code editor that supports R, such as [!INCLUDE[rsql_rtvs](../../advanced-analytics/r-services/includes/rsql-rtvs-md.md)] or RStudio. The download of [!INCLUDE[rsql_rro-noversion](../../a9notintoc/includes/rsql-rro-noversion-md.md)] also includes common command-line tools for R such as RGui.exe.  
   
 ##  <a name="bkmk_packages"></a> R Environment and Packages  
- The R environment supported in [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] consists of a runtime, the open source language, and a graphical engine supported and extended by multiple packages. The language allows a variety of extensions that are implemented using packages.  
+ The R environment supported in [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] consists of a runtime, the open source language, and a graphical engine supported and extended by multiple packages. The language allows a variety of extensions that are implemented using packages.  
   
- There are several sources of additional R  packages that you can use with [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] :  
+ There are several sources of additional R  packages that you can use with [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] :  
   
   
 -   General purpose R packages from public repositories. You can obtain the most popular open source R packages from public repositories such as CRAN, which hosts has over 6000 packages that can be used by data scientists.  
@@ -45,26 +45,26 @@ manager: "jhubbard"
   
      For the Windows platform, R packages are provided as zip files and can be downloaded and installed under the GPL license.  
   
-     For information about how to install third-party packages for use with [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)], see [Install Additional R Packages on SQL Server](../../advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md)  
+     For information about how to install third-party packages for use with [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)], see [Install Additional R Packages on SQL Server](../../advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md)  
   
--   Additional packages and libraries provided by [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)].   
+-   Additional packages and libraries provided by [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)].   
   
      The **RevoScaleR** package includes high performance big data analytics, improved versions of functions that support common data science tasks, optimized learners for Naive Bayes, linear regression, time series models, and neural networks, and advanced math libraries.  
   
      The **RevoPemaR** package lets you develop your own parallel external memory algorithms in R.  
   
-     For more information about these packages and how to use them, see [Data Exploration and Predictive Modeling &#40;Tutorial: SQL Server R Services&#41;](../Topic/Data%20Exploration%20and%20Predictive%20Modeling%20\(Tutorial:%20SQL%20Server%20R%20Services\).md).  
+     For more information about these packages and how to use them, see [Data Exploration and Predictive Modeling &#40;Tutorial: SQL Server R Services&#41;](../../a9notintoc/data-exploration-and-predictive-modeling-tutorial-sql-server-r-services.md).  
   
 ## Using Data Sources and Compute Contexts  
- When using the RevoScaleR package to connect to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], there are some important new functions to use in your R code:  
+ When using the RevoScaleR package to connect to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], there are some important new functions to use in your R code:  
   
--   [RxSqlServerData](RxSqlServerData.md) is a function provided in the RevoScaleR package to support improved data connectivity to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   [RxSqlServerData](../../a9retired/rxsqlserverdata.md) is a function provided in the RevoScaleR package to support improved data connectivity to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
-     You use this function in your R code to define the *data source*. The data source object specifies the server and tables where the data resides and manages the task of  reading data from and writing data to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+     You use this function in your R code to define the *data source*. The data source object specifies the server and tables where the data resides and manages the task of  reading data from and writing data to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
--   The [RxInSqlServer](rxInSqlServer.md) function can be used to specify the *compute context*.  In other words, you can indicate where the R code should be executed: on your local workstation, or on the computer that hosts the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance.  
+-   The [RxInSqlServer](../../a9retired/rxinsqlserver.md) function can be used to specify the *compute context*.  In other words, you can indicate where the R code should be executed: on your local workstation, or on the computer that hosts the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance.  
   
-     When you set the compute context, it affects only computations that support remote execution context, which means R operations provided by the RevoScaleR package and related functions. Typically, R solutions based on standard CRAN packages cannot run in a remote compute context, though they can be run on the [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer if started by T-SQL. However, you can use the `rxExec` function to call individual R functions and run them remotely in [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+     When you set the compute context, it affects only computations that support remote execution context, which means R operations provided by the RevoScaleR package and related functions. Typically, R solutions based on standard CRAN packages cannot run in a remote compute context, though they can be run on the [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] computer if started by T-SQL. However, you can use the `rxExec` function to call individual R functions and run them remotely in [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  For examples of how to create and work with data sources and execution contexts,  see thee tutorials:
  
@@ -72,9 +72,9 @@ manager: "jhubbard"
  +  [RevoScaleR SQL Server Getting Started](https://msdn.microsoft.com/microsoft-r/scaler-sql-server-getting-started).  
   
 ## Deploying Your R Code to Production  
- An important part of data science is providing your analyses to others, or using predictive models to improve business results or processes. In [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)], it is easy to move to production when your R script or model is ready.  
+ An important part of data science is providing your analyses to others, or using predictive models to improve business results or processes. In [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)], it is easy to move to production when your R script or model is ready.  
   
- For more information about how you can move your code to run in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Operationalizing Your R Code](../../advanced-analytics/r-services/operationalizing-your-r-code.md).  
+ For more information about how you can move your code to run in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Operationalizing Your R Code](../../advanced-analytics/r-services/operationalizing-your-r-code.md).  
   
  Typically the deployment process begins with cleaning up your script to eliminate code that is not needed in production. as you move computations closer to the data, you might find ways to  more efficiently move, summarize, or present data than doing everything in R.  
   
@@ -82,7 +82,7 @@ manager: "jhubbard"
   
 ##  <a name="bkmk_SQLInR"></a> In This Section  
 
-[Comparison of ScaleR Functions and CRAN R Functions](Summary%20of%20rx%20Functions.md)
+[Comparison of ScaleR Functions and CRAN R Functions](../../a9retired/summary-of-rx-functions.md)
 
 [ScaleR Functions for Working with SQL Server](../../advanced-analytics/r-services/scaler-functions-for-working-with-sql-server-data.md)
    

@@ -29,10 +29,10 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Formatting Lines, Colors, and Images (Report Builder and SSRS)
-  [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] gives you the ability to format lines, colors, data regions, images, and other report items.  
+  [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] gives you the ability to format lines, colors, data regions, images, and other report items.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Borders, Lines and Gridlines  
  Borders, lines, and gridlines can visually tie items together on the page and help your report readers easily read the contents of the report. Using the predefined border styles, you can quickly add a border around a text box, a group of text boxes, or an image. In addition, you can change the style, width, and color for the borders, lines, and gridlines. Borders are added around the entire item selected or around a border along an edge of the item, for example, a border along the bottom of a text box.  
@@ -57,6 +57,6 @@ manager: "erikre"
  [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
- [Fill Dialog Box &#40;Report Builder and SSRS&#41;](../Topic/Fill%20Dialog%20Box%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Fill Dialog Box &#40;Report Builder and SSRS&#41;](../../a9retired/fill-dialog-box-report-builder-and-ssrs.md)  
   
   

@@ -15,19 +15,19 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Could not load file or assembly Microsoft.Data.Services
-  In SharePoint 2010 environments that have [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint, this error will occur if you attempt a data feed export and the system is missing the required version of Microsoft ADO.NET Data Services.  
+  In SharePoint 2010 environments that have [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint, this error will occur if you attempt a data feed export and the system is missing the required version of Microsoft ADO.NET Data Services.  
   
 ## Details  
   
 |||  
 |-|-|  
-|Applies to|[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint|  
-|Product Version|[!INCLUDE[ssKilimanjaro](../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)]|  
+|Applies to|[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint|  
+|Product Version|[!INCLUDE[ssKilimanjaro](../../a9notintoc/includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)]|  
 |Cause|ADO.NET Data Services 3.5 SP1 was not found.|  
 |Message Text|Could not load file or assembly 'Microsoft.Data.Services, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' or one of its dependencies. The system cannot find the file specified|  
   
 ## Explanation  
- SharePoint 2010 includes an Export as Data Feed button that you can use to export a SharePoint list as an XML data feed. In addition, both Reporting Services in SharePoint mode and [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint support data feed features that require ADO.NET Data Services.  
+ SharePoint 2010 includes an Export as Data Feed button that you can use to export a SharePoint list as an XML data feed. In addition, both Reporting Services in SharePoint mode and [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint support data feed features that require ADO.NET Data Services.  
   
  If ADO.NET Data Services is not installed, this error will occur when you request a data feed.  
   

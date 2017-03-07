@@ -21,11 +21,11 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Provision Subscriptions and Alerts for SSRS Service Applications
-  [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] subscriptions and data alerts require SQL Server Agent and require the configuration of permissions for SQL Server Agent. If you see error messages that indicate SQL Server Agent is required and you have verified SQL Server Agent is running, then update or verify permissions. The scope of this topic is [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] in SharePoint mode and the topic describes three ways you can update the permissions of SQL Server Agent with [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] subscriptions. The credentials you use for the steps in this topic need to have sufficient permissions to grant execute permissions to the RSExecRole for objects in the service application, msdb, and master databases.  
+  [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] subscriptions and data alerts require SQL Server Agent and require the configuration of permissions for SQL Server Agent. If you see error messages that indicate SQL Server Agent is required and you have verified SQL Server Agent is running, then update or verify permissions. The scope of this topic is [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] in SharePoint mode and the topic describes three ways you can update the permissions of SQL Server Agent with [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] subscriptions. The credentials you use for the steps in this topic need to have sufficient permissions to grant execute permissions to the RSExecRole for objects in the service application, msdb, and master databases.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../analysis-services/includes/applies-md.md)]**  SharePoint 2016 &#124; SharePoint 2013|  
+|**[!INCLUDE[applies](../../../a9retired/includes/applies-md.md)]**  SharePoint 2016 &#124; SharePoint 2013|  
   
  ![SQL Agent permissions to Service Application DBs](../../../reporting-services/install/windows/media/rs-provisionsqlagent.gif "SQL Agent permissions to Service Application DBs")  
   
@@ -87,7 +87,7 @@ manager: "erikre"
   
 #### To load the Transact-SQL script in SQL Server Management Studio  
   
-1.  To open SQL Server Management Studio, on the **Start** menu, click [!INCLUDE[ssCurrentUI](../../../analysis-services/instances/install/windows/includes/sscurrentui-md.md)] and click **SQL Server Management Studio**.  
+1.  To open SQL Server Management Studio, on the **Start** menu, click [!INCLUDE[ssCurrentUI](../../../a9notintoc/includes/sscurrentui-md.md)] and click **SQL Server Management Studio**.  
   
 2.  In the **Connect to Server** dialog box set the following options:  
   

@@ -20,14 +20,14 @@ manager: "erikre"
   
  After you publish a report, you can change the default values, the available values, and other properties for a report parameter on the report server. You can provide multiple sets of default parameter values by creating linked reports. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
- This article is about adding report parameters to a paginated report in [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] or Report Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)]. You can also add report parameters to mobile reports in  [!INCLUDE[SS_MobileReptPub_Long](../../reporting-services/includes/ss-mobilereptpub-long-md.md)]. See [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) for more information.  
+ This article is about adding report parameters to a paginated report in [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] or Report Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)]. You can also add report parameters to mobile reports in  [!INCLUDE[SS_MobileReptPub_Long](../../reporting-services/includes/ss-mobilereptpub-long-md.md)]. See [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) for more information.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ### To add or edit a report parameter  
   
-1.  In [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] or Report Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], in the **Report Data** pane, right-click the **Parameters** node and click **Add Parameter**. The **Report Parameter Properties** dialog box opens.  
+1.  In [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] or Report Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], in the **Report Data** pane, right-click the **Parameters** node and click **Add Parameter**. The **Report Parameter Properties** dialog box opens.  
   
 2.  In **Name**, type the name of the parameter or accept the default name.  
   
@@ -49,7 +49,7 @@ manager: "erikre"
   
     -   To hide the parameter and protect it from being modified on the report server after the report is published, select **Internal**. The report parameter can then only be viewed in the report definition. For this option, you must set a default value or allow the parameter to accept a null value.  
   
-9. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To delete a report parameter  
   
@@ -65,7 +65,7 @@ manager: "erikre"
  [Add Cascading Parameters to a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorials/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Add Dataset Filters, Data Region Filters, and Group Filters &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/fcca7243-a702-4725-8e6f-cf118e988acf.md)   
- [Parameters Collection References &#40;Report Builder and SSRS&#41;](../Topic/Parameters%20Collection%20References%20\(Report%20Builder%20and%20SSRS\).md)   
+ [Parameters Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [Add a multi-value parameter to a Report](../../reporting-services/report-design/add-a-multi-value-parameter-to-a-report.md)  
   
   

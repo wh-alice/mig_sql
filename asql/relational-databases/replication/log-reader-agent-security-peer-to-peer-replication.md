@@ -34,13 +34,13 @@ manager: "jhubbard"
  The database that serves as the publication database and subscription database at each peer.  
   
  **Connection to Distributor**  
- The context under which the connection to the Distributor is made. The local connection to the Distributor is always made using the context of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows account under which the agent runs, so this field will always display **Impersonate '\<Domain>\\<Login\>'** or **Impersonate '\<Computer>\\<Login\>'**.  
+ The context under which the connection to the Distributor is made. The local connection to the Distributor is always made using the context of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows account under which the agent runs, so this field will always display **Impersonate '\<Domain>\\<Login\>'** or **Impersonate '\<Computer>\\<Login\>'**.  
   
  **Connection to Publisher**  
- The context under which the connection to the Publisher is made. The connection to the Publisher can be made using a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login or using the context of the Windows account under which the agent runs. The field displays one of the following: **Use login '\<Login>'**, **Impersonate '\<Domain>\\<Login\>'** or **Impersonate '\<Computer>\\<Login\>'**. [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] recommends that all connections be made using the context of the Windows account.  
+ The context under which the connection to the Publisher is made. The connection to the Publisher can be made using a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login or using the context of the Windows account under which the agent runs. The field displays one of the following: **Use login '\<Login>'**, **Impersonate '\<Domain>\\<Login\>'** or **Impersonate '\<Computer>\\<Login\>'**. [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] recommends that all connections be made using the context of the Windows account.  
   
 ## See Also  
  [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Peer-to-Peer Transactional Replication](../Topic/Peer-to-Peer%20Transactional%20Replication.md)  
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

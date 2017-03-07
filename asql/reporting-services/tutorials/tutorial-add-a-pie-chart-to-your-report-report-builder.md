@@ -39,7 +39,7 @@ For information about requirements, see [Prerequisites for Tutorials &#40;Report
 In this section, you use the Chart Wizard to create an embedded dataset, choose a shared data source, and create a pie chart.  
 
   
-1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
+1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
   
     The **New Report or Dataset** dialog box opens.  
   
@@ -123,7 +123,7 @@ On each slice of the pie, you can display a percentage for this slice compared t
     > [!NOTE]  
     > **Number Format** in the **Series Label Properties** dialog box has no effect when you format percentages. This formats the labels as percentages, but does not calculate the percentage of the pie that each slice represents.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 7.  Click **Run** to preview the report.  
   

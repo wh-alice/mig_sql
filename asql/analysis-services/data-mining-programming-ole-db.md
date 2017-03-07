@@ -22,9 +22,9 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # Data Mining Programming - OLE DB
-  The data mining features in [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] comply with the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] OLE DB for Data Mining 1.0 specification released in June 2000.  
+  The data mining features in [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] comply with the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] OLE DB for Data Mining 1.0 specification released in June 2000.  
   
- [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] has extended the specification by adding new schema rowsets, adding columns to existing schema rowsets, and adding syntax to the Data Mining Extensions (DMX) language for creating and managing mining structures.  
+ [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] has extended the specification by adding new schema rowsets, adding columns to existing schema rowsets, and adding syntax to the Data Mining Extensions (DMX) language for creating and managing mining structures.  
   
  **For More Information:** [Data Mining Schema Rowsets](../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md), [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md), [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md), [DROP MINING STRUCTURE &#40;DMX&#41;](../dmx/drop-mining-structure-dmx.md)  
   

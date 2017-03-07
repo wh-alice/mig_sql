@@ -23,7 +23,7 @@ manager: "jhubbard"
 ## Example  
  This query constructs XML that provides sales order information. This includes the following:  
   
--   Sales order header information, `SalesOrderID`, `SalesPersonID`, and `OrderDate`. [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] stores this information in the `SalesOrderHeader` table.  
+-   Sales order header information, `SalesOrderID`, `SalesPersonID`, and `OrderDate`. [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] stores this information in the `SalesOrderHeader` table.  
   
 -   Sales order detail information. This includes one or more products ordered, the unit price, and the quantity ordered. This information is stored in the `SalesOrderDetail` table.  
   

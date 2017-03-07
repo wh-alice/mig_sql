@@ -24,16 +24,16 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Analysis Services Backward Compatibility
-  The topics in this section describe the changes in behavior between versions of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)].  
+  The topics in this section describe the changes in behavior between versions of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)].  
   
 ## In This Section  
   
 |Topics|Description|  
 |------------|-----------------|  
-|[Deprecated Analysis Services Features in SQL Server 2016](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)|Describes features that are retained in the current version to maintain  backward compatibility, but which will be removed in a future version of [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)].|  
-|[Discontinued Analysis Services Functionality in SQL Server 2016](../analysis-services/discontinued-analysis-services-functionality-in-sql-server-2016.md)|Describes features that existed in earlier versions of  [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] but are now officially unsupported  in the current version.|  
-|[Breaking Changes to Analysis Services Features in SQL Server 2016](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md)|Describes code changes introduced in this release of [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] that could potentially break a model or custom applications or script created in previous versions of the software.|  
-|[Behavior Changes to Analysis Services Features in SQL Server 2016](../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)|Describes existing features that have different behaviors in this release of [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)]. Common examples include changing a default to a new or different value, disallowing a previously allowable operation or configuration, or   a introducing a requirement to manually revise or replace a setting or configuration that is lost during upgrade.|  
+|[Deprecated Analysis Services Features in SQL Server 2016](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)|Describes features that are retained in the current version to maintain  backward compatibility, but which will be removed in a future version of [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)].|  
+|[Discontinued Analysis Services Functionality in SQL Server 2016](../analysis-services/discontinued-analysis-services-functionality-in-sql-server-2016.md)|Describes features that existed in earlier versions of  [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] but are now officially unsupported  in the current version.|  
+|[Breaking Changes to Analysis Services Features in SQL Server 2016](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md)|Describes code changes introduced in this release of [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] that could potentially break a model or custom applications or script created in previous versions of the software.|  
+|[Behavior Changes to Analysis Services Features in SQL Server 2016](../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)|Describes existing features that have different behaviors in this release of [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)]. Common examples include changing a default to a new or different value, disallowing a previously allowable operation or configuration, or   a introducing a requirement to manually revise or replace a setting or configuration that is lost during upgrade.|  
   
 ## See Also  
  [What's New in Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)   

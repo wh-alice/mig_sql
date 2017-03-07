@@ -31,14 +31,14 @@ When you run the package again, the Integration Services service uses the parame
 ## Lesson Tasks  
 This lesson contains the following tasks:  
   
-1.  [Step 1: Copying the Lesson 5 Package](../Topic/Step%201:%20Copying%20the%20Lesson%205%20Package.md)  
+1.  [Step 1: Copying the Lesson 5 Package](../../integration-services/tutorials/lesson-6-1-copying-the-lesson-5-package.md)  
   
-2.  [Step 2: Converting the Project to the Project Deployment Model](../Topic/Step%202:%20Converting%20the%20Project%20to%20the%20Project%20Deployment%20Model.md)  
+2.  [Step 2: Converting the Project to the Project Deployment Model](../../integration-services/tutorials/lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
-3.  [Step 3: Testing the Lesson 6 Package](../Topic/Step%203:%20Testing%20the%20Lesson%206%20Package.md)  
+3.  [Step 3: Testing the Lesson 6 Package](../../integration-services/tutorials/lesson-6-3-testing-the-lesson-6-package.md)  
   
-4.  [Step 4: Deploying the Lesson 6 Package](../Topic/Step%204:%20Deploying%20the%20Lesson%206%20Package.md)  
+4.  [Step 4: Deploying the Lesson 6 Package](../../integration-services/tutorials/lesson-6-4-deploying-the-lesson-6-package.md)  
   
 ## Start the Lesson  
-[Step 1: Copying the Lesson 5 Package](../Topic/Step%201:%20Copying%20the%20Lesson%205%20Package.md)  
+[Step 1: Copying the Lesson 5 Package](../../integration-services/tutorials/lesson-6-1-copying-the-lesson-5-package.md)  
   

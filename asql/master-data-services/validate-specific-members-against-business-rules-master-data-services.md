@@ -19,7 +19,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Validate Specific Members against Business Rules (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], apply business rules selectively when you want to update or validate subsets of members against business rules.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], apply business rules selectively when you want to update or validate subsets of members against business rules.  
   
 > [!NOTE]  
 >  If you want to apply business rules to all members in a version of a model, see [Validate a Version against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md).  
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 ### To apply business rules selectively  
   
-1.  On the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] home page, from the **Model** drop-down list, select a model.  
+1.  On the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] home page, from the **Model** drop-down list, select a model.  
   
 2.  From the **Version** drop-down list, select a version.  
   

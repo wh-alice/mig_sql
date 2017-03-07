@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Database Event Category
-  The **Database** event category contains event classes to monitor the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)].  
+  The **Database** event category contains event classes to monitor the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)].  
   
 ## In This Section  
   

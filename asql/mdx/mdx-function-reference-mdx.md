@@ -31,9 +31,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Function Reference (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] provides for the use of functions in Multidimensional Expressions (MDX) syntax. Functions can be used in any valid MDX statement, and are frequently used in queries, custom rollup definitions, and other calculations. This section provides information about the MDX functions included with [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)].  
+  [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] provides for the use of functions in Multidimensional Expressions (MDX) syntax. Functions can be used in any valid MDX statement, and are frequently used in queries, custom rollup definitions, and other calculations. This section provides information about the MDX functions included with [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)].  
   
  You can use the following tables to find functions by their category of return value, or you can select a function by name from the alphabetical list in the table of contents.  
   
@@ -164,7 +164,7 @@ manager: "erikre"
 |[DrilldownMemberTop &#40;MDX&#41;](../mdx/drilldownmembertop-mdx.md)|Drills down the members in a specified set that are present in a second specified set, limiting the result set to a specified number of members. Alternatively, this function drills down on a set of tuples.|  
 |[DrillupLevel &#40;MDX&#41;](../mdx/drilluplevel-mdx.md)|Drills up the members of a set that are below a specified level.|  
 |[DrillupMember &#40;MDX&#41;](../mdx/drillupmember-mdx.md)|Drills up the members in a specified set that are present in a second specified set.|  
-|[Except &#40;MDX&#41;](../Topic/Except%20\(MDX\).md)|Finds the difference between two sets, optionally retaining duplicates.|  
+|[Except &#40;MDX&#41;](../mdx/except-mdx-function.md)|Finds the difference between two sets, optionally retaining duplicates.|  
 |[Exists &#40;MDX&#41;](../mdx/exists-mdx.md)|Returns the set of members of one set that exist with one or more tuples of one or more other sets.|  
 |[Extract &#40;MDX&#41;](../mdx/extract-mdx.md)|Returns a set of tuples from extracted dimension elements.|  
 |[Filter &#40;MDX&#41;](../mdx/filter-mdx.md)|Returns the set that results from filtering a specified set based on a search condition.|  

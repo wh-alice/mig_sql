@@ -23,7 +23,7 @@ manager: "jhubbard"
   
  **To open the Mappings page**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package that has the ADO NET destination.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package that has the ADO NET destination.  
   
 2.  On the **Data Flow** tab, double-click the ADO NET destination.  
   

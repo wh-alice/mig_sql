@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # IsGeneration (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns whether a specified member is in a specified generation.  
   

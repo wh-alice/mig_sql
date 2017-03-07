@@ -17,15 +17,15 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Install SQL Server Database Engine
-  The [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] component of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is the core service for storing, processing, and securing data. The [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] provides controlled access and rapid transaction processing to meet the requirements of the most demanding data consuming applications in your enterprise.  
+  The [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] component of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is the core service for storing, processing, and securing data. The [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] provides controlled access and rapid transaction processing to meet the requirements of the most demanding data consuming applications in your enterprise.  
   
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports up to 50 instances of the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] on a single computer. To create a typical [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] installation, see [Install SQL Server 2016 from the Installation Wizard &#40;Setup&#41;](../Topic/Install%20SQL%20Server%202016%20from%20the%20Installation%20Wizard%20\(Setup\).md).  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] supports up to 50 instances of the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] on a single computer. To create a typical [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] installation, see [Install SQL Server 2016 from the Installation Wizard &#40;Setup&#41;](../../../database-engine/install/windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
- **Important** For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
+ **Important** For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
   
- The following features are installed when you select **[!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Database Engine** on the Components to Install page of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Installation Wizard:  
+ The following features are installed when you select **[!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Database Engine** on the Components to Install page of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Installation Wizard:  
   
--   [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)]  
+-   [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)]  
   
 -   Replication - is an optional component  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 -   Data Quality Client  
   
--   [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)]  
+-   [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)]  
   
 -   Connectivity components  
   
@@ -48,18 +48,18 @@ manager: "jhubbard"
   
 -   Management tools  
   
--   [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)]  
+-   [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)]  
   
 -   Documentation components  
   
 > [!NOTE]  
->  By default, sample databases and sample code are not installed as part of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Setup. To install sample databases and sample code, see the [CodePlex Web site](http://go.microsoft.com/fwlink/?LinkId=87843).  
+>  By default, sample databases and sample code are not installed as part of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Setup. To install sample databases and sample code, see the [CodePlex Web site](http://go.microsoft.com/fwlink/?LinkId=87843).  
   
 ## See Also  
  [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
  [Editions and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Planning a SQL Server Installation](../../../sql-server/install/planning-a-sql-server-installation.md)   
  [High Availability Solutions &#40;SQL Server&#41;](../../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../Topic/Upgrade%20to%20SQL%20Server%202016%20Using%20the%20Installation%20Wizard%20\(Setup\).md)  
+ [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../../database-engine/install/windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

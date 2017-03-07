@@ -19,12 +19,12 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Replication Subscribers and Always On Availability Groups (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   When an Always On availability group containing a database that is a replication subscriber fails over, the replication subscription might fail. For transactional subscribers, the distribution agent will continue to replicate automatically if the subscription is using the name of the availability group listener of the subscriber. For merge subscribers, a replication administrator must manually reconfigure the subscriber, by recreating the subscription.  
   
 ## What is Supported  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] replication supports the automatic failover of the publisher, the automatic failover of transactional subscribers, and the manual failover of merge subscribers. The failover of a distributor on an availability database is not supported. Always On cannot be combined with Websync and ssNoVersion Compact scenarios.  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] replication supports the automatic failover of the publisher, the automatic failover of transactional subscribers, and the manual failover of merge subscribers. The failover of a distributor on an availability database is not supported. Always On cannot be combined with Websync and ssNoVersion Compact scenarios.  
   
  **Failover of a Merge Pull Subscription**  
   
@@ -44,11 +44,11 @@ manager: "jhubbard"
 3.  Using the script in the **Creating a Transactional Replication Push Subscription** section below, create the subscription using the name of the availability group listener of the subscriber. After a failover, the listener name will always remain valid, whereas the actual server name of the subscriber will depend on the actual node that became the new primary.  
   
     > [!NOTE]  
-    >  The subscription must be created by using a [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] script and cannot be created using [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)].  
+    >  The subscription must be created by using a [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] script and cannot be created using [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)].  
   
 4.  If creating a pull subscription:  
   
-    1.  In [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], on the primary subscriber node, open the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent tree.  
+    1.  In [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)], on the primary subscriber node, open the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Agent tree.  
   
     2.  Identify the **Pull Distribution Agent** job and edit the job.  
   

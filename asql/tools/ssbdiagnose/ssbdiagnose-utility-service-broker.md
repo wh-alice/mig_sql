@@ -162,12 +162,12 @@ WHERE database_id = DB_ID();
  **RUNTIME**  
  Requests a report of issues that cause runtime errors for a [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] conversation. If neither **-NEW** or **-ID** are specified, **ssbdiagnose** monitors all conversations in all databases specified in the connection options. If **-NEW** or **-ID** are specified, **ssbdiagnose** builds a list of the IDs specified in the parameters.  
   
- While **ssbdiagnose** is running, it records all [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] events that indicate runtime errors. It records the events that occur for the specified IDs, plus system-level events. If runtime errors are encountered, **ssbdiagnose** runs a configuration report on the associated configuration.  
+ While **ssbdiagnose** is running, it records all [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] events that indicate runtime errors. It records the events that occur for the specified IDs, plus system-level events. If runtime errors are encountered, **ssbdiagnose** runs a configuration report on the associated configuration.  
   
  By default, runtime errors are not included in the output report, only the results of the configuration analysis. Use **-SHOWEVENTS** to have the runtime errors included in the report.  
   
  **-SHOWEVENTS**  
- Specifies that **ssbdiagnose** report [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] events during a RUNTIME report. Only events that are considered error conditions are reported. By default, **ssbdiagnose** only monitors error events; it does not report them in the output.  
+ Specifies that **ssbdiagnose** report [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] events during a RUNTIME report. Only events that are considered error conditions are reported. By default, **ssbdiagnose** only monitors error events; it does not report them in the output.  
   
  **-NEW**  
  Requests runtime monitoring of the first conversation that begins after **ssbdiagnose** starts running.  
@@ -203,7 +203,7 @@ WHERE database_id = DB_ID();
  Specifies the connection information for the databases that contain the services associated with conversation elements being monitored. If all the services are in the same database, you only have to specify one **CONNECT TO** clause. If the services are in separate databases you must supply a **CONNECT TO** clause for each database. If **runtimeconnectionoptions** is not specified, **ssbdiagnose** uses the connection information from **baseconnectionoptions**.  
   
  **–E**  
- Open a Windows Authentication connection to an instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] by using your current Windows account as the login ID. The login must be a member of the **sysadmin** fixed-server role.  
+ Open a Windows Authentication connection to an instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] by using your current Windows account as the login ID. The login must be a member of the **sysadmin** fixed-server role.  
   
  The -E option ignores the user and password settings of the SQLCMDUSER and SQLCMDPASSWORD environment variables.  
   
@@ -212,7 +212,7 @@ WHERE database_id = DB_ID();
  If the **-E** option is used together with the **-U** option or the **-P** option, an error message is generated.  
   
  **-U** *login_id*  
- Open a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication connection by using the specified login ID. The login must be a member of the **sysadmin** fixed-server role.  
+ Open a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication connection by using the specified login ID. The login must be a member of the **sysadmin** fixed-server role.  
   
  If neither **-E** nor **-U** is specified, **ssbdiagnose** uses the value from the SQLCMDUSER environment variable. If SQLCMDUSER is not set either, **ssbdiagnose** tries to connect by using Windows Authentication mode based on the Windows account of the user who is running **ssbdiagnose**.  
   
@@ -227,7 +227,7 @@ WHERE database_id = DB_ID();
  If the **-P** option is specified without a password **ssbdiagnose** uses the default password (NULL).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../database-engine/install/windows/includes/ssnotestrongpass-md.md)] For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
+>  [!INCLUDE[ssNoteStrongPass](../../a9notintoc/includes/ssnotestrongpass-md.md)] For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
  The password prompt is displayed by printing the password prompt to the console, as follows: `Password:`  
   
@@ -238,9 +238,9 @@ WHERE database_id = DB_ID();
  If the **-P** option is followed by more than one argument, an error message is generated.  
   
  **-S** *server_name*[\\*instance_name*]  
- Specifies the instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] that holds the [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] services to be analyzed.  
+ Specifies the instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] that holds the [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] services to be analyzed.  
   
- Specify *server_name* to connect to the default instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] on that server. Specify *server_name***\\***instance_name* to connect to a named instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] on that server. If **-S** is not specified, **ssbdiagnose** uses the value of the SQLCMDSERVER environment variable. If SQLCMDSERVER is not set either, **ssbdiagnose** connects to the default instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] on the local computer.  
+ Specify *server_name* to connect to the default instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] on that server. Specify *server_name***\\***instance_name* to connect to a named instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] on that server. If **-S** is not specified, **ssbdiagnose** uses the value of the SQLCMDSERVER environment variable. If SQLCMDSERVER is not set either, **ssbdiagnose** connects to the default instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] on the local computer.  
   
  **-d** *database_name*  
  Specifies the database that holds the [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] services to be analyzed. If the database does not exist, an error message is generated. If **-d** is not specified, the default is the database specified in the default-database property for your login.  
@@ -258,7 +258,7 @@ WHERE database_id = DB_ID();
   
 -   Confirm that there are no configuration errors after changing the configuration of an existing [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] application.  
   
--   Confirm that there are no configuration errors after a [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] database is detached and then reattached to a new instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+-   Confirm that there are no configuration errors after a [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] database is detached and then reattached to a new instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 -   Research whether there are configuration errors when messages are not successfully transmitted between services.  
   
@@ -284,7 +284,7 @@ WHERE database_id = DB_ID();
   
  The list does not include elements from databases that are not covered by the connection options. For example, assume that you use **-ID** to specify a conversation ID, but only provide a **runtimeconnectionoptions** clause for the initiator database and not the target database. **ssbdiagnose** will not include the target conversation handle in its list of IDs, only the conversation ID and the initiator conversation handle.  
   
- **ssbdiagnose** monitors the [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] events from the databases covered by **runtimeconnectionoptions** and **baseconnectionoptions**. It searches for [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] events that indicate an error was encountered by one or more of the [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] IDs in the runtime list. **ssbdiagnose** also searches for system-level [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] error events not specifically associated with any conversation group.  
+ **ssbdiagnose** monitors the [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] events from the databases covered by **runtimeconnectionoptions** and **baseconnectionoptions**. It searches for [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] events that indicate an error was encountered by one or more of the [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] IDs in the runtime list. **ssbdiagnose** also searches for system-level [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] error events not specifically associated with any conversation group.  
   
  If **ssbdiagnose** finds conversation errors, the utility will attempt to report on the root cause of the events by also running a configuration report. **ssbdiagnose** uses the metadata in the databases to try to determine the instances, [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] IDs, databases, services, and contracts used by the conversation. It then runs a configuration report using all available information.  
   
@@ -297,13 +297,13 @@ WHERE database_id = DB_ID();
  Reports a configuration issue. This includes issues found either a **CONFIGURATION** report is running, or during the configuration phase of a **RUNTIME** report. **ssbdiagnose** reports each configuration issue one time.  
   
  **Event**  
- Reports a [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] event that indicates a problem was encountered by a conversation being monitored during a **RUNTIME** report. **ssbdiagnose** reports events every time they are generated. Events can be reported multiple times if several conversations encounter the problem.  
+ Reports a [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] event that indicates a problem was encountered by a conversation being monitored during a **RUNTIME** report. **ssbdiagnose** reports events every time they are generated. Events can be reported multiple times if several conversations encounter the problem.  
   
  **Problem**  
  Reports an issue that is preventing **ssbdiagnose** from completing a configuration analysis or from monitoring conversations.  
   
 ## sqlcmd Environment Variables  
- The **ssbdiagnose** utility supports the SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD, and SQLCMDLOGINTIMOUT environment variables that are also used by the **sqlcmd** utility. You can set the environment variables either by using the command prompt SET command, or by using the **setvar** command in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] scripts that you run by using **sqlcmd**. For more information about how to use **setvar** in **sqlcmd**, see [Use sqlcmd with Scripting Variables](../Topic/Use%20sqlcmd%20with%20Scripting%20Variables.md).  
+ The **ssbdiagnose** utility supports the SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD, and SQLCMDLOGINTIMOUT environment variables that are also used by the **sqlcmd** utility. You can set the environment variables either by using the command prompt SET command, or by using the **setvar** command in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] scripts that you run by using **sqlcmd**. For more information about how to use **setvar** in **sqlcmd**, see [Use sqlcmd with Scripting Variables](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
   
 ## Permissions  
  In each **connectionoptions** clause, the login specified with either **-E** or **-U** must be a member of the **sysadmin** fixed-server role in the instance specified in **-S**.  
@@ -316,7 +316,7 @@ WHERE database_id = DB_ID();
   
 -   The initiator and target service are in the same database.  
   
--   The database is in the default instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+-   The database is in the default instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 -   The instances is on the same computer on which **ssbdiagnose** is run.  
   
@@ -334,7 +334,7 @@ ssbdiagnose -E CONFIGURATION FROM SERVICE /text/initiator -S InitiatorComputer -
 ```  
   
 ### C. Checking the Configuration of Two Services on Separate Computers That Use Separate Logins  
- The following example shows how to request a configuration report when the initiator and target service are on separate computers, and separate [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication logins are required for each instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+ The following example shows how to request a configuration report when the initiator and target service are on separate computers, and separate [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication logins are required for each instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 ```  
 ssbdiagnose CONFIGURATION FROM SERVICE /text/initiator   
@@ -358,7 +358,7 @@ ssbdiagnose -E CONFIGURATION FROM SERVICE /text/initiator
   
 -   The initiator and target service are in the same database.  
   
--   The database is in the default instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+-   The database is in the default instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 -   The instance is on the same computer on which **ssbdiagnose** is run.  
   
@@ -389,7 +389,7 @@ ssbdiagnose RUNTIME -ID D68D77A9-B1CF-41BF-A5CE-279ABCAB140D
 ```  
   
 ### H. Monitor the status of a conversation in two databases in the same instance  
- The following example shows how to monitor a specific conversation where the initiator and target services are in separate databases in the same instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)]. The example uses the **baseconnectionoptions** to specify the instance and login information, and two CONNECT TO clauses to specify the databases. -SHOWEVENTS is specified so that all runtime events are included in the report output.  
+ The following example shows how to monitor a specific conversation where the initiator and target services are in separate databases in the same instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)]. The example uses the **baseconnectionoptions** to specify the instance and login information, and two CONNECT TO clauses to specify the databases. -SHOWEVENTS is specified so that all runtime events are included in the report output.  
   
 ```  
 ssbdiagnose -E -S TestComputer/DevTestInstance RUNTIME -SHOWEVENTS   
@@ -398,7 +398,7 @@ ssbdiagnose -E -S TestComputer/DevTestInstance RUNTIME -SHOWEVENTS
 ```  
   
 ### I. Monitor the status of two conversations between two databases  
- The following example shows how to monitor two conversations where the initiator and target services are in separate databases in the same instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)]. The example uses the **baseconnectionoptions** to specify the instance and login information, and two CONNECT TO clauses to specify the databases.  
+ The following example shows how to monitor two conversations where the initiator and target services are in separate databases in the same instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)]. The example uses the **baseconnectionoptions** to specify the instance and login information, and two CONNECT TO clauses to specify the databases.  
   
 ```  
 ssbdiagnose -E -S TestComputer/DevTestInstance RUNTIME   
@@ -408,7 +408,7 @@ ssbdiagnose -E -S TestComputer/DevTestInstance RUNTIME
 ```  
   
 ### J. Monitor the status of all conversations between two databases  
- The following example shows how to monitor all the conversation between two databases in the same instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)]. The example uses the **baseconnectionoptions** to specify the instance and login information, and two CONNECT TO clauses to specify the databases.  
+ The following example shows how to monitor all the conversation between two databases in the same instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)]. The example uses the **baseconnectionoptions** to specify the instance and login information, and two CONNECT TO clauses to specify the databases.  
   
 ```  
 ssbdiagnose -E -S TestComputer/DevTestInstance RUNTIME   
@@ -456,8 +456,8 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [CREATE ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
  [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
- [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.transmission-queue-transact-sql.md)   
- [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.conversation-endpoints-transact-sql.md)   
- [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.conversation-groups-transact-sql.md)  
+ [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.transmission-queue-transact-sql.md)   
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.conversation-endpoints-transact-sql.md)   
+ [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.conversation-groups-transact-sql.md)  
   
   

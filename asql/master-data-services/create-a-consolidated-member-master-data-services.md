@@ -20,7 +20,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Create a Consolidated Member (Master Data Services)
-  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], create a consolidated member when you want a parent node for an explicit hierarchy. If you want to add data in bulk, use the staging tables instead. For more information, see  [Import Data from Tables &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md).  
+  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], create a consolidated member when you want a parent node for an explicit hierarchy. If you want to add data in bulk, use the staging tables instead. For more information, see  [Import Data from Tables &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md).  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 ### To create a consolidated member  
   
-1.  On the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] home page, from the **Model** list, select a model.  
+1.  On the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] home page, from the **Model** list, select a model.  
   
 2.  From the **Version** list, select a version.  
   

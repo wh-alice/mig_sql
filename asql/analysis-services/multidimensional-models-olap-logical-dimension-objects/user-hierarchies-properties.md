@@ -36,6 +36,6 @@ manager: "erikre"
   
 ## See Also  
  [User Hierarchies](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
- [Level Properties - user hierarchies](../Topic/Level%20Properties%20-%20user%20hierarchies.md)  
+ [Level Properties - user hierarchies](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md)  
   
   

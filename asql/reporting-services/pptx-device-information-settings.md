@@ -22,7 +22,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # PPTX Device Information Settings
-  The following table lists the device information settings for rendering [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] reports in the PPTX format.  
+  The following table lists the device information settings for rendering [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] reports in the PPTX format.  
   
 |Setting|Value|  
 |-------------|-----------|  

@@ -39,7 +39,7 @@ manager: "jhubbard"
   
     -   A COM-based *custom resolver*.  
   
-    -   A COM-based resolver supplied by [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)].  
+    -   A COM-based resolver supplied by [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)].  
   
      If the default resolution mechanism is used, behavior is further determined by the type of subscription used: client or server.  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 -   If you select logical record-level tracking, it is considered a conflict if changes are made to any row in the same logical record at more than one replication node (the columns affected in the corresponding rows need not be the same).  
   
- For more information, see [Detecting and Resolving Conflicts in Logical Records](../Topic/Detecting%20and%20Resolving%20Conflicts%20in%20Logical%20Records.md).  
+ For more information, see [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
  To specify the conflict tracking and resolution level for an article, see [Specify the Conflict Tracking and Resolution Level for Merge Articles](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
   
@@ -78,28 +78,28 @@ manager: "jhubbard"
   
 -   A COM-based custom resolver  
   
-     Merge replication provides an API for writing resolvers as COM objects in languages such as [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../relational-databases/replication/merge/includes/vcprvc-md.md)] or [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../analysis-services/data-mining/includes/vbprvb-md.md)]. For more information, see [COM-Based Custom Resolvers](../Topic/COM-Based%20Custom%20Resolvers.md).  
+     Merge replication provides an API for writing resolvers as COM objects in languages such as [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../relational-databases/replication/merge/includes/vcprvc-md.md)] or [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../a9retired/includes/vbprvb-md.md)]. For more information, see [COM-Based Custom Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
--   A COM-based resolver supplied by [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)]  
+-   A COM-based resolver supplied by [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)]  
   
-     [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] includes a number of COM-based resolvers. For more information, see [Microsoft COM-Based Resolvers](../Topic/Microsoft%20COM-Based%20Resolvers.md).  
+     [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] includes a number of COM-based resolvers. For more information, see [Microsoft COM-Based Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
- For information about how to select the appropriate type of resolver, see [Choose a Resolver](../Topic/Choose%20a%20Resolver.md).  
+ For information about how to select the appropriate type of resolver, see [Choose a Resolver](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-choose-a-resolver.md).  
   
 > [!NOTE]  
 >  Some article resolvers are written to handle conflicts only for certain operations. For example a resolver might handle updates, but not inserts or deletes. The default priority-based conflict resolver handles any conflicts not handled by the article resolver.  
   
  To specify a merge subscription type and conflict resolution priority, see  
   
--   [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]: [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/2b828d83-2341-4924-b92a-4f81a22246c0.md)  
+-   [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)]: [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/2b828d83-2341-4924-b92a-4f81a22246c0.md)  
   
--   Replication [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] programming and Replication Management Objects (RMO) programming: [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) and [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   Replication [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] programming and Replication Management Objects (RMO) programming: [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) and [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### Interactive Resolver  
- Replication supplies an Interactive Resolver user interface that can be used in conjunction with either the default priority-based conflict resolver or an article resolver. When performing on-demand synchronization through [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows Synchronization Manager, the Interactive Resolver displays conflict data at run-time, and lets you choose how to resolve conflicts. For more information about how to enable interactive resolution and launch the Interactive Resolver, see [Interactive Conflict Resolution](../Topic/Interactive%20Conflict%20Resolution.md).  
+ Replication supplies an Interactive Resolver user interface that can be used in conjunction with either the default priority-based conflict resolver or an article resolver. When performing on-demand synchronization through [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Windows Synchronization Manager, the Interactive Resolver displays conflict data at run-time, and lets you choose how to resolve conflicts. For more information about how to enable interactive resolution and launch the Interactive Resolver, see [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
 ## Viewing Conflicts  
- The most straightforward way to view conflicts is to use the Replication Conflict Viewer, available from [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] ([!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] also provides stored procedures that allow the conflict tables to be queried.). The Conflict Viewer and Interactive Resolver are similar tools, but the Interactive Resolver allows you to resolve conflicts as synchronization occurs, whereas the Conflict Viewer is designed for viewing conflicts after they have been resolved. If the conflict metadata is still available in the system tables (conflict metadata is retained for 14 days by default), you can override conflict resolution outcomes in the Conflict Viewer, but if direct intervention is regularly required, consider using the Interactive Resolver.  
+ The most straightforward way to view conflicts is to use the Replication Conflict Viewer, available from [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] ([!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] also provides stored procedures that allow the conflict tables to be queried.). The Conflict Viewer and Interactive Resolver are similar tools, but the Interactive Resolver allows you to resolve conflicts as synchronization occurs, whereas the Conflict Viewer is designed for viewing conflicts after they have been resolved. If the conflict metadata is still available in the system tables (conflict metadata is retained for 14 days by default), you can override conflict resolution outcomes in the Conflict Viewer, but if direct intervention is regularly required, consider using the Interactive Resolver.  
   
 > [!NOTE]  
 >  Conflicts that involve logical records are not displayed in Conflict Viewer. To view information about these conflicts, use replication stored procedures. For more information, see [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/4907fe35-10ee-4f81-b924-fc419b1864d2.md).  
@@ -120,13 +120,13 @@ manager: "jhubbard"
   
 -   At the Publisher if the publication compatibility level is lower than 80RTM.  
   
--   At the Publisher if Subscribers are running [!INCLUDE[ssEW](../../../analysis-services/instances/includes/ssew-md.md)]. Conflict data cannot be stored on [!INCLUDE[ssEW](../../../analysis-services/instances/includes/ssew-md.md)] Subscribers.  
+-   At the Publisher if Subscribers are running [!INCLUDE[ssEW](../../../a9retired/includes/ssew-md.md)]. Conflict data cannot be stored on [!INCLUDE[ssEW](../../../a9retired/includes/ssew-md.md)] Subscribers.  
   
  **To view conflicts**  
   
--   [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/aeee9546-4480-49f9-8b1e-c71da1f056c7.md)  
+-   [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/aeee9546-4480-49f9-8b1e-c71da1f056c7.md)  
   
--   Replication [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] Programming: [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/4907fe35-10ee-4f81-b924-fc419b1864d2.md)  
+-   Replication [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] Programming: [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/4907fe35-10ee-4f81-b924-fc419b1864d2.md)  
   
 ## See Also  
  [Synchronize Data](../../../relational-databases/replication/synchronize-data.md)  

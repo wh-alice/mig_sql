@@ -53,7 +53,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful; an error code indicates the call was not successful.  
   
 ## Remarks  
- *UrlString* does not include the virtual directory name. The [SetVirtualDirectory](../Topic/SetVirtualDirectory%20Method%20\(WMI%20MSReportServer_ConfigurationSetting\).md) method is provided for that purpose.  
+ *UrlString* does not include the virtual directory name. The [SetVirtualDirectory](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) method is provided for that purpose.  
   
  URL reservations are created for the current windows service account. Changing the windows service account requires updating all the URL reservations manually.  
   

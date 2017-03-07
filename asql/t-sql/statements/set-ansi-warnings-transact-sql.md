@@ -27,11 +27,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SET ANSI_WARNINGS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Specifies ISO standard behavior for several error conditions.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -60,21 +60,21 @@ SET ANSI_WARNINGS ON;
     > [!NOTE]  
     >  ANSI_WARNINGS is not honored when passing parameters in a stored procedure, user-defined function, or when declaring and setting variables in a batch statement. For example, if a variable is defined as **char(3)**, and then set to a value larger than three characters, the data is truncated to the defined size and the INSERT or UPDATE statement succeeds.  
   
- You can use the user options option of sp_configure to set the default setting for ANSI_WARNINGS for all connections to the server. For more information, see [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ You can use the user options option of sp_configure to set the default setting for ANSI_WARNINGS for all connections to the server. For more information, see [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md).  
   
  SET ANSI_WARNINGS must be ON when you are creating or manipulating indexes on computed columns or indexed views. If SET ANSI_WARNINGS is OFF, CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views will fail. For more information about required SET option settings with indexed views and indexes on computed columns, see "Considerations When You Use the SET Statements" in [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] includes the ANSI_WARNINGS database option. This is equivalent to SET ANSI_WARNINGS. When SET ANSI_WARNINGS is ON, errors or warnings are raised in divide-by-zero, string too large for database column, and other similar errors. When SET ANSI_WARNINGS is OFF, these errors and warnings are not raised. The default value in the model database for SET ANSI_WARNINGS is OFF. If not specified, the setting of ANSI_WARNINGS applies. If SET ANSI_WARNINGS is OFF, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses the value of the is_ansi_warnings_on column in the [sys.databases](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] includes the ANSI_WARNINGS database option. This is equivalent to SET ANSI_WARNINGS. When SET ANSI_WARNINGS is ON, errors or warnings are raised in divide-by-zero, string too large for database column, and other similar errors. When SET ANSI_WARNINGS is OFF, these errors and warnings are not raised. The default value in the model database for SET ANSI_WARNINGS is OFF. If not specified, the setting of ANSI_WARNINGS applies. If SET ANSI_WARNINGS is OFF, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses the value of the is_ansi_warnings_on column in the [sys.databases](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view.  
   
  ANSI_WARNINGS should be set to ON for executing distributed queries.  
   
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] automatically set ANSI_WARNINGS to ON when connecting. This can be configured in ODBC data sources, in ODBC connection attributes, set in the application before connecting. The default for SET ANSI_WARNINGS is OFF for connections from DB-Library applications.  
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] automatically set ANSI_WARNINGS to ON when connecting. This can be configured in ODBC data sources, in ODBC connection attributes, set in the application before connecting. The default for SET ANSI_WARNINGS is OFF for connections from DB-Library applications.  
   
  When SET ANSI_DEFAULTS is ON, SET ANSI_WARNINGS is enabled.  
   
  The setting of SET ANSI_WARNINGS is set at execute or run time and not at parse time.  
   
- If either SET ARITHABORT or SET ARITHIGNORE is OFF and SET ANSI_WARNINGS is ON, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] still returns an error message when encountering divide-by-zero or overflow errors.  
+ If either SET ARITHABORT or SET ARITHIGNORE is OFF and SET ANSI_WARNINGS is ON, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] still returns an error message when encountering divide-by-zero or overflow errors.  
   
  To view the current setting for this setting, run the following query.  
   

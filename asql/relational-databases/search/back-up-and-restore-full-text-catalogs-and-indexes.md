@@ -22,17 +22,17 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Back Up and Restore Full-Text Catalogs and Indexes
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  This topic explains how to back up and restore full-text indexes created in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the full-text catalog is a logical concept and does not reside in a filegroup. Therefore, to back up a full-text catalog in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you must identify every filegroup that contains a full-text index that belongs to the catalog. Then you must back up those filegroups, one by one.  
+  This topic explains how to back up and restore full-text indexes created in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], the full-text catalog is a logical concept and does not reside in a filegroup. Therefore, to back up a full-text catalog in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], you must identify every filegroup that contains a full-text index that belongs to the catalog. Then you must back up those filegroups, one by one.  
   
 > [!IMPORTANT]  
->  It is possible to import full-text catalogs when upgrading a [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] database. Each imported full-text catalog is a database file in its own filegroup. To back up an imported catalog, simply back up its filegroup. For more information, see [Backing Up and Restoring Full-Text Catalogs](http://go.microsoft.com/fwlink/?LinkID=121052), in [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] Books Online.  
+>  It is possible to import full-text catalogs when upgrading a [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] database. Each imported full-text catalog is a database file in its own filegroup. To back up an imported catalog, simply back up its filegroup. For more information, see [Backing Up and Restoring Full-Text Catalogs](http://go.microsoft.com/fwlink/?LinkID=121052), in [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] Books Online.  
   
 ##  <a name="backingup"></a> Backing Up the Full-Text Indexes of a Full-Text Catalog  
   
 ###  <a name="Find_FTIs_of_a_Catalog"></a> Finding the Full-Text Indexes of a Full-Text Catalog  
- You can retrieve the properties of the full-text indexes by using the following [SELECT](../../t-sql/queries/select-transact-sql.md) statement, which selects columns from the [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys.fulltext-indexes-transact-sql.md) and [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys.fulltext-catalogs-transact-sql.md) catalog views.  
+ You can retrieve the properties of the full-text indexes by using the following [SELECT](../../t-sql/queries/select-transact-sql.md) statement, which selects columns from the [sys.fulltext_indexes](../../relational-databases/reference/system-catalog-views/sys.fulltext-indexes-transact-sql.md) and [sys.fulltext_catalogs](../../relational-databases/reference/system-catalog-views/sys.fulltext-catalogs-transact-sql.md) catalog views.  
   
 ```  
 USE AdventureWorks2012;  
@@ -95,7 +95,7 @@ GO
   
 -   [Restore Files to a New Location &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
--   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   
 ## See Also  

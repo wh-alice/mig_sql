@@ -26,7 +26,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Parent-Child Dimension Attributes
-  In [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], a general assumption is usually made about the content of members in a dimension. Leaf members contain data derived directly from underlying data sources; nonleaf members contain data derived from aggregations performed on child members.  
+  In [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], a general assumption is usually made about the content of members in a dimension. Leaf members contain data derived directly from underlying data sources; nonleaf members contain data derived from aggregations performed on child members.  
   
  In a parent-child hierarchy, however, some nonleaf members may also have data derived from underlying data sources, in addition to data aggregated from child members. For these nonleaf members in a parent-child hierarchy, special system-generated child members are created that contain the underlying fact table data. Referred to as *data members*, they contain a value directly associated with a nonleaf member that is independent of the summary value calculated from the descendants of the nonleaf member.  
   
@@ -34,7 +34,7 @@ manager: "erikre"
   
  This setting does not override the normal aggregation behavior for nonleaf members; the data member is always included as a child member for the purposes of aggregation. However, a custom rollup formula can be used to override the normal aggregation behavior. The Multidimensional Expressions (MDX) [DataMember](../../mdx/datamember-mdx.md) function gives you the ability to access the value of the associated data member regardless of the value of the **MembersWithData** property.  
   
- The **MembersWithDataCaption** property of the parent attribute provides [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] with the naming template used to generate member names for data members.  
+ The **MembersWithDataCaption** property of the parent attribute provides [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] with the naming template used to generate member names for data members.  
   
 ## Using Data Members  
  Data members are useful when aggregating measures along organizational dimensions that have parent-child hierarchies. For example, the following diagram shows a dimension that has three levels, representing the gross sales volume of products. The first level shows the gross sales volume for all salespersons. The second level contains the gross sales volume for all sales staff grouped by sales manager, and the third level contains the gross sales volume for all sales staff grouped by salesperson.  
@@ -47,6 +47,6 @@ manager: "erikre"
   
 ## See Also  
  [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
- [Parent-Child Dimensions](../Topic/Parent-Child%20Dimensions.md)  
+ [Parent-Child Dimensions](../../analysis-services/multidimensional-models/parent-child-dimension.md)  
   
   

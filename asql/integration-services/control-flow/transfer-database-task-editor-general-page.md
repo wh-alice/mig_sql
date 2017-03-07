@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transfer Database Task Editor (General Page)
-  Use the **General** page of the **Transfer Database Task Editor** dialog box to name and describe the Transfer Database task. The Transfer Database task copies or moves a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database between two instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. This task can also be used to copy a database within the same server. For more information about this task, see [Transfer Database Task](../../integration-services/control-flow/transfer-database-task.md).  
+  Use the **General** page of the **Transfer Database Task Editor** dialog box to name and describe the Transfer Database task. The Transfer Database task copies or moves a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database between two instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. This task can also be used to copy a database within the same server. For more information about this task, see [Transfer Database Task](../../integration-services/control-flow/transfer-database-task.md).  
   
 ## Options  
  **Name**  

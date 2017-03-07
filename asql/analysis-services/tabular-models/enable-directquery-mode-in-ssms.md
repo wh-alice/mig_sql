@@ -18,12 +18,12 @@ manager: "erikre"
 # Enable DirectQuery mode in SSMS
   You can  change the data access properties of a tabular model that has already been deployed, enabling DirectQuery mode, where queries execute against a backend relational data source rather than cached data residing in-memory.  
   
- In [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], steps for DirectQuery configuration differ based on the model's compatibility level. Below you'll find steps that work for all compatibility levels.  
+ In [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], steps for DirectQuery configuration differ based on the model's compatibility level. Below you'll find steps that work for all compatibility levels.  
   
  This topic assumes that you have created and validated an in-memory tabular model at compatibility level 1200, and only need to enable DirectQuery access and update connection strings. If you're starting from a lower compatibility level, you need to manually upgrade it first. See [Upgrade Analysis Services](../../database-engine/install/windows/upgrade-analysis-services.md) for steps.  
   
 > [!IMPORTANT]  
->  We recommend using [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)] instead of Management Studio to switch data storage modes. When you use  [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)] to change  model, and then follow that up with deployment to the server,  the model and database stay in sync. Moreover, changing the storage modes in the model lets you review any validation errors that occur. When using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] as described in this article, validation errors are not reported.  
+>  We recommend using [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)] instead of Management Studio to switch data storage modes. When you use  [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)] to change  model, and then follow that up with deployment to the server,  the model and database stay in sync. Moreover, changing the storage modes in the model lets you review any validation errors that occur. When using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] as described in this article, validation errors are not reported.  
   
 ## Requirements  
  Enabling the use of Direct Query mode on a tabular model is a multistep process:  
@@ -45,7 +45,7 @@ manager: "erikre"
 ## Step 1: Check the compatibility level  
  Properties that define data access are different across compatibility levels. A preliminary step is to check to see what compatibility level the database is at.  
   
-1.  In [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], connect to the instance that has the tabular model.  
+1.  In [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], connect to the instance that has the tabular model.  
   
 2.  In Object Explorer, right-click the database > **Properties** > **Compatibility Level**.  
   
@@ -89,7 +89,7 @@ manager: "erikre"
   
 -   You can configure partitions on the cache in such a way that the primary partition used for DirectQuery mode is never processed and must always reference the relational source. There are many ways to use partitions to optimize the model design and reporting experience. For more information, see [Define partitions in DirectQuery models &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).  
   
--   After the model has been deployed, you can change the preferred connection method. For example, you might use a hybrid mode for testing, and switch the model over to **DirectQuery only** mode only after thoroughly testing any reports or queries that use the model. For more information, see [Set or Change the Preferred Connection Method for DirectQuery](../Topic/Set%20or%20Change%20the%20Preferred%20Connection%20Method%20for%20DirectQuery.md).  
+-   After the model has been deployed, you can change the preferred connection method. For example, you might use a hybrid mode for testing, and switch the model over to **DirectQuery only** mode only after thoroughly testing any reports or queries that use the model. For more information, see [Set or Change the Preferred Connection Method for DirectQuery](../../a9retired/set-or-change-the-preferred-connection-method-for-directquery.md).  
   
 ## Step 3: Check the connection properties on the database  
  Depending on how the data source connection is set up, switching to DirectQuery could change the security context of the connection. When changing the data access mode, review impersonation and connection string properties to verify the login is valid for ongoing connections to the backend database.  

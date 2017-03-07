@@ -19,10 +19,10 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # In-Memory OLTP (In-Memory Optimization)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- [!INCLUDE[hek_2](../../relational-databases/in-memory-oltp/includes/hek-2-md.md)] can significantly improve the performance of transaction processing, data ingestion and data load, and transient data scenarios.  To jump into the basic code and knowledge you need to quickly test your own memory-optimized table and natively compiled stored procedure, see
- -  [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../Topic/Quick%20Start%201:%20In-Memory%20OLTP%20Technologies%20for%20Faster%20Transact-SQL%20Performance.md).  
+ [!INCLUDE[hek_2](../../a9retired/includes/hek-2-md.md)] can significantly improve the performance of transaction processing, data ingestion and data load, and transient data scenarios.  To jump into the basic code and knowledge you need to quickly test your own memory-optimized table and natively compiled stored procedure, see
+ -  [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md).  
  
 A 17-minute video explaining In-Memory OLTP and demonstrating performance benefits:
 
@@ -36,9 +36,9 @@ For a more detailed overview of In-Memory OLTP and a review of scenarios that se
 
 - [Overview and Usage Scenarios](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)
  
- Note that [!INCLUDE[hek_2](../../relational-databases/in-memory-oltp/includes/hek-2-md.md)] is the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] technology for improving performance of transaction processing. For the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] technology that improves reporting and analytical query performance see [Columnstore Indexes Guide](../Topic/Columnstore%20Indexes%20Guide.md).
+ Note that [!INCLUDE[hek_2](../../a9retired/includes/hek-2-md.md)] is the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] technology for improving performance of transaction processing. For the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] technology that improves reporting and analytical query performance see [Columnstore Indexes Guide](../Topic/Columnstore%20Indexes%20Guide.md).
   
- Several improvements have been made to In-Memory OLTP in [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] as well as in [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)]. The Transact-SQL surface area has been increased to make it easier to migrate database applications. Support for performing ALTER operations for memory-optimized tables and natively compiled stored procedures has been added, to make it easier to maintain applications. For information about the new features in [!INCLUDE[hek_2](../../relational-databases/in-memory-oltp/includes/hek-2-md.md)], see [What's New in Database Engine](../Topic/What's%20New%20in%20Database%20Engine.md).  
+ Several improvements have been made to In-Memory OLTP in [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] as well as in [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)]. The Transact-SQL surface area has been increased to make it easier to migrate database applications. Support for performing ALTER operations for memory-optimized tables and natively compiled stored procedures has been added, to make it easier to maintain applications. For information about the new features in [!INCLUDE[hek_2](../../a9retired/includes/hek-2-md.md)], see [What's New in Database Engine](../Topic/What's%20New%20in%20Database%20Engine.md).  
   
 > [!NOTE]  
 >  **Try it out**  
@@ -51,23 +51,23 @@ For a more detailed overview of In-Memory OLTP and a review of scenarios that se
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../Topic/Quick%20Start%201:%20In-Memory%20OLTP%20Technologies%20for%20Faster%20Transact-SQL%20Performance.md)|Delve right into In-Memory OLTP|
+|[Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|Delve right into In-Memory OLTP|
 |[Overview and Usage Scenarios](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|Overview of what In-Memory OLTP is, and what are the scenarios that see performance benefits.|
 |[Requirements for Using Memory-Optimized Tables](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|Discusses hardware and software requirements and guidelines for using memory-optimized tables.|  
 |[In-Memory OLTP Code Samples](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|Contains code samples that show how to create and use a memory-optimized table.|  
 |[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Introduces memory-optimized tables.|  
-|[Memory-Optimized Table Variables](../Topic/Memory-Optimized%20Table%20Variables.md)|Code example showing how to use a memory-optimized table variable instead of a traditional table variable to reduce tempdb use.|  
-|[Indexes on Memory-Optimized Tables](../Topic/Indexes%20on%20Memory-Optimized%20Tables.md)|Introduces memory-optimized indexes.|  
+|[Memory-Optimized Table Variables](../../a9retired/memory-optimized-table-variables.md)|Code example showing how to use a memory-optimized table variable instead of a traditional table variable to reduce tempdb use.|  
+|[Indexes on Memory-Optimized Tables](../../a9retired/indexes-on-memory-optimized-tables.md)|Introduces memory-optimized indexes.|  
 |[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)|Introduces natively compiled stored procedures.|  
-|[Managing Memory for In-Memory OLTP](../Topic/Managing%20Memory%20for%20In-Memory%20OLTP.md)|Understanding and managing memory usage on your system.|  
+|[Managing Memory for In-Memory OLTP](../../a9retired/managing-memory-for-in-memory-oltp.md)|Understanding and managing memory usage on your system.|  
 |[Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)|Discusses data and delta files, which store information about transactions in memory-optimized tables.|  
-|[Backup, Restore, and Recovery of Memory-Optimized Tables](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)|Discusses backup, restore, and recovery for memory-optimized tables.|  
-|[Transact-SQL Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)|Discusses [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] support for [!INCLUDE[hek_2](../../relational-databases/in-memory-oltp/includes/hek-2-md.md)].|  
-|[High Availability Support for In-Memory OLTP databases](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|Discusses availability groups and failover clustering in [!INCLUDE[hek_2](../../relational-databases/in-memory-oltp/includes/hek-2-md.md)].|  
+|[Backup, Restore, and Recovery of Memory-Optimized Tables](../../a9retired/backup-restore-and-recovery-of-memory-optimized-tables.md)|Discusses backup, restore, and recovery for memory-optimized tables.|  
+|[Transact-SQL Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)|Discusses [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] support for [!INCLUDE[hek_2](../../a9retired/includes/hek-2-md.md)].|  
+|[High Availability Support for In-Memory OLTP databases](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|Discusses availability groups and failover clustering in [!INCLUDE[hek_2](../../a9retired/includes/hek-2-md.md)].|  
 |[SQL Server Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|Lists new and updated syntax and features supporting memory-optimized tables.|  
 |[Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)|Discusses how to migrate disk-based tables to memory-optimized tables.|  
   
- More information about [!INCLUDE[hek_2](../../relational-databases/in-memory-oltp/includes/hek-2-md.md)] is available on:  
+ More information about [!INCLUDE[hek_2](../../a9retired/includes/hek-2-md.md)] is available on:  
 
 - [Video explaining In-Memory OLTP and demonstrating performance benefits](https://www.youtube.com/watch?v=l5l5eophmK4).
 

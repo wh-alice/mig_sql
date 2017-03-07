@@ -41,7 +41,7 @@ manager: "erikre"
   
  **Reporting Properties**  
   
- For detailed information on setting [!INCLUDE[ssCrescent](../../analysis-services/includes/sscrescent-md.md)] table behavior properties, see [Configure Table Behavior Properties for Power View Reports &#40;SSAS Tabular&#41;](../Topic/Configure%20Table%20Behavior%20Properties%20for%20Power%20View%20Reports%20\(SSAS%20Tabular\).md).  
+ For detailed information on setting [!INCLUDE[ssCrescent](../../a9notintoc/includes/sscrescent-md.md)] table behavior properties, see [Configure Table Behavior Properties for Power View Reports &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md).  
   
 |Property|Default Setting|Description|  
 |--------------|---------------------|-----------------|  
@@ -60,7 +60,7 @@ manager: "erikre"
 2.  In the **Properties** window, click on a property, and then type a value or click the down arrow to select a setting option.  
   
 ## See Also  
- [Power View Reporting Properties &#40;SSAS Tabular&#41;](../Topic/Power%20View%20Reporting%20Properties%20\(SSAS%20Tabular\).md)   
+ [Power View Reporting Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)   
  [Hide or Freeze Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)   
  [Add Columns to a Table &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)  
   

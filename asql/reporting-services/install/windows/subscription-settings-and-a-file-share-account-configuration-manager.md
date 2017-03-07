@@ -17,17 +17,17 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Subscription Settings and a File Share Account (Configuration Manager)
-  Use the **Subscription Settings** page of the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Configuration Manager to configure a file share account for Native mode report servers and file share subscriptions. The file share account allows you to use a single set of credentials in multiple subscriptions that deliver reports to a file share. When it is time to change the credentials, you configure the change for the file share account and you do not need to update each individual subscription.  
+  Use the **Subscription Settings** page of the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Configuration Manager to configure a file share account for Native mode report servers and file share subscriptions. The file share account allows you to use a single set of credentials in multiple subscriptions that deliver reports to a file share. When it is time to change the credentials, you configure the change for the file share account and you do not need to update each individual subscription.  
   
- Two workflows exist with [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] file share subscriptions:  
+ Two workflows exist with [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] file share subscriptions:  
   
--   New in the [!INCLUDE[ssSQL15](../../../analysis-services/powershell/includes/sssql15-md.md)] release, your [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] administrator can configure a single file share account, that is used for one to many subscriptions. Configure the **Specify a file share account**, and then on individual subscription configuration pages, users select **Use file share account**.  
+-   New in the [!INCLUDE[ssSQL15](../../../a9notintoc/includes/sssql15-md.md)] release, your [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] administrator can configure a single file share account, that is used for one to many subscriptions. Configure the **Specify a file share account**, and then on individual subscription configuration pages, users select **Use file share account**.  
   
 -   Configure individual subscriptions with specific credentials for the destination file share.  
   
 -   You can also mix the two approaches and have some file share subscriptions use the central file share account while other subscriptions use specific credentials.  
   
- [!INCLUDE[applies](../../../analysis-services/includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Native mode.  
+ [!INCLUDE[applies](../../../a9retired/includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Native mode.  
   
 ## Specify a file share account  
  If this option is selected you will be able to provide an account to be used to access file shares from the report server. If you configure the file share account, all users can select the account for any subscriptions that are configured to deliver reports to a file share. If this option is not selected, the file share account is **not** available on any subscriptions.  
@@ -41,12 +41,12 @@ manager: "erikre"
 ## Prevent privilege escalation or elevated privileges  
   
 > [!IMPORTANT]
-> The [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] service account controls subscription delivery and interacts with the account used for file share subscriptions. Windows security features restrict combinations of 1) the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] service account and 2) the account used for file share accounts. For example, if a built-in operating system account is used for the file share account, then the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] service account must be another service account with impersonation permissions. If an explicit file share account and password is configured, then the file share account requires the right to logon on to the computer running the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] service. If the file share account does not have the required permissions, subscriptions using the file share account will fail with an error message similar to the following:  
+> The [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] service account controls subscription delivery and interacts with the account used for file share subscriptions. Windows security features restrict combinations of 1) the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] service account and 2) the account used for file share accounts. For example, if a built-in operating system account is used for the file share account, then the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] service account must be another service account with impersonation permissions. If an explicit file share account and password is configured, then the file share account requires the right to logon on to the computer running the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] service. If the file share account does not have the required permissions, subscriptions using the file share account will fail with an error message similar to the following:  
 >   
 >  `“Failure writing file {file} : An impersonation error occurred using the security context of the current user.”`  
   
 ## PowerShell sample to audit use of the file share account  
- Run the following Windows PowerShell script to list all [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] subscriptions that are configured to use the **File share account**. Update `SERVERNAME` to an appropriate value for your report server.  
+ Run the following Windows PowerShell script to list all [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] subscriptions that are configured to use the **File share account**. Update `SERVERNAME` to an appropriate value for your report server.  
   
 ```  
 # get all file share subscriptions using the default file share account  

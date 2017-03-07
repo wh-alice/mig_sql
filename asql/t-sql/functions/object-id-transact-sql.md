@@ -30,14 +30,14 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # OBJECT_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the database object identification number of a schema-scoped object.  
   
 > [!IMPORTANT]  
->  Objects that are not schema-scoped, such as DDL triggers, cannot be queried by using OBJECT_ID. For objects that are not found in the [sys.objects](../../relational-databases/system-catalog-views/sys.objects-transact-sql.md) catalog view, obtain the object identification numbers by querying the appropriate catalog view. For example, to return the object identification number of a DDL trigger, use `SELECT OBJECT_ID FROM sys.triggers WHERE name = 'DatabaseTriggerLog``'`.  
+>  Objects that are not schema-scoped, such as DDL triggers, cannot be queried by using OBJECT_ID. For objects that are not found in the [sys.objects](../../relational-databases/reference/system-catalog-views/sys.objects-transact-sql.md) catalog view, obtain the object identification numbers by querying the appropriate catalog view. For example, to return the object identification number of a DDL trigger, use `SELECT OBJECT_ID FROM sys.triggers WHERE name = 'DatabaseTriggerLog``'`.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -53,7 +53,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
  Is the object to be used. *object_name* is either **varchar** or **nvarchar**. If *object_name* is **varchar**, it is implicitly converted to **nvarchar**. Specifying the database and schema names is optional.  
   
  **'** *object_type* **'**  
- Is the schema-scoped object type. *object_type* is either **varchar** or **nvarchar**. If *object_type* is **varchar**, it is implicitly converted to **nvarchar**. For a list of object types, see the **type** column in [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.objects-transact-sql.md).  
+ Is the schema-scoped object type. *object_type* is either **varchar** or **nvarchar**. If *object_type* is **varchar**, it is implicitly converted to **nvarchar**. For a list of object types, see the **type** column in [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.objects-transact-sql.md).  
   
 ## Return Types  
  **int**  
@@ -75,7 +75,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ## Examples  
   
 ### A. Returning the object ID for a specified object  
- The following example returns the object ID for the `Production.WorkOrder` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example returns the object ID for the `Production.WorkOrder` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 USE master;  
@@ -96,10 +96,10 @@ GO
 ```  
   
 ### C. Using OBJECT_ID to specify the value of a system function parameter  
- The following example returns information for all indexes and partitions of the `Person.Address` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database by using the [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys.dm-db-index-operational-stats-transact-sql.md) function.  
+ The following example returns information for all indexes and partitions of the `Person.Address` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database by using the [sys.dm_db_index_operational_stats](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-index-operational-stats-transact-sql.md) function.  
   
 > [!IMPORTANT]  
->  When you are using the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] functions DB_ID and OBJECT_ID to return a parameter value, always make sure that a valid ID is returned. If the database or object name cannot be found, such as when they do not exist or are spelled incorrectly, both functions will return NULL. The **sys.dm_db_index_operational_stats** function interprets NULL as a wildcard value that specifies all databases or all objects. Because this can be an unintentional operation, the examples in this section demonstrate the safe way to determine database and object IDs.  
+>  When you are using the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] functions DB_ID and OBJECT_ID to return a parameter value, always make sure that a valid ID is returned. If the database or object name cannot be found, such as when they do not exist or are spelled incorrectly, both functions will return NULL. The **sys.dm_db_index_operational_stats** function interprets NULL as a wildcard value that specifies all databases or all objects. Because this can be an unintentional operation, the examples in this section demonstrate the safe way to determine database and object IDs.  
   
 ```  
 DECLARE @db_id int;  
@@ -121,7 +121,7 @@ ELSE
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### D: Returning the object ID for a specified object  
  The following example returns the object ID for the `FactFinance` table in the [!INCLUDE[ssawPDW](../../t-sql/database-console-commands/includes/ssawpdw-md.md)] database.  
@@ -132,8 +132,8 @@ SELECT OBJECT_ID(AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';
   
 ## See Also  
  [Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.objects-transact-sql.md)   
- [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-index-operational-stats-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.objects-transact-sql.md)   
+ [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-index-operational-stats-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
  [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)  
   

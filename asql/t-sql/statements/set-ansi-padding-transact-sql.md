@@ -28,11 +28,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SET ANSI_PADDING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Controls the way the column stores values shorter than the defined size of the column, and the way the column stores values that have trailing blanks in **char**, **varchar**, **binary**, and **varbinary** data.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -51,7 +51,7 @@ SET ANSI_PADDING ON;
 ## Remarks  
  Columns defined with **char**, **varchar**, **binary**, and **varbinary** data types have a defined size.  
   
- This setting affects only the definition of new columns. After the column is created, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] stores the values based on the setting when the column was created. Existing columns are not affected by a later change to this setting.  
+ This setting affects only the definition of new columns. After the column is created, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] stores the values based on the setting when the column was created. Existing columns are not affected by a later change to this setting.  
   
 > [!NOTE]  
 >  We recommend that ANSI_PADDING always be set to ON.  
@@ -68,7 +68,7 @@ SET ANSI_PADDING ON;
   
  SET ANSI_PADDING must be ON when you are creating or changing indexes on computed columns or indexed views. For more information about required SET option settings with indexed views and indexes on computed columns, see "Considerations When You Use the SET Statements" in [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
   
- The default for SET ANSI_PADDING is ON. The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] automatically set ANSI_PADDING to ON when connecting. This can be configured in ODBC data sources, in ODBC connection attributes, or OLE DB connection properties set in the application before connecting. The default for SET ANSI_PADDING is OFF for connections from DB-Library applications.  
+ The default for SET ANSI_PADDING is ON. The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] automatically set ANSI_PADDING to ON when connecting. This can be configured in ODBC data sources, in ODBC connection attributes, or OLE DB connection properties set in the application before connecting. The default for SET ANSI_PADDING is OFF for connections from DB-Library applications.  
   
  The SET ANSI_PADDING setting does not affect the **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)**, **varchar(max)**, and **nvarchar(max)** data types. They always display the SET ANSI_PADDING ON behavior. This means trailing spaces and zeros are not trimmed.  
   

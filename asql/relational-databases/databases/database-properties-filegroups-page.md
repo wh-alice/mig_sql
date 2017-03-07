@@ -21,9 +21,9 @@ manager: "jhubbard"
   
  Row filegroups contain regular data and log files. FILESTREAM data filegroups contain FILESTREAM data files. These data files store information about how binary large object (BLOB) data is stored on the file system when you are using FILESTREAM storage. The options are the same for both types of filegroups.  
   
- If FILESTREAM is not enabled, the **Filestream** section will not be available. You can enable FILESTREAM storage by using [Server Properties (Advanced Page)](../Topic/Server%20Properties%20\(Advanced%20Page\).md).  
+ If FILESTREAM is not enabled, the **Filestream** section will not be available. You can enable FILESTREAM storage by using [Server Properties (Advanced Page)](../../database-engine/configure/windows/server-properties-advanced-page.md).  
   
- For information about how [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses row filegroups, see [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md). For more information about FILESTREAM data and filegroups, see [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
+ For information about how [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses row filegroups, see [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md). For more information about FILESTREAM data and filegroups, see [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
  Memory-optimized file groups are required for a database to contain one or more memory-optimized tables.  
   
@@ -61,6 +61,6 @@ manager: "jhubbard"
   
 ## See Also  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md)  
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md)  
   
   

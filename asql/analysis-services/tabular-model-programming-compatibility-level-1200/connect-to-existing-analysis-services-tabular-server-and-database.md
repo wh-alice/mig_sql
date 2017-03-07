@@ -40,7 +40,7 @@ This flexibility explains the dependencies among the assemblies. In order to mak
 
 In contrast, TOM does not have dependency on AMO. Although TOM cannot be used to explore Multidimensional metadata (Cubes), AMO can be used to explore both Multidimensional and Tabular metadata. 
 
-For this reason, the first step in setting up your project requires adding references to all of the AMO assemblies. See [Install, reference and distribute the TOM client library](Install,%20distribute,%20and%20reference%20the%20Tabular%20Object%20Model%20\(Microsoft.AnalysisServices.Tabular\).md) for details. 
+For this reason, the first step in setting up your project requires adding references to all of the AMO assemblies. See [Install, reference and distribute the TOM client library](../../analysis-services/tabular-model-programming-compatibility-level-1200/install-distribute-and-reference-the-tabular-object-model.md) for details. 
 
 > [!NOTE]  
 >  Server and database connections are based on legacy AMO classes that inherit from MajorObject. Although major and minor objects aren’t used in a Tabular model tree, the MajorObject class is visible as a base class for Server and Database objects, regardless of which API you use to set up the connection.  

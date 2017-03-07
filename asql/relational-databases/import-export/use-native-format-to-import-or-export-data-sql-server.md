@@ -18,12 +18,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use Native Format to Import or Export Data (SQL Server)
-Native format is recommended when you bulk transfer data between multiple instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] using a data file that does not contain any extended/double-byte character set (DBCS) characters.  
+Native format is recommended when you bulk transfer data between multiple instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] using a data file that does not contain any extended/double-byte character set (DBCS) characters.  
 
 > [!NOTE]
->  To bulk transfer data between multiple instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] by using a data file that contains extended or DBCS characters, you should use the Unicode native format. For more information, see [Use Unicode Native Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).
+>  To bulk transfer data between multiple instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] by using a data file that contains extended or DBCS characters, you should use the Unicode native format. For more information, see [Use Unicode Native Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).
 
-Native format maintains the native data types of a database. Native format is intended for high-speed data transfer of data between [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] tables. If you use a format file, the source and target tables do not need to be identical. The data transfer involves two steps:  
+Native format maintains the native data types of a database. Native format is intended for high-speed data transfer of data between [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] tables. If you use a format file, the source and target tables do not need to be identical. The data transfer involves two steps:  
   
 1.  Bulk exporting the data from a source table into a data file  
   
@@ -59,14 +59,14 @@ To import data in native format successfully, ensure that:
   
 -   Noncharacter data  
   
-     The [bcp utility](../../tools/bcp-utility.md) uses the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] internal binary data format to write noncharacter data from a table to a data file.  
+     The [bcp utility](../../tools/bcp-utility.md) uses the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] internal binary data format to write noncharacter data from a table to a data file.  
   
 -   [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) or [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) data  
   
      At the beginning of each [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) or [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) field, [bcp](../../tools/bcp-utility.md) adds the prefix length.  
   
     > [!IMPORTANT]
-    >  When native mode is used, by default, the [bcp utility](../../tools/bcp-utility.md) converts characters from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to OEM characters before it copies them to a data file. The [bcp utility](../../tools/bcp-utility.md) converts characters from a data file to ANSI characters before it bulk imports them into a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table. During these conversions, extended character data can be lost. For extended characters, either use Unicode native format or specify a code page.
+    >  When native mode is used, by default, the [bcp utility](../../tools/bcp-utility.md) converts characters from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to OEM characters before it copies them to a data file. The [bcp utility](../../tools/bcp-utility.md) converts characters from a data file to ANSI characters before it bulk imports them into a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] table. During these conversions, extended character data can be lost. For extended characters, either use Unicode native format or specify a code page.
   
 -   [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) data  
   
@@ -88,7 +88,7 @@ Native format is supported by the following command options:
 |OPENROWSET|N/A|Must use a format file|
 
   
- \*To load native (**-n**) data to a format compatible with earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] clients, use the **-V** switch. For more information, see [Import Native and Character Format Data from Earlier Versions of SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ \*To load native (**-n**) data to a format compatible with earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] clients, use the **-V** switch. For more information, see [Import Native and Character Format Data from Earlier Versions of SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
 > [!NOTE]
 >  Alternatively, you can specify formatting on a per-field basis in a format file. For more information, see [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
@@ -98,7 +98,7 @@ Native format is supported by the following command options:
 The examples in this topic are based on the table, and format file defined below.
 
 ### **Sample Table**<a name="sample_table"></a>
-The script below creates a test database, a table named `myNative` and populates the table with some initial values.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+The script below creates a test database, a table named `myNative` and populates the table with some initial values.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 CREATE DATABASE TestDatabase;
 GO
@@ -178,7 +178,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **Using BULK INSERT and Native Format without a Format File**<a name="bulk_native"></a>
-**DATAFILETYPE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+**DATAFILETYPE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myNative; -- for testing
 BULK INSERT TestDatabase.dbo.myNative
@@ -192,7 +192,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
 ### **Using BULK INSERT and Native Format with a Non-XML Format File**<a name="bulk_native_fmt"></a>
-**FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+**FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myNative; -- for testing
 BULK INSERT TestDatabase.dbo.myNative
@@ -206,7 +206,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
 ### **Using OPENROWSET and Native Format with a Non-XML Format File**<a name="openrowset_native_fmt"></a>
-**FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+**FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myNative;  -- for testing
 INSERT INTO TestDatabase.dbo.myNative

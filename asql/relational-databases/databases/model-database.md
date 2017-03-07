@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # model Database
-  The **model** database is used as the template for all databases created on an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Because **tempdb** is created every time [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is started, the **model** database must always exist on a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system. The entire contents of the **model** database, including database options, are copied to the new database. Some of the settings of **model** are also used for creating a new **tempdb** during start up, so the **model** database must always exist on a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system.  
+  The **model** database is used as the template for all databases created on an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Because **tempdb** is created every time [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is started, the **model** database must always exist on a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system. The entire contents of the **model** database, including database options, are copied to the new database. Some of the settings of **model** are also used for creating a new **tempdb** during start up, so the **model** database must always exist on a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system.  
   
  Newly created user databases use the same [recovery model](../../relational-databases/backup-restore/recovery-models-sql-server.md) as the model database. The default is user configurable. To learn the current recovery model of the model, see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
@@ -39,12 +39,12 @@ manager: "jhubbard"
 |Primary data|modeldev|model.mdf|Autogrow by 64 MB until the disk is full.|  
 |Log|modellog|modellog.ldf|Autogrow by 64 MB to a maximum of 2 terabytes.|  
   
- For versions before [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)], see [model Database](https://msdn.microsoft.com/library/ms186388\(v=sql.120\).aspx)for default file growth values.  
+ For versions before [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)], see [model Database](https://msdn.microsoft.com/library/ms186388\(v=sql.120\).aspx)for default file growth values.  
   
  To move the **model** database or log files, see [Move System Databases](../../relational-databases/databases/move-system-databases.md).  
   
 ### Database Options  
- The following table lists the default value for each database option in the **model** database and whether the option can be modified. To view the current settings for these options, use the [sys.databases](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view.  
+ The following table lists the default value for each database option in the **model** database and whether the option can be modified. To view the current settings for these options, use the [sys.databases](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view.  
   
 |Database option|Default value|Can be modified|  
 |---------------------|-------------------|---------------------|  
@@ -73,12 +73,12 @@ manager: "jhubbard"
 |PARAMETERIZATION|SIMPLE|Yes|  
 |QUOTED_IDENTIFIER|OFF|Yes|  
 |READ_COMMITTED_SNAPSHOT|OFF|Yes|  
-|RECOVERY|Depends on [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] edition*|Yes|  
+|RECOVERY|Depends on [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] edition*|Yes|  
 |RECURSIVE_TRIGGERS|OFF|Yes|  
 |Service Broker Options|DISABLE_BROKER|No|  
 |TRUSTWORTHY|OFF|No|  
   
- *To verify the current recovery model of the database, see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) or [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md).  
+ *To verify the current recovery model of the database, see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) or [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md).  
   
  For a description of these database options, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
@@ -112,9 +112,9 @@ manager: "jhubbard"
 ## Related Content  
  [System Databases](../../relational-databases/databases/system-databases.md)  
   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md)  
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md)  
   
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.master-files-transact-sql.md)  
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.master-files-transact-sql.md)  
   
  [Move Database Files](../../relational-databases/databases/move-database-files.md)  
   

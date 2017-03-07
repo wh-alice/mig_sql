@@ -21,7 +21,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Executing a DiffGram by Using ADO (SQLXML 4.0)
-  This [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Visual Basic application uses ADO to establish a connection to an instance of Microsoft [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and then executes a DiffGram. In this application, the DiffGram and the XSD schema are stored in a file. The application loads the DiffGram from the specified file. You can use any of the DiffGrams (and the associated XSD schema) described in [DiffGram Examples](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4.0.md).  
+  This [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Visual Basic application uses ADO to establish a connection to an instance of Microsoft [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] and then executes a DiffGram. In this application, the DiffGram and the XSD schema are stored in a file. The application loads the DiffGram from the specified file. You can use any of the DiffGrams (and the associated XSD schema) described in [DiffGram Examples](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4.0.md).  
   
  This is the process for the sample application:  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
  The following code is the sample application.  
   
 > [!NOTE]  
->  In the code, you must provide the name of the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in the connection string.  
+>  In the code, you must provide the name of the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] in the connection string.  
   
 ```  
 Private Sub Command1_Click()  

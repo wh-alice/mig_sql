@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Scripting - FREEZE
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Locks the cell values of a specified subcube to their current values. When the cell values are locked, changes to other cells have no effect on the cells that are locked.  
   

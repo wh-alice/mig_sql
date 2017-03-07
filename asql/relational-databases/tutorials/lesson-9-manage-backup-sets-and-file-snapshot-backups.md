@@ -18,10 +18,10 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Lesson 9: Manage backup sets and file-snapshot backups
-In this lesson, you will delete a backup set using the [sp_delete_backup &#40;Transact-SQL&#41;](../Topic/sp_delete_backup%20(Transact-SQL).md) system stored procedure. This system stored procedure deletes the backup file and the file snapshot on each database file associated with this backup set.  
+In this lesson, you will delete a backup set using the [sp_delete_backup &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/snapshot-backup-sp-delete-backup.md) system stored procedure. This system stored procedure deletes the backup file and the file snapshot on each database file associated with this backup set.  
   
 > [!NOTE]  
-> If you attempt to delete a backup set by simply deleting the backup file from the Azure blob container, you will only delete the backup file itself - the associated file snapshots will remain. If you find yourself in this scenario, use the [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-db-backup-file-snapshots-transact-sql.md) system function to identify the URL of the orphaned file snapshots and use the [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../Topic/sp_delete_backup_file_snapshot%20(Transact-SQL).md) system stored procedure to delete each orphaned file snapshot. For more information, see  [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+> If you attempt to delete a backup set by simply deleting the backup file from the Azure blob container, you will only delete the backup file itself - the associated file snapshots will remain. If you find yourself in this scenario, use the [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-db-backup-file-snapshots-transact-sql.md) system function to identify the URL of the orphaned file snapshots and use the [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) system stored procedure to delete each orphaned file snapshot. For more information, see  [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 To delete a file-snapshot backup set, follow these steps:  
   
@@ -58,9 +58,9 @@ To delete a file-snapshot backup set, follow these steps:
   
 ## See Also  
 [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
-[sp_delete_backup &#40;Transact-SQL&#41;](../Topic/sp_delete_backup%20(Transact-SQL).md)  
-[sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-db-backup-file-snapshots-transact-sql.md)  
-[sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../Topic/sp_delete_backup_file_snapshot%20(Transact-SQL).md)  
+[sp_delete_backup &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
+[sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-db-backup-file-snapshots-transact-sql.md)  
+[sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)  
   
   
   

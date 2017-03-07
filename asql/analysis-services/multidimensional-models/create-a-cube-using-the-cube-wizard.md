@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Create a Cube Using the Cube Wizard
-  You can create a new cube by using the Cube Wizard in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+  You can create a new cube by using the Cube Wizard in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
 ### To create a new cube  
   

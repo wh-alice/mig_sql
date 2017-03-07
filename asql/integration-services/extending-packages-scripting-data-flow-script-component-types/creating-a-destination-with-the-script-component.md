@@ -23,16 +23,16 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Creating a Destination with the Script Component
-  You use a destination component in the data flow of an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package to save data received from upstream sources and transformations to a data source. Ordinarily the destination component connects to the data source through an existing connection manager.  
+  You use a destination component in the data flow of an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package to save data received from upstream sources and transformations to a data source. Ordinarily the destination component connects to the data source through an existing connection manager.  
   
  For an overview of the Script component, see [Extending the Data Flow with the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
  The Script component and the infrastructure code that it generates for you simplify significantly the process of developing a custom data flow component. However, to understand how the Script component works, you may find it useful to read through the steps for developing a custom data flow components in the [Developing a Custom Data Flow Component](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) section, and especially [Developing a Custom Destination Component](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md).  
   
 ## Getting Started with a Destination Component  
- When you add a Script component to the Data Flow tab of [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, the **Select Script Component Type** dialog box opens and prompts you to select a **Source**, **Destination**, or **Transformation** script. In this dialog box, select **Destination**.  
+ When you add a Script component to the Data Flow tab of [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, the **Select Script Component Type** dialog box opens and prompts you to select a **Source**, **Destination**, or **Transformation** script. In this dialog box, select **Destination**.  
   
- Next, connect the output of a transformation to the destination component in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer. For testing, you can connect a source directly to a destination without any transformations.  
+ Next, connect the output of a transformation to the destination component in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer. For testing, you can connect a source directly to a destination without any transformations.  
   
 ## Configuring a Destination Component in Metadata-Design Mode  
  After you select the option to create a destination component, you configure the component by using the **Script Transformation Editor**. For more information, see [Configuring the Script Component in the Script Component Editor](../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md).  
@@ -74,7 +74,7 @@ manager: "jhubbard"
  For more information about the **Script** page of the **Script Transformation Editor**, see [Script Transformation Editor &#40;Script Page&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
   
 ## Scripting a Destination Component in Code-Design Mode  
- After you have configured the metadata for your component, you can write your custom script. In the **Script Transformation Editor**, on the **Script** page, click **Edit Script** to open the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE where you can add your custom script. The scripting language that you use depends on whether you selected [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Visual C# as the script language for the **ScriptLanguage** property on the **Script** page.  
+ After you have configured the metadata for your component, you can write your custom script. In the **Script Transformation Editor**, on the **Script** page, click **Edit Script** to open the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE where you can add your custom script. The scripting language that you use depends on whether you selected [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Visual C# as the script language for the **ScriptLanguage** property on the **Script** page.  
   
  For important information that applies to all kinds of components created by using the Script component, see [Coding and Debugging the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).  
   
@@ -92,7 +92,7 @@ manager: "jhubbard"
   
 2.  Override the **PreExecute** method to prepare to save the data. For example, you may want to create and configure a **SqlCommand** and its parameters in this method.  
   
-3.  Use the overridden **ProcessInputRow** method to copy each input row to the external data source. For example, for a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] destination, you can copy the column values into the parameters of a **SqlCommand** and execute the command one time for each row. For a flat file destination, you can write the values for each column to a **StreamWriter**, separating the values by the column delimiter.  
+3.  Use the overridden **ProcessInputRow** method to copy each input row to the external data source. For example, for a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] destination, you can copy the column values into the parameters of a **SqlCommand** and execute the command one time for each row. For a flat file destination, you can write the values for each column to a **StreamWriter**, separating the values by the column delimiter.  
   
 4.  Override the **PostExecute** method to disconnect from the external data source, if required, and to perform any other required cleanup.  
   
@@ -103,13 +103,13 @@ manager: "jhubbard"
 >  These examples use the **Person.Address** table in the **AdventureWorks** sample database and pass its first and fourth columns, the **int*AddressID*** and **nvarchar(30)City** columns, through the data flow. The same data is used in the source, transformation, and destination samples in this section. Additional prerequisites and assumptions are documented for each example.  
   
 ### ADO.NET Destination Example  
- This example demonstrates a destination component that uses an existing [!INCLUDE[vstecado](../../analysis-services/data-mining/includes/vstecado-md.md)] connection manager to save data from the data flow into a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table.  
+ This example demonstrates a destination component that uses an existing [!INCLUDE[vstecado](../../a9retired/includes/vstecado-md.md)] connection manager to save data from the data flow into a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] table.  
   
  If you want to run this sample code, you must configure the package and the component as follows:  
   
-1.  Create an [!INCLUDE[vstecado](../../analysis-services/data-mining/includes/vstecado-md.md)] connection manager that uses the **SqlClient** provider to connect to the **AdventureWorks** database.  
+1.  Create an [!INCLUDE[vstecado](../../a9retired/includes/vstecado-md.md)] connection manager that uses the **SqlClient** provider to connect to the **AdventureWorks** database.  
   
-2.  Create a destination table by running the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] command in the **AdventureWorks** database:  
+2.  Create a destination table by running the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] command in the **AdventureWorks** database:  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -118,13 +118,13 @@ manager: "jhubbard"
   
 3.  Add a new Script component to the Data Flow designer surface and configure it as a destination.  
   
-4.  Connect the output of an upstream source or transformation to the destination component in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer. (You can connect a source directly to a destination without any transformations.) This output should provide data from the **Person.Address** table of the **AdventureWorks** sample database that contains at least the **AddressID** and **City** columns.  
+4.  Connect the output of an upstream source or transformation to the destination component in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer. (You can connect a source directly to a destination without any transformations.) This output should provide data from the **Person.Address** table of the **AdventureWorks** sample database that contains at least the **AddressID** and **City** columns.  
   
 5.  Open the **Script Transformation Editor**. On the **Input Columns** page, select the **AddressID** and **City** input columns.  
   
 6.  On the **Inputs and Outputs** page, rename the input with a more descriptive name such as **MyAddressInput**.  
   
-7.  On the **Connection Managers** page, add or create the [!INCLUDE[vstecado](../../analysis-services/data-mining/includes/vstecado-md.md)] connection manager with a name such as **MyADONETConnectionManager**.  
+7.  On the **Connection Managers** page, add or create the [!INCLUDE[vstecado](../../a9retired/includes/vstecado-md.md)] connection manager with a name such as **MyADONETConnectionManager**.  
   
 8.  On the **Script** page, click **Edit Script** and enter the script that follows. Then close the script development environment.  
   
@@ -235,7 +235,7 @@ public class ScriptMain:
   
 2.  Add a new Script component to the Data Flow designer surface and configure it as a destination.  
   
-3.  Connect the output of an upstream source or transformation to the destination component in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer. (You can connect a source directly to a destination without any transformations.) This output should provide data from the **Person.Address** table of the **AdventureWorks** sample database, and should contain at least the **AddressID** and **City** columns.  
+3.  Connect the output of an upstream source or transformation to the destination component in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer. (You can connect a source directly to a destination without any transformations.) This output should provide data from the **Person.Address** table of the **AdventureWorks** sample database, and should contain at least the **AddressID** and **City** columns.  
   
 4.  Open the **Script Transformation Editor**. On the **Input Columns** page, select the **AddressID** and **City** columns.  
   

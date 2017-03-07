@@ -15,19 +15,19 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # The data connection path is invalid
-  For Excel workbooks that contain [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data, Excel Services returns this error if it cannot connect to embedded data sources.  
+  For Excel workbooks that contain [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data, Excel Services returns this error if it cannot connect to embedded data sources.  
   
 ## Details  
   
 |||  
 |-|-|  
-|Applies to|[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint|  
-|Product Version|[!INCLUDE[ssKilimanjaro](../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)]|  
+|Applies to|[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint|  
+|Product Version|[!INCLUDE[ssKilimanjaro](../../a9notintoc/includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)]|  
 |Cause|Excel Services is configured to only allow data connections from .odc files that are in a trusted data connection library.|  
-|Message Text|The data connection path in the workbook points to a file on the local drive or is an invalid URI. The following connections failed to refresh: [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Data|  
+|Message Text|The data connection path in the workbook points to a file on the local drive or is an invalid URI. The following connections failed to refresh: [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Data|  
   
 ## Explanation  
- [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbooks contain embedded data connections. To support workbook interaction through slicers and filters, Excel Services must be configured to allow external data access through embedded connection information. External data access is required for retrieving [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data that is loaded on [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] servers in the farm.  
+ [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbooks contain embedded data connections. To support workbook interaction through slicers and filters, Excel Services must be configured to allow external data access through embedded connection information. External data access is required for retrieving [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data that is loaded on [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] servers in the farm.  
   
 ## User Action  
  Change the configuration settings to allow embedded data source connections.  
@@ -44,6 +44,6 @@ manager: "erikre"
   
 6.  Click **OK**.  
   
- Alternatively, you can create a new trusted location for sites that contain [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbooks, and then modify the configuration settings for just that site. For more information, see [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+ Alternatively, you can create a new trusted location for sites that contain [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbooks, and then modify the configuration settings for just that site. For more information, see [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
   

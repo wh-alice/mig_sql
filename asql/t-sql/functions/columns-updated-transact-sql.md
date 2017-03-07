@@ -27,9 +27,9 @@ manager: "jhubbard"
 # COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns a **varbinary** bit pattern that indicates the columns in a table or view that were inserted or updated. COLUMNS_UPDATED is used anywhere inside the body of a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] INSERT or UPDATE trigger to test whether the trigger should execute certain actions.  
+  Returns a **varbinary** bit pattern that indicates the columns in a table or view that were inserted or updated. COLUMNS_UPDATED is used anywhere inside the body of a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] INSERT or UPDATE trigger to test whether the trigger should execute certain actions.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -48,7 +48,7 @@ COLUMNS_UPDATED ( )
   
  To test for updates or inserts to specific columns, follow the syntax with a bitwise operator and an integer bitmask of the columns being tested. For example, table **t1** contains columns **C1**, **C2**, **C3**, **C4**, and **C5**. To verify that columns **C2**, **C3**, and **C4** are all updated (with table **t1** having an UPDATE trigger), follow the syntax with **& 14**. To test whether only column **C2** is updated, specify **& 2**.  
   
- COLUMNS_UPDATED can be used anywhere inside a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] INSERT or UPDATE trigger.  
+ COLUMNS_UPDATED can be used anywhere inside a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] INSERT or UPDATE trigger.  
   
  The ORDINAL_POSITION column of the INFORMATION_SCHEMA.COLUMNS view is not compatible with the bit pattern of columns returned by COLUMNS_UPDATED. To obtain a bit pattern compatible with COLUMNS_UPDATED, reference the `ColumnID` property of the `COLUMNPROPERTY` system function when you query the `INFORMATION_SCHEMA.COLUMNS` view, as shown in the following example.  
   

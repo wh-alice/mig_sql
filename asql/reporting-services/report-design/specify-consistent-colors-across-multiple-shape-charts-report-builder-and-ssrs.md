@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Specify Consistent Colors across Multiple Shape Charts (Report Builder and SSRS)
-  On non-shape charts in a paginated report, [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] selects a new color from the palette based on the index of series in the chart. For example, the first series on your chart will be mapped to the first color in the palette. However, this behavior differs for shape charts. On shape charts, each color in the palette is mapped to a data point in the dataset. For example, data point 1 is mapped to the first color in the palette, data point 2 is mapped to the second color palette and so on.  
+  On non-shape charts in a paginated report, [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] selects a new color from the palette based on the index of series in the chart. For example, the first series on your chart will be mapped to the first color in the palette. However, this behavior differs for shape charts. On shape charts, each color in the palette is mapped to a data point in the dataset. For example, data point 1 is mapped to the first color in the palette, data point 2 is mapped to the second color palette and so on.  
   
  If a data point has no value, it is omitted from display on a shape chart. This means that the data point is skipped from being colored. For example, if point 2 has a value of zero, point 1 will be mapped to the first color in the palette, and point 3 will be mapped to the second color in the palette. This approach is useful because the empty points in the dataset of a pie chart do not unnecessarily use a palette color when the empty point does not need to be drawn.  
   
@@ -25,7 +25,7 @@ manager: "erikre"
  The legend is connected to the series, so any color you specify for the series will automatically be shown on the legend.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## To specify consistent colors across multiple sparkline shape charts in a table or matrix  
   
@@ -59,7 +59,7 @@ manager: "erikre"
     > [!NOTE]  
     >  You will need to replace the "Color1" strings with your own colors. You can use named colors, for example "Red", or you can use six-digit hexadecimal value that represent the color, such as "#FFFFFF" for black. If you have more than three colors defined, you will need to extend the array of colors so that the number of colors in the array matches the number of points in your shape chart. You can add new colors to the array by specifying a comma-separated list of string values that contain named colors or hexadecimal representations of colors.  
   
-3.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 4.  Right-click on the shape chart and select **Series Properties**.  
   
@@ -73,7 +73,7 @@ manager: "erikre"
   
 ## See Also  
  [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Add Bevel, Emboss, and Texture Styles to a Chart &#40;Report Builder and SSRS&#41;](../Topic/Add%20Bevel,%20Emboss,%20and%20Texture%20Styles%20to%20a%20Chart%20\(Report%20Builder%20and%20SSRS\).md)   
+ [Add Bevel, Emboss, and Texture Styles to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [Define Colors on a Chart Using a Palette &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Add Empty Points to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)   
  [Shape Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   

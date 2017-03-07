@@ -17,17 +17,17 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Enable and Configure FILESTREAM
-  Before you can start to use FILESTREAM, you must enable FILESTREAM on the instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]. This topic describes how to enable FILESTREAM by using SQL Server Configuration Manager.  
+  Before you can start to use FILESTREAM, you must enable FILESTREAM on the instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)]. This topic describes how to enable FILESTREAM by using SQL Server Configuration Manager.  
   
 ##  <a name="enabling"></a> Enabling FILESTREAM  
   
 #### To enable and change FILESTREAM settings  
   
-1.  On the **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], point to **Configuration Tools**, and then click **SQL Server Configuration Manager**.  
+1.  On the **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], point to **Configuration Tools**, and then click **SQL Server Configuration Manager**.  
   
 2.  In the list of services, right-click **SQL Server Services**, and then click **Open**.  
   
-3.  In the **SQL Server Configuration Manager** snap-in, locate the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] on which you want to enable FILESTREAM.  
+3.  In the **SQL Server Configuration Manager** snap-in, locate the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] on which you want to enable FILESTREAM.  
   
 4.  Right-click the instance, and then click **Properties**.  
   
@@ -41,9 +41,9 @@ manager: "jhubbard"
   
 9. Click **Apply**.  
   
-10. In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], click **New Query** to display the Query Editor.  
+10. In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], click **New Query** to display the Query Editor.  
   
-11. In Query Editor, enter the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] code:  
+11. In Query Editor, enter the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] code:  
   
     ```tsql  
     EXEC sp_configure filestream_access_level, 2  
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 12. Click **Execute**.  
   
-13. Restart the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service.  
+13. Restart the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service.  
   
   
 ##  <a name="best"></a> Best Practices  
@@ -85,7 +85,7 @@ manager: "jhubbard"
   
 -   FILESTREAM columns must be accompanied by a corresponding **uniqueidentifier**ROWGUID column. These kinds of tables must also be accompanied by a unique index. Typically this index is not a clustered index. If the databases business logic requires a clustered index, you have to make sure that the values stored in the index are not random. Random values will cause the index to be reordered every time that a row is added or removed from the table.  
   
--   For performance reasons, FILESTREAM filegroups and containers should reside on volumes other than the operating system, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] log, tempdb, or paging file.  
+-   For performance reasons, FILESTREAM filegroups and containers should reside on volumes other than the operating system, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] log, tempdb, or paging file.  
   
 -   Space management and policies are not directly supported by FILESTREAM. However, you can manage space and apply policies indirectly by assigning each FILESTREAM filegroup to a separate volume and using the volume's management features.  
   

@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # Restore Element (XMLA)
-  Restores a [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] database from a backup file.  
+  Restores a [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] database from a backup file.  
   
 ## Syntax  
   
@@ -65,7 +65,7 @@ manager: "erikre"
 |Child elements|[AllowOverwrite](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md), [DatabaseName](../../../analysis-services/xmla/xml-elements-properties/databasename-element-xmla.md), [DatabaseID](../../../analysis-services/xmla/xml-elements-properties/databaseid-element-xmla.md), [File](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md), [Locations](../../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md), [Password](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md), [Security](../../../analysis-services/xmla/xml-elements-properties/security-element-xmla.md), [DbStorageLocation](../../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)|  
   
 ## Remarks  
- The **Restore** command restores an [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] database specified in the **DatabaseName** element from a backup file and optionally restores remote partitions from remote backup files.  
+ The **Restore** command restores an [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] database specified in the **DatabaseName** element from a backup file and optionally restores remote partitions from remote backup files.  
   
  Depending on the storage mode used by objects stored in the backup file, the **Restore** command restores information as listed in the following table.  
   
@@ -75,12 +75,12 @@ manager: "erikre"
 |Hybrid OLAP (HOLAP)|Aggregations and metadata|  
 |Relational OLAP (ROLAP)|Metadata|  
   
- During a **Restore** command, an exclusive lock is placed on the [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] database specified in the **DatabaseName** element. The lock is released after the **Restore** command has completed.  
+ During a **Restore** command, an exclusive lock is placed on the [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] database specified in the **DatabaseName** element. The lock is released after the **Restore** command has completed.  
   
  For more information about backing up and restoring databases, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 > [!IMPORTANT]  
->  For each backup file, the user who runs the restore command must have permission to read from the backup location specified for each file. To restore an [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] database that is not installed on the server, the user must also be a member of the server role for that [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance. To overwrite an [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] database, the user must have one of the following roles: a member of the server role for the [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance, or a member of a database role with Full Control (Administrator) permissions on the database to be restored.  
+>  For each backup file, the user who runs the restore command must have permission to read from the backup location specified for each file. To restore an [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] database that is not installed on the server, the user must also be a member of the server role for that [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance. To overwrite an [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] database, the user must have one of the following roles: a member of the server role for the [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance, or a member of a database role with Full Control (Administrator) permissions on the database to be restored.  
   
 > [!NOTE]  
 >  After restoring an existing database, the user who restored the database might lose access to the restored database. This loss of access can occur if, at the time that the backup was performed, the user was not a member of the server role or was not a member of the database role with Full Control (Administrator) permissions.  
@@ -90,6 +90,6 @@ manager: "erikre"
  [Batch Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
  [Parallel Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md)   
  [Synchronize Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
- [Commands &#40;XMLA&#41;](../Topic/Commands%20\(XMLA\).md)  
+ [Commands &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

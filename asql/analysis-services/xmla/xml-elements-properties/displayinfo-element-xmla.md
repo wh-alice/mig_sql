@@ -61,6 +61,6 @@ manager: "erikre"
  The **DisplayInfo** element contains various items of information that help a client application render the parent **HierarchyInfo** or **Member** element. The value is equivalent to the DISPLAY_INFO property defined for axis rowsets in the OLE DB for OLAP specification.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

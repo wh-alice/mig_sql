@@ -62,7 +62,7 @@ manager: "erikre"
 ## Remarks  
   
 ## Example  
- The following example combines all four partitions of the `Internet Sales` measure group into the `Internet_Sales_2004` target partition. The example uses the Adventure Works DW cube of the [!INCLUDE[ssAWDWsp](../../../analysis-services/includes/ssawdwsp-md.md)] sample [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] database.  
+ The following example combines all four partitions of the `Internet Sales` measure group into the `Internet_Sales_2004` target partition. The example uses the Adventure Works DW cube of the [!INCLUDE[ssAWDWsp](../../../a9notintoc/includes/ssawdwsp-md.md)] sample [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] database.  
   
 ```  
 <MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -96,6 +96,6 @@ manager: "erikre"
 ```  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

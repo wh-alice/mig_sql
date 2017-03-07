@@ -18,7 +18,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects
-  This topic describes performance counters for the **ReportServer:Service** and **ReportServerSharePoint:Service** performance objects that are part of a [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] deployment.  
+  This topic describes performance counters for the **ReportServer:Service** and **ReportServerSharePoint:Service** performance objects that are part of a [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] deployment.  
   
 > [!NOTE]  
 >  The performance objects are used to monitor events on the local report server. If you are running a report server in a scale-out deployment, the counts apply to the current server and not the scale-out deployment as a whole.  
@@ -33,12 +33,12 @@ manager: "erikre"
   
 -   [Use PowerShell Cmdlets to return lists](#bkmk_powershell)  
   
- [!INCLUDE[applies](../../analysis-services/includes/applies-md.md)] [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)].  
+ [!INCLUDE[applies](../../a9retired/includes/applies-md.md)] [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)].  
   
 ##  <a name="bkmk_ReportServer"></a> ReportServer:Service Performance Counters (Native Mode Report Server)  
- The **ReportServer:Service** performance object includes a collection of counters to track HTTP-related events and memory-related events for a report server instance. This performance object appears one time for each [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] instance on the computer, and you can add or remove counters from the performance object for each instance. Counters for the default instance appear in the format **ReportServer:Service**. Counters for named instances appear in the format **ReportServer$\<***instance_name***>:Service**.  
+ The **ReportServer:Service** performance object includes a collection of counters to track HTTP-related events and memory-related events for a report server instance. This performance object appears one time for each [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] instance on the computer, and you can add or remove counters from the performance object for each instance. Counters for the default instance appear in the format **ReportServer:Service**. Counters for named instances appear in the format **ReportServer$\<***instance_name***>:Service**.  
   
- The **ReportServer:Service** performance object was new in [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], and it provides a subset of counters that were included with Internet Information Services (IIS) and [!INCLUDE[vstecasp](../../database-engine/configure/windows/includes/vstecasp-md.md)] in previous versions of [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]. These new counters are specific to [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], and they track HTTP-related events for the report server, such as requests, connections, and logon attempts. Additionally, this performance object includes counters to track memory management events.  
+ The **ReportServer:Service** performance object was new in [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)], and it provides a subset of counters that were included with Internet Information Services (IIS) and [!INCLUDE[vstecasp](../../database-engine/configure/windows/includes/vstecasp-md.md)] in previous versions of [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]. These new counters are specific to [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)], and they track HTTP-related events for the report server, such as requests, connections, and logon attempts. Additionally, this performance object includes counters to track memory management events.  
   
  The following table lists the counters that are included in the **ReportServer:Service** performance object.  
   
@@ -73,7 +73,7 @@ manager: "erikre"
 |**Tasks Queued**|The number of tasks that are waiting for a thread to become available for processing. Each request made to the report server corresponds to one or more tasks. This counter represents only the number of tasks that are ready for processing; it does not include the number of tasks that are currently running.|  
   
 ##  <a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (SharePoint Mode Report Server)  
- The **ReportServerSharePoint:Service** performance object was added in [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)].  
+ The **ReportServerSharePoint:Service** performance object was added in [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)].  
   
  ![PowerShell related content](../../analysis-services/instances/install/windows/media/rs-powershellicon.jpg "PowerShell related content") The following Windows PowerShell script will return the list of performance counters for the CounterSetName  
   

@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Administer Servers by Using Policy-Based Management
-   Policy-Based Management is a policy based system for managing one or more instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Use is to create conditions that contain condition expressions. Then, create policies that apply the conditions to database target objects.  
+   Policy-Based Management is a policy based system for managing one or more instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Use is to create conditions that contain condition expressions. Then, create policies that apply the conditions to database target objects.  
 
 For example, as the database administrator, you may want to ensure that certain servers do not have Database Mail enabled, so you  create a condition and a policy that sets that server option. 
    
@@ -39,7 +39,7 @@ For example, as the database administrator, you may want to ensure that certain 
   
 3.  Define a policy that contains the condition, additional conditions that filter the target sets, and the evaluation mode.  
   
-4.  Check whether an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is in compliance with the policy.  
+4.  Check whether an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is in compliance with the policy.  
   
  For failed policies, Object Explorer indicates a critical health warning as a red icon next to the target and the nodes that are higher in the Object Explorer tree.  
   
@@ -62,19 +62,19 @@ For example, as the database administrator, you may want to ensure that certain 
   
     -   **On change: log only**. This automated mode uses event notification to evaluate a policy when a relevant change is made.  
   
-    -   **On schedule**. This automated mode uses a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent job to periodically evaluate a policy.  
+    -   **On schedule**. This automated mode uses a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent job to periodically evaluate a policy.  
   
      When automated policies are not enabled, Policy-Based Management will not affect system performance.  
   
 ## Terms  
  **Policy-Based Management managed target** 
- Entities that are managed by Policy-Based Management, such as an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)], a database, a table, or an index. All targets in a server instance form a target hierarchy. A target set is the set of targets that results from applying a set of target filters to the target hierarchy, for example, all the tables in the database owned by the HumanResources schema.  
+ Entities that are managed by Policy-Based Management, such as an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)], a database, a table, or an index. All targets in a server instance form a target hierarchy. A target set is the set of targets that results from applying a set of target filters to the target hierarchy, for example, all the tables in the database owned by the HumanResources schema.  
   
  **Policy-Based Management facet**
  A set of logical properties that model the behavior or characteristics for certain types of managed targets. The number and characteristics of the properties are built into the facet and can be added or removed by only the maker of the facet. A target type can implement one or more management facets, and a management facet can be implemented by one or more target types. Some properties of a facet can only apply to a specific version..  
   
  **Policy-Based Management condition**  
- A Boolean expression that specifies a set of allowed states of a Policy-Based Management managed target with regard to a management facet. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] tries to observe collations when evaluating a condition. When [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] collations do not exactly match Windows collations, test your condition to determine how the algorithm resolves conflicts.  
+ A Boolean expression that specifies a set of allowed states of a Policy-Based Management managed target with regard to a management facet. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] tries to observe collations when evaluating a condition. When [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] collations do not exactly match Windows collations, test your condition to determine how the algorithm resolves conflicts.  
   
  **Policy-Based Management policy**  
  A Policy-Based Management condition and the expected behavior, for example, evaluation mode, target filters, and schedule. A policy can contain only one condition. Policies can be enabled or disabled. Policies are stored in the msdb database.  
@@ -117,6 +117,6 @@ For example, as the database administrator, you may want to ensure that certain 
  - [Create the Off By Default Policy](https://msdn.microsoft.com/library/bb500172.aspx)
   - [Configure a Server to Run the Off By Default Policy](https://msdn.microsoft.com/library/bb522470.aspx)
 ## See also  
- [Policy-Based Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [Policy-Based Management Views &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

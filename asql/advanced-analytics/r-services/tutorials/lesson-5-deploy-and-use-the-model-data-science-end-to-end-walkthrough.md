@@ -19,7 +19,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 5: Deploy and Use the Model (Data Science End-to-End Walkthrough)
-In this lesson, you will use your R models in a production environment, by wrapping the persisted model in a stored procedure. You can then  invoke the stored procedure from R or any application programming language that supports [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] (such as C#, Java, Python, etc), to use the model to make predictions on new observations.  
+In this lesson, you will use your R models in a production environment, by wrapping the persisted model in a stored procedure. You can then  invoke the stored procedure from R or any application programming language that supports [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] (such as C#, Java, Python, etc), to use the model to make predictions on new observations.  
   
 There are two different ways that you can call a  model for scoring:  
   
@@ -38,7 +38,7 @@ For convenience, you can use a stored procedure that was created when you initia
   
 ### Use the stored procedure PredictTipBatchMode
 
-1. Take a minute to look over the script that defines the stored procedure, *PredictTipBatchMode*. It illustrates several aspects of how a model can be operationalized using [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)].  
+1. Take a minute to look over the script that defines the stored procedure, *PredictTipBatchMode*. It illustrates several aspects of how a model can be operationalized using [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)].  
   
     ```tsql  
     CREATE PROCEDURE [dbo].[PredictTipBatchMode]   
@@ -65,11 +65,11 @@ For convenience, you can use a stored procedure that was created when you initia
     END    
     ```  
 
-    + Note the SELECT statement that calls the stored model. You can store any trained model in a SQL table, by using a column of type **varbinary(max)**. In this code, the model is retrieved from the table, stored in the SQL variable _@lmodel2_, and passed as the parameter *mod* to the system stored procedure [sp_execute_external_script &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+    + Note the SELECT statement that calls the stored model. You can store any trained model in a SQL table, by using a column of type **varbinary(max)**. In this code, the model is retrieved from the table, stored in the SQL variable _@lmodel2_, and passed as the parameter *mod* to the system stored procedure [sp_execute_external_script &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-execute-external-script-transact-sql.md).
     + The input data used for scoring is passed as a string to the stored procedure.  
   
         To define input data for this particular model, create a query that returns valid data. As data is retrieved from the database, it is stored in a data frame called *InputDataSet*. All the rows in this data frame are used for batch scoring.
-        + *InputDataSet* is the default name for input data to the [sp_execute_external_script &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedure; you can define another variable name if needed.
+        + *InputDataSet* is the default name for input data to the [sp_execute_external_script &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedure; you can define another variable name if needed.
         + To generate the scores, the stored procedure calls the *rxPredict* function from the **RevoScaleR** library.
     + The return value for the stored procedure, *Score*, is a predicted probability that the driver will be given a tip.  
   
@@ -179,7 +179,7 @@ Instead of using a query to pass the input values to the saved R model, you migh
   
 ### Call the stored procedure and pass parameters
 
-1. In SQL Server Management Studio, you can use the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] **EXEC** to call the stored procedure, and pass it the required inputs. .  
+1. In SQL Server Management Studio, you can use the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] **EXEC** to call the stored procedure, and pass it the required inputs. .  
     ```tsql  
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303   
     ```  
@@ -206,7 +206,7 @@ Instead of using a query to pass the input values to the saved R model, you migh
     For more information about **RODBC**, see [http://www.inside-r.org/packages/cran/RODBC/docs/sqlQuery](http://www.inside-r.org/packages/cran/RODBC/docs/sqlQuery).  
   
 ## Conclusion  
-Now that you have learned how to work with [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data and persist trained R models to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], it should be relatively easy for you to create some additional models based on this data set. For example, you might try creating models like these:  
+Now that you have learned how to work with [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data and persist trained R models to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], it should be relatively easy for you to create some additional models based on this data set. For example, you might try creating models like these:  
   
 -   A regression model that predicts the tip amount    
 -   A multiclass classification model that predicts whether the tip will be big, medium, or small.  

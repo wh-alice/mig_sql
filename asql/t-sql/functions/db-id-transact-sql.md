@@ -27,11 +27,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # DB_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the database identification (ID) number.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -65,7 +65,7 @@ GO
 ```  
   
 ### B. Returning the database ID of a specified database  
- The following example returns the database ID of the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+ The following example returns the database ID of the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database.  
   
 ```  
 SELECT DB_ID(N'AdventureWorks2008R2') AS [Database ID];  
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### C. Using DB_ID to specify the value of a system function parameter  
- The following example uses `DB`_`ID` to return the database ID of the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database in the system function `sys.dm_db`\_`index`\_`operational`\_`stats`. The function takes a database ID as the first parameter.  
+ The following example uses `DB`_`ID` to return the database ID of the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database in the system function `sys.dm_db`\_`index`\_`operational`\_`stats`. The function takes a database ID as the first parameter.  
   
 ```  
 DECLARE @db_id int;  
@@ -95,7 +95,7 @@ ELSE
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### D. Return the ID of the current database  
  The following example returns the database ID of the current database.  
@@ -114,8 +114,8 @@ SELECT DB_ID('AdventureWorksPDW2012');
 ## See Also  
  [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)   
  [Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md)   
- [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-index-operational-stats-transact-sql.md)  
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md)   
+ [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-index-operational-stats-transact-sql.md)  
   
   
 

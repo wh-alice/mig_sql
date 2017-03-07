@@ -23,7 +23,7 @@ In this lesson, you will learn to configure the snapshot folder that is used to 
   
 ### To create a share for the snapshot folder and assign permissions  
   
-1.  In Windows Explorer, navigate to the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data folder. The default location is C:\Program Files\Microsoft SQL Server\MSSQL.X\MSSQL\Data.  
+1.  In Windows Explorer, navigate to the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data folder. The default location is C:\Program Files\Microsoft SQL Server\MSSQL.X\MSSQL\Data.  
   
 2.  Create a new folder named **repldata**.  
   

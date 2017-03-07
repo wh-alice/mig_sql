@@ -26,7 +26,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # PredictTimeSeries (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns predicted future values for time series data. Time series data is continuous and can be stored in a nested table or in a case table. The **PredictTimeSeries** function always returns a nested table.  
   
@@ -78,7 +78,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  A \<*table expression*>.  
   
 ## Remarks  
- The [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Time Series algorithm does not support historical prediction when you use the PREDICTION JOIN statement to add new data.  
+ The [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Time Series algorithm does not support historical prediction when you use the PREDICTION JOIN statement to add new data.  
   
  In a PREDICTION JOIN, the prediction process always starts at the time step immediately after the end of the original training series. This is true even if you add new data. Therefore, the *n* parameter and *n-start* parameter values must be an integer greater than 0.  
   
@@ -94,7 +94,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   The third example shows how to use the EXTEND_MODEL_CASES parameter to update a mining model with fresh data.  
   
- To learn more about working with time series models, see the data mining tutorial, [Lesson 2: Building a Forecasting Scenario &#40;Intermediate Data Mining Tutorial&#41;](../Topic/Lesson%202:%20Building%20a%20Forecasting%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md) and [Time Series Prediction DMX Tutorial](../Topic/Time%20Series%20Prediction%20DMX%20Tutorial.md).  
+ To learn more about working with time series models, see the data mining tutorial, [Lesson 2: Building a Forecasting Scenario &#40;Intermediate Data Mining Tutorial&#41;](../a9notintoc/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md) and [Time Series Prediction DMX Tutorial](../a9notintoc/time-series-prediction-dmx-tutorial.md).  
   
 > [!NOTE]  
 >  You might obtain different results from your model; the results of the examples below are provided only to illustrate the result format.  
@@ -128,7 +128,7 @@ OR [Model Region] = 'M200 Pacific'
 ### Example 2: Adding New Data and Using REPLACE_MODEL_CASES  
  Suppose you find that the data was incorrect for a particular region, and want to use the patterns in the model, but to adjust the predictions to match the new data. Or, you might find that another region has more reliable trends and you want to apply the most reliable model to data from a different region.  
   
- In such scenarios, you can use the REPLACE_MODEL_CASES parameter and specify a new set of data to use as historical data. That way, the projections will be based on the patterns in the specified model, but will continue smoothly from the end of the new data points. For a complete walkthrough of this scenario, see [Advanced Time Series Predictions &#40;Intermediate Data Mining Tutorial&#41;](../Topic/Advanced%20Time%20Series%20Predictions%20\(Intermediate%20Data%20Mining%20Tutorial\).md).  
+ In such scenarios, you can use the REPLACE_MODEL_CASES parameter and specify a new set of data to use as historical data. That way, the projections will be based on the patterns in the specified model, but will continue smoothly from the end of the new data points. For a complete walkthrough of this scenario, see [Advanced Time Series Predictions &#40;Intermediate Data Mining Tutorial&#41;](../a9notintoc/advanced-time-series-predictions-intermediate-data-mining-tutorial.md).  
   
  The following PREDICTION JOIN query illustrates the syntax for replacing data and making new predictions. For the replacement data, the example retrieves the value of the Amount and Quantity columns and multiplies each by two:  
   
@@ -195,7 +195,7 @@ WHERE ([Model Region] = 'M200 Europe'
  OR [Model Region] = 'M200 Pacific')  
 ```  
   
- Because the query uses the *EXTEND_MODEL_CASES* option, [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] takes the following actions for its predictions:  
+ Because the query uses the *EXTEND_MODEL_CASES* option, [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] takes the following actions for its predictions:  
   
 -   Increases the total size of the training cases by adding the two new months of data to the model.  
   
@@ -203,9 +203,9 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   Returns new predictions for the remaining three time slices based on the newly expanded model.  
   
- The following table lists the results of the Example 2 query. Notice that the first two values returned for M200 Europe are exactly the same as the new values that you provided. This behavior is by design; if you want to start predictions after the end of the new data, you must specify a starting and ending time step. For an example of how to do this, see [Lesson 5: Extending the Time Series Model](../Topic/Lesson%205:%20Extending%20the%20Time%20Series%20Model.md).  
+ The following table lists the results of the Example 2 query. Notice that the first two values returned for M200 Europe are exactly the same as the new values that you provided. This behavior is by design; if you want to start predictions after the end of the new data, you must specify a starting and ending time step. For an example of how to do this, see [Lesson 5: Extending the Time Series Model](../a9notintoc/lesson-5-extending-the-time-series-model.md).  
   
- Also, notice that you did not supply new data for the Pacific region. Therefore, [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] returns new predictions for all five time slices.  
+ Also, notice that you did not supply new data for the Pacific region. Therefore, [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] returns new predictions for all five time slices.  
   
  Quantity: M200 Europe. EXTEND_MODEL_CASES:  
   

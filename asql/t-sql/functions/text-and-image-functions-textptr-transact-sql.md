@@ -25,14 +25,14 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Text and Image Functions - TEXTPTR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the text-pointer value that corresponds to a **text**, **ntext**, or **image** column in **varbinary** format. The retrieved text pointer value can be used in READTEXT, WRITETEXT, and UPDATETEXT statements.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)] Alternative functionality is not available.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -51,7 +51,7 @@ TEXTPTR ( column )
 ## Remarks  
  For tables with in-row text, TEXTPTR returns a handle for the text to be processed. You can obtain a valid text pointer even if the text value is null.  
   
- You cannot use the TEXTPTR function on columns of views. You can only use it on columns of tables. To use the TEXTPTR function on a column of a view, you must set the compatibility level to 80 by using [ALTER DATABASE Compatibility Level](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md). If the table does not have in-row text, and if a **text**, **ntext**, or **image** column has not been initialized by an UPDATETEXT statement, TEXTPTR returns a null pointer.  
+ You cannot use the TEXTPTR function on columns of views. You can only use it on columns of tables. To use the TEXTPTR function on a column of a view, you must set the compatibility level to 80 by using [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). If the table does not have in-row text, and if a **text**, **ntext**, or **image** column has not been initialized by an UPDATETEXT statement, TEXTPTR returns a null pointer.  
   
  Use TEXTVALID to test whether a text pointer exists. You cannot use UPDATETEXT, WRITETEXT, or READTEXT without a valid text pointer.  
   
@@ -84,7 +84,7 @@ GO
 ```  
   
 ### B. Using TEXTPTR with in-row text  
- In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the in-row text pointer must be used inside a transaction, as shown in the following example.  
+ In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], the in-row text pointer must be used inside a transaction, as shown in the following example.  
   
 ```  
 CREATE TABLE t1 (c1 int, c2 text);  
@@ -187,7 +187,7 @@ pr_info
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
  [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
  [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [Text and Image Functions &#40;Transact-SQL&#41;](../Topic/Text%20and%20Image%20Functions%20\(Transact-SQL\).md)   
+ [Text and Image Functions &#40;Transact-SQL&#41;](../../a9retired/text-and-image-functions-transact-sql.md)   
  [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)   
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
   

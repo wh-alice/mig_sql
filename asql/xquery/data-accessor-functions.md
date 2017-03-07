@@ -21,12 +21,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Data Accessor Functions
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   The topics in this section discuss and provide sample code for the data-accessor functions.  
   
 ## Understanding fn:data(), fn:string(), and text()  
- XQuery has a function **fn:data()** to extract scalar, typed values from nodes, a node test **text()** to return text nodes, and the function **fn:string()** that returns the string value of a node. Their use can be confusing. The following are guidelines for using them correctly in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The XML instance \<age>12\</age> is used for the purpose of illustration.  
+ XQuery has a function **fn:data()** to extract scalar, typed values from nodes, a node test **text()** to return text nodes, and the function **fn:string()** that returns the string value of a node. Their use can be confusing. The following are guidelines for using them correctly in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]. The XML instance \<age>12\</age> is used for the purpose of illustration.  
   
 -   Untyped XML: The path expression /age/text() returns the text node "12". The function fn:data(/age) returns the string value "12" and so does fn:string(/age).  
   
@@ -34,9 +34,9 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [string Function &#40;XQuery&#41;](../Topic/string%20Function%20\(XQuery\).md)  
+-   [string Function &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md)  
   
--   [data Function &#40;XQuery&#41;](../Topic/data%20Function%20\(XQuery\).md)  
+-   [data Function &#40;XQuery&#41;](../xquery/data-accessor-functions-data-xquery.md)  
   
 ## See Also  
  [Path Expressions &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  

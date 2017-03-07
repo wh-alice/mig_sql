@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # SELECT INTO (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a new mining model that is built on the mining structure of an existing mining model. The **SELECT INTO** statement creates the new mining model by copying schema and other information that is not specific to the actual algorithm.  
   
@@ -64,7 +64,7 @@ FROM <existing model>
  The **WITH DRILLTHROUGH** clause enables drillthrough on the new mining model. Drillthrough can only be enabled when you create the model.  
   
 ## Example 1: Altering the Parameters of the Model  
- The following example creates a new mining model based on an existing mining model, `TM_Clustering`, which you create in the [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md). In the new model, the CLUSTER_COUNT parameter is modified so that a maximum of five clusters will exist in the new model. In contrast, the existing model uses the default value, which is 10.  
+ The following example creates a new mining model based on an existing mining model, `TM_Clustering`, which you create in the [Basic Data Mining Tutorial](../a9notintoc/basic-data-mining-tutorial.md). In the new model, the CLUSTER_COUNT parameter is modified so that a maximum of five clusters will exist in the new model. In contrast, the existing model uses the default value, which is 10.  
   
 ```  
 SELECT * INTO [New_Clustering]  
@@ -85,8 +85,8 @@ FROM [TM Clustering]
 >  Filters that are applied to the case table can be altered by using the SELECT INTO statement as shown in this example; however, if the original model contains a filter on a nested table, the nested table filter cannot be altered or removed by using this syntax, but is copied unchanged from the original model. To create a model with a different filter on a nested table, use the ALTER STRTUCTURE...ADD MODEL syntax.  
   
 ## See Also  
- [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Definition%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Manipulation%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)  
+ [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

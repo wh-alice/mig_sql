@@ -15,7 +15,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Basic Availability Groups (Always On Availability Groups)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Always On Basic Availability Groups provide a high availability solution for SQL Server 2016 Standard Edition. A basic availability group supports a failover environment for a single database. It is created and managed much like traditional (advanced) [Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) with Enterprise Edition. The differences and limitations of basic availability groups are summarized in this document.  
   

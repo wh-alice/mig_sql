@@ -22,7 +22,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create a Database Schema
-  This topic describes how to create a schema in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to create a schema in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 5.  In the **Schema owner** box, enter the name of a database user or role to own the schema. Alternately, click **Search** to open the **Search Roles and Users** dialog box.  
   
-6.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 ### Additional Options  
  The **Schema– New** dialog box also offers options on two additional pages: **Permissions** and **Extended Properties**.  
@@ -81,7 +81,7 @@ manager: "jhubbard"
   
 #### To create a schema  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

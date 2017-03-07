@@ -15,7 +15,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.projects (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Displays the details for all projects that appear in the **SSISDB** catalog.  
   
@@ -25,7 +25,7 @@ manager: "jhubbard"
 |folder_id|**bigint**|The unique ID of the folder where the project resides.|  
 |name|**sysname**|The name of the project.|  
 |description|**nvarchar(1024)**|The optional description of the project.|  
-|project_format_version|**int**|The version of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that was used to develop the project.|  
+|project_format_version|**int**|The version of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] that was used to develop the project.|  
 |deployed_by_sid|**varbinary(85)**|The security identifier (SID) of the user who installed the project.|  
 |deployed_by_name|**nvarchar(128)**|The name of the user who installed the project.|  
 |last_deployed_time|**datetimeoffset(7)**|The date and time at which the project was deployed or redeployed.|  

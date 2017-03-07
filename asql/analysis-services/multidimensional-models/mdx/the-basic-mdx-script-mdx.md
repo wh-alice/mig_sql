@@ -22,20 +22,20 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # The Basic MDX Script (MDX)
-  A Multidimensional Expressions (MDX) script defines the calculation process for a cube in [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)]. There are two types of MDX scripts:  
+  A Multidimensional Expressions (MDX) script defines the calculation process for a cube in [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)]. There are two types of MDX scripts:  
   
  **The default MDX script**  
- At the time that you create a cube, [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] creates a default MDX script for that cube. This script defines a calculation pass for the whole cube.  
+ At the time that you create a cube, [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] creates a default MDX script for that cube. This script defines a calculation pass for the whole cube.  
   
  **User-defined MDX script**  
  After you have created a cube, you can add user-defined MDX scripts that extend the calculation capabilities of the cube.  
   
 ## The Default MDX Script  
- The default MDX script that [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] creates when you define a cube contains a single CALCULATE statement. This single CALCULATE statement is at the beginning of the default MDX script, and indicates that the entire cube should be calculated during the first calculation pass.  
+ The default MDX script that [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] creates when you define a cube contains a single CALCULATE statement. This single CALCULATE statement is at the beginning of the default MDX script, and indicates that the entire cube should be calculated during the first calculation pass.  
   
  The default MDX script also contains the script commands that create named sets, assignments, and calculated members created in Cube Designer:  
   
--   [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] directly adds script commands to the default MDX script.  
+-   [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] directly adds script commands to the default MDX script.  
   
 -   For each named set in the cube, a corresponding CREATE SET statement exists in the default MDX script.  
   
@@ -51,22 +51,22 @@ manager: "erikre"
  All MDX scripting statements  
  In MDX scripts, MDX scripting statements control the context and scope of calculations, and manage the behavior of other statements in the MDX script. This category includes the following statements:  
   
--   [CALCULATE](../Topic/CALCULATE%20Statement%20\(MDX\).md)  
+-   [CALCULATE](../../../mdx/mdx-scripting-calculate.md)  
   
--   [FREEZE](../Topic/FREEZE%20Statement%20\(MDX\).md)  
+-   [FREEZE](../../../mdx/mdx-scripting-freeze.md)  
   
--   [SCOPE](../Topic/SCOPE%20Statement%20\(MDX\).md)  
+-   [SCOPE](../../../mdx/mdx-scripting-scope.md)  
   
  For more information on MDX scripting statements, see [MDX Scripting Statements &#40;MDX&#41;](../../../mdx/mdx-scripting-statements-mdx.md).  
   
- [CREATE MEMBER](../Topic/CREATE%20MEMBER%20Statement%20\(MDX\).md)  
- The CREATE MEMBER statement creates calculated members. For more information about how to create calculated members, see [Building Calculated Members in MDX &#40;MDX&#41;](../Topic/Building%20Calculated%20Members%20in%20MDX%20\(MDX\).md).  
+ [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md)  
+ The CREATE MEMBER statement creates calculated members. For more information about how to create calculated members, see [Building Calculated Members in MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
   
- [CREATE SET](../Topic/CREATE%20SET%20Statement%20\(MDX\).md)  
- The CREATE SET statement creates named sets. For more information about how to create names sets, see [Building Named Sets in MDX &#40;MDX&#41;](../Topic/Building%20Named%20Sets%20in%20MDX%20\(MDX\).md).  
+ [CREATE SET](../../../mdx/mdx-data-definition-create-set.md)  
+ The CREATE SET statement creates named sets. For more information about how to create names sets, see [Building Named Sets in MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
   
  Conditional statements  
- Conditional statements add conditional logic to MDX scripts. This category includes the [CASE](../../../mdx/case-statement-mdx.md) and [IF](../Topic/IF%20Statement%20%20\(MDX\).md) statements.  
+ Conditional statements add conditional logic to MDX scripts. This category includes the [CASE](../../../mdx/case-statement-mdx.md) and [IF](../../../mdx/mdx-scripting-if.md) statements.  
   
  Assignment expressions  
  An assignment expression assigns an expression, such as a value, to a constrained subcube. A constrained subcube expression is a collection of constrained set expressions that define the "edges" of a subcube within an MDX script. The following codes shows the syntax for a constrained subcube expression:  

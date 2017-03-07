@@ -20,9 +20,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Check Database Integrity Task (Maintenance Plan)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Use the **Check Database Integrity Task** dialog to check the allocation and structural integrity of user and system tables, and indexes in the database, by running the `DBCC CHECKDB`[!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement. Running `DBCC` ensures that any integrity problems with the database are reported, thereby allowing them to be addressed later by a system administrator or database owner.  
+  Use the **Check Database Integrity Task** dialog to check the allocation and structural integrity of user and system tables, and indexes in the database, by running the `DBCC CHECKDB`[!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement. Running `DBCC` ensures that any integrity problems with the database are reported, thereby allowing them to be addressed later by a system administrator or database owner.  
   
 ## Options  
  **Connection**  
@@ -36,15 +36,15 @@ manager: "jhubbard"
   
 -   **All databases**  
   
-     Generate a maintenance plan that runs maintenance tasks against all [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases except **tempdb**.  
+     Generate a maintenance plan that runs maintenance tasks against all [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] databases except **tempdb**.  
   
 -   **All system databases**  
   
-     Generate a maintenance plan that runs maintenance tasks against each of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system databases except **tempdb**. No maintenance tasks are run against user-created databases.  
+     Generate a maintenance plan that runs maintenance tasks against each of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system databases except **tempdb**. No maintenance tasks are run against user-created databases.  
   
 -   **All user databases**  
   
-     Generate a maintenance plan that runs maintenance tasks against all user-created databases. No maintenance tasks are run against the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system databases.  
+     Generate a maintenance plan that runs maintenance tasks against all user-created databases. No maintenance tasks are run against the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system databases.  
   
 -   **These specific databases**  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
  Causes DBCC CHECKDB to obtain locks instead of using an internal database snapshot. This includes a short-term exclusive (X) lock on the database. Using this option may help DBCC CHECKDB run faster on a database under heavy load, but decreases the concurrency available on the database while DBCC CHECKDB is running.  
   
  **View T-SQL**  
- View the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements performed against the server for this task, based on the selected options.  
+ View the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements performed against the server for this task, based on the selected options.  
   
 > [!NOTE]  
 >  When the number of objects affected is large, this display can take a considerable amount of time.  
@@ -82,13 +82,13 @@ manager: "jhubbard"
  Specify how to authenticate against the server.  
   
  **Use Windows integrated security**  
- Connect to an instance of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] with Windows Authentication.  
+ Connect to an instance of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] with Windows Authentication.  
   
  **Use a specific user name and password**  
- Connect to an instance of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication. This option is not available.  
+ Connect to an instance of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication. This option is not available.  
   
  **User name**  
- Provide a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login to use when authenticating. This option is not available.  
+ Provide a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login to use when authenticating. This option is not available.  
   
  **Password**  
  Provide a password to use when authenticating. This option is not available.  

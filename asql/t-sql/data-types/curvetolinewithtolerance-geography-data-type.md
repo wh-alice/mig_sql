@@ -41,7 +41,7 @@ manager: "jhubbard"
  Is a **bool** expression indicating whether to use a relative maximum for the deviation. When relative is set to false (0), then an absolute maximum is set for the deviation that a linear approximate can have.  When relative is set to true (1) then the tolerance is calculated as a product of the tolerance parameter and the diameter of the bounding box for the spatial object.  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **geography**  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] return type: **geography**  
   
  CLR return type: **SqlGeography**  
   

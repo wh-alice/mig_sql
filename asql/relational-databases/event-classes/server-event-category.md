@@ -26,7 +26,7 @@ manager: "jhubbard"
 |Topic|Description|  
 |-----------|-----------------|  
 |[Mount Tape Event Class](../../relational-databases/event-classes/mount-tape-event-class.md)|Indicates that a tape mount request has been received.|  
-|[Server Memory Change Event Class](../../relational-databases/event-classes/server-memory-change-event-class.md)|Indicates that [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] memory usage has changed.|  
+|[Server Memory Change Event Class](../../relational-databases/event-classes/server-memory-change-event-class.md)|Indicates that [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] memory usage has changed.|  
 |[Trace File Close Event Class](../../relational-databases/event-classes/trace-file-close-event-class.md)|Indicates that a trace file has been closed during a trace file rollover.|  
   
   

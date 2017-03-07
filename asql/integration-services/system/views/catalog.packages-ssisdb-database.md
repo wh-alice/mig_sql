@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.packages (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Displays the details for all packages that appear in the **SSISDB** catalog.  
   
@@ -28,7 +28,7 @@ manager: "jhubbard"
 |name|**nvarchar(256)**|The unique name of the package.|  
 |package_guid|**uniqueidentifier**|The globally unique identifier (GUID) that identifies the package.|  
 |description|**nvarchar(1024)**|An optional description of the package.|  
-|package_format_version|**int**|The version of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that was used to develop the package.|  
+|package_format_version|**int**|The version of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] that was used to develop the package.|  
 |version_major|**int**|The major version of the package.|  
 |version_minor|**int**|The minor version of the package.|  
 |version_build|**int**|The build version of the package.|  

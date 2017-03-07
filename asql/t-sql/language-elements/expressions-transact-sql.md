@@ -25,11 +25,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Expressions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Is a combination of symbols and operators that the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] evaluates to obtain a single data value. Simple expressions can be a single constant, variable, column, or scalar function. Operators can be used to join two or more simple expressions into a complex expression.  
+  Is a combination of symbols and operators that the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] evaluates to obtain a single data value. Simple expressions can be a single constant, variable, column, or scalar function. Operators can be used to join two or more simple expressions into a complex expression.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -80,7 +80,7 @@ manager: "jhubbard"
 |Term|Definition|  
 |----------|----------------|  
 |*constant*|Is a symbol that represents a single, specific data value. For more information, see [Constants &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).|  
-|*scalar_function*|Is a unit of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] syntax that provides a specific service and returns a single value. *scalar_function* can be built-in scalar functions, such as the SUM, GETDATE, or CAST functions, or scalar user-defined functions.|  
+|*scalar_function*|Is a unit of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] syntax that provides a specific service and returns a single value. *scalar_function* can be built-in scalar functions, such as the SUM, GETDATE, or CAST functions, or scalar user-defined functions.|  
 |[ *table_name***.** ]|Is the name or alias of a table.|  
 |*column*|Is the name of a column. Only the name of the column is allowed in an expression.|  
 |*variable*|Is the name of a variable, or parameter. For more information, see [DECLARE @local_variable &#40;Transact-SQL&#41;](../Topic/DECLARE%20@local_variable%20\(Transact-SQL\).md).|  
@@ -88,8 +88,8 @@ manager: "jhubbard"
 |**(** *scalar_subquery* **)**|Is a subquery that returns one value. For example:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|Unary operators can be applied only to expressions that evaluate to any one of the data types of the numeric data type category. Is an operator that has only one numeric operand:<br /><br /> + indicates a positive number.<br /><br /> - indicates a negative number.<br /><br /> ~ indicates the one's complement operator.|  
 |{ *binary_operator* }|Is an operator that defines the way two expressions are combined to yield a single result. *binary_operator* can be an arithmetic operator, the assignment operator (=), a bitwise operator, a comparison operator, a logical operator, the string concatenation operator (+), or a unary operator. For more information about operators, see [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md).|  
-|*ranking_windowed_function*|Is any [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] ranking function. For more information, see [Ranking Functions &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md).|  
-|*aggregate_windowed_function*|Is any [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] aggregate function with the OVER clause. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../Topic/OVER%20Clause%20\(Transact-SQL\).md).|  
+|*ranking_windowed_function*|Is any [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] ranking function. For more information, see [Ranking Functions &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md).|  
+|*aggregate_windowed_function*|Is any [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] aggregate function with the OVER clause. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).|  
   
 ## Expression Results  
  For a simple expression made up of a single constant, variable, scalar function, or column name: the data type, collation, precision, scale, and value of the expression is the data type, collation, precision, scale, and value of the referenced element.  
@@ -113,7 +113,7 @@ manager: "jhubbard"
   
  The collation of any expression that evaluates to a character string is set by following the rules of collation precedence. For more information, see [Collation Precedence &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
   
- In a programming language such as C or [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)], an expression always evaluates to a single result. Expressions in a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] select list follow a variation on this rule: The expression is evaluated individually for each row in the result set. A single expression may have a different value in each row of the result set, but each row has only one value for the expression. For example, in the following `SELECT` statement both the reference to `ProductID` and the term `1+2` in the select list are expressions:  
+ In a programming language such as C or [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)], an expression always evaluates to a single result. Expressions in a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] select list follow a variation on this rule: The expression is evaluated individually for each row in the result set. A single expression may have a different value in each row of the result set, but each row has only one value for the expression. For example, in the following `SELECT` statement both the reference to `ProductID` and the term `1+2` in the select list are expressions:  
   
 ```  
 USE AdventureWorks2012;  

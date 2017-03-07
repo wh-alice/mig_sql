@@ -49,7 +49,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  Indicates whether to create database in native mode or SharePoint mode.  
   
 > [!IMPORTANT]  
->  Beginning in [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)], *IsSharePointMode*=**True** is not supported because in SharePoint mode, [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] is a SharePoint shared service and is not controlled by the WMI provider. You should always set this parameter to **False**.  
+>  Beginning in [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)], *IsSharePointMode*=**True** is not supported because in SharePoint mode, [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] is a SharePoint shared service and is not controlled by the WMI provider. You should always set this parameter to **False**.  
   
  *Script*  
  [out] A string containing the generated SQL script.  
@@ -63,13 +63,13 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 ## Remarks  
  This method generates an SQL script that creates report server databases for the version of the report server currently connected to.  
   
- The value supplied in the *DatabaseName* parameter must conform to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database naming conventions.  
+ The value supplied in the *DatabaseName* parameter must conform to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database naming conventions.  
   
  The method does not check the existence of the database when generating the script.  
   
  This method does not check for the existence of the report server database when generating the script.  
   
- The generated script supports [!INCLUDE[ssVersion2000](../../analysis-services/multidimensional-models/includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] 2005, and [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)].  
+ The generated script supports [!INCLUDE[ssVersion2000](../../a9notintoc/includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] 2005, and [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)].  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../reporting-services/wmi-provider-library-reference/includes/ssrswminmspca-md.md)]  

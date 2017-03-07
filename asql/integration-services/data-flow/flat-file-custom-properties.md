@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 |Property name|Data Type|Description|  
 |-------------------|---------------|-----------------|  
-|FastParse|Boolean|A value that indicates whether the column uses the quicker, but locale-insensitive, fast parsing routines that DTS provides or the locale-sensitive standard parsing routines. For more information, see [Fast Parse](../Topic/Fast%20Parse.md) and [Standard Parse](../Topic/Standard%20Parse.md). The default value of this property is **False**.<br /><br /> Note: This property is not available in the **Flat File Source Editor**, but can be set by using the **Advanced Editor**.|  
+|FastParse|Boolean|A value that indicates whether the column uses the quicker, but locale-insensitive, fast parsing routines that DTS provides or the locale-sensitive standard parsing routines. For more information, see [Fast Parse](../../a9retired/fast-parse.md) and [Standard Parse](../../a9retired/standard-parse.md). The default value of this property is **False**.<br /><br /> Note: This property is not available in the **Flat File Source Editor**, but can be set by using the **Advanced Editor**.|  
   
  For more information, see [Flat File Source](../../integration-services/data-flow/flat-file-source.md).  
   
@@ -52,6 +52,6 @@ manager: "jhubbard"
  For more information, see [Flat File Destination](../../integration-services/data-flow/flat-file-destination.md).  
   
 ## See Also  
- [Common Properties](../Topic/Common%20Properties.md)  
+ [Common Properties](../../a9retired/common-properties.md)  
   
   

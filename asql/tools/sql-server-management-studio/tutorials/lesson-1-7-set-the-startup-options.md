@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 1-7 - Set the Startup Options
-[!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] can be configured to open the design surface to the configuration you prefer when [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] is started. Configuring [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] to open in your preferred configuration can save you time.  
+[!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] can be configured to open the design surface to the configuration you prefer when [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)] is started. Configuring [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)] to open in your preferred configuration can save you time.  
   
 ## Configuring Startup Options  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
     Note the other options you may be interested in, such as **Hide system objects in Object Explorer**.  
   
 ## Next Task in Lesson  
-[Restore the Default SQL Server Management Studio Configuration](../Topic/Restore%20the%20Default%20SQL%20Server%20Management%20Studio%20Configuration.md)  
+[Restore the Default SQL Server Management Studio Configuration](../../../tools/sql-server-management-studio/tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md)  
   
   
   

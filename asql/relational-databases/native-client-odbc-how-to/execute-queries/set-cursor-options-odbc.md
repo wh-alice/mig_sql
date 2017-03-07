@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Set Cursor Options (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
   To set cursor options, Call [SQLSetStmtAttr](../../../relational-databases/extended-stored-procedures-reference/sqlsetstmtattr.md) to set or [SQLGetStmtAttr](../../../relational-databases/extended-stored-procedures-reference/sqlgetstmtattr.md) to get the statement options that control cursor behavior.  
   

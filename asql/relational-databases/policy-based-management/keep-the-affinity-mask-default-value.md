@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Keep the Affinity Mask Default Value
-  This rule checks whether the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] setting for the affinity mask is set to 0, which is the default value. The affinity mask option dynamically controls CPU affinity.  
+  This rule checks whether the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] setting for the affinity mask is set to 0, which is the default value. The affinity mask option dynamically controls CPU affinity.  
   
 ## For More Information  
  [affinity mask Server Configuration Option](../../database-engine/configure/windows/affinity-mask-server-configuration-option.md)  

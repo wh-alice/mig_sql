@@ -19,12 +19,12 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Create a Model Deployment Package by Using the Wizard
-  Use the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] model deployment wizard to create a package of the model objects only. If you need to include data in the package, see [Create a Model Deployment Package by Using MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
+  Use the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] model deployment wizard to create a package of the model objects only. If you need to include data in the package, see [Create a Model Deployment Package by Using MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
 ## Prerequisites  
  To perform this procedure:  
   
--   In the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] web application, you must have permission to access the **System Administration** functional area.  
+-   In the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] web application, you must have permission to access the **System Administration** functional area.  
   
 -   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 ### To create a model deployment package  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **System Administration**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **System Administration**.  
   
 2.  On the **Model View** page, from the menu bar, point to **System** and click **Deployment**.  
   

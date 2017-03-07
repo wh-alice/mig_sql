@@ -20,11 +20,11 @@ manager: "jhubbard"
   
  However, you can specify that a column be included as a regressor by adding the FORCE_REGRESSOR parameter to the model and specifying the regressors to use. You might want to do this in cases where the attribute has meaning even if the effect is too small to be detected by the model, or when you want to ensure that the attribute is included in the formula.  
   
- The following procedure describes how to create a simple linear regression model, using the same sample data that is used for the [neural networks tutorial](../Topic/Lesson%205:%20Building%20Neural%20Network%20and%20Logistic%20Regression%20Models%20\(Intermediate%20Data%20Mining%20Tutorial\).md). The model is not necessarily robust, but demonstrates how to use the Data Mining Designer to customize a linear regression model.  
+ The following procedure describes how to create a simple linear regression model, using the same sample data that is used for the [neural networks tutorial](../../a9notintoc/42c3701a-1fd2-44ff-b7de-377345bbbd6b.md). The model is not necessarily robust, but demonstrates how to use the Data Mining Designer to customize a linear regression model.  
   
 ### How to create a simple linear regression model  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], in **Solution Explorer**, expand **Mining Structures**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], in **Solution Explorer**, expand **Mining Structures**.  
   
 2.  Double-click Call Center.dmm to open it in the designer.  
   

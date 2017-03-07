@@ -20,17 +20,17 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Open, View, and Print a Deadlock File (SQL Server Management Studio)
-  When [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] generates a deadlock, you can capture and save the deadlock information to a file. After you have saved the deadlock file, you can open it in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to view or print.  
+  When [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] generates a deadlock, you can capture and save the deadlock information to a file. After you have saved the deadlock file, you can open it in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] to view or print.  
   
 ### To open and view a deadlock file  
   
-1.  On the **File** menu in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], point to **Open**, and then click **File**.  
+1.  On the **File** menu in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], point to **Open**, and then click **File**.  
   
 2.  In the **Open File** dialog box, select the .xdl file type in the **Files of type** box. You will now have a filtered list of only deadlock files.  
   
 ### To print a deadlock file  
   
-1.  On the **File** menu in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], point to **Open,** and then click **File**.  
+1.  On the **File** menu in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], point to **Open,** and then click **File**.  
   
 2.  In the **Open File** dialog box, select the .xdl file type in the **Files of type** box. You will now have a filtered list of only deadlock files.  
   

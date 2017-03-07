@@ -27,11 +27,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # DROP CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Removes a credential from the server.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -50,7 +50,7 @@ DROP CREDENTIAL credential_name
  Information about credentials is visible in the **sys.credentials** catalog view.  
   
 > [!WARNING]  
->  Proxies are associated with a credential. Deleting a credential that is used by a proxy leaves the associated proxy in an unusable state. When dropping a credential used by a proxy, delete the proxy (by using [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md) and recreate the associated proxy by using [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md).  
+>  Proxies are associated with a credential. Deleting a credential that is used by a proxy leaves the associated proxy in an unusable state. When dropping a credential used by a proxy, delete the proxy (by using [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-delete-proxy-transact-sql.md) and recreate the associated proxy by using [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-add-proxy-transact-sql.md).  
   
 ## Permissions  
  Requires ALTER ANY CREDENTIAL permission. If dropping a system credential, requires CONTROL SERVER permission.  
@@ -68,6 +68,6 @@ GO
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [ALTER CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-credential-transact-sql.md)   
  [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.credentials-transact-sql.md)  
+ [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.credentials-transact-sql.md)  
   
   

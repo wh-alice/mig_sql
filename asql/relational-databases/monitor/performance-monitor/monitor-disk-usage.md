@@ -28,13 +28,13 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Monitor Disk Usage
-  Microsoft [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses Microsoft Windows operating system input/output (I/O) calls to perform read and write operations on your disk. [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] manages when and how disk I/O is performed, but the Windows operating system performs the underlying I/O operations. The I/O subsystem includes the system bus, disk controller cards, disks, tape drives, CD-ROM drive, and many other I/O devices. Disk I/O is frequently the cause of bottlenecks in a system.  
+  Microsoft [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] uses Microsoft Windows operating system input/output (I/O) calls to perform read and write operations on your disk. [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] manages when and how disk I/O is performed, but the Windows operating system performs the underlying I/O operations. The I/O subsystem includes the system bus, disk controller cards, disks, tape drives, CD-ROM drive, and many other I/O devices. Disk I/O is frequently the cause of bottlenecks in a system.  
   
  Monitoring disk activity involves two areas of focus:  
   
 -   Monitoring Disk I/O and Detecting Excess Paging  
   
--   Isolating Disk Activity That [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Creates  
+-   Isolating Disk Activity That [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Creates  
   
  For more information see, [Monitoring Disk Usage](http://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx)  
   

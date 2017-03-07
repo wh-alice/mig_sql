@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # return Element (XMLA)
-  Contains information returned by a [DiscoverResponse](../Topic/DiscoverResponse%20Element%20\(XMLA\).md) element in response to a [Discover](../Topic/Discover%20Method%20\(XMLA\).md) method call or an [ExecuteResponse](../Topic/ExecuteResponse%20Element%20\(XMLA\).md) element in response to an [Execute](../Topic/Execute%20Method%20\(XMLA\).md) method call.  
+  Contains information returned by a [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) element in response to a [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method call or an [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) element in response to an [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method call.  
   
 ## Syntax  
   
@@ -56,18 +56,18 @@ manager: "erikre"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[DiscoverResponse](../Topic/DiscoverResponse%20Element%20\(XMLA\).md), [ExecuteResponse](../Topic/ExecuteResponse%20Element%20\(XMLA\).md)|  
+|Parent elements|[DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md), [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md)|  
 |Child elements|See the table below.|  
   
 |Ancestor|Child elements|  
 |--------------|--------------------|  
-|[DiscoverResponse](../Topic/DiscoverResponse%20Element%20\(XMLA\).md)|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
-|[ExecuteResponse](../Topic/ExecuteResponse%20Element%20\(XMLA\).md)|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) or [results](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md)|  
+|[DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
+|[ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md)|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) or [results](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md)|  
   
 ## Remarks  
  The **return** element contains the data returned by the **Discover** and **Execute** methods. Typically, the **return** element contains a single **root** element that contains either the data returned by a successful **Discover** or **Execute** method call or an XML for Analysis (XMLA) exception returned by an unsuccessful method call. If the **Execute** method contains a **Batch** command that performs multiple operations, the **return** element contains a **results** element which, in turn, contains one **root** element for each command executed successfully or unsuccessfully by the **Batch** command.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

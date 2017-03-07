@@ -33,7 +33,7 @@ manager: "jhubbard"
 
   Displays the number of milliseconds required to parse, compile, and execute each statement.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -47,14 +47,14 @@ SET STATISTICS TIME { ON | OFF }
   
  The setting of SET STATISTICS TIME is set at execute or run time and not at parse time.  
   
- Microsoft [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is unable to provide accurate statistics in fiber mode, which is activated when you enable the **lightweight pooling** configuration option.  
+ Microsoft [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is unable to provide accurate statistics in fiber mode, which is activated when you enable the **lightweight pooling** configuration option.  
   
  The **cpu** column in the **sysprocesses** table is only updated when a query executes with SET STATISTICS TIME ON. When SET STATISTICS TIME is OFF, **0** is returned.  
   
- ON and OFF settings also affect the CPU column in the Process Info View for Current Activity in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+ ON and OFF settings also affect the CPU column in the Process Info View for Current Activity in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 ## Permissions  
- To use SET STATISTICS TIME, users must have the appropriate permissions to execute the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement. The SHOWPLAN permission is not required.  
+ To use SET STATISTICS TIME, users must have the appropriate permissions to execute the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement. The SHOWPLAN permission is not required.  
   
 ## Examples  
  This example shows the server execution, parse, and compile times.  

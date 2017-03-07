@@ -15,7 +15,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Test a User&#39;s Permissions (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], you can create a test user and log into the web application to test permissions.When a user attempts to access the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] URL, the user's credentials are authenticated. In Internet Explorer, security settings control whether this occurs automatically or if the user must enter a user name and password. To change these settings, complete the following steps:  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], you can create a test user and log into the web application to test permissions.When a user attempts to access the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] URL, the user's credentials are authenticated. In Internet Explorer, security settings control whether this occurs automatically or if the user must enter a user name and password. To change these settings, complete the following steps:  
   
 ### To test a user’s security  
   

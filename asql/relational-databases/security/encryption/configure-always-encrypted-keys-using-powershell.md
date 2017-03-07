@@ -15,7 +15,7 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Configure Always Encrypted Keys using PowerShell
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
     
 This article provides the steps to provision keys for Always Encrypted using the [SqlServer PowerShell module](../../../relational-databases/scripting/sql-server-powershell-provider.md). You can use PowerShell to provision Always Encrypted keys both [with and without role separation](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#KeyManagementRoles), providing control over who has access to the actual encryption keys in the key store, and who has access to the database. 

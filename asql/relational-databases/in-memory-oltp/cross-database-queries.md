@@ -15,16 +15,16 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Cross-Database Queries
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../integration-services/includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  Starting with [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)], memory-optimized tables do not support cross-database transactions. You cannot access another database from the same transaction or the same query that also accesses a memory-optimized table. You cannot easily copy data from a table in one database, to a memory-optimized table in another database.  
+  Starting with [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)], memory-optimized tables do not support cross-database transactions. You cannot access another database from the same transaction or the same query that also accesses a memory-optimized table. You cannot easily copy data from a table in one database, to a memory-optimized table in another database.  
   
  Table variables are not transactional. Therefore, memory-optimized table variables can be used in cross-database queries, and can thus facilitate moving data from one database into memory-optimized tables in another. You can use two transactions. In the first transaction, insert the data from the remote table into the variable. In the second transaction, insert the data into the local memory-optimized table from the variable.  For more information on memory-optimized table variables, see [Faster temp table and table variable by using memory optimization](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
   
 ## Example
 This example illustrates a method to transfer data from one database into a memory-optimized table in a different database.
 
-1. Create Test Objects.  Execute the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+1. Create Test Objects.  Execute the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
 
     ```tsql
     USE master;
@@ -76,7 +76,7 @@ This example illustrates a method to transfer data from one database into a memo
     GO
     ```
 
-2.  Attempt cross-database query. Execute the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].
+2.  Attempt cross-database query. Execute the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].
   
     ```tsql  
     INSERT [DestinationDatabase].[dbo].[DestTable_InMem]
@@ -87,7 +87,7 @@ This example illustrates a method to transfer data from one database into a memo
     > Msg 41317, Level 16, State 5  
     > A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
 
-3.  Create a memory-optimized table type.  Execute the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].
+3.  Create a memory-optimized table type.  Execute the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].
 
     ```tsql
     USE DestinationDatabase;

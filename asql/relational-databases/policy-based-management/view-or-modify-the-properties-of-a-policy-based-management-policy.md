@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View or Modify the Properties of a Policy-Based Management Policy
-  This topic describes how to view or modify a Policy-Based Management policy's properties in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to view or modify a Policy-Based Management policy's properties in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 #### To view a policy's properties  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -71,6 +71,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [syspolicy_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syspolicy-policies-transact-sql.md).  
+ For more information, see [syspolicy_policies &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/syspolicy-policies-transact-sql.md).  
   
   

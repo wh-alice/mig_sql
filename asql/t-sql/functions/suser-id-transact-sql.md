@@ -27,14 +27,14 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SUSER_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the login identification number of the user.  
   
 > [!NOTE]  
->  Starting with [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)], SUSER_ID returns the value listed as **principal_id** in the **sys.server_principals** catalog view.  
+>  Starting with [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)], SUSER_ID returns the value listed as **principal_id** in the **sys.server_principals** catalog view.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -45,13 +45,13 @@ SUSER_ID ( [ 'login' ] )
   
 ## Arguments  
  **'** *login* **'**  
- Is the login name of the user. *login* is **nchar**. If *login* is specified as **char**, *login* is implicitly converted to **nchar**. *login* can be any [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login or Windows user or group that has permission to connect to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. If *login* is not specified, the login identification number for the current user is returned. If the parameter contains the word NULL will return NULL.  
+ Is the login name of the user. *login* is **nchar**. If *login* is specified as **char**, *login* is implicitly converted to **nchar**. *login* can be any [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login or Windows user or group that has permission to connect to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. If *login* is not specified, the login identification number for the current user is returned. If the parameter contains the word NULL will return NULL.  
   
 ## Return Types  
  **int**  
   
 ## Remarks  
- SUSER_ID returns an identification number only for logins that have been explicitly provisioned inside [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. This ID is used within [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to track ownership and permissions. This ID is not equivalent to the SID of the login that is returned by SUSER_SID. If *login* is a SQL Server login, the SID maps to a GUID. If *login* is a Windows login or Windows group, the SID maps to a Windows security identifier.  
+ SUSER_ID returns an identification number only for logins that have been explicitly provisioned inside [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. This ID is used within [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to track ownership and permissions. This ID is not equivalent to the SID of the login that is returned by SUSER_SID. If *login* is a SQL Server login, the SID maps to a GUID. If *login* is a Windows login or Windows group, the SID maps to a Windows security identifier.  
   
  SUSER_SID returns a SUID only for a login that has an entry in the **syslogins** system table.  
   
@@ -65,8 +65,8 @@ SELECT SUSER_ID('sa');
 ```  
   
 ## See Also  
- [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-principals-transact-sql.md)   
+ [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-principals-transact-sql.md)   
  [SUSER_SID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-transact-sql.md)  
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/system-functions-transact-sql.md)  
   
   

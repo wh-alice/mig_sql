@@ -16,11 +16,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # JSON_MODIFY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Updates the value of a property in a JSON string and returns the updated JSON string.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -53,7 +53,7 @@ JSON_MODIFY ( expression , path , newValue )
 -   *\<json path>*  
     Specifies the path for the property to update. For more info, see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-In [!INCLUDE[ssSQLv14_md](../../advanced-analytics/r-services/includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDSfull_md](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)], you can provide a variable as the value of *path*.
+In [!INCLUDE[ssSQLv14_md](../../advanced-analytics/r-services/includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDSfull_md](../../a9retired/includes/sssdsfull-md.md)], you can provide a variable as the value of *path*.
 
 **JSON_MODIFY** returns an error if the format of *path* isn't valid.  
   

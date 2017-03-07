@@ -37,7 +37,7 @@ manager: "jhubbard"
  Includes information about virtual private networks and Web synchronization.  
   
  [Security Considerations for SQL Server Compact Replication](../../../relational-databases/replication/security/security-considerations-for-sql-server-compact-replication.md)  
- Discusses Securing connectivity between an instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] and [!INCLUDE[ssEW](../../../analysis-services/instances/includes/ssew-md.md)].  
+ Discusses Securing connectivity between an instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] and [!INCLUDE[ssEW](../../../a9retired/includes/ssew-md.md)].  
   
 ## See Also  
  [Security Overview &#40;Replication&#41;](../../../relational-databases/replication/security/security-overview-replication.md)   

@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Columnstore index recommendations in Database Engine Tuning Advisor (DTA)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
  
   Data warehousing and analytic workloads can greatly benefit from [columnstore indexes](../../t-sql/statements/create-columnstore-index-transact-sql.md) as well as traditional rowstore indexes. The choice of which rowstore and columnstore indexes to build for your database is dependent on your application’s workload. In SQL Server 2016, the [Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) can analyze your workload and recommend an appropriate combination of rowstore and columnstore indexes to build on the database. 

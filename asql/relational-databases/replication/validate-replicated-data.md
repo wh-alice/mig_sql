@@ -34,10 +34,10 @@ manager: "jhubbard"
   
  **To validate data**  
   
- To validate all articles in a subscription, use [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], stored procedures or Replication Management Objects (RMO). For more information, see [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md). To validate individual articles in snapshot and transactional publications, you must use stored procedures.  
+ To validate all articles in a subscription, use [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], stored procedures or Replication Management Objects (RMO). For more information, see [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md). To validate individual articles in snapshot and transactional publications, you must use stored procedures.  
   
 ## Data Validation Results  
- When validation is complete, the Distribution Agent or Merge Agent logs messages regarding success or failure (replication does not report which rows failed). These messages can be viewed in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], Replication Monitor, and replication system tables. The how-to topic listed above demonstrates how to run validation and view the results.  
+ When validation is complete, the Distribution Agent or Merge Agent logs messages regarding success or failure (replication does not report which rows failed). These messages can be viewed in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], Replication Monitor, and replication system tables. The how-to topic listed above demonstrates how to run validation and view the results.  
   
  To handle validation failures, consider the following:  
   
@@ -64,18 +64,18 @@ manager: "jhubbard"
   
 -   Validation by using binary checksum or checksum can incorrectly report a failure if data types are different at the Subscriber than they are at the Publisher. This can occur if you do any one of the following:  
   
-    -   Explicitly set schema options to map data types for earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+    -   Explicitly set schema options to map data types for earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
-    -   Set the publication compatibility level for a merge publication to an earlier version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and published tables contain one or more data types that must be mapped for this version.  
+    -   Set the publication compatibility level for a merge publication to an earlier version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], and published tables contain one or more data types that must be mapped for this version.  
   
     -   Manually initialize a subscription and are using different data types at the Subscriber.  
   
 -   Binary checksum and checksum validations are not supported for transformable subscriptions for transactional replication.  
   
--   Validation is not supported for data replicated to non-[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Subscribers.  
+-   Validation is not supported for data replicated to non-[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Subscribers.  
   
 ## How Data Validation Works  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] validates data by calculating a row count or a checksum at the Publisher and then comparing those values to the row count or checksum calculated at the Subscriber. One value is calculated for the entire publication table and one value is calculated for the entire subscription table, but data in **text**, **ntext**, or **image** columns is not included in the calculations.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] validates data by calculating a row count or a checksum at the Publisher and then comparing those values to the row count or checksum calculated at the Subscriber. One value is calculated for the entire publication table and one value is calculated for the entire subscription table, but data in **text**, **ntext**, or **image** columns is not included in the calculations.  
   
  While the calculations are performed, shared locks are placed temporarily on tables for which row counts or checksums are being run, but the calculations are completed quickly and the shared locks removed, usually in a matter of seconds.  
   

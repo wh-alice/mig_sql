@@ -21,9 +21,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # XML for Analysis  (XMLA) Reference
-  [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] uses the XML for Analysis (XMLA) protocol to handle all communication between client applications and an Analysis Services instance. At their most basic level, other client libraries such as ADOMD.NET and AMO construct requests and decode responses in XMLA, serving as an intermediary to an Analysis Services instance, which uses XMLA exclusively.  
+  [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] uses the XML for Analysis (XMLA) protocol to handle all communication between client applications and an Analysis Services instance. At their most basic level, other client libraries such as ADOMD.NET and AMO construct requests and decode responses in XMLA, serving as an intermediary to an Analysis Services instance, which uses XMLA exclusively.  
   
- To support the discovery and manipulation of data in both multidimensional and tabular formats, the XMLA specification defines two generally accessible methods, [Discover](../Topic/Discover%20Method%20\(XMLA\).md) and [Execute](../Topic/Execute%20Method%20\(XMLA\).md), and a collection of XML elements and data types. Because XML allows for a loosely coupled client and server architecture, both methods handle incoming and outgoing information in XML format. Analysis Services is compliant with the XMLA 1.1. specification, but also extends it to include data definition and manipulation capability, implemented as annotations on the **Discover** and **Execute** methods. The extended XML syntax is referred to as Analysis Services Scripting Language (ASSL). ASSL builds on the XMLA specification without breaking it. Interoperability based on XMLA is ensured whether you use just XMLA, or XMLA and ASSL together.  
+ To support the discovery and manipulation of data in both multidimensional and tabular formats, the XMLA specification defines two generally accessible methods, [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) and [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md), and a collection of XML elements and data types. Because XML allows for a loosely coupled client and server architecture, both methods handle incoming and outgoing information in XML format. Analysis Services is compliant with the XMLA 1.1. specification, but also extends it to include data definition and manipulation capability, implemented as annotations on the **Discover** and **Execute** methods. The extended XML syntax is referred to as Analysis Services Scripting Language (ASSL). ASSL builds on the XMLA specification without breaking it. Interoperability based on XMLA is ensured whether you use just XMLA, or XMLA and ASSL together.  
   
  As a programmer, you can use XMLA as a programmatic interface if solution requirements specify standard protocols, such as XML, SOAP, and HTTP. Programmers and administrators can also use XMLA on an ad hoc basis to retrieve information from the server or run commands.  
   
@@ -31,7 +31,7 @@ manager: "erikre"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[XML Elements &#40;XMLA&#41;](../Topic/XML%20Elements%20\(XMLA\).md)|Describes elements in the XMLA specification.|  
+|[XML Elements &#40;XMLA&#41;](../../a9retired/xml-elements-xmla.md)|Describes elements in the XMLA specification.|  
 |[XML Data Types &#40;XMLA&#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)|Describes data types in the XMLA specification.|  
 |[XML for Analysis Compliance &#40;XMLA&#41;](../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)|Describes the level of compliance with the XMLA 1.1 specification.|  
   

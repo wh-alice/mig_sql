@@ -31,7 +31,7 @@ manager: "jhubbard"
 
   Creates a new synonym.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -62,7 +62,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
 ## Arguments  
  *schema_name_1*  
- Specifies the schema in which the synonym is created. If *schema* is not specified, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses the default schema of the current user.  
+ Specifies the schema in which the synonym is created. If *schema* is not specified, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses the default schema of the current user.  
   
  *synonym_name*  
  Is the name of the new synonym.  
@@ -70,7 +70,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  *server_name*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Is the name of the server on which base object is located.  
   
@@ -86,7 +86,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  Windows Azure SQL Database supports the three-part name format database_name.[schema_name].object_name when the database_name is the current database or the database_name is tempdb and the object_name starts with #.  
   
 ## Remarks  
- The base object need not exist at synonym create time. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] checks for the existence of the base object at run time.  
+ The base object need not exist at synonym create time. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] checks for the existence of the base object at run time.  
   
  Synonyms can be created for the following types of objects:  
   
@@ -158,7 +158,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 EXEC sp_addlinkedserver Server_Remote;  

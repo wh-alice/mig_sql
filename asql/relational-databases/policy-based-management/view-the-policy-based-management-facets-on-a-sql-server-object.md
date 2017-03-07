@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View the Policy-Based Management Facets on a SQL Server Object
-  This topic describes how to view all of the Policy-Based Management facets applied to a specific SQL Server object in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+  This topic describes how to view all of the Policy-Based Management facets applied to a specific SQL Server object in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
  **In This Topic**  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 #### To view all of the facets in an object  
   
-1.  In Object Explorer, right-click an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], instance object, database, or database object, and then click **Facets**.  
+1.  In Object Explorer, right-click an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], instance object, database, or database object, and then click **Facets**.  
   
 2.  In the **View Facets –***object_name* dialog box, in the **Facet** list, select a facet to view its properties. For more information on the available options in this dialog box, see [View Facets Dialog Box](../../relational-databases/policy-based-management/view-facets-dialog-box.md).  
   

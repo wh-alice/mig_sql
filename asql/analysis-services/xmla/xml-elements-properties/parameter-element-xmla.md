@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # Parameter Element (XMLA)
-  Contains the name and value of a parameter used by the [Execute](../Topic/Execute%20Method%20\(XMLA\).md) method.  
+  Contains the name and value of a parameter used by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.  
   
 ## Syntax  
   
@@ -64,6 +64,6 @@ manager: "erikre"
  Some XML for Analysis (XMLA) commands, such as the [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) command, can require additional information. The **Parameter** element provides a mechanism for providing additional information, including chunked information, for an XMLA command.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

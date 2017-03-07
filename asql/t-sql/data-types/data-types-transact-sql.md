@@ -21,11 +21,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Data Types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], each column, local variable, expression, and parameter has a related data type. A data type is an attribute that specifies the type of data that the object can hold: integer data, character data, monetary data, date and time data, binary strings, and so on.  
+  In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], each column, local variable, expression, and parameter has a related data type. A data type is an attribute that specifies the type of data that the object can hold: integer data, character data, monetary data, date and time data, binary strings, and so on.  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supplies a set of system data types that define all the types of data that can be used with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. You can also define your own data types in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] or the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)]. Alias data types are based on the system-supplied data types. For more information about alias data types, see [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md). User-defined types obtain their characteristics from the methods and operators of a class that you create by using one of the programming languages support by the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)].  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supplies a set of system data types that define all the types of data that can be used with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. You can also define your own data types in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] or the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)]. Alias data types are based on the system-supplied data types. For more information about alias data types, see [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md). User-defined types obtain their characteristics from the methods and operators of a class that you create by using one of the programming languages support by the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)].  
   
  When two expressions that have different data types, collations, precision, scale, or length are combined by an operator, the characteristics of result are determined by the following:  
   
@@ -35,10 +35,10 @@ manager: "jhubbard"
   
 -   The precision, scale, and length of the result depend on the precision, scale, and length of the input expressions. For more information, see [Precision, Scale, and Length &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provides data type synonyms for ISO compatibility. For more information, see [Data Type Synonyms &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] provides data type synonyms for ISO compatibility. For more information, see [Data Type Synonyms &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).  
   
 ## Data Type Categories  
- Data types in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] are organized into the following categories:  
+ Data types in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] are organized into the following categories:  
   
 |||  
 |-|-|  
@@ -47,7 +47,7 @@ manager: "jhubbard"
 |Date and time|Other data types|  
 |Character strings||  
   
- In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], based on their storage characteristics, some data types are designated as belonging to the following groups:  
+ In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], based on their storage characteristics, some data types are designated as belonging to the following groups:  
   
 -   Large value data types: **varchar(max)**, **nvarchar(max)**, and **varbinary(max)**  
   
@@ -106,20 +106,20 @@ manager: "jhubbard"
 |||  
 |-|-|  
 |[cursor](../../t-sql/data-types/cursor-transact-sql.md)|[timestamp](../../t-sql/data-types/rowversion-transact-sql.md)|  
-|[hierarchyid](../Topic/hierarchyid%20\(Transact-SQL\).md)|[uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md)|  
+|[hierarchyid](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md)|  
 |[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)|[xml](../../t-sql/xml/xml-transact-sql.md)|  
-|[table](../../t-sql/data-types/table-transact-sql.md)|[Spatial Types](../Topic/Spatial%20Types.md)|  
+|[table](../../t-sql/data-types/table-transact-sql.md)|[Spatial Types](../../a9retired/spatial-types.md)|  
   
 ## See Also  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../Topic/DECLARE%20@local_variable%20\(Transact-SQL\).md)   
- [EXECUTE &#40;Transact-SQL&#41;](../Topic/EXECUTE%20\(Transact-SQL\).md)   
+ [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Built-in Functions &#40;Transact-SQL&#41;](../Topic/Built-in%20Functions%20\(Transact-SQL\).md)   
  [LIKE &#40;Transact-SQL&#41;](../Topic/LIKE%20\(Transact-SQL\).md)   
- [sp_droptype &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
- [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)  
+ [sp_droptype &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-droptype-transact-sql.md)   
+ [sp_help &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-help-transact-sql.md)   
+ [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-rename-transact-sql.md)  
   
   

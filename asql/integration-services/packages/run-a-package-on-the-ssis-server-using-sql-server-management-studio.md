@@ -15,13 +15,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Run a Package on the SSIS Server Using SQL Server Management Studio
-  After you deploy your project to the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] server, you can run the package on the server.  
+  After you deploy your project to the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] server, you can run the package on the server.  
   
  You can use operations reports to view information about packages that have run, or are currently running, on the server. For more information, see [Reports for the Integration Services Server](../../integration-services/performance/reports-for-the-integration-services-server.md).  
   
 ### To run a package on the server using SQL Server Management Studio  
   
-1.  Open [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and connect to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that contains the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog.  
+1.  Open [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] and connect to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that contains the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] catalog.  
   
 2.  In Object Explorer, expand the **Integration Services Catalogs** node, expand the **SSISDB** node, and navigate to the package contained in the project you deployed.  
   

@@ -19,7 +19,7 @@ manager: "jhubbard"
 # Lesson 1-4 - Adding Package Configurations
 In this task, you will add a configuration to each package. Configurations update the values of package properties and package objects at run time.  
   
-[!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] provides a variety of configuration types. You can store configurations in environment variables, registry entries, user-defined variables, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] tables, and XML files. To provide additional flexibility, [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] supports the use of indirect configurations. This means that you use an environment variable to specify the location of the configuration, which in turn specifies the actual values. The packages in the Deployment Tutorial project use a combination of XML configuration files and indirect configurations. An XML configuration file can include configurations for multiple properties, and when appropriate, can be referenced by multiple packages. In this tutorial, you will use a separate configuration file for each package.  
+[!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] provides a variety of configuration types. You can store configurations in environment variables, registry entries, user-defined variables, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] tables, and XML files. To provide additional flexibility, [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] supports the use of indirect configurations. This means that you use an environment variable to specify the location of the configuration, which in turn specifies the actual values. The packages in the Deployment Tutorial project use a combination of XML configuration files and indirect configurations. An XML configuration file can include configurations for multiple properties, and when appropriate, can be referenced by multiple packages. In this tutorial, you will use a separate configuration file for each package.  
   
 Configuration files frequently contain sensitive information such as connection strings. Therefore, you should use an access control list (ACL) to restrict access to the location or folder where you store the files, and give access only to users or accounts that are permitted to run packages. For more information, see [Access to Files Used by Packages](../../integration-services/security/access-to-files-used-by-packages.md).  
   
@@ -27,13 +27,13 @@ The packages (DataTransfer and LoadXMLData) that you added to the Deployment Tut
   
 You will create two configuration files, DataTransferConfig.dtsConfig and LoadXMLData.dtsConfig. These files contain name-value pairs that update the properties in packages that specify the location of the data and log files used by the package. Later, as a step in the deployment process, you will update the values in the configuration files to reflect the new location of the files on the destination computer.  
   
-[!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] recognizes that the DataTransferConfig.dtsConfig and LoadXMLData.dtsConfig are dependencies of the DataTransfer and LoadXMLData packages, and automatically includes the configuration files when you create the deployment bundle in the next lesson.  
+[!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] recognizes that the DataTransferConfig.dtsConfig and LoadXMLData.dtsConfig are dependencies of the DataTransfer and LoadXMLData packages, and automatically includes the configuration files when you create the deployment bundle in the next lesson.  
   
 ### To create indirect configuration for the DataTransfer package  
   
 1.  In Solution Explorer, double-click DataTransfer.dtsx.  
   
-2.  In [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click anywhere in the background of the control flow design surface.  
+2.  In [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, click anywhere in the background of the control flow design surface.  
   
 3.  On the **SSIS** menu, click **Package Configurations**.  
   
@@ -56,7 +56,7 @@ You will create two configuration files, DataTransferConfig.dtsConfig and LoadXM
   
 1.  In Solution Explorer, double-click DataTransfer.dtsx.  
   
-2.  In [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click anywhere in the background of the control flow design surface.  
+2.  In [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, click anywhere in the background of the control flow design surface.  
   
 3.  On the **SSIS** menu, click **Package Configurations**.  
   
@@ -84,7 +84,7 @@ You will create two configuration files, DataTransferConfig.dtsConfig and LoadXM
   
 1.  In Solution Explorer, double-click LoadXMLData.dtsx.  
   
-2.  In [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click anywhere in the background of the control flow design surface.  
+2.  In [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, click anywhere in the background of the control flow design surface.  
   
 3.  On the **SSIS** menu, click **Package Configurations**.  
   
@@ -105,7 +105,7 @@ You will create two configuration files, DataTransferConfig.dtsConfig and LoadXM
   
 1.  In Solution Explorer, double-click LoadXMLData.dtsx.  
   
-2.  In [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click anywhere in the background of the control flow design surface.  
+2.  In [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, click anywhere in the background of the control flow design surface.  
   
 3.  On the **SSIS** menu, click **Package Configurations**.  
   
@@ -128,7 +128,7 @@ You will create two configuration files, DataTransferConfig.dtsConfig and LoadXM
 12. In the **Package Configuration Organizer** dialog box, verify that the LoadXMLData EV Configuration is listed first, and the LoadXMLData Configuration is listed second, and then click **Close**.  
   
 ## Next Task in Lesson  
-[Step 5: Testing the Updated Packages](../Topic/Step%205:%20Testing%20the%20Updated%20Packages.md)  
+[Step 5: Testing the Updated Packages](../../integration-services/tutorials/lesson-1-5-testing-the-updated-packages.md)  
   
 ## See Also  
 [Package Configurations](../../integration-services/packages/package-configurations.md)  

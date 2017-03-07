@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # ClusterDistance (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   The **ClusterDistance** function returns the distance of the input case from the specified cluster, or if no cluster is specified, the distance of the input case from the most likely cluster.  
   
@@ -53,7 +53,7 @@ ClusterDistance([<ClusterID expression>])
  ClusterDistance(N) =1–ClusterProbability (N))  
   
 ## Related Prediction Functions  
- [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] provides the following additional functions for querying clustering models:  
+ [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] provides the following additional functions for querying clustering models:  
   
 -   Use the [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md) function to return the most likely cluster.  
   

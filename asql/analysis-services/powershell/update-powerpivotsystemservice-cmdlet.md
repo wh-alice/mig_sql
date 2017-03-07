@@ -15,7 +15,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Update-PowerPivotSystemService cmdlet
-  Upgrades the parent object of the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service in the farm.  
+  Upgrades the parent object of the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service in the farm.  
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   
@@ -26,13 +26,13 @@ Update-PowerPivotSystemService [-Confirm <switch>] [<CommonParameters>]
 ```  
   
 ## Description  
- The **Update-PowerPivotSystemService** cmdlet runs a series of upgrade actions on the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service parent object, instances, and [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service applications in the farm. All of the middle-tier services and applications in a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint deployment must run at the same functional level. This cmdlet runs the upgrade actions on all of these objects.  
+ The **Update-PowerPivotSystemService** cmdlet runs a series of upgrade actions on the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service parent object, instances, and [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service applications in the farm. All of the middle-tier services and applications in a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint deployment must run at the same functional level. This cmdlet runs the upgrade actions on all of these objects.  
   
- Run this cmdlet after you have run SQL Server Setup to install a newer version of [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint or if you have applied a cumulative update on the server. To check whether upgrade is required, run `Get-PowerPivotSystemService` to review the **NeedsUpgrade** property. If **NeedsUpgrade** is true, you should run the cmdlet to upgrade the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] middle-tier objects in the farm.  
+ Run this cmdlet after you have run SQL Server Setup to install a newer version of [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint or if you have applied a cumulative update on the server. To check whether upgrade is required, run `Get-PowerPivotSystemService` to review the **NeedsUpgrade** property. If **NeedsUpgrade** is true, you should run the cmdlet to upgrade the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] middle-tier objects in the farm.  
   
- Because a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint deployment includes middle-tier and backend data services, you must run **Update-PowerPivotEngineService** whenever you run **Update-PowerPivotSystemService** to ensure that both tiers are the same version across the farm.  
+ Because a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint deployment includes middle-tier and backend data services, you must run **Update-PowerPivotEngineService** whenever you run **Update-PowerPivotSystemService** to ensure that both tiers are the same version across the farm.  
   
- Upgrade cannot be rolled back to the previous version. If you must revert to a previous version, remove [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] from your SharePoint farm and reinstall the software. To verify the upgrade operation succeeded, run `Get-PowerPivotSystemService` to review the global properties for version information and to verify that **NeedsUpgrade** is no longer set to true.  
+ Upgrade cannot be rolled back to the previous version. If you must revert to a previous version, remove [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] from your SharePoint farm and reinstall the software. To verify the upgrade operation succeeded, run `Get-PowerPivotSystemService` to review the global properties for version information and to verify that **NeedsUpgrade** is no longer set to true.  
   
 ## Parameters  
   

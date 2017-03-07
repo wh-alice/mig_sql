@@ -21,7 +21,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Replication Programming Concepts
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Before developing an application that uses replication functionalities, you should follow the following general planning steps:  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 -   The replication topologies and how they align with the types of replication.  
   
- If you are new to [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] replication, see [Types of Replication](../../../relational-databases/replication/types-of-replication.md).  
+ If you are new to [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] replication, see [Types of Replication](../../../relational-databases/replication/types-of-replication.md).  
   
 ## Defining Application Functionality  
  Once the replication topology has been defined, you should decide on the functionalities that your application will offer. These functionalities can range from a script that synchronizes a subscription to an application with a user interface to configure replication. Replication supports the following general programming tasks:  
@@ -70,11 +70,11 @@ manager: "jhubbard"
   
 -   Troubleshooting replication.  
   
- It is also common extend your application by combining replication functionalities with other functionalities provided by [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The following table highlights some extended functionalities that you might provide in your replication application.  
+ It is also common extend your application by combining replication functionalities with other functionalities provided by [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. The following table highlights some extended functionalities that you might provide in your replication application.  
   
 |Functionality|Example|  
 |-------------------|-------------|  
-|Server administration using [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Management Objects (SMO)|An application that enables an administrator to attach and configure a database as a Publisher in a replication topology.|  
+|Server administration using [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Management Objects (SMO)|An application that enables an administrator to attach and configure a database as a Publisher in a replication topology.|  
 |Data access using ADO.NET|An application that enables users to programmatically access and change replicated sales data in a local Subscriber database while offline and then connect and synchronize the pull subscription by clicking a button.|  
   
 ## Planning for Security  
@@ -91,11 +91,11 @@ manager: "jhubbard"
   
 -   **Managed code**  
   
-     Object oriented development environment that leverages the benefits of the [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] programming and the .NET common language runtime (CLR). Managed code is the recommended programming environment for both .NET development and [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] applications. Managed replication interfaces enable the programming of replication administration in an object-oriented manner without having to know [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)], and it also provides some callback functionalities when running replication agents that are not available from scripts. Managed code is the best environment for developing reusable components and user interface applications.  
+     Object oriented development environment that leverages the benefits of the [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] programming and the .NET common language runtime (CLR). Managed code is the recommended programming environment for both .NET development and [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] applications. Managed replication interfaces enable the programming of replication administration in an object-oriented manner without having to know [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)], and it also provides some callback functionalities when running replication agents that are not available from scripts. Managed code is the best environment for developing reusable components and user interface applications.  
   
 -   **Scripting**  
   
-     Simple applications that execute a series of commands as either replication system stored procedures in [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] scripts or commands in batch files. While you can execute scripts in a managed environment using the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in-process managed provider, the same functionality can obtained by using managed replication interfaces, which also provide callback functionalities. Scripting is the best environment for executing tasks that will run only a few times and where callback functionalities are not required, such as installing a replication server.  
+     Simple applications that execute a series of commands as either replication system stored procedures in [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] scripts or commands in batch files. While you can execute scripts in a managed environment using the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] in-process managed provider, the same functionality can obtained by using managed replication interfaces, which also provide callback functionalities. Scripting is the best environment for executing tasks that will run only a few times and where callback functionalities are not required, such as installing a replication server.  
   
 -   **Native code**  
   
@@ -109,11 +109,11 @@ manager: "jhubbard"
 |[Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)|Managed code|Administration, monitoring, and synchronization.|  
 |<xref:Microsoft.SqlServer.Replication>|Managed code|Synchronization.|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|Managed code|Creation of business logic handlers to integrate custom logic with the merge synchronization process.|  
-|[Replication Stored Procedures &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Scripting|Administration and monitoring.|  
+|[Replication Stored Procedures &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Scripting|Administration and monitoring.|  
 |[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Scripting|Synchronization.|  
   
 ## Example  
- At [!INCLUDE[ssSampleDBCoShort](../../../analysis-services/data-mining/includes/sssampledbcoshort-md.md)], data needs to be published for 200 sales representatives around the world. The sales representatives travel often and will need to use laptop computers or personal digital assistants (PDAs) to change customer data and add new orders. The changes will then need to be synchronized with the Publisher when the sales representative connects the laptop to the network.  
+ At [!INCLUDE[ssSampleDBCoShort](../../../a9notintoc/includes/sssampledbcoshort-md.md)], data needs to be published for 200 sales representatives around the world. The sales representatives travel often and will need to use laptop computers or personal digital assistants (PDAs) to change customer data and add new orders. The changes will then need to be synchronized with the Publisher when the sales representative connects the laptop to the network.  
   
  For this application, the planning steps might look like the following:  
   
@@ -123,10 +123,10 @@ manager: "jhubbard"
   
 3.  Follow all of the security guidelines for replication, including using Windows Authentication and a virtual private network (VPN) when connecting to the publisher. If implementing Web synchronization, use a secure sockets layer (SSL) connection. For more information, see [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md).  
   
-4.  In order to take advantage of the features of the [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)], the application is developed using a managed code language.  
+4.  In order to take advantage of the features of the [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)], the application is developed using a managed code language.  
   
 5.  Based on these requirements, the Replication Management Objects (RMO) managed interface can provide all of the needed replication functionality for this application.  
   
- This example scenario has been implemented in the AdventureWorks sample application that can be downloaded for [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ This example scenario has been implemented in the AdventureWorks sample application that can be downloaded for [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
   

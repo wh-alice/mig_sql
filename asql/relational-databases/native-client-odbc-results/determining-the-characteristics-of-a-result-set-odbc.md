@@ -23,11 +23,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Determining the Characteristics of a Result Set (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   Metadata is data that describes other data. For example, result set metadata describes the characteristics of a result set, such as the number of columns in the result set, the data types of those columns, their names, precision, and nullability.  
   
- ODBC supplies metadata to applications through its catalog API functions. The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver implements many of the ODBC API catalog functions as calls to a corresponding [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] catalog procedure.  
+ ODBC supplies metadata to applications through its catalog API functions. The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver implements many of the ODBC API catalog functions as calls to a corresponding [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] catalog procedure.  
   
  Applications require metadata for most result set operations. For example, the application uses the data type of a column to determine what kind of variable to bind to that column. It uses the byte length of a character column to determine how much space it must have to display data from that column. How an application determines the metadata for a column depends on the type of the application.  
   

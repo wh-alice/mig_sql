@@ -16,7 +16,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Approval Required (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], the administrator can set an entity to Approval Required. All the changes on this entity would require one of the entity administrators to review and approve the changes.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], the administrator can set an entity to Approval Required. All the changes on this entity would require one of the entity administrators to review and approve the changes.  
   
 > [!NOTE]  
 >  Changes made on leaf members requires approval. The changes made on deprecated explicit hierarchies and collections  bypass the approval.  
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 ## To enable Approval Required for an entity  
   
-1.  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], click **System Administration**.  
+1.  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], click **System Administration**.  
   
 2.  On the **Manage Model** page, select a model from the grid, and then click **Entities**.  
   

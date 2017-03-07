@@ -27,7 +27,7 @@ manager: "erikre"
  The My Reports feature is disabled by default. You can either enable or disable the feature for all users, but you cannot enable it for a subset of users. Most users and organizations find this feature valuable; study the advantages and disadvantages presented later in this topic to determine whether it is a good fit for your organization.  
   
 ## How to Enable and Disable My Reports  
- To enable My Reports by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], connect to the report server instance and open the **Server Properties** page. Then on the **General** tab, select the **Enable a My Reports folder for each user** option.  
+ To enable My Reports by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], connect to the report server instance and open the **Server Properties** page. Then on the **General** tab, select the **Enable a My Reports folder for each user** option.  
   
  The role definition used for My Reports determines what actions are supported in the My Reports workspace. For example, if the My Reports role excludes "Create linked reports," users cannot create linked reports in the My Reports folders. For more information, see [Secure My Reports](../../reporting-services/security/secure-my-reports.md).  
   

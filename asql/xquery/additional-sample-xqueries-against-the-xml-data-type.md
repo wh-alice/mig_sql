@@ -1,7 +1,7 @@
 ---
 title: "Additional Sample XQueries Against the xml Data Type | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "03/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,7 +22,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Additional Sample XQueries Against the xml Data Type
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   The topics in this section provide additional samples that show how to use XQuery queries against the **xml** data type:  
   

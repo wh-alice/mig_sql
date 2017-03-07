@@ -35,7 +35,7 @@ manager: "jhubbard"
 
   Specifies the columns to be returned by the query.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -82,13 +82,13 @@ SELECT [ ALL | DISTINCT ]
  Limits the scope of the \* to the specified table or view.  
   
  *column_name*  
- Is the name of a column to return. Qualify *column_name* to prevent an ambiguous reference, such as occurs when two tables in the FROM clause have columns with duplicate names. For example, the SalesOrderHeader and SalesOrderDetail tables in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database both have a column named ModifiedDate. If the two tables are joined in a query, the modified date of the SalesOrderDetail entries can be specified in the select list as SalesOrderDetail.ModifiedDate.  
+ Is the name of a column to return. Qualify *column_name* to prevent an ambiguous reference, such as occurs when two tables in the FROM clause have columns with duplicate names. For example, the SalesOrderHeader and SalesOrderDetail tables in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database both have a column named ModifiedDate. If the two tables are joined in a query, the modified date of the SalesOrderDetail entries can be specified in the select list as SalesOrderDetail.ModifiedDate.  
   
  *expression*  
  Is a constant, function, any combination of column names, constants, and functions connected by an operator or operators, or a subquery.  
   
  $IDENTITY  
- Returns the identity column. For more information, see [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../Topic/IDENTITY%20\(Property\)%20\(Transact-SQL\).md), [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), and [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
+ Returns the identity column. For more information, see [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md), [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), and [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
  If more than one table in the FROM clause has a column with the IDENTITY property, $IDENTITY must be qualified with the specific table name, such as T1.$IDENTITY.  
   
@@ -101,7 +101,7 @@ SELECT [ ALL | DISTINCT ]
  Is the name of a common language runtime (CLR) user-defined type column to return.  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] returns user-defined type values in binary representation. To return user-defined type values in string or XML format, use [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) or [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+>  [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] returns user-defined type values in binary representation. To return user-defined type values in string or XML format, use [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) or [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
  { . | :: }  
  Specifies a method, property, or field of a CLR user-defined type. Use . for an instance (nonstatic) method, property, or field. Use :: for a static method, property, or field. To invoke a method, property, or field of a CLR user-defined type, you must have EXECUTE permission on the type.  
@@ -147,7 +147,7 @@ FROM Cities;
 ## Remarks  
  The length of data returned for **text** or **ntext** columns that are included in the select list is set to the smallest value of the following: the actual size of the **text** column, the default TEXTSIZE session setting, or the hard-coded application limit. To change the length of returned text for the session, use the SET statement. By default, the limit on the length of text data returned with a SELECT statement is 4,000 bytes.  
   
- The [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] raises exception 511 and rolls back the current running statement if either of the following behavior occurs:  
+ The [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] raises exception 511 and rolls back the current running statement if either of the following behavior occurs:  
   
 -   The SELECT statement produces a result row or an intermediate work table row exceeding 8,060 bytes.  
   

@@ -19,19 +19,19 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Managing Users, Roles, and Logins
-  In SMO, logins are represented by the <xref:Microsoft.SqlServer.Management.Smo.Login> object. When the logon exists in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], it can be added to a server role. The server role is represented by the <xref:Microsoft.SqlServer.Management.Smo.ServerRole> object. The database role is represented by the <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> object and the application role is represented by the <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> object.  
+  In SMO, logins are represented by the <xref:Microsoft.SqlServer.Management.Smo.Login> object. When the logon exists in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], it can be added to a server role. The server role is represented by the <xref:Microsoft.SqlServer.Management.Smo.ServerRole> object. The database role is represented by the <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> object and the application role is represented by the <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> object.  
   
  Privileges associated with the server level are listed as properties of the <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> object. The server level privileges can be granted to, denied to, or revoked from individual logon accounts.  
   
  Every <xref:Microsoft.SqlServer.Management.Smo.Database> object has a <xref:Microsoft.SqlServer.Management.Smo.UserCollection> object that specifies all users in the database. Each user is associated with a logon. One logon can be associated with users in more than one database. The <xref:Microsoft.SqlServer.Management.Smo.Login> object's <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> method can be used to list all users in every database that is associated with the logon. Alternatively, the <xref:Microsoft.SqlServer.Management.Smo.User> object's <xref:Microsoft.SqlServer.Management.Smo.Login> property specifies the logon that is associated with the user.  
   
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases also have roles that specify a set of database level privileges that let a user perform specific tasks. Unlike server roles, database roles are not fixed. They can be created, modified, and removed. Privileges and users can be assigned to a database role for bulk administration.  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] databases also have roles that specify a set of database level privileges that let a user perform specific tasks. Unlike server roles, database roles are not fixed. They can be created, modified, and removed. Privileges and users can be assigned to a database role for bulk administration.  
   
 ## Example  
- For the following code example, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20Basic%20SMO%20Project%20in%20Visual%20Studio%20.NET.md) and [Create a Visual C&#35; SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20C%23%20SMO%20Project%20in%20Visual%20Studio%20.NET.md).  
+ For the following code example, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-.net.md) and [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-.net.md).  
   
 ## Enumerating Logins and Associated Users in Visual Basic  
- Every user in a database is associated with a logon. The logon can be associated with users in more than one database. The code example shows how to call the <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> method of the <xref:Microsoft.SqlServer.Management.Smo.Login> object to list all the database users who are associated with the logon. The example creates a logon and user in the [!INCLUDE[ssSampleDBnormal](../../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database to make sure there is mapping information to enumerate.  
+ Every user in a database is associated with a logon. The logon can be associated with users in more than one database. The code example shows how to call the <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> method of the <xref:Microsoft.SqlServer.Management.Smo.Login> object to list all the database users who are associated with the logon. The example creates a logon and user in the [!INCLUDE[ssSampleDBnormal](../../../a9notintoc/includes/sssampledbnormal-md.md)] database to make sure there is mapping information to enumerate.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -59,7 +59,7 @@ Next
 ```
   
 ## Enumerating Logins and Associated Users in Visual C#  
- Every user in a database is associated with a logon. The logon can be associated with users in more than one database. The code example shows how to call the <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> method of the <xref:Microsoft.SqlServer.Management.Smo.Login> object to list all the database users who are associated with the logon. The example creates a logon and user in the [!INCLUDE[ssSampleDBnormal](../../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database to make sure there is mapping information to enumerate.  
+ Every user in a database is associated with a logon. The logon can be associated with users in more than one database. The code example shows how to call the <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> method of the <xref:Microsoft.SqlServer.Management.Smo.Login> object to list all the database users who are associated with the logon. The example creates a logon and user in the [!INCLUDE[ssSampleDBnormal](../../../a9notintoc/includes/sssampledbnormal-md.md)] database to make sure there is mapping information to enumerate.  
   
 ```C#  
 {   
@@ -85,7 +85,7 @@ foreach ( Database db in srv.Databases) {
 ```  
   
 ## Enumerating Logins and Associated Users in PowerShell  
- Every user in a database is associated with a logon. The logon can be associated with users in more than one database. The code example shows how to call the <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> method of the <xref:Microsoft.SqlServer.Management.Smo.Login> object to list all the database users who are associated with the logon. The example creates a logon and user in the [!INCLUDE[ssSampleDBnormal](../../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database to make sure there is mapping information to enumerate.  
+ Every user in a database is associated with a logon. The logon can be associated with users in more than one database. The code example shows how to call the <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> method of the <xref:Microsoft.SqlServer.Management.Smo.Login> object to list all the database users who are associated with the logon. The example creates a logon and user in the [!INCLUDE[ssSampleDBnormal](../../../a9notintoc/includes/sssampledbnormal-md.md)] database to make sure there is mapping information to enumerate.  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  

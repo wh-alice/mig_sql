@@ -18,9 +18,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Change the HADR Cluster Context of Server Instance (SQL Server)
-  This topic describes how to switch the HADR cluster context of an instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] in [!INCLUDE[ssSQL11SP1](../../../analysis-services/instances/install/windows/includes/sssql11sp1-md.md)] and later versions. The *HADR cluster context* determines which Windows Server Failover Clustering (WSFC) cluster manages the metadata for availability replicas hosted by the server instance.  
+  This topic describes how to switch the HADR cluster context of an instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] in [!INCLUDE[ssSQL11SP1](../../../analysis-services/instances/install/windows/includes/sssql11sp1-md.md)] and later versions. The *HADR cluster context* determines which Windows Server Failover Clustering (WSFC) cluster manages the metadata for availability replicas hosted by the server instance.  
   
- Switch the HADR cluster context only during a cross-cluster migration of [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] to an instance of [!INCLUDE[ssSQL11SP1](../../../analysis-services/instances/install/windows/includes/sssql11sp1-md.md)] on a new WSFC cluster. Cross-cluster migration of [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] supports OS upgrade to [!INCLUDE[win8](../../../database-engine/availability-groups/windows/includes/win8-md.md)] or [!INCLUDE[win8srv](../../../database-engine/availability-groups/windows/includes/win8srv-md.md)] with minimal downtime of availability groups. For more information, see [Cross-Cluster Migration of Always On Availability Groups for OS Upgrade](http://msdn.microsoft.com/library/jj873730.aspx).  
+ Switch the HADR cluster context only during a cross-cluster migration of [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] to an instance of [!INCLUDE[ssSQL11SP1](../../../analysis-services/instances/install/windows/includes/sssql11sp1-md.md)] on a new WSFC cluster. Cross-cluster migration of [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] supports OS upgrade to [!INCLUDE[win8](../../../a9notintoc/includes/win8-md.md)] or [!INCLUDE[win8srv](../../../a9notintoc/includes/win8srv-md.md)] with minimal downtime of availability groups. For more information, see [Cross-Cluster Migration of Always On Availability Groups for OS Upgrade](http://msdn.microsoft.com/library/jj873730.aspx).  
   
 -   **Before you begin:**  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 > [!CAUTION]  
->  Switch the HADR cluster context only during cross-cluster migration of [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] deployments.  
+>  Switch the HADR cluster context only during cross-cluster migration of [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] deployments.  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 -   The server instance must be enabled for Always On. For more information, see [Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
--   To be eligible to be switched from the local cluster context to a remote cluster cluster, a server instance cannot be hosting any availability replicas. The [sys.availability_replicas](../../../relational-databases/system-catalog-views/sys.availability-replicas-transact-sql.md) catalog view should not return any rows.  
+-   To be eligible to be switched from the local cluster context to a remote cluster cluster, a server instance cannot be hosting any availability replicas. The [sys.availability_replicas](../../../relational-databases/reference/system-catalog-views/sys.availability-replicas-transact-sql.md) catalog view should not return any rows.  
   
      If any availability replicas exist on the server instance, before you can change the HADR cluster context, you must do one of the following:  
   
@@ -90,7 +90,7 @@ manager: "jhubbard"
   
 -   **SQL Server service account**  
   
-     The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service account of the server instance must have:  
+     The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] service account of the server instance must have:  
   
     -   Permission to open the destination WSFC cluster.  
   
@@ -129,7 +129,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;
 ##  <a name="FollowUp"></a> Follow Up: After Switching the Cluster Context of an Availability Replica  
  The new HADR cluster context takes effect immediately, without restarting the server instance. The HADR cluster context setting is a persistent instance-level setting that remains unchanged if the server instance restarts.  
   
- Confirm the new HADR cluster context by querying the [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys.dm-hadr-cluster-transact-sql.md) dynamic management view, as follows:  
+ Confirm the new HADR cluster context by querying the [sys.dm_hadr_cluster](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-hadr-cluster-transact-sql.md) dynamic management view, as follows:  
   
 ```  
 SELECT cluster_name FROM sys.dm_hadr_cluster  
@@ -139,7 +139,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
  When the HADR cluster context is switched to a new cluster:  
   
--   The metadata is cleaned up for any availability replicas that are currently hosted by the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   The metadata is cleaned up for any availability replicas that are currently hosted by the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
 -   All the databases that previously belonged to an availability replica are now in the RESTORING state.  
   

@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Create Drillthrough Queries using DMX
-  For all models that support drillthrough, you can retrieve case data and structure data by creating a DMX query in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or any other client that supports DMX.  
+  For all models that support drillthrough, you can retrieve case data and structure data by creating a DMX query in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or any other client that supports DMX.  
   
 > [!WARNING]  
 >  To view the data, drillthrough must have been enabled, and you must have the necessary permissions.  

@@ -21,13 +21,13 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SQL Server Collation Name (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Is a single string that specifies the collation name for a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] collation.  
+  Is a single string that specifies the collation name for a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] collation.  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports Windows collations. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] also supports a limited number (<80) of collations called [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] collations which were developed before [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supported Windows collations. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] collations are still supported for backward compatibility, but should not be used for new development work. For more information about Windows collations, see [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md).  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports Windows collations. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] also supports a limited number (<80) of collations called [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] collations which were developed before [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supported Windows collations. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] collations are still supported for backward compatibility, but should not be used for new development work. For more information about Windows collations, see [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -61,7 +61,7 @@ _CaseSensitivity_AccentSensitivity
  Specifies the binary sort order to be used.  
   
 ## Remarks  
- To list the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] collations supported by your server, execute the following query.  
+ To list the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] collations supported by your server, execute the following query.  
   
 ```  
 SELECT * FROM sys.fn_helpcollations()   
@@ -77,6 +77,6 @@ WHERE name LIKE 'SQL%';
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../Topic/DECLARE%20@local_variable%20\(Transact-SQL\).md)   
  [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
- [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-helpcollations-transact-sql.md)  
+ [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-helpcollations-transact-sql.md)  
   
   

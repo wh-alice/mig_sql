@@ -22,9 +22,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # bcp_columns
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  Sets the total number of columns found in the user file for use with a bulk copy into or out of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) can be used instead of bcp_columns and [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md).  
+  Sets the total number of columns found in the user file for use with a bulk copy into or out of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) can be used instead of bcp_columns and [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md).  
   
 ## Syntax  
   
@@ -40,7 +40,7 @@ RETCODE bcp_columns (
  Is the bulk copy-enabled ODBC connection handle.  
   
  *nColumns*  
- Is the total number of columns in the user file. Even if you are preparing to bulk copy data from the user file to an [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table and do not intend to copy all columns in the user file, you must still set *nColumns* to the total number of user-file columns.  
+ Is the total number of columns in the user file. Even if you are preparing to bulk copy data from the user file to an [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] table and do not intend to copy all columns in the user file, you must still set *nColumns* to the total number of user-file columns.  
   
 ## Returns  
  SUCCEED or FAIL.  
@@ -53,6 +53,6 @@ RETCODE bcp_columns (
  After calling **bcp_columns**, you must call [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)for each column in the user file to completely define a custom file format.  
   
 ## See Also  
- [Bulk Copy Functions](../Topic/Bulk%20Copy%20Functions.md)  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

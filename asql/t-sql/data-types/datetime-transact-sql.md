@@ -26,7 +26,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # datetime (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Defines a date that is combined with a time of day with fractional seconds that is based on a 24-hour clock.  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
 |ODBC|Description|  
 |----------|-----------------|  
-|{ ts '1998-05-02 01:23:56.123' }<br /><br /> { d '1990-10-02' }<br /><br /> { t '13:33:41' }|The ODBC API defines escape sequences to represent date and time values, which ODBC calls timestamp data. This ODBC timestamp format is also supported by the OLE DB language definition (DBGUID-SQL) supported by the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] OLE DB provider for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Applications that use the ADO, OLE DB, and ODBC-based APIs can use this ODBC timestamp format to represent dates and times.<br /><br /> ODBC timestamp escape sequences are of the format: { *literal_type* '*constant_value*' }:<br /><br /> <br /><br /> - *literal_type* specifies the type of the escape sequence. Timestamps have three *literal_type* specifiers:<br />1) d = date only<br />2) t = time only<br />3) ts = timestamp (time + date)<br /><br /> <br /><br /> - '*constant_value*' is the value of the escape sequence. *constant_value* must follow these formats for each *literal_type*.<br />d : yyyy-mm-dd<br />t : hh:mm:ss[.fff]<br />ts : yyyy-mm-dd hh:mm:ss[.fff]|  
+|{ ts '1998-05-02 01:23:56.123' }<br /><br /> { d '1990-10-02' }<br /><br /> { t '13:33:41' }|The ODBC API defines escape sequences to represent date and time values, which ODBC calls timestamp data. This ODBC timestamp format is also supported by the OLE DB language definition (DBGUID-SQL) supported by the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] OLE DB provider for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Applications that use the ADO, OLE DB, and ODBC-based APIs can use this ODBC timestamp format to represent dates and times.<br /><br /> ODBC timestamp escape sequences are of the format: { *literal_type* '*constant_value*' }:<br /><br /> <br /><br /> - *literal_type* specifies the type of the escape sequence. Timestamps have three *literal_type* specifiers:<br />1) d = date only<br />2) t = time only<br />3) ts = timestamp (time + date)<br /><br /> <br /><br /> - '*constant_value*' is the value of the escape sequence. *constant_value* must follow these formats for each *literal_type*.<br />d : yyyy-mm-dd<br />t : hh:mm:ss[.fff]<br />ts : yyyy-mm-dd hh:mm:ss[.fff]|  
   
 ## Rounding of datetime Fractional Second Precision  
  **datetime** values are rounded to increments of .000, .003, or .007 seconds, as shown in the following table.  
@@ -90,7 +90,7 @@ manager: "jhubbard"
  **datetime** is not ANSI or ISO 8601 compliant.  
   
 ##  <a name="_datetime"></a> Converting Date and Time Data  
- When you convert to date and time data types, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] rejects all values it cannot recognize as dates or times. For information about using the CAST and CONVERT functions with date and time data, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+ When you convert to date and time data types, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] rejects all values it cannot recognize as dates or times. For information about using the CAST and CONVERT functions with date and time data, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ### Converting Other Date and Time Types to the datetime Data Type 
 This section describes what occurs when other date and time data types are converted to the **datetime** data type.  

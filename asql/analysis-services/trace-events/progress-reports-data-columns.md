@@ -51,7 +51,7 @@ manager: "erikre"
 |NTCanonicalUserName|40|8|User name in canonical form. For example, engineering.microsoft.com/software/someone.|  
 |SPID|41|1|Contains the server process ID (SPID) that uniquely identifies the user session associated with the reported event. The SPID directly corresponds to the session GUID used by XML for Analysis (XMLA).|  
 |TextData|42|9|Contains the text data associated with the reported event.|  
-|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] on which the reported event occurred.|  
+|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] on which the reported event occurred.|  
   
 ## Progress Report End–Data Columns  
   
@@ -84,7 +84,7 @@ manager: "erikre"
 |NTCanonicalUserName|40|8|Contains the Windows user name associated with the reported event. The user name is in canonical form. For example, engineering.microsoft.com/software/user.|  
 |SPID|41|1|Contains the server process ID (SPID) that uniquely identifies the user session associated with the reported event. The SPID directly corresponds to the session GUID used by XML for Analysis (XMLA).|  
 |TextData|42|9|Contains the text data associated with the reported event.|  
-|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] on which the reported event occurred.|  
+|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] on which the reported event occurred.|  
   
 ## Progress Report Current–Data Columns  
   
@@ -108,7 +108,7 @@ manager: "erikre"
 |SessionID|39|8|Contains the session ID associated with the reported event.|  
 |SPID|41|1|Contains the server process ID (SPID) that uniquely identifies the user session associated with the reported event. The SPID directly corresponds to the session GUID used by XML for Analysis (XMLA).|  
 |TextData|42|9|Contains the text data associated with the reported event.|  
-|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] on which the reported event occurred.|  
+|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] on which the reported event occurred.|  
   
 ## Progress Report Error–Data Columns  
   
@@ -136,7 +136,7 @@ manager: "erikre"
 |SessionID|39|8|Contains the session ID associated with the reported event.|  
 |SPID|41|1|Contains the server process ID (SPID) that uniquely identifies the user session associated with the reported event. The SPID directly corresponds to the session GUID used by XML for Analysis (XMLA).|  
 |TextData|42|9|Contains the text data associated with the reported event.|  
-|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] on which the reported event occurred.|  
+|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] on which the reported event occurred.|  
   
 ## See Also  
  [Progress Reports Event Category](../../analysis-services/trace-events/progress-reports-event-category.md)  

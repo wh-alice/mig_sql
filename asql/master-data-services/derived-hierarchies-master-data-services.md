@@ -20,7 +20,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Derived Hierarchies (Master Data Services)
-  A [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] derived hierarchy is derived from the domain-based attribute relationships that already exist between entities in a model.  
+  A [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] derived hierarchy is derived from the domain-based attribute relationships that already exist between entities in a model.  
   
  You can create a derived hierarchy to highlight any of the existing domain-based attribute relationships in the model.  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
  The following table shows some of the differences between explicit and derived hierarchies.  
   
 > [!NOTE]  
->  Explicit Hierarchies are deprecated in this release of [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)].  
+>  Explicit Hierarchies are deprecated in this release of [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)].  
   
 |Explicit Hierarchies|Derived Hierarchies|  
 |--------------------------|-------------------------|  

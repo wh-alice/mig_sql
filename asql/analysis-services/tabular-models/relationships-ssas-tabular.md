@@ -51,7 +51,7 @@ manager: "erikre"
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|.10|254|2010-01-03|Budget Movie-Maker|27|  
   
- This approach can work, but it involves storing a lot of redundant data, such as the customer e-mail address for every order. Storage is cheap, but you have to make sure you update every row for that customer if the e-mail address changes. One solution to this problem is to split the data into multiple tables and define relationships between those tables. This is the approach used in *relational databases* like [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For example, a database that you import into a model might represent order data by using three related tables:  
+ This approach can work, but it involves storing a lot of redundant data, such as the customer e-mail address for every order. Storage is cheap, but you have to make sure you update every row for that customer if the e-mail address changes. One solution to this problem is to split the data into multiple tables and define relationships between those tables. This is the approach used in *relational databases* like [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For example, a database that you import into a model might represent order data by using three related tables:  
   
 ### Customers  
   
@@ -120,7 +120,7 @@ manager: "erikre"
 ### One Relationship for Each Source Column  
  A source column cannot participate in multiple relationships. If you have used a column as a source column in one relationship already, but want to use that column to connect to another related lookup column in a different table, you can create a copy of the column, and use that column for the new relationship.  
   
- It is easy to create a copy of a column that has the exact same values, by using a DAX formula in a calculated column. For more information, see [Create a Calculated Column &#40;SSAS Tabular&#41;](../Topic/Create%20a%20Calculated%20Column%20\(SSAS%20Tabular\).md).  
+ It is easy to create a copy of a column that has the exact same values, by using a DAX formula in a calculated column. For more information, see [Create a Calculated Column &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md).  
   
 ### Unique Identifier for Each Table  
  Each table must have a single column that uniquely identifies each row in that table. This column is often referred to as the primary key.  
@@ -139,7 +139,7 @@ manager: "erikre"
 ###  <a name="bkmk_many_to_many"></a> Many-to-Many Relationships  
  Tabular models do not support many-to-many relationships, and you cannot add *junction tables* in the model designer. However, you can use DAX functions to model many-to-many relationships.  
   
- You can also try setting up a bi-directional cross filter to see if it achieves the same purpose. Sometimes the requirement  of many-to-many relationship can be satisfied through cross filters that persist a filter context across multiple table relationships. See [Bi-directional cross filters for tabular models in SQL Server 2016 Analysis Services](../Topic/Bi-directional%20cross%20filters%20for%20tabular%20models%20in%20SQL%20Server%202016%20Analysis%20Services.md) for details.  
+ You can also try setting up a bi-directional cross filter to see if it achieves the same purpose. Sometimes the requirement  of many-to-many relationship can be satisfied through cross filters that persist a filter context across multiple table relationships. See [Bi-directional cross filters for tabular models in SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) for details.  
   
 ### Self-Joins and Loops  
  Self-joins are not permitted in tabular model tables. A self-join is a recursive relationship between a table and itself. Self-joins are often used to define parent-child hierarchies. For example, you could join an Employees table to itself to produce a hierarchy that shows the management chain at a business.  
@@ -189,10 +189,10 @@ manager: "erikre"
 |-----------|-----------------|  
 |[Create a Relationship Between Two Tables &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)|Describes how to manually create a relationship between two tables.|  
 |[Delete Relationships &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)|Describes how to delete a relationship and the ramifications of deleting relationships.|  
-|[Bi-directional cross filters for tabular models in SQL Server 2016 Analysis Services](../Topic/Bi-directional%20cross%20filters%20for%20tabular%20models%20in%20SQL%20Server%202016%20Analysis%20Services.md)|Describes two-way cross filtering for related tables. A filter context of one table relationship can be used when querying across a second table relationship if tables are related and bi-directional cross filters are define.|  
+|[Bi-directional cross filters for tabular models in SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)|Describes two-way cross filtering for related tables. A filter context of one table relationship can be used when querying across a second table relationship if tables are related and bi-directional cross filters are define.|  
   
 ## See Also  
  [Tables and Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
- [Import Data &#40;SSAS Tabular&#41;](../Topic/Import%20Data%20\(SSAS%20Tabular\).md)  
+ [Import Data &#40;SSAS Tabular&#41;](../../a9retired/import-data-ssas-tabular.md)  
   
   

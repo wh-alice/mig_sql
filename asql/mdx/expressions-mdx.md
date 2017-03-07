@@ -23,9 +23,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Expressions (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  An expression is a combination of identifiers, values, and operators that [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] can evaluate to get a result. The data can be used in several different places when accessing or changing data. For example, you can use an expression as part of the data to be retrieved by a query or as a search condition to look for data that meets a set of criteria.  
+  An expression is a combination of identifiers, values, and operators that [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] can evaluate to get a result. The data can be used in several different places when accessing or changing data. For example, you can use an expression as part of the data to be retrieved by a query or as a search condition to look for data that meets a set of criteria.  
   
 ## Simple and Complex Expressions  
  An expression can be simple or complex in MDX:  

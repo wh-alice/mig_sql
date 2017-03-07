@@ -15,14 +15,14 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.folders (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Displays the folders in the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog.  
+  Displays the folders in the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] catalog.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |id|**bigint**|The unique identifier of the folder.|  
-|name|**sysname(nvarchar(128)**|The name of the folder, which is unique within the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog.|  
+|name|**sysname(nvarchar(128)**|The name of the folder, which is unique within the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] catalog.|  
 |description|**nvarchar(1024)**|The description of the folder.|  
 |created_by_sid|**varbinary(85)**|The security identifier (SID) of the user who created the folder.|  
 |created_by_name|**nvarchar(128)**|The name of the user who created the folder.|  

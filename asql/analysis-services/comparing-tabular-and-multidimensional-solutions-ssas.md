@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Comparing Tabular and Multidimensional Solutions (SSAS)
-  [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] provides several approaches for creating a business intelligence semantic model:  Multidimensional, Tabular, and Power Pivot.  
+  [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] provides several approaches for creating a business intelligence semantic model:  Multidimensional, Tabular, and Power Pivot.  
   
  Having more than one approach enables a modeling experience tailored to different business and user requirements. Multidimensional is a mature technology built on open standards, embraced by numerous vendors of BI software, but can be hard to master. Tabular offers a relational modeling approach that many developers find more intuitive. Power Pivot is even simpler, offering visual data modeling in Excel, with server support provided via SharePoint.  
   
@@ -26,7 +26,7 @@ manager: "erikre"
   
  Because of differences in memory architecture and metadata, none of the model types are interchangeable, although you can upgrade very easily from a Tabular 1050-1103 model to Tabular 1200, and you can import Power Pivot to create an entirely new model as Tabular project.  
   
- Tabular and Multidimensional solutions are built using [!INCLUDE[ssBIDevStudio](../analysis-services/includes/ssbidevstudio-md.md)] and are intended for corporate BI projects that run on a standalone [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] instance on-premises or an [Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/) server in the cloud. Both solutions yield high performance analytical databases that integrate easily with BI clients. Yet each solution differs in how they are created, used, and deployed. The bulk of this topic compares these two types so that you can identify the right approach for you.  
+ Tabular and Multidimensional solutions are built using [!INCLUDE[ssBIDevStudio](../a9notintoc/includes/ssbidevstudio-md.md)] and are intended for corporate BI projects that run on a standalone [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] instance on-premises or an [Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/) server in the cloud. Both solutions yield high performance analytical databases that integrate easily with BI clients. Yet each solution differs in how they are created, used, and deployed. The bulk of this topic compares these two types so that you can identify the right approach for you.  
   
  For new development projects, we generally recommend Tabular. It will be faster to design, test, and deploy; and it will work better with the latest self-service BI applications and cloud services from Microsoft.  
   
@@ -66,7 +66,7 @@ manager: "erikre"
 |Hierarchies|Yes|Yes|Yes|  
 |KPIs|Yes|Yes|Yes|  
 |Linked objects|Yes|Yes (linked tables)|No|  
-|Many-to-many relationships|Yes|No (but there is [bi-directional cross filters](../Topic/Bi-directional%20cross%20filters%20for%20tabular%20models%20in%20SQL%20Server%202016%20Analysis%20Services.md) at 1200 compatibility level)|No|  
+|Many-to-many relationships|Yes|No (but there is [bi-directional cross filters](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) at 1200 compatibility level)|No|  
 |Named sets|Yes|No|No|  
 |Parent-child Hierarchies|Yes|Yes (via DAX)|Yes (via DAX)|  
 |Partitions|Yes|Yes|Yes|  
@@ -95,7 +95,7 @@ manager: "erikre"
   
  DirectQuery, revamped in this release, has fewer restrictions than before, and better performance. Leveraging the backend relational database for storage and query execution makes building a large scale Tabular model more feasible than was previously possible.  
   
- Historically, the largest [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] databases in production are multidimensional, with processing and query workloads running independently on dedicated hardware, each one optimized for its respective use.  Tabular databases are catching up quickly, and new advancements in DirectQuery will help close the gap even further.  
+ Historically, the largest [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] databases in production are multidimensional, with processing and query workloads running independently on dedicated hardware, each one optimized for its respective use.  Tabular databases are catching up quickly, and new advancements in DirectQuery will help close the gap even further.  
   
  For Multidimensional offloading data storage and query execution is available via ROLAP.   On a query server, rowsets can be cached, and stale ones  paged out. Efficient and balanced use of memory and disk resources often guide customers to multidimensional solutions.  
   
@@ -128,37 +128,37 @@ manager: "erikre"
   
 -   Analysis Services PowerShell is supported for Tabular and Multidimensional models and databases.  
   
- All databases support XML/A. See [Query and Expression Language Reference &#40;Analysis Services&#41;](../Topic/Query%20and%20Expression%20Language%20Reference%20\(Analysis%20Services\).md) and [Analysis Services Developer Documentation](../analysis-services/analysis-services-developer-documentation.md) for more information.  
+ All databases support XML/A. See [Query and Expression Language Reference &#40;Analysis Services&#41;](../a9retired/query-and-expression-language-reference-analysis-services.md) and [Analysis Services Developer Documentation](../analysis-services/analysis-services-developer-documentation.md) for more information.  
   
 ##  <a name="bkmk_sec"></a> Security Features  
  All Analysis Services solutions can be secured at the database level. More granular security options vary by mode. If granular security settings are requirement for your solution, review the following list to ensure the level of security you want is supported in the type of solution you want to build:  
   
--   [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] workbooks are secured at the file level, using SharePoint permissions.  
+-   [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] workbooks are secured at the file level, using SharePoint permissions.  
   
 -   Tabular model databases can use row-level security, using role-based permissions in Analysis Services.  
   
 -   Multidimensional model databases can use dimension and cell-level security, using role-based permissions in Analysis Services.  
   
- [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] workbooks can be restored to a Tabular mode server. Once the file is restored, it is decoupled from SharePoint, allowing you to use all Tabular modeling features, including row-level security.  
+ [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] workbooks can be restored to a Tabular mode server. Once the file is restored, it is decoupled from SharePoint, allowing you to use all Tabular modeling features, including row-level security.  
   
 ##  <a name="bkmk_designer"></a> Design Tools  
  Data modeling skills and technical expertise can vary widely among users who are tasked with building analytical models. If tool familiarity or user expertise is a consideration for your solution, compare the following experiences for model creation.  
   
 |Modeling Tool|How Used|  
 |-------------------|--------------|  
-|[!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)]|Use to create Tabular, Multidimensional, and Data Mining solutions. This authoring environment uses the Visual Studio shell to provide workspaces, property panes, and object navigation. Technical users who already use Visual Studio will most likely prefer this tool for building business intelligence applications.|  
-|[!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] for Excel|Use to create a [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] workbook that you later deploy to a SharePoint farm that has an installation of [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] for SharePoint. [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] for Excel has a separate application workspace that opens over Excel. It uses the same visual metaphors (tabbed pages, grid layout, and formula bar) as Excel. Users who are proficient in Excel will prefer this tool over [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)].|  
+|[!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)]|Use to create Tabular, Multidimensional, and Data Mining solutions. This authoring environment uses the Visual Studio shell to provide workspaces, property panes, and object navigation. Technical users who already use Visual Studio will most likely prefer this tool for building business intelligence applications.|  
+|[!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] for Excel|Use to create a [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] workbook that you later deploy to a SharePoint farm that has an installation of [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] for SharePoint. [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] for Excel has a separate application workspace that opens over Excel. It uses the same visual metaphors (tabbed pages, grid layout, and formula bar) as Excel. Users who are proficient in Excel will prefer this tool over [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)].|  
   
 ##  <a name="bkmk_client"></a> Client Application Support  
  If you are using Reporting Services, report feature availability varies across editions and server modes. For this reason, the type of report that you want to build might influence which server mode you choose to install.  
   
- [!INCLUDE[ssCrescent](../analysis-services/includes/sscrescent-md.md)], a Reporting Services authoring tool that runs in SharePoint, is available on a report server that is deployed in a SharePoint 2010 farm. The only type of data source that can be used with this report is an Analysis Services tabular model database or a [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] workbook. This means that you must have a tabular mode server or a [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] for SharePoint server to host the data source used by this type of report. You cannot use a multidimensional model as a data source for a [!INCLUDE[ssCrescent](../analysis-services/includes/sscrescent-md.md)] report. You must create a [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] BI Semantic Model connection or a Reporting Services shared data source to use as the data source for a [!INCLUDE[ssCrescent](../analysis-services/includes/sscrescent-md.md)] report.  
+ [!INCLUDE[ssCrescent](../a9notintoc/includes/sscrescent-md.md)], a Reporting Services authoring tool that runs in SharePoint, is available on a report server that is deployed in a SharePoint 2010 farm. The only type of data source that can be used with this report is an Analysis Services tabular model database or a [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] workbook. This means that you must have a tabular mode server or a [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] for SharePoint server to host the data source used by this type of report. You cannot use a multidimensional model as a data source for a [!INCLUDE[ssCrescent](../a9notintoc/includes/sscrescent-md.md)] report. You must create a [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] BI Semantic Model connection or a Reporting Services shared data source to use as the data source for a [!INCLUDE[ssCrescent](../a9notintoc/includes/sscrescent-md.md)] report.  
   
- Report Builder and Report Designer can use any Analysis Services database, including [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] workbooks that are hosted on [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] for SharePoint.  
+ Report Builder and Report Designer can use any Analysis Services database, including [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] workbooks that are hosted on [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] for SharePoint.  
   
- Excel PivotTable reports are supported by all Analysis Services databases. Excel functionality is the same whether you use a tabular .database, multidimensional database, or [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] workbook, although Writeback is only supported for multidimensional databases.  
+ Excel PivotTable reports are supported by all Analysis Services databases. Excel functionality is the same whether you use a tabular .database, multidimensional database, or [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] workbook, although Writeback is only supported for multidimensional databases.  
   
- PerformancePoint dashboards can connect to all Analysis Services databases, including [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] workbooks. For more information, see [Create Data Connections (PerformancePoint Services)](http://go.microsoft.com/fwlink/?linkdID=218155).  
+ PerformancePoint dashboards can connect to all Analysis Services databases, including [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] workbooks. For more information, see [Create Data Connections (PerformancePoint Services)](http://go.microsoft.com/fwlink/?linkdID=218155).  
   
 ##  <a name="bkmk_deploymentmode"></a> Server Deployment Modes for Multidimensional and Tabular Solutions  
  An Analysis Services instance is installed in one of three modes that set the operational context of the server. The server mode you install will determine the type of solutions that can be deployed to that server. Storage and memory architecture are the primary differences among the modes, but additional differences apply. The three server modes are briefly described in the following table. For more information, see [Determine the Server Mode of an Analysis Services Instance](../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
@@ -166,22 +166,22 @@ manager: "erikre"
 |Deployment mode|Description|  
 |---------------------|-----------------|  
 |0 - Multidimensional and Data Mining|Runs multidimensional and data mining solutions that you deploy to a default instance of Analysis Services. Deployment mode 0 is the default for an Analysis Services installation.|  
-|1 - [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] for SharePoint|For [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] data access, Analysis Services is an internal component of a [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] for SharePoint installation. Analysis Services is installed in deployment mode 1 and used exclusively by [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] services in a SharePoint environment.|  
+|1 - [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] for SharePoint|For [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] data access, Analysis Services is an internal component of a [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] for SharePoint installation. Analysis Services is installed in deployment mode 1 and used exclusively by [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] services in a SharePoint environment.|  
 |2 - Tabular|Runs tabular solutions on a standalone instance of Analysis Services configured for deployment mode 2.|  
   
  See [Install Analysis Services](../analysis-services/instances/install/windows/install-analysis-services.md) for more information.  
   
 ##  <a name="bkmk_sharePoint"></a> SharePoint Requirements  
- SQL Server integrates with SharePoint by adding support for [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] data access and tabular data access. Investment in SharePoint and SQL Server integration grows when you maximize the number of features used from each product. If you have SharePoint, you can install SQL Server [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] for SharePoint to enable [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] data access and get the [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] .bism connection files used to access tabular databases running on an external Analysis Services instance on a network server.  
+ SQL Server integrates with SharePoint by adding support for [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] data access and tabular data access. Investment in SharePoint and SQL Server integration grows when you maximize the number of features used from each product. If you have SharePoint, you can install SQL Server [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] for SharePoint to enable [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] data access and get the [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] .bism connection files used to access tabular databases running on an external Analysis Services instance on a network server.  
   
- Power View reporting, which uses [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] and tabular databases as a data source, is both a SharePoint feature provided by SQL Server and a built-in feature of Excel. Although the tabular databases run on an Analysis Services instance outside of SharePoint, that data is consumed by Power View reports that run in SharePoint.  
+ Power View reporting, which uses [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] and tabular databases as a data source, is both a SharePoint feature provided by SQL Server and a built-in feature of Excel. Although the tabular databases run on an Analysis Services instance outside of SharePoint, that data is consumed by Power View reports that run in SharePoint.  
   
- If you do not use SharePoint, you can still use [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] for Excel to create [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] workbooks but you will not have a cohesive data visualization experience. Each person who uses the workbook must download and view each workbook in Excel using the [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] for Excel add-in to get data interaction and exploration using slicers, filters, and pivots. Otherwise, workbook visualization is limited to static data as it appears when you open the workbook.  
+ If you do not use SharePoint, you can still use [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] for Excel to create [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] workbooks but you will not have a cohesive data visualization experience. Each person who uses the workbook must download and view each workbook in Excel using the [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] for Excel add-in to get data interaction and exploration using slicers, filters, and pivots. Otherwise, workbook visualization is limited to static data as it appears when you open the workbook.  
   
  Tabular, multidimensional, and data mining solutions run on Analysis Services instances on a network, with no SharePoint dependency.  
   
 ##  <a name="bkmk_ext"></a> Programmability and Extensibility Support  
- Although there is developer support for Power BI, there is no developer support for [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] workbooks. If you are using [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] workbooks, you must use the built-in client and server applications as part of your solution. Excel programming and SharePoint programming are the only options.  
+ Although there is developer support for Power BI, there is no developer support for [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] workbooks. If you are using [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] workbooks, you must use the built-in client and server applications as part of your solution. Excel programming and SharePoint programming are the only options.  
   
  For Power BI, see [Power BI Embedded](https://azure.microsoft.com/services/power-bi-embedded/).  
   
@@ -194,19 +194,19 @@ manager: "erikre"
 ##  <a name="bkmk_Next"></a> Next Step: Build a Solution  
  Now that you have a basic understanding of how the solutions compare, try out the following tutorials to learn the steps for creating each one. The following links take you to tutorials that explain the steps.  
   
--   Build a [!INCLUDE[ssGemini](../analysis-services/includes/ssgemini-md.md)] model. See, [Get started with Power Pivot in Microsoft Excel](https://support.office.com/article/Get-started-with-Power-Pivot-in-Microsoft-Excel-fdfcf944-7876-424a-8437-1a6c1043a80b).  
+-   Build a [!INCLUDE[ssGemini](../a9notintoc/includes/ssgemini-md.md)] model. See, [Get started with Power Pivot in Microsoft Excel](https://support.office.com/article/Get-started-with-Power-Pivot-in-Microsoft-Excel-fdfcf944-7876-424a-8437-1a6c1043a80b).  
   
 -   Build a tabular model. See, [Tabular Modeling &#40;Adventure Works Tutorial&#41;](../analysis-services/tutorials/tabular-modeling-adventure-works-tutorial.md).  
   
 -   Build a multidimensional model. See,  [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](../analysis-services/tutorials/multidimensional-modeling-adventure-works-tutorial.md).  
   
--   Build a data mining model. See,  [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md).  
+-   Build a data mining model. See,  [Basic Data Mining Tutorial](../a9notintoc/basic-data-mining-tutorial.md).  
   
 ## See Also  
  [Analysis Services Instance Management](../analysis-services/instances/analysis-services-instance-management.md)   
  [What's New in Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)     
  [What’s New in Power Pivot](http://go.microsoft.com/fwlink/?LinkId=238141)   
  [Power Pivot BI Semantic Model Connection &#40;.bism&#41;](../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-.bism.md)   
- [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](../Topic/Create%20and%20Manage%20Shared%20Data%20Sources%20\(Reporting%20Services%20in%20SharePoint%20Integrated%20Mode\).md)  
+ [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](../a9retired/2d3428e4-a810-4e66-a287-ff18e57fad76.md)  
   
   

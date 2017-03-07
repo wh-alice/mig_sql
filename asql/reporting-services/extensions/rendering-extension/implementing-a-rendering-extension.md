@@ -31,7 +31,7 @@ manager: "erikre"
   
 ## In This Section  
  [Rendering Extensions Overview](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)  
- Introduces how to write a custom rendering extension for [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)].  
+ Introduces how to write a custom rendering extension for [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)].  
   
  [Implementing the IRenderingExtension Interface](../../../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md)  
  Describes the attributes of a rendering extension.  

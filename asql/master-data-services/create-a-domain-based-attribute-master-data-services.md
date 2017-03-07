@@ -20,7 +20,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Create a Domain-Based Attribute (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], create a domain-based attribute to populate an attribute's values with members from an entity.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], create a domain-based attribute to populate an attribute's values with members from an entity.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -58,7 +58,7 @@ manager: "jhubbard"
   
 ### To create a domain-based attribute  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **System Administration**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **System Administration**.  
   
 2.  On the **Manage Models** page, click a model, and then click **Entities**.  
   

@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Database Snapshot (Transact-SQL)
-  The only way to create a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database snapshot is to use [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] does not support the creation of database snapshots.  
+  The only way to create a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database snapshot is to use [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] does not support the creation of database snapshots.  
   
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
@@ -25,7 +25,7 @@ manager: "jhubbard"
 ###  <a name="Prerequisites"></a> Prerequisites  
  The source database, which can use any recovery model, must meet the following prerequisites:  
   
--   The server instance must be running an edition of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that supports database snapshot. For information about support for database snapshots in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   The server instance must be running an edition of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that supports database snapshot. For information about support for database snapshots in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
   
 -   The source database must be online, unless the database is a mirror database within a database mirroring session.  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 -   The creation date and time of the snapshot, a sequence number, or some other information, such as time of day, to distinguish sequential snapshots on a given database.  
   
- For example, consider a series of snapshots for the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database. Three daily snapshots are created at 6-hour intervals between 6 A.M. and 6 P.M., based on a 24-hour clock. Each daily snapshot is kept for 24 hours before being dropped and replaced by a new snapshot of the same name. Note that each snapshot name indicates the hour, but not the day:  
+ For example, consider a series of snapshots for the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database. Three daily snapshots are created at 6-hour intervals between 6 A.M. and 6 P.M., based on a 24-hour clock. Each daily snapshot is kept for 24 hours before being dropped and replaced by a new snapshot of the same name. Note that each snapshot name indicates the hour, but not the day:  
   
 ```  
 AdventureWorks_snapshot_0600  
@@ -79,7 +79,7 @@ AdventureWorks_snapshot_evening
 **Note!** To revert to a database snapshot, you need to delete any other snapshots from that database.  
   
 ####  <a name="Client_Connections"></a> Best Practice: Client Connections to a Database Snapshot  
- To use a database snapshot, clients need to know where to find it. Users can read from one database snapshot while another is being created or deleted. However, when you substitute a new snapshot for an existing one, you need to redirect clients to the new snapshot. Users can manually connect to a database snapshot by means of [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. However, to support a production environment, you should create a programmatic solution that transparently directs report-writing clients to the latest database snapshot of the database.  
+ To use a database snapshot, clients need to know where to find it. Users can read from one database snapshot while another is being created or deleted. However, when you substitute a new snapshot for an existing one, you need to redirect clients to the new snapshot. Users can manually connect to a database snapshot by means of [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. However, to support a production environment, you should create a programmatic solution that transparently directs report-writing clients to the latest database snapshot of the database.  
   
 
   

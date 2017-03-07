@@ -30,7 +30,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # SQLXML 4.0 .NET Framework Support - Using DiffGrams to Modify Data
-  The DiffGram format is introduced in the **DataSet** component of the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] .NET Framework. Within the .NET Framework, you can create DiffGrams and use them to modify data in tables in a Microsoft [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database.  
+  The DiffGram format is introduced in the **DataSet** component of the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] .NET Framework. Within the .NET Framework, you can create DiffGrams and use them to modify data in tables in a Microsoft [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] database.  
   
 > [!NOTE]  
 >  This section provides a brief introduction to DiffGrams and examples of how to use them. It is assumed that you are familiar with DiffGrams in the .NET Framework. In this documentation, the primary focus is on DiffGram issues that are specific to SQLXML.  

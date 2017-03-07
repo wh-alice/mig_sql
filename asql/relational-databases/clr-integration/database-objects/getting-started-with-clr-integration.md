@@ -30,10 +30,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Getting Started with CLR Integration
-  This topic provides an overview of the namespaces and libraries required to compile database objects using the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] integration with the .NET Framework common language runtime (CLR). The topic also shows you how to write, compile, and run a simple CLR stored procedure written in [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Visual C#.  
+  This topic provides an overview of the namespaces and libraries required to compile database objects using the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] integration with the .NET Framework common language runtime (CLR). The topic also shows you how to write, compile, and run a simple CLR stored procedure written in [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Visual C#.  
   
 ## Required Namespaces  
- The components required to develop basic CLR database objects are installed with [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. CLR integration functionality is exposed in an assembly called system.data.dll, which is part of the .NET Framework. This assembly can be found in the Global Assembly Cache (GAC) as well as in the .NET Framework directory. A reference to this assembly is typically added automatically by both command line tools and [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Visual Studio, so there is no need to add it manually.  
+ The components required to develop basic CLR database objects are installed with [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. CLR integration functionality is exposed in an assembly called system.data.dll, which is part of the .NET Framework. This assembly can be found in the Global Assembly Cache (GAC) as well as in the .NET Framework directory. A reference to this assembly is typically added automatically by both command line tools and [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Visual Studio, so there is no need to add it manually.  
   
  The system.data.dll assembly contains the following namespaces, which are required for compiling CLR database objects:  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
  `System.Data.SqlTypes`  
   
 ## Writing A Simple "Hello World" Stored Procedure  
- Copy and paste the following Visual C# or [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Visual Basic code into a text editor, and save it in a file named "helloworld.cs" or "helloworld.vb".  
+ Copy and paste the following Visual C# or [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Visual Basic code into a text editor, and save it in a file named "helloworld.cs" or "helloworld.vb".  
   
 ```c#  
 using System;  
@@ -82,12 +82,12 @@ End Class
   
 ```  
   
- This simple program contains a single static method on a public class. This method uses two new classes, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** and **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, for creating managed database objects to output a simple text message. The method also assigns the string "Hello world!" as the value of an out parameter. This method can be declared as a stored procedure in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and then run in the same manner as a [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] stored procedure.  
+ This simple program contains a single static method on a public class. This method uses two new classes, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** and **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, for creating managed database objects to output a simple text message. The method also assigns the string "Hello world!" as the value of an out parameter. This method can be declared as a stored procedure in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], and then run in the same manner as a [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] stored procedure.  
   
- Compile this program as a library, load it into [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and run it as a stored procedure.  
+ Compile this program as a library, load it into [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], and run it as a stored procedure.  
   
 ## Compile the "Hello World" stored procedure  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] installs the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] .NET Framework redistribution files by default. These files include csc.exe and vbc.exe, the command-line compilers for Visual C# and Visual Basic programs. In order to compile our sample, you must modify your path variable to point to the directory containing csc.exe or vbc.exe. The following is the default installation path of the .NET Framework.  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] installs the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] .NET Framework redistribution files by default. These files include csc.exe and vbc.exe, the command-line compilers for Visual C# and Visual Basic programs. In order to compile our sample, you must modify your path variable to point to the directory containing csc.exe or vbc.exe. The following is the default installation path of the .NET Framework.  
   
 ```  
 C:\Windows\Microsoft.NET\Framework\(version)  
@@ -116,11 +116,11 @@ vbc /target:library helloworld.vb
  These commands launch the Visual C# or Visual Basic compiler using the /target option to specify building a library DLL.  
   
 ## Loading and Running the "Hello World" Stored Procedure in SQL Server  
- Once the sample procedure has successfully compiled, you can test it in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. To do this, open [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and create a new query, connecting to a suitable test database (for example, the AdventureWorks sample database).  
+ Once the sample procedure has successfully compiled, you can test it in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. To do this, open [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] and create a new query, connecting to a suitable test database (for example, the AdventureWorks sample database).  
   
- The ability to execute common language runtime (CLR) code is set to OFF by default in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The CLR code can be enabled by using the **sp_configure** system stored procedure. For more information, see [Enabling CLR Integration](../Topic/Enabling%20CLR%20Integration.md).  
+ The ability to execute common language runtime (CLR) code is set to OFF by default in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. The CLR code can be enabled by using the **sp_configure** system stored procedure. For more information, see [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
   
- We will need to create the assembly so we can access the stored procedure. For this example, we will assume that you have created the helloworld.dll assembly in the C:\ directory. Add the following [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statement to your query.  
+ We will need to create the assembly so we can access the stored procedure. For this example, we will assume that you have created the helloworld.dll assembly in the C:\ directory. Add the following [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statement to your query.  
   
 ```  
 CREATE ASSEMBLY helloworld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE  
@@ -139,7 +139,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
- Once the procedure has been created, it can be run just like a normal stored procedure written in [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]. Execute the following command:  
+ Once the procedure has been created, it can be run just like a normal stored procedure written in [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]. Execute the following command:  
   
 ```  
 DECLARE @J nchar(25)  
@@ -147,7 +147,7 @@ EXEC hello @J out
 PRINT @J  
 ```  
   
- This should result in the following output in the [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] messages window.  
+ This should result in the following output in the [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] messages window.  
   
 ```  
 Hello world!  

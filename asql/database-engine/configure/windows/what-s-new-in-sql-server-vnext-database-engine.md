@@ -15,7 +15,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # What&#39;s New in SQL Server vNext (Database Engine)
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../../../analysis-services/includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../../../a9notintoc/includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
 **Note:** SQL Server vNext also includes the features added in SQL Server 2016 service packs. For those items, see [What's New in SQL Server 2016 (Database Engine)](../../../database-engine/configure/windows/what-s-new-in-sql-server-2016-database-engine.md).
 
@@ -27,8 +27,8 @@ manager: "jhubbard"
 - Temporal Tables Retention Policy support added,
 - New DMV SYS.DM_DB_STATS_HISTOGRAM
 - Online non-clustered columnstore index buill and rebuild support added
-- 5 new dynamic management views to return information about Linux process. For more information, see [Linux Process Dynamic Management Views](../../../relational-databases/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md).   
-- [sys.dm_db_stats_histogram (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys.dm-db-stats-histogram-transact-sql.md) is added for examining statistics.
+- 5 new dynamic management views to return information about Linux process. For more information, see [Linux Process Dynamic Management Views](../../../relational-databases/reference/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md).   
+- [sys.dm_db_stats_histogram (Transact-SQL)](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-stats-histogram-transact-sql.md) is added for examining statistics.
 
 ## SQL Server Database Engine (CTP 1.2)
 
@@ -55,7 +55,7 @@ manager: "jhubbard"
 
 - Database **COMPATIBILITY_LEVEL** 140 has been added.   Customers running in this level will get the latest language features and query optimizer behaviors. This includes changes in each pre-release version Microsoft releases.
 - Improvements to the way incremental statistics update thresholds are computed (140 compat mode required).
-- [sys.dm_exec_query_statistics_xml](../../../relational-databases/system-dynamic-management-views/sys.dm-exec-query-statistics-xml-transact-sql.md) is added.
+- [sys.dm_exec_query_statistics_xml](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-exec-query-statistics-xml-transact-sql.md) is added.
 - We have added many performance and language enhancements to In-Memory Tables:
     - `sp_spaceused` is now supported for in-memory tables.
     - `sp_rename` is now supported for native modules.
@@ -68,8 +68,8 @@ manager: "jhubbard"
 - Clustered Columnstore Indexes now support LOB columns (nvarchar(max), varchar(max), varbinary(max)).
 - The [STRING_AGG](../../../t-sql/functions/string-agg-transact-sql.md) aggregate function has been added.  
 - New Permissions: `DATABASE SCOPED CREDENTIAL` is now a class of securable, supporting `CONTROL`, `ALTER`, `REFERENCES`, `TAKE OWNERSHIP`, and `VIEW DEFINITION` permissions. `ADMINISTER DATABASE BULK OPERATIONS` which is restricted to SQL Database is now visible in `sys.fn_builtin_permissions`.   
-- The [sys.dm_os_host_info](../../../relational-databases/system-dynamic-management-views/sys.dm-os-host-info-transact-sql.md) DMV is added to provide operating system information for both Windows and Linux.   
-- The database roles are created with R Services for managing permissions associated with packages. For more information, see [R Package management for SQL Server](R%20Package%20Management%20for%20SQL%20Server%20R%20Services.md).
+- The [sys.dm_os_host_info](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-os-host-info-transact-sql.md) DMV is added to provide operating system information for both Windows and Linux.   
+- The database roles are created with R Services for managing permissions associated with packages. For more information, see [R Package management for SQL Server](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
  
 <a name="InMemory_CodeSamples"/> 
 ## Code Samples for new In-Memory Enhancements

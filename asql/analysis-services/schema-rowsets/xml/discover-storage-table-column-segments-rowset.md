@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS Rowset
-  Provides information at the column and segment level about storage tables used by an Analysis Services database running in tabular or [!INCLUDE[ssGemini](../../../analysis-services/includes/ssgemini-md.md)] mode. This rowset is primarily used for troubleshooting and analysis.  
+  Provides information at the column and segment level about storage tables used by an Analysis Services database running in tabular or [!INCLUDE[ssGemini](../../../a9notintoc/includes/ssgemini-md.md)] mode. This rowset is primarily used for troubleshooting and analysis.  
   
  **Applies to:** tabular models  
   
@@ -45,7 +45,7 @@ manager: "erikre"
 |**VERTIPAQ_STATE**|**DBTYPE_WSTR**||The state of the VertiPaq compression for this column segment. The value is one of the following:<br /><br /> SKIPPED – The VertiPaq compression was skipped.<br /><br /> COMPLETED – The VertiPaq compression completed successfully.<br /><br /> TIMEBOXED – The VertiPaq compression was timeboxed.|  
   
 ## Using ADOMD.NET to return the rowset  
- When using ADOMD.NET and the schema rowset to retrieve metadata, you can use either the GUID or string to reference a schema rowset object in the GetSchemaDataSet method. For more information, see [Working with Schema Rowsets in ADOMD.NET](../Topic/Working%20with%20Schema%20Rowsets%20in%20ADOMD.NET.md).  
+ When using ADOMD.NET and the schema rowset to retrieve metadata, you can use either the GUID or string to reference a schema rowset object in the GetSchemaDataSet method. For more information, see [Working with Schema Rowsets in ADOMD.NET](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets.md).  
   
  The following table provides the GUID and string values that identify this rowset.  
   

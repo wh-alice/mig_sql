@@ -31,11 +31,11 @@ manager: "jhubbard"
  This transformation has one input and multiple outputs. It does not support an error output.  
   
 ## Configuration of the Multicast Transformation  
- You can set properties through [!INCLUDE[ssIS](../../../analysis-services/instances/includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../../../a9retired/includes/ssis-md.md)] Designer or programmatically.  
   
  For information about the properties that you can set in the **Multicast Transformation Editor** dialog box, see [Multicast Transformation Editor](../../../integration-services/data-flow/transformations/multicast-transformation-editor.md).  
   
- For information about the properties that you can set programmatically, see [Common Properties](../Topic/Common%20Properties.md).  
+ For information about the properties that you can set programmatically, see [Common Properties](../../../a9retired/common-properties.md).  
   
 ## Related Tasks  
  For information about how to set properties of this component, see [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  

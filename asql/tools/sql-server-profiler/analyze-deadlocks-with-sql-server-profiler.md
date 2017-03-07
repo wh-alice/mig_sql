@@ -24,9 +24,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Analyze Deadlocks with SQL Server Profiler
-  Use [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] to identify the cause of a deadlock. A deadlock occurs when there is a cyclic dependency between two or more threads, or processes, for some set of resources within SQL Server. Using [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)], you can create a trace that records, replays, and displays deadlock events for analysis.  
+  Use [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] to identify the cause of a deadlock. A deadlock occurs when there is a cyclic dependency between two or more threads, or processes, for some set of resources within SQL Server. Using [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)], you can create a trace that records, replays, and displays deadlock events for analysis.  
   
- To trace deadlock events, add the **Deadlock graph** event class to a trace. This event class populates the **TextData** data column in the trace with XML data about the process and objects that are involved in the deadlock. [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] can extract the XML document to a deadlock XML (.xdl) file which you can view later in SQL Server Management Studio. You can configure [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] to extract **Deadlock graph** events to a single file that contains all **Deadlock graph** events, or to separate files. This extraction can be done in any of the following ways:  
+ To trace deadlock events, add the **Deadlock graph** event class to a trace. This event class populates the **TextData** data column in the trace with XML data about the process and objects that are involved in the deadlock. [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] can extract the XML document to a deadlock XML (.xdl) file which you can view later in SQL Server Management Studio. You can configure [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] to extract **Deadlock graph** events to a single file that contains all **Deadlock graph** events, or to separate files. This extraction can be done in any of the following ways:  
   
 -   At trace configuration time, using the **Events Extraction Settings** tab. Note that this tab does not appear until you select the **Deadlock graph** event on the **Events Selection** tab.  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
 -   Individual events can also be extracted and saved by right-clicking a specific event and choosing **Extract Event Data**.  
   
 ## Deadlock Graphs  
- [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] and [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] use a deadlock wait-for graph to describe a deadlock. The deadlock wait-for graph contains process nodes, resource nodes, and edges representing the relationships between the processes and the resources. The components of wait-for graphs are defined in the following table:  
+ [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] and [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] use a deadlock wait-for graph to describe a deadlock. The deadlock wait-for graph contains process nodes, resource nodes, and edges representing the relationships between the processes and the resources. The components of wait-for graphs are defined in the following table:  
   
  Process node  
  A thread that performs a task; for example, INSERT, UPDATE, or DELETE.  

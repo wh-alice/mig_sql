@@ -39,7 +39,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  To create a relational index, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md). For information about how to create a spatial index, see [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -145,18 +145,18 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF or *fillfactor* is not specified  
  The intermediate-level pages are filled to near capacity, leaving sufficient space for at least one row of the maximum size the index can have, considering the set of keys on the intermediate pages.  
   
- The PAD_INDEX option is useful only when FILLFACTOR is specified, because PAD_INDEX uses the percentage specified by FILLFACTOR. If the percentage specified for FILLFACTOR is not large enough to allow for one row, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] internally overrides the percentage to allow for the minimum. The number of rows on an intermediate index page is never less than two, regardless of how low the value of *fillfactor*.  
+ The PAD_INDEX option is useful only when FILLFACTOR is specified, because PAD_INDEX uses the percentage specified by FILLFACTOR. If the percentage specified for FILLFACTOR is not large enough to allow for one row, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] internally overrides the percentage to allow for the minimum. The number of rows on an intermediate index page is never less than two, regardless of how low the value of *fillfactor*.  
   
  FILLFACTOR **=***fillfactor*  
- Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] should make the leaf level of each index page during index creation or rebuild. *fillfactor* must be an integer value from 1 to 100. The default is 0. If *fillfactor* is 100 or 0, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] creates indexes with leaf pages filled to capacity.  
+ Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] should make the leaf level of each index page during index creation or rebuild. *fillfactor* must be an integer value from 1 to 100. The default is 0. If *fillfactor* is 100 or 0, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] creates indexes with leaf pages filled to capacity.  
   
 > [!NOTE]  
 >  Fill factor values 0 and 100 are the same in all respects.  
   
- The FILLFACTOR setting applies only when the index is created or rebuilt. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] does not dynamically keep the specified percentage of empty space in the pages. To view the fill factor setting, use the [sys.indexes](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md) catalog view.  
+ The FILLFACTOR setting applies only when the index is created or rebuilt. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] does not dynamically keep the specified percentage of empty space in the pages. To view the fill factor setting, use the [sys.indexes](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md) catalog view.  
   
 > [!IMPORTANT]  
->  Creating a clustered index with a FILLFACTOR less than 100 affects the amount of storage space the data occupies because the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] redistributes the data when it creates the clustered index.  
+>  Creating a clustered index with a FILLFACTOR less than 100 affects the amount of storage space the data occupies because the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] redistributes the data when it creates the clustered index.  
   
  For more information, see [Specify Fill Factor for an Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
@@ -186,18 +186,18 @@ CREATE [ PRIMARY ] XML INDEX index_name
  The index type cannot be changed by using DROP_EXISTING. Also, a primary XML index cannot be redefined as a secondary XML index, or vice versa.  
   
  ONLINE **=OFF**  
- Specifies that underlying tables and associated indexes are not available for queries and data modification during the index operation. In this version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], online index builds are not supported for XML indexes. If this option is set to ON for a XML index, an error is raised. Either omit the ONLINE option or set ONLINE to OFF.  
+ Specifies that underlying tables and associated indexes are not available for queries and data modification during the index operation. In this version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], online index builds are not supported for XML indexes. If this option is set to ON for a XML index, an error is raised. Either omit the ONLINE option or set ONLINE to OFF.  
   
  An offline index operation that creates, rebuilds, or drops a XML index, acquires a Schema modification (Sch-M) lock on the table. This prevents all user access to the underlying table for the duration of the operation.  
   
 > [!NOTE]  
->  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
  Specifies whether row locks are allowed. The default is ON.  
   
  ON  
- Row locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] determines when row locks are used.  
+ Row locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] determines when row locks are used.  
   
  OFF  
  Row locks are not used.  
@@ -206,7 +206,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  Specifies whether page locks are allowed. The default is ON.  
   
  ON  
- Page locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] determines when page locks are used.  
+ Page locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] determines when page locks are used.  
   
  OFF  
  Page locks are not used.  
@@ -231,12 +231,12 @@ CREATE [ PRIMARY ] XML INDEX index_name
  For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]  
->  Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## Remarks  
  Computed columns derived from **xml** data types can be indexed either as a key or included nonkey column as long as the computed column data type is allowable as an index key column or nonkey column. You cannot create a primary XML index on a computed **xml** column.  
   
- To view information about XML indexes, use the [sys.xml_indexes](../../relational-databases/system-catalog-views/sys.xml-indexes-transact-sql.md) catalog view.  
+ To view information about XML indexes, use the [sys.xml_indexes](../../relational-databases/reference/system-catalog-views/sys.xml-indexes-transact-sql.md) catalog view.  
   
  For more information about XML indexes, see [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
@@ -290,9 +290,9 @@ GO
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
  [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md)   
- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.index-columns-transact-sql.md)   
- [sys.xml_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.xml-indexes-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md)   
+ [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.index-columns-transact-sql.md)   
+ [sys.xml_indexes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.xml-indexes-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   

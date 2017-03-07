@@ -15,8 +15,8 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Client Protocols (SQL Server Configuration Manager)
-  To configure the order that protocols are used by the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] clients on this computer, right-click **ClientProtocols** in the console pane, and then click **Properties**, or right-click the a protocol in the details pane, and then click **Order**.  
+  To configure the order that protocols are used by the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] clients on this computer, right-click **ClientProtocols** in the console pane, and then click **Properties**, or right-click the a protocol in the details pane, and then click **Order**.  
   
- To configure the properties of the client protocols used by the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] clients on this computer, in the console pane click **ClientProtocols**, in the details pane right-click the desired protocol, and then click **Properties**.  
+ To configure the properties of the client protocols used by the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] clients on this computer, in the console pane click **ClientProtocols**, in the details pane right-click the desired protocol, and then click **Properties**.  
   
   

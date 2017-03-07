@@ -32,9 +32,9 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -45,7 +45,7 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
   
 ## Arguments  
  [**N**]**'***language***'** | **@***language_var*  
- Is the name of the language as stored in [sys.syslanguages](../../relational-databases/system-compatibility-views/sys.syslanguages-transact-sql.md). This argument can be either Unicode or DBCS converted to Unicode. To specify a language in Unicode, use **N'***language***'**. If specified as a variable, the variable must be **sysname**.  
+ Is the name of the language as stored in [sys.syslanguages](../../relational-databases/reference/system-compatibility-views/sys.syslanguages-transact-sql.md). This argument can be either Unicode or DBCS converted to Unicode. To specify a language in Unicode, use **N'***language***'**. If specified as a variable, the variable must be **sysname**.  
   
 ## Remarks  
  The setting of SET LANGUAGE is set at execute or run time and not at parse time.  
@@ -72,8 +72,8 @@ GO
   
 ## See Also  
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [syslanguages](../../relational-databases/system-compatibility-views/sys.syslanguages-transact-sql.md)   
- [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)   
+ [syslanguages](../../relational-databases/reference/system-compatibility-views/sys.syslanguages-transact-sql.md)   
+ [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-helplanguage-transact-sql.md)   
  [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

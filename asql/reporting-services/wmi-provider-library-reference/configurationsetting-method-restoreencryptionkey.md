@@ -60,7 +60,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
 ## Remarks  
  If an entry already exists for the report server in the report server database, it is deleted. The new entry is then created using the specified encryption key and the report server’s public key.  
   
- The method is most effective when called after the [DeleteEncryptionKey](../Topic/DeleteEncryptionKey%20Method%20\(WMI%20MSReportServer_ConfigurationSetting\).md) method, which clears the list of encryption keys.  
+ The method is most effective when called after the [DeleteEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptionkey.md) method, which clears the list of encryption keys.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../reporting-services/wmi-provider-library-reference/includes/ssrswminmspca-md.md)]  

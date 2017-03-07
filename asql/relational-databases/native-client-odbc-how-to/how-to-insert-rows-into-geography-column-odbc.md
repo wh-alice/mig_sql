@@ -15,26 +15,26 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # How to: Insert Rows into Geography Column (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   This sample inserts two rows into a table with a geography column from a WellKnownBinary (WKB) using 2 different bindings (SQLCCHAR and SQLCBINARY). Then it selects one row from that table and uses ::STAsText() to display it.The WKB is 0x01010000000700ECFAD03A4C4001008000B5DF07C0 and the application prints to the console: POINT(56.4595 -2.9842).  
   
  This sample does not require an ODBC data source, but the sample runs, by default, on the local instance of SQL Server.  
   
- This sample will not work with any version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)].  
+ This sample will not work with any version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)].  
   
  For more information about spatial storage, see [Spatial Data &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ## Example  
- The first ([!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]) code listing creates a table used by this sample.  
+ The first ([!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]) code listing creates a table used by this sample.  
   
  Compile the second (C++) code listing with odbc32.lib and user32.lib. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   
  If you will build and run this sample as a 32-bit application on a 64-bit operating system, you must create the ODBC data source with the ODBC Administrator in %windir%\SysWOW64\odbcad32.exe.  
   
- This sample connects to your computer's default [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. To connect to a named instance, change the definition of the ODBC data source to specify the instance using the following format: server\namedinstance. By default, [!INCLUDE[ssExpress](../../database-engine/configure/windows/includes/ssexpress-md.md)] installs to a named instance.  
+ This sample connects to your computer's default [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. To connect to a named instance, change the definition of the ODBC data source to specify the instance using the following format: server\namedinstance. By default, [!INCLUDE[ssExpress](../../a9notintoc/includes/ssexpress-md.md)] installs to a named instance.  
   
- The third ([!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]) code listing deletes the table used by this sample.  
+ The third ([!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]) code listing deletes the table used by this sample.  
   
 ```  
 use tempdb  

@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Keep Identity Values When Bulk Importing Data (SQL Server)
-Data files that contain identity values can be bulk imported into an instance of Microsoft SQL Server.  By default, the values for the identity column in the data file that is imported are ignored and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] assigns unique values automatically.  The unique values are based on the seed and increment values that are specified during table creation.
+Data files that contain identity values can be bulk imported into an instance of Microsoft SQL Server.  By default, the values for the identity column in the data file that is imported are ignored and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] assigns unique values automatically.  The unique values are based on the seed and increment values that are specified during table creation.
 
 If the data file does not contain values for the identifier column in the table, use a format file to specify that the identifier column in the table should be skipped when importing data.  See [Use a Format File to Skip a Table Column (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md) for additional information.
 
@@ -28,7 +28,7 @@ If the data file does not contain values for the identifier column in the table,
 |[Keep Identity Values](#keep_identity)<br />[Example Test Conditions](#etc)<br />&emsp;&#9679;&emsp;[Sample Table](#sample_table)<br />&emsp;&#9679;&emsp;[Sample Data File](#sample_data_file)<br />&emsp;&#9679;&emsp;[Sample Non-XML Format File](#nonxml_format_file)<br />[Examples](#examples)<br />&emsp;&#9679;&emsp;[Using bcp and Keeping Identity Values without a Format File](#bcp_identity)<br />&emsp;&#9679;&emsp;[Using bcp and Keeping Identity Values with a Non-XML Format File](#bcp_identity_fmt)<br />&emsp;&#9679;&emsp;[Using bcp and Generated Identity Values without a Format File](#bcp_default)<br />&emsp;&#9679;&emsp;[Using bcp and Generated Identity Values with a Non-XML Format File](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[Using BULK INSERT and Keeping Identity Values without a Format File](#bulk_identity)<br />&emsp;&#9679;&emsp;[Using BULK INSERT and Keeping Identity Values with a Non-XML Format File](#bulk_identity_fmt)<br />&emsp;&#9679;&emsp;[Using BULK INSERT and Generated Identity Values without a Format File](#bulk_default)<br />&emsp;&#9679;&emsp;[Using BULK INSERT and Generated Identity Values with a Non-XML Format File](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[Using OPENROWSET and Keeping Identity Values with a Non-XML Format File](#openrowset_identity_fmt)<br />&emsp;&#9679;&emsp;[Using OPENROWSET and Generated Identity Values with a Non-XML Format File](#openrowset_default_fmt)<br /><p>                                                                                                                                                                                                                  </p>|
 
 ## Keep Identity Values <a name="keep_identity"></a>  
-To prevent [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from assigning identity values while bulk importing data rows into a table, use the appropriate keep-identity command qualifier.  When you specify a keep-identity qualifier, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses the identity values in the data file.  These qualifiers are as follows:
+To prevent [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] from assigning identity values while bulk importing data rows into a table, use the appropriate keep-identity command qualifier.  When you specify a keep-identity qualifier, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses the identity values in the data file.  These qualifiers are as follows:
 
 |Command|Keep-identity qualifier|Qualifier type|  
 |-------------|------------------------------|--------------------|  
@@ -36,7 +36,7 @@ To prevent [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/s
 |BULK INSERT|KEEPIDENTITY|Argument|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|KEEPIDENTITY|Table hint|  
    
- For more information, see [bcp Utility](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md), [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md), [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md), and [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+ For more information, see [bcp Utility](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md), [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md), [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md), and [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
 
 > [!NOTE]
 >  To create an automatically incrementing number that can be used in multiple tables or that can be called from applications without referencing any table, see [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md).
@@ -45,7 +45,7 @@ To prevent [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/s
 The examples in this topic are based on the table, data file, and format file defined below.
 
 ### **Sample Table**<a name="sample_table"></a>
-The script below creates a test database and a table named `myIdentity`.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+The script below creates a test database and a table named `myIdentity`.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 CREATE DATABASE TestDatabase;
 GO
@@ -169,7 +169,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
   
 ### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Keeping Identity Values without a Format File**<a name="bulk_identity"></a>
-**KEEPIDENTITY** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+**KEEPIDENTITY** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -188,7 +188,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
 ### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_identity_fmt"></a>
-**KEEPIDENTITY** and the **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+**KEEPIDENTITY** and the **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -206,7 +206,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
 ### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Generated Identity Values without a Format File**<a name="bulk_default"></a>
-Using defaults.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+Using defaults.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -224,7 +224,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
 ### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
-Using defaults and **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+Using defaults and **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -241,7 +241,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
 ### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_identity_fmt"></a>
-**KEEPIDENTITY** table hint and **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+**KEEPIDENTITY** table hint and **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -261,7 +261,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
  
 ### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_default_fmt"></a>
-Using defaults and **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+Using defaults and **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -322,6 +322,6 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)  
+ [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  
 [Format Files for Importing or Exporting Data (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   

@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 ## Task List  
   
--   In [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent](../../analysis-services/data-mining/includes/ssiscurrent-md.md)] package that has the ODBC destination.  
+-   In [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent](../../a9retired/includes/ssiscurrent-md.md)] package that has the ODBC destination.  
   
 -   On the **Data Flow** tab, double-click the ODBC destination.  
   

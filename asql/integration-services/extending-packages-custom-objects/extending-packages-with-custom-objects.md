@@ -17,15 +17,15 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Extending Packages with Custom Objects
-  If you find that the components provided in [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] do not meet your requirements, you can extend the power of [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] by coding your own extensions. You have two discrete options for extending your packages: you can write code within the powerful wrappers provided by the Script task and the Script component, or you can create custom [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] extensions from scratch by deriving from the base classes provided by the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] object model.  
+  If you find that the components provided in [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] do not meet your requirements, you can extend the power of [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] by coding your own extensions. You have two discrete options for extending your packages: you can write code within the powerful wrappers provided by the Script task and the Script component, or you can create custom [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] extensions from scratch by deriving from the base classes provided by the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] object model.  
   
  This section explores the more advanced of the two options — extending packages with custom objects.  
   
- When your custom [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] solution requires more flexibility than the Script task and the Script component provide, or when you need a component that you can reuse in multiple packages, the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] object model lets you build custom tasks, data flow components, and other package objects in managed code from the ground up.  
+ When your custom [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] solution requires more flexibility than the Script task and the Script component provide, or when you need a component that you can reuse in multiple packages, the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] object model lets you build custom tasks, data flow components, and other package objects in managed code from the ground up.  
   
 ## In This Section  
  [Developing Custom Objects for Integration Services](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)  
- Discusses the custom objects that can be created for [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)], and summarizes the essential steps and settings.  
+ Discusses the custom objects that can be created for [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)], and summarizes the essential steps and settings.  
   
  [Persisting Custom Objects](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)  
  Discusses the default persistence of custom objects, and the process of implementing custom persistence.  
@@ -50,14 +50,14 @@ manager: "jhubbard"
   
 ## Reference  
  [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)  
- Lists the predefined [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] error codes with their symbolic names and descriptions.  
+ Lists the predefined [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] error codes with their symbolic names and descriptions.  
   
 ## Related Sections  
  [Extending Packages with Scripting](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  Discusses how to extend the control flow by using the Script task, or extend the data flow by using the Script component.  
   
  [Building Packages Programmatically](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
- Describes how to create, configure, run, load, save, and manage [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] packages programmatically.  
+ Describes how to create, configure, run, load, save, and manage [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] packages programmatically.  
   
 ## See Also  
  [Comparing Scripting Solutions and Custom Objects](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)   

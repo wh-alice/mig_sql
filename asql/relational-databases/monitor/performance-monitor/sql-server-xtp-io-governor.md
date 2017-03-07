@@ -15,7 +15,7 @@ ms.author: "v-dagir"
 manager: "jhubbard"
 ---
 # SQL Server XTP IO Governor
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 The SQL Server XTP IO Governor performance object contains counters related to the In-Memory OLTP IO Rate Governor.
 

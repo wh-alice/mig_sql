@@ -23,21 +23,21 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Native Client ODBC Data Sources
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  A [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data source name (DSN) identifies an ODBC data source containing all of the information that an ODBC application needs to connect to a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database on a specific server. There are two ways you can define an ODBC data source name:  
+  A [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data source name (DSN) identifies an ODBC data source containing all of the information that an ODBC application needs to connect to a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database on a specific server. There are two ways you can define an ODBC data source name:  
   
 -   On a client computer, open Administrative Tools in Control Panel, and double-click **Data Sources (ODBC)**. This will open the ODBC Data Source Administrator, which you can use to create a DSN.  
   
 -   In an ODBC application, call [SQLConfigDataSource](../../relational-databases/extended-stored-procedures-reference/sqlconfigdatasource.md).  
   
- A [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data source contains:  
+ A [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data source contains:  
   
 -   The name of the data source.  
   
--   Any information needed to connect to a specific instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   Any information needed to connect to a specific instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
--   The default database to use on a specific instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (optional).  
+-   The default database to use on a specific instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] (optional).  
   
 -   Settings such as which ANSI options to use, whether to log performance statistics, and so on (optional).  
   

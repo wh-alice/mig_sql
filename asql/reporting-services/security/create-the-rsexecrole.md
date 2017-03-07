@@ -18,7 +18,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Create the RSExecRole
-  [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] uses a predefined database role called **RSExecRole** to grant report server permissions to the report server database. The **RSExecRole** role is created automatically with the report server database. As a rule, you should never modify it or assign other users to the role. However, when you move a report server database to a new or different [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)], must re-create the role in the Master and MSDB system databases.  
+  [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] uses a predefined database role called **RSExecRole** to grant report server permissions to the report server database. The **RSExecRole** role is created automatically with the report server database. As a rule, you should never modify it or assign other users to the role. However, when you move a report server database to a new or different [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)], must re-create the role in the Master and MSDB system databases.  
   
  Using the following instructions, you will perform the following steps:  
   
@@ -31,22 +31,22 @@ manager: "erikre"
   
 ## Before you start  
   
--   Back up the encryption keys so that you can restore them after the database is moved. This is step does not directly affect your ability to create and provision the **RSExecRole**, but you must have a backup of the keys in order to verify your work. For more information, see [Back Up and Restore Reporting Services Encryption Keys](../Topic/Back%20Up%20and%20Restore%20Reporting%20Services%20Encryption%20Keys.md).  
+-   Back up the encryption keys so that you can restore them after the database is moved. This is step does not directly affect your ability to create and provision the **RSExecRole**, but you must have a backup of the keys in order to verify your work. For more information, see [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install/windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
--   Verify you are logged on as a user account that has **sysadmin** permissions on the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance.  
+-   Verify you are logged on as a user account that has **sysadmin** permissions on the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance.  
   
--   Verify [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent service is installed and running on the instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] instance that you plan to use.  
+-   Verify [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent service is installed and running on the instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] instance that you plan to use.  
   
 -   Attach the reportservertempdb and reportserver databases. You are not required to attach the databases to create the actual role, but they must be attached before you can test your work.  
   
  The instructions for manually creating the **RSExecRole** are intended to be used within the context of migrating a report server installation. Important tasks such as backing up and moving the report server database are not addressed in this topic, but are documented in the Database Engine documentation.  
   
 ## Create RSExecRole in Master  
- [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] uses extended stored procedures for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent service to support scheduled operations. The following steps explain how to grant Execute permissions for the procedures to the **RSExecRole** role.  
+ [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] uses extended stored procedures for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent service to support scheduled operations. The following steps explain how to grant Execute permissions for the procedures to the **RSExecRole** role.  
   
 #### To create RSExecRole in the Master system database using Management Studio  
   
-1.  Start [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] and connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] instance that hosts the report server database.  
+1.  Start [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] and connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] instance that hosts the report server database.  
   
 2.  Open **Databases**.  
   
@@ -186,9 +186,9 @@ manager: "erikre"
 ## Move the Report Server Database  
  After you create the roles, you can move the report server database to new SQL Server instance. For more information, see [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
- If you are upgrading the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] to [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], you can upgrade it before or after moving the database.  
+ If you are upgrading the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] to [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], you can upgrade it before or after moving the database.  
   
- The report server database will be upgraded to the [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] automatically when the report server connects to it. There are no specific steps required for upgrading the database.  
+ The report server database will be upgraded to the [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] automatically when the report server connects to it. There are no specific steps required for upgrading the database.  
   
 ## Restore Encryption Keys and Verify Your Work  
  If you have attached the report server databases, you should now be able to complete the following steps to verify your work.  
@@ -228,7 +228,7 @@ manager: "erikre"
 ## See Also  
  [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install/windows/reporting-services-configuration-manager-native-mode.md)   
- [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../Topic/Create%20a%20Native%20Mode%20Report%20Server%20Database%20%20\(SSRS%20Configuration%20Manager\).md)   
- [Back Up and Restore Reporting Services Encryption Keys](../Topic/Back%20Up%20and%20Restore%20Reporting%20Services%20Encryption%20Keys.md)  
+ [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install/windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   The AdventureWorks sample database. For more information, see [AdventureWorks Sample Databases](http://msftdbprodsamples.codeplex.com/).  
   
--   Microsoft [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client. For more information, see [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
+-   Microsoft [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client. For more information, see [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 -   MDAC 2.6 or later  
   

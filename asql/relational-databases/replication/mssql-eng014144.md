@@ -25,19 +25,19 @@ manager: "jhubbard"
 |Product Name|SQL Server|  
 |Event ID|14144|  
 |Event Source|MSSQLSERVER|  
-|Component|[!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]|  
+|Component|[!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)]|  
 |Symbolic Name||  
 |Message Text|Cannot drop Subscriber '%s'. There are subscriptions for it in the publication database '%s'.|  
   
 ## Explanation  
- A [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance that is configured as a Subscriber cannot be removed from the role of Subscriber while there are active subscriptions configured for the instance.  
+ A [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance that is configured as a Subscriber cannot be removed from the role of Subscriber while there are active subscriptions configured for the instance.  
   
 ## User Action  
- Drop all associated subscriptions before attempting to change the Subscriber status of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance:  
+ Drop all associated subscriptions before attempting to change the Subscriber status of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance:  
   
-1.  Execute [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) in the publication database at the Publisher to find subscriptions.  
+1.  Execute [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-helpsubscription-transact-sql.md) in the publication database at the Publisher to find subscriptions.  
   
-2.  Execute [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md) in the publication database to drop subscriptions.  
+2.  Execute [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-dropsubscription-transact-sql.md) in the publication database to drop subscriptions.  
   
 ## See Also  
  [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   

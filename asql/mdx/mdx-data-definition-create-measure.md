@@ -15,7 +15,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Data Definition - CREATE MEASURE
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Creates a measure in a Tabular Model.  
   
@@ -43,7 +43,7 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
   
  The CREATE MEASURE statement can only be used inside of a MDX script definition; see [MdxScript Element &#40;ASSL&#41;](../analysis-services/scripting/objects/mdxscript-element-assl.md).  
   
- You can also define a calculated member for use by a single query. To define a calculated member that is limited to a single query, you use the WITH clause in the SELECT statement. For more information, see [Building Measures in MDX](../Topic/Building%20Measures%20in%20MDX.md).  
+ You can also define a calculated member for use by a single query. To define a calculated member that is limited to a single query, you use the WITH clause in the SELECT statement. For more information, see [Building Measures in MDX](../analysis-services/multidimensional-models/mdx/mdx-building-measures.md).  
   
 ## See Also  
  [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  

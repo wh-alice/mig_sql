@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Detach a Database
-  This topic describes how to detach a database in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. The detached files remain and can be reattached by using CREATE DATABASE with the FOR ATTACH or FOR ATTACH_REBUILD_LOG option. The files can be moved to another server and attached there.  
+  This topic describes how to detach a database in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. The detached files remain and can be reattached by using CREATE DATABASE with the FOR ATTACH or FOR ATTACH_REBUILD_LOG option. The files can be moved to another server and attached there.  
   
  **In This Topic**  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 #### To detach a database  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] Object Explorer, connect to the instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] and then expand the instance.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] Object Explorer, connect to the instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] and then expand the instance.  
   
 2.  Expand **Databases**, and select the name of the user database you want to detach.  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
      By default, the detach operation retains any out-of-date optimization statistics when detaching the database; to update the existing optimization statistics, click this check box.  
   
      **Keep Full-Text Catalogs**  
-     By default, the detach operation keeps any full-text catalogs that are associated with the database. To remove them, clear the **Keep Full-Text Catalogs** check box. This option appears only when you are upgrading a database from [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)].  
+     By default, the detach operation keeps any full-text catalogs that are associated with the database. To remove them, clear the **Keep Full-Text Catalogs** check box. This option appears only when you are upgrading a database from [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)].  
   
      **Status**  
      Displays one of the following states: **Ready** or **Not ready**.  
@@ -95,7 +95,7 @@ manager: "jhubbard"
   
 #### To detach a database  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -107,6 +107,6 @@ EXEC sp_detach_db 'AdventureWorks2012', 'true';
   
 ## See Also  
  [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
+ [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-detach-db-transact-sql.md)  
   
   

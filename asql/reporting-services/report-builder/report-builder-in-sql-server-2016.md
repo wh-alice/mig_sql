@@ -21,7 +21,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Report Builder in SQL Server 2016
-  [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] is a tool for authoring paginated reports, for business users who prefer to work in a stand-alone environment instead of using Report Designer in Visual Studio.  When you design a paginated report, you're creating a report definition that specifies where to get the data, which data to get, and how to display the data. When you run the report, the report processor takes the report definition you have specified, retrieves the data, and combines it with the report layout to generate the report. You can preview your report in [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] and publish your report to a [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report server in native mode or  in SharePoint integrated mode, where others can run it.  
+  [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] is a tool for authoring paginated reports, for business users who prefer to work in a stand-alone environment instead of using Report Designer in Visual Studio.  When you design a paginated report, you're creating a report definition that specifies where to get the data, which data to get, and how to display the data. When you run the report, the report processor takes the report definition you have specified, retrieves the data, and combines it with the report layout to generate the report. You can preview your report in [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] and publish your report to a [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] report server in native mode or  in SharePoint integrated mode, where others can run it.  
   
  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)  
   
@@ -31,21 +31,21 @@ manager: "erikre"
   
 ##  <a name="JumpStartReptCreation"></a> Jump-Start Report Creation  
   
--   **Start with a shared dataset**. Shared datasets are queries based on a shared data source and saved to a [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report server in native mode or  in SharePoint integrated mode.  
+-   **Start with a shared dataset**. Shared datasets are queries based on a shared data source and saved to a [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] report server in native mode or  in SharePoint integrated mode.  
   
 -   **Start with the Table, Matrix, or Chart wizard**. Choose a data source connection, drag and drop fields to create a dataset query, select a layout and style, and customize your report.  
   
--   **Start with the Map wizard** to create reports that display aggregated data against a geographic or geometric background. Map data can be spatial data from a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] query or an Environmental Systems Research Institute, Inc. (ESRI) shapefile. You can also add a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Bing map tile background.  
+-   **Start with the Map wizard** to create reports that display aggregated data against a geographic or geometric background. Map data can be spatial data from a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] query or an Environmental Systems Research Institute, Inc. (ESRI) shapefile. You can also add a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Bing map tile background.  
   
--   **Start your report with report parts**. Report parts are report items that have been published separately to a [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report server in native mode or  in SharePoint integrated mode. Report parts can be reused in other reports. Report items such as tables, matrices, charts, and images can be published as report parts.  
+-   **Start your report with report parts**. Report parts are report items that have been published separately to a [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] report server in native mode or  in SharePoint integrated mode. Report parts can be reused in other reports. Report items such as tables, matrices, charts, and images can be published as report parts.  
   
 ##  <a name="DesignRept"></a> Design Your Report  
   
 -   **Create paginated reports with table, matrix, chart, and free-form report layouts.** Create table reports for column-based data, matrix reports (like cross-tab or PivotTable reports) for summarized data, chart reports for graphical data, and free-form reports for anything else. Reports can embed other reports and charts, together with lists, graphics, and controls for dynamic Web-based applications.  
   
--   **Report from a variety of data sources.** Build reports using data from any data source type that has a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)]-managed data provider, OLE DB provider, or ODBC data source. You can create reports that use relational and multidimensional data from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], Oracle, Hyperion, and other databases. You can use an XML data processing extension to retrieve data from any XML data source. You can use table-valued functions to design custom data sources.  
+-   **Report from a variety of data sources.** Build reports using data from any data source type that has a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)]-managed data provider, OLE DB provider, or ODBC data source. You can create reports that use relational and multidimensional data from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], Oracle, Hyperion, and other databases. You can use an XML data processing extension to retrieve data from any XML data source. You can use table-valued functions to design custom data sources.  
   
--   **Modify existing reports.** By using [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)], you can customize and update reports that were created in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)]Report Designer.  
+-   **Modify existing reports.** By using [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)], you can customize and update reports that were created in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)]Report Designer.  
   
 -   **Modify your data** by filtering, grouping, and sorting data, or by adding formulas or expressions.  
   
@@ -70,16 +70,16 @@ manager: "erikre"
   
 ##  <a name="InThisSection"></a> In This Section  
  [What's New in Reporting Services and Report Builder for SQL Server 2016](What's%20New%20in%20Reporting%20Services%20\(SSRS\).md)  
-  Describes the new features in this version of [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] and [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)].  
+  Describes the new features in this version of [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] and [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)].  
   
  [Tutorial: Creating a Quick Chart Report Offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
- Introduces [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] and the wizards available to help you create reports. The tutorial provides a set of data for you to work with so you do not need to connect to a data source to get started.  
+ Introduces [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] and the wizards available to help you create reports. The tutorial provides a set of data for you to work with so you do not need to connect to a data source to get started.  
   
  [Planning a Report &#40;Report Builder&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  Provides information on what you should consider before you start to build your report.  
   
  [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
- Defines key concepts used in throughout [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] documentation.  
+ Defines key concepts used in throughout [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] documentation.  
   
  [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  Explains the different panes and regions of report design view.  
@@ -88,7 +88,7 @@ manager: "erikre"
  Explains the different panes and regions of shared dataset design view.  
   
  [Keyboard Shortcuts &#40;Report Builder&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
- Outlines the shortcut keys available for navigating and designing reports in [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)].  
+ Outlines the shortcut keys available for navigating and designing reports in [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)].  
   
 ## See Also  
  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)  

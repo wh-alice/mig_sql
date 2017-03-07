@@ -20,7 +20,7 @@ ms.author: "carlasab"
 manager: "erikre"
 ---
 # Creating a Custom Report Item Run-Time Component
-  The custom report item run-time component is implemented as a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] component using any CLS-compliant language, and is called by the report processor at run time. You define the properties for the run-time component in the design environment by modifying the custom report item's corresponding design-time component.  
+  The custom report item run-time component is implemented as a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] component using any CLS-compliant language, and is called by the report processor at run time. You define the properties for the run-time component in the design environment by modifying the custom report item's corresponding design-time component.  
   
  For a sample of a fully implemented custom report item, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   

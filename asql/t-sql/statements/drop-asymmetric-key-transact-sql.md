@@ -32,7 +32,7 @@ manager: "jhubbard"
 
   Removes an asymmetric key from the database.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -51,7 +51,7 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
 ## Remarks  
  An asymmetric key with which a symmetric key in the database has been encrypted, or to which a user or login is mapped, cannot be dropped. Before you drop such a key, you must drop any user or login that is mapped to the key. You must also drop or change any symmetric key encrypted with the asymmetric key. You can use the DROP ENCRYPTION option of [ALTER SYMMETRIC KEY](../../t-sql/statements/alter-symmetric-key-transact-sql.md) to remove encryption by an asymmetric key.  
   
- Metadata of asymmetric keys can be accessed by using the [sys.asymmetric_keys](../../relational-databases/system-catalog-views/sys.asymmetric-keys-transact-sql.md) catalog view. The keys themselves cannot be directly viewed from inside the database.  
+ Metadata of asymmetric keys can be accessed by using the [sys.asymmetric_keys](../../relational-databases/reference/system-catalog-views/sys.asymmetric-keys-transact-sql.md) catalog view. The keys themselves cannot be directly viewed from inside the database.  
   
  If the asymmetric key is mapped to an Extensible Key Management (EKM) key on an EKM device and the REMOVE PROVIDER KEY option is not specified, the key will be dropped from the database but not the device. A warning will be issued.  
   

@@ -27,11 +27,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # COUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the number of items in a group. COUNT works like the [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) function. The only difference between the two functions is their return values. COUNT always returns an **int** data type value. COUNT_BIG always returns a **bigint** data type value.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -70,7 +70,7 @@ COUNT ( { expression | * } ) OVER ( [ <partition_by_clause> ] )
  Specifies that all rows should be counted to return the total number of rows in a table. COUNT(\*) takes no parameters and cannot be used with DISTINCT. COUNT(\*) does not require an *expression* parameter because, by definition, it does not use information about any particular column. COUNT(*) returns the number of rows in a specified table without getting rid of duplicates. It counts each row separately. This includes rows that contain null values.  
   
  OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_clause* ] **)**  
- *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the logical order in which the operation is performed. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../Topic/OVER%20Clause%20\(Transact-SQL\).md).  
+ *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the logical order in which the operation is performed. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## Return Types  
  **int**  
@@ -89,7 +89,7 @@ COUNT ( { expression | * } ) OVER ( [ <partition_by_clause> ] )
 ## Examples  
   
 ### A. Using COUNT and DISTINCT  
- The following example lists the number of different titles that an employee who works at [!INCLUDE[ssSampleDBCoFull](../../analysis-services/data-mining/includes/sssampledbcofull-md.md)] can hold.  
+ The following example lists the number of different titles that an employee who works at [!INCLUDE[ssSampleDBCoFull](../../a9notintoc/includes/sssampledbcofull-md.md)] can hold.  
   
 ```  
 SELECT COUNT(DISTINCT Title)  
@@ -106,7 +106,7 @@ GO
  `(1 row(s) affected)`  
   
 ### B. Using COUNT(*)  
- The following example finds the total number of employees who work at [!INCLUDE[ssSampleDBCoFull](../../analysis-services/data-mining/includes/sssampledbcofull-md.md)].  
+ The following example finds the total number of employees who work at [!INCLUDE[ssSampleDBCoFull](../../a9notintoc/includes/sssampledbcofull-md.md)].  
   
 ```  
 SELECT COUNT(*)  
@@ -123,7 +123,7 @@ GO
  `(1 row(s) affected)`  
   
 ### C. Using COUNT(*) with other aggregates  
- The following example shows that `COUNT(*)` can be combined with other aggregate functions in the select list. The example uses the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example shows that `COUNT(*)` can be combined with other aggregate functions in the select list. The example uses the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 SELECT COUNT(*), AVG(Bonus)  
@@ -141,7 +141,7 @@ GO
  `(1 row(s) affected)`  
   
 ### C. Using the OVER clause  
- The following example uses the MIN, MAX, AVG and COUNT functions with the OVER clause to provide aggregated values for each department in the `HumanResources.Department` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example uses the MIN, MAX, AVG and COUNT functions with the OVER clause to provide aggregated values for each department in the `HumanResources.Department` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 SELECT DISTINCT Name  
@@ -183,7 +183,7 @@ Tool Design                   8.62                  29.8462               23.505
  (16 row(s) affected)  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### D. Using COUNT and DISTINCT  
  The following example lists the number of different titles that an employee who works at a specific company can hold.  
@@ -285,7 +285,7 @@ WHERE SalesOrderNumber IN (N'SO53115',N'SO55981');
 ## See Also  
  [Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [COUNT_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/count-big-transact-sql.md)   
- [OVER Clause &#40;Transact-SQL&#41;](../Topic/OVER%20Clause%20\(Transact-SQL\).md)  
+ [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

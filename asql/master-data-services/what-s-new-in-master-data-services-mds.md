@@ -18,17 +18,17 @@ manager: "jhubbard"
 # What&#39;s New in Master Data Services (MDS)
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../integration-services/includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-  This topic summarizes the changes and updates in the [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)] release of [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)]. 
+  This topic summarizes the changes and updates in the [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)] release of [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)]. 
   
- For an overview of how you organize data in [!INCLUDE[ssMDSshort_md](../analysis-services/includes/ssmdsshort-md.md)], see [Master Data Services Overview](../master-data-services/master-data-services-overview-mds.md). 
+ For an overview of how you organize data in [!INCLUDE[ssMDSshort_md](../a9notintoc/includes/ssmdsshort-md.md)], see [Master Data Services Overview](../master-data-services/master-data-services-overview-mds.md). 
   
  **To install Master Data Services, set up the database and Website, and deploy the sample models, see** [Master Data Services Overview (MDS)](../master-data-services/master-data-services-overview-mds.md).  
   
  **Download**  
   
--   To download [!INCLUDE[ssSQL15](../analysis-services/powershell/includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
+-   To download [!INCLUDE[ssSQL15](../a9notintoc/includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
   
--   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)] already installed.  
+-   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)] already installed.  
   
 ##  Improved Performance  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
      For more information, see [Create an Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)and [Data Compression](../relational-databases/data-compression/data-compression.md).  
   
--   The Dynamic Content Compression IIS feature is enabled, by default. This significantly reduces the size of the xml response and saves the network I/O, though CPU usage is increased. If you have CPU bound on the server, you can turn off data compression by adding the following setting to the [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] Web.config file.  
+-   The Dynamic Content Compression IIS feature is enabled, by default. This significantly reduces the size of the xml response and saves the network I/O, though CPU usage is increased. If you have CPU bound on the server, you can turn off data compression by adding the following setting to the [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] Web.config file.  
   
     ```  
     <configuration>  
@@ -71,17 +71,17 @@ manager: "jhubbard"
   
 ##  Improved Security  
   
- The new Super User function permission gives a user or group the same permissions as the Server Admin in the previous release of [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)]. The Super User permission can be assigned to multiple users and groups. In the previous release, the user who originally installed [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] was the server admin, and it was difficult to transfer this permission to another user or a group. For more information, see [Functional Area Permissions &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+ The new Super User function permission gives a user or group the same permissions as the Server Admin in the previous release of [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)]. The Super User permission can be assigned to multiple users and groups. In the previous release, the user who originally installed [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] was the server admin, and it was difficult to transfer this permission to another user or a group. For more information, see [Functional Area Permissions &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
  A user can now explicitly be assigned the Admin permission at the model level. This means that if the user is later assigned permissions in the model subtree, such as the entity level, he will not lose this Admin permission.  
   
- In this release of [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], we’re providing more levels of permissions by introducing the following new permissions: Read, Create, Update and Delete. For example, a user that has only the Update permission can now update the master data without creating or deleting the data. When you give a user the Create, Update or Delete permission, the user is automatically assigned the Read permission. You can also combine the Read, Create, Update and Delete permissions.  
+ In this release of [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], we’re providing more levels of permissions by introducing the following new permissions: Read, Create, Update and Delete. For example, a user that has only the Update permission can now update the master data without creating or deleting the data. When you give a user the Create, Update or Delete permission, the user is automatically assigned the Read permission. You can also combine the Read, Create, Update and Delete permissions.  
   
- When you upgrade to [!INCLUDE[ssSQL15](../analysis-services/powershell/includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], old permissions are converted to new permissions as shown in the following table.  
+ When you upgrade to [!INCLUDE[ssSQL15](../a9notintoc/includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], old permissions are converted to new permissions as shown in the following table.  
   
 |Permission in previous release|New permission|  
 |------------------------------------|--------------------|  
-|User who originally installs [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] has the Server Admin permission.|User has the Super User function permission|  
+|User who originally installs [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] has the Server Admin permission.|User has the Super User function permission|  
 |User has Update permissions at the model level and no permissions in the model subtree, and so is implicitly a model admin.|User has explicit Admin permissions at the model level.|  
 |User has Read-only permissions.|User has Read access permissions.|  
 |User has Update permissions.|User has all four access permissions: Create, Update, Delete, and Read.|  
@@ -109,7 +109,7 @@ manager: "jhubbard"
   
 ## Improved Troubleshooting  
   
- In [!INCLUDE[ssSQL15](../analysis-services/powershell/includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], features have been added to improve debugging and make it easier to troubleshoot issues. For more information, see [Tracing &#40;Master Data Services&#41;](../master-data-services/tracing-master-data-services.md).  
+ In [!INCLUDE[ssSQL15](../a9notintoc/includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], features have been added to improve debugging and make it easier to troubleshoot issues. For more information, see [Tracing &#40;Master Data Services&#41;](../master-data-services/tracing-master-data-services.md).  
   
 ## Improved Manageability  
   
@@ -225,7 +225,7 @@ manager: "jhubbard"
  The sample packages were updated to support new scenarios. For more information, see [SQL Server Samples: Model Deployment Packages (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
 ## See Also  
- [Master Data Services and Data Quality Services Features Supported by the Editions of SQL Server 2016](Master%20Data%20Services%20and%20Data%20Quality%20Services%20Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)  
+ [Master Data Services and Data Quality Services Features Supported by the Editions of SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [Deprecated Master Data Services Features](../master-data-services/deprecated-master-data-services-features.md)   
  [Discontinued Master Data Services Features](../master-data-services/discontinued-master-data-services-features.md)  
   

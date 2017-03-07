@@ -16,7 +16,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Implementing IDENTITY in a Memory-Optimized Table
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 IDENTITY is supported on a memory-optimized table, as long as the seed and increment are both 1 (which is the default). Identity columns with definition of IDENTITY(x, y) where x != 1 or y != 1 are not supported on memory-optimized tables.   
     

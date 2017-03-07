@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Full-Text Search
-  Full-Text Search in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSFull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] lets users and applications run full-text queries against character-based data in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] tables.
+  Full-Text Search in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSFull](../../a9retired/includes/sssdsfull-md.md)] lets users and applications run full-text queries against character-based data in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] tables.
   
 ## Basic tasks
 This topic provides an overview of Full-Text Search and describes its components and its architecture. If you prefer to get started right away, here are the basic tasks.
@@ -28,7 +28,7 @@ This topic provides an overview of Full-Text Search and describes its components
 -   [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md)
 
 > [!NOTE]
-> Full-Text Search is an optional component of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Database Engine. If you didn't select Full-Text Search when you installed SQL Server, run SQL Server Setup again to add it.
+> Full-Text Search is an optional component of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Database Engine. If you didn't select Full-Text Search when you installed SQL Server, run SQL Server Setup again to add it.
 
 ## Overview
 A full-text index includes one or more character-based columns in a table. These columns can have any of the following data types: **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, or **varbinary(max)** and **FILESTREAM**. Each full-text index indexes one or more columns from the table, and each column can use a specific language.  
@@ -52,7 +52,7 @@ A full-text index includes one or more character-based columns in a table. These
   
  Full-text queries are not case-sensitive. For example, searching for "Aluminum" or "aluminum" returns the same results.  
   
- Full-text queries use a small set of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] predicates (CONTAINS and FREETEXT) and functions (CONTAINSTABLE and FREETEXTTABLE). However, the search goals of a given business scenario influence the structure of the full-text queries. For example:  
+ Full-text queries use a small set of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] predicates (CONTAINS and FREETEXT) and functions (CONTAINSTABLE and FREETEXTTABLE). However, the search goals of a given business scenario influence the structure of the full-text queries. For example:  
   
 -   e-business—searching for a product on a website:  
   
@@ -63,7 +63,7 @@ A full-text index includes one or more character-based columns in a table. These
     AND product_cost < 200 ;  
     ```  
   
--   Recruitment scenario—searching for job candidates that have experience working with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]:  
+-   Recruitment scenario—searching for job candidates that have experience working with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]:  
   
     ```  
     SELECT candidate_name,SSN   
@@ -74,12 +74,12 @@ A full-text index includes one or more character-based columns in a table. These
  For more information, see [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md).  
   
 ##  <a name="like"></a> Compare Full-Text Search queries to the LIKE predicate
- In contrast to full-text search, the [LIKE](../Topic/LIKE%20\(Transact-SQL\).md) [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] predicate works on character patterns only. Also, you cannot use the LIKE predicate to query formatted binary data. Furthermore, a LIKE query against a large amount of unstructured text data is much slower than an equivalent full-text query against the same data. A LIKE query against millions of rows of text data can take minutes to return; whereas a full-text query can take only seconds or less against the same data, depending on the number of rows that are returned.  
+ In contrast to full-text search, the [LIKE](../Topic/LIKE%20\(Transact-SQL\).md) [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] predicate works on character patterns only. Also, you cannot use the LIKE predicate to query formatted binary data. Furthermore, a LIKE query against a large amount of unstructured text data is much slower than an equivalent full-text query against the same data. A LIKE query against millions of rows of text data can take minutes to return; whereas a full-text query can take only seconds or less against the same data, depending on the number of rows that are returned.  
   
 ##  <a name="architecture"></a> Full-Text Search architecture
  Full-text search architecture consists of the following processes:  
   
--   The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] process (sqlservr.exe).  
+-   The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] process (sqlservr.exe).  
   
 -   The filter daemon host process (fdhost.exe).  
   
@@ -90,7 +90,7 @@ A full-text index includes one or more character-based columns in a table. These
  ![full-text search architecture](../../relational-databases/search/media/ifts-arch.gif "full-text search architecture")  
 
 ###  <a name="sqlprocess"></a> SQL Server process  
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] process uses the following components for full-text search:  
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] process uses the following components for full-text search:  
   
 -   **User tables.** These tables contain the data to be full-text indexed.  
   
@@ -100,12 +100,12 @@ A full-text index includes one or more character-based columns in a table. These
   
 -   **Stoplist objects.** Stoplist objects contain a list of common words that are not useful for the search. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
--   **[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] query processor.** The query processor compiles and executes SQL queries. If a SQL query includes a full-text search query, the query is sent to the Full-Text Engine, both during compilation and during execution. The query result is matched against the full-text index.  
+-   **[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] query processor.** The query processor compiles and executes SQL queries. If a SQL query includes a full-text search query, the query is sent to the Full-Text Engine, both during compilation and during execution. The query result is matched against the full-text index.  
   
--   **Full-Text Engine.** The Full-Text Engine in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is fully integrated with the query processor. The Full-Text Engine compiles and executes full-text queries. As part of query execution, the Full-Text Engine might receive input from the thesaurus and stoplist.  
+-   **Full-Text Engine.** The Full-Text Engine in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is fully integrated with the query processor. The Full-Text Engine compiles and executes full-text queries. As part of query execution, the Full-Text Engine might receive input from the thesaurus and stoplist.  
 
     >[!NOTE]  
-    >  In [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] and later versions, the Full-Text Engine resides in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] process, rather than in a separate service. Integrating the Full-Text Engine into the Database Engine improved full-text manageability, optimization of mixed query, and overall performance.  
+    >  In [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] and later versions, the Full-Text Engine resides in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] process, rather than in a separate service. Integrating the Full-Text Engine into the Database Engine improved full-text manageability, optimization of mixed query, and overall performance.  
  
 -   **Index writer (indexer).** The index writer builds the structure that is used to store the indexed tokens.  
   
@@ -128,7 +128,7 @@ A full-text index includes one or more character-based columns in a table. These
 ###  <a name="indexing"></a> Full-Text indexing process  
  When a full-text population (also known as a crawl) is initiated, the Full-Text Engine pushes large batches of data into memory and notifies the filter daemon host. The host filters and word breaks the data and converts the converted data into inverted word lists. The full-text search then pulls the converted data from the word lists, processes the data to remove stopwords, and persists the word lists for a batch into one or more inverted indexes.  
   
- When indexing data stored in a **varbinary(max)** or **image** column, the filter, which implements the **IFilter** interface, extracts text based on the specified file format for that data (for example, [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Word). In some cases, the filter components require the **varbinary(max)**, or **image** data to be written out to the filterdata folder, instead of being pushed into memory.  
+ When indexing data stored in a **varbinary(max)** or **image** column, the filter, which implements the **IFilter** interface, extracts text based on the specified file format for that data (for example, [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Word). In some cases, the filter components require the **varbinary(max)**, or **image** data to be written out to the filterdata folder, instead of being pushed into memory.  
   
  As part of processing, the gathered text data is passed through a word breaker to separate the text into individual tokens, or keywords. The language used for tokenization is specified at the column level, or can be identified within **varbinary(max)**, **image**, or **xml** data by the filter component.  
   
@@ -140,14 +140,14 @@ A full-text index includes one or more character-based columns in a table. These
  The query processor passes the full-text portions of a query to the Full-Text Engine for processing. The Full-Text Engine performs word breaking and, optionally, thesaurus expansions, stemming, and stopword (noise-word) processing. Then the full-text portions of the query are represented in the form of SQL operators, primarily as streaming table-valued functions (STVFs). During query execution, these STVFs access the inverted index to retrieve the correct results. The results are either returned to the client at this point, or they are further processed before being returned to the client.  
 
 ## Full-text index architecture
-  The information in full-text indexes is used by the Full-Text Engine to compile full-text queries that can quickly search a table for particular words or combinations of words. A full-text index stores information about significant words and their location within one or more columns of a database table. A full-text index is a special type of token-based functional index that is built and maintained by the Full-Text Engine for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The process of building a full-text index differs from building other types of indexes. Instead of constructing a B-tree structure based on a value stored in a particular row, the Full-Text Engine builds an inverted, stacked, compressed index structure based on individual tokens from the text being indexed.  The size of a full-text index is limited only by the available memory resources of the computer on which the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running.  
+  The information in full-text indexes is used by the Full-Text Engine to compile full-text queries that can quickly search a table for particular words or combinations of words. A full-text index stores information about significant words and their location within one or more columns of a database table. A full-text index is a special type of token-based functional index that is built and maintained by the Full-Text Engine for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The process of building a full-text index differs from building other types of indexes. Instead of constructing a B-tree structure based on a value stored in a particular row, the Full-Text Engine builds an inverted, stacked, compressed index structure based on individual tokens from the text being indexed.  The size of a full-text index is limited only by the available memory resources of the computer on which the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running.  
   
- Beginning in [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)], the full-text indexes are integrated with the Database Engine, instead of residing in the file system as in previous versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For a new database, the full-text catalog is now a virtual object that does not belong to any filegroup; it is merely a logical concept that refers to a group of the full-text indexes. Note, however, that during upgrade of a [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] database, any full-text catalog that contains data files, a new filegroup is created; for more information, see [Upgrade Full-Text Search](../../relational-databases/search/upgrade-full-text-search.md).  
+ Beginning in [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)], the full-text indexes are integrated with the Database Engine, instead of residing in the file system as in previous versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For a new database, the full-text catalog is now a virtual object that does not belong to any filegroup; it is merely a logical concept that refers to a group of the full-text indexes. Note, however, that during upgrade of a [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] database, any full-text catalog that contains data files, a new filegroup is created; for more information, see [Upgrade Full-Text Search](../../relational-databases/search/upgrade-full-text-search.md).  
   
 Only one full-text index is allowed per table. For a full-text index to be created on a table, the table must have a single, unique nonnull column. You can build a full-text index on columns of type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**, and **varbinary(max)** can be indexed for full-text search. Creating a full-text index on a column whose data type is  **varbinary**, **varbinary(max)**, **image**, or **xml** requires that you specify a type column. A *type column* is a table column in which you store the file extension (.doc, .pdf, .xls, and so forth) of the document in each row.  
 
 ###  <a name="structure"></a> Full-text index structure  
- A good understanding of the structure of a full-text index will help you understand how the Full-Text Engine works. This topic uses the following excerpt of the **Document** table in [!INCLUDE[ssSampleDBCoShort](../../analysis-services/data-mining/includes/sssampledbcoshort-md.md)] as an example table. This excerpt shows only two columns, the **DocumentID** column and the **Title** column, and three rows from the table.  
+ A good understanding of the structure of a full-text index will help you understand how the Full-Text Engine works. This topic uses the following excerpt of the **Document** table in [!INCLUDE[ssSampleDBCoShort](../../a9notintoc/includes/sssampledbcoshort-md.md)] as an example table. This excerpt shows only two columns, the **DocumentID** column and the **Title** column, and three rows from the table.  
   
  For this example, we will assume that a full-text index has been created on the **Title** column.  
   
@@ -186,7 +186,7 @@ Only one full-text index is allowed per table. For a full-text index to be creat
   
  The **ColId** column contains a value that corresponds to a particular column that is full-text indexed.  
   
- The **DocId** column contains values for an eight-byte integer that maps to a particular full-text key value in a full-text indexed table. This mapping is necessary when the full-text key is not an integer data type. In such cases, mappings between full-text key values and **DocId** values are maintained in a separate table called the DocId Mapping table. To query for these mappings use the [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md) system stored procedure. To satisfy a search condition, DocId values from the above table need to be joined with the DocId Mapping table to retrieve rows from the base table being queried. If the full-text key value of the base table is an integer type, the value directly serves as the DocId and no mapping is necessary. Therefore, using integer full-text key values can help optimize full-text queries.  
+ The **DocId** column contains values for an eight-byte integer that maps to a particular full-text key value in a full-text indexed table. This mapping is necessary when the full-text key is not an integer data type. In such cases, mappings between full-text key values and **DocId** values are maintained in a separate table called the DocId Mapping table. To query for these mappings use the [sp_fulltext_keymappings](../../relational-databases/reference/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md) system stored procedure. To satisfy a search condition, DocId values from the above table need to be joined with the DocId Mapping table to retrieve rows from the base table being queried. If the full-text key value of the base table is an integer type, the value directly serves as the DocId and no mapping is necessary. Therefore, using integer full-text key values can help optimize full-text queries.  
   
  The **Occurrence** column contains an integer value. For each DocId value, there is a list of occurrence values that correspond to the relative word offsets of the particular keyword within that DocId. Occurrence values are useful in determining phrase or proximity matches, for example, phrases have numerically adjacent occurrence values. They are also useful in computing relevance scores; for example, the number of occurrences of a keyword in a DocId may be used in scoring.   
   
@@ -197,7 +197,7 @@ Only one full-text index is allowed per table. For a full-text index to be creat
 |----------------|-----------|  
 |3|Rear Reflector|  
   
- In the following example, which shows Fragment 2, the fragment contains newer data about DocId 3 compared to Fragment 1. Therefore, when the user queries for "Rear Reflector" the data from Fragment 2 is used for DocId 3. Each fragment is marked with a creation timestamp that can be queried by using the [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys.fulltext-index-fragments-transact-sql.md) catalog view.  
+ In the following example, which shows Fragment 2, the fragment contains newer data about DocId 3 compared to Fragment 1. Therefore, when the user queries for "Rear Reflector" the data from Fragment 2 is used for DocId 3. Each fragment is marked with a creation timestamp that can be queried by using the [sys.fulltext_index_fragments](../../relational-databases/reference/system-catalog-views/sys.fulltext-index-fragments-transact-sql.md) catalog view.  
   
  **Fragment 2**  
   
@@ -206,7 +206,7 @@ Only one full-text index is allowed per table. For a full-text index to be creat
 |Rear|1|3|1|  
 |Reflector|1|3|2|  
   
- As can be seen from Fragment 2, full-text queries need to query each fragment internally and discard older entries. Therefore, too many full-text index fragments in the full-text index can lead to substantial degradation in query performance. To reduce the number of fragments, reorganize the fulltext catalog by using the REORGANIZE option of the [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)[!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement. This statement performs a *master merge*, which merges the fragments into a single larger fragment and removes all obsolete entries from the full-text index.  
+ As can be seen from Fragment 2, full-text queries need to query each fragment internally and discard older entries. Therefore, too many full-text index fragments in the full-text index can lead to substantial degradation in query performance. To reduce the number of fragments, reorganize the fulltext catalog by using the REORGANIZE option of the [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)[!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement. This statement performs a *master merge*, which merges the fragments into a single larger fragment and removes all obsolete entries from the full-text index.  
   
  After being reorganized, the example index would contain the following rows:  
   
@@ -234,7 +234,7 @@ Only one full-text index is allowed per table. For a full-text index to be creat
 |Grouped within the same database into one or more full-text catalogs.|Not grouped.|  
 
 ##  <a name="components"></a> Full-Text search linguistic components and language support
- Full-text search supports almost 50 diverse languages, such as English, Spanish, Chinese, Japanese, Arabic, Bengali, and Hindi. For a complete list of the supported full-text languages, see [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-languages-transact-sql.md). Each of the columns contained in the full-text index is associated with a Microsoft Windows locale identifier (LCID) that equates to a language that is supported by full-text search. For example, LCID 1033 equates to U.S English, and LCID 2057 equates to British English. For each supported full-text language, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provides linguistic components that support indexing and querying full-text data that is stored in that language.  
+ Full-text search supports almost 50 diverse languages, such as English, Spanish, Chinese, Japanese, Arabic, Bengali, and Hindi. For a complete list of the supported full-text languages, see [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-languages-transact-sql.md). Each of the columns contained in the full-text index is associated with a Microsoft Windows locale identifier (LCID) that equates to a language that is supported by full-text search. For example, LCID 1033 equates to U.S English, and LCID 2057 equates to British English. For each supported full-text language, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] provides linguistic components that support indexing and querying full-text data that is stored in that language.  
   
  Language-specific components include the following:  
   
@@ -242,7 +242,7 @@ Only one full-text index is allowed per table. For a full-text index to be creat
   
 -   **Stoplists.** A system stoplist is provided that contains a basic set stopwords (also known as noise words). A *stopword* is a word that does not help the search and is ignored by full-text queries. For example, for the English locale words such as "a", "and", "is", and "the" are considered stopwords. Typically, you will need to configure one or more thesaurus files and stoplists. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
--   **Thesaurus files.** [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] also installs a thesaurus file for each full-text language, as well as a global thesaurus file. The installed thesaurus files are essentially empty, but you can edit them to define synonyms for a specific language or business scenario. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. For more information, see [Configure and Manage Thesaurus Files for Full-Text Search](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
+-   **Thesaurus files.** [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] also installs a thesaurus file for each full-text language, as well as a global thesaurus file. The installed thesaurus files are essentially empty, but you can edit them to define synonyms for a specific language or business scenario. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. For more information, see [Configure and Manage Thesaurus Files for Full-Text Search](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
 -   **Filters (iFilters).**  Indexing a document in a **varbinary(max)**, **image**, or **xml** data type column requires a filter to perform extra processing. The filter must be specific to the document type (.doc, .pdf, .xls, .xml, and so forth). For more information, see [Configure and Manage Filters for Search](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
   

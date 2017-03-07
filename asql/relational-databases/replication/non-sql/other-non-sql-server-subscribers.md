@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Other Non-SQL Server Subscribers
-  For a list of non-[!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Subscribers supported by [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)], see [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). This topic includes information about requirements for ODBC drivers and OLE DB providers.  
+  For a list of non-[!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Subscribers supported by [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)], see [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). This topic includes information about requirements for ODBC drivers and OLE DB providers.  
   
 ## ODBC Driver Requirements  
  The ODBC driver:  
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 -   **IDBProperties**  
   
- If the provider supports the **IDBInfo** interface, [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses the interface to retrieve information such as the quoted identifier character, maximum SQL statement length, and maximum number of characters in table and column names.  
+ If the provider supports the **IDBInfo** interface, [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] uses the interface to retrieve information such as the quoted identifier character, maximum SQL statement length, and maximum number of characters in table and column names.  
   
 ### Session Object Interfaces  
  The following interfaces are required:  
@@ -86,7 +86,7 @@ manager: "jhubbard"
   
 -   **ICommandWithParameters**  
   
- **IAccessor** is necessary to create parameter accessors. If the provider supports **IColumnRowset**, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses that interface to determine whether a column is an identity column.  
+ **IAccessor** is necessary to create parameter accessors. If the provider supports **IColumnRowset**, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] uses that interface to determine whether a column is an identity column.  
   
 ### Rowset Object Interfaces  
  The following interfaces are required:  

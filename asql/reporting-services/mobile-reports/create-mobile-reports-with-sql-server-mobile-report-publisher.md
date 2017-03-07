@@ -16,19 +16,19 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Create mobile reports with SQL Server Mobile Report Publisher
-Learn about [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] mobile reports, optimized for mobile devices and connected to on-premises data, with an assortment of data visualizations. 
+Learn about [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] mobile reports, optimized for mobile devices and connected to on-premises data, with an assortment of data visualizations. 
 
-> **Note:** Do you need to migrate Datazen Server content such as dashboards and KPIs to a SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] server? Try the [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
+> **Note:** Do you need to migrate Datazen Server content such as dashboards and KPIs to a SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] server? Try the [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
-With [!INCLUDE[PRODUCT_NAME](../../reporting-services/mobile-reports/includes/ss-mobilereptpub-long.md)], you can quickly create [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] mobile reports, optimized for mobile devices and a variety of other form factors. Mobile reports feature an assortment of visualizations, from time, category, and comparison charts, to treemaps and custom maps. 
+With [!INCLUDE[PRODUCT_NAME](../../a9retired/includes/ss-mobilereptpub-long.md)], you can quickly create [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] mobile reports, optimized for mobile devices and a variety of other form factors. Mobile reports feature an assortment of visualizations, from time, category, and comparison charts, to treemaps and custom maps. 
 
 * Connect your mobile reports to a range of data sources, including on-premises SQL Server and Analysis Services data. 
 * Lay out your mobile reports on a design surface with adjusting grid rows and columns, and flexible mobile report elements that scale well to any screen size. 
 * Then save these mobile reports to a Reporting Service server, and view and interact with them in a browser or in the Power BI mobile app on iPads, iPhones, Android phones, and Windows 10 devices.
   
-## Create [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]  mobile reports  
+## Create [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)]  mobile reports  
   
 These articles will help you get started.
 -  Download [SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkID=733527)  

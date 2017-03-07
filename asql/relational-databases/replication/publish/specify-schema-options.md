@@ -20,10 +20,10 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Specify Schema Options
-  This topic describes how to specify schema options in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]. When you are publishing a table or view, you can control the object creation options that are replicated for the published object. You can set these option when the article is created, and you can also change them at a later time. If you do not explicitly specify these options for an article, a default set of options will be defined.  
+  This topic describes how to specify schema options in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]. When you are publishing a table or view, you can control the object creation options that are replicated for the published object. You can set these option when the article is created, and you can also change them at a later time. If you do not explicitly specify these options for an article, a default set of options will be defined.  
   
 > [!NOTE]  
->  The default schema options when using replication stored procedures may differ from the default options when articles are added using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+>  The default schema options when using replication stored procedures may differ from the default options when articles are added using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
  **In This Topic**  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   For the complete list of schema options, see the **@schema_option** parameter of [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) and [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
+-   For the complete list of schema options, see the **@schema_option** parameter of [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-addarticle-transact-sql.md) and [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Specify schema options, such as whether to copy constraints and triggers to Subscribers, on the **Properties** tab of the **Article Properties - \<Article>** dialog box. This tab is available in the New Publication Wizard and the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) and [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
@@ -72,22 +72,22 @@ manager: "jhubbard"
 5.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
- Schema options are specified as a hexadecimal value that is the [| (Bitwise OR)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) result of one or more options. For more information, see [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) and [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
+ Schema options are specified as a hexadecimal value that is the [| (Bitwise OR)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) result of one or more options. For more information, see [sp_addarticle](../../../relational-databases/reference/system-stored-procedures/sp-addarticle-transact-sql.md) and [sp_addmergearticle](../../../relational-databases/reference/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
   
 > [!NOTE]  
 >  You must convert schema option values from **binary** to **int** before performing a bitwise operation. For more information, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 #### To specify schema options when defining an article for a snapshot or transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, the type of database object for **@type**, and the [| (Bitwise OR)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) result of one or more schema options for **@schema_option**. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  At the Publisher on the publication database, execute [sp_addarticle](../../../relational-databases/reference/system-stored-procedures/sp-addarticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, the type of database object for **@type**, and the [| (Bitwise OR)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) result of one or more schema options for **@schema_option**. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 #### To specify schema options when defining an article for a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, and the [| (Bitwise OR)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) result of one or more schema options for **@schema_option**. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  At the Publisher on the publication database, execute [sp_addmergearticle](../../../relational-databases/reference/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, and the [| (Bitwise OR)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) result of one or more schema options for **@schema_option**. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 #### To change schema options for an existing article in a snapshot or transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication** and the name of the article for **@article**. Note the value of the **schema_option** column in the result set.  
+1.  At the Publisher on the publication database, execute [sp_helparticle](../../../relational-databases/reference/system-stored-procedures/sp-helparticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication** and the name of the article for **@article**. Note the value of the **schema_option** column in the result set.  
   
 2.  Execute a [& (Bitwise AND)](../Topic/&%20\(Bitwise%20AND\)%20\(Transact-SQL\).md) operation using the value from step 1 and the desired schema option value to determine if the option is set.  
   
@@ -97,13 +97,13 @@ manager: "jhubbard"
   
 3.  If the option is not set, execute a [| (Bitwise OR)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) operation using the value from step 1 and the desired schema option value.  
   
-4.  At the Publisher on the publication database, execute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, the name of the article for **@article**, a value of **schema_option** for **@property**, and the hexadecimal result from step 3 for **@value**.  
+4.  At the Publisher on the publication database, execute [sp_changearticle](../../../relational-databases/reference/system-stored-procedures/sp-changearticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, the name of the article for **@article**, a value of **schema_option** for **@property**, and the hexadecimal result from step 3 for **@value**.  
   
 5.  Run the Snapshot Agent to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 #### To change schema options for an existing article in a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication** and the name of the article for **@article**. Note the value of the **schema_option** column in the result set.  
+1.  At the Publisher on the publication database, execute [sp_helpmergearticle](../../../relational-databases/reference/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication** and the name of the article for **@article**. Note the value of the **schema_option** column in the result set.  
   
 2.  Execute a [& (Bitwise AND)](../Topic/&%20\(Bitwise%20AND\)%20\(Transact-SQL\).md) operation using the value from step 1 and the desired schema option value to determine if the option is set.  
   
@@ -113,7 +113,7 @@ manager: "jhubbard"
   
 3.  If the option is not set, execute a [| (Bitwise OR)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) operation using the value from step 1 and the desired schema option value.  
   
-4.  At the Publisher on the publication database, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, the name of the article for **@article**, a value of **schema_option** for **@property**, and the hexadecimal result from step 3 for **@value**.  
+4.  At the Publisher on the publication database, execute [sp_changemergearticle](../../../relational-databases/reference/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, the name of the article for **@article**, a value of **schema_option** for **@property**, and the hexadecimal result from step 3 for **@value**.  
   
 5.  Run the Snapshot Agent to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   

@@ -57,7 +57,7 @@ public void InitializeReportServer(string InstallationID,
   
  The *InitializeReportServer* method must be called against a report server that already has access to the secure information so that it can decrypt the encryption key. The resulting encrypted encryption key is then stored in the report server database.  
   
- If the report server’s [IsInitialized](../Topic/IsInitialized%20Property%20\(WMI%20MSReportServer_ConfigurationSetting\).md) property is set to **true** when the InitializeReportServer method is called, the method returns success without trying to encrypt the encryption key.  
+ If the report server’s [IsInitialized](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md) property is set to **true** when the InitializeReportServer method is called, the method returns success without trying to encrypt the encryption key.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../reporting-services/wmi-provider-library-reference/includes/ssrswminmspca-md.md)]  

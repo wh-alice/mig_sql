@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Full Database Backup (SQL Server)
-  This topic describes how to create a full database backup in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], or PowerShell.  
+  This topic describes how to create a full database backup in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], or PowerShell.  
   
 >  For information on SQL Server backup to the Windows Azure Blob storage service, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   The BACKUP statement is not allowed in an explicit or implicit transaction.  
   
--   Backups created by more recent version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] cannot be restored in earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   Backups created by more recent version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] cannot be restored in earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 -   For and overview of, and deeper dive into, backup concepts and tasks, see [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md) before proceding.  
   
@@ -38,27 +38,27 @@ manager: "jhubbard"
   
 -   As a database increases in size full database backups take more time to finish and require more storage space. For a large database, you might want to supplement a full database backup with a series of *differential database backups*. For more information, see [Differential Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
--   Estimate the size of a full database backup by using the [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) system stored procedure.  
+-   Estimate the size of a full database backup by using the [sp_spaceused](../../relational-databases/reference/system-stored-procedures/sp-spaceused-transact-sql.md) system stored procedure.  
   
--   By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log and in the system event log. If you back up frequently, these success messages will accumulate quickly, resulting in huge error logs! This can make finding other messages difficult. In such cases you can suppress these backup log entries by using trace flag 3226 if none of your scripts depend on those entries. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md).  
+-   By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error log and in the system event log. If you back up frequently, these success messages will accumulate quickly, resulting in huge error logs! This can make finding other messages difficult. In such cases you can suppress these backup log entries by using trace flag 3226 if none of your scripts depend on those entries. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
 ###  <a name="Security"></a> Security  
- TRUSTWORTHY is set to OFF on a database backup. For information about how to set TRUSTWORTHY to ON, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+ TRUSTWORTHY is set to OFF on a database backup. For information about how to set TRUSTWORTHY to ON, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
- Beginning with [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] the **PASSWORD** and **MEDIAPASSWORD** options are discontinued for creating backups. You can still restore backups created with passwords.  
+ Beginning with [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] the **PASSWORD** and **MEDIAPASSWORD** options are discontinued for creating backups. You can still restore backups created with passwords.  
   
 ####  <a name="Permissions"></a> Permissions  
  BACKUP DATABASE and BACKUP LOG permissions default to members of the **sysadmin** fixed server role and the **db_owner** and **db_backupoperator** fixed database roles.  
   
- Ownership and permission problems on the backup device's physical file can interfere with a backup operation. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] must be able to read and write to the device; the account under which the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service runs **must** have write permissions. However, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, does not check file access permissions. Such problems on the backup device's physical file may not appear until the physical resource is accessed when the backup or restore is attempted.  
+ Ownership and permission problems on the backup device's physical file can interfere with a backup operation. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] must be able to read and write to the device; the account under which the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service runs **must** have write permissions. However, [sp_addumpdevice](../../relational-databases/reference/system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, does not check file access permissions. Such problems on the backup device's physical file may not appear until the physical resource is accessed when the backup or restore is attempted.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
->  When you specify a back up task by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], you can generate the corresponding [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) script by clicking the **Script** button and selecting a script destination.  
+>  When you specify a back up task by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], you can generate the corresponding [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) script by clicking the **Script** button and selecting a script destination.  
   
 ### Back up a database  
   
-1.  After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)], in **Object Explorer**, click the server name to expand the server tree.  
+1.  After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)], in **Object Explorer**, click the server name to expand the server tree.  
   
 2.  Expand **Databases**, and either select a user database or expand **System Databases** and select a system database.  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
      Note that after creating a full database backup, you can create a differential database backup; for more information, see [Create a Differential Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).  
   
-7.  Optionally, you can select the **Copy-only backup** checkbox to create a copy-only backup. A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backups. For more information, see [Copy-Only Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  A copy-only backup is not available for the **Differential** backup type.  
+7.  Optionally, you can select the **Copy-only backup** checkbox to create a copy-only backup. A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] backups. For more information, see [Copy-Only Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  A copy-only backup is not available for the **Differential** backup type.  
 
 8.  For **Backup component**, select the **Database** radio button.  
   
@@ -245,7 +245,7 @@ A stored access policy has been created with read, write, and list rights.  The 
   
     -   The backup device where the full database backup is written.  
   
-     The basic [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] syntax for a full database backup is:  
+     The basic [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] syntax for a full database backup is:  
   
      BACKUP DATABASE *database*  
   
@@ -290,7 +290,7 @@ A stored access policy has been created with read, write, and list rights.  The 
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
   
 #### **A. Backing up to a disk device**  
- The following example backs up the complete [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database to disk, by using `FORMAT` to create a new media set.  
+ The following example backs up the complete [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database to disk, by using `FORMAT` to create a new media set.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -304,7 +304,7 @@ GO
 ```  
   
 #### **B. Backing up to a tape device**  
- The following example backs up the complete [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database to tape, appending the backup to the previous backups.  
+ The following example backs up the complete [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database to tape, appending the backup to the previous backups.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -317,7 +317,7 @@ GO
 ```  
   
 #### **C. Backing up to a logical tape device**  
- The following example creates a logical backup device for a tape drive. The example then backs up the complete [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database to that device.  
+ The following example creates a logical backup device for a tape drive. The example then backs up the complete [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database to that device.  
   
 ```tsql  
 -- Create a logical backup device,   
@@ -372,7 +372,7 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
   
 -   [Restore a Database Backup Under the Simple Recovery Model &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
--   [Restore a Database to the Point of Failure Under the Full Recovery Model &#40;Transact-SQL&#41;](../Topic/Restore%20a%20Database%20to%20the%20Point%20of%20Failure%20Under%20the%20Full%20Recovery%20Model%20\(Transact-SQL\).md)  
+-   [Restore a Database to the Point of Failure Under the Full Recovery Model &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery-model.md)  
   
 -   [Restore a Database to a New Location &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
@@ -383,7 +383,7 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
 [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Back Up Database &#40;General Page&#41;](../../relational-databases/backup-restore/back-up-database-general-page.md)   
  [Back Up Database &#40;Backup Options Page&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)   

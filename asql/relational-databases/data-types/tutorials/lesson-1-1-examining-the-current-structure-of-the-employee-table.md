@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 1-1 - Examining the Current Structure of the Employee Table
-The sample [!INCLUDE[ssSampleDBobject](../../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database contains an **Employee** table in the **HumanResources** schema. To avoid changing the original table, this step makes a copy of the **Employee** table named **EmployeeDemo**. To simplify the example, you only copy five columns from the original table. Then, you query the **HumanResources.EmployeeDemo** table to review how the data is structured in a table without using the **hierarchyid** data type.  
+The sample [!INCLUDE[ssSampleDBobject](../../../a9retired/includes/sssampledbobject-md.md)] database contains an **Employee** table in the **HumanResources** schema. To avoid changing the original table, this step makes a copy of the **Employee** table named **EmployeeDemo**. To simplify the example, you only copy five columns from the original table. Then, you query the **HumanResources.EmployeeDemo** table to review how the data is structured in a table without using the **hierarchyid** data type.  
   
 ### To copy the Employee table  
   
@@ -72,7 +72,7 @@ Notice that the **ORDER BY** clause caused the output to list the direct reports
 In the next task, we will create a new table with a **hierarchyid** data type, and move the data into the new table.  
   
 ## Next Task in Lesson  
-[Populating a Table with Existing Hierarchical Data](../Topic/Populating%20a%20Table%20with%20Existing%20Hierarchical%20Data.md)  
+[Populating a Table with Existing Hierarchical Data](../../../relational-databases/data-types/tutorials/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)  
   
   
   

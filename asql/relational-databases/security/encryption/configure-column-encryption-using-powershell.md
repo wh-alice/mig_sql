@@ -15,7 +15,7 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Configure Column Encryption using PowerShell
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 This article provides the steps for setting the target Always Encrypted configuration for database columns using the [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx) cmdlet (in the *SqlServer* PowerShell module). The **Set-SqlColumnEncryption** cmdlet modifies both the schema of the target database as well as the data stored in the selected columns. The data stored in a column can be encrypted, re-encrypted or decrypted, depending the specified target encryption settings for the columns and the current encryption configuration.
 For more information about Always Encrypted support in the SqlServer PowerShell module, please see [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).

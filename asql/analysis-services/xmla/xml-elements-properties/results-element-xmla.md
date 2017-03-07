@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # results Element (XMLA)
-  Contains a collection of [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elements returned by the [Execute](../Topic/Execute%20Method%20\(XMLA\).md) method using the [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) command.  
+  Contains a collection of [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elements returned by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method using the [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) command.  
   
  **Namespace** http://schemas.microsoft.com/analysisservices/2003/xmla-multipleresults  
   
@@ -65,6 +65,6 @@ manager: "erikre"
  For non-transactional **Batch** commands, the **results** element contains one **root** element for each command executed by the **Batch** command, whether the command completes successfully or unsuccessfully. For transactional **Batch** commands, the **results** element contains only one **root** element, which contains the error information for the command that failed within the **Batch** command.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

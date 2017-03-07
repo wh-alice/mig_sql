@@ -15,7 +15,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Filter Dialog Box (MDS Add-in for Excel)
-  In the [!INCLUDE[ssMDSshort](../../analysis-services/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../analysis-services/includes/ssmdsxls-md.md)], use the **Filter** dialog box to narrow the list of MDS-managed data before loading it into Excel.  
+  In the [!INCLUDE[ssMDSshort](../../a9notintoc/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../a9notintoc/includes/ssmdsxls-md.md)], use the **Filter** dialog box to narrow the list of MDS-managed data before loading it into Excel.  
   
  This dialog box contains three sections: **Columns**, **Rows**, and **Summary**.  
   

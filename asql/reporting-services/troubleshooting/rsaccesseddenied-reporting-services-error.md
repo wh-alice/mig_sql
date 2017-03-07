@@ -18,11 +18,11 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # rsAccessedDenied - Reporting Services Error
-  The [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] error **rsAccessedDenied** occurs when a user does not have permission to perform an action. For, example, they do not have a role assignment that allows them to open a report or they did not open their browser with the required permissions.  
+  The [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] error **rsAccessedDenied** occurs when a user does not have permission to perform an action. For, example, they do not have a role assignment that allows them to open a report or they did not open their browser with the required permissions.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../analysis-services/includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Native mode &#124; SharePoint mode|  
+|**[!INCLUDE[applies](../../a9retired/includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] Native mode &#124; SharePoint mode|  
   
 -   If the error occurred while accessing the report server directly through a URL, the exception is mapped to an HTTP 401 error.  
   
@@ -34,10 +34,10 @@ manager: "erikre"
   
 |||  
 |-|-|  
-|**Product Name**|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|  
+|**Product Name**|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]|  
 |**Event ID**|rsAccessedDenied|  
 |**Event Source**|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
-|**Component**|[!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]|  
+|**Component**|[!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]|  
 |**Message Text**|The permissions granted to user 'mydomain\myAccount' are insufficient for performing this operation. (rsAccessDenied) (ReportingServicesLibrary)|  
   
 ## User Action  

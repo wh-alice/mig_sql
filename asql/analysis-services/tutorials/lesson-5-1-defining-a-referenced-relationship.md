@@ -41,7 +41,7 @@ Up to this point in the tutorial, each cube dimension that you defined was based
   
     In the **Edit Relationship** dialog box, notice that the **GeographyKey** column is the primary key in the **Geography** table and the foreign key in the **Reseller** table.  
   
-7.  Click **Cancel**, switch to Cube Designer for the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial cube, and then click the **Dimension Usage** tab.  
+7.  Click **Cancel**, switch to Cube Designer for the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial cube, and then click the **Dimension Usage** tab.  
   
     Notice that the **Geography** cube dimension does not currently have a relationship with either the **Internet Sales** measure group or the **Reseller Sales** measure group.  
   
@@ -61,7 +61,7 @@ Up to this point in the tutorial, each cube dimension that you defined was based
   
 11. In the **Select relationship type** list, select **Referenced**.  
   
-    You define a referenced relationship by specifying a dimension that is directly connected to the measure group table, called an *intermediate dimension*, that [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] can use to link the reference dimension to the fact table. You then specify the attribute that links the reference dimension to the intermediate dimension.  
+    You define a referenced relationship by specifying a dimension that is directly connected to the measure group table, called an *intermediate dimension*, that [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] can use to link the reference dimension to the fact table. You then specify the attribute that links the reference dimension to the intermediate dimension.  
   
 12. In the **Intermediate dimension** list, select **Reseller**.  
   
@@ -87,7 +87,7 @@ In the next task, you will solve this problem by defining an attribute that is b
   
     The Geography Key attribute in the Reseller dimension will only be used to link the Geography dimension to the Reseller Sales fact table. Because it will not be used for browsing, there is no value in defining this attribute hierarchy as visible. Additionally, ordering and optimizing the attribute hierarchy will only negatively affect processing performance. However, the attribute must be enabled to serve as the link between the two dimensions.  
   
-4.  Switch to Cube Designer for the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial cube, click the **Dimension Usage** tab, and then click the ellipsis button (**…**) at the intersection of the **Reseller Sales** measure group and the **Geography** cube dimension.  
+4.  Switch to Cube Designer for the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial cube, click the **Dimension Usage** tab, and then click the ellipsis button (**…**) at the intersection of the **Reseller Sales** measure group and the **Geography** cube dimension.  
   
 5.  In the **Select relationship type** list, select **Referenced**.  
   
@@ -111,7 +111,7 @@ In the next task, you will solve this problem by defining an attribute that is b
   
 1.  On the **Build** menu, click **Deploy Analysis Services Tutorial**.  
   
-2.  When deployment has successfully completed, click the **Browser** tab in Cube Designer for the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial cube, and then click the **Reconnect** button.  
+2.  When deployment has successfully completed, click the **Browser** tab in Cube Designer for the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial cube, and then click the **Reconnect** button.  
   
 3.  In the metadata pane, expand **Reseller Geography**, right-click **Geographies**, and then click **Add to Row Area**.  
   
@@ -120,7 +120,7 @@ In the next task, you will solve this problem by defining an attribute that is b
     ![Define Relationship dialog box](../../analysis-services/tutorials/media/l5-referencedrelationship-5.gif "Define Relationship dialog box")  
   
 ## Next Task in Lesson  
-[Defining a Fact Relationship](../Topic/Defining%20a%20Fact%20Relationship.md)  
+[Defining a Fact Relationship](../../analysis-services/tutorials/lesson-5-2-defining-a-fact-relationship.md)  
   
 ## See Also  
 [Attribute Relationships](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  

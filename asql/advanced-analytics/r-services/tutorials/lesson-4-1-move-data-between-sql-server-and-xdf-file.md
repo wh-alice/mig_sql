@@ -19,13 +19,13 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 4-1 - Move Data between SQL Server and XDF File
-When you are working in a local compute context, you have access to both local data files and the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database (defined as an *RxSqlServerData* data source).  
+When you are working in a local compute context, you have access to both local data files and the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] database (defined as an *RxSqlServerData* data source).  
   
-In this section, you'll learn how to get data and store it in a file on the local computer so that you can perform transformations on the data. When you're done, you'll use the data in the file to create a new [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table, by using *rxDataStep*.  
+In this section, you'll learn how to get data and store it in a file on the local computer so that you can perform transformations on the data. When you're done, you'll use the data in the file to create a new [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] table, by using *rxDataStep*.  
   
 ## Create a SQL Server Table from an XDF File  
 
-The *rxImport* function lets you import data from any supported data source to a local XDF file. Using a local file can be convenient if you want to do many different analyses on data that is stored in a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database, and you want to avoid running the same query over and over.  
+The *rxImport* function lets you import data from any supported data source to a local XDF file. Using a local file can be convenient if you want to do many different analyses on data that is stored in a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] database, and you want to avoid running the same query over and over.  
   
 For this exercise, you'll use the credit card fraud data again. In this scenario, you've been asked to do some extra analysis on users in the states of California, Oregon, and Washington. To be more efficient, you've decided to store data for just these states on your local computer and work with the variables gender, cardholder, state, and balance.  
   
@@ -42,7 +42,7 @@ CA |  OR  | WA
 -- | -- | --
  5 |  38  | 48 
   
-2.  Now you'll define the data you want to bring over from SQL Server, using a [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] query.  Later you'll use this variable as the *inData* argument for *rxImport*.  
+2.  Now you'll define the data you want to bring over from SQL Server, using a [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] query.  Later you'll use this variable as the *inData* argument for *rxImport*.  
   
     ```R  
     importQuery <- paste("SELECT gender,cardholder,balance,state FROM",  sqlFraudTable,  "WHERE (state = 5 OR state = 38 OR state = 48)")  
@@ -103,7 +103,7 @@ CA |  OR  | WA
     *Var 3: balance, Type: integer, Low/High: (0, 22463)*    
     *Var 4: state, Type: factor, no factor levels available*
   
-8.  You can now call various R functions to analyze the *localDs* object, just as you would with the source data on [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For example:  
+8.  You can now call various R functions to analyze the *localDs* object, just as you would with the source data on [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. For example:  
   
     ```R  
     rxSummary(~gender + cardholder + balance + state, data = localDS)    

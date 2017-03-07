@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Delete a Workload Group
-  You can delete a workload group or resource pool by using either [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or Transact-SQL.  
+  You can delete a workload group or resource pool by using either [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or Transact-SQL.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
 ##  <a name="DelWGObjEx"></a> Delete a Workload Group Using Object Explorer  
  **To delete a workload group by using Object Explorer**  
   
-1.  In[!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to and including **Resource Pools**.  
+1.  In[!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to and including **Resource Pools**.  
   
 2.  Recursively expand **Resource Pools** down to and including the **Workload Groups** node in the resource pool that contains the workload group to be deleted.  
   

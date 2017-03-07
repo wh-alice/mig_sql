@@ -20,7 +20,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Role Definitions - Predefined Roles
-  [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] installs with predefined roles that you can use to grant access to report server operations. Each predefined role describes a collection of related tasks. You can assign groups and user accounts to predefined roles to provide immediate access to report server operations.  
+  [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] installs with predefined roles that you can use to grant access to report server operations. Each predefined role describes a collection of related tasks. You can assign groups and user accounts to predefined roles to provide immediate access to report server operations.  
   
 ## How to Use Predefined Roles  
   
@@ -48,7 +48,7 @@ manager: "erikre"
 |[System User Role](#bkmk_systemuser)|System|Users who are assigned to this role can view basic information about the report server such as the schedule information in a shared schedule.|  
   
 ##  <a name="bkmk_content"></a> Content Manager Role  
- The **Content Manager** role is a predefined role that includes tasks that are useful for a user who manages reports and Web content, but does not necessarily author reports or manage a Web server or [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. A content manager deploys reports, manages report models and data source connections, and makes decisions about how reports are used. All item-level tasks are selected by default for the **Content Manager** role definition.  
+ The **Content Manager** role is a predefined role that includes tasks that are useful for a user who manages reports and Web content, but does not necessarily author reports or manage a Web server or [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. A content manager deploys reports, manages report models and data source connections, and makes decisions about how reports are used. All item-level tasks are selected by default for the **Content Manager** role definition.  
   
  The **Content Manager** role is often used with the **System Administrator** role. Together, the two role definitions provide a complete set of tasks for users who require full access to all items on a report server. Although the **Content Manager** role provides full access to reports, report models, folders, and other items within the folder hierarchy, it does not provide access to site-level items or operations. Tasks such as creating and managing shared schedules, setting server properties, and managing role definitions are system-level tasks that are included in the **System Administrator** role. For this reason, we recommend that you create a second role assignment at the site level that provides access to shared schedules.  
   
@@ -176,7 +176,7 @@ manager: "erikre"
 ##  <a name="bkmk_systemadministrator"></a> System Administrator Role  
  The **System Administrator** role is a predefined role that includes tasks that are useful for a report server administrator who has overall responsibility for a report server, but not necessarily for the content within it.  
   
- To create a role assignment that includes this role, use the Site Settings page in Report Manager or use the right-click commands on the report server node in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)].  
+ To create a role assignment that includes this role, use the Site Settings page in Report Manager or use the right-click commands on the report server node in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)].  
   
  The **System Administrator** role does not convey the same full range of permissions that a local administrator might have on a computer. Rather, the **System Administrator** role includes operations that are performed at the site level, and not the item level. For users who require access to both site-wide operations and items stored on the report server, create a second role assignment on the Home folder that includes the **Content Manager** role. Together, the two role definitions provide a complete set of tasks for users who require full access to all items on a report server.  
   
@@ -202,15 +202,15 @@ manager: "erikre"
 |Task|Description|  
 |----------|-----------------|  
 |Execute report definitions|Run a report without publishing it to a report server.|  
-|View report server properties|View properties that apply to the report server, such as the application name, whether My Reports is enabled, and report history defaults.<br /><br /> If you remove this task from the **System User** role, the Site Settings page is not available. Also, the application title is not displayed at the top of each page. By default, the title for Report Manager is "[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]."|  
+|View report server properties|View properties that apply to the report server, such as the application name, whether My Reports is enabled, and report history defaults.<br /><br /> If you remove this task from the **System User** role, the Site Settings page is not available. Also, the application title is not displayed at the top of each page. By default, the title for Report Manager is "[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]."|  
 |View shared schedules|View shared schedules that are used to run reports or refresh a report.<br /><br /> If you remove this task from the **System User** role, users cannot select shared schedules to use with subscriptions and other scheduled operations.|  
   
  The **System User** role can be used to supplement default security. You can include the role in new role assignments that extend report server access to report users. For more information, see [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 ## See Also  
- [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Role%20\(Management%20Studio\).md)   
+ [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [Grant User Access to a Report Server &#40;Report Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modify or Delete a Role Assignment &#40;Report Manager&#41;](../Topic/Modify%20or%20Delete%20a%20Role%20Assignment%20\(Report%20Manager\).md)   
+ [Modify or Delete a Role Assignment &#40;Report Manager&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)  
   

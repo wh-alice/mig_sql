@@ -19,13 +19,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Replay a Transact-SQL Script (SQL Server Profiler)
-  When you test possible solutions to a performance problem, use [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] to replay [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] scripts, and compare performance before and after your changes.  
+  When you test possible solutions to a performance problem, use [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] to replay [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] scripts, and compare performance before and after your changes.  
   
 ### To replay a Transact-SQL script  
   
 1.  On the **File** menu, point to **Open**, and then click **Script File**.  
   
-2.  Select the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] script file you want to open. Make sure that the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] script contains events necessary for replay. For more information, see [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md).  
+2.  Select the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] script file you want to open. Make sure that the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] script contains events necessary for replay. For more information, see [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md).  
   
 3.  On the **Replay** menu, click **Start**, and connect to the server where you want to replay the script.  
   

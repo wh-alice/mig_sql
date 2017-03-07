@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Executing Queries How-to Topics (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
   Executing an SQL statement in an ODBC application requires allocating a statement handle, setting statement attributes, and preparing and executing the SQL statement.  
   

@@ -15,10 +15,10 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # IntelliSense (SQL Server Management Studio)
-  The editors in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] support [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] IntelliSense options that reduce typing, provide quick access to syntax information, or make it easier to view the delimiters of complex expressions.  
+  The editors in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] support [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] IntelliSense options that reduce typing, provide quick access to syntax information, or make it easier to view the delimiters of complex expressions.  
   
 ## Benefits of IntelliSense  
- [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] IntelliSense provides an array of options that make language references easily accessible. When coding, you do not need to leave the editor to perform searches on language elements. You can keep your context, find the information you need, insert language elements directly into your code, and even have IntelliSense complete your typing for you.  
+ [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] IntelliSense provides an array of options that make language references easily accessible. When coding, you do not need to leave the editor to perform searches on language elements. You can keep your context, find the information you need, insert language elements directly into your code, and even have IntelliSense complete your typing for you.  
   
 ## IntelliSense Tasks  
   

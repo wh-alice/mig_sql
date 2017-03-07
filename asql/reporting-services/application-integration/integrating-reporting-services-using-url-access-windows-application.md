@@ -24,14 +24,14 @@ ms.author: "carlasab"
 manager: "erikre"
 ---
 # Integrating Reporting Services Using URL Access - Windows Application
-  Although URL access to a report server is optimized for a Web environment, you can also use URL access to embed [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] reports into a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows application. However, URL access that involves Windows Forms still requires that you use Web browser technology. You can use the following integration scenarios with URL access and Windows Forms:  
+  Although URL access to a report server is optimized for a Web environment, you can also use URL access to embed [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] reports into a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows application. However, URL access that involves Windows Forms still requires that you use Web browser technology. You can use the following integration scenarios with URL access and Windows Forms:  
   
 -   Display a report from a Windows Form application by starting a Web browser programmatically.  
   
 -   Use the <xref:System.Windows.Forms.WebBrowser> control on a Windows Form to display a report.  
   
 ## Starting Internet Explorer from a Windows Form  
- You can use the <xref:System.Diagnostics.Process> class to access a process that is running on a computer. The <xref:System.Diagnostics.Process> class is a useful [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] construct for starting, stopping, controlling, and monitoring applications. To view a specific report in your report server database, you can start the **IExplore** process, passing in the URL to the report. The following code example can be used to start [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Internet Explorer and pass a specific report URL when the user clicks a button on a Windows Form.  
+ You can use the <xref:System.Diagnostics.Process> class to access a process that is running on a computer. The <xref:System.Diagnostics.Process> class is a useful [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] construct for starting, stopping, controlling, and monitoring applications. To view a specific report in your report server database, you can start the **IExplore** process, passing in the URL to the report. The following code example can be used to start [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Internet Explorer and pass a specific report URL when the user clicks a button on a Windows Form.  
   
 ```vb#  
 Private Sub viewReportButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles viewReportButton.Click  
@@ -87,7 +87,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 ###### To add the WebBrowser control to your Windows Form  
   
-1.  Create a new Windows application in either [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[csprcs](../../integration-services/includes/csprcs-md.md)] or [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)].  
+1.  Create a new Windows application in either [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[csprcs](../../a9retired/includes/csprcs-md.md)] or [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)].  
   
 2.  Locate the <xref:System.Windows.Forms.WebBrowser> control in the **Toolbox** Dialog Box.  
   
@@ -117,7 +117,7 @@ webBrowser1.Navigate(url);
  [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [Integrating Reporting Services Using URL Access](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
  [Integrating Reporting Services Using SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   
- [Integrating Reporting Services Using the ReportViewer Controls](../Topic/Integrating%20Reporting%20Services%20Using%20the%20ReportViewer%20Controls.md)   
+ [Integrating Reporting Services Using the ReportViewer Controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)   
  [URL Access &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)  
   
   

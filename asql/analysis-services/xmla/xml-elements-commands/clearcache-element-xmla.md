@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # ClearCache Element (XMLA)
-  Clears the memory cache for the specified object on a [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance.  
+  Clears the memory cache for the specified object on a [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance.  
   
 ## Syntax  
   
@@ -58,9 +58,9 @@ manager: "erikre"
 |Child elements|[Object](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)|  
   
 ## Remarks  
- The **ClearCache** command flushes the cache for a specified database, dimension, cube, measure group, or partition on an [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance. If an object other than a database, dimension, cube, measure group, or partition is specified in the **Object** element, an error occurs.  
+ The **ClearCache** command flushes the cache for a specified database, dimension, cube, measure group, or partition on an [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance. If an object other than a database, dimension, cube, measure group, or partition is specified in the **Object** element, an error occurs.  
   
 ## See Also  
- [Commands &#40;XMLA&#41;](../Topic/Commands%20\(XMLA\).md)  
+ [Commands &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

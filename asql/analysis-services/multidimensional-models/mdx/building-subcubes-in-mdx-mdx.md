@@ -26,7 +26,7 @@ manager: "erikre"
 # Building Subcubes in MDX (MDX)
   A subcube is a subset of a cube on representing a filtered view of the underlying data. By limiting the cube to a subcube, you can improve query performance.  
   
- To define a subcube, you use the [CREATE SUBCUBE](../Topic/CREATE%20SUBCUBE%20Statement%20\(MDX\).md) statement, as described in this topic.  
+ To define a subcube, you use the [CREATE SUBCUBE](../../../mdx/mdx-data-definition-create-subcube.md) statement, as described in this topic.  
   
 ## CREATE SUBCUBE Syntax  
  Use the following syntax to create a subcube:  
@@ -37,7 +37,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  The CREATE SUBCUBE syntax is fairly simple. The *Subcube_Identifier* parameter identifies the cube on which the subcube will be based. The *Subcube_Expression* parameter selects the part of the cube that will become the subcube  
   
- After you create a subcube, that subcube becomes the context for all MDX queries until either the session closes or you run the [DROP SUBCUBE](../Topic/DROP%20SUBCUBE%20Statement%20\(MDX\).md) statement.  
+ After you create a subcube, that subcube becomes the context for all MDX queries until either the session closes or you run the [DROP SUBCUBE](../../../mdx/mdx-data-definition-drop-subcube.md) statement.  
   
 ### What a Subcube Contains  
  Although the CREATE SUBCUBE statement is fairly simple to use, the statement itself does not explicitly show all the members that become part of a subcube. In defining a subcube, the following rules apply:  

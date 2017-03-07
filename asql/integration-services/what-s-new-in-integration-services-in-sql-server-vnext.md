@@ -15,7 +15,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # What&#39;s New in Integration Services in SQL Server vNext
-This topic describes the features that have been added or updated in [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)].
+This topic describes the features that have been added or updated in [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)].
 
 >   [!NOTE]
 > SQL Server vNext also includes the features of SQL Server 2016 and the features added in SQL Server 2016 updates. For info about the new SSIS features in SQL Server 2016, see [What's New in Integration Services in SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).
@@ -28,7 +28,7 @@ There are no new SSIS features in SQL Server vNext CTP 1.1.
 
 ### Scale Out for SSIS
 
-The Scale Out feature makes it much easier to run [!INCLUDE[ssIS_md](../analysis-services/instances/includes/ssis-md.md)] on multiple machines. 
+The Scale Out feature makes it much easier to run [!INCLUDE[ssIS_md](../a9retired/includes/ssis-md.md)] on multiple machines. 
    
 After installing the Scale Out Master and Workers, the package can be distributed to execute on different Workers automatically. If the execution is terminated unexpectedly, the execution is retried automatically. Also, all the executions and Workers can be centrally managed using the Master.
    

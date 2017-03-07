@@ -38,13 +38,13 @@ manager: "erikre"
   
 |For this type of report|Date and time information is located here|To view the information, do the following|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|A report that runs as a report snapshot.|On the Contents page. For more information, see [Contents Page &#40;Report Manager&#41;](../Topic/Contents%20Page%20\(Report%20Manager\).md).|1) Locate the folder that contains the report.<br /><br /> 2) Set the folder in Details view.<br /><br /> 3) Note the date and time in the **When Run** column.|  
-|A snapshot in report history.|On the History Properties page. For more information, see [Snapshot Options Properties Page &#40;Report Manager&#41;](../Topic/Snapshot%20Options%20Properties%20Page%20\(Report%20Manager\).md).|1) Open the report.<br /><br /> 2) Click the **Properties** page.<br /><br /> 3) Click the **History** tab.<br /><br /> 4) Note the date and time in the **When Run** column.|  
+|A report that runs as a report snapshot.|On the Contents page. For more information, see [Contents Page &#40;Report Manager&#41;](../../a9retired/contents-page-report-manager.md).|1) Locate the folder that contains the report.<br /><br /> 2) Set the folder in Details view.<br /><br /> 3) Note the date and time in the **When Run** column.|  
+|A snapshot in report history.|On the History Properties page. For more information, see [Snapshot Options Properties Page &#40;Report Manager&#41;](../../a9retired/snapshot-options-properties-page-report-manager.md).|1) Open the report.<br /><br /> 2) Click the **Properties** page.<br /><br /> 3) Click the **History** tab.<br /><br /> 4) Note the date and time in the **When Run** column.|  
 |A cached report.|In the schedule used to create and refresh the cached report.|1) Open the report.<br /><br /> 2) Click the **Properties** page.<br /><br /> 3) Click the **Execution** tab.<br /><br /> 4) Open the schedule.|  
   
 ## See Also  
  [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)  
+ [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md)  
   
   

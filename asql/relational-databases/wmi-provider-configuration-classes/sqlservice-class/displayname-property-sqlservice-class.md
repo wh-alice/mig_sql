@@ -39,7 +39,7 @@ object.DisplayName [= value]
  A string value that specifies the display name of the service.  
   
 ## Remarks  
- This string has a maximum length of 256 characters. The name is case-preserved in the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager. However, display name comparisons are always case-insensitive.  
+ This string has a maximum length of 256 characters. The name is case-preserved in the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager. However, display name comparisons are always case-insensitive.  
   
 ## Example  
   

@@ -20,24 +20,24 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Install Reporting Services native mode report server
-Learn how to install [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] in native mode. This will provide access to a [!INCLUDE[ssRSWebPortal](../../../reporting-services/includes/ssrswebportal.md)] where you can manage reports and other items.
+Learn how to install [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] in native mode. This will provide access to a [!INCLUDE[ssRSWebPortal](../../../reporting-services/includes/ssrswebportal.md)] where you can manage reports and other items.
 
-A [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] native mode report server is the default [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] server mode and can be installed from the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] installation wizard or from the command line. In the setup wizard, you can select to either install files and configure the server with default settings or to only install the files. This topic reviews the *Default configuration for native mode* where Setup both installs and configures a report server instance. After Setup is finished, the report server is running and ready to use for basic report viewing and report management.  Additional features such as [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)] integration and e-mail delivery with subscription processing require additional configuration.  
+A [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] native mode report server is the default [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] server mode and can be installed from the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] installation wizard or from the command line. In the setup wizard, you can select to either install files and configure the server with default settings or to only install the files. This topic reviews the *Default configuration for native mode* where Setup both installs and configures a report server instance. After Setup is finished, the report server is running and ready to use for basic report viewing and report management.  Additional features such as [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)] integration and e-mail delivery with subscription processing require additional configuration.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../analysis-services/includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Native mode|  
+|**[!INCLUDE[applies](../../../a9retired/includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Native mode|  
   
 ##  <a name="bkmk_whatisdefaultconfiguration"></a> What is the default configuration?  
- Setup installs the following [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] features when you select the default configuration for native mode option:  
+ Setup installs the following [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] features when you select the default configuration for native mode option:  
   
 -   Report Server service (which includes the Report Server Web service, background processing application, and the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../database-engine/availability-groups/windows/includes/ssrswebportal-non-markdown-md.md)] for viewing and managing reports as well as permissions.  
   
--   The [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Configuration Manager  
+-   The [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Configuration Manager  
   
--   The [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] command line utilities rsconfig.exe, rskeymgmt.exe and rs.exe.  
+-   The [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] command line utilities rsconfig.exe, rskeymgmt.exe and rs.exe.  
   
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../../analysis-services/includes/ssbidevstudiofull-md.md)] are now separate downloads.  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../../a9notintoc/includes/ssbidevstudiofull-md.md)] are now separate downloads.  
   
  Setup configures the following for a native mode report server installation:  
   
@@ -53,27 +53,27 @@ A [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsn
   
 -   Connection information, also known as the data source name (DSN), for the report server databases.  
   
- Setup does not configure the unattended execution account, report server e-mail, back up the encryption keys, or a scale-out deployment. You can use the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Configuration Manager to configure these properties. For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../reporting-services/install/windows/reporting-services-configuration-manager-native-mode.md).
+ Setup does not configure the unattended execution account, report server e-mail, back up the encryption keys, or a scale-out deployment. You can use the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Configuration Manager to configure these properties. For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../reporting-services/install/windows/reporting-services-configuration-manager-native-mode.md).
   
 ##  <a name="bkmk_whentoinstalldefaultconfig"></a> When to install the default configuration for native mode  
- A default configuration installs [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] in an operational state so that you can use the report server immediately after Setup is finished. Specify this mode when you want to save steps by eliminating any required configuration tasks you would otherwise have to perform in the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Configuration tool.  
+ A default configuration installs [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] in an operational state so that you can use the report server immediately after Setup is finished. Specify this mode when you want to save steps by eliminating any required configuration tasks you would otherwise have to perform in the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Configuration tool.  
   
  Installing the default configuration does not guarantee that the report server will work after Setup is finished. The default URLs might not register when the service starts. Always test your installation to verify that the service starts and runs as expected.  See [Verify a Reporting Services Installation](../../../reporting-services/install/windows/verify-a-reporting-services-installation.md).
   
 ##  <a name="bkmk_requirements"></a> Requirements  
  The default configuration option uses default values to configure the core settings required to make a report server operational. It has the following requirements:  
   
--   Review [Hardware and Software Requirements for Installing SQL Server 2016](../Topic/Hardware%20and%20Software%20Requirements%20for%20Installing%20SQL%20Server%202016.md) .  
+-   Review [Hardware and Software Requirements for Installing SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) .  
   
--   [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] and [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] must be installed together in the same instance. The [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] instance hosts the report server database that Setup creates and configures.  
+-   [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] and [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] must be installed together in the same instance. The [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] instance hosts the report server database that Setup creates and configures.  
   
--   The user account used to run Setup must be a member of the local Administrators group and have permission to access and create databases on the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] instance that hosts the report server databases.  
+-   The user account used to run Setup must be a member of the local Administrators group and have permission to access and create databases on the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] instance that hosts the report server databases.  
   
 -   Setup must be able to use the default values to reserve the URLs that provide access to the report server and the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../database-engine/availability-groups/windows/includes/ssrswebportal-non-markdown-md.md)]. These values are port 80, a strong wildcard, and the virtual directory names in the format **ReportServer_\<***instance_name***>** and **Reports_\<***instance_name***>**.  
   
 -   Setup must be able to use the default values to create the report server databases. These values are **ReportServer** and **ReportServerTempDB**. If you have existing databases from a previous installation, Setup will be blocked because it cannot configure the report server in the default configuration for native mode. You must rename, move, or delete the databases to unblock Setup.  
   
- If your computer does not meet all requirements for a default installation, you must install [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] in files-only mode and then use the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Configuration Manager to configure it after Setup is finished.
+ If your computer does not meet all requirements for a default installation, you must install [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] in files-only mode and then use the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Configuration Manager to configure it after Setup is finished.
  
  > [!IMPORTANT]
  > While Reporting Services can be installed in an environment that has a Read-Only Domain Controller (RODC), Reporting Services needs access to a Read-Write Domain Controller to function properly. If Reporting Services only has access to a RODC, you may encounter errors when trying to administer the service.
@@ -85,7 +85,7 @@ A [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsn
 |----------|-----------------|  
 |Prefix|The default prefix is HTTP. If you previously installed a Secure Sockets Layer (SSL) certificate, Setup will try to create URL reservations that use the HTTPS prefix.|  
 |Host name|The default host name is a strong wildcard (+). It specifies that the report server will accept any HTTP request on the designated port for any host name that resolves to the computer, including http://\<computername>/reportserver, http://localhost/reportserver, or http://\<IPAddress>/reportserver.|  
-|Port|The default port is 80. Note that if you use any port other than port 80, you will have to explicitly add it to the URL when you open a [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Web application in a browser window.|  
+|Port|The default port is 80. Note that if you use any port other than port 80, you will have to explicitly add it to the URL when you open a [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Web application in a browser window.|  
 |Virtual directory|By default, virtual directories are created in the format of ReportServer_\<*instance_name*> for the Report Server Web service and Reports_\<*instance_name*> for the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../database-engine/availability-groups/windows/includes/ssrswebportal-non-markdown-md.md)]. For the Report Server Web service, the default virtual directory is **reportserver**. For the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../database-engine/availability-groups/windows/includes/ssrswebportal-non-markdown-md.md)], the default virtual directory is **reports**.|  
   
  An example of the complete URL string might be as follows:  
@@ -95,7 +95,7 @@ A [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsn
 -   http://+:80/reports, provides access to the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../database-engine/availability-groups/windows/includes/ssrswebportal-non-markdown-md.md)].
   
 ##  <a name="bkmk_installwithwizard"></a> Install native mode with the SQL Server installation wizard  
- The following list describes the  [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] specific  steps and options you select in the SQL Server Installation Wizard. The list does not described each page you will see in the installation wizard, only the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] related pages that are part of a Native mode installation.  
+ The following list describes the  [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] specific  steps and options you select in the SQL Server Installation Wizard. The list does not described each page you will see in the installation wizard, only the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] related pages that are part of a Native mode installation.  
   
 1.  Run the SQL Server setup wizard (setup.exe) and step through the following preliminary pages:  
   
@@ -133,7 +133,7 @@ A [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsn
   
     -   `http://[ServerName]/Reports_THESQLINSTANCE`  
   
-6.  **Server Configuration**: If you plan to use the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] subscription feature, then on the **Server Configuration** page, configure SQL Server Agent **Automatic** Startup type.   The default is manual.  
+6.  **Server Configuration**: If you plan to use the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] subscription feature, then on the **Server Configuration** page, configure SQL Server Agent **Automatic** Startup type.   The default is manual.  
   
 7.  Add  SQL Server administrators on the **Database Engine Configuration** page.  
   
@@ -144,17 +144,17 @@ A [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsn
     > [!NOTE]  
     >  **Install and Configure** will not be available unless the database feature is also selected to be installed.  
   
-9. Feature Configuration Rules: verify the rules passed. The setup wizard automatically advances to the **Ready to install** if the rules all pass.  Specific to [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], the rules verify a report server catalog and temp catalog database do not already exist.  
+9. Feature Configuration Rules: verify the rules passed. The setup wizard automatically advances to the **Ready to install** if the rules all pass.  Specific to [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)], the rules verify a report server catalog and temp catalog database do not already exist.  
   
-10. ![note](../../../analysis-services/instances/install/windows/media/ssrs-fyi-note.png "note")On the **ready to install** page, note the path to the  configuration file as you can refer to it at a later time for a good summary of the servers initial [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] configuration including the components installed, service accounts and administrators.  
+10. ![note](../../../a9retired/media/ssrs-fyi-note.png "note")On the **ready to install** page, note the path to the  configuration file as you can refer to it at a later time for a good summary of the servers initial [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] configuration including the components installed, service accounts and administrators.  
   
 11. After the SQL Server installation wizard is complete, verify the default Native mode installation using the following basic steps.  
   
-    -   Open [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Configuration Manager and confirm you can connect to the report server.  
+    -   Open [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Configuration Manager and confirm you can connect to the report server.  
   
     -   Open your browser **with administrative privileges** and connect to the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../database-engine/availability-groups/windows/includes/ssrswebportal-non-markdown-md.md)], for example `http://localhost/Reports`.  
   
-    -   Open your browser with administrative privileges and connect to the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report server page. For example,  `http://localhost/ReportServer`  
+    -   Open your browser with administrative privileges and connect to the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] report server page. For example,  `http://localhost/ReportServer`  
   
  For more information, see the Native section of the following two topics:  
   
@@ -177,9 +177,9 @@ A [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsn
  [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Files-Only Installation &#40;Reporting Services&#41;](../../../reporting-services/install/windows/files-only-installation-reporting-services.md)   
- [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../Topic/Initialize%20a%20Report%20Server%20\(SSRS%20Configuration%20Manager\).md)   
+ [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Configure SSL Connections on a Native Mode Report Server](../../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
  [Configure Windows Service Accounts and Permissions](../../../database-engine/configure/windows/configure-windows-service-accounts-and-permissions.md)   
- [Quick-Start Installation of SQL Server 2016](../Topic/Quick-Start%20Installation%20of%20SQL%20Server%202016.md)  
+ [Quick-Start Installation of SQL Server 2016](../../../a9retired/quick-start-installation-of-sql-server-2016.md)  
   
   

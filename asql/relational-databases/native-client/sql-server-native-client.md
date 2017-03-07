@@ -14,13 +14,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Native Client
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-The last SQL Server Native Client can be downloaded from [Microsoft® SQL Server® 2012 Feature Pack](https://www.microsoft.com/download/details.aspx?id=29065).  Developers who wish to use an OLE DB provider to connect to the latest version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] must use the OLE DB provider that shipped in [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] Native Client.  
+The last SQL Server Native Client can be downloaded from [Microsoft® SQL Server® 2012 Feature Pack](https://www.microsoft.com/download/details.aspx?id=29065).  Developers who wish to use an OLE DB provider to connect to the latest version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] must use the OLE DB provider that shipped in [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] Native Client.  
 
 For more information on ODBC Driver for SQL Server, see [Microsoft ODBC Driver for SQL Server on Windows](https://msdn.microsoft.com/library/jj730314(v=sql.110).aspx).  See also, [Introducing the new Microsoft ODBC Drivers for SQL Server](https://blogs.msdn.microsoft.com/sqlnativeclient/2013/01/23/introducing-the-new-microsoft-odbc-drivers-for-sql-server/), and [ODBC Driver 13.1 for SQL Server released](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/).  
   
- The following topics describe significant new [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client features in [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)].  
+ The following topics describe significant new [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client features in [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)].  
   
 -   [SQL Server Native Client Support for LocalDB](../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
   
@@ -32,17 +32,17 @@ For more information on ODBC Driver for SQL Server, see [Microsoft ODBC Driver f
   
 -   [Accessing Diagnostic Information in the Extended Events Log](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
   
- In addition, ODBC in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client now supports three features that were added to standard ODBC in the Windows 7 SDK:  
+ In addition, ODBC in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client now supports three features that were added to standard ODBC in the Windows 7 SDK:  
   
 -   Asynchronous execution on connection-related operations. For more information, see [Asynchronous Execution](http://go.microsoft.com/fwlink/?LinkID=191493).  
   
 -   C Data Type Extensibility. For more information, see [C Data Types in ODBC](http://go.microsoft.com/fwlink/?LinkID=191495).  
   
-     To support this feature in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client, SQLGetDescField can return **SQL_C_SS_TIME2** (for **time** types) or **SQL_C_SS_TIMESTAMPOFFSET** (for **datetimeoffset**) instead of **SQL_C_BINARY**, if your application uses ODBC 3.8. For more information, see [Data Type Support for ODBC Date and Time Improvements](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
+     To support this feature in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client, SQLGetDescField can return **SQL_C_SS_TIME2** (for **time** types) or **SQL_C_SS_TIMESTAMPOFFSET** (for **datetimeoffset**) instead of **SQL_C_BINARY**, if your application uses ODBC 3.8. For more information, see [Data Type Support for ODBC Date and Time Improvements](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
   
 -   Calling **SQLGetData** with a small buffer multiple times to retrieve a large parameter value. For more information, see [Retrieving Output Parameters Using SQLGetData](http://go.microsoft.com/fwlink/?LinkID=191494).  
   
- The following topics describe [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client behavior changes in [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)].  
+ The following topics describe [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client behavior changes in [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)].  
   
 -   When calling **ICommandWithParameters::SetParameterInfo**, the value passed to the *pwszName* parameter must be a valid identifier. For more information, see [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md).  
   

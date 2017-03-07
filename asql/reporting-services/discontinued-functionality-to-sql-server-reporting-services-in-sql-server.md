@@ -20,7 +20,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Discontinued functionality to SQL Server Reporting Services in SQL Server 
-  This topic describes [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] features that are no longer available in [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)]. It does not include announcements about discontinued support for specific versions of the operating system or [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Internet Information Services (IIS). For more information about system prerequisites, see [Hardware and Software Requirements for Installing SQL Server 2016](../Topic/Hardware%20and%20Software%20Requirements%20for%20Installing%20SQL%20Server%202016.md).  
+  This topic describes [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] features that are no longer available in [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)]. It does not include announcements about discontinued support for specific versions of the operating system or [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Internet Information Services (IIS). For more information about system prerequisites, see [Hardware and Software Requirements for Installing SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 A *discontinued feature* is one that is no longer supported. It might also be physically removed from the product. The following features are discontinued.  
   

@@ -34,7 +34,7 @@ manager: "erikre"
  To quickly get started, see [Tutorial: Format Text &#40;Report Builder&#41;](../../reporting-services/tutorials/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Creating Placeholder Text in a Text Box  
  When a simple or complex expression is defined inside a text box, the resulting UI representation of this expression is known as a *placeholder*. You can define colors, fonts, actions, and other behavior on any number of placeholders or sections of text within a single text box.  
@@ -43,7 +43,7 @@ manager: "erikre"
   
 -   Drag a field from the **Report Data** pane and drop it into the text box. If you drag the expression anywhere else on the report body, a new text box will be created that contains the placeholder. The value of this placeholder will be the field expression that corresponds to the field that was dropped.  
   
--   Right-click anywhere in the text box and select **Insert Placeholder**. In the **Placeholder Properties** dialog box, you can specify an expression as the value of your placeholder. For more information, see [Placeholder Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](../Topic/Placeholder%20Properties%20Dialog%20Box,%20General%20\(Report%20Builder%20and%20SSRS\).md).  
+-   Right-click anywhere in the text box and select **Insert Placeholder**. In the **Placeholder Properties** dialog box, you can specify an expression as the value of your placeholder. For more information, see [Placeholder Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](../../a9retired/placeholder-properties-dialog-box-general-report-builder-and-ssrs.md).  
   
 -   Type any simple or complex expression into the text box. For example, if you type **Name: [Name]** into the text box, the **[Name]** text will be displayed as a placeholder that represents the expression `=Fields!Name.Value`.  
   
@@ -73,7 +73,7 @@ manager: "erikre"
  [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Placeholder Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](../Topic/Placeholder%20Properties%20Dialog%20Box,%20General%20\(Report%20Builder%20and%20SSRS\).md)   
+ [Placeholder Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](../../a9retired/placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
  [Text Boxes &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
   

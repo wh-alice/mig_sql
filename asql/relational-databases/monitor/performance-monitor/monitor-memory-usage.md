@@ -28,7 +28,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Monitor Memory Usage
-  Monitor an instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] periodically to confirm that memory usage is within typical ranges.  
+  Monitor an instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] periodically to confirm that memory usage is within typical ranges.  
   
  To monitor for a low-memory condition, use the following object counters:  
   
@@ -40,14 +40,14 @@ manager: "jhubbard"
   
  Low values for the **Available Bytes** counter can indicate that there is an overall shortage of memory on the computer or that an application is not releasing memory. A high rate for the **Pages/sec** counter could indicate excessive paging. Monitor the **Memory: Page Faults/sec** counter to make sure that the disk activity is not caused by paging.  
   
- A low rate of paging (and hence page faults) is typical, even if the computer has plenty of available memory. The Microsoft Windows Virtual Memory Manager (VMM) takes pages from [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and other processes as it trims the working-set sizes of those processes. This VMM activity tends to cause page faults. To determine whether [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or another process is the cause of excessive paging, monitor the **Process: Page Faults/sec** counter for the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] process instance.  
+ A low rate of paging (and hence page faults) is typical, even if the computer has plenty of available memory. The Microsoft Windows Virtual Memory Manager (VMM) takes pages from [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] and other processes as it trims the working-set sizes of those processes. This VMM activity tends to cause page faults. To determine whether [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] or another process is the cause of excessive paging, monitor the **Process: Page Faults/sec** counter for the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] process instance.  
   
  For more information about resolving excessive paging, see the Windows operating system documentation.  
   
 ## Isolating Memory Used by SQL Server  
- By default, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] changes its memory requirements dynamically, on the basis of available system resources. If [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] needs more memory, it queries the operating system to determine whether free physical memory is available and uses the available memory. If [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not need the memory currently allocated to it, it releases the memory to the operating system. However, you can override the option to dynamically use memory by using the **minservermemory**, and **maxservermemory** server configuration options. For more information, see [Server Memory Options](../../../database-engine/configure/windows/server-memory-server-configuration-options.md).  
+ By default, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] changes its memory requirements dynamically, on the basis of available system resources. If [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] needs more memory, it queries the operating system to determine whether free physical memory is available and uses the available memory. If [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] does not need the memory currently allocated to it, it releases the memory to the operating system. However, you can override the option to dynamically use memory by using the **minservermemory**, and **maxservermemory** server configuration options. For more information, see [Server Memory Options](../../../database-engine/configure/windows/server-memory-server-configuration-options.md).  
   
- To monitor the amount of memory that [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses, examine the following performance counters:  
+ To monitor the amount of memory that [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] uses, examine the following performance counters:  
   
 -   **Process: Working Set**  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 -   **SQL Server: Memory Manager: Total Server Memory (KB)**  
   
- The **WorkingSet** counter shows the amount of memory that is used by a process. If this number is consistently below the amount of memory that is set by the **min server memory** and **max server memory** server options, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is configured to use too much memory.  
+ The **WorkingSet** counter shows the amount of memory that is used by a process. If this number is consistently below the amount of memory that is set by the **min server memory** and **max server memory** server options, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is configured to use too much memory.  
   
  The **Buffer Cache Hit Ratio** counter is specific to an application. However, a rate of 90 percent or higher is desirable. Add more memory until the value is consistently greater than 90 percent. A value greater than 90 percent indicates that more than 90 percent of all requests for data were satisfied from the data cache.  
   

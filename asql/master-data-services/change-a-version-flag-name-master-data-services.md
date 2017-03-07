@@ -17,7 +17,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Change a Version Flag Name (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], you can change the name of a version flag.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], you can change the name of a version flag.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 ### To change a version flag name  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **Version Management**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **Version Management**.  
   
 2.  On the **Manage Versions** page, from the menu bar, point to **Manage** and then click **Flags**.  
   

@@ -17,35 +17,35 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Power Pivot for SharePoint (SSAS)
-  An [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] server in [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] mode provides server hosting of [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data in a SharePoint farm. [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data is an analytical data model that you build using one of the following:  
+  An [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] server in [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] mode provides server hosting of [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data in a SharePoint farm. [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data is an analytical data model that you build using one of the following:  
   
--   The [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for Excel 2010 add-in  
+-   The [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for Excel 2010 add-in  
   
 -   Excel 2013  
   
 -   Excel 2016  
   
- **[!INCLUDE[applies](../../analysis-services/includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../analysis-services/includes/ssgeminishort-md.md)] 2016 | [!INCLUDE[ssGeminiShort](../../analysis-services/includes/ssgeminishort-md.md)] 2013  
+ **[!INCLUDE[applies](../../a9retired/includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../a9notintoc/includes/ssgeminishort-md.md)] 2016 | [!INCLUDE[ssGeminiShort](../../a9notintoc/includes/ssgeminishort-md.md)] 2013  
   
- Server hosting of that data requires SharePoint, Excel Services, and an installation of [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint. Data is loaded on [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint instances where it can be refreshed at scheduled intervals using the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data refresh capability that the server provides for Excel 2010 workbooks, that the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] provides for Excel 2013 and 2016 workbooks.  
+ Server hosting of that data requires SharePoint, Excel Services, and an installation of [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint. Data is loaded on [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint instances where it can be refreshed at scheduled intervals using the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data refresh capability that the server provides for Excel 2010 workbooks, that the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] provides for Excel 2013 and 2016 workbooks.  
   
 ## Power Pivot for SharePoint 2016  
- [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../analysis-services/includes/ssgeminishort-md.md)] supports [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] SharePoint 2016 and [!INCLUDE[offOnlineServer](../../analysis-services/power-pivot-sharepoint/includes/offonlineserver-md.md)] usage of Excel workbooks containing data models and [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Power View reports.  
+ [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../a9notintoc/includes/ssgeminishort-md.md)] supports [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] SharePoint 2016 and [!INCLUDE[offOnlineServer](../../analysis-services/power-pivot-sharepoint/includes/offonlineserver-md.md)] usage of Excel workbooks containing data models and [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] Power View reports.  
   
- Excel, within [!INCLUDE[offOnlineServer](../../analysis-services/power-pivot-sharepoint/includes/offonlineserver-md.md)] includes data model functionality to enable interaction with a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbook in the browser. You do not need to deploy the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint 2016 add-in into the farm. You only need to install an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] server in [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] mode and register the server with [!INCLUDE[offOnlineServer](../../analysis-services/power-pivot-sharepoint/includes/offonlineserver-md.md)].  
+ Excel, within [!INCLUDE[offOnlineServer](../../analysis-services/power-pivot-sharepoint/includes/offonlineserver-md.md)] includes data model functionality to enable interaction with a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbook in the browser. You do not need to deploy the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint 2016 add-in into the farm. You only need to install an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] server in [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] mode and register the server with [!INCLUDE[offOnlineServer](../../analysis-services/power-pivot-sharepoint/includes/offonlineserver-md.md)].  
   
- Deploying the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint 2016 add-in enables additional functionality and features in your SharePoint farm. The additional features include [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery and Schedule Data Refresh.  
+ Deploying the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint 2016 add-in enables additional functionality and features in your SharePoint farm. The additional features include [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery and Schedule Data Refresh.  
   
  ![SSAS Power Pivot Mode 3 Server with Office Online Server](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-mode-3server-oos-deploy.png "SSAS Power Pivot Mode 3 Server with Office Online Server")  
   
 ## Power Pivot for SharePoint 2013  
- [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../analysis-services/includes/ssgeminishort-md.md)] supports [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] SharePoint 2013 Excel Services usage of Excel workbooks containing data models and [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Power View reports.  
+ [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../a9notintoc/includes/ssgeminishort-md.md)] supports [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] SharePoint 2013 Excel Services usage of Excel workbooks containing data models and [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] Power View reports.  
   
- Excel Services in SharePoint 2013 includes data model functionality to enable interaction with a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbook in the browser. You do not need to deploy the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint 2013 add-in into the farm. You only need to install an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] server in SharePoint mode and register the server within the Excel Services **Data Model** settings.  
+ Excel Services in SharePoint 2013 includes data model functionality to enable interaction with a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbook in the browser. You do not need to deploy the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint 2013 add-in into the farm. You only need to install an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] server in SharePoint mode and register the server within the Excel Services **Data Model** settings.  
   
- Deploying the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint 2013 add-in enables additional functionality and features in your SharePoint farm. The additional features include [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery, Schedule Data Refresh, and the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Management Dashboard.  
+ Deploying the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint 2013 add-in enables additional functionality and features in your SharePoint farm. The additional features include [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery, Schedule Data Refresh, and the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Management Dashboard.  
   
- ![SSAS PowerPivot Mode 2 Server Deployment](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot Mode 2 Server Deployment")  
+ ![SSAS PowerPivot Mode 2 Server Deployment](../../a9retired/media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot Mode 2 Server Deployment")  
   
 ##  <a name="bkmk_RelatedContent"></a> In This Section  
  [Power Pivot Server Administration and Configuration in Central Administration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
@@ -60,7 +60,7 @@ manager: "erikre"
   
  [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   
- [Power Pivot Gallery](../Topic/Power%20Pivot%20Gallery.md)  
+ [Power Pivot Gallery](../../a9retired/power-pivot-gallery.md)  
   
  [Power Pivot Data Access](../../analysis-services/power-pivot-sharepoint/power-pivot-data-access.md)  
   
@@ -79,7 +79,7 @@ manager: "erikre"
   
  [PowerShell Reference for Power Pivot for SharePoint](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
- [Example License Topologies and Costs  for SQL Server 2016 Business Intelligence](../Topic/Example%20License%20Topologies%20and%20Costs%20%20for%20SQL%20Server%202016%20Business%20Intelligence.md)  
+ [Example License Topologies and Costs  for SQL Server 2016 Business Intelligence](../../a9retired/example-license-topologies-and-costs-for-sql-server-2016-business-intelligence.md)  
   
 ## See Also  
  [Power Pivot Planning and Deployment](http://go.microsoft.com/fwlink/?linkID=220972)   

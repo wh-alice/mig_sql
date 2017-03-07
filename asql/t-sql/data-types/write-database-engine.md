@@ -24,7 +24,7 @@ manager: "jhubbard"
 # Write (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Write writes out a binary representation of **SqlHierarchyId** to the passed-in **BinaryWriter**. Write cannot be called by using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. Use CAST or CONVERT instead.  
+  Write writes out a binary representation of **SqlHierarchyId** to the passed-in **BinaryWriter**. Write cannot be called by using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. Use CAST or CONVERT instead.  
   
 ## Syntax  
   
@@ -41,7 +41,7 @@ void Write( BinaryWriter w )
  **CLR return type:void**  
   
 ## Remarks  
- Write is used internally by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] when it is necessary, such as when loading data from a **hierarchyid** column. Write is also called internally when a conversion is done between **hierarchyid** and **varbinary**.  
+ Write is used internally by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] when it is necessary, such as when loading data from a **hierarchyid** column. Write is also called internally when a conversion is done between **hierarchyid** and **varbinary**.  
   
 ## Examples  
   
@@ -57,6 +57,6 @@ byte[] encoding = stream.ToArray();
  [Read &#40;Database Engine&#41;](../../t-sql/data-types/read-database-engine.md)   
  [ToString &#40;Database Engine&#41;](../../t-sql/data-types/tostring-database-engine.md)   
  [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [hierarchyid Data Type Method Reference](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
+ [hierarchyid Data Type Method Reference](../../a9retired/hierarchyid-data-type-method-reference.md)  
   
   

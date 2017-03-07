@@ -22,7 +22,7 @@ manager: "jhubbard"
   Use the **General** page of the **Transfer Jobs Task Editor** dialog box to name and describe the Transfer Jobs task. For more information about the Transfer Jobs task, see [Transfer Jobs Task](../../integration-services/control-flow/transfer-jobs-task.md).  
   
 > [!NOTE]  
->  Only members of the **sysadmin** fixed server role or one of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent fixed database roles on the destination server can successfully create jobs there. To access jobs on the source server, users must be a member of at least the **SQLAgentUserRole** fixed database role there. For more information about [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent fixed database roles and their permissions, see [SQL Server Agent Fixed Database Roles](../Topic/SQL%20Server%20Agent%20Fixed%20Database%20Roles.md).  
+>  Only members of the **sysadmin** fixed server role or one of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent fixed database roles on the destination server can successfully create jobs there. To access jobs on the source server, users must be a member of at least the **SQLAgentUserRole** fixed database role there. For more information about [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent fixed database roles and their permissions, see [SQL Server Agent Fixed Database Roles](../Topic/SQL%20Server%20Agent%20Fixed%20Database%20Roles.md).  
   
 ## Options  
  **Name**  

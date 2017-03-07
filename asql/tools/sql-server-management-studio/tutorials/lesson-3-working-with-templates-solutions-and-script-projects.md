@@ -15,7 +15,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 3: Working with Templates, Solutions, and Script Projects
-Usse [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS) to create custom templates, and create solutions and script projects.  
+Usse [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS) to create custom templates, and create solutions and script projects.  
   
 This lesson contains the following topics:  
   
@@ -28,7 +28,7 @@ This lesson contains the following topics:
 -   [Summary](https://msdn.microsoft.com/library/ms170152.aspx)  
   
 ## Next Task in Lesson  
-[Create Scripts Using Templates](../Topic/Create%20Scripts%20Using%20Templates.md)  
+[Create Scripts Using Templates](../../../tools/sql-server-management-studio/tutorials/lesson-3-1-create-scripts-using-templates.md)  
   
   
   

@@ -29,11 +29,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # DBCC DROPCLEANBUFFERS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Removes all clean buffers from the buffer pool, and columnstore objects from the columnstore object pool.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -51,7 +51,7 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
   
 ## Arguments  
  WITH NO_INFOMSGS  
- Suppresses all informational messages. Informational messages are always suppressed on [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)].  
+ Suppresses all informational messages. Informational messages are always suppressed on [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)].  
   
  COMPUTE  
  Purge the query plan cache from each Compute node.  
@@ -65,18 +65,18 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
  To drop clean buffers from the buffer pool and columnstore objects from the columnstore object pool, first use CHECKPOINT to produce a cold buffer cache. This forces all dirty pages for the current database to be written to disk and cleans the buffers. After you do this, you can issue DBCC DROPCLEANBUFFERS command to remove all buffers from the buffer pool.  
   
 ## Result Sets  
- DBCC DROPCLEANBUFFERS on [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns:  
+ DBCC DROPCLEANBUFFERS on [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns:  
   
 ```  
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role on [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Requires membership in the **sysadmin** fixed server role on [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- Requires CONTROL permission on [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)].  
+ Requires CONTROL permission on [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)].  
   
- Requires ALTER SERVER STATE permission on [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)].  
+ Requires ALTER SERVER STATE permission on [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)].  
   
 ## See Also  
  [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   

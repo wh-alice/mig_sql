@@ -15,7 +15,7 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # PolyBase configuration
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Use the procedures below to configure PolyBase.  
   

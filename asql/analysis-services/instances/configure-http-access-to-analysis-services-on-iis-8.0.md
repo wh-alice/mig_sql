@@ -304,7 +304,7 @@ manager: "erikre"
   
  `Data Source=https://<servername>/olap/msmdpump.dll; Initial Catalog=AdventureWorksDW2012; Integrated Security=Basic; User ID=XXXX; Password=XXXXX;`  
   
- For more information about setting up the connection programmatically, see [Establishing Secure Connections in ADOMD.NET](../Topic/Establishing%20Secure%20Connections%20in%20ADOMD.NET.md).  
+ For more information about setting up the connection programmatically, see [Establishing Secure Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd.net-establishing-secure-connections.md).  
   
  As a final step, be sure to follow-up with more rigorous testing by using a client computer that runs in the network environment from which the connections will originate.  
   

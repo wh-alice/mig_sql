@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 2-4 - Using Comments
-[!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] allows you to easily comment out a portion of your script.  
+[!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] allows you to easily comment out a portion of your script.  
   
 ## Commenting Out Part of a Script  
   
@@ -34,7 +34,7 @@ In addition to using the **Edit** menu, you can comment or uncomment a selected 
 -   Press CTRL+K and CTRL+C to comment the text, or press CTRL+K, CTRL+U to uncomment the text.  
   
 ## Next Task in Lesson  
-[Other Ways of Viewing the Code Window](../Topic/Other%20Ways%20of%20Viewing%20the%20Code%20Window.md)  
+[Other Ways of Viewing the Code Window](../../../tools/sql-server-management-studio/tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md)  
   
   
   

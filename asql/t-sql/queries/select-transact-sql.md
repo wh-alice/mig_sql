@@ -29,9 +29,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retrieves rows from the database and enables the selection of one or many rows or columns from one or many tables in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The full syntax of the SELECT statement is complex, but the main clauses can be summarized as:  
+  Retrieves rows from the database and enables the selection of one or many rows or columns from one or many tables in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The full syntax of the SELECT statement is complex, but the main clauses can be summarized as:  
   
  [ WITH { [ XMLNAMESPACES ,] [ <common_table_expression> ] } ]  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
  The UNION, EXCEPT and INTERSECT operators can be used between queries to combine or compare their results into one result set.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -101,18 +101,18 @@ SELECT <select_criteria>
   
 |||  
 |-|-|  
-|[WITH XMLNAMESPACES](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[HAVING](../Topic/HAVING%20\(Transact-SQL\).md)|  
+|[WITH XMLNAMESPACES](../../t-sql/data-types/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[HAVING](../../t-sql/queries/select-having-transact-sql.md)|  
 |[SELECT Clause](../../t-sql/queries/select-clause-transact-sql.md)|[UNION](../Topic/UNION%20\(Transact-SQL\).md)|  
-|[INTO Clause](../Topic/INTO%20Clause%20\(Transact-SQL\).md)|[EXCEPT and INTERSECT](../Topic/EXCEPT%20and%20INTERSECT%20\(Transact-SQL\).md)|  
-|[FROM](../../t-sql/queries/from-transact-sql.md)|[ORDER BY](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md)|  
-|[WHERE](../../t-sql/queries/where-transact-sql.md)|[FOR Clause](../Topic/FOR%20Clause%20\(Transact-SQL\).md)|  
-|[GROUP BY](../Topic/GROUP%20BY%20\(Transact-SQL\).md)|[OPTION Clause](../../t-sql/queries/option-clause-transact-sql.md)|  
+|[INTO Clause](../../t-sql/queries/select-into-clause-transact-sql.md)|[EXCEPT and INTERSECT](../Topic/EXCEPT%20and%20INTERSECT%20\(Transact-SQL\).md)|  
+|[FROM](../../t-sql/queries/from-transact-sql.md)|[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)|  
+|[WHERE](../../t-sql/queries/where-transact-sql.md)|[FOR Clause](../../t-sql/queries/select-for-clause-transact-sql.md)|  
+|[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)|[OPTION Clause](../../t-sql/queries/option-clause-transact-sql.md)|  
   
  The order of the clauses in the SELECT statement is significant. Any one of the optional clauses can be omitted, but when the optional clauses are used, they must appear in the appropriate order.  
   
  SELECT statements are permitted in user-defined functions only if the select lists of these statements contain expressions that assign values to variables that are local to the functions.  
   
- A four-part name constructed with the OPENDATASOURCE function as the server-name part can be used as a table source wherever a table name can appear in a SELECT statement. A four-part name cannot be specified for [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].  
+ A four-part name constructed with the OPENDATASOURCE function as the server-name part can be used as a table source wherever a table name can appear in a SELECT statement. A four-part name cannot be specified for [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].  
   
  Some syntax restrictions apply to SELECT statements that involve remote tables.  
   
@@ -144,7 +144,7 @@ SELECT <select_criteria>
 ## Permissions  
  Selecting data requires **SELECT** permission on the table or view, which could be inherited from a higher scope such as **SELECT** permission on the schema or **CONTROL** permission on the table. Or requires membership in the **db_datareader** or **db_owner** fixed database roles, or the **sysadmin** fixed server role. Creating a new table using **SELECTINTO** also requires both the **CREATETABLE** permission, and the **ALTERSCHEMA** permission on the schema that owns the new table.  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### A. Using SELECT to retrieve rows and columns  
  This section shows three code examples. This first code example returns all rows (no WHERE clause is specified) and all columns (using the `*`) from the `DimEmployee` table in the [!INCLUDE[ssawPDW](../../t-sql/database-console-commands/includes/ssawpdw-md.md)] database.  

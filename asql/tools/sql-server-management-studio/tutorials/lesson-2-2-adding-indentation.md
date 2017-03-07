@@ -54,7 +54,7 @@ Query Editor allows you to indent large sections of code with a single step, and
 3.  Click **OK**.  
   
 ## Next Task in Lesson  
-[Maximizing Query Editor](../Topic/Maximizing%20Query%20Editor.md)  
+[Maximizing Query Editor](../../../tools/sql-server-management-studio/tutorials/lesson-2-3-maximizing-query-editor.md)  
   
   
   

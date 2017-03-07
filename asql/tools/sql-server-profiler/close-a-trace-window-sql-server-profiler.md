@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Close a Trace Window (SQL Server Profiler)
-  This topic describes how to close the trace window for traces that are running or for saved traces you are viewing by using [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)].  
+  This topic describes how to close the trace window for traces that are running or for saved traces you are viewing by using [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)].  
   
 ### To close a trace window  
   

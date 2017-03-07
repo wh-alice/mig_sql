@@ -50,10 +50,10 @@ manager: "jhubbard"
   
  Because this schema defines the target namespace, an XPath query (such as "Employee") against the schema must include the namespace.  
   
- This is a sample [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Visual Basic application that executes an XPath query (x:Employee) against the preceding XSD schema. To resolve the prefix, the namespace binding is specified by using the namespaces property.  
+ This is a sample [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Visual Basic application that executes an XPath query (x:Employee) against the preceding XSD schema. To resolve the prefix, the namespace binding is specified by using the namespaces property.  
   
 > [!NOTE]  
->  In the code, you must provide the name of the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in the connection string. Also, this example specifies the use of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client (SQLNCLI11) for the data provider, which requires additional network client software to be installed. For more information, see [System Requirements for SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
+>  In the code, you must provide the name of the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] in the connection string. Also, this example specifies the use of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client (SQLNCLI11) for the data provider, which requires additional network client software to be installed. For more information, see [System Requirements for SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

@@ -16,7 +16,7 @@ ms.author: "carlrab"
 manager: "jhubbard"
 ---
 # Creating a System-Versioned Temporal Table
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   There are three ways to create a system-versioned temporal table with regards to how the history table is specified:  
   

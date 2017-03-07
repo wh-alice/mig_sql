@@ -24,9 +24,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Full File Backups (SQL Server)
-  This topic is relevant for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases that contain multiple files or filegroups.  
+  This topic is relevant for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] databases that contain multiple files or filegroups.  
   
- The files in a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database can be backed up and restored individually. Also, you can specify a whole filegroup instead of specifying each constituent file individually. Note that if any file in a filegroup is offline (for example, because the file is being restored), the whole filegroup is offline and cannot be backed up.  
+ The files in a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database can be backed up and restored individually. Also, you can specify a whole filegroup instead of specifying each constituent file individually. Note that if any file in a filegroup is offline (for example, because the file is being restored), the whole filegroup is offline and cannot be backed up.  
   
  File backups of read-only filegroups can be combined with partial backups. Partial backups include all the read/write filegroups and, optionally, one or more read-only filegroups. For more information, see [Partial Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   

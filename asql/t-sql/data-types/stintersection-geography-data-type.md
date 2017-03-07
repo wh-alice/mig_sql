@@ -38,7 +38,7 @@ manager: "jhubbard"
  Is another **geography** instance to compare with the instance on which STIntersection() is being invoked.  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **geography**  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] return type: **geography**  
   
  CLR return type: **SqlGeography**  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
  STIntersection() always returns null if the spatial reference identifiers (SRIDs) of the **geography** instances do not match.  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports spatial instances that are larger than a hemisphere. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] may include **FullGlobe** instances in the set of possible results returned on the server.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports spatial instances that are larger than a hemisphere. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] may include **FullGlobe** instances in the set of possible results returned on the server.  
   
  The result may contain circular arc segments only if the input instances contain circular arc segments.  
   

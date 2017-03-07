@@ -15,9 +15,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Resolve Out Of Memory Issues
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../integration-services/includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[hek_1](../../relational-databases/backup-restore/includes/hek-1-md.md)] uses more memory and in different ways than does [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. It is possible that the amount of memory you installed and allocated for [!INCLUDE[hek_2](../../relational-databases/in-memory-oltp/includes/hek-2-md.md)] becomes inadequate for your growing needs. If so, you could run out of memory. This topic covers how to recover from an OOM situation. See [Monitor and Troubleshoot Memory Usage](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) for guidance that can help you avoid many OOM situations.  
+  [!INCLUDE[hek_1](../../a9retired/includes/hek-1-md.md)] uses more memory and in different ways than does [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. It is possible that the amount of memory you installed and allocated for [!INCLUDE[hek_2](../../a9retired/includes/hek-2-md.md)] becomes inadequate for your growing needs. If so, you could run out of memory. This topic covers how to recover from an OOM situation. See [Monitor and Troubleshoot Memory Usage](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) for guidance that can help you avoid many OOM situations.  
   
 ## Covered in this topic  
   
@@ -42,7 +42,7 @@ If the server does have enough physical memory, but you are still seeing this er
   
     > [!IMPORTANT]  
     >  If the server is running on a VM and is not dedicated, set the value of MIN_MEMORY_PERCENT to the same value as MAX_MEMORY_PERCENT.   
-    > See the topic [Best Practices: Using In-Memory OLTP in a VM environment](../Topic/Using%20In-Memory%20OLTP%20in%20a%20VM%20Environment.md) for more information.  
+    > See the topic [Best Practices: Using In-Memory OLTP in a VM environment](../../a9retired/using-in-memory-oltp-in-a-vm-environment.md) for more information.  
   
     ```tsql  
   
@@ -97,16 +97,16 @@ If the server does have enough physical memory, but you are still seeing this er
 #### Increase available memory  
   
 ##### Increase value of MAX_MEMORY_PERCENT on the resource pool  
- If you have not created a named resource pool for your in-memory tables you should do that and bind your [!INCLUDE[hek_2](../../relational-databases/in-memory-oltp/includes/hek-2-md.md)] databases to it. See the topic [Bind a Database with Memory-Optimized Tables to a Resource Pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) for guidance on creating and binding your [!INCLUDE[hek_2](../../relational-databases/in-memory-oltp/includes/hek-2-md.md)] databases to a resource pool.  
+ If you have not created a named resource pool for your in-memory tables you should do that and bind your [!INCLUDE[hek_2](../../a9retired/includes/hek-2-md.md)] databases to it. See the topic [Bind a Database with Memory-Optimized Tables to a Resource Pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) for guidance on creating and binding your [!INCLUDE[hek_2](../../a9retired/includes/hek-2-md.md)] databases to a resource pool.  
   
- If your [!INCLUDE[hek_2](../../relational-databases/in-memory-oltp/includes/hek-2-md.md)] database is bound to a resource pool you may be able to increase the percent of memory the pool can access. See the sub-topic [Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation) for guidance on changing the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT for a resource pool.  
+ If your [!INCLUDE[hek_2](../../a9retired/includes/hek-2-md.md)] database is bound to a resource pool you may be able to increase the percent of memory the pool can access. See the sub-topic [Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation) for guidance on changing the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT for a resource pool.  
   
  Increase the value of MAX_MEMORY_PERCENT.   
 This code snippet changes MAX_MEMORY_PERCENT for the resource pool PoolHk to 70% of installed memory.  
   
 > [!IMPORTANT]  
 >  If the server is running on a VM and is not dedicated, set the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value.   
-> See the topic [Best Practices: Using In-Memory OLTP in a VM environment](../Topic/Using%20In-Memory%20OLTP%20in%20a%20VM%20Environment.md) for more information.  
+> See the topic [Best Practices: Using In-Memory OLTP in a VM environment](../../a9retired/using-in-memory-oltp-in-a-vm-environment.md) for more information.  
   
 ```tsql  
   
@@ -129,11 +129,11 @@ GO
  For information on maximum values for MAX_MEMORY_PERCENT see the topic section [Percent of memory available for memory-optimized tables and indexes](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable).  
   
 ##### Install additional memory  
- Ultimately the best solution, if possible, is to install additional physical memory. If you do this, remember that you will probably be able to also increase the value of MAX_MEMORY_PERCENT (see the sub-topic [Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)) since [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] won’t likely need more memory, allowing you to make most if not all of the newly installed memory available to the resource pool.  
+ Ultimately the best solution, if possible, is to install additional physical memory. If you do this, remember that you will probably be able to also increase the value of MAX_MEMORY_PERCENT (see the sub-topic [Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)) since [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] won’t likely need more memory, allowing you to make most if not all of the newly installed memory available to the resource pool.  
   
 > [!IMPORTANT]  
 >  If the server is running on a VM and is not dedicated, set the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value.   
-> See the topic [Best Practices: Using In-Memory OLTP in a VM environment](../Topic/Using%20In-Memory%20OLTP%20in%20a%20VM%20Environment.md) for more information.  
+> See the topic [Best Practices: Using In-Memory OLTP in a VM environment](../../a9retired/using-in-memory-oltp-in-a-vm-environment.md) for more information.  
   
 ##  <a name="bkmk_PageAllocFailure"></a> Resolve page allocation failures due to insufficient memory when sufficient memory is available  
  If you get the error message, “Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'http://go.microsoft.com/fwlink/?LinkId=330673' for more information.” in the error log when the available physical memory is sufficient to allocate the page, it may be due to a disabled Resource Governor. When the Resource Governor is disabled MEMORYBROKER_FOR_RESERVE induces artificial memory pressure.  
@@ -143,9 +143,9 @@ GO
  See [Enable Resource Governor](http://technet.microsoft.com/library/bb895149.aspx) for information on Limits and Restrictions as well as guidance on enabling Resource Governor using Object Explorer, Resource Governor properties, or Transact-SQL.  
   
 ## See Also  
- [Managing Memory for In-Memory OLTP](../Topic/Managing%20Memory%20for%20In-Memory%20OLTP.md)   
+ [Managing Memory for In-Memory OLTP](../../a9retired/managing-memory-for-in-memory-oltp.md)   
  [Monitor and Troubleshoot Memory Usage](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
  [Bind a Database with Memory-Optimized Tables to a Resource Pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Best Practices: Using In-Memory OLTP in a VM environment](../Topic/Using%20In-Memory%20OLTP%20in%20a%20VM%20Environment.md)  
+ [Best Practices: Using In-Memory OLTP in a VM environment](../../a9retired/using-in-memory-oltp-in-a-vm-environment.md)  
   
   

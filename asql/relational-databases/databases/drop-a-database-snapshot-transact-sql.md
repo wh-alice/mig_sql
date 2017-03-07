@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Drop a Database Snapshot (Transact-SQL)
-  Dropping a database snapshot deletes the database snapshot from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and deletes the sparse files that are used by the snapshot. When you drop a database snapshot, all user connections to it are terminated.  
+  Dropping a database snapshot deletes the database snapshot from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and deletes the sparse files that are used by the snapshot. When you drop a database snapshot, all user connections to it are terminated.  
   
 ## Security  
   
@@ -29,7 +29,7 @@ manager: "jhubbard"
 ##  <a name="TsqlProcedure"></a> How to Drop a Database Snapshot (Using Transact-SQL)  
  **To drop a database snapshot**  
   
-1.  Identify the database snapshot that you want to drop. You can view the snapshots on a database in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. For more information, see [View a Database Snapshot &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md).  
+1.  Identify the database snapshot that you want to drop. You can view the snapshots on a database in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. For more information, see [View a Database Snapshot &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md).  
   
 2.  Issue a [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) statement, specifying the name of the database snapshot to be dropped. The syntax is as follows:  
   

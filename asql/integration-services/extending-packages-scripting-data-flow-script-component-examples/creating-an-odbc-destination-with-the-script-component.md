@@ -22,17 +22,17 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Creating an ODBC Destination with the Script Component
-  In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)], you typically save data to an ODBC destination by using an [!INCLUDE[vstecado](../../analysis-services/data-mining/includes/vstecado-md.md)] destination and the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] Data Provider for ODBC. However, you can also create an ad hoc ODBC destination for use in a single package. To create this ad hoc ODBC destination, you use the Script component as shown in the following example.  
+  In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)], you typically save data to an ODBC destination by using an [!INCLUDE[vstecado](../../a9retired/includes/vstecado-md.md)] destination and the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] Data Provider for ODBC. However, you can also create an ad hoc ODBC destination for use in a single package. To create this ad hoc ODBC destination, you use the Script component as shown in the following example.  
   
 > [!NOTE]  
 >  If you want to create a component that you can more easily reuse across multiple Data Flow tasks and multiple packages, consider using the code in this Script component sample as the starting point for a custom data flow component. For more information, see [Developing a Custom Data Flow Component](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
 ## Example  
- The following example demonstrates how to create a destination component that uses an existing ODBC connection manager to save data from the data flow into a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table.  
+ The following example demonstrates how to create a destination component that uses an existing ODBC connection manager to save data from the data flow into a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] table.  
   
- This example is a modified version of the custom [!INCLUDE[vstecado](../../analysis-services/data-mining/includes/vstecado-md.md)] destination that was demonstrated in the topic, [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). However, in this example, the custom [!INCLUDE[vstecado](../../analysis-services/data-mining/includes/vstecado-md.md)] destination has been modified to work with an ODBC connection manager and save data to an ODBC destination. These modifications also include the following changes:  
+ This example is a modified version of the custom [!INCLUDE[vstecado](../../a9retired/includes/vstecado-md.md)] destination that was demonstrated in the topic, [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). However, in this example, the custom [!INCLUDE[vstecado](../../a9retired/includes/vstecado-md.md)] destination has been modified to work with an ODBC connection manager and save data to an ODBC destination. These modifications also include the following changes:  
   
--   You cannot call the **AcquireConnection** method of the ODBC connection manager from managed code, because it returns a native object. Therefore, this sample uses the connection string of the connection manager to connect to the data source directly by using the managed ODBC [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] Data Provider.  
+-   You cannot call the **AcquireConnection** method of the ODBC connection manager from managed code, because it returns a native object. Therefore, this sample uses the connection string of the connection manager to connect to the data source directly by using the managed ODBC [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] Data Provider.  
   
 -   The **OdbcCommand** expects positional parameters. The positions of the parameters are indicated by the question marks (?) in the text of the command. (In contrast, a **SqlCommand** expects named parameters.)  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 3.  Add a new Script component to the Data Flow designer surface and configure it as a destination.  
   
-4.  Connect the output of an upstream source or transformation to the destination component in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer. (You can connect a source directly to a destination without any transformations.) To ensure that this sample works, the output of the upstream component must include at least the **AddressID** and **City** columns from the **Person.Address** table of the **AdventureWorks** sample database.  
+4.  Connect the output of an upstream source or transformation to the destination component in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer. (You can connect a source directly to a destination without any transformations.) To ensure that this sample works, the output of the upstream component must include at least the **AddressID** and **City** columns from the **Person.Address** table of the **AdventureWorks** sample database.  
   
 5.  Open the **Script Transformation Editor**. On the **Input Columns** page, select the **AddressID** and **City** columns.  
   

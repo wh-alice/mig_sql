@@ -47,14 +47,14 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Generate and Publish Scripts Wizard
-  You can use the **Generate and Publish Scripts Wizard** to create scripts for transferring a database between instances of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] or [!INCLUDE[ssSDSFull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)]. You can generate scripts for a database on an instance of the Database Engine in your local network, or from [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)]. The generated scripts can be run on another instance of the Database Engine or [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)]. You can also use the wizard to publish the contents of a database directly to a Web service created by using the Database Publishing Services. You can create scripts for an entire database, or limit it to specific objects.  
+  You can use the **Generate and Publish Scripts Wizard** to create scripts for transferring a database between instances of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] or [!INCLUDE[ssSDSFull](../../a9retired/includes/sssdsfull-md.md)]. You can generate scripts for a database on an instance of the Database Engine in your local network, or from [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)]. The generated scripts can be run on another instance of the Database Engine or [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)]. You can also use the wizard to publish the contents of a database directly to a Web service created by using the Database Publishing Services. You can create scripts for an entire database, or limit it to specific objects.  
   
 1.  **Before you begin:**  [Publishing to a Hosted Service](#PubHostSvc), [Permissions](#Permissions)  
   
 2.  **To generate or publish a script, using:**  [The Generate and Publish Scripts Wizard](#GenPubScriptWiz)  
   
 ## Before You Begin  
- The source and target database can be on [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)], or an instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] running [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] or later.  
+ The source and target database can be on [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)], or an instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] running [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] or later.  
   
 ###  <a name="PubHostSvc"></a> Publishing to a Hosted Service  
  In addition to creating scripts, the **Generate and Publish Scripts Wizard** can be used to publish a database to a specific type of hosted SQL Server Web service. The SQL Server Hosting Toolkit provides Database Publishing Services as a shared source project on CodePlex. The Database Publishing Services project can be used by Web hosting providers to build a set of Web services that make it easy for their customers to deploy databases to the Web service. For more information about downloading the SQL Server Hosting Toolkit, see [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025).  
@@ -62,7 +62,7 @@ manager: "jhubbard"
  To publish a database to a Web hosting service, select the **Publish to Web Service** option on the **Set Scripting Options** page of the wizard.  
   
 ###  <a name="Permissions"></a> Permissions  
- The minimum permission to publish a database is membership in the db_ddladmin fixed database role on the origin database. The minimum permission to publish a database script to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] at the hosting provider is membership in the db_ddladmin fixed database role on the target database.  
+ The minimum permission to publish a database is membership in the db_ddladmin fixed database role on the origin database. The minimum permission to publish a database script to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] at the hosting provider is membership in the db_ddladmin fixed database role on the target database.  
   
  The user also has to supply a user name and password to access their hosting provider account to publish with the wizard. The target database must be created at the hosting provider before the source database is published. Publishing overwrites objects in that existing database.  
   
@@ -118,7 +118,7 @@ manager: "jhubbard"
 ###  <a name="SetScriptOpt"></a> Set Scripting Options Page  
  Use this page to specify if you want the wizard to save scripts to the location of your choice or to use them to publish database objects to a remote Web hosting provider. To publish, you must have access to a Web service installed by using the Database Publishing Services Web service.  
   
- **Options** - If you want the wizard to save scripts to a location of your choice, select **Save scripts to a specific location**. You can later run the scripts against either an instance of the Database Engine, or against [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)]. If you want the wizard to publish your database objects to a remote Web hosting provider, select **Publish to Web service**.  
+ **Options** - If you want the wizard to save scripts to a location of your choice, select **Save scripts to a specific location**. You can later run the scripts against either an instance of the Database Engine, or against [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)]. If you want the wizard to publish your database objects to a remote Web hosting provider, select **Publish to Web service**.  
   
  **Save Scripts to a Specific Location** – save one or more .Transact-SQL script files to a location you specify.  
   
@@ -141,7 +141,7 @@ manager: "jhubbard"
 -   **Target database** - Select the target database where you want to publish the objects that you selected. You must select a provider before selecting a target database.  
   
 ###  <a name="AdvScriptOpt"></a> Advanced Scripting Options Page  
- Use this page to specify how you want this wizard to generate scripts. Many different options are available. Options are greyed out if they are not supported by the version of SQL Server or [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] specified in **Database engine type**.  
+ Use this page to specify how you want this wizard to generate scripts. Many different options are available. Options are greyed out if they are not supported by the version of SQL Server or [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] specified in **Database engine type**.  
   
  **Options** - Specify advanced options by selecting a value from the list of available settings to the right of each option.  
   
@@ -173,13 +173,13 @@ manager: "jhubbard"
   
 -   **Script defaults** - Includes default objects used to set default values in table columns. The default is **True**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md).  
   
--   **Script drop and create** - When **Script CREATE**, [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements are included to create objects. When **Script DROP**, [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements are included to drop objects. When **Script DROP and CREATE**, the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] drop statement is included in the script, followed by the create statement, for each scripted object. The default is **Script CREATE**.  
+-   **Script drop and create** - When **Script CREATE**, [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements are included to create objects. When **Script DROP**, [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements are included to drop objects. When **Script DROP and CREATE**, the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] drop statement is included in the script, followed by the create statement, for each scripted object. The default is **Script CREATE**.  
   
 -   **Script extended properties** - Includes extended properties in the script if the object has extended properties. The default is **True**.  
   
--   **Script for engine type** - Creates a script that can be run on the selected type of either [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] or an instance of the SQL Server Database Engine. Objects not supported on the specified type are not included in the script. The default is the type of the origin server.  
+-   **Script for engine type** - Creates a script that can be run on the selected type of either [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] or an instance of the SQL Server Database Engine. Objects not supported on the specified type are not included in the script. The default is the type of the origin server.  
   
--   **Script for server version** - Creates a script that can be run on the selected version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Features new to a version cannot be scripted for earlier versions. The default is the version of the origin server.  
+-   **Script for server version** - Creates a script that can be run on the selected version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Features new to a version cannot be scripted for earlier versions. The default is the version of the origin server.  
   
 -   **Script logins** - When the object to be scripted is a database user, this option creates the logins on which the user depends. The default is **False**.  
   
@@ -229,7 +229,7 @@ manager: "jhubbard"
  **Cancel** - Undoes all changes that you have made on the **Hosting Provider** dialog box.  
   
 ###  <a name="AdvPubOpts"></a> Advanced Publishing Options Page  
- Use this page to specify how you want this wizard to publish a database. Many different options are available. Options are greyed out if they are not supported by the version of SQL Server or [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] specified in **Database engine type**.  
+ Use this page to specify how you want this wizard to publish a database. Many different options are available. Options are greyed out if they are not supported by the version of SQL Server or [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] specified in **Database engine type**.  
   
  **Options** - Specify advanced options by selecting a value from the list of available settings to the right of each option.  
   
@@ -245,7 +245,7 @@ manager: "jhubbard"
   
 5.  **Publish extended properties** - Includes extended properties in the script that is sent to the provider for publishing, if the object has extended properties. The default is **True**.  
   
-6.  **Publish for server version** - Creates a script that is sent to the remote provider for publishing in a way that can be run on the selected version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Features new to a version cannot be scripted for earlier versions. The default is the version of the origin server.  
+6.  **Publish for server version** - Creates a script that is sent to the remote provider for publishing in a way that can be run on the selected version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Features new to a version cannot be scripted for earlier versions. The default is the version of the origin server.  
   
 7.  **Publish object-Level permissions** - Includes the permissions on the selected objects in the database. The default is **False**.  
   
@@ -334,11 +334,11 @@ manager: "jhubbard"
  
 ## Generating Scripts on Azure SQL Data Warehouse  
 
-If the syntax generated when using “Script As…” does not look like [!INCLUDE[ssSDW_md](../../database-engine/configure/windows/includes/sssdw-md.md)] syntax or if you receive an error message, you may need to set your scripting options in SQL Server Management Studio to [!INCLUDE[ssSDW_md](../../database-engine/configure/windows/includes/sssdw-md.md)].  
+If the syntax generated when using “Script As…” does not look like [!INCLUDE[ssSDW_md](../../a9retired/includes/sssdw-md.md)] syntax or if you receive an error message, you may need to set your scripting options in SQL Server Management Studio to [!INCLUDE[ssSDW_md](../../a9retired/includes/sssdw-md.md)].  
 
 ### How to set default scripting options to SQL Data Warehouse  
 
-In order to script objects with [!INCLUDE[ssSDW_md](../../database-engine/configure/windows/includes/sssdw-md.md)] syntax, set the default scripting option to [!INCLUDE[ssSDW_md](../../database-engine/configure/windows/includes/sssdw-md.md)] as follows:  
+In order to script objects with [!INCLUDE[ssSDW_md](../../a9retired/includes/sssdw-md.md)] syntax, set the default scripting option to [!INCLUDE[ssSDW_md](../../a9retired/includes/sssdw-md.md)] as follows:  
 
 1. Click **Tools** then **Options**.  
 2. Under **General Scripting Options** set:  
@@ -348,7 +348,7 @@ In order to script objects with [!INCLUDE[ssSDW_md](../../database-engine/config
 
 ### How to Generate Scripts for SQL Data Warehouse when it is not the default scripting option  
 
-If you set [!INCLUDE[ssSDW_md](../../database-engine/configure/windows/includes/sssdw-md.md)] as your default scripting option as shown above, these instructions can be ignored. However, if you choose to use different default scripting options, you may encounter an error. To avoid errors, follow these steps in order to Generate and Publish Scripts for [!INCLUDE[ssSDW_md](../../database-engine/configure/windows/includes/sssdw-md.md)]:  
+If you set [!INCLUDE[ssSDW_md](../../a9retired/includes/sssdw-md.md)] as your default scripting option as shown above, these instructions can be ignored. However, if you choose to use different default scripting options, you may encounter an error. To avoid errors, follow these steps in order to Generate and Publish Scripts for [!INCLUDE[ssSDW_md](../../a9retired/includes/sssdw-md.md)]:  
 
 1. Right click on your SQL Data Warehouse database.  
 2. Select **Generate Scripts...**.  

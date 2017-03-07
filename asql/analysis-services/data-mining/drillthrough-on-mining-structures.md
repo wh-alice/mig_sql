@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Drillthrough on Mining Structures
   *Drillthrough* means the ability to query either a mining model or a mining structure and get detailed data that is not exposed in the model.  
   
- [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] provides two different options for drilling through into case data. You can drill through to the data that were used to build the mining model, or you can drill through to the source data in the mining structure.  
+ [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] provides two different options for drilling through into case data. You can drill through to the data that were used to build the mining model, or you can drill through to the source data in the mining structure.  
   
 ## Drillthrough to Model Cases vs. Drillthrough to Structure  
  Drilling through to **model cases** is useful for finding additional details about rules, patterns or clusters in a model.  

@@ -25,17 +25,17 @@ manager: "jhubbard"
 |Product Name|SQL Server|  
 |Event ID|14121|  
 |Event Source|MSSQLSERVER|  
-|Component|[!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]|  
+|Component|[!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)]|  
 |Symbolic Name||  
 |Message Text|Could not drop the Distributor '%s'. This Distributor has associated distribution databases.|  
   
 ## Explanation  
- A [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance that is configured as a Distributor cannot be removed from the role of Distributor because there are distribution databases associated with the instance. This error occurs if you attempt to drop a distribution database that is associated with one or more Publishers.  
+ A [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance that is configured as a Distributor cannot be removed from the role of Distributor because there are distribution databases associated with the instance. This error occurs if you attempt to drop a distribution database that is associated with one or more Publishers.  
   
 ## User Action  
- To find the names of any Publishers and distribution databases associated with this Distributor, execute [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md) from any database on the Distributor.  
+ To find the names of any Publishers and distribution databases associated with this Distributor, execute [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-helpdistpublisher-transact-sql.md) from any database on the Distributor.  
   
- Execute [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md) for any distribution databases associated with this Distributor. After all distribution database associations are removed, you can disable distribution.  
+ Execute [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-dropdistributiondb-transact-sql.md) for any distribution databases associated with this Distributor. After all distribution database associations are removed, you can disable distribution.  
   
 ## See Also  
  [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   

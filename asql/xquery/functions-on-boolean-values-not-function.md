@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Functions on Boolean Values - not Function 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns TRUE if the effective Boolean value of *$arg* is false, and returns FALSE if the effective Boolean value of *$arg* is true.  
   
@@ -60,7 +60,7 @@ WHERE CatalogDescription.exist('
   
  Note the following from the previous query:  
   
--   Because the document uses namespaces, the sample uses the WITH NAMESPACES statement. Another option is to use the **declare namespace** keyword in the [XQuery Prolog](../Topic/XQuery%20Prolog.md) to define the prefix.  
+-   Because the document uses namespaces, the sample uses the WITH NAMESPACES statement. Another option is to use the **declare namespace** keyword in the [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md) to define the prefix.  
   
 -   The query then constructs the XML that includes the <`Product`> element and its **ProductModelID** attribute.  
   
@@ -88,7 +88,7 @@ WHERE ProductModelID=7
   
  In the preceding query, note the following:  
   
--   The **declarenamespace** in [XQuery Prolog](../Topic/XQuery%20Prolog.md) defines the Adventure Works manufacturing instructions namespace prefix. It represents the same namespace used in the manufacturing instructions document.  
+-   The **declarenamespace** in [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md) defines the Adventure Works manufacturing instructions namespace prefix. It represents the same namespace used in the manufacturing instructions document.  
   
 -   In the query, the **not(@MachineHours)** predicate returns True if there is no **MachineHours** attribute.  
   

@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Change Indicator Icons and Indicator Sets (Report Builder and SSRS)
-  The preconfigured indicators sets that [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] provides for paginated reports might not always depict your data effectively and work well in the delivered report. This topic provides procedures to change the appearance of indicator icons and change the indicator sets to include different, more, or fewer indicator icons.  
+  The preconfigured indicators sets that [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] provides for paginated reports might not always depict your data effectively and work well in the delivered report. This topic provides procedures to change the appearance of indicator icons and change the indicator sets to include different, more, or fewer indicator icons.  
   
  Options such as colors can be set by using expressions. For more information, see [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
@@ -30,7 +30,7 @@ manager: "erikre"
   
      Optionally, click the **Expression** (*fx*) button to edit an expression that sets the value of the **Color** option.  
   
-     If you clicked **More Colors**, the **Select Color** dialog box opens, where you can choose from a wide array of colors. For more information about its options, see [Select Color Dialog Box &#40;Report Builder and SSRS&#41;](../Topic/Select%20Color%20Dialog%20Box%20\(Report%20Builder%20and%20SSRS\).md). Click **OK** to close the **Select Color** dialog box.  
+     If you clicked **More Colors**, the **Select Color** dialog box opens, where you can choose from a wide array of colors. For more information about its options, see [Select Color Dialog Box &#40;Report Builder and SSRS&#41;](../../a9retired/select-color-dialog-box-report-builder-and-ssrs.md). Click **OK** to close the **Select Color** dialog box.  
   
 4.  Click **OK**.  
   

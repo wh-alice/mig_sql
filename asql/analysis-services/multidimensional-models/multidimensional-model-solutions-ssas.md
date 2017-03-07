@@ -22,27 +22,27 @@ manager: "erikre"
 # Multidimensional Model Solutions (SSAS)
     
 ## In This Section  
- The following topics provide guidance on designing [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] multidimensional database objects.  
+ The following topics provide guidance on designing [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] multidimensional database objects.  
   
  [Multidimensional Model Databases &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
- Describes how to define an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] database.  
+ Describes how to define an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] database.  
   
  [Supported Data Sources &#40;SSAS - Multidimensional&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
- Describes how to define [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] data source objects.  
+ Describes how to define [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] data source objects.  
   
  [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
- Describes how to design [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] data source views.  
+ Describes how to design [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] data source views.  
   
  [Dimensions in Multidimensional Models](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
- Describes how to design [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] dimension objects.  
+ Describes how to design [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] dimension objects.  
   
  [Cubes in Multidimensional Models](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
- Describes how to design [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] cube objects.  
+ Describes how to design [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] cube objects.  
   
  [Schema Generation Wizard &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
  Describes how to design multidimensional database objects without an existing relational schema.  
   
  [Analysis Services Personalization Extensions](../../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)  
- Describes how to design Personalization Extensions for [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)].  
+ Describes how to design Personalization Extensions for [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)].  
   
   

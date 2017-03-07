@@ -39,7 +39,7 @@ In this scenario, Mary can only access the **Products** table by using the store
 You must have EXECUTE permission to execute a stored procedure. You must have SELECT, INSERT, UPDATE, and DELETE permissions to access and change data. The GRANT statement is also used for other permissions, such as permission to create tables.  
   
 ## Next Task in Lesson  
-[Summary: Configuring Permissions on Database Objects](../Topic/Summary:%20Configuring%20Permissions%20on%20Database%20Objects.md)  
+[Summary: Configuring Permissions on Database Objects](../../t-sql/tutorials/lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
 ## See Also  
 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)  

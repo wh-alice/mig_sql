@@ -25,7 +25,7 @@ ms.author: "carlasab"
 manager: "erikre"
 ---
 # Setting the Url Property of the Web Service
-  At any time in your [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] applications, you can modify the base URL of the Report Server Web service to which your application is currently directed. To do this, simply set the **Url** property of the service object. For example:  
+  At any time in your [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] applications, you can modify the base URL of the Report Server Web service to which your application is currently directed. To do this, simply set the **Url** property of the service object. For example:  
   
 ```vb#  
 Dim rs As New ReportingService2010()  

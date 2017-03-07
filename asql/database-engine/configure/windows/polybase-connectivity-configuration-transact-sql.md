@@ -17,11 +17,11 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # PolyBase Connectivity Configuration (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Displays or changes global configuration settings for PolyBase Hadoop and Azure blob storage connectivity.  
   
- ![Topic link icon](../../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -96,8 +96,8 @@ RECONFIGURE
 |**run_value**|**int**|Current value in use by PolyBase. This value is set by running RECONFIGURE.<br /><br /> The **config_value** and **run_value** are usually the same unless the value is in the process of being changed.<br /><br /> A restart might be required before this run value is accurate, if the reconfiguration is in progress.|  
   
 ## General Remarks  
- In [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], after running RECONFIGURE, for the run value of the 'hadoop connectivity' to take effect, you need to restart [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
-In [!INCLUDE[ssPDW](../../../database-engine/configure/windows/includes/sspdw-md.md)], after running RECONFIGURE, for the run value of the 'hadoop connectivity' to take effect, you need to restart the [!INCLUDE[ssPDW](../../../database-engine/configure/windows/includes/sspdw-md.md)] region.  
+ In [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], after running RECONFIGURE, for the run value of the 'hadoop connectivity' to take effect, you need to restart [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
+In [!INCLUDE[ssPDW](../../../a9notintoc/includes/sspdw-md.md)], after running RECONFIGURE, for the run value of the 'hadoop connectivity' to take effect, you need to restart the [!INCLUDE[ssPDW](../../../a9notintoc/includes/sspdw-md.md)] region.  
   
 ## Limitations and Restrictions  
  RECONFIGURE is not allowed in an explicit or implicit transaction.  
@@ -138,7 +138,7 @@ GO
 ```  
   
 ## See Also  
- [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-external-data-source-transact-sql.md)  

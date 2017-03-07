@@ -76,7 +76,7 @@ manager: "erikre"
  The **Attribute** element defines the attribute member that is inserted, updated, or deleted, respectively, by the **Insert**, **Update**, or **Drop** command. As these commands can operate only on one attribute member at a time, the [Attributes](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md) collection of the **Insert**, **Update**, and **Drop** commands can contain only one **Attribute** element. However, the **Attributes** collection of the **Where** element for the **Drop** and **Update** commands can contain more than one **Attribute** element, so that you can filter the attributes to be dropped or updated in a write-enabled dimension.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)   
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)   
  [Write-Enabled Dimensions](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

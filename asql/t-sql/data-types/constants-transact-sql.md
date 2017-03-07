@@ -36,14 +36,14 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Constants (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   A constant, also known as a literal or a scalar value, is a symbol that represents a specific data value. The format of a constant depends on the data type of the value it represents.  
   
  Character string constants  
  Character string constants are enclosed in single quotation marks and include alphanumeric characters (a-z, A-Z, and 0-9) and special characters, such as exclamation point (!), at sign (@), and number sign (#). Character string constants are assigned the default collation of the current database, unless the COLLATE clause is used to specify a collation. Character strings typed by users are evaluated through the code page of the computer and are translated to the database default code page if it is required.  
   
- If the QUOTED_IDENTIFIER option has been set OFF for a connection, character strings can also be enclosed in double quotation marks, but the Microsoft [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client Provider and ODBC driver automatically use SET QUOTED_IDENTIFIER ON. We recommend using single quotation marks.  
+ If the QUOTED_IDENTIFIER option has been set OFF for a connection, character strings can also be enclosed in double quotation marks, but the Microsoft [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client Provider and ODBC driver automatically use SET QUOTED_IDENTIFIER ON. We recommend using single quotation marks.  
   
  If a character string enclosed in single quotation marks contains an embedded quotation mark, represent the embedded single quotation mark with two single quotation marks. This is not required in strings embedded in double quotation marks.  
   
@@ -142,7 +142,7 @@ manager: "jhubbard"
  **money** constants  
  **money** constants are represented as string of numbers with an optional decimal point and an optional currency symbol as a prefix. **money** constantsare not enclosed in quotation marks.  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not enforce any kind of grouping rules such as inserting a comma (,) every three digits in strings that represent money.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not enforce any kind of grouping rules such as inserting a comma (,) every three digits in strings that represent money.  
   
 > [!NOTE]  
 >  Commas are ignored anywhere in the specified **money** literal.  

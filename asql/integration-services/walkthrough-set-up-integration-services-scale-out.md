@@ -15,7 +15,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Walkthrough: Set Up Integration Services Scale Out
-Set up [!INCLUDE[ssISnoversion_md](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] Scale Out by completing the following tasks. 
+Set up [!INCLUDE[ssISnoversion_md](../a9notintoc/includes/ssisnoversion-md.md)] Scale Out by completing the following tasks. 
 
 > [!NOTE]
 > If you are installing Scale Out on one computer, install the Scale Out Master and Scale Out Worker features at the same time. When you install the features at the same time, the endpoint is automatically generated to connect to Scale Out Master. 
@@ -38,16 +38,16 @@ Set up [!INCLUDE[ssISnoversion_md](../advanced-analytics/r-services/includes/ssi
 
 ## <a name="InstallMaster"></a> Install Scale Out Master
 
-To enable the functionality of Scale Out Master, you must install Database Engine Services, [!INCLUDE[ssISnoversion_md](../advanced-analytics/r-services/includes/ssisnoversion-md.md)], and its Scale Out Master feature when you set up [!INCLUDE[ssNoVersion_md](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. 
+To enable the functionality of Scale Out Master, you must install Database Engine Services, [!INCLUDE[ssISnoversion_md](../a9notintoc/includes/ssisnoversion-md.md)], and its Scale Out Master feature when you set up [!INCLUDE[ssNoVersion_md](../a9notintoc/includes/ssnoversion-md.md)]. 
 
-For information on setting up Database Engine Services and [!INCLUDE[ssISnoversion_md](../advanced-analytics/r-services/includes/ssisnoversion-md.md)], see [Install SQL Server Database Engine](../database-engine/install/windows/install-sql-server-database-engine.md), and [Install Integration Services](../integration-services/install/windows/install-integration-services.md).
+For information on setting up Database Engine Services and [!INCLUDE[ssISnoversion_md](../a9notintoc/includes/ssisnoversion-md.md)], see [Install SQL Server Database Engine](../database-engine/install/windows/install-sql-server-database-engine.md), and [Install Integration Services](../integration-services/install/windows/install-integration-services.md).
 > [!NOTE]
 > During Database Engine installation, select Mixed Mode for Authentication mode on the Database Engine Configuration page. 
 
-**To install the Scale Out Master feature, use the [!INCLUDE[ssNoVersion_md](../advanced-analytics/r-services/includes/ssnoversion-md.md)] installation wizard or the command prompt.**
+**To install the Scale Out Master feature, use the [!INCLUDE[ssNoVersion_md](../a9notintoc/includes/ssnoversion-md.md)] installation wizard or the command prompt.**
 
-- Steps for the [!INCLUDE[ssNoVersion_md](../advanced-analytics/r-services/includes/ssnoversion-md.md)] installation wizard
-  1.  On the **Feature Selection** page, select **Scale Out Master**, which is listed under [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)].   
+- Steps for the [!INCLUDE[ssNoVersion_md](../a9notintoc/includes/ssnoversion-md.md)] installation wizard
+  1.  On the **Feature Selection** page, select **Scale Out Master**, which is listed under [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)].   
   ![Feature Select Master](../integration-services/media/feature-select-master.PNG)
   
   2.  On the **Server Configuration** page, select the account to run **SQL Server Integration Services Scale Out Master service** and select the **Startup Type**.  
@@ -58,7 +58,7 @@ For information on setting up Database Engine Services and [!INCLUDE[ssISnoversi
     * Let the setup process create a default, self-signed SSL certificate by clicking **Create a new SSL certificate**. The default certificate is installed under Trusted Root Certification Authorities, Local Computer.
     * Select an existing SSL Certicate on the local computer by clicking **Use an existing SSL certificate** and then clicking **Browse**. The thumbprint of the certificate appears in the text box. Clicking **Browse** displays certificates that are stored in Trusted Root Certification Authorities, Local Computer. The certificate you select must be stored here.       
 ![Master Config 2](../integration-services/media/master-config-2.PNG "Master Config 2")
-  5.  Finish the [!INCLUDE[ssNoVersion_md](../advanced-analytics/r-services/includes/ssnoversion-md.md)] installation wizard.
+  5.  Finish the [!INCLUDE[ssNoVersion_md](../a9notintoc/includes/ssnoversion-md.md)] installation wizard.
 - Steps for the command prompt
 
     Follow the instructions in [Install SQL Server from the Command Prompt](../database-engine/install/windows/install-sql-server-2016-from-the-command-prompt.md). Set the Scale Out Master related parameters by doing the following.
@@ -67,12 +67,12 @@ For information on setting up Database Engine Services and [!INCLUDE[ssISnoversi
   
 ## <a name="InstallWorker"></a> Install Scale Out Worker
  
-To enable the functionality of Scale Out Worker, you must install [!INCLUDE[ssISnoversion_md](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] and its Scale Out Worker feature in [!INCLUDE[ssNoVersion_md](../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup.
+To enable the functionality of Scale Out Worker, you must install [!INCLUDE[ssISnoversion_md](../a9notintoc/includes/ssisnoversion-md.md)] and its Scale Out Worker feature in [!INCLUDE[ssNoVersion_md](../a9notintoc/includes/ssnoversion-md.md)] setup.
 
-**To install the Scale Out Worker feature, use the [!INCLUDE[ssNoVersion_md](../advanced-analytics/r-services/includes/ssnoversion-md.md)] installation wizard or the command prompt.**
+**To install the Scale Out Worker feature, use the [!INCLUDE[ssNoVersion_md](../a9notintoc/includes/ssnoversion-md.md)] installation wizard or the command prompt.**
 
-- Steps for the [!INCLUDE[ssNoVersion_md](../advanced-analytics/r-services/includes/ssnoversion-md.md)] installation wizard
-  1.  On the **Feature Selection** page, select **Scale Out Worker**, which is listed under [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)].   
+- Steps for the [!INCLUDE[ssNoVersion_md](../a9notintoc/includes/ssnoversion-md.md)] installation wizard
+  1.  On the **Feature Selection** page, select **Scale Out Worker**, which is listed under [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)].   
   ![Feature Select Worker](../integration-services/media/feature-select-worker.PNG)
   2. On the **Server Configuration** page, select the account to run **SQL Server Integration Services Scale Out Worker service** and select the **Startup Type**.    
   ![Server Config 2](../integration-services/media/server-config-2.PNG "Server Config 2")
@@ -88,7 +88,7 @@ To enable the functionality of Scale Out Worker, you must install [!INCLUDE[ssIS
      
      Click **Browse** to find the certificate file (*.cer). To use the default SSL certificate, select the SSISScaleOutMaster.cer file located under \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn on the computer on which Scale Out Master is installed.   
    ![Worker Config 2](../integration-services/media/worker-config-2.PNG "Worker Config 2")
-  5. Finish the [!INCLUDE[ssNoVersion_md](../advanced-analytics/r-services/includes/ssnoversion-md.md)] installation wizard.
+  5. Finish the [!INCLUDE[ssNoVersion_md](../a9notintoc/includes/ssnoversion-md.md)] installation wizard.
 - Steps for the command prompt
 
     Follow the instructions in [Install SQL Server from the Command Prompt](../database-engine/install/windows/install-sql-server-2016-from-the-command-prompt.md). Set the Scale Out Worker related parameters by doing the following.
@@ -115,10 +115,10 @@ If the startup type of the services is not set to Automatic during installation,
    
 ## <a name="EnableMaster"></a> Enable Scale Out Master
 
-Click **Enable this server as SSIS scale out master** in the **Create Catalog** dialog when you create the SSISDB catalog in [!INCLUDE[ssNoVersion_md](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../advanced-analytics/r-services/includes/ssmanstudio-md.md)].
+Click **Enable this server as SSIS scale out master** in the **Create Catalog** dialog when you create the SSISDB catalog in [!INCLUDE[ssNoVersion_md](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../a9notintoc/includes/ssmanstudio-md.md)].
 
 ## <a name="EnableAuth"></a> Enable SQL Server Authentication mode
-If [!INCLUDE[ssNoVersion_md](../advanced-analytics/r-services/includes/ssnoversion-md.md)] authentication is not enabled during the Database Engine installation, enable SQL Server authentication mode on the [!INCLUDE[ssNoVersion_md](../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance that hosts the SSISDB catalog. 
+If [!INCLUDE[ssNoVersion_md](../a9notintoc/includes/ssnoversion-md.md)] authentication is not enabled during the Database Engine installation, enable SQL Server authentication mode on the [!INCLUDE[ssNoVersion_md](../a9notintoc/includes/ssnoversion-md.md)] instance that hosts the SSISDB catalog. 
 
 Package execution is not blocked when SQL Server authentication is disabled. However, the execution log will not be able to write to SSISDB.
 

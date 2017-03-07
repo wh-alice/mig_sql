@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Server Properties in Analysis Services
-  An [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] administrator can modify default server configuration properties of an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance. Each instance has its own configuration properties, which are set independently of other instances on the same server.  
+  An [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] administrator can modify default server configuration properties of an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance. Each instance has its own configuration properties, which are set independently of other instances on the same server.  
   
  To configure the server, use SQL Server Management Studio or edit the msmdsrv.ini file of a specific instance.  
  
@@ -32,17 +32,17 @@ Property pages in SQL Server Management Studio show a subset of the properties m
 > [!NOTE]  
 >  In a default installation, msmdsrv.ini can be found in the \Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config folder.
 > 
-> Other properties affecting server configuration include deployment configuration properties in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)]. For more information about those properties, see [Specifying Configuration Settings for Solution Deployment](../Topic/Specifying%20Configuration%20Settings%20for%20Solution%20Deployment.md).
+> Other properties affecting server configuration include deployment configuration properties in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)]. For more information about those properties, see [Specifying Configuration Settings for Solution Deployment](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  
 ##  <a name="bkmk_config"></a> Configure properties in Management Studio 
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], connect to an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], connect to an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance.  
   
-2. In Object Explorer, right-click the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance, and then click **Properties**. The General page appears, displaying the more commonly used properties.  
+2. In Object Explorer, right-click the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance, and then click **Properties**. The General page appears, displaying the more commonly used properties.  
 
 3.  To view additional properties, click the **Show Advanced (All) Properties** checkbox at the bottom of the page.  
   
-     Modifying server properties is supported only for tabular mode and multidimensional mode servers. If you installed [!INCLUDE[ssGeminiShort](../../analysis-services/includes/ssgeminishort-md.md)], always use the default values unless otherwise directed otherwise by Microsoft Support.  
+     Modifying server properties is supported only for tabular mode and multidimensional mode servers. If you installed [!INCLUDE[ssGeminiShort](../../a9notintoc/includes/ssgeminishort-md.md)], always use the default values unless otherwise directed otherwise by Microsoft Support.  
   
      For guidance on how to address operational or performance issues through server properties, see [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
@@ -65,7 +65,7 @@ Property pages in SQL Server Management Studio show a subset of the properties m
   
 ##  <a name="bkmk_ref"></a> Server Property Reference  
   
- The following topics describe the various [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] configuration properties:  
+ The following topics describe the various [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] configuration properties:  
   
 |Topic|Description|  
 |-----------|-----------------|  
@@ -85,6 +85,6 @@ Property pages in SQL Server Management Studio show a subset of the properties m
   
 ## See Also  
  [Analysis Services Instance Management](../../analysis-services/instances/analysis-services-instance-management.md)   
- [Specifying Configuration Settings for Solution Deployment](../Topic/Specifying%20Configuration%20Settings%20for%20Solution%20Deployment.md)  
+ [Specifying Configuration Settings for Solution Deployment](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

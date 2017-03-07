@@ -16,7 +16,7 @@ ms.author: "carlrab"
 manager: "jhubbard"
 ---
 # Stopping System-Versioning on a System-Versioned Temporal Table
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   You may want to stop versioning on your temporal table either temporarily or permanently.   
 You can do that by setting **SYSTEM_VERSIONING** clause to **OFF**.  

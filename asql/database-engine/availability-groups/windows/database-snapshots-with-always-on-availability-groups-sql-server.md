@@ -18,7 +18,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Database Snapshots with Always On Availability Groups (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   You can create a database snapshot on an primary or secondary database in an availability group. The replica role must be either PRIMARY or SECONDARY, not in the RESOLVING state.  
   
@@ -26,7 +26,7 @@ manager: "jhubbard"
   
  A database snapshot on a secondary replica should continue to work if the replica is DISCONNECTED from the primary replica.  
   
- Some [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] conditions cause both the source database and its database snapshots to be restarted, temporarily disconnecting users. These conditions are as follows:  
+ Some [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] conditions cause both the source database and its database snapshots to be restarted, temporarily disconnecting users. These conditions are as follows:  
   
 -   The primary replica changes roles, whether because the current primary replica goes off line and comes back online on the same server instance or because the availability group fails over.  
   

@@ -48,7 +48,7 @@ SELECT TOP ( number )
 ```  
   
 ## Nearest Neighbor Query and Spatial Indexes  
- In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], **TOP** and **ORDER BY** clauses are used to perform a Nearest Neighbor query on spatial data columns. The **ORDER BY** clause contains a call to the `STDistance()` method for the spatial column data type. The **TOP** clause indicates the number of objects to return for the query.  
+ In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], **TOP** and **ORDER BY** clauses are used to perform a Nearest Neighbor query on spatial data columns. The **ORDER BY** clause contains a call to the `STDistance()` method for the spatial column data type. The **TOP** clause indicates the number of objects to return for the query.  
   
  The following requirements must be met for a Nearest Neighbor query to use a spatial index:  
   

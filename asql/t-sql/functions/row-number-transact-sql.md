@@ -25,16 +25,16 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # ROW_NUMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Numbers the output of a result set. More specifically, returns the sequential number of a row within a partition of a result set, starting at 1 for the first row in each partition. 
   
 `ROW_NUMBER` and `RANK` are similar. `ROW_NUMBER` numbers all rows sequentially (for example 1, 2, 3, 4, 5). `RANK` provides the same numeric value for ties (for example 1, 2, 2, 4, 5).   
   
 > [!NOTE]
-> `ROW_NUMBER` is a temporary value calculated when the query is run. To persist numbers in a table, see [IDENTITY Property](IDENTITY%20\(Property\)%20\(Transact-SQL\).md) and [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
+> `ROW_NUMBER` is a temporary value calculated when the query is run. To persist numbers in a table, see [IDENTITY Property](../../t-sql/statements/create-table-transact-sql-identity-property.md) and [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
   
 ## Syntax  
@@ -46,10 +46,10 @@ ROW_NUMBER ( )
   
 ## Arguments  
  PARTITION BY *value_expression*  
- Divides the result set produced by the [FROM](../../t-sql/queries/from-transact-sql.md) clause into partitions to which the ROW_NUMBER function is applied. *value_expression* specifies the column by which the result set is partitioned. If `PARTITION BY` is not specified, the function treats all rows of the query result set as a single group. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../Topic/OVER%20Clause%20\(Transact-SQL\).md).  
+ Divides the result set produced by the [FROM](../../t-sql/queries/from-transact-sql.md) clause into partitions to which the ROW_NUMBER function is applied. *value_expression* specifies the column by which the result set is partitioned. If `PARTITION BY` is not specified, the function treats all rows of the query result set as a single group. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  *order_by_clause*  
- The `ORDER BY` clause determines the sequence in which the rows are assigned their unique `ROW_NUMBER` within a specified partition. It is required. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../Topic/OVER%20Clause%20\(Transact-SQL\).md).  
+ The `ORDER BY` clause determines the sequence in which the rows are assigned their unique `ROW_NUMBER` within a specified partition. It is required. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## Return Types  
  **bigint**  
@@ -128,7 +128,7 @@ FROM sys.databases WHERE database_id < 5;
 
 
 ### B. Returning the row number for salespeople  
- The following example calculates a row number for the salespeople in [!INCLUDE[ssSampleDBCoFull](../../analysis-services/data-mining/includes/sssampledbcofull-md.md)] based on their year-to-date sales ranking.  
+ The following example calculates a row number for the salespeople in [!INCLUDE[ssSampleDBCoFull](../../a9notintoc/includes/sssampledbcofull-md.md)] based on their year-to-date sales ranking.  
   
 ```  
 USE AdventureWorks2012;   
@@ -214,7 +214,7 @@ Shu        Ito                  Southwest            2458535.61    2
 Jae        Pak                  United Kingdom       4116871.22    1  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### E. Returning the row number for salespeople  
  The following example returns the `ROW_NUMBER` for sales representatives based on their assigned sales quota.  

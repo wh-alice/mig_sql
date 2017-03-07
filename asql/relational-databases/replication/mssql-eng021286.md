@@ -25,12 +25,12 @@ manager: "jhubbard"
 |Product Name|SQL Server|  
 |Event ID|21286|  
 |Event Source|MSSQLSERVER|  
-|Component|[!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]|  
+|Component|[!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)]|  
 |Symbolic Name||  
 |Message Text|Conflict table '%s' does not exist.|  
   
 ## Explanation  
- This error is raised if the conflict table for an article listed in [sysmergearticles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) does not actually exist. The error can occur when you attempt to add a column to or drop a column from a table published for merge replication.  
+ This error is raised if the conflict table for an article listed in [sysmergearticles &#40;Transact-SQL&#41;](../../relational-databases/reference/system-tables/sysmergearticles-transact-sql.md) does not actually exist. The error can occur when you attempt to add a column to or drop a column from a table published for merge replication.  
   
 ## User Action  
  Execute [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database with the missing conflict table to verify there are no data consistency issues.  

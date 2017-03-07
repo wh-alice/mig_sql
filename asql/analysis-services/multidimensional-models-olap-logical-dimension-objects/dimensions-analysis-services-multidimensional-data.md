@@ -22,13 +22,13 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Dimensions (Analysis Services - Multidimensional Data)
-  In [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], dimensions are a fundamental component of cubes. Dimensions organize data with relation to an area of interest, such as customers, stores, or employees, to users. Dimensions in [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] contain attributes that correspond to columns in dimension tables. These attributes appear as attribute hierarchies and can be organized into user-defined hierarchies, or can be defined as parent-child hierarchies based on columns in the underlying dimension table. Hierarchies are used to organize measures that are contained in a cube. The following topics provide an overview of dimensions, attributes, and hierarchies.  
+  In [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], dimensions are a fundamental component of cubes. Dimensions organize data with relation to an area of interest, such as customers, stores, or employees, to users. Dimensions in [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] contain attributes that correspond to columns in dimension tables. These attributes appear as attribute hierarchies and can be organized into user-defined hierarchies, or can be defined as parent-child hierarchies based on columns in the underlying dimension table. Hierarchies are used to organize measures that are contained in a cube. The following topics provide an overview of dimensions, attributes, and hierarchies.  
   
 ## In This Section  
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Introduction to Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../Topic/Introduction%20to%20Dimensions%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)|Provides an overview of dimension concepts.|  
+|[Introduction to Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)|Provides an overview of dimension concepts.|  
 |[Attributes and Attribute Hierarchies](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)|Describes attributes and attribute hierarchies.|  
 |[User Hierarchies](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)|Describes user-defined hierarchies of attributes.|  
 |[Write-Enabled Dimensions](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)|Describes write-enabled dimensions.|  

@@ -29,7 +29,7 @@ manager: "erikre"
 # Reporting Services Properties
   The report server defines a set of system properties that are global to the report server and a set of item properties that are associated with an individual item stored in the report server database. Properties defined by the report server cannot be deleted, and in some cases they are read-only. An application can extend system properties and item properties by adding additional user-defined properties to the system and item properties.  
   
- The following Web service methods retrieve and set [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] properties.  
+ The following Web service methods retrieve and set [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] properties.  
   
 |Method|Action|  
 |------------|------------|  
@@ -42,8 +42,8 @@ manager: "erikre"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Report Server Item Properties](../Topic/Report%20Server%20Item%20Properties.md)|Describes the item-specific properties in [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)].|  
-|[Report Server System Properties](../Topic/Report%20Server%20System%20Properties.md)|Describes the system-specific properties in [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)].|  
+|[Report Server Item Properties](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-item-properties.md)|Describes the item-specific properties in [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)].|  
+|[Report Server System Properties](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)|Describes the system-specific properties in [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)].|  
   
 ## See Also  
  [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-.net-framework.md)   

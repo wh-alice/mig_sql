@@ -27,7 +27,7 @@ ms.author: "carlasab"
 manager: "erikre"
 ---
 # Batching Methods
-  The use of SOAP headers in [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] enables you to include multiple Web service methods in a single operation. Methods run within the scope of a single database transaction, in the order in which they are called.  
+  The use of SOAP headers in [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] enables you to include multiple Web service methods in a single operation. Methods run within the scope of a single database transaction, in the order in which they are called.  
   
  Rollback is one advantage of using multiple-method batch operations. If an error occurs on any of the method calls while a batch is running, the report server stops running the batch and rolls back any previous operations. This is useful when a method call depends on the successful completion of other method calls in that batch.  
   

@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Format Nested JSON Output with PATH Mode (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   To maintain full control over the format of the JSON output, specify the **PATH** option with the **FOR JSON** clause.  
   
@@ -116,6 +116,6 @@ FOR JSON PATH
 ```  
   
 ## See Also  
- [FOR Clause &#40;Transact-SQL&#41;](../Topic/FOR%20Clause%20\(Transact-SQL\).md)  
+ [FOR Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  
   
   

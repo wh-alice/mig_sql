@@ -15,9 +15,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Functions - dm_execution_performance_counters
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../integration-services/includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  Returns the performance statistics for an execution that is running on the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] server.  
+  Returns the performance statistics for an execution that is running on the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] server.  
   
 ## Syntax  
   
@@ -67,7 +67,7 @@ select * from [catalog].[dm_execution_performance_counters] (34)
 ```  
   
 ## Example  
- In the following example, the function returns statistics for all the executions running on the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] server, depending on your permissions.  
+ In the following example, the function returns statistics for all the executions running on the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] server, depending on your permissions.  
   
 ```  
 select * from [catalog].[dm_execution_performance_counters] (NULL)  

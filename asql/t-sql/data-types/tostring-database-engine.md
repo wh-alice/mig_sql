@@ -49,7 +49,7 @@ string ToString  ( )
  **CLR return type:String**  
   
 ## Remarks  
- Returns the logical location in the hierarchy. For example, `/2/1/` represents the fourth row ([!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]) in the following hierarchical structure of a file system:  
+ Returns the logical location in the hierarchy. For example, `/2/1/` represents the fourth row ([!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]) in the following hierarchical structure of a file system:  
   
 ```  
 /        C:\  
@@ -115,8 +115,8 @@ this.ToString()
 ```  
   
 ## See Also  
- [hierarchyid Data Type Method Reference](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)   
+ [hierarchyid Data Type Method Reference](../../a9retired/hierarchyid-data-type-method-reference.md)   
  [Hierarchical Data &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)   
- [hierarchyid &#40;Transact-SQL&#41;](../Topic/hierarchyid%20\(Transact-SQL\).md)  
+ [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

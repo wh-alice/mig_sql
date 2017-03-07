@@ -24,19 +24,19 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # XML Elements - Methods
-  The XML for Analysis (XMLA) protocol uses two methods, **Discover** and **Execute**, to offer a standard way for applications to access information on an instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)]. Because these methods are invoked by using Simple Object Access Protocol (SOAP), they accept input and deliver output in XML. [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] implements both methods, in compliance with the XML for Analysis 1.1 specification.  
+  The XML for Analysis (XMLA) protocol uses two methods, **Discover** and **Execute**, to offer a standard way for applications to access information on an instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)]. Because these methods are invoked by using Simple Object Access Protocol (SOAP), they accept input and deliver output in XML. [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] implements both methods, in compliance with the XML for Analysis 1.1 specification.  
   
 ## In This Section  
- The following topics describe the XMLA methods implemented by [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)].  
+ The following topics describe the XMLA methods implemented by [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)].  
   
 |Method|Description|  
 |------------|-----------------|  
-|[Discover Method &#40;XMLA&#41;](../Topic/Discover%20Method%20\(XMLA\).md)|Retrieves information, such as the list of available databases or details about a specific object, from an instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)]. The data retrieved with the **Discover** method depends on the values of the parameters passed to it.|  
-|[Execute Method &#40;XMLA&#41;](../Topic/Execute%20Method%20\(XMLA\).md)|Sends XMLA commands to an instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)]. This includes requests involving data transfer, such as retrieving or updating data on the server.|  
+|[Discover Method &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)|Retrieves information, such as the list of available databases or details about a specific object, from an instance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)]. The data retrieved with the **Discover** method depends on the values of the parameters passed to it.|  
+|[Execute Method &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)|Sends XMLA commands to an instance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)]. This includes requests involving data transfer, such as retrieving or updating data on the server.|  
   
 ## See Also  
- [XML Elements &#40;XMLA&#41;](../Topic/XML%20Elements%20\(XMLA\).md)   
+ [XML Elements &#40;XMLA&#41;](../../a9retired/xml-elements-xmla.md)   
  [XML Data Types &#40;XMLA&#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
- [XML Elements &#40;XMLA&#41;](../Topic/XML%20Elements%20\(XMLA\).md)  
+ [XML Elements &#40;XMLA&#41;](../../a9retired/xml-elements-xmla.md)  
   
   

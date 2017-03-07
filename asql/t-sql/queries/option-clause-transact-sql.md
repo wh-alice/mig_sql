@@ -25,13 +25,13 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # OPTION Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Specifies that the indicated query hint should be used throughout the entire query. Each query hint can be specified only one time, although multiple query hints are permitted. Only one OPTION clause can be specified with the statement.  
   
  This clause can be specified in the SELECT, DELETE, UPDATE and MERGE statements.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -60,7 +60,7 @@ OPTION ( <query_option> [ ,...n ] )
   
 ## Arguments  
  *query_hint*  
- Keywords that indicate which optimizer hints are used to customize the way the Database Engine processes the statement. For more information, see [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).  
+ Keywords that indicate which optimizer hints are used to customize the way the Database Engine processes the statement. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## Examples  
   
@@ -79,7 +79,7 @@ OPTION (HASH GROUP, FAST 10);
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### B. SELECT statement with a label in the OPTION clause  
  The following example shows a simple [!INCLUDE[ssDW](../../database-engine/configure/windows/includes/ssdw-md.md)] SELECT statement with a label in the OPTION clause.  
@@ -104,7 +104,7 @@ OPTION (HASH JOIN);
 ```  
   
 ### D. SELECT statement with a label and multiple query hints in the OPTION clause  
- The following example is a [!INCLUDE[ssDW](../../database-engine/configure/windows/includes/ssdw-md.md)] SELECT statement that contains a label and multiple query hints. When the query is run on the Compute nodes, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will apply a hash join or merge join, according to the strategy that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] decides is the most optimal.  
+ The following example is a [!INCLUDE[ssDW](../../database-engine/configure/windows/includes/ssdw-md.md)] SELECT statement that contains a label and multiple query hints. When the query is run on the Compute nodes, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will apply a hash join or merge join, according to the strategy that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] decides is the most optimal.  
   
 ```  
 -- Uses AdventureWorks  

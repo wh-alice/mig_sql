@@ -33,16 +33,16 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SYSDATETIME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns a **datetime2(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running.  
+  Returns a **datetime2(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running.  
   
 > [!NOTE]  
 >  SYSDATETIME and SYSUTCDATETIME have more fractional seconds precision than GETDATE and GETUTCDATE. SYSDATETIMEOFFSET includes the system time zone offset. SYSDATETIME, SYSUTCDATETIME, and SYSDATETIMEOFFSET can be assigned to a variable of any of the date and time types.  
   
- For an overview of all [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] date and time data types and functions, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ For an overview of all [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] date and time data types and functions, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -56,15 +56,15 @@ SYSDATETIME ( )
  **datetime2(7)**  
   
 ## Remarks  
- [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements can refer to SYSDATETIME anywhere they can refer to a **datetime2(7)** expression.  
+ [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements can refer to SYSDATETIME anywhere they can refer to a **datetime2(7)** expression.  
   
  SYSDATETIME is a nondeterministic function. Views and expressions that reference this function in a column cannot be indexed.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] obtains the date and time values by using the GetSystemTimeAsFileTime() Windows API. The accuracy depends on the computer hardware and version of Windows on which the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running. The precision of this API is fixed at 100 nanoseconds. The accuracy can be determined by using the GetSystemTimeAdjustment() Windows API.  
+>  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] obtains the date and time values by using the GetSystemTimeAsFileTime() Windows API. The accuracy depends on the computer hardware and version of Windows on which the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running. The precision of this API is fixed at 100 nanoseconds. The accuracy can be determined by using the GetSystemTimeAdjustment() Windows API.  
   
 ## Examples  
- The following examples use the six [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system functions that return current date and time to return the date, time or both. The values are returned in series; therefore, their fractional seconds might be different.  
+ The following examples use the six [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system functions that return current date and time to return the date, time or both. The values are returned in series; therefore, their fractional seconds might be different.  
   
 ### A. Getting the current system date and time  
   
@@ -119,7 +119,7 @@ GETUTCDATE()       20:18:45.3470000
 */  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### D: Getting the current system date and time  
   

@@ -26,9 +26,9 @@ manager: "jhubbard"
 # CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns the checksum of the values in a group. Null values are ignored. Can be followed by the [OVER clause](../Topic/OVER%20Clause%20\(Transact-SQL\).md).  
+  Returns the checksum of the values in a group. Null values are ignored. Can be followed by the [OVER clause](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -60,7 +60,7 @@ CHECKSUM_AGG ( [ ALL | DISTINCT ] expression )
  CHECKSUM_AGG has similar functionality with other aggregate functions. For more information, see [Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md).  
   
 ## Examples  
- The following example uses `CHECKSUM_AGG` to detect changes in the `Quantity` column of the `ProductInventory` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example uses `CHECKSUM_AGG` to detect changes in the `Quantity` column of the `ProductInventory` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 --Get the checksum value before the column value is changed.  
@@ -95,6 +95,6 @@ FROM Production.ProductInventory;
   
 ## See Also  
  [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
- [OVER Clause &#40;Transact-SQL&#41;](../Topic/OVER%20Clause%20\(Transact-SQL\).md)  
+ [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   

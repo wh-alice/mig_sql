@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # PermissionSet Element (ASSL)
-  Identifies the permission set associated with a [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] .NET Framework assembly.  
+  Identifies the permission set associated with a [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] .NET Framework assembly.  
   
 ## Syntax  
   
@@ -62,7 +62,7 @@ manager: "erikre"
 |-----------|-----------------|  
 |*Safe*|Only internal computation and local data access is allowed. *Safe* is the most restrictive permission set. Code executed by an assembly with *Safe* permissions cannot access external system resources such as files, the network, environment variables, or the registry.|  
 |*ExternalAccess*|*Safe*, with the additional ability to access external system resources such as files, networks, environmental variables, and the registry.|  
-|*Unrestricted*|Unrestricted allows assemblies unrestricted access to resources, both within and outside [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Code executing from within an *Unrestricted* assembly can call unmanaged code.|  
+|*Unrestricted*|Unrestricted allows assemblies unrestricted access to resources, both within and outside [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. Code executing from within an *Unrestricted* assembly can call unmanaged code.|  
   
  The enumeration that corresponds to the allowed values for **PermissionSet** in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.PermissionSet>.  
   

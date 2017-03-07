@@ -22,7 +22,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Set Thresholds and Warnings in Replication Monitor
-  [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Replication Monitor displays status information for publications and subscriptions. By default, Replication Monitor displays warnings only for uninitialized subscriptions, but you can enable warnings for other conditions. It is recommended that you enable warnings for your topology, so that you are informed about status and performance in a timely manner.  
+  [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Replication Monitor displays status information for publications and subscriptions. By default, Replication Monitor displays warnings only for uninitialized subscriptions, but you can enable warnings for other conditions. It is recommended that you enable warnings for your topology, so that you are informed about status and performance in a timely manner.  
   
  When you enable a warning, you specify a threshold. When that threshold is met or exceeded, a warning is displayed (unless an issue with a higher priority needs to be displayed). In addition to displaying a warning in Replication Monitor, reaching a threshold can also trigger an alert. You can enable warnings for the following conditions:  
   
@@ -80,7 +80,7 @@ manager: "jhubbard"
   
     -   On the **Options** page, customize the text of the response.  
   
-4.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 5.  Click **Close**.  
   
@@ -122,7 +122,7 @@ manager: "jhubbard"
   
     -   On the **Options** page, customize the text of the response.  
   
-4.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 5.  Click **Close**.  
   
@@ -154,11 +154,11 @@ manager: "jhubbard"
   
     -   On the **Options** page, customize the text of the response.  
   
-4.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 5.  Click **Close**.  
   
 ## See Also  
- [Monitoring Replication](../Topic/Monitoring%20Replication.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

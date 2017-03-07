@@ -18,7 +18,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Memory Optimization Advisor
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Transaction Performance Analysis reports (see [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informs you about which tables in your database will benefit if ported to use In-Memory OLTP. After you identify a table that you would like to port to use In-Memory OLTP, you can use the memory optimization advisor in SQL Server Management Studio to help you migrate the disk-based table to a memory-optimized table.  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
  If you wish to keep a list of these incompatibilities, to plan your migration, click the **Generate Report** to generate a HTML list.  
   
- If your table has no incompatibilities and you are connected to a [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] instance with In-Memory OLTP, click **Next**.  
+ If your table has no incompatibilities and you are connected to a [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] instance with In-Memory OLTP, click **Next**.  
   
 ### Memory Optimization Warnings  
  The next page, memory optimization warnings, contains a list of issues that do not prevent the table from being migrated to use In-Memory OLTP, but that may cause the behavior of other objects (such as stored procedures or CLR functions) to fail or result in unexpected behavior.  
@@ -94,7 +94,7 @@ manager: "jhubbard"
   
  If a primary key doesn’t exist and the table is being migrated to a non-durable table, this screen will not appear.  
   
- For textual columns (columns with types **char**, **nchar**, **varchar**, and **nvarchar**) you must select an appropriate collation. In-Memory OLTP only supports BIN2 collations for columns on a memory-optimized table and it does not support collations with supplementary characters. See [Collations and Code Pages](../Topic/Collations%20and%20Code%20Pages.md) for information on the collations supported and the potential impact of a change in collation.  
+ For textual columns (columns with types **char**, **nchar**, **varchar**, and **nvarchar**) you must select an appropriate collation. In-Memory OLTP only supports BIN2 collations for columns on a memory-optimized table and it does not support collations with supplementary characters. See [Collations and Code Pages](../../a9retired/collations-and-code-pages.md) for information on the collations supported and the potential impact of a change in collation.  
   
  You can configure the following parameters for the primary key:  
   
@@ -108,7 +108,7 @@ manager: "jhubbard"
   
 -   A NONCLUSTERED index. This type of index is best for indexes with many range queries. You may configure the sort order for each column in the **Sort column and order** list.  
   
- To understand the type of index best for your primary key, see [Hash Indexes](../Topic/Hash%20Indexes.md).  
+ To understand the type of index best for your primary key, see [Hash Indexes](../../a9retired/hash-indexes.md).  
   
  Click **Next** after you make your primary key choices.  
   
@@ -120,7 +120,7 @@ manager: "jhubbard"
  After you make a decision for every index in your table, click **Next**.  
   
 ### Verify Migration Actions  
- The next page is **Verify Migration Actions**. To script the migration operation, click **Script** to generate a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] script. You may then modify and execute the script. Click **Migrate** to begin the table migration.  
+ The next page is **Verify Migration Actions**. To script the migration operation, click **Script** to generate a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] script. You may then modify and execute the script. Click **Migrate** to begin the table migration.  
   
  After the process is finished, refresh **Object Explorer** to see the new memory-optimized table and the old disk-based table. You can keep the old table or delete it at your convenience.  
   

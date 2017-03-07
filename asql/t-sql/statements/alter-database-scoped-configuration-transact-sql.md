@@ -27,9 +27,9 @@ ms.author: "carlrab"
 manager: "jhubbard"
 ---
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  This statement enables several database configuration settings at the **individual database** level. This statement is available in both [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)] and in [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)]. Those settings are:  
+  This statement enables several database configuration settings at the **individual database** level. This statement is available in both [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)] and in [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)]. Those settings are:  
   
 -   Clear procedure cache.  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 -   Enable or disable query optimization hotfixes at the database level.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -82,7 +82,7 @@ To set this option at the instance level, see [Configure the max degree of paral
  Can only be set for the secondaries and indicates that the configuration will be the one set for the primary. If the configuration for the primary changes, secondary will also adjust to the same value. **PRIMARY** is the default setting for the secondaries  
   
  LEGACY_CARDINALITY_ESTIMATION **=** { ON | OFF | PRIMARY }  
- Enables you to set the query optimizer cardinality estimation model to the SQL Server 2012 and earlier version independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/en-us/kb/2801413). To set  this at the instance level, see [Trace Flags (Transact-SQL)](../Topic/Trace%20Flags%20\(Transact-SQL\).md). To accomplish this at the query level, add the **QUERYTRACEON** [query hint](https://msdn.microsoft.com/library/ms181714.aspx).  
+ Enables you to set the query optimizer cardinality estimation model to the SQL Server 2012 and earlier version independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/en-us/kb/2801413). To set  this at the instance level, see [Trace Flags (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). To accomplish this at the query level, add the **QUERYTRACEON** [query hint](https://msdn.microsoft.com/library/ms181714.aspx).  
   
  **ON**  
   
@@ -98,7 +98,7 @@ level of the database.
  This value is only valid on secondaries and specifies that the query optimizer cardinality estimation model setting on all secondaries will be the value set for the primary. If the configuration on the primary for  the query optimizer cardinality estimation model changes, the value on the secondaries will change accordingly. **PRIMARY** is the default setting for the secondaries.  
   
  PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}  
- Enables or disables parameter sniffing. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/en-us/kb/980653). To set  this at the instance level, see [Trace Flags (Transact-SQL)](../Topic/Trace%20Flags%20\(Transact-SQL\).md). To set this at the query level, see the **OPTIMIZE FOR UNKNOWN** [query hint](https://msdn.microsoft.com/library/ms181714.aspx).  
+ Enables or disables parameter sniffing. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/en-us/kb/980653). To set  this at the instance level, see [Trace Flags (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). To set this at the query level, see the **OPTIMIZE FOR UNKNOWN** [query hint](https://msdn.microsoft.com/library/ms181714.aspx).  
   
  **ON**  
   
@@ -114,7 +114,7 @@ level of the database.
   
  QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }  
  Enables or disables query optimization hotfixes regardless of the compatibility level of the database. This is equivalent to [Trace Flag 4199](https://support.microsoft.com/en-us/kb/974006).   
- To set  this at the instance level, see [Trace Flags (Transact-SQL)](../Topic/Trace%20Flags%20\(Transact-SQL\).md). To accomplish this at the query level, add the **QUERYTRACEON** [query hint](https://msdn.microsoft.com/library/ms181714.aspx).  
+ To set  this at the instance level, see [Trace Flags (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). To accomplish this at the query level, add the **QUERYTRACEON** [query hint](https://msdn.microsoft.com/library/ms181714.aspx).  
   
  **ON**  
   
@@ -172,7 +172,7 @@ on the database. This permission can be granted by a user with CONTROL permissio
  Since ALTER DATABASE SCOPED CONFIGURATION is a new feature in Azure SQL Database and SQL Server 2016 that affects the database schema, exports of the schema (with or without data)  will not be able to be imported into an older version of SQL Server e.g. SQL Server 2012 or SQL Server 2014.   For example, an export to a [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) or a [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) from an Azure SQL Database or SQL Server 2016 database that used this new feature would not be able to be imported into a down-level server.  
   
 ## Metadata  
- The [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-scoped-configurations-transact-sql.md) system view provides information about scoped configurations within a database. Database-scoped configuration options only show up in sys.database_scoped_configurations as they are overrides to server-wide default settings. The [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.configurations-transact-sql.md) system view only shows server-wide settings.  
+ The [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-scoped-configurations-transact-sql.md) system view provides information about scoped configurations within a database. Database-scoped configuration options only show up in sys.database_scoped_configurations as they are overrides to server-wide default settings. The [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.configurations-transact-sql.md) system view only shows server-wide settings.  
   
 ## Examples  
  These examples demonstrate the use of ALTER DATABASE SCOPED CONFIGURATION  
@@ -276,11 +276,11 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 * [SQL Server query optimizer hotfix trace flag 4199 servicing model](https://support.microsoft.com/en-us/kb/974006)
 
 ## More information  
- [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-scoped-configurations-transact-sql.md)   
- [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.configurations-transact-sql.md)   
- [Databases and Files Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+ [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-scoped-configurations-transact-sql.md)   
+ [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.configurations-transact-sql.md)   
+ [Databases and Files Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure/windows/server-configuration-options-sql-server.md)   
- [Trace Flags &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md)   
- [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.configurations-transact-sql.md)  
+ [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)   
+ [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.configurations-transact-sql.md)  
   
   

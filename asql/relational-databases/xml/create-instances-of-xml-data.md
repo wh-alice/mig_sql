@@ -26,7 +26,7 @@ manager: "jhubbard"
 # Create Instances of XML Data
   This topic describes how to generate XML instances.  
   
- In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you can generate XML instances in the following ways:  
+ In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], you can generate XML instances in the following ways:  
   
 -   Type casting string instances.  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
 -   Using bulk load.  
   
 ## Type Casting String and Binary Instances  
- You can parse any of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] string data types, such as [**n**][**var**]**char**, **[n]text**, **varbinary**,and **image**, into the **xml** data type by casting (CAST) or converting (CONVERT) the string to the **xml** data type. Untyped XML is checked to confirm that it is well formed. If there is a schema associated with the **xml** type, validation is also performed. For more information, see [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+ You can parse any of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] string data types, such as [**n**][**var**]**char**, **[n]text**, **varbinary**,and **image**, into the **xml** data type by casting (CAST) or converting (CONVERT) the string to the **xml** data type. Untyped XML is checked to confirm that it is well formed. If there is a schema associated with the **xml** type, validation is also performed. For more information, see [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
  XML documents can be encoded with different encodings (for example, UTF-8, UTF-16, windows-1252). The following outlines the rules on how the string and binary source types interact with the XML document encoding and how the parser behaves.  
   
@@ -54,13 +54,13 @@ select CAST(x as XML)
 from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)  
 ```  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] internally represents XML in an efficient binary representation that uses UTF-16 encoding. User-provided encoding is not preserved, but is considered during the parse process.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] internally represents XML in an efficient binary representation that uses UTF-16 encoding. User-provided encoding is not preserved, but is considered during the parse process.  
   
 ### Type Casting CLR user-defined types  
  If a CLR user-defined type has an XML Serialization, instances of that type can be explicitly cast to an XML datatype. For more details about the XML serialization of a CLR user-defined typed, see [XML Serialization from CLR Database Objects](../Topic/XML%20Serialization%20from%20CLR%20Database%20Objects.md).  
   
 ### White Space Handling in Typed XML  
- In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], white space inside element content is considered insignificant if it occurs inside a sequence of white-space-only character data delimited by markup, such as begin or end tags, and is not entitized. (CDATA sections are ignored.) This handling of white space handling is different from how white space is described in the XML 1.0 specification published by the World Wide Web Consortium (W3C). This is because the XML parser in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] recognizes only a limited number of DTD subsets, as defined in XML 1.0. For more information about the limited DTD subsets supported in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+ In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], white space inside element content is considered insignificant if it occurs inside a sequence of white-space-only character data delimited by markup, such as begin or end tags, and is not entitized. (CDATA sections are ignored.) This handling of white space handling is different from how white space is described in the XML 1.0 specification published by the World Wide Web Consortium (W3C). This is because the XML parser in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] recognizes only a limited number of DTD subsets, as defined in XML 1.0. For more information about the limited DTD subsets supported in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
  By default, the XML parser discards insignificant white space when it converts string data to XML if either of the following is true:  
   
@@ -177,7 +177,7 @@ go
  For more information about FOR XML, see [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns **xml** data type instances to the client as a result of different server constructs such as FOR XML queries that use the TYPE directive, or where the **xml** data type is used to return XML from SQL columns, variables, and output parameters. In client application code, the ADO.NET provider requests that this **xml** data type information be sent in a binary encoding from the server. However, if you are using FOR XML without the TYPE directive, the XML data returns as a string type. In any case, the client provider will always be able to handle either form of XML.  
+>  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns **xml** data type instances to the client as a result of different server constructs such as FOR XML queries that use the TYPE directive, or where the **xml** data type is used to return XML from SQL columns, variables, and output parameters. In client application code, the ADO.NET provider requests that this **xml** data type information be sent in a binary encoding from the server. However, if you are using FOR XML without the TYPE directive, the XML data returns as a string type. In any case, the client provider will always be able to handle either form of XML.  
   
 ## Using Constant Assignments  
  A string constant can be used where an instance of the **xml** data type is expected. This is the same as an implied CAST of string to XML. For example:  

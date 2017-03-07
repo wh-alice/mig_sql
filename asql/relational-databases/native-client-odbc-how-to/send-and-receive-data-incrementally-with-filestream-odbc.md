@@ -15,7 +15,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Send and Receive Data Incrementally with FILESTREAM (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   This sample shows how to use the FILESTREAM feature to send and receive data incrementally with SQLPutData and SQLGetData.  
   
@@ -24,11 +24,11 @@ manager: "jhubbard"
 ## Example  
  Before you compile and run this sample, enable FILESTREAM support ([Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- The first ([!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]) code listing creates a database used by this sample. Your instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] must have write access to run this script (for example, log on as a local system account).  
+ The first ([!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]) code listing creates a database used by this sample. Your instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] must have write access to run this script (for example, log on as a local system account).  
   
  The second code listing is the C++ code. You must specify a server; in the C++ code listing, change "MyServer" to a valid server name. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h. Compile the C++ code listing with odbc32.lib, user32.lib, /D "_UNICODE", /D "UNICODE", odbc32.lib, and /EHsc.  
   
- The third ([!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]) code listing deletes the database used by this sample.  
+ The third ([!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]) code listing deletes the database used by this sample.  
   
 ```  
 USE master  

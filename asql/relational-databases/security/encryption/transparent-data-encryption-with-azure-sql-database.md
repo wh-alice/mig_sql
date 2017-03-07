@@ -23,18 +23,18 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Transparent Data Encryption with Azure SQL Database
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx_md](../../../relational-databases/security/encryption/includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx_md](../../../relational-databases/reference/system-dynamic-management-views/includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssSDSFull](../../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] transparent data encryption helps protect against the threat of malicious activity by performing real-time encryption and decryption of the database, associated backups, and transaction log files at rest without requiring changes to the application.  
+  [!INCLUDE[ssSDSFull](../../../a9retired/includes/sssdsfull-md.md)] transparent data encryption helps protect against the threat of malicious activity by performing real-time encryption and decryption of the database, associated backups, and transaction log files at rest without requiring changes to the application.  
   
- TDE encrypts the storage of an entire database by using a symmetric key called the database encryption key. In [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)] the database encryption key is protected by a built-in server certificate. The built-in server certificate is unique for each [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)] server. If a database is in a GeoDR relationship, it is protected by a different key on each server. If 2 databases are connected to the same server, they share the same built-in certificate. [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] automatically rotates these certificates at least every 90 days. For a general description of TDE, see [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+ TDE encrypts the storage of an entire database by using a symmetric key called the database encryption key. In [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)] the database encryption key is protected by a built-in server certificate. The built-in server certificate is unique for each [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)] server. If a database is in a GeoDR relationship, it is protected by a different key on each server. If 2 databases are connected to the same server, they share the same built-in certificate. [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] automatically rotates these certificates at least every 90 days. For a general description of TDE, see [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
   
- [!INCLUDE[ssSDSFull](../../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] does not support Azure Key Vault integration with TDE. [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] running on an Azure virtual machine can use an asymmetric key from the Key Vault. For more information, see [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
+ [!INCLUDE[ssSDSFull](../../../a9retired/includes/sssdsfull-md.md)] does not support Azure Key Vault integration with TDE. [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] running on an Azure virtual machine can use an asymmetric key from the Key Vault. For more information, see [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 ##  <a name="Permissions"></a> Permissions  
  To configure TDE through the Azure portal, by using the REST API, or by using PowerShell, you must be connected as the Azure Owner, Contributor, or SQL Security Manager.  
   
- To configure TDE by using [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] requires the following:  
+ To configure TDE by using [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] requires the following:  
   
 -   To execute the ALTER DATABASE statement with the SET option requires membership in the **dbmanager** role.  
   
@@ -54,9 +54,9 @@ manager: "jhubbard"
   
      ![SQL Database TDE Start Encryption](../../../relational-databases/security/encryption/media/sqldb-tde-encrypt.png "SQL Database TDE Start Encryption")  
   
-     You can also monitor the progress of encryption by connecting to [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)] using a query tool such as [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] as a database user with the **VIEW DATABASE STATE** permission. Query the **encryption_state** column of the [sys.dm_database_encryption_keys](../../../relational-databases/system-dynamic-management-views/sys.dm-database-encryption-keys-transact-sql.md) view.  
+     You can also monitor the progress of encryption by connecting to [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)] using a query tool such as [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] as a database user with the **VIEW DATABASE STATE** permission. Query the **encryption_state** column of the [sys.dm_database_encryption_keys](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-database-encryption-keys-transact-sql.md) view.  
   
-##  <a name="Encrypt"></a> Enabling TDE on [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)] by Using Transact-SQL  
+##  <a name="Encrypt"></a> Enabling TDE on [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)] by Using Transact-SQL  
  The following steps enable TDE.  
   
 ###  <a name="TsqlProcedure"></a>  
@@ -71,9 +71,9 @@ manager: "jhubbard"
     GO  
     ```  
   
-3.  To monitor the progress of encryption on [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)], database users with the **VIEW DATABASE STATE** permission can query the **encryption_state** column of the [sys.dm_database_encryption_keys](../../../relational-databases/system-dynamic-management-views/sys.dm-database-encryption-keys-transact-sql.md) view.  
+3.  To monitor the progress of encryption on [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)], database users with the **VIEW DATABASE STATE** permission can query the **encryption_state** column of the [sys.dm_database_encryption_keys](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-database-encryption-keys-transact-sql.md) view.  
   
-##  <a name="EncryptPS"></a> Enabling and Disabling TDE on [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)] by Using PowerShell  
+##  <a name="EncryptPS"></a> Enabling and Disabling TDE on [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)] by Using PowerShell  
  Using the Azure PowerShell you can run the following command to turn TDE on/off. You must connect your account to the PS window before running the command. Customize the example to use your values for the `ServerName`, `ResourceGroupName`, and `DatabaseName` parameters. For additional information about PowerShell, see [How to install and configure Azure PowerShell](http://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
   
 > [!NOTE]  
@@ -102,7 +102,7 @@ manager: "jhubbard"
   
      If using version 0.9.8 use the Set-AzureSqlDatabaseTransparentDataEncryption command.  
   
-##  <a name="Decrypt"></a> Decrypting a TDE Protected Database on [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)]  
+##  <a name="Decrypt"></a> Decrypting a TDE Protected Database on [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)]  
   
 #### To Disable TDE by Using the Azure Portal  
   
@@ -118,7 +118,7 @@ manager: "jhubbard"
   
 6.  In the **Transparent data encryption** blade, move the **Data encryption** button to **Off**, and then click **Save** (at the top of the page) to apply the setting. The **Encryption status** will approximate the progress of the transparent data decryption.  
   
-     You can also monitor the progress of decryption by connecting to [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)] using a query tool such as [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] as a database user with the **VIEW DATABASE STATE** permission. Query the **encryption_state** column of the [sys.dm_database_encryption_keys](../../../relational-databases/system-dynamic-management-views/sys.dm-database-encryption-keys-transact-sql.md) view.  
+     You can also monitor the progress of decryption by connecting to [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)] using a query tool such as [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)] as a database user with the **VIEW DATABASE STATE** permission. Query the **encryption_state** column of the [sys.dm_database_encryption_keys](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-database-encryption-keys-transact-sql.md) view.  
   
 #### To Disable TDE by Using Transact-SQL  
   
@@ -132,9 +132,9 @@ manager: "jhubbard"
     GO  
     ```  
   
-3.  To monitor the progress of encryption on [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)], database users with the **VIEW DATABASE STATE** permission can query the **encryption_state** column of the [sys.dm_database_encryption_keys](../../../relational-databases/system-dynamic-management-views/sys.dm-database-encryption-keys-transact-sql.md) view.  
+3.  To monitor the progress of encryption on [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)], database users with the **VIEW DATABASE STATE** permission can query the **encryption_state** column of the [sys.dm_database_encryption_keys](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-database-encryption-keys-transact-sql.md) view.  
   
-##  <a name="Working"></a> Moving a TDE Protected Database on [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)]  
+##  <a name="Working"></a> Moving a TDE Protected Database on [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)]  
  You do not need to decrypt databases for operations within Azure. The TDE settings on the source database or primary database are transparently inherited on the target. This includes operations involving:  
   
 -   Geo-Restore  
@@ -147,11 +147,11 @@ manager: "jhubbard"
   
 -   Creating a Database Copy  
   
- When exporting a TDE protected database using the Export Database function in the [!INCLUDE[ssSDSFull](../../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] Portal or the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard, the exported content of the database is not encrypted. This exported content is stored in unencrypted .bacpac files. Be sure to protect the .bacpac files appropriately and enable TDE once import of the new database is completed. 
+ When exporting a TDE protected database using the Export Database function in the [!INCLUDE[ssSDSFull](../../../a9retired/includes/sssdsfull-md.md)] Portal or the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard, the exported content of the database is not encrypted. This exported content is stored in unencrypted .bacpac files. Be sure to protect the .bacpac files appropriately and enable TDE once import of the new database is completed. 
  
- For example, if the .bacpac file is exported from an on-premises [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], then the imported content of the new database will not be automatically encrypted. Likewise, if the .bacpac file is exported from an [!INCLUDE[ssSDSFull](../../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] to an on-premises [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the new database is also not automatically encrypted.  
+ For example, if the .bacpac file is exported from an on-premises [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], then the imported content of the new database will not be automatically encrypted. Likewise, if the .bacpac file is exported from an [!INCLUDE[ssSDSFull](../../../a9retired/includes/sssdsfull-md.md)] to an on-premises [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], the new database is also not automatically encrypted.  
  
- The one exception is when exporting to and from [!INCLUDE[ssSDSFull](../../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] – TDE will be enabled in the new database, but the .bacpac file itself is still not encrypted.
+ The one exception is when exporting to and from [!INCLUDE[ssSDSFull](../../../a9retired/includes/sssdsfull-md.md)] – TDE will be enabled in the new database, but the .bacpac file itself is still not encrypted.
   
 ## Related SQL Server Topic  
  [Enable TDE on SQL Server Using EKM](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  

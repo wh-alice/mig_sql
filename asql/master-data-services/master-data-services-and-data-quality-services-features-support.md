@@ -16,11 +16,11 @@ manager: "jhubbard"
 ---
 # Master Data Services and Data Quality Services Features Support
 
-## [!INCLUDE[ssMDSshort_md](../analysis-services/includes/ssmdsshort-md.md)] and Data Quality Services
+## [!INCLUDE[ssMDSshort_md](../a9notintoc/includes/ssmdsshort-md.md)] and Data Quality Services
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] database|Yes||||||Yes|  
-|[!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] web application|Yes||||||Yes|  
+|[!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] database|Yes||||||Yes|  
+|[!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] web application|Yes||||||Yes|  
 |Data Quality Services|Yes||||||Yes|  
 
 

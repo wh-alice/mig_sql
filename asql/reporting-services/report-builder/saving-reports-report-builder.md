@@ -16,11 +16,11 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Saving Reports (Report Builder)
-  In Report Builder you can save a paginated report to a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report server, SharePoint library, file share where you have write permission, or your computer. 
+  In Report Builder you can save a paginated report to a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] report server, SharePoint library, file share where you have write permission, or your computer. 
   
 When you save a report, what you are really saving is the report definition, which describes the report layout. You are not saving the data. Every time you run the report, the report data is refreshed and is likely to be different than the previous time you ran the report.  
   
- If you want to save the report to a different format or save the report definition with the data, use one of the following [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] features:  
+ If you want to save the report to a different format or save the report definition with the data, use one of the following [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] features:  
   
 -   Export a rendered report to a different file format such as comma separated files (CSV) or Excel workbooks and save the report in that format. You can also generate data feeds from reports and save the report data.  
   
@@ -35,7 +35,7 @@ When you save a report, what you are really saving is the report definition, whi
   
 -   Reports become available to others who have permission to access the folder in which you saved the report.  
   
--   Reports can be managed and viewed on the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal.  
+-   Reports can be managed and viewed on the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal.  
   
 -   Report resources such as data sources, images, and subreports are stored in one place for easier access.  
   
@@ -62,7 +62,7 @@ When you save a report, what you are really saving is the report definition, whi
    
 ## See Also  
  [Reports, Report Parts, and Report Definitions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Install and Uninstall Report Builder](../Topic/Install%20and%20Uninstall%20Report%20Builder.md)   
+ [Install and Uninstall Report Builder](../../a9retired/install-and-uninstall-report-builder.md)   
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Print Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  

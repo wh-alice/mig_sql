@@ -20,7 +20,7 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # CREATE DATABASE (Azure SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx_md](../../relational-databases/system-stored-procedures/includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx_md](../../relational-databases/reference/system-stored-procedures/includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 Creates a new database.  
   
@@ -40,7 +40,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 ## Arguments  
 *database_name*  
-The name of the new database. This name must be unique on the SQL server, which can host both [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] databases and [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+The name of the new database. This name must be unique on the SQL server, which can host both [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)] databases and [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *collation_name*  
 Specifies the default collation for the database. Collation name can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the default collation, which is SQL_Latin1_General_CP1_CI_AS.  
@@ -48,13 +48,13 @@ Specifies the default collation for the database. Collation name can be either a
 For more information about the Windows and SQL collation names, see [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
   
 *EDITION*  
-Specifies the service tier of the database. For [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] use 'datawarehouse' .  
+Specifies the service tier of the database. For [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] use 'datawarehouse' .  
   
 *MAXSIZE*  
 The maximum size the database may grow to. Setting this value prevents the growth of the database size beyond the size set. The default *MAXSIZE* when not specified is 10240 GB (10 TB).  Other possible values range from 250 GB up to 240 TB.  
   
 SERVICE_OBJECTIVE  
-Specifies the performance level. For more information about service objectives for [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)], see [Scale Performance on SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-performance-scale/).  
+Specifies the performance level. For more information about service objectives for [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)], see [Scale Performance on SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-performance-scale/).  
   
 ## General Remarks  
 Use [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) to see the database properties.  
@@ -76,11 +76,11 @@ If the size of the database reaches MAXSIZE you will receive error code 40544. W
 ## Limitations and Restrictions  
 You must be connected to the master database to create a new database.  
   
-The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] batch.
+The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] batch.
 
 You cannot change the database collation after the database is created.   
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)]  
   
 ### A. Simple example  
 A simple example for creating a data warehouse database. This creates the database with the smallest max size which is 10240 GB, the default collation which is SQL_Latin1_General_CP1_CI_AS, and the smallest compute power which is DW100.  

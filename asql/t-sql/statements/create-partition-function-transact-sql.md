@@ -34,9 +34,9 @@ manager: "jhubbard"
 # CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Creates a function in the current database that maps the rows of a table or index into partitions based on the values of a specified column. Using CREATE PARTITION FUNCTION is the first step in creating a partitioned table or index. In [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], a table or index can have a maximum of 15,000 partitions.  
+  Creates a function in the current database that maps the rows of a table or index into partitions based on the values of a specified column. Using CREATE PARTITION FUNCTION is the first step in creating a partitioned table or index. In [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], a table or index can have a maximum of 15,000 partitions.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -60,16 +60,16 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  *boundary_value*  
  Specifies the boundary values for each partition of a partitioned table or index that uses *partition_function_name*. If *boundary_value* is empty, the partition function maps the whole table or index using *partition_function_name* into a single partition. Only one partitioning column, specified in a CREATE TABLE or CREATE INDEX statement, can be used.  
   
- *boundary_value* is a constant expression that can reference variables. This includes user-defined type variables, or functions and user-defined functions. It cannot reference [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] expressions. *boundary_value* must either match or be implicitly convertible to the data type supplied in *input_parameter_type*, and cannot be truncated during implicit conversion in a way that the size and scale of the value does not match that of its corresponding *input_parameter_type*.  
+ *boundary_value* is a constant expression that can reference variables. This includes user-defined type variables, or functions and user-defined functions. It cannot reference [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] expressions. *boundary_value* must either match or be implicitly convertible to the data type supplied in *input_parameter_type*, and cannot be truncated during implicit conversion in a way that the size and scale of the value does not match that of its corresponding *input_parameter_type*.  
   
 > [!NOTE]  
 >  If *boundary_value* consists of **datetime** or **smalldatetime** literals, these literals are evaluated assuming that us_english is the session language. This behavior is deprecated. To make sure the partition function definition behaves as expected for all session languages, we recommend that you use constants that are interpreted the same way for all language settings, such as the yyyymmdd format; or explicitly convert literals to a specific style. To determine the language session of your server, run `SELECT @@LANGUAGE`.  
   
  *...n*  
- Specifies the number of values supplied by *boundary_value*, not to exceed 14,999. The number of partitions created is equal to *n* + 1. The values do not have to be listed in order. If the values are not in order, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] sorts them, creates the function, and returns a warning that the values are not provided in order. The Database Engine returns an error if *n* includes any duplicate values.  
+ Specifies the number of values supplied by *boundary_value*, not to exceed 14,999. The number of partitions created is equal to *n* + 1. The values do not have to be listed in order. If the values are not in order, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] sorts them, creates the function, and returns a warning that the values are not provided in order. The Database Engine returns an error if *n* includes any duplicate values.  
   
  **LEFT** | RIGHT  
- Specifies to which side of each boundary value interval, left or right, the *boundary_value* [ **,***...n* ] belongs, when interval values are sorted by the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] in ascending order from left to right. If not specified, LEFT is the default.  
+ Specifies to which side of each boundary value interval, left or right, the *boundary_value* [ **,***...n* ] belongs, when interval values are sorted by the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] in ascending order from left to right. If not specified, LEFT is the default.  
   
 ## Remarks  
  The scope of a partition function is limited to the database that it is created in. Within the database, partition functions reside in a separate namespace from the other functions.  
@@ -189,12 +189,12 @@ GO
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.partition_functions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.partition-functions-transact-sql.md)   
- [sys.partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.partition-parameters-transact-sql.md)   
- [sys.partition_range_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.partition-range-values-transact-sql.md)   
- [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.partitions-transact-sql.md)   
- [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.tables-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md)   
- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.index-columns-transact-sql.md)  
+ [sys.partition_functions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.partition-functions-transact-sql.md)   
+ [sys.partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.partition-parameters-transact-sql.md)   
+ [sys.partition_range_values &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.partition-range-values-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.partitions-transact-sql.md)   
+ [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.tables-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md)   
+ [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.index-columns-transact-sql.md)  
   
   

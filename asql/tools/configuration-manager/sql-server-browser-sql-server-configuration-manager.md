@@ -15,8 +15,8 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SQL Server Browser (SQL Server Configuration Manager)
-  This is the service that supports [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Browser. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.  
+  This is the service that supports [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Browser. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.  
   
- For a description of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Browser service and how it works, see [SQL Server Browser Service](../../tools/configuration-manager/sql-server-browser-service.md).  
+ For a description of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Browser service and how it works, see [SQL Server Browser Service](../../tools/configuration-manager/sql-server-browser-service.md).  
   
   

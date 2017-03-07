@@ -54,7 +54,7 @@ manager: "jhubbard"
  Is a **bit** specifying whether the *tolerance* value is relative or absolute. If 'TRUE' or 1, tolerance is relative and is calculated as the product of the *tolerance* parameter and the angular extent \* equatorial radius of the ellipsoid. If 'FALSE' or 0, tolerance is absolute and the *tolerance* value is the absolute maximum variation in the ideal buffer distance for the returned linear approximation.  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **geography**  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] return type: **geography**  
   
  CLR return type: **SqlGeography**  
   
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
  0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Earth’s circumference)  
   
- The error between the theorectical and computed buffer is max(tolerance, extents \* 1.E-7) where tolerance is the value of the *tolerance* parameter. For more information on extents, see [geography Data Type Method Reference](../Topic/geography%20Data%20Type%20Method%20Reference.md).  
+ The error between the theorectical and computed buffer is max(tolerance, extents \* 1.E-7) where tolerance is the value of the *tolerance* parameter. For more information on extents, see [geography Data Type Method Reference](../../../a9retired/geography-data-type-method-reference.md).  
   
  This method is not precise.  
   

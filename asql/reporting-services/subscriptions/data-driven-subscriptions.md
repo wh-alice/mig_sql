@@ -42,9 +42,9 @@ manager: "erikre"
 ## Requirements for using Data-Driven Subscriptions  
  Data-driven subscription functionality is not available in all editions. There are also limitations on the kinds of data sources that you can use to retrieve subscription data at run time. The following list provides more information about the requirements:  
   
--   For more information about the editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that support Data-driven subscription functionality, see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+-   For more information about the editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that support Data-driven subscription functionality, see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
--   For subscription data, choose a data source that can provide schema information to the report server. Examples of supported data source types include [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] relational data, Oracle, [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] databases, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package data, ODBC data sources, and OLE DB data sources. For more information about subscriber data source requirements, see [Use an External Data Source for Subscriber Data &#40;Data-Driven Subscription&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
+-   For subscription data, choose a data source that can provide schema information to the report server. Examples of supported data source types include [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] relational data, Oracle, [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] databases, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package data, ODBC data sources, and OLE DB data sources. For more information about subscriber data source requirements, see [Use an External Data Source for Subscriber Data &#40;Data-Driven Subscription&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
 ## Working with Data-Driven Subscriptions  
  The following topics provide more information about data-driven subscriptions.  
@@ -58,7 +58,7 @@ manager: "erikre"
   
 ## See Also  
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Create Data-driven Subscription Page &#40;Report Manager&#41;](../Topic/Create%20Data-driven%20Subscription%20Page%20\(Report%20Manager\).md)   
+ [Create Data-driven Subscription Page &#40;Report Manager&#41;](../../a9retired/create-data-driven-subscription-page-report-manager.md)   
  [Preload the Cache &#40;Report Manager&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   

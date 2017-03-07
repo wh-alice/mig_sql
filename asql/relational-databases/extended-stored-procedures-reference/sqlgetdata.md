@@ -18,21 +18,21 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLGetData
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   **SQLGetData** is used to retrieve result set data without binding column values. **SQLGetData** can be called successively on the same column to retrieve large amounts of data from a column with a **text**, **ntext**, or **image** data type.  
   
- There is no requirement that an application bind variables to fetch result set data. The data of any column can be retrieved from the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver by using **SQLGetData**.  
+ There is no requirement that an application bind variables to fetch result set data. The data of any column can be retrieved from the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver by using **SQLGetData**.  
   
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver does not support using **SQLGetData** to retrieve data in random column order. All unbound columns processed with **SQLGetData** must have higher column ordinals than the bound columns in the result set. The application must process data from the lowest unbound ordinal column value to the highest. Attempting to retrieve data from a lower ordinally numbered column results in an error. If the application is using server cursors to report result set rows, the application can refetch the current row and then fetch the value of a column. If a statement is executed on the default read-only, forward-only cursor, you must re-execute the statement to back up **SQLGetData**.  
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver does not support using **SQLGetData** to retrieve data in random column order. All unbound columns processed with **SQLGetData** must have higher column ordinals than the bound columns in the result set. The application must process data from the lowest unbound ordinal column value to the highest. Attempting to retrieve data from a lower ordinally numbered column results in an error. If the application is using server cursors to report result set rows, the application can refetch the current row and then fetch the value of a column. If a statement is executed on the default read-only, forward-only cursor, you must re-execute the statement to back up **SQLGetData**.  
   
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver accurately reports the length of **text**, **ntext**, and **image** data retrieved using **SQLGetData**. The application can make good use of the *StrLen_or_IndPtr* parameter return to retrieve long data rapidly.  
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver accurately reports the length of **text**, **ntext**, and **image** data retrieved using **SQLGetData**. The application can make good use of the *StrLen_or_IndPtr* parameter return to retrieve long data rapidly.  
   
 > [!NOTE]  
 >  For large value types, *StrLen_or_IndPtr* will return SQL_NO_TOTAL in cases of data truncation.  
   
 ## SQLGetData Support for Enhanced Date and Time Features  
- Result column values of date/time types are converted as described in [Conversions from SQL to C](../Topic/Conversions%20from%20SQL%20to%20C.md).  
+ Result column values of date/time types are converted as described in [Conversions from SQL to C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md).  
   
  For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   

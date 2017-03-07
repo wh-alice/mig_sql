@@ -28,11 +28,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CREATE EVENT NOTIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Creates an object that sends information about a database or server event to a service broker service. Event notifications are created only by using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements.  
+  Creates an object that sends information about a database or server event to a service broker service. Event notifications are created only by using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -51,7 +51,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
  Is the name of the event notification. An event notification name must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md) and must be unique within the scope in which they are created: SERVER, DATABASE, or *object_name*.  
   
  SERVER  
- Applies the scope of the event notification to the current instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. If specified, the notification fires whenever the specified event in the FOR clause occurs anywhere in the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Applies the scope of the event notification to the current instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. If specified, the notification fires whenever the specified event in the FOR clause occurs anywhere in the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  This option is not available in a contained database.  
@@ -66,7 +66,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
  Is the name of the queue to which the event notification applies. *queue_name* can be specified only if QUEUE is specified.  
   
  WITH FAN_IN  
- Instructs [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to send only one message per event to any specified service for all event notifications that:  
+ Instructs [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to send only one message per event to any specified service for all event notifications that:  
   
 -   Are created on the same event.  
   
@@ -79,15 +79,15 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
  For example, three event notifications are created. All event notifications specify FOR ALTER_TABLE, WITH FAN_IN, the same TO SERVICE clause, and are created by the same SID. When an ALTER TABLE statement is run, the messages that are created by these three event notifications are merged into one. Therefore, the target service receives only one message of the event.  
   
  *event_type*  
- Is the name of an event type that causes the event notification to execute. *event_type* can be a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] DDL event type, a SQL Trace event type, or a [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] event type. For a list of qualifying [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] DDL event types, see [DDL Events](../../relational-databases/triggers/ddl-events.md). [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] event types are QUEUE_ACTIVATION and BROKER_QUEUE_DISABLED. For more information, see [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
+ Is the name of an event type that causes the event notification to execute. *event_type* can be a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] DDL event type, a SQL Trace event type, or a [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] event type. For a list of qualifying [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] DDL event types, see [DDL Events](../../relational-databases/triggers/ddl-events.md). [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] event types are QUEUE_ACTIVATION and BROKER_QUEUE_DISABLED. For more information, see [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
   
  *event_group*  
- Is the name of a predefined group of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] or SQL Trace event types. An event notification can fire after execution of any event that belongs to an event group. For a list of DDL event groups, the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] events they cover, and the scope at which they can be defined, see [DDL Event Groups](../../relational-databases/triggers/ddl-event-groups.md).  
+ Is the name of a predefined group of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] or SQL Trace event types. An event notification can fire after execution of any event that belongs to an event group. For a list of DDL event groups, the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] events they cover, and the scope at which they can be defined, see [DDL Event Groups](../../relational-databases/triggers/ddl-event-groups.md).  
   
  *event_group* also acts as a macro, when the CREATE EVENT NOTIFICATION statement finishes, by adding the event types it covers to the **sys.events** catalog view.  
   
  **'** *broker_service* **'**  
- Specifies the target service that receives the event instance data. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] opens one or more conversations to the target service for the event notification. This service must honor the same [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Events message type and contract that is used to send the message.  
+ Specifies the target service that receives the event instance data. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] opens one or more conversations to the target service for the event notification. This service must honor the same [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Events message type and contract that is used to send the message.  
   
  The conversations remain open until the event notification is dropped. Certain errors could cause the conversations to close earlier. Ending some or all conversations explicitly might prevent the target service from receiving more messages.  
   
@@ -125,12 +125,12 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 ## Examples  
   
 > [!NOTE]  
->  In Examples A and B below, the GUID in the `TO SERVICE 'NotifyService'` clause ('8140a771-3c4b-4479-8ac0-81008ab17984') is specific to the computer on which the example was set up. For that instance, that was the GUID for the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+>  In Examples A and B below, the GUID in the `TO SERVICE 'NotifyService'` clause ('8140a771-3c4b-4479-8ac0-81008ab17984') is specific to the computer on which the example was set up. For that instance, that was the GUID for the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
 >   
->  To copy and run these examples, you need to replace this GUID with one from your computer and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. As explained in the Arguments section above, you can acquire the **'***broker_instance_specifier***'** by querying the service_broker_guid column of the sys.databases catalog view.  
+>  To copy and run these examples, you need to replace this GUID with one from your computer and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. As explained in the Arguments section above, you can acquire the **'***broker_instance_specifier***'** by querying the service_broker_guid column of the sys.databases catalog view.  
   
 ### A. Creating an event notification that is server scoped  
- The following example creates the required objects to set up a target service using [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)]. The target service references the message type and contract of the initiating service specifically for event notifications. Then an event notification is created on that target service that sends a notification whenever an `Object_Created` trace event happens on the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ The following example creates the required objects to set up a target service using [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)]. The target service references the message type and contract of the initiating service specifically for event notifications. Then an event notification is created on that target service that sends a notification whenever an `Object_Created` trace event happens on the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ```tsql  
 --Create a queue to receive messages.  
@@ -157,7 +157,7 @@ TO SERVICE 'NotifyService',
 ```  
   
 ### B. Creating an event notification that is database scoped  
- The following example creates an event notification on the same target service as the previous example. The event notification fires after an `ALTER_TABLE` event occurs on the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] sample database.  
+ The following example creates an event notification on the same target service as the previous example. The event notification fires after an `ALTER_TABLE` event occurs on the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] sample database.  
   
 ```tsql  
 CREATE EVENT NOTIFICATION Notify_ALTER_T1  
@@ -187,9 +187,9 @@ WHERE name = 'Notify_ALTER_T1';
  [Event Notifications](../../relational-databases/service-broker/event-notifications.md)   
  [DROP EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.event-notifications-transact-sql.md)   
- [sys.server_event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-event-notifications-transact-sql.md)   
- [sys.events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.events-transact-sql.md)   
- [sys.server_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-events-transact-sql.md)  
+ [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.event-notifications-transact-sql.md)   
+ [sys.server_event_notifications &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-event-notifications-transact-sql.md)   
+ [sys.events &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.events-transact-sql.md)   
+ [sys.server_events &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-events-transact-sql.md)  
   
   

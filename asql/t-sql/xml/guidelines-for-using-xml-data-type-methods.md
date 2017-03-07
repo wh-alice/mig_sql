@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Guidelines for Using xml Data Type Methods
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   This topic describes guidelines for using the **xml** data type methods.  
   

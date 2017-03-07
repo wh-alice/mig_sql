@@ -28,18 +28,18 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Specifies that when a local transaction is active, executing a remote stored procedure starts a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] distributed transaction managed by [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC).  
+  Specifies that when a local transaction is active, executing a remote stored procedure starts a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] distributed transaction managed by [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../database-engine/configure/windows/includes/ssnotedepnextdontuse-md.md)] This option is provided for backward compatibility for applications that use remote stored procedures. Instead of issuing remote stored procedure calls, use distributed queries that reference linked servers. These are defined by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../database-engine/configure/windows/includes/ssnotedepnextdontuse-md.md)] This option is provided for backward compatibility for applications that use remote stored procedures. Instead of issuing remote stored procedure calls, use distributed queries that reference linked servers. These are defined by using [sp_addlinkedserver](../../relational-databases/reference/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -50,18 +50,18 @@ SET REMOTE_PROC_TRANSACTIONS { ON | OFF }
   
 ## Arguments  
  ON | OFF  
- When ON, a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] distributed transaction is started when a remote stored procedure is executed from a local transaction. When OFF, calling remote stored procedures from a local transaction does not start a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] distributed transaction.  
+ When ON, a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] distributed transaction is started when a remote stored procedure is executed from a local transaction. When OFF, calling remote stored procedures from a local transaction does not start a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] distributed transaction.  
   
 ## Remarks  
- When REMOTE_PROC_TRANSACTIONS is ON, calling a remote stored procedure starts a distributed transaction and enlists the transaction with MS DTC. The instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] making the remote stored procedure call is the transaction originator and controls the completion of the transaction. When a subsequent COMMIT TRANSACTION or ROLLBACK TRANSACTION statement is issued for the connection, the controlling instance requests that MS DTC manage the completion of the distributed transaction across the computers involved.  
+ When REMOTE_PROC_TRANSACTIONS is ON, calling a remote stored procedure starts a distributed transaction and enlists the transaction with MS DTC. The instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] making the remote stored procedure call is the transaction originator and controls the completion of the transaction. When a subsequent COMMIT TRANSACTION or ROLLBACK TRANSACTION statement is issued for the connection, the controlling instance requests that MS DTC manage the completion of the distributed transaction across the computers involved.  
   
- After a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] distributed transaction has been started, remote stored procedure calls can be made to other instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that have been defined as remote servers. The remote servers are all enlisted in the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] distributed transaction, and MS DTC ensures that the transaction is completed against each remote server.  
+ After a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] distributed transaction has been started, remote stored procedure calls can be made to other instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that have been defined as remote servers. The remote servers are all enlisted in the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] distributed transaction, and MS DTC ensures that the transaction is completed against each remote server.  
   
  REMOTE_PROC_TRANSACTIONS is a connection-level setting that can be used to override the instance-level **sp_configure remote proc trans** option.  
   
  When REMOTE_PROC_TRANSACTIONS is OFF, remote stored procedure calls are not made part of a local transaction. The modifications made by the remote stored procedure are committed or rolled back at the time the stored procedure completes. Subsequent COMMIT TRANSACTION or ROLLBACK TRANSACTION statements issued by the connection that called the remote stored procedure have no effect on the processing done by the procedure.  
   
- The REMOTE_PROC_TRANSACTIONS option is a compatibility option that affects only remote stored procedure calls made to instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] defined as remote servers using **sp_addserver**. The option does not apply to distributed queries that execute a stored procedure on an instance defined as a linked server using **sp_addlinkedserver**.  
+ The REMOTE_PROC_TRANSACTIONS option is a compatibility option that affects only remote stored procedure calls made to instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] defined as remote servers using **sp_addserver**. The option does not apply to distributed queries that execute a stored procedure on an instance defined as a linked server using **sp_addlinkedserver**.  
   
  The setting of SET REMOTE_PROC_TRANSACTIONS is set at execute or run time and not at parse time.  
   

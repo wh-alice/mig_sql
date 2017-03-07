@@ -30,7 +30,7 @@ manager: "erikre"
  If you require a lower compatibility level, perhaps because you want to deploy a model on an earlier version of Analysis Services, you can still use the model designer in SSDT for Visual Studio 2015. Newer versions of the tool support creating any model type (tabular or multidimensional), at any compatibility level you require. There is no need to keep earlier tools around just to  build or edit an older model.  
   
 ### Download the model designer  
- [!INCLUDE[ssBIDevStudio](../analysis-services/includes/ssbidevstudio-md.md)], previously known as SQL Server Data Tools for Business Intelligence (SSDT-BI) and before that, as Business Intelligence Development Studio (BIDS), is used to create Analysis Services models.  
+ [!INCLUDE[ssBIDevStudio](../a9notintoc/includes/ssbidevstudio-md.md)], previously known as SQL Server Data Tools for Business Intelligence (SSDT-BI) and before that, as Business Intelligence Development Studio (BIDS), is used to create Analysis Services models.  
   
 ||  
 |-|  

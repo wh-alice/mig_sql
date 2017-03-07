@@ -17,7 +17,7 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # NULL and UNKNOWN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   NULL indicates that the value is unknown. A null value is different from an empty or zero value. No two null values are equal. Comparisons between two null values, or between a null value and any other value, return unknown because the value of each NULL is unknown.  
   

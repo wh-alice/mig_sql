@@ -18,23 +18,23 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create User-defined Aggregates
-  You can create a database object inside [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that is programmed in a CLR assembly. Database objects that can leverage the rich programming model provided by the CLR include triggers, stored procedures, functions, aggregate functions, and types.  
+  You can create a database object inside [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that is programmed in a CLR assembly. Database objects that can leverage the rich programming model provided by the CLR include triggers, stored procedures, functions, aggregate functions, and types.  
   
- Like the built-in aggregate functions provided in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], user-defined aggregate functions perform a calculation on a set of values and return a single value.  
+ Like the built-in aggregate functions provided in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], user-defined aggregate functions perform a calculation on a set of values and return a single value.  
   
- Creating a user-defined aggregate function in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] involves the following steps:  
+ Creating a user-defined aggregate function in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] involves the following steps:  
   
--   Define the user-defined aggregate function as a class in a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] .NET Framework-supported language. For more information about how to program user-defined aggregates in the CLR, see [CLR User-Defined Aggregates](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md). Compile this class to build a CLR assembly using the appropriate language compiler.  
+-   Define the user-defined aggregate function as a class in a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] .NET Framework-supported language. For more information about how to program user-defined aggregates in the CLR, see [CLR User-Defined Aggregates](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md). Compile this class to build a CLR assembly using the appropriate language compiler.  
   
--   Register the assembly in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] using the CREATE ASSEMBLY statement. For more information about assemblies in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Assemblies &#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md).  
+-   Register the assembly in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] using the CREATE ASSEMBLY statement. For more information about assemblies in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Assemblies &#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md).  
   
 -   Create the user-defined aggregate that references the registered assembly using the CREATE AGGREGATE statement.  
   
 > [!NOTE]  
->  Deploying a SQL Server Project in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] registers an assembly in the database that was specified for the project. Deploying the project also creates a user-defined aggregate in the database for all class definitions annotated with the **SqlUserDefinedAggregate** attribute. For more information, see [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
+>  Deploying a SQL Server Project in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] registers an assembly in the database that was specified for the project. Deploying the project also creates a user-defined aggregate in the database for all class definitions annotated with the **SqlUserDefinedAggregate** attribute. For more information, see [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
   
 > [!NOTE]  
->  The ability of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to execute CLR code is off by default. You can create, alter and drop database objects that reference managed code modules, but these references will not execute in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] unless the [clr enabled Option](../../database-engine/configure/windows/clr-enabled-server-configuration-option.md) is enabled using [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+>  The ability of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to execute CLR code is off by default. You can create, alter and drop database objects that reference managed code modules, but these references will not execute in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] unless the [clr enabled Option](../../database-engine/configure/windows/clr-enabled-server-configuration-option.md) is enabled using [sp_configure (Transact-SQL)](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md).  
   
  **To create, modify, or drop an assembly**  
   

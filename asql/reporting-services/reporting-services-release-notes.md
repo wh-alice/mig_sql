@@ -17,14 +17,14 @@ manager: "erikre"
 # Reporting Services Release notes
  ||  
 |-|  
-|**[!INCLUDE[applies](../analysis-services/includes/applies-md.md)]**  January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services|
+|**[!INCLUDE[applies](../a9retired/includes/applies-md.md)]**  January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services|
 
 This topic describes limitations and issues with the Technical Preview of Power BI reports in SQL Server Reporting Services.
 
-- To read what's new in this release, see [What's new in Reporting Services](What's%20new%20in%20Reporting%20Services%20\(SSRS\).md).
+- To read what's new in this release, see [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
  **Try it out:**    
-   -   [![Download from Microsoft Download center](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?linkid=839351)  Download the Technical Preview of Power BI reports in SQL Server Reporting Services, and Power BI Desktop (SQL Server Reporting Services), from the **[Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=839351)**
+   -   [![Download from Microsoft Download center](../a9notintoc/media/download.png)](https://go.microsoft.com/fwlink/?linkid=839351)  Download the Technical Preview of Power BI reports in SQL Server Reporting Services, and Power BI Desktop (SQL Server Reporting Services), from the **[Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=839351)**
 
 
 ## January  2017

@@ -30,19 +30,19 @@ The performance of full-text indexing and full-text queries is influenced by har
 
 The main cause for reduced full-text indexing performance is hardware-resource limits.  
   
--   **CPU**. If CPU usage by the filter daemon host process (fdhost.exe) or the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] process (sqlservr.exe) is close to 100 percent, the CPU is the bottleneck.  
+-   **CPU**. If CPU usage by the filter daemon host process (fdhost.exe) or the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] process (sqlservr.exe) is close to 100 percent, the CPU is the bottleneck.  
   
 -   **Memory**. If there is a shortage of physical memory, memory might be the bottleneck.  
 
--   **Disk**. If the average disk-waiting queue length is more than two times the number of disk heads, there is a bottleneck on the disk. The primary workaround is to create full-text catalogs that are separate from the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database files and logs. Put the logs, database files, and full-text catalogs on separate disks. Installing faster disks and using RAID can also help improve indexing performance.  
+-   **Disk**. If the average disk-waiting queue length is more than two times the number of disk heads, there is a bottleneck on the disk. The primary workaround is to create full-text catalogs that are separate from the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database files and logs. Put the logs, database files, and full-text catalogs on separate disks. Installing faster disks and using RAID can also help improve indexing performance.  
   
     > [!NOTE]  
-    >  Beginning in [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)], the Full-Text Engine can use AWE memory because the Full-Text Engine is part of the sqlservr.exe process.  
+    >  Beginning in [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)], the Full-Text Engine can use AWE memory because the Full-Text Engine is part of the sqlservr.exe process.  
 
 ### Full-text batching issues
  If the system has no hardware bottlenecks, the indexing performance of full-text search mostly depends on the following:  
   
--   How long it takes [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to create full-text batches.  
+-   How long it takes [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to create full-text batches.  
   
 -   How quickly the filter daemon can consume those batches.  
 
@@ -56,7 +56,7 @@ The main cause for reduced full-text indexing performance is hardware-resource l
 ##  <a name="tuning"></a> Tune the performance of full-text indexes  
 To maximize the performance of your full-text indexes, implement the following best practices:  
   
--   To use all CPU processors or cores to the maximum, set [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) '**max full-text crawl range**' to the number of CPUs on the system. For information about this configuration option, see [max full-text crawl range Server Configuration Option](../../database-engine/configure/windows/max-full-text-crawl-range-server-configuration-option.md).  
+-   To use all CPU processors or cores to the maximum, set [sp_configure](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md) '**max full-text crawl range**' to the number of CPUs on the system. For information about this configuration option, see [max full-text crawl range Server Configuration Option](../../database-engine/configure/windows/max-full-text-crawl-range-server-configuration-option.md).  
   
 -   Make sure that the base table has a clustered index. Use an integer data type for the first column of the clustered index. Avoid using GUIDs in the first column of the clustered index. A multi-range population on a clustered index can produce the highest population speed. We recommend that the column serving as the full-text key be an integer data type.  
   
@@ -87,15 +87,15 @@ The variable parts of the crawl log file name are the following.
  During a full-text population, it is possible for fdhost.exe or sqlservr.exe to run low on memory or to run out of memory.
 -   If the full-text crawl log shows that fdhost.exe is being restarted often or that error code 8007008 is being returned it means one of these processes is running out of memory.
 -   If fdhost.exe is producing dumps, particularly on large, multi-CPU computers, it might be running out of memory.  
--   To get information about memory buffers used by a full-text crawl, see [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-memory-buffers-transact-sql.md).  
+-   To get information about memory buffers used by a full-text crawl, see [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-memory-buffers-transact-sql.md).  
   
  The possible causes of low memory or out of memory issues are the following:  
   
--   **Insufficient memory**. If the amount of physical memory that is available during a full population is zero, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] buffer pool might be consuming most of the physical memory on the system.  
+-   **Insufficient memory**. If the amount of physical memory that is available during a full population is zero, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] buffer pool might be consuming most of the physical memory on the system.  
   
      The sqlservr.exe process tries to grab all available memory for the buffer pool, up to the configured maximum server memory. If the **max server memory** allocation is too large, out-of-memory conditions and failure to allocate shared memory can occur for the fdhost.exe process.  
   
-     You can solve this problem by setting the **max server memory** value of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] buffer pool appropriately. For more information, see "Estimating the Memory Requirements of the Filter Daemon Host Process (fdhost.exe)," later in this topic. Reducing the batch size used for full-text indexing may also help.  
+     You can solve this problem by setting the **max server memory** value of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] buffer pool appropriately. For more information, see "Estimating the Memory Requirements of the Filter Daemon Host Process (fdhost.exe)," later in this topic. Reducing the batch size used for full-text indexing may also help.  
 
 -   **Memory contention**. During a full-text population on a multi-CPU computer, contention for the buffer pool memory can occur between fdhost.exe or sqlservr.exe. The resulting lack of shared memory causes batch retries, memory thrashing, and dumps by the fdhost.exe process.  
 
@@ -148,7 +148,7 @@ For essential information about the following formulas, see the notes that follo
   
  #### Example: Setting max server memory  
   
- This example uses the [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) and [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements to set **max server memory** to the value calculated for *M* in the preceding example, `7052`:  
+ This example uses the [sp_configure](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md) and [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements to set **max server memory** to the value calculated for *M* in the preceding example, `7052`:  
   
 ```  
 USE master;  
@@ -166,7 +166,7 @@ The performance of full populations is not optimal when the average CPU consumpt
   
 -   High wait time for pages  
   
-     To find out whether a page wait time is high, run the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement:  
+     To find out whether a page wait time is high, run the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement:  
   
     ```  
     Execute SELECT TOP 10 * FROM sys.dm_os_wait_stats ORDER BY wait_time_ms DESC;  
@@ -179,7 +179,7 @@ The performance of full populations is not optimal when the average CPU consumpt
     |PAGEIO_LATCH_SH (_EX or _UP)|This could indicate an IO bottleneck, in which case you would typically also see a high average disk-queue length.|Moving the full-text index to a different filegroup on a different disk could help reduce the IO bottleneck.|  
     |PAGELATCH_EX (or _UP)|This could indicate a lot of contention among threads that are trying to write to the same database file.|Adding files to the filegroup on which the fulltext index resides could help alleviate such contention.|  
   
-     For more info, see [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-os-wait-stats-transact-sql.md).  
+     For more info, see [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-os-wait-stats-transact-sql.md).  
   
 -   Inefficiencies in scanning the base table  
   
@@ -187,7 +187,7 @@ The performance of full populations is not optimal when the average CPU consumpt
   
     -   If the base table has a high percentage of out-of-row columns that are being full-text indexed, scanning the base table to produce batches might be the bottleneck. In this case, moving the smaller data in-row using **varchar(max)** or **nvarchar(max)** might help.  
   
-    -   If the base table is very fragmented, scanning might be inefficient. For information about computing out-of-row data and index fragmentation, see [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-partition-stats-transact-sql.md) and [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md).  
+    -   If the base table is very fragmented, scanning might be inefficient. For information about computing out-of-row data and index fragmentation, see [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-partition-stats-transact-sql.md) and [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md).  
   
          To reduce fragmentation, you can reorganize or rebuild the clustered index. For more information, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
@@ -197,7 +197,7 @@ The performance of full populations is not optimal when the average CPU consumpt
 > This section describes an issue that only affects customers who index documents (such as Microsoft Word documents) in which other document types are embedded.
 
 The Full-Text Engine uses two types of filters when it populates a full-text index: multithreaded filters and single-threaded filters.
--   Some documents, such as [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Word documents, are filtered using a multithreaded filter.
+-   Some documents, such as [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Word documents, are filtered using a multithreaded filter.
 -   Other documents, such as Adobe Acrobat Portable Document Format (PDF) documents, are filtered using a single-threaded filter.  
   
  For security reasons, filters are loaded by the filter daemon host processes. A server instance uses a multithreaded process for all multithreaded filters and a single-threaded process for all single-threaded filters. When a document that uses a multithreaded filter contains an embedded document that uses a single-threaded filter, the Full-Text Engine launches a single-threaded process for the embedded document. For example, on encountering a Word document that contains a PDF document, the Full-Text Engine uses the multithreaded process for the Word content and launches a single-threaded process for the PDF content. A single-threaded filter might not work well in this environment, however, and could destabilize the filtering process. In certain circumstances where such embedding is common, destabilization might lead to crashes of the process. When this occurs, the Full-Text Engine re-routes any failed document - for example, a Word document that contains embedded PDF content - to the single-threaded filtering process. If re-routing occurs frequently, it results in performance degradation of the full-text indexing process.  
@@ -209,8 +209,8 @@ To work around this problem, mark the filter for the container document (the Wor
  [max full-text crawl range Server Configuration Option](../../database-engine/configure/windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md)   
  [Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
- [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-memory-buffers-transact-sql.md)   
- [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-memory-pools-transact-sql.md)   
+ [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-memory-buffers-transact-sql.md)   
+ [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-memory-pools-transact-sql.md)   
  [Troubleshoot Full-Text Indexing](../../relational-databases/search/troubleshoot-full-text-indexing.md)  
   
   

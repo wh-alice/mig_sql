@@ -26,15 +26,15 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # RECEIVE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retrieves one or more messages from a queue. Depending on the retention setting for the queue, either removes the message from the queue or updates the status of the message in the queue.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -149,9 +149,9 @@ manager: "jhubbard"
   
  If the conversation handle or conversation group identifier specified in the WHERE clause does not exist, or is not associated with the specified queue, the RECEIVE statement returns an error.  
   
- If the queue specified in the RECEIVE statement has the queue status set to OFF, the statement fails with a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] error.  
+ If the queue specified in the RECEIVE statement has the queue status set to OFF, the statement fails with a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] error.  
   
- When the WAITFOR clause is specified, the statement waits for the specified time out, or until a result set is available. If the queue is dropped or the status of the queue is set to OFF while the statement is waiting, the statement immediately returns an error. If the RECEIVE statement specifies a conversation group or conversation handle and the service for that conversation is dropped or moved to another queue, the RECEIVE statement reports a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] error.  
+ When the WAITFOR clause is specified, the statement waits for the specified time out, or until a result set is available. If the queue is dropped or the status of the queue is set to OFF while the statement is waiting, the statement immediately returns an error. If the RECEIVE statement specifies a conversation group or conversation handle and the service for that conversation is dropped or moved to another queue, the RECEIVE statement reports a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] error.  
   
  RECEIVE is not valid in a user-defined function.  
   
@@ -169,11 +169,11 @@ manager: "jhubbard"
 |**conversation_handle**|**uniqueidentifier**|Handle for the conversation that this message is part of.|  
 |**message_sequence_number**|**bigint**|Sequence number of the message in the conversation.|  
 |**service_name**|**nvarchar(512)**|Name of the service that the conversation is to.|  
-|**service_id**|**int**|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] object identifier of the service that the conversation is to.|  
+|**service_id**|**int**|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] object identifier of the service that the conversation is to.|  
 |**service_contract_name**|**nvarchar(256)**|Name of the contract that the conversation follows.|  
-|**service_contract_id**|**int**|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] object identifier of the contract that the conversation follows.|  
+|**service_contract_id**|**int**|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] object identifier of the contract that the conversation follows.|  
 |**message_type_name**|**nvarchar(256)**|Name of the message type that describes the format of the message. Messages can be either application message types or Broker system messages.|  
-|**message_type_id**|**int**|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] object identifier of the message type that describes the message.|  
+|**message_type_id**|**int**|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] object identifier of the message type that describes the message.|  
 |**validation**|**nchar(2)**|Validation used for the message.<br /><br /> **E**=Empty**N**=None**X**=XML|  
 |**message_body**|**varbinary(MAX)**|Content of the message.|  
   

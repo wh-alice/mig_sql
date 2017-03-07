@@ -20,39 +20,39 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # RESTORE Statements - Arguments (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   This topic documents the arguments that are described in the Syntax sections of the RESTORE {DATABASE|LOG} statement and of the associated set of auxiliary statements: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY, and RESTORE VERIFYONLY. Most of the arguments are supported by only a subset of these six statements. The support for each argument is indicated in the description of the argument.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
  For syntax, see the following topics:  
   
--   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
--   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)  
+-   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
--   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
--   [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20REWINDONLY%20\(Transact-SQL\).md)  
+-   [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)  
   
--   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+-   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
 ## Arguments  
  DATABASE  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Specifies the target database. If a list of files and filegroups is specified, only those files and filegroups are restored.  
   
- For a database using the full or bulk-logged recovery model, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] requires in most cases that you back up the tail of the log before restoring the database. Restoring a database without first backing up the tail of the log results in an error, unless the RESTORE DATABASE statement contains either the WITH REPLACE or the WITH STOPAT clause, which must specify a time or transaction that occurred after the end of the data backup. For more information about tail-log backups, see [Tail-Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
+ For a database using the full or bulk-logged recovery model, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] requires in most cases that you back up the tail of the log before restoring the database. Restoring a database without first backing up the tail of the log results in an error, unless the RESTORE DATABASE statement contains either the WITH REPLACE or the WITH STOPAT clause, which must specify a time or transaction that occurred after the end of the data backup. For more information about tail-log backups, see [Tail-Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
  LOG  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- Specifies that a transaction log backup is to be applied to this database. Transaction logs must be applied in sequential order. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] checks the backed up transaction log to ensure that the transactions are being loaded into the correct database and in the correct sequence. To apply multiple transaction logs, use the NORECOVERY option on all restore operations except the last.  
+ Specifies that a transaction log backup is to be applied to this database. Transaction logs must be applied in sequential order. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] checks the backed up transaction log to ensure that the transactions are being loaded into the correct database and in the correct sequence. To apply multiple transaction logs, use the NORECOVERY option on all restore operations except the last.  
   
 > [!NOTE]  
 >  Typically, the last log restored is the tail-log backup. A *tail-log backup* is a log backup taken right before restoring a database, typically after a failure on the database. Taking a tail-log backup from the possibly damaged database prevents work loss by capturing the log that has not yet been backed up (the tail of the log). For more information, see [Tail-Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
@@ -60,12 +60,12 @@ manager: "jhubbard"
  For more information, see [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
  { *database_name* | **@***database_name_var*}  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Is the database that the log or complete database is restored into. If supplied as a variable (**@***database_name_var*), this name can be specified either as a string constant (**@***database_name_var* = *database*_*name*) or as a variable of character string data type, except for the **ntext** or **text** data types.  
   
  <file_or_filegroup_or_page> [ **,**...*n* ]  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Specifies the name of a logical file or filegroup or page to include in a RESTORE DATABASE or RESTORE LOG statement. You can specify a list of files or filegroups.  
   
@@ -121,7 +121,7 @@ manager: "jhubbard"
  <backup_device> [ **,**...*n* ]  
  Specifies the logical or physical backup devices to use for the restore operation.  
   
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md), [RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md), [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md), [RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md), [RESTORE REWINDONLY](../Topic/RESTORE%20REWINDONLY%20\(Transact-SQL\).md), and [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md), and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  <backup_device>::=  
  Specifies a logical or physical backup device to use for the backup operation, as follows:  
@@ -134,7 +134,7 @@ manager: "jhubbard"
   
  If using a network server with a UNC name (which must contain machine name), specify a device type of disk. For more information about how to use UNC names, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
- The account under which you are running [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] must have READ access to the remote computer or network server in order to perform a RESTORE operation.  
+ The account under which you are running [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] must have READ access to the remote computer or network server in order to perform a RESTORE operation.  
   
  *n*  
  Is a placeholder indicating that up to 64 backup devices may be specified in a comma-separated list.  
@@ -151,21 +151,21 @@ manager: "jhubbard"
 >  When you are restoring a backup from a mirrored media set, you can specify only a single mirror for each media family. In the presence of errors, however, having the other mirrors enables some restore problems to be resolved quickly. You can substitute a damaged media volume with the corresponding volume from another mirror. Be aware that for offline restores you can restore from fewer devices than media families, but each family is processed only once.  
   
  <database_snapshot>::=  
- **Supported by:**  [RESTORE DATABASE](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  DATABASE_SNAPSHOT **=***database_snapshot_name*  
  Reverts the database to the database snapshot specified by *database_snapshot_name*. The DATABASE_SNAPSHOT option is available only for a full database restore. In a revert operation, the database snapshot takes the place of a full database backup.  
   
- A revert operation requires that the specified database snapshot is the only one on the database. During the revert operation, the database snapshot and the destination database and are both marked as `In restore`. For more information, see the "Remarks" section in [RESTORE DATABASE](../Topic/RESTORE%20\(Transact-SQL\).md).  
+ A revert operation requires that the specified database snapshot is the only one on the database. During the revert operation, the database snapshot and the destination database and are both marked as `In restore`. For more information, see the "Remarks" section in [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 ### WITH Options  
  Specifies the options to be used by a restore operation. For a summary of which statements use each option, see "Summary of Support for WITH Options," later in this topic.  
   
 > [!NOTE]  
->  WITH options are organized here in the same order as in the "Syntax" section in [RESTORE {DATABASE|LOG}](../Topic/RESTORE%20\(Transact-SQL\).md).  
+>  WITH options are organized here in the same order as in the "Syntax" section in [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md).  
   
  PARTIAL  
- **Supported by:**  [RESTORE DATABASE](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Specifies a partial restore operation that restores the primary filegroup and any specified secondary filegroup(s). The PARTIAL option implicitly selects the primary filegroup; specifying FILEGROUP = 'PRIMARY' is unnecessary. To restore a secondary filegroup, you must explicitly specify the filegroup using the FILE option or FILEGROUP option.  
   
@@ -174,14 +174,14 @@ manager: "jhubbard"
  The PARTIAL option starts the initial stage of a piecemeal restore, which allows remaining filegroups to be restored at a later time. For more information, see [Piecemeal Restores &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
  [ **RECOVERY** | NORECOVERY | STANDBY ]  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  **RECOVERY**  
  Instructs the restore operation to roll back any uncommitted transactions. After the recovery process, the database is ready for use. If neither NORECOVERY, RECOVERY, nor STANDBY is specified, RECOVERY is the default.  
   
  If subsequent RESTORE operations (RESTORE LOG, or RESTORE DATABASE from differential) are planned, NORECOVERY or STANDBY should be specified instead.  
   
- When restoring backup sets from an earlier version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], a database upgrade might be required. This upgrade is performed automatically when WITH RECOVERY is specified. For more information, see [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
+ When restoring backup sets from an earlier version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], a database upgrade might be required. This upgrade is performed automatically when WITH RECOVERY is specified. For more information, see [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
 > [!NOTE]  
 >  If the FROM clause is omitted, NORECOVERY, RECOVERY, or STANDBY must be specified in the WITH clause.  
@@ -197,26 +197,26 @@ manager: "jhubbard"
   
 -   A sequence of file restores is used and the database is not intended to be usable between two of the restore operations.  
   
- In some cases RESTORE WITH NORECOVERY rolls the roll forward set far enough forward that it is consistent with the database. In such cases, roll back does not occur and the data remains offline, as expected with this option. However, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] issues an informational message that states that the roll-forward set can now be recovered by using the RECOVERY option.  
+ In some cases RESTORE WITH NORECOVERY rolls the roll forward set far enough forward that it is consistent with the database. In such cases, roll back does not occur and the data remains offline, as expected with this option. However, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] issues an informational message that states that the roll-forward set can now be recovered by using the RECOVERY option.  
   
  STANDBY **=***standby_file_name*  
  Specifies a standby file that allows the recovery effects to be undone. The STANDBY option is allowed for offline restore (including partial restore). The option is disallowed for online restore. Attempting to specify the STANDBY option for an online restore operation causes the restore operation to fail. STANDBY is also not allowed when a database upgrade is necessary.  
   
- The standby file is used to keep a "copy-on-write" pre-image for pages modified during the undo pass of a RESTORE WITH STANDBY. The standby file allows a database to be brought up for read-only access between transaction log restores and can be used with either warm standby server situations or special recovery situations in which it is useful to inspect the database between log restores. After a RESTORE WITH STANDBY operation, the undo file is automatically deleted by the next RESTORE operation. If this standby file is manually deleted before the next RESTORE operation, then the entire database must be re-restored. While the database is in the STANDBY state, you should treat this standby file with the same care as any other database file. Unlike other database files, this file is only kept open by the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] during active restore operations.  
+ The standby file is used to keep a "copy-on-write" pre-image for pages modified during the undo pass of a RESTORE WITH STANDBY. The standby file allows a database to be brought up for read-only access between transaction log restores and can be used with either warm standby server situations or special recovery situations in which it is useful to inspect the database between log restores. After a RESTORE WITH STANDBY operation, the undo file is automatically deleted by the next RESTORE operation. If this standby file is manually deleted before the next RESTORE operation, then the entire database must be re-restored. While the database is in the STANDBY state, you should treat this standby file with the same care as any other database file. Unlike other database files, this file is only kept open by the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] during active restore operations.  
   
- The *standby_file_name* specifies a standby file whose location is stored in the log of the database. If an existing file is using the specified name, the file is overwritten; otherwise, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] creates the file.  
+ The *standby_file_name* specifies a standby file whose location is stored in the log of the database. If an existing file is using the specified name, the file is overwritten; otherwise, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] creates the file.  
   
  The size requirement of a given standby file depends on the volume of undo actions resulting from uncommitted transactions during the restore operation.  
   
 > [!IMPORTANT]  
 >  If free disk space is exhausted on the drive containing the specified standby file name, the restore operation stops.  
   
- For a comparison of RECOVERY and NORECOVERY, see the "Remarks" section in [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md).  
+ For a comparison of RECOVERY and NORECOVERY, see the "Remarks" section in [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md).  
   
  LOADHISTORY  
- **Supported by:**  [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
- Specifies that the restore operation loads the information into the **msdb** history tables. The LOADHISTORY option loads information, for the single backup set being verified, about [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backups stored on the media set to the backup and restore history tables in the **msdb** database. For more information about history tables, see [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md).  
+ Specifies that the restore operation loads the information into the **msdb** history tables. The LOADHISTORY option loads information, for the single backup set being verified, about [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] backups stored on the media set to the backup and restore history tables in the **msdb** database. For more information about history tables, see [System Tables &#40;Transact-SQL&#41;](../../relational-databases/reference/system-tables/system-tables-transact-sql.md).  
   
 #### <general_WITH_options> [ ,...n ]  
  The general WITH options are all supported in RESTORE DATABASE and RESTORE LOG statements. Some of these options are is also supported by one or more auxiliary statements, as noted below.  
@@ -225,7 +225,7 @@ manager: "jhubbard"
  These options affect the behavior of the restore operation.  
   
  MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [ ...*n* ]  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) and [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  Specifies that the data or log file whose logical name is specified by *logical_file_name_in_backup* should be moved by restoring it to the location specified by *operating_system_file_name*. The logical file name of a data or log file in a backup set matches its logical name in the database when the backup set was created.  
   
@@ -238,28 +238,28 @@ manager: "jhubbard"
   
  When used with RESTORE LOG, the MOVE option can be used only to relocate files that were added during the interval covered by the log being restored. For example, if the log backup contains an add file operation for file `file23`, this file may be relocated using the MOVE option on RESTORE LOG.  
   
- When used with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Snaphot Backup, the MOVE option can be used only to relocate files to an Azure blob within the same storage account as the original blob. The MOVE option cannot be used to restore the snapshot backup to a local file or to a different storage account.  
+ When used with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Snaphot Backup, the MOVE option can be used only to relocate files to an Azure blob within the same storage account as the original blob. The MOVE option cannot be used to restore the snapshot backup to a local file or to a different storage account.  
   
  If a RESTORE VERIFYONLY statement is used when you plan to relocate a database on the same server or copy it to a different server, the MOVE option might be necessary to verify that sufficient space is available in the target and to identify potential collisions with existing files.  
   
  For more information, see [Copy Databases with Backup and Restore](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
  CREDENTIAL  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md), [RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md), [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md), [RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md), and [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Used only when restoring a backup from the Microsoft Azure Blob storage service.  
   
 > [!NOTE]  
->  With [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] SP1 CU2 until  [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)], you can only restore from a single device when restoring from URL. In order to restore from multiple devices when restoring from URL you must use [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)) and you must use Shared Access Signature (SAS) tokens. For more information, see [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) and [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+>  With [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] SP1 CU2 until  [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)], you can only restore from a single device when restoring from URL. In order to restore from multiple devices when restoring from URL you must use [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)) and you must use Shared Access Signature (SAS) tokens. For more information, see [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) and [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
  REPLACE  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- Specifies that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] should create the specified database and its related files even if another database already exists with the same name. In such a case, the existing database is deleted. When the REPLACE option is not specified, a safety check occurs. This prevents overwriting a different database by accident. The safety check ensures that the RESTORE DATABASE statement does not restore the database to the current server if the following conditions both exist:  
+ Specifies that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] should create the specified database and its related files even if another database already exists with the same name. In such a case, the existing database is deleted. When the REPLACE option is not specified, a safety check occurs. This prevents overwriting a different database by accident. The safety check ensures that the RESTORE DATABASE statement does not restore the database to the current server if the following conditions both exist:  
   
 -   The database named in the RESTORE statement already exists on the current server, and  
   
@@ -269,17 +269,17 @@ manager: "jhubbard"
   
  REPLACE also overrides the requirement that you back up the tail of the log before restoring the database.  
   
- For information the impact of using the REPLACE option, see [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+ For information the impact of using the REPLACE option, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
  RESTART  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- Specifies that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] should restart a restore operation that has been interrupted. RESTART restarts the restore operation at the point it was interrupted.  
+ Specifies that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] should restart a restore operation that has been interrupted. RESTART restarts the restore operation at the point it was interrupted.  
   
  RESTRICTED_USER  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md).  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md).  
   
- Restricts access for the newly restored database to members of the **db_owner**, **dbcreator**, or **sysadmin** roles.  RESTRICTED_USER replaces the DBO_ONLY option. DBO_ONLY has been discontinued with [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)].  
+ Restricts access for the newly restored database to members of the **db_owner**, **dbcreator**, or **sysadmin** roles.  RESTRICTED_USER replaces the DBO_ONLY option. DBO_ONLY has been discontinued with [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)].  
   
  Use with the RECOVERY option.  
   
@@ -287,9 +287,9 @@ manager: "jhubbard"
  These options operate on the backup set containing the backup to be restored.  
   
  FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md), [RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md), [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md), and [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
- Identifies the backup set to be restored. For example, a *backup_set_file_number* of **1** indicates the first backup set on the backup medium and a *backup_set_file_number* of **2** indicates the second backup set. You can obtain the *backup_set_file_number* of a backup set by using the [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md) statement.  
+ Identifies the backup set to be restored. For example, a *backup_set_file_number* of **1** indicates the first backup set on the backup medium and a *backup_set_file_number* of **2** indicates the second backup set. You can obtain the *backup_set_file_number* of a backup set by using the [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) statement.  
   
  When not specified, the default is **1**, except for RESTORE HEADERONLY in which case all backup sets in the media set are processed. For more information, see "Specifying a Backup Set," later in this topic.  
   
@@ -297,7 +297,7 @@ manager: "jhubbard"
 >  This FILE option is unrelated to the FILE option for specifying a database file, FILE **=** { *logical_file_name_in_backup* | **@***logical_file_name_in_backup_var* }.  
   
  PASSWORD  **=** { *password* | **@***password_variable* }  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md), [RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md), [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md), and [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Supplies the password of the backup set. A backup-set password is a character string.  
   
@@ -313,7 +313,7 @@ manager: "jhubbard"
  These options operate on the media set as a whole.  
   
  MEDIANAME **=** { *media_name* | **@***media_name_variable*}  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md), [RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md), [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md), [RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md), and [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Specifies the name for the media. If provided, the media name must match the media name on the backup volumes; otherwise, the restore operation terminates. If no media name is given in the RESTORE statement, the check for a matching media name on the backup volumes is not performed.  
   
@@ -321,7 +321,7 @@ manager: "jhubbard"
 >  Consistently using media names in backup and restore operations provides an extra safety check for the media selected for the restore operation.  
   
  MEDIAPASSWORD **=** { *mediapassword* | **@***mediapassword_variable* }  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md), [RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md), [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md), [RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md), and [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Supplies the password of the media set. A media-set password is a character string.  
   
@@ -334,7 +334,7 @@ manager: "jhubbard"
 >  This password provides only weak protection for the media set. For more information, see the "Permissions" section for the relevant statement.  
   
  BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Specifies the physical block size, in bytes. The supported sizes are 512, 1024, 2048, 4096, 8192, 16384, 32768, and 65536 (64 KB) bytes. The default is 65536 for tape devices and 512 otherwise. Typically, this option is unnecessary because RESTORE automatically selects a block size that is appropriate to the device. Explicitly stating a block size overrides the automatic selection of block size.  
   
@@ -347,22 +347,22 @@ manager: "jhubbard"
  The options enable you to optimize data transfer from the backup device.  
   
  BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Specifies the total number of I/O buffers to be used for the restore operation. You can specify any positive integer; however, large numbers of buffers might cause "out of memory" errors because of inadequate virtual address space in the Sqlservr.exe process.  
   
  The total space used by the buffers is determined by: *buffercount***\****maxtransfersize*.  
   
  MAXTRANSFERSIZE **=** { *maxtransfersize* | **@***maxtransfersize_variable* }  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- Specifies the largest unit of transfer in bytes to be used between the backup media and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4194304 bytes (4 MB).  
+ Specifies the largest unit of transfer in bytes to be used between the backup media and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4194304 bytes (4 MB).  
   
 ##### Error Management Options  
  These options allow you to determine whether backup checksums are enabled for the restore operation and whether the operation will stop on encountering an error.  
   
  { CHECKSUM | NO_CHECKSUM }  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md), [RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md), [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md), [RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md), and [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  The default behavior is to verify checksums if they are present and proceed without verification if they are not present.  
   
@@ -380,7 +380,7 @@ manager: "jhubbard"
  Explicitly disables the validation of checksums by the restore operation.  
   
  { **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR }  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md), [RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md), [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md), [RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md), and [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  STOP_ON_ERROR  
  Specifies that the restore operation stops with the first error encountered. This is the default behavior for RESTORE, except for VERIFYONLY which has CONTINUE_AFTER_ERROR as the default.  
@@ -392,23 +392,23 @@ manager: "jhubbard"
   
 ##### FILESTREAM Options  
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) and [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
- A windows-compatible directory name. This name should be unique among all the database-level FILESTREAM directory names in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. Uniqueness comparison is done in a case-insensitive fashion, regardless of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] collation settings.  
+ A windows-compatible directory name. This name should be unique among all the database-level FILESTREAM directory names in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. Uniqueness comparison is done in a case-insensitive fashion, regardless of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] collation settings.  
   
 ##### Monitoring Options  
  These options enable you to monitor the transfer of data transfer from the backup device.  
   
  STATS [ **=** *percentage* ]  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) and [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
- Displays a message each time another percentage completes, and is used to gauge progress. If *percentage* is omitted, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] displays a message after each 10 percent is completed (approximately).  
+ Displays a message each time another percentage completes, and is used to gauge progress. If *percentage* is omitted, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] displays a message after each 10 percent is completed (approximately).  
   
- The STATS option reports the percentage complete as of the threshold for reporting the next interval. This is at approximately the specified percentage; for example, with STATS=10, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] reports at approximately that interval; for instance, instead of displaying precisely 40%, the option might display 43%. For large backup sets, this is not a problem because the percentage complete moves very slowly between completed I/O calls.  
+ The STATS option reports the percentage complete as of the threshold for reporting the next interval. This is at approximately the specified percentage; for example, with STATS=10, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] reports at approximately that interval; for instance, instead of displaying precisely 40%, the option might display 43%. For large backup sets, this is not a problem because the percentage complete moves very slowly between completed I/O calls.  
   
 ##### Tape Options  
  These options are used only for TAPE devices. If a nontape device is being used, these options are ignored.  
@@ -417,24 +417,24 @@ manager: "jhubbard"
  These options are used only for TAPE devices. If a non-tape device is being used, these options are ignored.  
   
  REWIND  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md), [RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md), [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md), [RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md), and [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
- Specifies that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] release and rewind the tape. REWIND is the default.  
+ Specifies that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] release and rewind the tape. REWIND is the default.  
   
  NOREWIND  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) and [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  Specifying NOREWIND in any other restore statement generates an error.  
   
- Specifies that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will keep the tape open after the backup operation. You can use this option to improve performance when performing multiple backup operations to a tape.  
+ Specifies that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will keep the tape open after the backup operation. You can use this option to improve performance when performing multiple backup operations to a tape.  
   
  NOREWIND implies NOUNLOAD, and these options are incompatible within a single RESTORE statement.  
   
 > [!NOTE]  
->  If you use NOREWIND, the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] retains ownership of the tape drive until a BACKUP or RESTORE statement running in the same process uses either the REWIND or UNLOAD option, or the server instance is shut down. Keeping the tape open prevents other processes from accessing the tape. For information about how to display a list of open tapes and to close an open tape, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+>  If you use NOREWIND, the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] retains ownership of the tape drive until a BACKUP or RESTORE statement running in the same process uses either the REWIND or UNLOAD option, or the server instance is shut down. Keeping the tape open prevents other processes from accessing the tape. For information about how to display a list of open tapes and to close an open tape, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
  { **UNLOAD** | NOUNLOAD }  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md), [RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md), [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md), [RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md), [RESTORE REWINDONLY](../Topic/RESTORE%20REWINDONLY%20\(Transact-SQL\).md), and [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md), and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  These options are used only for TAPE devices. If a non-tape device is being used, these options are ignored.  
   
@@ -451,7 +451,7 @@ manager: "jhubbard"
  This option is relevant only if the database was replicated when the backup was created.  
   
  KEEP_REPLICATION  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  KEEP_REPLICATION should used when setting up replication to work with log shipping. It prevents replication settings from being removed when a database backup or log backup is restored on a warm standby server and the database is recovered. Specifying this option when restoring a backup with the NORECOVERY option is not permitted. To ensure replication functions properly after restore:  
   
@@ -463,11 +463,11 @@ manager: "jhubbard"
  This option is relevant only if the database was enabled for change data capture when the backup was created.  
   
  KEEP_CDC  
- **Supported by:**  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  KEEP_CDC should be used to prevent change data capture settings from being removed when a database backup or log backup is restored on another server and the database is recovered. Specifying this option when restoring a backup with the NORECOVERY option is not permitted.  
   
- Restoring the database with KEEP_CDC will not create the change data capture jobs. To extract changes from the log after restoring the database, recreate the capture process job and the cleanup job for the restored database. For information, see [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys.sp-cdc-add-job-transact-sql.md).  
+ Restoring the database with KEEP_CDC will not create the change data capture jobs. To extract changes from the log after restoring the database, recreate the capture process job and the cleanup job for the restored database. For information, see [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sys.sp-cdc-add-job-transact-sql.md).  
   
  For information about using change data capture with database mirroring, see [Change Data Capture and Other SQL Server Features](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md).  
   
@@ -475,7 +475,7 @@ manager: "jhubbard"
  Turns [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] message delivery on or off or sets a new [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] identifier. This option is relevant only if [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] was enabled (activated) for the database when the backup was created.  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
- **Supported by:**  [RESTORE DATABASE](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ **Supported by:**  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  ENABLE_BROKER  
  Specifies that [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] message delivery is enabled at the end of the restore so that messages can be sent immediately. By default [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] message delivery is disabled during a restore. The database retains the existing Service Broker identifier.  
@@ -487,7 +487,7 @@ manager: "jhubbard"
  Specifies that the database be assigned a new Service Broker identifier. Because the database is considered to be a new Service Broker, existing conversations in the database are immediately removed without producing end dialog messages. Any route referencing the old Service Broker identifier must be recreated with the new identifier.  
   
 #### <point_in_time_WITH_options>  
- **Supported by:**  [RESTORE {DATABASE|LOG}](../Topic/RESTORE%20\(Transact-SQL\).md) and only for the full or bulk-logged recovery models.  
+ **Supported by:**  [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) and only for the full or bulk-logged recovery models.  
   
  You can restore a database to a specific point in time or transaction, by specifying the target recovery point in a STOPAT, STOPATMARK, or STOPBEFOREMARK clause. A specified time or transaction is always restored from a log backup. In every RESTORE LOG statement of the restore sequence, you must specify your target time or transaction in an identical STOPAT, STOPATMARK, or STOPBEFOREMARK clause.  
   
@@ -519,7 +519,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  If the specified mark, LSN, or time is after the last LOG backup, the database is left in the unrecovered state, just as if RESTORE LOG ran with NORECOVERY.  
   
- For more information, see [Use Marked Transactions to Recover Related Databases Consistently &#40;Full Recovery Model&#41;](../Topic/Use%20Marked%20Transactions%20to%20Recover%20Related%20Databases%20Consistently%20\(Full%20Recovery%20Model\).md) and [Recover to a Log Sequence Number &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md).  
+ For more information, see [Use Marked Transactions to Recover Related Databases Consistently &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) and [Recover to a Log Sequence Number &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md).  
   
  STOPBEFOREMARK **=** { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
  Specifies recovery up to a specified recovery point. The specified transaction is not included in the recovery, and is rolled back when WITH RECOVERY is used.  
@@ -536,27 +536,27 @@ manager: "jhubbard"
 ## Result Sets  
  For result sets, see the following topics:  
   
--   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)  
+-   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
--   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
 ## Remarks  
  For additional remarks, see the following topics:  
   
--   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
--   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
--   [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20REWINDONLY%20\(Transact-SQL\).md)  
+-   [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)  
   
--   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+-   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
 ## Specifying a Backup Set  
- A *backup set* contains the backup from a single, successful backup operation. RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY, and RESTORE VERIFYONLY statements operate on a single backup set within the media set on the specified backup device or devices. You should specify the backup you need from within the media set. You can obtain the *backup_set_file_number* of a backup set by using the [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md) statement.  
+ A *backup set* contains the backup from a single, successful backup operation. RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY, and RESTORE VERIFYONLY statements operate on a single backup set within the media set on the specified backup device or devices. You should specify the backup you need from within the media set. You can obtain the *backup_set_file_number* of a backup set by using the [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) statement.  
   
  The option for specifying the backup set to restore is:  
   
@@ -603,35 +603,35 @@ manager: "jhubbard"
 ## Permissions  
  For permissions, see the following topics:  
   
--   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
--   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)  
+-   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
--   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
--   [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20REWINDONLY%20\(Transact-SQL\).md)  
+-   [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)  
   
--   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+-   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
 ## Examples  
  For examples, see the following topics:  
   
--   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
--   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)  
+-   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
 ## See Also  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)   
- [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)   
- [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)   
- [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20REWINDONLY%20\(Transact-SQL\).md)   
- [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
+ [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
+ [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   
+ [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
+ [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
   

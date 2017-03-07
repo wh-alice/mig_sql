@@ -18,9 +18,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Workload Group
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  You can create a workload group by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  You can create a workload group by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
  Creating a workload group requires CONTROL SERVER permission.  
   
 ##  <a name="CreRPProp"></a> Create a Workload Group Using SQL Server Management Studio  
- **To create a workload group by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]**  
+ **To create a workload group by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]**  
   
 1.  In Object Explorer, recursively expand the **Management** node down to and including the resource pool that contains the workload group to be modified.  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
 7.  To save the changes, click **OK**  
   
 ##  <a name="CreRPTSQL"></a> Create a Workload Group Using Transact-SQL  
- **To create a workload group by using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]**  
+ **To create a workload group by using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]**  
   
 1.  Run the CREATE WORKLOAD GROUP statement specifying the property values to be set.  
   

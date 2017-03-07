@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Using Set Functions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   A set function retrieves a set from a dimension, hierarchy, level, or by traversing the absolute and relative locations of members within these objects, constructing sets in a variety of ways.  
   
@@ -179,7 +179,7 @@ manager: "erikre"
   
  `FROM [Adventure Works]`  
   
- Finally it is possible to perform a number of logical set operations using functions such as [Intersect &#40;MDX&#41;](../mdx/intersect-mdx.md), [Union  &#40;MDX&#41;](../mdx/union-mdx.md) and [Except &#40;MDX&#41;](../Topic/Except%20\(MDX\).md) functions. The following query shows examples of the latter two functions:  
+ Finally it is possible to perform a number of logical set operations using functions such as [Intersect &#40;MDX&#41;](../mdx/intersect-mdx.md), [Union  &#40;MDX&#41;](../mdx/union-mdx.md) and [Except &#40;MDX&#41;](../mdx/except-mdx-function.md) functions. The following query shows examples of the latter two functions:  
   
  `SELECT`  
   

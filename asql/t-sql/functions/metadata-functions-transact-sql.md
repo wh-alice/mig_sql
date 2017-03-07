@@ -20,7 +20,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Metadata Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   The following scalar functions return information about the database and database objects:  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
 |[FILEGROUPPROPERTY](../../t-sql/functions/filegroupproperty-transact-sql.md)|[TYPE_ID](../../t-sql/functions/type-id-transact-sql.md)|  
 |[FILEPROPERTY](../../t-sql/functions/fileproperty-transact-sql.md)|[TYPE_NAME](../../t-sql/functions/type-name-transact-sql.md)|  
 |[FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)|[TYPEPROPERTY](../../t-sql/functions/typeproperty-transact-sql.md)|  
-|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)|[VERSION](VERSION%20\(Transact-SQL\).md)|  
+|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)|[VERSION](../../t-sql/functions/version-transact-sql-metadata-functions.md)|  
   
  All metadata functions are nondeterministic. This means these functions do not always return the same results every time they are called, even with the same set of input values.  
   

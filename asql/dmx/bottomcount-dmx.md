@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # BottomCount (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the specified number of bottom-most rows, in increasing order of rank as specified by an expression.  
   
@@ -43,7 +43,7 @@ BottomCount(<table expression>, <rank expression>, <count>)
  The value that is supplied by the \<rank expression> argument determines the increasing order of rank for the rows that are supplied in the \<table expression> argument, and the number of bottom-most rows that is specified in the \<count> argument is returned.  
   
 ## Examples  
- The following example creates a prediction query against the Association model that you build by using the [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md).  
+ The following example creates a prediction query against the Association model that you build by using the [Basic Data Mining Tutorial](../a9notintoc/basic-data-mining-tutorial.md).  
   
  To understand how BottomCount works, it might be helpful to first execute a prediction query that returns only the nested table.  
   

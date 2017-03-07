@@ -23,11 +23,11 @@ manager: "jhubbard"
   
 -   Database mirroring  
   
--   SOAP (support for SOAP endpoints is present in [!INCLUDE[ssKilimanjaro](../../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)] and earlier [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] versions)  
+-   SOAP (support for SOAP endpoints is present in [!INCLUDE[ssKilimanjaro](../../../a9notintoc/includes/sskilimanjaro-md.md)] and earlier [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] versions)  
   
 -   Service Broker  
   
--   [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]  
+-   [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]  
   
  Also, the <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A> property can be used to specify the following two supported protocols:  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
  When the endpoint has been created and fully defined, access can be granted to, revoked from, and denied to database users, groups, roles, and logons.  
   
 ## Example  
- For the following code example, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20Basic%20SMO%20Project%20in%20Visual%20Studio%20.NET.md) and [Create a Visual C&#35; SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20C%23%20SMO%20Project%20in%20Visual%20Studio%20.NET.md).  
+ For the following code example, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-.net.md) and [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-.net.md).  
   
 ## Creating a Database Mirroring Endpoint Service in Visual Basic  
  The code example demonstrates how to create a Database Mirroring endpoint in SMO. This is necessary before you create a database mirror. Use the <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> and other properties on the <xref:Microsoft.SqlServer.Management.Smo.Database> object to create a database mirror.  

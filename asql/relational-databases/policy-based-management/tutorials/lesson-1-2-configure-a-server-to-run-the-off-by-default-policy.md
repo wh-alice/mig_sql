@@ -21,15 +21,15 @@ Now you have a policy named Off By Default. In this task, you will check to see 
   
 ### To run the Off By Default policy  
   
-1.  In Object Explorer, right-click your instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], point to **Policies**, and then click **Evaluate**.  
+1.  In Object Explorer, right-click your instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], point to **Policies**, and then click **Evaluate**.  
   
-2.  In the **Evaluate Policies** dialog box you can select policies from another instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or from a file. For this step, leave **Source** set to your instance of the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+2.  In the **Evaluate Policies** dialog box you can select policies from another instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] or from a file. For this step, leave **Source** set to your instance of the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 3.  In the **Policies** section, select the **Off By Default** policy.  
   
 4.  To see whether the server is in compliance with the policy, click **Evaluate**.  
   
-5.  In the **Results** area, you will see a green circle with a check mark if the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] complies with the policy. You will see a red circle with an X if the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] does not comply with the policy.  
+5.  In the **Results** area, you will see a green circle with a check mark if the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] complies with the policy. You will see a red circle with an X if the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] does not comply with the policy.  
   
 6.  In the **Target Details** area, you will see additional information in the **Message** column if an error occurs. In the **Message** column, click **View** to see a report that contains the results of the check for each facet property that was checked.  
   

@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using Cursors (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   ODBC supports a cursor model that allows:  
   
@@ -33,11 +33,11 @@ manager: "jhubbard"
   
 -   Positioned updates.  
   
- ODBC applications rarely declare and open cursors or use any cursor-related [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements. ODBC automatically opens a cursor for every result set returned from an SQL statement. The characteristics of the cursors are controlled by statement attributes set with [SQLSetStmtAttr](../../relational-databases/extended-stored-procedures-reference/sqlsetstmtattr.md) before the SQL statement is executed. The ODBC API functions for processing result sets support the full range of cursor functionality, including fetching, scrolling, and positioned updates.  
+ ODBC applications rarely declare and open cursors or use any cursor-related [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements. ODBC automatically opens a cursor for every result set returned from an SQL statement. The characteristics of the cursors are controlled by statement attributes set with [SQLSetStmtAttr](../../relational-databases/extended-stored-procedures-reference/sqlsetstmtattr.md) before the SQL statement is executed. The ODBC API functions for processing result sets support the full range of cursor functionality, including fetching, scrolling, and positioned updates.  
   
- This is a comparison of how [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] scripts and ODBC applications work with cursors.  
+ This is a comparison of how [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] scripts and ODBC applications work with cursors.  
   
-|Action|[!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]|ODBC|  
+|Action|[!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]|ODBC|  
 |------------|------------------------|----------|  
 |Define cursor behavior|Specify through DECLARE CURSOR parameters|Set cursor attributes by using [SQLSetStmtAttr](../../relational-databases/extended-stored-procedures-reference/sqlsetstmtattr.md)|  
 |Open a cursor|DECLARE CURSOR OPEN *cursor_name*|**SQLExecDirect** or **SQLExecute**|  
@@ -45,7 +45,7 @@ manager: "jhubbard"
 |Positioned update|WHERE CURRENT OF clause on UPDATE or DELETE|**SQLSetPos**|  
 |Close a cursor|CLOSE *cursor_name* DEALLOCATE|[SQLCloseCursor](../../relational-databases/extended-stored-procedures-reference/sqlclosecursor.md)|  
   
- The server cursors implemented in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] support the functionality of the ODBC cursor model. The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client driver uses server cursors to support the cursor functionality of the ODBC API.  
+ The server cursors implemented in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] support the functionality of the ODBC cursor model. The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client driver uses server cursors to support the cursor functionality of the ODBC API.  
   
 ## In This Section  
   

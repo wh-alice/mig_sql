@@ -19,9 +19,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Use the Properties Window in Management Studio
-  The Properties window describes the state of an item in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], such as a connection or a Showplan operator, and information about database objects such as tables, views, and designers.  
+  The Properties window describes the state of an item in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], such as a connection or a Showplan operator, and information about database objects such as tables, views, and designers.  
   
- You can use the Properties window to view the properties of the current connection. Many properties are read-only in the Properties window but can be changed elsewhere in the [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)]. For example, the Database property of a query is read-only in the Properties window, but can be changed on the tool bar.  
+ You can use the Properties window to view the properties of the current connection. Many properties are read-only in the Properties window but can be changed elsewhere in the [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)]. For example, the Database property of a query is read-only in the Properties window, but can be changed on the tool bar.  
   
 ### To view properties using the Properties window  
   

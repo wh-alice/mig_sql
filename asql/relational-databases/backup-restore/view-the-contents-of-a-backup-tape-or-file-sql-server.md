@@ -22,9 +22,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View the Contents of a Backup Tape or File (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes how to view the content of a backup tape or file in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to view the content of a backup tape or file in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
 > [!NOTE]  
 >  Support for tape backup devices will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
@@ -44,16 +44,16 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Security"></a> Security  
- For information about security, see [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md).  
+ For information about security, see [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
   
 ####  <a name="Permissions"></a> Permissions  
- In [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] and later versions, obtaining information about a backup set or backup device requires CREATE DATABASE permission. For more information, see [GRANT Database Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Database%20Permissions%20\(Transact-SQL\).md).  
+ In [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] and later versions, obtaining information about a backup set or backup device requires CREATE DATABASE permission. For more information, see [GRANT Database Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Database%20Permissions%20\(Transact-SQL\).md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 #### To view the content of a backup tape or file  
   
-1.  After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
+1.  After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
   
 2.  Expand **Databases**, and, depending on the database, either select a user database or expand **System Databases** and select a system database.  
   
@@ -71,11 +71,11 @@ manager: "jhubbard"
   
 #### To view the content of a backup tape or file  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Use the [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md) statement. This example returns information about the file named `AdventureWorks2012-FullBackup.bak`.  
+3.  Use the [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) statement. This example returns information about the file named `AdventureWorks2012-FullBackup.bak`.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -85,11 +85,11 @@ GO
 ```  
   
 ## See Also  
- [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/reference/system-tables/backupfilegroup-transact-sql.md)   
+ [backupfile &#40;Transact-SQL&#41;](../../relational-databases/reference/system-tables/backupfile-transact-sql.md)   
+ [backupset &#40;Transact-SQL&#41;](../../relational-databases/reference/system-tables/backupset-transact-sql.md)   
+ [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/reference/system-tables/backupmediaset-transact-sql.md)   
+ [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/reference/system-tables/backupmediafamily-transact-sql.md)   
  [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Define a Logical Backup Device for a Disk File &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
  [Define a Logical Backup Device for a Tape Drive &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  

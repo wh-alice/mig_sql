@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Fetching Rows
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   The **IRowset** interface is the base rowset interface. The **IRowset** interface provides methods for fetching rows sequentially, getting the data from those rows, and managing rows. Consumers use the methods in **IRowset** for all basic rowset operations. This includes fetching and releasing rows and getting column values.  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
  The **IColumnsInfo** and **IColumnsRowset** interfaces are used to extract information about the columns in the rowset. The **IColumnsInfo** interface returns a limited set of information, whereas **IColumnsRowset** provides all the metadata.  
   
 > [!NOTE]  
->  In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] version 7.0 and earlier, the optional metadata column DBCOLUMN_COMPUTEMODE returned by **IColumnsInfo::GetColumnsInfo** returns DBSTATUS_S_ISNULL (instead of the values describing whether the column is computed) because it cannot be determined whether the underlying column is computed.  
+>  In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] version 7.0 and earlier, the optional metadata column DBCOLUMN_COMPUTEMODE returned by **IColumnsInfo::GetColumnsInfo** returns DBSTATUS_S_ISNULL (instead of the values describing whether the column is computed) because it cannot be determined whether the underlying column is computed.  
   
  The ordinals are used to specify a binding to a column. A binding is a structure that associates an element of the consumer's structure with a column. The binding can bind the data value, length, and status value of the column.  
   
@@ -60,7 +60,7 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [Next Fetch Position](../Topic/Next%20Fetch%20Position.md)  
+-   [Next Fetch Position](../../relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md)  
   
 ## See Also  
  [Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  

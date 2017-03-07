@@ -20,16 +20,16 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Transact-SQL Syntax Supported by IntelliSense
-  This topic describes the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements and syntax elements that are supported by IntelliSense in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  This topic describes the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements and syntax elements that are supported by IntelliSense in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
 ## Statements Supported by IntelliSense  
- In [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], IntelliSense supports only the most commonly used [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements. Some general [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Query Editor conditions might prevent IntelliSense from functioning. For more information, see [Troubleshooting IntelliSense &#40;SQL Server Management Studio&#41;](../Topic/Troubleshooting%20IntelliSense%20\(SQL%20Server%20Management%20Studio\).md).  
+ In [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], IntelliSense supports only the most commonly used [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements. Some general [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Query Editor conditions might prevent IntelliSense from functioning. For more information, see [Troubleshooting IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense.md).  
   
 > [!NOTE]  
 >  IntelliSense is not available for encrypted database objects, such as encrypted stored procedures or user-defined functions. Parameter help and Quick Info are not available for the parameters of extended stored procedures and CLR Integration user-defined types.  
   
 ### SELECT Statement  
- The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Query Editor provides IntelliSense support for the following syntax elements in the SELECT statement:  
+ The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Query Editor provides IntelliSense support for the following syntax elements in the SELECT statement:  
   
 |||  
 |-|-|  
@@ -40,7 +40,7 @@ manager: "jhubbard"
 |TOP|OPTION (hint)|  
   
 ### Additional Transact-SQL Statements That Are Supported  
- The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Query Editor also provides IntelliSense support for [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements that are shown in the following table.  
+ The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Query Editor also provides IntelliSense support for [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements that are shown in the following table.  
   
 |Transact-SQL statement|Syntax supported|Exceptions|  
 |-----------------------------|----------------------|----------------|  
@@ -49,7 +49,7 @@ manager: "jhubbard"
 |[DELETE](../../t-sql/statements/delete-transact-sql.md)|All syntax.|None|  
 |[DECLARE @local_variable](../Topic/DECLARE%20@local_variable%20\(Transact-SQL\).md)|All syntax.|None|  
 |[SET @local_variable](../Topic/SET%20@local_variable%20\(Transact-SQL\).md)|All syntax.|None|  
-|[EXECUTE](../Topic/EXECUTE%20\(Transact-SQL\).md)|Execution of user-defined stored procedures, system stored procedures, user-defined functions, and system functions.|None|  
+|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|Execution of user-defined stored procedures, system stored procedures, user-defined functions, and system functions.|None|  
 |[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|All syntax.|None|  
 |[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|All syntax.|None|  
 |[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)|All syntax.|There is no IntelliSense support for the EXTERNAL NAME clause.<br /><br /> In the AS clause, IntelliSense supports only the statements and syntax that are listed in this topic.|  
@@ -57,7 +57,7 @@ manager: "jhubbard"
 |[USE](../../t-sql/language-elements/use-transact-sql.md)|All syntax.|None|  
   
 ## IntelliSense in Supported Statements  
- IntelliSense in the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Query Editor supports the following syntax elements when they are used in one of the supported [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements:  
+ IntelliSense in the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Query Editor supports the following syntax elements when they are used in one of the supported [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements:  
   
 -   All join types, including APPLY  
   
@@ -88,10 +88,10 @@ manager: "jhubbard"
     > [!NOTE]  
     >  IntelliSense is not available for the columns of a CREATE VIEW statement until the CREATE VIEW statement has been executed.  
   
- IntelliSense is not provided for the previously listed elements when they are used in other [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements. For example, there is IntelliSense support for column names that are used in a SELECT statement, but not for columns that are used in the CREATE FUNCTION statement.  
+ IntelliSense is not provided for the previously listed elements when they are used in other [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements. For example, there is IntelliSense support for column names that are used in a SELECT statement, but not for columns that are used in the CREATE FUNCTION statement.  
   
 ## Examples  
- Within a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] script or batch, IntelliSense in the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Query Editor supports only the statements and syntax that are listed in this topic. The following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] code examples show what statements and syntax elements IntelliSense supports. For example, in the following batch, IntelliSense is available for the `SELECT` statement when it is coded by itself, but not when the `SELECT` is contained in a `CREATE FUNCTION` statement.  
+ Within a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] script or batch, IntelliSense in the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Query Editor supports only the statements and syntax that are listed in this topic. The following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] code examples show what statements and syntax elements IntelliSense supports. For example, in the following batch, IntelliSense is available for the `SELECT` statement when it is coded by itself, but not when the `SELECT` is contained in a `CREATE FUNCTION` statement.  
   
 ```  
 USE AdventureWorks2012;  
@@ -112,9 +112,9 @@ RETURN
 );GO  
 ```  
   
- This functionality also applies to the sets of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements in the AS clause of a CREATE PROCEDURE or ALTER PROCEDURE statement.  
+ This functionality also applies to the sets of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements in the AS clause of a CREATE PROCEDURE or ALTER PROCEDURE statement.  
   
- Within a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] script or batch, IntelliSense supports objects that have been specified in a CREATE or ALTER statement; however, these objects do not exist in the database because the statements have not been executed. For example, you might enter the following code in the Query Editor:  
+ Within a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] script or batch, IntelliSense supports objects that have been specified in a CREATE or ALTER statement; however, these objects do not exist in the database because the statements have not been executed. For example, you might enter the following code in the Query Editor:  
   
 ```  
 USE MyTestDB;  

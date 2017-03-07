@@ -17,7 +17,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Add Members to a Collection (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], you can add leaf and consolidated members to a collection.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], you can add leaf and consolidated members to a collection.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 ### To add members to a collection  
   
-1.  On the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] home page, from the **Model** list, select a model.  
+1.  On the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] home page, from the **Model** list, select a model.  
   
 2.  From the **Version** list, select a version.  
   

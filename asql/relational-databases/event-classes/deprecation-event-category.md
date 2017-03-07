@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Deprecation Announcement Event Class](../../relational-databases/event-classes/deprecation-announcement-event-class.md)|Indicates that a feature will be removed in a future version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].|  
-|[Deprecation Final Support Event Class](../../relational-databases/event-classes/deprecation-final-support-event-class.md)|Indicates that a feature will be removed in the next major release of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].|  
+|[Deprecation Announcement Event Class](../../relational-databases/event-classes/deprecation-announcement-event-class.md)|Indicates that a feature will be removed in a future version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].|  
+|[Deprecation Final Support Event Class](../../relational-databases/event-classes/deprecation-final-support-event-class.md)|Indicates that a feature will be removed in the next major release of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].|  
   
   

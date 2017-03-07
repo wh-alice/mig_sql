@@ -38,7 +38,7 @@ manager: "jhubbard"
  Specifies the second **geography** instance that the calling **geography** instance is trying to determine the shortest distance to.  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **geography**  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] return type: **geography**  
   
  CLR return type: **SqlGeography**  
   

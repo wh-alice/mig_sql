@@ -19,20 +19,20 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # SQL Server Extended Events Packages
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  A package is a container for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Extended Events objects. There are three kinds of Extended Events packages, which include the following:  
+  A package is a container for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Extended Events objects. There are three kinds of Extended Events packages, which include the following:  
   
 -   package0 - Extended Events system objects. This is the default package.  
   
--   sqlserver - [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] related objects.  
+-   sqlserver - [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] related objects.  
   
--   sqlos - [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Operating System (SQLOS) related objects.  
+-   sqlos - [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Operating System (SQLOS) related objects.  
   
 > [!NOTE]  
->  The SecAudit package is used by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Audit. None of the objects in the package are available through the Extended Events data definition language (DDL).  
+>  The SecAudit package is used by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Audit. None of the objects in the package are available through the Extended Events data definition language (DDL).  
   
- Packages are identified by a name, a GUID, and the binary module that contains the package. For more information, see [sys.dm_xe_packages &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-xe-packages-transact-sql.md).  
+ Packages are identified by a name, a GUID, and the binary module that contains the package. For more information, see [sys.dm_xe_packages &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-xe-packages-transact-sql.md).  
   
  A package can contain any or all of the following objects, which are discussed in greater detail later in this topic:  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
  ![The relationship of a module, packages, and object](../../relational-databases/extended-events/media/xepackagesobjects.gif "The relationship of a module, packages, and object")  
   
 ### Events  
- Events are monitoring points of interest in the execution path of a program, such as [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. An event firing carries with it the fact that the point of interest was reached, and state information from the time the event was fired.  
+ Events are monitoring points of interest in the execution path of a program, such as [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. An event firing carries with it the fact that the point of interest was reached, and state information from the time the event was fired.  
   
  Events can be used solely for tracing purposes or for triggering actions. These actions can either be synchronous or asynchronous.  
   
@@ -94,7 +94,7 @@ where name = 'keyword_map'
 >  Keywords map closely to the current grouping of SQL Trace events.  
   
 ### Targets  
- Targets are event consumers. Targets process events, either synchronously on the thread that fires the event or asynchronously on a system provided thread. Extended Events provides several targets that you can use as appropriate for directing event output. For more information, see [SQL Server Extended Events Targets](../Topic/SQL%20Server%20Extended%20Events%20Targets.md).  
+ Targets are event consumers. Targets process events, either synchronously on the thread that fires the event or asynchronously on a system provided thread. Extended Events provides several targets that you can use as appropriate for directing event output. For more information, see [SQL Server Extended Events Targets](../../a9retired/sql-server-extended-events-targets.md).  
   
 ### Actions  
  An action is a programmatic response or series of responses to an event. Actions are bound to an event, and each event may have a unique set of actions.  
@@ -116,9 +116,9 @@ where name = 'keyword_map'
   
 -   Stack dumper  
   
--   Execution plan detection ([!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] only)  
+-   Execution plan detection ([!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] only)  
   
--   [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] stack collection ([!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] only)  
+-   [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] stack collection ([!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] only)  
   
 -   Run time statistics calculation  
   
@@ -149,7 +149,7 @@ where name = 'keyword_map'
   
 -   type  
   
- For more information, see [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-xe-objects-transact-sql.md).  
+ For more information, see [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-xe-objects-transact-sql.md).  
   
 ### Maps  
  A map table maps an internal value to a string, which enables a user to know what the value represents. Instead of only being able to obtain a numeric value, a user can get a meaningful description of the internal value. The following query shows how to obtain map values.  
@@ -216,6 +216,6 @@ where name = 'lock_mode'
 ## See Also  
  [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)  
+ [SQL Server Extended Events Targets](../../a9retired/sql-server-extended-events-targets.md)  
   
   

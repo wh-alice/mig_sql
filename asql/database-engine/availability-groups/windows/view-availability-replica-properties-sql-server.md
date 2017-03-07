@@ -17,7 +17,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # View Availability Replica Properties (SQL Server)
-  This topic describes how to view the properties of an availability replica for an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  This topic describes how to view the properties of an availability replica for an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)].  
   
 -   **To view availability replica properties, using:**  
   
@@ -44,32 +44,32 @@ manager: "jhubbard"
   
  To view the properties and states of availability replicas, use the following views and system function:  
   
- [sys.availability_replicas](../../../relational-databases/system-catalog-views/sys.availability-replicas-transact-sql.md)  
- Returns a row for every availability replica in each availability group for which the local instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] hosts an availability replica.  
+ [sys.availability_replicas](../../../relational-databases/reference/system-catalog-views/sys.availability-replicas-transact-sql.md)  
+ Returns a row for every availability replica in each availability group for which the local instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] hosts an availability replica.  
   
  **Column names:** replica_id, group_id, replica_metadata_id, replica_server_name, owner_sid, endpoint_url, availability_mode, availability_mode_desc, failover_mode, failover_mode_desc, session_timeout, primary_role_allow_connections, primary_role_allow_connections_desc, secondary_role_allow_connections, secondary_role_allow_connections_desc, create_date, modify_date, backup_priority, read_only_routing_url  
   
- [sys.availability_read_only_routing_lists](../../../relational-databases/system-catalog-views/sys.availability-read-only-routing-lists-transact-sql.md)  
+ [sys.availability_read_only_routing_lists](../../../relational-databases/reference/system-catalog-views/sys.availability-read-only-routing-lists-transact-sql.md)  
  Returns a row for the read only routing list of each availability replica in an Always On availability group in the WSFC failover cluster.  
   
  **Column names:** replica_id, routing_priority, read_only_replica_id  
   
- [sys.dm_hadr_availability_replica_cluster_nodes](../../../relational-databases/system-dynamic-management-views/sys.dm-hadr-availability-replica-cluster-nodes-transact-sql.md)  
+ [sys.dm_hadr_availability_replica_cluster_nodes](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-hadr-availability-replica-cluster-nodes-transact-sql.md)  
  Returns a row for every availability replica (regardless of join state) of the Always On availability groups in the Windows Server Failover Clustering (WSFC) cluster.  
   
  **Column names:** group_name, replica_server_name, node_name  
   
- [sys.dm_hadr_availability_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys.dm-hadr-availability-replica-cluster-states-transact-sql.md)  
+ [sys.dm_hadr_availability_replica_cluster_states](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-hadr-availability-replica-cluster-states-transact-sql.md)  
  Returns a row for each replica (regardless of join state) of all Always On availability groups (regardless of replica location) in the Windows Server Failover Clustering (WSFC) cluster.  
   
  **Column names:** replica_id, replica_server_name, group_id, join_state, join_state_desc  
   
- [sys.dm_hadr_availability_replica_states](../../../relational-databases/system-dynamic-management-views/sys.dm-hadr-availability-replica-states-transact-sql.md)  
+ [sys.dm_hadr_availability_replica_states](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-hadr-availability-replica-states-transact-sql.md)  
  Returns a row showing the state of each local availability replica and a row for each remote availability replica in the same availability group.  
   
  **Column names:** replica_id, group_id, is_local, role, role_desc, operational_state, operational_state_desc, connected_state, connected_state_desc, recovery_health, recovery_health_desc, synchronization_health, synchronization_health_desc, last_connect_error_number, last_connect_error_description, and last_connect_error_timestamp  
   
- [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys.fn-hadr-backup-is-preferred-replica-transact-sql.md)  
+ [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/reference/system-functions/sys.fn-hadr-backup-is-preferred-replica-transact-sql.md)  
  Determines whether the current replica is the preferred backup replica. Returns 1 if the database on the current server instance is the preferred replica. Otherwise, it returns 0.  
   
 > [!NOTE]  
@@ -83,7 +83,7 @@ manager: "jhubbard"
   
 -   [View Availability Group Listener Properties &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
   
--   [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../Topic/Always%20On%20Policies%20for%20Operational%20Issues%20with%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md)  
+-   [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
   
 -   [Use the Always On Dashboard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
@@ -107,7 +107,7 @@ manager: "jhubbard"
   
  **To manage an availability database**  
   
--   [Add a Database to an Availability Group &#40;SQL Server&#41;](../Topic/Add%20a%20Database%20to%20an%20Availability%20Group%20\(SQL%20Server\).md)  
+-   [Add a Database to an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)  
   
 -   [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
@@ -123,7 +123,7 @@ manager: "jhubbard"
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Monitor Availability Groups &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../Topic/Always%20On%20Policies%20for%20Operational%20Issues%20with%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md)   
+ [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [Administration of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)  
   
   

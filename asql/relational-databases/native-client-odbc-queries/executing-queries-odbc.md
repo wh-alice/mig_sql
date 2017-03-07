@@ -21,9 +21,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Executing Queries (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  After an ODBC application initializes a connection handle and connects with a data source, it allocates one or more statement handles on the connection handle. The application can then execute [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] statements on the statement handle. The general sequence of events in executing an SQL statement is:  
+  After an ODBC application initializes a connection handle and connects with a data source, it allocates one or more statement handles on the connection handle. The application can then execute [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] statements on the statement handle. The general sequence of events in executing an SQL statement is:  
   
 1.  Set any required statement attributes.  
   
@@ -45,7 +45,7 @@ INSERT INTO MyTable VALUES (?, ?, ?)
   
  After all SQL statements execute and their result sets process, the application frees the statement handle.  
   
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver supports multiple statement handles per connection handle. Transactions are managed at the connection level, so that all work performed on all statement handles on a single connection handle are managed as part of the same transaction.  
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver supports multiple statement handles per connection handle. Transactions are managed at the connection level, so that all work performed on all statement handles on a single connection handle are managed as part of the same transaction.  
   
 ## In This Section  
   

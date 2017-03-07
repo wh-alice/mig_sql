@@ -37,7 +37,7 @@ manager: "jhubbard"
 > [!CAUTION]  
 >  More than one table or index can use the same partition function. ALTER PARTITION FUNCTION affects all of them in a single transaction.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -55,7 +55,7 @@ ALTER PARTITION FUNCTION partition_function_name()
  Is the name of the partition function to be modified.  
   
  SPLIT RANGE ( *boundary_value* )  
- Adds one partition to the partition function. *boundary_value* determines the range of the new partition, and must differ from the existing boundary ranges of the partition function. Based on *boundary_value*, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] splits one of the existing ranges into two. Of these two, the one where the new *boundary_value* resides is considered the new partition.  
+ Adds one partition to the partition function. *boundary_value* determines the range of the new partition, and must differ from the existing boundary ranges of the partition function. Based on *boundary_value*, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] splits one of the existing ranges into two. Of these two, the one where the new *boundary_value* resides is considered the new partition.  
   
  A filegroup must exist online and be marked by the partition scheme that uses the partition function as NEXT USED to hold the new partition. Filegroups are allocated to partitions in a CREATE PARTITION SCHEME statement. If a CREATE PARTITION SCHEME statement allocates more filegroups than necessary (fewer partitions are created in the CREATE PARTITION FUNCTION statement than filegroups to hold them), then there are unassigned filegroups, and one of them is marked NEXT USED by the partition scheme. This filegroup will hold the new partition. If there are no filegroups marked NEXT USED by the partition scheme, you must use ALTER PARTITION SCHEME to either add a filegroup, or designate an existing one, to hold the new partition. A filegroup that already holds partitions can be designated to hold additional partitions. Because a partition function can participate in more than one partition scheme, all the partition schemes that use the partition function to which you are adding partitions must have a NEXT USED filegroup. Otherwise, ALTER PARTITION FUNCTION fails with an error that displays the partition scheme or schemes that lack a NEXT USED filegroup.  
   
@@ -65,7 +65,7 @@ ALTER PARTITION FUNCTION partition_function_name()
 >  Limitations with columnstore index: Only empty partitions can be split in when a columnstore index exists on the table. You will need to drop or disable the columnstore index before performing this operation  
   
  MERGE [ RANGE ( *boundary_value*) ]  
- Drops a partition and merges any values that exist in the partition into one of the remaining partitions. RANGE (*boundary_value*) must be an existing boundary value, into which the values from the dropped partition are merged. The filegroup that originally held *boundary_value* is removed from the partition scheme unless it is used by a remaining partition, or is marked with the NEXT USED property. The merged partition resides in the filegroup that originally did not hold *boundary_value*. *boundary_value* is a constant expression that can reference variables (including user-defined type variables) or functions (including user-defined functions). It cannot reference a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] expression. *boundary_value* must either match or be implicitly convertible to the data type of its corresponding partitioning column, and cannot be truncated during implicit conversion in a way that the size and scale of the value does not match that of its corresponding *input_parameter_type*.  
+ Drops a partition and merges any values that exist in the partition into one of the remaining partitions. RANGE (*boundary_value*) must be an existing boundary value, into which the values from the dropped partition are merged. The filegroup that originally held *boundary_value* is removed from the partition scheme unless it is used by a remaining partition, or is marked with the NEXT USED property. The merged partition resides in the filegroup that originally did not hold *boundary_value*. *boundary_value* is a constant expression that can reference variables (including user-defined type variables) or functions (including user-defined functions). It cannot reference a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] expression. *boundary_value* must either match or be implicitly convertible to the data type of its corresponding partitioning column, and cannot be truncated during implicit conversion in a way that the size and scale of the value does not match that of its corresponding *input_parameter_type*.  
   
 > [!NOTE]  
 >  Limitations with columnstore index: Two nonempty partitions containing a columnstore index cannot be merged. You will need to drop or disable the columnstore index before performing this operation  
@@ -85,7 +85,7 @@ ALTER PARTITION FUNCTION partition_function_name()
     > [!NOTE]  
     >  Dropping a partitioned clustered index results in a partitioned heap.  
   
--   Drop and rebuild an existing partitioned index by using the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] CREATE INDEX statement with the DROP EXISTING = ON clause.  
+-   Drop and rebuild an existing partitioned index by using the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] CREATE INDEX statement with the DROP EXISTING = ON clause.  
   
 -   Perform a sequence of ALTER PARTITION FUNCTION statements.  
   
@@ -93,7 +93,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
  ALTER PARTITION FUNCTION fails when there is a disabled clustered index on any tables that use the partition function.  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not provide replication support for modifying a partition function. Changes to a partition function in the publication database must be manually applied in the subscription database.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not provide replication support for modifying a partition function. Changes to a partition function in the publication database must be manually applied in the subscription database.  
   
 ## Permissions  
  Any one of the following permissions can be used to execute ALTER PARTITION FUNCTION:  
@@ -152,12 +152,12 @@ MERGE RANGE (100);
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [sys.partition_functions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.partition-functions-transact-sql.md)   
- [sys.partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.partition-parameters-transact-sql.md)   
- [sys.partition_range_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.partition-range-values-transact-sql.md)   
- [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.partitions-transact-sql.md)   
- [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.tables-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md)   
- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.index-columns-transact-sql.md)  
+ [sys.partition_functions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.partition-functions-transact-sql.md)   
+ [sys.partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.partition-parameters-transact-sql.md)   
+ [sys.partition_range_values &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.partition-range-values-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.partitions-transact-sql.md)   
+ [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.tables-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md)   
+ [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.index-columns-transact-sql.md)  
   
   

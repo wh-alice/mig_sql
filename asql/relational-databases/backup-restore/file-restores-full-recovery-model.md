@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # File Restores (Full Recovery Model)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   This topic is relevant only for databases that contain multiple files or filegroups under the full or bulk-load recovery model.  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
      In an *offline file restore*, the database is offline while damaged files or filegroups are restored. At the end of the restore sequence, the database comes online.  
   
-     All editions of [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] support offline file restore.  
+     All editions of [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] support offline file restore.  
   
 -   Online file restore  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
      For information about support for online page and file restore, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). For more information about online restores, see [Online Restore (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md).
   
     > [!TIP]  
-    >  If you want the database to be offline for a file restore, take the database offline before you start the restore sequence by executing the following [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) statement: ALTER DATABASE *database_name* SET OFFLINE.  
+    >  If you want the database to be offline for a file restore, take the database offline before you start the restore sequence by executing the following [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) statement: ALTER DATABASE *database_name* SET OFFLINE.  
   
   
 ##  <a name="Overview"></a> Restoring Damaged Files from File Backups  
@@ -79,7 +79,7 @@ manager: "jhubbard"
 ## Transact-SQL Restore Sequence for an Offline File Restore (Full Recovery Model)  
  A file restore scenario consists of a single restore sequence that copies, rolls forward, and recovers the appropriate data.  
   
- This section shows the essential [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) options for a file-restore sequence. Syntax and details that are not relevant to this purpose are omitted.  
+ This section shows the essential [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) options for a file-restore sequence. Syntax and details that are not relevant to this purpose are omitted.  
   
  The following sample restore sequence shows an offline restore of two secondary files, `A` and `B`, using WITH NORECOVERY. Next, two log backups are applied with NORECOVERY, followed with the tail-log backup, and this is restored using WITH RECOVERY.  
   
@@ -134,7 +134,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
  [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Restore and Recovery Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Complete Database Restores &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [Piecemeal Restores &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   

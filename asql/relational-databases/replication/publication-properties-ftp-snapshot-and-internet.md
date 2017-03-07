@@ -19,12 +19,12 @@ manager: "jhubbard"
 # Publication Properties, FTP Snapshot and Internet
   This page allows you to:  
   
--   Set properties for delivering the snapshot through File Transfer Protocol (FTP). For more information, see [Transfer Snapshots Through FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md). To use FTP for snapshot delivery you must set up an FTP server. See the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows documentation for more information.  
+-   Set properties for delivering the snapshot through File Transfer Protocol (FTP). For more information, see [Transfer Snapshots Through FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md). To use FTP for snapshot delivery you must set up an FTP server. See the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows documentation for more information.  
   
     > [!NOTE]  
     >  Changes to any FTP settings require a new snapshot to be generated.  
   
--   Set properties for Web synchronization for merge replication on [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] and later versions, which allows subscriptions to be synchronized over HTTPS (secure hypertext transfer protocol). To use Web synchronization, you must configure an [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Internet Information Services (IIS) server. For more information, see [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
+-   Set properties for Web synchronization for merge replication on [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] and later versions, which allows subscriptions to be synchronized over HTTPS (secure hypertext transfer protocol). To use Web synchronization, you must configure an [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Internet Information Services (IIS) server. For more information, see [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
 ## Options  
  **Access snapshot files via FTP**  

@@ -23,9 +23,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Data Mining Schema Rowsets
-  A server that is running [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] supports the following data mining schema rowsets. To check whether a particular XML/A provider supports a specific rowset, use the [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) rowset with the [Discover](../Topic/Discover%20Method%20\(XMLA\).md) method.  
+  A server that is running [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] supports the following data mining schema rowsets. To check whether a particular XML/A provider supports a specific rowset, use the [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) rowset with the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method.  
   
- In [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)], the data mining schema rowsets are exposed as tables in the Transact-SQL language, in the $SYSTEM schema. For example, the following query on an Analysis Services instance returns a list of the schemas that are available on the current instance.  
+ In [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)], the data mining schema rowsets are exposed as tables in the Transact-SQL language, in the $SYSTEM schema. For example, the following query on an Analysis Services instance returns a list of the schemas that are available on the current instance.  
   
 ```  
 SELECT * FROM [$system].[DBSCHEMA_TABLES]  
@@ -46,7 +46,7 @@ SELECT * FROM [$system].[DBSCHEMA_TABLES]
 |[DMSCHEMA_MINING_STRUCTURE_COLUMNS Rowset](../../../analysis-services/schema-rowsets/data-mining/dmschema-mining-structure-columns-rowset.md)|Describes the individual columns of all mining structures that are deployed on the server.|  
 |[DMSCHEMA_MINING_STRUCTURES Rowset](../../../analysis-services/schema-rowsets/data-mining/dmschema-mining-structures-rowset.md)|Enumerates information on mining structures.|  
   
- All the schema rowsets listed here are supported by the server that is running [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].  
+ All the schema rowsets listed here are supported by the server that is running [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].  
   
 ## See Also  
  [Analysis Services Schema Rowsets](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)   

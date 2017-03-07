@@ -31,7 +31,7 @@ manager: "erikre"
  **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
   
 > [!TIP]  
->  It is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers.  
+>  It is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers.  
   
 ## Access a Resource  
  To access a resource, use the *rs:Command*=*GetResourceContents* parameter.If the resource is compatible with the browser, such as an image, it is opened in the browser. Otherwise, you are prompted to open or save the file or resource to disk.  
@@ -70,7 +70,7 @@ manager: "erikre"
   
  **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rs:Command=GetChildren`  
   
- The user interface you see is similar to the directory browsing mode used by [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Internet Information Server (IIS). The version number, including the build number, of the report server is also displayed below the folder listing.  
+ The user interface you see is similar to the directory browsing mode used by [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Internet Information Server (IIS). The version number, including the build number, of the report server is also displayed below the folder listing.  
   
 ## See Also  
  [URL Access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   

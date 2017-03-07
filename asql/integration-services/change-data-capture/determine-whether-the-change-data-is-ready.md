@@ -17,13 +17,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Determine Whether the Change Data Is Ready
-  In the control flow of an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the second task is to ensure that the change data for the selected interval is ready. This step is necessary because the asynchronous capture process might not yet have processed all the changes up to the selected endpoint.  
+  In the control flow of an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the second task is to ensure that the change data for the selected interval is ready. This step is necessary because the asynchronous capture process might not yet have processed all the changes up to the selected endpoint.  
   
 > [!NOTE]  
 >  The first task for the control flow is to calculate the endpoints of the change interval. For more information about this task, see [Specify an Interval of Change Data](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md). For a description of the overall process of designing the control flow, see [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
 ## Understanding the Components of the Solution  
- The solution described in this topic uses 4 [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] components:  
+ The solution described in this topic uses 4 [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] components:  
   
 -   A For Loop container that repeatedly evaluates the output of an Execute SQL Task.  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 #### To set up package variables  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], in the **Variables** window, create the following variables:  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], in the **Variables** window, create the following variables:  
   
     1.  Create a variable with an integer data type to hold the status value returned by the Execute SQL task.  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 #### To configure a For Loop container to wait until change data is ready  
   
-1.  On the **Control Flow** tab of the [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, add a For Loop container to the control flow.  
+1.  On the **Control Flow** tab of the [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, add a For Loop container to the control flow.  
   
 2.  Connect the Execute SQL Task that calculates the endpoints of the interval to the For Loop container.  
   
@@ -186,7 +186,7 @@ manager: "jhubbard"
   
          \- or -  
   
-    -   If you are programming in [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)], enter the following line of code:  
+    -   If you are programming in [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)], enter the following line of code:  
   
         ```  
         System.Threading.Thread.Sleep(Ctype(Dts.Variables("DelaySeconds").Value, Integer) * 1000)  

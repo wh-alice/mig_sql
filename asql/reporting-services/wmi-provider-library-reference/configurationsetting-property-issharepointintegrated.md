@@ -18,7 +18,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # ConfigurationSetting Property - IsSharePointIntegrated
-  Specifies whether the report server is in SharePoint integrated mode. Beginning in [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)], this property always returns **False** because in SharePoint mode, [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] instances are SharePoint shared services and are not controlled by WMI providers.  
+  Specifies whether the report server is in SharePoint integrated mode. Beginning in [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)], this property always returns **False** because in SharePoint mode, [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] instances are SharePoint shared services and are not controlled by WMI providers.  
   
 ## Syntax  
   

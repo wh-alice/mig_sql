@@ -20,7 +20,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Specify Endpoint URL - Adding or Modifying Availability Replica
-  To host an availability replica for an availability group, a server instance must possess a database mirroring endpoint. The server instance uses this endpoint to listen for [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] messages from availability replicas hosted by other server instances. To define an availability replica for an availability group, you must specify the endpoint URL of the server instance that will host the replica. The *endpoint URL* identifies the transport protocol of the database mirroring endpoint—TCP, the system address of the server instance, and the port number associated with the endpoint.  
+  To host an availability replica for an availability group, a server instance must possess a database mirroring endpoint. The server instance uses this endpoint to listen for [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] messages from availability replicas hosted by other server instances. To define an availability replica for an availability group, you must specify the endpoint URL of the server instance that will host the replica. The *endpoint URL* identifies the transport protocol of the database mirroring endpoint—TCP, the system address of the server instance, and the port number associated with the endpoint.  
   
 > [!NOTE]  
 >  The term "endpoint URL" is synonymous with the term "server network address" used by the database mirroring user interface and documentation.  
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
      ![Server network addresses of a default instance](../../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Server network addresses of a default instance")  
   
-     To identify the port currently associated with database mirroring endpoint of a server instance, use the following [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statement:  
+     To identify the port currently associated with database mirroring endpoint of a server instance, use the following [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statement:  
   
     ```  
     SELECT type_desc, port FROM sys.TCP_endpoints  
@@ -119,15 +119,15 @@ manager: "jhubbard"
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To Configure a Database Mirroring Endpoint**  
   
--   [Create a Database Mirroring Endpoint for Always On Availability Groups &#40;SQL Server PowerShell&#41;](../Topic/Create%20a%20Database%20Mirroring%20Endpoint%20for%20Always%20On%20Availability%20Groups%20\(SQL%20Server%20PowerShell\).md)  
+-   [Create a Database Mirroring Endpoint for Always On Availability Groups &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 -   [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../Topic/Allow%20a%20Database%20Mirroring%20Endpoint%20to%20Use%20Certificates%20for%20Outbound%20Connections%20\(Transact-SQL\).md)  
+    -   [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections &#40;Transact-SQL&#41;](../Topic/Allow%20a%20Database%20Mirroring%20Endpoint%20to%20Use%20Certificates%20for%20Inbound%20Connections%20\(Transact-SQL\).md)  
+    -   [Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [Specify a Server Network Address &#40;Database Mirroring&#41;](../../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
@@ -137,7 +137,7 @@ manager: "jhubbard"
   
  **To View Information About the Database Mirroring Endpoint**  
   
--   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.database-mirroring-endpoints-transact-sql.md)  
+-   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.database-mirroring-endpoints-transact-sql.md)  
   
  **To add an availability replica**  
   

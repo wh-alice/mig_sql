@@ -24,13 +24,13 @@ manager: "erikre"
   
  The **Dataset Properties** dialog box includes the following:  
   
--   [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Parameters%20\(Report%20Builder\).md)  
+-   [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](../../a9retired/dataset-properties-dialog-box-parameters-report-builder.md)  
   
--   [Dataset Properties Dialog Box, Fields &#40;Report Builder&#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Fields%20\(Report%20Builder\).md)  
+-   [Dataset Properties Dialog Box, Fields &#40;Report Builder&#41;](../../a9retired/dataset-properties-dialog-box-fields-report-builder.md)  
   
 -   [Dataset Properties Dialog Box, Options &#40;Report Builder&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)  
   
--   [Dataset Properties Dialog Box, Filters &#40;Report Builder&#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Filters%20\(Report%20Builder\).md)  
+-   [Dataset Properties Dialog Box, Filters &#40;Report Builder&#41;](../../a9retired/dataset-properties-dialog-box-filters-report-builder.md)  
   
  For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
@@ -51,7 +51,7 @@ manager: "erikre"
  Select the data source on which to base the dataset. To create a new data source, click **New**.  
   
  **Query type**  
- Select the type of command or query to use for the dataset. Select **Text** to run a query to retrieve data from the database. Select **Table** to use the **TableDirect** feature of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to select all the fields within a table. Select **Stored Procedure** to run a stored procedure by name. **Text** is selected by default and is used for most queries. To edit the selected data source query, click **Query Designer**.  
+ Select the type of command or query to use for the dataset. Select **Text** to run a query to retrieve data from the database. Select **Table** to use the **TableDirect** feature of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to select all the fields within a table. Select **Stored Procedure** to run a stored procedure by name. **Text** is selected by default and is used for most queries. To edit the selected data source query, click **Query Designer**.  
   
 > [!NOTE]  
 >  Not all query types are supported by all data sources. For example, **Table** is supported only by data source types **OLE DB** and **ODBC**.  
@@ -72,11 +72,11 @@ manager: "erikre"
  Type the number of seconds until the query times out. The default is 30 seconds. The value for **Time out** must be empty or greater than zero. If it is empty, the query does not time out.  
   
  **Refresh Fields**  
- Run the query command to update the list of fields in the [Dataset Properties Dialog Box, Fields](../Topic/Dataset%20Properties%20Dialog%20Box,%20Fields%20\(Report%20Builder\).md) page.  
+ Run the query command to update the list of fields in the [Dataset Properties Dialog Box, Fields](../../a9retired/dataset-properties-dialog-box-fields-report-builder.md) page.  
   
 ## See Also  
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Report Builder Help for Dialog Boxes, Panes, and Wizards](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [Query Designers &#40;Report Builder&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+ [Query Designers &#40;Report Builder&#41;](../../a9retired/query-designers-report-builder.md)  
   
   

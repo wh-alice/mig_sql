@@ -18,11 +18,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server, Backup Device Object
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  The **Backup Device** object provides counters to monitor Microsoft [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backup devices used for backup and restore operations. Monitor backup devices when you want to determine the throughput or the progress and performance of your backup and restore operations on a per device basis. To monitor the throughput of the entire database backup or restore operation, use the **Backup/Restore Throughput/sec** counter of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] **Databases** object. For more information, see [SQL Server, Databases Object](../../../relational-databases/monitor/performance-monitor/sql-server-databases-object.md).  
+  The **Backup Device** object provides counters to monitor Microsoft [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] backup devices used for backup and restore operations. Monitor backup devices when you want to determine the throughput or the progress and performance of your backup and restore operations on a per device basis. To monitor the throughput of the entire database backup or restore operation, use the **Backup/Restore Throughput/sec** counter of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] **Databases** object. For more information, see [SQL Server, Databases Object](../../../relational-databases/monitor/performance-monitor/sql-server-databases-object.md).  
   
- This table describes the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] **Backup Device** counter.  
+ This table describes the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] **Backup Device** counter.  
   
 |SQL Server Backup Device counters|Description|  
 |---------------------------------------|-----------------|  

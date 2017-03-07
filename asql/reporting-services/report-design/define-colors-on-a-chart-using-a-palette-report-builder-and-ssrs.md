@@ -19,7 +19,7 @@ manager: "erikre"
   You can change the color palette for a chart by selecting a pre-defined palette or defining a custom palette. Custom palettes are report-specific.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ### To change the colors on the chart using a built-in color palette  
   

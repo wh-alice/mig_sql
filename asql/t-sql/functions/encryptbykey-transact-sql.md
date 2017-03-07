@@ -29,7 +29,7 @@ manager: "jhubbard"
 
   Encrypts data by using a symmetric key.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -87,7 +87,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  Symmetric encryption and decryption is relatively fast, and is suitable for working with large amounts of data.  
   
 > [!IMPORTANT]  
->  Using the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] encryption functions together with the ANSI_PADDING OFF setting could cause data loss because of implicit conversions. For more information about ANSI_PADDING, see [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+>  Using the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] encryption functions together with the ANSI_PADDING OFF setting could cause data loss because of implicit conversions. For more information about ANSI_PADDING, see [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## Examples  
  The functionality illustrated in the following examples relies on keys and certificates created in [How To: Encrypt a Column of Data](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  

@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 ## Options  
  **Distribution database name**  
- Enter a name for the distribution database. The default name for the distribution database is 'distribution'. If you specify a name, the name can be a maximum of 128 characters, must be unique within an instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and must conform to the rules for identifiers. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+ Enter a name for the distribution database. The default name for the distribution database is 'distribution'. If you specify a name, the name can be a maximum of 128 characters, must be unique within an instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], and must conform to the rules for identifiers. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
  **Folder for the distribution database file** and **Folder for the distribution database log file**  
  Enter the path for the distribution database and log files. Paths must refer to disks that are local to the Distributor and begin with a local drive letter and colon (for example, C:). Mapped drive letters and network paths are not valid.  

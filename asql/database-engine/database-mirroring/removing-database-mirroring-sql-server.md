@@ -28,7 +28,7 @@ manager: "jhubbard"
   
      If the partners are communicating with each other when the session is stopped, their relationship is immediately broken on both computers. If the partners are not communicating (the database is in a DISCONNECTED state at the time of stopping), the relationship is broken immediately on the partner from which mirroring is stopped; when the other partner tries to reconnect, it discovers that the database mirroring session has ended.  
   
--   Information about the mirroring session is dropped, unlike when pausing a session. Mirroring is removed on both the principal database and the mirror database. In **sys.databases**, the **mirroring_state** column and all other mirroring columns are set to NULL. For more information, see [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-mirroring-transact-sql.md).  
+-   Information about the mirroring session is dropped, unlike when pausing a session. Mirroring is removed on both the principal database and the mirror database. In **sys.databases**, the **mirroring_state** column and all other mirroring columns are set to NULL. For more information, see [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-mirroring-transact-sql.md).  
   
 -   Each partner server instance is left with a separate copy of the database.  
   
@@ -44,15 +44,15 @@ manager: "jhubbard"
   
  **To start database mirroring**  
   
--   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../Topic/Establish%20a%20Database%20Mirroring%20Session%20Using%20Windows%20Authentication%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/143c68a5-589f-4e7f-be59-02707e1a430a.md)  
+-   [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
   
   
 ## See Also  
- [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md)   
+ [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Pausing and Resuming Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md)  
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md)  
   
   

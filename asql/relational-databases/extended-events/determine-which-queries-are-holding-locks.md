@@ -22,7 +22,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Determine Which Queries Are Holding Locks
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Database administrators often need to identify the source of locks that are hindering database performance.  
   
@@ -30,9 +30,9 @@ manager: "jhubbard"
   
  You query sys.dm_tran_locks and the results show that there are many locks outstanding, but the sessions that were granted the locks do not have any active requests showing in sys.dm_exec_requests.  
   
- This example demonstrates a method of determining what query took the lock, the plan of the query, and the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] stack at the time the lock was taken. This example also illustrates how the pairing target is used in an Extended Events session.  
+ This example demonstrates a method of determining what query took the lock, the plan of the query, and the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] stack at the time the lock was taken. This example also illustrates how the pairing target is used in an Extended Events session.  
   
- Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to carry out the following procedure.  
+ Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] to carry out the following procedure.  
   
 > [!NOTE]  
 >  This example uses the AdventureWorks database.  
@@ -155,7 +155,7 @@ manager: "jhubbard"
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-xe-session-targets-transact-sql.md)   
- [sys.dm_xe_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-xe-sessions-transact-sql.md)  
+ [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-xe-session-targets-transact-sql.md)   
+ [sys.dm_xe_sessions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-xe-sessions-transact-sql.md)  
   
   

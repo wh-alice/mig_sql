@@ -34,7 +34,7 @@ manager: "jhubbard"
     >  Unlike regular stored procedures, parameters of all SQL Server Profiler stored procedures (**sp_trace_*xx***) are strictly typed and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.  
   
 ## Example  
- The following code demonstrates creating a trace using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. It is in three sections: creating the trace, populating the trace file, and stopping the trace. Customize the trace by adding the events that you want to trace. For the list of events and columns, see [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+ The following code demonstrates creating a trace using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. It is in three sections: creating the trace, populating the trace file, and stopping the trace. Customize the trace by adding the events that you want to trace. For the list of events and columns, see [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
  The following code creates a trace, adds events to the trace, and then starts the trace:  
   
@@ -96,12 +96,12 @@ EXEC sp_trace_setstatus @TraceID, 2
 ```  
   
 ## Example  
- To examine the trace file, open the SampleTrace.trc file using [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)].  
+ To examine the trace file, open the SampleTrace.trc file using [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)].  
   
 ## See Also  
- [SQL Server Profiler Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   
- [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)  
+ [SQL Server Profiler Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   
+ [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-trace-create-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-trace-setfilter-transact-sql.md)  
   
   

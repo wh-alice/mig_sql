@@ -26,7 +26,7 @@ manager: "erikre"
  When you view the report, columns that support interactive sorting have arrow icons that change to indicate the sort order. The first time you click an interactive sort button, items are sorted in ascending order. Subsequent clicks toggle the sort order between ascending and descending order.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ##  <a name="BackToTop"></a> In this Article  
  [Sorting Detail Rows for a Table with No Groups](#SortingDetailRows)  
@@ -54,13 +54,13 @@ manager: "erikre"
   
 5.  In **Sort by**, specify a sort expression. From the drop-down list, select the field that corresponds to the column for which you are defining a sort action (for example, for a column heading named "Title", choose `[Title]`). Specifying a sort expression is required.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 7.  Repeat steps 1-6 for every column to which you want to add an interactive sort button.  
   
  To verify the sort action, click **Run** to preview the report, and then click the interactive sort buttons.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="SortingTopLevelParent"></a> Sorting a Top-Level Parent Row Group for a Table or Matrix  
  Add an interactive sort button to a column header to enable a user to click the column header and sort the parent group rows in a table or matrix by the value displayed in that column. The order of child groups remains unchanged.  
@@ -80,11 +80,11 @@ manager: "erikre"
     > [!NOTE]  
     >  For complex group expressions, manually set the **Sort by** expression to the same value as the group expression.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
  To verify the sort action, click **Run** to preview the report, and then click the interactive sort buttons.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="SortingChildGroups"></a> Sorting Child Groups or Detail Rows for a Group  
  Add an interactive sort button to a group header row to enable the user to sort the values of a child group from a parent group or to sort the detail rows for the innermost child group.  
@@ -103,11 +103,11 @@ manager: "erikre"
   
     -   **Groups** Click **Groups** to sort the child group values. For this option, the **Sort by** expression is automatically filled in from the group expression.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
  To verify the sort action, click **Run** to preview the report, and then click the interactive sort buttons.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="SortingMultipleRowGroups"></a> Sorting Rows Based on a Complex Group Expression  
  Add an interactive sort button to a column header to enable a user to click the column header and sort the combined parent and child groups. To achieve this affect, you must change the group expression to be a composite of both groups. For example, suppose a matrix displays inventory totals for a store for items grouped by both color and size. To sort the rows based on the combination of color and size, instead of having a separate group for color and a separate group for size, you can define a group based on the combination of color and size. For more information about defining group expressions, see [Group Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
@@ -134,7 +134,7 @@ manager: "erikre"
   
 7.  Type the expression that specifies all fields that you want to group by. For example, the following group expression combines a field named Color and a field named Size: `=Fields!Color.Value & Fields!Size.Value`.  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
      You have now defined the group. Next, drag the fields to display to the tablix body area of the matrix. Add the fields that you chose to group by in step 7 to the tablix body area, each in its own column.  
   
@@ -156,7 +156,7 @@ manager: "erikre"
   
 14. From the drop-down list, select the name of the group you created in step 5. The group expression is automatically copied to the **Sort by** text box.  
   
-15. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+15. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
      You have added the sort button to the text box.  
   
@@ -164,7 +164,7 @@ manager: "erikre"
   
  To verify the sort action, click **Run** to preview the report, and then click the interactive sort button. The matrix sorts by the combined values of the group expression, although each individual value displays in its own column.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="SynchronizingSortOrder"></a> Synchronizing Sort Order for Multiple Data Regions  
  Add an interactive sort button that enables a user to click one sort button and sort multiple data regions. When you create an interactive sort button, you can specify whether to synchronize the sort for multiple data regions based on the same report dataset. For example, a report might include a matrix and a chart that graphically displays the data. When a user changes the sort order of the rows in the matrix, the chart automatically displays the same sort order.  
@@ -195,7 +195,7 @@ manager: "erikre"
   
 10. In Sort by, from the drop-down list, choose the same field that you chose in step 6 to group by.  
   
-11. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+11. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 12. In the matrix, right-click the text box in the column header to which you want to add an interactive sort button, and then click **Text Box Properties**.  
   
@@ -209,11 +209,11 @@ manager: "erikre"
   
 17. Select **Also apply this sort to other groups and data regions within**. In the text box, type the name of the dataset, for example, "SalesData".  
   
-18. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+18. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
  To verify the sort action, click **Run** to preview the report, and then click the interactive sort button. The matrix sorts by the combined values of the group expression, although each individual value displays in its own column.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ## See Also  
  [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   

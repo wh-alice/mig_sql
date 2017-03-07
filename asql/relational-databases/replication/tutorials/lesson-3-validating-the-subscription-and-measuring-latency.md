@@ -23,7 +23,7 @@ In this lesson, you will use tracer tokens to verify that changes are being repl
   
 ### To insert a tracer token and view information on the token  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], expand the server node, right-click the **Replication** folder, and then click **Launch Replication Monitor**.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], expand the server node, right-click the **Replication** folder, and then click **Launch Replication Monitor**.  
   
     Replication Monitor launches.  
   

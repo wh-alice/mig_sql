@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # CalculationCurrentPass (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the current calculation pass of a cube for the specified query context.  
   
@@ -33,7 +33,7 @@ CalculationCurrentPass()
 ```  
   
 ## Remarks  
- The **CalculationCurrentPass** function returns the zero-based index of the calculation pass for the current query context. With automatic recursion resolution in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)], this function has little practical use.  
+ The **CalculationCurrentPass** function returns the zero-based index of the calculation pass for the current query context. With automatic recursion resolution in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)], this function has little practical use.  
   
 ## See Also  
  [CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)   

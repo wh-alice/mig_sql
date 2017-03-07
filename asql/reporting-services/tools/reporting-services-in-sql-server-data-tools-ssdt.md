@@ -18,11 +18,11 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Reporting Services in SQL Server Data Tools (SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment, where you can open, modify, preview, save, and deploy [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report definitions, shared data sources, shared datasets, and report parts. [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] is not included with [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. Download [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
+  [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment, where you can open, modify, preview, save, and deploy [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report definitions, shared data sources, shared datasets, and report parts. [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] is not included with [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. Download [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
   
- This topic describes [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)] solutions, projects, project templates, and configurations used for [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], and the views, menus, toolbars, and shortcuts that you can use in Report Designer.  
+ This topic describes [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)] solutions, projects, project templates, and configurations used for [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)], and the views, menus, toolbars, and shortcuts that you can use in Report Designer.  
   
- To get started designing reports, see [Design Reports with Report Designer &#40;SSRS&#41;](../Topic/Design%20Reports%20with%20Report%20Designer%20\(SSRS\).md).  
+ To get started designing reports, see [Design Reports with Report Designer &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ##  <a name="bkmk_SolutionsandProjects"></a> Solutions and Projects  
  A report project acts as a container for report definitions and resources. Every file in the report project is published to the report server when the project is deployed. When you create a project for the first time, a solution is also created as a container for the project. You can add multiple projects to a single solution.  
@@ -32,9 +32,9 @@ manager: "erikre"
  To create multiple sets of project properties for deployment variations such as enterprise test and production report servers, use the Configuration Manager. For more information, see [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 ##  <a name="bkmk_ReportServerProjects"></a> Report Server Projects  
- When you install [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], the following project templates are made available in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)]:  
+ When you install [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)], the following project templates are made available in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)]:  
   
--   **Report Server Project.** When you select a Report Server Project, Report Designer opens. A Report Server Project is a Business Intelligence Projects template installed by [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] that is available from the **New Project** dialog box. For more information, see [Add a New or Existing Report to a Report Project &#40;SSRS&#41;](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md).Report Server project properties apply to all reports and all shared data sources in a [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] project. These properties include the URL for the report server and the folder names for reports and shared data sources. Use the **Project Property Pages** dialog box to view the current property values. To open this dialog box, on the **Project** menu, click **Properties**.  
+-   **Report Server Project.** When you select a Report Server Project, Report Designer opens. A Report Server Project is a Business Intelligence Projects template installed by [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] that is available from the **New Project** dialog box. For more information, see [Add a New or Existing Report to a Report Project &#40;SSRS&#41;](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md).Report Server project properties apply to all reports and all shared data sources in a [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] project. These properties include the URL for the report server and the folder names for reports and shared data sources. Use the **Project Property Pages** dialog box to view the current property values. To open this dialog box, on the **Project** menu, click **Properties**.  
   
 -   **Report Server Project Wizard.** When you select a Report Server Wizard Project, a report server project is automatically created, and the Report Wizard opens. In the wizard, you can create a report by following instructions on each page to create a connection string to a data source, set data source credentials, design a query, add a table or matrix data region, specify report data and groups, pick a font and color style, publish the report to a report server, and preview the report locally. After you create a report with the wizard, you can change the report data and the report designer by using Report Designer in the Report Server project.  
   
@@ -88,21 +88,21 @@ manager: "erikre"
  The Toolbox contains report items that you can drag to the design surface. Data regions are report items that you use to organize data on the report. Table, Matrix, List, Chart, Gauge, Data Bar, Sparkline, and Indicator are data regions. Other report items include Map, Text Box, Rectangle, Line, Image, and Subreport. Custom report items might also appear on this list if they have been installed and registered by your system administrator.  
   
 ###  <a name="bkmk_PropertiesPane"></a> Properties Pane  
- The Properties pane is a standard [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] window that shows property names and values for the currently selected report item on the design surface. In most cases, property names correspond to elements and attributes in the Report Definition Language (RDL) file. The most commonly used properties can be set by using the Properties dialog box for the selected item. To open the corresponding dialog box, click the **Property Pages** button on the Properties pane toolbar. Advanced users can set property values directly in the Properties pane.  
+ The Properties pane is a standard [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] window that shows property names and values for the currently selected report item on the design surface. In most cases, property names correspond to elements and attributes in the Report Definition Language (RDL) file. The most commonly used properties can be set by using the Properties dialog box for the selected item. To open the corresponding dialog box, click the **Property Pages** button on the Properties pane toolbar. Advanced users can set property values directly in the Properties pane.  
   
  Use the Properties pane to:  
   
--   Set properties for the currently selected item on the design surface. Some properties provide a drop-down list of values. You can also type the value directly in the cell. Some properties contain a collection of values, indicated by the value **(Collection)**. Most properties can accept an expression; complex expressions are indicated by the value **\<Expression>**. Click **\<Expression>** to open the **Expression** dialog box. For more information, see [Expression Dialog Box](../Topic/Expression%20Dialog%20Box.md).  
+-   Set properties for the currently selected item on the design surface. Some properties provide a drop-down list of values. You can also type the value directly in the cell. Some properties contain a collection of values, indicated by the value **(Collection)**. Most properties can accept an expression; complex expressions are indicated by the value **\<Expression>**. Click **\<Expression>** to open the **Expression** dialog box. For more information, see [Expression Dialog Box](../../a9retired/expression-dialog-box.md).  
   
 -   Use the Properties pane toolbar buttons to change the grid from category view to alphabetical view. In category view, you may need to expand a category to see all the properties under it. To open an item's Properties dialog box, click the **Property Pages** button on the toolbar or by right-click the item and click **Properties**.  
   
 -   Set properties for the currently selected group member in the Grouping pane. Group member properties help control how static group header and footer rows repeat for each group instance. For more information, see [Display Headers and Footers with a Group &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
   
- To display the Properties pane, from the **View** menu, click **Properties Window**. You can undock this pane and move it to another area of the [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)]window, or display it as a tabbed view on the design surface.  
+ To display the Properties pane, from the **View** menu, click **Properties Window**. You can undock this pane and move it to another area of the [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)]window, or display it as a tabbed view on the design surface.  
   
   
 ###  <a name="bkmk_SolutionExplorer"></a> Solution Explorer  
- Solution Explorer is a standard [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] component that displays all the items in your project. For a Report Server project, this includes folders to organize shared data sources, shared datasets, reports and resources. Folder items are automatically alphabetized when you open the solution file. To view item properties in the Properties pane, select the item.  
+ Solution Explorer is a standard [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] component that displays all the items in your project. For a Report Server project, this includes folders to organize shared data sources, shared datasets, reports and resources. Folder items are automatically alphabetized when you open the solution file. To view item properties in the Properties pane, select the item.  
   
 ###  <a name="bkmk_Output"></a> Output  
  The Output window displays processing errors when you preview a report, and publishing errors when you deploy a report or a shared data source.  
@@ -116,7 +116,7 @@ manager: "erikre"
  Use the Document Outline pane to help identify text boxes and other report items by name. When you select an item in the Document Outline, the item is also selected on the Design Surface.  
   
 ###  <a name="bkmk_TaskList"></a> Task List  
- The Task List window displays build errors for unsupported features when you import a report from another application, such as [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Access.  
+ The Task List window displays build errors for unsupported features when you import a report from another application, such as [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Access.  
   
   
 ##  <a name="bkmk_ReportDesignerDesignView"></a> Report Designer Design View  
@@ -138,13 +138,13 @@ manager: "erikre"
   
 -   **Understanding the Local Data Cache** When you preview a report, the report processor runs all the queries for datasets in the report using the current parameter defaults, and saves the results as a local data cache (.rdl.data) file. You can continue to design your report without incurring the overhead of retrieving this data again if you make no changes to either the report dataset queries or the report parameters.  
   
--   **Previewing the Report using Configuration Manager and Debug.** In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], project properties define how you want to deploy and debug your reports. These properties apply to all reports and shared data sources in the project. To set the project properties, from the **Project** menu, click **Properties**. Use these settings to test your reports and publish them to the report server.  
+-   **Previewing the Report using Configuration Manager and Debug.** In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], project properties define how you want to deploy and debug your reports. These properties apply to all reports and shared data sources in the project. To set the project properties, from the **Project** menu, click **Properties**. Use these settings to test your reports and publish them to the report server.  
   
 -   **Monitoring the Output Pane for Error Messages.** When you preview a report and the report processor detects a problem, it writes error messages to the Output pane.  
   
   
 ##  <a name="bkmk_ReportDesignerMenus"></a> Report Designer Menus  
- When a Report Designer project is active in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], the following toolbars are added to the main toolbar. The Report Designer menus are visible only when in Design view.  
+ When a Report Designer project is active in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], the following toolbars are added to the main toolbar. The Report Designer menus are visible only when in Design view.  
   
 ###  <a name="FormatMenu"></a> Format Menu  
  When you select an item on the design surface, the **Format** menu contains the following options:  
@@ -232,14 +232,14 @@ manager: "erikre"
   
 -   **Standard** Open or save projects, display windows, and select the Debug configuration.  
   
- Use the **View** menu to control whether to display these toolbars. Other [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] toolbars may be disabled if their functionality does not apply to Report Designer features.  
+ Use the **View** menu to control whether to display these toolbars. Other [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] toolbars may be disabled if their functionality does not apply to Report Designer features.  
   
 
 ##  <a name="bkmk_SourceControl"></a> Source Control  
- [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)] can integrate with source plug-ins. Use the Projects and Solutions pages in the **Options** dialog box to specify the plug-in and configure properties.  
+ [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)] can integrate with source plug-ins. Use the Projects and Solutions pages in the **Options** dialog box to specify the plug-in and configure properties.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Custom Report Templates  
- To use custom reports as templates for new reports, you simply copy them to the ReportProject folder on the computer on which [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)] is installed. By default, this folder is in the following location:
+ To use custom reports as templates for new reports, you simply copy them to the ReportProject folder on the computer on which [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)] is installed. By default, this folder is in the following location:
  `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. 
    When you add a new item to the report project, your custom report appears in the Templates pane.  
   
@@ -247,7 +247,7 @@ manager: "erikre"
   
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> Command Line Support for SQL Server Data Tools  
- [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)] is based on [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] and the underlying devenv.exe application. Before you can use these options, you must set valid values for following two items:  
+ [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)] is based on [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] and the underlying devenv.exe application. Before you can use these options, you must set valid values for following two items:  
   
 -   Project properties for OverwriteDataSources, TargetDataSourceFolder, TargetReportFolder, and TargetServerURL.  
   
@@ -278,7 +278,7 @@ manager: "erikre"
 ##  <a name="bkmk_KeyboardShortcuts"></a> Keyboard Shortcuts in Reporting Services  
  Use keyboard shortcuts to:  
   
--   Control windows and modes in [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)]:  
+-   Control windows and modes in [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)]:  
   
     |Description|Key Combination|  
     |-----------------|---------------------|  

@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SQL Server Audit Records
-  The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Audit feature enables you to audit server-level and database-level groups of events and events. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Audit feature enables you to audit server-level and database-level groups of events and events. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
  Audits consist of zero or more audit action items, which are recorded to an audit *target*. The audit target can be a binary file, the Windows Application event log or the Windows Security event log. The records sent to the target can contain the elements described in the following table.  
   
@@ -53,11 +53,11 @@ manager: "jhubbard"
 ## Remarks  
  Some actions do not populate a column's value because it might be non-applicable to the action.  
   
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Audit stores 4000 characters of data for character fields in an audit record. When the **additional_information** and **statement** values returned from an auditable action return more than 4000 characters, the **sequence_no** column is used to write multiple records into the audit report for a single audit action to record this data. The process is as follows:  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Audit stores 4000 characters of data for character fields in an audit record. When the **additional_information** and **statement** values returned from an auditable action return more than 4000 characters, the **sequence_no** column is used to write multiple records into the audit report for a single audit action to record this data. The process is as follows:  
   
 -   The **statement** column is divided into 4000 characters.  
   
--   [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Audit writes as the first row for the audit record with the partial data. All the other fields are duplicated in each row.  
+-   [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Audit writes as the first row for the audit record with the partial data. All the other fields are duplicated in each row.  
   
 -   The **sequence_no** value is incremented.  
   
@@ -86,24 +86,24 @@ manager: "jhubbard"
   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-authorization-transact-sql.md)  
   
- [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys.fn-get-audit-file-transact-sql.md)  
+ [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-functions/sys.fn-get-audit-file-transact-sql.md)  
   
- [sys.server_audits &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.server-audits-transact-sql.md)  
+ [sys.server_audits &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.server-audits-transact-sql.md)  
   
- [sys.server_file_audits &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.server-file-audits-transact-sql.md)  
+ [sys.server_file_audits &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.server-file-audits-transact-sql.md)  
   
- [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.server-audit-specifications-transact-sql.md)  
+ [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.server-audit-specifications-transact-sql.md)  
   
- [sys.server_audit_specification_details &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.server-audit-specification-details-transact-sql.md)  
+ [sys.server_audit_specification_details &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.server-audit-specification-details-transact-sql.md)  
   
- [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.database-audit-specifications-transact-sql.md)  
+ [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.database-audit-specifications-transact-sql.md)  
   
- [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.database-audit-specification-details-transact-sql.md)  
+ [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.database-audit-specification-details-transact-sql.md)  
   
- [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys.dm-server-audit-status-transact-sql.md)  
+ [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-server-audit-status-transact-sql.md)  
   
- [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys.dm-audit-actions-transact-sql.md)  
+ [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-audit-actions-transact-sql.md)  
   
- [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys.dm-audit-class-type-map-transact-sql.md)  
+ [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-audit-class-type-map-transact-sql.md)  
   
   

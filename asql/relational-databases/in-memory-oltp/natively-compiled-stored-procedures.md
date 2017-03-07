@@ -17,9 +17,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Natively Compiled Stored Procedures
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Natively compiled stored procedures are [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] stored procedures compiled to native code that access memory-optimized tables. Natively compiled stored procedures allow for efficient execution of the queries and business logic in the stored procedure. For more details about the native compilation process, see [Native Compilation of Tables and Stored Procedures](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md). For more information about migrating disk-based stored procedures to natively compiled stored procedures, see [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md).  
+  Natively compiled stored procedures are [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] stored procedures compiled to native code that access memory-optimized tables. Natively compiled stored procedures allow for efficient execution of the queries and business logic in the stored procedure. For more details about the native compilation process, see [Native Compilation of Tables and Stored Procedures](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md). For more information about migrating disk-based stored procedures to natively compiled stored procedures, see [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md).  
   
 > [!NOTE]  
 >  One difference between interpreted (disk-based) stored procedures and natively compiled stored procedures is that an interpreted stored procedure is compiled at first execution, whereas a natively compiled stored procedure is compiled when it is created. With natively compiled stored procedures, many error conditions can be detected at create time and will cause creation of the natively compiled stored procedure to fail (such as arithmetic overflow, type conversion, and some divide-by-zero conditions). With interpreted stored procedures, these error conditions typically do not cause a failure when the stored procedure is created, but all executions will fail.  
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 -   [Creating Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md)  
   
--   [Atomic Blocks](../Topic/Atomic%20Blocks.md)  
+-   [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)  
   
 -   [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)  
   

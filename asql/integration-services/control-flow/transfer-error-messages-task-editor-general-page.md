@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transfer Error Messages Task Editor (General Page)
-  Use the **General** page of the **Transfer Error Messages Task Editor** dialog box to name and describe the Transfer Error Messages task. The Transfer Error Messages task transfers one or more [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] user-defined error messages between instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information about this task, see [Transfer Error Messages Task](../../integration-services/control-flow/transfer-error-messages-task.md).  
+  Use the **General** page of the **Transfer Error Messages Task Editor** dialog box to name and describe the Transfer Error Messages task. The Transfer Error Messages task transfers one or more [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] user-defined error messages between instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For more information about this task, see [Transfer Error Messages Task](../../integration-services/control-flow/transfer-error-messages-task.md).  
   
 ## Options  
  **Name**  

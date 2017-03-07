@@ -25,16 +25,16 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Server Performance and Activity Monitoring
-  The goal of monitoring databases is to assess how a server is performing. Effective monitoring involves taking periodic snapshots of current performance to isolate processes that are causing problems, and gathering data continuously over time to track performance trends. [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows operating system provide utilities that let you view the current condition of the database and to track performance as conditions change.  
+  The goal of monitoring databases is to assess how a server is performing. Effective monitoring involves taking periodic snapshots of current performance to isolate processes that are causing problems, and gathering data continuously over time to track performance trends. [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows operating system provide utilities that let you view the current condition of the database and to track performance as conditions change.  
   
- The following section contains topics that describe how to use [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and Windows performance and activity monitoring tools. It contains the following topics:  
+ The following section contains topics that describe how to use [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and Windows performance and activity monitoring tools. It contains the following topics:  
   
 ## In This Section  
  **To perform monitoring tasks with Windows tools**  
   
 -   [Start System Monitor &#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
--   [View the Windows Application Log &#40;Windows&#41;](../Topic/View%20the%20Windows%20Application%20Log%20\(Windows\).md)  
+-   [View the Windows Application Log &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
  **To create SQL Server database alerts with Windows tools**  
   

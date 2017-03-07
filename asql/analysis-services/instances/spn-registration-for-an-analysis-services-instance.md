@@ -28,7 +28,7 @@ manager: "erikre"
  SPN registration is not required if the service runs under a predefined managed service account created by a domain administrator. Note that depending on the functional level of your domain, registering an SPN can require domain administrator permissions.  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]** is a diagnostic tool that helps troubleshoot Kerberos related connectivity issues with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information, see [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]** is a diagnostic tool that helps troubleshoot Kerberos related connectivity issues with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For more information, see [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
   
  This topic contains the following sections:  
   
@@ -154,7 +154,7 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
   
  This means that you can use the instructions from previous sections for default or named instance to register the SPN. When specifying the host name, be sure to use the host name you specified in the msmdpump.ini file when you configured the service for HTTP access.  
   
- For more information about HTTP access, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../Topic/Configure%20HTTP%20Access%20to%20Analysis%20Services%20on%20Internet%20Information%20Services%20\(IIS\)%208.0.md).  
+ For more information about HTTP access, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8.0.md).  
   
 ##  <a name="bkmk_spnFixedPorts"></a> SPN registration for SSAS instances listening on fixed ports  
  You cannot specify a port number on an Analysis Services SPN registration. If you installed Analysis Services as the default instance and configured it to listen on a fixed port, you must now configure it to listen on the default port (TCP 2383). For named instances, you need to use SQL Server Browser service and dynamic port assignments.  

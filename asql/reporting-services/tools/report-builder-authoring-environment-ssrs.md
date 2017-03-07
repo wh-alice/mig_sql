@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Report Builder authoring environment (SSRS)
-  Report Builder [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] is a stand-alone authoring environment for creating [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports outside of Visual Studio. When you design a report, you specify where to get the data, which data to get, and how to display the data. When you run the report, the report processor takes all the information you have specified, retrieves the data, and combines it with the report layout to generate the report. You can install it from the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal or from the Microsoft Download Center.  
+  Report Builder [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] is a stand-alone authoring environment for creating [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports outside of Visual Studio. When you design a report, you specify where to get the data, which data to get, and how to display the data. When you run the report, the report processor takes all the information you have specified, retrieves the data, and combines it with the report layout to generate the report. You can install it from the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal or from the Microsoft Download Center.  
   
  [Install Report Builder](../../reporting-services/install/windows/install-report-builder.md) from the Microsoft Download Center.  
   
@@ -37,7 +37,7 @@ manager: "erikre"
   
 -   Preview reports in HTML or print format.  
   
--   Export reports to other file formats such as [!INCLUDE[ofprexcel](../../analysis-services/data-mining/includes/ofprexcel-md.md)].  
+-   Export reports to other file formats such as [!INCLUDE[ofprexcel](../../a9retired/includes/ofprexcel-md.md)].  
   
 -   Save your report and related items to a SharePoint library, a report server, or your local computer.  
   
@@ -47,6 +47,6 @@ manager: "erikre"
  [Install Report Builder](../../reporting-services/install/windows/install-report-builder.md)   
  [Configure Report Builder Access](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)   
- [Design Reports with Report Designer &#40;SSRS&#41;](../Topic/Design%20Reports%20with%20Report%20Designer%20\(SSRS\).md)  
+ [Design Reports with Report Designer &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   

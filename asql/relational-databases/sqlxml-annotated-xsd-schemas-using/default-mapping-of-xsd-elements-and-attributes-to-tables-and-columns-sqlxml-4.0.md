@@ -158,7 +158,7 @@ manager: "jhubbard"
 </xsd:schema>  
 ```  
   
- The **xml** data type was introduced in [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)].  
+ The **xml** data type was introduced in [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)].  
   
 ##### To test a sample XPath query against the schema  
   

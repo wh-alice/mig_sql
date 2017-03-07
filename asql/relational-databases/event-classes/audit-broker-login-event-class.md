@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Audit Broker Login Event Class
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] creates an **Audit Broker Login** event to report audit messages related to Service Broker transport security.  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] creates an **Audit Broker Login** event to report audit messages related to Service Broker transport security.  
   
 ## Audit Broker Login Event Class Data Columns  
   
@@ -25,7 +25,7 @@ manager: "jhubbard"
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Unused in this event class.|10|Yes|  
 |**ClientProcessID**|**int**|Unused in this event class.|9|Yes|  
-|**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] displays the name of the database if the **ServerName** data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|3|Yes|  
+|**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] displays the name of the database if the **ServerName** data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|3|Yes|  
 |**EventClass**|**int**|The type of event class captured. Always **159** for **Audit Broker Login**.|27|No|  
 |**EventSequence**|**int**|Sequence number for this event.|51|No|  
 |**EventSubClass**|**int**|The type of event subclass, providing further information about each event class. The table below lists the event subclass values for this event.|21|Yes|  

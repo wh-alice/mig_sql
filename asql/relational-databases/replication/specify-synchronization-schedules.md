@@ -20,7 +20,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Specify Synchronization Schedules
-  This topic describes how to specify synchronization schedules in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], or Replication Management Objects (RMO). When you create a subscription, you can define a synchronization schedule that controls when the replication agent for the subscription will run. If you do not specify scheduling parameters, the subscription will use the default schedule.  
+  This topic describes how to specify synchronization schedules in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], or Replication Management Objects (RMO). When you create a subscription, you can define a synchronization schedule that controls when the replication agent for the subscription will run. If you do not specify scheduling parameters, the subscription will use the default schedule.  
   
  Subscriptions are synchronized by the Distribution Agent (for snapshot and transactional replication) or the Merge Agent (for merge replication). Agents can run continuously, run on demand, or run on a schedule.  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Specify synchronization schedules on the **Synchronization Schedule** page of the New Subscription Wizard. For more information about accessing this wizard, see [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md) and [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   
- Modify synchronization schedules in the **Job Schedule Properties** dialog box, which is available from the **Jobs** folder in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and from the agent details windows in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Modify synchronization schedules in the **Job Schedule Properties** dialog box, which is available from the **Jobs** folder in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] and from the agent details windows in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
  If you specify schedules from the **Jobs** folder, use the following table to determine the agent job name.  
   
@@ -89,11 +89,11 @@ manager: "jhubbard"
   
 7.  If you select **Recurring**, specify a schedule for the agent.  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 #### To modify a synchronization schedule for a push subscription in Management Studio  
   
-1.  Connect to the Distributor in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Distributor in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **SQL Server Agent** folder, and then expand the **Jobs** folder.  
   
@@ -111,11 +111,11 @@ manager: "jhubbard"
   
 6.  If you select **Recurring**, specify a schedule for the agent.  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 #### To modify a synchronization schedule for a pull subscription in Management Studio  
   
-1.  Connect to the Subscriber in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Subscriber in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **SQL Server Agent** folder, and then expand the **Jobs** folder.  
   
@@ -133,12 +133,12 @@ manager: "jhubbard"
   
 6.  If you select **Recurring**, specify a schedule for the agent.  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  You can define synchronization schedules programmatically using replication stored procedures. The stored procedures that you use depend on the type of replication and the type of subscription (pull or push).  
   
- A schedule is defined by the following scheduling parameters, the behaviors of which are inherited from [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md):  
+ A schedule is defined by the following scheduling parameters, the behaviors of which are inherited from [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-add-schedule-transact-sql.md):  
   
 -   **@frequency_type** - the type of frequency used when scheduling the agent.  
   
@@ -164,25 +164,25 @@ manager: "jhubbard"
   
 1.  Create a new pull subscription to a transactional publication. For more information, see [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   
-2.  At the Subscriber, execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specify **@publisher**, **@publisher_db**, **@publication**, and the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows credentials under which the Distribution Agent at the Subscriber runs for **@job_name** and **@password**. Specify the synchronization parameters, detailed above, that define the schedule for the Distribution Agent job that synchronizes the subscription.  
+2.  At the Subscriber, execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specify **@publisher**, **@publisher_db**, **@publication**, and the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows credentials under which the Distribution Agent at the Subscriber runs for **@job_name** and **@password**. Specify the synchronization parameters, detailed above, that define the schedule for the Distribution Agent job that synchronizes the subscription.  
   
 #### To define the synchronization schedule for a push subscription to a transactional publication  
   
 1.  Create a new push subscription to a transactional publication. For more information, see [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   
-2.  At the Subscriber, execute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specify **@subscriber**, **@subscriber_db**, **@publication**, and the Windows credentials under which the Distribution Agent at the Subscriber runs for **@job_name** and **@password**. Specify the synchronization parameters, detailed above, that define the schedule for the Distribution Agent job that synchronizes the subscription.  
+2.  At the Subscriber, execute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specify **@subscriber**, **@subscriber_db**, **@publication**, and the Windows credentials under which the Distribution Agent at the Subscriber runs for **@job_name** and **@password**. Specify the synchronization parameters, detailed above, that define the schedule for the Distribution Agent job that synchronizes the subscription.  
   
 #### To define the synchronization schedule for a pull subscription to a merge publication  
   
 1.  Create a new pull subscription to a merge publication. For more information, see [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   
-2.  At the Subscriber, execute [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specify **@publisher**, **@publisher_db**, **@publication**, and the Windows credentials under which the Merge Agent at the Subscriber runs for **@job_name** and **@password**. Specify the synchronization parameters, detailed above, that define the schedule for the Merge Agent job that synchronizes the subscription.  
+2.  At the Subscriber, execute [sp_addmergepullsubscription_agent](../../relational-databases/reference/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specify **@publisher**, **@publisher_db**, **@publication**, and the Windows credentials under which the Merge Agent at the Subscriber runs for **@job_name** and **@password**. Specify the synchronization parameters, detailed above, that define the schedule for the Merge Agent job that synchronizes the subscription.  
   
 #### To define the synchronization schedule for a push subscription to a merge publication  
   
 1.  Create a new push subscription to a merge publication. For more information, see [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   
-2.  At the Subscriber, execute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Specify **@subscriber**, **@subscriber_db**, **@publication**, and the Windows credentials under which the Merge Agent at the Subscriber runs for **@job_name** and **@password**. Specify the synchronization parameters, detailed above, that define the schedule for the Merge Agent job that synchronizes the subscription.  
+2.  At the Subscriber, execute [sp_addmergepushsubscription_agent](../../relational-databases/reference/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Specify **@subscriber**, **@subscriber_db**, **@publication**, and the Windows credentials under which the Merge Agent at the Subscriber runs for **@job_name** and **@password**. Specify the synchronization parameters, detailed above, that define the schedule for the Merge Agent job that synchronizes the subscription.  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  Replication uses the SQL Server Agent to schedule jobs for activities that occur periodically, such as snapshot generation and subscription synchronization. You can use Replication Management Objects (RMO) programmatically to specify schedules for replication agent jobs.  
@@ -317,9 +317,9 @@ manager: "jhubbard"
 ###  <a name="PShellExample"></a> Example (RMO)  
  This example creates a push subscription to a merge publication and specifies the schedule on which the subscription is synchronized.  
   
- [!code-cs[HowTo#rmo_CreateMergePushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepushsub)]  
+ [!code-cs[HowTo#rmo_CreateMergePushSub](../../a9retired/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepushsub)]  
   
- [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
+ [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../a9retired/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
 ## See Also  
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   

@@ -25,7 +25,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # SELECT FROM &lt;model&gt;.DIMENSION_CONTENT (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   A mining model can be used as a dimension in an OLAP cube, where each node in the model is represented as a member of the dimension. **The SELECT FROM \<model>.Dimension_CONTENT** statement returns the content of the model that pertains to its usage as a dimension.  
   
@@ -89,8 +89,8 @@ FROM [TM Decision Tree].Dimension_Content
   
 ## See Also  
  [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Definition%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Manipulation%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)  
+ [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

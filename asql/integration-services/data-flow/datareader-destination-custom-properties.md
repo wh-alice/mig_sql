@@ -30,6 +30,6 @@ manager: "jhubbard"
  For more information, see [DataReader Destination](../../integration-services/data-flow/datareader-destination.md).  
   
 ## See Also  
- [Common Properties](../Topic/Common%20Properties.md)  
+ [Common Properties](../../a9retired/common-properties.md)  
   
   

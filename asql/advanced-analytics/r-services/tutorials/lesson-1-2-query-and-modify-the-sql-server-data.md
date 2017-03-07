@@ -19,7 +19,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 1-2 - Query and Modify the SQL Server Data
-Now that you've loaded the data into [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you can use the data sources you created  as arguments to R functions in [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)], to get basic information about the variables, and generate summaries and histograms.  
+Now that you've loaded the data into [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], you can use the data sources you created  as arguments to R functions in [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)], to get basic information about the variables, and generate summaries and histograms.  
   
 In this step, you'll re-use the data sources to do some quick analysis and then enhance the data:  
   
@@ -86,7 +86,7 @@ In this step, you will provide a string vector containing the abbreviations, and
 
     ```  
   
-3.  To create the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data source that uses the updated data, call the *RxSqlServerData* function as before but add the *colInfo* argument.  
+3.  To create the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data source that uses the updated data, call the *RxSqlServerData* function as before but add the *colInfo* argument.  
   
     ```R  
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,  
@@ -119,10 +119,10 @@ In this step, you will provide a string vector containing the abbreviations, and
 Now the three variables you specified (_gender_, _state_, and _cardholder_) are  treated as factors.  
   
 ## Next Step  
-[Define and Use Compute Contexts &#40;Data Science Deep Dive&#41;](../Topic/Define%20and%20Use%20Compute%20Contexts%20(Data%20Science%20Deep%20Dive).md)  
+[Define and Use Compute Contexts &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-1-3-define-and-use-compute-contexts.md)  
   
 ## Previous Step  
-[Create SQL Server Data Objects using RxSqlServerData](../Topic/Create%20SQL%20Server%20Data%20Objects%20using%20RxSqlServerData.md)  
+[Create SQL Server Data Objects using RxSqlServerData](../../../advanced-analytics/r-services/tutorials/lesson-1-1-create-sql-server-data-objects-using-rxsqlserverdata.md)  
   
 ## See Also  
 [Data Science Deep Dive: Using the RevoScaleR Packages](../../../advanced-analytics/r-services/tutorials/data-science-deep-dive-using-the-revoscaler-packages.md)  

@@ -34,7 +34,7 @@ manager: "jhubbard"
 ### Recommendations for reorganizing  
  Reorganize a columnstore index after one or more data loads to achieve query performance benefits as quickly as possible. Reorganizing will initially require additional CPU resources to compress the data, which could slow overall system performance. However, as soon as the data is compressed, query performance can improve.  
   
- Use the example in [sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-column-store-row-group-physical-stats-transact-sql.md) to compute the fragmentation. This helps you to determine whether it is worthwhile to perform a REORGANIZE operation.  
+ Use the example in [sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-column-store-row-group-physical-stats-transact-sql.md) to compute the fragmentation. This helps you to determine whether it is worthwhile to perform a REORGANIZE operation.  
   
 ### Example: How reorganizing works  
  This example shows how ALTER INDEX REORGANIZE can force all deltastore rowgroups into the columnstore and then combine the rowgroups.  
@@ -188,11 +188,11 @@ manager: "jhubbard"
  Rebuilding a columnstore index removes fragmentation, and moves all rows into the columnstore. Use [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) or [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) to perform a full rebuild of an existing clustered columnstore index. Additionally, you can use ALTER INDEX … REBUILD to rebuild a specific partition.  
   
 ### Rebuild Process  
- To rebuild a columnstore index, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]:  
+ To rebuild a columnstore index, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]:  
   
 1.  Acquires an exclusive lock on the table or partition while the rebuild occurs.  The data is “offline” and unavailable during the rebuild, even when using NOLOCK, RCSI, or SI.  
   
-2.  Re-compresses all data into the columnstore. Two copies of the columnstore index exist while the rebuild is taking place. When the rebuild is finished, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] deletes the original columnstore index.  
+2.  Re-compresses all data into the columnstore. Two copies of the columnstore index exist while the rebuild is taking place. When the rebuild is finished, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] deletes the original columnstore index.  
   
 ### Recommendations for Rebuilding a Columnstore Index  
  Rebuilding a columnstore index is useful for removing fragmentation, and for moving all rows into the columnstore. We have the following recommendations:  

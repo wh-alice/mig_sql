@@ -29,7 +29,7 @@ manager: "jhubbard"
 
   Changes the name, password, or default schema of an application role.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -52,7 +52,7 @@ ALTER APPLICATION ROLE application_role_name
  Specifies the new name of the application role. This name must not already be used to refer to any principal in the database.  
   
  PASSWORD ='*password*'  
- Specifies the password for the application role. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. You should always use strong passwords.  
+ Specifies the password for the application role. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. You should always use strong passwords.  
   
  DEFAULT_SCHEMA =*schema_name*  
  Specifies the first schema that will be searched by the server when it resolves the names of objects. *schema_name* can be a schema that does not exist in the database.  
@@ -66,7 +66,7 @@ ALTER APPLICATION ROLE application_role_name
  Application roles are visible in the sys.database_principals catalog view.  
   
 > [!CAUTION]  
->  In [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)]the behavior of schemas changed from the behavior in earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Code that assumes that schemas are equivalent to database users may not return correct results. Old catalog views, including sysobjects, should not be used in a database in which any of the following DDL statements has ever been used: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. In a database in which any of these statements has ever been used, you must use the new catalog views. The new catalog views take into account the separation of principals and schemas that is introduced in [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)]. For more information about catalog views, see [Catalog Views &#40;Transact-SQL&#41;](../Topic/Catalog%20Views%20\(Transact-SQL\).md).  
+>  In [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)]the behavior of schemas changed from the behavior in earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Code that assumes that schemas are equivalent to database users may not return correct results. Old catalog views, including sysobjects, should not be used in a database in which any of the following DDL statements has ever been used: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. In a database in which any of these statements has ever been used, you must use the new catalog views. The new catalog views take into account the separation of principals and schemas that is introduced in [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)]. For more information about catalog views, see [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/catalog-views-transact-sql.md).  
   
 ## Permissions  
  Requires ALTER ANY APPLICATION ROLE permission on the database. To change the default schema, the user also needs ALTER permission on the application role. An application role can alter its own default schema, but not its name or password.  

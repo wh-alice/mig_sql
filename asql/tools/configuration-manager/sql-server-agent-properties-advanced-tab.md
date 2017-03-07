@@ -28,7 +28,7 @@ manager: "jhubbard"
  Displays the location where memory dumps are placed in case of an error.  
   
  **Error Reporting**  
- When set to **Yes**, the Dr. Watson program forwards information to either [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] or your error server if a serious failure occurs. For more information on Error Reporting, search Books Online for the topic, "Error and Usage Report Settings."  
+ When set to **Yes**, the Dr. Watson program forwards information to either [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] or your error server if a serious failure occurs. For more information on Error Reporting, search Books Online for the topic, "Error and Usage Report Settings."  
   
  **Instance ID**  
  Indicates the instance that uses this service.  

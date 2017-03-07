@@ -16,7 +16,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Alter an Extended Events Session
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   After you create an Extended Events session, you can alter it according to your needs using the **SQL Server Extended Events Wizard**.  
   
@@ -50,6 +50,6 @@ manager: "jhubbard"
   
 ## See Also  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
- [Create an Extended Events Session Using Query Editor](../Topic/Create%20an%20Extended%20Events%20Session%20Using%20Query%20Editor.md)  
+ [Create an Extended Events Session Using Query Editor](../../a9retired/create-an-extended-events-session-using-query-editor.md)  
   
   

@@ -20,13 +20,13 @@ manager: "jhubbard"
   Describes how to find similar or related documents or text values, and information about how they are similar or related, in columns that are configured for statistical semantic indexing.  
    
 ##  <a name="HowToQuerySimilar"></a> Find similar or related documents with SEMANTICSIMILARITYTABLE  
- To identify similar or related documents in a specific column, query the function [semanticsimilaritytable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md).  
+ To identify similar or related documents in a specific column, query the function [semanticsimilaritytable &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/semanticsimilaritytable-transact-sql.md).  
   
  **SEMANTICSIMILARITYTABLE** returns a table of zero, one, or more rows whose content in the specified column is semantically similar to the specified document. This rowset function can be referenced in the FROM clause of a SELECT statement like a regular table name.  
   
  You cannot query across columns for similar documents. The **SEMANTICSIMILARITYTABLE** function only retrieves results from the same column as the source column, which is identified by the **source_key** argument.  
   
- For detailed information about the parameters required by the **SEMANTICSIMILARITYTABLE** function, and about the table of results that it returns, see [semanticsimilaritytable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md).  
+ For detailed information about the parameters required by the **SEMANTICSIMILARITYTABLE** function, and about the table of results that it returns, see [semanticsimilaritytable &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/semanticsimilaritytable-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  The columns that you target must have full-text and semantic indexing enabled.  
@@ -47,11 +47,11 @@ GO
 ```  
   
 ##  <a name="HowToQuerySimilarity"></a>Find info about how documents are similar or related with SEMANTICSIMILARITYDETAILSTABLE  
- To get information about the key phrases that make documents similar or related, you can query the function [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md).  
+ To get information about the key phrases that make documents similar or related, you can query the function [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/semanticsimilaritydetailstable-transact-sql.md).  
   
  **SEMANTICSIMILARITYDETAILSTABLE** returns a table of zero, one, or more rows of key phrases common across two documents (a source document and a matched document) whose content is semantically similar. This rowset function can be referenced in the FROM clause of a SELECT statement like a regular table name.  
   
- For detailed information about the parameters required by the **SEMANTICSIMILARITYDETAILSTABLE** function, and about the table of results that it returns, see [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md).  
+ For detailed information about the parameters required by the **SEMANTICSIMILARITYDETAILSTABLE** function, and about the table of results that it returns, see [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/semanticsimilaritydetailstable-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  The columns that you target must have full-text and semantic indexing enabled.  

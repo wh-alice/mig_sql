@@ -23,7 +23,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # XQuery Functions against the xml Data Type
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   This topic and its subtopics describe the functions you can use when specifying XQuery against the **xml** data type. For the W3C specifications, see [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](http://go.microsoft.com/fwlink/?LinkId=4873).  
   
@@ -33,39 +33,39 @@ manager: "jhubbard"
   
 |Category|Function Name|  
 |--------------|-------------------|  
-|[Functions on Numeric Values](../Topic/Functions%20on%20Numeric%20Values.md)|[ceiling](../Topic/ceiling%20Function%20\(XQuery\).md)|  
-||[floor](../Topic/floor%20Function%20\(XQuery\).md)|  
-||[round](../Topic/round%20Function%20\(XQuery\).md)|  
-|[XQuery Functions on String Values](../Topic/XQuery%20Functions%20on%20String%20Values.md)|[concat](../Topic/concat%20Function%20\(XQuery\).md)|  
-||[contains](../Topic/contains%20Function%20\(XQuery\).md)|  
-||[substring](../Topic/substring%20Function%20\(XQuery\).md)|  
-||[lower-case  Function &#40;XQuery&#41;](../Topic/lower-case%20%20Function%20\(XQuery\).md)|  
-||[string-length](../Topic/string-length%20Function%20\(XQuery\).md)|  
-||[upper-case  Function &#40;XQuery&#41;](../Topic/upper-case%20%20Function%20\(XQuery\).md)|  
-|[Functions on Boolean Values](../Topic/Functions%20on%20Boolean%20Values.md)|[not](../Topic/not%20Function%20\(XQuery\).md)|  
-|[Functions on Nodes](../Topic/Functions%20on%20Nodes.md)|[number](../Topic/number%20Function%20\(XQuery\).md)|  
-||[local-name Function (XQuery)](../Topic/local-name%20Function%20\(XQuery\).md)|  
-||[namespace-uri Function (XQuery)](../Topic/namespace-uri%20Function%20\(XQuery\).md)|  
-|[Context Functions](../Topic/Context%20Functions.md)|[last](../Topic/last%20Function%20\(XQuery\).md)|  
-||[position](../Topic/position%20Function%20\(XQuery\).md)|  
-|[Functions on Sequences](../Topic/Functions%20on%20Sequences.md)|[empty](../Topic/empty%20Function%20\(XQuery\).md)|  
-||[distinct-values](../Topic/distinct-values%20Function%20\(XQuery\).md)|  
-||[id Function (XQuery)](../Topic/id%20Function%20\(XQuery\).md)|  
-|[Aggregate Functions &#40;XQuery&#41;](../Topic/Aggregate%20Functions%20\(XQuery\).md)|[count](../Topic/count%20Function%20\(XQuery\).md)|  
-||[avg](../Topic/avg%20Function%20\(XQuery\).md)|  
-||[min](../Topic/min%20Function%20\(XQuery\).md)|  
-||[max](../Topic/max%20Function%20\(XQuery\).md)|  
-||[sum](../Topic/sum%20Function%20\(XQuery\).md)|  
+|[Functions on Numeric Values](../a9retired/functions-on-numeric-values.md)|[ceiling](../xquery/numeric-values-functions-ceiling.md)|  
+||[floor](../xquery/numeric-values-functions-floor.md)|  
+||[round](../xquery/numeric-values-functions-round.md)|  
+|[XQuery Functions on String Values](../a9retired/xquery-functions-on-string-values.md)|[concat](../xquery/functions-on-string-values-concat.md)|  
+||[contains](../xquery/functions-on-string-values-contains.md)|  
+||[substring](../xquery/functions-on-string-values-substring.md)|  
+||[lower-case  Function &#40;XQuery&#41;](../xquery/functions-on-string-values-lower-case.md)|  
+||[string-length](../xquery/functions-on-string-values-string-length.md)|  
+||[upper-case  Function &#40;XQuery&#41;](../xquery/functions-on-string-values-upper-case.md)|  
+|[Functions on Boolean Values](../a9retired/functions-on-boolean-values.md)|[not](../xquery/functions-on-boolean-values-not-function.md)|  
+|[Functions on Nodes](../a9retired/functions-on-nodes.md)|[number](../xquery/functions-on-nodes-number.md)|  
+||[local-name Function (XQuery)](../xquery/functions-on-nodes-local-name.md)|  
+||[namespace-uri Function (XQuery)](../xquery/functions-on-nodes-namespace-uri.md)|  
+|[Context Functions](../a9retired/context-functions.md)|[last](../xquery/context-functions-last-xquery.md)|  
+||[position](../xquery/context-functions-position-xquery.md)|  
+|[Functions on Sequences](../a9retired/functions-on-sequences.md)|[empty](../xquery/functions-on-sequences-empty.md)|  
+||[distinct-values](../xquery/functions-on-sequences-distinct-values.md)|  
+||[id Function (XQuery)](../xquery/functions-on-sequences-id.md)|  
+|[Aggregate Functions &#40;XQuery&#41;](../a9retired/aggregate-functions-xquery.md)|[count](../xquery/aggregate-functions-count.md)|  
+||[avg](../xquery/aggregate-functions-avg.md)|  
+||[min](../xquery/aggregate-functions-min.md)|  
+||[max](../xquery/aggregate-functions-max.md)|  
+||[sum](../xquery/aggregate-functions-sum.md)|  
 |[Constructor Functions &#40;XQuery&#41;](../xquery/constructor-functions-xquery.md)|[Constructor Functions](../xquery/constructor-functions-xquery.md)|  
-|[Data Accessor Functions](../xquery/data-accessor-functions.md)|[string](../Topic/string%20Function%20\(XQuery\).md)|  
-||[data](../Topic/data%20Function%20\(XQuery\).md)|  
-|[Boolean Constructor Functions &#40;XQuery&#41;](../Topic/Boolean%20Constructor%20Functions%20\(XQuery\).md)|[true Function (XQuery)](../Topic/true%20Function%20\(XQuery\).md)|  
-||[false Function (XQuery)](../Topic/false%20Function%20\(XQuery\).md)|  
-|[Functions Related to QNames &#40;XQuery&#41;](../Topic/Functions%20Related%20to%20QNames%20\(XQuery\).md)|[expanded-QName (XQuery)](../Topic/expanded-QName%20\(XQuery\).md)|  
-||[local-name-from-QName (XQuery)](../Topic/local-name-from-QName%20\(XQuery\).md)|  
-||[namespace-uri-from-QName (XQuery)](../Topic/namespace-uri-from-QName%20\(XQuery\).md)|  
-|[SQL Server XQuery Extension Functions](../Topic/SQL%20Server%20XQuery%20Extension%20Functions.md)|[sql:column() function (XQuery)](../Topic/sql:column\(\)%20Function%20\(XQuery\).md)|  
-||[sql:variable() function (XQuery)](../Topic/sql:variable\(\)%20Function%20\(XQuery\).md)|  
+|[Data Accessor Functions](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
+||[data](../xquery/data-accessor-functions-data-xquery.md)|  
+|[Boolean Constructor Functions &#40;XQuery&#41;](../a9retired/boolean-constructor-functions-xquery.md)|[true Function (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
+||[false Function (XQuery)](../xquery/boolean-constructor-functions-false-xquery.md)|  
+|[Functions Related to QNames &#40;XQuery&#41;](../a9retired/functions-related-to-qnames-xquery.md)|[expanded-QName (XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  
+||[local-name-from-QName (XQuery)](../xquery/functions-related-to-qnames-local-name-from-qname.md)|  
+||[namespace-uri-from-QName (XQuery)](../xquery/functions-related-to-qnames-namespace-uri-from-qname.md)|  
+|[SQL Server XQuery Extension Functions](../a9retired/xquery-extension-functions.md)|[sql:column() function (XQuery)](../xquery/xquery-extension-functions-sql-column.md)|  
+||[sql:variable() function (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)|  
   
 ## See Also  
  [xml Data Type Methods](../t-sql/xml/xml-data-type-methods.md)   

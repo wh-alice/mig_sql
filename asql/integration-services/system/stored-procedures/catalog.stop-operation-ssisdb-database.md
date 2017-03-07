@@ -15,9 +15,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.stop_operation (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Stops a validation or instance of execution in the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog.  
+  Stops a validation or instance of execution in the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] catalog.  
   
 ## Syntax  
   
@@ -54,6 +54,6 @@ stop_operation [ @operation_id = ] operation_id
 -   The operation has already been stopped  
   
 ## Remarks  
- Only one user at a time should stop an operation in [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog. If multiple users try to stop the operation, the stored procedure will return success (the value `0`) on the first attempt, but subsequent attempts will raise an error.  
+ Only one user at a time should stop an operation in [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] catalog. If multiple users try to stop the operation, the stored procedure will return success (the value `0`) on the first attempt, but subsequent attempts will raise an error.  
   
   

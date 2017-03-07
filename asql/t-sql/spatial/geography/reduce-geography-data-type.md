@@ -43,7 +43,7 @@ manager: "jhubbard"
 |*tolerance*|Is a value of type **float**. *tolerance* is the tolerance to input to the Douglas-Peucker algorithm. *tolerance* must be a positive number.|  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **geography**  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] return type: **geography**  
   
  CLR return type: **SqlGeography**  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
  The Douglas-Peucker algorithm works on each curve or ring in the **geography** instance by removing all points except for the start point and end point. Each point removed is then added back, starting with the farthest outlying point, until no point is more than *tolerance* from the result. The result is then made valid if necessary, as a valid result is guaranteed.  
   
- In [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)], this method has been extended to **FullGlobe** instances.  
+ In [!INCLUDE[ssSQL11](../../../a9notintoc/includes/sssql11-md.md)], this method has been extended to **FullGlobe** instances.  
   
  This method is not precise.  
   

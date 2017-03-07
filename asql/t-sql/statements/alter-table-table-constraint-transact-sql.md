@@ -25,7 +25,7 @@ manager: "jhubbard"
 
   Specifies the properties of a PRIMARY KEY, UNIQUE, FOREIGN KEY, a CHECK constraint, or a DEFAULT definition added to a table by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -78,15 +78,15 @@ manager: "jhubbard"
  Specifies the order in which the column or columns participating in table constraints are sorted. The default is ASC.  
   
  WITH FILLFACTOR **=***fillfactor*  
- Specifies how full the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] should make each index page used to store the index data. User-specified *fillfactor* values can be from 1 through 100. If a value is not specified, the default is 0.  
+ Specifies how full the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] should make each index page used to store the index data. User-specified *fillfactor* values can be from 1 through 100. If a value is not specified, the default is 0.  
   
 > [!IMPORTANT]  
->  Documenting WITH FILLFACTOR = *fillfactor* as the only index option that applies to PRIMARY KEY or UNIQUE constraints is maintained for backward compatibility, but will not be documented in this manner in future releases. Other index options can be specified in the [index_option](../Topic/index_option%20\(Transact-SQL\).md) clause of ALTER TABLE.  
+>  Documenting WITH FILLFACTOR = *fillfactor* as the only index option that applies to PRIMARY KEY or UNIQUE constraints is maintained for backward compatibility, but will not be documented in this manner in future releases. Other index options can be specified in the [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) clause of ALTER TABLE.  
   
  ON { *partition_scheme_name***(***partition_column_name***)** | *filegroup*| **"**default**"** }  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Specifies the storage location of the index created for the constraint. If *partition_scheme_name* is specified, the index is partitioned and the partitions are mapped to the filegroups that are specified by *partition_scheme_name*. If *filegroup* is specified, the index is created in the named filegroup. If **"**default**"** is specified or if ON is not specified at all, the index is created in the same filegroup as the table. If ON is specified when a clustered index is added for a PRIMARY KEY or UNIQUE constraint, the whole table is moved to the specified filegroup when the clustered index is created.  
   
@@ -105,7 +105,7 @@ manager: "jhubbard"
  Specifies what action happens to rows in the table that is altered, if those rows have a referential relationship and the referenced row is deleted from the parent table. The default is NO ACTION.  
   
  NO ACTION  
- The [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] raises an error and the delete action on the row in the parent table is rolled back.  
+ The [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] raises an error and the delete action on the row in the parent table is rolled back.  
   
  CASCADE  
  Corresponding rows are deleted from the referencing table if that row is deleted from the parent table.  
@@ -120,17 +120,17 @@ manager: "jhubbard"
   
  ON DELETE CASCADE cannot be defined if an INSTEAD OF trigger ON DELETE already exists on the table that is being altered.  
   
- For example, in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database, the **ProductVendor** table has a referential relationship with the **Vendor** table. The **ProductVendor.VendorID** foreign key references the **Vendor.VendorID** primary key.  
+ For example, in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database, the **ProductVendor** table has a referential relationship with the **Vendor** table. The **ProductVendor.VendorID** foreign key references the **Vendor.VendorID** primary key.  
   
- If a DELETE statement is executed on a row in the **Vendor** table and an ON DELETE CASCADE action is specified for **ProductVendor.VendorID**, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] checks for one or more dependent rows in the **ProductVendor** table. If any exist, the dependent rows in the **ProductVendor** table will be deleted, in addition to the row referenced in the **Vendor** table.  
+ If a DELETE statement is executed on a row in the **Vendor** table and an ON DELETE CASCADE action is specified for **ProductVendor.VendorID**, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] checks for one or more dependent rows in the **ProductVendor** table. If any exist, the dependent rows in the **ProductVendor** table will be deleted, in addition to the row referenced in the **Vendor** table.  
   
- Conversely, if NO ACTION is specified, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] raises an error and rolls back the delete action on the **Vendor** row when there is at least one row in the **ProductVendor** table that references it.  
+ Conversely, if NO ACTION is specified, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] raises an error and rolls back the delete action on the **Vendor** row when there is at least one row in the **ProductVendor** table that references it.  
   
  ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
  Specifies what action happens to rows in the table altered when those rows have a referential relationship and the referenced row is updated in the parent table. The default is NO ACTION.  
   
  NO ACTION  
- The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] raises an error, and the update action on the row in the parent table is rolled back.  
+ The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] raises an error, and the update action on the row in the parent table is rolled back.  
   
  CASCADE  
  Corresponding rows are updated in the referencing table when that row is updated in the parent table.  
@@ -145,24 +145,24 @@ manager: "jhubbard"
   
  ON UPDATE CASCADE, SET NULL, or SET DEFAULT cannot be defined if an INSTEAD OF trigger ON UPDATE already exists on the table that is being altered.  
   
- For example, in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database, the **ProductVendor** table has a referential relationship with the **Vendor** table. The **ProductVendor.VendorID** foreign key references the **Vendor.VendorID** primary key.  
+ For example, in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database, the **ProductVendor** table has a referential relationship with the **Vendor** table. The **ProductVendor.VendorID** foreign key references the **Vendor.VendorID** primary key.  
   
- If an UPDATE statement is executed on a row in the **Vendor** table and an ON UPDATE CASCADE action is specified for **ProductVendor.VendorID**, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] checks for one or more dependent rows in the **ProductVendor** table. If any exist, the dependent row in the **ProductVendor** table will be updated, as well as the row referenced in the **Vendor** table.  
+ If an UPDATE statement is executed on a row in the **Vendor** table and an ON UPDATE CASCADE action is specified for **ProductVendor.VendorID**, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] checks for one or more dependent rows in the **ProductVendor** table. If any exist, the dependent row in the **ProductVendor** table will be updated, as well as the row referenced in the **Vendor** table.  
   
- Conversely, if NO ACTION is specified, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] raises an error and rolls back the update action on the **Vendor** row when there is at least one row in the **ProductVendor** table that references it.  
+ Conversely, if NO ACTION is specified, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] raises an error and rolls back the update action on the **Vendor** row when there is at least one row in the **ProductVendor** table that references it.  
   
  NOT FOR REPLICATION  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Can be specified for FOREIGN KEY constraints and CHECK constraints. If this clause is specified for a constraint, the constraint is not enforced when replication agents perform insert, update, or delete operations.  
   
  DEFAULT  
- Specifies the default value for the column. DEFAULT definitions can be used to provide values for a new column in the existing rows of data. DEFAULT definitions cannot be added to columns that have a **timestamp** data type, an IDENTITY property, an existing DEFAULT definition, or a bound default. If the column has an existing default, the default must be dropped before the new default can be added. If a default value is specified for a user-defined type column, the type should support an implicit conversion from *constant_expression* to the user-defined type. To maintain compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], a constraint name can be assigned to a DEFAULT.  
+ Specifies the default value for the column. DEFAULT definitions can be used to provide values for a new column in the existing rows of data. DEFAULT definitions cannot be added to columns that have a **timestamp** data type, an IDENTITY property, an existing DEFAULT definition, or a bound default. If the column has an existing default, the default must be dropped before the new default can be added. If a default value is specified for a user-defined type column, the type should support an implicit conversion from *constant_expression* to the user-defined type. To maintain compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], a constraint name can be assigned to a DEFAULT.  
   
  *constant_expression*  
- Is a literal value, a NULL, or a system function that is used as the default column value. If *constant_expression* is used in conjunction with a column defined to be of a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] user-defined type, the implementation of the type must support an implicit conversion from the *constant_expression* to the user-defined type.  
+ Is a literal value, a NULL, or a system function that is used as the default column value. If *constant_expression* is used in conjunction with a column defined to be of a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] user-defined type, the implementation of the type must support an implicit conversion from the *constant_expression* to the user-defined type.  
   
  FOR *column*  
  Specifies the column associated with a table-level DEFAULT definition.  
@@ -179,7 +179,7 @@ manager: "jhubbard"
 ## Remarks  
  When FOREIGN KEY or CHECK constraints are added, all existing data is verified for constraint violations unless the WITH NOCHECK option is specified. If any violations occur, ALTER TABLE fails and an error is returned. When a new PRIMARY KEY or UNIQUE constraint is added to an existing column, the data in the column or columns must be unique. If duplicate values are found, ALTER TABLE fails. The WITH NOCHECK option has no effect when PRIMARY KEY or UNIQUE constraints are added.  
   
- Each PRIMARY KEY and UNIQUE constraint generates an index. The number of UNIQUE and PRIMARY KEY constraints cannot cause the number of indexes on the table to exceed 999 nonclustered indexes and 1 clustered index. Foreign key constraints do not automatically generate an index. However, foreign key columns are frequently used in join criteria in queries by matching the column or columns in the foreign key constraint of one table with the primary or unique key column or columns in the other table. An index on the foreign key columns enables the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] to quickly find related data in the foreign key table.  
+ Each PRIMARY KEY and UNIQUE constraint generates an index. The number of UNIQUE and PRIMARY KEY constraints cannot cause the number of indexes on the table to exceed 999 nonclustered indexes and 1 clustered index. Foreign key constraints do not automatically generate an index. However, foreign key columns are frequently used in join criteria in queries by matching the column or columns in the foreign key constraint of one table with the primary or unique key column or columns in the other table. An index on the foreign key columns enables the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] to quickly find related data in the foreign key table.  
   
 ## Examples  
  For examples, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  

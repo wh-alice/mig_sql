@@ -22,10 +22,10 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Secure My Reports
-  The My Reports feature provides a user-managed workspace for working with reports. In order to serve its intended purpose, the My Reports folder requires less restrictive permissions than other folders that are available for general use. Users who have permissions to only view and run reports in other folders might require an expanded set of permissions to manage their My Reports folders and content that they own. [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] provides a specialized role assignment and role definition for this purpose.  
+  The My Reports feature provides a user-managed workspace for working with reports. In order to serve its intended purpose, the My Reports folder requires less restrictive permissions than other folders that are available for general use. Users who have permissions to only view and run reports in other folders might require an expanded set of permissions to manage their My Reports folders and content that they own. [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] provides a specialized role assignment and role definition for this purpose.  
   
 > [!NOTE]  
->  My Reports is available only in Report Manager. It is not available in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)].  
+>  My Reports is available only in Report Manager. It is not available in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)].  
   
 ## Role Assignment for My Reports  
  The role assignment for My Reports has preset elements and is automatically created for each user who activates a My Reports folder. Having the report server automatically assign security is especially useful for organizations that use My Reports widely because administrators do not have to enable access for each My Reports user.  

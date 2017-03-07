@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Aggregate Functions - sum
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns the sum of a sequence of numbers.  
   
@@ -47,7 +47,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  The function returns a runtime error when an overflow or out of range exception occurs.  
   
 ## Examples  
- This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the [!INCLUDE[ssSampleDBobject](../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+ This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the [!INCLUDE[ssSampleDBobject](../a9retired/includes/sssampledbobject-md.md)] database.  
   
 ### A. Using the sum() XQuery function to find the total combined number of labor hours for all work center locations in the manufacturing process  
  The following query finds the total labor hours for all work center locations in the manufacturing process of all product models for which manufacturing instructions are stored.  

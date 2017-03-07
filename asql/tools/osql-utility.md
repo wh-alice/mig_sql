@@ -28,10 +28,10 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # osql Utility
-  The **osql** utility allows you to enter [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] statements, system procedures, and script files. This utility uses ODBC to communicate with the server.  
+  The **osql** utility allows you to enter [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] statements, system procedures, and script files. This utility uses ODBC to communicate with the server.  
   
 > [!IMPORTANT]  
->  This feature will be removed in a future version of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use the feature. Use **sqlcmd** instead. For more information, see [sqlcmd Utility](../tools/sqlcmd-utility.md).  
+>  This feature will be removed in a future version of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use the feature. Use **sqlcmd** instead. For more information, see [sqlcmd Utility](../tools/sqlcmd-utility.md).  
   
 ## Syntax  
   
@@ -91,7 +91,7 @@ C:\>osql
  Uses a trusted connection instead of requesting a password.  
   
  **-S** *server_name*[ **\\***instance_name*]  
- Specifies the instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] to connect to. Specify *server_name* to connect to the default instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* to connect to a named instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] on that server. If no server is specified, **osql** connects to the default instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] on the local computer. This option is required when executing **osql** from a remote computer on the network.  
+ Specifies the instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] to connect to. Specify *server_name* to connect to the default instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* to connect to a named instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] on that server. If no server is specified, **osql** connects to the default instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] on the local computer. This option is required when executing **osql** from a remote computer on the network.  
   
  **-H** *wksta_name*  
  Is a workstation name. The workstation name is stored in **sysprocesses.hostname** and is displayed by **sp_who**. If this option is not specified, the current computer name is assumed.  
@@ -115,7 +115,7 @@ C:\>osql
  Allows the user to set the screen width for output. The default is 80 characters. When an output line has reached its maximum screen width, it is broken into multiple lines.  
   
  **-a** *packet_size*  
- Allows you to request a different-sized packet. The valid values for *packet_size* are 512 through 65535. The default value **osql** is the server default. Increased packet size can enhance performance on larger script execution where the amount of SQL statements between GO commands is substantial. [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] testing indicates that 8192 is typically the fastest setting for bulk copy operations. A larger packet size can be requested, but **osql** defaults to the server default if the request cannot be granted.  
+ Allows you to request a different-sized packet. The valid values for *packet_size* are 512 through 65535. The default value **osql** is the server default. Increased packet size can enhance performance on larger script execution where the amount of SQL statements between GO commands is substantial. [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] testing indicates that 8192 is typically the fastest setting for bulk copy operations. A larger packet size can be requested, but **osql** defaults to the server default if the request cannot be granted.  
   
  **-e**  
  Echoes input.  
@@ -124,13 +124,13 @@ C:\>osql
  Sets the QUOTED_IDENTIFIER connection option on.  
   
  **-D** *data_source_name*  
- Connects to an ODBC data source that is defined using the ODBC driver for [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The **osql** connection uses the options specified in the data source.  
+ Connects to an ODBC data source that is defined using the ODBC driver for [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]. The **osql** connection uses the options specified in the data source.  
   
 > [!NOTE]  
 >  This option does not work with data sources defined for other drivers.  
   
  **-c** *cmd_end*  
- Specifies the command terminator. By default, commands are terminated and sent to [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] by entering GO on a line by itself. When you reset the command terminator, do not use [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] reserved words or characters that have special meaning to the operating system, whether preceded by a backslash or not.  
+ Specifies the command terminator. By default, commands are terminated and sent to [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] by entering GO on a line by itself. When you reset the command terminator, do not use [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] reserved words or characters that have special meaning to the operating system, whether preceded by a backslash or not.  
   
  **-q "** *query* **"**  
  Executes a query when **osql** starts, but does not exit **osql** when the query completes. (Note that the query statement should not include GO). If you issue a query from a batch file, use %variables, or environment %variables%. For example:  
@@ -166,13 +166,13 @@ osql -E -q "select name, object_id from %table%"
  Prints performance statistics.  
   
  **-b**  
- Specifies that **osql** exits and returns a DOS ERRORLEVEL value when an error occurs. The value returned to the DOS ERRORLEVEL variable is 1 when the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] error message has a severity of 11 or greater; otherwise, the value returned is 0. [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] MS-DOS batch files can test the value of DOS ERRORLEVEL and handle the error appropriately.  
+ Specifies that **osql** exits and returns a DOS ERRORLEVEL value when an error occurs. The value returned to the DOS ERRORLEVEL variable is 1 when the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] error message has a severity of 11 or greater; otherwise, the value returned is 0. [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] MS-DOS batch files can test the value of DOS ERRORLEVEL and handle the error appropriately.  
   
  **-u**  
  Specifies that *output_file* is stored in Unicode format, regardless of the format of the *input_file*.  
   
  **-R**  
- Specifies that the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] ODBC driver use client settings when converting currency, date, and time data to character data.  
+ Specifies that the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] ODBC driver use client settings when converting currency, date, and time data to character data.  
   
  **-O**  
  Specifies that certain **osql** features be deactivated to match the behavior of earlier versions of **isql**. These features are deactivated:  
@@ -189,19 +189,19 @@ osql -E -q "select name, object_id from %table%"
 >  The **-n**, **-O** and **-D** options are no longer supported by **osql**.  
   
 ## Remarks  
- The **osql** utility is started directly from the operating system with the case-sensitive options listed here. After **osql**starts, it accepts SQL statements and sends them to [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] interactively. The results are formatted and displayed on the screen (**stdout**). Use QUIT or EXIT to exit from **osql**.  
+ The **osql** utility is started directly from the operating system with the case-sensitive options listed here. After **osql**starts, it accepts SQL statements and sends them to [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] interactively. The results are formatted and displayed on the screen (**stdout**). Use QUIT or EXIT to exit from **osql**.  
   
- If you do not specify a user name when you start **osql**, [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] checks for the environment variables and uses those, for example, **osqluser=(***user***)** or **osqlserver=(***server***)**. If no environment variables are set, the workstation user name is used. If you do not specify a server, the name of the workstation is used.  
+ If you do not specify a user name when you start **osql**, [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] checks for the environment variables and uses those, for example, **osqluser=(***user***)** or **osqlserver=(***server***)**. If no environment variables are set, the workstation user name is used. If you do not specify a server, the name of the workstation is used.  
   
- If neither the **-U** or **-P** options are used, [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] attempts to connect using [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows Authentication Mode. Authentication is based on the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows account of the user running **osql**.  
+ If neither the **-U** or **-P** options are used, [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] attempts to connect using [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Windows Authentication Mode. Authentication is based on the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Windows account of the user running **osql**.  
   
- The **osql** utility uses the ODBC API. The utility uses the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] ODBC driver default settings for the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] ISO connection options. For more information, see Effects of ANSI Options.  
+ The **osql** utility uses the ODBC API. The utility uses the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] ODBC driver default settings for the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] ISO connection options. For more information, see Effects of ANSI Options.  
   
 > [!NOTE]  
 >  The **osql** utility does not support CLR user-defined data types. To process these data types, you must use the **sqlcmd** utility. For more information, see [sqlcmd Utility](../tools/sqlcmd-utility.md).  
   
 ## OSQL Commands  
- In addition to [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] statements within **osql**, these commands are also available.  
+ In addition to [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] statements within **osql**, these commands are also available.  
   
 |Command|Description|  
 |-------------|-----------------|  
@@ -215,7 +215,7 @@ osql -E -q "select name, object_id from %table%"
   
  The command terminators GO (by default), RESET EXIT, QUIT, and CTRL+C, are recognized only if they appear at the beginning of a line, immediately following the **osql** prompt.  
   
- GO signals both the end of a batch and the execution of any cached [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] statements. When you press ENTER at the end of each input line, **osql** caches the statements on that line. When you press ENTER after typing GO, all of the currently cached statements are sent as a batch to [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ GO signals both the end of a batch and the execution of any cached [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] statements. When you press ENTER at the end of each input line, **osql** caches the statements on that line. When you press ENTER after typing GO, all of the currently cached statements are sent as a batch to [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)].  
   
  The current **osql** utility works as if there is an implied GO at the end of any script executed, therefore all statements in the script execute.  
   
@@ -253,10 +253,10 @@ osql -E -i titles.qry -o titles.res
  When using **osql** interactively, you can read an operating-system file into the command buffer with **:r***file_name*. This sends the SQL script in *file_name* directly to the server as a single batch.  
   
 > [!NOTE]  
->  When using **osql**, [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] treats the batch separator GO, if it appears in a SQL script file, as a syntax error.  
+>  When using **osql**, [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] treats the batch separator GO, if it appears in a SQL script file, as a syntax error.  
   
 ## Inserting Comments  
- You can include comments in a Transact-SQL statement submitted to [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] by **osql**. Two types of commenting styles are allowed: -- and /*...\*/.  
+ You can include comments in a Transact-SQL statement submitted to [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] by **osql**. Two types of commenting styles are allowed: -- and /*...\*/.  
   
 ## Using EXIT to Return Results in osql  
  You can use the result of a SELECT statement as the return value from **osql**. If it is numeric, the last column of the last result row is converted to a 4-byte integer (long). MS-DOS passes the low byte to the parent process or operating system error level. Windows passes the entire 4-byte integer. The syntax is:  
@@ -307,7 +307,7 @@ RAISERROR(50001, 10, 127)
   
  This error will cause the **osql** script to end and the message ID 50001 will be returned to the client.  
   
- The return values -1 to -99 are reserved by [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]; **osql** defines these values:  
+ The return values -1 to -99 are reserved by [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]; **osql** defines these values:  
   
 -   -100  
   
@@ -322,7 +322,7 @@ RAISERROR(50001, 10, 127)
      Conversion error occurred when selecting return value.  
   
 ## Displaying money and smallmoney Data Types  
- **osql** displays the **money** and **smallmoney** data types with two decimal places although [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] stores the value internally with four decimal places. Consider the example:  
+ **osql** displays the **money** and **smallmoney** data types with two decimal places although [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] stores the value internally with four decimal places. Consider the example:  
   
 ```  
 SELECT CAST(CAST(10.3496 AS money) AS decimal(6, 4))  
@@ -333,8 +333,8 @@ GO
   
 ## See Also  
  [Comment &#40;MDX&#41;](../mdx/comment-mdx.md)   
- [-- &#40;Comment&#41; &#40;MDX&#41;](../Topic/--%20\(Comment\)%20\(MDX\).md)   
+ [-- &#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
  [CAST and CONVERT &#40;Transact-SQL&#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
- [RAISERROR &#40;Transact-SQL&#41;](../Topic/RAISERROR%20\(Transact-SQL\).md)  
+ [RAISERROR &#40;Transact-SQL&#41;](../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

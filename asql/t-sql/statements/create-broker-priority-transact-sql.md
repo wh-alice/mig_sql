@@ -30,11 +30,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # CREATE BROKER PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Defines a priority level and the set of criteria for determining which [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] conversations to assign the priority level. The priority level is assigned to any conversation endpoint that uses the same combination of contracts and services that are specified in the conversation priority. Priorities range in value from 1 (low) to 10 (high). The default is 5.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -54,13 +54,13 @@ FOR CONVERSATION
   
 ## Arguments  
  *ConversationPriorityName*  
- Specifies the name for this conversation priority. The name must be unique in the current database, and must conform to the rules for [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] [identifiers](../../relational-databases/databases/database-identifiers.md).  
+ Specifies the name for this conversation priority. The name must be unique in the current database, and must conform to the rules for [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
  SET  
  Specifies the criteria for determining if the conversation priority applies to a conversation. If specified, SET must contain at least one criterion: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME, or PRIORITY_LEVEL. If SET is not specified, the defaults are set for all three criteria.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
- Specifies the name of a contract to be used as a criterion for determining if the conversation priority applies to a conversation. *ContractName* is a [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] identifier, and must specify the name of a contract in the current database.  
+ Specifies the name of a contract to be used as a criterion for determining if the conversation priority applies to a conversation. *ContractName* is a [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] identifier, and must specify the name of a contract in the current database.  
   
  *ContractName*  
  Specifies that the conversation priority can be applied only to conversations where the BEGIN DIALOG statement that started the conversation specified ON CONTRACT *ContractName*.  
@@ -73,7 +73,7 @@ FOR CONVERSATION
  LOCAL_SERVICE_NAME = {*LocalServiceName* | **ANY**}  
  Specifies the name of a service to be used as a criterion to determine if the conversation priority applies to a conversation endpoint.  
   
- *LocalServiceName* is a [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] identifier. It must specify the name of a service in the current database.  
+ *LocalServiceName* is a [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] identifier. It must specify the name of a service in the current database.  
   
  *LocalServiceName*  
  Specifies that the conversation priority can be applied to the following:  
@@ -90,7 +90,7 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Specifies the name of a service to be used as a criterion to determine if the conversation priority applies to a conversation endpoint.  
   
- *RemoteServiceName* is a literal of type **nvarchar(256)**. [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] uses a byte-by-byte comparison to match the *RemoteServiceName* string. The comparison is case-sensitive and does not consider the current collation. The target service can be in the current instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)], or a remote instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+ *RemoteServiceName* is a literal of type **nvarchar(256)**. [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] uses a byte-by-byte comparison to match the *RemoteServiceName* string. The comparison is case-sensitive and does not consider the current collation. The target service can be in the current instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)], or a remote instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
  '*RemoteServiceName*'  
  Specifies that the conversation priority can be applied to the following:  
@@ -145,11 +145,11 @@ FOR CONVERSATION
   
  [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] independently assigns a priority level to each conversation endpoint. To have [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] assign priority levels to both the initiator and target conversation endpoints, you must ensure that both endpoints are covered by conversation priorities. If the initiator and target conversation endpoints are in separate databases, you must create conversation priorities in each database. The same priority level is usually specified for both of the conversation endpoints for a conversation, but you can specify different priority levels.  
   
- Priority levels are always applied to operations that receive messages or conversation group identifiers from a queue. Priority levels are also applied when transmitting messages from one instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] to another.  
+ Priority levels are always applied to operations that receive messages or conversation group identifiers from a queue. Priority levels are also applied when transmitting messages from one instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] to another.  
   
  Priority levels are not used when transmitting messages:  
   
--   From a database where the HONOR_BROKER_PRIORITY database option is set to OFF. For more information, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+-   From a database where the HONOR_BROKER_PRIORITY database option is set to OFF. For more information, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 -   Between services in the same instance of the Database Engine.  
   
@@ -290,6 +290,6 @@ CREATE BROKER PRIORITY BronzePriority
  [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
  [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
  [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md)   
- [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.conversation-priorities-transact-sql.md)  
+ [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.conversation-priorities-transact-sql.md)  
   
   

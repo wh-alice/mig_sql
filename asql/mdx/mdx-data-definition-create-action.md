@@ -29,7 +29,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Data Definition - CREATE ACTION
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates an action that can be associated with a cube, dimension, hierarchy, or subordinate object.  
   
@@ -88,10 +88,10 @@ FOR
  It is possible for client applications to create and run actions that are unsafe; it is also possible for client applications to use unsafe functions. To avoid these situations, use the **Safety Options** property. For more information, see Safety Options Property.  
   
 > [!NOTE]  
->  This statement is included for backwards compatibility. Actions new to [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)], such as Drillthrough or Report actions, are not supported.  
+>  This statement is included for backwards compatibility. Actions new to [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)], such as Drillthrough or Report actions, are not supported.  
   
 ## Action Types  
- The following table describes the different types of actions available in [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)].  
+ The following table describes the different types of actions available in [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)].  
   
 |Action type|Description|  
 |-----------------|-----------------|  
@@ -104,7 +104,7 @@ FOR
 |**PROPRIETARY**|A client application should not display, nor execute the action unless the application has a custom, nongeneric knowledge of the specific action. Proprietary actions are not returned to the client application unless the client application explicitly asks for these by setting the appropriate restriction on the **APPLICATION_NAME**.|  
   
 ## Invocation Types  
- The following table describes the different types of invocations available in [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)]. The invocation type is used only by the client application to help determine when to invoke the action. The invocation type does not actually determine the invocation behavior of the action.  
+ The following table describes the different types of invocations available in [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)]. The invocation type is used only by the client application to help determine when to invoke the action. The invocation type does not actually determine the invocation behavior of the action.  
   
 |Invocation type|Description|  
 |---------------------|-----------------|  

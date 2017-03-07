@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Backup Stretch-enabled databases (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
  Database backups help you to recover from many types of failures, errors, and disasters.  
   
@@ -49,9 +49,9 @@ Azure database backups are stored on geo-redundant Azure Storage (RA-GRS) and ar
 ### <a name="stretchRPO"></a>Stretch Database reduces the risk of data loss for your Azure data by retaining migrated rows temporarily
 After Stretch Database migrates eligible rows from SQL Server to Azure, it retains those rows in the staging table for a minimum of 8 hours. If you restore a backup of your Azure database, Stretch Database uses the rows saved in the staging table to reconcile the SQL Server and the Azure databases.
 
-After you restore a backup of your Azure data, you have to run the stored procedure [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys.sp-rda-reauthorize-db-transact-sql.md) to reconnect the Stretch-enabled SQL Server database to the remote Azure database. When you run **sys.sp_rda_reauthorize_db**, Stretch Database automatically reconciles the SQL Server and the Azure databases.
+After you restore a backup of your Azure data, you have to run the stored procedure [sys.sp_rda_reauthorize_db](../../relational-databases/reference/system-stored-procedures/sys.sp-rda-reauthorize-db-transact-sql.md) to reconnect the Stretch-enabled SQL Server database to the remote Azure database. When you run **sys.sp_rda_reauthorize_db**, Stretch Database automatically reconciles the SQL Server and the Azure databases.
 
-To increase the number of hours of migrated data that Stretch Database retains temporarily in the staging table, run the stored procedure [sys.sp_rda_set_rpo_duration](../../relational-databases/system-stored-procedures/sys.sp-rda-set-rpo-duration-transact-sql.md) and specify a number of hours greater than 8. To decide how much data to retain, consider the following factors:
+To increase the number of hours of migrated data that Stretch Database retains temporarily in the staging table, run the stored procedure [sys.sp_rda_set_rpo_duration](../../relational-databases/reference/system-stored-procedures/sys.sp-rda-set-rpo-duration-transact-sql.md) and specify a number of hours greater than 8. To decide how much data to retain, consider the following factors:
 -   The frequency of automatic Azure backups (at least every 8 hours).
 -   The time required after a problem to recognize the problem and to decide to restore a backup.
 -   The duration of the Azure restore operation.
@@ -59,7 +59,7 @@ To increase the number of hours of migrated data that Stretch Database retains t
 > [!NOTE]
 > Increasing the amount of data that Stretch Database retains temporarily in the staging table increases the amount of space required on the SQL Server.
 
-To check the number of hours of data that Stretch Database currently retains temporarily in the staging table, run the stored procedure [sys.sp_rda_get_rpo_duration](../../relational-databases/system-stored-procedures/sys.sp-rda-get-rpo-duration-transact-sql.md).
+To check the number of hours of data that Stretch Database currently retains temporarily in the staging table, run the stored procedure [sys.sp_rda_get_rpo_duration](../../relational-databases/reference/system-stored-procedures/sys.sp-rda-get-rpo-duration-transact-sql.md).
 
 ## See Also  
 [Restore Stretch-enabled databases](../../sql-server/install/restore-stretch-enabled-databases-stretch-database.md)  

@@ -49,7 +49,7 @@ manager: "erikre"
   
 ## See Also  
  [Report Builder Help for Dialog Boxes, Panes, and Wizards](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [Aggregate Function &#40;Report Builder and SSRS&#41;](../Topic/Aggregate%20Function%20\(Report%20Builder%20and%20SSRS\).md)   
+ [Aggregate Function &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)   
  [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Dataset Properties Dialog Box, Query &#40;Report Builder&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)  

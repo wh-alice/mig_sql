@@ -56,7 +56,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  Synchronizing a publication database with a subscription database can result in published tables being restored to a point in time that is more recent than the point in time of other non-published tables restored from the backup.  
   
- If you synchronize with a Subscriber that is running a version of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] prior to [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)], the subscription cannot be anonymous; it must be a client subscription or server subscription (referred to as local subscriptions and global subscriptions in previous releases).  
+ If you synchronize with a Subscriber that is running a version of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] prior to [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)], the subscription cannot be anonymous; it must be a client subscription or server subscription (referred to as local subscriptions and global subscriptions in previous releases).  
   
  To synchronize a subscription, see [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) and [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   

@@ -24,9 +24,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # XQuery and Static Typing
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XQuery in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] is a statically typed language. That is, it raises type errors during query compilation when an expression returns a value that has a type or cardinality that is not accepted by a particular function or operator. Additionally, static type checking can also detect if a path expression on a typed XML document has been mistyped. The XQuery compiler first applies the normalization phase that adds the implicit operations, such as atomization, and then performs static type inference and static type checking.  
+  XQuery in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] is a statically typed language. That is, it raises type errors during query compilation when an expression returns a value that has a type or cardinality that is not accepted by a particular function or operator. Additionally, static type checking can also detect if a path expression on a typed XML document has been mistyped. The XQuery compiler first applies the normalization phase that adds the implicit operations, such as atomization, and then performs static type inference and static type checking.  
   
 ## Static Type Inference  
  Static type inference determines the return type of an expression. It determines this by taking the static types of the input parameters and the static semantics of the operation and inferring the static type of the result. For example, the static type of the expression 1 + 2.3 is determined in the following way:  
@@ -85,7 +85,7 @@ manager: "jhubbard"
  Within XQuery context, the "average" function `fn:avg (//r)` returns a static error, because the XQuery compiler cannot add values of different types (**xs:int**, **xs:float** or **xs:double**) for the <`r`> elements in the argument of **fn:avg()**. To  solve this, rewrite the function invocation as `fn:avg(for $r in //r return $r cast as xs:double ?)`.  
   
 ### Example: Operator over Union Type  
- The addition operation ('+') requires precise types of the operands. As a result, the expression `(//r)[1] + 1` returns a static error that has the previously described type definition for element <`r`>. One solution is to rewrite it as `(//r)[1] cast as xs:int? +1`, where the "?" indicates 0 or 1 occurrences. [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] requires "cast as" with "?", because any cast can cause the empty sequence as a result of run-time errors.  
+ The addition operation ('+') requires precise types of the operands. As a result, the expression `(//r)[1] + 1` returns a static error that has the previously described type definition for element <`r`>. One solution is to rewrite it as `(//r)[1] cast as xs:int? +1`, where the "?" indicates 0 or 1 occurrences. [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] requires "cast as" with "?", because any cast can cause the empty sequence as a result of run-time errors.  
   
 ## See Also  
  [XQuery Language Reference &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

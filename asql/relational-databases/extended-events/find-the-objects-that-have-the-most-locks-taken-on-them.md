@@ -21,13 +21,13 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Find the Objects That Have the Most Locks Taken on Them
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Database administrators often need to identify the source of locks that are hindering database performance.  
   
  For example, you are monitoring your production server for any possible bottlenecks. You suspect that there might be highly contested resources, and would like to know how many locks are taken on those objects. Once the most frequently locked objects are identified, steps can be taken to optimize access to the contended objects.  
   
- To do this, use Query Editor in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+ To do this, use Query Editor in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 ### To find the objects that have the most locks  
   
@@ -108,8 +108,8 @@ manager: "jhubbard"
 ## See Also  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-xe-session-targets-transact-sql.md)   
- [sys.dm_xe_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-xe-sessions-transact-sql.md)   
- [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-event-sessions-transact-sql.md)  
+ [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-xe-session-targets-transact-sql.md)   
+ [sys.dm_xe_sessions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-xe-sessions-transact-sql.md)   
+ [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-event-sessions-transact-sql.md)  
   
   

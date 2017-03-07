@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Subscription Type
-  Merge replication offers two subscription types: server and client (referred to in previous versions of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] as global and local, respectively). Subscribers with a server subscription can:  
+  Merge replication offers two subscription types: server and client (referred to in previous versions of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] as global and local, respectively). Subscribers with a server subscription can:  
   
 -   Republish data to other Subscribers.  
   

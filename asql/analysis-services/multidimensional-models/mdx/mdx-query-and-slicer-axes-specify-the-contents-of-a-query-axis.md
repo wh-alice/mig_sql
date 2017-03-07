@@ -114,6 +114,6 @@ FROM [Adventure Works]
 ```  
   
 ## See Also  
- [Specifying the Contents of a Slicer Axis &#40;MDX&#41;](../Topic/Specifying%20the%20Contents%20of%20a%20Slicer%20Axis%20\(MDX\).md)  
+ [Specifying the Contents of a Slicer Axis &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

@@ -60,7 +60,7 @@ manager: "erikre"
 |<xref:ReportService2010.ReportingService2010.SetProperties%2A>|Sets one or more properties of an item.|  
 |<xref:ReportService2010.ReportingService2010.SetItemDefinition%2A>|Sets the definition or content for a specified item. This method applies to the **Report**, **Model**, **Dataset**, **Component**, **Resource**, and **DataSource** item types.|  
 |<xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>|Sets one or more system properties in the report server or SharePoint farm.|  
-|<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|Validates [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] extension settings.|  
+|<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|Validates [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] extension settings.|  
   
 ## See Also  
  [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-.net-framework.md)   

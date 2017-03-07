@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   Between editors.  
   
--   To the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows Recycle Bin.  
+-   To the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows Recycle Bin.  
   
 ### To drag and drop text  
   

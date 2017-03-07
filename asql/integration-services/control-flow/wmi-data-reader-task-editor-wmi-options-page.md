@@ -68,7 +68,7 @@ manager: "jhubbard"
  **WQLQuerySource**  
  Select a variable in the list, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../Topic/Add%20Variable.md)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../../a9retired/add-variable.md)  
   
 ## DestinationType Dynamic Options  
   
@@ -82,7 +82,7 @@ manager: "jhubbard"
  **Destination**  
  Select a variable in the list, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../Topic/Add%20Variable.md)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../../a9retired/add-variable.md)  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   

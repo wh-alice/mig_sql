@@ -42,11 +42,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # UPDATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Changes existing data in a table or view in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. For examples, see [Examples](#UpdateExamples).  
+  Changes existing data in a table or view in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. For examples, see [Examples](#UpdateExamples).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -142,7 +142,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Is either the [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) function, subject to provider capabilities.  
   
  WITH **(** <Table_Hint_Limited> **)**  
- Specifies one or more table hints that are allowed for a target table. The WITH keyword and the parentheses are required. NOLOCK and READUNCOMMITTED are not allowed. For information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+ Specifies one or more table hints that are allowed for a target table. The WITH keyword and the parentheses are required. NOLOCK and READUNCOMMITTED are not allowed. For information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  @*table_variable*  
  Specifies a [table](../../t-sql/data-types/table-transact-sql.md) variable as a table source.  
@@ -157,7 +157,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Is a variable, literal value, expression, or a subselect statement (enclosed with parentheses) that returns a single value. The value returned by *expression* replaces the existing value in *column_name* or *@variable*.  
   
 > [!NOTE]  
->  When referencing the Unicode character data types **nchar**, **nvarchar**, and **ntext**, 'expression' should be prefixed with the capital letter 'N'. If 'N' is not specified, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] converts the string to the code page that corresponds to the default collation of the database or column. Any characters not found in this code page are lost.  
+>  When referencing the Unicode character data types **nchar**, **nvarchar**, and **ntext**, 'expression' should be prefixed with the capital letter 'N'. If 'N' is not specified, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] converts the string to the code page that corresponds to the default collation of the database or column. Any characters not found in this code page are lost.  
   
  DEFAULT  
  Specifies that the default value defined for the column is to replace the existing value in the column. This can also be used to change the column to NULL if the column has no default and is defined to allow null values.  
@@ -195,7 +195,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  *expression* is the value that is copied to *column_name*. *expression* must evaluate to or be able to be implicitly cast to the *column_name* type. If *expression* is set to NULL, *@Length* is ignored, and the value in *column_name* is truncated at the specified *@Offset*.  
   
- *@Offset* is the starting point in the value of *column_name* at which *expression* is written. *@Offset* is a zero-based ordinal position, is **bigint**, and cannot be a negative number. If *@Offset* is NULL, the update operation appends *expression* at the end of the existing *column_name* value and *@Length* is ignored. If @Offset is greater than the length of the *column_name* value, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] returns an error. If *@Offset* plus *@Length* exceeds the end of the underlying value in the column, the deletion occurs up to the last character of the value. If *@Offset* plus LEN(*expression*) is greater than the underlying declared size, an error is raised.  
+ *@Offset* is the starting point in the value of *column_name* at which *expression* is written. *@Offset* is a zero-based ordinal position, is **bigint**, and cannot be a negative number. If *@Offset* is NULL, the update operation appends *expression* at the end of the existing *column_name* value and *@Length* is ignored. If @Offset is greater than the length of the *column_name* value, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] returns an error. If *@Offset* plus *@Length* exceeds the end of the underlying value in the column, the deletion occurs up to the last character of the value. If *@Offset* plus LEN(*expression*) is greater than the underlying declared size, an error is raised.  
   
  *@Length* is the length of the section in the column, starting from *@Offset*, that is replaced by *expression*. *@Length* is **bigint** and cannot be a negative number. If *@Length* is NULL, the update operation removes all data from *@Offset* to the end of the *column_name* value.  
   
@@ -244,7 +244,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Is the name of a cursor variable. *cursor_variable_name* must reference a cursor that allows updates.  
   
  OPTION **(** <query_hint> [ **,**... *n* ] **)**  
- Specifies that optimizer hints are used to customize the way the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] processes the statement. For more information, see [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).  
+ Specifies that optimizer hints are used to customize the way the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] processes the statement. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## Best Practices  
  Use the @@ROWCOUNT function to return the number of inserted rows to the client application. For more information, see [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
@@ -318,7 +318,7 @@ GO
 ```  
   
 ## Compatibility Support  
- Support for use of the READUNCOMMITTED and NOLOCK hints in the FROM clause that apply to the target table of an UPDATE or DELETE statement will be removed in a future version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Avoid using these hints in this context in new development work, and plan to modify applications that currently use them.  
+ Support for use of the READUNCOMMITTED and NOLOCK hints in the FROM clause that apply to the target table of an UPDATE or DELETE statement will be removed in a future version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Avoid using these hints in this context in new development work, and plan to modify applications that currently use them.  
   
 ## Data Types  
  All **char** and **nchar** columns are right-padded to the defined length.  
@@ -333,12 +333,12 @@ GO
  If the UPDATE statement could change more than one row while updating both the clustering key and one or more **text**, **ntext**, or **image** columns, the partial update to these columns is executed as a full replacement of the values.  
   
 > [!IMPORTANT]  
->  The **ntext**, **text**, and **image** data types will be removed in a future version of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Avoid using these data types in new development work, and plan to modify applications that currently use them. Use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md), and [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) instead.  
+>  The **ntext**, **text**, and **image** data types will be removed in a future version of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Avoid using these data types in new development work, and plan to modify applications that currently use them. Use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md), and [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) instead.  
   
 ### Updating Large Value Data Types  
  Use the **.**WRITE (*expression***,** *@Offset***,***@Length*) clause to perform a partial or full update of **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types. For example, a partial update of a **varchar(max)** column might delete or modify only the first 200 characters of the column, whereas a full update would delete or modify all the data in the column. **.**WRITE updates that insert or append new data are minimally logged if the database recovery model is set to bulk-logged or simple. Minimal logging is not used when existing values are updated. For more information, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
- The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] converts a partial update to a full update when the UPDATE statement causes either of these actions:  
+ The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] converts a partial update to a full update when the UPDATE statement causes either of these actions:  
   
 -   Changes a key column of the partitioned view or table.  
   
@@ -357,7 +357,7 @@ GO
 ### Updating User-defined Type Columns  
  Updating values in user-defined type columns can be accomplished in one of the following ways:  
   
--   Supplying a value in a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system data type, as long as the user-defined type supports implicit or explicit conversion from that type. The following example shows how to update a value in a column of user-defined type `Point`, by explicitly converting from a string.  
+-   Supplying a value in a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system data type, as long as the user-defined type supports implicit or explicit conversion from that type. The following example shows how to update a value in a column of user-defined type `Point`, by explicitly converting from a string.  
   
     ```  
     UPDATE Cities  
@@ -374,7 +374,7 @@ GO
     ```  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns an error if a mutator method is invoked on a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] null value, or if a new value produced by a mutator method is null.  
+    >  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns an error if a mutator method is invoked on a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] null value, or if a new value produced by a mutator method is null.  
   
 -   Modifying the value of a registered property or public data member of the user-defined type. The expression supplying the value must be implicitly convertible to the type of the property. The following example modifies the value of property `X` of user-defined type `Point`.  
   
@@ -399,12 +399,12 @@ GO
 ## Interoperability  
  UPDATE statements are allowed in the body of user-defined functions only if the table being modified is a table variable.  
   
- When an INSTEAD OF trigger is defined on UPDATE actions against a table, the trigger is running instead of the UPDATE statement. Earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] only support AFTER triggers defined on UPDATE and other data modification statements. The FROM clause cannot be specified in an UPDATE statement that references, either directly or indirectly, a view with an INSTEAD OF trigger defined on it. For more information about INSTEAD OF triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ When an INSTEAD OF trigger is defined on UPDATE actions against a table, the trigger is running instead of the UPDATE statement. Earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] only support AFTER triggers defined on UPDATE and other data modification statements. The FROM clause cannot be specified in an UPDATE statement that references, either directly or indirectly, a view with an INSTEAD OF trigger defined on it. For more information about INSTEAD OF triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ## Limitations and Restrictions  
  The FROM clause cannot be specified in an UPDATE statement that references, either directly or indirectly, a view that has an INSTEAD OF trigger defined on it. For more information about INSTEAD OF triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
- When a common table expression (CTE) is the target of an UPDATE statement, all references to the CTE in the statement must match. For example, if the CTE is assigned an alias in the FROM clause, the alias must be used for all other references to the CTE. Unambiguous CTE references are required because a CTE does not have an object ID, which [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses to recognize the implicit relationship between an object and its alias. Without this relationship, the query plan may produce unexpected join behavior and unintended query results. The following examples demonstrate correct and incorrect methods of specifying a CTE when the CTE is the target object of the update operation.  
+ When a common table expression (CTE) is the target of an UPDATE statement, all references to the CTE in the statement must match. For example, if the CTE is assigned an alias in the FROM clause, the alias must be used for all other references to the CTE. Unambiguous CTE references are required because a CTE does not have an object ID, which [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses to recognize the implicit relationship between an object and its alias. Without this relationship, the query plan may produce unexpected join behavior and unintended query results. The following examples demonstrate correct and incorrect methods of specifying a CTE when the CTE is the target object of the update operation.  
   
 ```  
 USE tempdb;  
@@ -468,7 +468,7 @@ GO
  `(2 row(s) affected)`  
   
 ## Locking Behavior  
- An UPDATE statement always acquires an exclusive (X) lock on the table it modifies, and holds that lock until the transaction completes. With an exclusive lock, no other transactions can modify data. You can specify table hints to override this default behavior for the duration of the UPDATE statement by specifying another locking method, however, we recommend that hints be used only as a last resort by experienced developers and database administrators. For more information, see [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+ An UPDATE statement always acquires an exclusive (X) lock on the table it modifies, and holds that lock until the transaction completes. With an exclusive lock, no other transactions can modify data. You can specify table hints to override this default behavior for the duration of the UPDATE statement by specifying another locking method, however, we recommend that hints be used only as a last resort by experienced developers and database administrators. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## Logging Behavior  
  The UPDATE statement is logged; however, partial updates to large value data types using the **.**WRITE clause are minimally logged. For more information, see "Updating Large Value Data Types" in the earlier section “Data Types”.  
@@ -780,10 +780,10 @@ GO
 ```  
   
 ###  <a name="RemoteTables"></a> Updating Rows in a Remote Table  
- Examples in this section demonstrate how to update rows in a remote target table by using a [linked server](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../../t-sql/functions/rowset-functions-transact-sql.md) to reference the remote table.  
+ Examples in this section demonstrate how to update rows in a remote target table by using a [linked server](../../relational-databases/reference/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../../t-sql/functions/rowset-functions-transact-sql.md) to reference the remote table.  
   
 #### A. Updating data in a remote table by using a linked server  
- The following example updates a table on a remote server. The example begins by creating a link to the remote data source by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). The linked server name, `MyLinkServer`, is then specified as part of the four-part object name in the form server.catalog.schema.object. Note that you must specify a valid server name for `@datasrc`.  
+ The following example updates a table on a remote server. The example begins by creating a link to the remote data source by using [sp_addlinkedserver](../../relational-databases/reference/system-stored-procedures/sp-addlinkedserver-transact-sql.md). The linked server name, `MyLinkServer`, is then specified as part of the four-part object name in the form server.catalog.schema.object. Note that you must specify a valid server name for `@datasrc`.  
   
 ```  
 USE master;  
@@ -816,7 +816,7 @@ SET GroupName = 'Sales and Marketing';
 ```  
   
 #### C. Updating data in a remote table by using the OPENDATASOURCE function  
- The following example inserts a row into a remote table by specifying the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) rowset function. Specify a valid server name for the data source by using the format *server_name* or *server_name\instance_name*. You may need to configure the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] for Ad Hoc Distributed Queries. For more information, see [ad hoc distributed queries Server Configuration Option](../../database-engine/configure/windows/ad-hoc-distributed-queries-server-configuration-option.md).  
+ The following example inserts a row into a remote table by specifying the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) rowset function. Specify a valid server name for the data source by using the format *server_name* or *server_name\instance_name*. You may need to configure the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] for Ad Hoc Distributed Queries. For more information, see [ad hoc distributed queries Server Configuration Option](../../database-engine/configure/windows/ad-hoc-distributed-queries-server-configuration-option.md).  
   
 ```  
 UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
@@ -933,7 +933,7 @@ WHERE [SerialNumber] = 2;
  The following examples modify values in CLR user-defined type (UDT) columns. Three methods are demonstrated. For more information about user-defined columns, see [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 #### A. Using a system data type  
- You can update a UDT by supplying a value in a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system data type, as long as the user-defined type supports implicit or explicit conversion from that type. The following example shows how to update a value in a column of user-defined type `Point`, by explicitly converting from a string.  
+ You can update a UDT by supplying a value in a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system data type, as long as the user-defined type supports implicit or explicit conversion from that type. The following example shows how to update a value in a column of user-defined type `Point`, by explicitly converting from a string.  
   
 ```  
 UPDATE dbo.Cities  
@@ -963,10 +963,10 @@ WHERE Name = 'Anchorage';
  Examples in this section demonstrate how to use table and query hints to temporarily override the default behavior of the query optimizer when processing the UPDATE statement.  
   
 > [!CAUTION]  
->  Because the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that hints be used only as a last resort by experienced developers and database administrators.  
+>  Because the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that hints be used only as a last resort by experienced developers and database administrators.  
   
 #### A. Specifying a table hint  
- The following example specifies the [table hint](../Topic/Table%20Hints%20\(Transact-SQL\).md) TABLOCK. This hint specifies that a shared lock is taken on the table `Production.Product` and held until the end of the UPDATE statement.  
+ The following example specifies the [table hint](../../t-sql/queries/hints-transact-sql-table.md) TABLOCK. This hint specifies that a shared lock is taken on the table `Production.Product` and held until the end of the UPDATE statement.  
   
 ```  
 USE AdventureWorks2012;  
@@ -979,7 +979,7 @@ GO
 ```  
   
 #### B. Specifying a query hint  
- The following example specifies the [query hint](../Topic/Query%20Hints%20\(Transact-SQL\).md)`OPTIMIZE FOR (@variable)` in the UPDATE statement. This hint instructs the query optimizer to use a particular value for a local variable when the query is compiled and optimized. The value is used only during query optimization, and not during query execution.  
+ The following example specifies the [query hint](../../t-sql/queries/hints-transact-sql-query.md)`OPTIMIZE FOR (@variable)` in the UPDATE statement. This hint instructs the query optimizer to use a particular value for a local variable when the query is compiled and optimized. The value is used only during query optimization, and not during query execution.  
   
 ```  
 USE AdventureWorks2012;  
@@ -1090,7 +1090,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### A. Using a simple UPDATE statement  
  The following examples show how all rows can be affected when a WHERE clause is not used to specify the row (or rows) to update.  
@@ -1202,7 +1202,7 @@ AND [acs].[CalendarYear]                = [fis].[CalendarYear]
 ;  
 ```
 
-Since [!INCLUDE[ssSDW_md](../../database-engine/configure/windows/includes/sssdw-md.md)] does not support ANSI joins in the FROM clause of an UPDATE statement, you cannot copy this code over without changing it slightly.  
+Since [!INCLUDE[ssSDW_md](../../a9retired/includes/sssdw-md.md)] does not support ANSI joins in the FROM clause of an UPDATE statement, you cannot copy this code over without changing it slightly.  
 
 You can use a combination of a CTAS and an implicit join to replace this code:  
 
@@ -1244,7 +1244,7 @@ DROP TABLE CTAS_acs
  [Cursors &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [Text and Image Functions &#40;Transact-SQL&#41;](../Topic/Text%20and%20Image%20Functions%20\(Transact-SQL\).md)   
+ [Text and Image Functions &#40;Transact-SQL&#41;](../../a9retired/text-and-image-functions-transact-sql.md)   
  [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
   

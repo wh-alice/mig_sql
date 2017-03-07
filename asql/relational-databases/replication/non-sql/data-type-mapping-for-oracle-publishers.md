@@ -19,9 +19,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Data Type Mapping for Oracle Publishers
-  Oracle data types and [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data types do not always match exactly. Where possible, the matching data type is selected automatically when publishing an Oracle table. In cases that a single data type mapping is not clear, alternative data type mappings are provided. For information about how to select alternative mappings, see the "Specifying Alternative Data Type Mappings" section later in this topic.  
+  Oracle data types and [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data types do not always match exactly. Where possible, the matching data type is selected automatically when publishing an Oracle table. In cases that a single data type mapping is not clear, alternative data type mappings are provided. For information about how to select alternative mappings, see the "Specifying Alternative Data Type Mappings" section later in this topic.  
   
- The following table shows how data types are mapped by default between Oracle and [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] when data is moved from the Oracle Publisher to the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Distributor. The Alternatives column indicates whether alternative mappings are available.  
+ The following table shows how data types are mapped by default between Oracle and [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] when data is moved from the Oracle Publisher to the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Distributor. The Alternatives column indicates whether alternative mappings are available.  
   
 |Oracle data type|SQL Server data type|Alternatives|  
 |----------------------|--------------------------|------------------|  
@@ -73,15 +73,15 @@ manager: "jhubbard"
 -   Columns that use REF  
   
 ### The DATE Data Type  
- Dates in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] range from 1753 A.D. to 9999 A.D., whereas dates in Oracle range from 4712 B.C. to 4712 A.D. If a column of type DATE contains values that are out of range for SQL Server, select the alternative data type for the column, which is VARCHAR(19).  
+ Dates in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] range from 1753 A.D. to 9999 A.D., whereas dates in Oracle range from 4712 B.C. to 4712 A.D. If a column of type DATE contains values that are out of range for SQL Server, select the alternative data type for the column, which is VARCHAR(19).  
   
 ### FLOAT and NUMBER Types  
  The scale and precision specified during the mapping of FLOAT and NUMBER data types depends upon the scale and precision specified for the column using the data type in the Oracle database. Precision is the number of digits in a number. Scale is the number of digits to the right of the decimal point in a number. For example, the number 123.45 has a precision of 5 and a scale of 2.  
   
- Oracle allows numbers to be defined with a scale greater than the precision, such as NUMBER(4,5), but [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] requires the precision to be equal to or greater than the scale. To ensure there is no data truncation, if the scale is greater than the precision at the Oracle Publisher, the precision is set equal to the scale when the data type is mapped: NUMBER(4,5) would be mapped as NUMERIC(5,5).  
+ Oracle allows numbers to be defined with a scale greater than the precision, such as NUMBER(4,5), but [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] requires the precision to be equal to or greater than the scale. To ensure there is no data truncation, if the scale is greater than the precision at the Oracle Publisher, the precision is set equal to the scale when the data type is mapped: NUMBER(4,5) would be mapped as NUMERIC(5,5).  
   
 > [!NOTE]  
->  If you do not specify a scale and precision for NUMBER, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] defaults to using the maximum scale (8) and precision (38). We recommend that you set a specific scale and precision in Oracle for better storage and performance when the data is replicated.  
+>  If you do not specify a scale and precision for NUMBER, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] defaults to using the maximum scale (8) and precision (38). We recommend that you set a specific scale and precision in Oracle for better storage and performance when the data is replicated.  
   
 ### Large Object Types  
  Oracle supports up to 4 gigabytes (GB), whereas SQL Server supports up to 2 GB. Data replicated above 2 GB is truncated.  

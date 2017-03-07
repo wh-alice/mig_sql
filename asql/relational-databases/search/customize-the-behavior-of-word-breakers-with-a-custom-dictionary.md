@@ -21,7 +21,7 @@ manager: "jhubbard"
   
  [Create a custom dictionary (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=215011)  
   
- For [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], place custom dictionary files in the following folder:  
+ For [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], place custom dictionary files in the following folder:  
   
  `C:\Program Files\Microsoft SQL Server\<instance name>\MSSQL\Binn`  
   

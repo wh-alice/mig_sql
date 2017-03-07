@@ -15,7 +15,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Remove-PowerPivotSystemServiceInstance cmdlet
-  Removes a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service instance from the farm.  
+  Removes a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service instance from the farm.  
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   
@@ -26,16 +26,16 @@ Remove-PowerPivotSystemServiceInstance [-Confirm <switch>] [-DeleteLocal <switch
 ```  
   
 ## Description  
- The Remove-PowerPivotSystemServiceInstance cmdlet removes instance information about [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service from the farm. It does not remove the program files. To permanently remove the program files, you must uninstall them.  
+ The Remove-PowerPivotSystemServiceInstance cmdlet removes instance information about [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service from the farm. It does not remove the program files. To permanently remove the program files, you must uninstall them.  
   
- If you remove [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service, be sure to also run Remove-PowerPivotEngineServiceInstance to remove the associated Analysis Services instance, followed by Remove-PowerPivotServiceApplication to delete any PowerPivotservice applications. The service applications will no longer run once theservices are removed.  
+ If you remove [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service, be sure to also run Remove-PowerPivotEngineServiceInstance to remove the associated Analysis Services instance, followed by Remove-PowerPivotServiceApplication to delete any PowerPivotservice applications. The service applications will no longer run once theservices are removed.  
   
  To revert this change, you can run New-PowerPivotSystemServiceInstance -Provision:$true to re-enable instance information.  
   
 ## Parameters  
   
 ### -Identity \<PowerPivotMidTierServiceInstancePipeBind>  
- Specifies the GUID of the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service instance you want to remove. There is one service instance on each application server that has an installation of [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint.  
+ Specifies the GUID of the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service instance you want to remove. There is one service instance on each application server that has an installation of [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint.  
   
 |||  
 |-|-|  
@@ -46,7 +46,7 @@ Remove-PowerPivotSystemServiceInstance [-Confirm <switch>] [-DeleteLocal <switch
 |Accept wildcard characters?|false|  
   
 ### -DeleteLocal \<switch>  
- Deletes the instance of [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service that is installed on the local computer, allowing you to remove the instance without having to specify an object identity.  
+ Deletes the instance of [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service that is installed on the local computer, allowing you to remove the instance without having to specify an object identity.  
   
 |||  
 |-|-|  
@@ -84,7 +84,7 @@ Remove-PowerPivotSystemServiceInstance [-Confirm <switch>] [-DeleteLocal <switch
 C:\PS>Remove-PowerPivotSystemServiceInstance -deletelocal  
 ```  
   
- This example shows how to remove the instance of [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service that runs on the local application server.  
+ This example shows how to remove the instance of [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service that runs on the local application server.  
   
 ## Example 2  
   
@@ -92,6 +92,6 @@ C:\PS>Remove-PowerPivotSystemServiceInstance -deletelocal
 C:\PS>Remove-PowerPivotSystemServiceInstance -identity 1234567-890a-bcde-fghijklmn  
 ```  
   
- This example shows how to delete a specific [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service based on its identity.  
+ This example shows how to delete a specific [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service based on its identity.  
   
   

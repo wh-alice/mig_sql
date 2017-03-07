@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # Cancel Element (XMLA)
-  Cancels a currently running command an [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance.  
+  Cancels a currently running command an [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance.  
   
 ## Syntax  
   
@@ -67,10 +67,10 @@ manager: "erikre"
   
  Typically, the **Cancel** command is used to cancel executing commands on the currently active session. In that case, none of the child elements for the **Cancel** command must be specified. The **Cancel** command can also be used by administrators to cancel commands executing on connections or sessions other than the currently active session. Members of a role that has Administer permissions for a given database can cancel commands for connections and sessions applicable to that database, while server administrators can cancel commands for connections and sessions for a given Analysis Services instance.  
   
- To retrieve information about current connections and sessions for an [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance, the **Discover** method can be executed to request, respectively, the DISCOVER_CONNECTIONS and DISCOVER_SESSIONS schema rowsets. Members of a role that has Administer permissions for a given database can return sessions only for a given database by specifying that database in the SESSION_CURRENT_DATABASE restriction column for the DISCOVER_SESSIONS schema rowset. For more information about the **Discover** method, see [Discover Method &#40;XMLA&#41;](../Topic/Discover%20Method%20\(XMLA\).md).  
+ To retrieve information about current connections and sessions for an [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance, the **Discover** method can be executed to request, respectively, the DISCOVER_CONNECTIONS and DISCOVER_SESSIONS schema rowsets. Members of a role that has Administer permissions for a given database can return sessions only for a given database by specifying that database in the SESSION_CURRENT_DATABASE restriction column for the DISCOVER_SESSIONS schema rowset. For more information about the **Discover** method, see [Discover Method &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-methods-discover.md).  
   
 ## See Also  
  [Batch Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [Commands &#40;XMLA&#41;](../Topic/Commands%20\(XMLA\).md)  
+ [Commands &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

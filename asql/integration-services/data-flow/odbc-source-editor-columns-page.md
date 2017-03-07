@@ -24,7 +24,7 @@ manager: "jhubbard"
 ## Task List  
  **To open the ODBC Source Editor Columns Page**  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent](../../analysis-services/data-mining/includes/ssiscurrent-md.md)] package that has the ODBC source.  
+1.  In [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent](../../a9retired/includes/ssiscurrent-md.md)] package that has the ODBC source.  
   
 2.  On the **Data Flow** tab, double-click the ODBC source.  
   

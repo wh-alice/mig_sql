@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Sending Data as a Table-Valued Parameter Using Data-At-Execution (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   This is similar to the [All in Memory](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) procedure, but uses data-at-execution for the table-valued parameter.  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
  When SQLPutData is called for a table-value, *DataPtr* is used for the number of rows available (in this example, always 1). *StrLen_or_IndPtr* must always be 0. When all rows of the table-value have been passed, SQLPutData is called with a *DataPtr* value of 0.  
   
 ## Prerequisite  
- This procedure assumes that the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] has been executed on the server:  
+ This procedure assumes that the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] has been executed on the server:  
   
 ```  
 create type TVParam as table(ProdCode integer, Qty integer)  
@@ -577,6 +577,6 @@ EXIT:
 ```  
   
 ## See Also  
- [ODBC Table-Valued Parameter Programming Examples](../Topic/ODBC%20Table-Valued%20Parameter%20Programming%20Examples.md)  
+ [ODBC Table-Valued Parameter Programming Examples](../../a9retired/odbc-table-valued-parameter-programming-examples.md)  
   
   

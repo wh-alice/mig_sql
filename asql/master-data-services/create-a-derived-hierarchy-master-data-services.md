@@ -18,7 +18,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Create a Derived Hierarchy (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], create a derived hierarchy when you want a level-based hierarchy that ensures that members exist at the correct level. Derived hierarchies are based on the domain-based attribute relationships that exist in a model.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], create a derived hierarchy when you want a level-based hierarchy that ensures that members exist at the correct level. Derived hierarchies are based on the domain-based attribute relationships that exist in a model.  
   
 > [!NOTE]  
 >  If a domain-based attribute value doesn't exist for a member, the member is not included in the derived hierarchy. See [Require Attribute Values &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md) to require a domain-based attribute value for all members.  
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 ### To create a derived hierarchy  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **System Administration**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **System Administration**.  
   
 2.  From the menu bar, point to **Manage** and click **Derived Hierarchies**.  
   

@@ -21,9 +21,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Power Pivot Data Feeds
-  A data feed provides a stream of data on demand from an online data source to a client application. In [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], you can use data feeds to add data from an Atom-aware Web service or application to a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data source in an Excel workbook.  
+  A data feed provides a stream of data on demand from an online data source to a client application. In [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], you can use data feeds to add data from an Atom-aware Web service or application to a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data source in an Excel workbook.  
   
- This section provides information to help you make best use of data feeds to get existing corporate or workgroup data into [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbooks. It also provides information on how share data feeds with others in your organization, and how data feeds are constructed and used in case you need to troubleshoot any problems that arise.  
+ This section provides information to help you make best use of data feeds to get existing corporate or workgroup data into [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbooks. It also provides information on how share data feeds with others in your organization, and how data feeds are constructed and used in case you need to troubleshoot any problems that arise.  
   
 ## Related Tasks  
  [Create or Customize a Data Feed Library &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)  

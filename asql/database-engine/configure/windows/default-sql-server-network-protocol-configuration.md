@@ -18,9 +18,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Default SQL Server Network Protocol Configuration
-To enhance security, [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] disables network connectivity for some new installations. Network connectivity using TCP/IP is not disabled if you are using the Enterprise, Standard, or Workgroup edition or if a previous installation of [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is present. For all installations, shared memory protocol is enabled to allow local connections to the server. The [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Browser service might be stopped, depending on installation conditions and installation options.
+To enhance security, [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)] disables network connectivity for some new installations. Network connectivity using TCP/IP is not disabled if you are using the Enterprise, Standard, or Workgroup edition or if a previous installation of [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)] is present. For all installations, shared memory protocol is enabled to allow local connections to the server. The [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)] Browser service might be stopped, depending on installation conditions and installation options.
 
-Use the [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Network Configuration node of [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager to configure the network protocols after installation. Use the [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Services node of [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager to configure the [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Browser service to start automatically. For more information, see [Enable or Disable a Server Network Protocol](../../../database-engine/configure/windows/enable-or-disable-a-server-network-protocol.md).
+Use the [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)] Network Configuration node of [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager to configure the network protocols after installation. Use the [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)] Services node of [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager to configure the [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)] Browser service to start automatically. For more information, see [Enable or Disable a Server Network Protocol](../../../database-engine/configure/windows/enable-or-disable-a-server-network-protocol.md).
 
 
 ## Default Configuration
@@ -40,10 +40,10 @@ All editions	| Upgrade	| Enabled	| Settings from the previous installation are p
 
 
 >[!NOTE]
-> If the instance is running on a [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] failover cluster, it will listen on those ports on each IP address selected for [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] during [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup.
+> If the instance is running on a [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)] failover cluster, it will listen on those ports on each IP address selected for [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)] during [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)] setup.
  
 >[!NOTE]
-> When you are installing [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] with command-prompt arguments, you can specify the protocols to enable by using the `TCPENABLED` and `NPENABLED` parameters. For more information, see [Install SQL Server from the Command Prompt](../../../database-engine/install/windows/install-sql-server-2016-from-the-command-prompt.md).
+> When you are installing [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)] with command-prompt arguments, you can specify the protocols to enable by using the `TCPENABLED` and `NPENABLED` parameters. For more information, see [Install SQL Server from the Command Prompt](../../../database-engine/install/windows/install-sql-server-2016-from-the-command-prompt.md).
 
 ## Creating a Connection String
 
@@ -53,19 +53,19 @@ See the following topics for samples of connection strings:
 * [Creating a Valid Connection String Using Named Pipes](Creating%20a%20Valid%20Connection%20String%20Using%20Named%20Pipes.xml)
 
 
-## [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Browser Settings
+## [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)] Browser Settings
 
-The [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Browser service can be configured to start automatically during setup. The default is to start automatically under the following conditions:
+The [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)] Browser service can be configured to start automatically during setup. The default is to start automatically under the following conditions:
 
 * When upgrading an installation.
-* When installing side-by-side with another instance of [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].
+* When installing side-by-side with another instance of [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)].
 * When installing on a cluster.
-* When installing a named instance of the Database Engine including all instances of [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Express.
+* When installing a named instance of the Database Engine including all instances of [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)] Express.
 * When installing a named instance of Analysis Services.
 
 ## See Also
 
-[Hardware and Software Requirements for Installing SQL Server 2016](Hardware%20and%20Software%20Requirements%20for%20Installing%20SQL%20Server%202016.md)
+[Hardware and Software Requirements for Installing SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 
 [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md)  
 

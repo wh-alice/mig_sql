@@ -22,11 +22,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Decrypts using a symmetric key that is automatically decrypted using an asymmetric key.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -73,7 +73,7 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
  Requires VIEW DEFINITION permission on the symmetric key and CONTROL permission on the asymmetric key.  
   
 ## Examples  
- The following example shows how `DecryptByKeyAutoAsymKey` can be used to simplify code that performs a decryption. This code should be run on an [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database that does not already have a database master key.  
+ The following example shows how `DecryptByKeyAutoAsymKey` can be used to simplify code that performs a decryption. This code should be run on an [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database that does not already have a database master key.  
   
 ```  
 --Create the keys and certificate.  

@@ -46,7 +46,7 @@ manager: "jhubbard"
   
  ![Event handler flow](../integration-services/media/mw-dts-eventhandlers.gif "Event handler flow")  
   
- Event handlers are members of an event handler collection, and all containers include this collection. If you create the package using [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer, you can see the members of the event handler collections in the **Event Handlers** folders on the **Package Explorer** tab of [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer.  
+ Event handlers are members of an event handler collection, and all containers include this collection. If you create the package using [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer, you can see the members of the event handler collections in the **Event Handlers** folders on the **Package Explorer** tab of [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer.  
   
  You can configure the event handler container in the following ways:  
   
@@ -61,12 +61,12 @@ manager: "jhubbard"
 -   Specify the logging mode that the event handler uses.  
   
 ## Event Handler Content  
- Creating an event handler is similar to building a package; an event handler has tasks and containers, which are sequenced into a control flow, and an event handler can also include data flows. The [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer includes the **Event Handlers** tab for creating custom event handlers.  
+ Creating an event handler is similar to building a package; an event handler has tasks and containers, which are sequenced into a control flow, and an event handler can also include data flows. The [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer includes the **Event Handlers** tab for creating custom event handlers.  
   
  You can also create event handlers programmatically. For more information, see [Handling Events Programmatically](../integration-services/building-packages-programmatically/handling-events-programmatically.md).  
   
 ## Run-Time Events  
- The following table lists the event handlers that [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] provides, and describes the run-time events that cause the event handler to run.  
+ The following table lists the event handlers that [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] provides, and describes the run-time events that cause the event handler to run.  
   
 |Event handler|Event|  
 |-------------------|-----------|  
@@ -88,21 +88,21 @@ At run time, containers and tasks raise events. You can create custom event hand
   
  An event handler is similar to a package. Like a package, an event handler can provide scope for variables, and includes a control flow and optional data flows. You can build event handlers for packages, the Foreach Loop container, the For Loop container, the Sequence container, and all tasks.  
   
- You create event handlers by using the design surface of the **Event Handlers** tab in [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer.  
+ You create event handlers by using the design surface of the **Event Handlers** tab in [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer.  
   
- When the **Event Handlers** tab is active, the **Control Flow Items** and **Maintenance Plan Tasks** nodes of the Toolbox in [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer contain the task and containers for building the control flow in the event handler. The **Data Flow Sources**, **Transformations**, **and Data Flow Destinations** nodes contain the data sources, transformations, and destinations for building the data flows in the event handler. For more information, see [Control Flow](../integration-services/control-flow/control-flow.md) and [Data Flow](../integration-services/data-flow/data-flow.md).  
+ When the **Event Handlers** tab is active, the **Control Flow Items** and **Maintenance Plan Tasks** nodes of the Toolbox in [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer contain the task and containers for building the control flow in the event handler. The **Data Flow Sources**, **Transformations**, **and Data Flow Destinations** nodes contain the data sources, transformations, and destinations for building the data flows in the event handler. For more information, see [Control Flow](../integration-services/control-flow/control-flow.md) and [Data Flow](../integration-services/data-flow/data-flow.md).  
   
- The **Event Handlers** tab also includes the **Connections** Managers area where you can create and modify the connection managers that event handlers use to connect to servers and data sources. For more information, see [Create Connection Managers](../Topic/Create%20Connection%20Managers.md).  
+ The **Event Handlers** tab also includes the **Connections** Managers area where you can create and modify the connection managers that event handlers use to connect to servers and data sources. For more information, see [Create Connection Managers](../a9retired/create-connection-managers.md).  
   
 ### Add an event handler on the Event Handlers tab  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
 3.  Click the **Event Handlers** tab.  
   
-     ![Screenshot of design surface with event handler](../integration-services/media/eventhandlers.gif "Screenshot of design surface with event handler")  
+     ![Screenshot of design surface with event handler](../a9retired/media/eventhandlers.gif "Screenshot of design surface with event handler")  
   
      Creating the control flow and data flows in an event handler is similar to creating the control flow and data flows in a package. For more information, see [Control Flow](../integration-services/control-flow/control-flow.md) and [Data Flow](../integration-services/data-flow/data-flow.md).  
   
@@ -119,13 +119,13 @@ At run time, containers and tasks raise events. You can create custom event hand
 9. On the **File** menu, click **Save Selected Items** to save the package.  
 
 ## Set the properties of an event handler  
- You can set properties in the **Properties** window of [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)] or programmatically.  
+ You can set properties in the **Properties** window of [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)] or programmatically.  
   
- For information about how to set these properties in [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], see [Set the Properties of a Task or Container](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md).  
+ For information about how to set these properties in [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], see [Set the Properties of a Task or Container](../a9retired/set-the-properties-of-a-task-or-container.md).  
   
  For information about programmatically setting these properties, see <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
 ## Related Tasks  
- For information about how to add an event handler to a package, see [Add an Event Handler to a Package](../Topic/Add%20an%20Event%20Handler%20to%20a%20Package.md).  
+ For information about how to add an event handler to a package, see [Add an Event Handler to a Package](../a9retired/add-an-event-handler-to-a-package.md).  
   
   

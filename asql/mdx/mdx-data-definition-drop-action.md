@@ -28,7 +28,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Data Definition - DROP ACTION
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Deletes a specified action from a specified cube.  
   
@@ -48,7 +48,7 @@ DROP ACTION CURRENTCUBE | Cube_Name
  A valid string expression that provides the name of the action being dropped.  
   
 ## See Also  
- [CREATE ACTION Statement &#40;MDX&#41;](../Topic/CREATE%20ACTION%20Statement%20\(MDX\).md)   
+ [CREATE ACTION Statement &#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)   
  [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

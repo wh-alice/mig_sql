@@ -30,7 +30,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Back Up and Restore Replicated Databases
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Replicated databases require special attention with regards to backing up and restoring data. This topic provides introductory information and links to further information on backup and restore strategies for each type of replication.  
   

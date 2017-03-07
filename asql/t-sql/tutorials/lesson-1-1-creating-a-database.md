@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 1-1 - Creating a Database
-Like many [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements, the CREATE DATABASE statement has a required parameter: the name of the database. CREATE DATABASE also has many optional parameters, such as the disk location where you want to put the database files. When you execute CREATE DATABASE without the optional parameters, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses default values for many of these parameters. This tutorial uses very few of the optional syntax parameters.  
+Like many [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements, the CREATE DATABASE statement has a required parameter: the name of the database. CREATE DATABASE also has many optional parameters, such as the disk location where you want to put the database files. When you execute CREATE DATABASE without the optional parameters, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses default values for many of these parameters. This tutorial uses very few of the optional syntax parameters.  
   
 ### To create a database  
   
@@ -34,13 +34,13 @@ Like many [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.m
   
 3.  In Query Editor, press **F5** to execute the statement and create a database named `TestData`.  
   
-When you create a database, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] makes a copy of the **model** database, and renames the copy to the database name. This operation should only take several seconds, unless you specify a large initial size of the database as an optional parameter.  
+When you create a database, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] makes a copy of the **model** database, and renames the copy to the database name. This operation should only take several seconds, unless you specify a large initial size of the database as an optional parameter.  
   
 > [!NOTE]  
 > The keyword GO separates statements when more than one statement is submitted in a single batch. GO is optional when the batch contains only one statement.  
   
 ## Next Task in Lesson  
-[Creating a Table &#40;Tutorial&#41;](../Topic/Creating%20a%20Table%20(Tutorial).md)  
+[Creating a Table &#40;Tutorial&#41;](../../t-sql/tutorials/lesson-1-2-creating-a-table.md)  
   
 ## See Also  
 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  

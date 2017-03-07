@@ -36,7 +36,7 @@ manager: "erikre"
 |Measures and Measure Groups|[Create Measures and Measure Groups in Multidimensional Models](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|  
 |Partitions|[Partitions in Multidimensional Models](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)|  
 |Perspectives|[Perspectives in Multidimensional Models](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)|  
-|Hierarchies|[Create User-Defined Hierarchies](../Topic/Create%20User-Defined%20Hierarchies.md)|  
+|Hierarchies|[Create User-Defined Hierarchies](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)|  
 |Actions|[Actions in Multidimensional Models](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)|  
 |Key Performance Indicators (KPI)|[Key Performance Indicators &#40;KPIs&#41; in Multidimensional Models](../../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |Calculations|[Calculations in Multidimensional Models](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)|  

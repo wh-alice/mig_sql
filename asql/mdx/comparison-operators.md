@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Comparison Operators
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   You use comparison operators with scalar data. You can use comparison operators in any Multidimensional Expressions (MDX) expression.  
   

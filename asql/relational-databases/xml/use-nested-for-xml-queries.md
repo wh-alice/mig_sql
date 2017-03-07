@@ -120,9 +120,9 @@ FOR XML AUTO, TYPE;
  Shows how to generate siblings by using a nested AUTO mode query  
   
  [Use Nested FOR XML Queries in ASP.NET](../../relational-databases/xml/use-nested-for-xml-queries-in-asp.net.md)  
- Demonstrates how an ASPX application can use FOR XML to return XML from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Demonstrates how an ASPX application can use FOR XML to return XML from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  [Shape XML with Nested FOR XML Queries](../../relational-databases/xml/shape-xml-with-nested-for-xml-queries.md)  
- Shows how to use nested FOR XML queries to control the structure of an XML document created by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Shows how to use nested FOR XML queries to control the structure of an XML document created by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
   

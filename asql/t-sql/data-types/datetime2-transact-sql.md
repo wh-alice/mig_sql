@@ -26,7 +26,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # datetime2 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Defines a date that is combined with a time of day that is based on 24-hour clock. **datetime2** can be considered as an extension of the existing **datetime** type that has a larger date range, a larger default fractional precision, and optional user-specified precision.  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
 |Time zone offset aware and preservation|No|  
 |Daylight saving aware|No|  
   
- For data type metadata, see [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys.systypes-transact-sql.md) or [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md). Precision and scale are variable for some date and time data types. To obtain the precision and scale for a column, see [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md), or [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.columns-transact-sql.md).  
+ For data type metadata, see [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-compatibility-views/sys.systypes-transact-sql.md) or [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md). Precision and scale are variable for some date and time data types. To obtain the precision and scale for a column, see [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md), or [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.columns-transact-sql.md).  
   
 ## Supported String Literal Formats for datetime2  
  The following tables list the supported ISO 8601 and ODBC string literal formats for **datetime2**. For information about alphabetical, numeric, unseparated, and time formats for the date and time parts of **datetime2**, see [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) and [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md).  
@@ -68,9 +68,9 @@ manager: "jhubbard"
  The ANSI and ISO 8601 compliance of [date](../../t-sql/data-types/date-transact-sql.md) and [time](../../t-sql/data-types/time-transact-sql.md) apply to **datetime2**.  
   
 ##  <a name="BackwardCompatibilityforDownlevelClients"></a> Backward Compatibility for Down-level Clients  
- Some down-level clients do not support the **time**, **date**, **datetime2** and **datetimeoffset** data types. The following table shows the type mapping between an up-level instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and down-level clients.  
+ Some down-level clients do not support the **time**, **date**, **datetime2** and **datetimeoffset** data types. The following table shows the type mapping between an up-level instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and down-level clients.  
   
-|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data type|Default string literal format passed to down-level client|Down-level ODBC|Down-level OLEDB|Down-level JDBC|Down-level SQLCLIENT|  
+|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data type|Default string literal format passed to down-level client|Down-level ODBC|Down-level OLEDB|Down-level JDBC|Down-level SQLCLIENT|  
 |-----------------------------------------|----------------------------------------------------------------|----------------------|-----------------------|----------------------|---------------------------|  
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR or SQL_VARCHAR|DBTYPE_WSTRor DBTYPE_STR|Java.sql.String|String or SqString|  
 |**date**|YYYY-MM-DD|SQL_WVARCHAR or SQL_VARCHAR|DBTYPE_WSTRor DBTYPE_STR|Java.sql.String|String or SqString|  
@@ -78,7 +78,7 @@ manager: "jhubbard"
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR or SQL_VARCHAR|DBTYPE_WSTRor DBTYPE_STR|Java.sql.String|String or SqString|  
   
 ## Converting Date and Time Data  
- When you convert to date and time data types, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] rejects all values it cannot recognize as dates or times. For information about using the CAST and CONVERT functions with date and time data, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ When you convert to date and time data types, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] rejects all values it cannot recognize as dates or times. For information about using the CAST and CONVERT functions with date and time data, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
 ### Converting Other Date and Time Types to the datetime2 Data Type  
 This section describes what occurs when other date and time data types are converted to the **datetime2** data type.  

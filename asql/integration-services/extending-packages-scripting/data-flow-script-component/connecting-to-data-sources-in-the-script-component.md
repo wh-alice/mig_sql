@@ -55,6 +55,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Connections](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Create Connection Managers](../Topic/Create%20Connection%20Managers.md)  
+ [Create Connection Managers](../../../a9retired/create-connection-managers.md)  
   
   

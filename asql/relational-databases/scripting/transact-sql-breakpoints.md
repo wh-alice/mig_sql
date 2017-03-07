@@ -17,10 +17,10 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Transact-SQL Breakpoints
-  Breakpoints specify that the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] debugger pause execution on a specific [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement, you can then view the state of the code elements at that point.  
+  Breakpoints specify that the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] debugger pause execution on a specific [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement, you can then view the state of the code elements at that point.  
   
 ## Breakpoints  
- When running the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] debugger, you can toggle a breakpoint on specific statements. When execution reaches a statement with a breakpoint, the debugger pauses execution so you can view debugging information, such as the values present in variables and parameters.  
+ When running the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] debugger, you can toggle a breakpoint on specific statements. When execution reaches a statement with a breakpoint, the debugger pauses execution so you can view debugging information, such as the values present in variables and parameters.  
   
  You can manage breakpoints individually in the editor window, or collectively by using the **Breakpoints** window. You can edit breakpoints to specify items such as specific conditions under which execution should pause, or the actions to be taken if the breakpoint is executed.  
   
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to specify the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement on which you want the debugger to pause.|[Toggle a Breakpoint](../../relational-databases/scripting/toggle-a-breakpoint.md)|  
+|Describes how to specify the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement on which you want the debugger to pause.|[Toggle a Breakpoint](../../relational-databases/scripting/toggle-a-breakpoint.md)|  
 |Describes how to temporarily deactivate a breakpoint, and later reactivate it. Also describes how to delete a breakpoint.|[Enable, Disable, and Delete Breakpoints](../../relational-databases/scripting/enable-disable-and-delete-breakpoints.md)|  
 |Describes how to specify a condition, which defines whether breakpoint breaks based on the evaluation of a specified Transact-SQL expression.|[Specify a Breakpoint Condition](../../relational-databases/scripting/specify-a-breakpoint-condition.md)|  
 |Describes how to specify a hit count, which causes a breakpoint to break only when the statement containing the breakpoint has been executed a specified number of times.|[Specify a Hit Count](../../relational-databases/scripting/specify-a-hit-count.md)|  
@@ -37,6 +37,6 @@ manager: "jhubbard"
 |Describes how to edit the location of a breakpoint.|[Edit a Breakpoint Location](../../relational-databases/scripting/edit-a-breakpoint-location.md)|  
   
 ## See Also  
- [Transact-SQL Debugger Information](../Topic/Transact-SQL%20Debugger%20Information.md)  
+ [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)  
   
   

@@ -21,7 +21,7 @@ In this task, you will create the working folder (C:\DeploymentTutorial) and the
   
 The working folder is at the root of the C drive. If you must use a different drive or location, you can do that. However, you need to note this location and then use it wherever the tutorial refers to the location of the DeploymentTutorial working folder.  
   
-In a later lesson, you will deploy packages that are saved to the file system to the sysssispackages table in the msdb[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database. Ideally you will deploy the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] packages to a different computer. If that is not possible, you can still learn a lot from doing this tutorial by deploying the packages to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that is on the local computer. The environment variables that are used on the local and destination computers have the same variable names, but different values are stored in the variables. For example, on the local computer, the value of the environment variable `DataTransfer` references the C:\DeploymentTutorial folder, whereas on the target computer the environment variable `DataTransfer` references the C:\DeploymentTutorialInstall folder.  
+In a later lesson, you will deploy packages that are saved to the file system to the sysssispackages table in the msdb[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database. Ideally you will deploy the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] packages to a different computer. If that is not possible, you can still learn a lot from doing this tutorial by deploying the packages to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that is on the local computer. The environment variables that are used on the local and destination computers have the same variable names, but different values are stored in the variables. For example, on the local computer, the value of the environment variable `DataTransfer` references the C:\DeploymentTutorial folder, whereas on the target computer the environment variable `DataTransfer` references the C:\DeploymentTutorialInstall folder.  
   
 If you plan to deploy to the local computer, you need to create only one set of environment variables; however, you will need to update the value of the environment variables to an appropriate value before you do the local deployment.  
   
@@ -82,7 +82,7 @@ If you plan to deploy the packages to a different computer, you must create two 
 10. Optionally, restart your computer.  
   
 ## Next Task in Lesson  
-[Step 2: Creating the Deployment Project](../Topic/Step%202:%20Creating%20the%20Deployment%20Project.md)  
+[Step 2: Creating the Deployment Project](../../integration-services/tutorials/lesson-1-2-creating-the-deployment-project.md)  
   
   
   

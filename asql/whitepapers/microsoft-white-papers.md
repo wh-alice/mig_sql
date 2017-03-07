@@ -20,6 +20,6 @@ manager: "jhubbard"
 [SQL Server In-Memory OLTP Internals for SQL Server 2016](https://msdn.microsoft.com/library/mt764316.aspx)
   
   
-![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)  
+![MS_Logo_X-Small](../a9notintoc/media/ms-logo-x-small.png)  
   
   

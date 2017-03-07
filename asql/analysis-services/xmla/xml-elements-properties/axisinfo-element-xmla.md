@@ -69,6 +69,6 @@ manager: "erikre"
  In a **root** element that uses the **MDDataSet** object, an **AxisInfo** element contains a collection of **HierarchyInfo** elements that, combined with the value of the **name** attribute, represents the definition of a single axis returned in the multidimensional dataset.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

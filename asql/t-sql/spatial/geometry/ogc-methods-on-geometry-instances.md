@@ -21,7 +21,7 @@ manager: "jhubbard"
 # OGC Methods on Geometry Instances
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../../relational-databases/indexes/includes/tsql-appliesto-ss2012-all-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports the Open Geospatial Consortium (OGC) methods on geometry instances.  
+  [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] supports the Open Geospatial Consortium (OGC) methods on geometry instances.  
   
  For more information on OGC specifications, see the following:  
   

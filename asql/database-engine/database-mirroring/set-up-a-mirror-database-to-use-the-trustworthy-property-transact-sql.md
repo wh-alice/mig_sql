@@ -34,7 +34,7 @@ manager: "jhubbard"
     SELECT name, database_id, is_trustworthy_on FROM sys.databases   
     ```  
   
-     For more information, see [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md).  
+     For more information, see [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md).  
   
 2.  After starting mirroring, verify that the database is currently the principal database, the session is using a synchronous operating mode, and the session is already synchronized.  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
     SELECT database_id, mirroring_role, mirroring_safety_level_desc, mirroring_state_desc FROM sys.database_mirroring  
     ```  
   
-     For more information, see [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-mirroring-transact-sql.md).  
+     For more information, see [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-mirroring-transact-sql.md).  
   
 3.  Once the mirroring session is synchronized, manually fail over to the mirror database.  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
      In SQL Server Management Studio:  
   
-    -   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../Topic/Establish%20a%20Database%20Mirroring%20Session%20Using%20Windows%20Authentication%20\(SQL%20Server%20Management%20Studio\).md)  
+    -   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
 ## See Also  
  [TRUSTWORTHY Database Property](../../relational-databases/security/trustworthy-database-property.md)   

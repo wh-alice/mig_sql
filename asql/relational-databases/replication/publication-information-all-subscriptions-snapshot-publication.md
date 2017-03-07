@@ -33,7 +33,7 @@ manager: "jhubbard"
  Filter settings are specific to each grid. Column selection and sorting are applied to all grids of the same type, such as the publications grid for each Publisher.  
   
  **Show**  
- [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] and later versions only. Select the subscription states to display for the selected subscription type. For example, you can select to display only those subscriptions that have an error.  
+ [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] and later versions only. Select the subscription states to display for the selected subscription type. For example, you can select to display only those subscriptions that have an error.  
   
  **Status**  
  The status of each subscription, which is determined by the status of the Snapshot Agent or the Distribution Agent (the higher priority status is displayed).  
@@ -42,9 +42,9 @@ manager: "jhubbard"
   
 -   Error  
   
--   Expiring soon/Expired ([!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] and later versions only)  
+-   Expiring soon/Expired ([!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] and later versions only)  
   
--   Uninitialized subscription ([!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] and later versions only)  
+-   Uninitialized subscription ([!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] and later versions only)  
   
 -   Retrying failed command  
   
@@ -68,6 +68,6 @@ manager: "jhubbard"
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
  [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/fbb59d31-2424-4552-9195-0da8d83e755f.md)   
- [Monitoring Replication](../Topic/Monitoring%20Replication.md)  
+ [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

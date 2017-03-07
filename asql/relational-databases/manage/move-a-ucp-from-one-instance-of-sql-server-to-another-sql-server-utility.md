@@ -15,15 +15,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Move a UCP from One Instance of SQL Server to Another (SQL Server Utility)
-  This topic describes how to move a utility control point (UCP) from one instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to another in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+  This topic describes how to move a utility control point (UCP) from one instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to another in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 #### Move a UCP from one instance of SQL Server to another.  
   
-1.  Create a new UCP on the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that will be the new host instance of the UCP. For more information, see [Create a SQL Server Utility Control Point &#40;SQL Server Utility&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md).  
+1.  Create a new UCP on the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that will be the new host instance of the UCP. For more information, see [Create a SQL Server Utility Control Point &#40;SQL Server Utility&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md).  
   
-2.  If non-default policy settings have been set for any instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in your [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility, make note of the policy thresholds so that you can re-establish them on the new UCP. Default policies are applied when instances are added to the new UCP. If default policies are in effect, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility list view displays **Global** in the **Policy Type** column.  
+2.  If non-default policy settings have been set for any instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] in your [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility, make note of the policy thresholds so that you can re-establish them on the new UCP. Default policies are applied when instances are added to the new UCP. If default policies are in effect, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility list view displays **Global** in the **Policy Type** column.  
   
 3.  Remove all managed instances from the old UCP. For more information, see [Remove an Instance of SQL Server from the SQL Server Utility](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md).  
   
@@ -31,9 +31,9 @@ manager: "jhubbard"
   
 5.  Restore the backup of the UMDW to the new UCP. For more information, see [Copy Databases with Backup and Restore](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
-6.  Enroll instances into the new UCP to make them managed by the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility. For more information, see [Enroll an Instance of SQL Server &#40;SQL Server Utility&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md).  
+6.  Enroll instances into the new UCP to make them managed by the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility. For more information, see [Enroll an Instance of SQL Server &#40;SQL Server Utility&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md).  
   
-7.  Implement custom policy definitions for the managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], as necessary.  
+7.  Implement custom policy definitions for the managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], as necessary.  
   
 8.  Wait approximately 1 hour for data collection and aggregation operations to complete.  
   

@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Except (MDX) function
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Evaluates two sets and removes those tuples in the first set that also exist in the second set, optionally retaining duplicates.  
   
@@ -62,7 +62,7 @@ WHERE
 ```  
   
 ## See Also  
- [- &#40;Except&#41; &#40;MDX&#41;](../Topic/-%20\(Except\)%20\(MDX\).md)   
+ [- &#40;Except&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)   
  [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

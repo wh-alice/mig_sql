@@ -20,7 +20,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Backup and Restore for Oracle Publishers
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Follow these guidelines when backing up and restoring:  
   

@@ -16,7 +16,7 @@ ms.author: "carlrab"
 manager: "jhubbard"
 ---
 # Temporal Table Security
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   To understand security as it applies to temporal tables, it is important to understand the security principals that apply to temporal tables. After you understand these security principles, you are ready to dive into the security around the **CREATE TABLE**, **ALTER TABLE**, and **SELECT** statements.  
   

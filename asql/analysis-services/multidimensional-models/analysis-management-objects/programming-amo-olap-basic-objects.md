@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Programming AMO OLAP Basic Objects
-  Creating complex [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] objects is simple and straightforward but requires attention to detail. This topic explains the programming details of OLAP basic objects. This topic contains the following sections:  
+  Creating complex [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] objects is simple and straightforward but requires attention to detail. This topic explains the programming details of OLAP basic objects. This topic contains the following sections:  
   
 -   [Dimension Objects](#Dim)  
   
@@ -505,7 +505,7 @@ static void FullProcessAllPartitions(MeasureGroup mg)
   
 -   Partitions reside on the same server; remote partitions can be merged if on the same server.  
   
- Unlike previous versions, in [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] it is not necessary that all source partitions have identical aggregations design.  
+ Unlike previous versions, in [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] it is not necessary that all source partitions have identical aggregations design.  
   
  The resulting set of aggregations for the target partition is the same set of aggregations as of the state before running merge command.  
   
@@ -563,11 +563,11 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
   
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
- [Introducing AMO Classes](../Topic/Introducing%20AMO%20Classes.md)   
+ [Introducing AMO Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO OLAP Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)   
- [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../Topic/Logical%20Architecture%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
+ [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Processing a multidimensional model &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../Topic/Install%20Sample%20Data%20and%20Projects%20for%20the%20Analysis%20Services%20Multidimensional%20Modeling%20Tutorial.md)  
+ [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../../../analysis-services/tutorials/install-sample-data-and-projects.md)  
   
   

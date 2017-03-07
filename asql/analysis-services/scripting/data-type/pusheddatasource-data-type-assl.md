@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # PushedDataSource Data Type (ASSL)
-  Defines a primitive data type that represents a data source (such as a [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package) used for "pushing" data into a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element.  
+  Defines a primitive data type that represents a data source (such as a [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] package) used for "pushing" data into a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element.  
   
 ## Syntax  
   

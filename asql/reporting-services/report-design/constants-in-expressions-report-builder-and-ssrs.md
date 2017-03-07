@@ -19,7 +19,7 @@ manager: "erikre"
   A constant consists of literal text or predefined text. The report processor has access to predefined constants so that when you include them in an expression, the values they represent are substituted in the expression before it is evaluated.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Literal Text  
  In an expression, literal text is text that is in double quotation marks. You can also type text directly into a text box without double quotation marks if it is not part of an expression. If the text box value does not begin with an equal sign (=), the text is treated as literal text. The following table shows several examples of literal text in an expression.  
@@ -39,22 +39,22 @@ manager: "erikre"
 |BorderStyle|Valid values for a line added to a report.|Default, None, Dotted, Dashed, Solid, Double, DashDot, DashDotdot|  
   
 ## Visual Basic Constants  
- You can use constants defined in the [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] run-time library in an expression. For example, you can use the constant **DateInterval.Day**. The following expression for the date January 10, 2008 returns the number 10:  
+ You can use constants defined in the [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] run-time library in an expression. For example, you can use the constant **DateInterval.Day**. The following expression for the date January 10, 2008 returns the number 10:  
   
  `=DatePart("d",Globals!ExecutionTime)`  
   
 ## CLR Constants  
- You can use constants defined in [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] common language run-time (CLR) classes in an expression. The following table shows an example of a system-defined color.  
+ You can use constants defined in [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] common language run-time (CLR) classes in an expression. The following table shows an example of a system-defined color.  
   
 |Constant|Description|  
 |--------------|-----------------|  
 |MistyRose|When you create an expression for a report property that is based on background color, you can specify a color by name. Valid names are listed in the **Expression** dialog box.|  
   
 ## See Also  
- [Expression Dialog Box](../Topic/Expression%20Dialog%20Box.md)   
+ [Expression Dialog Box](../../a9retired/expression-dialog-box.md)   
  [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Expression Dialog Box &#40;Report Builder&#41;](../Topic/Expression%20Dialog%20Box%20\(Report%20Builder\).md)  
+ [Expression Dialog Box &#40;Report Builder&#41;](../../a9retired/expression-dialog-box-report-builder.md)  
   
   

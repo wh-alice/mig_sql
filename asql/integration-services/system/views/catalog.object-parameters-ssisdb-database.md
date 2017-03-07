@@ -15,9 +15,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.object_parameters (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Displays the parameters for all packages and projects in the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog.  
+  Displays the parameters for all packages and projects in the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] catalog.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -35,8 +35,8 @@ manager: "jhubbard"
 |value_type|**char(1)**|Indicates the type of parameter value. This field displays `V` when parameter_value is a literal value and `R` when the value is assigned by referencing an environment variable.|  
 |value_set|**bit**|When the value is `1`, the parameter value has been assigned. When the value is `0`, the parameter value has not been assigned.|  
 |referenced_variable_name|**nvarchar(128)**|The name of the environment variable that is assigned to the value of the parameter. The default value is **NULL**.|  
-|validation_status|**char(1)**|Identified for informational purposes only. Not used in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
-|last_validation_time|**datetimeoffset(7)**|Identified for informational purposes only. Not used in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|validation_status|**char(1)**|Identified for informational purposes only. Not used in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)].|  
+|last_validation_time|**datetimeoffset(7)**|Identified for informational purposes only. Not used in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ## Permissions  
  To see rows in this view, you must have one of the following permissions:  

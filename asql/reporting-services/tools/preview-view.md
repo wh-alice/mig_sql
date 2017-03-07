@@ -20,7 +20,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Preview View
-In [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Report Designer, use **Preview** view to display the rendered report. When a report is previewed, Report Designer runs the report locally and displays it in the Preview view. In preview mode, the report is processed in full. If the report has a complex query or has a large amount of data, preview might take several minutes to complete the first time you view it. For subsequent changes that affect only the format of the report, preview uses cached data.
+In [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] Report Designer, use **Preview** view to display the rendered report. When a report is previewed, Report Designer runs the report locally and displays it in the Preview view. In preview mode, the report is processed in full. If the report has a complex query or has a large amount of data, preview might take several minutes to complete the first time you view it. For subsequent changes that affect only the format of the report, preview uses cached data.
 
   ![ssrs_ssdt_preview](../../reporting-services/reports/media/ssrs-ssdt-preview.png)  
 ## Options  

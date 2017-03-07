@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # IBCPSession::BCPWriteFmt (OLE DB)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   Writes format information for each column to the format file.  
   
@@ -48,7 +48,7 @@ HRESULT BCPWriteFmt(
  The method succeeded.  
   
  E_FAIL  
- A provider-specific error occurred; for detailed information, use the [ISQLServerErrorInfo](../Topic/ISQLServerErrorInfo%20\(OLE%20DB\).md) interface.  
+ A provider-specific error occurred; for detailed information, use the [ISQLServerErrorInfo](../../a9retired/isqlservererrorinfo-ole-db.md) interface.  
   
  E_OUTOFMEMORY  
  Out-of-memory error.  

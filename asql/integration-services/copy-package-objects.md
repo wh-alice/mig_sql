@@ -24,11 +24,11 @@ manager: "jhubbard"
   
 ### To copy control and data flow items  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the packages that you want work with.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] project that contains the packages that you want work with.  
   
 2.  In Solution Explorer, double-click the packages that you want to copy between.  
   
-3.  In [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer, click the tab for the package that contains the items to copy and click the **Control Flow**, **Data Flow**, or **Event Handlers** tab.  
+3.  In [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer, click the tab for the package that contains the items to copy and click the **Control Flow**, **Data Flow**, or **Event Handlers** tab.  
   
 4.  Select the control flow or data flow items to copy. You can either select items one at a time by pressing the Shift key and clicking the item or select items as a group by dragging the pointer across the items you want to select.  
   
@@ -46,11 +46,11 @@ manager: "jhubbard"
   
 ### To copy connection managers  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package that you want to work with.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package that you want to work with.  
   
 2.  In Solution Explorer, double-click the package.  
   
-3.  In [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Designer, click the **Control Flow**, **Data Flow**, or **Event Handler** tab.  
+3.  In [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Designer, click the **Control Flow**, **Data Flow**, or **Event Handler** tab.  
   
 4.  In the **Connection Managers** area, right-click the connection manager, and then click **Copy**. You can copy only one connection manager at a time.  
   
@@ -62,6 +62,6 @@ manager: "jhubbard"
  [Control Flow](../integration-services/control-flow/control-flow.md)   
  [Data Flow](../integration-services/data-flow/data-flow.md)   
  [Integration Services &#40;SSIS&#41; Connections](../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Copy Project Items](../Topic/Copy%20Project%20Items.md)  
+ [Copy Project Items](../a9retired/copy-project-items.md)  
   
   

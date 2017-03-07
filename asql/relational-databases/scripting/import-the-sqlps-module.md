@@ -15,7 +15,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Import the SQLPS Module
-  The recommended way to manage [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from PowerShell is to import the **sqlps** module into a Windows PowerShell environment. The module loads and registers the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] snap-ins and manageability assemblies.  Beginning in Windows PowerShell 3.0, modules are imported automatically when any cmdlet or function in the module is used in a command. This feature works on any module in a directory that this included in the value of the PSModulePath environment variable.  For additional information, see [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)
+  The recommended way to manage [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] from PowerShell is to import the **sqlps** module into a Windows PowerShell environment. The module loads and registers the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] snap-ins and manageability assemblies.  Beginning in Windows PowerShell 3.0, modules are imported automatically when any cmdlet or function in the module is used in a command. This feature works on any module in a directory that this included in the value of the PSModulePath environment variable.  For additional information, see [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)
   
 1.  **Before You Begin:**  [Security](#Security)  
   
@@ -28,11 +28,11 @@ manager: "jhubbard"
   
 -   Run Windows PowerShell script files.  
   
--   Run [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] cmdlets.  
+-   Run [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] cmdlets.  
   
--   Use the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provider paths to navigate through the hierarchy of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] objects.  
+-   Use the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] provider paths to navigate through the hierarchy of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] objects.  
   
--   Use the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] manageability object models (such as Microsoft.SqlServer.Management.Smo) to manage [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] objects.  
+-   Use the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] manageability object models (such as Microsoft.SqlServer.Management.Smo) to manage [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] objects.  
   
 > [!NOTE]  
 >  The verbs used in the names of two SQL Server cmdlets (**Encode-Sqlname** and **Decode-Sqlname**) do not match the approved verbs for Windows PowerShell. This has no effect on their operation, but Windows PowerShell raises a warning when the **sqlps** module is imported to a session.  
@@ -61,7 +61,7 @@ Get-Module -ListAvailable -Name Sqlps;
 > [!NOTE]  
 >  If the **sqlps** module is not in your path, change to the location of the module or use the full path in the script (using double-quotes of folders in your path have spaces). The **sqlps** module is located in the Tools\Powershell folder for your SQL Server instance.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [&#91;Top&#93;]()  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [&#91;Top&#93;]()  
   
 ## See Also  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   

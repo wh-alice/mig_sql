@@ -17,22 +17,22 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Lesson 1: Creating a Sample Subscriber Database
-In this [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] tutorial lesson, you create a small "subscriber" database to store subscription data that will be used by a data-driven subscription. When the subscription is processed, the report server retrieves this data and uses it to customize report output. For example, the rows of data include specific order numbers to use for filters and what file format generated reports will be in when they are created.  
+In this [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] tutorial lesson, you create a small "subscriber" database to store subscription data that will be used by a data-driven subscription. When the subscription is processed, the report server retrieves this data and uses it to customize report output. For example, the rows of data include specific order numbers to use for filters and what file format generated reports will be in when they are created.  
   
-This lesson assumes you are using [!INCLUDE[ssManStudioFull_md](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]  to create a [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] database.  
+This lesson assumes you are using [!INCLUDE[ssManStudioFull_md](../../a9notintoc/includes/ssmanstudiofull-md.md)]  to create a [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] database.  
   
 ### To create a sample Subscriber database  
   
-1.  Start [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], and open a connection to an instance of the [!INCLUDE[ssDEnoversion_md](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)].  
+1.  Start [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], and open a connection to an instance of the [!INCLUDE[ssDEnoversion_md](../../a9notintoc/includes/ssdenoversion-md.md)].  
   
 2.  Right-click on Databases, select **New Database...**.  
   
 3.  In the New Database dialog box, in **Database Name**, type *Subscribers*. 
-4. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 5.  Click the **New Query** button on the toolbar.  
   
-6.  Copy the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements into the empty query:  
+6.  Copy the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements into the empty query:  
   
     ```  
     Use Subscribers  

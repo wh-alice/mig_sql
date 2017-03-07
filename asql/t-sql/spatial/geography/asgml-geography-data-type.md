@@ -38,7 +38,7 @@ manager: "jhubbard"
 ```  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **xml**  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] return type: **xml**  
   
  CLR return type: **SqlXml**  
   

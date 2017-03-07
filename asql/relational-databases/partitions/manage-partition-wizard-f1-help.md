@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 ### To start the Manage Partition Wizard  
   
--   In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], select the database, right-click the table on which you want to create partitions, point to **Storage**, and then click **Manage Partition**.  
+-   In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], select the database, right-click the table on which you want to create partitions, point to **Storage**, and then click **Manage Partition**.  
   
      **Note** If **Manage Partition** is unavailable, you may have selected a table that does not contain partitions. Click **Create Partition** on the **Storage** submenu and use the **Create Partition Wizard** to create partitions in your table.  
   
@@ -85,7 +85,7 @@ manager: "jhubbard"
  **Manage partitioned data in a sliding window scenario**  
  Appends an empty partition to the existing table that can be used for switching in data. The wizard currently supports switching into the last partition and switching out the first partition.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
 ##  <a name="SwitchIn"></a> Select Partition Switching-In Options Page  
  Use the **Select Partition Switching-In options** page to select the staging table you are switching into the partitioned table.  
@@ -100,7 +100,7 @@ manager: "jhubbard"
  **Switch in table**  
  Select the staging table that contains the partition that you want to add to your partitioned table. You must create this staging table before you switch-in partitions with the **Manage PartitionsWizard**.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
 ##  <a name="SwitchOut"></a> Select Partition Switching-Out Options Page  
  Use the **Select Partition Switching-Out options** page to select the partition and the staging table to hold the partitioned data that you are switching out of the partitioned table.  
@@ -118,7 +118,7 @@ manager: "jhubbard"
  **Existing**  
  Select an existing staging table you want to use for the partition you want to switch out of the current source table. If the existing table contains data, this data will be overwritten with the data you are switching out.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
 ##  <a name="StagingTableOptions"></a> Select the Staging Table Options Page  
  Use the **Select the Staging Table Options** page to create the staging table you want to use for switching your partitioned data.  
@@ -140,7 +140,7 @@ manager: "jhubbard"
  **Filegroup**  
  Select a filegroup for the new table.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
 ##  <a name="OutputOption"></a> Select Output Option Page  
  Use the **Select Output Option** page to specify how you want to complete the modifications to your partitions.  
@@ -167,13 +167,13 @@ manager: "jhubbard"
  **Change schedule**  
  Opens the **New Job Schedule** dialog box, where you can select, change, or view the properties of the scheduled job.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
 ##  <a name="NewJob"></a> New Job Schedule Page  
  Use the **New Job Schedule** page to view and change the properties of the schedule.  
   
 ### Options  
- Select the type of schedule you want for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent job.  
+ Select the type of schedule you want for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent job.  
   
  **Name**  
  Type a new name for the schedule.  
@@ -250,7 +250,7 @@ manager: "jhubbard"
  **Time**  
  Select the time for the job to run.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
 ##  <a name="Summary"></a> Summary Page  
  Use the **Summary** page to review the options that you have selected on the previous pages.  
@@ -259,7 +259,7 @@ manager: "jhubbard"
  **Review your selections**  
  Displays the selections you have made for each page of the wizard. Click a node to expand and view your previously selected options.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
 ##  <a name="Progress"></a> Progress Page  
  Use the **Progress** page to monitor status information about the actions of the **Manage Partition Wizard**. Depending on the options that you selected in the wizard, the **Progress** page might contain one or more actions. The top box displays the overall status of the wizard and the number of status, error, and warning messages that the wizard has received.  
@@ -297,7 +297,7 @@ manager: "jhubbard"
  **Close**  
  Close the wizard.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
+ ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
 ## See Also  
  [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  

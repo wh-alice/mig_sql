@@ -34,7 +34,7 @@ manager: "erikre"
  For more information about report paging, see [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ### To print a report in Report Builder  
   
@@ -55,7 +55,7 @@ manager: "erikre"
   
 ### To print a report from a Web browser application  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md).  
   
 2.  In Report Manager, navigate to the report that you want to print. Open the report.  
   
@@ -80,7 +80,7 @@ manager: "erikre"
   
 1.  Right-click outside of the report body and click **Report Properties**.  
   
-2.  In **Page Setup**, select a value from the **Paper Size** list. Each option populates the **Width** and **Height** properties. You can also specify a custom size by typing numeric values in the **Width** and **Height** boxes. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+2.  In **Page Setup**, select a value from the **Paper Size** list. Each option populates the **Width** and **Height** properties. You can also specify a custom size by typing numeric values in the **Width** and **Height** boxes. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  Size values have a default unit based on the user's locale settings. To designate a different unit, type a physical unit designator such as cm, mm, pt, or pc after the numeric value.  
@@ -96,7 +96,7 @@ manager: "erikre"
 ## See Also  
  [Print Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Report Properties Dialog Box, Page Setup &#40;Report Builder&#41;](../Topic/Report%20Properties%20Dialog%20Box,%20Page%20Setup%20\(Report%20Builder\).md)   
+ [Report Properties Dialog Box, Page Setup &#40;Report Builder&#41;](../../a9retired/report-properties-dialog-box-page-setup-report-builder.md)   
  [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
   
   

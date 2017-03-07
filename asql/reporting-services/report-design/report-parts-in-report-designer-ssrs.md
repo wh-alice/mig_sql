@@ -72,7 +72,7 @@ manager: "erikre"
   
 2.  Deploy the report.  
   
- When you deploy the report, the report part is published to a SharePoint site or report server, and others can reuse it. To publish a report part, you must have a connection to and sufficient permissions on a [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] report server when you deploy the report.  
+ When you deploy the report, the report part is published to a SharePoint site or report server, and others can reuse it. To publish a report part, you must have a connection to and sufficient permissions on a [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] report server when you deploy the report.  
   
   
 ##  <a name="SearchReuseComponents"></a> Reusing Report Parts  

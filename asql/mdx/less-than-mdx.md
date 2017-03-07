@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # &lt; (Less Than) (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Performs a comparison operation that determines whether the value of one Multidimensional Expressions (MDX) expression is less than the value of another MDX expression.  
   

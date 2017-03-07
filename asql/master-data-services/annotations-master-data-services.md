@@ -18,15 +18,15 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Annotations (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], annotations are comments that you enter to provide details about transactions.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], annotations are comments that you enter to provide details about transactions.  
   
  You can annotate a transaction to provide information about why an action was taken. You must select a transaction to add a related annotation. Annotations are displayed along with transactions in:  
   
--   The **Explorer** functional area of the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] web application.  
+-   The **Explorer** functional area of the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] web application.  
   
--   The **Version Management** functional area of the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] web application.  
+-   The **Version Management** functional area of the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] web application.  
   
--   The MDS [!INCLUDE[ssMDSXLS](../analysis-services/includes/ssmdsxls-md.md)].  
+-   The MDS [!INCLUDE[ssMDSXLS](../a9notintoc/includes/ssmdsxls-md.md)].  
   
 ## Related Tasks  
   

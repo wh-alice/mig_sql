@@ -19,7 +19,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Report Server ExecutionLog and the ExecutionLog3 View
-  The [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], report server execution log contains information about the reports that execute on the server or on multiple servers in a native mode scale-out deployment or a SharePoint farm. You can use the report execution log to find out how often a report is requested, what output formats are used the most, and how many milliseconds of processing time is spent on each processing phase. The log contains information on the length of time spent executing a report's dataset query and the time spent processing the data. If you are a report server administrator, you can review the log information and identify long running tasks and make suggestions to the report authors on the areas of the report (dataset or processing) they may be able to improve.  
+  The [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)], report server execution log contains information about the reports that execute on the server or on multiple servers in a native mode scale-out deployment or a SharePoint farm. You can use the report execution log to find out how often a report is requested, what output formats are used the most, and how many milliseconds of processing time is spent on each processing phase. The log contains information on the length of time spent executing a report's dataset query and the time spent processing the data. If you are a report server administrator, you can review the log information and identify long running tasks and make suggestions to the report authors on the areas of the report (dataset or processing) they may be able to improve.  
   
  Report servers configured for SharePoint mode, can also utilize the SharePoint ULS logs. For more information, see [Turn on Reporting Services events for the SharePoint trace log &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
@@ -43,7 +43,7 @@ manager: "erikre"
 -   [Log Fields (ExecutionLog)](#bkmk_executionlog)  
   
 ##  <a name="bkmk_sharepoint"></a> Configuration Settings for a SharePoint mode Report Server  
- You can turn report execution logging on or off from the system settings of a [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] service application.  
+ You can turn report execution logging on or off from the system settings of a [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] service application.  
   
  By default, log entries are kept 60 days. Entries that exceed this date are removed at 2:00 A.M. every day. On a mature installation, only 60 days of information will be available at any given time.  
   
@@ -53,7 +53,7 @@ manager: "erikre"
   
 1.  From SharePoint Central Administration, click **Manage service applications** in the **Application Management** group.  
   
-2.  Click the name of the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] service application you want to configure.  
+2.  Click the name of the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] service application you want to configure.  
   
 3.  Click **System Settings**.  
   
@@ -65,7 +65,7 @@ manager: "erikre"
   
  You need to enable logging as described in the previous steps and then complete the following:  
   
-1.  From the **System Settings** page of your [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] services application, find the **User-defined** section.  
+1.  From the **System Settings** page of your [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] services application, find the **User-defined** section.  
   
 2.  Change the **ExecutionLogLevel** to **verbose**. This field is a text entry field and the two possible values are **verbose** and **normal**.  
   
@@ -260,7 +260,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 -   **ExternalImages**  
   
-     Added in [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)]  
+     Added in [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)]  
   
      The value is in miliseconds. This data can be used to diagnose performance issues. The time needed to retrieve images from an external webserver may slow the overall report execution.  
   
@@ -274,7 +274,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 -   **Connections**  
   
-     Added in [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)]  
+     Added in [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)]  
   
      A multi-leveled structure  
   

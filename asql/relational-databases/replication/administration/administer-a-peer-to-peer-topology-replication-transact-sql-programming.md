@@ -22,7 +22,7 @@ manager: "jhubbard"
   Administering a peer-to-peer topology is similar to administering a typical transactional replication topology, but there are a number of areas with special considerations. The principal difference in administering a peer-to-peer topology is that some changes require the system to be *quiesced*. Quiescing a system involves stopping activity on published tables at all nodes and ensuring that each node has received all changes from all other nodes. For more information, see [Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
 > [!NOTE]  
->  In a peer-to-peer topology, the distributor cannot be using an earlier version of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] than a pull subscriber.  
+>  In a peer-to-peer topology, the distributor cannot be using an earlier version of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] than a pull subscriber.  
   
 ### To add an article to an existing configuration  
   
@@ -34,10 +34,10 @@ manager: "jhubbard"
   
 4.  Bulk copy the data for the new table manually at all nodes by using the [bcp utility](../../../tools/bcp-utility.md).  
   
-5.  Execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) to create the new article at each node in the topology. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+5.  Execute [sp_addarticle](../../../relational-databases/reference/system-stored-procedures/sp-addarticle-transact-sql.md) to create the new article at each node in the topology. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
     > [!NOTE]  
-    >  After [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) is executed, replication automatically adds the article to the subscriptions in the topology.  
+    >  After [sp_addarticle](../../../relational-databases/reference/system-stored-procedures/sp-addarticle-transact-sql.md) is executed, replication automatically adds the article to the subscriptions in the topology.  
   
 6.  Restart the Distribution Agents at each node in the topology.  
   
@@ -52,15 +52,15 @@ manager: "jhubbard"
 ## Example  
  The following example demonstrates how to add a new table article to an existing peer-to-peer replication topology that has two nodes.  
   
- [!code-sql[HowTo#sp_addp2particle_createtables](../../../relational-databases/replication/codesnippet/tsql/administer-a-peer-to-pee_1.sql)]  
+ [!code-sql[HowTo#sp_addp2particle_createtables](../../../a9retired/codesnippet/tsql/administer-a-peer-to-pee_1.sql)]  
   
- [!code-sql[HowTo#sp_addp2particle_cmdline](../../../relational-databases/replication/codesnippet/tsql/administer-a-peer-to-pee_2.sql)]  
+ [!code-sql[HowTo#sp_addp2particle_cmdline](../../../a9retired/codesnippet/tsql/administer-a-peer-to-pee_2.sql)]  
   
- [!code-sql[HowTo#sp_addp2particle_createarticle](../../../relational-databases/replication/codesnippet/tsql/administer-a-peer-to-pee_3.sql)]  
+ [!code-sql[HowTo#sp_addp2particle_createarticle](../../../a9retired/codesnippet/tsql/administer-a-peer-to-pee_3.sql)]  
   
 ## See Also  
  [Administration &#40;Replication&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
  [Back Up and Restore of SQL Server Databases](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Peer-to-Peer Transactional Replication](../Topic/Peer-to-Peer%20Transactional%20Replication.md)  
+ [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

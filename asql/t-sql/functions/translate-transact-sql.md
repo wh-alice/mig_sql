@@ -20,7 +20,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # TRANSLATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../../analysis-services/includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../../a9notintoc/includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
 Returns the string provided as a first argument after some characters specified in the second argument are translated into a destination set of characters.
 

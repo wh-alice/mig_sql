@@ -22,7 +22,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Select rows to migrate by using a filter function (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   If you store cold data in a separate table, you can configure Stretch Database to migrate the entire table. If your table contains both hot and cold data, on the other hand, you can specify a filter predicate to select the rows to migrate. The filter predicate is an inline table-valued function. This topic describes how to write an inline table-valued function to select rows to migrate.  
   
@@ -208,7 +208,7 @@ If you want use a function that you can't create in the **Enable Database for St
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
   
-2. Wait for migration to finish. You can check the status in **Stretch Database Monitor** from SQL Server Management Studio, or you can query the **sys.dm_db_rda_migration_status** view. For more info, see [Monitor and troubleshoot data migration](../../sql-server/install/monitor-and-troubleshoot-data-migration-stretch-database.md) or [sys.dm_db_rda_migration_status](sys.dm_db_rda_migration_status%20\(Transact-SQL\).md).  
+2. Wait for migration to finish. You can check the status in **Stretch Database Monitor** from SQL Server Management Studio, or you can query the **sys.dm_db_rda_migration_status** view. For more info, see [Monitor and troubleshoot data migration](../../sql-server/install/monitor-and-troubleshoot-data-migration-stretch-database.md) or [sys.dm_db_rda_migration_status](../../relational-databases/reference/system-dynamic-management-views/stretch-database-sys.dm-db-rda-migration-status.md).  
   
 3. Create the filter function that you want to apply to the table.  
   
@@ -601,7 +601,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
  After you remove the filter function, all rows in the table are eligible for migration. As a result, you cannot specify a filter function for the same table later unless you bring back all the remote data for the table from Azure first. This restriction exists to avoid the situation where rows that are not eligible for migration when you provide a new filter function have already been migrated to Azure.  
   
 ## Check the filter function applied to a table  
- To check the filter function applied to a table, open the catalog view **sys.remote_data_archive_tables** and check the value of the **filter_predicate** column. If the value is null, the entire table is eligible for archiving. For more info, see [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../Topic/sys.remote_data_archive_tables%20\(Transact-SQL\).md).  
+ To check the filter function applied to a table, open the catalog view **sys.remote_data_archive_tables** and check the value of the **filter_predicate** column. If the value is null, the entire table is eligible for archiving. For more info, see [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/stretch-database-catalog-views-sys.remote-data-archive-tables.md).  
   
 ## Security notes for filter functions  
 A compromised account with db_owner privileges can do the following things.  

@@ -36,10 +36,10 @@ manager: "jhubbard"
 |**ReadOnlyVariables**|Type a comma-separated list of variables for read-only access by the Script transformation.<br /><br /> Note: Variable names are case-sensitive.|  
 |**ReadWriteVariables**|Type a comma-separated list of variables for read/write access by the Script transformation.<br /><br /> Note: Variable names are case-sensitive.|  
 |**ScriptLanguage**|Select the script language to be used by the Script component.<br /><br /> To set the default script language for Script components and Script tasks, use the **Scripting language** option on the **General** page of the **Options** dialog box.|  
-|**UserComponentTypeName**|Specifies the <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> class and the **Microsoft.SqlServer.TxScript** assembly that support the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] infrastructure.|  
+|**UserComponentTypeName**|Specifies the <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> class and the **Microsoft.SqlServer.TxScript** assembly that support the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] infrastructure.|  
   
  **Edit Script**  
- Use [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] Tools for Applications (VSTA) to create or modify a script.  
+ Use [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../a9retired/includes/vsprvs-md.md)] Tools for Applications (VSTA) to create or modify a script.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   

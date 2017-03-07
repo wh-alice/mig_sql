@@ -33,7 +33,7 @@ In this section, you'll learn how to use these functions. Let's start with  *rxD
 ## Use rxDataStep to Transform Variables  
 The *rxDataStep* function processes data one chunk at a time, reading from one data source and writing to another. You can specify the columns to transform, the transformations to load, and so forth.  
   
-To make this example interesting, you’ll use a function from another R package to transform your data.  The **boot** package is one of the "recommended" packages, meaning that **boot** is included with every distribution of R, but is not loaded automatically on start-up. Therefore, the package should already be available on the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance that you've been using with [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)].  
+To make this example interesting, you’ll use a function from another R package to transform your data.  The **boot** package is one of the "recommended" packages, meaning that **boot** is included with every distribution of R, but is not loaded automatically on start-up. Therefore, the package should already be available on the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance that you've been using with [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)].  
   
 From the **boot** package, you'll use the  function *inv.logit*, which computes the inverse of a logit. That is, the *inv.logit* function converts a logit back to a probability on the [0,1] scale.  
   
@@ -56,7 +56,7 @@ From the **boot** package, you'll use the  function *inv.logit*, which computes 
   
     In the new table, you will get all the variables from the previous *ccScoreOutput* table, plus the newly created variable.  
   
-3.  Set the compute context to the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance.  
+3.  Set the compute context to the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance.  
   
     ```R  
     rxSetComputeContext(sqlCompute)  
@@ -106,7 +106,7 @@ Notice that the factor variables have been written to the table *ccScoreOutput2*
 
   
 ## Next Step  
-[Load Data into Memory using rxImport &#40;Data Science Deep Dive&#41;](Load%20Data%20into%20Memory%20using%20rxImport%20\(Data%20Science%20Deep%20Dive\).md)  
+[Load Data into Memory using rxImport &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-3-1-load-data-into-memory-using-rximport.md)  
   
 ## Previous Step  
 [Lesson 2: Create and Run R Scripts &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-2-create-and-run-r-scripts-data-science-deep-dive.md)  

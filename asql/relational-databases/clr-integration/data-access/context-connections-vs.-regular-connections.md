@@ -26,7 +26,7 @@ manager: "jhubbard"
   
  The context connection follows a shorter code path and involves fewer components, so you can expect requests and results to get to and from the server faster than in a regular connection. Query execution time on the server is the same for context and regular connections.  
   
- There are some cases in which you may need to open a separate regular connection to the same server. For example, there are certain restrictions on using the context connection, described in [Restrictions on Regular and Context Connections](../Topic/Restrictions%20on%20Regular%20and%20Context%20Connections.md).  
+ There are some cases in which you may need to open a separate regular connection to the same server. For example, there are certain restrictions on using the context connection, described in [Restrictions on Regular and Context Connections](../../../relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md).  
   
 ## See Also  
  [Context Connection](../../../relational-databases/clr-integration/data-access/context-connection.md)  

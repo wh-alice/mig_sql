@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Mining Model Viewer Tasks and How-tos
-  Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] contains several tools that you can use to explore mining models. The following topics provide step-by-step instructions on how to complete tasks that are specific to using the **Mining Model Viewer** tab in the designer.  
+  Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] contains several tools that you can use to explore mining models. The following topics provide step-by-step instructions on how to complete tasks that are specific to using the **Mining Model Viewer** tab in the designer.  
   
 ## In This Section  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
 -   [Change the Colors Used in the Data Mining Viewer](../../analysis-services/data-mining/change-the-colors-used-in-the-data-mining-viewer.md)  
   
 ## See Also  
- [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)   
- [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../Topic/Mining%20Model%20Viewers%20\(Data%20Mining%20Model%20Designer\).md)  
+ [Basic Data Mining Tutorial](../../a9notintoc/basic-data-mining-tutorial.md)   
+ [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../a9retired/mining-model-viewers-data-mining-model-designer.md)  
   
   

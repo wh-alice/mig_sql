@@ -17,15 +17,15 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Lesson 3: Defining a Data-Driven Subscription
-In this [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] tutorial lesson, you use the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portals data-driven subscription pages to connect to a subscription data source, build a query that retrieves subscription data, and map the result set to report and delivery options.  
+In this [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] tutorial lesson, you use the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] web portals data-driven subscription pages to connect to a subscription data source, build a query that retrieves subscription data, and map the result set to report and delivery options.  
   
 > [!NOTE]  
-> Before you start, verify that **[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent** service is running. If it is not running, you cannot save the subscription.  One method for verification is to open the [SQL Server Configuraton Manger](../../relational-databases/sql-server-configuration-manager.md).
+> Before you start, verify that **[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent** service is running. If it is not running, you cannot save the subscription.  One method for verification is to open the [SQL Server Configuraton Manger](../../relational-databases/sql-server-configuration-manager.md).
 This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data source uses stored credentials.  For more information, see [Lesson 2: Modifying the Report Data Source Properties](../../reporting-services/tutorials/lesson-2-modifying-the-report-data-source-properties.md)  
   
 ## <a name="bkmk_startwizard"></a>Start the Data-Driven Subscription Wizard  
   
-1.  In [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, click **Home**, and navigate to the folder containing the **Sales Orders** report.  
+1.  In [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, click **Home**, and navigate to the folder containing the **Sales Orders** report.  
   
 2.  In the context menu ![ssrs_tutorial_datadriven_reportmenu](../../reporting-services/tutorials/media/ssrs-tutorial-datadriven-reportmenu.png) of the report, click **Manage**, and then click **Subscriptions** in the left pane.  
   
@@ -59,7 +59,7 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
  2. Select **Windows user name and password**.
  3.  In **User Name** and **Password**, type your domain user name and password. Include both the domain and user account when specifying **User Name**.
      > [!NOTE]  
-    > Credentials used to connect to a subscriber data source are not passed back to [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)]. If you modify the subscription later, you must retype the password used to connect to the data source.
+    > Credentials used to connect to a subscriber data source are not passed back to [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)]. If you modify the subscription later, you must retype the password used to connect to the data source.
 ## Query      
 1.  In the query box, type the following query:  
   

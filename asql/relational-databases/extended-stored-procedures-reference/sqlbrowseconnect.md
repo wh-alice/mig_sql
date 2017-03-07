@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLBrowseConnect
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   **SQLBrowseConnect** uses keywords that can be categorized into three levels of connection information. For each keyword, the following table indicates whether a list of valid values is returned and whether the keyword is optional.  
   
@@ -27,13 +27,13 @@ manager: "jhubbard"
 |Keyword|List returned?|Optional?|Description|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN|N/A|No|Name of the data source returned by **SQLDataSources**. The DSN keyword cannot be used if the DRIVER keyword is used.|  
-|DRIVER|N/A|No|Microsoft® [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver name is {[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client 11}. The DRIVER keyword cannot be used if the DSN keyword is used.|  
+|DRIVER|N/A|No|Microsoft® [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver name is {[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client 11}. The DRIVER keyword cannot be used if the DSN keyword is used.|  
   
 ## Level 2  
   
 |Keyword|List returned?|Optional?|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|Yes|No|Name of the server on the network on which the data source resides. The term "(local)" can be entered as the server, in which case a local copy of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] can be used, even when this is a non-networked version.|  
+|SERVER|Yes|No|Name of the server on the network on which the data source resides. The term "(local)" can be entered as the server, in which case a local copy of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] can be used, even when this is a non-networked version.|  
 |UID|No|Yes|User login ID.|  
 |PWD|No|Yes (depends on the user)|User-specified password.|  
 |APP|No|Yes|Name of the application calling **SQLBrowseConnect**.|  
@@ -43,8 +43,8 @@ manager: "jhubbard"
   
 |Keyword|List returned?|Optional?|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DATABASE|Yes|Yes|Name of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database.|  
-|LANGUAGE|Yes|Yes|National language used by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].|  
+|DATABASE|Yes|Yes|Name of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database.|  
+|LANGUAGE|Yes|Yes|National language used by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].|  
   
  **SQLBrowseConnect** ignores the values of the DATABASE and LANGUAGE keywords stored in the ODBC data source definitions. If the database or language specified in the connection string passed to **SQLBrowseConnect** is invalid, **SQLBrowseConnect** returns SQL_NEED_DATA and the level 3 connection attributes.  
   
@@ -57,10 +57,10 @@ manager: "jhubbard"
 |SQL_COPT_SS_BROWSE_CACHE_DATA|When the SQL_COPT_SS_BROWSE_CACHE_DATA attribute is set to SQL_CACHE_DATA_YES, you can fetch data in chunks when the buffer length is not large enough to hold the result. This length is specified in the BufferLength argument to SQLBrowseConnect.<br /><br /> SQL_NEED_DATA is returned when more data is available. SQL_SUCCESS is returned when there is no more data to retrieve.<br /><br /> The default is SQL_CACHE_DATA_NO.|  
   
 ## SQLBrowseConnect Support for High Availability, Disaster Recovery  
- For more information on using **SQLBrowseConnect** to connect to an [!INCLUDE[ssHADR](../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] cluster, see [SQL Server Native Client Support for High Availability, Disaster Recovery](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ For more information on using **SQLBrowseConnect** to connect to an [!INCLUDE[ssHADR](../../a9notintoc/includes/sshadr-md.md)] cluster, see [SQL Server Native Client Support for High Availability, Disaster Recovery](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## SQLBrowseConnect Support for Service Principal Names (SPNs)  
- When a connection is opened, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client sets SQL_COPT_SS_MUTUALLY_AUTHENTICATED and SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD to the authentication method used to open the connection.  
+ When a connection is opened, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client sets SQL_COPT_SS_MUTUALLY_AUTHENTICATED and SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD to the authentication method used to open the connection.  
   
  For more information about SPNs, see [Service Principal Names &#40;SPNs&#41; in Client Connections &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   

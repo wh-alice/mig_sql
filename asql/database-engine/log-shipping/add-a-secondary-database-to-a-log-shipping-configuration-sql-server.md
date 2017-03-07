@@ -20,7 +20,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Add a Secondary Database to a Log Shipping Configuration (SQL Server)
-  This topic describes how to add a secondary database to an existing log shipping configuration in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to add a secondary database to an existing log shipping configuration in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 3.  Under **Secondary server instances and databases**, click **Add**.  
   
-4.  Click **Connect** and connect to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that you want to use as your secondary server.  
+4.  Click **Connect** and connect to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that you want to use as your secondary server.  
   
 5.  In the **Secondary database** box, choose a database from the list or type the name of the database you want to create.  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 7.  On the **Copy Files tab**, in the **Destination folder for copied files** box, type the path of the folder into which the transaction logs backups should be copied. This folder is often located on the secondary server.  
   
-8.  Note the copy schedule listed in the **Schedule** box under **Copy job**. If you want to customize the schedule for your installation, click **Schedule** and then adjust the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent schedule as needed. This schedule should approximate the backup schedule.  
+8.  Note the copy schedule listed in the **Schedule** box under **Copy job**. If you want to customize the schedule for your installation, click **Schedule** and then adjust the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent schedule as needed. This schedule should approximate the backup schedule.  
   
 9. On the **Restore** tab, under **Database state when restoring backups**, choose the **No recovery mode** or **Standby mode** option.  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
 12. Choose an alert threshold under **Alert if no restore occurs within**.  
   
-13. Note the restore schedule listed in the **Schedule** box under **Restore job**. If you want to customize the schedule for your installation, click **Schedule** and then adjust the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent schedule as needed. This schedule should approximate the backup schedule.  
+13. Note the restore schedule listed in the **Schedule** box under **Restore job**. If you want to customize the schedule for your installation, click **Schedule** and then adjust the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent schedule as needed. This schedule should approximate the backup schedule.  
   
 14. Click **OK**.  
   
@@ -81,13 +81,13 @@ manager: "jhubbard"
   
 #### To add a log shipping secondary database  
   
-1.  On the secondary server, execute [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md) supplying the details of the primary server and database. This stored procedure returns the secondary ID and the copy and restore job IDs.  
+1.  On the secondary server, execute [sp_add_log_shipping_secondary_primary](../../relational-databases/reference/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md) supplying the details of the primary server and database. This stored procedure returns the secondary ID and the copy and restore job IDs.  
   
-2.  On the secondary server, execute [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md) to set the schedule for the copy and restore jobs.  
+2.  On the secondary server, execute [sp_add_jobschedule](../../relational-databases/reference/system-stored-procedures/sp-add-jobschedule-transact-sql.md) to set the schedule for the copy and restore jobs.  
   
-3.  On the secondary server, execute [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md) to add a secondary database.  
+3.  On the secondary server, execute [sp_add_log_shipping_secondary_database](../../relational-databases/reference/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md) to add a secondary database.  
   
-4.  On the primary server, execute [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) to add the required information about the new secondary database to the primary server.  
+4.  On the primary server, execute [sp_add_log_shipping_primary_secondary](../../relational-databases/reference/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) to add the required information about the new secondary database to the primary server.  
   
 5.  On the secondary server, enable the copy and restore jobs. For more information, see [Disable or Enable a Job](../Topic/Disable%20or%20Enable%20a%20Job.md).  
   

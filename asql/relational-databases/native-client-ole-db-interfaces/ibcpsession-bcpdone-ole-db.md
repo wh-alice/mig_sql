@@ -20,9 +20,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # IBCPSession::BCPDone (OLE DB)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  Commits the remaining rows to be sent to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Commits the remaining rows to be sent to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## Syntax  
   
@@ -44,7 +44,7 @@ HRESULT BCPDone(void);
 ## Example  
  This sample shows how to use the **IBCPSession** interface.  
   
- The following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] must be executed before running this sample:  
+ The following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] must be executed before running this sample:  
   
 ```  
 create table fltest(col1 int, col2 int, col3 image)  

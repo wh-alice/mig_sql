@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # How FOR JSON escapes special characters and control characters (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   This topic describes how the **FOR JSON** clause of a **SELECT** statement escapes special characters and represents control characters in the JSON output.  
 
@@ -77,4 +77,4 @@ FOR JSON PATH
   
 ## See Also  
  [Format Query Results as JSON with FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  
-[FOR Clause](FOR%20Clause%20\(Transact-SQL\).md)
+[FOR Clause](../../t-sql/queries/select-for-clause-transact-sql.md)

@@ -24,7 +24,7 @@ manager: "jhubbard"
 # Integration Services (SSIS) Queries
   The Execute SQL task, the OLE DB source, the OLE DB destination, and the Lookup transformation can use SQL queries. In the Execute SQL task, the SQL statements can create, update, and delete database objects and data; run stored procedures; and perform SELECT statements. In the OLE DB source and the Lookup transformation, the SQL statements are typically SELECT statements or EXEC statements. The latter most frequently run stored procedures that return result sets.  
   
- A query can be parsed to establish whether it is valid. When parsing a query that uses a connection to [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], the query is parsed, executed, and the execution outcome (success or failure) is assigned to the parsing outcome. If the query uses a connection to a data other than [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], the statement is parsed only.  
+ A query can be parsed to establish whether it is valid. When parsing a query that uses a connection to [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], the query is parsed, executed, and the execution outcome (success or failure) is assigned to the parsing outcome. If the query uses a connection to a data other than [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], the statement is parsed only.  
   
 You can provide the SQL statement in the following ways:
 1.   Enter it directly in the designer.
@@ -54,13 +54,13 @@ You can provide the SQL statement in the following ways:
   
  You can also provide direct input by typing the query in the task or data flow component dialog box or the Properties window.  
   
- For more information, see [Query Builder](../Topic/Query%20Builder.md).  
+ For more information, see [Query Builder](../a9retired/query-builder.md).  
   
 ## SQL in Files  
- The SQL statement for the Execute SQL task can also reside in a separate file. For example, you can write queries using tools such as the Query Editor in [!INCLUDE[ssManStudioFull](../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], save the query to a file, and then read the query from the file when running a package. The file can contain only the SQL statements to run and comments. To use a SQL statement stored in a file, you must provide a file connection that specifies the file name and location. For more information, see [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md).  
+ The SQL statement for the Execute SQL task can also reside in a separate file. For example, you can write queries using tools such as the Query Editor in [!INCLUDE[ssManStudioFull](../a9notintoc/includes/ssmanstudiofull-md.md)], save the query to a file, and then read the query from the file when running a package. The file can contain only the SQL statements to run and comments. To use a SQL statement stored in a file, you must provide a file connection that specifies the file name and location. For more information, see [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md).  
   
 ## SQL in Variables  
- If the source of the SQL statement in the Execute SQL task is a variable, you provide the name of the variable that contains the query. The Value property of the variable contains the query text. You set the ValueType property of the variable to a string data type and then type or copy the SQL statement into the Value property. For more information, see [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](../Topic/Use%20Variables%20in%20Packages.md).  
+ If the source of the SQL statement in the Execute SQL task is a variable, you provide the name of the variable that contains the query. The Value property of the variable contains the query text. You set the ValueType property of the variable to a string data type and then type or copy the SQL statement into the Value property. For more information, see [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](../a9retired/use-variables-in-packages.md).  
 
 ## Query Builder dialog box
 Use the **Query Builder** dialog box to create a query for use in the Execute SQL task, the OLE DB source and the OLE DB destination, and the Lookup transformation.  
@@ -79,7 +79,7 @@ Use the **Query Builder** dialog box to create a query for use in the Execute SQ
   
  To learn more about the Transact-SQL language and its syntax, see [Transact-SQL Reference &#40;Database Engine&#41;](../t-sql/transact-sql-reference-database-engine.md).  
   
- You can also use variables in a query to provide values to an input parameter, to capture values of output parameters, and to store return codes. To learn more about using variables in the queries that packages use, see [Execute SQL Task](../integration-services/control-flow/execute-sql-task.md), [OLE DB Source](../integration-services/data-flow/ole-db-source.md), and [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). To learn more about using variables in the Execute SQL Task, see [Parameters and Return Codes in the Execute SQL Task](../Topic/Parameters%20and%20Return%20Codes%20in%20the%20Execute%20SQL%20Task.md) and [Result Sets in the Execute SQL Task](../Topic/Result%20Sets%20in%20the%20Execute%20SQL%20Task.md).  
+ You can also use variables in a query to provide values to an input parameter, to capture values of output parameters, and to store return codes. To learn more about using variables in the queries that packages use, see [Execute SQL Task](../integration-services/control-flow/execute-sql-task.md), [OLE DB Source](../integration-services/data-flow/ole-db-source.md), and [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). To learn more about using variables in the Execute SQL Task, see [Parameters and Return Codes in the Execute SQL Task](../a9retired/parameters-and-return-codes-in-the-execute-sql-task.md) and [Result Sets in the Execute SQL Task](../a9retired/result-sets-in-the-execute-sql-task.md).  
   
  The Lookup and Fuzzy lookup transformations can also use variables with parameters and return codes. The information about the OLE DB source applies to these two transformations also.  
   

@@ -32,7 +32,7 @@ manager: "jhubbard"
  The CommandType property of the SqlXmlCommand object by default is **Sql**. Therefore, the property is not explicitly set.  
   
 > [!NOTE]  
->  In the code, you must provide the name of the instance of Microsoft [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in the connection string.  
+>  In the code, you must provide the name of the instance of Microsoft [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] in the connection string.  
   
  This is the C# code:  
   
@@ -94,7 +94,7 @@ public static int Main(String[] args)
   
 3.  At the command prompt, execute DocSample.exe.  
   
- To test this example, you must have the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] .NET Framework installed on your computer.  
+ To test this example, you must have the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] .NET Framework installed on your computer.  
   
  Instead of specifying SQL queries as the command text, you can specify a template (as shown in the following code fragment) that executes an updategram (which is also a template) to insert a customer record. You can specify templates and updategrams in files and execute files. For more information, see [Executing Template Files by Using the CommandText Property](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md).  
   

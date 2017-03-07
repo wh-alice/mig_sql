@@ -16,7 +16,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # What&#39;s New in SQL Server R Services
-  [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] is a feature in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and SQL Server vNext that supports enterprise-scale data science.  R is the most popular programming language for advanced analytics, and offers an incredibly rich set of packages and a vibrant and fast-growing developer community. [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] helps you embrace the highly popular open source R language in your business. 
+  [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] is a feature in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and SQL Server vNext that supports enterprise-scale data science.  R is the most popular programming language for advanced analytics, and offers an incredibly rich set of packages and a vibrant and fast-growing developer community. [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] helps you embrace the highly popular open source R language in your business. 
   
  > [!TIP]
  > Already have SQL Server 2016 R Services?
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
   For the database administrator, new roles are included in [!INCLUDE[ssSQLv14_md](../../advanced-analytics/r-services/includes/sssqlv14-md.md)] for managing permissions associated with packages, both on the instance level and database level. 
   
-  For more information, see [R Package Management for SQL Server R Services](R%20Package%20Management%20for%20SQL%20Server%20R%20Services.md). 
+  For more information, see [R Package Management for SQL Server R Services](../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md). 
      
 + New functions in **RevoScaleR** for reading and writing R model objects
 
@@ -65,7 +65,7 @@ manager: "jhubbard"
 
 -   Supports both SQL logins and integrated Windows authentication.  
     
--   Significant performance improvements, including optimization of the SQL Satellite processes, which connect R and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], support for paging of data to enable high-volume data usage, and streaming to enable fast processing of  billions of rows. 
+-   Significant performance improvements, including optimization of the SQL Satellite processes, which connect R and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], support for paging of data to enable high-volume data usage, and streaming to enable fast processing of  billions of rows. 
   
 -   Use SQL Server resource pools to manage memory used by R processes. For more information see [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md).  
   
@@ -84,7 +84,7 @@ manager: "jhubbard"
 
 ## Learn More
   
--  Resources are available for both data scientists who want to learn about SQL Server integration, and SQL developers who want to create R solutions using T-SQL and the familiar environment of [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. 
+-  Resources are available for both data scientists who want to learn about SQL Server integration, and SQL developers who want to create R solutions using T-SQL and the familiar environment of [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. 
    + [SQL Server R Services Tutorials](https://msdn.microsoft.com/library/mt591993.aspx)
    + [Free ebook: Data Science with SQL Server 2016](https://mva.microsoft.com/ebooks/)
  

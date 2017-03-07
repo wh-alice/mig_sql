@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # Parameters Element (XMLA)
-  Contains a collection of [Parameter](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md) elements used by the [Execute](../Topic/Execute%20Method%20\(XMLA\).md) method.  
+  Contains a collection of [Parameter](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md) elements used by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.  
   
  **Namespace:** `urn:schemas-microsoft-com:xml-analysis`  
   
@@ -58,7 +58,7 @@ manager: "erikre"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[Execute](../Topic/Execute%20Method%20\(XMLA\).md)|  
+|Parent elements|[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
 |Child elements|[Parameter](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)|  
   
 ## Remarks  
@@ -67,6 +67,6 @@ manager: "erikre"
  If the XMLA command does not use the **Parameters** element, the element can be omitted when calling the **Execute** method.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

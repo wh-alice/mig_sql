@@ -28,11 +28,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SUSER_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx_md](../../relational-databases/system-dynamic-management-views/includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx_md](../../relational-databases/reference/system-dynamic-management-views/includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
   Returns the login identification name of the user.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -43,13 +43,13 @@ SUSER_NAME ( [ server_user_id ] )
   
 ## Arguments  
  *server_user_id*  
- Is the login identification number of the user. *server_user_id*, which is optional, is **int**. *server_user_id* can be the login identification number of any [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login or [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows user or group that has permission to connect to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. If *server_user_id* is not specified, the login identification name for the current user is returned. If the parameter contains the word NULL will return NULL.  
+ Is the login identification number of the user. *server_user_id*, which is optional, is **int**. *server_user_id* can be the login identification number of any [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login or [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows user or group that has permission to connect to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. If *server_user_id* is not specified, the login identification name for the current user is returned. If the parameter contains the word NULL will return NULL.  
   
 ## Return Types  
  **nvarchar(128)**  
   
 ## Remarks  
- In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] version 7.0, the security identification number (SID) replaced the server user identification number (SUID).  
+ In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] version 7.0, the security identification number (SID) replaced the server user identification number (SUID).  
   
  SUSER_NAME returns a login name only for a login that has an entry in the **syslogins** system table.  
   

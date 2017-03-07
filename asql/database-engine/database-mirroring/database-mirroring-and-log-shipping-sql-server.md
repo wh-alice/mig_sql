@@ -67,14 +67,14 @@ manager: "jhubbard"
 ## The Impact of Database Mirroring on a Remote Monitoring Instance  
  When log shipping uses with a remote monitoring instance, combining the log shipping session and database mirroring affects the information in the monitor tables. The information about the primary is a combination of the one configured at the principal/primary and the monitor configured on each secondary.  
   
- To keep monitoring as seamless as possible, when you use a remote monitor, we recommend that you specify the original primary name when configuring the primary at the secondary. This approach also facilitates changing the log shipping configuration from Microsoft [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent. For more information about monitoring, see [Monitor Log Shipping &#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md).  
+ To keep monitoring as seamless as possible, when you use a remote monitor, we recommend that you specify the original primary name when configuring the primary at the secondary. This approach also facilitates changing the log shipping configuration from Microsoft [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent. For more information about monitoring, see [Monitor Log Shipping &#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md).  
   
 ## Setting Up Mirroring and Log Shipping Together  
  To set up database mirroring and log shipping together, the following steps are required:  
   
 1.  Restore backups of the principal/primary database with NORECOVERY onto another server instance to be later used as database mirroring mirror database for the principal/primary database. For more information, see [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-2.  Set up database mirroring. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../Topic/Establish%20a%20Database%20Mirroring%20Session%20Using%20Windows%20Authentication%20\(SQL%20Server%20Management%20Studio\).md) or [Setting Up Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+2.  Set up database mirroring. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) or [Setting Up Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
 3.  Restore backups of the principal/primary database to other server instances to be later used as log shipping secondary databases for the primary database.  
   
@@ -99,7 +99,7 @@ manager: "jhubbard"
   
      You must use the same backup share that you used in step 4.  
   
-     The **Transaction Log Shipping** interface in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] supports only one primary database per log shipping configuration. Therefore, you must use stored procedures to set up the new principal as primary.  
+     The **Transaction Log Shipping** interface in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] supports only one primary database per log shipping configuration. Therefore, you must use stored procedures to set up the new principal as primary.  
   
 7.  Perform another manual failover to fail back to the original principal.  
   

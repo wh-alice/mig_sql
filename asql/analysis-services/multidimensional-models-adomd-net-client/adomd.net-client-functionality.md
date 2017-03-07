@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # ADOMD.NET Client Functionality
-  ADOMD.NET, as with other [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] .NET Framework data providers, serves as a bridge between an application and a data source. However, ADOMD.NET is unlike other .NET Framework data providers in that ADOMD.NET works with analytical data. To work with analytical data, ADOMD.NET supports functionality that is very different than other .NET Framework data providers. ADOMD.NET not only allows you to retrieve data, but also to retrieve metadata and change the structure of the analytical data store:  
+  ADOMD.NET, as with other [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] .NET Framework data providers, serves as a bridge between an application and a data source. However, ADOMD.NET is unlike other .NET Framework data providers in that ADOMD.NET works with analytical data. To work with analytical data, ADOMD.NET supports functionality that is very different than other .NET Framework data providers. ADOMD.NET not only allows you to retrieve data, but also to retrieve metadata and change the structure of the analytical data store:  
   
  **Retrieving Metadata**  
  Applications can learn more about the data that can be retrieved from the data source through metadata retrieval, using either schema rowsets or the object model. Information such as the types of each key performance indicator (KPI) that are available, the dimensions in a cube, and the parameters needed by the mining models are all discoverable. Metadata is most important to *dynamic* applications that require user input to determine the type, depth, and scope of data to be retrieved. Examples include Query Analyzer, Microsoft Excel, and other querying tools. Metadata is less critical to *static* applications that perform a predefined set of actions.  
@@ -45,7 +45,7 @@ manager: "erikre"
   
 1.  First, a connection is made to the database, using the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> object. When you open the connection, the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> object exposes metadata about the server to which you have connected. In a dynamic application, some of this information is typically shown to the user so that the user can make a selection, such as which cube to query. The connection created during this step can be reused multiple times by the application, reducing overhead.  
   
-     For more information: [Establishing Connections in ADOMD.NET](../Topic/Establishing%20Connections%20in%20ADOMD.NET.md)  
+     For more information: [Establishing Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd.net.md)  
   
 2.  Once a connection has been made, a dynamic application would then query the server for more specific metadata. For a static application, the programmer knows in advance which objects the application will be querying, and thus will not need to retrieve this metadata. Metadata that is retrieved can be used by the application and the user for the next step.  
   

@@ -30,7 +30,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Export a Data-tier Application
-  Exporting a deployed data-tier application (DAC) or database creates an export file that includes both the definitions of the objects in the database and all of the data contained in the tables. The export file can then be imported to another instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)], or to [!INCLUDE[ssSDSFull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)]. The export-import operations can be combined to migrate a DAC between instances, to create an archive, or to create an on-premise copy of a database deployed in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+  Exporting a deployed data-tier application (DAC) or database creates an export file that includes both the definitions of the objects in the database and all of the data contained in the tables. The export file can then be imported to another instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)], or to [!INCLUDE[ssSDSFull](../../a9retired/includes/sssdsfull-md.md)]. The export-import operations can be combined to migrate a DAC between instances, to create an archive, or to create an on-premise copy of a database deployed in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
 ## Before You Begin  
  The export process builds a DAC export file in two stages.  
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 
 ###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
- A DAC or database can only be exported from a database in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)], or [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later.  
+ A DAC or database can only be exported from a database in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)], or [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later.  
   
  You cannot export a database that has objects that are not supported in a DAC, or contained users. For more information about the types of objects supported in a DAC, see [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
 ##  <a name="UsingDeployDACWizard"></a> Using the Export Data-tier Application Wizard  
  **To Export a DAC Using a Wizard**  
   
-1.  Connect to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], whether on-premise or in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+1.  Connect to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], whether on-premise or in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
 2.  In **Object Explorer**, expand the node for the instance from which you want to export the DAC.  
   

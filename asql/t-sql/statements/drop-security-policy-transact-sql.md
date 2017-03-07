@@ -25,11 +25,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # DROP SECURITY POLICY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Deletes a security policy.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -42,7 +42,7 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
  *IF EXISTS*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  Conditionally drops the security policy only if it already exists.  
   
@@ -67,7 +67,7 @@ DROP SECURITY POLICY secPolicy;
  [Row-Level Security](../../relational-databases/security/row-level-security.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
- [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.security-policies-transact-sql.md)   
- [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.security-predicates-transact-sql.md)  
+ [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.security-policies-transact-sql.md)   
+ [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.security-predicates-transact-sql.md)  
   
   

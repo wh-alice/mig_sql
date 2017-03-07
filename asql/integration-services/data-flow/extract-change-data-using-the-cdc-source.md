@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 ### To extract change data using a CDC source  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent](../../analysis-services/data-mining/includes/ssiscurrent-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent](../../a9retired/includes/ssiscurrent-md.md)] project that contains the package you want.  
   
 2.  In the Solution Explorer, double-click the package to open it.  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 4.  Double-click the CDC source.  
   
-5.  In the **CDC Source Editor** dialog box, on the **Connection Manager** page, select an existing ADO.NET connection manager from the list, or click **New** to create a new connection. The connection should be to a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database that contains the change tables to read.  
+5.  In the **CDC Source Editor** dialog box, on the **Connection Manager** page, select an existing ADO.NET connection manager from the list, or click **New** to create a new connection. The connection should be to a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database that contains the change tables to read.  
   
 6.  Select the **CDC table** where you want to process changes.  
   

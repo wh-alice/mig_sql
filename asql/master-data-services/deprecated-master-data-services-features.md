@@ -15,7 +15,7 @@ ms.author: "carlasab"
 manager: "erikre"
 ---
 # Deprecated Master Data Services Features
-  This topic describes the deprecated [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] features that are still available in [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  
+  This topic describes the deprecated [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] features that are still available in [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  
   
 ## Explicit Hierarchies, Collections, and Related Components  
  Explicit hierarchies, collections and related components are deprecated. Members that before were modeled as consolidated member types (explicit hierarchy parent) and collection member types will be modeled as leaf members in derived hierarchies. The following new features enable derived hierarchies to take the place of explicit hierarchies.  

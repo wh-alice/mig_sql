@@ -15,21 +15,21 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Add drillthrough from a mobile report to other mobile reports or URLs
-You can add drillthrough from any gauge, chart, or data grid in a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] mobile report to another mobile report or custom URL. 
+You can add drillthrough from any gauge, chart, or data grid in a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] mobile report to another mobile report or custom URL. 
 
 A *drillthrough*  is a link from a source report that opens another target report or URL. The target drillthrough report often contains details about some item in the summary report. Depending on the source mobile report, one or more parameters can be passed to the target mobile report or integrated into a custom URL.  
   
-When you view the source mobile report in the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal and select an element with a drillthrough target, you go to that target, either another mobile report or a URL.  
+When you view the source mobile report in the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal and select an element with a drillthrough target, you go to that target, either another mobile report or a URL.  
 
 Report items with drillthrough, either to a URL or another mobile report, have the drillthrough icon ![mobile-report-drill-through-icon](../../reporting-services/mobile-reports/media/mobile-report-drill-through-icon.png) in the upper-right corner.
 
 ![mobile-report-gauge-drill-through](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png) 
 
->**Tip**: Create the target report and save it to a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal first. If you plan to pass parameters from the source report, add the parameters to the target report, too. Then you can set up drillthrough from the source report to the target report. [Add parameters to a mobile report](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
+>**Tip**: Create the target report and save it to a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal first. If you plan to pass parameters from the source report, add the parameters to the target report, too. Then you can set up drillthrough from the source report to the target report. [Add parameters to a mobile report](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
  
 ## Set up drillthrough to a mobile report  
 
-1. In Layout view in [!INCLUDE[SS_MobileReptPub_Long](../../reporting-services/mobile-reports/includes/ss-mobilereptpub-long.md)], select a visualization that supports drillthrough.   
+1. In Layout view in [!INCLUDE[SS_MobileReptPub_Long](../../a9retired/includes/ss-mobilereptpub-long.md)], select a visualization that supports drillthrough.   
 
    Maps and gauges support drillthrough, as do most charts and simple data grids.
    
@@ -48,7 +48,7 @@ Report items with drillthrough, either to a URL or another mobile report, have t
   
 ## Set up a drillthrough to a custom URL  
   
-1. In Layout view in [!INCLUDE[SS_MobileReptPub_Long](../../reporting-services/mobile-reports/includes/ss-mobilereptpub-long.md)], select a visualization that supports drillthrough targets.    
+1. In Layout view in [!INCLUDE[SS_MobileReptPub_Long](../../a9retired/includes/ss-mobilereptpub-long.md)], select a visualization that supports drillthrough targets.    
 2. In the **Visual Properties** pane, select **Drillthrough target** > **Custom URL**.  this will open the drillthrough configuration dialog.  
   
 3. In **Set drillthrough URL**, enter the destination URL to go to when the visualization is clicked, and and select from **Available parameters** listed on the right. A preview of the custom URL combined with sample resolved parameters (if included) is displayed in the panel below.  

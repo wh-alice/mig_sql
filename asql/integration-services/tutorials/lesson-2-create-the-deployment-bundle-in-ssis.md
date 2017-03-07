@@ -17,7 +17,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Lesson 2: Create the Deployment Bundle in SSIS
-In [Lesson 1: Preparing to Create the Deployment Bundle](../../integration-services/tutorials/lesson-1-preparing-to-create-the-deployment-bundle.md), you created the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project named Deployment Tutorial, added the packages and supporting files to the project, and implemented configurations in packages.  
+In [Lesson 1: Preparing to Create the Deployment Bundle](../../integration-services/tutorials/lesson-1-preparing-to-create-the-deployment-bundle.md), you created the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project named Deployment Tutorial, added the packages and supporting files to the project, and implemented configurations in packages.  
   
 In this lesson, you will create the deployment bundle, which is a folder that contains the items that you need to install packages on another computer. The deployment bundle will include a deployment manifest, copies of the packages, and copies of the supporting files from the Deployment Tutorial project. The deployment manifest lists the packages, miscellaneous files, and configurations in the deployment bundle.  
   
@@ -28,12 +28,12 @@ You will also verify the file list in the deployment bundle and examine the cont
 ## Lesson Tasks  
 This lesson contains the following tasks:  
   
--   [Step 1: Building the Deployment Utility](../Topic/Step%201:%20Building%20the%20Deployment%20Utility.md)  
+-   [Step 1: Building the Deployment Utility](../../integration-services/tutorials/lesson-2-1-building-the-deployment-utility.md)  
   
--   [Step 2: Verifying the Deployment Bundle](../Topic/Step%202:%20Verifying%20the%20Deployment%20Bundle.md)  
+-   [Step 2: Verifying the Deployment Bundle](../../integration-services/tutorials/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## Start the Lesson  
-[Step 1: Building the Deployment Utility](../Topic/Step%201:%20Building%20the%20Deployment%20Utility.md)  
+[Step 1: Building the Deployment Utility](../../integration-services/tutorials/lesson-2-1-building-the-deployment-utility.md)  
   
   
   

@@ -15,7 +15,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create an Encrypted Backup
-  This topic describes the steps necessary to create an encrypted backup using Transact-SQL.  For an example using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], see [Create a Full Database Backup (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md). 
+  This topic describes the steps necessary to create an encrypted backup using Transact-SQL.  For an example using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], see [Create a Full Database Backup (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md). 
   
 ## Backup to Disk with Encryption  
  **Prerequisites:**  
@@ -73,7 +73,7 @@ manager: "jhubbard"
   
  **Prerequisites:**  
   
--   A windows storage account and a container. For more information, see. [Lesson 1: Create Windows Azure Storage Objects](../Topic/Lesson%201:%20Create%20Windows%20Azure%20Storage%20Objects.md).  
+-   A windows storage account and a container. For more information, see. [Lesson 1: Create Windows Azure Storage Objects](../../a9notintoc/lesson-1-create-windows-azure-storage-objects.md).  
   
 -   A Database Master Key for the master database, and a certificate or asymmetric key  on the instance of SQL Server. For encryption requirements and permissions, see [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md).  
   

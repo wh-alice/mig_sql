@@ -31,9 +31,9 @@ manager: "jhubbard"
 ## See Also  
  [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/aeee9546-4480-49f9-8b1e-c71da1f056c7.md)   
  [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
- [Advanced Merge Replication Conflict Detection and Resolution](../Topic/Advanced%20Merge%20Replication%20Conflict%20Detection%20and%20Resolution.md)   
- [Conflict Detection in Peer-to-Peer Replication](../Topic/Conflict%20Detection%20in%20Peer-to-Peer%20Replication.md)   
- [Queued Updating Conflict Detection and Resolution](../Topic/Queued%20Updating%20Conflict%20Detection%20and%20Resolution.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
+ [Queued Updating Conflict Detection and Resolution](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [Properties Reference &#40;Replication&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   
   

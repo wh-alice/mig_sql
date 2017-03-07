@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Synchronize a Push Subscription
-  This topic describes how to synchronize a push subscription in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], [replication agents](../../relational-databases/replication/agents/replication-agents-overview.md), or Replication Management Objects (RMO).  
+  This topic describes how to synchronize a push subscription in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], [replication agents](../../relational-databases/replication/agents/replication-agents-overview.md), or Replication Management Objects (RMO).  
   
  **In This Topic**  
   
@@ -34,11 +34,11 @@ manager: "jhubbard"
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Subscriptions are synchronized by the Distribution Agent (for snapshot and transactional replication) or the Merge Agent (for merge replication). Agents can run continuously, run on demand, or run on a schedule. For more information about specifying synchronization schedules, see [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
- Synchronize a subscription on demand from the **Local Publications** and **Local Subscriptions** folders in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and the **All Subscriptions** tab in Replication Monitor. Subscriptions to Oracle publications cannot be synchronized on demand from the Subscriber. For information about starting Replication Monitor, see [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Synchronize a subscription on demand from the **Local Publications** and **Local Subscriptions** folders in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] and the **All Subscriptions** tab in Replication Monitor. Subscriptions to Oracle publications cannot be synchronized on demand from the Subscriber. For information about starting Replication Monitor, see [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 #### To synchronize a push subscription on demand in Management Studio (at the Publisher)  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Publications** folder.  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 #### To synchronize a push subscription on demand in Management Studio (at the Subscriber)  
   
-1.  Connect to the Subscriber in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Subscriber in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Subscriptions** folder.  
   
@@ -114,7 +114,7 @@ manager: "jhubbard"
     -   **-SubscriberSecurityMode = 0**  
   
         > [!IMPORTANT]  
-        >  [!INCLUDE[ssNoteWinAuthentication](../../integration-services/includes/ssnotewinauthentication-md.md)]  
+        >  [!INCLUDE[ssNoteWinAuthentication](../../a9retired/includes/ssnotewinauthentication-md.md)]  
   
 #### To start the Merge Agent to synchronize a push subscription to a merge publication  
   
@@ -155,7 +155,7 @@ manager: "jhubbard"
     -   **-SubscriberSecurityMode = 0**  
   
         > [!IMPORTANT]  
-        >  [!INCLUDE[ssNoteWinAuthentication](../../integration-services/includes/ssnotewinauthentication-md.md)]  
+        >  [!INCLUDE[ssNoteWinAuthentication](../../a9retired/includes/ssnotewinauthentication-md.md)]  
   
 ###  <a name="TsqlExample"></a> Examples (Replication Agents)  
  The following example starts the Distribution Agent to synchronize a push subscription.  
@@ -203,7 +203,7 @@ REM -- The following command must be supplied without line breaks.
  You can synchronize push subscriptions programmatically by using Replication Management Objects (RMO) and managed code access to replication agent functionalities. The classes that you use to synchronize a push subscription depend on the type of publication to which the subscription belongs.  
   
 > [!NOTE]  
->  If you want to start a synchronization that runs autonomously without affecting your application, start the agent asynchronously. However, if you want to monitor the outcome of the synchronization and receive callbacks from the agent during the synchronization process (for example, if you want to display a progress bar), you should start the agent synchronously. For [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssExpressEd2005](../../relational-databases/replication/includes/ssexpressed2005-md.md)] Subscribers, you must start the agent synchronously.  
+>  If you want to start a synchronization that runs autonomously without affecting your application, start the agent asynchronously. However, if you want to monitor the outcome of the synchronization and receive callbacks from the agent during the synchronization process (for example, if you want to display a progress bar), you should start the agent synchronously. For [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssExpressEd2005](../../a9retired/includes/ssexpressed2005-md.md)] Subscribers, you must start the agent synchronously.  
   
 #### To synchronize a push subscription to a snapshot or transactional publication  
   
@@ -256,27 +256,27 @@ REM -- The following command must be supplied without line breaks.
 ###  <a name="PShellExample"></a> Examples (RMO)  
  This example synchronizes a push subscription to a transactional publication, where the agent is started asynchronously using the agent job.  
   
- [!code-cs[HowTo#rmo_SyncTranPushSub_WithJob](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_synctranpushsub_withjob)]  
+ [!code-cs[HowTo#rmo_SyncTranPushSub_WithJob](../../a9retired/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_synctranpushsub_withjob)]  
   
- [!code-vb[HowTo#rmo_vb_SyncTranPushSub_WithJob](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_synctranpushsub_withjob)]  
+ [!code-vb[HowTo#rmo_vb_SyncTranPushSub_WithJob](../../a9retired/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_synctranpushsub_withjob)]  
   
  This example synchronizes a push subscription to a transactional publication, where the agent is started synchronously.  
   
- [!code-cs[HowTo#rmo_SyncTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_synctranpushsub)]  
+ [!code-cs[HowTo#rmo_SyncTranPushSub](../../a9retired/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_synctranpushsub)]  
   
- [!code-vb[HowTo#rmo_vb_SyncTranPushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_synctranpushsub)]  
+ [!code-vb[HowTo#rmo_vb_SyncTranPushSub](../../a9retired/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_synctranpushsub)]  
   
  This example synchronizes a push subscription to a merge publication, where the agent is started asynchronously using the agent job.  
   
- [!code-cs[HowTo#rmo_SyncMergePushSub_WithJob](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_syncmergepushsub_withjob)]  
+ [!code-cs[HowTo#rmo_SyncMergePushSub_WithJob](../../a9retired/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_syncmergepushsub_withjob)]  
   
- [!code-vb[HowTo#rmo_vb_SyncMergePushSub_WithJob](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_syncmergepushsub_withjob)]  
+ [!code-vb[HowTo#rmo_vb_SyncMergePushSub_WithJob](../../a9retired/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_syncmergepushsub_withjob)]  
   
  This example synchronizes a push subscription to a merge publication, where the agent is started synchronously.  
   
- [!code-cs[HowTo#rmo_SyncMergePushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_syncmergepushsub)]  
+ [!code-cs[HowTo#rmo_SyncMergePushSub](../../a9retired/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_syncmergepushsub)]  
   
- [!code-vb[HowTo#rmo_vb_SyncMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_syncmergepushsub)]  
+ [!code-vb[HowTo#rmo_vb_SyncMergePushSub](../../a9retired/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_syncmergepushsub)]  
   
 ## See Also  
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   

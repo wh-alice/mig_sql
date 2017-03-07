@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Linked Domain
-  This topic describes how to create a linked domain in a knowledge base in [!INCLUDE[ssDQSnoversion](../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS). A linked domain is created from another, previously existing domain, and inherits all values, rules, and properties from the domain that it is linked to, with the exception of the name and the description. You can manage a set of linked domains as one. By linking one domain to the other, you create a domain that inherits its contents from another domain.  
+  This topic describes how to create a linked domain in a knowledge base in [!INCLUDE[ssDQSnoversion](../a9retired/includes/ssdqsnoversion-md.md)] (DQS). A linked domain is created from another, previously existing domain, and inherits all values, rules, and properties from the domain that it is linked to, with the exception of the name and the description. You can manage a set of linked domains as one. By linking one domain to the other, you create a domain that inherits its contents from another domain.  
   
 ## Scenarios  
  Linked domains are particularly useful in the following scenarios.  
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssDQSInitialStep](../data-quality-services/includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] home screen, open or create a knowledge base. Select **Domain Management** as the activity, and then click **Open** or **Create**. For more information, see [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) or [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+2.  In the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] home screen, open or create a knowledge base. Select **Domain Management** as the activity, and then click **Open** or **Create**. For more information, see [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) or [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
 3.  From the **Domain list** on the **Domain Management** page, right-click the domain that you want to link a new domain to, and then click **Create Linked Domain**.  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 6.  If necessary, you can change the name or description of the linked domain in the Domain Properties tab.  
   
-7.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md).  
+7.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](../a9retired/end-the-domain-management-activity.md).  
   
 ##  <a name="Map"></a> Map two fields to linked domains  
   

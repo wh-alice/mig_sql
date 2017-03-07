@@ -19,9 +19,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # FTP Connection Manager
-  An FTP connection manager enables a package to connect to a File Transfer Protocol (FTP) server. The FTP task that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] includes uses this connection manager.  
+  An FTP connection manager enables a package to connect to a File Transfer Protocol (FTP) server. The FTP task that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] includes uses this connection manager.  
   
- When you add an FTP connection manager to a package, [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] creates a connection manager that can be resolved as an FTP connection at run time, sets the connection manager properties, and adds the connection manager to the **Connections** collection on the package.  
+ When you add an FTP connection manager to a package, [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] creates a connection manager that can be resolved as an FTP connection at run time, sets the connection manager properties, and adds the connection manager to the **Connections** collection on the package.  
   
  The **ConnectionManagerType** property of the connection manager is set to **FTP**.  
   
@@ -48,9 +48,9 @@ manager: "jhubbard"
  An FTP connection manager can send and receive files using either active mode or passive mode. In active mode, the server initiates the data connection, and in passive mode, the client initiates the data connection.  
   
 ## Configuration of the FTP Connection Manager  
- You can set properties through [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer or programmatically.  
   
- For information about the properties that you can set in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, see [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md).  
+ For information about the properties that you can set in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, see [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md).  
   
  For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   

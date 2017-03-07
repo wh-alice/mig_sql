@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Add a Moving Average to a Chart (Report Builder and SSRS)
-A moving average is an average of the data in your series, calculated over a defined period of time. In [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports, the moving average can be shown on the chart to identify significant trends.  
+A moving average is an average of the data in your series, calculated over a defined period of time. In [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports, the moving average can be shown on the chart to identify significant trends.  
 
 ![report-builder-column-chart-tutorial](../../reporting-services/report-design/media/report-builder-column-chart-tutorial.png)
   
@@ -26,10 +26,10 @@ A moving average is an average of the data in your series, calculated over a def
   
  When a moving average formula is added in Design mode, the line series that is added is only a visual placeholder. The chart will calculate the data points of each formula during report processing.  
   
- Built-in support for trend lines is not available in [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)].  
+ Built-in support for trend lines is not available in [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)].  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## To add a calculated moving average to a series on the chart  
   

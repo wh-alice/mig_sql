@@ -27,7 +27,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # decimal and numeric (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Numeric data types that have fixed precision and scale. Decimal and numeric are synonyms and can be used interchangeably.  
   
@@ -55,13 +55,13 @@ manager: "jhubbard"
 >  Informatica (connected through the SQL Server PDW Informatica Connector) only supports 16 significant digits, regardless of the precision and scale specified.  
   
 ##  <a name="_decimal"></a> Converting decimal and numeric Data  
- For the **decimal** and **numeric** data types, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] considers each specific combination of precision and scale as a different data type. For example, **decimal(5,5)** and **decimal(5,0)** are considered different data types.  
+ For the **decimal** and **numeric** data types, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] considers each specific combination of precision and scale as a different data type. For example, **decimal(5,5)** and **decimal(5,0)** are considered different data types.  
   
- In [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements, a constant with a decimal point is automatically converted into a **numeric** data value, using the minimum precision and scale necessary. For example, the constant 12.345 is converted into a **numeric** value with a precision of 5 and a scale of 3.  
+ In [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements, a constant with a decimal point is automatically converted into a **numeric** data value, using the minimum precision and scale necessary. For example, the constant 12.345 is converted into a **numeric** value with a precision of 5 and a scale of 3.  
   
  Converting from **decimal** or **numeric** to **float** or **real** can cause some loss of precision. Converting from **int**, **smallint**, **tinyint**, **float**, **real**, **money**, or **smallmoney** to either **decimal** or **numeric** can cause overflow.  
   
- By default, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses rounding when converting a number to a **decimal** or **numeric** value with a lower precision and scale. However, if the SET ARITHABORT option is ON, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] raises an error when overflow occurs. Loss of only precision and scale is not sufficient to raise an error.  
+ By default, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses rounding when converting a number to a **decimal** or **numeric** value with a lower precision and scale. However, if the SET ARITHABORT option is ON, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] raises an error when overflow occurs. Loss of only precision and scale is not sufficient to raise an error.  
   
  When converting float or real values to decimal or numeric, the decimal value will never have more than 17 decimals. Any float value < 5E-18 will always convert as 0.  
   
@@ -101,6 +101,6 @@ MyDecimalColumn                         MyNumericColumn
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../Topic/DECLARE%20@local_variable%20\(Transact-SQL\).md)   
  [SET @local_variable &#40;Transact-SQL&#41;](../Topic/SET%20@local_variable%20\(Transact-SQL\).md)   
- [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.types-transact-sql.md)  
+ [sys.types &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.types-transact-sql.md)  
   
   

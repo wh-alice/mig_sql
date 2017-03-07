@@ -20,17 +20,17 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Native Client (OLE DB) Interfaces
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider exposes interfaces to consumers wanting access to data on one or more computers running [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider is an OLE DB version 2.0–compliant provider.  
+  The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider exposes interfaces to consumers wanting access to data on one or more computers running [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider is an OLE DB version 2.0–compliant provider.  
   
- This [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider programming reference does not document all of the OLE DB interfaces and methods, only those interfaces and methods that exhibit provider-specific behavior when using the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider.  
+ This [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider programming reference does not document all of the OLE DB interfaces and methods, only those interfaces and methods that exhibit provider-specific behavior when using the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider.  
   
  For a full description of the core OLE DB interfaces and methods, see the [OLE DB Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45232).  
   
 ## In This Section  
   
--   [Interfaces &#40;OLE DB&#41;](../Topic/Interfaces%20\(OLE%20DB\).md)  
+-   [Interfaces &#40;OLE DB&#41;](../../a9retired/interfaces-ole-db.md)  
   
 ## See Also  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

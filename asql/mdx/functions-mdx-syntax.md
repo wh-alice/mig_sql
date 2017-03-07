@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Functions (MDX Syntax)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Multidimensional Expressions (MDX) has several categories of intrinsic functions to perform certain operations. The following table lists the function categories that are available in MDX.  
   

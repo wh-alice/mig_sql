@@ -22,7 +22,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create Indexed Views
-  This topic describes how to create an indexed view in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. The first index created on a view must be a unique clustered index. After the unique clustered index has been created, you can create more nonclustered indexes. Creating a unique clustered index on a view improves query performance because the view is stored in the database in the same way a table with a clustered index is stored. The query optimizer may use indexed views to speed up the query execution. The view does not have to be referenced in the query for the optimizer to consider that view for a substitution.  
+  This topic describes how to create an indexed view in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. The first index created on a view must be a unique clustered index. After the unique clustered index has been created, you can create more nonclustered indexes. Creating a unique clustered index on a view improves query performance because the view is stored in the database in the same way a table with a clustered index is stored. The query optimizer may use indexed views to speed up the query execution. The view does not have to be referenced in the query for the optimizer to consider that view for a substitution.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
  The following steps are required to create an indexed view and are critical to the successful implementation of the indexed view:  
@@ -38,7 +38,7 @@ manager: "jhubbard"
 5.  Create the unique clustered index on the view.  
   
 ###  <a name="Restrictions"></a> Required SET Options for Indexed Views  
- Evaluating the same expression can produce different results in the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] when different SET options are active when the query is executed. For example, after the SET option CONCAT_NULL_YIELDS_NULL is set to ON, the expression **'**abc**'** + NULL returns the value NULL. However, after CONCAT_NULL_YIEDS_NULL is set to OFF, the same expression produces **'**abc**'**.  
+ Evaluating the same expression can produce different results in the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] when different SET options are active when the query is executed. For example, after the SET option CONCAT_NULL_YIELDS_NULL is set to ON, the expression **'**abc**'** + NULL returns the value NULL. However, after CONCAT_NULL_YIEDS_NULL is set to OFF, the same expression produces **'**abc**'**.  
   
  To make sure that the views can be maintained correctly and return consistent results, indexed views require fixed values for several SET options. The SET options in the following table must be set to the values shown in the **Required Value** column whenever the following conditions occur:  
   
@@ -129,16 +129,16 @@ manager: "jhubbard"
 -   If the view definition contains a GROUP BY clause, the key of the unique clustered index can reference only the columns specified in the GROUP BY clause.  
   
 ###  <a name="Recommendations"></a> Recommendations  
- When you refer to **datetime** and **smalldatetime** string literals in indexed views, we recommend that you explicitly convert the literal to the date type you want by using a deterministic date format style. For a list of the date format styles that are deterministic, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Expressions that involve implicit conversion of character strings to **datetime** or **smalldatetime** are considered nondeterministic. This is because the results depend on the LANGUAGE and DATEFORMAT settings of the server session. For example, the results of the expression `CONVERT (datetime, '30 listopad 1996', 113)` depend on the LANGUAGE setting because the string '`listopad`' means different months in different languages. Similarly, in the expression `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] interprets the string `'2000-12-01'` based on the DATEFORMAT setting.  
+ When you refer to **datetime** and **smalldatetime** string literals in indexed views, we recommend that you explicitly convert the literal to the date type you want by using a deterministic date format style. For a list of the date format styles that are deterministic, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Expressions that involve implicit conversion of character strings to **datetime** or **smalldatetime** are considered nondeterministic. This is because the results depend on the LANGUAGE and DATEFORMAT settings of the server session. For example, the results of the expression `CONVERT (datetime, '30 listopad 1996', 113)` depend on the LANGUAGE setting because the string '`listopad`' means different months in different languages. Similarly, in the expression `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] interprets the string `'2000-12-01'` based on the DATEFORMAT setting.  
   
  Implicit conversion of non-Unicode character data between collations is also considered nondeterministic.  
   
 ###  <a name="Considerations"></a> Considerations  
- The setting of the **large_value_types_out_of_row** option of columns in an indexed view is inherited from the setting of the corresponding column in the base table. This value is set by using [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). The default setting for columns formed from expressions is 0. This means that large value types are stored in-row.  
+ The setting of the **large_value_types_out_of_row** option of columns in an indexed view is inherited from the setting of the corresponding column in the base table. This value is set by using [sp_tableoption](../../relational-databases/reference/system-stored-procedures/sp-tableoption-transact-sql.md). The default setting for columns formed from expressions is 0. This means that large value types are stored in-row.  
   
  Indexed views can be created on a partitioned table, and can themselves be partitioned.  
   
- To prevent the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] from using indexed views, include the OPTION (EXPAND VIEWS) hint on the query. Also, if any of the listed options are incorrectly set, this will prevent the optimizer from using the indexes on the views. For more information about the OPTION (EXPAND VIEWS) hint, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ To prevent the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] from using indexed views, include the OPTION (EXPAND VIEWS) hint on the query. Also, if any of the listed options are incorrectly set, this will prevent the optimizer from using the indexes on the views. For more information about the OPTION (EXPAND VIEWS) hint, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
  All indexes on a view are dropped when the view is dropped. All nonclustered indexes and auto-created statistics on the view are dropped when the clustered index is dropped. User-created statistics on the view are maintained. Nonclustered indexes can be individually dropped. Dropping the clustered index on the view removes the stored result set, and the optimizer returns to processing the view like a standard view.  
   
@@ -153,7 +153,7 @@ manager: "jhubbard"
   
 #### To create an indexed view  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

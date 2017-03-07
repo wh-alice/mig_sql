@@ -20,11 +20,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Processing Results
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   If a rowset object is produced by either the execution of a command or the generation of a rowset object directly from the provider, the consumer needs to retrieve and access data in the rowset.  
   
- Rowsets are the central objects that enable the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider to expose data in tabular form. Conceptually, a rowset is a set of rows in which each row has column data. A rowset object exposes interfaces such as **IRowset** (contains methods for fetching rows from the rowset sequentially), **IAccessor** (permits the definition of a group of column bindings describing the way tabular data is bound to consumer program variables), **IColumnsInfo** (provides information about columns in the rowset), and **IRowsetInfo** (provides information about rowset).  
+ Rowsets are the central objects that enable the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider to expose data in tabular form. Conceptually, a rowset is a set of rows in which each row has column data. A rowset object exposes interfaces such as **IRowset** (contains methods for fetching rows from the rowset sequentially), **IAccessor** (permits the definition of a group of column bindings describing the way tabular data is bound to consumer program variables), **IColumnsInfo** (provides information about columns in the rowset), and **IRowsetInfo** (provides information about rowset).  
   
  A consumer can call the **IRowset::GetData** method to retrieve a row of data from the rowset into a buffer. Before **GetData** is called, the consumer describes the buffer using a set of DBBINDING structures. Each binding describes how a column in a rowset is stored in a consumer buffer and contains the following:  
   

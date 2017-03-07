@@ -18,17 +18,17 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Date and Time Improvements (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] introduced new date and time data types. This section describes how these new types are exposed as extensions in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client. For an overview of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client support for the new date and time data types, see [Date and Time Improvements](../../relational-databases/native-client/features/date-and-time-improvements.md). For a sample demonstrating ODBC date/time support, see [Use Date and Time Types](../../relational-databases/native-client-odbc-how-to/use-date-and-time-types.md).  
+  [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] introduced new date and time data types. This section describes how these new types are exposed as extensions in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client. For an overview of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client support for the new date and time data types, see [Date and Time Improvements](../../relational-databases/native-client/features/date-and-time-improvements.md). For a sample demonstrating ODBC date/time support, see [Use Date and Time Types](../../relational-databases/native-client-odbc-how-to/use-date-and-time-types.md).  
   
  For more general information about date and time data types, see [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md).  
   
 ## In This Section  
  [Data Type Support for ODBC Date and Time Improvements](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)  
- Provides information about ODBC types that support [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] date and time data types.  
+ Provides information about ODBC types that support [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] date and time data types.  
   
- [Metadata &#40;ODBC&#41;](../Topic/Metadata%20\(ODBC\).md)  
+ [Metadata &#40;ODBC&#41;](../../a9retired/metadata-odbc.md)  
  Describes information returned in the implementation parameter descriptor (IPD) and implementation row descriptor (IRD) fields, as well as column metadata returned by **SQLColumns** and **SQLProcedureColumns**. Also describes data type metadata returned by **SQLGetTypeInfo**.  
   
  [datetime Data Type Conversions &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-odbc.md)  
@@ -41,7 +41,7 @@ manager: "jhubbard"
  Describes date/time enhancements to support bulk copy operations.  
   
  [Enhanced Date and Time Type Behavior with Previous SQL Server Versions &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc.md)  
- Describes the expected behavior when a client application using enhanced date and time features communicates with an older version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and when a client compiled with an older version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client sends commands to a server that supports enhanced date and time features.  
+ Describes the expected behavior when a client application using enhanced date and time features communicates with an older version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], and when a client compiled with an older version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client sends commands to a server that supports enhanced date and time features.  
   
  [ODBC API Support for Enhanced Date and Time Features](../../relational-databases/native-client-odbc-date-time/odbc-api-support-for-enhanced-date-and-time-features.md)  
  Lists the ODBC functions that support enhanced date and time functionality.  

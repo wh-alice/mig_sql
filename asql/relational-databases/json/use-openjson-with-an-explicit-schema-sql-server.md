@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Use OPENJSON with an Explicit Schema (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Use **OPENJSON** with an explicit schema to return a table that's formatted as you specify in the WITH clause.  
   
@@ -60,8 +60,8 @@ WITH ( k1 int,
 |31|"32"|*NULL*|*NULL*|*NULL*|{"k1": 31, "k2": 32 }|  
 |41|*NULL*|*NULL*|false|{ "data": false }|{"k1": 41, "k2": null,       "k4": { "data": false }    }|  
   
-## Example - Load JSON into a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table.  
- The following example loads an entire JSON object into a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table.  
+## Example - Load JSON into a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] table.  
+ The following example loads an entire JSON object into a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] table.  
   
 ```tsql  
 DECLARE @json NVARCHAR(MAX) = '{  

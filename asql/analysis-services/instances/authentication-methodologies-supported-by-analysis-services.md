@@ -59,7 +59,7 @@ manager: "erikre"
   
  **EffectiveUserName**  
   
- EffectiveUserName is a connection string property used for passing identity information to Analysis Services. [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint uses it to record user activity in the usage logs. Excel Services and PerformancePoint Services can use it to retrieve data used by workbooks or dashboards in SharePoint. It can also be used in custom applications or scripts that perform operations on an Analysis Services instance.  
+ EffectiveUserName is a connection string property used for passing identity information to Analysis Services. [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint uses it to record user activity in the usage logs. Excel Services and PerformancePoint Services can use it to retrieve data used by workbooks or dashboards in SharePoint. It can also be used in custom applications or scripts that perform operations on an Analysis Services instance.  
   
  For more information about using EffectiveUserName in SharePoint, see [Use Analysis Services EffectiveUserName in SharePoint Server 2010](http://go.microsoft.com/fwlink/?LinkId=311905).  
   
@@ -69,7 +69,7 @@ manager: "erikre"
   
  For Anonymous authentication, you can set the anonymous user identity to a specific Windows user account (IUSR_GUEST by default) or an application pool identity. The anonymous user account will be used on the Analysis Services connection, and must have data access permissions on the Analysis Services instance. When you use this approach, only the user identity associated with the Anonymous account is used on the connection. If your application requires additional identity management, you will need to choose one of the other approaches, or supplement with an identity management solution that you provide.  
   
- Basic and Anonymous are available only when you configure Analysis Services for HTTP access, using IIS and the msmdpump.dll to establish the connection. For more information, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../Topic/Configure%20HTTP%20Access%20to%20Analysis%20Services%20on%20Internet%20Information%20Services%20\(IIS\)%208.0.md).  
+ Basic and Anonymous are available only when you configure Analysis Services for HTTP access, using IIS and the msmdpump.dll to establish the connection. For more information, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8.0.md).  
   
  **Stored Credentials**  
   
@@ -79,7 +79,7 @@ manager: "erikre"
   
 ## See Also  
  [Using Impersonation with Transport Security](http://go.microsoft.com/fwlink/?LinkId=311727)   
- [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../Topic/Configure%20HTTP%20Access%20to%20Analysis%20Services%20on%20Internet%20Information%20Services%20\(IIS\)%208.0.md)   
+ [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8.0.md)   
  [Configure Analysis Services for Kerberos constrained delegation](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [SPN registration for an Analysis Services instance](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
  [Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  

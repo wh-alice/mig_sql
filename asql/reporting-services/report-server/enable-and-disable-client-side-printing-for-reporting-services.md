@@ -22,9 +22,9 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Enable and Disable Client-Side Printing for Reporting Services
-  The print button on the report viewer toolbar uses the Portable Document Format (PDF) format for client-side printing of [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] reports viewed in a browser. The new remote printing experience uses the PDF rendering extension that is included with [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], to render the report in PDF format. You can download a .PDF form of the report or if you have an application installed for viewing .PDF files, the print button displays a print dialog box for page common configuration items such as page size an orientation and a preview of the .PDF file. Although client-side printing is enabled by default, you can disable the feature to prevent it from being used.  
+  The print button on the report viewer toolbar uses the Portable Document Format (PDF) format for client-side printing of [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] reports viewed in a browser. The new remote printing experience uses the PDF rendering extension that is included with [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)], to render the report in PDF format. You can download a .PDF form of the report or if you have an application installed for viewing .PDF files, the print button displays a print dialog box for page common configuration items such as page size an orientation and a preview of the .PDF file. Although client-side printing is enabled by default, you can disable the feature to prevent it from being used.  
   
- Previous versions of [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] used an ActiveX control that required downloading to the client computer from the report server. If you upgrade your report server to [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], the print control is not removed from the report server or client computers.  
+ Previous versions of [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] used an ActiveX control that required downloading to the client computer from the report server. If you upgrade your report server to [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], the print control is not removed from the report server or client computers.  
   
 ##  <a name="bkmk_top"></a> In this topic  
   
@@ -37,7 +37,7 @@ manager: "erikre"
 ##  <a name="bkmk_clientside_printexpereince"></a> The Print Experience  
  When you click the print ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") button on the report viewer toolbar, the experience varies depending on what  .PDF viewing applications are installed on the client computer and what browser you are using.   You can download the PDF file or configure print options from a dialog, or both, depending on the client computer.  
   
- ![Report toolbar](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
+ ![Report toolbar](../../a9retired/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
   
 |||  
 |-|-|  
@@ -49,11 +49,11 @@ manager: "erikre"
 ##  <a name="bkmk_troubleshoot_clientsideprinting"></a> Troubleshoot Client-Side Printing  
  If the print button the report viewer toolbar is disabled, verify the following:  
   
--   Client-side printing is disabled for the report server in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)]. See the section  [Enable and Disable Client-Side Printing](#bkmk_enable) in this topic.  
+-   Client-side printing is disabled for the report server in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)]. See the section  [Enable and Disable Client-Side Printing](#bkmk_enable) in this topic.  
   
--   The [!INCLUDE[ssRSCurrent](../../reporting-services/includes/ssrscurrent-md.md)] PDF rendering extension is disabled. Review the `<Extension Name="PDF"` section of the **rsreportserver.config** file.  
+-   The [!INCLUDE[ssRSCurrent](../../a9notintoc/includes/ssrscurrent-md.md)] PDF rendering extension is disabled. Review the `<Extension Name="PDF"` section of the **rsreportserver.config** file.  
   
--   You are viewing the reporting in comparability mode, which uses the old [!INCLUDE[ssRSCurrent](../../reporting-services/includes/ssrscurrent-md.md)] HTML4 rendering engine. The PDF printing experience requires the HTML 5 rendering engine.  Click the **Try Preview** button on the toolbar.  
+-   You are viewing the reporting in comparability mode, which uses the old [!INCLUDE[ssRSCurrent](../../a9notintoc/includes/ssrscurrent-md.md)] HTML4 rendering engine. The PDF printing experience requires the HTML 5 rendering engine.  Click the **Try Preview** button on the toolbar.  
   
      ![ssrs_html5_switch2html5](../../reporting-services/report-server/media/ssrs-html5-switch2html5.png "ssrs_html5_switch2html5")  
   
@@ -62,11 +62,11 @@ manager: "erikre"
   
 -   For a **Native mode report server**:  
   
-    1.  Start [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] with administrative privileges.  
+    1.  Start [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] with administrative privileges.  
   
-    2.  Connect to a report server instance in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)].  
+    2.  Connect to a report server instance in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)].  
   
-    3.  Right-click the report server node, and then click **Properties**. If the **Properties** option is disabled, verify you started [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] with administrative privileges.  
+    3.  Right-click the report server node, and then click **Properties**. If the **Properties** option is disabled, verify you started [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] with administrative privileges.  
   
     4.  Click **Advanced**.  
   
@@ -82,7 +82,7 @@ manager: "erikre"
   
     2.  Click **Manage service applications**.  
   
-    3.  Click the name of your [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] service application, and then click **Manage** in the SharePoint ribbon.  
+    3.  Click the name of your [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] service application, and then click **Manage** in the SharePoint ribbon.  
   
     4.  Click **System Settings**.  
   
@@ -92,7 +92,7 @@ manager: "erikre"
   
 -   Write script or code to set the report server system property **EnableClientPrinting** to **false.**  
   
- The following sample script illustrates one approach for disabling client-side printing. Compile and then run the following [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] code to set the **EnableClientPrinting** property to **False**. After you run the code, restart IIS.  
+ The following sample script illustrates one approach for disabling client-side printing. Compile and then run the following [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] code to set the **EnableClientPrinting** property to **False**. After you run the code, restart IIS.  
   
 ### Sample Script  
   

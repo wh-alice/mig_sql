@@ -44,13 +44,13 @@ After you select **.NET Framework Data Provider for SQL Server** on the **Choose
  Enter the name of the source or destination database, or select a database from the drop-down list.  
   
  **Integrated Security**  
- Specify **True** to connect with Windows integrated authentication (recommended), or **False** to connect with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] authentication. If you specify **False**, you must enter a user ID and password. The default value is **False**.  
+ Specify **True** to connect with Windows integrated authentication (recommended), or **False** to connect with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] authentication. If you specify **False**, you must enter a user ID and password. The default value is **False**.  
   
  **User ID**  
- Enter a user name if you're using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] authentication.  
+ Enter a user name if you're using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] authentication.  
   
  **Password**  
- Enter the password if you're using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] authentication.  
+ Enter the password if you're using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] authentication.  
 
 ## Connect to SQL Server with the ODBC driver for SQL Server 
 ODBC drivers aren't listed in the drop-down list of data sources. To connect with an ODBC driver, start by selecting the **.NET Framework Data Provider for ODBC** as the data source. This provider acts as a wrapper around the ODBC driver.

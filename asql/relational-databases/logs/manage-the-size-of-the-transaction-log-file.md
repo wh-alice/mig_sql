@@ -17,10 +17,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Manage the Size of the Transaction Log File
-This topic contains information about how to monitor the size of a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] transaction log, shrink the transaction log, add or enlarge a transaction log file, optimize the **tempdb** transaction log growth rate, and control the growth of a transaction log file.  
+This topic contains information about how to monitor the size of a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] transaction log, shrink the transaction log, add or enlarge a transaction log file, optimize the **tempdb** transaction log growth rate, and control the growth of a transaction log file.  
 
   ##  <a name="MonitorSpaceUse"></a> Monitor log space use  
-Monitor log space use by using DBCC SQLPERF (LOGSPACE). This command returns information about the amount of log space currently used, and indicates when the transaction log needs truncation. For more information, see [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md). For information about the current size of a log file, its maximum size, and the autogrow option for the file, you can also use the **size**, **max_size**, and **growth** columns for that log file in **sys.database_files**. For more information, see [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-files-transact-sql.md).  
+Monitor log space use by using DBCC SQLPERF (LOGSPACE). This command returns information about the amount of log space currently used, and indicates when the transaction log needs truncation. For more information, see [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md). For information about the current size of a log file, its maximum size, and the autogrow option for the file, you can also use the **size**, **max_size**, and **growth** columns for that log file in **sys.database_files**. For more information, see [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-files-transact-sql.md).  
   
 **Important!** Avoid overloading the log disk!  
 
@@ -47,10 +47,10 @@ Monitor log space use by using DBCC SQLPERF (LOGSPACE). This command returns inf
   
 -   [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)  
   
--   [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-files-transact-sql.md) (See the **size**, **max_size**, and **growth** columns for the log file or files.)  
+-   [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-files-transact-sql.md) (See the **size**, **max_size**, and **growth** columns for the log file or files.)  
   
 > [!NOTE]
->  Shrinking database and log files can be set to occur automatically. However, we recommend against automatic shrinking, and the **autoshrink** database property is set to FALSE by default. If **autoshrink** is set to TRUE, automatic shrinking reduces the size of a file only when more than 25 percent of its space is unused. The file is shrunk either to the size at which only 25 percent of the file is unused space or to the original size of the file, whichever is larger. For information about changing the setting of the **autoshrink** property, see [View or Change the Properties of a Database](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)—use the **Auto Shrink** property on the **Options** page—or [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)—use the AUTO_SHRINK option.  
+>  Shrinking database and log files can be set to occur automatically. However, we recommend against automatic shrinking, and the **autoshrink** database property is set to FALSE by default. If **autoshrink** is set to TRUE, automatic shrinking reduces the size of a file only when more than 25 percent of its space is unused. The file is shrunk either to the size at which only 25 percent of the file is unused space or to the original size of the file, whichever is larger. For information about changing the setting of the **autoshrink** property, see [View or Change the Properties of a Database](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)—use the **Auto Shrink** property on the **Options** page—or [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)—use the AUTO_SHRINK option.  
   
 
 ##  <a name="AddOrEnlarge"></a> Add or enlarge a log file  

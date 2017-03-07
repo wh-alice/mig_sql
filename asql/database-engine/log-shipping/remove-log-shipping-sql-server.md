@@ -19,7 +19,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Remove Log Shipping (SQL Server)
-  This topic describes how to remove log shipping in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to remove log shipping in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 #### To remove log shipping  
   
-1.  Connect to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that is currently the log shipping primary server and expand that instance.  
+1.  Connect to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that is currently the log shipping primary server and expand that instance.  
   
 2.  Expand **Databases**, right-click the log shipping primary database, and then click **Properties**.  
   
@@ -60,9 +60,9 @@ manager: "jhubbard"
   
 #### To Remove Log Shipping  
   
-1.  On the log shipping primary server, execute [sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md) to delete the information about the secondary database from the primary server.  
+1.  On the log shipping primary server, execute [sp_delete_log_shipping_primary_secondary](../../relational-databases/reference/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md) to delete the information about the secondary database from the primary server.  
   
-2.  On the log shipping secondary server, execute [sp_delete_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md) to delete the secondary database.  
+2.  On the log shipping secondary server, execute [sp_delete_log_shipping_secondary_database](../../relational-databases/reference/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md) to delete the secondary database.  
   
     > [!NOTE]  
     >  If there are no other secondary databases with the same secondary ID, **sp_delete_log_shipping_secondary_primary** is invoked from **sp_delete_log_shipping_secondary_database** and deletes the entry for the secondary ID and the copy and restore jobs.  

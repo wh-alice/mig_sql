@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # + (Add) (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Performs an arithmetic operation that adds two numbers together.  
   
@@ -43,7 +43,7 @@ Numeric_Expression + Numeric_Expression
  Both expressions must be of the same data type, or one expression must be able to be implicitly converted to the data type of the other expression. If one expression evaluates to a null value, the operator returns the result of the other expression.  
   
 ## See Also  
- [Arithmetic Operators &#40;DMX&#41;](../Topic/Arithmetic%20Operators%20\(DMX\).md)   
+ [Arithmetic Operators &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
  [Data Mining Extensions &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
   

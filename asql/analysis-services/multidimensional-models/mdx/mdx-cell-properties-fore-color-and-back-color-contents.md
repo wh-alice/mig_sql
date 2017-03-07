@@ -30,6 +30,6 @@ manager: "erikre"
  The valid range for an ordinary RGB color is zero (0) to 16,777,215 (&H00FFFFFF). The high byte of a number in this range always equals 0; the lower 3 bytes, from least to most significant byte, determine the amount of red, green, and blue, respectively. The red, green, and blue components are each represented by a number between 0 and 255 (&HFF).  
   
 ## See Also  
- [Using Cell Properties &#40;MDX&#41;](../Topic/Using%20Cell%20Properties%20\(MDX\).md)  
+ [Using Cell Properties &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)  
   
   

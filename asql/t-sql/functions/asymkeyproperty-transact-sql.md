@@ -26,7 +26,7 @@ manager: "jhubbard"
 
   Returns the properties of an asymmetric key.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -72,8 +72,8 @@ GO
  [SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)   
  [VERIFYSIGNEDBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
  [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [sys.asymmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.asymmetric-keys-transact-sql.md)   
- [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [sys.asymmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.asymmetric-keys-transact-sql.md)   
+ [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/security-catalog-views-transact-sql.md)   
  [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
  [SYMKEYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/symkeyproperty-transact-sql.md)  
   

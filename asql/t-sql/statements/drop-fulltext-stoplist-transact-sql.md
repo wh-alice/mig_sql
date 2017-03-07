@@ -28,9 +28,9 @@ manager: "jhubbard"
 # DROP FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Drops a full-text stoplist from the database in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Drops a full-text stoplist from the database in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!IMPORTANT]  
 >  CREATE FULLTEXT STOPLIST is supported only for compatibility level 100 and higher. For compatibility levels 80 and 90, the system stoplist is always assigned to the database.  
@@ -63,7 +63,7 @@ DROP FULLTEXT STOPLIST myStoplist;
 ## See Also  
  [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
  [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
- [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-stoplists-transact-sql.md)   
- [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-stopwords-transact-sql.md)  
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-stoplists-transact-sql.md)   
+ [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-stopwords-transact-sql.md)  
   
   

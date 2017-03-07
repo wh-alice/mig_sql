@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Large CLR User-Defined Types (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
   This topic discusses the changes to ODBC in SQL Server Native Client to support large common language runtime (CLR) user-defined types (UDTs).  
   

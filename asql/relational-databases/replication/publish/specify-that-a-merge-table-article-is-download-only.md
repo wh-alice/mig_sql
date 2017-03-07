@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Specify That a Merge Table Article is Download-Only
-  This topic describes how to specify that a merge table article is download-only in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]. Download-only articles are designed for applications with data that is not updated at Subscribers. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+  This topic describes how to specify that a merge table article is download-only in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]. Download-only articles are designed for applications with data that is not updated at Subscribers. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
  **In This Topic**  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 #### To specify that a new merge table article is download-only  
   
-1.  Execute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), specifying a value of **1** or **2** for the parameter **@subscriber_upload_options**. The numbers correspond to the following behavior:  
+1.  Execute [sp_addmergearticle](../../../relational-databases/reference/system-stored-procedures/sp-addmergearticle-transact-sql.md), specifying a value of **1** or **2** for the parameter **@subscriber_upload_options**. The numbers correspond to the following behavior:  
   
     -   **0** - No restrictions (default). Changes made at the Subscriber are uploaded to the Publisher.  
   
@@ -77,9 +77,9 @@ manager: "jhubbard"
   
 #### To modify an existing merge table article to be download-only  
   
-1.  To determine if an article is download-only, execute [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Note the value of **upload_options** for the article in the result set.  
+1.  To determine if an article is download-only, execute [sp_helpmergearticle](../../../relational-databases/reference/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Note the value of **upload_options** for the article in the result set.  
   
-2.  If the value returned in step 1 is **0**, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying a value of **subscriber_upload_options** for **@property**, a value of **1** for **@force_invalidate_snapshot** and **@force_reinit_subscription**, and a value of **1** or **2** for **@value**, which corresponds to the following behavior:  
+2.  If the value returned in step 1 is **0**, execute [sp_changemergearticle](../../../relational-databases/reference/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying a value of **subscriber_upload_options** for **@property**, a value of **1** for **@force_invalidate_snapshot** and **@force_reinit_subscription**, and a value of **1** or **2** for **@value**, which corresponds to the following behavior:  
   
     -   **1** - Changes are allowed at the Subscriber, but they are not uploaded to the Publisher.  
   

@@ -18,9 +18,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLGetFunctions
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver interface complies with the three defined compliance levels for ODBC (ISO, Open Group, and ODBC level 2). **SQLGetFunctions** reports that all ODBC functions are supported for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver.  
+  The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver interface complies with the three defined compliance levels for ODBC (ISO, Open Group, and ODBC level 2). **SQLGetFunctions** reports that all ODBC functions are supported for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver.  
   
 ## See Also  
  [SQLGetFunctions Function](http://go.microsoft.com/fwlink/?LinkId=59353)   

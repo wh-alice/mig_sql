@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # RemoteDatasourceID Element (ASSL)
-  Specifies the identifier (ID) of the OLAP data source that points to the instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] that stores the remote partition.  
+  Specifies the identifier (ID) of the OLAP data source that points to the instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] that stores the remote partition.  
   
 ## Syntax  
   

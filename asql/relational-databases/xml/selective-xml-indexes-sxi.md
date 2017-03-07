@@ -17,7 +17,7 @@ manager: "jhubbard"
 # Selective XML Indexes (SXI)
   Selective XML indexes are another type of XML index that is available to you in addition to ordinary XML indexes. The goals of the selective XML index feature are the following:  
   
--   To improve the performance of queries over XML data stored in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   To improve the performance of queries over XML data stored in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 -   To support faster indexing of large XML data workloads.  
   
@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  The main limitation with ordinary XML indexes is that they index the entire XML document. This leads to several significant drawbacks, such as decreased query performance and increased index maintenance cost, mostly related to the storage costs of the index.  
   
- The selective XML index feature lets you promote only certain paths from the XML documents to index. At index creation time, these paths are evaluated, and the nodes that they point to are shredded and stored inside a relational table in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. This feature uses an efficient mapping algorithm developed by [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Research in collaboration with the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] product team. This algorithm maps the XML nodes to a single relational table, and achieves exceptional performance while requiring only modest storage space.  
+ The selective XML index feature lets you promote only certain paths from the XML documents to index. At index creation time, these paths are evaluated, and the nodes that they point to are shredded and stored inside a relational table in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. This feature uses an efficient mapping algorithm developed by [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Research in collaboration with the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] product team. This algorithm maps the XML nodes to a single relational table, and achieves exceptional performance while requiring only modest storage space.  
   
  The selective XML index feature also supports secondary selective XML indexes over nodes that have been indexed by a selective XML index. These secondary selective indexes are efficient and further improve the performance of queries.  
   
@@ -98,7 +98,7 @@ FOR
 ## Supported Features, Prerequisites, and Limitations  
   
 ###  <a name="features"></a> Supported XML Features  
- Selective XML indexes support the XQuery supported by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] inside the exist(), value() and nodes() methods.  
+ Selective XML indexes support the XQuery supported by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] inside the exist(), value() and nodes() methods.  
   
 -   For the exist(), value() and nodes() methods, selective XML indexes contain enough information to transform the entire expression.  
   
@@ -110,7 +110,7 @@ FOR
   
   
 ###  <a name="unsupported"></a> Unsupported XML Features  
- Selective XML indexes do not support the following features that are supported in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] implementation of XML:  
+ Selective XML indexes do not support the following features that are supported in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] implementation of XML:  
   
 -   Indexing of nodes with complex XS types: union types, sequence types, and list types.  
   

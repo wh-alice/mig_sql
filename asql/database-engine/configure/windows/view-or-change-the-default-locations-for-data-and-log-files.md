@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View or Change the Default Locations for Data and Log Files
-  This topic describes how to view and change the default locations of new data and log files in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. The default path is obtained from the registry. After you change the location all new databases created in the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will use that location if a different location is not specified.  
+  This topic describes how to view and change the default locations of new data and log files in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)]. The default path is obtained from the registry. After you change the location all new databases created in the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] will use that location if a different location is not specified.  
   
  
 ##  <a name="Recommendations"></a> Recommendations  

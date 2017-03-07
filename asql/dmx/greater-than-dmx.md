@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # &gt; (Greater Than) (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Performs a comparison operation that determines whether the value of one Data Mining Extensions (DMX) expression is greater than the value of another DMX expression.  
   
@@ -40,7 +40,7 @@ DMX_Expression > DMX_Expression
  A Boolean value that contains TRUE if both parameters are non-null and the first parameter has a value that is greater than the value of the second parameter. The Boolean value contains FALSE if both parameters are non-null and the first parameter has a value that is equal to or less than the value of the second parameter. The Boolean value contains a null value if either parameter or both parameters evaluate to a null value.  
   
 ## See Also  
- [Comparison Operators &#40;DMX&#41;](../Topic/Comparison%20Operators%20\(DMX\).md)   
+ [Comparison Operators &#40;DMX&#41;](../dmx/operators-comparison.md)   
  [Data Mining Extensions &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
   

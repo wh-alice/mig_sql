@@ -17,7 +17,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Lesson 2: Defining and Deploying a Cube
-After you define a data source view in your [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] project, you are ready to define an initial [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] cube.  
+After you define a data source view in your [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] project, you are ready to define an initial [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] cube.  
   
 You can define a cube and its dimensions in a single pass using the Cube Wizard. Alternatively, you can define one or more dimensions and then use the Cube Wizard to define a cube that uses those dimensions. If you are designing a complex solution, you generally start by defining the dimensions. For more information, see [Dimensions in Multidimensional Models](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md) or [Cubes in Multidimensional Models](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md).  
   
@@ -26,22 +26,22 @@ You can define a cube and its dimensions in a single pass using the Cube Wizard.
   
 This lesson contains the following tasks:  
   
-[Defining a Dimension](../Topic/Defining%20a%20Dimension.md)  
+[Defining a Dimension](../../analysis-services/tutorials/lesson-2-1-defining-a-dimension.md)  
 In this task, you use the Dimension Wizard to define a dimension.  
   
-[Defining a Cube](../Topic/Defining%20a%20Cube.md)  
-In this task, you use the Cube Wizard to define an initial [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] cube.  
+[Defining a Cube](../../analysis-services/tutorials/lesson-2-2-defining-a-cube.md)  
+In this task, you use the Cube Wizard to define an initial [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] cube.  
   
-[Adding Attributes to Dimensions](../Topic/Adding%20Attributes%20to%20Dimensions.md)  
+[Adding Attributes to Dimensions](../../analysis-services/tutorials/lesson-2-3-adding-attributes-to-dimensions.md)  
 In this task, you add attributes to the dimensions that you created.  
   
-[Reviewing Cube and Dimension Properties](../Topic/Reviewing%20Cube%20and%20Dimension%20Properties.md)  
+[Reviewing Cube and Dimension Properties](../../analysis-services/tutorials/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
 In this task, you review the structure of the cube that you defined by using the Cube Wizard.  
   
-[Deploying an Analysis Services Project](../Topic/Deploying%20an%20Analysis%20Services%20Project.md)  
-In this task, you deploy the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] project to your local instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], and learn about certain deployment properties.  
+[Deploying an Analysis Services Project](../../analysis-services/tutorials/lesson-2-5-deploying-an-analysis-services-project.md)  
+In this task, you deploy the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] project to your local instance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], and learn about certain deployment properties.  
   
-[Browsing the Cube](../Topic/Browsing%20the%20Cube.md)  
+[Browsing the Cube](../../analysis-services/tutorials/lesson-2-6-browsing-the-cube.md)  
 In this task, you browse the cube and dimension data by using Excel or the MDX query designer.  
   
 ## Next Lesson  

@@ -15,7 +15,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Add navigators to Reporting Services mobile reports
-In [!INCLUDE[SS_MobileReptPub_Long](../../reporting-services/mobile-reports/includes/ss-mobilereptpub-long.md)], you add *navigators* to filter the data in visualizations by time or by selection. 
+In [!INCLUDE[SS_MobileReptPub_Long](../../a9retired/includes/ss-mobilereptpub-long.md)], you add *navigators* to filter the data in visualizations by time or by selection. 
 
 Navigators are similar to slicers in Power BI and Excel PivotTables, but navigators have some unique traits, too.
 
@@ -32,7 +32,7 @@ As its name implies, you use the time navigator to filter a range of data bounde
 ![SSMRP_TimeNav](../../reporting-services/mobile-reports/media/ssmrp-timenav.png)  
 *The four line charts on the left are set in the Time Range Presets. The line chart on the right is the filter.*  
   
-When you view the report in Preview or in the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, you drag the arrows in the time navigator to filter the rest of the report.  
+When you view the report in Preview or in the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, you drag the arrows in the time navigator to filter the rest of the report.  
   
 ![SSMRP_TimeNavPreview](../../reporting-services/mobile-reports/media/ssmrp-timenavpreview.png)  
   
@@ -67,7 +67,7 @@ For each visualization in the mobile report that you want the selection list to 
 
 2. Under **Filtered by**, select the selection list.
 
-When you view the mobile report in Preview or in the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal and select a value in the selection list, it filters the other visualizations in the mobile report.
+When you view the mobile report in Preview or in the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal and select a value in the selection list, it filters the other visualizations in the mobile report.
 
 ![mobile-report-selection-list-filtering](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
      
@@ -98,7 +98,7 @@ The scorecard grid filter functions much like the selection list filter, but it 
 
 8. After you've set the data properties, under **Tables FIltered by Selection List**, select the tables to be filtered and the column to filter by. This column needs to match values in the selection list's key column. 
 
-When you view the mobile report in Preview or in the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal and select a value in the scorecard grid, it filters the other visualizations in the mobile report.
+When you view the mobile report in Preview or in the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal and select a value in the scorecard grid, it filters the other visualizations in the mobile report.
 
 ![mobile-report-scorecard-grid](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
     

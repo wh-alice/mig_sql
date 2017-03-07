@@ -20,13 +20,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # query() Method (xml Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Specifies an XQuery against an instance of the **xml** data type. The result is of **xml** type. The method returns an instance of untyped XML.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
 ## Syntax  
   
@@ -86,7 +86,7 @@ declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-w
   
  Note the following from the previous query:  
   
--   The CatalogDescription column is a typed **xml** column . This means it has a schema collection associated with it. In the [XQuery Prolog](../Topic/XQuery%20Prolog.md), the **namespace** keyword is used to define the prefix that is later used in the query body.  
+-   The CatalogDescription column is a typed **xml** column . This means it has a schema collection associated with it. In the [XQuery Prolog](../../xquery/modules-and-prologs-xquery-prolog.md), the **namespace** keyword is used to define the prefix that is later used in the query body.  
   
 -   The **query()** method constructs XML, a <`Product`> element that has a **ProductModelID** attribute, in which the **ProductModelID** attribute value is retrieved from the database. For more information about XML construction, see [XML Construction &#40;XQuery&#41;](../../xquery/xml-construction-xquery.md).  
   

@@ -21,7 +21,7 @@ manager: "jhubbard"
   This topic describes format files. You can use a format file to skip importing a table column when the field does not exist in the data file. A data file can contain fewer fields than the number of columns in the table only if the skipped columns are nullable and/or have default value.  
   
 ## Sample Table and Data File  
- The following examples require a table named `myTestSkipCol` in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] sample database under the **dbo** schema. Create this table as follows:  
+ The following examples require a table named `myTestSkipCol` in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] sample database under the **dbo** schema. Create this table as follows:  
   
 ```  
 USE AdventureWorks2012;  
@@ -100,7 +100,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
  The following examples are also based on the `myTestSkipCol` sample table and the `myTestSkipCol2.dat` sample data file that are created in "Sample Table and Data File," earlier in this topic.  
   
 #### Using BULK INSERT  
- This example works by using either of the modified non-XML format files created in "Methods for Modifying a Non-XML Format File," earlier in this topic. In this example, the modified format file is named `C:\myTestSkipCol2.fmt`. To use `BULK INSERT` to bulk import the `myTestSkipCol2.dat` data file, in the [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
+ This example works by using either of the modified non-XML format files created in "Methods for Modifying a Non-XML Format File," earlier in this topic. In this example, the modified format file is named `C:\myTestSkipCol2.fmt`. To use `BULK INSERT` to bulk import the `myTestSkipCol2.dat` data file, in the [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -168,7 +168,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 #### Using OPENROWSET(BULK...)  
  The following example uses the `OPENROWSET` bulk rowset provider and the `myTestSkipCol2.xml` format file. The example bulk imports the `myTestSkipCol2.dat` data file into the `myTestSkipCol` table. The statement contains an explicit list of columns in the select list and also in the target table, as required.  
   
- In the [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
+ In the [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -185,7 +185,7 @@ GO
 #### Using BULK IMPORT on a View  
  The following example creates the `v_myTestSkipCol` on the `myTestSkipCol` table. This view skips the second table column, `Col2`. The example then uses `BULK INSERT` to import the `myTestSkipCol2.dat` data file into this view.  
   
- In the [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
+ In the [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
   
 ```tsql  
 CREATE VIEW v_myTestSkipCol AS  

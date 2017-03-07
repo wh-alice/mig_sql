@@ -17,12 +17,12 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Lesson 8: Defining Actions
-In this lesson, you will learn to define actions in your [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] project. An action is just a Multidimensional Expressions (MDX) statement that is stored in [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] and which can be incorporated into client applications and started by a user.  
+In this lesson, you will learn to define actions in your [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] project. An action is just a Multidimensional Expressions (MDX) statement that is stored in [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] and which can be incorporated into client applications and started by a user.  
   
 > [!NOTE]  
 > Completed projects for all of the lessons in this tutorial are available online. You can jump ahead to any lesson by using the completed project from the previous lesson as a starting point. [Click here](http://go.microsoft.com/fwlink/?LinkID=221866) to download the sample projects that go with this tutorial.  
   
-[!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] supports the types of actions that are described in the following table.  
+[!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] supports the types of actions that are described in the following table.  
   
 |||  
 |-|-|  
@@ -39,11 +39,11 @@ In this lesson, you will learn to define actions in your [!INCLUDE[ssASnoversion
 Actions let users start an application or perform other steps within the context of a selected item. For more information, see [Actions &#40;Analysis Services - Multidimensional Data&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md), [Actions in Multidimensional Models](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
 > [!NOTE]  
-> For examples of actions, see the action examples on the Templates tab in the Calculation Tools pane or in the examples in the [!INCLUDE[ssSampleDBCoShort](../../analysis-services/data-mining/includes/sssampledbcoshort-md.md)] DW sample data warehouse. For more information about installing this database, see [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../Topic/Install%20Sample%20Data%20and%20Projects%20for%20the%20Analysis%20Services%20Multidimensional%20Modeling%20Tutorial.md).  
+> For examples of actions, see the action examples on the Templates tab in the Calculation Tools pane or in the examples in the [!INCLUDE[ssSampleDBCoShort](../../a9notintoc/includes/sssampledbcoshort-md.md)] DW sample data warehouse. For more information about installing this database, see [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../../analysis-services/tutorials/install-sample-data-and-projects.md).  
   
 This lesson includes the following task:  
   
-[Defining and Using a Drillthrough Action](../Topic/Defining%20and%20Using%20a%20Drillthrough%20Action.md)  
+[Defining and Using a Drillthrough Action](../../analysis-services/tutorials/lesson-8-1-defining-and-using-a-drillthrough-action.md)  
 In this task, you define, use, and then modify a drillthrough action through the fact dimension relationship that you defined earlier in this tutorial.  
   
 ## Next Lesson  

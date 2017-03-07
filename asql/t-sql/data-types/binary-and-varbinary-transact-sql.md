@@ -25,7 +25,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # binary and varbinary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Binary data types of either fixed length or variable length.  
   
@@ -46,9 +46,9 @@ manager: "jhubbard"
  Use **varbinary(max)** when the column data entries exceed 8,000 bytes.  
   
 ## Converting binary and varbinary Data  
- When data is converted from a string data type (**char**, **varchar**, **nchar**, **nvarchar**, **binary**, **varbinary**, **text**, **ntext**, or **image**) to a **binary** or **varbinary** data type of unequal length, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] pads or truncates the data on the right. When other data types are converted to **binary** or **varbinary**, the data is padded or truncated on the left. Padding is achieved by using hexadecimal zeros.  
+ When data is converted from a string data type (**char**, **varchar**, **nchar**, **nvarchar**, **binary**, **varbinary**, **text**, **ntext**, or **image**) to a **binary** or **varbinary** data type of unequal length, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] pads or truncates the data on the right. When other data types are converted to **binary** or **varbinary**, the data is padded or truncated on the left. Padding is achieved by using hexadecimal zeros.  
   
- Converting data to the **binary** and **varbinary** data types is useful if **binary** data is the easiest way to move data around. Converting any value of any type to a binary value of large enough size and then back to the type, will always result in the same value if both conversions are taking place on the same version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The binary representation of a value might change from version to version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Converting data to the **binary** and **varbinary** data types is useful if **binary** data is the easiest way to move data around. Converting any value of any type to a binary value of large enough size and then back to the type, will always result in the same value if both conversions are taking place on the same version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The binary representation of a value might change from version to version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  You can convert **int**, **smallint**, and **tinyint** to **binary** or **varbinary**, but if you convert the **binary** value back to an integer value, this value will be different from the original integer value if truncation has occurred. For example, the following SELECT statement shows that the integer value `123456` is usually stored as a binary `0x0001e240`:  
   
@@ -77,7 +77,7 @@ GO
  The final result is `57921`, not `123457`.  
   
 > [!NOTE]  
->  Conversions between any data type and the **binary** data types are not guaranteed to be the same between versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+>  Conversions between any data type and the **binary** data types are not guaranteed to be the same between versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## See Also  
  [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   

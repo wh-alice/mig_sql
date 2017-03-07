@@ -39,15 +39,15 @@ GO
   
 3.  Select **New Full-Text Catalog**.  
   
-4.  In the **New Full-Text Catalog** dialog box, specify the information for the catalog that you are re-creating. For more information, see [New Full-Text Catalog &#40;General Page&#41;](../Topic/New%20Full-Text%20Catalog%20\(General%20Page\).md).  
+4.  In the **New Full-Text Catalog** dialog box, specify the information for the catalog that you are re-creating. For more information, see [New Full-Text Catalog &#40;General Page&#41;](../../a9retired/new-full-text-catalog-general-page.md).  
   
     > [!NOTE]  
     >  Full-text catalog IDs begin at 00005 and are incremented by one for each new catalog created.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="props"></a> View the properties of a full-text catalog  
- [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] functions such as **FULLTEXTCATALOGPROPERTY** can be used to obtain the value of various properties related to full-text indexing. This information is useful for administering and troubleshooting full-text search. For more info, see [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
+ [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] functions such as **FULLTEXTCATALOGPROPERTY** can be used to obtain the value of various properties related to full-text indexing. This information is useful for administering and troubleshooting full-text search. For more info, see [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
   
 The following table lists the properties that are related to full-text catalogs.  
   

@@ -22,16 +22,16 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Tail-Log Backups (SQL Server)
-  This topic is relevant only for backup and restore of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases that are using the full or bulk-logged recovery models.  
+  This topic is relevant only for backup and restore of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] databases that are using the full or bulk-logged recovery models.  
   
- A *tail-log backup* captures any log records that have not yet been backed up (the *tail of the log*) to prevent work loss and to keep the log chain intact. Before you can recover a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database to its latest point in time, you must back up the tail of its transaction log. The tail-log backup will be the last backup of interest in the recovery plan for the database.  
+ A *tail-log backup* captures any log records that have not yet been backed up (the *tail of the log*) to prevent work loss and to keep the log chain intact. Before you can recover a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database to its latest point in time, you must back up the tail of its transaction log. The tail-log backup will be the last backup of interest in the recovery plan for the database.  
   
 > **NOTE:** Not all restore scenarios require a tail-log backup. You do not need a tail-log backup if the recovery point is contained in an earlier log backup. Also, a tail-log backup is unnecessary if you are moving or replacing (overwriting) a database and do not need to restore it to a point of time after its most recent backup.  
   
    ##  <a name="TailLogScenarios"></a> Scenarios That Require a Tail-Log Backup  
  We recommend that you take a tail-log backup in the following scenarios:  
   
--   If the database is online and you plan to perform a restore operation on the database, begin by backing up the tail of the log. To avoid an error for an online database, you must use the … WITH NORECOVERY option of the [BACKUP](../../t-sql/statements/backup-transact-sql.md) [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement.  
+-   If the database is online and you plan to perform a restore operation on the database, begin by backing up the tail of the log. To avoid an error for an online database, you must use the … WITH NORECOVERY option of the [BACKUP](../../t-sql/statements/backup-transact-sql.md) [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement.  
   
 -   If a database is offline and fails to start and you need to restore the database, first back up the tail of the log. Because no transactions can occur at this time, using the WITH NORECOVERY is optional.  
   
@@ -49,9 +49,9 @@ manager: "jhubbard"
 ##  <a name="IncompleteMetadata"></a> Tail-Log Backups That Have Incomplete Backup Metadata  
  Tail log backups capture the tail of the log even if the database is offline, damaged, or missing data files. This might cause incomplete metadata from the restore information commands and **msdb**. However, only the metadata is incomplete; the captured log is complete and usable.  
   
- If a tail-log backup has incomplete metadata, in the [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) table, **has_incomplete_metadata** is set to **1**. Also, in the output of [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md), **HasIncompleteMetadata** is set to **1**.  
+ If a tail-log backup has incomplete metadata, in the [backupset](../../relational-databases/reference/system-tables/backupset-transact-sql.md) table, **has_incomplete_metadata** is set to **1**. Also, in the output of [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), **HasIncompleteMetadata** is set to **1**.  
   
- If the metadata in a tail-log backup is incomplete, the [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md) table will be missing most of the information about filegroups at the time of the tail-log backup. Most of the **backupfilegroup** table columns are NULL; the only meaningful columns are as follows:  
+ If the metadata in a tail-log backup is incomplete, the [backupfilegroup](../../relational-databases/reference/system-tables/backupfilegroup-transact-sql.md) table will be missing most of the information about filegroups at the time of the tail-log backup. Most of the **backupfilegroup** table columns are NULL; the only meaningful columns are as follows:  
   
 -   **backup_set_id**  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
     
 ## See Also  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Copy-Only Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   

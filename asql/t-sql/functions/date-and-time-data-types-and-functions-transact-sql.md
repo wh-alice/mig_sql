@@ -25,9 +25,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Date and Time Data Types and Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  The following sections in this topic provide an overview of all [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] date and time data types and functions.  
+  The following sections in this topic provide an overview of all [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] date and time data types and functions.  
   
 -   [Date and Time Data Types](#DateandTimeDataTypes)  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
 -   [Date and Time–Related Topics](#DateandTimeRelatedTopics)  
   
 ##  <a name="DateandTimeDataTypes"></a> Date and Time Data Types  
- The [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] date and time data types are listed in the following table.  
+ The [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] date and time data types are listed in the following table.  
   
 |Data type|Format|Range|Accuracy|Storage size (bytes)|User-defined fractional second precision|Time zone offset|  
 |---------------|------------|-----------|--------------|----------------------------|-----------------------------------------------|----------------------|  
@@ -62,30 +62,30 @@ manager: "jhubbard"
 |[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|0001-01-01 00:00:00.0000000 through 9999-12-31 23:59:59.9999999 (in UTC)|100 nanoseconds|8 to 10|Yes|Yes|  
   
 > [!NOTE]  
->  The [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)][rowversion](../../t-sql/data-types/rowversion-transact-sql.md) data type is not a date or time data type. **timestamp** is a deprecated synonym for **rowversion**.  
+>  The [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)][rowversion](../../t-sql/data-types/rowversion-transact-sql.md) data type is not a date or time data type. **timestamp** is a deprecated synonym for **rowversion**.  
   
 ##  <a name="DateandTimeFunctions"></a> Date and Time Functions  
- The [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] date and time functions are listed in the following tables. For more information about determinism, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ The [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] date and time functions are listed in the following tables. For more information about determinism, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ###  <a name="GetSystemDateandTimeValues"></a> Functions That Get System Date and Time Values  
- All system date and time values are derived from the operating system of the computer on which the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running.  
+ All system date and time values are derived from the operating system of the computer on which the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running.  
   
 #### Higher-Precision System Date and Time Functions  
- [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] obtains the date and time values by using the GetSystemTimeAsFileTime() Windows API. The accuracy depends on the computer hardware and version of Windows on which the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running. The precision of this API is fixed at 100 nanoseconds. The accuracy can be determined by using the GetSystemTimeAdjustment() Windows API.  
+ [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] obtains the date and time values by using the GetSystemTimeAsFileTime() Windows API. The accuracy depends on the computer hardware and version of Windows on which the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running. The precision of this API is fixed at 100 nanoseconds. The accuracy can be determined by using the GetSystemTimeAdjustment() Windows API.  
   
 |Function|Syntax|Return value|Return data type|Determinism|  
 |--------------|------------|------------------|----------------------|-----------------|  
-|[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|Returns a **datetime2(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running. The time zone offset is not included.|**datetime2(7)**|Nondeterministic|  
-|[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|Returns a **datetimeoffset(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running. The time zone offset is included.|**datetimeoffset(7)**|Nondeterministic|  
-|[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|Returns a **datetime2(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running. The date and time is returned as UTC time (Coordinated Universal Time).|**datetime2(7)**|Nondeterministic|  
+|[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|Returns a **datetime2(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running. The time zone offset is not included.|**datetime2(7)**|Nondeterministic|  
+|[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|Returns a **datetimeoffset(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running. The time zone offset is included.|**datetimeoffset(7)**|Nondeterministic|  
+|[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|Returns a **datetime2(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running. The date and time is returned as UTC time (Coordinated Universal Time).|**datetime2(7)**|Nondeterministic|  
   
 #### Lower-Precision System Date and Time Functions  
   
 |Function|Syntax|Return value|Return data type|Determinism|  
 |--------------|------------|------------------|----------------------|-----------------|  
-|[CURRENT_TIMESTAMP](../../t-sql/functions/current-timestamp-transact-sql.md)|CURRENT_TIMESTAMP|Returns a **datetime** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running. The time zone offset is not included.|**datetime**|Nondeterministic|  
-|[GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|Returns a **datetime** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running. The time zone offset is not included.|**datetime**|Nondeterministic|  
-|[GETUTCDATE](../../t-sql/functions/getutcdate-transact-sql.md)|GETUTCDATE ( )|Returns a **datetime** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running. The date and time is returned as UTC time (Coordinated Universal Time).|**datetime**|Nondeterministic|  
+|[CURRENT_TIMESTAMP](../../t-sql/functions/current-timestamp-transact-sql.md)|CURRENT_TIMESTAMP|Returns a **datetime** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running. The time zone offset is not included.|**datetime**|Nondeterministic|  
+|[GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|Returns a **datetime** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running. The time zone offset is not included.|**datetime**|Nondeterministic|  
+|[GETUTCDATE](../../t-sql/functions/getutcdate-transact-sql.md)|GETUTCDATE ( )|Returns a **datetime** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running. The date and time is returned as UTC time (Coordinated Universal Time).|**datetime**|Nondeterministic|  
   
 ###  <a name="GetDateandTimeParts"></a> Functions That Get Date and Time Parts  
   
@@ -133,7 +133,7 @@ manager: "jhubbard"
 |[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@***format_var* }|Sets the order of the dateparts (month/day/year) for entering **datetime** or **smalldatetime** data.|Not applicable|Not applicable|  
 |[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|Returns the name of the language that is currently being used. @@LANGUAGE is not a date or time function. However, the language setting can affect the output of date functions.|Not applicable|Not applicable|  
 |[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'***language***'** &#124; **@***language_var* }|Sets the language environment for the session and system messages. SET LANGUAGE is not a date or time function. However, the language setting affects the output of date functions.|Not applicable|Not applicable|  
-|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'***language***'** ]|Returns information about date formats of all supported languages. **sp_helplanguage** is not a date or time stored procedure. However, the language setting affects the output of date functions.|Not applicable|Not applicable|  
+|[sp_helplanguage](../../relational-databases/reference/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'***language***'** ]|Returns information about date formats of all supported languages. **sp_helplanguage** is not a date or time stored procedure. However, the language setting affects the output of date functions.|Not applicable|Not applicable|  
   
 ###  <a name="ValidateDateandTimeValues"></a> Functions That Validate Date and Time Values  
   
@@ -146,8 +146,8 @@ manager: "jhubbard"
 |Topic|Description|  
 |-----------|-----------------|  
 |[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)|Provides information about the conversion of date and time values to and from string literals and other date and time formats.|  
-|[Write International Transact-SQL Statements](../../relational-databases/collations/write-international-transact-sql-statements.md)|Provides guidelines for portability of databases and database applications that use [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements from one language to another, or that support multiple languages.|  
-|[ODBC Scalar Functions &#40;Transact-SQL&#41;](../../t-sql/functions/odbc-scalar-functions-transact-sql.md)|Provides information about ODBC scalar functions that can be used in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements. This includes ODBC date and time functions.|  
+|[Write International Transact-SQL Statements](../../relational-databases/collations/write-international-transact-sql-statements.md)|Provides guidelines for portability of databases and database applications that use [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements from one language to another, or that support multiple languages.|  
+|[ODBC Scalar Functions &#40;Transact-SQL&#41;](../../t-sql/functions/odbc-scalar-functions-transact-sql.md)|Provides information about ODBC scalar functions that can be used in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements. This includes ODBC date and time functions.|  
 |[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)|Provides time zone conversion.|  
   
 ## See Also  

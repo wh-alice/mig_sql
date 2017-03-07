@@ -28,7 +28,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Data Definition - DROP SET
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Removes a named set.  
   
@@ -52,7 +52,7 @@ DROP [SESSION] SET
  A valid string expression that provides that name of the named set to be dropped.  
   
 ## Remarks  
- For more information about named sets, see [Building Named Sets in MDX &#40;MDX&#41;](../Topic/Building%20Named%20Sets%20in%20MDX%20\(MDX\).md).  
+ For more information about named sets, see [Building Named Sets in MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
   
 ## See Also  
  [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  

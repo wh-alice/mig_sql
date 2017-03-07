@@ -29,9 +29,9 @@ manager: "jhubbard"
 # HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Evaluates the effective permission of the current user on a securable. A related function is [fn_my_permissions](../../relational-databases/system-functions/sys.fn-my-permissions-transact-sql.md).  
+  Evaluates the effective permission of the current user on a securable. A related function is [fn_my_permissions](../../relational-databases/reference/system-functions/sys.fn-my-permissions-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -48,7 +48,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  *securable_class*  
  Is the name of the class of securable against which the permission is tested. *securable_class* is a scalar expression of type **nvarchar(60)**.  
   
- In [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)], the securable_class argument must be set to one of the following: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA**, or **USER**.  
+ In [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)], the securable_class argument must be set to one of the following: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA**, or **USER**.  
   
  *permission*  
  A nonnull scalar expression of type **sysname** that represents the permission name to be checked. There is no default. The permission name ANY is a wildcard.  
@@ -57,12 +57,12 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  An optional scalar expression of type **sysname** that represents the name of the securable sub-entity against which the permission is tested. The default is NULL.  
   
 > [!NOTE]  
->  In versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], sub-securables cannot use brackets in the form **'[***sub name***]'**. Use **'***sub name***'** instead.  
+>  In versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], sub-securables cannot use brackets in the form **'[***sub name***]'**. Use **'***sub name***'** instead.  
   
  *sub-securable_class*  
  An optional scalar expression of type **nvarchar(60)** that represent the class of securable subentity against which the permission is tested. The default is NULL.  
   
- In [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)], the sub-securable_class argument is valid only if the securable_class argument is set to **OBJECT**. If the securable_class argument is set to **OBJECT**, the sub-securable_class argument must be set to **COLUMN**.  
+ In [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)], the sub-securable_class argument is valid only if the securable_class argument is set to **OBJECT**. If the securable_class argument is set to **OBJECT**, the sub-securable_class argument must be set to **COLUMN**.  
   
 ## Return Types  
  **int**  
@@ -104,7 +104,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -114,7 +114,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  
@@ -184,7 +184,7 @@ SELECT name AS column_name,
  [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-builtin-permissions-transact-sql.md)   
- [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
+ [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-builtin-permissions-transact-sql.md)   
+ [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/security-catalog-views-transact-sql.md)  
   
   

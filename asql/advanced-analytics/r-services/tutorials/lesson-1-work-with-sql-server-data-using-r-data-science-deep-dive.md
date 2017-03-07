@@ -24,27 +24,27 @@ In this lesson, you'll set up the environment and add the data you need for trai
   
 -   Create a new database to store the data for training and scoring two R models.  
   
--   Create an account (either a Windows user or SQL login) to use when communicating between your workstation and the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer.  
+-   Create an account (either a Windows user or SQL login) to use when communicating between your workstation and the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] computer.  
   
--   Create data sources in R for working with [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data and database objects.  
+-   Create data sources in R for working with [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data and database objects.  
   
--   Use the R data source to load data into [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   Use the R data source to load data into [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
--   Use R to get a list of variables and modify the metadata of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table.  
+-   Use R to get a list of variables and modify the metadata of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] table.  
   
 -   Create a compute context to enable remote execution of R code.  
   
 -   learn how to enable tracing on the remote compute context.  
   
 ## Create the Database and User  
-For this walkthrough, you'll create a new database in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)], and add a SQL login with permissions to write and read data, as well as to run R scripts.  
+For this walkthrough, you'll create a new database in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)], and add a SQL login with permissions to write and read data, as well as to run R scripts.  
   
 > [!NOTE]  
 > If you're only reading data, the account that runs the R scripts requires only SELECT permissions (**db_datareader** role) on the specified database. However, in this tutorial,  you will need DDL admin privileges to prepare the database and to create tables for saving the scoring results.  
   
-1.  In [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], select the instance where [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)] is enabled, right-click **Databases**, and select **New database**.  
+1.  In [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], select the instance where [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)] is enabled, right-click **Databases**, and select **New database**.  
   
-2.  Type a name for the new database. You can use any name you want; just remember to edit all the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] scripts and R scripts in this walkthrough accordingly.  
+2.  Type a name for the new database. You can use any name you want; just remember to edit all the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] scripts and R scripts in this walkthrough accordingly.  
   
     > [!TIP]  
     > To view the updated database name, right-click **Databases** and select **Refresh** .  
@@ -108,11 +108,11 @@ This section lists some common issues that you might run across in the course of
   
 -   **I don't have DDL privileges. Can I still run the tutorial?**?  
   
-    Yes; however, you should ask someone to pre-load the data into the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] tables, and skip past the sections that call for creating new tables. The functions that require DDL privileges are generally called out in the tutorial.  
+    Yes; however, you should ask someone to pre-load the data into the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] tables, and skip past the sections that call for creating new tables. The functions that require DDL privileges are generally called out in the tutorial.  
   
   
 ## Next Step  
-[Create SQL Server Data Objects using RxSqlServerData](../Topic/Create%20SQL%20Server%20Data%20Objects%20using%20RxSqlServerData.md)  
+[Create SQL Server Data Objects using RxSqlServerData](../../../advanced-analytics/r-services/tutorials/lesson-1-1-create-sql-server-data-objects-using-rxsqlserverdata.md)  
   
 ## Previous Step  
 [Data Science Deep Dive: Using the RevoScaleR Packages](../../../advanced-analytics/r-services/tutorials/data-science-deep-dive-using-the-revoscaler-packages.md)  

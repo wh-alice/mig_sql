@@ -130,7 +130,7 @@ In both cases, the Lookup transformation will utilize the OLE DB connection mana
 12. In the Properties window, verify that the **LocaleID** property is set to **English (United States)** and the **DefaultCodePage** property is set to **1252**.  
   
 ## Next Task in Lesson  
-[Step 7: Adding and Configuring the OLE DB Destination](../Topic/Step%207:%20Adding%20and%20Configuring%20the%20OLE%20DB%20Destination.md)  
+[Step 7: Adding and Configuring the OLE DB Destination](../../integration-services/tutorials/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## See Also  
 [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md)  

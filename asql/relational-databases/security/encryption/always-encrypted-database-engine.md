@@ -22,23 +22,23 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Always Encrypted (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
- Always Encrypted is a feature designed to protect sensitive data, such as credit card numbers or national identification numbers (e.g. U.S. social security numbers), stored in [!INCLUDE[ssSDSFull](../../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] or [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases. Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)] or [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]). As a result, Always Encrypted provides a separation between those who own the data (and can view it) and those who manage the data (but should have no access). By ensuring on-premises database administrators, cloud database operators, or other high-privileged, but unauthorized users, cannot access the encrypted data, Always Encrypted enables customers to confidently store sensitive data outside of their direct control. This allows organizations to encrypt data at rest and in use for storage in Azure, to enable delegation of on-premises database administration to third parties, or to reduce security clearance requirements for their own DBA staff.  
+ Always Encrypted is a feature designed to protect sensitive data, such as credit card numbers or national identification numbers (e.g. U.S. social security numbers), stored in [!INCLUDE[ssSDSFull](../../../a9retired/includes/sssdsfull-md.md)] or [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] databases. Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)] or [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]). As a result, Always Encrypted provides a separation between those who own the data (and can view it) and those who manage the data (but should have no access). By ensuring on-premises database administrators, cloud database operators, or other high-privileged, but unauthorized users, cannot access the encrypted data, Always Encrypted enables customers to confidently store sensitive data outside of their direct control. This allows organizations to encrypt data at rest and in use for storage in Azure, to enable delegation of on-premises database administration to third parties, or to reduce security clearance requirements for their own DBA staff.  
   
- Always Encrypted makes encryption transparent to applications. An Always Encrypted-enabled driver installed on the client computer achieves this by automatically encrypting and decrypting sensitive data in the client application. The driver encrypts the data in sensitive columns before passing the data to the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)], and automatically rewrites queries so that the semantics to the application are preserved. Similarly, the driver transparently decrypts data, stored in encrypted database columns, contained in query results.  
+ Always Encrypted makes encryption transparent to applications. An Always Encrypted-enabled driver installed on the client computer achieves this by automatically encrypting and decrypting sensitive data in the client application. The driver encrypts the data in sensitive columns before passing the data to the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)], and automatically rewrites queries so that the semantics to the application are preserved. Similarly, the driver transparently decrypts data, stored in encrypted database columns, contained in query results.  
   
- Always Encrypted is available in [!INCLUDE[ssSQL15](../../../analysis-services/powershell/includes/sssql15-md.md)] and [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)]. (Prior to [!INCLUDE[ssSQL15_md](../../../analysis-services/powershell/includes/sssql15-md.md)] SP1, Always Encrypted was limited to the Enterprise Edition.) For a Channel 9 presentation that includes Always Encrypted, see [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted).  
+ Always Encrypted is available in [!INCLUDE[ssSQL15](../../../a9notintoc/includes/sssql15-md.md)] and [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)]. (Prior to [!INCLUDE[ssSQL15_md](../../../a9notintoc/includes/sssql15-md.md)] SP1, Always Encrypted was limited to the Enterprise Edition.) For a Channel 9 presentation that includes Always Encrypted, see [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted).  
   
 ## Typical Scenarios  
   
 ### Client and Data On-Premises  
- A customer has a client application and [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] both running on-premises, at their business location. The customer wants to hire an external vendor to administer [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. In order to protect sensitive data stored in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the customer uses Always Encrypted to ensure the separation of duties between database administrators and application administrators. The customer stores plaintext values of Always Encrypted keys in a trusted key store which the client application can access. [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] administrators have no access to the keys and, therefore, are unable to decrypt sensitive data stored in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ A customer has a client application and [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] both running on-premises, at their business location. The customer wants to hire an external vendor to administer [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. In order to protect sensitive data stored in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], the customer uses Always Encrypted to ensure the separation of duties between database administrators and application administrators. The customer stores plaintext values of Always Encrypted keys in a trusted key store which the client application can access. [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] administrators have no access to the keys and, therefore, are unable to decrypt sensitive data stored in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ### Client On-Premises with Data in Azure  
- A customer has an on-premises client application at their business location. The application operates on sensitive data stored in a database hosted in Azure ([!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)] or [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] running in a virtual machine on Microsoft Azure). The customer uses Always Encrypted and stores Always Encrypted keys in a trusted key store hosted on-premises, to ensure [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] cloud administrators have no access to sensitive data.  
+ A customer has an on-premises client application at their business location. The application operates on sensitive data stored in a database hosted in Azure ([!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)] or [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] running in a virtual machine on Microsoft Azure). The customer uses Always Encrypted and stores Always Encrypted keys in a trusted key store hosted on-premises, to ensure [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] cloud administrators have no access to sensitive data.  
   
 ### Client and Data in Azure  
  A customer has a client application, hosted in Microsoft Azure (e.g. in a worker role or a web role), which operates on sensitive data stored in a database hosted in Azure (SQL Database or SQL Server running in a virtual machine on Microsoft Azure). Although Always Encrypted does not provide complete isolation of data from cloud administrators, as both the data and keys are exposed to cloud administrators of the platform hosting the client tier, the customer still benefits from reducing the security attack surface area (the data is always encrypted in the database).  
@@ -117,7 +117,7 @@ Use the [Always Encrypted Wizard](../../../relational-databases/security/encrypt
   
 -   Deterministic encryption requires a column to have one of the [*binary2* collations](../../../relational-databases/collations/collation-and-unicode-support.md).  
 
--   After changing the definition of an encrypted object, execute [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) to update the Always Encrypted metadata for the object.
+-   After changing the definition of an encrypted object, execute [sp_refresh_parameter_encryption](../../../relational-databases/reference/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) to update the Always Encrypted metadata for the object.
   
  Always Encrypted is not supported for the columns with the below characteristics (e.g. the *Encrypted WITH* clause cannot be used in **CREATE TABLE/ALTER TABLE** for a column, if any of the following conditions apply to the column):  
   
@@ -184,17 +184,17 @@ Tool Requirements
   
  **Important notes:**  
   
--   The permissions apply to actions using [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)], [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] (dialog boxes and wizard), or PowerShell.  
+-   The permissions apply to actions using [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)], [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)] (dialog boxes and wizard), or PowerShell.  
   
 -   The two *VIEW* permissions are required when selecting encrypted columns, even if the user does not have permission to decrypt the columns.  
   
--   In [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], both *VIEW* permissions are granted by default to the `public` fixed database role. A database administrator may choose to revoke (or deny) the *VIEW* permissions to the `public` role and grant them to specific roles or users to implement more restricted control.  
+-   In [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], both *VIEW* permissions are granted by default to the `public` fixed database role. A database administrator may choose to revoke (or deny) the *VIEW* permissions to the `public` role and grant them to specific roles or users to implement more restricted control.  
   
--   In [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)], the *VIEW* permissions are not granted by default to the `public` fixed database role. This enables certain existing, legacy tools (using older versions of DacFx) to work properly. Consequently, to work with encrypted columns (even if not decrypting them) a database administrator must explicitly grant the two *VIEW* permissions.  
+-   In [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)], the *VIEW* permissions are not granted by default to the `public` fixed database role. This enables certain existing, legacy tools (using older versions of DacFx) to work properly. Consequently, to work with encrypted columns (even if not decrypting them) a database administrator must explicitly grant the two *VIEW* permissions.  
 
   
 ## Example  
- The following [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] creates column master key metadata, column encryption key metadata, and a table with encrypted columns. For information how to create the keys, referenced in the metadata, see:
+ The following [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] creates column master key metadata, column encryption key metadata, and a table with encrypted columns. For information how to create the keys, referenced in the metadata, see:
 - [Configure Always Encrypted using SSMS](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 - [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 
@@ -233,17 +233,17 @@ GO
 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
 [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
 [CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   
-[column_definition &#40;Transact-SQL&#41;](../Topic/column_definition%20\(Transact-SQL\).md)   
-[sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.column-encryption-keys-transact-sql.md)   
-[sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.column-encryption-key-values-transact-sql.md)   
-[sys.column_master_keys &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.column-master-keys-transact-sql.md)   
-[sys.columns &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.columns-transact-sql.md)   
+[column_definition &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
+[sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.column-encryption-keys-transact-sql.md)   
+[sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.column-encryption-key-values-transact-sql.md)   
+[sys.column_master_keys &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.column-master-keys-transact-sql.md)   
+[sys.columns &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.columns-transact-sql.md)   
 [Always Encrypted Wizard](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
 [Migrate Sensitive Data Protected by Always Encrypted](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)   
 [Always Encrypted &#40;client development&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)   
 [Always Encrypted Cryptography](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
 [Configure Always Encrypted using SSMS](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   
-[sp_refresh_parameter_encryption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
+[sp_refresh_parameter_encryption &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
   
   

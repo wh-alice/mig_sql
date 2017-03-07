@@ -19,7 +19,7 @@ manager: "erikre"
   
 #### To create a folder  
   
-1.  Start the [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Start the [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md).  
   
 2.  In the web portal, select **Folder** under the **New** menu drop down. Or, to create a folder under an existing folder, navigate to that folder and select **Folder** under the **New** menu drop down.  
   

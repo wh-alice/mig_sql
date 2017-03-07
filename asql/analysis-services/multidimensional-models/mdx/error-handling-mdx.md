@@ -23,7 +23,7 @@ manager: "erikre"
   Each cube can control how errors within a Multidimensional Expressions (MDX) script are handled. Error handling is done through the **ScriptErrorHandlingMode** enumerator. The possible values for this enumerator are:  
   
  **IgnoreNone**  
- Causes the server to raise an error when [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] finds any error in the MDX script.  
+ Causes the server to raise an error when [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] finds any error in the MDX script.  
   
  **IgnoreAll**  
  Causes the server to ignore all commands in the MDX script that contain an error, including syntax errors, name resolution errors, and more.  

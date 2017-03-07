@@ -25,14 +25,14 @@ manager: "jhubbard"
   You can administer multiple servers by designating Central Management Servers and creating server groups.  
   
 ## What is a Central Management Server and server groups?  
- An instance of SQL Server designated as a Central Management Server maintains server groups that contain the connection information for one or more instances. You can execute [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] statements and Policy-Based Management policies at the same time against server groups. You can also view the log files on instances managed through a Central Management Server. 
+ An instance of SQL Server designated as a Central Management Server maintains server groups that contain the connection information for one or more instances. You can execute [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] statements and Policy-Based Management policies at the same time against server groups. You can also view the log files on instances managed through a Central Management Server. 
  
- Basically a Central management Server is central repository containing a list of your managed servers. Versions earlier than [!INCLUDE[ssKatmai](../analysis-services/data-mining/includes/sskatmai-md.md)] cannot be designated as a Central Management Server.  
+ Basically a Central management Server is central repository containing a list of your managed servers. Versions earlier than [!INCLUDE[ssKatmai](../a9notintoc/includes/sskatmai-md.md)] cannot be designated as a Central Management Server.  
   
- [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] statements can also be executed against local server groups in Registered Servers.  
+ [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] statements can also be executed against local server groups in Registered Servers.  
   
 ## Create Central Management Server and server groups 
- To create a Central Management Server and server groups, use the **Registered Servers** window in [!INCLUDE[ssManStudioFull](../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. Note that the Central Management Server cannot be a member of a group that it maintains. 
+ To create a Central Management Server and server groups, use the **Registered Servers** window in [!INCLUDE[ssManStudioFull](../a9notintoc/includes/ssmanstudiofull-md.md)]. Note that the Central Management Server cannot be a member of a group that it maintains. 
  
  For how to create Central Management Servers and server groups, see [Create a Central Management Server and Server Group &#40;SQL Server Management Studio&#41;](../tools/sql-server-management-studio/da265482-3953-440a-ac23-0ab7e42a55eb.md).  
   

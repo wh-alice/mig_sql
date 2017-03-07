@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Data Types in the .NET Framework
-  The **SqlTypes** library is part of the base class library of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] .NET Framework. It is designed to provide data types with the same semantics and precision as those found in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database. This topic describes the new semantics to .NET Framework programmers, and introduces the types implemented in the **System.Data.SqlTypes** namespace that is included in the **System.Data** library.  
+  The **SqlTypes** library is part of the base class library of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] .NET Framework. It is designed to provide data types with the same semantics and precision as those found in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database. This topic describes the new semantics to .NET Framework programmers, and introduces the types implemented in the **System.Data.SqlTypes** namespace that is included in the **System.Data** library.  
   
  This following table lists the topics in this section.  
   
@@ -35,9 +35,9 @@ manager: "jhubbard"
  Describes how collations are handled with CLR integration.  
   
  [Handling Large Object &#40;LOB&#41; Parameters in the CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
- Describes how to pass LOB types between [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and the CLR.  
+ Describes how to pass LOB types between [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and the CLR.  
   
  [Mapping CLR Parameter Data](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  
- Shows data type mappings between [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], CLR integration, and the .NET Framework.  
+ Shows data type mappings between [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], CLR integration, and the .NET Framework.  
   
   

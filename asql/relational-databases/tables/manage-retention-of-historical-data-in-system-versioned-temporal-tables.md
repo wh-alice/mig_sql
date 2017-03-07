@@ -16,7 +16,7 @@ ms.author: "carlrab"
 manager: "jhubbard"
 ---
 # Manage Retention of Historical Data in System-Versioned Temporal Tables
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   With system-versioned temporal tables, the history table may increase database size more than regular tables, particularly under the following conditions:  
   
@@ -29,7 +29,7 @@ manager: "jhubbard"
 ## Data retention management for history table  
  Managing temporal table data retention begins with determining the required retention period for each temporal table. Your retention policy, in most cases, should be considered to be part of the business logic of the application using the temporal tables. For example,  applications in data audit and time travel scenarios have firm requirements in terms of for how long historical data must be available for online querying.  
   
- Once you determine your data retention period, your next step is to develop a plan for managing historical data how and where you store your historical data and how to delete historical data that is older than your retention requirements. With [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], you have the following three approaches for managing historical data in the temporal history table:  
+ Once you determine your data retention period, your next step is to develop a plan for managing historical data how and where you store your historical data and how to delete historical data that is older than your retention requirements. With [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], you have the following three approaches for managing historical data in the temporal history table:  
   
 -   [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#Anchor_1)  
   
@@ -43,9 +43,9 @@ manager: "jhubbard"
   
 ## Using Stretch Database approach  
   
-> **NOTE:**  Using the Stretch Database approach only applies to [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and does not apply to [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].  
+> **NOTE:**  Using the Stretch Database approach only applies to [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and does not apply to [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].  
   
- [Stretch Database](../../sql-server/install/stretch-database.md) in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] migrates your historical data transparently to Azure. For additional security, you can encrypt data in motion using SQL Server's [Always Encrypted](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) feature. Additionally, you can use [Row-Level Security](../../relational-databases/security/row-level-security.md) and other advanced SQL Server security features with Temporal and Stretch Database to protect your data.  
+ [Stretch Database](../../sql-server/install/stretch-database.md) in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] migrates your historical data transparently to Azure. For additional security, you can encrypt data in motion using SQL Server's [Always Encrypted](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) feature. Additionally, you can use [Row-Level Security](../../relational-databases/security/row-level-security.md) and other advanced SQL Server security features with Temporal and Stretch Database to protect your data.  
   
  Using the Stretch Database approach, you can stretch some or all of your temporal history tables to Azure and SQL Server will silently move historical data to Azure. Stretch-enabling a history table does not change how you interact with the temporal table in terms of data modification and temporal querying.  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
  You can configure a temporal history table for Stretch using either the Stretch Wizard or Transact-SQL, and you can stretch-enable a temporal history table while system-versioning is set to **ON**. Stretching the current table is not allowed because it does not make sense to stretch the current table.  
   
 ### Using the Stretch Wizard to stretch the entire history table  
- The easiest method for beginners is to use the Stretch Wizard to enable stretch for the entire database and then select the temporal history table within the Stretch wizard (this example assumes that you have configured the Department table as a system-versioned temporal table in an otherwise empty database). In [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)], you cannot right-click the temporal history table itself and click Stretch.  
+ The easiest method for beginners is to use the Stretch Wizard to enable stretch for the entire database and then select the temporal history table within the Stretch wizard (this example assumes that you have configured the Department table as a system-versioned temporal table in an otherwise empty database). In [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)], you cannot right-click the temporal history table itself and click Stretch.  
   
 1.  Right-click your database and point to **Tasks**, point to **Stretch**, and then click **Enable** to launch the wizard.  
   

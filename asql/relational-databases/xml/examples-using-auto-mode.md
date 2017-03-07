@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Examples: Using AUTO Mode
-  The following examples illustrate the use of AUTO mode. Many of these queries are specified against bicycle manufacturing instructions XML documents that are stored in the Instructions column of the ProductModel table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] sample database.  
+  The following examples illustrate the use of AUTO mode. Many of these queries are specified against bicycle manufacturing instructions XML documents that are stored in the Instructions column of the ProductModel table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] sample database.  
   
 ## Example: Retrieving customer, order, and order detail information  
  This query retrieves customer, order, and order detail information for a specific customer.  

@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # CovarianceN (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the sample covariance of x-y pairs of values evaluated over a set, by using the unbiased population formula (dividing by the number of x-y pairs).  
   

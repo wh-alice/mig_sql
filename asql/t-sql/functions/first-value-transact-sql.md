@@ -25,9 +25,9 @@ manager: "jhubbard"
 # FIRST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../relational-databases/indexes/includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Returns the first value in an ordered set of values in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  Returns the first value in an ordered set of values in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -42,7 +42,7 @@ FIRST_VALUE ( [scalar_expression ] )
  Is the value to be returned. *scalar_expression* can be a column, subquery, or other arbitrary expression that results in a single value. Other analytic functions are not permitted.  
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
- *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the logical order in which the operation is performed. *order_by_clause* is required. *rows_range_clause* further limits the rows within the partition by specifying start and end points. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../Topic/OVER%20Clause%20\(Transact-SQL\).md).  
+ *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the logical order in which the operation is performed. *order_by_clause* is required. *rows_range_clause* further limits the rows within the partition by specifying start and end points. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## Return Types  
  Is the same type as *scalar_expression*.  
@@ -118,6 +118,6 @@ Accounts Receivable Specialist      Walton                    62            Poe
 ```  
   
 ## See Also  
- [OVER Clause &#40;Transact-SQL&#41;](../Topic/OVER%20Clause%20\(Transact-SQL\).md)  
+ [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   

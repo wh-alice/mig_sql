@@ -17,11 +17,11 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Configure a URL  (SSRS Configuration Manager)
-  Before you can use the [!INCLUDE[ssRSWebPortal](../../../reporting-services/includes/ssrswebportal.md)] or the Report Server Web service, you must configure at least one URL for each application. Configuring the URLs is mandatory if you installed [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] in "files-only" mode (that is, by selecting the **Install but do not configure the server** option on the Report Server Installation Options page in the Installation Wizard). If you installed [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] in the default configuration, URLs are already configured for each application.  
+  Before you can use the [!INCLUDE[ssRSWebPortal](../../../reporting-services/includes/ssrswebportal.md)] or the Report Server Web service, you must configure at least one URL for each application. Configuring the URLs is mandatory if you installed [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] in "files-only" mode (that is, by selecting the **Install but do not configure the server** option on the Report Server Installation Options page in the Installation Wizard). If you installed [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] in the default configuration, URLs are already configured for each application.  
   
- Use the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Configuration tool to configure the URLs. All parts of the URL are defined in this tool. Unlike earlier releases, Internet Information Services (IIS) Web sites no longer provide access to [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] applications in [!INCLUDE[ssKatmai](../../../analysis-services/data-mining/includes/sskatmai-md.md)] and later versions.  
+ Use the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Configuration tool to configure the URLs. All parts of the URL are defined in this tool. Unlike earlier releases, Internet Information Services (IIS) Web sites no longer provide access to [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] applications in [!INCLUDE[ssKatmai](../../../a9notintoc/includes/sskatmai-md.md)] and later versions.  
   
- [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] provides default values that work well in most deployment scenarios, including side-by-side deployments with other Web services and applications. Default URLs incorporate instance names, minimizing the risk of URL conflicts if you run multiple report server instances on the same computer.  
+ [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] provides default values that work well in most deployment scenarios, including side-by-side deployments with other Web services and applications. Default URLs incorporate instance names, minimizing the risk of URL conflicts if you run multiple report server instances on the same computer.  
   
  This topic provides instructions for the following tasks:  
   
@@ -31,36 +31,36 @@ manager: "erikre"
   
 -   Set advanced URL properties to define additional URLs.  
   
- For more information about how URLs are stored and maintained or interoperability issues, see [About URL Reservations and Registration  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) and [Install Reporting Services and Internet Information Services Side-by-Side &#40;SSRS Native Mode&#41;](../../../reporting-services/install/windows/9b651fa5-f582-4f18-a77d-0dde95d9d211.md) in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Books Online. To review examples of URLs often used in a Reporting Services installation, see [Examples of URLs](#URLExamples) in this topic.  
+ For more information about how URLs are stored and maintained or interoperability issues, see [About URL Reservations and Registration  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) and [Install Reporting Services and Internet Information Services Side-by-Side &#40;SSRS Native Mode&#41;](../../../reporting-services/install/windows/9b651fa5-f582-4f18-a77d-0dde95d9d211.md) in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Books Online. To review examples of URLs often used in a Reporting Services installation, see [Examples of URLs](#URLExamples) in this topic.  
   
 ## Prerequisites  
  Before you create or modify a URL, remember the following points:  
   
 -   You must be a member of the local Administrators group on the report server computer.  
   
--   If IIS is installed on the same computer, check the names of virtual directories on any Web site that uses port 80. If you see any virtual directories that use the default Reporting Services virtual directory names (that is, "Reports" and "ReportServer"), choose different virtual directory names for the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] URLs that you configure.  
+-   If IIS is installed on the same computer, check the names of virtual directories on any Web site that uses port 80. If you see any virtual directories that use the default Reporting Services virtual directory names (that is, "Reports" and "ReportServer"), choose different virtual directory names for the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] URLs that you configure.  
   
--   You must use the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Configuration tool to configure the URL. Do not use a system utility. Never modify URL reservations in the **URLReservations** section of the RSReportServer.config file directly. Using the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Configuration tool is necessary to update both the underlying URL reservation that is stored internally and synchronize the URL settings stored in the RSReportServer.config file.  
+-   You must use the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Configuration tool to configure the URL. Do not use a system utility. Never modify URL reservations in the **URLReservations** section of the RSReportServer.config file directly. Using the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Configuration tool is necessary to update both the underlying URL reservation that is stored internally and synchronize the URL settings stored in the RSReportServer.config file.  
   
 -   Choose a time that has low report activity. Each time the URL reservation changes, you can expect that the application domains for Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../../reporting-services/includes/ssrswebportal.md)] might be recycled.  
   
--   For an overview of URL construction and usage in [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], see [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/configure-report-server-urls-ssrs-configuration-manager.md).  
+-   For an overview of URL construction and usage in [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)], see [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
 ### To configure a URL for the Report Server Web service  
   
-1.  Start the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Configuration tool and connect to a local report server instance.  
+1.  Start the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Configuration tool and connect to a local report server instance.  
   
 2.  Click **Web Service URL**.  
   
 3.  Specify the virtual directory. The virtual directory name identifies which application receives the request. Because an IP address and port can be shared by multiple applications, the virtual directory name specifies which application receives the request.  
   
-     This value must be unique to ensure that the request reaches its intended destination. This value is required. It is case-insensitive. There is a one-to-one correspondence between a virtual directory name and an instance of a [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] application. If you create multiple URLs to the same application instance, you must use the same virtual directory name in all of the URLs you define for this application instance.  
+     This value must be unique to ensure that the request reaches its intended destination. This value is required. It is case-insensitive. There is a one-to-one correspondence between a virtual directory name and an instance of a [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] application. If you create multiple URLs to the same application instance, you must use the same virtual directory name in all of the URLs you define for this application instance.  
   
      For the Report Server Web service, the default virtual directory name is **ReportServer**.  
   
 4.  Specify the IP address that uniquely identifies the report server computer on the network. If you want to specify a host header or define additional URLs for the same application instance, you must click **Advanced**. For instructions on how to set advanced properties on the URL, see the instructions later in this topic. Otherwise, use the **Web Service URL** page to select from the following values:  
   
-    -   **All Assigned** specifies that any of the IP addresses that are assigned to the computer can be used in a URL that points to a report server application. This value also encompasses friendly host names (such as computer names) that can be resolved by a domain name server to an IP address that is assigned to the computer. This is the default value for a [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] URL.  
+    -   **All Assigned** specifies that any of the IP addresses that are assigned to the computer can be used in a URL that points to a report server application. This value also encompasses friendly host names (such as computer names) that can be resolved by a domain name server to an IP address that is assigned to the computer. This is the default value for a [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] URL.  
   
     -   **All Unassigned** specifies that the report server will receive any request that has not been handled by another application. We recommend that you avoid this option. If you select this option, it becomes possible for another application that has a stronger URL reservation to intercept requests intended for the report server.  
   
@@ -90,7 +90,7 @@ manager: "erikre"
   
 9. Click **Apply** to create the URL.  
   
-10. Test the URL by clicking the link in the **URLs** section of page. Note that the report server database must be created and configured before you can test the URL. For instructions, see [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../Topic/Create%20a%20Native%20Mode%20Report%20Server%20Database%20%20\(SSRS%20Configuration%20Manager\).md).  
+10. Test the URL by clicking the link in the **URLs** section of page. Note that the report server database must be created and configured before you can test the URL. For instructions, see [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
 > [!NOTE]  
 >  If you have existing SSL Bindings and URL Reservations and you want to change the SSL Binding, for example use a different certificate or hostheader, then it is recommended you complete the following steps in order:  
@@ -99,7 +99,7 @@ manager: "erikre"
 > 2.  Then remove all SSL Bindings.  
 > 3.  Then recreate the URLs and the SSL bindings.  
 >   
->  The previous steps can be completed using [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Configuration Manager.  
+>  The previous steps can be completed using [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Configuration Manager.  
 >   
 >  Microsoft Windows supports one binding for each IP address to Port combination. If you configure a report server to use a specific hostheader value and the certificate on the Port to IP address combination is also issued to a different hostheader value, you will see in your browser, a warning indicating the certificate does not match the URL that is being used.  
 >   
@@ -107,7 +107,7 @@ manager: "erikre"
   
 ### To create a URL reservation for the [!INCLUDE[ssRSWebPortal](../../../reporting-services/includes/ssrswebportal.md)]  
   
-1.  Start the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server instance.  
+1.  Start the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server instance.  
   
 2.  Click **Web Portal URL**.  
   
@@ -128,7 +128,7 @@ manager: "erikre"
   
 -   http://www.adventure-works.com/reportserver  
   
- You cannot set multiple virtual directory names for the same application instance. Each [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] application instance is mapped to a single virtual directory name. If you have multiple instances of [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] on the same computer, the virtual directory name for an application should include the instance name to ensure that each request reaches its intended target.  
+ You cannot set multiple virtual directory names for the same application instance. Each [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] application instance is mapped to a single virtual directory name. If you have multiple instances of [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] on the same computer, the virtual directory name for an application should include the instance name to ensure that each request reaches its intended target.  
  
   **Host Header**  
  If you already have a host header defined on a domain name server that resolves to your computer, you can specify that host header in a URL that you configure for report server access.  
@@ -143,7 +143,7 @@ manager: "erikre"
   
  Specifies the fully qualified computer name for which the certificate is registered. The name that you specify must be identical to the name for which the certificate is registered.  
   
- You must have a certificate installed to use this option. You must also modify the UrlRoot configuration setting in the RSReportServer.config file so that it specifies the fully qualified name of the computer for which the certificate is registered. For more information, see [Configure SSL Connections on a Native Mode Report Server](../../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Books Online.  
+ You must have a certificate installed to use this option. You must also modify the UrlRoot configuration setting in the RSReportServer.config file so that it specifies the fully qualified name of the computer for which the certificate is registered. For more information, see [Configure SSL Connections on a Native Mode Report Server](../../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Books Online.  
   
 ### To set advanced properties on a URL  
   
@@ -160,7 +160,7 @@ manager: "erikre"
 6.  Test the URL by opening a browser window and entering the URL.  
   
 ## URLs for Multiple Report Server Instances on the Same Computer  
- If you are reserving URLs for multiple instances of [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], you should follow naming conventions so that you can avoid naming conflicts. For more information, see [URL Reservations for Multi-Instance Report Server Deployments  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/f67c83c0-1f74-42bb-bfc1-e50c38152d3d.md).  
+ If you are reserving URLs for multiple instances of [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)], you should follow naming conventions so that you can avoid naming conflicts. For more information, see [URL Reservations for Multi-Instance Report Server Deployments  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/f67c83c0-1f74-42bb-bfc1-e50c38152d3d.md).  
   
 ##  <a name="URLExamples"></a> Examples of URL Configurations  
  The following list shows some examples of what a report server URL might resemble:  

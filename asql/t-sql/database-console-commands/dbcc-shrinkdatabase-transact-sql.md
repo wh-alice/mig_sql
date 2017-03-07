@@ -36,7 +36,7 @@ manager: "jhubbard"
 
   Shrinks the size of the data and log files in the specified database.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -77,19 +77,19 @@ DBCC SHRINKDATABASE
   
 |Column name|Description|  
 |-----------------|-----------------|  
-|**DbId**|Database identification number of the file the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] tried to shrink.|  
-|**FileId**|File identification number of the file the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] tried to shrink.|  
+|**DbId**|Database identification number of the file the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] tried to shrink.|  
+|**FileId**|File identification number of the file the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] tried to shrink.|  
 |**CurrentSize**|Number of 8-KB pages the file currently occupies.|  
 |**MinimumSize**|Number of 8-KB pages the file could occupy, at minimum. This corresponds to the minimum size or originally created size of a file.|  
 |**UsedPages**|Number of 8-KB pages currently used by the file.|  
-|**EstimatedPages**|Number of 8-KB pages that the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] estimates the file could be shrunk down to.|  
+|**EstimatedPages**|Number of 8-KB pages that the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] estimates the file could be shrunk down to.|  
   
-> **NOTE:** The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] does not display rows for those files not shrunk.  
+> **NOTE:** The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] does not display rows for those files not shrunk.  
   
 ## Remarks  
  To shrink all data and log files for a specific database, execute the DBCC SHRINKDATABASE command. To shrink one data or log file at a time for a specific database, execute the [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) command.  
   
- To view the current amount of free (unallocated) space in the database, run [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).  
+ To view the current amount of free (unallocated) space in the database, run [sp_spaceused](../../relational-databases/reference/system-stored-procedures/sp-spaceused-transact-sql.md).  
   
  DBCC SHRINKDATABASE operations can be stopped at any point in the process, and any completed work is retained.  
   
@@ -106,15 +106,15 @@ DBCC SHRINKDATABASE
   
  Assume a database named **mydb** with a data file and two log files. The data and log files are 10 MB each and the data file contains 6 MB of data.  
   
- For each file, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] calculates a target size. This is the size to which the file is to be shrunk. When DBCC SHRINKDATABASE is specified with *target_percent*, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] calculates target size to be the *target_percent* amount of space free in the file after shrinking. For example, if you specify a *target_percent* of 25 for shrinking **mydb**, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] calculates the target size for the data file to be 8 MB (6 MB of data plus 2 MB of free space). Therefore, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] moves any data from the last 2 MB of the data file to any free space in the first 8 MB of the data file and then shrinks the file.  
+ For each file, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] calculates a target size. This is the size to which the file is to be shrunk. When DBCC SHRINKDATABASE is specified with *target_percent*, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] calculates target size to be the *target_percent* amount of space free in the file after shrinking. For example, if you specify a *target_percent* of 25 for shrinking **mydb**, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] calculates the target size for the data file to be 8 MB (6 MB of data plus 2 MB of free space). Therefore, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] moves any data from the last 2 MB of the data file to any free space in the first 8 MB of the data file and then shrinks the file.  
   
- Assume the data file of **mydb** contains 7 MB of data. Specifying a *target_percent* of 30 allows for this data file to be shrunk to the free percentage of 30. However, specifying a *target_percent* of 40 does not shrink the data file because the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] will not shrink a file to a size smaller than the data currently occupies. You can also think of this issue another way: 40 percent wanted free space + 70 percent full data file (7 MB out of 10 MB) is more than 100 percent. Because the percentage free that is wanted plus the current percentage that the data file occupies is over 100 percent (by 10 percent), any *target_size* greater than 30 will not shrink the data file.  
+ Assume the data file of **mydb** contains 7 MB of data. Specifying a *target_percent* of 30 allows for this data file to be shrunk to the free percentage of 30. However, specifying a *target_percent* of 40 does not shrink the data file because the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] will not shrink a file to a size smaller than the data currently occupies. You can also think of this issue another way: 40 percent wanted free space + 70 percent full data file (7 MB out of 10 MB) is more than 100 percent. Because the percentage free that is wanted plus the current percentage that the data file occupies is over 100 percent (by 10 percent), any *target_size* greater than 30 will not shrink the data file.  
   
- For log files, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] uses *target_percent* to calculate the target size for the whole log; therefore, *target_percent* is the amount of free space in the log after the shrink operation. Target size for the whole log is then translated to a target size for each log file.  
+ For log files, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] uses *target_percent* to calculate the target size for the whole log; therefore, *target_percent* is the amount of free space in the log after the shrink operation. Target size for the whole log is then translated to a target size for each log file.  
   
- DBCC SHRINKDATABASE tries to shrink each physical log file to its target size immediately. If no part of the logical log resides in the virtual logs beyond the target size of the log file, the file is successfully truncated and DBCC SHRINKDATABASE finishes without any messages. However, if part of the logical log resides in the virtual logs beyond the target size, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] frees as much space as possible, and then issues an informational message. The message describes what actions are required to move the logical log out of the virtual logs at the end of the file. After the actions are performed, DBCC SHRINKDATABASE can be used to free the remaining space.  
+ DBCC SHRINKDATABASE tries to shrink each physical log file to its target size immediately. If no part of the logical log resides in the virtual logs beyond the target size of the log file, the file is successfully truncated and DBCC SHRINKDATABASE finishes without any messages. However, if part of the logical log resides in the virtual logs beyond the target size, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] frees as much space as possible, and then issues an informational message. The message describes what actions are required to move the logical log out of the virtual logs at the end of the file. After the actions are performed, DBCC SHRINKDATABASE can be used to free the remaining space.  
   
- Because a log file can only be shrunk to a virtual log file boundary, shrinking a log file to a size smaller than the size of a virtual log file might not be possible, even if it is not being used. The size of the virtual log file is chosen dynamically by the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] when log files are created or extended.  
+ Because a log file can only be shrunk to a virtual log file boundary, shrinking a log file to a size smaller than the size of a virtual log file might not be possible, even if it is not being used. The size of the virtual log file is chosen dynamically by the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] when log files are created or extended.  
   
 ## Best Practices  
  Consider the following information when you plan to shrink a database:  
@@ -128,7 +128,7 @@ DBCC SHRINKDATABASE
 -   Unless you have a specific requirement, do not set the AUTO_SHRINK database option to ON.  
   
 ## Troubleshooting  
- It is possible for shrink operations to be blocked by a transaction that is running under a [row versioning-based isolation level](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). For example, if a large delete operation running under a row versioning-based isolation level is in progress when a DBCC SHRINK DATABASE operation is executed, the shrink operation will wait for the delete operation to complete before shrinking the files. When this happens, DBCC SHRINKFILE and DBCC SHRINKDATABASE operations print out an informational message (5202 for SHRINKDATABASE and 5203 for SHRINKFILE) to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log every five minutes in the first hour and then every hour after that. For example, if the error log contains the following error message:  
+ It is possible for shrink operations to be blocked by a transaction that is running under a [row versioning-based isolation level](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). For example, if a large delete operation running under a row versioning-based isolation level is in progress when a DBCC SHRINK DATABASE operation is executed, the shrink operation will wait for the delete operation to complete before shrinking the files. When this happens, DBCC SHRINKFILE and DBCC SHRINKDATABASE operations print out an informational message (5202 for SHRINKDATABASE and 5203 for SHRINKFILE) to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error log every five minutes in the first hour and then every hour after that. For example, if the error log contains the following error message:  
   
 ```  
 DBCC SHRINKDATABASE for database ID 9 is waiting for the snapshot   
@@ -136,7 +136,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
- This means that the shrink operation is blocked by snapshot transactions that have timestamps older than 109, which is the last transaction that the shrink operation completed. It also indicates that the **transaction_sequence_num**, or **first_snapshot_sequence_num** columns in the [sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-tran-active-snapshot-database-transactions-transact-sql.md) dynamic management view contains a value of 15. If either the **transaction_sequence_num**, or **first_snapshot_sequence_num** columns in the view contains a number that is less than the last transaction completed by a shrink operation (109), the shrink operation will wait for those transactions to finish.  
+ This means that the shrink operation is blocked by snapshot transactions that have timestamps older than 109, which is the last transaction that the shrink operation completed. It also indicates that the **transaction_sequence_num**, or **first_snapshot_sequence_num** columns in the [sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-tran-active-snapshot-database-transactions-transact-sql.md) dynamic management view contains a value of 15. If either the **transaction_sequence_num**, or **first_snapshot_sequence_num** columns in the view contains a number that is less than the last transaction completed by a shrink operation (109), the shrink operation will wait for those transactions to finish.  
   
  To resolve the problem, you can do one of the following tasks:  
   

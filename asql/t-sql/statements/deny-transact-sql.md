@@ -31,11 +31,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # DENY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Denies a permission to a principal. Prevents that principal from inheriting the permission through its group or role memberships.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -179,11 +179,11 @@ The use of AS in this statement does not imply the ability to impersonate anothe
   
 ## See Also  
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
- [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
- [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
+ [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addlogin-transact-sql.md)   
+ [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-adduser-transact-sql.md)   
+ [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-helprotect-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-helpuser-transact-sql.md)  
   
   

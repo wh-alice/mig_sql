@@ -22,7 +22,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Attributes (Master Data Services)
-  Attributes are objects that are contained in [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] entities. Attribute values describe the members of the entity. An attribute can be used to describe a leaf member, a consolidated member, or a collection.  
+  Attributes are objects that are contained in [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] entities. Attribute values describe the members of the entity. An attribute can be used to describe a leaf member, a consolidated member, or a collection.  
   
 ## How Attributes Relate to Other Model Objects  
  You can think of an attribute as a column in an entity table. An attribute value is the value used to describe a specific member.  

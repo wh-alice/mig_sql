@@ -20,19 +20,19 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Step Through Transact-SQL Code
-  The [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] debugger enables you to control which [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements are run in a [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Query Editor window. You can pause the debugger on individual statements and then view the state of the code elements at that point.  
+  The [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] debugger enables you to control which [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements are run in a [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Query Editor window. You can pause the debugger on individual statements and then view the state of the code elements at that point.  
   
 ## Breakpoints  
- A breakpoint signals the debugger to pause execution on a specific [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement. For more information about breakpoints, see [Transact-SQL Breakpoints](../../relational-databases/scripting/transact-sql-breakpoints.md).  
+ A breakpoint signals the debugger to pause execution on a specific [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement. For more information about breakpoints, see [Transact-SQL Breakpoints](../../relational-databases/scripting/transact-sql-breakpoints.md).  
   
 ## Controlling Statement Execution  
- In the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] debugger, you can specify the following options for executing from the current statement in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] code:  
+ In the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] debugger, you can specify the following options for executing from the current statement in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] code:  
   
 -   Run to the next breakpoint.  
   
 -   Step into the next statement.  
   
-     If the next statement invokes a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] stored procedure, function, or trigger, the debugger displays a new Query Editor window that contains the code of the module. The window is in debug mode, and execution pauses on the first statement in the module. You can then move through the module code, for example, by setting breakpoints or stepping through the code.  
+     If the next statement invokes a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] stored procedure, function, or trigger, the debugger displays a new Query Editor window that contains the code of the module. The window is in debug mode, and execution pauses on the first statement in the module. You can then move through the module code, for example, by setting breakpoints or stepping through the code.  
   
 -   Step over the next statement.  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 -   Run from the current location to the current location of the pointer, and ignore all breakpoints.  
   
- The following table lists the various ways in which you can control how statements execute in the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] debugger.  
+ The following table lists the various ways in which you can control how statements execute in the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] debugger.  
   
 |Action|Perform action:|  
 |------------|---------------------|  
@@ -55,6 +55,6 @@ manager: "jhubbard"
 |Run to the current cursor location|Right-click in the Query Editor window, and then click **Run To Cursor**.<br /><br /> Press CTRL+F10.|  
   
 ## See Also  
- [Transact-SQL Debugger Information](../Topic/Transact-SQL%20Debugger%20Information.md)  
+ [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)  
   
   

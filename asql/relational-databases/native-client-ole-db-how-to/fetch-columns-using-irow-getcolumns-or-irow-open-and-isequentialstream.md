@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   Large data can be bound or retrieved using the **ISequentialStream** interface. For bound columns, the status flag DBSTATUS_S_TRUNCATED indicates that the data is truncated.  
   
@@ -45,11 +45,11 @@ manager: "jhubbard"
   
  This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) home page.  
   
- The first ([!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]) code listing creates a table used by the sample.  
+ The first ([!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]) code listing creates a table used by the sample.  
   
- Compile with ole32.lib oleaut32.lib  and execute the second (C++) code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
+ Compile with ole32.lib oleaut32.lib  and execute the second (C++) code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   
- The third ([!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]) code listing deletes the table used by the sample.  
+ The third ([!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]) code listing deletes the table used by the sample.  
   
 ```  
 USE AdventureWorks  

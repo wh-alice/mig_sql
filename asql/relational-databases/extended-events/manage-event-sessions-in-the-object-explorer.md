@@ -16,7 +16,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Manage Event Sessions in the Object Explorer
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   This topic discusses the actions you can take in **Object Explorer** that affect Extended Events:  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
 -   Delete an Extended Events Session  
   
 ## Create an Extended Events Session  
- For more information about creating an Extended Events session, see [Create an Extended Events Session](../Topic/Create%20an%20Extended%20Events%20Session.md).  
+ For more information about creating an Extended Events session, see [Create an Extended Events Session](../../a9retired/create-an-extended-events-session.md).  
   
 ## Starting or Stopping an Extended Events Session  
  You can start or stop an Extended Events session through the **Query Editor** using the **ALTER EVENT SESSION** statement, or by using the **Extended Events** node of **Object Explorer**.  
@@ -77,10 +77,10 @@ STATE = STOP
   
 3.  In the **Save As** dialog box, select a location to save the file, type the file name in the **File name** box, and then click **Save**.  
   
-     If you save the file to the default [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] template location, the template will appear in the dropdown list of predefined templates when you use the **New Session Wizard** and **New Session** dialog.  
+     If you save the file to the default [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] template location, the template will appear in the dropdown list of predefined templates when you use the **New Session Wizard** and **New Session** dialog.  
   
 ## Import an Extended Events Session Template  
- Using **Object Explorer**, you can import a template for an Extended Events session. For example, you may want to do this to create a session from a template that was exported from another instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Using **Object Explorer**, you can import a template for an Extended Events session. For example, you may want to do this to create a session from a template that was exported from another instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  To import an Extended Events session, you must have the necessary **ALTER ANY EVENT SESSION** permissions.  
   
@@ -113,10 +113,10 @@ STATE = STOP
   
 4.  After you finish revising the event session, click **OK**.  
   
-## Script an Event Session Definition Using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]  
- Both the New Session Wizard and the New Session dialog have a Script option that generates the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] that defines the Extended Events session.  
+## Script an Event Session Definition Using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]  
+ Both the New Session Wizard and the New Session dialog have a Script option that generates the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] that defines the Extended Events session.  
   
- You can access the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] for an existing Extended Events session by right clicking the session name, selecting **Script Session as**, and then selecting **Create to**.  
+ You can access the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] for an existing Extended Events session by right clicking the session name, selecting **Script Session as**, and then selecting **Create to**.  
   
 ## Delete an Extended Events Session  
  You can delete an Extended Events session:  
@@ -128,7 +128,7 @@ STATE = STOP
  When you delete an event session, all configuration information is removed and the session definition no longer appears in the sys.server_event_sessions catalog view.  
   
 > [!NOTE]  
->  system_health and Always On_health are included with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]; do not delete them. system_health is enabled by default (for more information, see [Use the system_health Session](../../relational-databases/extended-events/use-the-system-health-session.md)). Always On_health is off by default. These sessions collect data that can be useful for diagnosing performance issues.  
+>  system_health and Always On_health are included with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]; do not delete them. system_health is enabled by default (for more information, see [Use the system_health Session](../../relational-databases/extended-events/use-the-system-health-session.md)). Always On_health is off by default. These sessions collect data that can be useful for diagnosing performance issues.  
   
  To delete an Extended Events session, you must have the ALTER ANY EVENT SESSION permission.  
   

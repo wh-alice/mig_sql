@@ -18,21 +18,21 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Walkthrough: Publish an SSIS Package as a SQL View
-  This walkthrough provides detailed steps to publish an SSIS package as a SQL view in a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database.  
+  This walkthrough provides detailed steps to publish an SSIS package as a SQL view in a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database.  
   
 ## Prerequisites  
  You must have the following software installed on your computer to perform this walkthrough.  
   
-1.  [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] or later with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)].  
+1.  [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] or later with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)].  
   
 2.  [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx).  
   
 ## Step 1: Build and Deploy SSIS Project to the SSIS Catalog  
- In this step, you create an SSIS package that extracts data from an SSIS supported data source - in this example, we use a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database - and outputs the data using a Data Streaming Destination component. Then you build and deploy the SSIS project to the SSIS catalog.  
+ In this step, you create an SSIS package that extracts data from an SSIS supported data source - in this example, we use a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database - and outputs the data using a Data Streaming Destination component. Then you build and deploy the SSIS project to the SSIS catalog.  
   
 1.  Launch **SQL Server Data Tools**. On the **Start** menu, point to **All Programs**, point to **Microsoft SQL Server**, and click **SQL Server Data Tools**.  
   
-2.  Create a new [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project.  
+2.  Create a new [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project.  
   
     1.  Click **File** on the menu bar, point to **New**, and click **Project**.  
   

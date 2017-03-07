@@ -23,17 +23,17 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Prepare to Bulk Import Data (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   You can use the **bcp** command, BULK INSERT statement, or OPENROWSET(BULK) function to bulk import data from a data file only.  
   
 > [!NOTE]  
->  It is possible to write a custom application that bulk imports data from objects other than a text file. To bulk import data from memory buffers, use either the bcp extensions to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client (ODBC) application programming interface (API) or the OLE DB **IRowsetFastLoad** interface.  To bulk import data from a C# data table, use the ADO.NET bulk-copy API, **SqlBulkCopy**.  
+>  It is possible to write a custom application that bulk imports data from objects other than a text file. To bulk import data from memory buffers, use either the bcp extensions to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client (ODBC) application programming interface (API) or the OLE DB **IRowsetFastLoad** interface.  To bulk import data from a C# data table, use the ADO.NET bulk-copy API, **SqlBulkCopy**.  
   
 > [!NOTE]  
 >  Bulk importing data into a remote table is not supported.  
   
- Use the following guidelines when you bulk import data from a data file to an instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]:  
+ Use the following guidelines when you bulk import data from a data file to an instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]:  
   
 -   Obtain required permissions for your user account.  
   

@@ -19,7 +19,7 @@ manager: "jhubbard"
 # Perform an Incremental Load of Multiple Tables
   In the topic, [Improving Incremental Loads with Change Data Capture](../../integration-services/change-data-capture/change-data-capture-ssis.md), the diagram illustrates a basic package that performs an incremental load on just one table. However, loading one table is not as common as having to perform an incremental load of multiple tables.  
   
- When you perform an incremental load of multiple tables, some steps have to be performed once for all the tables, and other steps have to be repeated for each source table. You have more than one option for implementing these steps in [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)]:  
+ When you perform an incremental load of multiple tables, some steps have to be performed once for all the tables, and other steps have to be repeated for each source table. You have more than one option for implementing these steps in [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)]:  
   
 -   Use a parent package and child packages.  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 1.  Create a parent package.  
   
-2.  In the control flow, use an Execute SQL task or [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] expressions to calculate the endpoints.  
+2.  In the control flow, use an Execute SQL task or [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] expressions to calculate the endpoints.  
   
      For an example of how to calculate endpoints, see [Specify an Interval of Change Data](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md).  
   
@@ -73,7 +73,7 @@ manager: "jhubbard"
   
 1.  Create a single package.  
   
-2.  In the control flow, use an Execute SQL Task or [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] expressions to calculate the endpoints.  
+2.  In the control flow, use an Execute SQL Task or [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] expressions to calculate the endpoints.  
   
      For an example of how to calculate endpoints, see [Specify an Interval of Change Data](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md).  
   

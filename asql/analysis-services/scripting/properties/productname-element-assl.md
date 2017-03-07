@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # ProductName Element (ASSL)
-  Contains the read-only product name of the instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] that is associated with a [Server](../../../analysis-services/scripting/objects/server-element-assl.md) element.  
+  Contains the read-only product name of the instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] that is associated with a [Server](../../../analysis-services/scripting/objects/server-element-assl.md) element.  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- The **ProductName** element provides read-only access to the name of the product associated with an instance of [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].  
+ The **ProductName** element provides read-only access to the name of the product associated with an instance of [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].  
   
  The element that corresponds to the parent of **ProductName** in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.Server>.  
   

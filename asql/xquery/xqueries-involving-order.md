@@ -23,7 +23,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # XQueries Involving Order
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Relational databases do not have a concept of sequence. For example, you cannot make a request such as "Get the first customer from the database." However, you can query an XML document and retrieve the first \<Customer> element. Then, you will always retrieve the same customer.  
   
@@ -64,7 +64,7 @@ WHERE ProductModelID=7
   
 -   The FLWOR iteration (FOR ... RETURN) retrieves all the <`step`> child elements of the second work center location.  
   
--   The [sql:column() function (XQuery)](../Topic/sql:column\(\)%20Function%20\(XQuery\).md) includes the relational value in the XML that is being constructed.  
+-   The [sql:column() function (XQuery)](../xquery/xquery-extension-functions-sql-column.md) includes the relational value in the XML that is being constructed.  
   
  This is the result:  
   

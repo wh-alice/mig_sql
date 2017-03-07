@@ -21,13 +21,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Save an Execution Plan in XML Format
-  Use [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to save execution plans as an XML file, and to open them for viewing.  
+  Use [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] to save execution plans as an XML file, and to open them for viewing.  
   
- To use the execution plan feature in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], or to use the XML Showplan SET options, users must have the appropriate permissions to execute the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] query for which an execution plan is being generated, and they must be granted the SHOWPLAN permission for all databases referenced by the query.  
+ To use the execution plan feature in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], or to use the XML Showplan SET options, users must have the appropriate permissions to execute the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] query for which an execution plan is being generated, and they must be granted the SHOWPLAN permission for all databases referenced by the query.  
   
 ### To save a query plan by using the XML Showplan SET options  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] open a query editor and connect to [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] open a query editor and connect to [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  Turn SHOWPLAN_XML on with the following statement:  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 ### To save an execution plan by using SQL Server Management Studio options  
   
-1.  Generate either an estimated execution plan or an actual execution plan by using [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)]. For more information, see [Display the Estimated Execution Plan](../../relational-databases/performance/display-the-estimated-execution-plan.md) or [Display an Actual Execution Plan](../../relational-databases/performance/display-an-actual-execution-plan.md).  
+1.  Generate either an estimated execution plan or an actual execution plan by using [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)]. For more information, see [Display the Estimated Execution Plan](../../relational-databases/performance/display-the-estimated-execution-plan.md) or [Display an Actual Execution Plan](../../relational-databases/performance/display-an-actual-execution-plan.md).  
   
 2.  In the **Execution plan** tab of the results pane, right-click the graphical execution plan, and choose **Save Execution Plan As**.  
   
@@ -80,13 +80,13 @@ manager: "jhubbard"
   
 ### To open a saved XML query plan in SQL Server Management Studio  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], on the **File** menu, choose **Open**, and then click **File**.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], on the **File** menu, choose **Open**, and then click **File**.  
   
 2.  In the **Open File** dialog box, set **Files of type** to **Execution Plan Files (\*.sqlplan)** to produce a filtered list of saved XML query plan files.  
   
 3.  Select the XML query plan file that you want to view, and click **Open**.  
   
-     As an alternative, in Windows Explorer, double-click a file with extension **.sqlplan**. The plan opens in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)].  
+     As an alternative, in Windows Explorer, double-click a file with extension **.sqlplan**. The plan opens in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)].  
   
 ## See Also  
  [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-xml-transact-sql.md)   

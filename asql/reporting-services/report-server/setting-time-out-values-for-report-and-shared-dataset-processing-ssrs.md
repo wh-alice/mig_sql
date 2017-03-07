@@ -21,7 +21,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Setting Time-out Values for Report and Shared Dataset Processing (SSRS)
-  You can [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] specify time-out values to set limits on how system resources are used. Report server supports two time-out values:  
+  You can [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] specify time-out values to set limits on how system resources are used. Report server supports two time-out values:  
   
 -   An embedded dataset query time-out value is the number of seconds that the report server waits for a response from the database. This value is defined in a report.  
   
@@ -56,6 +56,6 @@ manager: "erikre"
  [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-server/sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)  
+ [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md)  
   
   

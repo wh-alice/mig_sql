@@ -28,7 +28,7 @@ manager: "erikre"
   
  The **CustomRollupColumn** property on an attribute specifies the column that contains custom member formulas for members of the attribute. If a row in the column is empty, the cell value for the member is returned normally. If the formula in the column is not valid, a run-time error occurs whenever a cell value that uses the member is retrieved.  
   
- Before you can specify custom member formulas for an attribute, make sure that the dimension table that contains the attribute, or a directly related table, has a string column to store the custom member formulas. If this is the case, you can either set the **CustomRollupColumn** property on an attribute manually or use the Set Custom Member Formula enhancement of the Business Intelligence Wizard to enable a custom member formula on an attribute. For more information about how to use this enhancement, see [Set Custom Member Formulas for Attributes in a Dimension](../Topic/Set%20Custom%20Member%20Formulas%20for%20Attributes%20in%20a%20Dimension.md).  
+ Before you can specify custom member formulas for an attribute, make sure that the dimension table that contains the attribute, or a directly related table, has a string column to store the custom member formulas. If this is the case, you can either set the **CustomRollupColumn** property on an attribute manually or use the Set Custom Member Formula enhancement of the Business Intelligence Wizard to enable a custom member formula on an attribute. For more information about how to use this enhancement, see [Set Custom Member Formulas for Attributes in a Dimension](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md).  
   
 ## Evaluating Custom Member Formulas  
  Custom member formulas differ from calculated members. Custom member formulas apply to members that exist in dimension tables, and only provide the value of the member. In contrast, calculated members are not stored in dimension tables, and calculated member expressions define both data and metadata for additional members included in a dimension or hierarchy.  
@@ -72,6 +72,6 @@ Time.[Quarter 3] * 1.5
   
 ## See Also  
  [Attributes and Attribute Hierarchies](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Set Custom Member Formulas for Attributes in a Dimension](../Topic/Set%20Custom%20Member%20Formulas%20for%20Attributes%20in%20a%20Dimension.md)  
+ [Set Custom Member Formulas for Attributes in a Dimension](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   

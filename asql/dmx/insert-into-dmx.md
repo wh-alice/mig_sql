@@ -32,7 +32,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # INSERT INTO (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Processes the specified data mining object. For more information about processing mining models and mining structures, see [Processing Requirements and Considerations &#40;Data Mining&#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
@@ -60,7 +60,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  The source query in the provider-defined format.  
   
 ## Remarks  
- If you do not specify **MINING MODEL** or **MINING STRUCTURE**, [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] searches for the object type based on the name, and processes the correct object. If the server contains a mining structure and a mining model that have the same name, an error is returned.  
+ If you do not specify **MINING MODEL** or **MINING STRUCTURE**, [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] searches for the object type based on the name, and processes the correct object. If the server contains a mining structure and a mining model that have the same name, an error is returned.  
   
  By using the second syntax form, INSERT INTO*\<object>*.COLUMN_VALUES, you can insert data directly into the model columns without training the model. This method provides column data to the model in a concise, ordered manner that is useful when you work with datasets that contain hierarchies or ordered columns.  
   
@@ -104,12 +104,12 @@ INSERT INTO [MINING MODEL] <model>
   
 -   **SHAPE**  
   
--   Any [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] query that returns a rowset  
+-   Any [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] query that returns a rowset  
   
  For more information about data source types, see [&#60;source data query&#62;](../dmx/source-data-query.md).  
   
 ## Basic Example  
- The following example uses **OPENQUERY** to train a Naive Bayes model based on the targeted mailing data in the [!INCLUDE[ssSampleDBDWobject](../analysis-services/data-mining/includes/sssampledbdwobject-md.md)] database.  
+ The following example uses **OPENQUERY** to train a Naive Bayes model based on the targeted mailing data in the [!INCLUDE[ssSampleDBDWobject](../a9notintoc/includes/sssampledbdwobject-md.md)] database.  
   
 ```  
 INSERT INTO NBSample (CustomerKey, Gender, [Number Cars Owned],  
@@ -136,8 +136,8 @@ AS [Models]
 ```  
   
 ## See Also  
- [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Definition%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Manipulation%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)  
+ [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

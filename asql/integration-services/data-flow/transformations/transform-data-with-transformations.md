@@ -19,13 +19,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transform Data with Transformations
-  [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] includes three types of data flow components: sources, transformations, and destinations.  
+  [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] includes three types of data flow components: sources, transformations, and destinations.  
   
  The following diagram shows a simple data flow that has a source, two transformations, and a destination.  
   
- ![Data flow](../../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
+ ![Data flow](../../../a9retired/media/mw-dts-08.gif "Data flow")  
   
- [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] transformations provide the following functionality:  
+ [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] transformations provide the following functionality:  
   
 -   Splitting, copying, and merging rowsets and performing lookup operations.  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
  You can also write custom transformations. For more information, see [Developing a Custom Data Flow Component](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) and [Developing Specific Types of Data Flow Components](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md).  
   
- After you add the transformation to the data flow designer, but before you configure the transformation, you connect the transformation to the data flow by connecting the output of another transformation or source in the data flow to the input of this transformation. The connector between two data flow components is called a path. For more information about connecting components and working with paths, see [Connect Components with Paths](../Topic/Connect%20Components%20with%20Paths.md).  
+ After you add the transformation to the data flow designer, but before you configure the transformation, you connect the transformation to the data flow by connecting the output of another transformation or source in the data flow to the input of this transformation. The connector between two data flow components is called a path. For more information about connecting components and working with paths, see [Connect Components with Paths](../../../a9retired/connect-components-with-paths.md).  
   
 ### To add a transformation to a data flow  
   
@@ -58,7 +58,7 @@ manager: "jhubbard"
 ## See Also  
  [Data Flow Task](../../../integration-services/control-flow/data-flow-task.md)   
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   
- [Connect Components with Paths](../Topic/Connect%20Components%20with%20Paths.md)   
+ [Connect Components with Paths](../../../a9retired/connect-components-with-paths.md)   
  [Error Handling in Data](../../../integration-services/data-flow/error-handling-in-data.md)   
  [Data Flow](../../../integration-services/data-flow/data-flow.md)  
   

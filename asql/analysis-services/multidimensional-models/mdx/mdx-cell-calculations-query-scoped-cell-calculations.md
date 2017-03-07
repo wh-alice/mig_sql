@@ -53,6 +53,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  On the other hand, MDX processes the calculation formula whenever an MDX query is issued against the cube involving cells included in the calculated cells definition. This processing occurs regardless of the creation scope.  
   
 ## See Also  
- [CREATE CELL CALCULATION Statement &#40;MDX&#41;](../Topic/CREATE%20CELL%20CALCULATION%20Statement%20\(MDX\).md)  
+ [CREATE CELL CALCULATION Statement &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

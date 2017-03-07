@@ -16,10 +16,10 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Add or Delete a Group in a Chart (Report Builder and SSRS)
-In [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports, click in the chart data region to display the **Chart Data** pane. Create groups by dragging dataset fields to the **Category Groups** and **Series Groups** areas. To add nested groups, add multiple fields to the area.  
+In [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports, click in the chart data region to display the **Chart Data** pane. Create groups by dragging dataset fields to the **Category Groups** and **Series Groups** areas. To add nested groups, add multiple fields to the area.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## To add a parent or child group to a chart  
   
@@ -35,7 +35,7 @@ In [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnov
   
 3.  Add or remove group expressions, filters, sort expressions, and group variables.  
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## To edit a series group on a chart  
   
@@ -45,7 +45,7 @@ In [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnov
   
 3.  Add or remove group expressions, filters, sort expressions, and group variables.  
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## To delete a group from a chart  
   

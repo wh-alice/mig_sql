@@ -17,16 +17,16 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 1: Create and Apply an Off By Default Policy
-Using Policy-Based Management policies, you can administer one or more instances of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], one or more instance objects, server instances, one or more databases, or one or more database objects. As the database administrator, you want to ensure that certain servers do not have Database Mail enabled. In this lesson, you will create a condition and a policy that sets that server option. You will test the server to see whether it complies with the policy. Then, you will use the policy to reconfigure the server to bring the server into compliance.  
+Using Policy-Based Management policies, you can administer one or more instances of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], one or more instance objects, server instances, one or more databases, or one or more database objects. As the database administrator, you want to ensure that certain servers do not have Database Mail enabled. In this lesson, you will create a condition and a policy that sets that server option. You will test the server to see whether it complies with the policy. Then, you will use the policy to reconfigure the server to bring the server into compliance.  
   
 This lesson contains the following topics:  
   
--   [Create the Off By Default Policy](../Topic/Create%20the%20Off%20By%20Default%20Policy.md)  
+-   [Create the Off By Default Policy](../../../relational-databases/policy-based-management/tutorials/lesson-1-1-create-the-off-by-default-policy.md)  
   
--   [Configure a Server to Run the Off By Default Policy](../Topic/Configure%20a%20Server%20to%20Run%20the%20Off%20By%20Default%20Policy.md)  
+-   [Configure a Server to Run the Off By Default Policy](../../../relational-databases/policy-based-management/tutorials/lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)  
   
 ## Next Task in Lesson  
-[Create the Off By Default Policy](../Topic/Create%20the%20Off%20By%20Default%20Policy.md)  
+[Create the Off By Default Policy](../../../relational-databases/policy-based-management/tutorials/lesson-1-1-create-the-off-by-default-policy.md)  
   
 ## Next Lesson  
 [Lesson 2: Create and Apply a Naming Standards Policy](../../../relational-databases/policy-based-management/tutorials/lesson-2-create-and-apply-a-naming-standards-policy.md)  

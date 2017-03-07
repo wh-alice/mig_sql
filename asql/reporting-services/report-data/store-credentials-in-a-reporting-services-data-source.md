@@ -22,11 +22,11 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Store Credentials in a Reporting Services Data Source
-  You can configure stored credentials that a [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report server uses to access external data for a report. Stored credentials are used if the report runs unattended, for example a [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] subscription that publishes a report as an e-mail. The report server retrieves and uses the credentials when report processing is scheduled or triggered. This topic walks you through configuring stored credentials for both Native mode and SharePoint mode report servers.  
+  You can configure stored credentials that a [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] report server uses to access external data for a report. Stored credentials are used if the report runs unattended, for example a [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] subscription that publishes a report as an e-mail. The report server retrieves and uses the credentials when report processing is scheduled or triggered. This topic walks you through configuring stored credentials for both Native mode and SharePoint mode report servers.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../analysis-services/includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Native mode &#124; [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] SharePoint mode|  
+|**[!INCLUDE[applies](../../a9retired/includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] Native mode &#124; [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] SharePoint mode|  
   
 -   [Configure stored credentials for a report-specific data source (Native mode)](#bkmk_stored_credentials_data_source_native)  
   
@@ -55,7 +55,7 @@ manager: "erikre"
   
 4.  In the **Data Source Type** list, select the data processing extension that is used to process data from the data source.  
   
-5.  For **Connection String**, specify the connection string that the report server uses to connect to the data source. The following example illustrates a connection string used to connect to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database:  
+5.  For **Connection String**, specify the connection string that the report server uses to connect to the data source. The following example illustrates a connection string used to connect to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database:  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -71,7 +71,7 @@ manager: "erikre"
   
 8.  Click **Apply**.  
   
-     ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
+     ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a> Configure stored credentials for a report-specific data source (SharePoint mode)  
   
@@ -83,7 +83,7 @@ manager: "erikre"
   
 4.  In the **Data Source Type** list, select the data processing extension that is used to process data from the data source.  
   
-5.  For **Connection String**, specify the connection string that the report server uses to connect to the data source. The following example illustrates a connection string used to connect to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database:  
+5.  For **Connection String**, specify the connection string that the report server uses to connect to the data source. The following example illustrates a connection string used to connect to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database:  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -99,19 +99,19 @@ manager: "erikre"
   
 8.  Click **ok**.  
   
-     ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
+     ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> Configure stored credentials for a shared data source (Native mode)  
   
-1.  In Native mode Report Manager, browse to the shared data source item. ![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
+1.  In Native mode Report Manager, browse to the shared data source item. ![Shared data source icon](../../a9retired/media/hlp-16datasource.png "Shared data source icon")  
   
 2.  Click the context menu ![context menu in report manager for ssrs items](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "context menu in report manager for ssrs items") and then click **Manage**.  
   
 3.  In the **Data Source Type** list, specify the data processing extension that is used to process data from the data source.  
   
-4.  For **Connection String**, specify the connection string that the report server uses to connect to the data source. [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] recommends that you do not specify credentials in the connection string.  
+4.  For **Connection String**, specify the connection string that the report server uses to connect to the data source. [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] recommends that you do not specify credentials in the connection string.  
   
-     The following example illustrates a connection string used to connect to the local [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database:  
+     The following example illustrates a connection string used to connect to the local [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -125,11 +125,11 @@ manager: "erikre"
   
 6.  Click **Apply**.  
   
-     ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
+     ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> Configure stored credentials for a shared data source (SharePoint mode)  
   
-1.  In the document library, browse to the shared data source item.![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
+1.  In the document library, browse to the shared data source item.![Shared data source icon](../../a9retired/media/hlp-16datasource.png "Shared data source icon")  
   
 2.  Click the context menu ![document library context menu for ssrs items](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items") and then click the second context menu ![document library context menu for ssrs items](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items").  
   
@@ -137,9 +137,9 @@ manager: "erikre"
   
 4.  In the **Data Source Type** list, specify the data processing extension that is used to process data from the data source.  
   
-5.  For **Connection String**, specify the connection string that the report server uses to connect to the data source. [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] recommends that you do not specify credentials in the connection string.  
+5.  For **Connection String**, specify the connection string that the report server uses to connect to the data source. [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] recommends that you do not specify credentials in the connection string.  
   
-     The following example illustrates a connection string used to connect to the local [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database:  
+     The following example illustrates a connection string used to connect to the local [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -153,13 +153,13 @@ manager: "erikre"
   
 7.  Click **Ok**.  
   
-     ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
+     ![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
   
 ## See Also  
  [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Shared%20Data%20Source%20\(Report%20Manager\).md)   
- [Data Sources Properties Page &#40;Report Manager&#41;](../Topic/Data%20Sources%20Properties%20Page%20\(Report%20Manager\).md)   
- [New Data Source Page &#40;Report Manager&#41;](../Topic/New%20Data%20Source%20Page%20\(Report%20Manager\).md)  
+ [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../../a9retired/create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Data Sources Properties Page &#40;Report Manager&#41;](../../a9retired/data-sources-properties-page-report-manager.md)   
+ [New Data Source Page &#40;Report Manager&#41;](../../a9retired/new-data-source-page-report-manager.md)  
   
   

@@ -20,11 +20,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SQL Server, External Scripts Object
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  The **SQLServer:External Scripts** object in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provides counters to monitor the actions associated with executing external scripts. For information about executing external scripts, see [sp_execute_external_script &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
+  The **SQLServer:External Scripts** object in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] provides counters to monitor the actions associated with executing external scripts. For information about executing external scripts, see [sp_execute_external_script &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
   
- This table describes the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] **External Scripts** counters.  
+ This table describes the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] **External Scripts** counters.  
   
 |SQL Server External Scripts counters|Description|  
 |------------------------------------------|-----------------|  
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../../relational-databases/monitor/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.resource-governor-external-resource-pools-transact-sql.md)   
- [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys.dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
+ [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.resource-governor-external-resource-pools-transact-sql.md)   
+ [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
   
   

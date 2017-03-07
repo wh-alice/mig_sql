@@ -21,9 +21,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Sequence Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports the XQuery operators that are used to construct, filter, and combine a sequence of items. An item can be an atomic value or a node.  
+  [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] supports the XQuery operators that are used to construct, filter, and combine a sequence of items. An item can be an atomic value or a node.  
   
 ## Constructing Sequences  
  You can use the comma operator to construct a sequence that concatenates items into a single sequence.  
@@ -166,7 +166,7 @@ SELECT @x.query('/root/a[@attrA]')
 <a attrA="1">111</a>  
 ```  
   
- For more information about how to specify predicates in a path expression, see [Specifying Predicates in a Path Expression Step](../Topic/Specifying%20Predicates%20in%20a%20Path%20Expression%20Step.md).  
+ For more information about how to specify predicates in a path expression, see [Specifying Predicates in a Path Expression Step](../xquery/path-expressions-specifying-predicates.md).  
   
  The following example builds a sequence expression of subtrees and then applies a filter to the sequence.  
   

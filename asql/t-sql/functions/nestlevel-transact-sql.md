@@ -28,7 +28,7 @@ manager: "jhubbard"
 
   Returns the nesting level of the current stored procedure execution (initially 0) on the local server.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
 ## Remarks  
  Each time a stored procedure calls another stored procedure or executes managed code by referencing a common language runtime (CLR) routine, type, or aggregate, the nesting level is incremented. When the maximum of 32 is exceeded, the transaction is terminated.  
   
- When @@NESTLEVEL is executed within a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] string, the value returned is 1 + the current nesting level. When @@NESTLEVEL is executed dynamically by using sp_executesql the value returned is 2 + the current nesting level.  
+ When @@NESTLEVEL is executed within a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] string, the value returned is 1 + the current nesting level. When @@NESTLEVEL is executed dynamically by using sp_executesql the value returned is 2 + the current nesting level.  
   
 ## Examples  
   
@@ -125,7 +125,7 @@ GO
   
 ## See Also  
  [Configuration Functions &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
+ [Create a Stored Procedure](../../relational-databases/reference/stored-procedures/create-a-stored-procedure.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   
   

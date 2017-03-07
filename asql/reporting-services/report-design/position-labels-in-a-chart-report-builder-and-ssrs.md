@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Position Labels in a Chart (Report Builder and SSRS)
-  Because each chart type in a [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report has a different shape, data point labels are placed in an optimal location so as not to interfere on the chart. The default position of the labels depends varies with the chart type:  
+  Because each chart type in a [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report has a different shape, data point labels are placed in an optimal location so as not to interfere on the chart. The default position of the labels depends varies with the chart type:  
   
 -   On stacked charts, labels can only be positioned inside the series.  
   
@@ -29,7 +29,7 @@ manager: "erikre"
 -   On polar charts, labels are placed outside of the circular area that represents data points.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## To change the position of point labels in a Pie chart  
   

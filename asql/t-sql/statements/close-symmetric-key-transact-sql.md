@@ -32,9 +32,9 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -48,7 +48,7 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
  Is the name of the symmetric key to be closed.  
   
 ## Remarks  
- Open symmetric keys are bound to the session not to the security context. An open key will continue to be available until it is either explicitly closed or the session is terminated. CLOSE ALL SYMMETRIC KEYS will close any database master key that was opened in the current session by using the [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) statement.  Information about open keys is visible in the [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.openkeys-transact-sql.md) catalog view.  
+ Open symmetric keys are bound to the session not to the security context. An open key will continue to be available until it is either explicitly closed or the session is terminated. CLOSE ALL SYMMETRIC KEYS will close any database master key that was opened in the current session by using the [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) statement.  Information about open keys is visible in the [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.openkeys-transact-sql.md) catalog view.  
   
 ## Permissions  
  No explicit permission is required to close a symmetric key.  

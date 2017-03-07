@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # IsTrainingCase (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Indicates whether a case is used as a training case for the specified data mining model or mining structure.  
   
@@ -47,7 +47,7 @@ IsTrainingCase()
  To return cases that are part of the test data set, use the function [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md).  
   
 ## Examples  
- The following example uses the clustering data mining model from the targeted mailing scenario in the [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md). The query returns only those cases that were used for training the mining model. Moreover, the training cases are restricted to customers younger than 40.  
+ The following example uses the clustering data mining model from the targeted mailing scenario in the [Basic Data Mining Tutorial](../a9notintoc/basic-data-mining-tutorial.md). The query returns only those cases that were used for training the mining model. Moreover, the training cases are restricted to customers younger than 40.  
   
 ```  
 SELECT *  

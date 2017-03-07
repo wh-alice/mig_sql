@@ -28,7 +28,7 @@ manager: "erikre"
 # Asserting Permissions in Custom Assemblies
   By default, custom assembly code runs with the limited **Execution** permission set. In some cases, you may wish to implement a custom assembly that makes secured calls to protected resources within your security system (such as a file or the registry). In order to accomplish this, you must do the following:  
   
-1.  Identify the exact permissions that your code needs in order to make the secured call. If this method is part of a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] library, this information should be included in the method documentation.  
+1.  Identify the exact permissions that your code needs in order to make the secured call. If this method is part of a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] library, this information should be included in the method documentation.  
   
 2.  Modify the report server policy configuration files in order to grant the custom assembly the required permissions. For more information about the security policy configuration files, see [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).  
   

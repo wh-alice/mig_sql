@@ -29,7 +29,7 @@ manager: "jhubbard"
 2.  **To upgrade a DAC, using:**  [View the Contents of a DAC](#ViewDACContents), [View Database Changes](#ViewDBChanges), [View Upgrade Actions](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> Prerequisites  
- We recommend that you do not deploy a DAC package from unknown or untrusted sources. Such DACs could contain malicious code that might execute unintended [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] code or cause errors by modifying the schema. Before you use a DAC from an unknown or untrusted source, deploy it on an isolated test instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)], run [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database, and also examine the code, such as stored procedures or other user-defined code, in the database.  
+ We recommend that you do not deploy a DAC package from unknown or untrusted sources. Such DACs could contain malicious code that might execute unintended [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] code or cause errors by modifying the schema. Before you use a DAC from an unknown or untrusted source, deploy it on an isolated test instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)], run [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database, and also examine the code, such as stored procedures or other user-defined code, in the database.  
   
 ##  <a name="ViewDACContents"></a> View the Contents of a DAC  
  There are two mechanisms for viewing the contents of a data-tier application (DAC) package. You can import the DAC package to a DAC project in SQL Server Developer Tools. You can unpack the contents of the package to a folder.  
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 -   Unpack the DAC package into a folder by following the instructions in [Unpack a DAC Package](../../relational-databases/data-tier-applications/unpack-a-dac-package.md).  
   
--   View the contents of the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] scripts by opening them in the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Query Editor in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)].  
+-   View the contents of the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] scripts by opening them in the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Query Editor in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)].  
   
 -   View the contents of the text files in tools such as notepad.  
   
@@ -104,7 +104,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
 ```  
   
 ##  <a name="ViewUpgradeActions"></a> View Upgrade Actions  
- Before using a new version of a DAC package to upgrade a DAC that was deployed from an earlier DAC package, you can generate a report that contains the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements that will be run during the upgrade, and then review the statements.  
+ Before using a new version of a DAC package to upgrade a DAC that was deployed from an earlier DAC package, you can generate a report that contains the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements that will be run during the upgrade, and then review the statements.  
   
  **Report Upgrade Actions by Using a Wizard**  
   

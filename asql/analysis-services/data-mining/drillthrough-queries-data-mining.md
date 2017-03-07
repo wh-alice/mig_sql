@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Drillthrough Queries (Data Mining)
   A *drillthrough query* lets you retrieve details from the underlying cases or structure data, by sending a query to the mining model. Drillthrough is useful if you want to view the cases that were used to train the model, versus the cases that are used to test the model, or if you want to see additional details from the case data.  
   
- [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Data Mining provides two different options for drillthrough:  
+ [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Data Mining provides two different options for drillthrough:  
   
 -   Drilling through to the **model cases**  
   
@@ -58,7 +58,7 @@ manager: "jhubbard"
   
 ##  <a name="bkmk_Considerations"></a> Considerations When Using Drillthrough  
   
--   If you use the Data Mining Wizard, the option to enable drillthrough to the model cases is on the final page of the wizard. Drillthrough is disabled by default. For more information, see [Completing the Wizard &#40;Data Mining Wizard&#41;](../Topic/Completing%20the%20Wizard%20\(Data%20Mining%20Wizard\).md).  
+-   If you use the Data Mining Wizard, the option to enable drillthrough to the model cases is on the final page of the wizard. Drillthrough is disabled by default. For more information, see [Completing the Wizard &#40;Data Mining Wizard&#41;](../../a9retired/completing-the-wizard-data-mining-wizard.md).  
   
 -   You can add the ability to drill through on an existing mining model, but if you do, the model must be reprocessed before you can drill through to the data.  
   
@@ -84,7 +84,7 @@ manager: "jhubbard"
 |Microsoft Neural Network algorithm|Not supported. These algorithms do not assign cases to specific nodes in the content.|  
 |Microsoft Logistic Regression algorithm|Not supported. These algorithms do not assign cases to specific nodes in the content.|  
 |Microsoft Linear Regression algorithm|Supported. However, because the model creates a single node, **All**, drilling through returns all the training cases for the model. If the training set is large, loading the results may take a very long time.|  
-|Microsoft Time Series algorithm|Supported. However, you cannot drill through to structure or case data by using the **Mining Model Viewer** in Data Mining Designer. You must create a DMX query instead.<br /><br /> Also, you cannot drill through to specific nodes, or write a DMX query to retrieve cases in specific nodes of a time series model. You can retrieve case data from either the model or the structure by using other criteria, such as date or attribute values.<br /><br /> You can also return the dates from the cases in the model, by using the [Lag &#40;DMX&#41;](../../dmx/lag-dmx.md) function.<br /><br /> If you wish to view details of the ARTXP and ARIMA nodes created by the Microsoft Time Series algorithm, you can use the [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md).|  
+|Microsoft Time Series algorithm|Supported. However, you cannot drill through to structure or case data by using the **Mining Model Viewer** in Data Mining Designer. You must create a DMX query instead.<br /><br /> Also, you cannot drill through to specific nodes, or write a DMX query to retrieve cases in specific nodes of a time series model. You can retrieve case data from either the model or the structure by using other criteria, such as date or attribute values.<br /><br /> You can also return the dates from the cases in the model, by using the [Lag &#40;DMX&#41;](../../dmx/lag-dmx.md) function.<br /><br /> If you wish to view details of the ARTXP and ARIMA nodes created by the Microsoft Time Series algorithm, you can use the [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../../a9retired/microsoft-generic-content-tree-viewer-data-mining.md).|  
   
 ##  <a name="bkmk_Tasks"></a> Related Tasks  
  Use the following links to work with drillthrough in specific scenarios.  

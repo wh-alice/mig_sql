@@ -78,9 +78,9 @@ manager: "erikre"
 |[Synchronize](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)|[ConnectionString](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md), [DataSourceID](../../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md), [DataSourceType](../../../analysis-services/xmla/xml-elements-properties/datasourcetype-element-xmla.md), [Folders](../../../analysis-services/xmla/xml-elements-properties/folders-element-xmla.md)|  
   
 ## Remarks  
- For **Backup** commands, the **Location** element provides information about creating a remote backup file for a remote instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].  
+ For **Backup** commands, the **Location** element provides information about creating a remote backup file for a remote instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].  
   
- For **Restore** commands, the **Location** element provides information about identifying and connecting to a remote [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance, as well as the remote backup file used to restore remote partitions on that remote instance.  
+ For **Restore** commands, the **Location** element provides information about identifying and connecting to a remote [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance, as well as the remote backup file used to restore remote partitions on that remote instance.  
   
  For **Synchronize** commands, the **Location** element describes either a data source to be used by the target instance or a remote instance defined on the source instance that must be synchronized with the target instance, depending on the value of the **DataSourceType** element for the parent **Synchronize** command.  
   
@@ -88,6 +88,6 @@ manager: "erikre"
   
 ## See Also  
  [BackupRemotePartitions Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/backupremotepartitions-element-xmla.md)   
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

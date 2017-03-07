@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Create a Stepped Report (Report Builder and SSRS)
-A stepped report is a type of  [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report that shows detail rows or child groups indented under a parent group in the same column, as shown in the example below:  
+A stepped report is a type of  [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report that shows detail rows or child groups indented under a parent group in the same column, as shown in the example below:  
   
  ![Rendered stepped report](../../reporting-services/report-design/media/steppedreportrendered.gif "Rendered stepped report")  
   
@@ -28,7 +28,7 @@ A stepped report is a type of  [!INCLUDE[ssRSnoversion](../../advanced-analytics
 >  The wizard is available only in Report Builder.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## To create a stepped report  
   
@@ -42,7 +42,7 @@ A stepped report is a type of  [!INCLUDE[ssRSnoversion](../../advanced-analytics
   
     3.  In the **Tablix Group** dialog box, provide a name for the group and type or select a group expression from the drop-down list. The drop-down list displays the simple field expressions that are available in the Report Data pane. For example, [PostalCode] is a simple field expression for the PostalCode field in a dataset.  
   
-    4.  Select **Add group header**. This option adds a static row above the group for the group label and group totals. Likewise, you can select **Add group footer** to add a static row below the group. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+    4.  Select **Add group header**. This option adds a static row above the group for the group label and group totals. Likewise, you can select **Add group footer** to add a static row below the group. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
      You now have a basic tabular report. When it is rendered, you see one column with the group instance value, and one or more columns with grouped detail data. The following figure shows what the data region might look like on the design surface.  
   
@@ -97,7 +97,7 @@ A stepped report is a type of  [!INCLUDE[ssRSnoversion](../../advanced-analytics
   
     3.  In **Group expression**, type an expression or select a dataset field to group on. To create an expression, click the expression (**fx**) button to open the **Expression** dialog box.  
   
-    4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+    4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 3.  Change the padding for the cell that displays the group data.  
   

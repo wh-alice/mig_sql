@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Dropping an Assembly
-  Assemblies that have been registered in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] using the CREATE ASSEMBLY statement can be deleted, or dropped, when the functionality they provide is no longer needed. Dropping an assembly removes the assembly and all of its associated files, such as debug files, from the database. To drop an assembly, use the DROP ASSEMBLY statement with the following syntax:  
+  Assemblies that have been registered in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] using the CREATE ASSEMBLY statement can be deleted, or dropped, when the functionality they provide is no longer needed. Dropping an assembly removes the assembly and all of its associated files, such as debug files, from the database. To drop an assembly, use the DROP ASSEMBLY statement with the following syntax:  
   
 ```  
 DROP ASSEMBLY MyDotNETAssembly  
@@ -40,7 +40,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   Functions, stored procedures, or triggers that use variables or parameters of the UDT, created in the database with the WITH SCHEMABINDING clause.  
   
 ### Finding UDT Dependencies  
- You must first drop all dependent objects, and then execute the DROP TYPE statement. The following [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] query locates all of the columns and parameters that use a UDT in the **AdventureWorks** database.  
+ You must first drop all dependent objects, and then execute the DROP TYPE statement. The following [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] query locates all of the columns and parameters that use a UDT in the **AdventureWorks** database.  
   
 ```  
 USE Adventureworks;  

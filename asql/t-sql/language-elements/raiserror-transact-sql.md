@@ -33,11 +33,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # RAISERROR-Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Generates an error message and initiates error processing for the session. RAISERROR can either reference a user-defined message stored in the sys.messages catalog view or build a message dynamically. The message is returned as a server error message to the calling application or to an associated CATCH block of a TRY…CATCH construct. New applications should use [THROW](../Topic/THROW%20\(Transact-SQL\).md) instead.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -113,10 +113,10 @@ RAISERROR ( { msg_str | @local_variable }
 |x or X|Unsigned hexadecimal|  
   
 > [!NOTE]  
->  These type specifications are based on the ones originally defined for the **printf** function in the C standard library. The type specifications used in RAISERROR message strings map to [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] data types, while the specifications used in **printf** map to C language data types. Type specifications used in **printf** are not supported by RAISERROR when [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] does not have a data type similar to the associated C data type. For example, the *%p* specification for pointers is not supported in RAISERROR because [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] does not have a pointer data type.  
+>  These type specifications are based on the ones originally defined for the **printf** function in the C standard library. The type specifications used in RAISERROR message strings map to [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] data types, while the specifications used in **printf** map to C language data types. Type specifications used in **printf** are not supported by RAISERROR when [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] does not have a data type similar to the associated C data type. For example, the *%p* specification for pointers is not supported in RAISERROR because [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] does not have a pointer data type.  
   
 > [!NOTE]  
->  To convert a value to the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]**bigint** data type, specify **%I64d**.  
+>  To convert a value to the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]**bigint** data type, specify **%I64d**.  
   
  **@** *local_variable*  
  Is a variable of any valid character data type that contains a string formatted in the same manner as *msg_str*. **@***local_variable* must be **char** or **varchar**, or be able to be implicitly converted to these data types.  
@@ -153,12 +153,12 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
 |Value|Description|  
 |-----------|-----------------|  
-|LOG|Logs the error in the error log and the application log for the instance of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)]. Errors logged in the error log are currently limited to a maximum of 440 bytes. Only a member of the sysadmin fixed server role or a user with ALTER TRACE permissions can specify WITH LOG.<br /><br /> [!INCLUDE[applies](../../analysis-services/includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)]|  
-|NOWAIT|Sends messages immediately to the client.<br /><br /> [!INCLUDE[applies](../../analysis-services/includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)]|  
-|SETERROR|Sets the @@ERROR and ERROR_NUMBER values to *msg_id* or 50000, regardless of the severity level.<br /><br /> [!INCLUDE[applies](../../analysis-services/includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)]|  
+|LOG|Logs the error in the error log and the application log for the instance of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)]. Errors logged in the error log are currently limited to a maximum of 440 bytes. Only a member of the sysadmin fixed server role or a user with ALTER TRACE permissions can specify WITH LOG.<br /><br /> [!INCLUDE[applies](../../a9retired/includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)]|  
+|NOWAIT|Sends messages immediately to the client.<br /><br /> [!INCLUDE[applies](../../a9retired/includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)]|  
+|SETERROR|Sets the @@ERROR and ERROR_NUMBER values to *msg_id* or 50000, regardless of the severity level.<br /><br /> [!INCLUDE[applies](../../a9retired/includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)]|  
   
 ## Remarks  
- The errors generated by RAISERROR operate the same as errors generated by the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] code. The values specified by RAISERROR are reported by the ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY, ERROR_STATE, and @@ERROR system functions. When RAISERROR is run with a severity of 11 or higher in a TRY block, it transfers control to the associated CATCH block. The error is returned to the caller if RAISERROR is run:  
+ The errors generated by RAISERROR operate the same as errors generated by the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] code. The values specified by RAISERROR are reported by the ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY, ERROR_STATE, and @@ERROR system functions. When RAISERROR is run with a severity of 11 or higher in a TRY block, it transfers control to the associated CATCH block. The error is returned to the caller if RAISERROR is run:  
   
 -   Outside the scope of any TRY block.  
   
@@ -170,7 +170,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
  When *msg_id* specifies a user-defined message available from the sys.messages catalog view, RAISERROR processes the message from the text column using the same rules as are applied to the text of a user-defined message specified using *msg_str*. The user-defined message text can contain conversion specifications, and RAISERROR will map argument values into the conversion specifications. Use sp_addmessage to add user-defined error messages and sp_dropmessage to delete user-defined error messages.  
   
- RAISERROR can be used as an alternative to PRINT to return messages to calling applications. RAISERROR supports character substitution similar to the functionality of the **printf** function in the C standard library, while the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] PRINT statement does not. The PRINT statement is not affected by TRY blocks, while a RAISERROR run with a severity of 11 to 19 in a TRY block transfers control to the associated CATCH block. Specify a severity of 10 or lower to use RAISERROR to return a message from a TRY block without invoking the CATCH block.  
+ RAISERROR can be used as an alternative to PRINT to return messages to calling applications. RAISERROR supports character substitution similar to the functionality of the **printf** function in the C standard library, while the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] PRINT statement does not. The PRINT statement is not affected by TRY blocks, while a RAISERROR run with a severity of 11 to 19 in a TRY block transfers control to the associated CATCH block. Specify a severity of 10 or lower to use RAISERROR to return a message from a TRY block without invoking the CATCH block.  
   
  Typically, successive arguments replace successive conversion specifications; the first argument replaces the first conversion specification, the second argument replaces the second conversion specification, and so on. For example, in the following `RAISERROR` statement, the first argument of `N'number'` replaces the first conversion specification of `%s`; and the second argument of `5` replaces the second conversion specification of `%d.`  
   
@@ -211,7 +211,7 @@ GO
  The following code example shows how to use `RAISERROR` inside a `TRY` block to cause execution to jump to the associated `CATCH` block. It also shows how to use `RAISERROR` to return information about the error that invoked the `CATCH` block.  
   
 > [!NOTE]  
->  RAISERROR only generates errors with state from 1 through 127. Because the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] may raise errors with state 0, we recommend that you check the error state returned by ERROR_STATE before passing it as a value to the state parameter of RAISERROR.  
+>  RAISERROR only generates errors with state from 1 through 127. Because the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] may raise errors with state 0, we recommend that you check the error state returned by ERROR_STATE before passing it as a value to the state parameter of RAISERROR.  
   
 ```  
 BEGIN TRY  
@@ -275,7 +275,7 @@ RAISERROR (@StringVariable, -- Message text.
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### D. Returning error information from a CATCH block  
  The following code example shows how to use `RAISERROR` inside a `TRY` block to cause execution to jump to the associated `CATCH` block. It also shows how to use `RAISERROR` to return information about the error that invoked the `CATCH` block.  
@@ -329,11 +329,11 @@ GO
 ## See Also  
  [DECLARE @local_variable (Transact-SQL)](DECLARE%20@local_variable%20\(Transact-SQL\).md)
  [Built-in Functions &#40;Transact-SQL&#41;](../Topic/Built-in%20Functions%20\(Transact-SQL\).md)   
- [PRINT &#40;Transact-SQL&#41;](../Topic/PRINT%20\(Transact-SQL\).md)   
- [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
- [sys.messages &#40;Transact-SQL&#41;](../Topic/sys.messages%20\(Transact-SQL\).md)   
- [xp_logevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logevent-transact-sql.md)   
+ [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/messages-for-errors-catalog-views-sys.messages.md)   
+ [xp_logevent &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/xp-logevent-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   

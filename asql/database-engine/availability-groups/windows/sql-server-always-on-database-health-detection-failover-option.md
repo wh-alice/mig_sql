@@ -179,7 +179,7 @@ Related References
 
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
-* [Flexible Failover Policy for Automatic Failover of an Availability Group (SQL Server)](Flexible%20Failover%20Policy%20for%20Automatic%20Failover%20of%20an%20Availability%20Group%20\(SQL%20Server\).md)
+* [Flexible Failover Policy for Automatic Failover of an Availability Group (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)
 
 * [Enhance AlwaysOn Failover Policy to Test SQL Server Database Data and Log Drives](https://blogs.msdn.microsoft.com/alwaysonpro/2016/01/14/enhance-alwayson-failover-policy-to-test-sql-server-database-data-and-log-drives/)
 

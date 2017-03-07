@@ -41,19 +41,19 @@ manager: "jhubbard"
   
  `SUBSTRING(FirstName,1,1) == "B"`  
   
- [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] includes functions and operators that you can use to create the expressions that evaluate input data and direct output data. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../../../integration-services/expressions/integration-services-ssis-expressions.md).  
+ [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] includes functions and operators that you can use to create the expressions that evaluate input data and direct output data. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
  The Conditional Split transformation includes the **FriendlyExpression** custom property. This property can be updated by a property expression when the package is loaded. For more information, see [Use Property Expressions in Packages](../../../integration-services/expressions/use-property-expressions-in-packages.md) and [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
  This transformation has one input, one or more outputs, and one error output.  
   
- You can set properties through [!INCLUDE[ssIS](../../../analysis-services/instances/includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../../../a9retired/includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Conditional Split Transformation Editor** dialog box, see [Conditional Split Transformation Editor](../../../integration-services/data-flow/transformations/conditional-split-transformation-editor.md).  
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](../Topic/Common%20Properties.md)  
+-   [Common Properties](../../../a9retired/common-properties.md)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

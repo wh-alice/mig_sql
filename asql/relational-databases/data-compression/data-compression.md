@@ -28,9 +28,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Data Compression
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] support row and page compression for rowstore tables and indexes, and supports columnstore and columnstore archival compression for columnstore tables and indexes.  
+  [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)] support row and page compression for rowstore tables and indexes, and supports columnstore and columnstore archival compression for columnstore tables and indexes.  
   
  For rowstore tables and indexes, use the data compression feature to help reduce the size of the database. In addition to saving space, data compression can help improve performance of I/O intensive workloads because the data is stored in fewer pages and queries need to read fewer pages from disk. However, extra CPU resources are required on the database server to compress and decompress the data, while data is exchanged with the application. You can configure row and page compression on the following database objects:  
   
@@ -60,9 +60,9 @@ manager: "jhubbard"
   
 -   The details of data compression are subject to change without notice in service packs or subsequent releases.
 
--   Compression is available in [!INCLUDE[ssSDSfull_md](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)]  
+-   Compression is available in [!INCLUDE[ssSDSfull_md](../../a9retired/includes/sssdsfull-md.md)]  
   
--   Compression is not available in every edition of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   Compression is not available in every edition of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
   
 -   Compression is not available for system tables.  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
     -   An update to a fixed-length type must always succeed.  
   
-    -   Disabling data compression must always succeed. Even if the compressed row fits on the page, which means that it is less than 8060 bytes; [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] prevents updates that would not fit on the row when it is uncompressed.  
+    -   Disabling data compression must always succeed. Even if the compressed row fits on the page, which means that it is less than 8060 bytes; [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] prevents updates that would not fit on the row when it is uncompressed.  
   
 -   When a list of partitions is specified, the compression type can be set to ROW, PAGE, or NONE on individual partitions. If the list of partitions is not specified, all partitions are set with the data compression property that is specified in the statement. When a table or index is created, data compression is set to NONE unless otherwise specified. When a table is modified, the existing compression is preserved unless otherwise specified.  
   
@@ -104,19 +104,19 @@ manager: "jhubbard"
   
 -   Because of their size, large-value data types are sometimes stored separately from the normal row data on special purpose pages. Data compression is not available for the data that is stored separately.  
   
--   Tables which implemented the vardecimal storage format in [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] will retain that setting when upgraded. You can apply row compression to a table that has the vardecimal storage format. However, because row compression is a superset of the vardecimal storage format, there is no reason to retain the vardecimal storage format. Decimal values gain no additional compression when you combine the vardecimal storage format with row compression. You can apply page compression to a table that has the vardecimal storage format; however, the vardecimal storage format columns probably will not achieve additional compression.  
+-   Tables which implemented the vardecimal storage format in [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] will retain that setting when upgraded. You can apply row compression to a table that has the vardecimal storage format. However, because row compression is a superset of the vardecimal storage format, there is no reason to retain the vardecimal storage format. Decimal values gain no additional compression when you combine the vardecimal storage format with row compression. You can apply page compression to a table that has the vardecimal storage format; however, the vardecimal storage format columns probably will not achieve additional compression.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] supports the vardecimal storage format; however, because row-level compression achieves the same goals, the vardecimal storage format is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)]  
+    >  [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] supports the vardecimal storage format; however, because row-level compression achieves the same goals, the vardecimal storage format is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)]  
   
 ## Using Columnstore and Columnstore Archive Compression  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull_md](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull_md](../../a9retired/includes/sssdsfull-md.md)].|  
   
 ### Basics  
- Columnstore tables and indexes are always stored with columnstore compression. You can further reduce the size of columnstore data by configuring an additional compression called archival compression.  To perform archival compression, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] runs the Microsoft XPRESS compression algorithm on the data. Add or remove archival compression by using the following data compression types:  
+ Columnstore tables and indexes are always stored with columnstore compression. You can further reduce the size of columnstore data by configuring an additional compression called archival compression.  To perform archival compression, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] runs the Microsoft XPRESS compression algorithm on the data. Add or remove archival compression by using the following data compression types:  
   
 -   Use **COLUMNSTORE_ARCHIVE** data compression to compress columnstore data with archival compression.  
   
@@ -172,11 +172,11 @@ REBUILD PARTITION = ALL WITH (
 ### Metadata  
  The following system views contain information about data compression for clustered indexes:  
   
--   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md) - The **type** and **type_desc** columns include CLUSTERED COLUMNSTORE and NONCLUSTERED COLUMNSTORE.  
+-   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md) - The **type** and **type_desc** columns include CLUSTERED COLUMNSTORE and NONCLUSTERED COLUMNSTORE.  
   
--   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.partitions-transact-sql.md) – The **data_compression** and **data_compression_desc** columns include COLUMNSTORE and COLUMNSTORE_ARCHIVE.  
+-   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.partitions-transact-sql.md) – The **data_compression** and **data_compression_desc** columns include COLUMNSTORE and COLUMNSTORE_ARCHIVE.  
   
- The procedure [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) does not apply to columnstore indexes.  
+ The procedure [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) does not apply to columnstore indexes.  
   
 ## How Compression Affects Partitioned Tables and Indexes  
  When you use data compression with partitioned tables and indexes, be aware of the following considerations:  
@@ -213,17 +213,17 @@ REBUILD PARTITION = ALL WITH (
   
      2. Modify the table by using the ALTER TABLE ... REBUILD ... option that specifies the compression option.  
   
-     To drop a clustered index OFFLINE is a very fast operation, because only the upper levels of clustered indexes are removed. When a clustered index is dropped ONLINE, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] must rebuild the heap two times, once for step 1 and once for step 2.  
+     To drop a clustered index OFFLINE is a very fast operation, because only the upper levels of clustered indexes are removed. When a clustered index is dropped ONLINE, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] must rebuild the heap two times, once for step 1 and once for step 2.  
   
 ## How Compression Affects Replication 
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|   
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|   
  When you are using data compression with replication, be aware of the following considerations:  
   
 -   When the Snapshot Agent generates the initial schema script, the new schema will use the same compression settings for both the table and its indexes. Compression cannot be enabled on just the table and not the index.  
   
--   For transactional replication the article schema option determines what dependent objects and properties have to be scripted. For more information, see [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
+-   For transactional replication the article schema option determines what dependent objects and properties have to be scripted. For more information, see [sp_addarticle](../../relational-databases/reference/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
      The Distribution Agent does not check for down-level Subscribers when it applies scripts. If the replication of compression is selected, creating the table on down-level Subscribers will fail. In the case of a mixed topology, do not enable the replication of compression.  
   
@@ -243,9 +243,9 @@ REBUILD PARTITION = ALL WITH (
 ## How Compression Affects Other SQL Server Components 
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|
    
- Compression occurs in the storage engine and the data is presented to most of the other components of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in an uncompressed state. This limits the effects of compression on the other components to the following:  
+ Compression occurs in the storage engine and the data is presented to most of the other components of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] in an uncompressed state. This limits the effects of compression on the other components to the following:  
   
 -   Bulk import and export operations  
   

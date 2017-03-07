@@ -246,6 +246,6 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
   
 ## See Also  
  [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md)   
- [Configure a Foreach Loop Container](../Topic/Configure%20a%20Foreach%20Loop%20Container.md)  
+ [Configure a Foreach Loop Container](../../a9retired/configure-a-foreach-loop-container.md)  
   
   

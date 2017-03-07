@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # DBSCHEMA_TABLES Rowset
-  Identifies the measure groups and dimensions exposed as tables within [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].  
+  Identifies the measure groups and dimensions exposed as tables within [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].  
   
 ## Rowset Columns  
  The **DBSCHEMA_TABLES** rowset contains the following columns.  

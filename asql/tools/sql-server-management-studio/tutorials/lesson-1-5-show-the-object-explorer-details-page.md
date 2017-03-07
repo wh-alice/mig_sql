@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 1-5 - Show the Object Explorer Details Page
-[!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] can show a report for each object selected in Object Explorer. This report, called the Object Explorer Details page, is created by [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], and opens in the document window.  
+[!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] can show a report for each object selected in Object Explorer. This report, called the Object Explorer Details page, is created by [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)], and opens in the document window.  
   
 ## Showing the Object Explorer Details Page  
   
@@ -32,7 +32,7 @@ At each level in Object Explorer, the **Object Explorer Details** page provides 
 The **Object Explorer Details** page has two panes. The **List** pane in the top part of the page presents a list of the objects in the selected node of Object Explorer. Below the **List** pane, the **Details** pane presents information most likely to be of interest for each object type. Use the **List** view to multi-select objects when deleting many items.  
   
 ## Next Task in Lesson  
-[Select the Keyboard Shortcut Scheme](../Topic/Select%20the%20Keyboard%20Shortcut%20Scheme.md)  
+[Select the Keyboard Shortcut Scheme](../../../tools/sql-server-management-studio/tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme.md)  
   
   
   

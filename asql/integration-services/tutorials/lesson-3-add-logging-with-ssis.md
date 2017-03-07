@@ -17,17 +17,17 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Lesson 3: Add Logging with SSIS
-[!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] includes logging features that let you troubleshoot and monitor package execution by providing a trace of task and container events. The logging features are flexible, and can be enabled at the package level or on individual tasks and containers within the package. You can select which events you want to log, and create multiple logs against a single package.  
+[!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] includes logging features that let you troubleshoot and monitor package execution by providing a trace of task and container events. The logging features are flexible, and can be enabled at the package level or on individual tasks and containers within the package. You can select which events you want to log, and create multiple logs against a single package.  
   
-Logging is provided by a log provider. Each log provider can write logging information to different formats and destination types. [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] provides the following log providers:  
+Logging is provided by a log provider. Each log provider can write logging information to different formats and destination types. [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] provides the following log providers:  
   
 -   Text file  
   
--   [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)]  
+-   [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)]  
   
 -   Windows Event log  
   
--   [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]  
+-   [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]  
   
 -   XML file  
   
@@ -39,14 +39,14 @@ In this lesson, you will create a copy of the package that you created in [Lesso
 ## Lesson Tasks  
 This lesson contains the following tasks:  
   
--   [Step 1: Copying the Lesson 2 Package](../Topic/Step%201:%20Copying%20the%20Lesson%202%20Package.md)  
+-   [Step 1: Copying the Lesson 2 Package](../../integration-services/tutorials/lesson-3-1-copying-the-lesson-2-package.md)  
   
--   [Step 2: Adding and Configuring Logging](../Topic/Step%202:%20Adding%20and%20Configuring%20Logging.md)  
+-   [Step 2: Adding and Configuring Logging](../../integration-services/tutorials/lesson-3-2-adding-and-configuring-logging.md)  
   
--   [Step 3: Testing the Lesson 3 Tutorial Package](../Topic/Step%203:%20Testing%20the%20Lesson%203%20Tutorial%20Package.md)  
+-   [Step 3: Testing the Lesson 3 Tutorial Package](../../integration-services/tutorials/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## Start the Lesson  
-[Step 1: Copying the Lesson 2 Package](../Topic/Step%201:%20Copying%20the%20Lesson%202%20Package.md)  
+[Step 1: Copying the Lesson 2 Package](../../integration-services/tutorials/lesson-3-1-copying-the-lesson-2-package.md)  
   
   
   

@@ -30,11 +30,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # ALTER USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Renames a database user or changes its default schema.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -119,17 +119,17 @@ ALTER USER userName
  PASSWORD **=** '*password*'  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
  Specifies the password for the user that is being changed. Passwords are case-sensitive.  
   
 > [!NOTE]  
->  This option is available only for contained users. See [Contained Databases](../../relational-databases/databases/contained-databases.md) and [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md) for more information.  
+>  This option is available only for contained users. See [Contained Databases](../../relational-databases/databases/contained-databases.md) and [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md) for more information.  
   
  OLD_PASSWORD **=***'oldpassword'*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
  The current user password that will be replaced by '*password*'. Passwords are case-sensitive. *OLD_PASSWORD* is required to change a password, unless you have **ALTER ANY USER** permission. Requiring *OLD_PASSWORD* prevents users with **IMPERSONATION** permission from changing the password.  
   
@@ -139,7 +139,7 @@ ALTER USER userName
  DEFAULT_LANGUAGE **=***{ NONE | \<lcid> | \<language name> | \<language alias> }*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Specifies a default language to be assigned to the user. If this option is set to NONE, the default language is set to the current default language of the database. If the default language of the database is later changed, the default language of the user will remain unchanged. *DEFAULT_LANGUAGE* can be the local ID (lcid), the name of the language, or the language alias.  
   
@@ -149,7 +149,7 @@ ALTER USER userName
  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].|  
   
  Suppresses cryptographic metadata checks on the server in bulk copy operations. This  enables the user to bulk copy encrypted data between tables or databases, without decrypting the data. The default is OFF.  
   
@@ -170,7 +170,7 @@ ALTER USER userName
   
  You can change the name of a user who is mapped to a Windows login or group only when the SID of the new user name matches the SID that is recorded in the database. This check helps prevent spoofing of Windows logins in the database.  
   
- The WITH LOGIN clause enables the remapping of a user to a different login. Users without a login, users mapped to a certificate, or users mapped to an asymmetric key cannot be re-mapped with this clause. Only SQL users and Windows users (or groups) can be remapped. The WITH LOGIN clause cannot be used to change the type of user, such as changing a Windows account to a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login.  
+ The WITH LOGIN clause enables the remapping of a user to a different login. Users without a login, users mapped to a certificate, or users mapped to an asymmetric key cannot be re-mapped with this clause. Only SQL users and Windows users (or groups) can be remapped. The WITH LOGIN clause cannot be used to change the type of user, such as changing a Windows account to a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login.  
   
  The name of the user will be automatically renamed to the login name if the following conditions are true.  
   
@@ -184,7 +184,7 @@ ALTER USER userName
   
  Otherwise, the user will not be renamed unless the caller additionally invokes the NAME clause.  
   
- The name of a user mapped to a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login, a certificate, or an asymmetric key cannot contain the backslash character (\\).  
+ The name of a user mapped to a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login, a certificate, or an asymmetric key cannot contain the backslash character (\\).  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../t-sql/statements/includes/sscautionuserschema-md.md)]  
@@ -228,7 +228,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -241,7 +241,7 @@ WITH  NAME = Philipe
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### D. Changing the name of a database user  
  The following example changes the name of the database user `Mary5` to `Mary51`.  
@@ -265,7 +265,7 @@ ALTER USER [Contoso\Mary] WITH DEFAULT_SCHEMA = Sales;
  [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [Contained Databases](../../relational-databases/databases/contained-databases.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)  
+ [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)  
   
   
 

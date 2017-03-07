@@ -22,17 +22,17 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using Catalog Functions
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
   All databases have a structure containing the data stored in the database. A definition of this structure, along with other information such as permissions, is stored in a catalog (implemented as a set of system tables), also known as a data dictionary.  
   
- The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver enables an application to determine the database structure through calls to ODBC catalog functions. Catalog functions return information in result sets and are implemented using catalog stored procedures to query the system tables in the catalog. For example, an application might request a result set containing information about all the tables on the system or all the columns in a particular table. The standard ODBC catalog functions are used to get catalog information from the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to which the application connected.  
+ The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver enables an application to determine the database structure through calls to ODBC catalog functions. Catalog functions return information in result sets and are implemented using catalog stored procedures to query the system tables in the catalog. For example, an application might request a result set containing information about all the tables on the system or all the columns in a particular table. The standard ODBC catalog functions are used to get catalog information from the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] to which the application connected.  
   
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports distributed queries in which data from multiple, heterogeneous OLE DB data sources is accessed in a single query. One of the methods of accessing a remote OLE DB data source is to define the data source as a linked server. This can be done by using [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). After the linked server has been defined, objects in that server can be referenced in Transact-SQL statements by using a four-part name:  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] supports distributed queries in which data from multiple, heterogeneous OLE DB data sources is accessed in a single query. One of the methods of accessing a remote OLE DB data source is to define the data source as a linked server. This can be done by using [sp_addlinkedserver](../../../relational-databases/reference/system-stored-procedures/sp-addlinkedserver-transact-sql.md). After the linked server has been defined, objects in that server can be referenced in Transact-SQL statements by using a four-part name:  
   
  *linked_server_name.catalog.schema.object_name*.  
   
- The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver supports two driver-specific functions that help get catalog information from linked servers:  
+ The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver supports two driver-specific functions that help get catalog information from linked servers:  
   
 -   **SQLLinkedServers**  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
      Returns a list of the catalogs contained in a linked server.  
   
- After you have a linked server name and a catalog name, the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver supports getting information from the catalog by using a two-part name of *linked_server_name***.***catalog* for *CatalogName* on the following ODBC catalog functions:  
+ After you have a linked server name and a catalog name, the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver supports getting information from the catalog by using a two-part name of *linked_server_name***.***catalog* for *CatalogName* on the following ODBC catalog functions:  
   
 -   **SQLColumnPrivileges**  
   
@@ -66,11 +66,11 @@ manager: "jhubbard"
   
 -   sqlncli11.lib  
   
-     Must be in the library path of the linker and specified as a file to be linked. sqlncli11.lib is distributed with the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver.  
+     Must be in the library path of the linker and specified as a file to be linked. sqlncli11.lib is distributed with the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver.  
   
 -   sqlncli11.dll  
   
-     Must be present at execution time. sqlncli11.dll is distributed with the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver.  
+     Must be present at execution time. sqlncli11.dll is distributed with the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver.  
   
 ## See Also  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   

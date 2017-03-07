@@ -39,7 +39,7 @@ Monitor your use of deprecated features by using the **SQL Server:Deprecated Fea
 |sys.fulltext_catalogs columns:<br /><br /> path<br /><br /> data_space_id<br /><br /> file_id columns|None.|fulltext_catalogs.path<br /><br /> fulltext_catalogs.data_space_id<br /><br /> fulltext_catalogs.file_id|215<br /><br /> 216<br /><br /> 217|  
   
 ## Features Not Supported in a Future Version of SQL Server  
- The following full-text search features are supported in the next version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], but will be removed in a later version. The specific version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] has not been determined.  
+ The following full-text search features are supported in the next version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], but will be removed in a later version. The specific version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] has not been determined.  
   
  The **Feature name** value appears in trace events as the ObjectName and in performance counters and sys.dm_os_performance_counters as the instance name. The **Feature ID** value appears in trace events as the ObjectId.  
   

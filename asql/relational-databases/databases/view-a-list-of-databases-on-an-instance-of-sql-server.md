@@ -24,7 +24,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # View a List of Databases on an Instance of SQL Server
-  This topic describes how to view a list of databases on an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to view a list of databases on an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 #### To view a list of databases on an instance of SQL Server  
   
-1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)], and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  To see a list of all databases on the instance, expand **Databases**.  
   
@@ -57,11 +57,11 @@ manager: "jhubbard"
   
 #### To view a list of databases on an instance of SQL Server  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example returns a list of databases on the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The list includes the names of the databases, their database IDs, and the dates when the databases were created.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example returns a list of databases on the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The list includes the names of the databases, their database IDs, and the dates when the databases were created.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -73,7 +73,7 @@ GO
 ```  
   
 ## See Also  
- [Databases and Files Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md)  
+ [Databases and Files Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md)  
   
   

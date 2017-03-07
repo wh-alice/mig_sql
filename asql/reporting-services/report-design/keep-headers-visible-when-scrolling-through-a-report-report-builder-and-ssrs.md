@@ -34,7 +34,7 @@ manager: "erikre"
  ![Matrix](../../reporting-services/report-design/media/matrix.png "Matrix")  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ### To keep matrix group headers visible while scrolling  
   
@@ -42,7 +42,7 @@ manager: "erikre"
   
 2.  On the **General** tab, under **Row Headers** or **Column Headers**, select **Header should remain visible while scrolling**.  
   
-3.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To keep a static tablix member (row or column) visible while scrolling  
   

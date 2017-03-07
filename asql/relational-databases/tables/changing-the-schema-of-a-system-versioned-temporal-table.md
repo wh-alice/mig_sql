@@ -16,7 +16,7 @@ ms.author: "carlrab"
 manager: "jhubbard"
 ---
 # Changing the Schema of a System-Versioned Temporal Table
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Use the **ALTER TABLE** statement to add, alter or remove a column.  
   
@@ -58,9 +58,9 @@ ALTER TABLE dbo.Department
   
 -   Specified schema change is propagated to history table in appropriate way (depending on type of change)  
   
--   If you add a non-nullable column or alter existing column to become non-nullable, you must specify the default value for existing rows. The system will generate an additional default with the same value and apply it to the history table. Adding **DEFAULT** to a non-empty table is a size of data operation on all editions other than [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Enterprise Edition (on which it is a metadata operation).  
+-   If you add a non-nullable column or alter existing column to become non-nullable, you must specify the default value for existing rows. The system will generate an additional default with the same value and apply it to the history table. Adding **DEFAULT** to a non-empty table is a size of data operation on all editions other than [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Enterprise Edition (on which it is a metadata operation).  
   
--   Adding varchar(max), nvarchar(max), varbinary(max) or XML columns with defaults will be an update data operation on all editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   Adding varchar(max), nvarchar(max), varbinary(max) or XML columns with defaults will be an update data operation on all editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 -   If row size after column addition exceeds the row size limit, new columns cannot be added online.  
   

@@ -27,7 +27,7 @@ manager: "erikre"
   
  Session management involves correlating an HTTP request with other previous requests generated from the same session. Without session management, these requests appear unrelated to the Report Server Web service because of the connectionless and stateless nature of the HTTP protocol.  
   
- [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] does not expose a holistic concept of session state such as that exposed by [!INCLUDE[vstecasp](../../database-engine/configure/windows/includes/vstecasp-md.md)]. However, when executing reports, the report server maintains state between method calls in the form of an **execution**. An execution allows the user to interact with the report in several ways - including loading the report from the report server, setting credentials and parameters for the report, and rendering the report.  
+ [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] does not expose a holistic concept of session state such as that exposed by [!INCLUDE[vstecasp](../../database-engine/configure/windows/includes/vstecasp-md.md)]. However, when executing reports, the report server maintains state between method calls in the form of an **execution**. An execution allows the user to interact with the report in several ways - including loading the report from the report server, setting credentials and parameters for the report, and rendering the report.  
   
  While they are communicating to a report server, clients use the execution to manage report viewing and user navigation to other pages in a report, and to show or hide sections of a report. A unique execution exists for each report the client application is running.  
   

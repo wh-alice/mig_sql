@@ -37,7 +37,7 @@ The Code Window can be configured to display multiple code windows in several wa
 > To view the Query Editor in full-screen mode, click anywhere in the Query Editor window, and then press SHIFT+ALT+ENTER.  
   
 ## Next Task in Lesson  
-[Script a Table](../Topic/Script%20a%20Table.md)  
+[Script a Table](../../../tools/sql-server-management-studio/tutorials/lesson-2-6-script-a-table.md)  
   
   
   

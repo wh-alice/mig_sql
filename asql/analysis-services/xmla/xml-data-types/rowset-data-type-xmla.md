@@ -29,7 +29,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Rowset Data Type (XMLA)
-  Defines a derived data type that represents a [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) element that returns tabular data from a [Discover](../Topic/Discover%20Method%20\(XMLA\).md) or [Execute](../Topic/Execute%20Method%20\(XMLA\).md) method call.  
+  Defines a derived data type that represents a [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) element that returns tabular data from a [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) or [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method call.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis:rowset  
   
@@ -60,7 +60,7 @@ manager: "erikre"
 |Derived elements|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
 ## Remarks  
- XML does not allow certain characters as element and attribute names. To address this naming constraint, XML for Analysis (XMLA) supports encoding as defined by [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For column names that contain XML name characters that are not valid according to the XML 1.0 specification, XMLA uses the corresponding hexadecimal values to encode Unicode characters that are not valid . The hexadecimal values are escaped as _x*HHHH*\_, where *HHHH* stands for the four-digit hexadecimal UCS-2 code for the character in the most-significant bit first order. For example, XMLA encodes the name, "Order Details," as Order_x0020_Details, replacing the space character with the corresponding hexadecimal code.  
+ XML does not allow certain characters as element and attribute names. To address this naming constraint, XML for Analysis (XMLA) supports encoding as defined by [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. For column names that contain XML name characters that are not valid according to the XML 1.0 specification, XMLA uses the corresponding hexadecimal values to encode Unicode characters that are not valid . The hexadecimal values are escaped as _x*HHHH*\_, where *HHHH* stands for the four-digit hexadecimal UCS-2 code for the character in the most-significant bit first order. For example, XMLA encodes the name, "Order Details," as Order_x0020_Details, replacing the space character with the corresponding hexadecimal code.  
   
  Encoding can make Extensible Style Language (XSL) transformations difficult. To support a quick lookup of the actual, unencoded column names, add the **sql:field**attribute to the XML rowset schema for each column, as shown in the following example:  
   

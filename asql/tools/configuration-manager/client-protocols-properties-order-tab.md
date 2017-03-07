@@ -21,17 +21,17 @@ manager: "jhubbard"
   
  Click a protocol, and then click **Enable** or **Disable** to move the selected protocol to the **Disabled Protocols** or **Enabled Protocols** list.  
   
- Protocols are tried in the order listed, attempting to connect using the top protocol first, and then the second listed protocol, etc. Move protocols up or down the **Enabled Protocols** list, by clicking the up arrow and down arrow buttons. When connecting to [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from a client on that computer, the **Shared Memory** protocol will always be tried first, if enabled.  
+ Protocols are tried in the order listed, attempting to connect using the top protocol first, and then the second listed protocol, etc. Move protocols up or down the **Enabled Protocols** list, by clicking the up arrow and down arrow buttons. When connecting to [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] from a client on that computer, the **Shared Memory** protocol will always be tried first, if enabled.  
   
 > [!NOTE]  
->  These settings are not used by [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] .NET SqlClient. The protocol order for .NET SqlClient is first TCP, and then named pipes, which cannot be changed.  
+>  These settings are not used by [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] .NET SqlClient. The protocol order for .NET SqlClient is first TCP, and then named pipes, which cannot be changed.  
   
 ## Options  
  **Disabled Protocols**  
  Lists protocols which are installed but are not currently used.  
   
  **Enabled Protocols**  
- Lists protocols which are available for [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] clients on this computer.  
+ Lists protocols which are available for [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] clients on this computer.  
   
  **>**  
  Enables the currently highlighted protocol in the **Disabled Protocols** box, moving it to the **Enabled Protocols** box.  
@@ -46,7 +46,7 @@ manager: "jhubbard"
  Moves the highlighted protocol down in the list. This allows you to decrease the priority in which the Net-Library will attempt to use the selected protocol for connections.  
   
  **Enable Shared Memory Protocol**  
- Enables the shared memory protocol which is always tried first (if enabled), when connecting to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from a client on that computer.  
+ Enables the shared memory protocol which is always tried first (if enabled), when connecting to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] from a client on that computer.  
   
 > [!NOTE]  
 >  If the protocol is specified through a prefix or as part of the connection string, only the specified protocol is attempted.  

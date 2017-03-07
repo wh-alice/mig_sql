@@ -34,7 +34,7 @@ manager: "erikre"
 -   [To Delete a Subscription](#bkmk_delete_subscription)  
   
 ##  <a name="bkmk_create_subscription"></a> General requirements for subscriptions  
- The content in this topic explains how to create subscriptions on a native mode report server using [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Report Manager. After you define a subscription, you can access it in Report Manager through the My Subscriptions page or the **Subscriptions** tab of a specific report.  
+ The content in this topic explains how to create subscriptions on a native mode report server using [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] Report Manager. After you define a subscription, you can access it in Report Manager through the My Subscriptions page or the **Subscriptions** tab of a specific report.  
   
  [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) explains how to use the application pages in a SharePoint site to subscribe to reports on a SharePoint mode report server.  
   
@@ -48,7 +48,7 @@ manager: "erikre"
   
 ###  <a name="bkmk_create_fileshare_subscription"></a> To Create a File Share Subscription  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md).  
   
 2.  Navigate to the report you want to subscribe to. Click the report menu and click **Subscribe**.  
   
@@ -95,7 +95,7 @@ manager: "erikre"
   
 ###  <a name="bkmk_create_email_subscription"></a> To Create an E-mail Subscription  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md).  
   
 2.  Navigate to the report you want to subscribe to. Click the report menu and click **Subscribe**.  
   
@@ -129,7 +129,7 @@ manager: "erikre"
   
     -   To send the report as an attachment, choose any of the other rendering formats.  
   
-10. Select a priority from the **Priority** list box. In [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Exchange, this setting sets a flag for the importance level of the e-mail message.  
+10. Select a priority from the **Priority** list box. In [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Exchange, this setting sets a flag for the importance level of the e-mail message.  
   
 11. Specify when you want the report delivered:  
   
@@ -163,7 +163,7 @@ manager: "erikre"
 ##  <a name="bkmk_delete_subscription"></a> To Delete a Subscription  
  To delete a subscription”  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md).  
   
 2.  In Report Manager, click **My Subscriptions** on the toolbar and navigate to the subscription you want to modify or delete.  
   
@@ -182,7 +182,7 @@ manager: "erikre"
  [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0.md)   
  [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md)   
  [Use My Subscriptions &#40;Native Mode Report Server&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   

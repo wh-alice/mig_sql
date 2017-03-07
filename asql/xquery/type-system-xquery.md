@@ -30,7 +30,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Type System (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery is a strongly-typed language for schema types and a weakly-typed language for untyped data. The predefined types of XQuery include the following:  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 -   The typed value versus the string value of a node.  
   
--   The [data Function &#40;XQuery&#41;](../Topic/data%20Function%20\(XQuery\).md) and the [string Function &#40;XQuery&#41;](../Topic/string%20Function%20\(XQuery\).md).  
+-   The [data Function &#40;XQuery&#41;](../xquery/data-accessor-functions-data-xquery.md) and the [string Function &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md).  
   
 -   Matching the sequence type returned by an expression.  
   
@@ -100,9 +100,9 @@ SELECT @x.query( '/a[1] instance of element()')
   
  You can use the **data()** or **string()** function to retrieve the value of a node:  
   
--   The [data Function &#40;XQuery&#41;](../Topic/data%20Function%20\(XQuery\).md) returns the typed value of a node.  
+-   The [data Function &#40;XQuery&#41;](../xquery/data-accessor-functions-data-xquery.md) returns the typed value of a node.  
   
--   The [string Function &#40;XQuery&#41;](../Topic/string%20Function%20\(XQuery\).md) returns the string value of the node.  
+-   The [string Function &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md) returns the string value of the node.  
   
  In the following XML schema collection, the <`root`> element of the integer type is defined:  
   

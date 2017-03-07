@@ -29,7 +29,7 @@ manager: "jhubbard"
   
  You cannot alter secondary selective XML indexes. For more information, see [Create, Alter, and Drop Secondary Selective XML Indexes](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -123,7 +123,7 @@ identifier
 -   `table_name`  
   
  [WITH XMLNAMESPACES **(** <xmlnamespace_list> **)**]  
- Is the list of namespaces used by the paths to index. For information about the syntax of the WITH XMLNAMESPACES clause, see [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md).  
+ Is the list of namespaces used by the paths to index. For information about the syntax of the WITH XMLNAMESPACES clause, see [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/data-types/with-xmlnamespaces.md).  
   
  FOR **(** <promoted_node_path_action_list> **)**  
  Is the list of indexed paths to add or remove.  

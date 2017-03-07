@@ -31,11 +31,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # CREATE ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adds a new route to the routing table for the current database. For outgoing messages, [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] determines routing by checking the routing table in the local database. For messages on conversations that originate in another instance, including messages to be forwarded, [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] checks the routes in **msdb**.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -77,14 +77,14 @@ WHERE database_id = DB_ID()
  When the BROKER_INSTANCE clause is omitted, this route matches any broker instance. A route that matches any broker instance has higher priority for matching than routes with an explicit broker instance when the conversation does not specify a broker instance. For conversations that specify a broker instance, a route with a broker instance has higher priority than a route that matches any broker instance.  
   
  LIFETIME **=***route_lifetime*  
- Specifies the time, in seconds, that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] retains the route in the routing table. At the end of the lifetime, the route expires, and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] no longer considers the route when choosing a route for a new conversation. If this clause is omitted, the *route_lifetime* is NULL and the route never expires.  
+ Specifies the time, in seconds, that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] retains the route in the routing table. At the end of the lifetime, the route expires, and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] no longer considers the route when choosing a route for a new conversation. If this clause is omitted, the *route_lifetime* is NULL and the route never expires.  
   
  ADDRESS **='***next_hop_address***'**  
  Specifies the network address for this route. The *next_hop_address* specifies a TCP/IP address in the following format:  
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
   
- The specified *port_number* must match the port number for the [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] endpoint of an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] at the specified computer. This can be obtained by running the following query in the selected database:  
+ The specified *port_number* must match the port number for the [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] endpoint of an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] at the specified computer. This can be obtained by running the following query in the selected database:  
   
 ```  
 SELECT tcpe.port  
@@ -96,7 +96,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  When the service is hosted in a mirrored database, you must also specify the MIRROR_ADDRESS for the other instance that hosts a mirrored database. Otherwise, this route does not fail over to the mirror.  
   
- When a route specifies **'LOCAL'** for the *next_hop_address*, the message is delivered to a service within the current instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ When a route specifies **'LOCAL'** for the *next_hop_address*, the message is delivered to a service within the current instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  When a route specifies **'TRANSPORT'** for the *next_hop_address*, the network address is determined based on the network address in the name of the service. A route that specifies **'TRANSPORT'** might not specify a service name or broker instance.  
   
@@ -105,7 +105,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- The specified *port_number* must match the port number for the [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] endpoint of an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] at the specified computer. This can be obtained by running the following query in the selected database:  
+ The specified *port_number* must match the port number for the [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] endpoint of an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] at the specified computer. This can be obtained by running the following query in the selected database:  
   
 ```  
 SELECT tcpe.port  
@@ -122,7 +122,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  By default, the routing table in each user database contains one route. This route is named **AutoCreatedLocal**. The route specifies **'LOCAL'** for the *next_hop_address* and matches any service name and broker instance identifier.  
   
- When a route specifies **'TRANSPORT'** for the *next_hop_address*, the network address is determined based on the name of the service. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] can successfully process service names that begin with a network address in a format that is valid for a *next_hop_address*.  
+ When a route specifies **'TRANSPORT'** for the *next_hop_address*, the network address is determined based on the name of the service. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] can successfully process service names that begin with a network address in a format that is valid for a *next_hop_address*.  
   
  The routing table can contain any number of routes that specify the same service, network address, and broker instance identifier. In this case, [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] chooses a route using a procedure designed to find the most exact match between the information specified in the conversation and the information in the routing table.  
   
@@ -147,7 +147,7 @@ CREATE ROUTE ExpenseRoute
 ```  
   
 ### B. Creating a TCP/IP route by using a NetBIOS name  
- The following example creates a route to the service `//Adventure-Works.com/Expenses`. The route specifies that messages to this service travel over TCP to port `1234` on the host identified by the NetBIOS name `SERVER02`. Upon arrival, the target [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] delivers the message to the database instance identified by the unique identifier `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
+ The following example creates a route to the service `//Adventure-Works.com/Expenses`. The route specifies that messages to this service travel over TCP to port `1234` on the host identified by the NetBIOS name `SERVER02`. Upon arrival, the target [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] delivers the message to the database instance identified by the unique identifier `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
 ```  
 CREATE ROUTE ExpenseRoute  
@@ -158,7 +158,7 @@ CREATE ROUTE ExpenseRoute
 ```  
   
 ### C. Creating a TCP/IP route by using an IP address  
- The following example creates a route to the service `//Adventure-Works.com/Expenses`. The route specifies that messages to this service travel over TCP to port `1234` on the host at the IP address `192.168.10.2`. Upon arrival, the target [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] delivers the message to the broker instance identified by the unique identifier `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
+ The following example creates a route to the service `//Adventure-Works.com/Expenses`. The route specifies that messages to this service travel over TCP to port `1234` on the host at the IP address `192.168.10.2`. Upon arrival, the target [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] delivers the message to the broker instance identified by the unique identifier `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
 ```  
 CREATE ROUTE ExpenseRoute  
@@ -169,7 +169,7 @@ CREATE ROUTE ExpenseRoute
 ```  
   
 ### D. Creating a route to a forwarding broker  
- The following example creates a route to the forwarding broker on the server `dispatch.Adventure-Works.com`. Because both the service name and the broker instance identifier are not specified, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses this route for services that have no other route defined.  
+ The following example creates a route to the forwarding broker on the server `dispatch.Adventure-Works.com`. Because both the service name and the broker instance identifier are not specified, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses this route for services that have no other route defined.  
   
 ```  
 CREATE ROUTE ExpenseRoute  

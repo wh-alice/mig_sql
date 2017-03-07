@@ -15,9 +15,9 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # catalog.add_execution_worker (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Adds a [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] Scale Out Worker to an instance of execution in Scale Out.
+Adds a [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] Scale Out Worker to an instance of execution in Scale Out.
 
 ## Syntax
 

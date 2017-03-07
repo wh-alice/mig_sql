@@ -21,11 +21,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Rowsets
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   A rowset is a set of rows that contain columns of data. Rowsets are central objects that enable all OLE DB data providers to expose result set data in tabular form.  
   
- After a consumer creates a session by using the **IDBCreateSession::CreateSession** method, the consumer can use either the **IOpenRowset** or **IDBCreateCommand** interface on the session to create a rowset. The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider supports both of these interfaces. Both of these methods are described here.  
+ After a consumer creates a session by using the **IDBCreateSession::CreateSession** method, the consumer can use either the **IOpenRowset** or **IDBCreateCommand** interface on the session to create a rowset. The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider supports both of these interfaces. Both of these methods are described here.  
   
 -   Create a rowset by calling the **IOpenRowset::OpenRowset** method.  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 -   Create a command object by calling the **IDBCreateCommand::CreateCommand** method.  
   
-     The command object executes commands that the provider supports. With the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider, the consumer can specify any [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement, such as a SELECT statement or a call to a stored procedure. The steps for creating a rowset by using a command object are:  
+     The command object executes commands that the provider supports. With the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider, the consumer can specify any [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement, such as a SELECT statement or a call to a stored procedure. The steps for creating a rowset by using a command object are:  
   
     1.  The consumer calls the **IDBCreateCommand::CreateCommand** method on the session to get a command object requesting the **ICommandText** interface on the command object. This **ICommandText** interface sets and retrieves the actual command text. The consumer fills in the text command by calling the **ICommandText::SetCommandText** method.  
   

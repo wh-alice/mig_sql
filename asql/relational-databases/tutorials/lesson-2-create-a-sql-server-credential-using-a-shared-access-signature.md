@@ -65,5 +65,5 @@ To create a SQL Server credential, follow these steps:
 ## See Also  
 [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)  
 [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)  
-[sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.credentials-transact-sql.md)  
+[sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.credentials-transact-sql.md)  
   

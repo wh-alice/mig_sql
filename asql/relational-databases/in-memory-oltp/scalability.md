@@ -19,13 +19,13 @@ manager: "jhubbard"
   
 -   **Multiple threads to persist memory-optimized tables**  
   
-     In the previous release of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], there was a single offline checkpoint thread that scanned the transaction log for changes to memory-optimized tables and persisted them in checkpoint files (such as data and delta files). With larger number of COREs, the single offline checkpoint thread could fall behind.  
+     In the previous release of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], there was a single offline checkpoint thread that scanned the transaction log for changes to memory-optimized tables and persisted them in checkpoint files (such as data and delta files). With larger number of COREs, the single offline checkpoint thread could fall behind.  
   
-     In [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)], there are multiple concurrent threads responsible to persist changes to memory-optimized tables.  
+     In [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)], there are multiple concurrent threads responsible to persist changes to memory-optimized tables.  
   
 -   **Multi-threaded recovery**  
   
-     In the previous release of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the log apply as part of recovery operation was single threaded. In [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)], the log apply is multi-threaded.  
+     In the previous release of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], the log apply as part of recovery operation was single threaded. In [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)], the log apply is multi-threaded.  
   
 -   **MERGE Operation**  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 -   **Dynamic management views**  
   
-     [sys.dm_db_xtp_checkpoint_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-xtp-checkpoint-stats-transact-sql.md) and [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-xtp-checkpoint-files-transact-sql.md)have been changed significantly.  
+     [sys.dm_db_xtp_checkpoint_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-xtp-checkpoint-stats-transact-sql.md) and [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-xtp-checkpoint-files-transact-sql.md)have been changed significantly.  
   
  Manual Merge has been disabled as multi-threaded merge is expected to keep up with the load.  
   

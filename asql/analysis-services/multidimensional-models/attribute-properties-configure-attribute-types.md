@@ -24,20 +24,20 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Attribute Properties - Configure Attribute Types
-  In [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], attribute types help classify an attribute in terms of business functionality. There are many attribute types, most of which are used by client applications to display or support an attribute. However, some attribute types also have specific meaning to [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)]. For example, some attribute types identify attributes that represent time periods in various calendars for time dimensions.  
+  In [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], attribute types help classify an attribute in terms of business functionality. There are many attribute types, most of which are used by client applications to display or support an attribute. However, some attribute types also have specific meaning to [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)]. For example, some attribute types identify attributes that represent time periods in various calendars for time dimensions.  
   
 ##  <a name="setting_attibute_types"></a> Setting Attribute Types  
- The value of the **Type** property for an attribute determines the attribute type for that attribute. Several wizards in [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] set attribute types when defining dimensions or attributes. These [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] wizards also set attribute types when the wizards add functionality to dimensions. For example, the Business Intelligence Wizard applies several attribute types to attributes in a dimension when the wizard adds account intelligence to identify attributes that contain the names, codes, numbers, and structure of accounts in the dimension. The Business Intelligence Wizard also consumes attribute types, such as for currency conversion. For more information, see [Create a Currency type Dimension](../Topic/Create%20a%20Currency%20type%20Dimension.md).  
+ The value of the **Type** property for an attribute determines the attribute type for that attribute. Several wizards in [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] set attribute types when defining dimensions or attributes. These [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] wizards also set attribute types when the wizards add functionality to dimensions. For example, the Business Intelligence Wizard applies several attribute types to attributes in a dimension when the wizard adds account intelligence to identify attributes that contain the names, codes, numbers, and structure of accounts in the dimension. The Business Intelligence Wizard also consumes attribute types, such as for currency conversion. For more information, see [Create a Currency type Dimension](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
   
- The following tables list the attribute types available in [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)]. These tables separate attribute types into the following categories:  
+ The following tables list the attribute types available in [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)]. These tables separate attribute types into the following categories:  
   
 |Term|Definition|  
 |----------|----------------|  
 |[General attribute types](#general_attribute_types)|These values are available to all attributes, and exist only to enable classification of attributes for client application purposes.|  
-|[Account dimension attribute types](#account_dimension_attribute_types)|These values identify an attribute that belongs to an account dimension. For more information about account dimension, see [Create a Finance Account of parent-child type Dimension](../Topic/Create%20a%20Finance%20Account%20of%20parent-child%20type%20Dimension.md).|  
-|[Currency dimension attribute type](#currency_dimension_attribute_types)|These values identify an attribute that belongs to a currency dimension. For more information about currency dimensions, see [Create a Currency type Dimension](../Topic/Create%20a%20Currency%20type%20Dimension.md).|  
+|[Account dimension attribute types](#account_dimension_attribute_types)|These values identify an attribute that belongs to an account dimension. For more information about account dimension, see [Create a Finance Account of parent-child type Dimension](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).|  
+|[Currency dimension attribute type](#currency_dimension_attribute_types)|These values identify an attribute that belongs to a currency dimension. For more information about currency dimensions, see [Create a Currency type Dimension](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).|  
 |[Slowly changing dimension attributes](#slowly_changing_dimension_attribute_types)|These values identify an attribute that belongs to a slowly changing dimension.|  
-|[Time dimension attributes](#time_dimension_attribute_types)|These values identify an attribute that belongs to a time dimension. For more information about time dimensions, see [Create a Date type Dimension](../Topic/Create%20a%20Date%20type%20Dimension.md).|  
+|[Time dimension attributes](#time_dimension_attribute_types)|These values identify an attribute that belongs to a time dimension. For more information about time dimensions, see [Create a Date type Dimension](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md).|  
   
 ###  <a name="general_attribute_types"></a> General Attribute Types  
   
@@ -74,7 +74,7 @@ manager: "erikre"
 |**DateEnded**|Represents an end date.|  
 |**DateModified**|Represents a modification date.|  
 |**DateStart**|Represents a start date.|  
-|**DeletedFlag**|Indicates whether a member is or should be deleted (in terms of business functionality.)<br /><br /> Note: [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] does not use this attribute type to determine whether a member should be deleted. Instead, this attribute type is intended to be used by client applications for display purposes only.|  
+|**DeletedFlag**|Indicates whether a member is or should be deleted (in terms of business functionality.)<br /><br /> Note: [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] does not use this attribute type to determine whether a member should be deleted. Instead, this attribute type is intended to be used by client applications for display purposes only.|  
 |**FormattingColor**|Represents the color used in formatting.|  
 |**FormattingFont**|Represents the font used in formatting.|  
 |**FormattingFontEffects**|Represents the font effects used in formatting.|  
@@ -158,7 +158,7 @@ manager: "erikre"
 |**Account**|Represents the parent of an account. This attribute type is typically applied to the parent attribute of an account dimension.|  
 |**AccountName**|Represents the name of an account. This attribute type is typically applied to the key attributes of an account dimension.|  
 |**AccountNumber**|Represents the number of an account.|  
-|**AccountType**|Represents the type of an account. This attribute type identifies the aggregation function of an account member in an account type dimension in the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] database.|  
+|**AccountType**|Represents the type of an account. This attribute type identifies the aggregation function of an account member in an account type dimension in the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] database.|  
   
 ###  <a name="currency_dimension_attribute_types"></a> Currency Dimension Attribute Types  
   

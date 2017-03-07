@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 ### To implement a Lookup transformation in full cache mode by using OLE DB connection manager  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want, and then double-click the package in Solution Explorer.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want, and then double-click the package in Solution Explorer.  
   
 2.  On the **Data Flow** tab, from the **Toolbox**, drag the Lookup transformation to the design surface.  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
 13. Click **OK** to save your changes to the Lookup transformation, and then run the package.  
   
 ## See Also  
- [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](../Topic/Implement%20a%20Lookup%20Transformation%20in%20Full%20Cache%20Mode%20Using%20the%20Cache%20Connection%20Manager.md)   
+ [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
  [Implement a Lookup in No Cache or Partial Cache Mode](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

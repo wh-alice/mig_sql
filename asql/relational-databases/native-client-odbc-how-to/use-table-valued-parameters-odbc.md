@@ -15,18 +15,18 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use Table-Valued Parameters (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   This sample shows how to use table-valued parameters to insert multiple rows, with multiple columns, with one call to the server.  
   
- For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). For more samples using table-valued parameters, see [ODBC Table-Valued Parameter Programming Examples](../Topic/ODBC%20Table-Valued%20Parameter%20Programming%20Examples.md).  
+ For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). For more samples using table-valued parameters, see [ODBC Table-Valued Parameter Programming Examples](../../a9retired/odbc-table-valued-parameter-programming-examples.md).  
   
 ## Example  
- You will need an ODBC data source called TVPDemo. The default database for TVPDemo can be any test database on your computer. This data source must be based on the ODBC driver for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client.  
+ You will need an ODBC data source called TVPDemo. The default database for TVPDemo can be any test database on your computer. This data source must be based on the ODBC driver for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client.  
   
  If you will build and run this sample as a 32-bit application on a 64-bit operating system, you must create the ODBC data source with the ODBC Administrator in %windir%\SysWOW64\odbcad32.exe.  
   
- This sample connects to your computer's default [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. To connect to a named instance, change the definition of the ODBC data source to specify the instance using the following format: server\namedinstance. By default, [!INCLUDE[ssExpress](../../database-engine/configure/windows/includes/ssexpress-md.md)] installs to a named instance.  
+ This sample connects to your computer's default [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. To connect to a named instance, change the definition of the ODBC data source to specify the instance using the following format: server\namedinstance. By default, [!INCLUDE[ssExpress](../../a9notintoc/includes/ssexpress-md.md)] installs to a named instance.  
   
  Compile the (C++) code listing with odbc32.lib and user32.lib. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   

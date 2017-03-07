@@ -17,11 +17,11 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Lesson 3-1 - Modifying Measures
-You can use the **FormatString** property to define formatting settings that control how measures are displayed to users. In this task, you specify formatting properties for the currency and percentage measures in the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial cube.  
+You can use the **FormatString** property to define formatting settings that control how measures are displayed to users. In this task, you specify formatting properties for the currency and percentage measures in the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial cube.  
   
 ### To modify the measures of the cube  
   
-1.  Switch to the **Cube Structure** tab of Cube Designer for the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial cube, expand the **Internet Sales** measure group in the **Measures** pane, right-click **Order Quantity**, and then click **Properties**.  
+1.  Switch to the **Cube Structure** tab of Cube Designer for the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial cube, expand the **Internet Sales** measure group in the **Measures** pane, right-click **Order Quantity**, and then click **Properties**.  
   
 2.  In the Properties window, click the **Auto Hide** pushpin icon to pin the Properties window open.  
   
@@ -64,7 +64,7 @@ You can use the **FormatString** property to define formatting settings that con
 11. On the **File** menu, click **Save All**.  
   
 ## Next Task in Lesson  
-[Modifying the Customer Dimension](../Topic/Modifying%20the%20Customer%20Dimension.md)  
+[Modifying the Customer Dimension](../../analysis-services/tutorials/lesson-3-2-modifying-the-customer-dimension.md)  
   
 ## See Also  
 [Define Database Dimensions](../../analysis-services/multidimensional-models/define-database-dimensions.md)  

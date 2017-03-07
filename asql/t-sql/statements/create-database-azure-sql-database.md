@@ -34,7 +34,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CREATE DATABASE (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Creates a new database. You must be connected to the master database to create a new database.  
   
@@ -73,10 +73,10 @@ CREATE DATABASE database_name
 ```  
   
 ## Arguments  
- This syntax diagram demonstrates the supported arguments in [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].  
+ This syntax diagram demonstrates the supported arguments in [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].  
   
  *database_name*  
- The name of the new database. This name must be unique on the SQL server, which can host both [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] databases and [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+ The name of the new database. This name must be unique on the SQL server, which can host both [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)] databases and [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
  *Collation_name*  
  Specifies the default collation for the database. Collation name can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the default collation, which is  SQL_Latin1_General_CP1_CI_AS.  
@@ -131,17 +131,17 @@ CREATE DATABASE database_name
  To create a new database in an elastic database pool, set the SERVICE_OBJECTIVE of the database to ELASTIC_POOL and provide the name of the pool. For more information, see [Create and manage a SQL Database elastic database pool (preview)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/).  
   
  *AS COPY OF [source_server_name.]source_database_name*  
- For copying a database to the same or a different [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] server.  
+ For copying a database to the same or a different [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] server.  
   
  *source_server_name*  
- The name of the [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] server where the source database is located. This parameter is optional when the source database and the destination database are to be located on the same [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] server.  
+ The name of the [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] server where the source database is located. This parameter is optional when the source database and the destination database are to be located on the same [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] server.  
   
  Note: The `AS COPY OF` argument does not support the fully qualified unique domain names. In other words, if your server's fully qualified domain name is `serverName.database.windows.net`, use only `serverName` during database copy.  
   
  *source_database_name*  
  The name of the database that is to be copied.  
   
- [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] does not support the following arguments and options when using the `CREATE DATABASE` statement:  
+ [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)] does not support the following arguments and options when using the `CREATE DATABASE` statement:  
   
 -   Parameters related to the physical placement of file, such as \<filespec> and \<filegroup>  
   
@@ -156,19 +156,19 @@ CREATE DATABASE database_name
  For more information about the arguments and the `CREATE DATABASE` statement, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## Remarks  
- Databases in [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] have several default settings that are set when the database is created. For more information about these default settings, see the list of values in [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md).  
+ Databases in [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)] have several default settings that are set when the database is created. For more information about these default settings, see the list of values in [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
  MAXSIZE provides the ability to limit the size of the database. If the size of the database reaches its MAXSIZE you will receive error code 40544. When this occurs, you cannot insert or update data, or create new objects (such as tables, stored procedures, views, and functions). However, you can still read and delete data, truncate tables, drop tables and indexes, and rebuild indexes. You can then update MAXSIZE to a value larger than your current database size or delete some data to free storage space. There may be as much as a fifteen-minute delay before you can insert new data.  
   
 > [!IMPORTANT]  
->  The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] batch. You must be connected to the **master** database when executing the `CREATE DATABASE` statement.  
+>  The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] batch. You must be connected to the **master** database when executing the `CREATE DATABASE` statement.  
   
  To change the size, edition, or service objective values later, use [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md).  
   
 ## Database Copies  
- Copying a database using the `CREATE DATABASE` statement is an asynchronous operation. Therefore, a connection to the [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] server is not needed for the full duration of the copy process. The `CREATE DATABASE` statement will return control to the user after the entry in sys.databases is created but before the database copy operation is complete. In other words, the `CREATE DATABASE` statement returns successfully when the database copy is still in progress.  
+ Copying a database using the `CREATE DATABASE` statement is an asynchronous operation. Therefore, a connection to the [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] server is not needed for the full duration of the copy process. The `CREATE DATABASE` statement will return control to the user after the entry in sys.databases is created but before the database copy operation is complete. In other words, the `CREATE DATABASE` statement returns successfully when the database copy is still in progress.  
   
--   Monitoring the copy process on an [!INCLUDE[ssSDS_md](../../analysis-services/multidimensional-models/includes/sssds-md.md)] server: Query the `percentage_complete` or `replication_state_desc` columns in the [dm_database_copies](../../relational-databases/system-dynamic-management-views/sys.dm-database-copies-azure-sql-database.md) or the `state` column in the **sys.databases** view. The [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys.dm-operation-status-azure-sql-database.md) view can be used as well as it returns the status of database operations including database copy.  
+-   Monitoring the copy process on an [!INCLUDE[ssSDS_md](../../a9retired/includes/sssds-md.md)] server: Query the `percentage_complete` or `replication_state_desc` columns in the [dm_database_copies](../../relational-databases/reference/system-dynamic-management-views/sys.dm-database-copies-azure-sql-database.md) or the `state` column in the **sys.databases** view. The [sys.dm_operation_status](../../relational-databases/reference/system-dynamic-management-views/sys.dm-operation-status-azure-sql-database.md) view can be used as well as it returns the status of database operations including database copy.  
   
  At the time the copy process completes successfully, the destination database is transactionally consistent with the source database.  
   
@@ -176,9 +176,9 @@ CREATE DATABASE database_name
   
 -   The source server name and the server name for the copy target may be the same or different. When they are the same, this parameter is optional and the server context of the current session will be used by default.  
   
--   The source and destination database names must be specified, unique, and comply with the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+-   The source and destination database names must be specified, unique, and comply with the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
--   The `CREATE DATABASE` statement must be executed within the context of the master database of the [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] server where the new database will be created.  
+-   The `CREATE DATABASE` statement must be executed within the context of the master database of the [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] server where the new database will be created.  
   
 -   After the copying completes, the destination database must be managed as an independent database. You can execute the `ALTER DATABASE` and `DROP DATABASE` statements against the new database independently of the source database. You can also copy the new database to another new database.  
   
@@ -195,7 +195,7 @@ CREATE DATABASE database_name
   
 -   A login that is a member of the `dbmanager` database role  
   
- **Additional requirements for using `CREATE DATABASE ... AS COPY OF` syntax:** The login executing the statement on the local server must also be at least the `db_owner` on the source server. If the login  is based on [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] authentication, the login executing the statement on the local server must have a matching login on the source [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] server, with an identical name and password.  
+ **Additional requirements for using `CREATE DATABASE ... AS COPY OF` syntax:** The login executing the statement on the local server must also be at least the `db_owner` on the source server. If the login  is based on [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] authentication, the login executing the statement on the local server must have a matching login on the source [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] server, with an identical name and password.  
   
 ## Examples  
  All examples must be executed while connected to the **master** database. For more information, see [How to connect to an Azure SQL database with SSMS](https://azure.microsoft.com/documentation/articles/sql-database-connect-to-database/).  
@@ -257,7 +257,7 @@ CREATE DATABASE db_copy
   
 ## See Also  
 
--  [sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-database-copies-azure-sql-database.md)
+-  [sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-database-copies-azure-sql-database.md)
 
 -   [ALTER DATABASE &#40;Azure SQL Database&#41;](https://msdn.microsoft.com/library/mt574871.aspx)   
     

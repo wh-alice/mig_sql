@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Publisher Properties - Publisher, Subscribers
-  The **Subscribers** page of the **Publisher Properties** dialog box is used for Publishers running versions of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)]. The page allows you to enable Subscribers to receive data from publications on this Publisher. Enabling a Subscriber to receive data from this Publisher does not create subscriptions to publications on this Publisher. To create a subscription, you must use the New Subscription Wizard.  
+  The **Subscribers** page of the **Publisher Properties** dialog box is used for Publishers running versions of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)]. The page allows you to enable Subscribers to receive data from publications on this Publisher. Enabling a Subscriber to receive data from this Publisher does not create subscriptions to publications on this Publisher. To create a subscription, you must use the New Subscription Wizard.  
   
 ## Options  
  **Subscribers**  

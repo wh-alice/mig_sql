@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Operators (MDX Syntax)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   In Multidimensional Expressions (MDX), operators let you perform the following actions:  
   
@@ -52,7 +52,7 @@ manager: "erikre"
  When using multiple operators, the order in which MDX evaluates the operators is important. Similarly, the user of operators may require that one data type be converted into another data type before the operators can be evaluated.  
   
 ## Evaluating Complex Expressions  
- You can build an expression by using operators to combine several smaller expressions. In these complex expressions, MDX evaluates the operators in order based on the definition of operator precedence used by [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)]. MDX performs operators with higher precedence before performing operators with lower precedence.  
+ You can build an expression by using operators to combine several smaller expressions. In these complex expressions, MDX evaluates the operators in order based on the definition of operator precedence used by [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)]. MDX performs operators with higher precedence before performing operators with lower precedence.  
   
 ### Understanding Operator Precedence  
  The following list shows operator precedence, from highest to lowest. Operators in the same line are equal in precedence, and are evaluated from left to right unless otherwise forced by parenthesis:  

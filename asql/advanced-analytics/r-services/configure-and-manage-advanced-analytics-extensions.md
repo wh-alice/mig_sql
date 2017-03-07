@@ -16,7 +16,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Configure and Manage Advanced Analytics Extensions
-  After you have installed [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)], you can make minor changes in the configuration of the R runtime and other services associated with [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] .  
+  After you have installed [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)], you can make minor changes in the configuration of the R runtime and other services associated with [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] .  
   
   
  **In This Topic**  
@@ -30,15 +30,15 @@ manager: "jhubbard"
 -   [Modifying the Launchpad Service Account](#bkmk_Launchpad) 
   
 ##  <a name="bkmk_Provisioning"></a> Provisioning User Accounts for SQL Server R Services  
- R runtime processes in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] run in the context of low-privilege local user accounts. Running R runtime processes in individual low-privilege accounts has the following benefits:  
+ R runtime processes in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] run in the context of low-privilege local user accounts. Running R runtime processes in individual low-privilege accounts has the following benefits:  
   
--   Reduce privileges of the R runtime processes running on the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer  
+-   Reduce privileges of the R runtime processes running on the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] computer  
   
 -   Provide isolation between the R runtime sessions  
   
- As part of installation process in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], a new Windows *user account pool* is created that contains the local user accounts required for running the R runtime process. You can modify the number of users if needed to support R. Your database administrator must also give this group permission to connect to any instance where R Services has been enabled. For more information, see [Modify the User Account Pool for SQL Server R Services](../../advanced-analytics/r-services/modify-the-user-account-pool-for-sql-server-r-services.md).  
+ As part of installation process in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], a new Windows *user account pool* is created that contains the local user accounts required for running the R runtime process. You can modify the number of users if needed to support R. Your database administrator must also give this group permission to connect to any instance where R Services has been enabled. For more information, see [Modify the User Account Pool for SQL Server R Services](../../advanced-analytics/r-services/modify-the-user-account-pool-for-sql-server-r-services.md).  
   
- However, an access control list (ACL) can be defined for sensitive resources on the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to deny access to this group to prevent the R runtime process from getting access to the resources.  
+ However, an access control list (ACL) can be defined for sensitive resources on the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to deny access to this group to prevent the R runtime process from getting access to the resources.  
   
 -   The user account pool is linked to a specific instance.  For each instance on which R script has been enabled, a separate pool of worker accounts are created. Accounts cannot be shared between instances.
   
@@ -50,19 +50,19 @@ manager: "jhubbard"
  For more information about how to make changes to the user account pool, see [Modify the User Account Pool for SQL Server R Services](../../advanced-analytics/r-services/modify-the-user-account-pool-for-sql-server-r-services.md).  
   
 ##  <a name="bkmk_ManagingMemory"></a> Managing Memory Use by R Processes  
- By default, the R runtime processes associated with [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] are limited to using no more than 20% of total machine memory. However, this limit can be increased by the administrator, if needed.  
+ By default, the R runtime processes associated with [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] are limited to using no more than 20% of total machine memory. However, this limit can be increased by the administrator, if needed.  
   
- Generally, this amount will be inadequate for serious R tasks such as training model or predicting on many rows of data. You might need to reduce the amount of memory reserved for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (or for other services) and use Resource Governor to define an external resource pool or pools and allocate. For more information, see [Resource Governance for R Services](../../advanced-analytics/r-services/resource-governance-for-r-services.md).  
+ Generally, this amount will be inadequate for serious R tasks such as training model or predicting on many rows of data. You might need to reduce the amount of memory reserved for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] (or for other services) and use Resource Governor to define an external resource pool or pools and allocate. For more information, see [Resource Governance for R Services](../../advanced-analytics/r-services/resource-governance-for-r-services.md).  
   
 ##  <a name="bkmk_ChangingConfig"></a> Changing Advanced Service Options using the Configuration File  
  
-You can control some advanced properties of [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] by editing the [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] configuration file. This file is created during [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup and by default is saved as a plain text file in the following location:  
+You can control some advanced properties of [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] by editing the [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] configuration file. This file is created during [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] setup and by default is saved as a plain text file in the following location:  
  
 ```  
 <instance path>\binn\rlauncher.config  
 ```  
   
- You must be an administrator on the computer that is running [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to make changes to this file. If you edit the file, we recommend that you make a backup copy before saving changes.  
+ You must be an administrator on the computer that is running [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to make changes to this file. If you edit the file, we recommend that you make a backup copy before saving changes.  
   
  For example, to use Notepad to open the configuration file for the default instance (MSSQLSERVER) , you would open a command prompt as administrator, and type the following command:  
   
@@ -76,7 +76,7 @@ C:\>Notepad.exe "%programfiles%\Microsoft SQL Server\MSSQL13.MSSQLSERVER\mssql\b
   
  Default: TRACE_LEVEL=4  
   
- The following table lists each of the settings supported for [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], with the permissible values.  
+ The following table lists each of the settings supported for [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], with the permissible values.  
   
 |Setting name|Value type|Default|Description|  
 |------------------|----------------|-------------|-----------------|  
@@ -85,7 +85,7 @@ C:\>Notepad.exe "%programfiles%\Microsoft SQL Server\MSSQL13.MSSQLSERVER\mssql\b
 
 ## <a name="bkmk_Launchpad"></a>Modifying the Launchpad Service Account
 
-A separate [!INCLUDE[rsql_launchpad_md](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)] service is created for each instance on which you have configured [!INCLUDE[rsql_productname_md](../../advanced-analytics/r-services/includes/rsql-productname-md.md)]. 
+A separate [!INCLUDE[rsql_launchpad_md](../../a9notintoc/includes/rsql-launchpad-md.md)] service is created for each instance on which you have configured [!INCLUDE[rsql_productname_md](../../a9notintoc/includes/rsql-productname-md.md)]. 
 
 By default, the Launchpad is configured to run using the account, NT Service\MSSQLLaunchpad, which is provisioned with all necessary permissions to run R scripts. However, if you change this account, the Launchpad might not be able to start or to access the SQL Server instance where R scripts should be run.
  

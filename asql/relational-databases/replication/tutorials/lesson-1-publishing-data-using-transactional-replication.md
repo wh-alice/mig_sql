@@ -19,17 +19,17 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 1: Publishing Data Using Transactional Replication
-In this lesson, you will create a transactional publication using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to publish a filtered subset of the **Product** table in the [!INCLUDE[ssSampleDBobject](../../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] sample database. You will also add the SQL Server login used by the Distribution Agent to the publication access list (PAL). Before starting this tutorial, you should have completed the previous tutorial, [Preparing the Server for Replication](../../../relational-databases/replication/tutorials/tutorial-preparing-the-server-for-replication.md).  
+In this lesson, you will create a transactional publication using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] to publish a filtered subset of the **Product** table in the [!INCLUDE[ssSampleDBobject](../../../a9retired/includes/sssampledbobject-md.md)] sample database. You will also add the SQL Server login used by the Distribution Agent to the publication access list (PAL). Before starting this tutorial, you should have completed the previous tutorial, [Preparing the Server for Replication](../../../relational-databases/replication/tutorials/tutorial-preparing-the-server-for-replication.md).  
   
 ### To create a publication and define articles  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, right-click the **Local Publications** folder, and click **New Publication**.  
   
     The Publication Configuration Wizard launches.  
   
-3.  On the Publication Database page, select [!INCLUDE[ssSampleDBobject](../../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)], and then click **Next**.  
+3.  On the Publication Database page, select [!INCLUDE[ssSampleDBobject](../../../a9retired/includes/sssampledbobject-md.md)], and then click **Next**.  
   
 4.  On the Publication Type page, select **Transactional publication**, and then click **Next**.  
   
@@ -59,7 +59,7 @@ In this lesson, you will create a transactional publication using [!INCLUDE[ssMa
   
 ### To view the status of snapshot generation  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
   
 2.  In the **Local Publications** folder, right-click **AdvWorksProductTrans**, and then click **View Snapshot Agent Status**.  
   
@@ -67,7 +67,7 @@ In this lesson, you will create a transactional publication using [!INCLUDE[ssMa
   
 ### To add the Distribution Agent login to the PAL  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
   
 2.  In the **Local Publications** folder, right-click **AdvWorksProductTrans**, and then click **Properties**.  
   

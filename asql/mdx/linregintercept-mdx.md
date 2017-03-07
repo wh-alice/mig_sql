@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # LinRegIntercept (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Calculates the linear regression of a set and returns the value of the x-intercept in the regression line, y = ax + b.  
   

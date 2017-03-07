@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Error Handling (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   The W3C specification allows type errors to be raised statically or dynamically, and defines static, dynamic, and type errors.  
   
@@ -36,15 +36,15 @@ manager: "jhubbard"
  Explicit casting to the correct type allows users to work around static errors, although run-time cast errors will be transformed to empty sequences.  
   
 ## Static Errors  
- Static errors are returned by using the [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] error mechanism. In [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], XQuery type errors are returned statically. For more information, see [XQuery and Static Typing](../xquery/xquery-and-static-typing.md).  
+ Static errors are returned by using the [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] error mechanism. In [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], XQuery type errors are returned statically. For more information, see [XQuery and Static Typing](../xquery/xquery-and-static-typing.md).  
   
 ## Dynamic Errors  
- In XQuery, most dynamic errors are mapped to an empty sequence ("()"). However, these are the two exceptions: Overflow conditions in XQuery aggregator functions and XML-DML validation errors. Note that most dynamic errors are mapped to an empty sequence. Otherwise, query execution that takes advantages of the XML indexes may raise unexpected errors. Therefore, to provide an efficient execution without generating unexpected errors, [!INCLUDE[ssDEnoversion](../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] maps dynamic errors to ().  
+ In XQuery, most dynamic errors are mapped to an empty sequence ("()"). However, these are the two exceptions: Overflow conditions in XQuery aggregator functions and XML-DML validation errors. Note that most dynamic errors are mapped to an empty sequence. Otherwise, query execution that takes advantages of the XML indexes may raise unexpected errors. Therefore, to provide an efficient execution without generating unexpected errors, [!INCLUDE[ssDEnoversion](../a9notintoc/includes/ssdenoversion-md.md)] maps dynamic errors to ().  
   
  Frequently, in the situation where the dynamic error would occur inside a predicate, not raising the error is not changing the semantics, because () is mapped to False. However, in some cases, returning () instead of a dynamic error may cause unexpected results. The following are examples that illustrate this.  
   
 ### Example: Using the avg() Function with a String  
- In the following example, the [avg function](../Topic/avg%20Function%20\(XQuery\).md) is called to compute the average of the three values. One of these values is a string. Because the XML instance in this case is untyped, all the data in it is of untyped atomic type. The **avg()** function first casts these values to **xs:double** before computing the average. However, the value, `"Hello"`, cannot be cast to **xs:double** and creates a dynamic error. In this case, instead of returning a dynamic error, the casting of `"Hello"` to **xs:double** causes an empty sequence. The **avg()** function ignores this value, computes the average of the other two values, and returns 150.  
+ In the following example, the [avg function](../xquery/aggregate-functions-avg.md) is called to compute the average of the three values. One of these values is a string. Because the XML instance in this case is untyped, all the data in it is of untyped atomic type. The **avg()** function first casts these values to **xs:double** before computing the average. However, the value, `"Hello"`, cannot be cast to **xs:double** and creates a dynamic error. In this case, instead of returning a dynamic error, the casting of `"Hello"` to **xs:double** causes an empty sequence. The **avg()** function ignores this value, computes the average of the other two values, and returns 150.  
   
 ```  
 DECLARE @x xml  
@@ -57,7 +57,7 @@ SELECT @x.query('avg(//*)')
 ```  
   
 ### Example: Using the not Function  
- When you use the [not function](../Topic/not%20Function%20\(XQuery\).md) in a predicate, for example, `/SomeNode[not(Expression)]`, and the expression causes a dynamic error, an empty sequence will be returned instead of an error. Applying **not()** to the empty sequence returns True, instead of an error.  
+ When you use the [not function](../xquery/functions-on-boolean-values-not-function.md) in a predicate, for example, `/SomeNode[not(Expression)]`, and the expression causes a dynamic error, an empty sequence will be returned instead of an error. Applying **not()** to the empty sequence returns True, instead of an error.  
   
 ### Example: Casting a String  
  In the following example, the literal string "NaN" is cast to xs:string, then to xs:double. The result is an empty rowset. Although the string "NaN" cannot successfully be cast to xs:double, this cannot be determined until runtime because the string is first cast to xs:string.  

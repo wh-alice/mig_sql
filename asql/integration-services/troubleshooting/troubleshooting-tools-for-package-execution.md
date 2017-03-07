@@ -22,9 +22,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Troubleshooting Tools for Package Execution
-  [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] includes features and tools that you can use to troubleshoot packages when you execute them after they have been completed and deployed.  
+  [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] includes features and tools that you can use to troubleshoot packages when you execute them after they have been completed and deployed.  
   
- At design time, [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] provides breakpoints to pause package execution, the Progress window, and data viewers to watch your data as it passes through the data flow. However, these features are not available when you are running packages that have been deployed. The main techniques for troubleshooting deployed packages are as follows:  
+ At design time, [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] provides breakpoints to pause package execution, the Progress window, and data viewers to watch your data as it passes through the data flow. However, these features are not available when you are running packages that have been deployed. The main techniques for troubleshooting deployed packages are as follows:  
   
 -   Catch and handle package errors by using event handlers.  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
      The value of the message column for **DiagnosticEx** is XML text. To view the message text for a package execution, query the [catalog.operation_messages &#40;SSISDB Database&#41;](../../integration-services/system/views/catalog.operation-messages-ssisdb-database.md) view. Note that the **DiagnosticEx** event does not preserve whitespace in its XML output to reduce the size of the log. To improve readability, copy the log into an XML editor - in Visual Studio, for example - that supports XML formatting and syntax highlighting.  
   
 ## Troubleshoot Package Execution by Using Operations Reports  
- Standard operations reports are available in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to help you monitor [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] packages that have been deployed to the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog. These package reports help you to view package status and history, and, if necessary, identify the cause of failures.  
+ Standard operations reports are available in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] to help you monitor [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] packages that have been deployed to the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] catalog. These package reports help you to view package status and history, and, if necessary, identify the cause of failures.  
   
  For more information, see [Troubleshooting Reports for Package Execution](../../integration-services/troubleshooting/troubleshooting-reports-for-package-execution.md).  
   
@@ -73,35 +73,35 @@ manager: "jhubbard"
   
      The following approach is one suggestion for enhancing the default logging output and making it easier to generate reports:  
   
-    1.  **Create a parent table that logs each execution of a package**. This parent table has only a single row for each execution of a package, and uses the ExecutionID to link to the child records in the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] logging table. You can use an Execute SQL task at the beginning of each package to create this new row and to record the start time. Then you can use another Execute SQL task at the end of the package to update the row with the end time, duration, and status.  
+    1.  **Create a parent table that logs each execution of a package**. This parent table has only a single row for each execution of a package, and uses the ExecutionID to link to the child records in the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] logging table. You can use an Execute SQL task at the beginning of each package to create this new row and to record the start time. Then you can use another Execute SQL task at the end of the package to update the row with the end time, duration, and status.  
   
     2.  **Add auditing information to the data flow**. You can use the Audit transformation to add information to rows in the data flow about the package execution that created or modified each row. The Audit transformation makes nine pieces of information available, including the PackageName and ExecutionInstanceGUID. For more information, see [Audit Transformation](../../integration-services/data-flow/transformations/audit-transformation.md). If you have custom information that you would also like to include in each row for auditing purposes, you can add this information to rows in the data flow by using a Derived Column transformation. For more information, see [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
     3.  **Consider capturing row count data**. Consider creating a separate table for row count information, where each instance of package execution is identified by its ExecutionID. Use the Row Count transformation to save the row count into a series of variables at critical points in the data flow. After the data flow ends, use an Execute SQL task to insert the series of values into a row in the table for later analysis and reporting.  
   
-     For more information about this approach, see the section, "ETL Auditing and Logging," in the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] white paper, [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602).  
+     For more information about this approach, see the section, "ETL Auditing and Logging," in the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] white paper, [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ## Troubleshoot Package Execution by Using Debug Dump Files  
- In [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)], you can create debug dump files that provide information about the execution of a package. For more information, see [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
+ In [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)], you can create debug dump files that provide information about the execution of a package. For more information, see [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
   
 ## Troubleshoot Run-time Validation Issues  
- Sometimes you might not be able to connect to your data sources, or portions of your package cannot be validated, until prior tasks in the package have executed. [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] includes the following features to help you avoid the validation errors that would otherwise result from these conditions:  
+ Sometimes you might not be able to connect to your data sources, or portions of your package cannot be validated, until prior tasks in the package have executed. [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] includes the following features to help you avoid the validation errors that would otherwise result from these conditions:  
   
 -   **Configure the DelayValidation property on package elements that are not valid when the package is loaded**. You can set **DelayValidation** to **True** on package elements whose configuration is not valid, to prevent validation errors when the package is loaded. For example, you may have a Data Flow task that uses a destination table that does not exist until an Execute SQL task creates the table at run time. The **DelayValidation** property can be enabled at the package level, or at the level of the individual tasks and containers that the package includes.  
   
      The **DelayValidation** property can be set on a Data Flow task, but not on individual data flow components. You can achieve a similar effect by setting the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> property of individual data flow components to **false**. However, when the value of this property is **false**, the component is not aware of changes to the metadata of external data sources. When set to **true**, the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> property can help to avoid blocking issues caused by locking in the database, especially when the package is using transactions.  
   
 ## Troubleshoot Run-time Permissions Issues  
- If you encounter errors when trying to run deployed packages by using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent, the accounts used by Agent might not have the required permissions. For information on how to troubleshoot packages that are run from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent jobs, see [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](http://support.microsoft.com/kb/918760). For more information on how to run packages from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent jobs, see [SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
+ If you encounter errors when trying to run deployed packages by using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent, the accounts used by Agent might not have the required permissions. For information on how to troubleshoot packages that are run from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent jobs, see [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](http://support.microsoft.com/kb/918760). For more information on how to run packages from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent jobs, see [SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
   
- To connect to Excel or Access data sources, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent requires an account that has permission to read, write, create, and delete temporary files in the folder that is specified by the TEMP and TMP environment variables.  
+ To connect to Excel or Access data sources, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent requires an account that has permission to read, write, create, and delete temporary files in the folder that is specified by the TEMP and TMP environment variables.  
   
 ## Troubleshoot 64-bit Issues  
   
--   **Some data providers are not available on the 64-bit platform**. In particular, the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Jet OLE DB Provider that is required to connect to Excel or Access data sources is not available in a 64-bit version.  
+-   **Some data providers are not available on the 64-bit platform**. In particular, the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Jet OLE DB Provider that is required to connect to Excel or Access data sources is not available in a 64-bit version.  
   
 ## Troubleshoot Errors without a Description  
- If you encounter an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] error that does not have an accompanying description, you can locate the description in [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md) by looking up the error by its number. The list does not include troubleshooting information at this time.  
+ If you encounter an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] error that does not have an accompanying description, you can locate the description in [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md) by looking up the error by its number. The list does not include troubleshooting information at this time.  
   
 ## Related Tasks  
  [Configure an Error Output in a Data Flow Component](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)  
@@ -111,6 +111,6 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the rss feeds available on the page.|  
+|![Integration Services icon (small)](../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the rss feeds available on the page.|  
   
   

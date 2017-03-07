@@ -32,7 +32,7 @@ manager: "jhubbard"
 
   Displays the profile information for a statement. STATISTICS PROFILE works for ad hoc queries, views, and stored procedures.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -54,11 +54,11 @@ SET STATISTICS PROFILE { ON | OFF }
 ## Permissions  
  To use SET STATISTICS PROFILE and view the output, users must have the following permissions:  
   
--   Appropriate permissions to execute the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements.  
+-   Appropriate permissions to execute the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements.  
   
--   SHOWPLAN permission on all databases containing objects that are referenced by the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements.  
+-   SHOWPLAN permission on all databases containing objects that are referenced by the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements.  
   
- For [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements that do not produce STATISTICS PROFILE result sets, only the appropriate permissions to execute the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements are required. For [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements that do produce STATISTICS PROFILE result sets, checks for both the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement execution permission and the SHOWPLAN permission must succeed, or the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement execution is aborted and no Showplan information is generated.  
+ For [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements that do not produce STATISTICS PROFILE result sets, only the appropriate permissions to execute the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements are required. For [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements that do produce STATISTICS PROFILE result sets, checks for both the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement execution permission and the SHOWPLAN permission must succeed, or the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement execution is aborted and no Showplan information is generated.  
   
 ## See Also  
  [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   

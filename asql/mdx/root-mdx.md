@@ -21,9 +21,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Root (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns a tuple that consists of the **All** members from each attribute hierarchy within the current scope in a cube, dimension, or tuple. For more information about Scope, see [SCOPE Statement &#40;MDX&#41;](../Topic/SCOPE%20Statement%20\(MDX\).md).  
+  Returns a tuple that consists of the **All** members from each attribute hierarchy within the current scope in a cube, dimension, or tuple. For more information about Scope, see [SCOPE Statement &#40;MDX&#41;](../mdx/mdx-scripting-scope.md).  
   
 > [!NOTE]  
 >  If an attribute hierarchy does not have an **All** member, the tuple contains the default member for that hierarchy.  

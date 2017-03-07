@@ -15,7 +15,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Configuration (SQL Server R Services)
-  This section contains information about how to configure the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer to support R workloads.
+  This section contains information about how to configure the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] computer to support R workloads.
   
   for information about how to install R packages and manage R package libraries, see [Installing and Managing R Packages](../../advanced-analytics/r-services/installing-and-managing-r-packages.md).  
   

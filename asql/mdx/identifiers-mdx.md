@@ -25,9 +25,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Identifiers (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  An identifier is the name of an [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] object. Every [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] object can and must have an identifier. This includes cubes, dimensions, hierarchies, levels, members, and so on. You use the identifier of an object to reference the object in Multidimensional Expressions (MDX) statements.  
+  An identifier is the name of an [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] object. Every [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] object can and must have an identifier. This includes cubes, dimensions, hierarchies, levels, members, and so on. You use the identifier of an object to reference the object in Multidimensional Expressions (MDX) statements.  
   
  Depending on how you name the object, the identifier of the object identifier will be either a regular or delimited identifier.  
   
@@ -82,17 +82,17 @@ manager: "erikre"
  An identifier that does not comply with the formatting rules for regular identifiers must always be delimited by using brackets ([]).  
   
 > [!NOTE]  
->  Delimiters are for identifiers only. Delimiters cannot be used for keywords, whether or not the keywords are marked as reserved in [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)].  
+>  Delimiters are for identifiers only. Delimiters cannot be used for keywords, whether or not the keywords are marked as reserved in [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)].  
   
  You use a delimited identifier in the following situations:  
   
 -   When the name of an object or part of the name uses reserved words.  
   
-     We recommend that reserved keywords not be used as object names. Databases upgraded from earlier versions of [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] may contain identifiers that include words not reserved in the earlier version, but are reserved words for [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)]. Until you can change the identifier for the object, you can reference the object using a delimited identifier.  
+     We recommend that reserved keywords not be used as object names. Databases upgraded from earlier versions of [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] may contain identifiers that include words not reserved in the earlier version, but are reserved words for [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)]. Until you can change the identifier for the object, you can reference the object using a delimited identifier.  
   
 -   When the name of an object uses characters not listed as qualified identifiers.  
   
-     [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] allows a delimited identifier to use any character in the current code page. However, indiscriminate use of special characters in an object name may make MDX statements and scripts difficult to read and maintain.  
+     [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] allows a delimited identifier to use any character in the current code page. However, indiscriminate use of special characters in an object name may make MDX statements and scripts difficult to read and maintain.  
   
 ### Formatting Rules for Delimited Identifiers  
  The body of a delimited identifier can contain any combination of characters in the current code page, including the delimiting characters themselves. If the body of the delimited identifier contains delimiting characters, special handling is required:  

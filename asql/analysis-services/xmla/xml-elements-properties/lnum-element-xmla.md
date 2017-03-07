@@ -63,6 +63,6 @@ manager: "erikre"
  For **Member** elements, the **LNum** element contains the zero-based ordinal position, from the root level of the hierarchy, of the member represented by the parent [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) element. A value of zero represents the root level of the hierarchy.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -25,7 +25,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Data Definition - CREATE SUBCUBE
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Redefines the cube space of a specified cube or subcube to a specified subcube. This statement changes the apparent cube space for subsequent operations.  
   
@@ -44,7 +44,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  A valid Multidimensional Expressions (MDX) SELECT expression that does not contain WITH, NON EMPTY, or HAVING clauses, and does not request dimension or cell properties.  
   
- See [SELECT Statement &#40;MDX&#41;](../Topic/SELECT%20Statement%20\(MDX\).md) for a detailed syntax explanation on Select statements and the **NON VISUAL** clause.  
+ See [SELECT Statement &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md) for a detailed syntax explanation on Select statements and the **NON VISUAL** clause.  
   
 ## Remarks  
  When default members are excluded in the definition of a subcube, coordinates will correspondingly change. For attributes that can be aggregated, the default member is moved to the [All] member. For attributes that cannot be aggregated, the default member is moved to a member that exists in the subcube. The following table contains example subcube and default member combinations.  
@@ -139,7 +139,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
 ## See Also  
  [Key Concepts in MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [MDX Scripting Statements &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [DROP SUBCUBE Statement &#40;MDX&#41;](../Topic/DROP%20SUBCUBE%20Statement%20\(MDX\).md)   
- [SELECT Statement &#40;MDX&#41;](../Topic/SELECT%20Statement%20\(MDX\).md)  
+ [DROP SUBCUBE Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
+ [SELECT Statement &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

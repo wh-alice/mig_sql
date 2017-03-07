@@ -25,9 +25,9 @@ manager: "jhubbard"
 1.  On the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box, select **Native SQL Server - all Subscribers must be servers running SQL Server** or **Character - required if a Publisher or Subscriber is not running SQL Server**.  
   
     > [!NOTE]  
-    >  It is recommended to select the native format unless this publication must support subscriptions to a [!INCLUDE[ssEW](../../../analysis-services/instances/includes/ssew-md.md)] database or a non-[!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database.  
+    >  It is recommended to select the native format unless this publication must support subscriptions to a [!INCLUDE[ssEW](../../../a9retired/includes/ssew-md.md)] database or a non-[!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] database.  
   
-2.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+2.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 ## See Also  
  [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)   

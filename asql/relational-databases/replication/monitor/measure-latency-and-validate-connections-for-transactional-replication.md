@@ -21,7 +21,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Measure Latency and Validate Connections for Transactional Replication
-  This topic describes how to measure latency and validate connections for transactional replication in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using Replication Monitor, [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)], or Replication Management Objects (RMO). Transactional replication provides the tracer token feature, which provides a convenient way to measure latency in transactional replication topologies and to validate the connections between the Publisher, Distributor and Subscribers. A token (a small amount of data) is written to the transaction log of the publication database, marked as though it were a typical replicated transaction, and sent through the system, allowing a calculation of:  
+  This topic describes how to measure latency and validate connections for transactional replication in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using Replication Monitor, [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)], or Replication Management Objects (RMO). Transactional replication provides the tracer token feature, which provides a convenient way to measure latency in transactional replication topologies and to validate the connections between the Publisher, Distributor and Subscribers. A token (a small amount of data) is written to the transaction log of the publication database, marked as though it were a typical replicated transaction, and sent through the system, allowing a calculation of:  
   
 -   How much time elapses between a transaction being committed at the Publisher and the corresponding command being inserted in the distribution database at the Distributor.  
   
@@ -52,15 +52,15 @@ manager: "jhubbard"
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
  Tracer tokens can also be useful when quiescing a system, which involves stopping all activity and verifying that all nodes have received all outstanding changes. For more information, see [Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
- To use tracer tokens, you must use certain versions of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]:  
+ To use tracer tokens, you must use certain versions of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]:  
   
--   The Distributor must be [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)] or later.  
+-   The Distributor must be [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)] or later.  
   
--   The Publisher must be [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)] or later or be an Oracle Publisher.  
+-   The Publisher must be [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)] or later or be an Oracle Publisher.  
   
--   For push subscriptions, tracer token statistics are gathered from the Publisher, Distributor, and Subscribers if the Subscriber is [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] 7.0 or later.  
+-   For push subscriptions, tracer token statistics are gathered from the Publisher, Distributor, and Subscribers if the Subscriber is [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] 7.0 or later.  
   
--   For pull subscriptions, tracer token statistics are gathered from Subscribers only if the Subscriber is [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)] or later. If the Subscriber is [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] 7.0 or [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../analysis-services/multidimensional-models/includes/ssversion2000-md.md)], statistics are gathered only from the Publisher and Distributor.  
+-   For pull subscriptions, tracer token statistics are gathered from Subscribers only if the Subscriber is [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)] or later. If the Subscriber is [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] 7.0 or [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../a9notintoc/includes/ssversion2000-md.md)], statistics are gathered only from the Publisher and Distributor.  
   
  There are also a number of other issues and restrictions to be aware of:  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
 -   Tracer tokens are not forwarded by republishing Subscribers.  
   
--   After failover to a secondary, Replication Monitor is unable to adjust the name of the publishing instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and will continue to display replication information under the name of the original primary instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. After failover, a tracer token cannot be entered by using the Replication Monitor, however a tracer token entered on the new publisher by using [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)], is visible in Replication Monitor.  
+-   After failover to a secondary, Replication Monitor is unable to adjust the name of the publishing instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] and will continue to display replication information under the name of the original primary instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. After failover, a tracer token cannot be entered by using the Replication Monitor, however a tracer token entered on the new publisher by using [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)], is visible in Replication Monitor.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Replication Monitor  
  For information about starting Replication Monitor, see [Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
@@ -104,30 +104,30 @@ manager: "jhubbard"
   
 #### To post a tracer token to a transactional publication  
   
-1.  (Optional) At the Publisher on the publication database, execute [sp_helppublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). Verify that the publication exists and that the status is active.  
+1.  (Optional) At the Publisher on the publication database, execute [sp_helppublication &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-helppublication-transact-sql.md). Verify that the publication exists and that the status is active.  
   
-2.  (Optional) At the Publisher on the publication database, execute [sp_helpsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Verify that the subscription exists and that the status is active.  
+2.  (Optional) At the Publisher on the publication database, execute [sp_helpsubscription &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-helpsubscription-transact-sql.md). Verify that the subscription exists and that the status is active.  
   
-3.  At the Publisher on the publication database, execute [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md), specifying **@publication**. Note the value of the **@tracer_token_id** output parameter.  
+3.  At the Publisher on the publication database, execute [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-posttracertoken-transact-sql.md), specifying **@publication**. Note the value of the **@tracer_token_id** output parameter.  
   
 #### To determine latency and validate connections for a transactional publication  
   
 1.  Post a tracer token to the publication using the previous procedure.  
   
-2.  At the Publisher on the publication database, execute [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), specifying **@publication**. This returns a list of all tracer tokens posted to the publication. Note the desired **tracer_id** in the result set.  
+2.  At the Publisher on the publication database, execute [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-helptracertokens-transact-sql.md), specifying **@publication**. This returns a list of all tracer tokens posted to the publication. Note the desired **tracer_id** in the result set.  
   
-3.  At the Publisher on the publication database, execute [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md), specifying **@publication** and the tracer token ID from step 2 for **@tracer_id**. This returns latency information for the selected tracer token.  
+3.  At the Publisher on the publication database, execute [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md), specifying **@publication** and the tracer token ID from step 2 for **@tracer_id**. This returns latency information for the selected tracer token.  
   
 #### To remove tracer tokens  
   
-1.  At the Publisher on the publication database, execute [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), specifying **@publication**. This returns a list of all tracer tokens posted to the publication. Note the **tracer_id** for the tracer token to delete in the result set.  
+1.  At the Publisher on the publication database, execute [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-helptracertokens-transact-sql.md), specifying **@publication**. This returns a list of all tracer tokens posted to the publication. Note the **tracer_id** for the tracer token to delete in the result set.  
   
-2.  At the Publisher on the publication database, execute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), specifying **@publication** and the ID of the tracer to delete from step 2 for **@tracer_id**.  
+2.  At the Publisher on the publication database, execute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), specifying **@publication** and the ID of the tracer to delete from step 2 for **@tracer_id**.  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example posts a tracer token record and uses the returned ID of the posted tracer token to view latency information.  
   
- [!code-sql[HowTo#sp_tracertokens](../../../relational-databases/replication/codesnippet/tsql/measure-latency-and-vali_1.sql)]  
+ [!code-sql[HowTo#sp_tracertokens](../../../a9retired/codesnippet/tsql/measure-latency-and-vali_1.sql)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
   

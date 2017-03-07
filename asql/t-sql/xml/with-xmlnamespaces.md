@@ -26,12 +26,12 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # WITH XMLNAMESPACES
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Declares one or more XML namespaces.  
   
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -63,7 +63,7 @@ DEFAULT <xml_namespace_uri>
  A Uniform Resource Identifier (URI) that identifies the XML namespace that is being declared. *xml_namespace_uri* is an SQL string.  
   
  *xml_namespace_prefix*  
- Specifies a prefix to be mapped and associated with the namespace URI value specified in *xml_namespace_uri*. *xml_namespace_prefix* must be a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] identifier.  
+ Specifies a prefix to be mapped and associated with the namespace URI value specified in *xml_namespace_uri*. *xml_namespace_prefix* must be a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] identifier.  
   
 ## Remarks  
  When you use the WITH XMLNAMESPACES clause in a statement that also includes a common table expression, the WITH XMLNAMESPACES clause must precede the common table expression in the statement.  

@@ -29,7 +29,7 @@ manager: "jhubbard"
 ## To commit a local changeset  
  The commit option is only available for local changesets on entities where the Entity Administrator has not enabled the need for approval.  
   
-1.  On the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] home page, select the model and version and then click **Explorer**.  
+1.  On the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] home page, select the model and version and then click **Explorer**.  
   
 2.  Click an entity on the **Entities** menu.  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
 ## To submit a changeset  
  The submit option is only available on changesets on entities where the Entity Administrator has enabled the need for approval.  
   
-1.  On the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] home page, select the model and version and then click **Explorer**.  
+1.  On the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] home page, select the model and version and then click **Explorer**.  
   
 2.  Click an entity on the **Entities** menu.  
   

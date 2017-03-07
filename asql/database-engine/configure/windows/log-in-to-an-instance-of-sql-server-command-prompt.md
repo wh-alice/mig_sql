@@ -21,7 +21,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Log In to an Instance of SQL Server (Command Prompt)
-  This topic describes how to test connectivity to an instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], use the **sqlcmd** utility.  
+  This topic describes how to test connectivity to an instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], use the **sqlcmd** utility.  
   
 ##  <a name="SSMSProcedure"></a>  
   

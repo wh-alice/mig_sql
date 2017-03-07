@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # ClrAssembly Data Type (ASSL)
-  Defines a derived data type that represents a [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] assembly associated with a [Database](../../../analysis-services/scripting/objects/database-element-assl.md) or [Server](../../../analysis-services/scripting/objects/server-element-assl.md) element  
+  Defines a derived data type that represents a [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] assembly associated with a [Database](../../../analysis-services/scripting/objects/database-element-assl.md) or [Server](../../../analysis-services/scripting/objects/server-element-assl.md) element  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "erikre"
 |Derived elements|See [Assembly](../../../analysis-services/scripting/objects/assembly-element-assl.md) ([Assemblies](../../../analysis-services/scripting/collections/assemblies-element-assl.md) collection of [Database](../../../analysis-services/scripting/objects/database-element-assl.md) or [Server](../../../analysis-services/scripting/objects/server-element-assl.md))|  
   
 ## Remarks  
- The **ClrAssembly** element contains the files needed to recreate a [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] assembly, associated either with an instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] or with a specific database on an instance of [!INCLUDE[ssAS](../../../analysis-services/multidimensional-models/includes/ssas-md.md)], as well as the permissions needed to execute the assembly.  
+ The **ClrAssembly** element contains the files needed to recreate a [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] assembly, associated either with an instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] or with a specific database on an instance of [!INCLUDE[ssAS](../../../analysis-services/multidimensional-models/includes/ssas-md.md)], as well as the permissions needed to execute the assembly.  
   
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.ClrAssembly>.  
   

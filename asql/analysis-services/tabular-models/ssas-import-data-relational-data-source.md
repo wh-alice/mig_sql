@@ -17,7 +17,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # SSAS Import Data - Relational Data Source
-  You can import data from a variety of relational databases by using the Table Import Wizard. The wizard is available in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], on the **Model** menu. To connect to a data source, you must have the appropriate provider installed on your computer. For more information about supported data sources and providers, see [Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
+  You can import data from a variety of relational databases by using the Table Import Wizard. The wizard is available in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], on the **Model** menu. To connect to a data source, you must have the appropriate provider installed on your computer. For more information about supported data sources and providers, see [Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
   
  The Table Import Wizard supports importing data from the following data sources:  
   
@@ -47,18 +47,18 @@ manager: "erikre"
   
 -   Microsoft SQL Server Analysis Services cube  
   
- The Table Import Wizard does not support importing data from a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Workbook as a data source.  
+ The Table Import Wizard does not support importing data from a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Workbook as a data source.  
   
 ### To import data from a database  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Import from Data Source**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Import from Data Source**.  
   
 2.  On the **Connect to a Data Source** page, select the type of database to connect to, and then click **Next**.  
   
 3.  Follow the steps in the Table Import Wizard. On subsequent pages, you will be able to select specific tables and views or apply filters by using the **Select Tables and Views** page or by creating a SQL query on **Specify a SQL Query** page.  
   
 ## See Also  
- [Import Data &#40;SSAS Tabular&#41;](../Topic/Import%20Data%20\(SSAS%20Tabular\).md)   
+ [Import Data &#40;SSAS Tabular&#41;](../../a9retired/import-data-ssas-tabular.md)   
  [Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

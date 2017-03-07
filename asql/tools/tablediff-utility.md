@@ -25,13 +25,13 @@ manager: "jhubbard"
 # tablediff Utility
   The **tablediff** utility is used to compare the data in two tables for non-convergence, and is particularly useful for troubleshooting non-convergence in a replication topology. This utility can be used from the command prompt or in a batch file to perform the following tasks:  
   
--   A row by row comparison between a source table in an instance of [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] acting as a replication Publisher and the destination table at one or more instances of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] acting as replication Subscribers.  
+-   A row by row comparison between a source table in an instance of [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] acting as a replication Publisher and the destination table at one or more instances of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] acting as replication Subscribers.  
   
 -   Perform a fast comparison by only comparing row counts and schema.  
   
 -   Perform column-level comparisons.  
   
--   Generate a [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] script to fix discrepancies at the destination server to bring the source and destination tables into convergence.  
+-   Generate a [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] script to fix discrepancies at the destination server to bring the source and destination tables into convergence.  
   
 -   Log results to an output file or into a table in the destination database.  
   
@@ -76,7 +76,7 @@ tablediff
  Returns the list of supported parameters.  
   
  **-sourceserver** *source_server_name*[**\\***instance_name*]  
- Is the name of the source server. Specify *source_server_name* for the default instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Specify *source_server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Is the name of the source server. Specify *source_server_name* for the default instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]. Specify *source_server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *source_database*  
  Is the name of the source database.  
@@ -88,19 +88,19 @@ tablediff
  The schema owner of the source table. By default, the table owner is assumed to be dbo.  
   
  **-sourcepassword** *source_password*  
- Is the password for the login used to connect to the source server using [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication.  
+ Is the password for the login used to connect to the source server using [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Authentication.  
   
 > [!IMPORTANT]  
 >  When possible, supply security credentials at runtime. If you must store credentials in a script file, you should secure the file to prevent unauthorized access.  
   
  **-sourceuser** *source_login*  
- Is the login used to connect to the source server using [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication. If *source_login* is not supplied, then Windows Authentication is used when connecting to the source server. [!INCLUDE[ssNoteWinAuthentication](../integration-services/includes/ssnotewinauthentication-md.md)]  
+ Is the login used to connect to the source server using [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Authentication. If *source_login* is not supplied, then Windows Authentication is used when connecting to the source server. [!INCLUDE[ssNoteWinAuthentication](../a9retired/includes/ssnotewinauthentication-md.md)]  
   
  **-sourcelocked**  
  The source table is locked during the comparison using the TABLOCK and HOLDLOCK table hints.  
   
  **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- Is the name of the destination server. Specify *destination_server_name* for the default instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Specify *destination_server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Is the name of the destination server. Specify *destination_server_name* for the default instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]. Specify *destination_server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *subscription_database*  
  Is the name of the destination database.  
@@ -112,13 +112,13 @@ tablediff
  The schema owner of the destination table. By default, the table owner is assumed to be dbo.  
   
  **-destinationpassword** *destination_password*  
- Is the password for the login used to connect to the destination server using [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication.  
+ Is the password for the login used to connect to the destination server using [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Authentication.  
   
 > [!IMPORTANT]  
 >  When possible, supply security credentials at runtime. If you must store credentials in a script file, you should secure the file to prevent unauthorized access.  
   
  **-destinationuser** *destination_login*  
- Is the login used to connect to the destination server using [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication. If *destination_login* is not supplied, then Windows Authentication is used when connecting to the server. [!INCLUDE[ssNoteWinAuthentication](../integration-services/includes/ssnotewinauthentication-md.md)]  
+ Is the login used to connect to the destination server using [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Authentication. If *destination_login* is not supplied, then Windows Authentication is used when connecting to the server. [!INCLUDE[ssNoteWinAuthentication](../a9retired/includes/ssnotewinauthentication-md.md)]  
   
  **-destinationlocked**  
  The destination table is locked during the comparison using the TABLOCK and HOLDLOCK table hints.  
@@ -127,7 +127,7 @@ tablediff
  Is the number of bytes to compare for large object data type columns, which includes: **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)** and **varbinary(max)**. *large_object_bytes* defaults to the size of the column. Any data above *large_object_bytes* will not be compared.  
   
  **-bf**  *number_of_statements*  
- Is the number of [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] statements to write to the current [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] script file when the **-f** option is used. When the number of [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] statements exceeds *number_of_statements*, a new [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] script file is created.  
+ Is the number of [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] statements to write to the current [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] script file when the **-f** option is used. When the number of [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] statements exceeds *number_of_statements*, a new [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] script file is created.  
   
  **-c**  
  Compare column-level differences.  
@@ -139,7 +139,7 @@ tablediff
  Specifies the name of the result table to create. If this table already exists, **-DT** must be used or the operation will fail.  
   
  **-f** [ *file_name* ]  
- Generates a [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] script to bring the table at the destination server into convergence with the table at the source server. You can optionally specify a name and path for the generated [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] script file. If *file_name* is not specified, the [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] script file is generated in the directory where the utility runs.  
+ Generates a [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] script to bring the table at the destination server into convergence with the table at the source server. You can optionally specify a name and path for the generated [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] script file. If *file_name* is not specified, the [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] script file is generated in the directory where the utility runs.  
   
  **-o** *output_file_name*  
  Is the full name and path of the output file.  
@@ -168,7 +168,7 @@ tablediff
 |**2**|Table differences|  
   
 ## Remarks  
- The **tablediff** utility cannot be used with non-[!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] servers.  
+ The **tablediff** utility cannot be used with non-[!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] servers.  
   
  Tables with **sql_variant** data type columns are not supported.  
   
@@ -191,7 +191,7 @@ tablediff
   
  The source table in the comparison must contain at least one primary key, identity, or ROWGUID column. When you use the **-strict** option, the destination table must also have a primary key, identity, or ROWGUID column.  
   
- The [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] script generated to bring the destination table into convergence does not include the following data types:  
+ The [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] script generated to bring the destination table into convergence does not include the following data types:  
   
 -   **varchar(max)**  
   

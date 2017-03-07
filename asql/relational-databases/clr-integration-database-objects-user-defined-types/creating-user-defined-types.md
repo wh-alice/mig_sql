@@ -20,9 +20,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Creating User-Defined Types
-  To create a user-defined type (UDT) capable of being installed in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you must first create a class in one of the supported .NET Framework programming languages, such as Visual C# or  Visual Basic, which conforms to the specifications for creating UDTs. The class can then be compiled as a dynamic-link library (DLL), which can be loaded in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. You can also create and deploy UDTs using Visual Studio.  
+  To create a user-defined type (UDT) capable of being installed in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], you must first create a class in one of the supported .NET Framework programming languages, such as Visual C# or  Visual Basic, which conforms to the specifications for creating UDTs. The class can then be compiled as a dynamic-link library (DLL), which can be loaded in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. You can also create and deploy UDTs using Visual Studio.  
   
- The ability to execute common language runtime (CLR) code is set to OFF by default in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The CLR can be enabled by using the **sp_configure** system stored procedure, as shown in the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements:  
+ The ability to execute common language runtime (CLR) code is set to OFF by default in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The CLR can be enabled by using the **sp_configure** system stored procedure, as shown in the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements:  
   
 ```  
 sp_configure 'clr enabled', 1  
@@ -30,14 +30,14 @@ Reconfigure
 ```  
   
 ## In This Section  
- [User-Defined Type Requirements](../Topic/User-Defined%20Type%20Requirements.md)  
+ [User-Defined Type Requirements](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)  
  Describes the requirements for coding user-defined types.  
   
- [Coding User-Defined Types](../Topic/Coding%20User-Defined%20Types.md)  
+ [Coding User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)  
  Demonstrates coding techniques involved in creating user-defined types.  
   
 ## Example  
- The following code listing defines the Point UDT, which is described in detail in [Coding User-Defined Types](../Topic/Coding%20User-Defined%20Types.md).  
+ The following code listing defines the Point UDT, which is described in detail in [Coding User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
  The complete code listings for the other examples discussed in this section can be obtained by installing the CLR samples. For instructions on installing these samples, see [SQL Server Database Engine Samples](http://msftengprodsamples.codeplex.com/).  
   

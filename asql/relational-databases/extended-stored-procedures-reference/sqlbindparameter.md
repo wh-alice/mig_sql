@@ -18,18 +18,18 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLBindParameter
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  **SQLBindParameter** can eliminate the burden of data conversion when used to provide data for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver, resulting in significant performance gains for both the client and server components of applications. Other benefits include reduced loss of precision when inserting or updating approximate numeric data types.  
+  **SQLBindParameter** can eliminate the burden of data conversion when used to provide data for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver, resulting in significant performance gains for both the client and server components of applications. Other benefits include reduced loss of precision when inserting or updating approximate numeric data types.  
   
 > [!NOTE]  
 >  When inserting **char** and **wchar** type data into an image column, the size of the data being passed in is used, as opposed to the size of the data after conversion to a binary format.  
   
- If the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver encounters an error on a single array element of an array of parameters, the driver continues to execute the statement for the remaining array elements. If the application has bound an array of parameter status elements for the statement, the rows of parameters generating errors can be determined from the array.  
+ If the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver encounters an error on a single array element of an array of parameters, the driver continues to execute the statement for the remaining array elements. If the application has bound an array of parameter status elements for the statement, the rows of parameters generating errors can be determined from the array.  
   
- When using the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver, specify SQL_PARAM_INPUT when binding input parameters. Only specify SQL_PARAM_OUTPUT or SQL_PARAM_INPUT_OUTPUT when binding stored procedure parameters defined with the OUTPUT keyword.  
+ When using the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver, specify SQL_PARAM_INPUT when binding input parameters. Only specify SQL_PARAM_OUTPUT or SQL_PARAM_INPUT_OUTPUT when binding stored procedure parameters defined with the OUTPUT keyword.  
   
- [SQLRowCount](../../relational-databases/extended-stored-procedures-reference/sqlrowcount.md) is unreliable with the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver if an array element of a bound-parameter array causes an error in statement execution. The ODBC statement attribute SQL_ATTR_PARAMS_PROCESSED_PTR reports the number of rows processed before the error occurs. The application can then traverse its parameter status array to discover the number of statements successfully executed, if necessary.  
+ [SQLRowCount](../../relational-databases/extended-stored-procedures-reference/sqlrowcount.md) is unreliable with the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver if an array element of a bound-parameter array causes an error in statement execution. The ODBC statement attribute SQL_ATTR_PARAMS_PROCESSED_PTR reports the number of rows processed before the error occurs. The application can then traverse its parameter status array to discover the number of statements successfully executed, if necessary.  
   
 ## Binding Parameters for SQL Character Types  
  If the SQL data type passed in is a character type, *ColumnSize* is the size in characters (not bytes). If the length of the data string in bytes is greater than 8000, *ColumnSize* should be set to **SQL_SS_LENGTH_UNLIMITED**, indicating that there is no limit to the size of the SQL type.  
@@ -46,7 +46,7 @@ manager: "jhubbard"
  For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## SQLBindParameter Support for Enhanced Date and Time Features  
- Parameter values of date/time types are converted as described in [Conversions from C to SQL](../Topic/Conversions%20from%20C%20to%20SQL.md). Note that parameters of type **time** and **datetimeoffset** must have *ValueType* specified as **SQL_C_DEFAULT** or **SQL_C_BINARY** if their corresponding structures (**SQL_SS_TIME2_STRUCT** and **SQL_SS_TIMESTAMPOFFSET_STRUCT**) are used.  
+ Parameter values of date/time types are converted as described in [Conversions from C to SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Note that parameters of type **time** and **datetimeoffset** must have *ValueType* specified as **SQL_C_DEFAULT** or **SQL_C_BINARY** if their corresponding structures (**SQL_SS_TIME2_STRUCT** and **SQL_SS_TIMESTAMPOFFSET_STRUCT**) are used.  
   
  For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   

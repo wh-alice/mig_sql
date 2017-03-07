@@ -100,7 +100,7 @@ manager: "erikre"
 |Accept wildcard characters?|false|  
   
 ### -Credential \<PSCredential>  
- This parameter is used to pass in a username and password when using an HTTP connection to an Analysis Service instance, for an instance that you have configured for HTTP access. For more information, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../Topic/Configure%20HTTP%20Access%20to%20Analysis%20Services%20on%20Internet%20Information%20Services%20\(IIS\)%208.0.md) and [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md) for HTTP connections.  
+ This parameter is used to pass in a username and password when using an HTTP connection to an Analysis Service instance, for an instance that you have configured for HTTP access. For more information, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8.0.md) and [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md) for HTTP connections.  
   
  If this parameter is specified, the username and password will be used to connect to the specified Analysis Server instance. If no credentials are specified default windows account of the user who is running the tool will be used.  
   

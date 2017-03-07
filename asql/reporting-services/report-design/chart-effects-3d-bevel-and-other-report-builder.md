@@ -18,16 +18,16 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Chart Effects - 3D, Bevel, and Other (Report Builder)
-  Three-dimensional (3D) effects can be used to provide depth and add visual impact to charts in your [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports. For example, if you want to emphasize a particular slice of an exploded pie chart, you can rotate and change the perspective of the chart so that people notice that slice first. When 3D effects are applied to your chart, all gradient colors and hatching styles are disabled.  
+  Three-dimensional (3D) effects can be used to provide depth and add visual impact to charts in your [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports. For example, if you want to emphasize a particular slice of an exploded pie chart, you can rotate and change the perspective of the chart so that people notice that slice first. When 3D effects are applied to your chart, all gradient colors and hatching styles are disabled.  
   
  Three-dimensional effects can be applied to individual charts, and it is possible to display both two-dimensional and three-dimensional charts on the same report.  
   
- For all chart types, you can add three-dimensional effects to a chart area in the **Chart Area Properties** dialog box by selecting **Enable 3D**. For more information, see [Add 3D Effects to a Chart &#40;Report Builder and SSRS&#41;](../Topic/Add%203D%20Effects%20to%20a%20Chart%20\(Report%20Builder%20and%20SSRS\).md).  
+ For all chart types, you can add three-dimensional effects to a chart area in the **Chart Area Properties** dialog box by selecting **Enable 3D**. For more information, see [Add 3D Effects to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md).  
   
- Another way to add visual impact to charts is by adding bevel, emboss and texture styles in bar, column, pie and doughnut charts. For more information, see [Add Bevel, Emboss, and Texture Styles to a Chart &#40;Report Builder and SSRS&#41;](../Topic/Add%20Bevel,%20Emboss,%20and%20Texture%20Styles%20to%20a%20Chart%20\(Report%20Builder%20and%20SSRS\).md).  
+ Another way to add visual impact to charts is by adding bevel, emboss and texture styles in bar, column, pie and doughnut charts. For more information, see [Add Bevel, Emboss, and Texture Styles to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Coordinate-Based Three-Dimensional Charts  
  When working with coordinate-based chart types (Column, Bar, Area, Point, Line and Range), three-dimensional effects display the chart with a third axis, known as the "z-axis". The introduction of this third axis allows you to apply a variety of visual enhancements to your chart.  
@@ -60,6 +60,6 @@ manager: "erikre"
 ## See Also  
  [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Add 3D Effects to a Chart &#40;Report Builder and SSRS&#41;](../Topic/Add%203D%20Effects%20to%20a%20Chart%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Add 3D Effects to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
   
   

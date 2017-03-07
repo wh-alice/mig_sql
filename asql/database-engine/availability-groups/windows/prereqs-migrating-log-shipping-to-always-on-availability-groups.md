@@ -18,7 +18,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Prereqs Migrating Log Shipping to Always On Availability Groups
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   This topic describes the prerequisites for converting a log shipping primary database along with one or more of its secondary databases to an Always On primary database and secondary database(s).  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 ##  <a name="LogShipPrereqs"></a> Log Shipping Prerequisites  
   
--   The log shipping primary database must reside on the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that hosts the initial/current primary replica of the availability group.  
+-   The log shipping primary database must reside on the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] that hosts the initial/current primary replica of the availability group.  
   
 -   For a given log shipping secondary database to be converted to an Always On secondary database, it must:  
   

@@ -18,10 +18,10 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Parsing Data
-  Data flows in packages extract and load data between heterogeneous data stores, which may use a variety of standard and custom data types. In a data flow, [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] sources do the work of extracting data, parsing string data, and converting data to an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data type. Subsequent transformations may parse data to convert it to a different data type, or create column copies with different data types. Expressions used in components may also cast arguments and operands to different data types. Finally, when the data is loaded into a data store, the destination may parse the data to convert it to a data type that the destination uses. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+  Data flows in packages extract and load data between heterogeneous data stores, which may use a variety of standard and custom data types. In a data flow, [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] sources do the work of extracting data, parsing string data, and converting data to an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] data type. Subsequent transformations may parse data to convert it to a different data type, or create column copies with different data types. Expressions used in components may also cast arguments and operands to different data types. Finally, when the data is loaded into a data store, the destination may parse the data to convert it to a data type that the destination uses. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## Two types of parsing  
- [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] provides two types of parsing for converting data: Fast parse and Standard parse.  
+ [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] provides two types of parsing for converting data: Fast parse and Standard parse.  
   
 -   Fast parse is a fast, simple set of parsing routines that does not support locale-specific data type conversions, and supports only the most frequently used date and time formats. 
   
@@ -45,7 +45,7 @@ Fast parse provides a fast, simple set of routines for parsing data. These routi
 Fast parse provides a fast, simple, locale-insensitive set of routines for parsing data. Fast parse supports only a limited set of formats for integer data types.  
   
 ### Integer data type
- The integer data types that [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] provides are DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8, and DT_UI8. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ The integer data types that [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] provides are DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8, and DT_UI8. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Fast parse supports the following formats for integer data types:  
   

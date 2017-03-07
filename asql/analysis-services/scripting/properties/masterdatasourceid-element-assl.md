@@ -56,7 +56,7 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- For databases on remote instances of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] that contain remote partitions, the **MasterDatasourceID** element contains the data source ID of the data source used to identify the master instance of [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] that manages the remote partitions.  
+ For databases on remote instances of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] that contain remote partitions, the **MasterDatasourceID** element contains the data source ID of the data source used to identify the master instance of [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] that manages the remote partitions.  
   
  The element that corresponds to the parent of **MasterDatasourceID** in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.Database>.  
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
  Select the servers that are allowed to use this Distributor. Click the properties button (**...**) next to a Publisher to view and set additional properties.  
   
  **Add**  
- If the server you want to allow is not listed, click **Add** to add a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Publisher or Oracle Publisher to the list of available Publishers.  
+ If the server you want to allow is not listed, click **Add** to add a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Publisher or Oracle Publisher to the list of available Publishers.  
   
 ## See Also  
  [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   

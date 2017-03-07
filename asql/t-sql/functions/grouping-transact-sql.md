@@ -31,7 +31,7 @@ manager: "jhubbard"
 
   Indicates whether a specified column expression in a GROUP BY list is aggregated or not. GROUPING returns 1 for aggregated or 0 for not aggregated in the result set. GROUPING can be used only in the SELECT \<select> list, HAVING, and ORDER BY clauses when GROUP BY is specified.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -42,7 +42,7 @@ GROUPING ( <column_expression> )
   
 ## Arguments  
  <column_expression>  
- Is a column or an expression that contains a column in a [GROUP BY](../Topic/GROUP%20BY%20\(Transact-SQL\).md) clause.  
+ Is a column or an expression that contains a column in a [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) clause.  
   
 ## Return Types  
  **tinyint**  
@@ -51,7 +51,7 @@ GROUPING ( <column_expression> )
  GROUPING is used to distinguish the null values that are returned by ROLLUP, CUBE or GROUPING SETS from standard null values. The NULL returned as the result of a ROLLUP, CUBE or GROUPING SETS operation is a special use of NULL. This acts as a column placeholder in the result set and means all.  
   
 ## Examples  
- The following example groups `SalesQuota` and aggregates `SaleYTD` amounts in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. The `GROUPING` function is applied to the `SalesQuota` column.  
+ The following example groups `SalesQuota` and aggregates `SaleYTD` amounts in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database. The `GROUPING` function is applied to the `SalesQuota` column.  
   
 ```  
 SELECT SalesQuota, SUM(SalesYTD) 'TotalSalesYTD', GROUPING(SalesQuota) AS 'Grouping'  
@@ -80,6 +80,6 @@ GO
   
 ## See Also  
  [GROUPING_ID &#40;Transact-SQL&#41;](../../t-sql/functions/grouping-id-transact-sql.md)   
- [GROUP BY &#40;Transact-SQL&#41;](../Topic/GROUP%20BY%20\(Transact-SQL\).md)  
+ [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
   
   

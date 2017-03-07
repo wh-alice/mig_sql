@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Maintenance Plan (Design Tab)
-  Use the **Maintenance Plan (Design Tab)** to specify the properties of a maintenance plan and its subplans. Drag tasks from the Toolbox to the plan designer. Right-click groups of tasks to create branching execution paths. Maintenance plans are saved as [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] packages that are run by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent jobs.  
+  Use the **Maintenance Plan (Design Tab)** to specify the properties of a maintenance plan and its subplans. Drag tasks from the Toolbox to the plan designer. Right-click groups of tasks to create branching execution paths. Maintenance plans are saved as [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] packages that are run by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent jobs.  
   
 ## Options  
  **Add Subplan**  
@@ -38,7 +38,7 @@ manager: "jhubbard"
  Remove a schedule from the selected subplan.  
   
  **Manage Connections**  
- Display the **Manage Connections** dialog box. Used to add additional [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance connections to the maintenance plan. Each maintenance task in the subplan editor can use any of these connections. When executing, the maintenance plan makes a connection from the maintenance plan server to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] servers specified, using the connection credentials.  
+ Display the **Manage Connections** dialog box. Used to add additional [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance connections to the maintenance plan. Each maintenance task in the subplan editor can use any of these connections. When executing, the maintenance plan makes a connection from the maintenance plan server to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] servers specified, using the connection credentials.  
   
  **Reporting and Logging**  
  Display the **Reporting and Logging** dialog box, used to manage reports concerning maintenance plan activity, and to configure logging to the local or a remote server.  
@@ -55,7 +55,7 @@ manager: "jhubbard"
  **Designer Surface**  
  Design and maintain maintenance plans. Use the designer surface to add maintenance tasks to a plan, remove tasks from a plan, specify precedence links between the tasks, and indicate task branching and parallelism.  
   
- A precedence link between two tasks establishes a relationship between the tasks. The second task (the *dependent task*) executes only if the execution result of the first task (the *precedent task*) matches specified criteria. Typically the execution result specified is **Success**, **Failure**, or **Completion**. The maintenance plan designer surface is based on the [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] designer surface. For more information, see [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+ A precedence link between two tasks establishes a relationship between the tasks. The second task (the *dependent task*) executes only if the execution result of the first task (the *precedent task*) matches specified criteria. Typically the execution result specified is **Success**, **Failure**, or **Completion**. The maintenance plan designer surface is based on the [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] designer surface. For more information, see [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
   
  As an example, a Defragment Index Task could be specified to execute only if a previous Check Database Integrity task completed successfully. The task precedence linkage feature also allows for error or failure conditions to be handled in a plan. For example, if the Check Database Integrity task failed, a Notify Operator task could notify a user or operator about the failure.  
   
@@ -65,7 +65,7 @@ manager: "jhubbard"
   
  After a maintenance task is placed on the design surface, its properties can be edited as needed. For example, the specific database to back up in a Back Up Database Task is specified after the task is added the plan. Tasks on the design surface that are not properly configured contain a red icon with a white x.  
   
- To add a maintenance task to a plan, drag the task's icon from the **Maintenance Plan Tasks** toolbox to the plan design surface, or double-click the task in the toolbox, which adds that task to the currently active designer surface. If the **Maintenance Plan Tasks** toolbox is not visible, choose **Toolbox** from the [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] **View** menu. Expand the **Maintenance Plan Tasks** node in the **Toolbox** pane.  
+ To add a maintenance task to a plan, drag the task's icon from the **Maintenance Plan Tasks** toolbox to the plan design surface, or double-click the task in the toolbox, which adds that task to the currently active designer surface. If the **Maintenance Plan Tasks** toolbox is not visible, choose **Toolbox** from the [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] **View** menu. Expand the **Maintenance Plan Tasks** node in the **Toolbox** pane.  
   
  To remove a task from a plan, select the task in the designer surface and press the **DELETE** key, or right-click the task and then click **Delete**.  
   

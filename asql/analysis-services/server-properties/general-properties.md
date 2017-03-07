@@ -43,13 +43,13 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # General Properties
-  [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] supports the server properties listed in the following tables. This topic documents those server properties in the msmdsrv.ini file that are not otherwise included in a specific section, such as Security, Network, or ThreadPool. For more information about additional server properties and how to set them, see [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+  [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] supports the server properties listed in the following tables. This topic documents those server properties in the msmdsrv.ini file that are not otherwise included in a specific section, such as Security, Network, or ThreadPool. For more information about additional server properties and how to set them, see [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Applies to:** Multidimensional and Tabular server mode, unless noted otherwise  
   
 ## Non-Specific Category  
  **AdminTimeout**  
- A signed 32-bit integer property that defines the administrator timeout in seconds. This is an advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support.  
+ A signed 32-bit integer property that defines the administrator timeout in seconds. This is an advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support.  
   
  The default value for this property is zero (0), which indicates there is no timeout.  
   
@@ -82,7 +82,7 @@ manager: "erikre"
  A signed 32-bit integer property that defines the maximum number of threads per partition segment during query resolution. The fewer the number of concurrent users, the higher this value can be, at the cost of memory. Conversely, it may need to be lowered if there are a large number of concurrent users.  
   
  **CoordinatorShutdownMode**  
- A Boolean property that defines coordinator shutdown mode. This is an advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support.  
+ A Boolean property that defines coordinator shutdown mode. This is an advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support.  
   
  **DataDir**  
  A string property that identifies the name of the directory where data is stored.  
@@ -95,21 +95,21 @@ manager: "erikre"
 |Value|Description|  
 |-----------|-----------------|  
 |0|This is the default value. It specifies multidimensional mode, used to service multidimensional databases that use MOLAP, HOLAP, and ROLAP storage, as well as data mining models.|  
-|1|Specifies Analysis Services instances that were installed as part of a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint deployment. Do not change the deployment mode property of Analysis Services instance that is part of a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint installation. [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data will no longer run on the server if you change the mode.|  
+|1|Specifies Analysis Services instances that were installed as part of a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint deployment. Do not change the deployment mode property of Analysis Services instance that is part of a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint installation. [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data will no longer run on the server if you change the mode.|  
 |2|Specifies Tabular mode used for hosting tabular model databases that use in-memory storage or DirectQuery storage.|  
   
  Each mode is exclusive of the other. A server that is configured for tabular mode cannot run Analysis Services databases that contain cubes and dimensions. If the underlying computer hardware can support it, you can install multiple instances of Analysis Services on the same computer and configure each instance to use a different deployment mode. Remember that Analysis Services is a resource intensive application. Deploying multiple instances on the same system is recommended only for high-end servers.  
   
  **EnableFast1033Locale**  
- An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support.  
+ An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support.  
   
  **ExternalCommandTimeout**  
- An integer property that defines the timeout, in seconds, for commands issued to external servers, including relational data sources and external [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] servers.  
+ An integer property that defines the timeout, in seconds, for commands issued to external servers, including relational data sources and external [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] servers.  
   
  The default value for this property is 3600 (seconds).  
   
  **ExternalConnectionTimeout**  
- An integer property that defines the timeout, in seconds, for creating connections to external servers, including relational data sources and external [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] servers. This property is ignored if a connection timeout is specified on the connection string.  
+ An integer property that defines the timeout, in seconds, for creating connections to external servers, including relational data sources and external [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] servers. This property is ignored if a connection timeout is specified on the connection string.  
   
  The default value for this property is 60 (seconds).  
   
@@ -164,10 +164,10 @@ manager: "erikre"
   
 ## RequestPrioritization Category  
  **Enabled**  
- An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support.  
+ An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support.  
   
  **StatisticsStoreSize**  
- An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support.  
+ An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support.  
   
 ## See Also  
  [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   

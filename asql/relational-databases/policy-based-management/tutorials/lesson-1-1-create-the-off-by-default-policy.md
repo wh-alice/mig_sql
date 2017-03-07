@@ -55,10 +55,10 @@ This task creates a condition named Mail Off that is based on the Surface Area C
   
 11. To confirm the address by opening the Web page, click **Test Link**.  
   
-12. [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+12. [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 ## Next Task in Lesson  
-[Configure a Server to Run the Off By Default Policy](../Topic/Configure%20a%20Server%20to%20Run%20the%20Off%20By%20Default%20Policy.md)  
+[Configure a Server to Run the Off By Default Policy](../../../relational-databases/policy-based-management/tutorials/lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)  
   
   
   

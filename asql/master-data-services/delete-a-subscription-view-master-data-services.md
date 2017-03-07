@@ -19,7 +19,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Delete a Subscription View (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], delete a subscription view when it is no longer needed. Deleting a subscription view in [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] removes the view from the [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] database. You can also edit a subscription view.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], delete a subscription view when it is no longer needed. Deleting a subscription view in [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] removes the view from the [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] database. You can also edit a subscription view.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 ### To delete a subscription view  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **Integration Management**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **Integration Management**.  
   
 2.  From the menu bar, click **Create Views**.  
   

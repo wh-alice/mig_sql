@@ -17,14 +17,14 @@ manager: "jhubbard"
 # Look Up InfoPackage
   Use the **Look Up InfoPackage** dialog box to look up an InfoPackage that is defined in the SAP Netweaver BW system. When the list of InfoPackages appears, select the InfoPackage that you want, and the destination will populate the associated options with the required values.  
   
- The SAP BW destination of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Connector 1.1 for SAP BW uses the **Look Up Process Chain** dialog box. To learn more about the SAP BW destination, see [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
+ The SAP BW destination of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Connector 1.1 for SAP BW uses the **Look Up Process Chain** dialog box. To learn more about the SAP BW destination, see [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  The documentation for the Microsoft Connector 1.1 for SAP BW assumes familiarity with the SAP Netweaver BW environment. For more information about SAP Netweaver BW, or for information about how to configure SAP Netweaver BW objects and processes, see your SAP documentation.  
   
  **To open the Look Up InfoPackage dialog box**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package that contains the SAP BW destination.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package that contains the SAP BW destination.  
   
 2.  On the **Data Flow** tab, double-click the SAP BW destination.  
   

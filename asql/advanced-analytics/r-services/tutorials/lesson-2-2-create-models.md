@@ -19,7 +19,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 2-2 - Create Models
-Now that you have enriched the training data, it's time to analyze the data using linear regression. Linear models are an important tool in the world of predictive analytics, and the **RevoScaleR** package in [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)] includes a high-performance, scalable algorithm.  
+Now that you have enriched the training data, it's time to analyze the data using linear regression. Linear models are an important tool in the world of predictive analytics, and the **RevoScaleR** package in [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)] includes a high-performance, scalable algorithm.  
   
 ## Create a Linear Regression Model  
 You'll create a simple linear model that estimates the credit card balance for the customers, using as independent variables the values in the *gender* and *creditLine* columns.  
@@ -114,10 +114,10 @@ state=AL             -1.043e+00  1.383e+00  -0.754   0.4511*
 *Number of iterations: 15*  
   
 ## Next Step  
-[Score New Data &#40;Data Science Deep Dive&#41;](../Topic/Score%20New%20Data%20(Data%20Science%20Deep%20Dive).md)  
+[Score New Data &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-2-3-score-new-data.md)  
   
 ## Previous Step  
-[Visualize SQL Server Data using R &#40;Data Science Deep Dive&#41;](../Topic/Visualize%20SQL%20Server%20Data%20using%20R%20(Data%20Science%20Deep%20Dive).md)  
+[Visualize SQL Server Data using R &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-2-1-visualize-sql-server-data-using-r.md)  
   
 ## See Also  
 [Data Science Deep Dive: Using the RevoScaleR Packages](../../../advanced-analytics/r-services/tutorials/data-science-deep-dive-using-the-revoscaler-packages.md)  

@@ -35,12 +35,12 @@ manager: "jhubbard"
 ```  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **nvarchar(max)**  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] return type: **nvarchar(max)**  
   
  CLR return type: **SqlString**  
   
 ## Remarks  
- This method returns the string "Null" when called on null instances. In [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)], the set of possible results on the server has been extended to **FullGlobe** instances. This method will return the same value as `AsTextZM()`.  
+ This method returns the string "Null" when called on null instances. In [!INCLUDE[ssSQL11](../../../a9notintoc/includes/sssql11-md.md)], the set of possible results on the server has been extended to **FullGlobe** instances. This method will return the same value as `AsTextZM()`.  
   
  This method is not precise.  
   

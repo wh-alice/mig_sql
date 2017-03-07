@@ -15,7 +15,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Survey of Initial Areas in In-Memory OLTP
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   
 This article is for the developer who is in a hurry to learn the basics of the In-Memory OLTP performance features of Microsoft SQL Server and Azure SQL Database.  
@@ -186,7 +186,7 @@ Next is the T-SQL code to update the level, if necessary.
   
 When a transaction involves both a disk-based table and a memory-optimized table, we call that a *cross-container transaction*. In such a transaction it is essential that the memory-optimized portion of the transaction operate at the transaction isolation level named SNAPSHOT.  
   
-To reliably enforce this level for memory-optimized tables in a cross-container transaction, [alter your database setting](ALTER%20DATABASE%20SET%20Options%20%28Transact-SQL%29.xml) by executing the following T-SQL.  
+To reliably enforce this level for memory-optimized tables in a cross-container transaction, [alter your database setting](../../t-sql/statements/alter-database-transact-sql-set-options.md) by executing the following T-SQL.  
   
   
   
@@ -427,7 +427,7 @@ The rest of this section lists some of the major planning and trade-off consider
   
 You must plan to ensure there will be sufficient active memory for your planned memory-optimized table and its indexes. See:  
   
-- [Managing Memory for In-Memory OLTP](Managing%20Memory%20for%20In-Memory%20OLTP.xml)  
+- [Managing Memory for In-Memory OLTP](../../a9retired/managing-memory-for-in-memory-oltp.md)  
 - [Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   
@@ -483,7 +483,7 @@ Here are links to other articles that discuss special considerations for memory-
   - [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - The Transaction Performance Analysis report in SQL Server Management Studio helps you evaluate if In-Memory OLTP will improve your database application’s performance.  
   - Use the [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) to help you migrate the disk-based database table to In-Memory OLTP.   
-- [Backup, Restore, and Recovery of Memory-Optimized Tables](Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.xml)  
+- [Backup, Restore, and Recovery of Memory-Optimized Tables](../../a9retired/backup-restore-and-recovery-of-memory-optimized-tables.md)  
   - The storage used by memory-optimized tables can be much larger than its size in memory, and it affects the size of the database backup.  
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - Includes information about retry logic in T-SQL, for transactions on memory-optimized tables.  

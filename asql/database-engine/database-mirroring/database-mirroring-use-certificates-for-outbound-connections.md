@@ -42,9 +42,9 @@ manager: "jhubbard"
   
 #### To configure server instances for outbound mirroring connections (On HOST_A)  
   
-1.  On the **master** database, create the database Master Key, if none exists. To view the existing keys for a database, use the [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys.symmetric-keys-transact-sql.md) catalog view.  
+1.  On the **master** database, create the database Master Key, if none exists. To view the existing keys for a database, use the [sys.symmetric_keys](../../relational-databases/reference/system-catalog-views/sys.symmetric-keys-transact-sql.md) catalog view.  
   
-     To create the database Master Key, use the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] command:  
+     To create the database Master Key, use the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] command:  
   
     ```  
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<1_Strong_Password!>';  
@@ -72,14 +72,14 @@ manager: "jhubbard"
   
      For more information, see [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md).  
   
-     To view the certificates in the **master** database, you can use the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements:  
+     To view the certificates in the **master** database, you can use the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements:  
   
     ```  
     USE master;  
     SELECT * FROM sys.certificates;  
     ```  
   
-     For more information, see [sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.certificates-transact-sql.md).  
+     For more information, see [sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.certificates-transact-sql.md).  
   
 3.  Ensure that the database mirroring endpoint exist on each of the server instances.  
   
@@ -161,7 +161,7 @@ GO
  Copy the certificate to the other system using any secure method you choose. Be extremely careful to keep all of your certificates secure.  
   
 > [!IMPORTANT]  
->  After you set up outbound connections, you must configure inbound connections on each server instance for the other server instance or instances. For more information, see [Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections &#40;Transact-SQL&#41;](../Topic/Allow%20a%20Database%20Mirroring%20Endpoint%20to%20Use%20Certificates%20for%20Inbound%20Connections%20\(Transact-SQL\).md).  
+>  After you set up outbound connections, you must configure inbound connections on each server instance for the other server instance or instances. For more information, see [Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md).  
   
  For information on creating a mirror database, including a Transact-SQL example, see [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   

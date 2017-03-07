@@ -65,7 +65,7 @@ manager: "erikre"
   
 2.  Click the **Subscriptions** tab. Alternatively click the **My Subscriptions** link on at the tope of report manager  
   
-3.  Select the subscription you want to modify. The following icon indicates a data-driven subscription: ![Data-driven subscription icon](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "Data-driven subscription icon")  
+3.  Select the subscription you want to modify. The following icon indicates a data-driven subscription: ![Data-driven subscription icon](../../a9retired/media/hlp-16subscriptiondd.gif "Data-driven subscription icon")  
   
 #### To modify an existing data-driven subscription (SharePoint Mode)  
   
@@ -101,9 +101,9 @@ manager: "erikre"
 ## See Also  
  [Create and Manage Subscriptions for Native Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md)   
  [old_Create and Manage Subscriptions for Native Mode Report Servers](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Subscriptions Page &#40;Report Manager&#41;](../Topic/Subscriptions%20Page%20\(Report%20Manager\).md)   
- [My Subscriptions Page &#40;Report Manager&#41;](../Topic/My%20Subscriptions%20Page%20\(Report%20Manager\).md)  
+ [Subscriptions Page &#40;Report Manager&#41;](../../a9retired/subscriptions-page-report-manager.md)   
+ [My Subscriptions Page &#40;Report Manager&#41;](../../a9retired/my-subscriptions-page-report-manager.md)  
   
   

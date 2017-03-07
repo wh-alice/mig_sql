@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLColumns
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   **SQLColumns** returns SQL_SUCCESS whether or not values exist for the *CatalogName*, *TableName*, or *ColumnName* parameters. **SQLFetch** returns SQL_NO_DATA when invalid values are used in these parameters.  
   
@@ -27,7 +27,7 @@ manager: "jhubbard"
   
  **SQLColumns** can be executed on a static server cursor. An attempt to execute **SQLColumns** on an updatable (dynamic or keyset) cursor will return SQL_SUCCESS_WITH_INFO indicating that the cursor type has been changed.  
   
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver supports reporting information for tables on linked servers by accepting a two-part name for the *CatalogName* parameter: *Linked_Server_Name.Catalog_Name*.  
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver supports reporting information for tables on linked servers by accepting a two-part name for the *CatalogName* parameter: *Linked_Server_Name.Catalog_Name*.  
   
  For ODBC 2.*x* applications not using wildcards in *TableName*, **SQLColumns** returns information about any tables whose names match *TableName* and are owned by the current user. If the current user owns no table whose name matches the *TableName* parameter, **SQLColumns** returns information about any tables owned by other users where the table name matches the *TableName* parameter. For ODBC 2.*x* applications using wildcards, **SQLColumns** returns all tables whose names match *TableName*. For ODBC 3.*x* applications **SQLColumns** returns all tables whose names match *TableName* regardless of owner or whether wildcards are used.  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
  For the UDT of parameters, you can use the new driver-specific descriptors defined above to get or set the extra metadata properties of a UDT, should the server return or require this information.  
   
- When a client connects to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and calls SQLColumns, using NULL or wild card values for the catalog input parameter will not return information from other catalogs. Instead, only information about the current catalog will be returned. The client can first call SQLTables to determine in which catalog the desired table is located. The client can then use that catalog value for the catalog input parameter in its call to SQLColumns to retrieve information about the columns in that table.  
+ When a client connects to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and calls SQLColumns, using NULL or wild card values for the catalog input parameter will not return information from other catalogs. Instead, only information about the current catalog will be returned. The client can first call SQLTables to determine in which catalog the desired table is located. The client can then use that catalog value for the catalog input parameter in its call to SQLColumns to retrieve information about the columns in that table.  
   
 ## SQLColumns and Table-Valued Parameters  
  The result set returned by SQLColumns depends on the setting of SQL_SOPT_SS_NAME_SCOPE. For more information, see [SQLSetStmtAttr](../../relational-databases/extended-stored-procedures-reference/sqlsetstmtattr.md). The following columns have been added for table-valued parameters:  
@@ -65,7 +65,7 @@ manager: "jhubbard"
  For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## SQLColumns Support for Enhanced Date and Time Features  
- For information about the values returned for date/time types, see [Catalog Metadata](../Topic/Catalog%20Metadata.md).  
+ For information about the values returned for date/time types, see [Catalog Metadata](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md).  
   
  For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
@@ -73,14 +73,14 @@ manager: "jhubbard"
  **SQLColumns** supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## SQLColumns Support for Sparse Columns  
- Two [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] specific columns have been added to the result set for SQLColumns:  
+ Two [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] specific columns have been added to the result set for SQLColumns:  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|If the column is a sparse column, this is SQL_TRUE; otherwise, SQL_FALSE.|  
 |SS_IS_COLUMN_SET|**Smallint**|If the column is the **column_set** column, this is SQL_TRUE; otherwise, SQL_FALSE.|  
   
- In conformance with the ODBC specification, SS_IS_SPARSE and SS_IS_COLUMN_SET appear before all driver-specific columns that were added to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] versions earlier than [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)], and after all columns mandated by ODBC itself.  
+ In conformance with the ODBC specification, SS_IS_SPARSE and SS_IS_COLUMN_SET appear before all driver-specific columns that were added to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] versions earlier than [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)], and after all columns mandated by ODBC itself.  
   
  The result set returned by SQLColumns depends on the setting of SQL_SOPT_SS_NAME_SCOPE. For more information, see [SQLSetStmtAttr](../../relational-databases/extended-stored-procedures-reference/sqlsetstmtattr.md).  
   

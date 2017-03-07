@@ -17,9 +17,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # BACKUP and RESTORE Statements (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] enables you to back up and restore your databases. Additionally, you can export and import security certificates and keys. The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backup and restore component provides an important safeguard for protecting critical data.  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] enables you to back up and restore your databases. Additionally, you can export and import security certificates and keys. The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] backup and restore component provides an important safeguard for protecting critical data.  
   
 ## In This Section  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  

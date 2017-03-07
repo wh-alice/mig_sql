@@ -15,8 +15,8 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SQL Server Agent &lt;server&gt; (SQL Server Configuration Manager)
-  This is the service that supports [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.  
+  This is the service that supports [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent is a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows service that executes scheduled administrative tasks called *jobs*. For more information about [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent, see "About SQL Server Agent" in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Books Online.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent is a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows service that executes scheduled administrative tasks called *jobs*. For more information about [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent, see "About SQL Server Agent" in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Books Online.  
   
   

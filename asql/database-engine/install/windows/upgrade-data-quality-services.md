@@ -15,12 +15,12 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Upgrade Data Quality Services
-  This topic provides information on how to upgrade your existing installation of Data Quality Services (DQS) to [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] CTP2. As part of upgrading your Data Quality Server in DQS to [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)], you must also upgrade the DQS databases schema.  
+  This topic provides information on how to upgrade your existing installation of Data Quality Services (DQS) to [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] CTP2. As part of upgrading your Data Quality Server in DQS to [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)], you must also upgrade the DQS databases schema.  
   
 > [!IMPORTANT]  
 >  -   You must back up your DQS databases before upgrading DQS to prevent any accidental data loss during the schema upgrade. For information about backing up DQS databases, see [Backing Up and Restoring DQS Databases](../../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
-> -   You can connect to the [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] version of Data Quality Server by using the current or an earlier version of Data Quality Client or the [DQS Cleansing Transformation](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) in Integration Services to perform your data quality tasks.  
-> -   After upgrading Data Quality Services and Master Data Services to [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)], any earlier version of the Master Data Services Add-In for Excel will no longer work. You can download the [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] version of Master Data Services Add-In for Excel from [here](http://go.microsoft.com/fwlink/?LinkID=506665).  
+> -   You can connect to the [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] version of Data Quality Server by using the current or an earlier version of Data Quality Client or the [DQS Cleansing Transformation](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) in Integration Services to perform your data quality tasks.  
+> -   After upgrading Data Quality Services and Master Data Services to [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)], any earlier version of the Master Data Services Add-In for Excel will no longer work. You can download the [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] version of Master Data Services Add-In for Excel from [here](http://go.microsoft.com/fwlink/?LinkID=506665).  
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   
@@ -33,9 +33,9 @@ manager: "jhubbard"
   
 1.  Back up your DQS databases before you start the upgrade process. For information about backing up DQS databases, see [Backing Up and Restoring DQS Databases](../../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
   
-2.  Upgrade the SQL Server instance where DQS is installed to [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+2.  Upgrade the SQL Server instance where DQS is installed to [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)].  
   
-    1.  Run the [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] Setup wizard.  
+    1.  Run the [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] Setup wizard.  
   
     2.  In the left pane, click **Installation**.  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
     4.  Complete the Setup wizard.  
   
         > [!NOTE]  
-        >  This will upgrade your SQL Server instance to [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] and also install the latest Data Quality Client, if Data Quality Client was previously installed on this computer. If you have Data Quality Client installed on other computers, you must run the sub steps in Step 2 on those computers to install the current version of Data Quality Client. The Setup wizard installs the current version of Data Quality Client alongside the existing version of Data Quality Client. After you upgrade the DQS databases schema, you can connect to the [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] version of Data Quality Server by using the current or an earlier version of Data Quality Client.  
+        >  This will upgrade your SQL Server instance to [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] and also install the latest Data Quality Client, if Data Quality Client was previously installed on this computer. If you have Data Quality Client installed on other computers, you must run the sub steps in Step 2 on those computers to install the current version of Data Quality Client. The Setup wizard installs the current version of Data Quality Client alongside the existing version of Data Quality Client. After you upgrade the DQS databases schema, you can connect to the [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] version of Data Quality Server by using the current or an earlier version of Data Quality Client.  
   
 3.  Upgrade the DQS databases schema.  
   
@@ -88,6 +88,6 @@ manager: "jhubbard"
 ## See Also  
  [Install Data Quality Services](../../../data-quality-services/install/windows/install-data-quality-services.md)   
  [Remove Data Quality Server Objects](../../../sql-server/install/remove-data-quality-server-objects.md)   
- [Upgrade to SQL Server 2016](../Topic/Upgrade%20to%20SQL%20Server%202016.md)  
+ [Upgrade to SQL Server 2016](../../../database-engine/install/windows/upgrade-sql-server.md)  
   
   

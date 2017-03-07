@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Integration Services Transactions
-  Packages use transactions to bind the database actions that tasks perform into atomic units, and by doing this maintain data integrity. All [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] container types—packages, the For Loop, Foreach Loop, and Sequence containers, and the task hosts that encapsulate each task—can be configured to use transactions. [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] provides three options for configuring transactions: **NotSupported**, **Supported**, and **Required**.  
+  Packages use transactions to bind the database actions that tasks perform into atomic units, and by doing this maintain data integrity. All [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] container types—packages, the For Loop, Foreach Loop, and Sequence containers, and the task hosts that encapsulate each task—can be configured to use transactions. [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] provides three options for configuring transactions: **NotSupported**, **Supported**, and **Required**.  
   
 -   **Required** indicates that the container starts a transaction, unless one is already started by its parent container. If a transaction already exists, the container joins the transaction. For example, if a package that is not configured to support transactions includes a Sequence container that uses the **Required** option, the Sequence container would start its own transaction. If the package were configured to use the **Required** option, the Sequence container would join the package transaction.  
   
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 -   **NotSupported** indicates that the container does not start a transaction or join an existing transaction. A transaction started by a parent container does not affect child containers that have been configured to not support transactions. For example, if a package is configured to start a transaction and a For Loop container in the package uses the **NotSupported** option, none of the tasks in the For Loop can roll back if they fail.  
   
- You configure transactions by setting the TransactionOption property on the container. You can set this property by using the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], or you can set the property programmatically.  
+ You configure transactions by setting the TransactionOption property on the container. You can set this property by using the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], or you can set the property programmatically.  
   
 > [!NOTE]  
 >  The **TransactionOption** property influences whether or not the value of the **IsolationLevel** property requested by a container is applied. For more information, see the description of the **IsolationLevel** property in the topic, [Setting Package Properties](../integration-services/set-package-properties.md).  
@@ -47,7 +47,7 @@ When you configure a package to use transactions, you have two options:
   
  Next, you enlist specific tasks and containers in this single transaction. To enlist a task or container in a transaction, you set the TransactionOption property of that task or container to **Supported**.  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want to configure to use a transaction.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want to configure to use a transaction.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -71,7 +71,7 @@ When you configure a package to use transactions, you have two options:
   
  Next, you configure the desired tasks and containers inside the package to initiate or participate in transactions. To configure a task or container to initiate a transaction, you set the TransactionOption property of that task or container to **Required**.   
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want to configure to use transaction.s  
+1.  In [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want to configure to use transaction.s  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -98,7 +98,7 @@ When you configure a package to use transactions, you have two options:
 10. Repeat steps 6 through 9 for each task and container that starts a transaction.  
 
 ## Multiple transactions in a package
-It is possible for a package to include unrelated transactions in an [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package. Any time a container in the middle of a nested container hierarchy does not support transactions, the containers above or below it in the hierarchy start separate transactions if they are configured to support transactions. The transactions commit or roll back in order from the innermost task in the nested container hierarchy to the package. However, after the inner transaction commits, it does not roll back if an outer transaction is aborted.  
+It is possible for a package to include unrelated transactions in an [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] package. Any time a container in the middle of a nested container hierarchy does not support transactions, the containers above or below it in the hierarchy start separate transactions if they are configured to support transactions. The transactions commit or roll back in order from the innermost task in the nested container hierarchy to the package. However, after the inner transaction commits, it does not roll back if an outer transaction is aborted.  
   
 ### Example of multiple transactions in a package 
  For example, a package has a Sequence container that holds two Foreach Loop containers, and each container include two Execute SQL tasks. The Sequence container supports transactions, the Foreach Loop containers do not, and the Execute SQL tasks do. In this example, each Execute SQL task would start its own transaction and would not roll back if the transaction on the Sequence task was aborted.  
@@ -113,7 +113,7 @@ It is possible for a package to include unrelated transactions in an [!INCLUDE[s
   
  The following diagram shows the five unrelated transactions in the package. One transaction is started by the Sequence container and four transactions are started by the Execute SQL tasks.  
   
- ![Implementation of multiple transactions](../integration-services/media/mw-dts-trans2.gif "Implementation of multiple transactions")  
+ ![Implementation of multiple transactions](../a9retired/media/mw-dts-trans2.gif "Implementation of multiple transactions")  
  
 ## Inherited transactions
  A package can run another package by using the Execute Package task. The child package, which is the package run by the Execute Package task, may create its own package transaction, or it may inherit the parent package transaction.  
@@ -137,7 +137,7 @@ It is possible for a package to include unrelated transactions in an [!INCLUDE[s
   
 -   **TransactionOption** is set to **NotSupported** on package E, and on the tasks Execute Package C and Execute Package E.  
   
- ![Flow of inherited transactions](../integration-services/media/mw-dts-executepack.gif "Flow of inherited transactions")  
+ ![Flow of inherited transactions](../a9retired/media/mw-dts-executepack.gif "Flow of inherited transactions")  
   
  Only packages B, D, and F can inherit transactions from their parent packages.  
   
@@ -155,7 +155,7 @@ It is possible for a package to include unrelated transactions in an [!INCLUDE[s
 -   Blog entry, [How to Use Transactions in SQL Server Integration Services SSIS](http://go.microsoft.com/fwlink/?LinkId=157783), on www.mssqltips.com  
   
 ## See Also  
- [Inherited Transactions](../Topic/Inherited%20Transactions.md)   
- [Multiple Transactions](../Topic/Multiple%20Transactions.md)  
+ [Inherited Transactions](../a9retired/inherited-transactions.md)   
+ [Multiple Transactions](../a9retired/multiple-transactions.md)  
   
   

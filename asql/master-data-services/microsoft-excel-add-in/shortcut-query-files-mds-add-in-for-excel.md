@@ -15,7 +15,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Shortcut Query Files (MDS Add-in for Excel)
-  In the [!INCLUDE[ssMDSshort](../../analysis-services/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../analysis-services/includes/ssmdsxls-md.md)], use shortcut query files to quickly connect and load frequently-used data. You can also use them when you want to share MDS data with others. Instead of saving the worksheet and emailing it, you should save a shortcut query file and email that instead. This ensures that you are both connecting to the MDS repository to get the latest data.  
+  In the [!INCLUDE[ssMDSshort](../../a9notintoc/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../a9notintoc/includes/ssmdsxls-md.md)], use shortcut query files to quickly connect and load frequently-used data. You can also use them when you want to share MDS data with others. Instead of saving the worksheet and emailing it, you should save a shortcut query file and email that instead. This ensures that you are both connecting to the MDS repository to get the latest data.  
   
  Shortcut query files are XML files that contain information about:  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
  There are two ways to open shortcut query files: you can import them, or you can double-click them to open them automatically by the QueryOpener application.  
   
 ## QueryOpener Application  
- All users who install the [!INCLUDE[ssMDSXLS](../../analysis-services/includes/ssmdsxls-md.md)] have an application called QueryOpener installed. This application is used to open shortcut query files in the [!INCLUDE[ssMDSXLS](../../analysis-services/includes/ssmdsxls-md.md)]. If you double-click a shortcut query file, this application is automatically used to open the file in the Add-in.  
+ All users who install the [!INCLUDE[ssMDSXLS](../../a9notintoc/includes/ssmdsxls-md.md)] have an application called QueryOpener installed. This application is used to open shortcut query files in the [!INCLUDE[ssMDSXLS](../../a9notintoc/includes/ssmdsxls-md.md)]. If you double-click a shortcut query file, this application is automatically used to open the file in the Add-in.  
   
  When you open a shortcut query file with this application, you are prompted to make the connection a “safe” connection, which means you trust content from this location. (You can make a connection safe by selecting **Always allow connection to this address** in the prompt window.) Each time you mark a connection as safe, it is added to a list. If you want to clear this list, open the **Settings** dialog box and in the **Servers Added to Safe List** section, click **Clear All**.  
   

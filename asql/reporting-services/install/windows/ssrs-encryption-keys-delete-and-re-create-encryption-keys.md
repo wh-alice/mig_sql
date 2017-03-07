@@ -33,7 +33,7 @@ manager: "erikre"
   
  You can only re-create the symmetric key when the report server is in a working state. Re-creating the encryption keys and re-encrypting content disrupts server operations. You must take the server offline while re-encryption is underway. There should be no requests made to the report server during re-encryption.  
   
- You can use the Reporting Services Configuration tool or the **rskeymgmt** utility to reset the symmetric key and encrypted data. For more information about how the symmetric key is created, see [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../Topic/Initialize%20a%20Report%20Server%20\(SSRS%20Configuration%20Manager\).md).  
+ You can use the Reporting Services Configuration tool or the **rskeymgmt** utility to reset the symmetric key and encrypted data. For more information about how the symmetric key is created, see [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ### How to re-create encryption keys (Reporting Services Configuration Tool)  
   
@@ -49,7 +49,7 @@ manager: "erikre"
   
 2.  Start the Reporting Services Configuration tool, and then connect to the report server instance you want to configure.  
   
-3.  On the Encryption Keys page, click **Change**. [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  On the Encryption Keys page, click **Change**. [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 4.  Restart the Report Server Windows service. If you are recreating encryption keys for a scale-out deployment, restart the service on all instances.  
   
@@ -88,7 +88,7 @@ manager: "erikre"
   
 1.  Start the Reporting Services Configuration tool, and then connect to the report server instance you want to configure.  
   
-2.  Click **Encryption Keys**, and then click **Delete**. [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+2.  Click **Encryption Keys**, and then click **Delete**. [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 3.  Restart the Report Server Windows service. For a scale-out deployment, do this on all report server instances.  
   
@@ -106,14 +106,14 @@ manager: "erikre"
   
 1.  For each shared data source, you must retype the connection string.  
   
-2.  For each report and shared data source that uses stored credentials, you must retype the user name and password, and then save. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Books Online.  
+2.  For each report and shared data source that uses stored credentials, you must retype the user name and password, and then save. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Books Online.  
   
 3.  For each data-driven subscription, open each subscription and retype the credentials to the subscription database.  
   
 4.  For subscriptions that use encrypted data (this includes the File Share delivery extension and any third-party delivery extension that uses encryption), open each subscription and retype credentials. Subscriptions that use Report Server e-mail delivery do not use encrypted data and are unaffected by the key change.  
   
 ## See Also  
- [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../Topic/Configure%20and%20Manage%20Encryption%20Keys%20\(SSRS%20Configuration%20Manager\).md)   
- [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../Topic/Store%20Encrypted%20Report%20Server%20Data%20\(SSRS%20Configuration%20Manager\).md)  
+ [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

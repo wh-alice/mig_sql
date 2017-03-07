@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Translations in Tabular models (Analysis Services)
-  [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] adds translation string support for Tabular models created at the 1200 compatibility level. A single object in the model can have multiple translations of a name or description, making it possible to support multi-language versions within the model definition.  
+  [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] adds translation string support for Tabular models created at the 1200 compatibility level. A single object in the model can have multiple translations of a name or description, making it possible to support multi-language versions within the model definition.  
   
  Translated strings are for object metadata only (names and descriptions of tables and columns) that appear in a client tool like an Excel PivotTable list.  To use translated strings, the client connection specifies the culture. In the **Analysis in Excel** feature, you can choose the language from a drop-down list. For other tools, you might need to specify the culture in the connection string.  
   
@@ -35,7 +35,7 @@ manager: "erikre"
 -   Connect to the model using a client application that allows an LCID on the connection string  
   
 ## Create an empty translation file  
- Use [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)] to add translations.  
+ Use [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)] to add translations.  
   
 1.  Click **Model** > **Translations** > **Manage Translations**.  
   

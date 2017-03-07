@@ -28,11 +28,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CREATE SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Creates a schema in the current database. The CREATE SCHEMA transaction can also create tables and views within the new schema, and set GRANT, DENY, or REVOKE permissions on those objects.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -114,16 +114,16 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
 -   A Windows user does not have an individual database user account (a database principal in the database), but accesses a database as a member of a Windows group which has a database user account (a database principal for the Windows group).  
   
- When a user without a database user account creates an object without specifying an existing schema, a database principal and default schema will be automatically created in the database for that user. The created database principal and schema will have the same name as the name that user used when connecting to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] authentication login name or the Windows user name).  
+ When a user without a database user account creates an object without specifying an existing schema, a database principal and default schema will be automatically created in the database for that user. The created database principal and schema will have the same name as the name that user used when connecting to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] (the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] authentication login name or the Windows user name).  
   
  This behavior is necessary to allow users that are based on Windows groups to create and own objects. However it can result in the unintentional creation of schemas and users. To avoid implicitly creating users and schemas, whenever possible explicitly create database principals and assign a default schema. Or explicitly state an existing schema when creating objects in a database, using two or three-part object names.  
 
 >  [!NOTE]
->  The implicit creation of an Azure Active Directory user is not possible on [!INCLUDE[ssSDS_md](../../analysis-services/multidimensional-models/includes/sssds-md.md)]. Since creating an Azure AD user from external provider must check the users status in the AAD, creating the user will fail with error 2760: **The specified schema name "\<user_name@domain>" either does not exist or you do not have permission to use it.** And then error 2759: **CREATE SCHEMA failed due to previous errors.** To work around these errors, create the Azure AD user from external provider first and then rerun the statement creating the object.
+>  The implicit creation of an Azure Active Directory user is not possible on [!INCLUDE[ssSDS_md](../../a9retired/includes/sssds-md.md)]. Since creating an Azure AD user from external provider must check the users status in the AAD, creating the user will fail with error 2760: **The specified schema name "\<user_name@domain>" either does not exist or you do not have permission to use it.** And then error 2759: **CREATE SCHEMA failed due to previous errors.** To work around these errors, create the Azure AD user from external provider first and then rerun the statement creating the object.
  
   
 ## Deprecation Notice  
- CREATE SCHEMA statements that do not specify a schema name are currently supported for backward compatibility. Such statements do not actually create a schema inside the database, but they do create tables and views, and grant permissions. Principals do not need CREATE SCHEMA permission to execute this earlier form of CREATE SCHEMA, because no schema is being created. This functionality will be removed from a future release of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ CREATE SCHEMA statements that do not specify a schema name are currently supported for backward compatibility. Such statements do not actually create a schema inside the database, but they do create tables and views, and grant permissions. Principals do not need CREATE SCHEMA permission to execute this earlier form of CREATE SCHEMA, because no schema is being created. This functionality will be removed from a future release of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## Permissions  
  Requires CREATE SCHEMA permission on the database.  
@@ -150,7 +150,7 @@ CREATE SCHEMA Sprockets AUTHORIZATION Annik
 GO   
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### B. Creating a schema and a table in the schema  
  The following example creates schema `Sales` and then creates a table `Sales.Region` in that schema.  
@@ -182,7 +182,7 @@ GO
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.schemas &#40;Transact-SQL&#41;](../Topic/sys.schemas%20\(Transact-SQL\).md)   
+ [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/schemas-catalog-views-sys.schemas.md)   
  [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md)  
   
   

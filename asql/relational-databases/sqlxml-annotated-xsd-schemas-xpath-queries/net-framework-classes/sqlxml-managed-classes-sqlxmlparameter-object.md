@@ -30,8 +30,8 @@ manager: "jhubbard"
  The value of the parameter. For a working sample, see [Executing SQL Queries &#40;SQLXML Managed Classes&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
 ## See Also  
- [SqlXmlCommand Object &#40;SQLXML Managed Classes&#41;](../Topic/SqlXmlCommand%20Object%20\(SQLXML%20Managed%20Classes\).md)   
- [SqlXmlAdapter Object &#40;SQLXML Managed Classes&#41;](../Topic/SqlXmlAdapter%20Object%20\(SQLXML%20Managed%20Classes\).md)   
+ [SqlXmlCommand Object &#40;SQLXML Managed Classes&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
+ [SqlXmlAdapter Object &#40;SQLXML Managed Classes&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)   
  [Accessing SQLXML Functionality in the .NET Environment](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-.net-environment.md)  
   
   

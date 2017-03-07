@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 ### Select a mining structure  
   
-1.  Open the Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+1.  Open the Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
 2.  In Solution Explorer, open the database that contains the structure or model for which you want to create a report.  
   

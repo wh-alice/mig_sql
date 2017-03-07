@@ -15,7 +15,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Piecemeal Restore of Databases With Memory-Optimized Tables
-  Piecemeal restore is supported on databases with memory-optimized tables except for one restriction described below. For more information about piecemeal backup and restore, see [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) and [Piecemeal Restores &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
+  Piecemeal restore is supported on databases with memory-optimized tables except for one restriction described below. For more information about piecemeal backup and restore, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) and [Piecemeal Restores &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
  A memory-optimized filegroup must be backed up and restored together with the primary filegroup:  
   
@@ -93,6 +93,6 @@ GO
 ```  
   
 ## See Also  
- [Backup, Restore, and Recovery of Memory-Optimized Tables](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+ [Backup, Restore, and Recovery of Memory-Optimized Tables](../../a9retired/backup-restore-and-recovery-of-memory-optimized-tables.md)  
   
   

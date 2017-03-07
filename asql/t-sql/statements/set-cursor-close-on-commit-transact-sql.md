@@ -30,13 +30,13 @@ manager: "jhubbard"
 # SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Controls the behavior of the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] COMMIT TRANSACTION statement. The default value for this setting is OFF. This means that the server will not close cursors when you commit a transaction.  
+  Controls the behavior of the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] COMMIT TRANSACTION statement. The default value for this setting is OFF. This means that the server will not close cursors when you commit a transaction.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -55,7 +55,7 @@ SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }
   
  SET CURSOR_CLOSE_ON_COMMIT controls the same behavior as the CURSOR_CLOSE_ON_COMMIT database option. If CURSOR_CLOSE_ON_COMMIT is set to ON or OFF, that setting is used on the connection. If SET CURSOR_CLOSE_ON_COMMIT has not been specified, the value in the **is_cursor_close_on_commit_on** column in the **sys.databases** catalog view applies.  
   
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver both set CURSOR_CLOSE_ON_COMMIT to OFF when they connect. DB-Library does not automatically set the CURSOR_CLOSE_ON_COMMIT value.  
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver both set CURSOR_CLOSE_ON_COMMIT to OFF when they connect. DB-Library does not automatically set the CURSOR_CLOSE_ON_COMMIT value.  
   
  When SET ANSI_DEFAULTS is ON, SET CURSOR_CLOSE_ON_COMMIT is enabled.  
   

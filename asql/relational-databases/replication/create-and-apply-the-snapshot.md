@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 -   At a scheduled time. Specify a schedule on the **Snapshot Agent** page of the New Publication Wizard or when using stored procedures or Replication Management Objects (RMO).  
   
--   Manually. Run the Snapshot Agent from the command prompt or from [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. For more information about running agents, see [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md) and [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
+-   Manually. Run the Snapshot Agent from the command prompt or from [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. For more information about running agents, see [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md) and [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
  For merge replication, a snapshot is generated every time the Snapshot Agent runs. For transactional replication, snapshot generation depends on the setting of the publication property **immediate_sync**. If the property is set to TRUE (the default when using the New Publication Wizard), a snapshot is generated every time the Snapshot Agent runs, and it can be applied to a Subscriber at any time. If the property is set to FALSE (the default when using **sp_addpublication**), the snapshot is generated only if a new subscription has been added since the last Snapshot Agent run; Subscribers must wait for the Snapshot Agent to complete before they can synchronize.  
   
@@ -40,13 +40,13 @@ manager: "jhubbard"
   
  To view or modify the default snapshot folder location, see  
   
--   [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]: [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]: [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md)  
   
 -   Replication Programming and RMO programming: [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)  
   
 ## See Also  
  [Initialize a Subscription with a Snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md)   
- [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)  
+ [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addpublication-transact-sql.md)  
   
   

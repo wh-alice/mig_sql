@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Change Workload Group Settings
-  You can change workload group settings by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+  You can change workload group settings by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
  Changing workload group settings requires CONTROL SERVER permission.  
   
 ##  <a name="ChgWGProp"></a> Change Workload Group Settings Using SQL Server Management Studio  
- **To change workload group settings by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]**  
+ **To change workload group settings by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]**  
   
 1.  In Object Explorer, recursively expand the **Management** node down to and including the **Workload Groups** folder that contains the workload group to be modified.  
   

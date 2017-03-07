@@ -44,7 +44,7 @@ manager: "erikre"
 |Consume reports|View the shared dataset definition.|Content Manager<br /><br /> Report Builder|  
 |Set security on items|Create and modify role assignments that control access to the shared dataset. This task must be used with either "View reports" or "Manage reports" tasks. If it is not, it has no effect because the user cannot select the item.|Content Manager|  
   
- For more information, see [Item-Level Tasks](../Topic/Item-Level%20Tasks.md) and [Predefined Roles](../Topic/Predefined%20Roles.md).  
+ For more information, see [Item-Level Tasks](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md) and [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
 ## See Also  
  [Manage Shared Datasets](../../reporting-services/report-data/manage-shared-datasets.md)   

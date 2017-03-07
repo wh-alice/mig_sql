@@ -18,10 +18,10 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Recursive Hierarchies (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], a recursive hierarchy is a derived hierarchy that includes a recursive relationship. A recursive relationship exists when an entity has a domain-based attribute based on the entity itself.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], a recursive hierarchy is a derived hierarchy that includes a recursive relationship. A recursive relationship exists when an entity has a domain-based attribute based on the entity itself.  
   
 ## Recursive Hierarchy Example  
- A typical recursive hierarchy example is an organizational structure. In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], you would do this by creating an Employee entity with a domain-based attribute called Manager. The Manager attribute is populated from the list of employees. In this sample organization, all employees can be managers.  
+ A typical recursive hierarchy example is an organizational structure. In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], you would do this by creating an Employee entity with a domain-based attribute called Manager. The Manager attribute is populated from the list of employees. In this sample organization, all employees can be managers.  
   
  ![mds_conc_recursive_table_w_data](../master-data-services/media/mds-conc-recursive-table-w-data.gif "mds_conc_recursive_table_w_data")  
   

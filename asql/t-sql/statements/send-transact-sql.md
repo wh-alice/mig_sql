@@ -29,15 +29,15 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SEND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Sends a message, using one or more existing conversations.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -75,7 +75,7 @@ SEND
   
  In many cases the code that contains the SEND statement is separate from the code that contains either the BEGIN DIALOG or RECEIVE statements supplying conversation handle. In these cases, the conversation handle must be one of the data items in the state information passed to the code that contains the SEND statement.  
   
- Messages that are sent to services in other instances of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] are stored in a transmission queue in the current database until they can be transmitted to the service queues in the remote instances. Messages sent to services in the same instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] are put directly into the queues associated with these services. If a condition prevents a local message from being put directly in the target service queue, it can be stored in the transmission queue until the condition is resolved. Examples of when this occurs include some types of errors or the target service queue being inactive. You can use the **sys.transmission_queue** system view to see the messages in the transmission queue.  
+ Messages that are sent to services in other instances of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] are stored in a transmission queue in the current database until they can be transmitted to the service queues in the remote instances. Messages sent to services in the same instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] are put directly into the queues associated with these services. If a condition prevents a local message from being put directly in the target service queue, it can be stored in the transmission queue until the condition is resolved. Examples of when this occurs include some types of errors or the target service queue being inactive. You can use the **sys.transmission_queue** system view to see the messages in the transmission queue.  
   
  SEND is an atomic statement, that is, if a SEND statement sending a message on multiple conversations fails, e.g. because a conversation is in an errored state, no messages will be stored in the transmission queue or put in any target service queue.  
   
@@ -87,7 +87,7 @@ SEND
   
 -   Within priority level, their send sequence in the conversation.  
   
- Priority levels specified in conversation priorities are only applied to messages in the transmission queue if the HONOR_BROKER_PRIORITY database option is set to ON. If HONOR_BROKER_PRIORITY is set to OFF, all messages put in the transmission queue for that database are assigned the default priority level of 5. Priority levels are not applied to a SEND where the messages are put directly into a service queue in the same instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+ Priority levels specified in conversation priorities are only applied to messages in the transmission queue if the HONOR_BROKER_PRIORITY database option is set to ON. If HONOR_BROKER_PRIORITY is set to OFF, all messages put in the transmission queue for that database are assigned the default priority level of 5. Priority levels are not applied to a SEND where the messages are put directly into a service queue in the same instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
  The SEND statement separately locks each conversation on which a message is sent to ensure per-conversation ordered delivery.  
   
@@ -149,6 +149,6 @@ SEND ON CONVERSATION (@dialog_handle1, @dialog_handle2, @dialog_handle3)
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
  [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
- [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.transmission-queue-transact-sql.md)  
+ [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.transmission-queue-transact-sql.md)  
   
   

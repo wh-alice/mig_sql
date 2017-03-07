@@ -15,7 +15,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Implementing SQL_VARIANT in a Memory-Optimized Table
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Consider an example of a table with **SQL_VARIANT** column:  
   

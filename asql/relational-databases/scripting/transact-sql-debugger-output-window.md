@@ -20,7 +20,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Transact-SQL Debugger - Output Window
-  This window displays status messages for various features in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. Output is delivered to special panes in the **Output** window from the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] debugger, external tools features, or commands that are run in the debugger **Command Window**. Output that is usually displayed in the Command Prompt window from external tools, such as .bat or .com files, is also available.  
+  This window displays status messages for various features in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. Output is delivered to special panes in the **Output** window from the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] debugger, external tools features, or commands that are run in the debugger **Command Window**. Output that is usually displayed in the Command Prompt window from external tools, such as .bat or .com files, is also available.  
   
  **To access the Output window**  
   

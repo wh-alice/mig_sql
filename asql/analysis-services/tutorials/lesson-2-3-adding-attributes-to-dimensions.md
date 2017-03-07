@@ -122,7 +122,7 @@ In this task, you will use Dimension Designer to add attributes to the Customer 
 5.  On the File menu, click **Save All**.  
   
 ## Next Task in Lesson  
-[Reviewing Cube and Dimension Properties](../Topic/Reviewing%20Cube%20and%20Dimension%20Properties.md)  
+[Reviewing Cube and Dimension Properties](../../analysis-services/tutorials/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## See Also  
 [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  

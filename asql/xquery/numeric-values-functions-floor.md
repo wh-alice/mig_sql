@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Numeric Values Functions - floor
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns the largest number with no fraction part that is not greater than the value of its argument. If the argument is an empty sequence, it returns the empty sequence.  
   
@@ -45,7 +45,7 @@ fn:floor ($arg as numeric?) as numeric?
 ## Examples  
  This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the AdventureWorks sample database.  
   
- You can use the working sample in the [ceiling function (XQuery)](../Topic/ceiling%20Function%20\(XQuery\).md) for the **floor()** XQuery function. All you have to do is replace the **ceiling()** function in the query with the **floor()** function.  
+ You can use the working sample in the [ceiling function (XQuery)](../xquery/numeric-values-functions-ceiling.md) for the **floor()** XQuery function. All you have to do is replace the **ceiling()** function in the query with the **floor()** function.  
   
 ## Implementation Limitations  
  These are the limitations:  
@@ -53,8 +53,8 @@ fn:floor ($arg as numeric?) as numeric?
 -   The **floor()** function maps all integer values to xs:decimal.  
   
 ## See Also  
- [ceiling Function &#40;XQuery&#41;](../Topic/ceiling%20Function%20\(XQuery\).md)   
- [round Function &#40;XQuery&#41;](../Topic/round%20Function%20\(XQuery\).md)   
+ [ceiling Function &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)   
+ [round Function &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)   
  [XQuery Functions against the xml Data Type](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

@@ -20,9 +20,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Progress Page (Always On Availability Group Wizards)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Use this dialog box to view the progress of a [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] wizard that you are running in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)]. The progress bar indicates the relative progress of the steps that the wizard is performing.  
+  Use this dialog box to view the progress of a [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] wizard that you are running in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)]. The progress bar indicates the relative progress of the steps that the wizard is performing.  
   
 ## UIElement List  
  **More details**  
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 -   [Use the Add Replica to Availability Group Wizard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Use the Add Database to Availability Group Wizard &#40;SQL Server Management Studio&#41;](../Topic/Use%20the%20Add%20Database%20to%20Availability%20Group%20Wizard%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [Use the Add Database to Availability Group Wizard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
 -   [Use the Fail Over Availability Group Wizard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   

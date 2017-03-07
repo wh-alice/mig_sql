@@ -15,9 +15,9 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Table and Row Size in Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  A memory-optimized table consists of a collection of rows and indexes that contain pointers to rows. In a memory-optimized table, in-row data cannot be longer than 8,060 bytes. However, starting [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] it is possible to create a table with multiple large columns (e.g., multiple varbinary(8000) columns) and LOB columns (i.e., varbinary(max), varchar(max), and nvarchar(max)). Columns that exceed the max size for in-row data are placed off-row, in special internal tables. For details about these internal tables see [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.memory-optimized-tables-internal-attributes-transact-sql.md).
+  A memory-optimized table consists of a collection of rows and indexes that contain pointers to rows. In a memory-optimized table, in-row data cannot be longer than 8,060 bytes. However, starting [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] it is possible to create a table with multiple large columns (e.g., multiple varbinary(8000) columns) and LOB columns (i.e., varbinary(max), varchar(max), and nvarchar(max)). Columns that exceed the max size for in-row data are placed off-row, in special internal tables. For details about these internal tables see [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.memory-optimized-tables-internal-attributes-transact-sql.md).
   
  There are two reasons for computing table and row size:  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   The data size of a row, and does it fit in the 8,060 byte row size limitation? To answer these questions, use the computation for [row body size], discussed below.  
 
-Columns that do not fit in the 8060 byte row size limit are placed off-row, in a separate internal table. Each off-row column has a corresponding internal table, which in turn has a single nonclustered index. For details about internal tables used for off-row columns see [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.memory-optimized-tables-internal-attributes-transact-sql.md). 
+Columns that do not fit in the 8060 byte row size limit are placed off-row, in a separate internal table. Each off-row column has a corresponding internal table, which in turn has a single nonclustered index. For details about internal tables used for off-row columns see [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.memory-optimized-tables-internal-attributes-transact-sql.md). 
   
  The following figure illustrates a table with indexes and rows, which in turn have row headers and bodies:  
   

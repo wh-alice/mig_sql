@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
 ## Syntax  
   
@@ -133,9 +133,9 @@ WHERE CatalogDescription.exist('
   
 -   The WHERE clause selects only those rows from the **ProductDescription** table that satisfy the condition specified against the **CatalogDescription xml** type column.  
   
--   The **exist()** method in the WHERE clause returns 1 (True) if the XML does not include any <`Specifications`> element. Note the use of the [not() function (XQuery)](../Topic/not%20Function%20\(XQuery\).md).  
+-   The **exist()** method in the WHERE clause returns 1 (True) if the XML does not include any <`Specifications`> element. Note the use of the [not() function (XQuery)](../../xquery/functions-on-boolean-values-not-function.md).  
   
--   The [sql:column() function (XQuery)](../Topic/sql:column\(\)%20Function%20\(XQuery\).md) function is used to bring in the value from a non-XML column.  
+-   The [sql:column() function (XQuery)](../../xquery/xquery-extension-functions-sql-column.md) function is used to bring in the value from a non-XML column.  
   
 -   This query returns an empty rowset.  
   

@@ -40,7 +40,7 @@ manager: "jhubbard"
   
  **timestamp** is the synonym for the **rowversion** data type and is subject to the behavior of data type synonyms. In DDL statements, use **rowversion** instead of **timestamp** wherever possible. For more information, see [Data Type Synonyms &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).  
   
- The [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] **timestamp** data type is different from the **timestamp** data type defined in the ISO standard.  
+ The [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] **timestamp** data type is different from the **timestamp** data type defined in the ISO standard.  
   
 > [!NOTE]  
 >  The **timestamp** syntax is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)]  
@@ -51,7 +51,7 @@ manager: "jhubbard"
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, timestamp);  
 ```  
   
- If you do not specify a column name, the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] generates the **timestamp** column name; however, the **rowversion** synonym does not follow this behavior. When you use **rowversion**, you must specify a column name, for example:  
+ If you do not specify a column name, the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] generates the **timestamp** column name; however, the **rowversion** synonym does not follow this behavior. When you use **rowversion**, you must specify a column name, for example:  
   
 ```  
 CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;  
@@ -66,7 +66,7 @@ CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;
   
  You can add a **rowversion** column to a table to help maintain the integrity of the database when multiple users are updating rows at the same time. You may also want to know how many rows and which rows were updated without re-querying the table.  
   
- For example, assume that you create a table named `MyTest`. You populate some data in the table by running the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements.  
+ For example, assume that you create a table named `MyTest`. You populate some data in the table by running the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements.  
   
 ```  
 CREATE TABLE MyTest (myKey int PRIMARY KEY  
@@ -78,7 +78,7 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
- You can then use the following sample [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements to implement optimistic concurrency control on the `MyTest` table during the update.  
+ You can then use the following sample [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements to implement optimistic concurrency control on the `MyTest` table during the update.  
   
 ```  
 DECLARE @t TABLE (myKey int);  
@@ -98,7 +98,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
   
  `myValue` is the **rowversion** column value for the row that indicates the last time that you read the row. This value must be replaced by the actual **rowversion** value. An example of the actual **rowversion** value is 0x00000000000007D3.  
   
- You can also put the sample [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements into a transaction. By querying the `@t` variable in the scope of the transaction, you can retrieve the updated `myKey` column of the table without requerying the `MyTes`t table.  
+ You can also put the sample [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements into a transaction. By querying the `@t` variable in the scope of the transaction, you can retrieve the updated `myKey` column of the table without requerying the `MyTes`t table.  
   
  The following is the same example using the **timestamp** syntax:  
   

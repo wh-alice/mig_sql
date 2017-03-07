@@ -19,11 +19,11 @@ manager: "jhubbard"
 # Lesson 1-8 - Making the Lesson 1 Package Easier to Understand
 Now that you have completed the configuration of the Lesson 1 package, it is a good idea to tidy up the package layout. If the shapes in the control and data flow layouts are random sizes, or if the shapes are not aligned or grouped, the functionality of package can be more difficult to understand.  
   
-[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Data Tools provides tools that make it easy and quick to format the package layout. The formatting features include the ability to make shapes the same size, align shapes, and manipulate the horizontal and vertical spacing between shapes.  
+[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Data Tools provides tools that make it easy and quick to format the package layout. The formatting features include the ability to make shapes the same size, align shapes, and manipulate the horizontal and vertical spacing between shapes.  
   
 Another way to improve the understanding of package functionality is to add annotations that describe package functionality.  
   
-In this task, you will use the formatting features in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Data Tools to improve the layout of the data flow and also add an annotation to the data flow.  
+In this task, you will use the formatting features in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Data Tools to improve the layout of the data flow and also add an annotation to the data flow.  
   
 ### To format the layout of the data flow  
   
@@ -50,7 +50,7 @@ In this task, you will use the formatting features in [!INCLUDE[ssNoVersion](../
     If you do not add text to the annotation box, it disappears when you click outside the box.  
   
 ## Next Steps  
-[Step 9: Testing the Lesson 1 Tutorial Package](../Topic/Step%209:%20Testing%20the%20Lesson%201%20Tutorial%20Package.md)  
+[Step 9: Testing the Lesson 1 Tutorial Package](../../integration-services/tutorials/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   
   

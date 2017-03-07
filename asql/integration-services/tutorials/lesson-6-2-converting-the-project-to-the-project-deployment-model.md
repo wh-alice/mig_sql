@@ -50,7 +50,7 @@ In this task, you will use the Integration Services Project Conversion Wizard to
 13. Click the Parameters Tab and verify that the package now contains a parameter for VarFolderName and that the value is the same path specified for the New Sample Data folder from the Lesson 5 configuration file.  
   
 ## Next Task in Lesson  
-[Step 3: Testing the Lesson 6 Package](../Topic/Step%203:%20Testing%20the%20Lesson%206%20Package.md)  
+[Step 3: Testing the Lesson 6 Package](../../integration-services/tutorials/lesson-6-3-testing-the-lesson-6-package.md)  
   
   
   

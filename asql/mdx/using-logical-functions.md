@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Using Logical Functions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   A logical function performs a logical operation or comparison on objects and expressions and returns a Boolean value. Logical functions are essential in Multidimensional Expressions (MDX) to determine the position of a member.  
   

@@ -70,6 +70,6 @@ manager: "erikre"
  The structure of this element is identical to the structure of the **ErrorConfiguration** element in Analysis Services Scripting Language (ASSL). For more information about the **ErrorConfiguration** element, see [ErrorConfiguration Element &#40;ASSL&#41;](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md).  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

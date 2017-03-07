@@ -18,7 +18,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Hide or Delete Levels in a Derived Hierarchy (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], hide a level in a derived hierarchy when you require the level for grouping but you do not need to show the level. Delete a level when you do not want to use it for grouping.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], hide a level in a derived hierarchy when you require the level for grouping but you do not need to show the level. Delete a level when you do not want to use it for grouping.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 ### To hide or delete levels in a derived hierarchy  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **System Administration**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **System Administration**.  
   
 2.  From the menu bar, point to **Manage** and click **Derived Hierarchies**.  
   

@@ -24,14 +24,14 @@ manager: "erikre"
   Permission to read an object definition, or metadata, on selected objects lets an administrator grant permission to view object information, without also granting permission to modify the object's definition, modify the object's structure, or view the actual data for the object. **Read Definition** permissions can be granted at the database, data source, dimension, mining structure, and mining model levels. If you require **Read Definition** permissions for a cube, you must enable **Read Definition** for the database.Remember that permissions are additive. For example, one role grants permission to read the metadata for a cube, while a second role grants the same user permission to read the metadata for a dimension. The permissions from the two different roles combine to give the user permission to both read metadata for the cube and the metadata for the dimension within that database.  
   
 > [!NOTE]  
->  Permission to read a database's metadata is the minimum permission required to connect to an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] database using either [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] or [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)]. A user who has permission to read metadata can also use the DISCOVER_XML_METADATA schema rowset to query the object and view its metadata. For more information, see [DISCOVER_XML_METADATA Rowset](../../analysis-services/schema-rowsets/xml/discover-xml-metadata-rowset.md).  
+>  Permission to read a database's metadata is the minimum permission required to connect to an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] database using either [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] or [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)]. A user who has permission to read metadata can also use the DISCOVER_XML_METADATA schema rowset to query the object and view its metadata. For more information, see [DISCOVER_XML_METADATA Rowset](../../analysis-services/schema-rowsets/xml/discover-xml-metadata-rowset.md).  
   
 ## Set read definition permissions on a database  
  Granting permission to read database metadata also grants permission to read the metadata of all objects in the database.  
   
- We suggest that you include the **Read Definition** permission at the database level whenever you are setting up roles for dedicated processing. Having **Read Definition** allows non-administrators to view a model's object hierarchy in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and navigate to individual objects for subsequent processing.  
+ We suggest that you include the **Read Definition** permission at the database level whenever you are setting up roles for dedicated processing. Having **Read Definition** allows non-administrators to view a model's object hierarchy in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] and navigate to individual objects for subsequent processing.  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], connect to the instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], expand **Roles** for the appropriate database in Object Explorer, and then click a database role (or create a new database role).  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], connect to the instance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], expand **Roles** for the appropriate database in Object Explorer, and then click a database role (or create a new database role).  
   
 2.  On the **General** tab, select the **Read Definition** option.  
   
@@ -41,7 +41,7 @@ manager: "erikre"
   
 ## Set read definition permissions on individual objects  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], connect to the instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], open the **Databases** folder, select a database, expand **Roles** for the appropriate database in Object Explorer, and then click a database role (or create a new database role).  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], connect to the instance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], open the **Databases** folder, select a database, expand **Roles** for the appropriate database in Object Explorer, and then click a database role (or create a new database role).  
   
 2.  In the **General** pane, clear the database permission for **Read Definition**. This step removes permission inheritance so that you can set permissions on individual objects.  
   

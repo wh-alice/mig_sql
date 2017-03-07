@@ -24,7 +24,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Tasks and Permissions
-  In [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], *tasks* are actions that a user or administrator can perform. Tasks are predefined. You cannot create custom tasks or modify the ones provided either programmatically or through a tool. There are twenty-five tasks in all. These tasks comprise the entire set of operations that are available in role-based security. Some examples of tasks include "View reports," "Manage reports," and "Manage report server properties."  
+  In [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)], *tasks* are actions that a user or administrator can perform. Tasks are predefined. You cannot create custom tasks or modify the ones provided either programmatically or through a tool. There are twenty-five tasks in all. These tasks comprise the entire set of operations that are available in role-based security. Some examples of tasks include "View reports," "Manage reports," and "Manage report server properties."  
   
  Each task consists of a set of permissions, which are also predefined. For example, the "Manage folders" task contains permissions to create and delete folders and view and update folder properties. Permissions for each task are documented to provide a more exact description of each task. It is not possible to interact with permissions directly or to specify them in role assignments. Users are granted permissions indirectly through the tasks that are included in role definitions.  
   
@@ -38,12 +38,12 @@ Permissions and task diagram
   
 |Category|Description|  
 |--------------|-----------------|  
-|[Item-Level Tasks](../Topic/Item-Level%20Tasks.md)|Actions that are performed on items managed by a report server, such as folders, reports, report models, and resources.<br /><br /> Item-level tasks are scoped to the report server folder namespace. All items that you access through the folders on a report server or through URL access are secured by role assignments that include item-level tasks.|  
-|[System-Level Tasks](../Topic/System-Level%20Tasks.md)|Actions that are performed at the system level, such as managing jobs or shared schedules that can be used with many items. System-level tasks are scoped outside of the report server folder namespace.|  
+|[Item-Level Tasks](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)|Actions that are performed on items managed by a report server, such as folders, reports, report models, and resources.<br /><br /> Item-level tasks are scoped to the report server folder namespace. All items that you access through the folders on a report server or through URL access are secured by role assignments that include item-level tasks.|  
+|[System-Level Tasks](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)|Actions that are performed at the system level, such as managing jobs or shared schedules that can be used with many items. System-level tasks are scoped outside of the report server folder namespace.|  
   
 ## See Also  
  [Role Definitions](../../reporting-services/security/role-definitions.md)   
- [Predefined Roles](../Topic/Predefined%20Roles.md)   
+ [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

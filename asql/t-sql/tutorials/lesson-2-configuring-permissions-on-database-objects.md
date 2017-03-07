@@ -19,22 +19,22 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 2: Configuring Permissions on Database Objects
-Granting a user access to a database involves three steps. First, you create a login. The login lets the user connect to the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]. Then you configure the login as a user in the specified database. And finally, you grant that user permission to database objects. This lesson shows you these three steps, and shows you how to create a view and a stored procedure as the object.  
+Granting a user access to a database involves three steps. First, you create a login. The login lets the user connect to the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)]. Then you configure the login as a user in the specified database. And finally, you grant that user permission to database objects. This lesson shows you these three steps, and shows you how to create a view and a stored procedure as the object.  
   
 This lesson contains the following topics:  
   
--   [Creating a Login](../Topic/Creating%20a%20Login.md)  
+-   [Creating a Login](../../t-sql/tutorials/lesson-2-1-creating-a-login.md)  
   
--   [Granting Access to a Database](../Topic/Granting%20Access%20to%20a%20Database.md)  
+-   [Granting Access to a Database](../../t-sql/tutorials/lesson-2-2-granting-access-to-a-database.md)  
   
--   [Creating Views and Stored Procedures](../Topic/Creating%20Views%20and%20Stored%20Procedures.md)  
+-   [Creating Views and Stored Procedures](../../t-sql/tutorials/lesson-2-3-creating-views-and-stored-procedures.md)  
   
--   [Granting Access to a Database Object](../Topic/Granting%20Access%20to%20a%20Database%20Object.md)  
+-   [Granting Access to a Database Object](../../t-sql/tutorials/lesson-2-4-granting-access-to-a-database-object.md)  
   
--   [Summary: Configuring Permissions on Database Objects](../Topic/Summary:%20Configuring%20Permissions%20on%20Database%20Objects.md)  
+-   [Summary: Configuring Permissions on Database Objects](../../t-sql/tutorials/lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
 ## Next Task in Lesson  
-[Creating a Login](../Topic/Creating%20a%20Login.md)  
+[Creating a Login](../../t-sql/tutorials/lesson-2-1-creating-a-login.md)  
   
   
   

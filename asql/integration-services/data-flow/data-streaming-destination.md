@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Data Streaming Destination
-  The **Data Streaming Destination** is a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] (SSIS) destination component that lets the **OLE DB Provider for SSIS** consume output of an SSIS package as a tabular result set. You can create a linked server that uses the OLE DB Provider for SSIS and then run a SQL query on the linked server to display data returned by the SSIS package.  
+  The **Data Streaming Destination** is a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] (SSIS) destination component that lets the **OLE DB Provider for SSIS** consume output of an SSIS package as a tabular result set. You can create a linked server that uses the OLE DB Provider for SSIS and then run a SQL query on the linked server to display data returned by the SSIS package.  
   
  In the following example example, the following query returns output from the Package.dtsx package in the SSISPackagePublishing project in the Power BI folder of the SSIS Catalog. This query uses the linked server named  [Default Linked Server for Integration Services] that in turn uses the new OLE DB Provider for SSIS. The query includes folder name, project name, and package name in the SSIS catalog. The OLE DB Provider for SSIS runs the package you specified in the query and returns the tabular result set.  
   
@@ -26,7 +26,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ```  
   
 ## Data Feed Publishing Components  
- The Data Feed Publishing Components include the following components: OLE DB Provider for SSIS, Data Streaming Destination, and SSIS Package Publish Wizard. The wizard lets you publish an SSIS package as a SQL view in a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database instance. The wizard helps you with creating a linked server that uses the OLE DB Provider for SSIS and a SQL view that represents a query on the linked server. You run the view to query results from the SSIS package as a tabular data set.  
+ The Data Feed Publishing Components include the following components: OLE DB Provider for SSIS, Data Streaming Destination, and SSIS Package Publish Wizard. The wizard lets you publish an SSIS package as a SQL view in a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database instance. The wizard helps you with creating a linked server that uses the OLE DB Provider for SSIS and a SQL view that represents a query on the linked server. You run the view to query results from the SSIS package as a tabular data set.  
   
  To confirm that the SSISOLEDB provider is installed, in SQL Server Management Studio, expand **Server Objects**, **Linked Servers**, **Providers**, and confirm that you see the **SSISOLEDB** provider. Double-click **SSISOLEDB**, enable **Allow Inprocess** if it is not enabled, and click **OK**.  
   

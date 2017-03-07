@@ -19,16 +19,16 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Insert Transact-SQL Snippets
-  A [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] code snippet is a template you can use as a starting point when writing new [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements in the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Query Editor.  
+  A [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] code snippet is a template you can use as a starting point when writing new [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements in the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Query Editor.  
   
 ## Inserting Snippets  
  You can use the **Insert Snippet** menu to open a categorized list of snippets to choose from.  
   
- [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] snippets contain replacement points: text that suggests the syntax relevant to that point. For example, the CREATE TABLE snippet has replacement points for elements such as the table name, column names, and column data types. After inserting the snippet, you must change the replacement text to form a valid [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement. For more information, see [Complete Transact-SQL Snippets](../../relational-databases/scripting/complete-transact-sql-snippets.md).  
+ [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] snippets contain replacement points: text that suggests the syntax relevant to that point. For example, the CREATE TABLE snippet has replacement points for elements such as the table name, column names, and column data types. After inserting the snippet, you must change the replacement text to form a valid [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement. For more information, see [Complete Transact-SQL Snippets](../../relational-databases/scripting/complete-transact-sql-snippets.md).  
   
 #### Inserting a Snippet by Using the Insert Snippet Menu  
   
-1.  In the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Query Editor window, put the cursor where you want to insert the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] snippet.  
+1.  In the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Query Editor window, put the cursor where you want to insert the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] snippet.  
   
 2.  Launch the snippet picker tooltip in one of three ways:  
   

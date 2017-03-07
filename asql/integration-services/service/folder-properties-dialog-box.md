@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Folder Properties Dialog Box
-  A folder contains projects and environments in the **SSISDB** catalog. Each folder defines permissions that apply to the contents of the folder. For more information about [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] permissions, see [catalog.grant_permission &#40;SSISDB Database&#41;](../../integration-services/system/stored-procedures/catalog.grant-permission-ssisdb-database.md).  
+  A folder contains projects and environments in the **SSISDB** catalog. Each folder defines permissions that apply to the contents of the folder. For more information about [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] permissions, see [catalog.grant_permission &#40;SSISDB Database&#41;](../../integration-services/system/stored-procedures/catalog.grant-permission-ssisdb-database.md).  
   
 ## To Set Folder Description and Permissions  
   

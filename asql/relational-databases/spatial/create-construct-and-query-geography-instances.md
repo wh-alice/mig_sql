@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create, Construct, and Query geography Instances
-  The geography spatial data type, **geography**, represents data in a round-earth coordinate system. This type is implemented as a .NET common language runtime (CLR) data type in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] **geography** data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  
+  The geography spatial data type, **geography**, represents data in a round-earth coordinate system. This type is implemented as a .NET common language runtime (CLR) data type in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] **geography** data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  
   
  The **geography** type is predefined and available in each database. You can create table columns of type **geography** and operate on **geography** data in the same manner as you would use other system-supplied types.  
   
@@ -100,7 +100,7 @@ manager: "jhubbard"
  [STGeomCollFromWKB &#40;geography Data Type&#41;](../../t-sql/data-types/stgeomcollfromwkb-geography-data-type.md)STGeomCollFromWKB (geography Data Type)  
   
 ###  <a name="gml"></a> Constructing a geography Instance from GML Text Input  
- The **geography** data type provides a method that generates a **geography** instance from GML, an XML representation of a **geography** instance. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports a subset of GML.  
+ The **geography** data type provides a method that generates a **geography** instance from GML, an XML representation of a **geography** instance. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports a subset of GML.  
   
  For more information on Geography Markup Language, see the OGC Specification: [OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
@@ -122,10 +122,10 @@ manager: "jhubbard"
  [STAsBinary &#40;geography Data Type&#41;](../../t-sql/data-types/stasbinary-geography-data-type.md)  
   
  **To return a GML representation of a geography instance**  
- [AsGml &#40;geography Data Type&#41;](../Topic/AsGml%20\(geography%20Data%20Type\).md)  
+ [AsGml &#40;geography Data Type&#41;](../../t-sql/data-types/asgml-geography-data-type.md)  
   
 ##  <a name="query"></a> Querying the Properties and Behaviors of geography Instances  
- All **geography** instances have a number of properties that can be retrieved through methods that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provides. The following topics define the properties and behaviors of geography types, and the methods for querying each one.  
+ All **geography** instances have a number of properties that can be retrieved through methods that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] provides. The following topics define the properties and behaviors of geography types, and the methods for querying each one.  
   
 ###  <a name="valid"></a> Validity, Instance Type, and GeometryCollection Information  
  After a **geography** instance is constructed, you can use the following methods to return the instance type, or if it is a **GeometryCollection** instance, return a specific **geography** instance.  
@@ -222,9 +222,9 @@ manager: "jhubbard"
  [STSymDifference &#40;geography Data Type&#41;](../../t-sql/data-types/stsymdifference-geography-data-type.md)  
   
 ##  <a name="supportedsrid"></a> geography Instances Must Use Supported SRID  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports SRIDs based on the EPSG standards. A [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]-supported SRID for **geography** instances must be used when performing calculations or using methods with geography spatial data. The SRID must match one of the SRIDs displayed in the **sys.spatial_reference_systems** catalog view. As mentioned previously, when you perform calculations on your spatial data using the **geography** data type, your results will depend on which ellipsoid was used in the creation of your data, as each ellipsoid is assigned a specific spatial reference identifier (SRID).  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports SRIDs based on the EPSG standards. A [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]-supported SRID for **geography** instances must be used when performing calculations or using methods with geography spatial data. The SRID must match one of the SRIDs displayed in the **sys.spatial_reference_systems** catalog view. As mentioned previously, when you perform calculations on your spatial data using the **geography** data type, your results will depend on which ellipsoid was used in the creation of your data, as each ellipsoid is assigned a specific spatial reference identifier (SRID).  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses the default SRID of 4326, which maps to the WGS 84 spatial reference system, when using methods on **geography** instances. If you use data from a spatial reference system other than WGS 84 (or SRID 4326), you will need to determine the specific SRID for your geography spatial data.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses the default SRID of 4326, which maps to the WGS 84 spatial reference system, when using methods on **geography** instances. If you use data from a spatial reference system other than WGS 84 (or SRID 4326), you will need to determine the specific SRID for your geography spatial data.  
   
 ##  <a name="examples"></a> Examples  
  The following examples show how to add and query geography data.  

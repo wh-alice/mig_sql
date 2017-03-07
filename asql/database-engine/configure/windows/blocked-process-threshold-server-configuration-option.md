@@ -18,7 +18,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # blocked process threshold Server Configuration Option
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Use the **blocked process threshold** option to specify the threshold, in seconds, at which blocked process reports are generated. The threshold can be set from 0 to 86,400. By default, no blocked process reports are produced. This event is not generated for system tasks or for tasks that are waiting on resources that do not generate detectable deadlocks.  
   
@@ -45,7 +45,7 @@ GO
 ```  
   
 ## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Blocked Process Report Event Class](../../../relational-databases/event-classes/blocked-process-report-event-class.md)  
   
   

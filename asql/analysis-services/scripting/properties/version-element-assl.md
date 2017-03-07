@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Version Element (ASSL)
-  Contains the read-only version number of the instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] represented by the [Server](../../../analysis-services/scripting/objects/server-element-assl.md) element.  
+  Contains the read-only version number of the instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] represented by the [Server](../../../analysis-services/scripting/objects/server-element-assl.md) element.  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- The **Version** element describes which version of [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] is installed.  
+ The **Version** element describes which version of [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] is installed.  
   
  The element that corresponds to the parent of **Version** in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.Server>.  
   

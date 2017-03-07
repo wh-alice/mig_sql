@@ -18,9 +18,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Unique Constraints and Check Constraints
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
 
-  UNIQUE constraints and CHECK constraints are two types of constraints that can be used to enforce data integrity in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] tables. These are important database objects.  
+  UNIQUE constraints and CHECK constraints are two types of constraints that can be used to enforce data integrity in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] tables. These are important database objects.  
   
  This topic contains the following sections.  
   
@@ -31,13 +31,13 @@ manager: "jhubbard"
  [Related Tasks](#Tasks)  
   
 ##  <a name="Unique"></a> UNIQUE Constraints  
- Constraints are rules that the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] enforces for you. For example, you can use UNIQUE constraints to make sure that no duplicate values are entered in specific columns that do not participate in a primary key. Although both a UNIQUE constraint and a PRIMARY KEY constraint enforce uniqueness, use a UNIQUE constraint instead of a PRIMARY KEY constraint when you want to enforce the uniqueness of a column, or combination of columns, that is not the primary key.  
+ Constraints are rules that the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] enforces for you. For example, you can use UNIQUE constraints to make sure that no duplicate values are entered in specific columns that do not participate in a primary key. Although both a UNIQUE constraint and a PRIMARY KEY constraint enforce uniqueness, use a UNIQUE constraint instead of a PRIMARY KEY constraint when you want to enforce the uniqueness of a column, or combination of columns, that is not the primary key.  
   
  Unlike PRIMARY KEY constraints, UNIQUE constraints allow for the value NULL. However, as with any value participating in a UNIQUE constraint, only one null value is allowed per column. A UNIQUE constraint can be referenced by a FOREIGN KEY constraint.  
   
- When a UNIQUE constraint is added to an existing column or columns in the table, by default, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] examines the existing data in the columns to make sure all values are unique. If a UNIQUE constraint is added to a column that has duplicated values, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] returns an error and does not add the constraint.  
+ When a UNIQUE constraint is added to an existing column or columns in the table, by default, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] examines the existing data in the columns to make sure all values are unique. If a UNIQUE constraint is added to a column that has duplicated values, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] returns an error and does not add the constraint.  
   
- The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] automatically creates a UNIQUE index to enforce the uniqueness requirement of the UNIQUE constraint. Therefore, if an attempt to insert a duplicate row is made, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] returns an error message that states the UNIQUE constraint has been violated and does not add the row to the table. Unless a clustered index is explicitly specified, a unique, nonclustered index is created by default to enforce the UNIQUE constraint.  
+ The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] automatically creates a UNIQUE index to enforce the uniqueness requirement of the UNIQUE constraint. Therefore, if an attempt to insert a duplicate row is made, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] returns an error message that states the UNIQUE constraint has been violated and does not add the row to the table. Unless a clustered index is explicitly specified, a unique, nonclustered index is created by default to enforce the UNIQUE constraint.  
   
 ##  <a name="Check"></a> CHECK Constraints  
  CHECK constraints enforce domain integrity by limiting the values that are accepted by one or more columns. You can create a CHECK constraint with any logical (Boolean) expression that returns TRUE or FALSE based on the logical operators. For example, the range of values for a **salary** column can be limited by creating a CHECK constraint that allows for only data that ranges from $15,000 through $100,000. This prevents salaries from being entered beyond the regular salary range. The logical expression would be the following: `salary >= 15000 AND salary <= 100000`.  
@@ -50,7 +50,7 @@ manager: "jhubbard"
 >  Constraints that include implicit or explicit data type conversion may cause certain operations to fail. For example, such constraints defined on tables that are sources of partition switching may cause an ALTER TABLE...SWITCH operation to fail. Avoid data type conversion in constraint definitions.  
   
 ### Limitations of CHECK Constraints  
- CHECK constraints reject values that evaluate to FALSE. Because null values evaluate to UNKNOWN, their presence in expressions may override a constraint. For example, suppose you place a constraint on an **int** column **MyColumn** specifying that **MyColumn** can contain only the value 10 (**MyColumn=10**). If you insert the value NULL into **MyColumn**, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] inserts NULL and does not return an error.  
+ CHECK constraints reject values that evaluate to FALSE. Because null values evaluate to UNKNOWN, their presence in expressions may override a constraint. For example, suppose you place a constraint on an **int** column **MyColumn** specifying that **MyColumn** can contain only the value 10 (**MyColumn=10**). If you insert the value NULL into **MyColumn**, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] inserts NULL and does not return an error.  
   
  A CHECK constraint returns TRUE when the condition it is checking is not FALSE for any row in the table. A CHECK constraint works at the row level. If a table that has just been created does not have any rows, any CHECK constraint on this table is considered valid. This situation can produce unexpected results, as in the following example.  
   

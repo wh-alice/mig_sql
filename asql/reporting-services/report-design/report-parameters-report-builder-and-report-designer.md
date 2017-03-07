@@ -23,11 +23,11 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Report Parameters (Report Builder and Report Designer)
-  This topic describes the common uses for [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report parameters, the properties you can set, and much more. Report parameters enable you to control report data, connect related reports together, and vary report presentation. You can use report parameters in paginated reports you create in [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] and Report Designer,  and also in mobile reports you create in [!INCLUDE[SS_MobileReptPub_Long](../../reporting-services/includes/ss-mobilereptpub-long-md.md)]. Read more about [Report Parameters Concepts](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
+  This topic describes the common uses for [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] report parameters, the properties you can set, and much more. Report parameters enable you to control report data, connect related reports together, and vary report presentation. You can use report parameters in paginated reports you create in [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] and Report Designer,  and also in mobile reports you create in [!INCLUDE[SS_MobileReptPub_Long](../../reporting-services/includes/ss-mobilereptpub-long-md.md)]. Read more about [Report Parameters Concepts](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../analysis-services/includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] SharePoint mode and Native mode|  
+|[!INCLUDE[applies](../../a9retired/includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] SharePoint mode and Native mode|  
   
  To try adding a parameter to a report yourself, see [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorials/tutorial-add-a-parameter-to-your-report-report-builder.md).  
     
@@ -40,7 +40,7 @@ manager: "erikre"
   
 -   Filter data from a shared dataset. When you add a shared dataset to a paginated report, you cannot change the query. In the report, you can add a dataset filter that includes a reference to a report parameter that you create.  
   
--   Filter data from a shared dataset in a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] mobile report. See [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) for more information.  
+-   Filter data from a shared dataset in a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] mobile report. See [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) for more information.  
   
 -   Enable users to specify values to customize the data in a paginated report. For example, provide two parameters for the start date and end date for sales data.  
   
@@ -60,7 +60,7 @@ manager: "erikre"
   
 -   Enable users to customize report data and appearance by including parameters in an expression.  
   
-     For more information, see [Parameters Collection References &#40;Report Builder and SSRS&#41;](../Topic/Parameters%20Collection%20References%20\(Report%20Builder%20and%20SSRS\).md).  
+     For more information, see [Parameters Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).  
   
 ##  <a name="UserInterface"></a> Viewing a Report with Parameters  
  When you view a report that has parameters, the report viewer toolbar displays each parameter so you can interactively specify values. The following illustration shows the parameter area for a report withparameters @ReportMonth, @ReportYear, @EmployeeID, @ShowAll, @ExpandTableRows, @CategoryQuota, and @SalesDate.  
@@ -157,9 +157,9 @@ manager: "erikre"
   
  Use the query designer for the data source to help build a parameterized query.  
   
--   For [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] queries, different data sources support different syntax for parameters. Support ranges from parameters that are identified in the query by position or by name. For more information, see topics for specific external data source types in [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md). In the relational query designer, you must select the parameter option for a filter to create a parameterized query. For more information, see [Relational Query Designer User Interface &#40;Report Builder&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
+-   For [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] queries, different data sources support different syntax for parameters. Support ranges from parameters that are identified in the query by position or by name. For more information, see topics for specific external data source types in [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md). In the relational query designer, you must select the parameter option for a filter to create a parameterized query. For more information, see [Relational Query Designer User Interface &#40;Report Builder&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
--   For queries that are based on a multidimensional data source such as Microsoft SQL Server Analysis Services, SAP NetWeaver BI, or Hyperion Essbase, you can specify whether to create a parameter based on a filter that you specify in the query designer. For more information, see the query designer topic in [Query Designers &#40;Report Builder&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md) that corresponds to the data extension.  
+-   For queries that are based on a multidimensional data source such as Microsoft SQL Server Analysis Services, SAP NetWeaver BI, or Hyperion Essbase, you can specify whether to create a parameter based on a filter that you specify in the query designer. For more information, see the query designer topic in [Query Designers &#40;Report Builder&#41;](../../a9retired/query-designers-report-builder.md) that corresponds to the data extension.  
   
 ##  <a name="bkmk_Manage_Parameters"></a> Parameter Management for a Published Report  
  When you design a report, report parameters are saved in the report definition. When you publish a report, report parameters are saved and managed separately from the report definition.  

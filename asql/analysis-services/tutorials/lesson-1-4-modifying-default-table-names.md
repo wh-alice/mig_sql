@@ -42,7 +42,7 @@ In the following task, you will change the friendly name of each table in the da
   
 6.  When you have finished, click the **Auto Hide** button to hide the Properties window again.  
   
-7.  On the **File** menu, or on the toolbar of [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], click **Save All** to save the changes you have made to this point in the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial project. You can stop the tutorial here if you want and resume it later.  
+7.  On the **File** menu, or on the toolbar of [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], click **Save All** to save the changes you have made to this point in the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial project. You can stop the tutorial here if you want and resume it later.  
   
 ## Next Lesson  
 [Lesson 2: Defining and Deploying a Cube](../../analysis-services/tutorials/lesson-2-defining-and-deploying-a-cube.md)  

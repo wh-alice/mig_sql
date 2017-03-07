@@ -21,9 +21,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use Resource Governor to Limit CPU Usage by Backup Compression (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  By default, backing up using compression significantly increases CPU usage, and the additional CPU consumed by the compression process can adversely impact concurrent operations. Therefore, you might want to create a low-priority compressed backup in a session whose CPU usage is limited by[Resource Governor](../../relational-databases/resource-governor/resource-governor.md) when CPU contention occurs. This topic presents a scenario that classifies the sessions of a particular [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] user by mapping them to a Resource Governor workload group that limits CPU usage in such cases.  
+  By default, backing up using compression significantly increases CPU usage, and the additional CPU consumed by the compression process can adversely impact concurrent operations. Therefore, you might want to create a low-priority compressed backup in a session whose CPU usage is limited by[Resource Governor](../../relational-databases/resource-governor/resource-governor.md) when CPU contention occurs. This topic presents a scenario that classifies the sessions of a particular [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] user by mapping them to a Resource Governor workload group that limits CPU usage in such cases.  
   
 > [!IMPORTANT]  
 >  In a given Resource Governor scenario, session classification might be based on a user name, an application name, or anything else that can differentiate a connection. For more information, see [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md) and [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md).  
@@ -39,13 +39,13 @@ manager: "jhubbard"
 4.  [Compressing Backups Using a Session with Limited CPU](#creating_compressed_backup)  
   
 ##  <a name="setup_login_and_user"></a> Setting Up a Login and User for Low-Priority Operations  
- The scenario in this topic requires a low-priority [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login and user. The user name will be used to classify sessions running in the login and route them to a Resource Governor workload group that limits CPU usage.  
+ The scenario in this topic requires a low-priority [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login and user. The user name will be used to classify sessions running in the login and route them to a Resource Governor workload group that limits CPU usage.  
   
- The following procedure describes the steps for setting up a login and user for this purpose, followed by a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] example, "Example A: Setting Up a Login and User (Transact-SQL)."  
+ The following procedure describes the steps for setting up a login and user for this purpose, followed by a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] example, "Example A: Setting Up a Login and User (Transact-SQL)."  
   
 ### To set up a login and database user for classifying sessions  
   
-1.  Create a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login for creating low-priority compressed backups.  
+1.  Create a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login for creating low-priority compressed backups.  
   
      **To create a login**  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
      For more information, see [GRANT Database Principal Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Database%20Principal%20Permissions%20\(Transact-SQL\).md).  
   
-3.  Create a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] user for this login.  
+3.  Create a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] user for this login.  
   
      **To create a user**  
   
@@ -71,17 +71,17 @@ manager: "jhubbard"
   
      **To add a user to a fixed database role**  
   
-    -   [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)  
+    -   [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addrolemember-transact-sql.md)  
   
      For more information, see [GRANT Database Principal Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Database%20Principal%20Permissions%20\(Transact-SQL\).md).  
   
 ### Example A: Setting Up a Login and User (Transact-SQL)  
- The following example is relevant only if you choose to create a new [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login and user for low-priority backups. Alternatively, you can use an existing login and user, if an appropriate one exists.  
+ The following example is relevant only if you choose to create a new [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login and user for low-priority backups. Alternatively, you can use an existing login and user, if an appropriate one exists.  
   
 > [!IMPORTANT]  
->  The following example uses a sample login and user name, *domain_name*`\MAX_CPU`. Replace these with the names of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login and user that you plan to use when creating your low-priority compressed backups.  
+>  The following example uses a sample login and user name, *domain_name*`\MAX_CPU`. Replace these with the names of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login and user that you plan to use when creating your low-priority compressed backups.  
   
- This example creates a login for the *domain_name*`\MAX_CPU` Windows account and then grants VIEW SERVER STATE permission to the login. This permission enables you to verify the Resource Governor classification of sessions of the login. The example then creates a user for *domain_name*`\MAX_CPU` and adds it to the db_backupoperator fixed database role for the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] sample database. This user name will be used by the Resource Governor classifier function.  
+ This example creates a login for the *domain_name*`\MAX_CPU` Windows account and then grants VIEW SERVER STATE permission to the login. This permission enables you to verify the Resource Governor classification of sessions of the login. The example then creates a user for *domain_name*`\MAX_CPU` and adds it to the db_backupoperator fixed database role for the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] sample database. This user name will be used by the Resource Governor classifier function.  
   
 ```tsql  
 -- Create a SQL Server login for low-priority operations  
@@ -119,7 +119,7 @@ GO
 > [!NOTE]  
 >  For information about Resource Governor resource pools, workload groups, and classification, see [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
- The [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements for these steps are described in the procedure, "To configure Resource Governor for limiting CPU usage," which is followed by a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] example of the procedure.  
+ The [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements for these steps are described in the procedure, "To configure Resource Governor for limiting CPU usage," which is followed by a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] example of the procedure.  
   
  **To configure Resource Governor (SQL Server Management Studio)**  
   
@@ -196,7 +196,7 @@ GO
  After committing the transaction, the example applies the configuration changes requested in the ALTER WORKLOAD GROUP or ALTER RESOURCE POOL statements.  
   
 > [!IMPORTANT]  
->  The following example uses the user name of the sample [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] user created in "Example A: Setting Up a Login and User (Transact-SQL)," *domain_name*`\MAX_CPU`. Replace this with the name of the user of the login that you plan to use for creating low-priority compressed backups.  
+>  The following example uses the user name of the sample [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] user created in "Example A: Setting Up a Login and User (Transact-SQL)," *domain_name*`\MAX_CPU`. Replace this with the name of the user of the login that you plan to use for creating low-priority compressed backups.  
   
 ```tsql  
 -- Configure Resource Governor.  
@@ -253,15 +253,15 @@ GO
  In the results pane, the **name** column should list one or more sessions for the workload-group name that you specified in your classifier function.  
   
 > [!NOTE]  
->  For information about the dynamic management views called by this SELECT statement, see [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-exec-sessions-transact-sql.md) and [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-resource-governor-workload-groups-transact-sql.md).  
+>  For information about the dynamic management views called by this SELECT statement, see [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-exec-sessions-transact-sql.md) and [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-resource-governor-workload-groups-transact-sql.md).  
   
  [&#91;Top&#93;](#Top)  
   
 ##  <a name="creating_compressed_backup"></a> Compressing Backups Using a Session with Limited CPU  
- To create a compressed backup in a session with a limited maximum CPU, log in as the user specified in your classifier function. In your backup command, either specify WITH COMPRESSION ([!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]) or select **Compress backup** ([!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]). To create a compressed database backup, see [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+ To create a compressed backup in a session with a limited maximum CPU, log in as the user specified in your classifier function. In your backup command, either specify WITH COMPRESSION ([!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]) or select **Compress backup** ([!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]). To create a compressed database backup, see [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 ### Example C: Creating a Compressed Backup (Transact-SQL)  
- The following [BACKUP](../../t-sql/statements/backup-transact-sql.md) example creates a compressed full backup of the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database in a newly formatted backup file, `Z:\SQLServerBackups\AdvWorksData.bak`.  
+ The following [BACKUP](../../t-sql/statements/backup-transact-sql.md) example creates a compressed full backup of the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database in a newly formatted backup file, `Z:\SQLServerBackups\AdvWorksData.bak`.  
   
 ```tsql  
 --Run backup statement in the gBackup session.  

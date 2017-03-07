@@ -19,7 +19,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Data Alert Manager for SharePoint Users
-  [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] provides Data Alert Manager for SharePoint information workers to manage the data alerts. They can view information about the alerts they created, delete alerts, open alert definitions for editing, and run alerts on demand. They can choose to view alerts for a single report only or alerts for all reports. The following picture shows the features available to information workers in Data Alert Manager.  
+  [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] provides Data Alert Manager for SharePoint information workers to manage the data alerts. They can view information about the alerts they created, delete alerts, open alert definitions for editing, and run alerts on demand. They can choose to view alerts for a single report only or alerts for all reports. The following picture shows the features available to information workers in Data Alert Manager.  
   
  ![Alert Manager features for SharePoint users](../reporting-services/media/rs-alertmanageriw.gif "Alert Manager features for SharePoint users")  
   
@@ -30,7 +30,7 @@ manager: "erikre"
  `http://<site name>/_layouts/ReportServer/MyDataAlerts.aspx`  
   
 > [!NOTE]  
->  Before you can use the [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] alerting features, an administrator must grant you permissions. For information about the required permissions, see [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md).  
+>  Before you can use the [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] alerting features, an administrator must grant you permissions. For information about the required permissions, see [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md).  
   
 ##  <a name="ViewingAlerts"></a> View Data Alert Information  
  You can view a list of data alerts that you created in Data Alert Designer. To open Data Alert Manager, you right-click a report published to a SharePoint library. The following picture shows the **Manage Data Alerts** option on the report right-click menu.  

@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Use Sparse Columns
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
 
   Sparse columns are ordinary columns that have an optimized storage for null values. Sparse columns reduce the space requirements for null values at the cost of more overhead to retrieve nonnull values. Consider using sparse columns when the space saved is at least 20 percent to 40 percent. Sparse columns and column sets are defined by using the [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) or [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) statements.  
   
@@ -33,12 +33,12 @@ manager: "jhubbard"
   
      Because sparse columns have many null-valued rows, they are especially appropriate for filtered indexes. A filtered index on a sparse column can index only the rows that have populated values. This creates a smaller and more efficient index. For more information, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
- Sparse columns and filtered indexes enable applications, such as [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)], to efficiently store and access a large number of user-defined properties by using [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+ Sparse columns and filtered indexes enable applications, such as [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)], to efficiently store and access a large number of user-defined properties by using [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
 ## Properties of Sparse Columns  
  Sparse columns have the following characteristics:  
   
--   The [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] uses the SPARSE keyword in a column definition to optimize the storage of values in that column. Therefore, when the column value is NULL for any row in the table, the values require no storage.  
+-   The [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] uses the SPARSE keyword in a column definition to optimize the storage of values in that column. Therefore, when the column value is NULL for any row in the table, the values require no storage.  
   
 -   Catalog views for a table that has sparse columns are the same as for a typical table. The sys.columns catalog view contains a row for each column in the table and includes a column set if one is defined.  
   
@@ -117,7 +117,7 @@ manager: "jhubbard"
  Consider the example of a table that has 600 sparse columns of type bigint. If there are 571 non-null columns, then the total size on disk is 571 * 12 = 6852 bytes. After including additional row overhead and the sparse column header, this increases to around 6895 bytes. The page still has around 1124 bytes available on disk. This can give the impression that additional columns can be updated successfully. However, during the update, there is additional overhead in memory which is 2\*(number of non-null sparse columns). In this example, including the additional overhead – 2 \* 571 = 1142 bytes – increases the row size on disk to around 8037 bytes. This size exceeds the maximum allowed size of 8019 bytes. Since all the columns are fixed-length data types, they cannot be pushed off the row. As a result, the update fails with the 576 error.  
   
 ## Restrictions for Using Sparse Columns  
- Sparse columns can be of any [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data type and behave like any other column with the following restrictions:  
+ Sparse columns can be of any [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data type and behave like any other column with the following restrictions:  
   
 -   A sparse column must be nullable and cannot have the ROWGUIDCOL or IDENTITY properties. A sparse column cannot be of the following data types: **text**, **ntext**, **image**, **timestamp**, user-defined data type, **geometry**, or **geography**; or have the FILESTREAM attribute.  
   
@@ -153,13 +153,13 @@ manager: "jhubbard"
 -   When you change a non-sparse column to a sparse column, the sparse column will consume more space for non-null values. When a row is close to the maximum row size limit, the operation can fail.  
   
 ## SQL Server Technologies That Support Sparse Columns  
- This section describes how sparse columns are supported in the following [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] technologies:  
+ This section describes how sparse columns are supported in the following [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] technologies:  
   
 -   Transactional replication  
   
      Transactional replication supports sparse columns, but it does not support column sets, which can be used with sparse columns. For more information about column sets, see [Use Column Sets](../../relational-databases/tables/use-column-sets.md).  
   
-     The replication of the SPARSE attribute is determined by a schema option that is specified by using [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) or by using the **Article Properties** dialog box in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. Earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] do not support sparse columns. If you must replicate data to an earlier version, specify that the SPARSE attribute should not be replicated.  
+     The replication of the SPARSE attribute is determined by a schema option that is specified by using [sp_addarticle](../../relational-databases/reference/system-stored-procedures/sp-addarticle-transact-sql.md) or by using the **Article Properties** dialog box in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. Earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] do not support sparse columns. If you must replicate data to an earlier version, specify that the SPARSE attribute should not be replicated.  
   
      For tables that are published, you cannot add any new sparse columns to a table or change the sparse property of an existing column. If such an operation is required, drop and re-create the publication.  
   
@@ -236,6 +236,6 @@ WHERE ProductionSpecification IS NOT NULL ;
  [Use Column Sets](../../relational-databases/tables/use-column-sets.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.columns-transact-sql.md)  
+ [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.columns-transact-sql.md)  
   
   

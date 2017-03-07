@@ -15,7 +15,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.event_messages
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Displays information about messages that were logged during operations.  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
 |Event_name|nvarchar(1024)|The run-time event associated with the message.|  
 |Message_source_name|nvarchar(4000)|The package component that is the source of the message.|  
 |Message_source_id|nvarchar(38)|The unique ID of the source of the message.|  
-|Subcomponent_name|nvarchar(4000)|The data flow component that is the source of the message.<br /><br /> When messages are returned by the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] engine, SSIS.Pipeline appears in this column.|  
+|Subcomponent_name|nvarchar(4000)|The data flow component that is the source of the message.<br /><br /> When messages are returned by the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] engine, SSIS.Pipeline appears in this column.|  
 |Package_path|nvarchar(max)|The unique path of the component within the package.|  
 |Execution_path|nvarchar(max)|The full path from the parent package to the point in which the component is executed.<br /><br /> This path also captures iterations of a component.|  
 |threadID|int|ID for the thread that is executing when the message is logged.|  

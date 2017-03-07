@@ -15,9 +15,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.create_environment_variable (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Create an environment variable in the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog.  
+  Create an environment variable in the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] catalog.  
   
 ## Syntax  
   
@@ -80,12 +80,12 @@ create_environment_variable [ @folder_name = ] folder_name
 ## Remarks  
  An environment variable can be used to efficiently assign a value to a project parameter or package parameter for use in the execution of a package. Environment variables enable the organization of parameter values. Variable names must be unique within an environment.  
   
- The stored procedure validates the data type of the variable to make sure it is supported by the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog.  
+ The stored procedure validates the data type of the variable to make sure it is supported by the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] catalog.  
   
 > [!TIP]  
->  Consider using the **Int16** data type in [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] instead of the unsupported **Sbyte** data type.  
+>  Consider using the **Int16** data type in [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] instead of the unsupported **Sbyte** data type.  
   
- The value passed to this stored procedure with the *value* parameter will be converted from an [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data type to a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data type according to the following table:  
+ The value passed to this stored procedure with the *value* parameter will be converted from an [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] data type to a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data type according to the following table:  
   
 |Integration Services Data Type|SQL Server Data Type|  
 |------------------------------------|--------------------------|  

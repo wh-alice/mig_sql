@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # LinRegVariance (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Calculates the linear regression of a set, and returns the variance associated with the regression line, y = ax + b.  
   

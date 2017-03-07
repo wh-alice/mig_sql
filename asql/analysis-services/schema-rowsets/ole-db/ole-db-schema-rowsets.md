@@ -23,16 +23,16 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # OLE DB Schema Rowsets
-  The following OLE DB schema rowsets are supported by the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] XML for Analysis (XMLA) provider. Use the **DISCOVER_ENUMERATORS** rowset with the [Discover](../Topic/Discover%20Method%20\(XMLA\).md) method to check whether a particular data source provider supports a rowset.  
+  The following OLE DB schema rowsets are supported by the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] XML for Analysis (XMLA) provider. Use the **DISCOVER_ENUMERATORS** rowset with the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method to check whether a particular data source provider supports a rowset.  
   
- You can also find detailed information about these rowsets by searching for the topic "Schema Rowsets" in the OLE DB Programmer's Reference portion of the MSDN® Library at the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Web site.  
+ You can also find detailed information about these rowsets by searching for the topic "Schema Rowsets" in the OLE DB Programmer's Reference portion of the MSDN® Library at the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Web site.  
   
  The following table describes this schema rowset.  
   
 |Rowset|Description|  
 |------------|-----------------|  
 |**DBSCHEMA_ASSERTIONS**|Identifies the assertions that are defined in the catalog and owned by a given user.|  
-|[DBSCHEMA_CATALOGS Rowset](../../../analysis-services/schema-rowsets/ole-db/dbschema-catalogs-rowset.md) <sup>1</sup>|Identifies the physical attributes associated with catalogs that are accessible from the database management system (DBMS). For some systems, such as [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Access, there may be only one catalog. For [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], this rowset enumerates all catalogs (databases) defined in the system database.|  
+|[DBSCHEMA_CATALOGS Rowset](../../../analysis-services/schema-rowsets/ole-db/dbschema-catalogs-rowset.md) <sup>1</sup>|Identifies the physical attributes associated with catalogs that are accessible from the database management system (DBMS). For some systems, such as [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Access, there may be only one catalog. For [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], this rowset enumerates all catalogs (databases) defined in the system database.|  
 |**DBSCHEMA_CHARACTER_SETS**|Identifies the character sets that are defined in the catalog and accessible to a given user.|  
 |**DBSCHEMA_CHECK_CONSTRAINTS**|Identifies the check constraints that are defined in the catalog and owned by a given user.|  
 |**DBSCHEMA_CHECK_CONSTRAINTS_BY_TABLE**|Identifies the check constraints for a given table, defined in a catalog owned by a given user.|  
@@ -57,7 +57,7 @@ manager: "erikre"
 |**DBSCHEMA_TABLE_CONSTRAINTS**|Identifies the table constraints that are defined in the catalog and owned by a given user.|  
 |**DBSCHEMA_TABLE_PRIVILEGES**|Identifies the privileges on tables that are defined in the catalog and available to or granted by a given user.|  
 |**DBSCHEMA_TABLE_STATISTICS**|Describes the available set of statistics on tables in the provider.<br /><br /> This rowset is not related to the **STATISTICS** rowset.|  
-|[DBSCHEMA_TABLES Rowset](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) <sup>1</sup>|Identifies the measure groups and dimensions exposed as tables within [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].|  
+|[DBSCHEMA_TABLES Rowset](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) <sup>1</sup>|Identifies the measure groups and dimensions exposed as tables within [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].|  
 |**DBSCHEMA_TABLES_INFO** <sup>1</sup>|Identifies the tables (including views) that are defined in the catalog and accessible to a given user.|  
 |**DBSCHEMA_TRANSLATIONS**|Identifies the character translations that are defined in the catalog and accessible to a given user.|  
 |**DBSCHEMA_TRUSTEE**|Enumerates the trustees for a data source.|  
@@ -66,7 +66,7 @@ manager: "erikre"
 |**DBSCHEMA_VIEW_TABLE_USAGE**|Identifies the tables on which viewed tables, defined in the catalog and owned by a given user, are dependent.|  
 |**DBSCHEMA_VIEWS**|Identifies the views that are defined in the catalog and accessible to a given user.|  
   
- <sup>1</sup> Indicates schema rowsets supported by the MSOLAP data source provider for the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] XMLA provider.  
+ <sup>1</sup> Indicates schema rowsets supported by the MSOLAP data source provider for the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] XMLA provider.  
   
 ## See Also  
  [DISCOVER_ENUMERATORS Rowset](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)   

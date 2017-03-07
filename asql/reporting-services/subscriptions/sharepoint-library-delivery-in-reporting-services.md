@@ -22,7 +22,7 @@ manager: "erikre"
 # SharePoint Library Delivery in Reporting Services
   A report server that is configured for SharePoint integration includes a delivery extension that you can use to send a report to a SharePoint library.  
   
- To use the SharePoint delivery extension, you must create a subscription from an application page on a SharePoint site, and then select **SharePoint document library** as the delivery type. You cannot use the SharePoint delivery extension for subscriptions that you create in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] or Report Manager.  
+ To use the SharePoint delivery extension, you must create a subscription from an application page on a SharePoint site, and then select **SharePoint document library** as the delivery type. You cannot use the SharePoint delivery extension for subscriptions that you create in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] or Report Manager.  
   
 > [!NOTE]  
 >  The delivery extension does not support the delivery of reports to a SharePoint site if the report server is running in native mode. If you attempt to call the delivery extension programmatically for a native mode report server, the server will return the **rsDeliveryExtensionNotFound** error and log the **rsOperationNotSupportedSharePointMode** error in the report server log files.  

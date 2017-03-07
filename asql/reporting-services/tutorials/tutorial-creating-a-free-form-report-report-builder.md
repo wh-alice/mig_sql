@@ -35,7 +35,7 @@ For more information about requirements, see [Prerequisites for Tutorials &#40;R
   
 ### To create a blank report  
   
-1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
+1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
   
     The **New Report or Dataset** dialog box opens.  
   
@@ -114,10 +114,10 @@ For more information about requirements, see [Prerequisites for Tutorials &#40;R
   
     ![report-builder-free-form-tutorial-data](../../reporting-services/tutorials/media/report-builder-free-form-tutorial-data.png) 
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## <a name="List"></a>2. Add and Configure a List  
-In [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] the list data region is ideal for creating free-form reports. It's based on the *tablix* data region, as are tables and matrixes. For more information, see [Create Invoices and Forms with Lists](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+In [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] the list data region is ideal for creating free-form reports. It's based on the *tablix* data region, as are tables and matrixes. For more information, see [Create Invoices and Forms with Lists](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 You will use a list to display the sales information for sales territories in a report formatted like a newsletter. The information is grouped by territory. You will add a new row group that groups data by territory, and then delete the built-in Details row group.  
   
@@ -136,13 +136,13 @@ You will use a list to display the sales information for sales territories in a 
   
 3.  In the **Dataset name** drop-down list, select **ListDataset**.  
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 5.  Right-click inside the list, and then click **Rectangle Properties**.  
   
 6.  On the **General** tab, select the **Add a page break after** check box.  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To add a new row group and to delete the Details group  
   
@@ -152,7 +152,7 @@ You will use a list to display the sales information for sales territories in a 
   
 2.  In the **Group by** list, select `[Territory].`  
   
-3.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
     A column containing the cell `[Territory]` is added to the list.
   
@@ -166,7 +166,7 @@ You will use a list to display the sales information for sales territories in a 
    
 7.  Select **Delete Group only**.  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## <a name="Graphics"></a>3. Add Graphic elements  
 One advantage of list data regions is that you can add report items such as rectangles and text boxes anywhere, instead of being limited to a tabular layout. You will enhance the appearance of the report by adding a graphic (a rectangle filled with a color).  
@@ -183,7 +183,7 @@ One advantage of list data regions is that you can add report items such as rect
   
 4.  In **Fill color**, select **Light Gray**.  
    
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 6.  Click **Run** to preview the report.  
   
@@ -265,7 +265,7 @@ You can add text boxes to display static text that is repeated on each report pa
     =Sum(Fields!Sales.value)  
     ```  
   
-24. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+24. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
     ![report-builder-free-form-text-box](../../reporting-services/tutorials/media/report-builder-free-form-text-box.png)
  
@@ -417,7 +417,7 @@ Rectangles help you control how the report renders. Place a pie and column chart
 
 14. On the **General** tab, under **Legend position**, select the center dot at the bottom. 
   
-15. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+15. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
 
 16. Drag to make the chart region taller, if necessary.
 
@@ -506,7 +506,7 @@ For more information about lists, see:
 * [Create Invoices and Forms with Lists](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-For more information about query designers, see [Query Designers &#40;Report Builder&#41;](../Topic/Query%20Designers%20(Report%20Builder).md) and [Text-based Query Designer User Interface &#40;Report Builder&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+For more information about query designers, see [Query Designers &#40;Report Builder&#41;](../../a9retired/query-designers-report-builder.md) and [Text-based Query Designer User Interface &#40;Report Builder&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## See Also  
 [Report Builder Tutorials](../../reporting-services/tutorials/report-builder-tutorials.md) 

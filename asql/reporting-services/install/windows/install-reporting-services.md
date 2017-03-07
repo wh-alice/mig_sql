@@ -17,7 +17,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Install Reporting Services
-  [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] installation involves server components for storing report items, rendering reports, and processing of subscription and other report services.  The steps for a server installation are different for a native mode report server versus as SharePoint mode report server. This section includes detailed topics for installing and verifying core [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] scenarios.  
+  [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] installation involves server components for storing report items, rendering reports, and processing of subscription and other report services.  The steps for a server installation are different for a native mode report server versus as SharePoint mode report server. This section includes detailed topics for installing and verifying core [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] scenarios.  
   
 -   [Install Reporting Services Native Mode Report Server](http://msdn.microsoft.com/en-us/8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
   

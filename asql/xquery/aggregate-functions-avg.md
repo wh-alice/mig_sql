@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Aggregate Functions - avg
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the average of a sequence of numbers.  
   
@@ -54,7 +54,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the AdventureWorks database.  
   
 ### A. Using the avg() XQuery function to find work center locations in the manufacturing process in which labor hours are greater than the average for all work center locations.  
- You can rewrite the query provided in [min function (XQuery)](../Topic/min%20Function%20\(XQuery\).md) to use the **avg()** function.  
+ You can rewrite the query provided in [min function (XQuery)](../xquery/aggregate-functions-min.md) to use the **avg()** function.  
   
 ## Implementation Limitations  
  These are the limitations:  

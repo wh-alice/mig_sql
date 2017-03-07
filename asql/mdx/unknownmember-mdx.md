@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # UnknownMember (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the unknown member associated with a level or member.  
   
@@ -44,7 +44,7 @@ Hierarchy_Expression.UnknownMember
  A valid Multidimensional Expressions (MDX) expression that returns a hierarchy.  
   
 ## Remarks  
- [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] creates an unknown member to associate fact table data with a hierarchy when the hierarchy is not known. The unknown member can be at one of the following levels:  
+ [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] creates an unknown member to associate fact table data with a hierarchy when the hierarchy is not known. The unknown member can be at one of the following levels:  
   
 -   At the top level for attribute hierarchies that are not aggregated.  
   

@@ -22,11 +22,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ALTER RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Changes an existing Resource Governor resource pool configuration in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Changes an existing Resource Governor resource pool configuration in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md).  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## Syntax  
   
@@ -54,7 +54,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
   
 ## Arguments  
  { *pool_name* | **"default"** }  
- Is the name of an existing user-defined resource pool or the default resource pool that is created when [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is installed.  
+ Is the name of an existing user-defined resource pool or the default resource pool that is created when [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is installed.  
   
  "default" must be enclosed by quotation marks ("") or brackets ([]) when used with ALTER RESOURCE POOL to avoid conflict with DEFAULT, which is a system reserved word. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
@@ -70,7 +70,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
  CAP_CPU_PERCENT =*value*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Specifies the target maximum CPU capacity for requests in the resource pool. *value* is an integer with a default setting of 100. The allowed range for *value* is from 1 through 100.  
   
@@ -80,13 +80,13 @@ ALTER RESOURCE POOL { pool_name | "default" }
  AFFINITY {SCHEDULER = AUTO | (Scheduler_range_spec) | NUMANODE = (NUMA_node_range_spec)}  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Attach the resource pool to specific schedulers. The default value is AUTO.  
   
- AFFINITY SCHEDULER = (Scheduler_range_spec) maps the resource pool to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] schedules identified by the given IDs. These IDs map to the values in the scheduler_id column in [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-os-schedulers-transact-sql.md).  
+ AFFINITY SCHEDULER = (Scheduler_range_spec) maps the resource pool to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] schedules identified by the given IDs. These IDs map to the values in the scheduler_id column in [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-os-schedulers-transact-sql.md).  
   
- When you use AFFINITY NAMANODE = (NUMA_node_range_spec), the resource pool is affinitized to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] schedulers that map to the physical CPUs that correspond to the given NUMA node or range of nodes. You can use the following Transact-SQL query to discover the mapping between the physical NUMA configuration and the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] scheduler IDs.  
+ When you use AFFINITY NAMANODE = (NUMA_node_range_spec), the resource pool is affinitized to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] schedulers that map to the physical CPUs that correspond to the given NUMA node or range of nodes. You can use the following Transact-SQL query to discover the mapping between the physical NUMA configuration and the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] scheduler IDs.  
   
 ```  
 SELECT osn.memory_node_id AS [numa_node_id], sc.cpu_id, sc.scheduler_id  
@@ -104,14 +104,14 @@ INNER JOIN sys.dm_os_schedulers AS sc ON osn.node_id = sc.parent_node_id AND sc.
  MIN_IOPS_PER_VOLUME =*value*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Specifies the minimum I/O operations per second (IOPS) per disk volume to reserve for the resource pool. The allowed range for *value* is from 0 through 2^31-1 (2,147,483,647). Specify 0 to indicate no minimum threshold for the pool.  
   
  MAX_IOPS_PER_VOLUME =*value*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Specifies the maximum I/O operations per second (IOPS) per disk volume to allow for the resource pool. The allowed range for *value* is from 0 through 2^31-1 (2,147,483,647). Specify 0 to set an unlimited threshold for the pool. The default is 0.  
   
@@ -154,7 +154,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 ALTER RESOURCE POOL Pool25  

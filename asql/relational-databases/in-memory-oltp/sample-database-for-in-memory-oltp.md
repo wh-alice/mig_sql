@@ -20,7 +20,7 @@ manager: "jhubbard"
  This sample showcases the In-Memory OLTP feature. It shows  memory-optimized tables and natively-compiled stored procedures, and can be used to demonstrate performance benefits of In-Memory OLTP.  
   
 > [!NOTE]  
->  To view this topic for [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)], see [Extensions to AdventureWorks to Demonstrate In-Memory OLTP](https://msdn.microsoft.com/library/dn511655\(v=sql.120\).aspx).  
+>  To view this topic for [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)], see [Extensions to AdventureWorks to Demonstrate In-Memory OLTP](https://msdn.microsoft.com/library/dn511655\(v=sql.120\).aspx).  
   
  The sample migrates 5 tables in the AdventureWorks database to memory-optimized, and it includes a demo workload for sales order processing. You can use this demo workload to see the performance benefit of using In-Memory OLTP on your server.  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   
--   [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)]  
+-   [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)]  
   
 -   For performance testing, a server with specifications similar to your production environment. For this particular sample you should have at least 16GB of memory available to SQL Server. For general guidelines on hardware for In-Memory OLTP, see the following blog post:[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 1.  Download AdventureWorks2016CTP3.bak and SQLServer2016CTP3Samples.zip from: [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) to a local folder, for example 'c:\temp'.  
   
-2.  Restore the database backup using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] or [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]:  
+2.  Restore the database backup using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] or [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]:  
   
     1.  Identify the target folder and filename for the data file, for example  
   
@@ -136,25 +136,25 @@ manager: "jhubbard"
   
 -   *Default constraints* are supported for memory-optimized tables, and most default constraints we migrated as is. However, the original table Sales.SalesOrderHeader contains two default constraints that retrieve the current date, for the columns OrderDate and ModifiedDate. In a high throughput order processing workload with a lot of concurrency, any global resource can become a point of contention. System time is such a global resource, and we have observed that it can become a bottleneck when running an In-Memory OLTP workload that inserts sales orders, in particular if the system time needs to be retrieved for multiple columns in the sales order header, as well as the sales order details. The problem is addressed in this sample by retrieving the system time only once for each sales order that is inserted, and use that value for the datetime columns in SalesOrderHeader_inmem and SalesOrderDetail_inmem, in the stored procedure Sales.usp_InsertSalesOrder_inmem.  
   
--   *Alias UDTs* - The original table uses two alias user-defined data types (UDTs) dbo.OrderNumber and dbo.AccountNumber, for the columns PurchaseOrderNumber and AccountNumber, respectively. [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] does not support alias UDT for memory-optimized tables, thus the new tables use system data types nvarchar(25) and nvarchar(15), respectively.  
+-   *Alias UDTs* - The original table uses two alias user-defined data types (UDTs) dbo.OrderNumber and dbo.AccountNumber, for the columns PurchaseOrderNumber and AccountNumber, respectively. [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] does not support alias UDT for memory-optimized tables, thus the new tables use system data types nvarchar(25) and nvarchar(15), respectively.  
   
 -   *Nullable columns in index keys* - In the original table, the column SalesPersonID is nullable, while in the new tables the column is not nullable and has a default constraint with value (-1). This is because indexes on memory-optimized tables cannot have nullable columns in the index key; -1 is a surrogate for NULL in this case.  
   
--   *Computed columns* - The computed columns SalesOrderNumber and TotalDue are omitted, as [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] does not support computed columns in memory-optimized tables. The new view Sales.vSalesOrderHeader_extended_inmem reflects the columns SalesOrderNumber and TotalDue. Therefore, you can use this view if these columns are needed.  
+-   *Computed columns* - The computed columns SalesOrderNumber and TotalDue are omitted, as [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] does not support computed columns in memory-optimized tables. The new view Sales.vSalesOrderHeader_extended_inmem reflects the columns SalesOrderNumber and TotalDue. Therefore, you can use this view if these columns are needed.  
 
     - **Applies to:** [!INCLUDE[ssSQLv14_md](../../advanced-analytics/r-services/includes/sssqlv14-md.md)] CTP 1.1.  
 Beginning with [!INCLUDE[ssSQLv14_md](../../advanced-analytics/r-services/includes/sssqlv14-md.md)] CTP 1.1, computed columns are supported in memory-optimized tables and indexes.
 
   
--   *Foreign key constraints* are supported for memory-optimized tables in [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)], but only if the referenced tables are also memory-optimized. Foreign keys that reference tables that are also migrated to memory-optimized are kept in the migrated tables, while other foreign keys are omitted.  In addition, SalesOrderHeader_inmem is a hot table in the example workload, and foreign keys constraints require additional processing for all DML operations, as it requires lookups in all the other tables referenced in these constraints. Therefore, the assumption is that the app ensures referential integrity for the Sales.SalesOrderHeader_inmem table, and referential integrity is not validated when rows are inserted.  
+-   *Foreign key constraints* are supported for memory-optimized tables in [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)], but only if the referenced tables are also memory-optimized. Foreign keys that reference tables that are also migrated to memory-optimized are kept in the migrated tables, while other foreign keys are omitted.  In addition, SalesOrderHeader_inmem is a hot table in the example workload, and foreign keys constraints require additional processing for all DML operations, as it requires lookups in all the other tables referenced in these constraints. Therefore, the assumption is that the app ensures referential integrity for the Sales.SalesOrderHeader_inmem table, and referential integrity is not validated when rows are inserted.  
   
--   *Rowguid* - The rowguid column is omitted. While uniqueidentifier is support for memory-optimized tables, the option ROWGUIDCOL is not supported in [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)]. Columns of this kind are typically used for either merge replication or tables that have filestream columns. This sample includes neither.  
+-   *Rowguid* - The rowguid column is omitted. While uniqueidentifier is support for memory-optimized tables, the option ROWGUIDCOL is not supported in [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)]. Columns of this kind are typically used for either merge replication or tables that have filestream columns. This sample includes neither.  
   
  Sales.SalesOrderDetail  
   
 -   *Default constraints* – similar to SalesOrderHeader, the default constraint requiring the system date/time is not migrated, instead the stored procedure inserting sales orders takes care of inserting the current system date/time on first insert.  
   
--   *Computed columns* – the computed column LineTotal was not migrated as computed columns are not supported with memory-optimized tables in [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)]. To access this column use the view Sales.vSalesOrderDetail_extended_inmem.  
+-   *Computed columns* – the computed column LineTotal was not migrated as computed columns are not supported with memory-optimized tables in [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)]. To access this column use the view Sales.vSalesOrderDetail_extended_inmem.  
   
 -   *Rowguid* - The rowguid column is omitted. For details see the description for the table SalesOrderHeader.  
   

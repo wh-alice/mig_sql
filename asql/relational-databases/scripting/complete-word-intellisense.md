@@ -20,7 +20,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Complete Word (IntelliSense)
-  The [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] IntelliSense Complete Word option types the rest of a variable, command, or function name once you have entered enough characters to uniquely identify the term.  
+  The [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] IntelliSense Complete Word option types the rest of a variable, command, or function name once you have entered enough characters to uniquely identify the term.  
   
  There are four ways to invoke the Complete Word feature:  
   

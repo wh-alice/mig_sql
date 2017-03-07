@@ -16,19 +16,19 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Import Data from Tables (Master Data Services)
-  You can add data and make data changes to a model in [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], in bulk.  
+  You can add data and make data changes to a model in [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], in bulk.  
   
  **Prerequisites**  
   
--   You must have permission to insert data into the stg.\<name>_Leaf, the stg.\<name>_Consolidated, stg.\<name>_Relationship table in the [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] database.  
+-   You must have permission to insert data into the stg.\<name>_Leaf, the stg.\<name>_Consolidated, stg.\<name>_Relationship table in the [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] database.  
   
--   You must have permissions to execute either the stg.udp_\<name>_Leaf, stg.udp\_\<name>_Consolidated, or the stg.udp\_\<name>_Relationship stored procedure in the [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] database.  
+-   You must have permissions to execute either the stg.udp_\<name>_Leaf, stg.udp\_\<name>_Consolidated, or the stg.udp\_\<name>_Relationship stored procedure in the [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] database.  
   
 -   The model must not have a status of **Committed**.  
   
- **To add, update, and delete data in the [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] database**  
+ **To add, update, and delete data in the [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] database**  
   
-1.  Prepare the members for import into the appropriate staging table in the [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] database, including providing values for the required fields. For an overview of staging tables, see [Overview: Importing Data from Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+1.  Prepare the members for import into the appropriate staging table in the [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] database, including providing values for the required fields. For an overview of staging tables, see [Overview: Importing Data from Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
     -   For leaf members the table is stg.\<name>_Leaf, where \<name> refers to the corresponding entity. For information about the required fields, see [Leaf Member Staging Table &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
@@ -42,15 +42,15 @@ manager: "jhubbard"
   
          For an overview of deactivating and deleting members, see [Overview: Importing Data from Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
-2.  Open [!INCLUDE[ssManStudioFull](../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and connect to the Database Engine instance for your [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] database.  
+2.  Open [!INCLUDE[ssManStudioFull](../a9notintoc/includes/ssmanstudiofull-md.md)] and connect to the Database Engine instance for your [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] database.  
   
      For more information, see [SQL Server Management Studio](../Topic/SQL%20Server%20Management%20Studio.md).  
   
-3.  Import data into the staging tables by using the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export wizard.  
+3.  Import data into the staging tables by using the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Import and Export wizard.  
   
      For more information, see [SQL Server Import and Export Wizard](../Topic/SQL%20Server%20Import%20and%20Export%20Wizard.md).  
   
-4.  Load the data from the staging tables to the [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] tables, by doing one of the following  
+4.  Load the data from the staging tables to the [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] tables, by doing one of the following  
   
     -   Run the staging stored procedure that corresponds to the staging table that you want to move data to.  
   
@@ -62,7 +62,7 @@ manager: "jhubbard"
   
          ![Staging Batches Page in Master Data Manager](../master-data-services/media/mds-stagingbatchespage.png "Staging Batches Page in Master Data Manager")  
   
-         The staging process  is started at intervals determined by the **Staging batch interval** setting in [!INCLUDE[ssMDScfgmgr](../database-engine/install/windows/includes/ssmdscfgmgr-md.md)]. For more information, see [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
+         The staging process  is started at intervals determined by the **Staging batch interval** setting in [!INCLUDE[ssMDScfgmgr](../a9retired/includes/ssmdscfgmgr-md.md)]. For more information, see [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
 5.  View errors that occurred during staging. For more information, see [View Errors that Occur During Staging &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md) and [Staging Process Errors &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md).  
   

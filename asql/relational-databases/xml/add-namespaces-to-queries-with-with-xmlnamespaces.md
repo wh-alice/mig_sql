@@ -26,7 +26,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Add Namespaces to Queries with WITH XMLNAMESPACES
-  [WITH XMLNAMESPACES (Transact-SQL)](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md) provides namespace URI support in the following way:  
+  [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/data-types/with-xmlnamespaces.md) provides namespace URI support in the following way:  
   
 -   It makes the namespace prefix to URI mapping available when [Constructing XML Using FOR XML](../../relational-databases/xml/for-xml-sql-server.md) queries.  
   
@@ -242,7 +242,7 @@ Go
 ## See Also  
  [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md)   
  [XQuery Language Reference &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)   
- [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md)   
+ [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/data-types/with-xmlnamespaces.md)   
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

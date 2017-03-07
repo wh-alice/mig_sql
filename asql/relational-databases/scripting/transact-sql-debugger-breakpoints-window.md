@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Transact-SQL Debugger - Breakpoints Window
-  The **Breakpoints** window lists all the breakpoints that are set in the current [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Query Editor. To manage the breakpoints, use the toolbar in the **Breakpoints** window. Breakpoints are locations in the code where execution pauses in debug mode so that you can view debugging data.  
+  The **Breakpoints** window lists all the breakpoints that are set in the current [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Query Editor. To manage the breakpoints, use the toolbar in the **Breakpoints** window. Breakpoints are locations in the code where execution pauses in debug mode so that you can view debugging data.  
   
 ## Task List  
  **To access the Breakpoints window**  
@@ -33,7 +33,7 @@ manager: "jhubbard"
  Displays the name of the breakpoint. Breakpoint names are provided by the debugger. This name includes the name of Database Engine Query Editor window that contains the breakpoint, and the line number in the Query Editor on which the breakpoint is set.  
   
  **Condition**  
- Displays **(no condition)**. The [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] debugger does not support setting breakpoint conditions.  
+ Displays **(no condition)**. The [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] debugger does not support setting breakpoint conditions.  
   
  **Hit Count**  
  Displays**breaks always**.  
@@ -41,13 +41,13 @@ manager: "jhubbard"
  You can add and remove the following columns by selecting them on the **Columns** list.  
   
  **Filter**  
- Displays **(none)**. The [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] debugger does not support setting breakpoint filters.  
+ Displays **(none)**. The [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] debugger does not support setting breakpoint filters.  
   
  **When Hit**  
  Displays **Break**.  
   
  **Language**  
- Displays **Transact-SQL** for [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+ Displays **Transact-SQL** for [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **Function**  
  Displays the number of the line on which the breakpoint is set.  
@@ -56,13 +56,13 @@ manager: "jhubbard"
  Displays the name of the source file that contains the breakpoint, and the number of the line on which the breakpoint is set.  
   
  **Address**  
- The [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] debugger does not support this feature.  
+ The [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] debugger does not support this feature.  
   
  **Process**  
- Displays **[SQL]** to indicate that this is a [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] process. This is followed by the name of the instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] in which the code executes.  
+ Displays **[SQL]** to indicate that this is a [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] process. This is followed by the name of the instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] in which the code executes.  
   
 ## Breakpoints Window Toolbar  
- When the current [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Query Editor window has active breakpoints, the **Breakpoints** window displays a toolbar that can be used to manage the breakpoints.  
+ When the current [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Query Editor window has active breakpoints, the **Breakpoints** window displays a toolbar that can be used to manage the breakpoints.  
   
  **Delete**  
  Deletes the selected breakpoint.  

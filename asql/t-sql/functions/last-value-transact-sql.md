@@ -25,9 +25,9 @@ manager: "jhubbard"
 # LAST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx_md](../../t-sql/data-types/includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-  Returns the last value in an ordered set of values in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  Returns the last value in an ordered set of values in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -44,7 +44,7 @@ LAST_VALUE ( [scalar_expression )
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
  *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group.  
   
- *order_by_clause* determines the order of the data before the function is applied. The *order_by_clause* is required. *rows_range_clause* further limits the rows within the partition by specifying start and end points. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../Topic/OVER%20Clause%20\(Transact-SQL\).md).  
+ *order_by_clause* determines the order of the data before the function is applied. The *order_by_clause* is required. *rows_range_clause* further limits the rows within the partition by specifying start and end points. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## Return Types  
  Is the same type as *scalar_expression*.  
@@ -98,7 +98,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
 ### B. Using FIRST_VALUE and LAST_VALUE in a computed expression  
  The following example uses the FIRST_VALUE and LAST_VALUE functions in computed expressions to show the difference between the sales quota value for the current quarter and the first and last quarter of the year respectively for a given number of employees. The FIRST_VALUE function returns the sales quota value for the first quarter of the year, and subtracts it from the sales quota value for the current quarter. It is returned in the derived column entitled DifferenceFromFirstQuarter. For the first quarter of a year, the value of the DifferenceFromFirstQuarter column is 0. The LAST_VALUE function returns the sales quota value for the last quarter of the year, and subtracts it from the sales quota value for the current quarter. It is returned in the derived column entitled DifferenceFromLastQuarter. For the last quarter of a year, the value of the DifferenceFromLastQuarter column is 0.  
   
- The clause “RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING” is required in this example for the non-zero values to be returned in the DifferenceFromLastQuarter column, as shown below. The default range is “RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW”. In this example, using that default range (or not including a range, resulting in the default being used) would result in zeroes being returned in the DifferenceFromLastQuarter column. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../Topic/OVER%20Clause%20\(Transact-SQL\).md).  
+ The clause “RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING” is required in this example for the non-zero values to be returned in the DifferenceFromLastQuarter column, as shown below. The default range is “RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW”. In this example, using that default range (or not including a range, resulting in the default being used) would result in zeroes being returned in the DifferenceFromLastQuarter column. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  

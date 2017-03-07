@@ -124,7 +124,7 @@ WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
     
 ## Create an R plot of the model
 
-SQL Server Management Studio cannot directly display plots created using [sp_execute_external_script](../../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Instead, the general process for generating R plots in R Services is to create the plot as part of your R code and then write the image to a file. You can also return the serialized binary plot object to an application, such as Reporting Services, that can display images.
+SQL Server Management Studio cannot directly display plots created using [sp_execute_external_script](../../../relational-databases/reference/system-stored-procedures/sp-execute-external-script-transact-sql.md). Instead, the general process for generating R plots in R Services is to create the plot as part of your R code and then write the image to a file. You can also return the serialized binary plot object to an application, such as Reporting Services, that can display images.
 
 This example demonstrates how to create a simple graphic using a plotting function included by default with R. The image is output to the specified file, and is also output into a SQL variable by the stored procedure.
 

@@ -26,10 +26,10 @@ manager: "erikre"
 # Creating the Web Service Proxy
   A client and a Web service can communicate using SOAP messages, which encapsulate the input and output parameters as XML. A proxy class maps parameters to XML elements and then sends the SOAP messages over a network. In this way, the proxy class frees you from having to communicate with the Web service at the SOAP level and allows you to invoke Web service methods in any development environment that supports SOAP and Web service proxies.  
   
- There are two ways to add a proxy class to your development project using the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)]: with the WSDL tool in the [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)], and by adding a Web reference in [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../analysis-services/multidimensional-models/includes/vsprvs-md.md)]. The following sections discuss this subject in further detail.  
+ There are two ways to add a proxy class to your development project using the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)]: with the WSDL tool in the [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)], and by adding a Web reference in [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../a9retired/includes/vsprvs-md.md)]. The following sections discuss this subject in further detail.  
   
 ## Adding the Proxy Using the WSDL Tool  
- The [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] SDK includes the Web Services Description Language tool (Wsdl.exe), which enables you to generate a Web service proxy for use in the [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] development environment. The most common way to create a client proxy in languages that support Web services (currently C# and [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../analysis-services/data-mining/includes/vbprvb-md.md)]) is to use the WSDL tool.  
+ The [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] SDK includes the Web Services Description Language tool (Wsdl.exe), which enables you to generate a Web service proxy for use in the [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] development environment. The most common way to create a client proxy in languages that support Web services (currently C# and [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../a9retired/includes/vbprvb-md.md)]) is to use the WSDL tool.  
   
  **To add a proxy class to your project using Wsdl.exe**  
   
@@ -41,7 +41,7 @@ manager: "erikre"
     wsdl /language:CS /n:"Microsoft.SqlServer.ReportingServices2010" http://<Server Name>/reportserver/reportservice2010.asmx?wsdl  
     ```  
   
-     The WSDL tool accepts a number of command-prompt arguments for generating a proxy. The preceding example specifies the language C#, a suggested namespace to use in the proxy (to prevent name collision if using more than one Web service endpoint), and generates a C# file called ReportingService2010.cs. If the example had specified [!INCLUDE[vbprvb](../../../analysis-services/data-mining/includes/vbprvb-md.md)], the example would have generated a proxy file with the name ReportingService2010.vb. This file is created in the directory from which you run the command.  
+     The WSDL tool accepts a number of command-prompt arguments for generating a proxy. The preceding example specifies the language C#, a suggested namespace to use in the proxy (to prevent name collision if using more than one Web service endpoint), and generates a C# file called ReportingService2010.cs. If the example had specified [!INCLUDE[vbprvb](../../../a9retired/includes/vbprvb-md.md)], the example would have generated a proxy file with the name ReportingService2010.vb. This file is created in the directory from which you run the command.  
   
 2.  Compile the proxy class into an assembly file (with the extension .dll) and reference it in your project, or add the class as a project item.  
   
@@ -63,10 +63,10 @@ ReportingService2010 service = new ReportingService2010();
   
 ```  
   
- For more information about the Wsdl.exe tool, including its full syntax, see "Web Services Description Language Tool" in the [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] SDK documentation. For a full explanation of Web service proxies, see "Creating an XML Web Service Proxy" in the [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] SDK documentation.  
+ For more information about the Wsdl.exe tool, including its full syntax, see "Web Services Description Language Tool" in the [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] SDK documentation. For a full explanation of Web service proxies, see "Creating an XML Web Service Proxy" in the [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] SDK documentation.  
   
 ## Adding the Proxy Using a Web Reference in Visual Studio  
- A Web reference enables a project to consume one or more Web services. [!INCLUDE[vsprvs](../../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] enables users to add Web service references to projects by following a few simple steps.  
+ A Web reference enables a project to consume one or more Web services. [!INCLUDE[vsprvs](../../../a9retired/includes/vsprvs-md.md)] enables users to add Web service references to projects by following a few simple steps.  
   
  **To add a Web reference to a project**  
   
@@ -118,7 +118,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials
   
 ```  
   
- You can also add a **using** (**Import** in [!INCLUDE[vbprvb](../../../analysis-services/data-mining/includes/vbprvb-md.md)]) directive to the Report Server Web service reference. If you use this directive, you do not need to fully qualify the types in the namespace. To do this, add the following code to your file:  
+ You can also add a **using** (**Import** in [!INCLUDE[vbprvb](../../../a9retired/includes/vbprvb-md.md)]) directive to the Report Server Web service reference. If you use this directive, you do not need to fully qualify the types in the namespace. To do this, add the following code to your file:  
   
 ```vb#  
 Import myNamespace.myReferenceName  

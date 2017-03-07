@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Add a Gauge to a Report (Report Builder and SSRS)
-  In a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report, when you want to summarize data in a visual format, you can use a gauge data region. After you add a gauge data region to the design surface, you can drag report dataset fields to a data pane on the gauge.  
+  In a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report, when you want to summarize data in a visual format, you can use a gauge data region. After you add a gauge data region to the design surface, you can drag report dataset fields to a data pane on the gauge.  
   
 ## To add a gauge to your report  
   
@@ -24,7 +24,7 @@ manager: "erikre"
   
 2.  On the Insert tab, double-click Gauge. The **Select Gauge Type** dialog box opens.  
   
-3.  Select the type of gauge you want to add. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  Select the type of gauge you want to add. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  Unlike charts, gauges have only two types: linear and radial. The available gauges in the **Select a Gauge Type** dialog box are templates for these two types of gauges. For this reason, you cannot change the gauge type after you add the gauge to your report. You must delete and re-add a gauge to change its type.  

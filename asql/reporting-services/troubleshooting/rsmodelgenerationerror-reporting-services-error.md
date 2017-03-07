@@ -23,14 +23,14 @@ manager: "erikre"
   
 |||  
 |-|-|  
-|Product Name|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|  
+|Product Name|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]|  
 |Event ID|rsRenderingError|  
 |Event Source|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
-|Component|[!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]|  
+|Component|[!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]|  
 |Message Text|An error occurred while generating model. (rsModelGenerationError) (ReportingServicesLibrary) %1|  
   
 ## Explanation  
- The report model could not be generated. In [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]2005 SP1 and earlier versions, this error is most likely displayed when the System.Data.DataSet object cannot handle a table or relationship within the database schema, such as when, for example, two foreign keys are defined on the same column within a table.  
+ The report model could not be generated. In [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]2005 SP1 and earlier versions, this error is most likely displayed when the System.Data.DataSet object cannot handle a table or relationship within the database schema, such as when, for example, two foreign keys are defined on the same column within a table.  
   
 ## User Action  
  To determine the specific reason that caused this message to appear, review the report server log files, which are located at \Microsoft SQL Server\\<SQL Server Instance\>\Reporting Services\LogFiles.  

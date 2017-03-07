@@ -16,10 +16,10 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Chart Effects - Add 3D Effects (Report Builder)
-  Three-dimensional (3D) effects can be used to provide depth and add visual impact to charts in your [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports. For example, if you want to emphasize a particular slice of an exploded pie chart, you can rotate and change the perspective of the chart so that people notice that slice first. When 3D effects are applied to your chart, all gradient colors and hatching styles are disabled.  
+  Three-dimensional (3D) effects can be used to provide depth and add visual impact to charts in your [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports. For example, if you want to emphasize a particular slice of an exploded pie chart, you can rotate and change the perspective of the chart so that people notice that slice first. When 3D effects are applied to your chart, all gradient colors and hatching styles are disabled.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## To apply 3D effects to a Range, Area, Line, Scatter or Polar chart  
   
@@ -27,7 +27,7 @@ manager: "erikre"
   
 2.  In **3D Options**, select the **Enable 3D** option.  
   
-3.  (Optional) In **3D Options**, you can set a variety of properties relating to 3D angles and scene options. For more information about these properties, see [3D, Bevel, and Other Effects in a Chart &#40;Report Builder and SSRS&#41;](../Topic/3D,%20Bevel,%20and%20Other%20Effects%20in%20a%20Chart%20\(Report%20Builder%20and%20SSRS\).md).  
+3.  (Optional) In **3D Options**, you can set a variety of properties relating to 3D angles and scene options. For more information about these properties, see [3D, Bevel, and Other Effects in a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md).  
   
 4.  Click **OK**.  
   
@@ -82,7 +82,7 @@ manager: "erikre"
     4.  For the **DrawingStyle** property, specify the **Cylinder** value.  
   
 ## See Also  
- [3D, Bevel, and Other Effects in a Chart &#40;Report Builder and SSRS&#41;](../Topic/3D,%20Bevel,%20and%20Other%20Effects%20in%20a%20Chart%20\(Report%20Builder%20and%20SSRS\).md)   
+ [3D, Bevel, and Other Effects in a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
  [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   

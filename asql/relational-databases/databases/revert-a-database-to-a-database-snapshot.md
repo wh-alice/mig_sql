@@ -86,7 +86,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  For an example of this procedure, see [Examples (Transact-SQL)](#TsqlExample), later in this section.  
   
-1.  Identify the database snapshot to which you want to revert the database. You can view the snapshots on a database in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (see [View a Database Snapshot &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)). Also, you can identify the source database of a view from the **source_database_id** column of the [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view.  
+1.  Identify the database snapshot to which you want to revert the database. You can view the snapshots on a database in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (see [View a Database Snapshot &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)). Also, you can identify the source database of a view from the **source_database_id** column of the [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view.  
   
 2.  Drop any other database snapshots.  
   
@@ -100,7 +100,7 @@ manager: "jhubbard"
   
      Where *database_name* is the source database and *database_snapshot_name* is the name of the snapshot to which you want to revert the database. Notice that in this statement, you must specify a snapshot name rather than a backup device.  
   
-     For more information, see [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+     For more information, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
     > [!NOTE]  
     >  During the revert operation, both the snapshot and the source database are unavailable. The source database and snapshot are both marked as "In restore." If an error occurs during the revert operation, it will try to finish reverting when the database starts up again.  
@@ -122,7 +122,7 @@ manager: "jhubbard"
 -   B. [Reverting a snapshot on the Sales database](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> A. Reverting a snapshot on the AdventureWorks database  
- This example assumes that only one snapshot currently exists on the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database. For the example that creates the snapshot to which the database is reverted here, see [Create a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
+ This example assumes that only one snapshot currently exists on the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database. For the example that creates the snapshot to which the database is reverted here, see [Create a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
 USE master;  
@@ -164,8 +164,8 @@ GO
   
 ## See Also  
  [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md)   
  [Database Mirroring and Database Snapshots &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   

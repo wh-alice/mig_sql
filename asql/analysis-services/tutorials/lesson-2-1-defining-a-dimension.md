@@ -66,12 +66,12 @@ In the following task, you will use the Dimension Wizard to build a Date dimensi
   
 11. Click **Finish** to complete the wizard.  
   
-    In Solution Explorer, in the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial project, the Date dimension appears in the **Dimensions** folder. In the center of the development environment, Dimension Designer displays the Date dimension.  
+    In Solution Explorer, in the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial project, the Date dimension appears in the **Dimensions** folder. In the center of the development environment, Dimension Designer displays the Date dimension.  
   
 12. On the **File** menu, click **Save All**.  
   
 ## Next Task in Lesson  
-[Defining a Cube](../Topic/Defining%20a%20Cube.md)  
+[Defining a Cube](../../analysis-services/tutorials/lesson-2-2-defining-a-cube.md)  
   
 ## See Also  
 [Dimensions in Multidimensional Models](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  

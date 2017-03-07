@@ -29,7 +29,7 @@ manager: "jhubbard"
   
  At run time, the Data Flow task builds an execution plan from the data flow, and the data flow engine executes the plan. You can create a Data Flow task that has no data flow, but the task executes only if it includes at least one data flow.  
   
- To bulk insert data from text files into a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database, you can use the Bulk Insert task instead of a Data Flow task and a data flow. However, the Bulk Insert task cannot transform data. For more information, see [Bulk Insert Task](../../integration-services/control-flow/bulk-insert-task.md).  
+ To bulk insert data from text files into a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database, you can use the Bulk Insert task instead of a Data Flow task and a data flow. However, the Bulk Insert task cannot transform data. For more information, see [Bulk Insert Task](../../integration-services/control-flow/bulk-insert-task.md).  
   
 ## Multiple Flows  
  A Data Flow task can include multiple data flows. If a task copies several sets of data, and if the order in which the data is copied is not significant, it can be more convenient to include multiple data flows in the Data Flow task. For example, you might create five data flows, each copying data from a flat file into a different dimension table in a data warehouse star schema.  
@@ -41,7 +41,7 @@ manager: "jhubbard"
  ![Data flows](../../integration-services/control-flow/media/mw-dts-09.gif "Data flows")  
   
 ## Log Entries  
- [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] provides a set of log events that are available to all tasks. [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] also provides custom log entries to many tasks. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md). The Data Flow task includes the following custom log entries:  
+ [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] provides a set of log events that are available to all tasks. [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] also provides custom log entries to many tasks. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md). The Data Flow task includes the following custom log entries:  
   
 |Log entry|Description|  
 |---------------|-----------------|  
@@ -100,7 +100,7 @@ manager: "jhubbard"
   
  For more information about how to set these properties in the **Properties** window, click the following topic:  
   
--   [Set the Properties of a Task or Container](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Set the Properties of a Task or Container](../../a9retired/set-the-properties-of-a-task-or-container.md)  
   
 ## Programmatic Configuration of the Data Flow Task  
  For more information about programmatically adding a data flow task to a package and setting data flow properties, click the following topic:  
@@ -108,7 +108,7 @@ manager: "jhubbard"
 -   [Adding the Data Flow Task Programmatically](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## Related Tasks  
- [Set the Properties of a Task or Container](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+ [Set the Properties of a Task or Container](../../a9retired/set-the-properties-of-a-task-or-container.md)  
   
 ## Related Content  
  Video, [Balanced Data Distributer](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), on technet.microsoft.com.  

@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # SQL Server mobile reports: End-to-end walk-through
-Walk through creating mobile reports for any screen size with [!INCLUDE[PRODUCT_NAME](../../reporting-services/mobile-reports/includes/ss-mobilereptpub-long.md)] on the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, and viewing them in the Power BI mobile apps.
+Walk through creating mobile reports for any screen size with [!INCLUDE[PRODUCT_NAME](../../a9retired/includes/ss-mobilereptpub-long.md)] on the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, and viewing them in the Power BI mobile apps.
 
 Create mobile reports on a design surface with adjustable grid rows and columns, and flexible mobile report elements. Connect to a variety of on-premises data sources, or upload Excel workbooks to create mobile reports. Then save your reports to a [!INCLUDE[PRODUCT_NAME](../../reporting-services/mobile-reports/includes/ssrsnoversion.md)] web portal and view them in a browser, or in the Power BI mobile apps.  
   
@@ -30,7 +30,7 @@ This article walks you through:
 ## Before we start  
 To follow along, you need these products:  
   
-* To create data sources and KPIs, and publish datasets and mobile reports, you need access to a [!INCLUDE[ssRSCurrent_md](../../reporting-services/includes/ssrscurrent-md.md)] [report server in native mode](https://msdn.microsoft.com/library/ms143711.aspx).  
+* To create data sources and KPIs, and publish datasets and mobile reports, you need access to a [!INCLUDE[ssRSCurrent_md](../../a9notintoc/includes/ssrscurrent-md.md)] [report server in native mode](https://msdn.microsoft.com/library/ms143711.aspx).  
 * To [create shared datasets](#shared-dataset), you need to [install Report Builder](https://msdn.microsoft.com/library/ff519551.aspx).  
 * To create mobile reports, [install SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkId=717766).  
 * [AdventureWorks sample databases and scripts](http://msftdbprodsamples.codeplex.com/).  
@@ -63,7 +63,7 @@ Read more about [shared data sources in Reporting Services](https://msdn.microso
    
 ## <a name="shared-dataset">Create a shared dataset</a>  
   
-Use an existing [!INCLUDE[PRODUCT_NAME](../../reporting-services/mobile-reports/includes/ssrsnoversion.md)] client tool, such as Report Designer in [!INCLUDE[ssBIDevStudioFull_md](../../analysis-services/includes/ssbidevstudiofull-md.md)], to create the shared dataset.  This walkthrough uses [!INCLUDE[PRODUCT_NAME](../../reporting-services/mobile-reports/includes/ssrbnoversion.md)]. [Install Report Builder](https://msdn.microsoft.com/library/ff519551.aspx), or launch it from your web portal. You'll create three datasets, one each for: the KPI value, the KPI trend, and one with more fields for the Reporting Services mobile report.   
+Use an existing [!INCLUDE[PRODUCT_NAME](../../reporting-services/mobile-reports/includes/ssrsnoversion.md)] client tool, such as Report Designer in [!INCLUDE[ssBIDevStudioFull_md](../../a9notintoc/includes/ssbidevstudiofull-md.md)], to create the shared dataset.  This walkthrough uses [!INCLUDE[PRODUCT_NAME](../../reporting-services/mobile-reports/includes/ssrbnoversion.md)]. [Install Report Builder](https://msdn.microsoft.com/library/ff519551.aspx), or launch it from your web portal. You'll create three datasets, one each for: the KPI value, the KPI trend, and one with more fields for the Reporting Services mobile report.   
   
 1. From your [!INCLUDE[PRODUCT_NAME](../../reporting-services/mobile-reports/includes/ssrsnoversion.md)] web portal, click **New** > **Paginated Report** to start [!INCLUDE[PRODUCT_NAME](../../reporting-services/mobile-reports/includes/ssrbnoversion.md)].  
   
@@ -133,7 +133,7 @@ You create KPIs right in the [!INCLUDE[PRODUCT_NAME](../../reporting-services/mo
     
 ## <a name="create-mobile-report">Create a Reporting Services mobile report</a>  
    
-To create a Reporting Services mobile report, [install SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkId=717766), or launch it from the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal. 
+To create a Reporting Services mobile report, [install SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkId=717766), or launch it from the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal. 
 
 When you first open [!INCLUDE[PRODUCT_NAME](../../reporting-services/mobile-reports/includes/ss-mobilereptpub-short.md)], you see a blank canvas where you can create your mobile report. You can start by creating visuals first, or start with your data. If you create the visuals first, [!INCLUDE[PRODUCT_NAME](../../reporting-services/mobile-reports/includes/ss-mobilereptpub-short.md)] automatically generates simulated data that is tied to the report and changes dynamically as you change your visual selections. Try this yourself.   
   
@@ -257,7 +257,7 @@ You can save your report locally or to a [!INCLUDE[PRODUCT_NAME](../../reporting
   
 ## View your report on a mobile device   
   
-To view your [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report, you first need to:
+To view your [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] report, you first need to:
 
 *  [Sign up for the Power BI service](http://go.microsoft.com/fwlink/?LinkID=513879), if you don't have an account yet.
 *  [Download the Power BI mobile app](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) to your mobile device.  

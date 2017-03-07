@@ -21,9 +21,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Delete an Index
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  This topic describes how to delete (drop) an index in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to delete (drop) an index in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
- Indexes created as the result of a PRIMARY KEY or UNIQUE constraint cannot be deleted by using this method. Instead, the constraint must be deleted. To remove the constraint and corresponding index, use [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) with the DROP CONSTRAINT clause in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. For more information, see [Delete Primary Keys](../../relational-databases/tables/delete-primary-keys.md).  
+ Indexes created as the result of a PRIMARY KEY or UNIQUE constraint cannot be deleted by using this method. Instead, the constraint must be deleted. To remove the constraint and corresponding index, use [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) with the DROP CONSTRAINT clause in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. For more information, see [Delete Primary Keys](../../relational-databases/tables/delete-primary-keys.md).  
   
 ###  <a name="Security"></a> Security  
   
@@ -87,7 +87,7 @@ manager: "jhubbard"
   
 #### To delete an index  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

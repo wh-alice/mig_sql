@@ -23,9 +23,9 @@ Instead of permitting the transformation to fail, you can configure the componen
   
 In this task, you will configure the Lookup Currency Key transformation to redirect any rows that fail to the error output. In the error branch of the data flow, these rows will be written to a file.  
   
-By default the two extra columns in an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] error output, **ErrorCode** and **ErrorColumn**, contain only numeric codes that represent an error number, and the ID of the column in which the error occurred. These numeric values may be of limited use without the corresponding error description.  
+By default the two extra columns in an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] error output, **ErrorCode** and **ErrorColumn**, contain only numeric codes that represent an error number, and the ID of the column in which the error occurred. These numeric values may be of limited use without the corresponding error description.  
   
-To enhance the usefulness of the error output, before the package writes the failed rows to the file, you will use a Script component to access the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] API and get a description of the error.  
+To enhance the usefulness of the error output, before the package writes the failed rows to the file, you will use a Script component to access the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] API and get a description of the error.  
   
 ### To configure an error output  
   
@@ -51,7 +51,7 @@ To enhance the usefulness of the error output, before the package writes the fai
   
 10. On the **Script** page, verify that the **LocaleID** property is set to **English (United States.**  
   
-11. Click **Edit Script** to open [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] Tools for Applications (VSTA). In the **Input0_ProcessInputRow** method, type or paste the following code.  
+11. Click **Edit Script** to open [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] Tools for Applications (VSTA). In the **Input0_ProcessInputRow** method, type or paste the following code.  
   
     [Visual Basic]  
   
@@ -95,7 +95,7 @@ To enhance the usefulness of the error output, before the package writes the fai
 13. Click **OK** to close the **Script Transformation Editor** dialog box.  
   
 ## Next Steps  
-[Step 4: Adding a Flat File Destination](../Topic/Step%204:%20Adding%20a%20Flat%20File%20Destination.md)  
+[Step 4: Adding a Flat File Destination](../../integration-services/tutorials/lesson-4-4-adding-a-flat-file-destination.md)  
   
   
   

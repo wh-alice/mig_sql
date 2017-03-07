@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Arithmetic Operators
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   You can use arithmetic operators in Multidimensional Expressions (MDX) for any arithmetic computations, including addition, subtraction, multiplication, and division.  
   
@@ -28,7 +28,7 @@ manager: "erikre"
 |Operator|Description|  
 |--------------|-----------------|  
 |[+ (Add)](../mdx/add-mdx.md)|Adds two numbers.|  
-|[/ (Divide)](../Topic/\(Divide\)%20\(MDX\).md)|Divides one number by another number.|  
+|[/ (Divide)](../mdx/divide-mdx-operator-reference.md)|Divides one number by another number.|  
 |[* (Multiply)](../mdx/multiply-mdx.md)|Multiplies two numbers.|  
 |[- (Subtract)](../mdx/subtract-mdx.md)|Subtracts two numbers.|  
 |^ (Power)|Raises one number by another number.|  

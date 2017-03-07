@@ -15,12 +15,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # DQS Security
-  The [!INCLUDE[ssDQSnoversion](../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS) security infrastructure is based upon the SQL Server security infrastructure. A database administrator grants a user a set of permissions by associating the user with a DQS role. Doing so determines the DQS resources that the user has access to and the functional activities that the user is allowed to perform.  
+  The [!INCLUDE[ssDQSnoversion](../a9retired/includes/ssdqsnoversion-md.md)] (DQS) security infrastructure is based upon the SQL Server security infrastructure. A database administrator grants a user a set of permissions by associating the user with a DQS role. Doing so determines the DQS resources that the user has access to and the functional activities that the user is allowed to perform.  
   
 ## DQS Roles  
- There are four roles for DQS. One is the database administrator (DBA) who deals primarily with product installation, database maintenance, and user management. This role primarily uses the SQL Server Management Studio, rather than within the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] application. Their server role is sysadmin.  
+ There are four roles for DQS. One is the database administrator (DBA) who deals primarily with product installation, database maintenance, and user management. This role primarily uses the SQL Server Management Studio, rather than within the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] application. Their server role is sysadmin.  
   
- The three other roles are information workers, data stewards who use the product directly by working in the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] application. These roles include the following:  
+ The three other roles are information workers, data stewards who use the product directly by working in the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] application. These roles include the following:  
   
 -   The **DQS Administrator** (dqs_administrator role) can do everything in the scope of the product. The administrator can edit and execute a project, create and edit a knowledge base, terminate an activity, stop a process within an activity, and can change the configuration and Reference Data Services settings. The DQS Administrator cannot, however, install the server or add new users. The database administrator must do that.  
   
@@ -35,6 +35,6 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to create a user and grant DQS roles using SQL Server Management Studio.|[Manage DQS Users in SSMS](../Topic/Manage%20DQS%20Users%20in%20SSMS.md)|  
+|Describes how to create a user and grant DQS roles using SQL Server Management Studio.|[Manage DQS Users in SSMS](../a9retired/manage-dqs-users-in-ssms.md)|  
   
   

@@ -19,7 +19,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 3-3 - Perform Chunking Analysis using rxDataStep
-The *rxDataStep* function can be used to process data in chunks, rather than requiring that the entire dataset be loaded into memory and processed at one time, as in traditional R. The way it works is that you read the data in chunks and use R functions to process each chunk of data in turn, and then write the summary results for each chunk to a common [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data source.  
+The *rxDataStep* function can be used to process data in chunks, rather than requiring that the entire dataset be loaded into memory and processed at one time, as in traditional R. The way it works is that you read the data in chunks and use R functions to process each chunk of data in turn, and then write the summary results for each chunk to a common [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data source.  
   
 In this lesson, you'll practice this technique by using the *table* function in R to compute a contingency table.  
   
@@ -60,7 +60,7 @@ In this lesson, you'll practice this technique by using the *table* function in 
     dayQuery <-  "SELECT DayOfWeek FROM AirDemoSmallTest"   
     ```  
 
-4.  Plug that variable into the *sqlQuery* argument of a new [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data source.  
+4.  Plug that variable into the *sqlQuery* argument of a new [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data source.  
   
     ```R  
     inDataSource <- RxSqlServerData(sqlQuery = dayQuery,  
@@ -122,7 +122,7 @@ In this lesson, you'll practice this technique by using the *table* function in 
 [Lesson 4: Analyze Data in Local Compute Context &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-4-analyze-data-in-local-compute-context-data-science-deep-dive.md)  
   
 ## Previous Step  
-[Create New SQL Server Table using rxDataStep &#40;Data Science Deep Dive&#41;](Create%20New%20SQL%20Server%20Table%20using%20rxDataStep%20\(Data%20Science%20Deep%20Dive\).md)  
+[Create New SQL Server Table using rxDataStep &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-3-2-create-new-sql-server-table-using-rxdatastep.md)  
   
 ## See Also  
 [Data Science Deep Dive: Using the RevoScaleR Packages](../../../advanced-analytics/r-services/tutorials/data-science-deep-dive-using-the-revoscaler-packages.md)  

@@ -58,9 +58,9 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- The **Capability** element indicates that a particular capability, such as binary or compression, is supported by either the application that included the **ProtocolCapabilities** header element in the SOAP header of the SOAP request, or by the instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] that included the **ProtocolCapabilities** header element in the SOAP header of the SOAP response. The value of the **Capability** element is the name of the capability to be supported.  
+ The **Capability** element indicates that a particular capability, such as binary or compression, is supported by either the application that included the **ProtocolCapabilities** header element in the SOAP header of the SOAP request, or by the instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] that included the **ProtocolCapabilities** header element in the SOAP header of the SOAP response. The value of the **Capability** element is the name of the capability to be supported.  
   
- [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] supports the capabilities listed in the following table.  
+ [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] supports the capabilities listed in the following table.  
   
 |Capability name|Description|  
 |---------------------|-----------------|  
@@ -69,6 +69,6 @@ manager: "erikre"
   
 ## See Also  
  [Managing Connections and Sessions &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

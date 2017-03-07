@@ -19,9 +19,9 @@ manager: "erikre"
   A query designer helps you specify which data to retrieve from an external data source for a report dataset. You use a query designer when you build a query in a wizard or create a dataset query.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
- A dataset is based on a data source. The type of data source and the authoring environment determines which query designer opens when you define the dataset query. Query designer features vary based on the underlying data source. For more information about data layers, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md) or [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ A dataset is based on a data source. The type of data source and the authoring environment determines which query designer opens when you define the dataset query. Query designer features vary based on the underlying data source. For more information about data layers, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../../a9retired/data-connections-data-sources-and-connection-strings-in-report-builder.md) or [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
  You can use a query designer for the following tasks:  
   
@@ -53,9 +53,9 @@ manager: "erikre"
   
      If you select fields from more than one related database table, use the Relationships pane to view the table relationships that were detected from the database schema.  
   
-3.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
      The list of dataset fields appears in the Report Data pane.  
   
@@ -73,9 +73,9 @@ manager: "erikre"
   
 6.  Select the parameter option in this row to create a dataset parameter to enable a user to specify a filter value. A report parameter that matches the dataset parameter is automatically created.  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
  The list of dataset fields appears in the Report Data pane.  
   
@@ -84,17 +84,17 @@ manager: "erikre"
 1.  On the query designer toolbar, click **Run Query (!)**.  
   
     > [!NOTE]  
-    >  The query designer uses design time credentials to run the query and retrieve the result set. For more information, see [Specify Credentials in Report Builder](../Topic/Specify%20Credentials%20in%20Report%20Builder.md).  
+    >  The query designer uses design time credentials to run the query and retrieve the result set. For more information, see [Specify Credentials in Report Builder](../../a9retired/specify-credentials-in-report-builder.md).  
   
  The query runs on the data source and returns example data in the Query results pane.  
   
 ## See Also  
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Add Data from External Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [Query Designers &#40;Report Builder&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)   
+ [Query Designers &#40;Report Builder&#41;](../../a9retired/query-designers-report-builder.md)   
  [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Shared Dataset Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
- [Reporting Services Query Designers](../Topic/Reporting%20Services%20Query%20Designers.md)  
+ [Reporting Services Query Designers](../../a9retired/reporting-services-query-designers.md)  
   
   

@@ -47,7 +47,7 @@ manager: "jhubbard"
   
  Similarly, you can detect use of mismatched types through the same XEvent **hekaton_slow_parameter_passing**, with **reason=parameter_conversion**.  
   
- Because you will need to implement retry logic when using memory-optimized tables (in many scenarios), and because you will need to work around certain feature limitations, you may want to create a wrapper interpreted [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] stored procedure. For an example, see [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md).  
+ Because you will need to implement retry logic when using memory-optimized tables (in many scenarios), and because you will need to work around certain feature limitations, you may want to create a wrapper interpreted [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] stored procedure. For an example, see [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md).  
   
 ## See Also  
  [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  

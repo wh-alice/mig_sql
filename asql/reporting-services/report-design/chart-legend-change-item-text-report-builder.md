@@ -25,7 +25,7 @@ manager: "erikre"
  On non-shape charts, you can change the text of a legend item. For example, if your series name is "Series1", you may want to change the text to something more descriptive like "Sales for 2008".  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ### To modify the text that appears in the legend on a Shape chart  
   
@@ -52,8 +52,8 @@ manager: "erikre"
 2.  Click **Legend** and in the **Custom legend text** box, type a legend label. The series is updated with your text.  
   
 ## See Also  
- [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](../Topic/Formatting%20the%20Legend%20on%20a%20Chart%20\(Report%20Builder%20and%20SSRS\).md)   
+ [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Hide Legend Items on the Chart &#40;Report Builder and SSRS&#41;](../Topic/Hide%20Legend%20Items%20on%20the%20Chart%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Hide Legend Items on the Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)  
   
   

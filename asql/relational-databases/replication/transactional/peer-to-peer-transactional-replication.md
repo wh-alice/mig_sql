@@ -21,7 +21,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Peer-to-Peer - Transactional Replication
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Peer-to-peer replication provides a scale-out and high-availability solution by maintaining copies of data across multiple server instances, also referred to as *nodes*. Built on the foundation of transactional replication, peer-to-peer replication propagates transactionally consistent changes in near real-time. This enables applications that require scale-out of read operations to distribute the reads from clients across multiple nodes. Because data is maintained across the nodes in near real-time, peer-to-peer replication provides data redundancy, which increases the availability of data.  
   
@@ -39,10 +39,10 @@ manager: "jhubbard"
   
 -   There is always some latency involved when changes are replicated. For applications that require the latest change to be seen immediately, dynamically load balancing the application across multiple nodes can be problematic.  
   
- Peer-to-peer replication includes the option to enable conflict detection across a peer-to-peer topology. This option helps prevent the issues that are caused from undetected conflicts, including inconsistent application behavior and lost updates. By enabling this option, by default a conflicting change is treated as a critical error that causes the failure of the Distribution Agent. In the event of a conflict, the topology remains in an inconsistent state until the conflict is resolved manually and the data is made consistent across the topology. For more information, see [Conflict Detection in Peer-to-Peer Replication](../Topic/Conflict%20Detection%20in%20Peer-to-Peer%20Replication.md).  
+ Peer-to-peer replication includes the option to enable conflict detection across a peer-to-peer topology. This option helps prevent the issues that are caused from undetected conflicts, including inconsistent application behavior and lost updates. By enabling this option, by default a conflicting change is treated as a critical error that causes the failure of the Distribution Agent. In the event of a conflict, the topology remains in an inconsistent state until the conflict is resolved manually and the data is made consistent across the topology. For more information, see [Conflict Detection in Peer-to-Peer Replication](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
 > [!NOTE]  
->  To avoid potential data inconsistency, make sure that you avoid conflicts in a peer-to-peer topology, even with conflict detection enabled. To ensure that write operations for a particular row are performed at only one node, applications that access and change data must partition insert, update, and delete operations. This partitioning ensures that modifications to a given row originating at one node are synchronized with all other nodes in the topology before the row is modified by a different node. If an application requires sophisticated conflict detection and resolution capabilities, use merge replication. For more information, see [Merge Replication](../../../relational-databases/replication/merge/merge-replication.md) and [Detect and Resolve Merge Replication Conflicts](../Topic/Detect%20and%20Resolve%20Merge%20Replication%20Conflicts.md).  
+>  To avoid potential data inconsistency, make sure that you avoid conflicts in a peer-to-peer topology, even with conflict detection enabled. To ensure that write operations for a particular row are performed at only one node, applications that access and change data must partition insert, update, and delete operations. This partitioning ensures that modifications to a given row originating at one node are synchronized with all other nodes in the topology before the row is modified by a different node. If an application requires sophisticated conflict detection and resolution capabilities, use merge replication. For more information, see [Merge Replication](../../../relational-databases/replication/merge/merge-replication.md) and [Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
   
 ## Peer-to-Peer Topologies  
  The following scenarios illustrate typical uses for peer-to-peer replication.  
@@ -93,7 +93,7 @@ manager: "jhubbard"
   
 ### General Considerations  
   
--   Peer-to-peer replication is available only in Enterprise versions of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   Peer-to-peer replication is available only in Enterprise versions of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
 -   All databases that participate in peer-to-peer replication should contain identical schema and data:  
   
@@ -122,7 +122,7 @@ manager: "jhubbard"
   
 -   Timestamp columns.  
   
--   Non-[!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Publishers and Subscribers.  
+-   Non-[!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Publishers and Subscribers.  
   
 -   Immediate updating and queued updating subscriptions.  
   
@@ -130,7 +130,7 @@ manager: "jhubbard"
   
 -   Partial subscriptions.  
   
--   Attachable subscriptions and transformable subscriptions. (Both of these options were deprecated in [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)].)  
+-   Attachable subscriptions and transformable subscriptions. (Both of these options were deprecated in [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)].)  
   
 -   Shared Distribution Agents.  
   
@@ -161,7 +161,7 @@ manager: "jhubbard"
   
  Removing a node from the topology never requires quiescing.  
   
- Changing the article properties by using  [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) never requires quiescing. Allowable changes (for P2P) are the `description`, `ins_cmd`, `upd_cmd`, and `del_cmd` properties.  
+ Changing the article properties by using  [sp_changearticle](../../../relational-databases/reference/system-stored-procedures/sp-changearticle-transact-sql.md) never requires quiescing. Allowable changes (for P2P) are the `description`, `ins_cmd`, `upd_cmd`, and `del_cmd` properties.  
   
  Article Schema changes (adding/dropping column) never requires quiescing.  
   

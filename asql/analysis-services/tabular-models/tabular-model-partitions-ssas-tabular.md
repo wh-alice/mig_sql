@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Tabular Model Partitions (SSAS Tabular)
-  Partitions divide a table into logical parts. Each partition can then be processed (Refreshed) independent of other partitions. Partitions defined for a model during model authoring are duplicated in a deployed model. Once deployed, you can manage those partitions and create new partitions by using the **Partitions** dialog box in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or by using a script. Information provided in this topic describes partitions in a deployed tabular model database. For more information about creating and managing partitions during model authoring, see [Partitions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+  Partitions divide a table into logical parts. Each partition can then be processed (Refreshed) independent of other partitions. Partitions defined for a model during model authoring are duplicated in a deployed model. Once deployed, you can manage those partitions and create new partitions by using the **Partitions** dialog box in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or by using a script. Information provided in this topic describes partitions in a deployed tabular model database. For more information about creating and managing partitions during model authoring, see [Partitions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
  Sections in this topic:  
   
@@ -53,7 +53,7 @@ manager: "erikre"
  How you implement a partition strategy for your organization’s tabular models will largely be dependent on your particular model data processing needs and available resources.  
   
 ##  <a name="bkmk_permissions"></a> Permissions  
- In order to create, manage, and process partitions in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], you must have the appropriate Analysis Services permissions defined in a security role. Each security role has one of the following permissions:  
+ In order to create, manage, and process partitions in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], you must have the appropriate Analysis Services permissions defined in a security role. Each security role has one of the following permissions:  
   
 |Permission|Actions|  
 |----------------|-------------|  
@@ -61,10 +61,10 @@ manager: "erikre"
 |Process|Read, process|  
 |Read Only|Read|  
   
- To learn more about creating roles during model authoring by using [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], see [Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md). To learn more about managing role members for deployed tabular model roles by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], see [Tabular Model Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ To learn more about creating roles during model authoring by using [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], see [Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md). To learn more about managing role members for deployed tabular model roles by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], see [Tabular Model Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_parallelProc"></a> Parallel Processing  
- [!INCLUDE[ssASCurrent](../../analysis-services/includes/ssascurrent-md.md)] includes parallel processing for tables with two or more partitions, increasing processing performance. There are no configuration settings for parallel processing (see notes). Parallel processing occurs by default when you Process Table or you select multiple partitions for the same table and Process. You can still choose to process a tables partitions independently.  
+ [!INCLUDE[ssASCurrent](../../a9notintoc/includes/ssascurrent-md.md)] includes parallel processing for tables with two or more partitions, increasing processing performance. There are no configuration settings for parallel processing (see notes). Parallel processing occurs by default when you Process Table or you select multiple partitions for the same table and Process. You can still choose to process a tables partitions independently.  
   
 > [!NOTE]  
 >  To specify whether refresh operations run sequentially or in parallel, you can use the **maxParallism** property option with the [Sequence command (TMSL)](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md). TMSL is supported for tabular 1200 models only.
@@ -73,12 +73,12 @@ manager: "erikre"
 >  If re-encoding is detected, parallel processing can cause increased use of system resources. This is because multiple partition operations need to be interrupted and re-started with the new encoding in-parallel.  
   
 ##  <a name="bkmk_process_partitions"></a> Process Partitions  
- Partitions can be processed (refreshed) independent of other partitions by using the **Partitions** dialog box in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] or by using a script. Processing has the following options:  
+ Partitions can be processed (refreshed) independent of other partitions by using the **Partitions** dialog box in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] or by using a script. Processing has the following options:  
   
 |Mode|Description|  
 |----------|-----------------|  
 |Process Default|Detects the process state of a partition object, and performs processing necessary to deliver unprocessed or partially processed partition objects to a fully processed state. Data for empty tables and partitions is loaded; hierarchies, calculated columns, and relationships are built or rebuilt.|  
-|Process Full|Processes a partition object and all the objects that it contains. When Process Full is run for an object that has already been processed, [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] drops all data in the object, and then processes the object. This kind of processing is required when a structural change has been made to an object.|  
+|Process Full|Processes a partition object and all the objects that it contains. When Process Full is run for an object that has already been processed, [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] drops all data in the object, and then processes the object. This kind of processing is required when a structural change has been made to an object.|  
 |Process Data|Load data into a partition or a table without rebuilding hierarchies or relationships or recalculating calculated columns and measures.|  
 |Process Clear|Removes all data from a partition.|  
 |Process Add|Incrementally update partition with new data.|  
@@ -87,7 +87,7 @@ manager: "erikre"
   
 |Task|Description|  
 |----------|-----------------|  
-|[Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)|Describes how to create and manage partitions in a deployed tabular model by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].|  
-|[Process Tabular Model Partitions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|Describes how to process partitions in a deployed tabular model by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].|  
+|[Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)|Describes how to create and manage partitions in a deployed tabular model by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].|  
+|[Process Tabular Model Partitions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|Describes how to process partitions in a deployed tabular model by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].|  
   
   

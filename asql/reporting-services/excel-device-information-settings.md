@@ -19,7 +19,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Excel Device Information Settings
-  The following table lists the device information settings for rendering in [!INCLUDE[ofprexcel](../analysis-services/data-mining/includes/ofprexcel-md.md)] format.  
+  The following table lists the device information settings for rendering in [!INCLUDE[ofprexcel](../a9retired/includes/ofprexcel-md.md)] format.  
   
 |Setting|Value|  
 |-------------|-----------|  

@@ -51,7 +51,7 @@ manager: "erikre"
 2.  Click on the **Column** menu, and then click **Clear All Filters**.  
   
 ## See Also  
- [Filter and Sort Data &#40;SSAS Tabular&#41;](../Topic/Filter%20and%20Sort%20Data%20\(SSAS%20Tabular\).md)   
+ [Filter and Sort Data &#40;SSAS Tabular&#41;](../../a9retired/filter-and-sort-data-ssas-tabular.md)   
  [Perspectives &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   

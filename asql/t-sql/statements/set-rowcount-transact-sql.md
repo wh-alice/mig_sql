@@ -31,11 +31,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SET ROWCOUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Causes [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to stop processing the query after the specified number of rows are returned.  
+  Causes [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to stop processing the query after the specified number of rows are returned.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ SET ROWCOUNT { number | @number_var }
   
  To set this option off so that all rows are returned, specify SET ROWCOUNT 0.  
   
- Setting the SET ROWCOUNT option causes most [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements to stop processing when they have been affected by the specified number of rows. This includes triggers. The ROWCOUNT option does not affect dynamic cursors, but it does limit the rowset of keyset and insensitive cursors. This option should be used with caution.  
+ Setting the SET ROWCOUNT option causes most [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements to stop processing when they have been affected by the specified number of rows. This includes triggers. The ROWCOUNT option does not affect dynamic cursors, but it does limit the rowset of keyset and insensitive cursors. This option should be used with caution.  
   
  SET ROWCOUNT overrides the SELECT statement TOP keyword if the rowcount is the smaller value.  
   
@@ -99,7 +99,7 @@ GO
   
  `(4 row(s) affected)`  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
  SET ROWCOUNT stops processing after the specified number of rows. In the following example, note that more than 20 rows meet the criteria of `AccountType = 'Assets'`. However, after applying SET ROWCOUNT, you can see that not all rows were returned.  
   
 ```  

@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # IBCPSession::BCPInit (OLE DB)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   Initializes the bulk copy structure, performs some error checking, verifies that the data and format file names are correct, and then opens them.  
   
@@ -36,24 +36,24 @@ HRESULT BCPInit(
 ```  
   
 ## Remarks  
- The **BCPInit** method should be called before any other bulk-copy method. The **BCPInit** method performs the necessary initializations for a bulk copy of data between the workstation and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ The **BCPInit** method should be called before any other bulk-copy method. The **BCPInit** method performs the necessary initializations for a bulk copy of data between the workstation and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  The **BCPInit** method examines the structure of the database source or target table, not the data file. It specifies data format values for the data file based on each column in the database table, view, or SELECT result set. This specification includes the data type of each column, the presence or absence of a length or null indicator and terminator byte strings in the data, and the width of fixed-length data types. The **BCPInit** method sets these values as follows:  
   
--   The data type specified is the data type of the column in the database table, view, or SELECT result set. The data type is enumerated by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] native data types specified in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client header file (sqlncli.h). Their values are in the pattern of BCP_TYPE_XXX. The data is represented in its computer form. That is, data from a column of integer data type is represented by a four-byte sequence that is big-or little-endian based on the computer that created the data file.  
+-   The data type specified is the data type of the column in the database table, view, or SELECT result set. The data type is enumerated by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] native data types specified in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client header file (sqlncli.h). Their values are in the pattern of BCP_TYPE_XXX. The data is represented in its computer form. That is, data from a column of integer data type is represented by a four-byte sequence that is big-or little-endian based on the computer that created the data file.  
   
 -   If a database data type is fixed in length, the data file data is also fixed in length. Bulk-copy methods that process data (for example, [IBCPSession::BCPExec](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpexec-ole-db.md)) parse data rows expecting the length of the data in the data file to be identical to the length of the data specified in the database table, view, or SELECT column list. For example, data for a database column defined as `char(13)` must be represented by 13 characters for each row of data in the file. Fixed-length data can be prefixed with a null indicator if the database column allows null values.  
   
--   When copying data to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the data file must have data for each column in the database table. When copying data from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], data from all columns in the database table, view, or SELECT result set are copied to the data file.  
+-   When copying data to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], the data file must have data for each column in the database table. When copying data from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], data from all columns in the database table, view, or SELECT result set are copied to the data file.  
   
--   When copying data to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the ordinal position of a column in the data file must be identical to the ordinal position of the column in the database table. When copying data from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the **BCPExec** method places data based on the ordinal position of the column in the database table.  
+-   When copying data to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], the ordinal position of a column in the data file must be identical to the ordinal position of the column in the database table. When copying data from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], the **BCPExec** method places data based on the ordinal position of the column in the database table.  
   
--   If a database data type is variable in length (for example, `varbinary(22)`) or if a database column can contain null values, data in the data file is prefixed by a length/null indicator. The width of the indicator varies based on the data type and version of bulk copy. The [IBCPSession::BCPControl](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) method option BCP_OPTION_FILEFMT provides compatibility between earlier bulk-copy data files and servers running later versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] by indicating when the width of indicators in the data is narrower than expected.  
+-   If a database data type is variable in length (for example, `varbinary(22)`) or if a database column can contain null values, data in the data file is prefixed by a length/null indicator. The width of the indicator varies based on the data type and version of bulk copy. The [IBCPSession::BCPControl](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) method option BCP_OPTION_FILEFMT provides compatibility between earlier bulk-copy data files and servers running later versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] by indicating when the width of indicators in the data is narrower than expected.  
   
 > [!NOTE]  
 >  To change the data format values specified for a data file, use the [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) and [IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) methods.  
   
- Bulk copies to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] can be optimized for tables that do not contain indexes by setting the database option **select into/bulkcopy**.  
+ Bulk copies to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] can be optimized for tables that do not contain indexes by setting the database option **select into/bulkcopy**.  
   
 ## Arguments  
  *pwszTable*[in]  
@@ -77,7 +77,7 @@ HRESULT BCPInit(
  The method succeeded.  
   
  E_FAIL  
- A provider specific error occurred' for detailed information, use the [ISQLServerErrorInfo](../Topic/ISQLServerErrorInfo%20\(OLE%20DB\).md) interface.  
+ A provider specific error occurred' for detailed information, use the [ISQLServerErrorInfo](../../a9retired/isqlservererrorinfo-ole-db.md) interface.  
   
  E_OUTOFMEMORY  
  Out-of-memory error.  

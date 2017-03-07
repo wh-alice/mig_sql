@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Testing and Validation Tasks and How-tos (Data Mining)
-  You can use the **Mining Accuracy Chart** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] to compare the predictive accuracy of the mining models in your mining structure.  
+  You can use the **Mining Accuracy Chart** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] to compare the predictive accuracy of the mining models in your mining structure.  
   
  You can create four kinds of charts:  
   

@@ -15,13 +15,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Creating Natively Compiled Stored Procedures
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Natively compiled stored procedures do not implement the full [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] programmability and query surface area. There are certain [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] constructs that cannot be used inside natively compiled stored procedures. For more information, see [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
+  Natively compiled stored procedures do not implement the full [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] programmability and query surface area. There are certain [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] constructs that cannot be used inside natively compiled stored procedures. For more information, see [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
- There are, however, several [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] features that are only supported for natively compiled stored procedures:  
+ There are, however, several [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] features that are only supported for natively compiled stored procedures:  
   
--   Atomic blocks. For more information, see [Atomic Blocks](../Topic/Atomic%20Blocks.md).  
+-   Atomic blocks. For more information, see [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
   
 -   **NOT NULL** constraints on parameters of and variables in natively compiled stored procedures. You cannot assign **NULL** values to parameters or variables declared as **NOT NULL**. For more information, see [DECLARE @local_variable &#40;Transact-SQL&#41;](../Topic/DECLARE%20@local_variable%20\(Transact-SQL\).md).  
   
@@ -56,12 +56,12 @@ end
 go  
 ```  
   
- In the code sample, **NATIVE_COMPILATION** indicates that this [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] stored procedure is a natively compiled stored procedure. The following options are required:  
+ In the code sample, **NATIVE_COMPILATION** indicates that this [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] stored procedure is a natively compiled stored procedure. The following options are required:  
   
 |Option|Description|  
 |------------|-----------------|  
-|**SCHEMABINDING**|A natively compiled stored procedure must be bound to the schema of the objects it references. This means that tables referenced by the procedure cannot be dropped. Tables referenced in the procedure must include their schema name, and wildcards (\*) are not allowed in queries (meaning no `SELECT * from...`). **SCHEMABINDING** is only supported for natively compiled stored procedures in this version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].|  
-|**BEGIN ATOMIC**|The natively compiled stored procedure body must consist of exactly one atomic block. Atomic blocks guarantee atomic execution of the stored procedure. If the procedure is invoked outside the context of an active transaction, it will start a new transaction, which commits at the end of the atomic block. Atomic blocks in natively compiled stored procedures have two required options:<br /><br /> **TRANSACTION ISOLATION LEVEL**. See [Transaction Isolation Levels for Memory-Optimized Tables](../Topic/Transaction%20Isolation%20Levels%20for%20Memory-Optimized%20Tables.md) for supported isolation levels.<br /><br /> **LANGUAGE**. The language for the stored procedure must be set to one of the available languages or language aliases.|  
+|**SCHEMABINDING**|A natively compiled stored procedure must be bound to the schema of the objects it references. This means that tables referenced by the procedure cannot be dropped. Tables referenced in the procedure must include their schema name, and wildcards (\*) are not allowed in queries (meaning no `SELECT * from...`). **SCHEMABINDING** is only supported for natively compiled stored procedures in this version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].|  
+|**BEGIN ATOMIC**|The natively compiled stored procedure body must consist of exactly one atomic block. Atomic blocks guarantee atomic execution of the stored procedure. If the procedure is invoked outside the context of an active transaction, it will start a new transaction, which commits at the end of the atomic block. Atomic blocks in natively compiled stored procedures have two required options:<br /><br /> **TRANSACTION ISOLATION LEVEL**. See [Transaction Isolation Levels for Memory-Optimized Tables](../../a9retired/transaction-isolation-levels-for-memory-optimized-tables.md) for supported isolation levels.<br /><br /> **LANGUAGE**. The language for the stored procedure must be set to one of the available languages or language aliases.|  
   
 ## See Also  
  [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  

@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 -   Permissions assigned explicitly to the user.  
   
- If a user is a member of multiple groups, and those groups have access to [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], the following rules apply:  
+ If a user is a member of multiple groups, and those groups have access to [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], the following rules apply:  
   
 -   **Deny** overrides all other permissions. If the object permission is **Deny** in one group, the effective permission is deny.  
   

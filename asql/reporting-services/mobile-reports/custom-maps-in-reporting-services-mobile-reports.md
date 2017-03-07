@@ -15,9 +15,9 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Custom maps in Reporting Services mobile reports
-Geographic maps in [!INCLUDE[PRODUCT_NAME](../../reporting-services/mobile-reports/includes/product-name.md)] are defined in a format known as *ESRI shapefiles*.  
+Geographic maps in [!INCLUDE[PRODUCT_NAME](../../a9retired/includes/product-name.md)] are defined in a format known as *ESRI shapefiles*.  
   
-Initially designed by a private company, this is now a widespread semi-open format used in a large portion of GIS applications. In accordance with this format, [!INCLUDE[PRODUCT_NAME](../../reporting-services/mobile-reports/includes/short-product-name.md)] requires two files to be provided when defining a map:  
+Initially designed by a private company, this is now a widespread semi-open format used in a large portion of GIS applications. In accordance with this format, [!INCLUDE[PRODUCT_NAME](../../a9retired/includes/short-product-name.md)] requires two files to be provided when defining a map:  
   
 - A .SHP file for shape geometries  
 - A .DBF file for metadata  

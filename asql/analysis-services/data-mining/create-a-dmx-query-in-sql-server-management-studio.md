@@ -24,9 +24,9 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Create a DMX Query in SQL Server Management Studio
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provides a set of features to help you create prediction queries, content queries, and data definition queries against mining models and mining structures.  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] provides a set of features to help you create prediction queries, content queries, and data definition queries against mining models and mining structures.  
   
--   The graphical Prediction Query Builder is available in both [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], to simplify the process of writing prediction queries and mapping data sets to a model.  
+-   The graphical Prediction Query Builder is available in both [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], to simplify the process of writing prediction queries and mapping data sets to a model.  
   
 -   The query templates provided in the Template Explorer jump-start the creation of many kinds of DMX queries, including many types of prediction queries. Templates are provided for content queries, queries used nested data sets, queries that return cases from the mining structure, and even data definition queries.  
   
@@ -48,25 +48,25 @@ manager: "jhubbard"
  You can also create custom templates, for queries or commands that you run frequently.  
   
 ## XMLA Query Templates  
- [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] also provides templates for XMLA queries.  
+ [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] also provides templates for XMLA queries.  
   
  There is some overlap between the types of queries that you can perform by using XMLA and DMX. For example, you can create some model content queries by using either DMX or the data mining schema rowsets, but the schema rowsets sometimes contain information that is not exposed in DMX content queries.  
   
- There are also some key differences in the way that operations are handled in DMX and in XMLA. For example, you can use XMLA to perform administrative operations such as backup of an entire [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] database, but if you want to back up a single mining model, DMX provides a simple command, [EXPORT &#40;DMX&#41;](../../dmx/export-dmx.md), that is better suited to that purpose.  
+ There are also some key differences in the way that operations are handled in DMX and in XMLA. For example, you can use XMLA to perform administrative operations such as backup of an entire [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] database, but if you want to back up a single mining model, DMX provides a simple command, [EXPORT &#40;DMX&#41;](../../dmx/export-dmx.md), that is better suited to that purpose.  
   
 ##  <a name="BKMK_Building_Queries"></a> Build and Run a DMX Query  
   
 #### Open a new DMX Query window  
   
-1.  Click **New Query** in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], and then select **New Analysis Server DMX Query**.  
+1.  Click **New Query** in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], and then select **New Analysis Server DMX Query**.  
   
-2.  When the **Connect to Server** dialog box appears, select the instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] that contains the mining models you want to work with.  
+2.  When the **Connect to Server** dialog box appears, select the instance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] that contains the mining models you want to work with.  
   
 #### Open Template Explorer  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], on the **View** menu, select **Template Explorer**.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], on the **View** menu, select **Template Explorer**.  
   
-2.  Click **Analysis Server** to see a tree view of the templates that apply to [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)].  
+2.  Click **Analysis Server** to see a tree view of the templates that apply to [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)].  
   
 #### Apply a template to build a query  
   

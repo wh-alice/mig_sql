@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Server Element (ASSL)
-  Describes an instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].  
+  Describes an instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].  
   
 ## Syntax  
   
@@ -72,7 +72,7 @@ manager: "erikre"
 |Child elements|[Name](../../../analysis-services/scripting/properties/name-element-assl.md), [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [CreatedTimestamp](../../../analysis-services/scripting/properties/createdtimestamp-element-assl.md), [LastSchemaUpdate](../../../analysis-services/scripting/properties/lastschemaupdate-element-assl.md), [Description](../../../analysis-services/scripting/properties/description-element-assl.md), [Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md), [ProductName](../../../analysis-services/scripting/properties/productname-element-assl.md), [Edition](../../../analysis-services/scripting/properties/edition-element-assl.md), [EditionId](../../../analysis-services/xmla/xml-elements-properties/editionid-element.md), [Version](../../../analysis-services/scripting/properties/version-element-assl.md), [ServerMode](../../../analysis-services/xmla/xml-elements-properties/editionid-element.md), [ProductLevel](../../../analysis-services/xmla/xml-elements-properties/productlabel-element.md), [Databases](../../../analysis-services/scripting/collections/databases-element-assl.md), [Assemblies](../../../analysis-services/scripting/collections/assemblies-element-assl.md), [Traces](../../../analysis-services/scripting/collections/traces-element-assl.md), [Roles](../../../analysis-services/scripting/collections/roles-element-assl.md), [ServerProperties](../../../analysis-services/scripting/collections/serverproperties-element-assl.md)>|  
   
 ## Remarks  
- The **Server** element represents an instance of [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)], and serves as the topmost node in the Analysis Services Scripting Language (ASSL) node hierarchy.  
+ The **Server** element represents an instance of [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)], and serves as the topmost node in the Analysis Services Scripting Language (ASSL) node hierarchy.  
   
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.Server>.  
   

@@ -44,12 +44,12 @@ manager: "jhubbard"
     ||NOT NULL|Column is turned off for the specified event.|  
   
 > [!IMPORTANT]  
->  Unlike regular stored procedures, parameters of all [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] stored procedures (**sp_trace_*xx***) are strictly typed and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.  
+>  Unlike regular stored procedures, parameters of all [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] stored procedures (**sp_trace_*xx***) are strictly typed and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.  
   
 ## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [SQL Server Profiler Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [SQL Server Profiler Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)  
   
   

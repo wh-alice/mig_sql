@@ -22,9 +22,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Batches of Statements
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
-  A batch of [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statements contains two or more statements, separated by a semicolon (;), built into a single string passed to **SQLExecDirect** or [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360). For example:  
+  A batch of [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statements contains two or more statements, separated by a semicolon (;), built into a single string passed to **SQLExecDirect** or [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360). For example:  
   
 ```  
 SQLExecDirect(hstmt,   
@@ -36,7 +36,7 @@ SQLExecDirect(hstmt,
   
  Batches can always be used when the ODBC cursor attributes are set to the defaults of a forward-only, read-only cursor with a rowset size of 1.  
   
- If a batch is executed when using server cursors against [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the server cursor is implicitly converted to a default result set. **SQLExecDirect** or **SQLExecute** return SQL_SUCCESS_WITH_INFO, and a call to **SQLGetDiagRec** returns:  
+ If a batch is executed when using server cursors against [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], the server cursor is implicitly converted to a default result set. **SQLExecDirect** or **SQLExecute** return SQL_SUCCESS_WITH_INFO, and a call to **SQLGetDiagRec** returns:  
   
 ```  
 szSqlState = "01S02", pfNativeError = 0  

@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Manage Policy Categories
-  This topic describes how to apply any or all available policies in a category to the whole instance of [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to apply any or all available policies in a category to the whole instance of [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -37,9 +37,9 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   When using [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], if the **Mandate Database Subscriptions** check box is not selected, the policy category must be individually applied to each relevant portion of the server, such as one or more databases or tables.  
+-   When using [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], if the **Mandate Database Subscriptions** check box is not selected, the policy category must be individually applied to each relevant portion of the server, such as one or more databases or tables.  
   
--   If you specify a policy category that does not exist, a new policy category is created and the subscription is mandated for all databases when you execute the stored procedure. If you then clear the mandated subscription for the new category, the subscription will only apply for the database that you specified as the *target_object*. For more information about how to change a mandated subscription setting, see [sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md).  
+-   If you specify a policy category that does not exist, a new policy category is created and the subscription is mandated for all databases when you execute the stored procedure. If you then clear the mandated subscription for the new category, the subscription will only apply for the database that you specified as the *target_object*. For more information about how to change a mandated subscription setting, see [sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md).  
   
 ###  <a name="Security"></a> Security  
   
@@ -62,7 +62,7 @@ manager: "jhubbard"
      The name of the policy category.  
   
      **Mandate Database Subscriptions**  
-     Forces all databases on the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to enforce policies in the policy category.  
+     Forces all databases on the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to enforce policies in the policy category.  
   
 4.  Select or clear any or all check boxes under **Mandate Database Subscriptions** to apply that policy category to the SQL Server instance.  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
 #### To apply category policies to a SQL Server instance  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -88,6 +88,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md).  
+ For more information, see [sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md).  
   
   

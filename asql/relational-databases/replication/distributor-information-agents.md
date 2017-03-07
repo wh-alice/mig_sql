@@ -41,7 +41,7 @@ manager: "jhubbard"
 -   Never started  
   
  **Publisher**  
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance of the Publisher.  
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance of the Publisher.  
   
  **Publication**  
  The name of the publication with which the agent is associated.  
@@ -91,7 +91,7 @@ manager: "jhubbard"
 -   Never started  
   
  **Publisher**  
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance of the Publisher.  
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance of the Publisher.  
   
  **Publication**  
  The name of the publication with which the agent is associated.  
@@ -142,6 +142,6 @@ manager: "jhubbard"
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
  [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/2a420da2-66f4-4650-9bdd-1992221ed3fd.md)   
- [Monitoring Replication](../Topic/Monitoring%20Replication.md)  
+ [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

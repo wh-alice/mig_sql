@@ -21,7 +21,7 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # PolyBase troubleshooting
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   To troubleshoot PolyBase, use the techniques found in this topic.  
   
@@ -31,19 +31,19 @@ manager: "jhubbard"
 |||  
 |-|-|  
 |View|Description|  
-|[sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.external-tables-transact-sql.md)|Identifies external tables.|  
-|[sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.external-data-sources-transact-sql.md)|Identifies external data sources.|  
-|[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.external-file-formats-transact-sql.md)|Identifies external file formats.|  
+|[sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.external-tables-transact-sql.md)|Identifies external tables.|  
+|[sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.external-data-sources-transact-sql.md)|Identifies external data sources.|  
+|[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.external-file-formats-transact-sql.md)|Identifies external file formats.|  
   
 ## Dynamic Management Views  
   
 |||  
 |-|-|  
-|[sys.dm_exec_compute_node_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-exec-compute-node-errors-transact-sql.md)|[sys.dm_exec_compute_node_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-exec-compute-node-status-transact-sql.md)|  
-|[sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-exec-compute-nodes-transact-sql.md)|[sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-exec-distributed-request-steps-transact-sql.md)|  
-|[sys.dm_exec_distributed_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-exec-distributed-requests-transact-sql.md)|[sys.dm_exec_distributed_sql_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-exec-distributed-sql-requests-transact-sql.md)|  
-|[sys.dm_exec_dms_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-exec-dms-services-transact-sql.md)|[sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-exec-dms-workers-transact-sql.md)|  
-|[sys.dm_exec_external_operations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-exec-external-operations-transact-sql.md)|[sys.dm_exec_external_work &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-exec-external-work-transact-sql.md)|  
+|[sys.dm_exec_compute_node_errors &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-exec-compute-node-errors-transact-sql.md)|[sys.dm_exec_compute_node_status &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-exec-compute-node-status-transact-sql.md)|  
+|[sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-exec-compute-nodes-transact-sql.md)|[sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-exec-distributed-request-steps-transact-sql.md)|  
+|[sys.dm_exec_distributed_requests &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-exec-distributed-requests-transact-sql.md)|[sys.dm_exec_distributed_sql_requests &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-exec-distributed-sql-requests-transact-sql.md)|  
+|[sys.dm_exec_dms_services &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-exec-dms-services-transact-sql.md)|[sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-exec-dms-workers-transact-sql.md)|  
+|[sys.dm_exec_external_operations &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-exec-external-operations-transact-sql.md)|[sys.dm_exec_external_work &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-exec-external-work-transact-sql.md)|  
   
   PolyBase queries are broken into a series of steps within sys.dm_exec_distributed_request_steps. The following table provides a mapping from the step name to the associated DMV.
   
@@ -210,9 +210,9 @@ manager: "jhubbard"
   
 1.  Connect to SQL Server on the head node of a group.  
   
-2.  Run the DMV [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-exec-compute-nodes-transact-sql.md) to view all the nodes in the PolyBase Group.  
+2.  Run the DMV [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-exec-compute-nodes-transact-sql.md) to view all the nodes in the PolyBase Group.  
   
-3.  Run the DMV [sys.dm_exec_compute_node_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-exec-compute-node-status-transact-sql.md) to view the status of all the nodes in the PolyBase Group.  
+3.  Run the DMV [sys.dm_exec_compute_node_status &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-exec-compute-node-status-transact-sql.md) to view the status of all the nodes in the PolyBase Group.  
   
  ## Known Limitations
  

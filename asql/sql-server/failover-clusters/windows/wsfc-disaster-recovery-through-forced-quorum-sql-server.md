@@ -35,7 +35,7 @@ manager: "jhubbard"
  The Forced Quorum Procedure assumes that a healthy quorum existed before the quorum failure.  
   
 > [!WARNING]  
->  The user should be well-informed on the concepts and interactions of Windows Server Failover Clustering, WSFC Quorum Models, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and the environment's specific deployment configuration.  
+>  The user should be well-informed on the concepts and interactions of Windows Server Failover Clustering, WSFC Quorum Models, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], and the environment's specific deployment configuration.  
 >   
 >  For more information, see:  [Windows Server Failover Clustering (WSFC) with SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC Quorum Modes and Voting Configuration (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
  The user must be a domain account that is member of the local Administrators group on each node of the WSFC cluster.  
   
 ##  <a name="Main"></a> WSFC Disaster Recovery through the Forced Quorum Procedure  
- Remember that quorum failure will cause all clustered services, SQL Server instances, and [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)], in the WSFC cluster to be set offline, because the cluster, as configured, cannot ensure node-level fault tolerance.  A quorum failure means that healthy voting nodes in the WSFC cluster no longer satisfy the quorum model. Some nodes may have failed completely, and some may have just shut down the WSFC service and are otherwise healthy, except for the loss of the ability to communicate with a quorum.  
+ Remember that quorum failure will cause all clustered services, SQL Server instances, and [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)], in the WSFC cluster to be set offline, because the cluster, as configured, cannot ensure node-level fault tolerance.  A quorum failure means that healthy voting nodes in the WSFC cluster no longer satisfy the quorum model. Some nodes may have failed completely, and some may have just shut down the WSFC service and are otherwise healthy, except for the loss of the ability to communicate with a quorum.  
   
  To bring the WSFC cluster back online, you must correct the root cause of the quorum failure under the existing configuration, recover the affected databases as needed, and you may want to reconfigure the remaining nodes in the WSFC cluster to reflect the surviving cluster topology.  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
 1.  **Determine the scope of the failure.** Identify which availability groups or SQL Server instances are non-responsive, which cluster nodes are online and available for post-disaster use, and examine the Windows event logs and the SQL Server system logs.  Where practical, you should preserve forensic data and system logs for later analysis.  
   
     > [!TIP]  
-    >  On a responsive instance of [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)], you can obtain information about the health of availability groups that possess an availability replica on the local server instance by querying the [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys.dm-hadr-availability-group-states-transact-sql.md) dynamic management view (DMV).  
+    >  On a responsive instance of [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)], you can obtain information about the health of availability groups that possess an availability replica on the local server instance by querying the [sys.dm_hadr_availability_group_states](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-hadr-availability-group-states-transact-sql.md) dynamic management view (DMV).  
   
 2.  **Start the WSFC cluster by using forced quorum on a single node.** Identify a node with a minimal number of component failures, other than that the WSFC cluster service was shut down.  Verify that this node can communicate with a majority of the other nodes.  
   
@@ -87,7 +87,7 @@ manager: "jhubbard"
   
 6.  **Repair or replace failed components and re-validate cluster.** Now that you have recovered from the initial disaster and quorum failure, you should repair or replace the failed nodes and adjust related WSFC and Always On configurations accordingly.  This can include dropping availability group replicas, evicting nodes from the cluster, or flattening and re-installing software on a node.  
   
-     You must repair or remove all failed availability replicas.  [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will not truncate the transaction log past the last known point of the farthest behind availability replica.   If a failed replica is not repaired or removed from the availability group, the transaction logs will grow and you will run the risk of running out of transaction log space on the other replicas.  
+     You must repair or remove all failed availability replicas.  [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] will not truncate the transaction log past the last known point of the farthest behind availability replica.   If a failed replica is not repaired or removed from the availability group, the transaction logs will grow and you will run the risk of running out of transaction log space on the other replicas.  
   
     > [!NOTE]  
     >  If you run the WSFC Validate a Configuration Wizard when an availability group listener exists on the WSFC cluster, the wizard generates the following incorrect warning message:  

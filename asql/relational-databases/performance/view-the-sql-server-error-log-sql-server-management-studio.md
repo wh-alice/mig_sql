@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View the SQL Server Error Log (SQL Server Management Studio)
-  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log contains user-defined events and certain system events you will want for troubleshooting. 
+  The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error log contains user-defined events and certain system events you will want for troubleshooting. 
   
 
   ## How to view the logs

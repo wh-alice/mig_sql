@@ -23,7 +23,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Disable Publishing and Distribution
-  This topic describes how to disable publishing and distribution in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], or Replication Management Objects (RMO).  
+  This topic describes how to disable publishing and distribution in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
  You can do the following:  
   
@@ -58,7 +58,7 @@ manager: "jhubbard"
   
 #### To disable publishing and distribution  
   
-1.  Connect to the Publisher or Distributor you want to disable in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to the Publisher or Distributor you want to disable in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Right-click the **Replication** folder, and then click **Disable Publishing and Distribution**.  
   
@@ -71,29 +71,29 @@ manager: "jhubbard"
   
 1.  Stop all replication-related jobs. For a list of job names, see the "Agent Security Under SQL Server Agent" section of [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-2.  At each Subscriber on the subscription database, execute [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) to remove replication objects from the database. This stored procedure will not remove replication jobs at the Distributor.  
+2.  At each Subscriber on the subscription database, execute [sp_removedbreplication](../../relational-databases/reference/system-stored-procedures/sp-removedbreplication-transact-sql.md) to remove replication objects from the database. This stored procedure will not remove replication jobs at the Distributor.  
   
-3.  At the Publisher on the publication database, execute [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) to remove replication objects from the database.  
+3.  At the Publisher on the publication database, execute [sp_removedbreplication](../../relational-databases/reference/system-stored-procedures/sp-removedbreplication-transact-sql.md) to remove replication objects from the database.  
   
-4.  If the Publisher uses a remote Distributor, execute [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md).  
+4.  If the Publisher uses a remote Distributor, execute [sp_dropdistributor](../../relational-databases/reference/system-stored-procedures/sp-dropdistributor-transact-sql.md).  
   
-5.  At the Distributor, execute [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md). This stored procedure should be run once for each Publisher registered at the Distributor.  
+5.  At the Distributor, execute [sp_dropdistpublisher](../../relational-databases/reference/system-stored-procedures/sp-dropdistpublisher-transact-sql.md). This stored procedure should be run once for each Publisher registered at the Distributor.  
   
-6.  At the Distributor, execute [sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md) to delete the distribution database. This stored procedure should be run once for each distribution database at the Distributor. This also removes any Queue Reader Agent jobs associated with the distribution database.  
+6.  At the Distributor, execute [sp_dropdistributiondb](../../relational-databases/reference/system-stored-procedures/sp-dropdistributiondb-transact-sql.md) to delete the distribution database. This stored procedure should be run once for each distribution database at the Distributor. This also removes any Queue Reader Agent jobs associated with the distribution database.  
   
-7.  At the Distributor, execute [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) to remove the Distributor designation from the server.  
+7.  At the Distributor, execute [sp_dropdistributor](../../relational-databases/reference/system-stored-procedures/sp-dropdistributor-transact-sql.md) to remove the Distributor designation from the server.  
   
     > [!NOTE]  
-    >  If all replication publishing and distribution objects are not dropped before you execute [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) and [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md), these procedures will return an error. To drop all replication-related objects when a Publisher or Distributor is dropped, the **@no_checks** parameter must be set to **1**. If a Publisher or Distributor is offline or unreachable, the **@ignore_distributor** parameter can be set to **1** so that they can be dropped; however, any publishing and distributing objects left behind must be removed manually.  
+    >  If all replication publishing and distribution objects are not dropped before you execute [sp_dropdistpublisher](../../relational-databases/reference/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) and [sp_dropdistributor](../../relational-databases/reference/system-stored-procedures/sp-dropdistributor-transact-sql.md), these procedures will return an error. To drop all replication-related objects when a Publisher or Distributor is dropped, the **@no_checks** parameter must be set to **1**. If a Publisher or Distributor is offline or unreachable, the **@ignore_distributor** parameter can be set to **1** so that they can be dropped; however, any publishing and distributing objects left behind must be removed manually.  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example script removes replication objects from the subscription database.  
   
- [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/disable-publishing-and-d_1.sql)]  
+ [!code-sql[HowTo#sp_removedbreplication](../../a9retired/codesnippet/tsql/disable-publishing-and-d_1.sql)]  
   
  This example script disables publishing and distribution on a server that is a Publisher and Distributor and drops the distribution database.  
   
- [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/disable-publishing-and-d_2.sql)]  
+ [!code-sql[HowTo#sp_DropDistPub](../../a9retired/codesnippet/tsql/disable-publishing-and-d_2.sql)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
   
@@ -118,15 +118,15 @@ manager: "jhubbard"
 ###  <a name="PShellExample"></a> Examples (RMO)  
  This example removes the Publisher registration at the Distributor, drops the distribution database, and uninstalls the Distributor.  
   
- [!code-cs[HowTo#rmo_DropDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_dropdistpub)]  
+ [!code-cs[HowTo#rmo_DropDistPub](../../a9retired/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_dropdistpub)]  
   
- [!code-vb[HowTo#rmo_vb_DropDistPub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_dropdistpub)]  
+ [!code-vb[HowTo#rmo_vb_DropDistPub](../../a9retired/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_dropdistpub)]  
   
  This example uninstalls the Distributor without first disabling local publication databases or dropping the distribution database.  
   
- [!code-cs[HowTo#rmo_DropDistPubForce](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_dropdistpubforce)]  
+ [!code-cs[HowTo#rmo_DropDistPubForce](../../a9retired/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_dropdistpubforce)]  
   
- [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
+ [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../a9retired/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
 ## See Also  
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   

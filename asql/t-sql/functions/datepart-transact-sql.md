@@ -31,13 +31,13 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # DATEPART (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns an integer that represents the specified *datepart* of the specified *date*.  
   
- For an overview of all [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] date and time data types and functions, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ For an overview of all [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] date and time data types and functions, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -183,10 +183,10 @@ SELECT DATEPART(nanosecond,  '00:00:01.1234567'); -- Returns 123456700
 ## Remarks  
  DATEPART can be used in the select list, WHERE, HAVING, GROUP BY and ORDER BY clauses.  
   
- In [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], DATEPART implicitly casts string literals as a **datetime2** type. This means that DATEPART does not support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.  
+ In [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], DATEPART implicitly casts string literals as a **datetime2** type. This means that DATEPART does not support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.  
   
 ## Examples  
- The following example returns the base year. The base year is useful for date calculations. In the example, the date is specified as a number. Notice that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] interprets 0 as January 1, 1900.  
+ The following example returns the base year. The base year is useful for date calculations. In the example, the date is specified as a number. Notice that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] interprets 0 as January 1, 1900.  
   
 ```  
 SELECT DATEPART(year, 0), DATEPART(month, 0), DATEPART(day, 0);  

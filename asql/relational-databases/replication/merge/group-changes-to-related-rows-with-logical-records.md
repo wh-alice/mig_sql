@@ -65,7 +65,7 @@ manager: "jhubbard"
   
  If these changes are replicated without using logical records, the different **OrderTotal** values would result in a conflict and only one of them would be replicated. But the non-conflicting changes in the **OrderItems** table would be replicated without conflict, leaving the final **OrderTotal** values in an inconsistent state with respect to the **OrderItems** rows. If logical records are used in this scenario, the **OrderItems** change associated with the losing **Orders** table change would also be rolled back, and the final **OrderTotal** value would be an accurate summary of the **OrderItems** rows.  
   
- For more information about options related to conflict detection and resolution with logical records, see [Detecting and Resolving Conflicts in Logical Records](../Topic/Detecting%20and%20Resolving%20Conflicts%20in%20Logical%20Records.md).  
+ For more information about options related to conflict detection and resolution with logical records, see [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
 ## Considerations for Using Logical Records  
  Keep the following considerations in mind when using logical records.  
@@ -102,15 +102,15 @@ manager: "jhubbard"
   
 -   The publication must have a compatibility level of 90RTM or greater. For more information, see the "Publication Compatibility Level" section of [Replication Backward Compatibility](../../../relational-databases/replication/replication-backward-compatibility.md).  
   
--   The publication must use native snapshot mode. This is the default unless you are replicating to [!INCLUDE[ssEW](../../../analysis-services/instances/includes/ssew-md.md)], which does not support logical records.  
+-   The publication must use native snapshot mode. This is the default unless you are replicating to [!INCLUDE[ssEW](../../../a9retired/includes/ssew-md.md)], which does not support logical records.  
   
 -   The publication cannot allow Web synchronization. For more information about Web synchronization, see [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
 -   In order to use logical records on a filtered publication:  
   
-    -   Precomputed partitions must also be used. The requirements of precomputed partitions also apply to logical records. For more information, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../Topic/Optimize%20Parameterized%20Filter%20Performance%20with%20Precomputed%20Partitions.md).  
+    -   Precomputed partitions must also be used. The requirements of precomputed partitions also apply to logical records. For more information, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
-    -   You cannot use nonoverlapping parameterized filters. For more information, see the "Setting 'partition options'" section of [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md).  
+    -   You cannot use nonoverlapping parameterized filters. For more information, see the "Setting 'partition options'" section of [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   If the publication uses join filters, the **join unique key** property must be set to **true** for all join filters that are involved in logical record relationships. For more information, see [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   

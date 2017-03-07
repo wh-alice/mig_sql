@@ -35,9 +35,9 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
  LOGIN  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Specifies the execution context to be impersonated is a login. The scope of impersonation is at the server level.  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
 >  While the context switch to the database user is active, any attempt to access resources outside of the database will cause the statement to fail. This includes USE *database* statements, distributed queries, and queries that reference another database that uses three- or four-part identifiers.  
   
  **'** *name* **'**  
- Is a valid user or login name. *name* must be a member of the **sysadmin** fixed server role, or exist as a principal in [sys.database_principals](../../relational-databases/system-catalog-views/sys.database-principals-transact-sql.md) or [sys.server_principals](../../relational-databases/system-catalog-views/sys.server-principals-transact-sql.md), respectively.  
+ Is a valid user or login name. *name* must be a member of the **sysadmin** fixed server role, or exist as a principal in [sys.database_principals](../../relational-databases/reference/system-catalog-views/sys.database-principals-transact-sql.md) or [sys.server_principals](../../relational-databases/reference/system-catalog-views/sys.server-principals-transact-sql.md), respectively.  
   
  *name* can be specified as a local variable.  
   
@@ -84,7 +84,7 @@ manager: "jhubbard"
  For more information about reverting to the previous context, see [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
  COOKIE INTO **@***varbinary_variable*  
- Specifies the execution context can only be reverted back to the previous context if the calling REVERT WITH COOKIE statement contains the correct **@***varbinary_variable* value. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] passes the cookie to **@***varbinary_variable*. The **COOKIE INTO** option can only be used at the adhoc level.  
+ Specifies the execution context can only be reverted back to the previous context if the calling REVERT WITH COOKIE statement contains the correct **@***varbinary_variable* value. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] passes the cookie to **@***varbinary_variable*. The **COOKIE INTO** option can only be used at the adhoc level.  
   
  **@** *varbinary_variable* is **varbinary(8000)**.  
   
@@ -110,7 +110,7 @@ manager: "jhubbard"
  You can create an execution context stack by calling the EXECUTE AS statement multiple times across multiple principals. When called, the REVERT statement switches the context to the login or user in the next level up in the context stack. For a demonstration of this behavior, see [Example A](#_exampleA).  
   
 ##  <a name="_user"></a> Specifying a User or Login Name  
- The user or login name specified in EXECUTE AS <context_specification> must exist as a principal in **sys.database_principals** or **sys.server_principals**, respectively, or the EXECUTE AS statement fails. Additionally, IMPERSONATE permissions must be granted on the principal. Unless the caller is the database owner, or is a member of the **sysadmin** fixed server role, the principal must exist even when the user is accessing the database or instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] through a Windows group membership. For example, assume the following conditions:  
+ The user or login name specified in EXECUTE AS <context_specification> must exist as a principal in **sys.database_principals** or **sys.server_principals**, respectively, or the EXECUTE AS statement fails. Additionally, IMPERSONATE permissions must be granted on the principal. Unless the caller is the database owner, or is a member of the **sysadmin** fixed server role, the principal must exist even when the user is accessing the database or instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] through a Windows group membership. For example, assume the following conditions:  
   
 -   **CompanyDomain\SQLUsers** group has access to the **Sales** database.  
   
@@ -124,17 +124,17 @@ manager: "jhubbard"
  Specify a login or user that has the least privileges required to perform the operations in the session. For example, do not specify a login name with server-level permissions, if only database-level permissions are required; or do not specify a database owner account unless those permissions are required.  
   
 > [!CAUTION]  
->  The EXECUTE AS statement can succeed as long as the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] can resolve the name. If a domain user exists, Windows might be able to resolve the user for the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)], even though the Windows user does not have access to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. This can lead to a condition where a login with no access to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] appears to be logged in, though the impersonated login would only have the permissions granted to public or guest.  
+>  The EXECUTE AS statement can succeed as long as the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] can resolve the name. If a domain user exists, Windows might be able to resolve the user for the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)], even though the Windows user does not have access to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. This can lead to a condition where a login with no access to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] appears to be logged in, though the impersonated login would only have the permissions granted to public or guest.  
   
 ## Using WITH NO REVERT  
  When the EXECUTE AS statement includes the optional WITH NO REVERT clause, the execution context of a session cannot be reset using REVERT or by executing another EXECUTE AS statement. The context set by the statement remains in affect until the session is dropped.  
   
- When the WITH NO REVERT COOKIE = @*varbinary_variabl*e clause is specified, the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] passes the cookie value to @*varbinary_variabl*e. The execution context set by that statement can only be reverted to the previous context if the calling REVERT WITH COOKIE = @*varbinary_variable* statement contains the same *@varbinary_variable* value.  
+ When the WITH NO REVERT COOKIE = @*varbinary_variabl*e clause is specified, the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] passes the cookie value to @*varbinary_variabl*e. The execution context set by that statement can only be reverted to the previous context if the calling REVERT WITH COOKIE = @*varbinary_variable* statement contains the same *@varbinary_variable* value.  
   
  This option is useful in an environment in which connection pooling is used. Connection pooling is the maintenance of a group of database connections for reuse by applications on an application server. Because the value passed to *@varbinary_variable* is known only to the caller of the EXECUTE AS statement, the caller can guarantee that the execution context they establish cannot be changed by anyone else.  
   
 ## Determining the Original Login  
- Use the [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) function to return the name of the login that connected to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. You can use this function to return the identity of the original login in sessions in which there are many explicit or implicit context switches.  
+ Use the [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) function to return the name of the login that connected to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. You can use this function to return the identity of the original login in sessions in which there are many explicit or implicit context switches.  
   
 ## Permissions  
  To specify **EXECUTE AS** on a login, the caller must have **IMPERSONATE** permission on the specified login name and must not be denied the **IMPERSONATE ANY LOGIN** permission. To specify **EXECUTE AS** on a database user, the caller must have **IMPERSONATE** permissions on the specified user name. When **EXECUTE AS CALLER** is specified, **IMPERSONATE** permissions are not required.  

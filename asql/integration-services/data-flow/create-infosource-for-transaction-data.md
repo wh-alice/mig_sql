@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  **To open the Create InfoSource for Transaction Data dialog box**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package that contains the SAP BW destination.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package that contains the SAP BW destination.  
   
 2.  On the **Data Flow** tab, double-click the SAP BW destination.  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
  Displays the column in the output of the data flow that is connected to the SAP BW destination.  
   
  **PipelineDataType**  
- Displays the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data type of the data flow column.  
+ Displays the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] data type of the data flow column.  
   
  **Iobject - Search**  
  Associate an existing InfoObject to the data flow column in the current row. To make this association, click **Search**, and then use the **Look Up InfoObject** dialog box to select the existing InfoObject. For more information about this dialog box, see [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md).  

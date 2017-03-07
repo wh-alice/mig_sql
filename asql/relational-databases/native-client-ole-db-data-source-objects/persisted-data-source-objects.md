@@ -20,9 +20,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Persisted Data Source Objects
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider supports persisted data source objects with the **IPersistFile** interface.  
+  The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider supports persisted data source objects with the **IPersistFile** interface.  
   
 ## Examples  
  **A. Persist data source initialization:**  
@@ -138,7 +138,7 @@ HRESULT SetAndSaveInitProps
   
  **B. Use persisted data source initialization:**  
   
- This example uses a persisted data source object with additional initialization properties that provide a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login and password.  
+ This example uses a persisted data source object with additional initialization properties that provide a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login and password.  
   
 ```  
 HRESULT InitFromPersistedDS  

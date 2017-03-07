@@ -31,11 +31,11 @@ manager: "jhubbard"
 
   Creates a sequence object and specifies its properties. A sequence is a user-defined schema bound object that generates a sequence of numeric values according to the specification with which the sequence was created. The sequence of numeric values is generated in an ascending or descending order at a defined interval and can be configured to restart (cycle) when exhausted. Sequences, unlike identity columns, are not associated with specific tables. Applications refer to a sequence object to retrieve its next value. The relationship between sequences and tables is controlled by the application. User applications can reference a sequence object and coordinate the values across multiple rows and tables.  
   
- Unlike identity columns values that are generated when rows are inserted, an application can obtain the next sequence number without inserting the row by calling the [NEXT VALUE FOR function](../../t-sql/functions/next-value-for-transact-sql.md). Use [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) to get multiple sequence numbers at once.  
+ Unlike identity columns values that are generated when rows are inserted, an application can obtain the next sequence number without inserting the row by calling the [NEXT VALUE FOR function](../../t-sql/functions/next-value-for-transact-sql.md). Use [sp_sequence_get_range](../../relational-databases/reference/system-stored-procedures/sp-sequence-get-range-transact-sql.md) to get multiple sequence numbers at once.  
   
  For information and scenarios that use both **CREATE SEQUENCE** and the **NEXT VALUE FOR** function, see [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -93,10 +93,10 @@ CREATE SEQUENCE [schema_name . ] sequence_name
  [ **CACHE** [\<constant> ] | NO CACHE ]  
  Increases performance for applications that use sequence objects by minimizing the number of disk IOs that are required to generate sequence numbers. Defaults to CACHE.  
   
- For example, if a cache size of 50 is chosen, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not keep 50 individual values cached. It only caches the current value and the number of values left in the cache. This means that the amount of memory required to store the cache is always two instances of the data type of the sequence object.  
+ For example, if a cache size of 50 is chosen, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not keep 50 individual values cached. It only caches the current value and the number of values left in the cache. This means that the amount of memory required to store the cache is always two instances of the data type of the sequence object.  
   
 > [!NOTE]  
->  If the cache option is enabled without specifying a cache size, the Database Engine will select a size. However, users should not rely upon the selection being consistent. [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] might change the method of calculating the cache size without notice.  
+>  If the cache option is enabled without specifying a cache size, the Database Engine will select a size. However, users should not rely upon the selection being consistent. [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] might change the method of calculating the cache size without notice.  
   
  When created with the **CACHE** option, an unexpected shutdown (such as a power failure) may result in the loss of sequence numbers remaining in the cache.  
   
@@ -104,15 +104,15 @@ CREATE SEQUENCE [schema_name . ] sequence_name
  Sequence numbers are generated outside the scope of the current transaction. They are consumed whether the transaction using the sequence number is committed or rolled back.  
   
 ### Cache management  
- To improve performance, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] pre-allocates the number of sequence numbers specified by the **CACHE** argument.  
+ To improve performance, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] pre-allocates the number of sequence numbers specified by the **CACHE** argument.  
   
  For an example, a new sequence is created with a starting value of 1 and a cache size of 15. When the first value is needed, values 1 through 15 are made available from memory. The last cached value (15) is written to the system tables on the disk. When all 15 numbers are used, the next request (for number 16) will cause the cache to be allocated again. The new last cached value (30) will be written to the system tables.  
   
- If the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] is stopped after you use 22 numbers, the next intended sequence number in memory (23) is written to the system tables, replacing the previously stored number.  
+ If the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] is stopped after you use 22 numbers, the next intended sequence number in memory (23) is written to the system tables, replacing the previously stored number.  
   
  After SQL Server restarts and a sequence number is needed, the starting number is read from the system tables (23). The cache amount of 15 numbers (23-38) is allocated to memory and the next non-cache number (39) is written to the system tables.  
   
- If the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] stops abnormally for an event such as a power failure, the sequence restarts with the number read from system tables (39). Any sequence numbers allocated to memory (but never requested by a user or application) are lost. This functionality may leave gaps, but guarantees that the same value will never be issued two times for a single sequence object unless it is defined as **CYCLE** or is manually restarted.  
+ If the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] stops abnormally for an event such as a power failure, the sequence restarts with the number read from system tables (39). Any sequence numbers allocated to memory (but never requested by a user or application) are lost. This functionality may leave gaps, but guarantees that the same value will never be issued two times for a single sequence object unless it is defined as **CYCLE** or is manually restarted.  
   
  The cache is maintained in memory by tracking the current value (the last value issued) and the number of values left in the cache. Therefore, the amount of memory used by the cache is always two instances of the data type of the sequence object.  
   
@@ -151,7 +151,7 @@ CREATE SEQUENCE [schema_name . ] sequence_name
 3.  The calculated value is returned to the calling statement.  
   
 ## Metadata  
- For information about sequences, query [sys.sequences](../../relational-databases/system-catalog-views/sys.sequences-transact-sql.md).  
+ For information about sequences, query [sys.sequences](../../relational-databases/reference/system-catalog-views/sys.sequences-transact-sql.md).  
   
 ## Security  
   

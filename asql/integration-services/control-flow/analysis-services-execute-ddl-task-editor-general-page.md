@@ -19,19 +19,19 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Analysis Services Execute DDL Task Editor (General Page)
-  Use the **General** pageof the **Analysis Services Execute DDL Task Editor** dialog box to name and describe the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Execute DDL task.  
+  Use the **General** pageof the **Analysis Services Execute DDL Task Editor** dialog box to name and describe the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Execute DDL task.  
   
  To learn about this task, see [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md).  
   
 ## Options  
  **Name**  
- Provide a unique name for the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Execute DDL task. This name is used as the label in the task icon.  
+ Provide a unique name for the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Execute DDL task. This name is used as the label in the task icon.  
   
 > [!NOTE]  
 >  Task names must be unique within a package.  
   
  **Description**  
- Type a description of the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Execute DDL task.  
+ Type a description of the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Execute DDL task.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   

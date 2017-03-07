@@ -39,15 +39,15 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Discontinued Database Engine Functionality in SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes the [!INCLUDE[ssDE](../analysis-services/instances/install/windows/includes/ssde-md.md)] features that are no longer available in [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  This topic describes the [!INCLUDE[ssDE](../a9notintoc/includes/ssde-md.md)] features that are no longer available in [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)].  
   
-## Discontinued Features in [!INCLUDE[ssSQL15](../analysis-services/powershell/includes/sssql15-md.md)]  
+## Discontinued Features in [!INCLUDE[ssSQL15](../a9notintoc/includes/sssql15-md.md)]  
   
--   [!INCLUDE[ssSQL15](../analysis-services/powershell/includes/sssql15-md.md)] is a 64-bit application. 32-bit installation is discontinued, though some elements run as 32-bit components.  
+-   [!INCLUDE[ssSQL15](../a9notintoc/includes/sssql15-md.md)] is a 64-bit application. 32-bit installation is discontinued, though some elements run as 32-bit components.  
   
--   Compatibility level 90 is discontinued. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+-   Compatibility level 90 is discontinued. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 -   ActiveX subsytem is discontinued. Use command line or PowerShell scripts instead.
   

@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # PredictAdjustedProbability (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the adjusted probability of a specified state.  
   
@@ -44,7 +44,7 @@ PredictAdjustedProbability(<scalar column reference>, [<predicted state>])
   
  To return the adjusted probability for the missing states, set the \<predicted state> to NULL.  
   
- The **PredictAdjustedProbability** function is a [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] extension to the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] OLE DB for Data Mining specification.  
+ The **PredictAdjustedProbability** function is a [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] extension to the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] OLE DB for Data Mining specification.  
   
 ## Examples  
  The following example uses a natural prediction join to determine if an individual is likely to be a bike buyer based on the TM Decision Tree mining model, and also determines the adjusted probability for the prediction.  

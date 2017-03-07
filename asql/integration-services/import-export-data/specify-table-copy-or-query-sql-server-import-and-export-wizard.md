@@ -17,7 +17,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Specify Table Copy or Query (SQL Server Import and Export Wizard)
-  After you provide info about the destination for your data and about how to connect to it, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard shows **Specify Table Copy or Query**. On this page, you choose one of the following options.
+  After you provide info about the destination for your data and about how to connect to it, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard shows **Specify Table Copy or Query**. On this page, you choose one of the following options.
 -   **Copy data from one or more tables or views**. You want to pick a table or tables from a list.
 -   **Write a query to specify the data to transfer**. You want to enter or paste in the text of a SQL query.
     
@@ -45,7 +45,7 @@ When you select **Write a query to specify the data to transfer**, you can only 
 After you click **Next**, you provide a SQL statement to specify columns and select rows in the **Provide a Source Query** dialog box. For more info, see [Provide a Source Query](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md).   
     
 ## Why isn't the Copy option available?    
- The **Copy data from one or more tables or views** option may not be available when the wizard uses a [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] data provider to connect to your data source. This happens when the wizard doesn't have enough info about the data provider to request a list of tables and views from the data source. 
+ The **Copy data from one or more tables or views** option may not be available when the wizard uses a [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] data provider to connect to your data source. This happens when the wizard doesn't have enough info about the data provider to request a list of tables and views from the data source. 
  
 You can still use the **Write a query** option, even if you don't typically write SQL queries, as long as you know the name of the table that you want to export. In the **Provide a Source Query** dialog box, which you see after you click **Next**, enter the query as `SELECT * FROM <name of table>`. If the name of the table contains spaces or other special characters, surround the name with square brackets - `SELECT * FROM [<name of table>]`.
 

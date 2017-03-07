@@ -136,13 +136,13 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_ReplaceExtend"></a> Understanding the Behavior of Replace and Extend Operations  
  When you add new data to a time series model, you can specify whether to extend or replace the training data:  
   
--   **Extend:** When you extend a data series, [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] adds the new data at the end of the existing training data. The number of training cases also increases.  
+-   **Extend:** When you extend a data series, [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] adds the new data at the end of the existing training data. The number of training cases also increases.  
   
      Extending the model cases is useful for continuously updating the model with new data. For example, if you want to make the training set grow over time, you would simply extend the model.  
   
      To extend the data, you create a **PREDICTION JOIN** on a time series model, specify the source of the new data, and use the **EXTEND_MODEL_CASES** argument.  
   
--   **Replace:** When you replace the data in the data series, [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] keeps the trained model, but uses the new data values to replace some or all of the existing training cases. Therefore, the size of the training data never changes, but the cases themselves are continually being replaced with newer data. If you supply enough new data, you can replace the training data with a completely new series.  
+-   **Replace:** When you replace the data in the data series, [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] keeps the trained model, but uses the new data values to replace some or all of the existing training cases. Therefore, the size of the training data never changes, but the cases themselves are continually being replaced with newer data. If you supply enough new data, you can replace the training data with a completely new series.  
   
      Replacing the model cases is useful when you want to train a model on one set of cases and then apply that model to a different data series.  
   
@@ -161,7 +161,7 @@ AND NODE_TYPE = 15
   
   
 ###  <a name="bkmk_EXTEND"></a> Making Predictions with EXTEND_MODEL_CASES  
- Prediction behavior differs depending on whether you extend or replace the model cases. When you extend a model, the new data is attached to the end of the series and the size of the training set increases. However, the time slices used for prediction queries always start at the end of the original series. Therefore, if you add three new data points and request six predictions, the first three predictions returned overlap with the new data. In this case, [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] returns the actual new data points instead of making a prediction, until all the new data points are used up. Then, [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] makes predictions based on the composite series.  
+ Prediction behavior differs depending on whether you extend or replace the model cases. When you extend a model, the new data is attached to the end of the series and the size of the training set increases. However, the time slices used for prediction queries always start at the end of the original series. Therefore, if you add three new data points and request six predictions, the first three predictions returned overlap with the new data. In this case, [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] returns the actual new data points instead of making a prediction, until all the new data points are used up. Then, [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] makes predictions based on the composite series.  
   
  This behavior lets you add new data, and then show your actual sales figures in the prediction chart, instead of seeing projections.  
   
@@ -179,13 +179,13 @@ AND NODE_TYPE = 15
   
   
 ###  <a name="bkmk_REPLACE"></a> Making Predictions with REPLACE_MODEL_CASES  
- When you replace the cases in a model, the size of the model stays the same but [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] replaces the individual cases in the model. This is useful for cross-prediction and scenarios in which maintaining the training data set at a consistent size is important.  
+ When you replace the cases in a model, the size of the model stays the same but [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] replaces the individual cases in the model. This is useful for cross-prediction and scenarios in which maintaining the training data set at a consistent size is important.  
   
- For example, one of your stores has insufficient sales data. You could create a general model by averaging sales for all stores in a particular region and then training a model. Then, to make predictions for the store without sufficient sales data, you create a **PREDICTION JOIN** on the new sales data for just that store. When you do this, [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] keeps the patterns derived from the regional model, but replaces the existing training cases with the data from the individual store. As a result, your prediction values will be closer to the trend lines for the individual store.  
+ For example, one of your stores has insufficient sales data. You could create a general model by averaging sales for all stores in a particular region and then training a model. Then, to make predictions for the store without sufficient sales data, you create a **PREDICTION JOIN** on the new sales data for just that store. When you do this, [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] keeps the patterns derived from the regional model, but replaces the existing training cases with the data from the individual store. As a result, your prediction values will be closer to the trend lines for the individual store.  
   
- When you use the **REPLACE_MODEL_CASES** argument, [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] continually adds new cases to the end of the case set and deletes a corresponding number from the beginning of the case set. If you add more new data than was in the original training set, [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] discards the earliest data. If you supply sufficient new values, the predictions can be based on completely new data.  
+ When you use the **REPLACE_MODEL_CASES** argument, [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] continually adds new cases to the end of the case set and deletes a corresponding number from the beginning of the case set. If you add more new data than was in the original training set, [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] discards the earliest data. If you supply sufficient new values, the predictions can be based on completely new data.  
   
- For example, you trained your model on a case data set that contained 1000 rows. You then add 100 rows of new data. [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] drops the first 100 rows from the training set and adds the 100 rows of new data to the end of the set for a total of 1000 rows. If you add 1100 rows of new data, only the most recent 1000 rows are used.  
+ For example, you trained your model on a case data set that contained 1000 rows. You then add 100 rows of new data. [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] drops the first 100 rows from the training set and adds the 100 rows of new data to the end of the set for a total of 1000 rows. If you add 1100 rows of new data, only the most recent 1000 rows are used.  
   
  Here is another example. To add three new month's worth of data and make three new predictions, you would do the following actions:  
   
@@ -205,10 +205,10 @@ AND NODE_TYPE = 15
   
   
 ###  <a name="bkmk_MissingValues"></a> Missing Value Substitution in Time Series Models  
- When you add new data to a time series model by using a **PREDICTION JOIN** statement, the new dataset cannot have any missing values. If any series is incomplete, the model must supply the missing values by using either a null, a numeric means, a specific numeric mean, or a predicted value. If you specify **EXTEND_MODEL_CASES**, [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] replaces the missing values with predictions based on the original model. If you use **REPLACE_MODEL_CASES**, [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] replaces the missing values with the value that you specify in the *MISSING_VALUE_SUBSTITUTION* parameter.  
+ When you add new data to a time series model by using a **PREDICTION JOIN** statement, the new dataset cannot have any missing values. If any series is incomplete, the model must supply the missing values by using either a null, a numeric means, a specific numeric mean, or a predicted value. If you specify **EXTEND_MODEL_CASES**, [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] replaces the missing values with predictions based on the original model. If you use **REPLACE_MODEL_CASES**, [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] replaces the missing values with the value that you specify in the *MISSING_VALUE_SUBSTITUTION* parameter.  
   
 ## List of Prediction Functions  
- All [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Time Series algorithm supports the additional functions, listed in the following table.  
+ All [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Time Series algorithm supports the additional functions, listed in the following table.  
   
 |||  
 |-|-|  
@@ -219,7 +219,7 @@ AND NODE_TYPE = 15
 |[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Returns the variance of the predictions for the specified predictable column.<br /><br /> This function replaces the INCLUDE_STATISTICS argument, which is not supported for time series models.|  
 |[PredictTimeSeries &#40;DMX&#41;](../../dmx/predicttimeseries-dmx.md)|Returns predicted historical values or future predicted values for a time series.<br /><br /> You can also query time series models by using the general prediction function, [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md).|  
   
- For a list of the functions that are common to all [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] algorithms, see [General Prediction Functions &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](../../dmx/data-mining-extensions-dmx-function-reference.md).  
+ For a list of the functions that are common to all [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] algorithms, see [General Prediction Functions &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
   
 ## See Also  

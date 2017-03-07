@@ -35,14 +35,14 @@ manager: "jhubbard"
  **Subscription expiration**  
  Select one of the options for subscription expiration: **Subscriptions never expire** or **Subscriptions expire**, with an explicit time period (**Interval**).  
   
- For snapshot and transactional publications, [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] recommends that you accept the default of **Subscriptions never expire**.  
+ For snapshot and transactional publications, [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] recommends that you accept the default of **Subscriptions never expire**.  
   
- For merge replication, [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] recommends that you accept the default of **Subscriptions expire** and set as low a value as possible for **Interval**. As the subscription expiration period increases, so does the amount of metadata stored, which can affect performance. Balance the need for Subscribers to be disconnected or simply not to synchronize for an extended period against the potential performance issues of storing and processing a large amount of metadata.  
+ For merge replication, [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] recommends that you accept the default of **Subscriptions expire** and set as low a value as possible for **Interval**. As the subscription expiration period increases, so does the amount of metadata stored, which can affect performance. Balance the need for Subscribers to be disconnected or simply not to synchronize for an extended period against the potential performance issues of storing and processing a large amount of metadata.  
   
  For more information, see [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
  **Compatibility level**  
- [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] and later versions only; merge publications only. Select the minimum [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] version required for Subscribers that synchronize with this publication. There are a number of rules associated with determining the compatibility level.  
+ [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] and later versions only; merge publications only. Select the minimum [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] version required for Subscribers that synchronize with this publication. There are a number of rules associated with determining the compatibility level.  
   
 ## See Also  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   

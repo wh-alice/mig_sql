@@ -16,12 +16,12 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Merge Cells in a Data Region (Report Builder and SSRS)
-In a [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report, you can merge cells in a data region to combine cells, improve data region appearance, or provide spanning labels for column groups and row groups.  
+In a [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report, you can merge cells in a data region to combine cells, improve data region appearance, or provide spanning labels for column groups and row groups.  
   
 You can only merge cells within each area of a data region: corner, column headers, group definition (or row headers), and body. You can't merge cells that cross area boundaries. For example, you can't merge a cell in the data region corner area with a cell in the row group area. Read more about [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## To merge cells in a data region  
   

@@ -15,22 +15,22 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Call SQLColumns on a Table with Sparse Columns
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  This sample shows how to call SQLColumns on a table with sparse columns that were defined by using ODBC in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client.  
+  This sample shows how to call SQLColumns on a table with sparse columns that were defined by using ODBC in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client.  
   
- This sample will not work with any version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)].  
+ This sample will not work with any version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)].  
   
  For more information about the sparse columns feature, see [Sparse Columns Support in SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## Example  
  The first listing is the C++ source code. Change "MyServer" to a valid server name. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h. If you will build and run this sample as a 32-bit application on a 64-bit operating system, you must create the ODBC data source with the ODBC Administrator in %windir%\SysWOW64\odbcad32.exe.  
   
- This sample connects to your computer's default [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. To connect to a named instance, change the definition of the ODBC data source to specify the instance using the following format: server\namedinstance. By default, [!INCLUDE[ssExpress](../../database-engine/configure/windows/includes/ssexpress-md.md)] installs to a named instance.  
+ This sample connects to your computer's default [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. To connect to a named instance, change the definition of the ODBC data source to specify the instance using the following format: server\namedinstance. By default, [!INCLUDE[ssExpress](../../a9notintoc/includes/ssexpress-md.md)] installs to a named instance.  
   
  Compile with /EHsc /D, "UNICODE", and odbc32.lib.  
   
- The second ([!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]) code listing deletes the table created by this sample.  
+ The second ([!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]) code listing deletes the table created by this sample.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

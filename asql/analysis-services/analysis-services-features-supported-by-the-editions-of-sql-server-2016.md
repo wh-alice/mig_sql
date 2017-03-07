@@ -17,7 +17,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Analysis Services Features Supported by the Editions of SQL Server 2016
-This topic provides details of features supported by the different editions of [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+This topic provides details of features supported by the different editions of [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)].  
   
  SQL Server Evaluation edition is available for a 180-day trial period.  
   
@@ -25,7 +25,7 @@ This topic provides details of features supported by the different editions of [
     
  **Try SQL Server 2016!**    
     
- > [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
+ > [![Download from Evaluation Center](../a9notintoc/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
 > ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
     
@@ -139,22 +139,22 @@ This topic provides details of features supported by the different editions of [
 |Multiple prediction targets for naïve Bayes, neural network and logistic regression|Yes||||||Yes|  
   
 ##  <a name="BIC"></a> Business Intelligence Clients  
- The following software client applications are available on the Microsoft Download center and are provided to assist you with creating business intelligence documents that run on a [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. When you host these documents in a server environment, use an edition of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] that supports that document type. The following table identifies which [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] edition contains the server features required to host the documents created in these client applications.  
+ The following software client applications are available on the Microsoft Download center and are provided to assist you with creating business intelligence documents that run on a [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] instance. When you host these documents in a server environment, use an edition of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] that supports that document type. The following table identifies which [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] edition contains the server features required to host the documents created in these client applications.  
   
 |Tool Name|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Data Mining Add-ins for Excel and Visio 2010 (.xlsx, .vsdx)|Yes|Yes|||||Yes|  
-|[!INCLUDE[ssGeminiClient](../analysis-services/includes/ssgeminiclient-md.md)] 2010 and 2013 (.xlsx)|Yes||||||Yes|  
-|[!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../analysis-services/includes/ssmdsxls-md.md)] (.xlsx)|Yes||||||Yes|  
+|[!INCLUDE[ssGeminiClient](../a9notintoc/includes/ssgeminiclient-md.md)] 2010 and 2013 (.xlsx)|Yes||||||Yes|  
+|[!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../a9notintoc/includes/ssmdsxls-md.md)] (.xlsx)|Yes||||||Yes|  
   
 > [!NOTE]  
->  1.  [!INCLUDE[ssGeminiClient](../analysis-services/includes/ssgeminiclient-md.md)] is an Excel add-in for creating workbooks with a data model.  [!INCLUDE[ssGeminiClient](../analysis-services/includes/ssgeminiclient-md.md)] does not depend on [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], but [!INCLUDE[ssGeminiShort](../analysis-services/includes/ssgeminishort-md.md)] is required for sharing and collaborating on Excel workbooks with a data model in SharePoint. This capability is available as part of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Enterprise edition.  
+>  1.  [!INCLUDE[ssGeminiClient](../a9notintoc/includes/ssgeminiclient-md.md)] is an Excel add-in for creating workbooks with a data model.  [!INCLUDE[ssGeminiClient](../a9notintoc/includes/ssgeminiclient-md.md)] does not depend on [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], but [!INCLUDE[ssGeminiShort](../a9notintoc/includes/ssgeminishort-md.md)] is required for sharing and collaborating on Excel workbooks with a data model in SharePoint. This capability is available as part of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Enterprise edition.  
 >   
 >      In Excel 2016, Power Pivot capability is built in, so you no longer need the Power Pivot add-in.  
-> 2.  The above table identifies the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] editions that are required to enable these client tools; however these tools can access data hosted on any edition of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+> 2.  The above table identifies the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] editions that are required to enable these client tools; however these tools can access data hosted on any edition of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)].  
   
  ## See Also  
  [Features Supported by the Editions of SQL Server 2016](Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)  
- [Product Specifications for SQL Server 2016](../Topic/Product%20Specifications%20for%20SQL%20Server%202016.md)   
+ [Product Specifications for SQL Server 2016](../a9retired/product-specifications-for-sql-server-2016.md)   
  [Installation for SQL Server 2016](../database-engine/install/windows/installation-for-sql-server-2016.md)  
 

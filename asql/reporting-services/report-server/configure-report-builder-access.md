@@ -20,7 +20,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Configure Report Builder Access
-  Report Builder is an ad hoc reporting tool that installs with a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report server configured for either native mode or SharePoint integration mode.  
+  Report Builder is an ad hoc reporting tool that installs with a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] report server configured for either native mode or SharePoint integration mode.  
   
  Access to Report Builder depends on the following factors:  
   
@@ -33,13 +33,13 @@ manager: "erikre"
  To use Report Builder, you must have a published report model to work with.  
   
 ## Prerequisites  
- Report Builder is not available in every edition of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Report Builder is not available in every edition of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
   
- The client computer must have the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] 2.0 installed. The [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] provides the infrastructure for running [!INCLUDE[ndptecclick](../../reporting-services/report-server/includes/ndptecclick-md.md)] applications.  
+ The client computer must have the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] 2.0 installed. The [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] provides the infrastructure for running [!INCLUDE[ndptecclick](../../a9retired/includes/ndptecclick-md.md)] applications.  
   
- You must use [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Internet Explorer 6.0 or later.  
+ You must use [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Internet Explorer 6.0 or later.  
   
- Report Builder always runs in full trust; you cannot configure it to run in partial trust. In previous releases, it was possible to run Report Builder in partial trust, but that option is not supported in [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] and later versions.  
+ Report Builder always runs in full trust; you cannot configure it to run in partial trust. In previous releases, it was possible to run Report Builder in partial trust, but that option is not supported in [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] and later versions.  
   
 ## Enabling and Disabling Report Builder  
  Report Builder is enabled by default. Report server administrators have the option of disabling the Report Builder feature by setting the report server system property **EnableReportDesignClientDownload** to **false**. Setting this property will disable Report Builder downloads for that report server.  
@@ -164,8 +164,8 @@ manager: "erikre"
  [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md)   
  [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Report Server System Properties](../Topic/Report%20Server%20System%20Properties.md)  
+ [Report Server System Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   

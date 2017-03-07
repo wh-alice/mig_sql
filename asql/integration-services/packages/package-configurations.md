@@ -26,9 +26,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Package Configurations
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] provides package configurations that you can use to update the values of properties at run time.  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] provides package configurations that you can use to update the values of properties at run time.  
   
-> **NOTE:** Configurations are available for the package deployment model. Parameters are used in place of configurations for the project deployment model. The project deployment model enables you to deploy [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] projects to the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] server. For more information about the deployment models, see [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+> **NOTE:** Configurations are available for the package deployment model. Parameters are used in place of configurations for the project deployment model. The project deployment model enables you to deploy [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] projects to the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] server. For more information about the deployment models, see [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
   
  A configuration is a property/value pair that you add to a completed package. Typically, you create a package set properties on the package objects during package development, and then add the configuration to the package. When the package runs, it gets the new values of the property from the configuration. For example, by using a configuration, you can change the connection string of a connection manager, or update the value of a variable.  
   
@@ -40,9 +40,9 @@ manager: "jhubbard"
   
 -   Configurations make packages more flexible. For example, a configuration can update the value of a variable that is used in a property expression.  
   
- [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] supports several different methods of storing package configurations, such as XML files, tables in a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database, and environment and package variables.  
+ [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] supports several different methods of storing package configurations, such as XML files, tables in a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database, and environment and package variables.  
   
- Each configuration is a property/value pair. The XML configuration file and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] configuration types can include multiple configurations.  
+ Each configuration is a property/value pair. The XML configuration file and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] configuration types can include multiple configurations.  
   
  The configurations are included when you create a package deployment utility for installing packages. When you install the packages, the configurations can be updated as a step in the package installation.  
   
@@ -75,7 +75,7 @@ manager: "jhubbard"
   
 -   You cannot use the **/ConfigFile** option to load configurations that replace the configurations that you specified at design time.  
   
- For more information about these options, and how the behavior of these options differs between [!INCLUDE[ssISCurrent](../../analysis-services/data-mining/includes/ssiscurrent-md.md)] and earlier versions, see [Behavior Changes to Integration Services Features in SQL Server 2016](../Topic/Behavior%20Changes%20to%20Integration%20Services%20Features%20in%20SQL%20Server%202016.md).  
+ For more information about these options, and how the behavior of these options differs between [!INCLUDE[ssISCurrent](../../a9retired/includes/ssiscurrent-md.md)] and earlier versions, see [Behavior Changes to Integration Services Features in SQL Server 2016](../../a9retired/behavior-changes-to-integration-services-features-in-sql-server-2016.md).  
   
 ## Package Configuration Types  
  The following table describes the package configuration types.  
@@ -86,7 +86,7 @@ manager: "jhubbard"
 |Environment variable|An environment variable contains the configuration.|  
 |Registry entry|A Registry entry contains the configuration.|  
 |Parent package variable|A variable in the package contains the configuration. This configuration type is typically used to update properties in child packages.|  
-|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table|A table in a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database contains the configuration. The table can include multiple configurations.|  
+|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] table|A table in a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database contains the configuration. The table can include multiple configurations.|  
   
 ### XML Configuration Files  
  If you select the **XML configuration file** configuration type, you can create a new configuration file, reuse an existing file and add new configurations, or reuse an existing file but overwrite existing file content.  
@@ -122,7 +122,7 @@ manager: "jhubbard"
  If you select the **Registry entry** configuration type, you type the name of the Registry key in the Registry entry box. The format is \<registry key>. If you want to use a Registry key that is not at the root of HKEY_CURRENT_USER, use the format \<Registry key\registry key\\...> to identify the key. For example, to use the MyPackage key located in SSISPackages, type **SSISPackages\MyPackage**.  
   
 ### SQL Server  
- If you select the **SQL Server** configuration type, you specify the connection to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database in which you want to store the configurations. You can save the configurations to an existing table or create a new table in the specified database.  
+ If you select the **SQL Server** configuration type, you specify the connection to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database in which you want to store the configurations. You can save the configurations to an existing table or create a new table in the specified database.  
   
  The following SQL statement shows the default CREATE TABLE statement that the Package Configuration Wizard provides.  
   
@@ -140,7 +140,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  The name that you provide for the configuration is the value stored in the **ConfigurationFilter** column.  
   
 ## Direct and Indirect Configurations  
- [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] provides direct and indirect configurations. If you specify configurations directly, [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] creates a direct link between the configuration item and the package object property. Direct configurations are a better choice when the location of the source does not change. For example, if you are sure that all deployments in the package use the same file path, you can specify an XML configuration file.  
+ [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] provides direct and indirect configurations. If you specify configurations directly, [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] creates a direct link between the configuration item and the package object property. Direct configurations are a better choice when the location of the source does not change. For example, if you are sure that all deployments in the package use the same file path, you can specify an XML configuration file.  
   
  Indirect configurations use environment variables. Instead of specifying the configuration setting directly, the configuration points to an environment variable, which in turn contains the configuration value. Using indirect configurations is a better choice when the location of the configuration can change for each deployment of a package.  
   

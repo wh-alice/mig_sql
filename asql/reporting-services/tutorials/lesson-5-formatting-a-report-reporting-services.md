@@ -32,7 +32,7 @@ The Date field displays date and time information by default. You can format it 
   
 4.  In the **Type** box, select **January 31, 2000**.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 6.  Preview the report to see the change to the `[Date]` field and then change back to design view.  
   
@@ -57,7 +57,7 @@ The **LineTotal** field displays a general number. Format it to display the numb
   
     If the sample text is:**$12,345.00**, then your settings are correct.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 6.  Preview the report to see the change to the `[LineTotal]` field and then change back to design view.  
   

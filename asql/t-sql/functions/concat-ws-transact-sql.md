@@ -22,7 +22,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CONCAT_WS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../t-sql/functions/includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../a9notintoc/includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
 
 Concatenates a variable number of arguments with a delimiter specified in the 1st argument. (`CONCAT_WS` indicates *concatenate with separator*.)
 

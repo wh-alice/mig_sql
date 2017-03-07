@@ -23,7 +23,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Performing Bulk Load of XML Data (SQLXML 4.0)
-  XML Bulk Load is a standalone COM object that allows you to load semistructured XML data into Microsoft [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] tables.  
+  XML Bulk Load is a standalone COM object that allows you to load semistructured XML data into Microsoft [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] tables.  
   
 ## In This Section  
  [Introduction to XML Bulk Load &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/introduction-to-xml-bulk-load-sqlxml-4.0.md)  

@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # DDL Events
-  The following tables list the DDL events that can be used to fire a DDL trigger or event notification. Note that each event corresponds to a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement or stored procedure, with the statement syntax modified to include an underscore character (_) between keywords.  
+  The following tables list the DDL events that can be used to fire a DDL trigger or event notification. Note that each event corresponds to a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement or stored procedure, with the statement syntax modified to include an underscore character (_) between keywords.  
   
 > [!IMPORTANT]  
 >  System stored procedures that perform DDL-like operations also fire DDL triggers and event notifications. Test your DDL triggers and event notifications to determine their responses to system stored procedures that are run. For example, the CREATE TYPE statement and **sp_addtype** stored procedure will both fire a DDL trigger or event notification that is created on a CREATE_TYPE event.  

@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Stdev (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the sample standard deviation of a numeric expression evaluated over a set, using the unbiased population formula (dividing by n-1).  
   

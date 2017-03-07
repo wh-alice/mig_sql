@@ -42,7 +42,7 @@ manager: "erikre"
   
 ## See Also  
  [Installation for SQL Server 2016](../../database-engine/install/windows/installation-for-sql-server-2016.md)   
- [Install Analysis Services in Multidimensional and Data Mining Mode](../Topic/Install%20Analysis%20Services%20in%20Multidimensional%20and%20Data%20Mining%20Mode.md)   
+ [Install Analysis Services in Multidimensional and Data Mining Mode](../../a9retired/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [Install Analysis Services](../../analysis-services/instances/install/windows/install-analysis-services.md)   
  [Install Analysis Services in Power Pivot Mode](../../analysis-services/instances/install/windows/install-analysis-services-in-power-pivot-mode.md)  
   

@@ -23,9 +23,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # View a Stored XML Schema Collection
-  After you import an XML schema collection by using [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md), the schema components are stored in the metadata. You can use the [xml_schema_namespace](../Topic/xml_schema_namespace%20\(Transact-SQL\).md)intrinsic function to reconstruct the XML schema collection. This function returns an **xml** data type instance.  
+  After you import an XML schema collection by using [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md), the schema components are stored in the metadata. You can use the [xml_schema_namespace](../../t-sql/data-types/xml-schema-namespace.md)intrinsic function to reconstruct the XML schema collection. This function returns an **xml** data type instance.  
   
- For example, the following query retrieves an XML schema collection (`ProductDescriptionSchemaCollection`) from the production relational schema in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+ For example, the following query retrieves an XML schema collection (`ProductDescriptionSchemaCollection`) from the production relational schema in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database.  
   
 ```  
 SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection')  
@@ -57,11 +57,11 @@ SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection',
 GO  
 ```  
   
- When you create an XML schema collection by using CREATE XML SCHEMA COLLECTION in the database, the statement stores the schema components in the metadata. Note that only the schema components that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] understands are stored. Any comments, annotations, or non-XSD attributes are not stored. Therefore, the schema reconstructed by **xml_schema_namespace** is functionally equivalent to the original schema, but it will not necessarily look the same. For example, you will not see the same prefixes you had in the original schema. The schema returned by **xml_schema_namespace** uses **t** as the prefix for the target namespace and **ns1**, **ns2**, and so on, for other namespaces.  
+ When you create an XML schema collection by using CREATE XML SCHEMA COLLECTION in the database, the statement stores the schema components in the metadata. Note that only the schema components that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] understands are stored. Any comments, annotations, or non-XSD attributes are not stored. Therefore, the schema reconstructed by **xml_schema_namespace** is functionally equivalent to the original schema, but it will not necessarily look the same. For example, you will not see the same prefixes you had in the original schema. The schema returned by **xml_schema_namespace** uses **t** as the prefix for the target namespace and **ns1**, **ns2**, and so on, for other namespaces.  
   
  If you want to retain an identical copy of the XML schemas, you should save your XML schema in a file or in a database table in an **xml** type column.  
   
- The [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys.xml-schema-collections-transact-sql.md) catalog view also returns information about XML schema collections. This information includes the name of the collection, the creation date, and the owner of the collection.  
+ The [sys.xml_schema_collections](../../relational-databases/reference/system-catalog-views/sys.xml-schema-collections-transact-sql.md) catalog view also returns information about XML schema collections. This information includes the name of the collection, the creation date, and the owner of the collection.  
   
 ## See Also  
  [XML Schema Collections &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  

@@ -23,7 +23,7 @@ ms.author: "carlrab"
 manager: "jhubbard"
 ---
 # Soft-NUMA (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modern processors have multiple to many cores per socket. Each socket is represented, usually, as a single NUMA node. The SQL Server database engine partitions various internal structures and partitions service threads per NUMA node.  With processors containing 10 or more cores per socket, using software NUMA to split hardware NUMA nodes generally increases scalability and performance. Prior to SQL Server 2014 SP2, software-based NUMA (soft-NUMA) required you to edit the registry to add a node configuration affinity mask and was configured per computer rather than per instance.  With SQL Server 2014 SP2 and SQL Server 2016, soft-NUMA is configured automatically at the database-instance level when the SQL Server service starts.  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
 
   
 ## Manual Soft-NUMA  
- To manually configure [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to use soft-NUMA by disabling automatic soft_NUMA and editing the registry to add a node configuration affinity mask. When using this method, the soft-NUMA mask can be stated as a binary, DWORD (hexadecimal or decimal), or QWORD (hexadecimal or decimal) registry entry. To configure more than the first 32 CPUs use QWORD or BINARY registry values. (QWORD values cannot be used prior to [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)].) After modifying the registry, you must restart the  [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] for the soft-NUMA configuration to take  effect.  
+ To manually configure [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] to use soft-NUMA by disabling automatic soft_NUMA and editing the registry to add a node configuration affinity mask. When using this method, the soft-NUMA mask can be stated as a binary, DWORD (hexadecimal or decimal), or QWORD (hexadecimal or decimal) registry entry. To configure more than the first 32 CPUs use QWORD or BINARY registry values. (QWORD values cannot be used prior to [!INCLUDE[ssSQL11](../../../a9notintoc/includes/sssql11-md.md)].) After modifying the registry, you must restart the  [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] for the soft-NUMA configuration to take  effect.  
   
 > [!TIP]
 > CPUs are numbered starting with 0.  
@@ -57,7 +57,7 @@ manager: "jhubbard"
 > [!INCLUDE[ssNoteRegistry](../../../database-engine/configure/windows/includes/ssnoteregistry-md.md)]  
   
  Consider the following example. A computer with eight CPUs does not have hardware NUMA. Three soft-NUMA nodes are configured.   
-            [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] instance A is configured to use CPUs 0 through 3. A second instance of the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] is installed and configured to use CPUs 4 through 7. The example can be visually represented as:  
+            [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] instance A is configured to use CPUs 0 through 3. A second instance of the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] is installed and configured to use CPUs 4 through 7. The example can be visually represented as:  
   
  `CPUs          0  1  2  3  4  5  6  7`  
   
@@ -96,7 +96,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
   
  In the following example, assume you have a DL580 G9 server, with 18 cores per socket (in 4 sockets), and each socket is in its own K-group. A soft-numa configuration that you might create would look something like following. (6 cores per Node, 3 nodes per group, 4 groups).  
   
-|Example for a [!INCLUDE[ssSQL15](../../../analysis-services/powershell/includes/sssql15-md.md)] server with multiple K-Groups|Type|Value name|Value data|  
+|Example for a [!INCLUDE[ssSQL15](../../../a9notintoc/includes/sssql15-md.md)] server with multiple K-Groups|Type|Value name|Value data|  
 |-----------------------------------------------------------------------------------------------------------------|----------|----------------|----------------|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|Group|0|  
@@ -126,14 +126,14 @@ SET PROCESS AFFINITY CPU=4 TO 7;
 ## Metadata  
  You can use the following DMVs to view the current state and configuration of soft_NUMA.  
   
--   [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md): Displays the current value (0 or 1) for SOFTNUMA  
+-   [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md): Displays the current value (0 or 1) for SOFTNUMA  
   
--   [sys.dm_os_nodes &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys.dm-os-nodes-transact-sql.md): The node_state_desc column for each NUMA node will show whether the node was created by soft-NUMA or not.  
+-   [sys.dm_os_nodes &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-os-nodes-transact-sql.md): The node_state_desc column for each NUMA node will show whether the node was created by soft-NUMA or not.  
   
--   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys.dm-os-sys-info-transact-sql.md): The softnuma and softnuma_desc columns will show the configuration values.  
+-   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-os-sys-info-transact-sql.md): The softnuma and softnuma_desc columns will show the configuration values.  
   
 > [!NOTE]
-> While you can view the running value for automatic soft-NUMA using [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), you cannot change its value using **sp_configure**. You must use the [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md) statement with the SET SOFTNUMA argument.  
+> While you can view the running value for automatic soft-NUMA using [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md), you cannot change its value using **sp_configure**. You must use the [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md) statement with the SET SOFTNUMA argument.  
   
 ## See Also  
  [Map TCP IP Ports to NUMA Nodes &#40;SQL Server&#41;](../../../database-engine/configure/windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md)   

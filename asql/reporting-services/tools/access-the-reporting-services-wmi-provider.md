@@ -26,7 +26,7 @@ manager: "erikre"
   The Reporting Services WMI provider exposes two WMI classes for administration of Native mode report server instances through scripting:  
   
 > [!IMPORTANT]  
->  Starting with the [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] release, the WMI provider is supported for only native mode report servers. SharePoint mode report servers can be managed with SharePoint Central Administration pages and PowerShell scripts.  
+>  Starting with the [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] release, the WMI provider is supported for only native mode report servers. SharePoint mode report servers can be managed with SharePoint Central Administration pages and PowerShell scripts.  
   
 |Class|Namespace|Description|  
 |-----------|---------------|-----------------|  

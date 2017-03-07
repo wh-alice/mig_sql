@@ -20,7 +20,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # Attach Element
-  Attaches a [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] database that was previously detached from the current server instance or from another instance, to the current server instance.  
+  Attaches a [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] database that was previously detached from the current server instance or from another instance, to the current server instance.  
   
 ## Syntax  
   

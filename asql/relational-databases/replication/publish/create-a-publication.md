@@ -20,7 +20,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create a Publication
-  This topic describes how to create a publication in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)], or Replication Management Objects (RMO).  
+  This topic describes how to create a publication in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
  **In This Topic**  
   
@@ -45,14 +45,14 @@ manager: "jhubbard"
 -   Publication and article names cannot include any of the following characters: % , \* , [ , ] , | , : , " , ? , ' , \ , / , \< , >. If objects in the database include any of these characters and you want to replicate them, you must specify an article name that is different from the object name in the **Article Properties - \<Article>** dialog box, which is available from the **Articles** page in the wizard.  
   
 ###  <a name="Security"></a> Security  
- When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows .NET Framework.  
+ When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Windows .NET Framework.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Create publications and define articles with the New Publication Wizard. After a publication is created, view and modify publication properties in the **Publication Properties - \<Publication>** dialog box. For information about creating a publication from an Oracle database, see [Create a Publication from an Oracle Database](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md).  
   
 #### To create a publication and define articles  
   
-1.  Connect to the Publisher in [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then right-click the **Local Publications** folder.  
   
@@ -97,27 +97,27 @@ manager: "jhubbard"
   
 #### To create a snapshot or transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) to enable publication of the current database using snapshot or transactional replication.  
+1.  At the Publisher on the publication database, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-replicationdboption-transact-sql.md) to enable publication of the current database using snapshot or transactional replication.  
   
 2.  For a transactional publication, determine whether a Log Reader Agent job exists for the publication database. (This step is not required for snapshot publications.)  
   
     -   If a Log Reader Agent job exists for the publication database, proceed to step 3.  
   
-    -   If you are unsure whether a Log Reader Agent job exists for a published database, execute [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) at the Publisher on the publication database.  
+    -   If you are unsure whether a Log Reader Agent job exists for a published database, execute [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) at the Publisher on the publication database.  
   
-    -   If the result set is empty, create a Log Reader Agent job. At the Publisher, execute [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Specify the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows credentials under which the agent runs for **@job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. Proceed to step 3.  
+    -   If the result set is empty, create a Log Reader Agent job. At the Publisher, execute [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Specify the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Windows credentials under which the agent runs for **@job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. Proceed to step 3.  
   
-3.  At the Publisher, execute [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Specify a publication name for **@publication**, and, for the **@repl_freq** parameter, specify a value of **snapshot** for a snapshot publication or a value of **continuous** for a transactional publication. Specify any other publication options. This defines the publication.  
+3.  At the Publisher, execute [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-addpublication-transact-sql.md). Specify a publication name for **@publication**, and, for the **@repl_freq** parameter, specify a value of **snapshot** for a snapshot publication or a value of **continuous** for a transactional publication. Specify any other publication options. This defines the publication.  
   
     > [!NOTE]  
     >  Publication names cannot include the following characters:  
     >   
     >  % * [ ] | : " ? \ / \< >  
   
-4.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 3 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@snapshot_job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication.  
+4.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 3 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@snapshot_job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication.  
   
     > [!IMPORTANT]  
-    >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../Topic/Enable%20Encrypted%20Connections%20to%20the%20Database%20Engine%20\(SQL%20Server%20Configuration%20Manager\).md).  
+    >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure/windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 5.  Add articles to the publication. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
@@ -125,19 +125,19 @@ manager: "jhubbard"
   
 #### To create a merge publication  
   
-1.  At the Publisher, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) to enable publication of the current database using merge replication.  
+1.  At the Publisher, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-replicationdboption-transact-sql.md) to enable publication of the current database using merge replication.  
   
-2.  At the Publisher on the publication database, execute [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Specify a name for the publication for **@publication** and any other publication options. This defines the publication.  
+2.  At the Publisher on the publication database, execute [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-addmergepublication-transact-sql.md). Specify a name for the publication for **@publication** and any other publication options. This defines the publication.  
   
     > [!NOTE]  
     >  Publication names cannot include the following characters:  
     >   
     >  % * [ ] | : " ? \ / \< >  
   
-3.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 2 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@snapshot_job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication.  
+3.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 2 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@snapshot_job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication.  
   
     > [!IMPORTANT]  
-    >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../Topic/Enable%20Encrypted%20Connections%20to%20the%20Database%20Engine%20\(SQL%20Server%20Configuration%20Manager\).md).  
+    >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure/windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 4.  Add articles to the publication. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
@@ -146,11 +146,11 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example creates a transactional publication. Scripting variables are used to pass Windows credentials that are needed to create jobs for the Snapshot Agent and Log Reader Agent.  
   
- [!code-sql[HowTo#sp_AddTranPub](../../../relational-databases/replication/codesnippet/tsql/create-a-publication_1.sql)]  
+ [!code-sql[HowTo#sp_AddTranPub](../../../a9retired/codesnippet/tsql/create-a-publication_1.sql)]  
   
  This example creates a merge publication. Scripting variables are used to pass Windows credentials that are needed to create the job for the Snapshot Agent.  
   
- [!code-sql[HowTo#sp_AddMergePub](../../../relational-databases/replication/codesnippet/tsql/create-a-publication_2.sql)]  
+ [!code-sql[HowTo#sp_AddMergePub](../../../a9retired/codesnippet/tsql/create-a-publication_2.sql)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  You can create publications programmatically by using Replication Management Objects (RMO). The RMO classes that you use to create a publication depend on the type of publication you create.  
@@ -165,7 +165,7 @@ manager: "jhubbard"
   
 4.  For a transactional publication, check the value of the <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> property. If this property is **true**, a Log Read Agent job already exists for this database. If this property is **false**, do the following:  
   
-    -   Set the <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> and <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> or <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> fields of <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> to provide the credentials for the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows account under which the Log Reader Agent runs.  
+    -   Set the <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> and <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> or <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> fields of <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> to provide the credentials for the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Windows account under which the Log Reader Agent runs.  
   
         > [!NOTE]  
         >  Setting <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> is not required when the publication is created by a member of the **sysadmin** fixed server role. In this case, the agent will impersonate the SQL Server Agent account. For more information, see [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
@@ -198,7 +198,7 @@ manager: "jhubbard"
 6.  Call the <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> method to create the publication.  
   
     > [!IMPORTANT]  
-    >  When configuring a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> method. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../Topic/Enable%20Encrypted%20Connections%20to%20the%20Database%20Engine%20\(SQL%20Server%20Configuration%20Manager\).md).  
+    >  When configuring a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> method. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure/windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 7.  Call the <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> method to create the Snapshot Agent job for the publication.  
   
@@ -228,25 +228,25 @@ manager: "jhubbard"
 5.  Call the <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> method to create the publication.  
   
     > [!IMPORTANT]  
-    >  When configuring a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> method. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../Topic/Enable%20Encrypted%20Connections%20to%20the%20Database%20Engine%20\(SQL%20Server%20Configuration%20Manager\).md).  
+    >  When configuring a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> method. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure/windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 6.  Call the <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> method to create the Snapshot Agent job for the publication.  
   
 ###  <a name="PShellExample"></a> Examples (RMO)  
  This example enables the AdventureWorks database for transactional publishing, defines a Log Reader Agent job, and creates the AdvWorksProductTran publication. An article must be defined for this publication. The Windows account credentials that are needed to create the Log Reader Agent job and the Snapshot Agent job are passed at runtime. To learn how to use RMO to define snapshot and transactional articles, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
- [!code-cs[HowTo#rmo_CreateTranPub](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createtranpub)]  
+ [!code-cs[HowTo#rmo_CreateTranPub](../../../a9retired/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createtranpub)]  
   
- [!code-vb[HowTo#rmo_vb_CreateTranPub](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createtranpub)]  
+ [!code-vb[HowTo#rmo_vb_CreateTranPub](../../../a9retired/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createtranpub)]  
   
  This example enables the AdventureWorks database for merge publishing and creates the AdvWorksSalesOrdersMerge publication. Articles must still be defined for this publication. The Windows account credentials that are needed to create the Snapshot Agent job are passed at runtime. To learn how to use RMO to define merge articles, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
- [!code-cs[HowTo#rmo_CreateMergePub](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepub)]  
+ [!code-cs[HowTo#rmo_CreateMergePub](../../../a9retired/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepub)]  
   
- [!code-vb[HowTo#rmo_vb_CreateMergePub](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepub)]  
+ [!code-vb[HowTo#rmo_vb_CreateMergePub](../../../a9retired/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepub)]  
   
 ## See Also  
- [Use sqlcmd with Scripting Variables](../Topic/Use%20sqlcmd%20with%20Scripting%20Variables.md)   
+ [Use sqlcmd with Scripting Variables](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
  [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)   

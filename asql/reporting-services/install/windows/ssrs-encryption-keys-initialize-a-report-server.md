@@ -22,14 +22,14 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # SSRS Encryption Keys - Initialize a Report Server
-  In [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], an initialized server is one that can encrypt and decrypt data in a report server database. Initialization is a requirement for report server operation. Initialization occurs when the Report Server service is started for the first time. It also occurs when you join the report server to the existing deployment, or when you manually recreate the keys as part of the recovery process. For more information about how and why encryption keys are used, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../Topic/Configure%20and%20Manage%20Encryption%20Keys%20\(SSRS%20Configuration%20Manager\).md) and [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../Topic/Store%20Encrypted%20Report%20Server%20Data%20\(SSRS%20Configuration%20Manager\).md).  
+  In [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)], an initialized server is one that can encrypt and decrypt data in a report server database. Initialization is a requirement for report server operation. Initialization occurs when the Report Server service is started for the first time. It also occurs when you join the report server to the existing deployment, or when you manually recreate the keys as part of the recovery process. For more information about how and why encryption keys are used, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/ssrs-encryption-keys-manage-encryption-keys.md) and [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
  Encryption keys are based partly on the profile information of the Report Server service. If you change the user identity used to run the Report Server service, you must update the keys accordingly. If you are using the Reporting Services Configuration tool to change the identity, this step is handled for you automatically.  
   
  If initialization fails for some reason, the report server returns an **RSReportServerNotActivated** error in response to user and service requests. In this case, you may need to troubleshoot the system or server configuration. For more information, see [SSRS: Troubleshoot Issues and Errors with Reporting Services](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) in Technet Wiki.  
   
 ## Overview of the Initialization Process  
- The initialization process creates and stores a symmetric key used for encryption. The symmetric key is created by the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows Cryptographic Services and subsequently used by the Report Server service to encrypt and decrypt data. The symmetric key is itself encrypted with an asymmetric key.  
+ The initialization process creates and stores a symmetric key used for encryption. The symmetric key is created by the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Windows Cryptographic Services and subsequently used by the Report Server service to encrypt and decrypt data. The symmetric key is itself encrypted with an asymmetric key.  
   
  The following steps describe the initialization process:  
   
@@ -44,7 +44,7 @@ manager: "erikre"
 5.  The Report Server service connects to the report server database again, and adds the symmetric key to the public key and installation identifier values that were stored in step 3. Before storing it, the Report Server service uses its public key to encrypt the symmetric key. Once the symmetric key is stored, the report server is considered initialized and available to use.  
   
 ## Initializing a Report Server for Scale-out Deployment  
- [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] supports a scale-out deployment model that shares a single report server database among multiple report server instances. To join a scale-out deployment, a report server must create and store its copy of the symmetric key in the shared database. Although a single symmetric key is used by servers that use the database, each report server has its copy of the key. Each copy varies in that it is uniquely encrypted using the public key it owns.  
+ [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] supports a scale-out deployment model that shares a single report server database among multiple report server instances. To join a scale-out deployment, a report server must create and store its copy of the symmetric key in the shared database. Although a single symmetric key is used by servers that use the database, each report server has its copy of the key. Each copy varies in that it is uniquely encrypted using the public key it owns.  
   
  The first set of steps for initializing a report server for scale-out deployment are identical to the first three steps that describe initialization for a single server and database combination.  
   
@@ -59,15 +59,15 @@ manager: "erikre"
 > [!NOTE]  
 >  **RSKeymgmt** is a console application that you run from a command line on a computer that hosts a report server instance that is already part of a scale-out deployment. When you run the utility, you specify arguments to select a remote report server instance that you want to initialize.  
   
- A report server will be initialized only if there is a match between the installation identifier and the public key. If the match succeeds, a symmetric key is created that permits reversible encryption. If the match fails, the report server is disabled, in which case you may be required to apply a backup key or delete the encrypted data if a backup key is unavailable or not valid. For more information about encryption keys used by a report server, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../Topic/Configure%20and%20Manage%20Encryption%20Keys%20\(SSRS%20Configuration%20Manager\).md).  
+ A report server will be initialized only if there is a match between the installation identifier and the public key. If the match succeeds, a symmetric key is created that permits reversible encryption. If the match fails, the report server is disabled, in which case you may be required to apply a backup key or delete the encrypted data if a backup key is unavailable or not valid. For more information about encryption keys used by a report server, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/ssrs-encryption-keys-manage-encryption-keys.md).  
   
 > [!NOTE]  
->  You can also use the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) provider to initialize a report server programmatically. For more information, see [Access the Reporting Services WMI Provider](../../../reporting-services/tools/access-the-reporting-services-wmi-provider.md) in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Books Online.  
+>  You can also use the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) provider to initialize a report server programmatically. For more information, see [Access the Reporting Services WMI Provider](../../../reporting-services/tools/access-the-reporting-services-wmi-provider.md) in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Books Online.  
   
 ## How to Confirm a Report Server Initialization  
  To confirm report server initialization, ping the Report Server Web service by typing **http://\<servername>/reportserver** in the command window. If the **RSReportServerNotActivated** error occurs, the initialization failed.  
   
 ## See Also
-[Configure and Manage Encryption Keys (SSRS Configuration Manager)](Configure%20and%20Manage%20Encryption%20Keys%20\(SSRS%20Configuration%20Manager\).md)
+[Configure and Manage Encryption Keys (SSRS Configuration Manager)](../../../reporting-services/install/windows/ssrs-encryption-keys-manage-encryption-keys.md)
   
   

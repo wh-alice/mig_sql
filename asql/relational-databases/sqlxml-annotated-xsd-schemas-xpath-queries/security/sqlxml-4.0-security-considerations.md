@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # SQLXML 4.0 Security Considerations
-  This section provides information about security-related considerations for [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] SQLXML.  
+  This section provides information about security-related considerations for [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] SQLXML.  
   
 ## In This Section  
  [Core SQLXML Security Considerations](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/core-sqlxml-security-considerations.md)  

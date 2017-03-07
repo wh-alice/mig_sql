@@ -18,9 +18,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Table-Valued Parameters (SQL Server Native Client)
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
-  Table-valued parameters were introduced in [!INCLUDE[ssKatmai](../../../analysis-services/data-mining/includes/sskatmai-md.md)], and provide an efficient way to pass multiple rows of data to the server. Table-valued parameters provide functionality similar to parameter arrays, but they offer more flexibility and closer integration with [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)], and can frequently improve performance. Table-valued parameters can also participate in set-based operations, whereas parameter arrays cannot.  
+  Table-valued parameters were introduced in [!INCLUDE[ssKatmai](../../../a9notintoc/includes/sskatmai-md.md)], and provide an efficient way to pass multiple rows of data to the server. Table-valued parameters provide functionality similar to parameter arrays, but they offer more flexibility and closer integration with [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)], and can frequently improve performance. Table-valued parameters can also participate in set-based operations, whereas parameter arrays cannot.  
   
  For information about table-valued parameters and ODBC, see [Table-Valued Parameters &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   

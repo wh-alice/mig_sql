@@ -17,17 +17,17 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Implementing Full-Text Search
-  Full-text search is available per instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and is represented in SMO by the <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> object. The <xref:Microsoft.SqlServer.Management.Smo.FullTextService> object resides under the **Server** object. It is used to manage the configuration options for [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Full Text Search service. The <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> object belongs to the <xref:Microsoft.SqlServer.Management.Smo.Database> object and it is a collection of <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> objects that represent full-text catalogs defined for the database. You can only have one full-text index defined for each table, unlike normal indexes. This is represented by a <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> object in the <xref:Microsoft.SqlServer.Management.Smo.Table> object.  
+  Full-text search is available per instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] and is represented in SMO by the <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> object. The <xref:Microsoft.SqlServer.Management.Smo.FullTextService> object resides under the **Server** object. It is used to manage the configuration options for [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Full Text Search service. The <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> object belongs to the <xref:Microsoft.SqlServer.Management.Smo.Database> object and it is a collection of <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> objects that represent full-text catalogs defined for the database. You can only have one full-text index defined for each table, unlike normal indexes. This is represented by a <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> object in the <xref:Microsoft.SqlServer.Management.Smo.Table> object.  
   
  To create a full-text search service, you must have a full-text catalog defined on the database and a full-text search index defined on one of the tables in the database.  
   
- First, create a full-text catalog on the database by calling the <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> constructor and specifying the catalog name. Then, create the full-text index by calling the constructor and specifying the table on which it is to be created. You can then add index columns for the full-text index, by using the <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> object and providing the name of the column within the table. Then, set the <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A> property to the catalog you have created. Finally, call the <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A> method and create the full-text index on the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ First, create a full-text catalog on the database by calling the <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> constructor and specifying the catalog name. Then, create the full-text index by calling the constructor and specifying the table on which it is to be created. You can then add index columns for the full-text index, by using the <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> object and providing the name of the column within the table. Then, set the <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A> property to the catalog you have created. Finally, call the <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A> method and create the full-text index on the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## Example  
- To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20Basic%20SMO%20Project%20in%20Visual%20Studio%20.NET.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20C%23%20SMO%20Project%20in%20Visual%20Studio%20.NET.md).  
+ To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-.net.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-.net.md).  
   
 ## Creating a Full-Text Search Service in Visual Basic  
- This code example creates a full-text search catalog for the `ProductCategory` table in the [!INCLUDE[ssSampleDBnormal](../../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] sample database. It then creates a full-text search index on the Name column in the `ProductCategory` table. The full-text search index requires that there is a unique index already defined on the column.  
+ This code example creates a full-text search catalog for the `ProductCategory` table in the [!INCLUDE[ssSampleDBnormal](../../../a9notintoc/includes/sssampledbnormal-md.md)] sample database. It then creates a full-text search index on the Name column in the `ProductCategory` table. The full-text search index requires that there is a unique index already defined on the column.  
   
 ```  
 ' compile with:   
@@ -87,7 +87,7 @@ End Class
 ```  
   
 ## Creating a Full-Text Search Service in Visual C#  
- This code example creates a full-text search catalog for the `ProductCategory` table in the [!INCLUDE[ssSampleDBnormal](../../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] sample database. It then creates a full-text search index on the Name column in the `ProductCategory` table. The full-text search index requires that there is a unique index already defined on the column.  
+ This code example creates a full-text search catalog for the `ProductCategory` table in the [!INCLUDE[ssSampleDBnormal](../../../a9notintoc/includes/sssampledbnormal-md.md)] sample database. It then creates a full-text search index on the Name column in the `ProductCategory` table. The full-text search index requires that there is a unique index already defined on the column.  
   
 ```  
 // compile with:   
@@ -147,7 +147,7 @@ public class A {
 ```  
   
 ## Creating a Full-Text Search Service in PowerShell  
- This code example creates a full-text search catalog for the `ProductCategory` table in the [!INCLUDE[ssSampleDBnormal](../../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] sample database. It then creates a full-text search index on the Name column in the `ProductCategory` table. The full-text search index requires that there is a unique index already defined on the column.  
+ This code example creates a full-text search catalog for the `ProductCategory` table in the [!INCLUDE[ssSampleDBnormal](../../../a9notintoc/includes/sssampledbnormal-md.md)] sample database. It then creates a full-text search index on the Name column in the `ProductCategory` table. The full-text search index requires that there is a unique index already defined on the column.  
   
 ```  
 # Example of implementing a full text search on the default instance.  

@@ -29,7 +29,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # CREATE MINING MODEL (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates both a new mining model and a mining structure in the database. You can create a model either by defining the new model in the statement, or by using the Predictive Model Markup Language (PMML). This second option is for advanced users only.  
   
@@ -60,7 +60,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  The name of a data mining algorithm, as defined by the current provider.  
   
 > [!NOTE]  
->  A list of the algorithms supported by the current provider can be retrieved by using [DMSCHEMA_MINING_SERVICES Rowset](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). To view the algorithms supported in the current instance of [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)], see [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
+>  A list of the algorithms supported by the current provider can be retrieved by using [DMSCHEMA_MINING_SERVICES Rowset](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). To view the algorithms supported in the current instance of [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)], see [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
   
  *parameter list*  
  Optional. A comma-separated list of provider-defined parameters for the algorithm.  
@@ -115,7 +115,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [Modeling Flags &#40;Data Mining&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
- You can add a clause to the statement to describe the relationship between two columns. [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] supports the use of the following \<Column relationship> clause.  
+ You can add a clause to the statement to describe the relationship between two columns. [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] supports the use of the following \<Column relationship> clause.  
   
  **RELATED TO**  
  This form indicates a value hierarchy. The target of a RELATED TO column can be a key column in a nested table, a discretely-valued column in the case row, or another column with a RELATED TO clause, which indicates a deeper hierarchy.  
@@ -139,10 +139,10 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 ## Remarks  
  If you want to create a model that has a built-in testing data set, you should use the statement CREATE MINING STRUCTURE followed by ALTER MINING STRUCTURE. However, not all model types support a holdout data set. For more information, see [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
- For a walkthrough of how to create a mining model by using the CREATEMODEL statement, see [Time Series Prediction DMX Tutorial](../Topic/Time%20Series%20Prediction%20DMX%20Tutorial.md).  
+ For a walkthrough of how to create a mining model by using the CREATEMODEL statement, see [Time Series Prediction DMX Tutorial](../a9notintoc/time-series-prediction-dmx-tutorial.md).  
   
 ## Naive Bayes Example  
- The following example uses the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Naive Bayes algorithm to create a new mining model. The Bike Buyer column is defined as the predictable attribute.  
+ The following example uses the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Naive Bayes algorithm to create a new mining model. The Bike Buyer column is defined as the predictable attribute.  
   
 ```  
 CREATE MINING MODEL [NBSample]  
@@ -156,7 +156,7 @@ USING Microsoft_Naive_Bayes
 ```  
   
 ## Association Model Example  
- The following example uses the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Association algorithm to create a new mining model. The statement takes advantage of the ability to nest a table inside the model definition by using a table column. The model is modified by using the *MINIMUM_PROBABILITY* and *MINIMUM_SUPPORT* parameters.  
+ The following example uses the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Association algorithm to create a new mining model. The statement takes advantage of the ability to nest a table inside the model definition by using a table column. The model is modified by using the *MINIMUM_PROBABILITY* and *MINIMUM_SUPPORT* parameters.  
   
 ```  
 CREATE MINING MODEL MyAssociationModel (  
@@ -169,7 +169,7 @@ USING Microsoft_Association_Rules (Minimum_Probability = 0.1, MINIMUM_SUPPORT = 
 ```  
   
 ## Sequence Clustering Example  
- The following example uses the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Sequence Clustering algorithm to create a new mining model. Two keys are used to define the model. The OrderNumber column is used as the case key, and specifies individual orders. The LineNumber column is used as the nested table key, and specifies the sequence in which items were added to an order.  
+ The following example uses the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Sequence Clustering algorithm to create a new mining model. Two keys are used to define the model. The OrderNumber column is used as the case key, and specifies individual orders. The LineNumber column is used as the nested table key, and specifies the sequence in which items were added to an order.  
   
 ```  
 CREATE MINING MODEL BuyingSequence (  
@@ -184,7 +184,7 @@ USING Microsoft_Sequence_Clustering
 ```  
   
 ## Time Series Example  
- The following example uses the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Times Series algorithm to create a new mining model by using the ARTxp algorithm. ReportingDate is the key column for the time series and ModelRegion is the key column for the data series. In this example, it is assumed that the periodicity of the data is every 12 months. Therefore, the *PERIODICITY_HINT* parameter is set to 12.  
+ The following example uses the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Times Series algorithm to create a new mining model by using the ARTxp algorithm. ReportingDate is the key column for the time series and ModelRegion is the key column for the data series. In this example, it is assumed that the periodicity of the data is every 12 months. Therefore, the *PERIODICITY_HINT* parameter is set to 12.  
   
 > [!NOTE]  
 >  You must specify the *PERIODICITY_HINT* parameter by using brace characters. Moreover, because the value is a string, it must be enclosed in single quotation marks:  "{\<numeric value>}".  
@@ -200,8 +200,8 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ```  
   
 ## See Also  
- [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Definition%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Manipulation%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)  
+ [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

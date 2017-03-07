@@ -22,9 +22,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Replication Developer Documentation
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  The ability to programmatically configure, maintain, and monitor a replication topology enables you to both simplify repeated replication tasks and improve the user experience for your replication-based applications. By programming replication, your end-users can be provided with customized replication functionalities without having to be familiar with replication stored procedures and replication agent executables or having to using the replication user interface implemented by [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+  The ability to programmatically configure, maintain, and monitor a replication topology enables you to both simplify repeated replication tasks and improve the user experience for your replication-based applications. By programming replication, your end-users can be provided with customized replication functionalities without having to be familiar with replication stored procedures and replication agent executables or having to using the replication user interface implemented by [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
  The following are scenarios in which your applications might benefit from programmatic access to replication services:  
   
@@ -40,9 +40,9 @@ manager: "jhubbard"
   
 -   Writing customized business rules that are executed when a merge subscription is synchronized.  
   
--   Generating [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] scripts that can be run repeated when configuring new Subscribers.  
+-   Generating [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] scripts that can be run repeated when configuring new Subscribers.  
   
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] enables you to programmatically control replication agents and to programmatically administer and monitor a replication topology. To learn more about programming replication, see [Replication Programming Concepts](../../../relational-databases/replication/concepts/replication-programming-concepts.md).  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] enables you to programmatically control replication agents and to programmatically administer and monitor a replication topology. To learn more about programming replication, see [Replication Programming Concepts](../../../relational-databases/replication/concepts/replication-programming-concepts.md).  
   
 ## In This Section  
  [Replication Programming Concepts](../../../relational-databases/replication/concepts/replication-programming-concepts.md)  
@@ -52,7 +52,7 @@ manager: "jhubbard"
  Describes how system stored procedures can be used to proivide programmatic access in a replication topology.  
   
  [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
- Explains the concepts for using Replication Management Objects (RMO). This is a managed code assembly that encapsulates replication functionalities for [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Explains the concepts for using Replication Management Objects (RMO). This is a managed code assembly that encapsulates replication functionalities for [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
  [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
  Describes the use of Replication Agent Executable files.  

@@ -1,7 +1,7 @@
 ---
 title: "Implement Dynamic Security by Using Row Filters | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -35,7 +35,7 @@ In order to implement dynamic security for this Adventure Works scenario, you mu
   
 #### To add the dimSalesTerritory table  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], click on the **Model** menu, and then click **Existing Connections**.  
+1.  In [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], click on the **Model** menu, and then click **Existing Connections**.  
   
 2.  In the **Existing Connections** dialog box, verify the **Adventure Works DB from SQL** data source connection is selected, and then click **Open**.  
   
@@ -95,7 +95,7 @@ Because the dimEmployee table in the AdventureWorksDW sample database contains u
   
 5.  In the worksheet, select all of the cells with employee data, including the headers, then right click the selected data, and then click **Copy**.  
   
-6.  In [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], click the **Edit** menu, and then click **Paste**.  
+6.  In [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], click the **Edit** menu, and then click **Paste**.  
   
     If Paste is greyed out, click any column in any table in the model designer window, and then click the **Edit** menu, and then click **Paste**.  
   
@@ -129,11 +129,11 @@ In this task, you will hide the Employee Security table, keeping it from appeari
 In this task, you will create a new user role. This role will include a row filter defining which rows of the Sales Territory table are visible to users. The filter is then applied in the one-to many relationship direction to all other tables related to Sales Territory. You will also apply a simple filter that secures the entire Employee Security table from being queryable by any user that is a member of the role.  
   
 > [!NOTE]  
-> The Sales Employees by Territory role you create in this lesson restricts members to browse (or query) only sales data for the sales territory to which they belong. If you add a user as a member to the Sales Employees by Territory role that also exists as a member in a role created in [Lesson 12: Create Roles](../../analysis-services/tutorials/lesson-12-create-roles.md), you will get a combination of permissions. When a user is a member of multiple roles, the permissions, and row filters defined for each role are cumulative. That is, the user will have the greater permissions determined by the combination of roles.  
+> The Sales Employees by Territory role you create in this lesson restricts members to browse (or query) only sales data for the sales territory to which they belong. If you add a user as a member to the Sales Employees by Territory role that also exists as a member in a role created in [Lesson 12: Create Roles](../Topic/Lesson%2012:%20Create%20Roles.md), you will get a combination of permissions. When a user is a member of multiple roles, the permissions, and row filters defined for each role are cumulative. That is, the user will have the greater permissions determined by the combination of roles.  
   
 #### To create a Sales Employees by Territory user role  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], click the **Model** menu, and then click **Roles**.  
+1.  In [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], click the **Model** menu, and then click **Roles**.  
   
 2.  In the **Role Manager** dialog box, click **New**.  
   
@@ -172,11 +172,11 @@ In this task, you will create a new user role. This role will include a row filt
 10. In the Role Manager dialog box, click **Ok**.  
   
 ## Test the Sales Employees by Territory User Role  
-In this task, you will use the Analyze in Excel feature in [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)] to test the efficacy of the Sales Employees by Territory user role. You will specify one of the user names you added to the Employee Security table and as a member of the role. This user name will then be used as the effective user name in the connection created between Excel and the model.  
+In this task, you will use the Analyze in Excel feature in [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)] to test the efficacy of the Sales Employees by Territory user role. You will specify one of the user names you added to the Employee Security table and as a member of the role. This user name will then be used as the effective user name in the connection created between Excel and the model.  
   
 #### To test the Sales Employees by Territory user role  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], click the **Model** menu, and then click **Analyze in Excel**.  
+1.  In [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], click the **Model** menu, and then click **Analyze in Excel**.  
   
 2.  In the **Analyze in Excel** dialog box, in **Specify the user name or role to use to connect to the model**, select **Other Windows User**, and then click **Browse**.  
   

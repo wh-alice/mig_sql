@@ -26,7 +26,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Type Casting Rules in XQuery
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   The following W3C XQuery 1.0 and XPath 2.0 Functions and Operators specifications diagram shows the built-in data types. This includes the built-in primitive and built-in derived types.  
   
@@ -166,7 +166,7 @@ min(xs:integer("1"), xs:double("1.1"))
  When casting to binary types such as xs:base64Binary or xs:hexBinary from a string or untypedAtomic type, the input values have to be base64 or hex encoded, respectively.  
   
 ##### Casting a value to a string or untypedAtomic type  
- Casting to a string or untypedAtomic type transforms the value to its XQuery canonical lexical representation. Specifically, this can mean that a value that may have obeyed a specific pattern or other constraint during input will not be represented according to that constraint.  To inform users about this, [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] flags types where the type constraint can be a problem by providing a warning when those types are loaded into the schema collection.  
+ Casting to a string or untypedAtomic type transforms the value to its XQuery canonical lexical representation. Specifically, this can mean that a value that may have obeyed a specific pattern or other constraint during input will not be represented according to that constraint.  To inform users about this, [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] flags types where the type constraint can be a problem by providing a warning when those types are loaded into the schema collection.  
   
  When casting a value of type xs:float or xs:double, or any one of their subtypes, to a string or untypedAtomic type, the value is represented in scientific notation. This is done only when the value's absolute value is less than 1.0E-6, or greater than or equal to 1.0E6. This means that 0 is serialized in scientific notation to 0.0E0.  
   

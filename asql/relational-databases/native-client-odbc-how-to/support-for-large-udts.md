@@ -15,26 +15,26 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Support for Large UDTs
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   This sample solution contains two projects. One project creates an assembly (DLL) from C# source code. This assembly contains the CLR type. A table will be added to the database. A column in the table will be of a type defined in the assembly, By default, this sample will use the master database. The second project is a native C application that reads data from the table.  
   
- This sample will not work with any version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)].  
+ This sample will not work with any version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)].  
   
  For more information about support for large UDTs, see [Large CLR User-Defined Types &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## Example  
  The first code listing is C# source code. Paste it into a file called LargeStringUDT.cs and compile it to a DLL. Copy LargeStringUDT.dll to the root directory of your C drive.  
   
- The second ([!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]) code listing creates the assembly in the master database.  
+ The second ([!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]) code listing creates the assembly in the master database.  
   
  Compile the second (C++) code listing with odbc32.lib and user32.lib. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   
  If you will build and run this sample as a 32-bit application on a 64-bit operating system, you must create the ODBC data source with the ODBC Administrator in %windir%\SysWOW64\odbcad32.exe.  
   
- This sample connects to your computer's default [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. To connect to a named instance, change the definition of the ODBC data source to specify the instance using the following format: server\namedinstance. By default, [!INCLUDE[ssExpress](../../database-engine/configure/windows/includes/ssexpress-md.md)] installs to a named instance.  
+ This sample connects to your computer's default [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. To connect to a named instance, change the definition of the ODBC data source to specify the instance using the following format: server\namedinstance. By default, [!INCLUDE[ssExpress](../../a9notintoc/includes/ssexpress-md.md)] installs to a named instance.  
   
- The fourth ([!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]) code listing deletes the assembly from the master database.  
+ The fourth ([!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]) code listing deletes the assembly from the master database.  
   
 ```  
 // LargeStringUDT.cs  

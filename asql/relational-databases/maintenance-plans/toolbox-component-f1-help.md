@@ -19,12 +19,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Toolbox Component F1 Help
-  **Toolbox** displays a variety of items for use in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] projects. You can open the **Toolbox** from the **View** menu, and dock this window as you wish. While docked, the **Toolbox** can either be pinned open or set to **Auto Hide** when not in use.  
+  **Toolbox** displays a variety of items for use in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] projects. You can open the **Toolbox** from the **View** menu, and dock this window as you wish. While docked, the **Toolbox** can either be pinned open or set to **Auto Hide** when not in use.  
   
- **Toolbox** items can be dragged and dropped or copied and pasted into code editors or onto design view surfaces within [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+ **Toolbox** items can be dragged and dropped or copied and pasted into code editors or onto design view surfaces within [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 ## How the Toolbox works  
- The Toolbox is a sliding tree control that behaves much like [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows Explorer, but without grid or connection lines. Multiple segments of the **Toolbox** (called "tabs") can be expanded simultaneously, and the entire tree scrolls inside the **Toolbox** window. To expand any tab of the **Toolbox**, click the plus (**+**) sign next to its name. To collapse an expanded tab, click the minus (**-**) sign next to its name.  
+ The Toolbox is a sliding tree control that behaves much like [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows Explorer, but without grid or connection lines. Multiple segments of the **Toolbox** (called "tabs") can be expanded simultaneously, and the entire tree scrolls inside the **Toolbox** window. To expand any tab of the **Toolbox**, click the plus (**+**) sign next to its name. To collapse an expanded tab, click the minus (**-**) sign next to its name.  
   
  Each time you return to an editor or designer, the **Toolbox** automatically scrolls to the most recent tab and item selected. As you shift focus to a different editor or designer, the current selection in the **Toolbox** shifts with you.  
   

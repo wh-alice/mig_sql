@@ -23,9 +23,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using Multiple Active Result Sets (MARS)
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)] introduced support for multiple active result sets (MARS) in applications accessing the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)]. In earlier versions of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], database applications could not maintain multiple active statements on a connection. When using [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] default result sets, the application had to process or cancel all result sets from one batch before it could execute any other batch on that connection. [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)] introduced a new connection attribute that allows applications to have more than one pending request per connection, and in particular, to have more than one active default result set per connection.  
+  [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)] introduced support for multiple active result sets (MARS) in applications accessing the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)]. In earlier versions of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], database applications could not maintain multiple active statements on a connection. When using [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] default result sets, the application had to process or cancel all result sets from one batch before it could execute any other batch on that connection. [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)] introduced a new connection attribute that allows applications to have more than one pending request per connection, and in particular, to have more than one active default result set per connection.  
   
  MARS simplifies application design with the following new capabilities:  
   
@@ -41,14 +41,14 @@ manager: "jhubbard"
   
 -   Always read to the end of results for procedural requests regardless of whether they return results or not, and for batches that return multiple results.  
   
--   Wherever possible, use API calls to change connection properties and manage transactions in preference to [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statements.  
+-   Wherever possible, use API calls to change connection properties and manage transactions in preference to [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statements.  
   
 -   In MARS, session-scoped impersonation is prohibited while concurrent batches are running.  
   
 > [!NOTE]  
->  By default, MARS functionality is not enabled. To use MARS when connecting to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] with [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client, you must specifically enable it within a connection string. For more information, see the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider and [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver sections, later in this topic.  
+>  By default, MARS functionality is not enabled. To use MARS when connecting to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] with [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client, you must specifically enable it within a connection string. For more information, see the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider and [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver sections, later in this topic.  
   
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client does not limit the number of active statements on a connection.  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client does not limit the number of active statements on a connection.  
   
  Typical applications which do not need to have more than a single multistatement batch or stored procedure executing at the same time will benefit from MARS without having to understand how MARS is implemented. However, applications with more complex requirements do need to take account of this.  
   
@@ -66,10 +66,10 @@ manager: "jhubbard"
   
  The exact manner in which batches interleave execution is influenced by a number of factors, and it is difficult to predict the exact sequence in which commands from multiple batches that contain yield points will be executed. Be careful to avoid unwanted side effects due to interleaved execution of such complex batches.  
   
- Avoid problems by using API calls rather than [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statements to manage connection state (SET, USE) and transactions (BEGIN TRAN, COMMIT, ROLLBACK) by not including these statements in multi-statement batches that also contain yield points, and by serializing execution of such batches by consuming or canceling all results.  
+ Avoid problems by using API calls rather than [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statements to manage connection state (SET, USE) and transactions (BEGIN TRAN, COMMIT, ROLLBACK) by not including these statements in multi-statement batches that also contain yield points, and by serializing execution of such batches by consuming or canceling all results.  
   
 > [!NOTE]  
->  A batch or stored procedure which starts a manual or implicit transaction when MARS is enabled must complete the transaction before the batch exits. If it does not, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] rolls back all changes made by the transaction when the batch finishes. Such a transaction is managed by [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] as a batch-scoped transaction. This is a new type of transaction introduced in [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)] to enable existing well-behaved stored procedures to be used when MARS is enabled. For more information about batch-scoped transactions, see [Transaction Statements &#40;Transact-SQL&#41;](../Topic/Transaction%20Statements%20\(Transact-SQL\).md).  
+>  A batch or stored procedure which starts a manual or implicit transaction when MARS is enabled must complete the transaction before the batch exits. If it does not, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] rolls back all changes made by the transaction when the batch finishes. Such a transaction is managed by [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] as a batch-scoped transaction. This is a new type of transaction introduced in [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)] to enable existing well-behaved stored procedures to be used when MARS is enabled. For more information about batch-scoped transactions, see [Transaction Statements &#40;Transact-SQL&#41;](../Topic/Transaction%20Statements%20\(Transact-SQL\).md).  
   
  For an example of using MARS from ADO, see [Using ADO with SQL Server Native Client](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md).  
   
@@ -109,14 +109,14 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
  SQL Server (starting with 2016) supports MARS with columnstore indexes. SQL Server 2014 uses MARS for  read-only connections to tables with a columnstore index.    However, SQL Server 2014 does not support MARS for concurrent data manipulation language (DML) operations on a table with a columnstore index. When this occurs, SQL Server will terminate the connections and abort the transactions.   SQL Server 2012 has read-only columnstore indexes and MARS does not apply to them.  
   
 ## SQL Server Native Client OLE DB Provider  
- The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider supports MARS through the addition of the SSPROP_INIT_MARSCONNECTION data source initialization property, which is implemented in the DBPROPSET_SQLSERVERDBINIT property set. In addition, a new connection string keyword, **MarsConn**, as been added. It accepts **true** or **false** values; **false** is the default.  
+ The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider supports MARS through the addition of the SSPROP_INIT_MARSCONNECTION data source initialization property, which is implemented in the DBPROPSET_SQLSERVERDBINIT property set. In addition, a new connection string keyword, **MarsConn**, as been added. It accepts **true** or **false** values; **false** is the default.  
   
- The data source property DBPROP_MULTIPLECONNECTIONS defaults to VARIANT_TRUE. This means the provider will spawn multiple connections in order to support multiple concurrent command and rowset objects. When MARS is enabled, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client can support multiple command and rowset objects on a single connection, so MULTIPLE_CONNECTIONS is set to VARIANT_FALSE by default.  
+ The data source property DBPROP_MULTIPLECONNECTIONS defaults to VARIANT_TRUE. This means the provider will spawn multiple connections in order to support multiple concurrent command and rowset objects. When MARS is enabled, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client can support multiple command and rowset objects on a single connection, so MULTIPLE_CONNECTIONS is set to VARIANT_FALSE by default.  
   
  For more information about enhancements made to the DBPROPSET_SQLSERVERDBINIT property set, see [Initialization and Authorization Properties](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ### SQL Server Native Client OLE DB Provider Example  
- In this example, a data source object is created using the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native OLE DB provider, and MARS is enabled using the DBPROPSET_SQLSERVERDBINIT property set before the session object is created.  
+ In this example, a data source object is created using the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native OLE DB provider, and MARS is enabled using the DBPROPSET_SQLSERVERDBINIT property set before the session object is created.  
   
 ```  
 #include <sqlncli.h>  
@@ -202,7 +202,7 @@ hr = pIOpenRowset->OpenRowset (NULL,
 ```  
   
 ## SQL Server Native Client ODBC Driver  
- The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver supports MARS through additions to the [SQLSetConnectAttr](../../../relational-databases/extended-stored-procedures-reference/sqlsetconnectattr.md) and [SQLGetConnectAttr](../../../relational-databases/extended-stored-procedures-reference/sqlgetconnectattr.md) functions. SQL_COPT_SS_MARS_ENABLED has been added to accept either SQL_MARS_ENABLED_YES or SQL_MARS_ENABLED_NO, with SQL_MARS_ENABLED_NO being the default. In addition, a new connection string keyword, **Mars_Connection**, as been added. It accepts "yes" or "no" values; "no" is the default.  
+ The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver supports MARS through additions to the [SQLSetConnectAttr](../../../relational-databases/extended-stored-procedures-reference/sqlsetconnectattr.md) and [SQLGetConnectAttr](../../../relational-databases/extended-stored-procedures-reference/sqlgetconnectattr.md) functions. SQL_COPT_SS_MARS_ENABLED has been added to accept either SQL_MARS_ENABLED_YES or SQL_MARS_ENABLED_NO, with SQL_MARS_ENABLED_NO being the default. In addition, a new connection string keyword, **Mars_Connection**, as been added. It accepts "yes" or "no" values; "no" is the default.  
   
 ### SQL Server Native Client ODBC Driver Example  
  In this example, the **SQLSetConnectAttr** function is used to enable MARS before calling the **SQLDriverConnect** function to connect the database. Once the connection is made, two **SQLExecDirect** functions are called to create two separate result sets on the same connection.  

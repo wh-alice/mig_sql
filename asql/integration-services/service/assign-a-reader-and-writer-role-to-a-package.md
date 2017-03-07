@@ -19,7 +19,7 @@ manager: "jhubbard"
   
 ### Assign a reader and writer role to a package  
   
-1.  In Object Explorer, locate the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] connection.  
+1.  In Object Explorer, locate the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] connection.  
   
 2.  Expand the Stored Packages folder, and then expand the subfolder that contains the package to which you want to assign roles.  
   

@@ -20,11 +20,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Configure a Server to Listen on an Alternate Pipe
-  This topic describes how to configure a server to listen on an alternate pipe in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using SQL Server Configuration Manager. By default, the default instance of [!INCLUDE[ssDEnoversion](../../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] listens on named pipe \\\\.\pipe\sql\query. Named instances of [!INCLUDE[ssDEnoversion](../../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] and [!INCLUDE[ssEW](../../../analysis-services/instances/includes/ssew-md.md)] listen on other pipes.  
+  This topic describes how to configure a server to listen on an alternate pipe in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using SQL Server Configuration Manager. By default, the default instance of [!INCLUDE[ssDEnoversion](../../../a9notintoc/includes/ssdenoversion-md.md)] listens on named pipe \\\\.\pipe\sql\query. Named instances of [!INCLUDE[ssDEnoversion](../../../a9notintoc/includes/ssdenoversion-md.md)] and [!INCLUDE[ssEW](../../../a9retired/includes/ssew-md.md)] listen on other pipes.  
   
  There are three ways to connect to a specific named pipe with a client application:  
   
--   Run the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Browser service on the server.  
+-   Run the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Browser service on the server.  
   
 -   Create an alias on the client, specifying the named pipe.  
   
@@ -38,22 +38,22 @@ manager: "jhubbard"
   
 2.  In the details pane, right-click **Named Pipes**, and then click **Properties**.  
   
-3.  On the **Protocol** tab, in the **Pipe Name** box, type the pipe you want the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] to listen on, and then click **OK**.  
+3.  On the **Protocol** tab, in the **Pipe Name** box, type the pipe you want the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] to listen on, and then click **OK**.  
   
 4.  In the console pane, click **SQL Server Services**.  
   
-5.  In the details pane, right-click **SQL Server (**\<instance name>**)** and then click **Restart**, to stop and restart [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+5.  In the details pane, right-click **SQL Server (**\<instance name>**)** and then click **Restart**, to stop and restart [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
- When [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is listening on an alternate pipe, there are three ways to connect to a specific named pipe with a client application:  
+ When [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is listening on an alternate pipe, there are three ways to connect to a specific named pipe with a client application:  
   
--   Run the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Browser service on the server.  
+-   Run the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Browser service on the server.  
   
 -   Create an alias on the client, specifying the named pipe.  
   
 -   Program the client to connect using a custom connection string.  
   
 ## See Also  
- [Create or Delete a Server Alias for Use by a Client &#40;SQL Server Configuration Manager&#41;](../Topic/Create%20or%20Delete%20a%20Server%20Alias%20for%20Use%20by%20a%20Client%20\(SQL%20Server%20Configuration%20Manager\).md)   
+ [Create or Delete a Server Alias for Use by a Client &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure/windows/create-or-delete-a-server-alias-for-use-by-a-client.md)   
  [Server Network Configuration](../../../database-engine/configure/windows/server-network-configuration.md)  
   
   

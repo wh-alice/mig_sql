@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Database Dimensions - BI Wizard in Dimension Designer
-  In [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], you create custom rollup operators and custom member formulas and configure dimensions for writeback by using the Business Intelligence Wizard or Dimension Designer. You can start the Business Intelligence Wizard from Solution Explorer or from Cube Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)]. Dimension Designer can be accessed from [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+  In [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], you create custom rollup operators and custom member formulas and configure dimensions for writeback by using the Business Intelligence Wizard or Dimension Designer. You can start the Business Intelligence Wizard from Solution Explorer or from Cube Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)]. Dimension Designer can be accessed from [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
 ### To start the Business Intelligence Wizard  
   

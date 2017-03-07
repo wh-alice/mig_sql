@@ -18,7 +18,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Delete a Version (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], delete a version when you are sure you no longer need the master data associated with the version. After you delete a version, you cannot retrieve the associated master data.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], delete a version when you are sure you no longer need the master data associated with the version. After you delete a version, you cannot retrieve the associated master data.  
   
 > [!WARNING]  
 >  If a model has only one version and you delete it, the model becomes unusable.  
@@ -26,11 +26,11 @@ manager: "jhubbard"
 ## Prerequisites  
  To perform this procedure:  
   
--   You must have permission to view the mdm.viw_SYSTEM_SCHEMA_VERSION view and to execute the mds.udpVersionDelete stored procedure in the [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] database. For more information, see [Database Object Security &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md).  
+-   You must have permission to view the mdm.viw_SYSTEM_SCHEMA_VERSION view and to execute the mds.udpVersionDelete stored procedure in the [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] database. For more information, see [Database Object Security &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md).  
   
 ### To delete a version  
   
-1.  Open [!INCLUDE[ssManStudioFull](../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and connect to the [!INCLUDE[ssDE](../analysis-services/instances/install/windows/includes/ssde-md.md)] instance for your [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] database.  
+1.  Open [!INCLUDE[ssManStudioFull](../a9notintoc/includes/ssmanstudiofull-md.md)] and connect to the [!INCLUDE[ssDE](../a9notintoc/includes/ssde-md.md)] instance for your [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] database.  
   
 2.  Open the mdm.viw_SYSTEM_SCHEMA_VERSION view.  
   

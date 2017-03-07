@@ -21,7 +21,7 @@ manager: "erikre"
   
 ### To add a table from an existing data source  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Existing Connections**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Existing Connections**.  
   
 2.  On the **Existing Connections** page, select the connection to the data source that has the table you want to add, and then click **Open**.  
   
@@ -38,7 +38,7 @@ manager: "erikre"
 >  When importing multiple tables at the same time from a single data source, any relationships between those tables at the source will automatically be created in the model. When adding a table later; however, you may need to manually create relationships in the model between newly added tables and the tables that were previously imported.  
   
 ## See Also  
- [Import Data &#40;SSAS Tabular&#41;](../Topic/Import%20Data%20\(SSAS%20Tabular\).md)   
+ [Import Data &#40;SSAS Tabular&#41;](../../a9retired/import-data-ssas-tabular.md)   
  [Delete a Table &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)  
   
   

@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # WMI Provider for Server Events Concepts
-  The WMI Provider for Server Events lets you use Windows Management Instrumentation (WMI) to monitor events in an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  The WMI Provider for Server Events lets you use Windows Management Instrumentation (WMI) to monitor events in an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## In This Section  
  [Understanding the WMI Provider for Server Events](../../relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md)  

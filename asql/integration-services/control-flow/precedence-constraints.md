@@ -30,13 +30,13 @@ manager: "jhubbard"
   
  ![Executables connected by a precedence constraint](../../integration-services/control-flow/media/ssis-pcsimple.gif "Executables connected by a precedence constraint")  
   
- In a linear control flow, that is, one without branching, precedence constraints alone govern the sequence in which tasks run. If a control flow branches, the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] run-time engine determines the execution order among the tasks and containers that immediately follow the branching. The run-time engine also determines execution order among unconnected workflows in a control flow.  
+ In a linear control flow, that is, one without branching, precedence constraints alone govern the sequence in which tasks run. If a control flow branches, the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] run-time engine determines the execution order among the tasks and containers that immediately follow the branching. The run-time engine also determines execution order among unconnected workflows in a control flow.  
   
- The nested-container architecture of [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] enables all containers, except for the task host container that encapsulates only a single task, to include other containers, each with its own control flow. The For Loop, Foreach Loop, and Sequence containers can include multiple tasks and other containers, which in turn can include multiple tasks and containers. For example, a package with a Script task and a Sequence container has a precedence constraint that links the Script task and the Sequence container. The Sequence container includes three Script tasks, and its precedence constraints link the three Script tasks into a control flow. The following diagram shows the precedence constraints in a package with two levels of nesting.  
+ The nested-container architecture of [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] enables all containers, except for the task host container that encapsulates only a single task, to include other containers, each with its own control flow. The For Loop, Foreach Loop, and Sequence containers can include multiple tasks and other containers, which in turn can include multiple tasks and containers. For example, a package with a Script task and a Sequence container has a precedence constraint that links the Script task and the Sequence container. The Sequence container includes three Script tasks, and its precedence constraints link the three Script tasks into a control flow. The following diagram shows the precedence constraints in a package with two levels of nesting.  
   
  ![Precedence contraints in a package](../../integration-services/control-flow/media/mw-dts-12.gif "Precedence contraints in a package")  
   
- Because the package is at the top of the [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] container hierarchy, multiple packages cannot be linked by precedence constraints; however, you can add an Execute Package task to a package and indirectly link another package into the control flow.  
+ Because the package is at the top of the [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] container hierarchy, multiple packages cannot be linked by precedence constraints; however, you can add an Execute Package task to a package and indirectly link another package into the control flow.  
   
  You can configure precedence constraints in the following ways:  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
 -   Specify whether the precedence constraint is evaluated singly or together with other constraints that apply to the constrained executable.  
   
 ## Evaluation Operations  
- [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] provides the following evaluation operations:  
+ [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] provides the following evaluation operations:  
   
 -   A constraint that uses only the execution result of the precedence executable to determine whether the constrained executable runs. The execution result of the precedence executable can be completion, success, or failure. This is the default operation.  
   
@@ -59,9 +59,9 @@ manager: "jhubbard"
   
 -   An expression or a constraint that uses either the execution results of the precedence executable or the return results of evaluating the expression.  
   
- [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer uses color to identify the type of precedence constraint. The Success constraint is green, the Failure constraint is red, and the Completion constraint is blue. To display text labels in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] designer that show the type of the constraint, you must configure the accessibility features of [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer.  
+ [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer uses color to identify the type of precedence constraint. The Success constraint is green, the Failure constraint is red, and the Completion constraint is blue. To display text labels in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] designer that show the type of the constraint, you must configure the accessibility features of [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer.  
   
- The expression must be a valid [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] expression, and it can include functions, operators, and system and custom variables. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md) and [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md).  
+ The expression must be a valid [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] expression, and it can include functions, operators, and system and custom variables. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md) and [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md).  
   
 ## Execution Results  
  The precedence constraint can use the following execution results alone or in combination with an expression.  
@@ -77,7 +77,7 @@ manager: "jhubbard"
   
 ## Set the properties of a precedence constraint with the Precedence Constraint Editor  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -135,7 +135,7 @@ Use the **Precedence Constraint Editor** dialog box to configure precedence cons
   
 ## Set the properties of a precedence constraint in Properties window  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want to modify.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want to modify.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -159,7 +159,7 @@ Use the **Precedence Constraint Editor** dialog box to configure precedence cons
 
 ## Set the value of a precedence constraint with the shortcut menu  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -172,23 +172,23 @@ Use the **Precedence Constraint Editor** dialog box to configure precedence cons
 ## Add expressions to precedence constraints
  A precedence constraint can use an expression to define the constraint between two executables: the precedence executable and the constrained executable. The executables can be tasks or containers. The expression can be used alone or in combination with the execution result of the precedence executable. The execution result of an executable is either success or failure. When you configure the execution result of a precedence constraint, you can set the execution result to **Success**, **Failure**, or **Completion**. **Success** requires that the precedence executable succeed, **Failure** requires that the precedence executable fail, and **Completion** indicates that the constrained executable should run regardless of whether the precedence task succeeds or fails. For more information, see [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
   
- The expression must evaluate to **True** or **False** and it must be a valid [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] expression. The expression can use literals, system and custom variables, and the functions and operators that the [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] expression grammar provides. For example, the expression `@Count == SQRT(144) + 10` uses the variable **Count**, the SQRT function , and the equal (==) and add (+) operators. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md).  
+ The expression must evaluate to **True** or **False** and it must be a valid [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] expression. The expression can use literals, system and custom variables, and the functions and operators that the [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] expression grammar provides. For example, the expression `@Count == SQRT(144) + 10` uses the variable **Count**, the SQRT function , and the equal (==) and add (+) operators. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
  In the following illustration, task A and task B are linked by a precedence constraint that uses an execution result and an expression. The constraint value is set to **Success** and the expression is  `@X >== @Z`. Task B, the constrained task, runs only if task A completes successfully and the value of variable **X** is greater than or equal to the value of variable **Z**.  
   
- ![Precedence constraint between two tasks](../../integration-services/control-flow/media/mw-dts-03.gif "Precedence constraint between two tasks")  
+ ![Precedence constraint between two tasks](../../a9retired/media/mw-dts-03.gif "Precedence constraint between two tasks")  
   
  Executables can also be linked by using multiple precedence constraints that contain different expressions. For example, in the following illustration, tasks B and C are linked to task A by precedence constraints that use execution results and expressions. Both of the constraint values are set to **Success.** One precedence constraint includes the expression `@X >== @Z`, and the other precedence constraint includes the expression `@X < @Z`. Depending on the values of variable **X** and variable **Z**, either task C or task B runs.  
   
- ![Expressions on precedence constraints](../../integration-services/control-flow/media/mw-dts-04.gif "Expressions on precedence constraints")  
+ ![Expressions on precedence constraints](../../a9retired/media/mw-dts-04.gif "Expressions on precedence constraints")  
   
- You can add or modify an expression by using the **Precedence Constraint Editor** in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer and the Properties window that [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] provides. However, the Properties window does not provide verification of the expression syntax.  
+ You can add or modify an expression by using the **Precedence Constraint Editor** in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer and the Properties window that [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] provides. However, the Properties window does not provide verification of the expression syntax.  
   
  If a precedence constraint includes an expression, an icon appears on the design surface of the **Control Flow** tab, next to the precedence constraint, and the ToolTip on the icon displays the expression.  
 
 ### Add an expression to a precedence constraint  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -228,17 +228,17 @@ A precedence constraint connects two executables: two tasks, two containers, or 
   
  Assembling complex constraint scenarios by grouping constraints enables you to implement complex control flow in packages. For example, in the following illustration, Task D is linked to Task A by a **Success** constraint, Task D is linked to Task B by a **Failure** constraint, and Task D is linked to Task C by a **Success** constraint. The precedence constraints between Task D and Task A, between Task D and Task B, and between Task D and Task C participate in a logical *and* relationship. Therefore, for Task D to run, Task A must run successfully, Task B must fail, and Task C must run successfully.  
   
- ![Tasks linked by precedence constraints](../../integration-services/control-flow/media/precedenceconstraints.gif "Tasks linked by precedence constraints")  
+ ![Tasks linked by precedence constraints](../../a9retired/media/precedenceconstraints.gif "Tasks linked by precedence constraints")  
   
 ### LogicalAnd Property  
  If a task or a container has multiple constraints, the **LogicalAnd** property specifies whether a precedence constraint is evaluated singly or in concert with other constraints.  
   
- You can set the **LogicalAnd** property using the **Precedence Constraint Editor** in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, or in the Properties window that [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] provides.  
+ You can set the **LogicalAnd** property using the **Precedence Constraint Editor** in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, or in the Properties window that [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] provides.  
 
 ## Set the default value for precedence constraints  
-When you first use [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, the default value of a precedence constraint is **Success**. Follow these steps to configure [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer to use a different default value for precedence constraints.
+When you first use [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, the default value of a precedence constraint is **Success**. Follow these steps to configure [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer to use a different default value for precedence constraints.
   
-1.  Open [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+1.  Open [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
 2.  On the **Tools** menu, click **Options**.  
   
@@ -252,7 +252,7 @@ When you first use [!INCLUDE[ssIS](../../analysis-services/instances/includes/ss
   
 ## Create a default precedence constraint  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   

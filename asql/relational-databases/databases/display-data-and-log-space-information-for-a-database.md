@@ -24,7 +24,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Display Data and Log Space Information for a Database
-  This topic describes how to display the data and log space information for a database in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to display the data and log space information for a database in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
 
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 #### To display data and log space information for a database  
   
-1.  In Object Explorer, connect to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and then expand that instance.  
+1.  In Object Explorer, connect to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**.  
   
@@ -48,11 +48,11 @@ manager: "jhubbard"
   
 #### To display data and log space information for a database by using sp_spaceused  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example uses the [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) system stored procedure to report disk space information for the `Vendor` table and its indexes.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example uses the [sp_spaceused](../../relational-databases/reference/system-stored-procedures/sp-spaceused-transact-sql.md) system stored procedure to report disk space information for the `Vendor` table and its indexes.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -63,11 +63,11 @@ GO
   
 #### To display data and log space information for a database by querying sys.database_files  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.database_files](../../relational-databases/system-catalog-views/sys.database-files-transact-sql.md) catalog view to return specific information about the data and log files in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.database_files](../../relational-databases/reference/system-catalog-views/sys.database-files-transact-sql.md) catalog view to return specific information about the data and log files in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -80,8 +80,8 @@ GO
   
 ## See Also  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-files-transact-sql.md)   
- [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-files-transact-sql.md)   
+ [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)   
  [Delete Data or Log Files from a Database](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)  
   

@@ -31,18 +31,18 @@ The transaction log is a critical component of the database. If there is a syste
   
 -   Individual transaction recovery.  
   
--   Recovery of all incomplete transactions when [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is started.  
+-   Recovery of all incomplete transactions when [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is started.  
   
 -   Rolling a restored database, file, filegroup, or page forward to the point of failure.  
   
 -   Supporting transactional replication.  
   
--   Supporting high availability and disaster recovery solutions: [!INCLUDE[ssHADR](../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)], database mirroring, and log shipping.
+-   Supporting high availability and disaster recovery solutions: [!INCLUDE[ssHADR](../../a9notintoc/includes/sshadr-md.md)], database mirroring, and log shipping.
 
 ## Individual transaction recovery
 If an application issues a ROLLBACK statement, or if the Database Engine detects an error such as the loss of communication with a client, the log records are used to roll back the modifications made by an incomplete transaction. 
 
-## Recovery of all incomplete transactions when [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is started
+## Recovery of all incomplete transactions when [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is started
 If a server fails, the databases may be left in a state where some modifications were never written from the buffer cache to the data files, and there may be some modifications from incomplete transactions in the data files. When an instance of SQL Server is started, it runs a recovery of each database. Every modification recorded in the log which may not have been written to the data files is rolled forward. Every incomplete transaction found in the transaction log is then rolled back to make sure the integrity of the database is preserved. 
 
 ## Rolling a restored database, file, filegroup, or page forward to the point of failure
@@ -65,7 +65,7 @@ In a database mirroring scenario, every update to a database, the principal data
 
 ##  <a name="Characteristics"></a>Transaction Log characteristics
 
-Characteristics of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] transaction log: 
+Characteristics of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] transaction log: 
 -  The transaction log is implemented as a separate file or set of files in the database. The log cache is managed separately from the buffer cache for data pages, which results in simple, fast, and robust code within the Database Engine.
 -  The format of log records and pages is not constrained to follow the format of data pages.
 -  The transaction log can be implemented in several files. The files can be defined to expand automatically by setting the FILEGROWTH value for the log. This reduces the potential of running out of space in the transaction log, while at the same time reducing administrative overhead. For more information, see [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).
@@ -74,7 +74,7 @@ Characteristics of the [!INCLUDE[ssDEnoversion](../../analysis-services/instance
 ##  <a name="Truncation"></a> Transaction log truncation  
  Log truncation frees space in the log file for reuse by the transaction log. You must regularly truncate your transaction log to keep it from filling the alotted space (And it will!!)! Several factors can delay log truncation, so monitoring log size matters. Some operations can be minimally logged to reduce their impact on transaction log size.  
  
-  Log truncation deletes inactive virtual log files from the logical transaction log of a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database, freeing space in the logical log for reuse by the Physical transaction log. If a transaction log is never truncated, it will eventually fill all the disk space allocated to physical log files.  
+  Log truncation deletes inactive virtual log files from the logical transaction log of a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database, freeing space in the logical log for reuse by the Physical transaction log. If a transaction log is never truncated, it will eventually fill all the disk space allocated to physical log files.  
   
  To avoid running out of space, unless log truncation is delayed for some reason, truncation occurs automatically after the following events:  
   
@@ -91,7 +91,7 @@ Characteristics of the [!INCLUDE[ssDEnoversion](../../analysis-services/instance
   
 > **IMPORTANT!!** For information about how to respond to a full transaction log, see [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
- Really, Log truncation can be delayed by a variety of reasons. Learn what, if anything, is preventing your log truncation by querying the **log_reuse_wait** and **log_reuse_wait_desc** columns of the [sys.databases](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view. The following table describes the values of these columns.  
+ Really, Log truncation can be delayed by a variety of reasons. Learn what, if anything, is preventing your log truncation by querying the **log_reuse_wait** and **log_reuse_wait_desc** columns of the [sys.databases](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view. The following table describes the values of these columns.  
   
 |log_reuse_wait value|log_reuse_wait_desc value|Description|  
 |----------------------------|----------------------------------|-----------------|  
@@ -124,7 +124,7 @@ Characteristics of the [!INCLUDE[ssDEnoversion](../../analysis-services/instance
   
 When transactional replication is enabled, BULK INSERT operations are fully logged even under the Bulk Logged recovery model.  
   
--   SELECT [INTO](../Topic/INTO%20Clause%20\(Transact-SQL\).md) operations.  
+-   SELECT [INTO](../../t-sql/queries/select-into-clause-transact-sql.md) operations.  
   
 When transactional replication is enabled, SELECT INTO operations are fully logged even under the Bulk Logged recovery model.  
   

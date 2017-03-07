@@ -25,11 +25,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # ALTER SERVER CONFIGURATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifies global configuration settings for the current server in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Modifies global configuration settings for the current server in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -106,7 +106,7 @@ SET <optionspec>
  Enables hardware threads to be associated with CPUs.  
   
  CPU = { AUTO | <CPU_range_spec> }  
- Distributes [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] worker threads to each CPU within the specified range. CPUs outside the specified range will not have assigned threads.  
+ Distributes [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] worker threads to each CPU within the specified range. CPUs outside the specified range will not have assigned threads.  
   
  AUTO  
  Specifies that no thread is assigned a CPU. The operating system can freely move threads among CPUs based on the server workload. This is the default and recommended setting.  
@@ -130,19 +130,19 @@ SET <optionspec>
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  DIAGNOSTICS LOG  
  Starts or stops logging diagnostic data captured by the sp_server_diagnostics procedure, and sets SQLDIAG log configuration parameters such as the log file rollover count, log file size, and file location. For more information, see [View and Read Failover Cluster Instance Diagnostics Log](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md).  
   
  ON  
- Starts [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] logging diagnostic data in the location specified in the PATH file option. This is the default.  
+ Starts [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] logging diagnostic data in the location specified in the PATH file option. This is the default.  
   
  OFF  
  Stops logging diagnostic data.  
   
  PATH = { 'os_file_path' | DEFAULT }  
- Path indicating the location of the diagnostic logs. The default location is \<\MSSQL\Log> within the installation folder of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] failover cluster instance.  
+ Path indicating the location of the diagnostic logs. The default location is \<\MSSQL\Log> within the installation folder of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] failover cluster instance.  
   
  MAX_SIZE = { 'log_max_size' MB | DEFAULT }  
  Maximum size in megabytes to which each diagnostic log can grow. The default is 100 MB.  
@@ -154,7 +154,7 @@ SET <optionspec>
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  FAILOVER CLUSTER PROPERTY  
  Modifies the SQL Server resource private failover cluster properties.  
@@ -187,12 +187,12 @@ SET <optionspec>
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  HADR CLUSTER CONTEXT **=** { **'***remote_windows_cluster***'** | LOCAL }  
- Switches the HADR cluster context of the server instance to the specified Windows Server Failover Clustering (WSFC) cluster. The *HADR cluster context* determines what Windows Server Failover Clustering (WSFC) cluster manages the metadata for availability replicas hosted by the server instance. Use the SET HADR CLUSTER CONTEXT option only during a cross-cluster migration of [!INCLUDE[ssHADR](../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] to an instance of [!INCLUDE[ssSQL11SP1](../../analysis-services/instances/install/windows/includes/sssql11sp1-md.md)] or higher version on a new WSFC cluster.  
+ Switches the HADR cluster context of the server instance to the specified Windows Server Failover Clustering (WSFC) cluster. The *HADR cluster context* determines what Windows Server Failover Clustering (WSFC) cluster manages the metadata for availability replicas hosted by the server instance. Use the SET HADR CLUSTER CONTEXT option only during a cross-cluster migration of [!INCLUDE[ssHADR](../../a9notintoc/includes/sshadr-md.md)] to an instance of [!INCLUDE[ssSQL11SP1](../../analysis-services/instances/install/windows/includes/sssql11sp1-md.md)] or higher version on a new WSFC cluster.  
   
- You can switch the HADR cluster context only from the local WSFC cluster to a remote cluster and then back from the remote cluster to the local cluster. The HADR cluster context can be switched to a remote cluster only when the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is not hosting any availability replicas.  
+ You can switch the HADR cluster context only from the local WSFC cluster to a remote cluster and then back from the remote cluster to the local cluster. The HADR cluster context can be switched to a remote cluster only when the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is not hosting any availability replicas.  
   
  A remote HADR cluster context can be switched back to the local cluster at any time. However, the context cannot be switched again as long as the server instance is hosting any availability replicas.  
   
@@ -210,7 +210,7 @@ SET <optionspec>
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  ON  
  Enables the buffer pool extension option. This option extends the size of the buffer pool by using nonvolatile storage such as solid-state drives (SSD) to persist clean data pages in the pool. For more information about this feature, see [Buffer Pool Extension](../../database-engine/configure/windows/buffer-pool-extension.md).The buffer pool extension is not available in every SQL Server edition. For more information, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -219,7 +219,7 @@ SET <optionspec>
  Defines the directory path and name of the buffer pool extension cache file. The file extension must be specified as .BPE. You must turn off BUFFER POOL EXTENSION before you can modify FILENAME.  
   
  SIZE = *size* [ **KB** | MB | GB ]  
- Defines the size of the cache. The default size specification is KB. The minimum size is the size of Max Server Memory. The maximum limit is 32 times the size of Max Server Memory. For more information about Max Server Memory, see [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ Defines the size of the cache. The default size specification is KB. The minimum size is the size of Max Server Memory. The maximum limit is 32 times the size of Max Server Memory. For more information about Max Server Memory, see [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md).  
   
  You must turn BUFFER POOL EXTENSION off before you can modify the size of the file. To specify a size that is smaller than the current size, the instance of SQL Server must be restarted to reclaim memory. Otherwise, the specified size must be the same as or larger than the current size.  
   
@@ -234,7 +234,7 @@ SET <optionspec>
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  ON  
  Enables automatic partitioning to split large NUMA hardware nodes into smaller NUMA nodes. Changing the running value requires a restart of the database engine.  
@@ -252,7 +252,7 @@ SET <optionspec>
  **More Information:** If an ALTER SERVER CONFIGURATION with SET SOFTNUMA command is executed before the SQL Server service is restarted, then when the SQL Server Agent service is stopped, it will execute a T-SQL RECONFIGURE command that will revert the SOFTNUMA settings back to what they were before the ALTER SERVER CONFIGURATION. 
   
 ## General Remarks  
- This statement does not require a restart of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], unless explicitly stated otherwise. In the case of a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] failover cluster instance, it does not require a restart of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] cluster resource.  
+ This statement does not require a restart of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], unless explicitly stated otherwise. In the case of a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] failover cluster instance, it does not require a restart of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] cluster resource.  
   
 ## Limitations and Restrictions  
  This statement does not support DDL triggers.  
@@ -262,7 +262,7 @@ SET <optionspec>
   
  Requires ALTER SERVER STATE permission for the buffer pool entension option.  
   
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] resource DLL runs under the Local System account. Therefore, the Local System account must have read and write access to the specified path in the Diagnostic Log option.  
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] resource DLL runs under the Local System account. Therefore, the Local System account must have read and write access to the specified path in the Diagnostic Log option.  
   
 ## Examples  
   
@@ -328,7 +328,7 @@ SET PROCESS AFFINITY CPU=AUTO;
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  The examples in this section show how to set the values for the diagnostic log option.  
   
@@ -366,9 +366,9 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
- The following example illustrates setting the values of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] failover cluster resource properties.  
+ The following example illustrates setting the values of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] failover cluster resource properties.  
   
 #### A. Specifying the value for the HealthCheckTimeout property  
  The following example sets the `HealthCheckTimeout` option to 15,000 milliseconds (15 seconds).  
@@ -379,7 +379,7 @@ SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;
 ```  
   
 ###  <a name="ChangeClusterContextExample"></a> B. Changing the cluster context of an availability replica  
- The following example changes the HADR cluster context of the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. To specify the destination WSFC cluster, `clus01`, the example specifies the full cluster object name, `clus01.xyz.com`.  
+ The following example changes the HADR cluster context of the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. To specify the destination WSFC cluster, `clus01`, the example specifies the full cluster object name, `clus01.xyz.com`.  
   
 ```  
 ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';  
@@ -391,7 +391,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  The following example enables the buffer pool extension option and specifies a file name and size.  
   
@@ -423,9 +423,9 @@ GO
 ## See Also  
  [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure/windows/soft-numa-sql-server.md)   
  [Change the HADR Cluster Context of Server Instance &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)   
- [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-os-schedulers-transact-sql.md)   
- [sys.dm_os_memory_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-os-memory-nodes-transact-sql.md)   
- [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-os-buffer-pool-extension-configuration-transact-sql.md)   
+ [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-os-schedulers-transact-sql.md)   
+ [sys.dm_os_memory_nodes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-os-memory-nodes-transact-sql.md)   
+ [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-os-buffer-pool-extension-configuration-transact-sql.md)   
  [Buffer Pool Extension](../../database-engine/configure/windows/buffer-pool-extension.md)  
   
   

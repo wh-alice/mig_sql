@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure SQL Server Agent Mail to Use Database Mail
-  This topic describes how to configure [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent to use Database Mail to send notification and alerts in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  For information on how to enable and configure Database Mail, see [Configure Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  For an example using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], see [Create a Database Mail Profile](../../relational-databases/database-mail/create-a-database-mail-profile.md).
+  This topic describes how to configure [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent to use Database Mail to send notification and alerts in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  For information on how to enable and configure Database Mail, see [Configure Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  For an example using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], see [Create a Database Mail Profile](../../relational-databases/database-mail/create-a-database-mail-profile.md).
   
 -   **Before you begin:**  
   
@@ -36,9 +36,9 @@ manager: "jhubbard"
   
 -   [Enable Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  
   
--    [Create a Database Mail account](../../relational-databases/database-mail/create-a-database-mail-account.md) for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent service account to use.  
+-    [Create a Database Mail account](../../relational-databases/database-mail/create-a-database-mail-account.md) for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent service account to use.  
   
--   [Create a Database Mail profile](../../relational-databases/database-mail/create-a-database-mail-profile.md) for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent service account to use and add the user to the **DatabaseMailUserRole** in the **msdb** database.  
+-   [Create a Database Mail profile](../../relational-databases/database-mail/create-a-database-mail-profile.md) for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent service account to use and add the user to the **DatabaseMailUserRole** in the **msdb** database.  
   
 -   Set the profile as the default profile for the **msdb** database.  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To configure SQL Server Agent to use Database Mail**  
   
--   In Object Explorer, expand a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance.  
+-   In Object Explorer, expand a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance.  
   
 -   Right-click **SQL Server Agent**, and then click **Properties**.  
   

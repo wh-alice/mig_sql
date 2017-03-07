@@ -15,9 +15,9 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Add visualizations to Reporting Services mobile reports
-Charts are an essential part of data visualization. Learn about the charts you can use in [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] mobile reports to cover a range of scenarios. 
+Charts are an essential part of data visualization. Learn about the charts you can use in [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] mobile reports to cover a range of scenarios. 
 
-[!INCLUDE[SS_MobileReptPub_Short](../../reporting-services/mobile-reports/includes/ss-mobilereptpub-long.md)] has three basic chart types: time, category, and totals. These three chart types have corresponding comparison charts, which are useful for comparing two distinct sets of series.  
+[!INCLUDE[SS_MobileReptPub_Short](../../a9retired/includes/ss-mobilereptpub-long.md)] has three basic chart types: time, category, and totals. These three chart types have corresponding comparison charts, which are useful for comparing two distinct sets of series.  
 
 ## Shared chart properties
 
@@ -115,7 +115,7 @@ In comparison charts, you can choose to have the same chart colors on the main a
 ## Pie and funnel charts  
   
 Pie and funnel charts are among the simplest of visualizations. You can structure the data either by rows or by columns. 
-* **Pie charts** in [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] mobile reports can be pies, donuts, or donuts with a total in the center. Pie charts are good for showing the relative size of different parts of a whole. Too many slices make them hard to read.
+* **Pie charts** in [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] mobile reports can be pies, donuts, or donuts with a total in the center. Pie charts are good for showing the relative size of different parts of a whole. Too many slices make them hard to read.
 * **Funnel charts** are often used to show stages in a process, such as sales.
 
 ![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)

@@ -15,11 +15,11 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # EXPLAIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../a9retired/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Returns the query plan for a [!INCLUDE[ssDW](../../database-engine/configure/windows/includes/ssdw-md.md)] [!INCLUDE[DWsql](../../reporting-services/report-data/includes/dwsql-md.md)] statement without running the statement. Use **EXPLAIN** to preview which operations will require data movement and to view the estimated costs of the query operations.  
+  Returns the query plan for a [!INCLUDE[ssDW](../../database-engine/configure/windows/includes/ssdw-md.md)] [!INCLUDE[DWsql](../../a9retired/includes/dwsql-md.md)] statement without running the statement. Use **EXPLAIN** to preview which operations will require data movement and to view the estimated costs of the query operations.  
   
- For more information about query plans, see "Understanding Query Plans" in the [!INCLUDE[pdw-product-documentation_md](../../relational-databases/system-dynamic-management-views/includes/pdw-product-documentation-md.md)].  
+ For more information about query plans, see "Understanding Query Plans" in the [!INCLUDE[pdw-product-documentation_md](../../relational-databases/reference/system-dynamic-management-views/includes/pdw-product-documentation-md.md)].  
   
 ## Syntax  
   
@@ -33,7 +33,7 @@ EXPLAIN SQL_statement
   
 ## Arguments  
  *SQL_statement*  
- The [!INCLUDE[DWsql](../../reporting-services/report-data/includes/dwsql-md.md)] statement on which **EXPLAIN** will run. *SQL_statement* can be any of these commands: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE**.  
+ The [!INCLUDE[DWsql](../../a9retired/includes/dwsql-md.md)] statement on which **EXPLAIN** will run. *SQL_statement* can be any of these commands: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE**.  
   
 ## Permissions  
  Requires the **SHOWPLAN** permission, and permission to execute *SQL_statement*. See [Permissions: GRANT, DENY, REVOKE &#40;Azure SQL Data Warehouse, Parallel Data Warehouse&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
@@ -299,7 +299,7 @@ GO
   
 -   Line 136 starts operation 9. Lines 137 through 140: On all nodes, drop temporary table **TEMP_ID_16894**.  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
  The following example shows an **EXPLAIN** command run on a **SELECT** statement, and the XML result.  
   
  **Submitting an EXPLAIN statement**  

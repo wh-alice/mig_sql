@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Maintenance Plan (Maintenance Plan Design Surface)
-  This topic describes how to create a single server or multiserver maintenance plan using the Maintenance Plan Design Surface in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. While the **Maintenance Plan Wizard** is best for creating basic maintenance plans, creating a plan using the design surface allows you to utilize enhanced workflow.  
+  This topic describes how to create a single server or multiserver maintenance plan using the Maintenance Plan Design Surface in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. While the **Maintenance Plan Wizard** is best for creating basic maintenance plans, creating a plan using the design surface allows you to utilize enhanced workflow.  
   
  **In This Topic**  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   To create a multiserver maintenance plan, a multiserver environment containing one master server and one or more target servers must be configured. Multiserver maintenance plans must be created and maintained on the master server. These plans can be viewed, but not maintained, on target servers.  
   
--   Members of the **db_ssisadmin** and **dc_admin** roles may be able to elevate their privileges to **sysadmin**. This elevation of privilege can occur because these roles can modify [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] packages; these packages can be executed by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] using the **sysadmin** security context of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent. To guard against this elevation of privilege when running maintenance plans, data collection sets, and other [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] packages, configure [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent jobs that run packages to use a proxy account with limited privileges or only add **sysadmin** members to the **db_ssisadmin** and **dc_admin** roles.  
+-   Members of the **db_ssisadmin** and **dc_admin** roles may be able to elevate their privileges to **sysadmin**. This elevation of privilege can occur because these roles can modify [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] packages; these packages can be executed by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] using the **sysadmin** security context of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent. To guard against this elevation of privilege when running maintenance plans, data collection sets, and other [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] packages, configure [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent jobs that run packages to use a proxy account with limited privileges or only add **sysadmin** members to the **db_ssisadmin** and **dc_admin** roles.  
   
 ###  <a name="Security"></a> Security  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
      Removes a schedule from the selected subplan.  
   
      **Manage Connections**  
-     Displays the **Manage Connections** dialog box. Used to add additional [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance connections to the maintenance plan. See below for more information on this dialog box.  
+     Displays the **Manage Connections** dialog box. Used to add additional [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance connections to the maintenance plan. See below for more information on this dialog box.  
   
      **Reporting and Logging**  
      Displays the **Reporting and Logging** dialog box. See below for more information on this dialog box.  

@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  In the above example, there is an M2M relationship between the **Employee** and **TrainingClass** entities, provided by the mapping entity **ClassRegistration**. An employee may be registered as a student in multiple classes, and each class may contain multiple students.  
   
- Previously, Derived Hierarchies could not model M2M relationships. Beginning with [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)], you can now create a Derived Hierarchy that displays, for example, students by class, or invert the relationship and show classes grouped by student.  
+ Previously, Derived Hierarchies could not model M2M relationships. Beginning with [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)], you can now create a Derived Hierarchy that displays, for example, students by class, or invert the relationship and show classes grouped by student.  
   
  First, go to the Derived Hierarchy management page and create a new Derived Hierarchy:  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
  In the above screenshot, note that the **Employee** entity appears under **Current Levels** in the middle as the only level. The Derived Hierarchy **Preview** on the right simply shows a list of all members of the **Employee** entity. The **Available Levels** section on the left shows what levels may be added on top of the current top level (**Employee**). Most of these are domain-based attributes (DBAs) on the **Employee** entity, including the **Department** DBA.  
   
- Beginning with [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)], there is a new type of level that models M2M relationships, for example: **Class (mapped via ClassRegistration.Student)**. The level name is more verbose than the others to reflect the extra information needed to unambiguously describe the mapping relationship. Drag and drop this level to the **Employee** level in the **Current Levels** section:  
+ Beginning with [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)], there is a new type of level that models M2M relationships, for example: **Class (mapped via ClassRegistration.Student)**. The level name is more verbose than the others to reflect the extra information needed to unambiguously describe the mapping relationship. Drag and drop this level to the **Employee** level in the **Current Levels** section:  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
@@ -68,13 +68,13 @@ manager: "jhubbard"
  M2M levels may be hidden, just like other Derived Hierarchy levels.  
    
 ### <a name="M2MSample"></a> M2M Relationship in Sample Model  
-For a demonstration of an M2M relationship, view the Region Climate derived hierarchy in the Customer sample model that is included with [!INCLUDE[ssMDSshort_md](../analysis-services/includes/ssmdsshort-md.md)].   
+For a demonstration of an M2M relationship, view the Region Climate derived hierarchy in the Customer sample model that is included with [!INCLUDE[ssMDSshort_md](../a9notintoc/includes/ssmdsshort-md.md)].   
   
 As shown in the following image, the level name that models this relationship is ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (mapped via RegionClimate.Region)**. The ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** shows regions grouped by the types of climates that they are associated with. This is a M2M relationship because there are regions (child members) that are associated with multiple climates (parents). For example, ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** is associated with ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** and ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**.  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
-For instructions on deploying the Customer sample model, and other sample models included with [!INCLUDE[ssMDSshort_md](../analysis-services/includes/ssmdsshort-md.md)], see [Deploying Sample Models and Data](Master%20Data%20Services.md#deploySample).   
+For instructions on deploying the Customer sample model, and other sample models included with [!INCLUDE[ssMDSshort_md](../a9notintoc/includes/ssmdsshort-md.md)], see [Deploying Sample Models and Data](Master%20Data%20Services.md#deploySample).   
   
 ## One-Many Relationship  
  A member of a DH may be the parent of many child members, but it generally cannot have more than one parent (for exceptions, see [Member Security](#bkmk_member_security)). For example, suppose there are two entities: Employee and Department, where each employee belongs to a single department. This relationship is modeled by adding to the Employee entity a domain-based attribute (DBA) that references the Department entity:  

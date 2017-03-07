@@ -33,11 +33,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # ALTER XML SCHEMA COLLECTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adds new schema components to an existing XML schema collection.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -181,7 +181,7 @@ CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;
   
 2.  Specify the variable name in the CREATE XML SCHEMA COLLECTION statement.  
   
- The CREATE XML SCHEMA COLLECTION stores only the schema components that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] understands; everything in the XML schema is not stored in the database. Therefore, if you want the XML schema collection back exactly the way it was supplied, we recommend that you save your XML schemas in a database column or some other folder on your computer.  
+ The CREATE XML SCHEMA COLLECTION stores only the schema components that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] understands; everything in the XML schema is not stored in the database. Therefore, if you want the XML schema collection back exactly the way it was supplied, we recommend that you save your XML schemas in a database column or some other folder on your computer.  
   
 ### B. Specifying multiple schema namespaces in a schema collection  
  You can specify multiple XML schemas when you create an XML schema collection. For example:  

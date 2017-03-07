@@ -31,31 +31,31 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # ALTER DATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifies a database, or the files and filegroups associated with the database. Adds or removes files and filegroups from a database, changes the attributes of a database or its files and filegroups, changes the database collation, and sets database options. Database snapshots cannot be modified. To modify database options associated with replication, use [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
+  Modifies a database, or the files and filegroups associated with the database. Adds or removes files and filegroups from a database, changes the attributes of a database or its files and filegroups, changes the database collation, and sets database options. Database snapshots cannot be modified. To modify database options associated with replication, use [sp_replicationdboption](../../relational-databases/reference/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
    
  Because of its length, the ALTER DATABASE syntax is separated into the following topics:  
   
  ALTER DATABASE  
  The current topic provides the syntax for changing the name and the collation of a database.  
   
- [ALTER DATABASE File and Filegroup Options](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md)  
+ [ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
  Provides the syntax for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  
   
- [ALTER DATABASE SET Options](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+ [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
  Provides the syntax for changing the attributes of a database by using the SET options of ALTER DATABASE.  
   
- [ALTER DATABASE Database Mirroring](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md)  
+ [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)  
  Provides the syntax for the SET options of ALTER DATABASE that are related to database mirroring.  
   
- [ALTER DATABASE SET HADR](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md)  
- Provides the syntax for the [!INCLUDE[ssHADR](../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] options of ALTER DATABASE for configuring a secondary database on a secondary replica of an Always On availability group.  
+ [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)  
+ Provides the syntax for the [!INCLUDE[ssHADR](../../a9notintoc/includes/sshadr-md.md)] options of ALTER DATABASE for configuring a secondary database on a secondary replica of an Always On availability group.  
   
- [ALTER DATABASE Compatibility Level](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)  
+ [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
  Provides the syntax for the SET options of ALTER DATABASE that are related to database compatibility levels.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
 For Azure SQL Database, see [ALTER DATABASE &#40;Azure SQL Database&#41;](https://msdn.microsoft.com/library/mt574871.aspx)  
   
@@ -112,7 +112,7 @@ ALTER DATABASE { database_name  | CURRENT }
  CURRENT  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Designates that the current database in use should be altered.  
   
@@ -120,21 +120,21 @@ ALTER DATABASE { database_name  | CURRENT }
  Renames the database with the name specified as *new_database_name*.  
   
  COLLATE *collation_name*  
- Specifies the collation for the database. *collation_name* can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the collation of the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Specifies the collation for the database. *collation_name* can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the collation of the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- When creating databases with other than the default collation, the data in the database always respects the specified collation. For [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], when creating a contained database, the internal catalog information is maintained using the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] default collation, **Latin1_General_100_CI_AS_WS_KS_SC**.  
+ When creating databases with other than the default collation, the data in the database always respects the specified collation. For [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], when creating a contained database, the internal catalog information is maintained using the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] default collation, **Latin1_General_100_CI_AS_WS_KS_SC**.  
   
  For more information about the Windows and SQL collation names, see [COLLATE &#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md).  
   
  **<delayed_durability_option> ::=**  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
- For more information see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) and [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md).  
+ For more information see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) and [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md).  
   
  **<file_and_filegroup_options>::=**  
- For more information, see [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md).  
+ For more information, see [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
 ## Remarks  
  To remove a database, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).  
@@ -147,7 +147,7 @@ ALTER DATABASE { database_name  | CURRENT }
   
  When a database is in the RESTORING state, most ALTER DATABASE statements will fail. The exception is setting database mirroring options. A database may be in the RESTORING state during an active restore operation or when a restore operation of a database or log file fails because of a corrupted backup file.  
   
- The plan cache for the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is cleared by setting one of the following options.  
+ The plan cache for the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is cleared by setting one of the following options.  
   
 |||  
 |-|-|  
@@ -157,7 +157,7 @@ ALTER DATABASE { database_name  | CURRENT }
 |COLLATE|MODIFY FILEGROUP READ_ONLY|  
 |READ_ONLY|PAGE_VERIFY|  
   
- Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log contains the following informational message: "[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
+ Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error log contains the following informational message: "[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
   
  The procedure cache is also flushed in the following scenarios:  
   
@@ -180,7 +180,7 @@ ALTER DATABASE { database_name  | CURRENT }
   
 2.  No schema-bound object depends on the collation of the database.  
   
-     If the following objects, which depend on the database collation, exist in the database, the ALTER DATABASE*database_name*COLLATE statement will fail. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will return an error message for each object blocking the ALTER action:  
+     If the following objects, which depend on the database collation, exist in the database, the ALTER DATABASE*database_name*COLLATE statement will fail. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will return an error message for each object blocking the ALTER action:  
   
     -   User-defined functions and views created with SCHEMABINDING.  
   
@@ -208,7 +208,7 @@ ALTER DATABASE { database_name  | CURRENT }
   
 -   Index names within a table.  
   
- Duplicate names resulting from the new collation will cause the change action to fail, and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will return an error message specifying the namespace where the duplicate was found.  
+ Duplicate names resulting from the new collation will cause the change action to fail, and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will return an error message specifying the namespace where the duplicate was found.  
   
 ## Viewing Database Information  
  You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups.  
@@ -234,7 +234,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 USE master;  
@@ -255,14 +255,14 @@ GO
 - [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
 - [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
 - [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
-- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
-- [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
-- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md)   
-- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-files-transact-sql.md)   
-- [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../Topic/sys.database_mirroring_witnesses%20\(Transact-SQL\).md)   
-- [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.data-spaces-transact-sql.md)   
-- [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.filegroups-transact-sql.md)   
-- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.master-files-transact-sql.md)   
+- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md)   
+- [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-spaceused-transact-sql.md)   
+- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md)   
+- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-files-transact-sql.md)   
+- [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/database-mirroring-witness-catalog-views-sys.database-mirroring-witnesses.md)   
+- [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.data-spaces-transact-sql.md)   
+- [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.filegroups-transact-sql.md)   
+- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.master-files-transact-sql.md)   
 - [System Databases](../../relational-databases/databases/system-databases.md)  
 -   [ALTER DATABASE &#40;Azure SQL Database&#41;](https://msdn.microsoft.com/library/mt574871.aspx)  
   

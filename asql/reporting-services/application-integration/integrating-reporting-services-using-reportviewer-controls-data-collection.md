@@ -39,7 +39,7 @@ protected void Page_Load(object sender, EventArgs e)
 ```
 ## See also
 
-[Using the WebForms ReportViewer Control](Using%20the%20WebForms%20ReportViewer%20Control.md)  
-[Integrating Reporting Services Using the ReportViewer Controls](../Topic/Integrating%20Reporting%20Services%20Using%20the%20ReportViewer%20Controls.md) 
+[Using the WebForms ReportViewer Control](../../reporting-services/application-integration/4c200f36-4012-4108-8095-370b426ccf8d.md)  
+[Integrating Reporting Services Using the ReportViewer Controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md) 
 
 

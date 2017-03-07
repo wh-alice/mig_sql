@@ -15,7 +15,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Distributed Availability Groups (Always On Availability Groups)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Distributed Availability Groups enable you to associate two availability groups residing on different Windows Server Failover Clusters (WSFC). One of the main uses of Distributed Availability Groups is for disaster recovery where the primary site is geographically dispersed from the DR site. You want the data to continually replicate to the DR site, but you don't want a potential network problem or issue at the DR site to bring down your primary site.  
   

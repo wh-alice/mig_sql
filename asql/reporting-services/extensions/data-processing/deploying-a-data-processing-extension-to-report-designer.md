@@ -27,7 +27,7 @@ manager: "erikre"
   
 1.  Copy your assembly from your staging location to the Report Designer directory. The default location of the Report Designer directory is C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
-2.  After the assembly file is copied, open the RSReportDesigner.config file. The RSReportDesigner.config file is also located in the Report Designer directory. You need to make an entry in the configuration file for your data processing extension assembly file. You can open the configuration file with [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] or with a simple text editor, such as Notepad.  
+2.  After the assembly file is copied, open the RSReportDesigner.config file. The RSReportDesigner.config file is also located in the Report Designer directory. You need to make an entry in the configuration file for your data processing extension assembly file. You can open the configuration file with [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../a9retired/includes/vsprvs-md.md)] or with a simple text editor, such as Notepad.  
   
 3.  Locate the **Data** element in the RSReportDesigner.config file. An entry for your newly created data processing extension should be made in the following location:  
   
@@ -62,7 +62,7 @@ manager: "erikre"
     </CodeGroup>  
     ```  
   
- URL membership is only one of many membership conditions you might choose for your data processing extension. For more information about code access security in [!INCLUDE[ssRSversion2005](../../../reporting-services/extensions/data-processing/includes/ssrsversion2005-md.md)], see [Secure Development &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
+ URL membership is only one of many membership conditions you might choose for your data processing extension. For more information about code access security in [!INCLUDE[ssRSversion2005](../../../a9retired/includes/ssrsversion2005-md.md)], see [Secure Development &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   
 ## Generic Query Designer  
  Report Designer provides a generic query designer that you can use with custom data processing extensions. This designer consists of two panes: a query pane and a results pane. You can use the generic designer to write queries that are not supported by the graphical interface. Unlike the graphical query designer, the generic query designer does not check query syntax or restructure the query.  
@@ -76,7 +76,7 @@ manager: "erikre"
     ```  
   
 ## Verifying the Deployment  
- Before you can verify deployment, you must close all instances of [!INCLUDE[vsprvs](../../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] on your local computer. After you have ended all current sessions, you can verify whether your data processing extension was deployed successfully to Report Designer by creating a new report project in [!INCLUDE[vsprvs](../../../analysis-services/multidimensional-models/includes/vsprvs-md.md)]. Your extension should be included in the list of available data source types when you create a new data set for your report.  
+ Before you can verify deployment, you must close all instances of [!INCLUDE[vsprvs](../../../a9retired/includes/vsprvs-md.md)] on your local computer. After you have ended all current sessions, you can verify whether your data processing extension was deployed successfully to Report Designer by creating a new report project in [!INCLUDE[vsprvs](../../../a9retired/includes/vsprvs-md.md)]. Your extension should be included in the list of available data source types when you create a new data set for your report.  
   
 ## See Also  
  [Deploying a Data Processing Extension](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   

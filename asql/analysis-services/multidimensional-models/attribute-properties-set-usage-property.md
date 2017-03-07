@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Attribute Properties - Set Usage Property
-  You can set the usage for an attribute by using the **Dimension Structure** view in Dimension Designer, which is accessed from [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+  You can set the usage for an attribute by using the **Dimension Structure** view in Dimension Designer, which is accessed from [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
  When you set usage for an attribute, your changes do not take effect until you process the dimension. For more information, see [Processing a multidimensional model &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
@@ -40,6 +40,6 @@ manager: "erikre"
   
 ## See Also  
  [Attributes and Attribute Hierarchies](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Add an  Attribute to a Dimension](../Topic/Add%20an%20%20Attribute%20to%20a%20Dimension.md)  
+ [Add an  Attribute to a Dimension](../../analysis-services/multidimensional-models/attribute-properties-add-an-attribute-to-a-dimension.md)  
   
   

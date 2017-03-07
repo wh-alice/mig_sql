@@ -19,10 +19,10 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transfer Logins Task
-  The Transfer Logins task transfers one or more logins between instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  The Transfer Logins task transfers one or more logins between instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## Transfer Logins Between Instances of SQL Server  
- The Transfer Logins task supports a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] source and destination.  
+ The Transfer Logins task supports a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] source and destination.  
   
 ## Events  
  The task raises an information event that reports the number of logins transferred and a warning event when a login is overwritten.  
@@ -30,7 +30,7 @@ manager: "jhubbard"
  The Transfer Logins task does not report incremental progress of the login transfer; it reports only 0% and 100 % completion.  
   
 ## Execution Value  
- The execution value, defined in the **ExecutionValue** property of the task, returns the number of logins transferred. By assigning a user-defined variable to the **ExecValueVariable** property of the Transfer Logins task, information about the login transfer can be made available to other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](../Topic/Use%20Variables%20in%20Packages.md).  
+ The execution value, defined in the **ExecutionValue** property of the task, returns the number of logins transferred. By assigning a user-defined variable to the **ExecValueVariable** property of the Transfer Logins task, information about the login transfer can be made available to other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](../../a9retired/use-variables-in-packages.md).  
   
 ## Log Entries  
  The Transfer Logins task includes the following custom log entries:  
@@ -61,9 +61,9 @@ manager: "jhubbard"
   
  At run time, the Transfer Logins task connects to the source and destination servers by using two SMO connection managers. The SMO connection managers are configured separately from the Transfer Logins task, and then referenced in the Transfer Logins task. The SMO connection managers specify the server and the authentication mode to use when accessing the server. For more information, see [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md).  
   
- You can set properties through [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click one of the following topics:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [Transfer Logins Task Editor &#40;General Page&#41;](../../integration-services/control-flow/transfer-logins-task-editor-general-page.md)  
   
@@ -71,9 +71,9 @@ manager: "jhubbard"
   
 -   [Expressions Page](../../integration-services/expressions/expressions-page.md)  
   
- For more information about how to set these properties in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Set the Properties of a Task or Container](../../a9retired/set-the-properties-of-a-task-or-container.md)  
   
 ## Programmatic Configuration of the Transfer Logins Task  
  For more information about programmatically setting these properties, click the following topic:  

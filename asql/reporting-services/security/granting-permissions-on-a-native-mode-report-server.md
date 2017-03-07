@@ -28,16 +28,16 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Granting Permissions on a Native Mode Report Server
-  SQL Server [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] uses role-based authorization and an authentication subsystem to determine who can perform operations and access items on a report server. Role-based authorization categorizes into roles the set of actions that a user or group can perform. Authentication is based on built-in Windows Authentication or a custom authentication module that you provide. You can use predefined or custom roles with either authentication type.  
+  SQL Server [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] uses role-based authorization and an authentication subsystem to determine who can perform operations and access items on a report server. Role-based authorization categorizes into roles the set of actions that a user or group can perform. Authentication is based on built-in Windows Authentication or a custom authentication module that you provide. You can use predefined or custom roles with either authentication type.  
   
 ## Using Roles to Grant Report Server Access  
- All users interact with a report server within the context of a role that defines a specific level of access. [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] includes predefined roles that you can assign to users and groups to provide immediate access to a report server. **ContentManager**, **Publisher**, and **Browser** are examples of predefined roles. Each role defines a collection of related tasks. For example, a **Publisher** has permission to add reports and create folders for storing those reports.  
+ All users interact with a report server within the context of a role that defines a specific level of access. [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] includes predefined roles that you can assign to users and groups to provide immediate access to a report server. **ContentManager**, **Publisher**, and **Browser** are examples of predefined roles. Each role defines a collection of related tasks. For example, a **Publisher** has permission to add reports and create folders for storing those reports.  
   
  Role assignments are typically inherited from a parent node, but you can break permission inheritance by creating a new role assignment for a particular item. A user who is a member of the **Content Manager** role for one report may be a member of the **Browser** role for another report.  
   
  To grant access to report server items and operations, follow these guidelines:  
   
-1.  Review the predefined roles to determine whether you can use them as is. If you need to adjust the tasks or define additional roles, you should do this before you begin assigning users to specific roles. For more information about each role, see [Predefined Roles](../Topic/Predefined%20Roles.md).  
+1.  Review the predefined roles to determine whether you can use them as is. If you need to adjust the tasks or define additional roles, you should do this before you begin assigning users to specific roles. For more information about each role, see [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
 2.  Identify which users and groups require access to the report server, and at what level. Most users should be assigned to the **Browser** role or the **Report Builder** role. A smaller number of users should be assigned to the **Publisher** role. Very few users should be assigned to **Content Manager**.  
   
@@ -51,7 +51,7 @@ manager: "erikre"
 >  If you configured a report server to run in SharePoint integrated mode, you must set permissions on the SharePoint site to grant access to report server items. For more information, see [Granting Permissions on Report Server Items on a SharePoint Site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
   
 ## Who Sets Permissions  
- Initially, only users who are members of the local administrators group can access a report server. [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] is installed with two default role assignments that grant item-level and system-level access to members of the local administrators group. These built-in role assignments local Administrators to grant report server access to other users and manage report server items. The built-in role assignments cannot be deleted. A local administrator always has permission to fully manage a report server instance.  
+ Initially, only users who are members of the local administrators group can access a report server. [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] is installed with two default role assignments that grant item-level and system-level access to members of the local administrators group. These built-in role assignments local Administrators to grant report server access to other users and manage report server items. The built-in role assignments cannot be deleted. A local administrator always has permission to fully manage a report server instance.  
   
  Because full permissions on a report server include item-level and system-level permissions, a local administrator is assigned to the following roles:  
   
@@ -65,11 +65,11 @@ manager: "erikre"
   
 |Tool|Tasks|  
 |----------|-----------|  
-|Management Studio - Used to view, modify, create, and delete role definitions.|[Create, Delete, or Modify a Role &#40;Management Studio&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Role%20\(Management%20Studio\).md)|  
-|Report Manager - Used to assign users and groups to roles.|[Grant User Access to a Report Server &#40;Report Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Modify or Delete a Role Assignment &#40;Report Manager&#41;](../Topic/Modify%20or%20Delete%20a%20Role%20Assignment%20\(Report%20Manager\).md)|  
+|Management Studio - Used to view, modify, create, and delete role definitions.|[Create, Delete, or Modify a Role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
+|Report Manager - Used to assign users and groups to roles.|[Grant User Access to a Report Server &#40;Report Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Modify or Delete a Role Assignment &#40;Report Manager&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
 ## See Also  
- [Predefined Roles](../Topic/Predefined%20Roles.md)   
+ [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [Granting Permissions on Report Server Items on a SharePoint Site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Create and Manage Role Assignments](../../reporting-services/security/create-and-manage-role-assignments.md)   

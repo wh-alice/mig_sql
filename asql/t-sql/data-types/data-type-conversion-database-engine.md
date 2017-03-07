@@ -25,20 +25,20 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Data Type Conversion (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Data types can be converted in the following scenarios:  
   
 -   When data from one object is moved to, compared with, or combined with data from another object, the data may have to be converted from the data type of one object to the data type of the other.  
   
--   When data from a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] result column, return code, or output parameter is moved into a program variable, the data must be converted from the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system data type to the data type of the variable.  
+-   When data from a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] result column, return code, or output parameter is moved into a program variable, the data must be converted from the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system data type to the data type of the variable.  
   
- When you convert between an application variable and a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] result set column, return code, parameter, or parameter marker, the supported data type conversions are defined by the database API.  
+ When you convert between an application variable and a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] result set column, return code, parameter, or parameter marker, the supported data type conversions are defined by the database API.  
   
 ## Implicit and Explicit Conversion  
  Data types can be converted either implicitly or explicitly.  
   
- Implicit conversions are not visible to the user. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] automatically converts the data from one data type to another. For example, when a **smallint** is compared to an **int**, the **smallint** is implicitly converted to **int** before the comparison proceeds.  
+ Implicit conversions are not visible to the user. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] automatically converts the data from one data type to another. For example, when a **smallint** is compared to an **int**, the **smallint** is implicitly converted to **int** before the comparison proceeds.  
   
  **GETDATE()** implicitly converts to date style 0. **SYSDATETIME()** implicitly converts to date style 21.  
   
@@ -50,14 +50,14 @@ manager: "jhubbard"
 CAST ( $157.27 AS VARCHAR(10) )  
 ```  
   
- Use CAST instead of CONVERT if you want [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] program code to comply with ISO. Use CONVERT instead of CAST to take advantage of the style functionality in CONVERT.  
+ Use CAST instead of CONVERT if you want [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] program code to comply with ISO. Use CONVERT instead of CAST to take advantage of the style functionality in CONVERT.  
   
- The following illustration shows all explicit and implicit data type conversions that are allowed for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system-supplied data types. These include **xml**, **bigint**, and **sql_variant**. There is no implicit conversion on assignment from the **sql_variant** data type, but there is implicit conversion to **sql_variant**.  
+ The following illustration shows all explicit and implicit data type conversions that are allowed for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system-supplied data types. These include **xml**, **bigint**, and **sql_variant**. There is no implicit conversion on assignment from the **sql_variant** data type, but there is implicit conversion to **sql_variant**.  
   
  ![Data type conversion table](../../t-sql/data-types/media/lrdatahd.png "Data type conversion table")  
   
 ## Data Type Conversion Behaviors  
- Some implicit and explicit data type conversions are not supported when you are converting the data type of one [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] object to another. For example, an **nchar** value cannot be converted to an **image** value. An **nchar** can only be converted to **binary** by using explicit conversion, an implicit conversion to **binary** is not supported. However, an **nchar** can be explicitly or implicitly converted to **nvarchar**.  
+ Some implicit and explicit data type conversions are not supported when you are converting the data type of one [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] object to another. For example, an **nchar** value cannot be converted to an **image** value. An **nchar** can only be converted to **binary** by using explicit conversion, an implicit conversion to **binary** is not supported. However, an **nchar** can be explicitly or implicitly converted to **nvarchar**.  
   
  The following topics describe the conversion behaviors exhibited by their corresponding  data types:  
   
@@ -70,9 +70,9 @@ CAST ( $157.27 AS VARCHAR(10) )
 |[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)|[int, bigint, smallint, and tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|[uniqueidentifier &#40;Transact-SQL&#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)|  
   
 ###  <a name="_ole_automation"></a> Converting Data Types by Using OLE Automation Stored Procedures  
- Because [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] data types and OLE Automation uses [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] data types, the OLE Automation stored procedures must convert the data that passes between them.  
+ Because [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] data types and OLE Automation uses [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] data types, the OLE Automation stored procedures must convert the data that passes between them.  
   
- The following table describes [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] data type conversions.  
+ The following table describes [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] data type conversions.  
   
 |SQL Server data type|Visual Basic data type|  
 |--------------------------|----------------------------|  
@@ -89,9 +89,9 @@ CAST ( $157.27 AS VARCHAR(10) )
 |**datetime**, **smalldatetime**|**Date**|  
 |Anything set to NULL|**Variant** set to Null|  
   
- All single [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] values are converted to a single [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] value with the exception of **binary**, **varbinary**, and **image** values. These values are converted to a one-dimensional **Byte()** array in [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)]. This array has a range of **Byte(**0 to *length*1**)** where *length* is the number of bytes in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] **binary**, **varbinary**, or **image** values.  
+ All single [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] values are converted to a single [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] value with the exception of **binary**, **varbinary**, and **image** values. These values are converted to a one-dimensional **Byte()** array in [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)]. This array has a range of **Byte(**0 to *length*1**)** where *length* is the number of bytes in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] **binary**, **varbinary**, or **image** values.  
   
- These are the conversions from [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] data types to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data types.  
+ These are the conversions from [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] data types to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data types.  
   
 |Visual Basic data type|SQL Server data type|  
 |----------------------------|--------------------------|  
@@ -105,7 +105,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 |One-dimensional **Byte()** array with more than 8000 bytes|**image**|  
   
 ## See Also  
- [OLE Automation Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [OLE Automation Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [COLLATE &#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md)  

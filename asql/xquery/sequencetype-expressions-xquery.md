@@ -24,11 +24,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SequenceType Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   In XQuery, a value is always a sequence. The type of the value is referred to as a sequence type. The sequence type can be used in an **instance of** XQuery expression. The SequenceType syntax described in the XQuery specification is used when you need to refer to a type in an XQuery expression.  
   
- The atomic type name can also be used in the **cast as** XQuery expression. In [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], the **instance of** and **cast as** XQuery expressions on SequenceTypes are partially supported.  
+ The atomic type name can also be used in the **cast as** XQuery expression. In [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], the **instance of** and **cast as** XQuery expressions on SequenceTypes are partially supported.  
   
 ## instance of Operator  
  The **instance of** operator can be used to determine the dynamic, or run-time, type of the value of the specified expression. For example:  
@@ -38,11 +38,11 @@ manager: "jhubbard"
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- Note that the `instance of` operator, the `Occurrence indicator`, specifies the cardinality, number of items in the resulting sequence. If this is not specified, the cardinality is assumed to be 1. In [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], only the question mark (**?)** occurrence indicator is supported. The **?** occurrence indicator indicates that `Expression` can return zero or one item. If the **?** occurrence indicator is specified, `instance of` returns True when the `Expression` type matches the specified `SequenceType`, regardless of whether `Expression` returns a singleton or an empty sequence.  
+ Note that the `instance of` operator, the `Occurrence indicator`, specifies the cardinality, number of items in the resulting sequence. If this is not specified, the cardinality is assumed to be 1. In [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], only the question mark (**?)** occurrence indicator is supported. The **?** occurrence indicator indicates that `Expression` can return zero or one item. If the **?** occurrence indicator is specified, `instance of` returns True when the `Expression` type matches the specified `SequenceType`, regardless of whether `Expression` returns a singleton or an empty sequence.  
   
  If the **?** occurrence indicator is not specified, `sequence of` returns True only when the `Expression` type matches the `Type` specified and `Expression` returns a singleton.  
   
- **Note** The plus symbol (**+**) and the asterisk (**\***) occurrence indicators are not supported in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ **Note** The plus symbol (**+**) and the asterisk (**\***) occurrence indicators are not supported in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)].  
   
  The following examples illustrate the use of the**instance of** XQuery operator.  
   
@@ -137,7 +137,7 @@ where ProductModelID=19
  The query returns True.  
   
 ### Example C  
- When using union types, the `instance of` expression in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] has a limitation: Specifically, when the type of an element or attribute is a union type, `instance of` might not determine the exact type. Consequently, a query will return False, unless the atomic types used in the SequenceType is the highest parent of the actual type of the expression in the simpleType hierarchy. That is, the atomic types specified in the SequenceType must be a direct child of anySimpleType. For information about the type hierarchy, see [Type Casting Rules in XQuery](../xquery/type-casting-rules-in-xquery.md).  
+ When using union types, the `instance of` expression in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] has a limitation: Specifically, when the type of an element or attribute is a union type, `instance of` might not determine the exact type. Consequently, a query will return False, unless the atomic types used in the SequenceType is the highest parent of the actual type of the expression in the simpleType hierarchy. That is, the atomic types specified in the SequenceType must be a direct child of anySimpleType. For information about the type hierarchy, see [Type Casting Rules in XQuery](../xquery/type-casting-rules-in-xquery.md).  
   
  The next query example performs the following:  
   
@@ -311,9 +311,9 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   Full sequences, for example, `(1,2) instance of xs:integer*`, are not supported.  
   
--   When you are using a form of the **element()** sequence type that specifies a type name, such as `element(ElementName, TypeName)`, the type must be qualified with a question mark (?). For example, `element(Title, xs:string?)` indicates that the element might be null. [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not support run-time detection of the **xsi:nil** property by using `instance of`.  
+-   When you are using a form of the **element()** sequence type that specifies a type name, such as `element(ElementName, TypeName)`, the type must be qualified with a question mark (?). For example, `element(Title, xs:string?)` indicates that the element might be null. [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] does not support run-time detection of the **xsi:nil** property by using `instance of`.  
   
--   If the value in `Expression` comes from an element or attribute typed as a union, [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] can only identify the primitive, not derived, type from which the value's type was derived. For example, if <`e1`> is defined to have a static type of (xs:integer | xs:string), the following will return False.  
+-   If the value in `Expression` comes from an element or attribute typed as a union, [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] can only identify the primitive, not derived, type from which the value's type was derived. For example, if <`e1`> is defined to have a static type of (xs:integer | xs:string), the following will return False.  
   
     ```  
     data(<e1>123</e1>) instance of xs:integer  
@@ -331,7 +331,7 @@ select @x.query(' declare namespace CustOrders="Customers";
 Expression cast as  AtomicType?  
 ```  
   
- In [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], the question mark (?) is required after the `AtomicType`. For example, as shown in the following query, `"2" cast as xs:integer?` converts the string value to an integer:  
+ In [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], the question mark (?) is required after the `AtomicType`. For example, as shown in the following query, `"2" cast as xs:integer?` converts the string value to an integer:  
   
 ```  
 declare @x xml  

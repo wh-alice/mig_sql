@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ExitCode Property (SqlService Class)
-  Gets or sets the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Win32 error code that defines problems encountered when starting and stopping the service.  
+  Gets or sets the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Win32 error code that defines problems encountered when starting and stopping the service.  
   
 ## Syntax  
   

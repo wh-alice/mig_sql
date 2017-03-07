@@ -26,7 +26,7 @@ manager: "erikre"
   
 ### To publish a report to a SharePoint site  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open an existing or new Report Server project.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open an existing or new Report Server project.  
   
 2.  From the **Project** menu, click **Properties**. The *\<project>***Property Pages** dialog box opens.  
   
@@ -42,7 +42,7 @@ manager: "erikre"
   
 7.  For **TargetServerURL**, type a URL to a SharePoint top-level site or subsite. If you do not specify a site, the default top-level site is used (for example, *http://servername*, *http://servername/site*, or *http://servername/site/subsite*).  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 9. In Solution Explorer, right-click the report you want to publish, and click **Deploy**. The report is published to the location specified in **TargetReportFolder**. Deployment errors appear in the Output window.  
   

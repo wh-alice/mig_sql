@@ -28,7 +28,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Data Definition - DROP SUBCUBE
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Drops a specified subcube, reverting to the previously defined cube or subcube definition with the specified name.  
   
@@ -45,6 +45,6 @@ DROP SUBCUBE Subcube_Name
   
 ## See Also  
  [MDX Scripting Statements &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [CREATE SUBCUBE Statement &#40;MDX&#41;](../Topic/CREATE%20SUBCUBE%20Statement%20\(MDX\).md)  
+ [CREATE SUBCUBE Statement &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)  
   
   

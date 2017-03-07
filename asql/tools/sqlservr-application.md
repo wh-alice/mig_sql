@@ -27,7 +27,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # sqlservr Application
-  The **sqlservr** application starts, stops, pauses, and continues an instance of [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] from a command prompt.  
+  The **sqlservr** application starts, stops, pauses, and continues an instance of [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] from a command prompt.  
   
 ## Syntax  
   
@@ -40,22 +40,22 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
   
 ## Arguments  
  **-s** *instance_name*  
- Specifies the instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] to connect to. If no named instance is specified, **sqlservr** starts the default instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Specifies the instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] to connect to. If no named instance is specified, **sqlservr** starts the default instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  When starting an instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], you must use the **sqlservr** application in the appropriate directory for that instance. For the default instance, run **sqlservr** from the \MSSQL\Binn directory. For a named instance, run **sqlservr** from the \MSSQL$*instance_name*\Binn directory.  
+>  When starting an instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], you must use the **sqlservr** application in the appropriate directory for that instance. For the default instance, run **sqlservr** from the \MSSQL\Binn directory. For a named instance, run **sqlservr** from the \MSSQL$*instance_name*\Binn directory.  
   
  **-c**  
- Indicates that an instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] is started independently of the Windows Service Control Manager. This option is used when starting [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] from a command prompt, to shorten the amount of time it takes for [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] to start.  
+ Indicates that an instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] is started independently of the Windows Service Control Manager. This option is used when starting [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] from a command prompt, to shorten the amount of time it takes for [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] to start.  
   
 > [!NOTE]  
->  When you use this option, you cannot stop [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] by using [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Service Manager or the **net stop** command, and if you log off the computer, [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] is stopped.)  
+>  When you use this option, you cannot stop [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] by using [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Service Manager or the **net stop** command, and if you log off the computer, [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] is stopped.)  
   
  **-d** *master_path*  
  Indicates the fully qualified path for the **master** database file. There are no spaces between **-d** and *master_path*. If you do not provide this option, the existing registry parameters are used.  
   
  **-f**  
- Starts an instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] with minimal configuration. This is useful if the setting of a configuration value (for example, over-committing memory) has prevented the server from starting.  
+ Starts an instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] with minimal configuration. This is useful if the setting of a configuration value (for example, over-committing memory) has prevented the server from starting.  
   
  **-e** *error_log_path*  
  Indicates the fully qualified path for the error log file. If not specified, the default location is *\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog for the default instance and *\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog for a named instance. There are no spaces between **-e** and *error_log_path*.  
@@ -64,16 +64,16 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  Indicates the fully qualified path for the **master** database transaction log file. There are no spaces between **-l** and *master_log_path*.  
   
  **-m**  
- Indicates to start an instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] in single-user mode. Only a single user can connect when [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] is started in single-user mode. The CHECKPOINT mechanism, which guarantees that completed transactions are regularly written from the disk cache to the database device, is not started. (Typically, this option is used if you experience problems with system databases that require repair.) Enables the **sp_configure allow updates** option. By default, **allow updates** is disabled.  
+ Indicates to start an instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] in single-user mode. Only a single user can connect when [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] is started in single-user mode. The CHECKPOINT mechanism, which guarantees that completed transactions are regularly written from the disk cache to the database device, is not started. (Typically, this option is used if you experience problems with system databases that require repair.) Enables the **sp_configure allow updates** option. By default, **allow updates** is disabled.  
   
  **-n**  
- Allows you to start a named instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Without the **-s** parameter set, the default instance attempts to start. You must switch to the appropriate BINN directory for the instance at a command prompt before starting **sqlservr.exe**. For example, if Instance1 were to use \mssql$Instance1 for its binaries, the user must be in the \mssql$Instance1\binn directory to start **sqlservr.exe -s instance1**. If you start an instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] with the **-n** option, it is advisable to use the **-e** option too, or [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] events are not logged.  
+ Allows you to start a named instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]. Without the **-s** parameter set, the default instance attempts to start. You must switch to the appropriate BINN directory for the instance at a command prompt before starting **sqlservr.exe**. For example, if Instance1 were to use \mssql$Instance1 for its binaries, the user must be in the \mssql$Instance1\binn directory to start **sqlservr.exe -s instance1**. If you start an instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] with the **-n** option, it is advisable to use the **-e** option too, or [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] events are not logged.  
   
  **-T** *trace#*  
- Indicates that an instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] should be started with a specified trace flag (*trace#*) in effect. Trace flags are used to start the server with nonstandard behavior. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md).  
+ Indicates that an instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] should be started with a specified trace flag (*trace#*) in effect. Trace flags are used to start the server with nonstandard behavior. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
 > [!IMPORTANT]  
->  When specifying a trace flag, use **-T** to pass the trace flag number. A lowercase t (**-t**) is accepted by [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]; however, **-t** sets other internal trace flags required by [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] support engineers.  
+>  When specifying a trace flag, use **-T** to pass the trace flag number. A lowercase t (**-t**) is accepted by [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]; however, **-t** sets other internal trace flags required by [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] support engineers.  
   
  **-v**  
  Displays the server version number.  
@@ -82,25 +82,25 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  Disables the keeping of CPU time and cache-hit ratio statistics. Allows maximum performance.  
   
  **-g** *memory_to_reserve*  
- Specifies an integer number of megabytes (MB) of memory that [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] leaves available for memory allocations within the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] process, but outside the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] memory pool. The memory outside of the memory pool is the area used by [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] for loading items such as extended procedure `.dll` files, the OLE DB providers referenced by distributed queries, and automation objects referenced in [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] statements. The default is 256 MB.  
+ Specifies an integer number of megabytes (MB) of memory that [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] leaves available for memory allocations within the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] process, but outside the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] memory pool. The memory outside of the memory pool is the area used by [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] for loading items such as extended procedure `.dll` files, the OLE DB providers referenced by distributed queries, and automation objects referenced in [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] statements. The default is 256 MB.  
   
- Use of this option may help tune memory allocation, but only when physical memory exceeds the configured limit set by the operating system on virtual memory available to applications. Use of this option may be appropriate in large memory configurations in which the memory usage requirements of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] are atypical and the virtual address space of the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] process is totally in use. Incorrect use of this option can lead to conditions under which an instance of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] may not start or may encounter run-time errors.  
+ Use of this option may help tune memory allocation, but only when physical memory exceeds the configured limit set by the operating system on virtual memory available to applications. Use of this option may be appropriate in large memory configurations in which the memory usage requirements of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] are atypical and the virtual address space of the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] process is totally in use. Incorrect use of this option can lead to conditions under which an instance of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] may not start or may encounter run-time errors.  
   
- Use the default for the **-g** parameter unless you see any of the following warnings in the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log:  
+ Use the default for the **-g** parameter unless you see any of the following warnings in the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] error log:  
   
 -   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<size>"  
   
 -   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<size>"  
   
- These messages may indicate that [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] is trying to free parts of the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] memory pool in order to find space for items such as extended stored procedure .dll files or automation objects. In this case, consider increasing the amount of memory reserved by the **-g**``switch.  
+ These messages may indicate that [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] is trying to free parts of the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] memory pool in order to find space for items such as extended stored procedure .dll files or automation objects. In this case, consider increasing the amount of memory reserved by the **-g**``switch.  
   
  Using a value lower than the default increases the amount of memory available to the buffer pool and thread stacks; this may, in turn, provide some performance benefit to memory-intensive workloads in systems that do not use many extended stored procedures, distributed queries, or automation objects.  
   
 ## Remarks  
- In most cases, the sqlservr.exe program is only used for troubleshooting or major maintenance. When [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] is started from the command prompt with sqlservr.exe, [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not start as a service, so you cannot stop [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] using **net** commands. Users can connect to [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], but [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] tools show the status of the service, so [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager correctly indicates that the service is stopped. [!INCLUDE[ssManStudioFull](../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] can connect to the server, but it also indicates that the service is stopped.  
+ In most cases, the sqlservr.exe program is only used for troubleshooting or major maintenance. When [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] is started from the command prompt with sqlservr.exe, [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] does not start as a service, so you cannot stop [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] using **net** commands. Users can connect to [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], but [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] tools show the status of the service, so [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager correctly indicates that the service is stopped. [!INCLUDE[ssManStudioFull](../a9notintoc/includes/ssmanstudiofull-md.md)] can connect to the server, but it also indicates that the service is stopped.  
   
 ## Compatibility Support  
- The **-h**  parameter is not supported in [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)]. This parameter was used in earlier versions of 32-bit instances of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] to reserve virtual memory address space for Hot Add memory metadata when AWE is enabled. For more information, see [Discontinued SQL Server Features in SQL Server 2016](../Topic/Discontinued%20SQL%20Server%20Features%20in%20SQL%20Server%202016.md).  
+ The **-h**  parameter is not supported in [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)]. This parameter was used in earlier versions of 32-bit instances of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] to reserve virtual memory address space for Hot Add memory metadata when AWE is enabled. For more information, see [Discontinued SQL Server Features in SQL Server 2016](../a9retired/discontinued-sql-server-features-in-sql-server-2016.md).  
   
 ## See Also  
  [Database Engine Service Startup Options](../database-engine/configure/windows/database-engine-service-startup-options.md)  

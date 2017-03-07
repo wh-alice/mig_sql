@@ -20,9 +20,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Use the Always On Dashboard (SQL Server Management Studio)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Database administrators use the Always On Dashboard to obtains an at-a-glance view the health of an Always On availability group and its availability replicas and databases in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)]. Some of the typical uses for the Always On Dashboard are:  
+  Database administrators use the Always On Dashboard to obtains an at-a-glance view the health of an Always On availability group and its availability replicas and databases in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)]. Some of the typical uses for the Always On Dashboard are:  
   
 -   Choosing a replica for a manual failover.  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
- You must be connected to the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (server instance) that hosts either the primary replica or a secondary replica of an availability group.  
+ You must be connected to the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] (server instance) that hosts either the primary replica or a secondary replica of an availability group.  
   
 ###  <a name="Security"></a> Security  
   
@@ -88,12 +88,12 @@ manager: "jhubbard"
   
 ##  <a name="SSMSProcedure"></a> To start the Always On Dashboard  
   
-1.  In Object Explorer, connect to the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] on which you want to run the Always On Dashboard.  
+1.  In Object Explorer, connect to the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] on which you want to run the Always On Dashboard.  
   
 2.  Expand the **Always On High Availability** node, right-click the **Availability Groups** node, and then click **Show Dashboard**.  
   
 ###  <a name="DashboardOptions"></a> To Change Always On Dashboard Options  
- You can use the [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]**Options** dialog box to configure the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Always On Dashboard behavior for automatic refreshing and enabling an auto-defined Always On policy.  
+ You can use the [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)]**Options** dialog box to configure the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Always On Dashboard behavior for automatic refreshing and enabling an auto-defined Always On policy.  
   
 1.  From the **Tools** menu, click **Options**.  
   
@@ -118,7 +118,7 @@ manager: "jhubbard"
 -   **Manual**. Indicates that no replica is automatic-failover mode.  
   
  **Issues**  
- Click the **Issues** link to open troubleshooting documentation for a given issue. For a list of all the Always On policy issues, see [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../Topic/Always%20On%20Policies%20for%20Operational%20Issues%20with%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md).  
+ Click the **Issues** link to open troubleshooting documentation for a given issue. For a list of all the Always On policy issues, see [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!TIP]  
 >  Click the column headings to sort the availability group information by the name of the availability group, primary instance, failover mode, or Issue.  
@@ -149,7 +149,7 @@ manager: "jhubbard"
  The name of the server instance that hosts the availability replica. This column is shown by default.  
   
  **Role**  
- Indicates the current role of the availability replica, either **Primary** or **Secondary**. For information about [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] roles, see [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). This column is shown by default.  
+ Indicates the current role of the availability replica, either **Primary** or **Secondary**. For information about [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] roles, see [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). This column is shown by default.  
   
  **Failover Mode**  
  Displays the failover mode for which the replica is configured. The possible failover mode values are:  
@@ -173,7 +173,7 @@ manager: "jhubbard"
 -   **NULL**. Unknown state. This value occurs when the local server instance cannot communicate with the WSFC failover cluster (that is the local node is not part of WSFC quorum).  
   
  **Issues**  
- Lists the issue name. This value is shown by default. For a list of all the Always On policy issues, see [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../Topic/Always%20On%20Policies%20for%20Operational%20Issues%20with%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md).  
+ Lists the issue name. This value is shown by default. For a list of all the Always On policy issues, see [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Availability Mode**  
  Indicates the replica property that that you set separately for each availability replica. This value is hidden by default. The possible values are:  
@@ -247,7 +247,7 @@ manager: "jhubbard"
  The name of the availability database. This value is shown by default.  
   
  **Replica**  
- The name of the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that hosts the availability replica. This value is shown by default.  
+ The name of the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] that hosts the availability replica. This value is shown by default.  
   
  **Synchronization State**  
  Indicates whether the availability database is currently synchronized with primary replica. This value is shown by default. The possible synchronization states are:  
@@ -302,7 +302,7 @@ manager: "jhubbard"
   
 -   **Critical**. Click to display the critical issues.  
   
- For a list of all the Always On policy issues, see [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../Topic/Always%20On%20Policies%20for%20Operational%20Issues%20with%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md).  
+ For a list of all the Always On policy issues, see [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Suspended**  
  Indicates whether the database is **Suspended** or has been **Resumed**. This value is hidden by default.  
@@ -378,7 +378,7 @@ manager: "jhubbard"
 -   [Use Always On Policies to View the Health of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 ## See Also  
- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys.dm-os-performance-counters-transact-sql.md)   
+ [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-os-performance-counters-transact-sql.md)   
  [Monitoring of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   

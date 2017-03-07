@@ -19,9 +19,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Restore a SQL Server Database to a Point in Time (Full Recovery Model)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes how to restore a database to a point in time in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. This topic is relevant only for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases that use the full or bulk-logged recovery models.  
+  This topic describes how to restore a database to a point in time in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. This topic is relevant only for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] databases that use the full or bulk-logged recovery models.  
   
 > [!IMPORTANT]  
 >  Under the bulk-logged recovery model, if a log backup contains bulk-logged changes, point-in-time recovery is not possible to a point within that backup. The database must be recovered to the end of the transaction log backup.  
@@ -56,7 +56,7 @@ manager: "jhubbard"
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To restore a database to a point in time**  
   
-1.  In Object Explorer, connect to the appropriate instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)], and expand the server tree.  
+1.  In Object Explorer, connect to the appropriate instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)], and expand the server tree.  
   
 2.  Expand **Databases**. Depending on the database, either select a user database or expand **System Databases**, and then select a system database.  
   
@@ -87,7 +87,7 @@ manager: "jhubbard"
   
 7.  In the **Restore to** section, click **Specific date and time**.  
   
-8.  Use either the **Date** and **Time** boxes or the slider bar to specify a specific date and time to where the restore should stop. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  Use either the **Date** and **Time** boxes or the slider bar to specify a specific date and time to where the restore should stop. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  Use the **Timeline Interval** box to change the amount of time displayed on the timeline.  
@@ -118,7 +118,7 @@ manager: "jhubbard"
   
 12. **Take tail-log backup before restore** will be selected if it is necessary for the point in time that you have selected. You do not need to modify this setting, but you can choose to backup the tail of the log even if it is not required.  
   
-13. Restore operations may fail if there are active connections to the database. Check the **Close existing connections option** to ensure that all active connections between [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] and the database are closed. This check box sets the database to single user mode before performing the restore operations, and sets the database to multi-user mode when complete.  
+13. Restore operations may fail if there are active connections to the database. Check the **Close existing connections option** to ensure that all active connections between [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] and the database are closed. This check box sets the database to single user mode before performing the restore operations, and sets the database to multi-user mode when complete.  
   
 14. Select **Prompt before restoring each backup** if you wish to be prompted between each restore operation. This is not usually necessary unless the database is large and you wish to monitor the status of the restore operation.  
   
@@ -129,7 +129,7 @@ manager: "jhubbard"
   
  To help you identify which database backup to restore, you can optionally specify your WITH STOPAT clause in your RESTORE DATABASE statement to raise an error if a data backup is too recent for the specified target time. The complete data backup is always restored, even if it contains the target time.  
   
- **Basic [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] syntax**  
+ **Basic [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] syntax**  
   
  RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT **=***time***,** RECOVERY…  
   
@@ -160,7 +160,7 @@ manager: "jhubbard"
  The following example restores a database to its state as of `12:00 AM` on `April 15, 2020` and shows a restore operation that involves multiple log backups. On the backup device, `AdventureWorksBackups`, the full database backup to be restored is the third backup set on the device (`FILE = 3`), the first log backup is the fourth backup set (`FILE = 4`), and the second log backup is the fifth backup set (`FILE = 5`).  
   
 > [!IMPORTANT]  
->  The [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database uses the simple recovery model. To permit log backups, before taking a full database backup, the database was set to use the full recovery model, using `ALTER DATABASE AdventureWorks SET RECOVERY FULL`.  
+>  The [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database uses the simple recovery model. To permit log backups, before taking a full database backup, the database was set to use the full recovery model, using `ALTER DATABASE AdventureWorks SET RECOVERY FULL`.  
   
 ```  
 RESTORE DATABASE AdventureWorks  
@@ -185,7 +185,7 @@ GO
   
 -   [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   [Restore a Database to the Point of Failure Under the Full Recovery Model &#40;Transact-SQL&#41;](../Topic/Restore%20a%20Database%20to%20the%20Point%20of%20Failure%20Under%20the%20Full%20Recovery%20Model%20\(Transact-SQL\).md)  
+-   [Restore a Database to the Point of Failure Under the Full Recovery Model &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery-model.md)  
   
 -   [Restore a Database to a Marked Transaction &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
@@ -194,8 +194,8 @@ GO
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> (SMO)  
   
 ## See Also  
- [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+ [backupset &#40;Transact-SQL&#41;](../../relational-databases/reference/system-tables/backupset-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
   

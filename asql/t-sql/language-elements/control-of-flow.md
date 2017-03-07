@@ -20,9 +20,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Control-of-Flow
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  The [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] control-of-flow language keywords are:  
+  The [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] control-of-flow language keywords are:  
   
 |||  
 |-|-|  
@@ -37,8 +37,8 @@ manager: "jhubbard"
  [Slash Star Comment &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   
  [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../Topic/DECLARE%20@local_variable%20\(Transact-SQL\).md)   
- [EXECUTE &#40;Transact-SQL&#41;](../Topic/EXECUTE%20\(Transact-SQL\).md)   
- [PRINT &#40;Transact-SQL&#41;](../Topic/PRINT%20\(Transact-SQL\).md)   
- [RAISERROR &#40;Transact-SQL&#41;](../Topic/RAISERROR%20\(Transact-SQL\).md)  
+ [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
+ [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

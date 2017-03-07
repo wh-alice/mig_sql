@@ -29,9 +29,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SET Statements (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  The [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] programming language provides several SET statements that change the current session handling of specific information. The SET statements are grouped into the categories shown in the following table.  
+  The [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] programming language provides several SET statements that change the current session handling of specific information. The SET statements are grouped into the categories shown in the following table.  
   
  For information about setting local variables with the SET statement, see [SET @local_variable &#40;Transact-SQL&#41;](../Topic/SET%20@local_variable%20\(Transact-SQL\).md).  
   
@@ -76,10 +76,10 @@ manager: "jhubbard"
   
 -   When a stored procedure is executed, either from a batch or from another stored procedure, it is executed under the option values that are currently set in the database that contains the stored procedure. For example, when stored procedure **db1.dbo.sp1** calls stored procedure **db2.dbo.sp2**, stored procedure **sp1** is executed under the current compatibility level setting of database **db1**, and stored procedure **sp2** is executed under the current compatibility level setting of database **db2**.  
   
--   When a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement refers to objects that reside in multiple databases, the current database context and the current connection context applies to that statement. In this case, if [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement is in a batch, the current connection context is the database defined by the USE statement; if the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement is in a stored procedure, the connection context is the database that contains the stored procedure.  
+-   When a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement refers to objects that reside in multiple databases, the current database context and the current connection context applies to that statement. In this case, if [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement is in a batch, the current connection context is the database defined by the USE statement; if the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement is in a stored procedure, the connection context is the database that contains the stored procedure.  
   
 -   When you are creating and manipulating indexes on computed columns or indexed views, the SET options ARITHABORT, CONCAT_NULL_YIELDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING, and ANSI_WARNINGS must be set to ON. The option NUMERIC_ROUNDABORT must be set to OFF.  
   
-     If any one of these options is not set to the required values, INSERT, UPDATE, DELETE, DBCC CHECKDB and DBCC CHECKTABLE actions on indexed views or tables with indexes on computed columns will fail. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will raise an error listing all the options that are incorrectly set. Also, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will process SELECT statements on these tables or indexed views as if the indexes on computed columns or on the views do not exist.  
+     If any one of these options is not set to the required values, INSERT, UPDATE, DELETE, DBCC CHECKDB and DBCC CHECKTABLE actions on indexed views or tables with indexes on computed columns will fail. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will raise an error listing all the options that are incorrectly set. Also, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will process SELECT statements on these tables or indexed views as if the indexes on computed columns or on the views do not exist.  
   
   

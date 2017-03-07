@@ -27,13 +27,13 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Subscriptions and Delivery (Reporting Services)
-  A [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] subscription is a configuration that delivers a report at a specific time or in response to an event, and in a file format that you specify. For example, every Wednesday, save the MonthlySales.rdl report as a Microsoft Word document to a file share. Subscriptions can be used to schedule and automate the delivery of a report and with a specific set of report parameter values.  
+  A [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] subscription is a configuration that delivers a report at a specific time or in response to an event, and in a file format that you specify. For example, every Wednesday, save the MonthlySales.rdl report as a Microsoft Word document to a file share. Subscriptions can be used to schedule and automate the delivery of a report and with a specific set of report parameter values.  
   
  You can create multiple subscriptions for a single report to vary the subscription options; for example, you can specify different parameter values to produce three versions of a report, such as a Western region sales report, Eastern region sales, and all sales.  
   
  ![example ssrs subscription flow](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "example ssrs subscription flow")  
   
- Subscriptions are not available in every edition of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Subscriptions are not available in every edition of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
   
  **In this topic:**  
   
@@ -72,21 +72,21 @@ manager: "erikre"
 -   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0.md)  
   
 ##  <a name="bkmk_subscription_scenarios"></a> Subscription and delivery scenarios  
- For each subscription, you configure delivery options and the available options are determined by the delivery extension you choose. A delivery extension is a module that supports some manner of distribution. [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] includes several delivery extensions and delivery extension may be available through third-party vendors.  
+ For each subscription, you configure delivery options and the available options are determined by the delivery extension you choose. A delivery extension is a module that supports some manner of distribution. [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] includes several delivery extensions and delivery extension may be available through third-party vendors.  
   
  If you are a developer, you can create custom delivery extensions to support additional scenarios. For more information, see [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md).  
   
- The following table describes the common [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] subscription scenarios.  
+ The following table describes the common [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] subscription scenarios.  
   
 |Scenario|Description|  
 |--------------|-----------------|  
-|E-mail Reports|E-mail reports to individual users and groups. Create a subscription and specify a group alias or e-mail alias to receive a report that you want to distribute. You can have [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] determine the subscription data at run time. If you want to send the same report to a group that has a changing list of members, you can use a query to derive the subscription list at run time.|  
+|E-mail Reports|E-mail reports to individual users and groups. Create a subscription and specify a group alias or e-mail alias to receive a report that you want to distribute. You can have [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] determine the subscription data at run time. If you want to send the same report to a group that has a changing list of members, you can use a query to derive the subscription list at run time.|  
 |View Reports off-line|Users can select one of the following formats for subscription output:<br /><br /> -   XML file with report data<br />-   CSV (comma delimited)<br />-   PDF<br />-   MHTML (web archive)<br />-   Microsoft Excel<br />-   TIFF file<br />-   Microsoft Word<br /><br /> Reports that you want to archive can be sent directly to a shared folder that you back up on a nightly schedule. Large reports that take too long to load in a browser can be sent to a shared folder in a format that can be viewed in a desktop application.|  
 |Pre-load cache|If you have multiple instances of a parameterized report or a large number of report users who view reports, you can preload reports in the cache to reduce processing time required to display the report.|  
 |Data-driven reports|Use data-driven subscriptions to customize report output, delivery options, and report parameter settings at run time. The subscription uses a query to get input values from a data source at run time. You can use data-driven subscriptions to perform a mail-merge operation that sends a report to a list of subscribers that is determined at the time the subscription is processed.|  
   
 ##  <a name="bkmk_standard_and_datadriven"></a> Standard and data-driven subscriptions  
- [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] supports two kinds of subscriptions: **standard** and **data-driven**. Standard subscriptions are created and managed by individual users. A standard subscription consists of static values that cannot be varied during subscription processing. For each standard subscription, there is exactly one set of report presentation options, delivery options, and report parameters.  
+ [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] supports two kinds of subscriptions: **standard** and **data-driven**. Standard subscriptions are created and managed by individual users. A standard subscription consists of static values that cannot be varied during subscription processing. For each standard subscription, there is exactly one set of report presentation options, delivery options, and report parameters.  
   
  Data-driven subscriptions get subscription information at run time by querying an external data source that provides values used to specify a recipient, report parameters, or application format. You might use data-driven subscriptions if you have a very large recipient list or if you want to vary report output for each recipient. To use data-driven subscriptions, you must have expertise in building queries and an understanding of how parameters are used. Report server administrators typically create and manage these subscriptions. For more information, see the following:  
   
@@ -108,7 +108,7 @@ manager: "erikre"
 ##  <a name="bkmk_delivery_extensions"></a> Delivery extensions  
  Subscriptions are processed on the report server and are distributed through delivery extensions that are deployed on the server. By default, you can create subscriptions that send reports to a shared folder or to an e-mail address. If the report server is configured for SharePoint integrated mode, you can also send a report to a SharePoint library.  
   
- When a user creates a subscription, he or she can choose one of the available delivery extensions to determine how the report is delivered. [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] includes the following delivery extensions.  
+ When a user creates a subscription, he or she can choose one of the available delivery extensions to determine how the report is delivered. [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] includes the following delivery extensions.  
   
 |Delivery Extension|Description|  
 |------------------------|-----------------|  
@@ -118,7 +118,7 @@ manager: "erikre"
 |Null|The null delivery provider is a highly specialized delivery extension that is used to preload a cache with ready-to-view parameterized reports This method is not available to users in individual subscriptions. Null delivery is used by administrators in data-driven subscriptions to improve report server performance by preloading the cache.|  
   
 > [!NOTE]  
->  Report delivery is an extensible part of [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] architecture. Third-party vendors can create custom delivery extensions to route reports to different locations or devices. For more information about custom delivery extensions, see [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md).  
+>  Report delivery is an extensible part of [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] architecture. Third-party vendors can create custom delivery extensions to route reports to different locations or devices. For more information about custom delivery extensions, see [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md).  
   
 ##  <a name="bkmk_parts_of_subscription"></a> Parts of a subscription  
  A subscription definition consists of the following parts:  
@@ -140,7 +140,7 @@ manager: "erikre"
  Subscription information is stored with individual reports in a report server database. You cannot manage subscriptions separately from the report to which they are associated. Note that subscriptions cannot be extended to include descriptions, other custom text, or other elements. Subscriptions can contain only the items listed earlier.  
   
 ##  <a name="bkmk_subscription_processing"></a> How subscriptions are processed  
- [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] includes a scheduling and delivery processor, which provides functionality for scheduling reports and delivering them to users. The report server responds to events that it monitors on an ongoing basis. When an event occurs that matches the conditions defined for a subscription, the report server reads the subscription to determine how to process and deliver the report. The report server requests the delivery extension that is specified in the subscription. After the delivery extension is running, the report server extracts delivery information from the subscription and passes it to the delivery extension for processing.  
+ [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] includes a scheduling and delivery processor, which provides functionality for scheduling reports and delivering them to users. The report server responds to events that it monitors on an ongoing basis. When an event occurs that matches the conditions defined for a subscription, the report server reads the subscription to determine how to process and deliver the report. The report server requests the delivery extension that is specified in the subscription. After the delivery extension is running, the report server extracts delivery information from the subscription and passes it to the delivery extension for processing.  
   
  The delivery extension renders the report in the format defined in the subscription and then delivers the report or notification to the specified destination. If a report cannot be delivered, an entry is logged to the report server log file. If you want to support retry operations, you can configure the report server to re-attempt the delivery if the first attempt fails.  
   
@@ -168,7 +168,7 @@ manager: "erikre"
  A snapshot update event uses the scheduled update of a report snapshot to trigger a subscription. You can define a subscription that is triggered whenever the report is updated with new data, based on report execution properties that are set on the report.  
   
 ##  <a name="bkmk_code"></a> Programmatic control of subscriptions  
- The [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] object model allows you to programmatically audit and control subscriptions and subscriptions processing.  See the following for examples and getting started:  
+ The [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] object model allows you to programmatically audit and control subscriptions and subscriptions processing.  See the following for examples and getting started:  
   
 -   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0.md)  
   
@@ -176,7 +176,7 @@ manager: "erikre"
   
 -   <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
--   For an example PowerShell script to list all [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] subscriptions that are configured to use the **File share account** see [Subscription Settings and a File Share Account &#40;Configuration Manager&#41;](../../reporting-services/install/windows/subscription-settings-and-a-file-share-account-configuration-manager.md).  
+-   For an example PowerShell script to list all [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] subscriptions that are configured to use the **File share account** see [Subscription Settings and a File Share Account &#40;Configuration Manager&#41;](../../reporting-services/install/windows/subscription-settings-and-a-file-share-account-configuration-manager.md).  
   
 ## See Also  
  [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../../reporting-services/tutorials/create-a-data-driven-subscription-ssrs-tutorial.md)   

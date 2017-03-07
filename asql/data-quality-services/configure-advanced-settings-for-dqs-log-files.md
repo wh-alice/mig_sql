@@ -18,10 +18,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure Advanced Settings for DQS Log Files
-  This topic describes how to configure advanced settings for [!INCLUDE[ssDQSServer](../data-quality-services/includes/ssdqsserver-md.md)] and [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] log files, such as set the rolling file size limit of the log files, set the time stamp pattern of the events, and so on.  
+  This topic describes how to configure advanced settings for [!INCLUDE[ssDQSServer](../data-quality-services/includes/ssdqsserver-md.md)] and [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] log files, such as set the rolling file size limit of the log files, set the time stamp pattern of the events, and so on.  
   
 > [!NOTE]  
->  These activities cannot be performed using [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)], and is intended for advanced users only.  
+>  These activities cannot be performed using [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)], and is intended for advanced users only.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   Your Windows user account must be a member of the sysadmin fixed server role in the SQL Server instance to modify configuration settings in the A_CONFIGURATION table in the DQS_MAIN database.  
   
--   You must be logged on as a member of the Administrators group on the computer where you are modifying the DQLog.Client.xml file to configure the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] logging settings.  
+-   You must be logged on as a member of the Administrators group on the computer where you are modifying the DQLog.Client.xml file to configure the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] logging settings.  
   
 ##  <a name="DQSServer"></a> Configure Data Quality Server Log Settings  
  The [!INCLUDE[ssDQSServer](../data-quality-services/includes/ssdqsserver-md.md)] log settings are present in an XML format in the **VALUE** column of the **ServerLogging** row in the A_CONFIGURATION table in the DQS_MAIN database. You can run the following SQL query to view the configuration information:  
@@ -110,7 +110,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 >  The [!INCLUDE[ssDQSServer](../data-quality-services/includes/ssdqsserver-md.md)] logging settings configuration is dynamically generated and stored in the DQS_MAIN.Log file, which is typically available at C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log if you installed the default instance of SQL Server. However, changes done directly in this file do not hold, and are overwritten by the configuration settings in the A_CONFIGURATION table in the DQS_MAIN database.  
   
 ##  <a name="DQSClient"></a> Configure Data Quality Client Log Settings  
- The [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] log setting configuration file, DQLog.Client.xml, is typically available at C:\Program Files\Microsoft SQL Server\130\Tools\Binn\DQ\config. The contents of the XML file is similar to the XML file that you modified earlier for the [!INCLUDE[ssDQSServer](../data-quality-services/includes/ssdqsserver-md.md)] log configuration settings. To configure the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] log settings:  
+ The [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] log setting configuration file, DQLog.Client.xml, is typically available at C:\Program Files\Microsoft SQL Server\130\Tools\Binn\DQ\config. The contents of the XML file is similar to the XML file that you modified earlier for the [!INCLUDE[ssDQSServer](../data-quality-services/includes/ssdqsserver-md.md)] log configuration settings. To configure the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] log settings:  
   
 1.  Run any XML editing tool or notepad as an administrator.  
   

@@ -48,7 +48,7 @@ manager: "erikre"
   
 -   A combination of both relational data and tabular (HTML) data copy and pasted into the table.  
   
- When you import data, each table or view, sheet, or file of data is added as a table in the model designer. You typically add data from various sources onto separate tabs, but you can combine data in a single table by using **Paste** and **Paste Append**. For more information, see [Copy and Paste Data &#40;SSAS Tabular&#41;](../Topic/Copy%20and%20Paste%20Data%20\(SSAS%20Tabular\).md).  
+ When you import data, each table or view, sheet, or file of data is added as a table in the model designer. You typically add data from various sources onto separate tabs, but you can combine data in a single table by using **Paste** and **Paste Append**. For more information, see [Copy and Paste Data &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md).  
   
  After you have added the data that you need, you can create additional relationships between the tables, look up or reference related values in other tables, or create derived values by adding new calculated columns.  
   
@@ -67,7 +67,7 @@ manager: "erikre"
 |[Rename a Table or Column &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|Describes how to rename a table or column to make it more identifiable in your model.|  
 |[Set the Data Type of a Column &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|Describes how to change the data type of a column. The data type defines how data in the column is stored and presented.|  
 |[Hide or Freeze Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|Describes how to hide columns that you don’t want to display and how to keep an area of a model visible while you scroll to another area of the model by freezing (locking) specific columns in one area.|  
-|[Calculated Columns &#40;SSAS Tabular&#41;](../Topic/Calculated%20Columns%20\(SSAS%20Tabular\).md)|Topics in this section describe how you can use calculated columns to add aggregated data to your model.|  
-|[Filter and Sort Data &#40;SSAS Tabular&#41;](../Topic/Filter%20and%20Sort%20Data%20\(SSAS%20Tabular\).md)|Topics in this section describe how you can filter or sort data by using controls in the model designer.|  
+|[Calculated Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)|Topics in this section describe how you can use calculated columns to add aggregated data to your model.|  
+|[Filter and Sort Data &#40;SSAS Tabular&#41;](../../a9retired/filter-and-sort-data-ssas-tabular.md)|Topics in this section describe how you can filter or sort data by using controls in the model designer.|  
   
   

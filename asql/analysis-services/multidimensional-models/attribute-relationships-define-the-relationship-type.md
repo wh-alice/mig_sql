@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Attribute Relationships - Define the Relationship Type
-  You define the relationship type of an attribute relationship by using the **Attribute Relationships** tab in Dimension Designer, which can be accessed from [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+  You define the relationship type of an attribute relationship by using the **Attribute Relationships** tab in Dimension Designer, which can be accessed from [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
 ### To set the relationship type of an attribute relationship  
   
@@ -37,6 +37,6 @@ manager: "erikre"
      In a flexible relationship, relationships between members change over time. In a rigid relationship, relationships between members do not change over time.  
   
 ## See Also  
- [Define Attribute Relationships](../Topic/Define%20Attribute%20Relationships.md)  
+ [Define Attribute Relationships](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
   
   

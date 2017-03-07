@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # VarP (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the population variance of a numeric expression evaluated over a set, using the biased population formula (dividing by *n*-1).  
   

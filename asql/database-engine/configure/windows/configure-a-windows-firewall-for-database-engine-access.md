@@ -19,23 +19,23 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Configure a Windows Firewall for Database Engine Access
-  This topic describes how to configure a Windows firewall for Database Engine access in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using SQL Server Configuration Manager. Firewall systems help prevent unauthorized access to computer resources. To access an instance of the [!INCLUDE[ssDEnoversion](../../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] through a firewall, you must configure the firewall on the computer running [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to allow access.  
+  This topic describes how to configure a Windows firewall for Database Engine access in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using SQL Server Configuration Manager. Firewall systems help prevent unauthorized access to computer resources. To access an instance of the [!INCLUDE[ssDEnoversion](../../../a9notintoc/includes/ssdenoversion-md.md)] through a firewall, you must configure the firewall on the computer running [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] to allow access.  
   
- For more information about the default Windows firewall settings, and a description of the TCP ports that affect the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)], Analysis Services, Reporting Services, and Integration Services, see [Configure the Windows Firewall to Allow SQL Server Access](../../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). There are many firewall systems available. For information specific to your system, see the firewall documentation.  
+ For more information about the default Windows firewall settings, and a description of the TCP ports that affect the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)], Analysis Services, Reporting Services, and Integration Services, see [Configure the Windows Firewall to Allow SQL Server Access](../../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). There are many firewall systems available. For information specific to your system, see the firewall documentation.  
   
  The principal steps to allow access are:  
   
-1.  Configure the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] to use a specific TCP/IP port. The default instance of the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] uses port 1433, but that can be changed. The port used by the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] is listed in the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log. Instances of [!INCLUDE[ssExpress](../../../database-engine/configure/windows/includes/ssexpress-md.md)], [!INCLUDE[ssEW](../../../analysis-services/instances/includes/ssew-md.md)], and named instances of the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] use dynamic ports. To configure these instances to use a specific port, see [Configure a Server to Listen on a Specific TCP Port &#40;SQL Server Configuration Manager&#41;](../Topic/Configure%20a%20Server%20to%20Listen%20on%20a%20Specific%20TCP%20Port%20\(SQL%20Server%20Configuration%20Manager\).md).  
+1.  Configure the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] to use a specific TCP/IP port. The default instance of the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] uses port 1433, but that can be changed. The port used by the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] is listed in the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] error log. Instances of [!INCLUDE[ssExpress](../../../a9notintoc/includes/ssexpress-md.md)], [!INCLUDE[ssEW](../../../a9retired/includes/ssew-md.md)], and named instances of the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] use dynamic ports. To configure these instances to use a specific port, see [Configure a Server to Listen on a Specific TCP Port &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure/windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 2.  Configure the firewall to allow access to that port for authorized users or computers.  
   
 > [!NOTE]  
->  The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Browser service lets users connect to instances of the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] that are not listening on port 1433, without knowing the port number. To use [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Browser, you must open UDP port 1434. To promote the most secure environment, leave the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Browser service stopped, and configure clients to connect using the port number.  
+>  The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Browser service lets users connect to instances of the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] that are not listening on port 1433, without knowing the port number. To use [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Browser, you must open UDP port 1434. To promote the most secure environment, leave the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Browser service stopped, and configure clients to connect using the port number.  
   
 > [!NOTE]  
->  By default, [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows enables the Windows Firewall, which closes port 1433 to prevent Internet computers from connecting to a default instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] on your computer. Connections to the default instance using TCP/IP are not possible unless you reopen port 1433. The basic steps to configure the Windows firewall are provided in the following procedures. For more information, see the Windows documentation.  
+>  By default, [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Windows enables the Windows Firewall, which closes port 1433 to prevent Internet computers from connecting to a default instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] on your computer. Connections to the default instance using TCP/IP are not possible unless you reopen port 1433. The basic steps to configure the Windows firewall are provided in the following procedures. For more information, see the Windows documentation.  
   
- As an alternative to configuring [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to listen on a fixed port and opening the port, you can list the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] executable (Sqlservr.exe) as an exception to the blocked programs. Use this method when you want to continue to use dynamic ports. Only one instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] can be accessed in this way.  
+ As an alternative to configuring [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] to listen on a fixed port and opening the port, you can list the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] executable (Sqlservr.exe) as an exception to the blocked programs. Use this method when you want to continue to use dynamic ports. Only one instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] can be accessed in this way.  
   
  **In This Topic**  
   
@@ -65,11 +65,11 @@ manager: "jhubbard"
   
 3.  In the **Rule Type** dialog box, select **Port**, and then click **Next**.  
   
-4.  In the **Protocol and Ports** dialog box, select **TCP**. Select **Specific local ports**, and then type the port number of the instance of the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)], such as **1433** for the default instance. Click **Next**.  
+4.  In the **Protocol and Ports** dialog box, select **TCP**. Select **Specific local ports**, and then type the port number of the instance of the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)], such as **1433** for the default instance. Click **Next**.  
   
 5.  In the **Action** dialog box, select **Allow the connection**, and then click **Next**.  
   
-6.  In the **Profile** dialog box, select any profiles that describe the computer connection environment when you want to connect to the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)], and then click **Next**.  
+6.  In the **Profile** dialog box, select any profiles that describe the computer connection environment when you want to connect to the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)], and then click **Next**.  
   
 7.  In the **Name** dialog box, type a name and description for this rule, and then click **Finish**.  
   
@@ -81,11 +81,11 @@ manager: "jhubbard"
   
 3.  In the **Rule Type** dialog box, select **Program**, and then click **Next**.  
   
-4.  In the **Program** dialog box, select **This program path**. Click **Browse**, and navigate to the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that you want to access through the firewall, and then click **Open**. By default, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is at **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**. Click **Next**.  
+4.  In the **Program** dialog box, select **This program path**. Click **Browse**, and navigate to the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] that you want to access through the firewall, and then click **Open**. By default, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is at **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**. Click **Next**.  
   
 5.  In the **Action** dialog box, select **Allow the connection**, and then click **Next**.  
   
-6.  In the **Profile** dialog box, select any profiles that describe the computer connection environment when you want to connect to the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)], and then click **Next**.  
+6.  In the **Profile** dialog box, select any profiles that describe the computer connection environment when you want to connect to the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)], and then click **Next**.  
   
 7.  In the **Name** dialog box, type a name and description for this rule, and then click **Finish**.  
   

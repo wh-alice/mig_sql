@@ -102,6 +102,6 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ## See Also  
  [KPIs &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [Create and Manage KPIs &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
- [Calculated Columns &#40;SSAS Tabular&#41;](../Topic/Calculated%20Columns%20\(SSAS%20Tabular\).md)  
+ [Calculated Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

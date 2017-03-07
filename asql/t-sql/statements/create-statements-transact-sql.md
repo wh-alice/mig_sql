@@ -22,9 +22,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CREATE Statements (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] contains the following CREATE statements. Use CREATE statements to define new entities. For example, use CREATE TABLE to add a new table to a database.  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] contains the following CREATE statements. Use CREATE statements to define new entities. For example, use CREATE TABLE to add a new table to a database.  
   
 ## In This Section  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
 |[CREATE CREDENTIAL](../../t-sql/statements/create-credential-transact-sql.md)|[CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)|[CREATE SYMMETRIC KEY](../../t-sql/statements/create-symmetric-key-transact-sql.md)|  
 |[CREATE CRYPTOGRAPHIC PROVIDER](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)|[CREATE MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md)|[CREATE SYNONYM](../../t-sql/statements/create-synonym-transact-sql.md)|  
 |[CREATE DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md)|[CREATE MESSAGE TYPE](../../t-sql/statements/create-message-type-transact-sql.md)|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|  
-|[CREATE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)|[CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)|[CREATE TABLE (Azure SQL Database)](../Topic/CREATE%20TABLE%20on%20Azure%20SQL%20Database.md)|  
+|[CREATE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)|[CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)|[CREATE TABLE (Azure SQL Database)](../../a9retired/create-table-on-azure-sql-database.md)|  
 |[CREATE DATABASE (SQL Server)](../../t-sql/statements/create-database-sql-server-transact-sql.md)|[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)|[CREATE TABLE &#40;Azure SQL Data Warehouse, Parallel Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)|  
 |[CREATE DATABASE (Azure SQL Database)](../../t-sql/statements/create-database-azure-sql-database.md)|[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)|[CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)|  
 |[CREATE DATABASE AUDIT SPECIFICATION](../../t-sql/statements/create-database-audit-specification-transact-sql.md)|[CREATE QUEUE](../../t-sql/statements/create-queue-transact-sql.md)|[CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)|  

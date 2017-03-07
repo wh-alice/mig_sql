@@ -36,7 +36,7 @@ manager: "jhubbard"
 ## Trigger Security Best Practices  
  You can take the following measures to prevent trigger code from executing under escalated privileges:  
   
--   Be aware of the DML and DDL triggers that exist in the database and on the server instance by querying the [sys.triggers](../../relational-databases/system-catalog-views/sys.triggers-transact-sql.md) and [sys.server_triggers](../../relational-databases/system-catalog-views/sys.server-triggers-transact-sql.md) catalog views. The following query returns all DML and database-level DDL triggers in the current database, and all server-level DDL triggers on the server instance:  
+-   Be aware of the DML and DDL triggers that exist in the database and on the server instance by querying the [sys.triggers](../../relational-databases/reference/system-catalog-views/sys.triggers-transact-sql.md) and [sys.server_triggers](../../relational-databases/reference/system-catalog-views/sys.server-triggers-transact-sql.md) catalog views. The following query returns all DML and database-level DDL triggers in the current database, and all server-level DDL triggers on the server instance:  
   
     ```  
     SELECT type, name, parent_class_desc FROM sys.triggers  

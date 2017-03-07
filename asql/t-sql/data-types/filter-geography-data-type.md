@@ -43,7 +43,7 @@ manager: "jhubbard"
  Is another **geography** instance to compare against the instance on which Filter() is invoked.  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **bit**  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] return type: **bit**  
   
  CLR return type: **SqlBoolean**  
   

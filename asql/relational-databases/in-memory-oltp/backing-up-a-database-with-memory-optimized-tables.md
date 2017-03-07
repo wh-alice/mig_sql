@@ -15,7 +15,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Backing Up a Database with Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Memory-optimized tables are backed up as part of regular database backups. As for disk-based tables, the CHECKSUM of data and delta file pairs is validated as part of the database backup to detect storage corruption.  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
 |MERGE TARGET|File metadata only|  
 |WAITING FOR LOG TRUNCATION|File metadata plus used bytes|  
   
- For descriptions of the states for checkpoint file pairs, see [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-xtp-checkpoint-files-transact-sql.md), and its column state_desc.  
+ For descriptions of the states for checkpoint file pairs, see [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-xtp-checkpoint-files-transact-sql.md), and its column state_desc.  
   
  The size of database backups with one or more memory-optimized tables is typically larger than its size in memory, but smaller than its on-disk storage. The extra size depends on the number of deleted rows, among other factors.  
   
@@ -66,6 +66,6 @@ manager: "jhubbard"
  If memory-optimized tables are a significant portion of your database size, the differential backup can significantly reduce the size of your database backup. For typical OLTP workloads, the differential backups will be considerably smaller than the full database backups.  
   
 ## See Also  
- [Backup, Restore, and Recovery of Memory-Optimized Tables](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+ [Backup, Restore, and Recovery of Memory-Optimized Tables](../../a9retired/backup-restore-and-recovery-of-memory-optimized-tables.md)  
   
   

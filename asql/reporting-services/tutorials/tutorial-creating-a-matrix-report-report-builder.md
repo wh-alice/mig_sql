@@ -17,7 +17,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Tutorial: Creating a Matrix Report (Report Builder)
-This tutorial teaches you to create a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report with a matrix of sample sales data in nested row and column groups. 
+This tutorial teaches you to create a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report with a matrix of sample sales data in nested row and column groups. 
 
 You also create an adjacent column group, format columns, and rotate text. The following illustration shows a report similar to the one you will create.  
   
@@ -36,7 +36,7 @@ In this section, you choose a shared data source, create an embedded dataset, an
   
 ### To create a matrix  
   
-1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
+1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
   
     The **New Report or Dataset** dialog box opens.  
   
@@ -263,7 +263,7 @@ The corner area is in the upper left corner of the matrix. Depending on the numb
   
 6.  On the **Border** tab > **Presets** > **None**.
   
-9. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 10. Click **Run** to preview your report.  
   

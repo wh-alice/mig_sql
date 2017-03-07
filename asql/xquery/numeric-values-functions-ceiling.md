@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Numeric Values Functions - ceiling 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns the smallest number without a fractional part and that is not less than the value of its argument. If the argument is an empty sequence, it returns the empty sequence.  
   
@@ -99,7 +99,7 @@ ProductModelID Result
 -   The **ceiling()** function maps all integer values to xs:decimal.  
   
 ## See Also  
- [floor Function &#40;XQuery&#41;](../Topic/floor%20Function%20\(XQuery\).md)   
- [round Function &#40;XQuery&#41;](../Topic/round%20Function%20\(XQuery\).md)  
+ [floor Function &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
+ [round Function &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
   
   

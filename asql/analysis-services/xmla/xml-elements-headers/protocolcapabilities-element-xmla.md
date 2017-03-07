@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # ProtocolCapabilities Element (XMLA)
-  Uses the SOAP header in a SOAP request message to identify protocol capabilities between an instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] and a client application.  
+  Uses the SOAP header in a SOAP request message to identify protocol capabilities between an instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] and a client application.  
   
  **Namespace** http://schemas.microsoft.com/analysisservices/2003/engine  
   
@@ -67,24 +67,24 @@ manager: "erikre"
 |Child elements|[Capability](../../../analysis-services/xmla/xml-elements-properties/capability-element-xmla.md)|  
   
 ## Remarks  
- The **ProtocolCapabilities** element enables client applications to negotiate protocol capabilities, such as binary XML or compression support, with an [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance at any time. Protocol negotiation involves the following steps:  
+ The **ProtocolCapabilities** element enables client applications to negotiate protocol capabilities, such as binary XML or compression support, with an [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance at any time. Protocol negotiation involves the following steps:  
   
 1.  The client application identifies its protocol capability by sending a SOAP request that includes the **ProtocolCapabilities** element as part of the SOAP header.  
   
-2.  The [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance receives and processes the SOAP request.  
+2.  The [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance receives and processes the SOAP request.  
   
-3.  If the [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance has the same protocol capability as that requested, the instance sends a SOAP response that includes the same **ProtocolCapabilities** element sent in the SOAP request, and the protocol has been successfully negotiated. Otherwise, the protocol capabilities are not successfully negotiated, and the instance returns a SOAP fault.  
+3.  If the [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance has the same protocol capability as that requested, the instance sends a SOAP response that includes the same **ProtocolCapabilities** element sent in the SOAP request, and the protocol has been successfully negotiated. Otherwise, the protocol capabilities are not successfully negotiated, and the instance returns a SOAP fault.  
   
- After successfully negotiating protocol capabilities, how long the client application and the [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance use a particular protocol depends upon whether the session is explicit or implicit:  
+ After successfully negotiating protocol capabilities, how long the client application and the [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance use a particular protocol depends upon whether the session is explicit or implicit:  
   
 -   An explicit session is one that is created using the [BeginSession](../../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md) header element. For an explicit session, the negotiated protocol is used until either the client application sends a new **ProtocolCapabilities** element or the session ends.  
   
--   An implicit session is one that is created by an [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance and not explicitly specified by the client application when submitting a SOAP request. For an implicit session, the negotiated protocol is used only until the SOAP request is completed.  
+-   An implicit session is one that is created by an [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance and not explicitly specified by the client application when submitting a SOAP request. For an implicit session, the negotiated protocol is used only until the SOAP request is completed.  
   
- Protocol capabilities do not have to be explicitly negotiated. That is, a client application does not have to include a **ProtocolCapabilities** element as part of the SOAP request. If a SOAP request does not include a **ProtocolCapabilities** element, the [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance responds using the same format as the SOAP request.  
+ Protocol capabilities do not have to be explicitly negotiated. That is, a client application does not have to include a **ProtocolCapabilities** element as part of the SOAP request. If a SOAP request does not include a **ProtocolCapabilities** element, the [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance responds using the same format as the SOAP request.  
   
 ## See Also  
  [Managing Connections and Sessions &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [Headers &#40;XMLA&#41;](../Topic/Headers%20\(XMLA\).md)  
+ [Headers &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   

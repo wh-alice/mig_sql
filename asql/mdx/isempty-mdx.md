@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # IsEmpty (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns whether the evaluated expression is the empty cell value.  
   
@@ -42,7 +42,7 @@ IsEmpty(Value_Expression)
 > [!NOTE]  
 >  The default property for a member is the value of the member.  
   
- The **IsEmpty** function is the only way to reliably test for an empty cell because the empty cell value has special meaning in [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)].  
+ The **IsEmpty** function is the only way to reliably test for an empty cell because the empty cell value has special meaning in [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  If the evaluation of the value expression returns an error, the function will return **false**. A value expression can return an error, for example, if a properties reference refers to an invalid or non-existent property.  

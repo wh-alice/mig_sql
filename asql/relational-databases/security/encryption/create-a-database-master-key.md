@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create a Database Master Key
-  This topic describes how to create a database master key in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to create a database master key in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 1.  Choose a password for encrypting the copy of the master key that will be stored in the database.  
   
-2.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+2.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 3.  On the Standard bar, click **New Query**.  
   

@@ -15,9 +15,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 2: Writing Transact-SQL
-[!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] is an integrated development environment for writing [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)], MDX, DMX, and XML queries, and SQLCMD commands. The tutorial illustrates using the Database Engine Query Editor to write a [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] script.  
+[!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] is an integrated development environment for writing [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)], MDX, DMX, and XML queries, and SQLCMD commands. The tutorial illustrates using the Database Engine Query Editor to write a [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] script.  
   
->**PLEASE NOTE!!** This lesson focuses on using SSMS while working with T-SQL statements, **not on how to write T-SQL statements!** For a tutorial on writing [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statements, see [Tutorial: Writing Transact-SQL Statements](../../../t-sql/tutorials/tutorial-writing-transact-sql-statements.md).  
+>**PLEASE NOTE!!** This lesson focuses on using SSMS while working with T-SQL statements, **not on how to write T-SQL statements!** For a tutorial on writing [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statements, see [Tutorial: Writing Transact-SQL Statements](../../../t-sql/tutorials/tutorial-writing-transact-sql-statements.md).  
   
 This lesson covers the following topics:  
   
@@ -35,7 +35,7 @@ This lesson covers the following topics:
   
  
 ## Next Task in Lesson  
-[Connecting with Query Editor](../Topic/Connecting%20with%20Query%20Editor.md)  
+[Connecting with Query Editor](../../../tools/sql-server-management-studio/tutorials/lesson-2-1-connecting-with-query-editor.md)  
   
   
   

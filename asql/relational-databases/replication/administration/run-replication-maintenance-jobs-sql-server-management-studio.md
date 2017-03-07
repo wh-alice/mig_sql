@@ -31,11 +31,11 @@ manager: "jhubbard"
   
 -   **Expired subscription clean up**  
   
- Start and stop these jobs from the **Jobs** folder in [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and from the **Agents** tab in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md). View and modify properties for each job in the **Job Properties - \<Job>** dialog box, which is available from the same folder and tab.  
+ Start and stop these jobs from the **Jobs** folder in [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] and from the **Agents** tab in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md). View and modify properties for each job in the **Job Properties - \<Job>** dialog box, which is available from the same folder and tab.  
   
 ### To start or stop a replication maintenance job in Management Studio  
   
-1.  Connect to the Distributor in [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Distributor in [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **SQL Server Agent** folder, and then expand the **Jobs** folder.  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 ### To view and modify properties for a replication maintenance job in Management Studio  
   
-1.  Connect to the Distributor in [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Distributor in [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **SQL Server Agent** folder, and then expand the **Jobs** folder.  
   

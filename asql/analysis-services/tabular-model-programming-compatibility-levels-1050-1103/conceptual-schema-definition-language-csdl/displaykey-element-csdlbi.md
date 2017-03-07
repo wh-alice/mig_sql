@@ -73,7 +73,7 @@ manager: "erikre"
 ```  
   
 ## See Also  
- [Understanding the Tabular Object Model at Compatibility Levels 1050 through 1103](../Topic/Understanding%20the%20Tabular%20Object%20Model%20at%20Compatibility%20Levels%201050%20through%201103.md)   
+ [Understanding the Tabular Object Model at Compatibility Levels 1050 through 1103](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
  [CSDLBI Concepts](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md)  
   
   

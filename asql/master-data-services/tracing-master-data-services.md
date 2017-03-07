@@ -15,7 +15,7 @@ ms.author: "carlasab"
 manager: "erikre"
 ---
 # Tracing (Master Data Services)
-  The Web.config file contains a tracing section, as shown below. This section is new in [!INCLUDE[ssSQL15](../analysis-services/powershell/includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)]  
+  The Web.config file contains a tracing section, as shown below. This section is new in [!INCLUDE[ssSQL15](../a9notintoc/includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)]  
   
 ```  
 <sources>  

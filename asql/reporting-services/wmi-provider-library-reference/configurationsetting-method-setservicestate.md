@@ -43,7 +43,7 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
  A **Boolean** value indicating the state of the Windows service. A value of **true** starts the Report Server Windows service; a value of **false** stops the Windows service.  
   
  *EnableWebService*  
- A **Boolean** value indicating the state of the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Web service. A value of **true** starts the Report Server Web service; a value of **false** stops the Web service  
+ A **Boolean** value indicating the state of the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] Web service. A value of **true** starts the Report Server Web service; a value of **false** stops the Web service  
   
  *EnableReportManager*  
  A **Boolean** value indicating the desired state of the Report manager.  

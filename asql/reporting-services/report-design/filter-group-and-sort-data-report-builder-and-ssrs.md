@@ -50,7 +50,7 @@ manager: "erikre"
 -   [Report Samples (Report Builder and SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ##  <a name="Filtering"></a> Filtering Data in the Report  
  Filters are parts of a report that help control report data after it is retrieved from the data connection. Use filters when you cannot change a dataset query to filter data before it is retrieved from an external data source.  
@@ -61,9 +61,9 @@ manager: "erikre"
   
  For each filter, you specify a *filter equation*. A filter equation includes a dataset field or expression that specifies the data to filter, an operator, and a value to compare. Only those data values that match the filter condition are included when the item is processed.  
   
- To enable your users to help control the data in a report, you can include parameters in filter expressions. For more information, see [Parameters Collection References &#40;Report Builder and SSRS&#41;](../Topic/Parameters%20Collection%20References%20\(Report%20Builder%20and%20SSRS\).md).  
+ To enable your users to help control the data in a report, you can include parameters in filter expressions. For more information, see [Parameters Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).  
   
- To customize a view for each user, you can include a reference to the built-in field UserID in a filter. For more information, see [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](../Topic/Built-in%20Globals%20and%20Users%20References%20\(Report%20Builder%20and%20SSRS\).md).  
+ To customize a view for each user, you can include a reference to the built-in field UserID in a filter. For more information, see [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
   
 ##  <a name="Grouping"></a> Grouping Data in the Report  
@@ -85,7 +85,7 @@ manager: "erikre"
   
  The group name identifies an expression scope. You can specify the name of a group as a scope in which to calculate aggregates, to organize data hierarchically and toggle the display of child nodes from parent nodes in a drilldown report, to display different views of the same data on multiple data regions, and to visualize summary data in a table, matrix, chart, gauge, or map. For more information, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/a8d24287-8557-4b03-bea7-ca087f449b62.md).  
   
- To group on several dataset fields, add each field to the set of group expressions. You can also write your own group expressions in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)]. For example, you can group by a range of values, or by using a report parameter to enable your user to select how to group data in a data region. For more information, see [Group Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
+ To group on several dataset fields, add each field to the set of group expressions. You can also write your own group expressions in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)]. For example, you can group by a range of values, or by using a report parameter to enable your user to select how to group data in a data region. For more information, see [Group Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
  For report presentation, you can add page breaks before and after each group, or each instance of a group, to reduce the amount of data on each page and help you manage report rendering performance. For more information, see [Add a Page Break &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
   
@@ -94,7 +94,7 @@ manager: "erikre"
 ### Defining Group Variables  
  When you define a group, you can create a group variable to use in expressions that are scoped to the group and accessed from nested groups. A group variable is calculated once per group instance and can be accessed from expressions in child groups. For example, for data that is grouped by region and subregion, you can calculate a tax for each region and use that tax in calculations from the subregion group.  
   
- For more information, see [Report and Group Variables Collections References &#40;Report Builder and SSRS&#41;](../Topic/Report%20and%20Group%20Variables%20Collections%20References%20\(Report%20Builder%20and%20SSRS\).md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/a8d24287-8557-4b03-bea7-ca087f449b62.md).  
+ For more information, see [Report and Group Variables Collections References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/a8d24287-8557-4b03-bea7-ca087f449b62.md).  
   
 ### Groups and Scope in Data Regions  
  To provide multiple views of data from the same dataset, you can specify the same group expressions for eac data region. For example, you can display categorized data in a table to show all detail data and in a pie chart to show aggregates and to help visualize each category in relation to the entire dataset. For more information, see [Linking Multiple Data Regions to the Same Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
@@ -107,12 +107,12 @@ manager: "erikre"
   
  All three types of sorts can be combined in the same report. By default, sort order is determined by the order in which data is returned by the dataset query. Sort expressions are applied in the data region and data region group. Interactive sorts are applied after sort expressions.  
   
- For expressions that contain aggregate functions, most results are not affected by sort order. Return values for the following aggregate functions are affected by sort order:: First, Last, and Previous. For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../Topic/Aggregate%20Functions%20Reference%20\(Report%20Builder%20and%20SSRS\).md).  
+ For expressions that contain aggregate functions, most results are not affected by sort order. Return values for the following aggregate functions are affected by sort order:: First, Last, and Previous. For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ### Sorting Data in a Dataset Query  
  Include sort order in the dataset query to pre-sort data before it is retrieved for a report. By sorting data in the query, the sorting work is done by the data source instead of by the report processor.  
   
- For a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data source type, you can add an ORDER BY clause to the dataset query. For example, the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] query sorts the columns Sales and Region by Sales in descending order from the table SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. For more information, see "Sorting Rows with ORDER BY" in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=98335).  
+ For a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data source type, you can add an ORDER BY clause to the dataset query. For example, the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] query sorts the columns Sales and Region by Sales in descending order from the table SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. For more information, see "Sorting Rows with ORDER BY" in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=98335).  
   
 > [!NOTE]  
 >  Not all data sources support the ability to specify sort order in the query.  
@@ -137,7 +137,7 @@ manager: "erikre"
   
  Alternatively, you can define a dataset that includes only the sizes and a value that specifies the order that you want. You can change the sort expression to use the Lookup function for the sort order value.  
   
- For example, assume that the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] query defines a dataset named Sizes. The query uses a CASE statement to define a sort order value SizeSortOrder for each value of Size:  
+ For example, assume that the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] query defines a dataset named Sizes. The query uses a CASE statement to define a sort order value SizeSortOrder for each value of Size:  
   
 ```  
 SELECT Size,   
@@ -157,7 +157,7 @@ FROM Production.Product
 =Lookup(Fields!Size.Value, Fields!Size.Value, Fields!SizeSortOrder.Value, "Sizes")  
 ```  
   
- For more information, see [Sort Data in a Data Region &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md) and [Lookup Function &#40;Report Builder and SSRS&#41;](../Topic/Lookup%20Function%20\(Report%20Builder%20and%20SSRS\).md).  
+ For more information, see [Sort Data in a Data Region &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md) and [Lookup Function &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md).  
   
 ###  <a name="Interactive"></a> Adding Interactive Sorting for the User  
  To enable a user to change the sort order of report data in a table or matrix, you can add interactive sort buttons to column headers or group headers. Users can click the button to toggle the sort order. Interactive sort is supported in rendering formats that allow user interaction, such as HTML.  
@@ -198,7 +198,7 @@ FROM Production.Product
   
  [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/a8d24287-8557-4b03-bea7-ca087f449b62.md)  
   
- [Report and Group Variables Collections References &#40;Report Builder and SSRS&#41;](../Topic/Report%20and%20Group%20Variables%20Collections%20References%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Report and Group Variables Collections References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
  [Displaying a Series with Multiple Data Ranges on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/45da3d39-278e-4760-a4b3-9932c9547cf2.md)  
   

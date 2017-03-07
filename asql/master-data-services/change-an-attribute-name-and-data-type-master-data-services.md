@@ -18,7 +18,7 @@ ms.author: "carlasab"
 manager: "erikre"
 ---
 # Change an Attribute Name and Data Type (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], you can change the name of an attribute.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], you can change the name of an attribute.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -29,7 +29,7 @@ manager: "erikre"
   
 ### To change an attribute name and type  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **System Administration**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **System Administration**.  
   
 2.  On the **Manage Model** page, select a model from the grid and then click **Entities**.  
   

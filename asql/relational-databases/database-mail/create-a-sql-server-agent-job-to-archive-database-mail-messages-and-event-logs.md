@@ -58,7 +58,7 @@ manager: "jhubbard"
   
 ## To create a SQL Server Agent job  
   
-1.  In Object Explorer, expand [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent, right-click **Jobs**, and then click **New Job**.  
+1.  In Object Explorer, expand [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent, right-click **Jobs**, and then click **New Job**.  
   
 2.  In the **New Job** dialog box, in the **Name** box, type **Archive Database Mail**.  
   

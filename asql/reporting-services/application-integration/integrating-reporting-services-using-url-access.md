@@ -26,14 +26,14 @@ manager: "erikre"
  You can use URL access to embed hyperlinks to reports and other report server items in the applications that you develop, whether in a Windows or Web environment.  
   
 > [!NOTE]  
->  The topics in the section provide you with some basic ideas for integration. You can use the information to begin to design and develop your own [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] integration scenarios.  
+>  The topics in the section provide you with some basic ideas for integration. You can use the information to begin to design and develop your own [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] integration scenarios.  
   
 ## In This Section  
- [Using URL Access in a Web Application](../Topic/Using%20URL%20Access%20in%20a%20Web%20Application.md)  
- Describes how to use URL access to integrate [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] into a Web environment.  
+ [Using URL Access in a Web Application](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-web-application.md)  
+ Describes how to use URL access to integrate [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] into a Web environment.  
   
- [Using URL Access in a Windows Application](../Topic/Using%20URL%20Access%20in%20a%20Windows%20Application.md)  
- Describes how to use URL access to integrate [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] into a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Win32 environment.  
+ [Using URL Access in a Windows Application](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)  
+ Describes how to use URL access to integrate [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] into a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Win32 environment.  
   
 ## See Also  
  [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   

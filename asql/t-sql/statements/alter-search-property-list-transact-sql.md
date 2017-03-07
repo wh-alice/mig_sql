@@ -28,7 +28,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # ALTER SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Adds a specified search property to, or drops it from the specified search property list.  
   
@@ -55,7 +55,7 @@ ALTER SEARCH PROPERTY LIST list_name
  *list_name*  
  Is the name of the property list being altered. *list_name* is an identifier.  
   
- To view the names of the existing property lists, use the [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys.registered-search-property-lists-transact-sql.md) catalog view, as follows:  
+ To view the names of the existing property lists, use the [sys.registered_search_property_lists](../../relational-databases/reference/system-catalog-views/sys.registered-search-property-lists-transact-sql.md) catalog view, as follows:  
   
 ```  
 SELECT name FROM sys.registered_search_property_lists;  
@@ -72,7 +72,7 @@ SELECT name FROM sys.registered_search_property_lists;
   
  Developers will need to use the value you specify for *property_name* to identify the property in the [CONTAINS](../Topic/CONTAINS%20\(Transact-SQL\).md) predicate. Therefore, when adding a property it is important to specify a value that meaningfully represents the property defined by the specified property set GUID (*property_set_guid*) and property identifier (*property_int_id*). For more information about property names, see "Remarks," later in this topic.  
   
- To view the names of properties that currently exist in a search property list of the current database, use the [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys.registered-search-properties-transact-sql.md) catalog view, as follows:  
+ To view the names of properties that currently exist in a search property list of the current database, use the [sys.registered_search_properties](../../relational-databases/reference/system-catalog-views/sys.registered-search-properties-transact-sql.md) catalog view, as follows:  
   
 ```  
 SELECT property_name FROM sys.registered_search_properties;  
@@ -81,7 +81,7 @@ SELECT property_name FROM sys.registered_search_properties;
  PROPERTY_SET_GUID ='*property_set_guid*'  
  Specifies the identifier of the property set to which the property belongs. This is a globally unique identifier (GUID). For information about obtaining this value, see "Remarks," later in this topic.  
   
- To view the property set GUID of any property that exists in a search property list of the current database, use the [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys.registered-search-properties-transact-sql.md) catalog view, as follows:  
+ To view the property set GUID of any property that exists in a search property list of the current database, use the [sys.registered_search_properties](../../relational-databases/reference/system-catalog-views/sys.registered-search-properties-transact-sql.md) catalog view, as follows:  
   
 ```  
 SELECT property_set_guid FROM sys.registered_search_properties;  
@@ -90,7 +90,7 @@ SELECT property_set_guid FROM sys.registered_search_properties;
  PROPERTY_INT_ID =*property_int_id*  
  Specifies the integer that identifies the property within its property set. For information about obtaining this value, see "Remarks."  
   
- To view the integer identifier of any property that exists in a search property list of the current database, use the [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys.registered-search-properties-transact-sql.md) catalog view, as follows:  
+ To view the integer identifier of any property that exists in a search property list of the current database, use the [sys.registered_search_properties](../../relational-databases/reference/system-catalog-views/sys.registered-search-properties-transact-sql.md) catalog view, as follows:  
   
 ```  
 SELECT property_int_id FROM sys.registered_search_properties;  
@@ -208,9 +208,9 @@ DROP 'Comments' ;
 ## See Also  
  [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
  [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)   
- [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.registered-search-properties-transact-sql.md)   
- [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.registered-search-property-lists-transact-sql.md)   
- [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-index-keywords-by-property-transact-sql.md)   
+ [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.registered-search-properties-transact-sql.md)   
+ [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.registered-search-property-lists-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-index-keywords-by-property-transact-sql.md)   
  [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)  
   

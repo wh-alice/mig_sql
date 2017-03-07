@@ -42,7 +42,7 @@ FROM tbl_B
 WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);  
 ```  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -187,7 +187,7 @@ SET
  USING <table_source>  
  Specifies the data source that is matched with the data rows in *target_table* based on <merge_search condition>. The result of this match dictates the actions to take by the WHEN clauses of the MERGE statement. <table_source> can be a remote table or a derived table that accesses remote tables.  
   
- <table_source> can be a derived table that uses the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] [table value constructor](../../t-sql/queries/table-value-constructor-transact-sql.md) to construct a table by specifying multiple rows.  
+ <table_source> can be a derived table that uses the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] [table value constructor](../../t-sql/queries/table-value-constructor-transact-sql.md) to construct a table by specifying multiple rows.  
   
  For more information about the syntax and arguments of this clause, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
@@ -200,7 +200,7 @@ SET
  WHEN MATCHED THEN <merge_matched>  
  Specifies that all rows of *target_table* that match the rows returned by <table_source> ON <merge_search_condition>, and satisfy any additional search condition, are either updated or deleted according to the <merge_matched> clause.  
   
- The MERGE statement can have at most two WHEN MATCHED clauses. If two clauses are specified, then the first clause must be accompanied by an AND <search_condition> clause. For any given row, the second WHEN MATCHED clause is only applied if the first is not. If there are two WHEN MATCHED clauses, then one must specify an UPDATE action and one must specify a DELETE action. If UPDATE is specified in the <merge_matched> clause, and more than one row of <table_source>matches a row in *target_table* based on <merge_search_condition>, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns an error. The MERGE statement cannot update the same row more than once, or update and delete the same row.  
+ The MERGE statement can have at most two WHEN MATCHED clauses. If two clauses are specified, then the first clause must be accompanied by an AND <search_condition> clause. For any given row, the second WHEN MATCHED clause is only applied if the first is not. If there are two WHEN MATCHED clauses, then one must specify an UPDATE action and one must specify a DELETE action. If UPDATE is specified in the <merge_matched> clause, and more than one row of <table_source>matches a row in *target_table* based on <merge_search_condition>, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns an error. The MERGE statement cannot update the same row more than once, or update and delete the same row.  
   
  WHEN NOT MATCHED [ BY TARGET ] THEN <merge_not_matched>  
  Specifies that a row is inserted into *target_table* for every row returned by <table_source> ON <merge_search_condition> that does not match a row in *target_table*, but does satisfy an additional search condition, if present. The values to insert are specified by the <merge_not_matched> clause. The MERGE statement can have only one WHEN NOT MATCHED clause.  
@@ -218,7 +218,7 @@ SET
  <table_hint_limited>  
  Specifies one or more table hints that are applied on the target table for each of the insert, update, or delete actions that are performed by the MERGE statement. The WITH keyword and the parentheses are required.  
   
- NOLOCK and READUNCOMMITTED are not allowed. For more information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+ NOLOCK and READUNCOMMITTED are not allowed. For more information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Specifying the TABLOCK hint on a table that is the target of an INSERT statement has the same effect as specifying the TABLOCKX hint. An exclusive lock is taken on the table. When FORCESEEK is specified, it is applied to the implicit instance of the target table joined with the source table.  
   
@@ -226,13 +226,13 @@ SET
 >  Specifying READPAST with WHEN NOT MATCHED [ BY TARGET ] THEN INSERT may result in INSERT operations that violate UNIQUE constraints.  
   
  INDEX ( index_val [ ,...n ] )  
- Specifies the name or ID of one or more indexes on the target table for performing an implicit join with the source table. For more information, see [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+ Specifies the name or ID of one or more indexes on the target table for performing an implicit join with the source table. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  <output_clause>  
  Returns a row for every row in *target_table* that is updated, inserted, or deleted, in no particular order. **$action** can be specified in the output clause. **$action** is a column of type **nvarchar(10)** that returns one of three values for each row: 'INSERT', 'UPDATE', or 'DELETE', according to the action that was performed on that row. For more information about the arguments of this clause, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  OPTION ( <query_hint> [ ,...n ] )  
- Specifies that optimizer hints are used to customize the way the Database Engine processes the statement. For more information, see [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).  
+ Specifies that optimizer hints are used to customize the way the Database Engine processes the statement. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
  <merge_matched>  
  Specifies the update or delete action that is applied to all rows of *target_table* that do not match the rows returned by <table_source> ON <merge_search_condition>, and that satisfy any additional search condition.  
@@ -276,7 +276,7 @@ SET
  The **MERGE** statement should not be used when using queued updating replication. The **MERGE** and queued updating trigger are not compatible. Replace the **MERGE** statement with an insert or an update statement.  
   
 ## Trigger Implementation  
- For every insert, update, or delete action specified in the MERGE statement, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] fires any corresponding AFTER triggers defined on the target table, but does not guarantee on which action to fire triggers first or last. Triggers defined for the same action honor the order you specify. For more information about setting trigger firing order, see [Specify First and Last Triggers](../../relational-databases/triggers/specify-first-and-last-triggers.md).  
+ For every insert, update, or delete action specified in the MERGE statement, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] fires any corresponding AFTER triggers defined on the target table, but does not guarantee on which action to fire triggers first or last. Triggers defined for the same action honor the order you specify. For more information about setting trigger firing order, see [Specify First and Last Triggers](../../relational-databases/triggers/specify-first-and-last-triggers.md).  
   
  If the target table has an enabled INSTEAD OF trigger defined on it for an insert, update, or delete action performed by a MERGE statement, then it must have an enabled INSTEAD OF trigger for all of the actions specified in the MERGE statement.  
   
@@ -290,7 +290,7 @@ SET
 ## Examples  
   
 ### A. Using MERGE to perform INSERT and UPDATE operations on a table in a single statement  
- A common scenario is updating one or more columns in a table if a matching row exists, or inserting the data as a new row if a matching row does not exist. This is usually done by passing parameters to a stored procedure that contains the appropriate UPDATE and INSERT statements. With the MERGE statement, you can perform both tasks in a single statement. The following example shows a stored procedure in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)]database that contains both an INSERT statement and an UPDATE statement. The procedure is then modified to perform the equivalent operations by using a single MERGE statement.  
+ A common scenario is updating one or more columns in a table if a matching row exists, or inserting the data as a new row if a matching row does not exist. This is usually done by passing parameters to a stored procedure that contains the appropriate UPDATE and INSERT statements. With the MERGE statement, you can perform both tasks in a single statement. The following example shows a stored procedure in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)]database that contains both an INSERT statement and an UPDATE statement. The procedure is then modified to perform the equivalent operations by using a single MERGE statement.  
   
 ```  
   
@@ -361,7 +361,7 @@ GO
 ```  
   
 ### B. Using MERGE to perform UPDATE and DELETE operations on a table in a single statement  
- The following example uses MERGE to update the `ProductInventory` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] sample database on a daily basis, based on orders that are processed in the `SalesOrderDetail` table. The `Quantity` column of the `ProductInventory` table is updated by subtracting the number of orders placed each day for each product in the `SalesOrderDetail` table. If the number of orders for a product drops the inventory level of a product to 0 or less, the row for that product is deleted from the `ProductInventory` table.  
+ The following example uses MERGE to update the `ProductInventory` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] sample database on a daily basis, based on orders that are processed in the `SalesOrderDetail` table. The `Quantity` column of the `ProductInventory` table is updated by subtracting the number of orders placed each day for each product in the `SalesOrderDetail` table. If the number of orders for a product drops the inventory level of a product to 0 or less, the row for that product is deleted from the `ProductInventory` table.  
   
 ```  
   
@@ -390,7 +390,7 @@ EXECUTE Production.usp_UpdateInventory '20030501'
 ```  
   
 ### C. Using MERGE to perform UPDATE and INSERT operations on a target table by using a derived source table  
- The following example uses MERGE to modify the `SalesReason` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database by either updating or inserting rows. When the value of `NewName` in the source table matches a value in the `Name` column of the target table, (`SalesReason`), the `ReasonType` column is updated in the target table. When the value of `NewName` does not match, the source row is inserted into the target table. The source table is a derived table that uses the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] table value constructor to specify multiple rows for the source table. For more information about using the table value constructor in a derived table, see [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md). The example also shows how to store the results of the OUTPUT clause in a table variable and then summarize the results of the MERGE statment by performing a simple select operation that returns the count of inserted and updated rows.  
+ The following example uses MERGE to modify the `SalesReason` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database by either updating or inserting rows. When the value of `NewName` in the source table matches a value in the `Name` column of the target table, (`SalesReason`), the `ReasonType` column is updated in the target table. When the value of `NewName` does not match, the source row is inserted into the target table. The source table is a derived table that uses the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] table value constructor to specify multiple rows for the source table. For more information about using the table value constructor in a derived table, see [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md). The example also shows how to store the results of the OUTPUT clause in a table variable and then summarize the results of the MERGE statment by performing a simple select operation that returns the count of inserted and updated rows.  
   
 ```  
 -- Create a temporary table variable to hold the output actions.  
@@ -413,7 +413,7 @@ GROUP BY Change;
 ```  
   
 ### D. Inserting the results of the MERGE statement into another table  
- The following example captures data returned from the OUTPUT clause of a MERGE statement and inserts that data into another table. The MERGE statement updates the `Quantity` column of the `ProductInventory` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database, based on orders that are processed in the `SalesOrderDetail` table. The example captures the rows that are updated and inserts them into another table that is used to track inventory changes.  
+ The following example captures data returned from the OUTPUT clause of a MERGE statement and inserts that data into another table. The MERGE statement updates the `Quantity` column of the `ProductInventory` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database, based on orders that are processed in the `SalesOrderDetail` table. The example captures the rows that are updated and inserts them into another table that is used to track inventory changes.  
   
 ```  
 CREATE TABLE Production.UpdatedInventory  

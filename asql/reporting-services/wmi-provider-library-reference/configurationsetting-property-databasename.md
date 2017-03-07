@@ -23,7 +23,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # ConfigurationSetting Property - DatabaseName
-  Specifies the name of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance that hosts the report server database. Read only.  
+  Specifies the name of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance that hosts the report server database. Read only.  
   
 ## Syntax  
   

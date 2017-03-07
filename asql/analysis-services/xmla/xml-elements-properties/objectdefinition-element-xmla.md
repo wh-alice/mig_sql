@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # ObjectDefinition Element (XMLA)
-  Contains one or more Analysis Services Scripting Language (ASSL) elements, used to create or alter objects on an instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].  
+  Contains one or more Analysis Services Scripting Language (ASSL) elements, used to create or alter objects on an instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].  
   
 ## Syntax  
   
@@ -57,12 +57,12 @@ manager: "erikre"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|[Alter](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md), [Create](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
-|Child elements|Required ASSL elements. One or more ASSL elements, used to define [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] objects. For more information about ASSL, see [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md).|  
+|Child elements|Required ASSL elements. One or more ASSL elements, used to define [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] objects. For more information about ASSL, see [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md).|  
   
 ## Remarks  
   
 ## Example  
- The following example creates an empty database named **Test Database** on an [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance.  
+ The following example creates an empty database named **Test Database** on an [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance.  
   
 ```  
   
@@ -77,6 +77,6 @@ manager: "erikre"
 ```  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

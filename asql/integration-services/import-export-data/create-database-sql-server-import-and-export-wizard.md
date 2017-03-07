@@ -17,12 +17,12 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Create Database (SQL Server Import and Export Wizard)
-If you select **New** on the **Choose a Destination** page to create a new SQL Server destination database, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard shows the **Create Database** dialog box. On this page, you provide a name for the new database. Optionally you can also change the settings for the initial size and the automatic growth of the new database and its log file. 
+If you select **New** on the **Choose a Destination** page to create a new SQL Server destination database, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard shows the **Create Database** dialog box. On this page, you provide a name for the new database. Optionally you can also change the settings for the initial size and the automatic growth of the new database and its log file. 
 
-The **Create Database** dialog box in the wizard offers only the basic options that are available for creating a new SQL Server database. To see and configure all the options for a new [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database, use [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to create the database, or to configure the database after the wizard creates it. 
+The **Create Database** dialog box in the wizard offers only the basic options that are available for creating a new SQL Server database. To see and configure all the options for a new [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database, use [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] to create the database, or to configure the database after the wizard creates it. 
 
 > [!NOTE]
-> If you're looking for info about the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] CREATE DATABASE statement, and not about the **Create Database** dialog box of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+> If you're looking for info about the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] CREATE DATABASE statement, and not about the **Create Database** dialog box of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
 
 ## Screen shot of the Create Database page  
 The following screen shot shows the **Create Database** dialog box of the wizard.  

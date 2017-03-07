@@ -15,11 +15,11 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Transact-SQL Support for In-Memory OLTP
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  The following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements include syntax options to support In-Memory OLTP:  
+  The following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements include syntax options to support In-Memory OLTP:  
   
--   [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md) (added **MEMORY_OPTIMIZED_DATA**)  
+-   [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) (added **MEMORY_OPTIMIZED_DATA**)  
   
 -   [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
 -   [DECLARE @local_variable &#40;Transact-SQL&#41;](../Topic/DECLARE%20@local_variable%20\(Transact-SQL\).md)   
     In a natively compiled stored procedure, you can declare a variable as **NOT NULL**. You cannot do so in a regular stored procedure.  
   
- **AUTO_UPDATE_STATISTICS** can be **ON** for memory-optimized tables, starting with SQL Server 2016. For more information, see [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md).  
+ **AUTO_UPDATE_STATISTICS** can be **ON** for memory-optimized tables, starting with SQL Server 2016. For more information, see [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-autostats-transact-sql.md).  
   
  [SET STATISTICS XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-xml-transact-sql.md) ON is not supported for natively compiled stored procedures.  
   

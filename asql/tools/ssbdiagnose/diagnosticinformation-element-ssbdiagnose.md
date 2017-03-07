@@ -52,7 +52,7 @@ manager: "jhubbard"
 |**Child elements**|[Banner Element &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/banner-element-ssbdiagnose.md)<br /><br /> [Issue Element &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/issue-element-ssbdiagnose.md)|  
   
 ## Remarks  
- For more information about XML namespaces, see [Namespaces in an XML Document](http://go.microsoft.com/fwlink/?LinkId=7341) in the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] MSDN Library.  
+ For more information about XML namespaces, see [Namespaces in an XML Document](http://go.microsoft.com/fwlink/?LinkId=7341) in the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] MSDN Library.  
   
 ## See Also  
  [ssbdiagnose Utility &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  

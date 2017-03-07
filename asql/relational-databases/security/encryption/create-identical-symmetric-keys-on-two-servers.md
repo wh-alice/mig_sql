@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create Identical Symmetric Keys on Two Servers
-  This topic describes how to create identical symmetric keys on two different servers in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]. In order to decrypt ciphertext, you need the key that was used to encrypt it. When both encryption and decryption occur in a single database, the key is stored in the database and it is available, depending on permissions, for both encryption and decryption. But when encryption and decryption occur in separate databases or on separate servers, the key stored in one database is not available for use on the second database  
+  This topic describes how to create identical symmetric keys on two different servers in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]. In order to decrypt ciphertext, you need the key that was used to encrypt it. When both encryption and decryption occur in a single database, the key is stored in the database and it is available, depending on permissions, for both encryption and decryption. But when encryption and decryption occur in separate databases or on separate servers, the key stored in one database is not available for use on the second database  
   
  **In This Topic**  
   
@@ -40,13 +40,13 @@ manager: "jhubbard"
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
- Requires ALTER ANY SYMMETRIC KEY permission on the database. If AUTHORIZATION is specified, requires IMPERSONATE permission on the database user or ALTER permission on the application role. If encryption is by certificate or asymmetric key, requires VIEW DEFINITION permission on the certificate or asymmetric key. Only Windows logins, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] logins, and application roles can own symmetric keys. Groups and roles cannot own symmetric keys.  
+ Requires ALTER ANY SYMMETRIC KEY permission on the database. If AUTHORIZATION is specified, requires IMPERSONATE permission on the database user or ALTER permission on the application role. If encryption is by certificate or asymmetric key, requires VIEW DEFINITION permission on the certificate or asymmetric key. Only Windows logins, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] logins, and application roles can own symmetric keys. Groups and roles cannot own symmetric keys.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To create identical symmetric keys on two different servers  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

@@ -27,21 +27,21 @@ manager: "jhubbard"
 # Integration Services Paths
   A path connects two components in a data flow by connecting the output of one data flow component to the input of another component. A path has a source and a destination. For example, if a path connects an OLE DB source and a Sort transformation, the OLE DB source is the source of the path, and the Sort transformation is the destination of the path. The source is the component where the path starts, and the destination is the component where the path ends.  
   
- If you run a package in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, you can view the data in a data flow by attaching data viewers to a path. A data viewer can be configured to display data in a grid. A data viewer is a useful debugging tool. For more information, see [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
+ If you run a package in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, you can view the data in a data flow by attaching data viewers to a path. A data viewer can be configured to display data in a grid. A data viewer is a useful debugging tool. For more information, see [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 ## Configure the path  
- The [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer provides the **Data Flow Path Editor** dialog box for setting path properties, viewing the metadata of the data columns that pass through the path, and configuring data viewers.  
+ The [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer provides the **Data Flow Path Editor** dialog box for setting path properties, viewing the metadata of the data columns that pass through the path, and configuring data viewers.  
   
  The configurable path properties include the name, description, and annotation of the path. You can also configure paths programmatically. For more information, see [Connecting Data Flow Components Programmatically](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
   
- A path annotation displays the name of the path source or the path name on the design surface of the **Data Flow** tab in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer. Path annotations are similar to the annotations you can add to data flows, control flows, and event handlers. The only difference is that a path annotation is attached to a path, whereas other annotations appear on the **Data Flow**, **Control Flow**, and **Event Handle**r tabs of [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer.  
+ A path annotation displays the name of the path source or the path name on the design surface of the **Data Flow** tab in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer. Path annotations are similar to the annotations you can add to data flows, control flows, and event handlers. The only difference is that a path annotation is attached to a path, whereas other annotations appear on the **Data Flow**, **Control Flow**, and **Event Handle**r tabs of [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer.  
   
  The metadata shows the name, data type, precision, scale, length, code page, and source component of each column in the output of the previous component. The source component is the data flow component that created the column. This may or may not be the first component in the data flow. For example, the Union All and Sort transformations create their own columns, and they are the sources of their output columns. In contrast, a Copy Column transformation can pass through columns without changing them or can create new columns by copying input columns. The Copy Column transformation is the source component only of the new columns.  
 
 ## Set the properties of a path with the Data Flow Path Editor
 Paths connect two data flow components. Before you can set path properties, the data flow must contain at least two connected data flow components.
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   
@@ -140,12 +140,12 @@ Use the **Data Viewers** page of the **Data Flow Path Editor** dialog box to man
  Click to configure a selected data viewer by using the **Configure Data Viewer** dialog box.  
  
 ## Path properties
-The data flow objects in the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] object model have common properties and custom properties at the level of the component, inputs and outputs, and input columns and output columns. Many properties have read-only values that are assigned at run time by the data flow engine.  
+The data flow objects in the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] object model have common properties and custom properties at the level of the component, inputs and outputs, and input columns and output columns. Many properties have read-only values that are assigned at run time by the data flow engine.  
   
  This topic lists and describes the custom properties of the paths that connect data flow objects.  
   
 ### Custom properties of a path  
- In the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] object model, a path that connects components in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> interface.  
+ In the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] object model, a path that connects components in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> interface.  
   
  The following table describes the configurable properties of the paths in a data flow. The data flow engine also assigns values to additional read-only properties that are not listed here.  
   

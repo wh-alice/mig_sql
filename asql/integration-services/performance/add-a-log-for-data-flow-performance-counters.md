@@ -22,7 +22,7 @@ manager: "jhubbard"
   This procedure describes how to add a log for the performance counters that the data flow engine provides.  
   
 > [!NOTE]  
->  If you install [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] on a computer that is running [!INCLUDE[winxpsvr](../../database-engine/configure/windows/includes/winxpsvr-md.md)], and then upgrade that computer to [!INCLUDE[firstref_longhorn](../../database-engine/install/windows/includes/firstref-longhorn-md.md)], the upgrade process removes the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] performance counters from the computer. To restore the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] performance counters on the computer, run [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Setup in repair mode.  
+>  If you install [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] on a computer that is running [!INCLUDE[winxpsvr](../../database-engine/configure/windows/includes/winxpsvr-md.md)], and then upgrade that computer to [!INCLUDE[firstref_longhorn](../../database-engine/install/windows/includes/firstref-longhorn-md.md)], the upgrade process removes the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] performance counters from the computer. To restore the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] performance counters on the computer, run [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Setup in repair mode.  
   
 ### To add logging of performance counters  
   

@@ -23,9 +23,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Copy Databases with Backup and Restore
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  In [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], you can create a new database by restoring a backup of a user database created by using [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] or a later version. However, backups of **master**, **model** and **msdb** that were created by using an earlier version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] cannot be restored by [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. Also, [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] backups cannot be restored by any earlier version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  In [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], you can create a new database by restoring a backup of a user database created by using [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] or a later version. However, backups of **master**, **model** and **msdb** that were created by using an earlier version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] cannot be restored by [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. Also, [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] backups cannot be restored by any earlier version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 >**IMPORTANT!** SQL Server 2016 uses a different default path than earlier versions. Therefore, to restore backups of a database created in the default location of earlier versions you must use the MOVE option. For information about the new default path see [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). For more information about moving database files, see "Moving the Database Files," later in this topic.  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
  The general steps are:  
   
-1.  Back up the source database, which can reside on an instance of [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] or later. The computer on which this instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running is the **source computer**.  
+1.  Back up the source database, which can reside on an instance of [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] or later. The computer on which this instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running is the **source computer**.  
   
 2.  On the computer to which you want to copy the database (the **destination computer**), connect to the instance of SQL Server on which you plan to restore the database. If needed, on the **destination** server instance, create the same backup devices as used to the backup of the **source** databases.  
   
@@ -59,7 +59,7 @@ Some additional considerations that may affect this process:
   
     -   If the existing file cannot be overwritten, a restore error would occur.  
   
- To avoid errors and unpleasant consequences, before the restore operation, you can use the [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) history table to find out the database and log files in the backup you plan to restore.  
+ To avoid errors and unpleasant consequences, before the restore operation, you can use the [backupfile](../../relational-databases/reference/system-tables/backupfile-transact-sql.md) history table to find out the database and log files in the backup you plan to restore.  
   
 ## Moving the database files  
  If the files within the database backup cannot be restored onto the destination computer, it is necessary to move the files to a new location while they are being restored. For example:  
@@ -78,25 +78,25 @@ Some additional considerations that may affect this process:
  The database name explicitly supplied when you restore a database is used automatically as the new database name. Because the database name does not already exist, a new one is created by using the files in the backup.  
   
 ## When upgrading a database by using Restore  
- When restoring backups from an earlier version, it is helpful to know in advance whether the path (drive and directory) of each of the full-text catalogs in a backup exists on the destination computer. To list the logical names and physical names, path and file name) of every file in a backup, including the catalog files, use a RESTORE FILELISTONLY FROM *<backup_device>* statement. For more information, see [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md).  
+ When restoring backups from an earlier version, it is helpful to know in advance whether the path (drive and directory) of each of the full-text catalogs in a backup exists on the destination computer. To list the logical names and physical names, path and file name) of every file in a backup, including the catalog files, use a RESTORE FILELISTONLY FROM *<backup_device>* statement. For more information, see [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
  If the same path does not exist on the destination computer, you have two alternatives:  
   
 -   Create the equivalent drive/directory mapping on the destination computer.  
   
--   Move the catalog files to a new location during the restore operation, by using the WITH MOVE clause in your RESTORE DATABASE statement. For more information, see [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+-   Move the catalog files to a new location during the restore operation, by using the WITH MOVE clause in your RESTORE DATABASE statement. For more information, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
  For information about alternative options for upgrading full-text indexes, see [Upgrade Full-Text Search](../../relational-databases/search/upgrade-full-text-search.md).  
   
 ## Database ownership  
- When a database is restored on another computer, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login or [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows user who initiates the restore operation becomes the owner of the new database automatically. When the database is restored, the system administrator or the new database owner can change database ownership. To prevent unauthorized restoration of a database, use media or backup set passwords.  
+ When a database is restored on another computer, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login or [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows user who initiates the restore operation becomes the owner of the new database automatically. When the database is restored, the system administrator or the new database owner can change database ownership. To prevent unauthorized restoration of a database, use media or backup set passwords.  
   
 ## Managing metadata when restoring to another server instance  
- When you restore a database onto another server instance, to provide a consistent experience to users and applications, you might have to re-create some or all of the metadata for the database, such as logins and jobs, on the other server instance. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../Topic/Manage%20Metadata%20When%20Making%20a%20Database%20Available%20on%20Another%20Server%20Instance%20\(SQL%20Server\).md).  
+ When you restore a database onto another server instance, to provide a consistent experience to users and applications, you might have to re-create some or all of the metadata for the database, such as logins and jobs, on the other server instance. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
  **View the data and log files in a backup set**  
   
--   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)  
+-   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
  **Restore files and filegroups to a new location**  
   
@@ -118,7 +118,7 @@ Some additional considerations that may affect this process:
   
  **Change database owner**  
   
--   [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)  
+-   [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-changedbowner-transact-sql.md)  
   
  **Copy a database by using SQL Server Management Objects (SMO)**  
   
@@ -133,7 +133,7 @@ Some additional considerations that may affect this process:
 ## See also  
  [Copy Databases to Other Servers](../../relational-databases/databases/copy-databases-to-other-servers.md)   
  [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
- [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

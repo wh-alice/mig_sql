@@ -20,7 +20,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Optimize Parameterized Row Filters
-  This topic describes how to optimize parameterized row filters in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to optimize parameterized row filters in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -38,9 +38,9 @@ manager: "jhubbard"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   When you use parameterized filters, you can control how the filters are processed by merge replication by specifying either the **use partition groups** option or the **keep partition changes** option when you create a publication. These options improve the synchronization performance for publications with filtered articles by storing additional metadata in the publication database. You can control how the data is shared among Subscribers by setting **partition options** when you create an article. For more information about these requirements, see [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md).  
+-   When you use parameterized filters, you can control how the filters are processed by merge replication by specifying either the **use partition groups** option or the **keep partition changes** option when you create a publication. These options improve the synchronization performance for publications with filtered articles by storing additional metadata in the publication database. You can control how the data is shared among Subscribers by setting **partition options** when you create an article. For more information about these requirements, see [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-     With [!INCLUDE[ssEW](../../../analysis-services/instances/includes/ssew-md.md)]SQL Server Compact subscribers, keep_partition_changes must be set to true to ensure that deletes are correctly propagated. When set to false, the subscriber might have more rows than expected.  
+     With [!INCLUDE[ssEW](../../../a9retired/includes/ssew-md.md)]SQL Server Compact subscribers, keep_partition_changes must be set to true to ensure that deletes are correctly propagated. When set to false, the subscriber might have more rows than expected.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  The following settings can be used to optimize parameterized row filters:  
@@ -49,7 +49,7 @@ manager: "jhubbard"
  Set this option on the **Properties** page of the **Article Properties - \<Article>** dialog box, or in the **Add Filter** dialog box. Both dialog boxes are available in the New Publication Wizard and the **Publication Properties - \<Publication>** dialog box. The **Article Properties - \<Article>** dialog box allows you to specify additional values for this option that are not available in the **Add Filter** dialog box.  
   
  **Precompute Partitions**  
- This option is set to **True** by default if the articles in your publication adhere to a set of requirements. For more information about these requirements, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../Topic/Optimize%20Parameterized%20Filter%20Performance%20with%20Precomputed%20Partitions.md). Modify this option on the **Subscription Options** page of the **Publication Properties - \<Publication>** dialog box.  
+ This option is set to **True** by default if the articles in your publication adhere to a set of requirements. For more information about these requirements, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md). Modify this option on the **Subscription Options** page of the **Publication Properties - \<Publication>** dialog box.  
   
  **Optimize Synchronization**  
  This option should be set to **True** only if **Precompute Partitions** is set to **False**. Set this option on the **Subscription Options** page of the **Publication Properties - \<Publication>** dialog box.  
@@ -68,9 +68,9 @@ manager: "jhubbard"
   
     -   **A row from this table will go to only one subscription**  
   
-     If you select **A row from this table will go to only one subscription**, merge replication can optimize performance by storing and processing less metadata. However, you must ensure that the data is partitioned in such a way that a row cannot be replicated to more than one Subscriber. For more information, see the section "Setting 'partition options'" in the topic [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md).  
+     If you select **A row from this table will go to only one subscription**, merge replication can optimize performance by storing and processing less metadata. However, you must ensure that the data is partitioned in such a way that a row cannot be replicated to more than one Subscriber. For more information, see the section "Setting 'partition options'" in the topic [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-4.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 5.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
   
@@ -90,9 +90,9 @@ manager: "jhubbard"
   
     -   **Nonoverlapping, shared between subscriptions**  
   
-     For more information about these options and how they relate to the options available in the **Add Filter** and **Edit Filter** dialog boxes, see the "Setting 'partition options'" section of [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md).  
+     For more information about these options and how they relate to the options available in the **Add Filter** and **Edit Filter** dialog boxes, see the "Setting 'partition options'" section of [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-4.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 5.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
   
@@ -104,28 +104,28 @@ manager: "jhubbard"
   
     -   A snapshot has not yet been generated for the publication. In this case, the option displays a value of **Set automatically when a snapshot is created**.  
   
-2.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+2.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 #### To set Optimize Synchronization  
   
 1.  On the **Subscription Options** page of the **Publication Properties - \<Publication>** dialog box, select a value of **True** for the **Optimize Synchronization** option.  
   
-2.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+2.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
- For definitions of the filtering options for **@keep_partition_changes** and **@use_partition_groups**, see [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
+ For definitions of the filtering options for **@keep_partition_changes** and **@use_partition_groups**, see [sp_addmergepublication](../../../relational-databases/reference/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
   
 #### To specify merge filter optimizations when creating a new publication  
   
-1.  At the Publisher on the publication database, execute [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Specify **@publication** and a value of **true** for one the following parameters:  
+1.  At the Publisher on the publication database, execute [sp_addmergepublication](../../../relational-databases/reference/system-stored-procedures/sp-addmergepublication-transact-sql.md). Specify **@publication** and a value of **true** for one the following parameters:  
   
-    -   **@use_partition_groups**: - the highest performance optimization, provided that the articles conform to the requirements for precomputed partitions. For more information, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../Topic/Optimize%20Parameterized%20Filter%20Performance%20with%20Precomputed%20Partitions.md).  
+    -   **@use_partition_groups**: - the highest performance optimization, provided that the articles conform to the requirements for precomputed partitions. For more information, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
     -   **@keep_partition_changes** - use this optimization if precomputed partitions cannot be used.  
   
 2.  Add a snapshot job for the publication. For more information see [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
-3.  At the Publisher on the publication database, execute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), specifying the following parameters:  
+3.  At the Publisher on the publication database, execute [sp_addmergearticle](../../../relational-databases/reference/system-stored-procedures/sp-addmergearticle-transact-sql.md), specifying the following parameters:  
   
     -   **@publication** - the name of the publication from step 1.  
   
@@ -139,26 +139,26 @@ manager: "jhubbard"
   
 4.  Repeat step 3 for each article in the publication.  
   
-5.  (Optional) At the Publisher on the publication database, execute [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) to define a join filter between two articles. For more information, see [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+5.  (Optional) At the Publisher on the publication database, execute [sp_addmergefilter](../../../relational-databases/reference/system-stored-procedures/sp-addmergefilter-transact-sql.md) to define a join filter between two articles. For more information, see [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 #### To view and modify merge filter behaviors for an existing publication  
   
-1.  (Optional) At the Publisher on the publication database, execute [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), specifying **@publication**. Note the value of **keep_partition_changes** and **use_partition_groups** in the result set.  
+1.  (Optional) At the Publisher on the publication database, execute [sp_helpmergepublication](../../../relational-databases/reference/system-stored-procedures/sp-helpmergepublication-transact-sql.md), specifying **@publication**. Note the value of **keep_partition_changes** and **use_partition_groups** in the result set.  
   
-2.  (Optional) At the Publisher on the publication database, execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specify a value of **use_partition_groups** for **@property** and either **true** or **false** for **@value**.  
+2.  (Optional) At the Publisher on the publication database, execute [sp_changemergepublication](../../../relational-databases/reference/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specify a value of **use_partition_groups** for **@property** and either **true** or **false** for **@value**.  
   
-3.  (Optional) At the Publisher on the publication database, execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specify a value of **keep_partition_changes** for **@property** and either **true** or **false** for **@value**.  
+3.  (Optional) At the Publisher on the publication database, execute [sp_changemergepublication](../../../relational-databases/reference/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specify a value of **keep_partition_changes** for **@property** and either **true** or **false** for **@value**.  
   
     > [!NOTE]  
     >  When enabling **keep_partition_changes**, you must first disable **use_partition_groups** and specify a value of **1** for **@force_reinit_subscription**.  
   
-4.  (Optional) At the Publisher on the publication database, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify a value of **partition_options** for **@property** and the appropriate value for **@value**. See [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) for definitions of these filtering options.  
+4.  (Optional) At the Publisher on the publication database, execute [sp_changemergearticle](../../../relational-databases/reference/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify a value of **partition_options** for **@property** and the appropriate value for **@value**. See [sp_addmergearticle](../../../relational-databases/reference/system-stored-procedures/sp-addmergearticle-transact-sql.md) for definitions of these filtering options.  
   
 5.  (Optional) Start the Snapshot Agent to regenerate the snapshot if necessary. For information about which changes require a new snapshot to be generated, see [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 ## See Also  
  [Automatically Generate a Set of Join Filters Between Merge Articles &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/7ef419f4-c17f-42a5-9068-174a3ec08941.md)   
  [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
- [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md)  
+ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

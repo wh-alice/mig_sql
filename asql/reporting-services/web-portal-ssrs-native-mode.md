@@ -131,7 +131,7 @@ You can enter a search team, and you will see everything you can access. The res
 
 [Working with KPIs](../reporting-services/working-with-kpis-in-reporting-services.md)
   
-[Working with shared datasets](Working%20with%20shared%20datasets%20(web%20portal).md)  
+[Working with shared datasets](../reporting-services/work-with-shared-datasets-web-portal.md)  
   
 ## See also
 

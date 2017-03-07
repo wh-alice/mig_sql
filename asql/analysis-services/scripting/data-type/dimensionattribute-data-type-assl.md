@@ -89,7 +89,7 @@ manager: "erikre"
 |Derived elements|[Attribute](../../../analysis-services/scripting/objects/attribute-element-assl.md) ([Attributes](../../../analysis-services/scripting/collections/attributes-element-assl.md) collection of [Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md))|  
   
 ## Remarks  
- The following restrictions apply when running the service in DeploymentMode configuration property values of 1 and 2 (SharePoint and Tabular modes, used to run [!INCLUDE[ssGemini](../../../analysis-services/includes/ssgemini-md.md)] and tabular model databases):  
+ The following restrictions apply when running the service in DeploymentMode configuration property values of 1 and 2 (SharePoint and Tabular modes, used to run [!INCLUDE[ssGemini](../../../a9notintoc/includes/ssgemini-md.md)] and tabular model databases):  
   
 -   Usage element only accepts KEY or REGULAR values.  
   
@@ -119,7 +119,7 @@ manager: "erikre"
   
 -   Bindings cannot be set to ‘Value’.  
   
- The following elements are unsupported when running the service in DeploymentMode configuration property values of 1 and 2 (SharePoint and Tabular modes, used to run [!INCLUDE[ssGemini](../../../analysis-services/includes/ssgemini-md.md)] and tabular model databases):  
+ The following elements are unsupported when running the service in DeploymentMode configuration property values of 1 and 2 (SharePoint and Tabular modes, used to run [!INCLUDE[ssGemini](../../../a9notintoc/includes/ssgemini-md.md)] and tabular model databases):  
   
 -   AttributeHierarchyOptimizedState  
   

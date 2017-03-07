@@ -27,7 +27,7 @@ manager: "erikre"
  Strip lines are not applicable to Shape or Polar chart types.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ### To display interlaced strip lines at regular intervals on a chart  
   

@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # Design first or data first when creating in Reporting Services mobile reports
   
-With [!INCLUDE[PRODUCT_NAME](../../reporting-services/mobile-reports/includes/ss-mobilereptpub-long.md)], you can quickly create mobile reports that scale well to any screen size, on a design surface with adjustable grid rows and columns, and flexible mobile report elements.   
+With [!INCLUDE[PRODUCT_NAME](../../a9retired/includes/ss-mobilereptpub-long.md)], you can quickly create mobile reports that scale well to any screen size, on a design surface with adjustable grid rows and columns, and flexible mobile report elements.   
   
 When creating mobile reports, you have your choice of two basic approaches: start with the data first, or start with the design first. [!INCLUDE[SS_MobileReptPub_Long](../../reporting-services/mobile-reports/includes/ss-mobilereptpub-short.md)] supports both.   
   

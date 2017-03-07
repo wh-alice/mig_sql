@@ -18,13 +18,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Integration Services (SSIS) Server and Catalog
-  After you design and test packages in [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], you can deploy the projects that contain the packages to the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] server.  
+  After you design and test packages in [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], you can deploy the projects that contain the packages to the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] server.  
   
- The [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] server is an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] that hosts the **SSISDB** database. The database stores the following objects: packages, projects, parameters, permissions, server properties, and operational history.  
+ The [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] server is an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] that hosts the **SSISDB** database. The database stores the following objects: packages, projects, parameters, permissions, server properties, and operational history.  
   
  The **SSISDB** database exposes the object information in public views that you can query. The database also provides stored procedures that you can call to manage the objects.  
   
- Before you can deploy the projects to the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] server, you need to create the **SSISDB** catalog.  
+ Before you can deploy the projects to the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] server, you need to create the **SSISDB** catalog.  
   
  For an overview of the SSISDB catalog functionality, see [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
   
@@ -34,15 +34,15 @@ manager: "jhubbard"
  You can also provide high-availability of SSISDB and its contents by making use of SSIS and Always On Availability Groups. For more information, see this blog post by Matt Masson, [SSIS with Always On](http://go.microsoft.com/fwlink/?LinkId=255873), at blogs.msdn.com.  
   
 ##  <a name="ssms"></a> Integration Services Server in SQL Server Management Studio  
- When you connect to an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] that hosts the **SSISDB** database, you see the following objects in Object Explorer:  
+ When you connect to an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] that hosts the **SSISDB** database, you see the following objects in Object Explorer:  
   
 -   **SSISDB Database**  
   
-     The **SSISDB** database appears under the **Databases** node in Object Explore. You can query the views and call the stored procedures that manage the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] server and the objects that are stored on the server.  
+     The **SSISDB** database appears under the **Databases** node in Object Explore. You can query the views and call the stored procedures that manage the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] server and the objects that are stored on the server.  
   
 -   **Integration Services Catalogs**  
   
-     Under the **Integration Services Catalogs** node there are folders for [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] projects and environments.  
+     Under the **Integration Services Catalogs** node there are folders for [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] projects and environments.  
   
 ## Related Tasks  
   

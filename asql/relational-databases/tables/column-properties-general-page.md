@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Column Properties (General Page)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
 
   Use this page to view properties for the selected column.  
   
@@ -52,10 +52,10 @@ manager: "jhubbard"
  Indicates the initial row value for an identity column.  
   
  **Identity Increment**  
- The **Identity Increment** property specifies the value [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] adds to the greatest existing row identity value as it generates an identity value for a row being inserted.  
+ The **Identity Increment** property specifies the value [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] adds to the greatest existing row identity value as it generates an identity value for a row being inserted.  
   
  **Default Binding**  
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] default bound to the column. This option is blank if no default is bound.  
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] default bound to the column. This option is blank if no default is bound.  
   
  **Default Schema**  
  Identifies the database schema owning the default bound to the referenced column. This option is blank if no default is bound.  
@@ -64,7 +64,7 @@ manager: "jhubbard"
  Identifies the data integrity constraint that is bound to the column. This option is blank if no rule is bound.  
   
  **Rule Schema**  
- Displays the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database schema that owns the rule bound to the referenced column. This option is blank if no rule is bound.  
+ Displays the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database schema that owns the rule bound to the referenced column. This option is blank if no rule is bound.  
   
  **Length**  
  Indicates the maximum number of characters or bytes accepted by the column.  
@@ -82,10 +82,10 @@ manager: "jhubbard"
  Defines the type of the XML column by way of XML Schema Definition (XSD) Language validation.  
   
  **XML Schema Namespace schema**  
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] schema that owns the XML Schema Namespace.  
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] schema that owns the XML Schema Namespace.  
   
 > [!NOTE]  
->  There are several common but different meanings of the word schema. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses schema to organize database objects. It is similar to ownership. XML uses the schema to define the organization of XML information into a series of namespaces. It is a way to group related XML code together.  
+>  There are several common but different meanings of the word schema. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses schema to organize database objects. It is similar to ownership. XML uses the schema to define the organization of XML information into a series of namespaces. It is a way to group related XML code together.  
   
  **Is Sparse**  
  Indicates whether the column is a sparse column. Possible values are **True** and **False**. For more information, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  

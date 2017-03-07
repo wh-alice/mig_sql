@@ -62,7 +62,7 @@ manager: "jhubbard"
   
 ### To implement a Lookup transformation in full cache mode in one package by using Cache connection manager and a data source in the data flow  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../analysis-services/includes/ssbidevstudiofull-md.md)], open a [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project, and then open a package.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../../a9notintoc/includes/ssbidevstudiofull-md.md)], open a [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] project, and then open a package.  
   
 2.  On the **Control Flow** tab, add two Data Flow tasks, and then connect the tasks by using a green connector:  
   
@@ -127,7 +127,7 @@ manager: "jhubbard"
   
 ### To implement a Lookup transformation in full cache mode in two packages by using Cache connection manager and a data source in the data flow  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../analysis-services/includes/ssbidevstudiofull-md.md)], open a [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project, and then open two packages.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../../a9notintoc/includes/ssbidevstudiofull-md.md)], open a [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] project, and then open two packages.  
   
 2.  On the Control Flow tab in each package, add a Data Flow task.  
   
@@ -165,7 +165,7 @@ manager: "jhubbard"
   
 9. In the child package, create a Cache connection manager by right-clicking in the **Connection Managers** area, clicking **New Connection**, selecting **CACHE** in the **Add SSIS Connection Manager** dialog box, and then clicking **Add**.  
   
-     The **Connection Managers** area appears on the bottom of the **Control Flow**, **Data Flow**, and **Event Handlers** tabs of [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] Designer.  
+     The **Connection Managers** area appears on the bottom of the **Control Flow**, **Data Flow**, and **Event Handlers** tabs of [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] Designer.  
   
 10. In the **Cache Connection Manager Editor**, on the **General** tab, configure the Cache connection manager to read the data from the cache file that you selected by setting the following options:  
   
@@ -215,11 +215,11 @@ manager: "jhubbard"
   
 ### To implement a Lookup transformation in full cache mode by using Cache connection manager and an existing cache file  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../analysis-services/includes/ssbidevstudiofull-md.md)], open a [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project, and then open a package.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../../a9notintoc/includes/ssbidevstudiofull-md.md)], open a [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] project, and then open a package.  
   
 2.  Right-click in the **Connection Managers** area, and then click **New Connection**.  
   
-     The **Connection Managers** area appears on the bottom of the **Control Flow**, **Data Flow**, and **Event Handlers** tabs of [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] Designer.  
+     The **Connection Managers** area appears on the bottom of the **Control Flow**, **Data Flow**, and **Event Handlers** tabs of [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] Designer.  
   
 3.  In the **Add SSIS Connection Manager** dialog box, select **CACHE**, and then click **Add** to add a Cache connection manager.  
   
@@ -277,7 +277,7 @@ manager: "jhubbard"
 9. Run the package.  
   
 ## See Also  
- [Implement a Lookup Transformation in Full Cache Mode Using the OLE DB Connection Manager](../Topic/Implement%20a%20Lookup%20Transformation%20in%20Full%20Cache%20Mode%20Using%20the%20OLE%20DB%20Connection%20Manager.md)   
+ [Implement a Lookup Transformation in Full Cache Mode Using the OLE DB Connection Manager](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implement a Lookup in No Cache or Partial Cache Mode](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

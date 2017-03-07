@@ -18,7 +18,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Use Column Sets
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
 
   Tables that use sparse columns can designate a column set to return all sparse columns in the table. A column set is an untyped XML representation that combines all the sparse columns of a table into a structured output. A column set is like a calculated column in that the column set is not physically stored in the table. A column set differs from a calculated column in that the column set is directly updatable.  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
 -   Conceptually, a column set is a type of updatable, computed XML column that aggregates a set of underlying relational columns into a single XML representation. The column set only supports the ALL_SPARSE_COLUMNS property. This property is used to aggregate all nonnull values from all sparse columns for a particular row.  
   
--   In the [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] table editor, column sets are displayed as an editable XML field. Define column sets in the format:  
+-   In the [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] table editor, column sets are displayed as an editable XML field. Define column sets in the format:  
   
     ```  
     <column_name_1>value1</column_name_1><column_name_2>value2</column_name_2>...  

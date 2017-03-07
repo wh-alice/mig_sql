@@ -29,7 +29,7 @@ manager: "erikre"
   
 |||  
 |-|-|  
-|[GetReportServerUrls Method &#40;WMI MSReportServer_Instance&#41;](../Topic/GetReportServerUrls%20Method%20\(WMI%20MSReportServer_Instance\).md)|Lists URLs users can use to access the report server and the [!INCLUDE[ssRSWebPortal](../../reporting-services/includes/ssrswebportal.md)].|  
+|[GetReportServerUrls Method &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|Lists URLs users can use to access the report server and the [!INCLUDE[ssRSWebPortal](../../reporting-services/includes/ssrswebportal.md)].|  
   
 ## See Also  
  [MSReportServer_Instance Members](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  

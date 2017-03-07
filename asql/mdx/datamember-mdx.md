@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # DataMember (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the system-generated data member that is associated with a nonleaf member of a dimension.  
   
@@ -37,7 +37,7 @@ Member_Expression.DataMember
  A valid Multidimensional Expressions (MDX) expression that returns a member.  
   
 ## Remarks  
- This function operates on nonleaf members in any hierarchy and can be used by the [UPDATE CUBE Statement (MDX)](../Topic/UPDATE%20CUBE%20Statement%20\(MDX\).md) command to writeback data to a nonleaf member directly, rather than to the leaf member's descendants.  
+ This function operates on nonleaf members in any hierarchy and can be used by the [UPDATE CUBE Statement (MDX)](../mdx/mdx-data-manipulation-update-cube.md) command to writeback data to a nonleaf member directly, rather than to the leaf member's descendants.  
   
 > [!NOTE]  
 >  Returns the specified member if the specified member is a leaf member, or if the nonleaf member does not have an associated data member.  

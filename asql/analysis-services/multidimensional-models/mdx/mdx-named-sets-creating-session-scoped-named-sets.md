@@ -20,12 +20,12 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Named Sets - Creating Session-Scoped Named Sets
-  To create a named set that is available throughout a Multidimensional Expressions (MDX) session, you use the [CREATE SET](../Topic/CREATE%20SET%20Statement%20\(MDX\).md) statement. A named set that is created by using the CREATE SET statement will not be removed until after the MDX session closes.  
+  To create a named set that is available throughout a Multidimensional Expressions (MDX) session, you use the [CREATE SET](../../../mdx/mdx-data-definition-create-set.md) statement. A named set that is created by using the CREATE SET statement will not be removed until after the MDX session closes.  
   
  As discussed in this topic, the syntax of the WITH keyword is straightforward and easy to use.  
   
 > [!NOTE]  
->  For more information about named sets, see [Building Named Sets in MDX &#40;MDX&#41;](../Topic/Building%20Named%20Sets%20in%20MDX%20\(MDX\).md).  
+>  For more information about named sets, see [Building Named Sets in MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
   
 ## CREATE SET Syntax  
  Use the following syntax for the CREATE SET statement:  
@@ -52,6 +52,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## See Also  
- [Creating Query-Scoped Named Sets &#40;MDX&#41;](../Topic/Creating%20Query-Scoped%20Named%20Sets%20\(MDX\).md)  
+ [Creating Query-Scoped Named Sets &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

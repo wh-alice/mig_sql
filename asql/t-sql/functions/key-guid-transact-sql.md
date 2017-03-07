@@ -28,7 +28,7 @@ manager: "jhubbard"
 
   Returns the GUID of a symmetric key in the database.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -61,7 +61,7 @@ SELECT Key_GUID('ABerglundKey1');
   
 ## See Also  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
- [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.symmetric-keys-transact-sql.md)   
- [sys.key_encryptions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.key-encryptions-transact-sql.md)  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.symmetric-keys-transact-sql.md)   
+ [sys.key_encryptions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.key-encryptions-transact-sql.md)  
   
   

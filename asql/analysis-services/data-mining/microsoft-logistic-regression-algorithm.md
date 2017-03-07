@@ -23,7 +23,7 @@ manager: "jhubbard"
 # Microsoft Logistic Regression Algorithm
   Logistic regression is a well-known statistical technique that is used for modeling binary outcomes.  
   
- There are various implementations of logistic regression in statistics research, using different learning techniques. The [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Logistic Regression algorithm has been implemented by using a variation of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Neural Network algorithm. This algorithm shares many of the qualities of neural networks but is easier to train.  
+ There are various implementations of logistic regression in statistics research, using different learning techniques. The [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Logistic Regression algorithm has been implemented by using a variation of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Neural Network algorithm. This algorithm shares many of the qualities of neural networks but is easier to train.  
   
  One advantage of logistic regression is that the algorithm is highly flexible, taking any kind of input, and supports several different analytical tasks:  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
  When you view the model by using the Microsoft Neural Network Viewer, Analysis Services shows you the factors that contribute to a particular outcome, ranked by their importance. You can choose an attribute and values to compare. For more information, see [Browse a Model Using the Microsoft Neural Network Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
- If you want to know more, you can browse the model details by using the Microsoft Generic Content Tree Viewer. The model content for a logistic regression model includes a marginal node that shows you the all the inputs used for the model, and subnetworks for the predictable attributes. For more information, see [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](../Topic/Mining%20Model%20Content%20for%20Logistic%20Regression%20Models%20\(Analysis%20Services%20-%20Data%20Mining\).md).  
+ If you want to know more, you can browse the model details by using the Microsoft Generic Content Tree Viewer. The model content for a logistic regression model includes a marginal node that shows you the all the inputs used for the model, and subnetworks for the predictable attributes. For more information, see [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   
 ## Creating Predictions  
  After the model has been trained, you can create queries against the model content to get the regression coefficients and other details, or you can use the model to make predictions.  
@@ -77,7 +77,7 @@ manager: "jhubbard"
 -   Does not support the use of Predictive Model Markup Language (PMML) to create mining models.  
   
 ## See Also  
- [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](../Topic/Mining%20Model%20Content%20for%20Logistic%20Regression%20Models%20\(Analysis%20Services%20-%20Data%20Mining\).md)   
+ [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Microsoft Logistic Regression Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Logistic Regression Model Query Examples](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)  
   

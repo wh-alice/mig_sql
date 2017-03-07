@@ -15,7 +15,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.add_data_tap
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Adds a data tap on the output of a component in a package data flow, for an instance of the execution.  
   
@@ -36,14 +36,14 @@ OUTPUT
  The execution ID for the execution that contains the package. The *execution_id* is a **bigint**.  
   
  [ @task_package_path = ] *task_package_path*  
- The package path for the data flow task. The **PackagePath** property for the data flow task specifies the path. The path is case-sensitive. To locate the package path, in [!INCLUDE[ssBIDevStudio](../../../analysis-services/includes/ssbidevstudio-md.md)] right-click the Data Flow task, and then click **Properties**. The **PackagePath** property appears in the **Properties** window.  
+ The package path for the data flow task. The **PackagePath** property for the data flow task specifies the path. The path is case-sensitive. To locate the package path, in [!INCLUDE[ssBIDevStudio](../../../a9notintoc/includes/ssbidevstudio-md.md)] right-click the Data Flow task, and then click **Properties**. The **PackagePath** property appears in the **Properties** window.  
   
  The *task_package_path* is a **nvarchar(max)**.  
   
  [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
  The identification string for the data flow path. A path connects two data flow components. The **IdentificationString** property for the path specifies the string.  
   
- To locate the identification string, in [!INCLUDE[ssBIDevStudio](../../../analysis-services/includes/ssbidevstudio-md.md)] right-click the path between two data flow components and then click **Properties**. The **IdentificationString** property appears in the **Properties** window.  
+ To locate the identification string, in [!INCLUDE[ssBIDevStudio](../../../a9notintoc/includes/ssbidevstudio-md.md)] right-click the path between two data flow components and then click **Properties**. The **IdentificationString** property appears in the **Properties** window.  
   
  The *dataflow_path_id_string* is a **nvarchar(4000)**.  
   

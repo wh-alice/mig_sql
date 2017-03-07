@@ -49,11 +49,11 @@ rsconfig {-?}
 |**-c**|Required if **-e** argument is not used.|Specifies the connection string, credentials, and data source values used to connect a report server to the report server database.<br /><br /> This argument does not take a value. However, additional arguments must be specified with it to provide all of the required connection values.<br /><br /> Arguments that you can specify with **-c** include **-m**, **-s**, **-i**,**-d**,**-a**,**-u**,**-p**, and**-t**.|  
 |**-e**|Required if **-c** argument is not used.|Specifies the unattended report execution account.<br /><br /> This argument does not take a value. However, you must include additional arguments on the command line to specify that values that are encrypted in the configuration file.<br /><br /> Arguments that you can specify with **-e** include **-u** and **-p**. You can also set **-t**.|  
 |**-m**  *computername*|Required if you are configuring a remote report server instance.|Specifies the name of the computer that is hosting the report server. If this argument is omitted, the default is **localhost**.|  
-|**-s**  *servername*|Required.|Specifies the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance that hosts the report server database.|  
-|**-i**  *instancename*|Required if you are using named instances.|If you used a named [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance to host the report server database, this value specifies the named instance.|  
+|**-s**  *servername*|Required.|Specifies the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance that hosts the report server database.|  
+|**-i**  *instancename*|Required if you are using named instances.|If you used a named [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance to host the report server database, this value specifies the named instance.|  
 |**-d**  *databasename*|Required.|Specifies the name of the report server database.|  
 |**-a**  *authmethod*|Required.|Specifies the authentication method that the report server uses to connect to the report server database. Valid values are **Windows** or **SQL** (this argument is not case-sensitive).<br /><br /> **Windows** specifies that the report server use Windows Authentication.<br /><br /> **SQL** specifies that the report server use SQL Server Authentication.|  
-|**-u**  *[domain\\]username*|Required with **-e** Optional with **-c**.|Specifies a user account for the report server database connection or for the unattended account.<br /><br /> For **rsconfig -e**, this argument is required. It must be a domain user account.<br /><br /> For **rsconfig -c** and **-a SQL**, this argument must specify a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login.<br /><br /> For **rsconfig -c** and **-a Windows**, this argument may specify a domain user, a built-in account, or service account credentials. If you are specifying a domain account, specify *domain* and *username* in the format *domain\username*. If you are using a built-in account, this argument is optional. If you want to use service account credentials, omit this argument.|  
+|**-u**  *[domain\\]username*|Required with **-e** Optional with **-c**.|Specifies a user account for the report server database connection or for the unattended account.<br /><br /> For **rsconfig -e**, this argument is required. It must be a domain user account.<br /><br /> For **rsconfig -c** and **-a SQL**, this argument must specify a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login.<br /><br /> For **rsconfig -c** and **-a Windows**, this argument may specify a domain user, a built-in account, or service account credentials. If you are specifying a domain account, specify *domain* and *username* in the format *domain\username*. If you are using a built-in account, this argument is optional. If you want to use service account credentials, omit this argument.|  
 |**-p**  *password*|Required if **-u** is specified.|Specifies the password to use with the *username* argument. You can set this argument to a blank value if the account does not require a password. This value is case-sensitive for domain accounts.|  
 |**-t**|Optional.|Outputs error messages to the trace log. This argument does not take a value. For more information, see [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
   
@@ -70,7 +70,7 @@ rsconfig {-?}
   
 -   To configure a special account that the report server uses to log on to a remote database server when other credentials are not available.  
   
- You can run the**rsconfig** utility on a local or remote instance of [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]. You cannot use the **rsconfig** utility to decrypt and view values that are already set.  
+ You can run the**rsconfig** utility on a local or remote instance of [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]. You cannot use the **rsconfig** utility to decrypt and view values that are already set.  
   
  Before you can run this utility, Windows Management Instrumentation (WMI) must be installed on the computer that you are configuring.  
   
@@ -85,14 +85,14 @@ rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows -u <MYDOMAIN\MYACCOUNT
 ```  
   
 #### Specifying a SQL Server Database User Account  
- This example shows how to configure a report server to use [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login to connect to a remote report server database.  
+ This example shows how to configure a report server to use [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login to connect to a remote report server database.  
   
 ```  
 rsconfig -c -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -d reportserver -a SQL -u SA -p <SAPASSWORD>  
 ```  
   
 #### Specifying a Built-in Account  
- This example shows how to configure a report server to use a built-in account when connecting to a local report server database. Notice that **-u** is not used. Examples of supported built-in account values include NT AUTHORITY\SYSTEM for Local System and NT AUTHORITY\NETWORKSERVICE for Network Service ([!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../database-engine/configure/windows/includes/winxpsvr-md.md)] only).  
+ This example shows how to configure a report server to use a built-in account when connecting to a local report server database. Notice that **-u** is not used. Examples of supported built-in account values include NT AUTHORITY\SYSTEM for Local System and NT AUTHORITY\NETWORKSERVICE for Network Service ([!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../database-engine/configure/windows/includes/winxpsvr-md.md)] only).  
   
 ```  
 rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows "NT AUTHORITY\SYSTEM"  
@@ -106,14 +106,14 @@ rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows
 ```  
   
 #### Specifying the Unattended Account on a Local Server  
- This example shows how to configure the account used for unattended report execution for reports that do not pass credentials to the external data source. The account must be a Windows domain account. You cannot specify a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login for the user name and password. The account is configured on a local report server instance. Error messages are captured in the trace logs in the ReportingServices\LogFiles folder.  
+ This example shows how to configure the account used for unattended report execution for reports that do not pass credentials to the external data source. The account must be a Windows domain account. You cannot specify a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login for the user name and password. The account is configured on a local report server instance. Error messages are captured in the trace logs in the ReportingServices\LogFiles folder.  
   
 ```  
 rsconfig -e -u <DOMAIN\ACCOUNT> -p <PASSWORD> -t  
 ```  
   
 #### Specifying the Unattended Account on a Remote Server  
- This example shows how to configure the account on a remote report server instance that is the same version as Rsconfig.exe (for example, the report server and Rsconfig.exe are the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] 2008 R2 version). Error message information is captured in the trace logs on the remote server.  
+ This example shows how to configure the account on a remote report server instance that is the same version as Rsconfig.exe (for example, the report server and Rsconfig.exe are the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] 2008 R2 version). Error message information is captured in the trace logs on the remote server.  
   
 ```  
 rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <PASSWORD> -t  
@@ -123,7 +123,7 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
  [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../Topic/Store%20Encrypted%20Report%20Server%20Data%20\(SSRS%20Configuration%20Manager\).md)   
+ [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Report Server Command Prompt Utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver.config-configuration-file.md)  

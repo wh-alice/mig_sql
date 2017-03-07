@@ -63,6 +63,6 @@ manager: "erikre"
  For **Member** elements, this element contains the unique name of the level in the hierarchy that contains the member represented by the parent **Member** element.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

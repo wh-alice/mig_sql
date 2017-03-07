@@ -19,7 +19,7 @@ manager: "erikre"
 # Lesson 4-2 - Defining Parent Attribute Properties in a Parent-Child Hierarchy
 A parent-child hierarchy is a hierarchy in a dimension that is based on two table columns. Together, these columns define the hierarchical relationships among the members of the dimension. The first column, called the *member key column*, identifies each dimension member. The other column, called the *parent column*, identifies the parent of each dimension member. The **NamingTemplate** property of a parent attribute determines the name of each level in the parent-child hierarchy, and the **MembersWithData** property determines whether data for parent members should be displayed.  
   
-For more information, see [Parent-Child Dimensions](../Topic/Parent-Child%20Dimensions.md), [Attributes in Parent-Child Hierarchies](../Topic/Attributes%20in%20Parent-Child%20Hierarchies.md)  
+For more information, see [Parent-Child Dimensions](../../analysis-services/multidimensional-models/parent-child-dimension.md), [Attributes in Parent-Child Hierarchies](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)  
   
 > [!NOTE]  
 > When you use the Dimension Wizard to create a dimension, the wizard recognizes the tables that have parent-child relationships and automatically defines the parent-child hierarchy for you.  
@@ -42,7 +42,7 @@ In the tasks in this topic, you will create a naming template that defines the n
   
     Notice that the level name for this member is **Level 03**.  
   
-5.  In Solution Explorer, double-click **Analysis Services Tutorial.cube** in the **Cubes** folder to open Cube Designer for the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial cube.  
+5.  In Solution Explorer, double-click **Analysis Services Tutorial.cube** in the **Cubes** folder to open Cube Designer for the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial cube.  
   
 6.  Click the **Browser** tab.  
   
@@ -88,9 +88,9 @@ In the tasks in this topic, you will create a naming template that defines the n
   
 ## Browsing the Employee Dimension with the Modified Attributes  
   
-1.  On the **Build** menu of [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], click **Deploy Analysis Services Tutorial**.  
+1.  On the **Build** menu of [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], click **Deploy Analysis Services Tutorial**.  
   
-2.  When deployment has successfully completed, switch to Cube Designer for the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial cube, and then click **Reconnect** on the toolbar of the **Browser** tab.  
+2.  When deployment has successfully completed, switch to Cube Designer for the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial cube, and then click **Reconnect** on the toolbar of the **Browser** tab.  
   
 3.  Click the Excel icon, and then click **Enable**.  
   
@@ -103,11 +103,11 @@ In the tasks in this topic, you will create a naming template that defines the n
     ![Modified Employees hierarchy](../../analysis-services/tutorials/media/l4-employee-2.png "Modified Employees hierarchy")  
   
 ## Next Task in Lesson  
-[Automatically Grouping Attribute Members](../Topic/Automatically%20Grouping%20Attribute%20Members.md)  
+[Automatically Grouping Attribute Members](../../analysis-services/tutorials/lesson-4-3-automatically-grouping-attribute-members.md)  
   
 ## See Also  
-[Parent-Child Dimensions](../Topic/Parent-Child%20Dimensions.md)  
-[Attributes in Parent-Child Hierarchies](../Topic/Attributes%20in%20Parent-Child%20Hierarchies.md)  
+[Parent-Child Dimensions](../../analysis-services/multidimensional-models/parent-child-dimension.md)  
+[Attributes in Parent-Child Hierarchies](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)  
   
   
   

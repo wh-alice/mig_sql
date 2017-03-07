@@ -16,7 +16,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Changesets (Master Data Services)
-  [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] now supports the ability to save any pending changes to an entity as changesets. There are two usage scenarios for this feature.  
+  [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] now supports the ability to save any pending changes to an entity as changesets. There are two usage scenarios for this feature.  
   
 -   **Changes when “Approval Required” is turned on by Entity Administrator**  
   

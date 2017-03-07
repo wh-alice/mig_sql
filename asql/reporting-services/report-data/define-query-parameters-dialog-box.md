@@ -31,6 +31,6 @@ manager: "erikre"
 ## See Also  
  [SQL Server Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)   
  [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Reporting Services Query Designers](../Topic/Reporting%20Services%20Query%20Designers.md)  
+ [Reporting Services Query Designers](../../a9retired/reporting-services-query-designers.md)  
   
   

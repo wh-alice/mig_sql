@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # PredictSequence (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Predicts future sequence values for a specified set of sequence data.  
   
@@ -46,7 +46,7 @@ PredictSequence(<table column reference, n-start, n-end>)
 -   If both *n-start* and *n-end* are specified, the sequence values from *n-start* to *n-end*.  
   
 ## Examples  
- The following example returns a sequence of the five products that are most likely to be purchased by a customer in the [!INCLUDE[ssAWDWsp](../analysis-services/includes/ssawdwsp-md.md)] database based on the Sequence Clustering mining model.  
+ The following example returns a sequence of the five products that are most likely to be purchased by a customer in the [!INCLUDE[ssAWDWsp](../a9notintoc/includes/ssawdwsp-md.md)] database based on the Sequence Clustering mining model.  
   
 ```  
 SELECT  

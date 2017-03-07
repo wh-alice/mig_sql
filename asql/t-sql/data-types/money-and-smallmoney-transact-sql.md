@@ -28,7 +28,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # money and smallmoney (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Data types that represent monetary or currency values.  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
  ![Table of currency symbols, hexadecimal values](../../t-sql/data-types/media/money01.gif "Table of currency symbols, hexadecimal values")  
   
- Currency or monetary data does not need to be enclosed in single quotation marks ( ' ). It is important to remember that while you can specify monetary values preceded by a currency symbol, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not store any currency information associated with the symbol, it only stores the numeric value.  
+ Currency or monetary data does not need to be enclosed in single quotation marks ( ' ). It is important to remember that while you can specify monetary values preceded by a currency symbol, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not store any currency information associated with the symbol, it only stores the numeric value.  
   
 ##  <a name="_money"></a> Converting money Data  
  When you convert to **money** from integer data types, units are assumed to be in monetary units. For example, the integer value of 4 is converted to the **money** equivalent of 4 monetary units.  
@@ -78,6 +78,6 @@ SM_MONEY VARCHAR               MONEY DECIMAL
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../Topic/DECLARE%20@local_variable%20\(Transact-SQL\).md)   
  [SET @local_variable &#40;Transact-SQL&#41;](../Topic/SET%20@local_variable%20\(Transact-SQL\).md)   
- [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.types-transact-sql.md)  
+ [sys.types &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.types-transact-sql.md)  
   
   

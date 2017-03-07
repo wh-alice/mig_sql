@@ -24,21 +24,21 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Permissions Hierarchy (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] manages a hierarchical collection of entities that can be secured with permissions. These entities are known as *securables*. The most prominent securables are servers and databases, but discrete permissions can be set at a much finer level. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] regulates the actions of principals on securables by verifying that they have been granted appropriate permissions.  
+  The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] manages a hierarchical collection of entities that can be secured with permissions. These entities are known as *securables*. The most prominent securables are servers and databases, but discrete permissions can be set at a much finer level. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] regulates the actions of principals on securables by verifying that they have been granted appropriate permissions.  
   
- The following illustration shows the relationships among the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] permissions hierarchies.  
+ The following illustration shows the relationships among the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] permissions hierarchies.  
   
- The permissions system works the same in all versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)], [!INCLUDE[ssDW](../../database-engine/configure/windows/includes/ssdw-md.md)], [!INCLUDE[ssAPS](../../database-engine/configure/windows/includes/ssaps-md.md)], however some features are not available in all versions. For example, server-level permission cannot be configured in Azure products.  
+ The permissions system works the same in all versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)], [!INCLUDE[ssDW](../../database-engine/configure/windows/includes/ssdw-md.md)], [!INCLUDE[ssAPS](../../database-engine/configure/windows/includes/ssaps-md.md)], however some features are not available in all versions. For example, server-level permission cannot be configured in Azure products.  
   
  ![Diagram of Database Engine permissions hierarchies](../../relational-databases/security/media/wj-security-layers.gif "Diagram of Database Engine permissions hierarchies")  
   
 ## Chart of SQL Server Permissions  
- For a poster sized chart of all [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] permissions in pdf format, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ For a poster sized chart of all [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] permissions in pdf format, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
 ## Working with Permissions  
- Permissions can be manipulated with the familiar [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] queries GRANT, DENY, and REVOKE. Information about permissions is visible in the [sys.server_permissions](../../relational-databases/system-catalog-views/sys.server-permissions-transact-sql.md) and [sys.database_permissions](../../relational-databases/system-catalog-views/sys.database-permissions-transact-sql.md) catalog views. There is also support for querying permissions information by using built-in functions.  
+ Permissions can be manipulated with the familiar [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] queries GRANT, DENY, and REVOKE. Information about permissions is visible in the [sys.server_permissions](../../relational-databases/reference/system-catalog-views/sys.server-permissions-transact-sql.md) and [sys.database_permissions](../../relational-databases/reference/system-catalog-views/sys.database-permissions-transact-sql.md) catalog views. There is also support for querying permissions information by using built-in functions.  
   
  For information about designing a permissions system, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
@@ -51,8 +51,8 @@ manager: "jhubbard"
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
- [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-builtin-permissions-transact-sql.md)   
- [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-permissions-transact-sql.md)   
- [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-permissions-transact-sql.md)  
+ [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-builtin-permissions-transact-sql.md)   
+ [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-permissions-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-permissions-transact-sql.md)  
   
   

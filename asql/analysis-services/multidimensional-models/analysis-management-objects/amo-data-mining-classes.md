@@ -97,7 +97,7 @@ manager: "erikre"
   
  Basic information includes the name and ID (internal identifier) of the mining model.  
   
- An algorithm definition refers to any one of the standard algorithms provided in [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)], or any custom algorithms enabled on the server.  
+ An algorithm definition refers to any one of the standard algorithms provided in [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)], or any custom algorithms enabled on the server.  
   
  Columns are a collection of the columns that are used by the algorithm and their usage definition.  
   
@@ -111,8 +111,8 @@ manager: "erikre"
  <xref:Microsoft.AnalysisServices>   
  [AMO Fundamental Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
  [Programming AMO Data Mining Objects](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-data-mining-objects.md)   
- [Introducing AMO Classes](../Topic/Introducing%20AMO%20Classes.md)   
- [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../Topic/Logical%20Architecture%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
+ [Introducing AMO Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
+ [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

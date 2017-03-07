@@ -17,7 +17,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Lesson 1-1 - Creating an Analysis Services Project
-In the following task, you use [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] to create a new [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] project named **Analysis Services Tutorial**, based on the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Project template. A *project* is a collection of related objects. Projects exist within a solution, which includes one or more projects. For more information, see [Create an Analysis Services Project &#40;SSDT&#41;](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md).  
+In the following task, you use [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] to create a new [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] project named **Analysis Services Tutorial**, based on the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Project template. A *project* is a collection of related objects. Projects exist within a solution, which includes one or more projects. For more information, see [Create an Analysis Services Project &#40;SSDT&#41;](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md).  
   
 ### To create a new Analysis Services project  
   
@@ -33,7 +33,7 @@ In the following task, you use [!INCLUDE[ssBIDevStudioFull](../../analysis-servi
 You have successfully created the **Analysis Services Tutorial** project, based on the **Analysis Services Multidimensional and Data Mining Project** template, within a new solution that is also named **Analysis Services Tutorial**.  
   
 ## Next Task in Lesson  
-[Defining a Data Source](../Topic/Defining%20a%20Data%20Source.md)  
+[Defining a Data Source](../../analysis-services/tutorials/lesson-1-2-defining-a-data-source.md)  
   
 ## See Also  
 [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  

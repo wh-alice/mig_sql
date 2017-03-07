@@ -19,7 +19,7 @@ manager: "erikre"
 # Power Pivot BI Semantic Model Connection (.bism)
   A BI semantic model connection (.bism) is a portable connection that connects Excel or Power View reports to an Analysis Services tabular model database or an Analysis Services instance in multidimensional mode. If you are familiar with office data connection (.odc) files, you will notice a similarity in how a .bism connection file is defined and used.  
   
- A BI semantic model connection is created and accessed via SharePoint. Creating BI semantic model connections enables quick launch commands on a BI semantic model connection in a library. Quick launch commands open a new Excel workbook or options for editing the connection file. If Reporting Services is installed, you will also see a command to create a [!INCLUDE[ssCrescent](../../analysis-services/includes/sscrescent-md.md)] report.  
+ A BI semantic model connection is created and accessed via SharePoint. Creating BI semantic model connections enables quick launch commands on a BI semantic model connection in a library. Quick launch commands open a new Excel workbook or options for editing the connection file. If Reporting Services is installed, you will also see a command to create a [!INCLUDE[ssCrescent](../../a9notintoc/includes/sscrescent-md.md)] report.  
   
  ![Screenshot of BISM quick launch command](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "Screenshot of BISM quick launch command")  
   
@@ -28,7 +28,7 @@ manager: "erikre"
   
 -   A tabular model database running on a standalone Analysis Services instance in tabular server mode. A deployment of a standalone Analysis Services instance is external to the farm. Accessing data sources off the farm requires additional permissions, which you can read about in this topic: [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
--   [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbooks saved to SharePoint. Embedded [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] databases inside Excel workbooks are equivalent to tabular model databases that run on a standalone Analysis Services tabular mode server. If you already use [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for Excel and [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint, you can define a BI semantic model connection that points to [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbooks in a SharePoint library and build [!INCLUDE[ssCrescent](../../analysis-services/includes/sscrescent-md.md)] reports using existing [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data.  You can use workbooks created in either SQL Server 2008 R2 or [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] versions of [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for Excel.  
+-   [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbooks saved to SharePoint. Embedded [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] databases inside Excel workbooks are equivalent to tabular model databases that run on a standalone Analysis Services tabular mode server. If you already use [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for Excel and [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint, you can define a BI semantic model connection that points to [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbooks in a SharePoint library and build [!INCLUDE[ssCrescent](../../a9notintoc/includes/sscrescent-md.md)] reports using existing [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data.  You can use workbooks created in either SQL Server 2008 R2 or [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] versions of [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for Excel.  
   
 -   A multidimensional data model on an Analysis Services instance.  
   
@@ -61,14 +61,14 @@ manager: "erikre"
   
  ![Imersonated connection to tabular db](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-2.gif "Imersonated connection to tabular db")  
   
- **Connecting from Power View to [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data in SharePoint**  
+ **Connecting from Power View to [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data in SharePoint**  
   
- When a SharePoint user clicks on a BI semantic connection that resolves to a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbook in the same farm, the connections occur within the context of the SharePoint environment. A [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application handles the connection request, which it forwards to the Analysis Services instance on the same computer. The Analysis Services instance extracts the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data from the workbook and loads it. All subsequent connections are managed by [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service applications in the farm.  
+ When a SharePoint user clicks on a BI semantic connection that resolves to a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbook in the same farm, the connections occur within the context of the SharePoint environment. A [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application handles the connection request, which it forwards to the Analysis Services instance on the same computer. The Analysis Services instance extracts the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data from the workbook and loads it. All subsequent connections are managed by [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service applications in the farm.  
   
  In this scenario, all connections occur within the same farm, so there is no requirement for Kerberos or constrained delegation.  
   
 ##  <a name="bkmk_rel"></a> Related Tasks  
- [Add a BI Semantic Model Connection Content Type to a Library &#40;Power Pivot for SharePoint&#41;](../Topic/Add%20a%20BI%20Semantic%20Model%20Connection%20Content%20Type%20to%20a%20Library%20\(Power%20Pivot%20for%20SharePoint\).md)  
+ [Add a BI Semantic Model Connection Content Type to a Library &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)  
   
  [Create a BI Semantic Model Connection to a Power Pivot Workbook](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   

@@ -22,9 +22,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Usage (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  When you use Data Mining Extensions (DMX) to define a new data mining model in [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)], you must specify how the data mining algorithm that builds the model will use each column. You can specify a column as one of the following types:  
+  When you use Data Mining Extensions (DMX) to define a new data mining model in [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)], you must specify how the data mining algorithm that builds the model will use each column. You can specify a column as one of the following types:  
   
 -   **Key**  
   
@@ -42,7 +42,7 @@ manager: "erikre"
   
  Columns that are specified as the **Predict** type are used as both input and output columns. Columns that are specified as **PredictOnly** are only used as output columns. Specific algorithms may treat Predict columns differently.  
   
- For more information about the column usage types that [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] supports, see [Mining Model Columns](../analysis-services/data-mining/mining-model-columns.md).  
+ For more information about the column usage types that [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] supports, see [Mining Model Columns](../analysis-services/data-mining/mining-model-columns.md).  
   
 ## See Also  
  [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
@@ -50,7 +50,7 @@ manager: "erikre"
  [Data Mining Extensions &#40;DMX&#41; Syntax Elements](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40;DMX&#41; Syntax Conventions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Structure and Usage of DMX Prediction Queries](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 3.  Press ENTER.  
   
- A list of [!INCLUDE[ssSampleDBCoShort](../../analysis-services/data-mining/includes/sssampledbcoshort-md.md)] employee names and addresses is written to the command prompt window.  
+ A list of [!INCLUDE[ssSampleDBCoShort](../../a9notintoc/includes/sssampledbcoshort-md.md)] employee names and addresses is written to the command prompt window.  
 
 ## Save the output to a text file
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
  No output is returned in the Command Prompt window. Instead, the output is sent to the EmpAdds.txt file. You can verify this output by opening the EmpAdds.txt file.  
   
 ## See Also  
- [Start the sqlcmd Utility](../Topic/Start%20the%20sqlcmd%20Utility.md)   
+ [Start the sqlcmd Utility](../../relational-databases/scripting/sqlcmd-start-the-utility.md)   
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
   
   

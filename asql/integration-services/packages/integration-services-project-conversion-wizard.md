@@ -20,7 +20,7 @@ manager: "jhubbard"
   The **Integration Services Project Conversion Wizard** converts a project to the project deployment model.  
   
 > [!NOTE]  
->  If the project contains one or more datasources, the datasources are removed when the project conversion is completed. To create a connection to a data source that can be shared by the packages in the project, add a connection manager at the project level. For more information, see [Add, Delete, or Share a Connection Manager in a Package](../Topic/Add,%20Delete,%20or%20Share%20a%20Connection%20Manager%20in%20a%20Package.md).  
+>  If the project contains one or more datasources, the datasources are removed when the project conversion is completed. To create a connection to a data source that can be shared by the packages in the project, add a connection manager at the project level. For more information, see [Add, Delete, or Share a Connection Manager in a Package](../../a9retired/add-delete-or-share-a-connection-manager-in-a-package.md).  
   
  **What do you want to do?**  
   
@@ -49,16 +49,16 @@ manager: "jhubbard"
 ##  <a name="open_dialog"></a> Open the Integration Services Project Conversion Wizard  
  Do one of the following to open the **Integration Services Project Conversion** Wizard.  
   
--   Open the project in [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)], and then in Solution Explorer, right-click the project and click **Convert to Project Deployment Model**.  
+-   Open the project in [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)], and then in Solution Explorer, right-click the project and click **Convert to Project Deployment Model**.  
   
--   From Object Explorer in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], right-click the **Projects** node and select **Import Packages**.  
+-   From Object Explorer in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], right-click the **Projects** node and select **Import Packages**.  
   
- Depending on whether you run the **Integration Services Project Conversion Wizard** from [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] or from [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], the wizard performs different conversion tasks. For more information, see [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+ Depending on whether you run the **Integration Services Project Conversion Wizard** from [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] or from [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], the wizard performs different conversion tasks. For more information, see [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
   
 ##  <a name="locate"></a> Set Options on the Locate Packages Page  
   
 > [!NOTE]  
->  The **Locate Packages** page is available only when you run the wizard from [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)].  
+>  The **Locate Packages** page is available only when you run the wizard from [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)].  
   
  The following option displays on the page when you select **File system** in the **Source** drop-down list. Select this option when the package is resides in the file system.  
   
@@ -73,7 +73,7 @@ manager: "jhubbard"
  **Folder**  
  Type the package path, or navigate to the package by clicking **Browse**.  
   
- The following options display on the page when you select **Microsoft SQL Server** in the **Source** drop-down list. Select this option when the package resides in Microsoft [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ The following options display on the page when you select **Microsoft SQL Server** in the **Source** drop-down list. Select this option when the package resides in Microsoft [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  **Server**  
  Type the server name or select the server.  
@@ -82,7 +82,7 @@ manager: "jhubbard"
  Microsoft Windows Authentication mode allows a user to connect through a Windows user account. If you use Windows Authentication, you do not need to provide a user name or password.  
   
  **Use SQL Server authentication**  
- When a user connects with a specified login name and password from a non-trusted connection, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] authenticates the connection by checking to see if a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login account has been set up and if the specified password matches the one previously recorded. If [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not have a login account set, authentication fails, and the user receives an error message.  
+ When a user connects with a specified login name and password from a non-trusted connection, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] authenticates the connection by checking to see if a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login account has been set up and if the specified password matches the one previously recorded. If [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not have a login account set, authentication fails, and the user receives an error message.  
   
  **User name**  
  Specify a user name when you are using SQL Server Authentication.  
@@ -116,7 +116,7 @@ manager: "jhubbard"
  On this page, specify the name and path for a new project deployment file (.ispac) or select an existing file.  
   
 > [!NOTE]  
->  The **Select Destination** page is available only when you run the wizard from [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)].  
+>  The **Select Destination** page is available only when you run the wizard from [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)].  
   
  **Output path**  
  Type the path for the deployment file or navigate to the file by clicking **Browse**.  
@@ -133,7 +133,7 @@ manager: "jhubbard"
 ##  <a name="projectProperties"></a> Set Options on the Specify Project Properties Page  
   
 > [!NOTE]  
->  The **Specify Project Properties** page is available only when you run the wizard from [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)].  
+>  The **Specify Project Properties** page is available only when you run the wizard from [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)].  
   
  **Project name**  
  Lists the project name.  
@@ -211,7 +211,7 @@ manager: "jhubbard"
   
  In the **Set Parameter Details** dialog box, you can edit the parameter value. You can also specify whether the parameter value must be provided when you run the package.  
   
- You can modify value in the **Parameters** page of the **Configure** dialog box in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], by clicking the browse button next to the parameter. The **Set Parameter Value** dialog box appears.  
+ You can modify value in the **Parameters** page of the **Configure** dialog box in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], by clicking the browse button next to the parameter. The **Set Parameter Value** dialog box appears.  
   
  The **Set Parameter Details** dialog box also lists the data type of the parameter value and the origin of the parameter.  
   
@@ -233,7 +233,7 @@ manager: "jhubbard"
  **Result**  
  Lists the status of each conversion step. Click the status message for more information.  
   
- The project conversion is not saved until the project is saved in [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)].  
+ The project conversion is not saved until the project is saved in [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)].  
   
  **Save report**  
  Click to save a summary of the project conversion in an .xml file.  

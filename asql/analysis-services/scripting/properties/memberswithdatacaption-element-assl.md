@@ -56,7 +56,7 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- The value of the **MembersWithDataCaption** element is used only by parent attributes (in other words, the value of the [Usage](../../../analysis-services/scripting/properties/usage-element-dimensionattribute-assl.md) element of the **DimensionAttribute** parent element is set to *Parent*) to determine the caption of data members in the parent attribute. For more information about data members, see [Attributes in Parent-Child Hierarchies](../Topic/Attributes%20in%20Parent-Child%20Hierarchies.md).  
+ The value of the **MembersWithDataCaption** element is used only by parent attributes (in other words, the value of the [Usage](../../../analysis-services/scripting/properties/usage-element-dimensionattribute-assl.md) element of the **DimensionAttribute** parent element is set to *Parent*) to determine the caption of data members in the parent attribute. For more information about data members, see [Attributes in Parent-Child Hierarchies](../../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
   
  The elements that correspond to the parents of **MembersWithDataCaption** in the Analysis Management Objects (AMO) object model are <xref:Microsoft.AnalysisServices.AttributeTranslation> and <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   

@@ -17,16 +17,16 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Creating, Altering, and Removing Triggers
-  In SMO, triggers are represented by using the <xref:Microsoft.SqlServer.Management.Smo.Trigger> object. The [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] code that runs when the trigger that is fired is set by the <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> property of the Trigger object. The type of trigger is set by using other properties of the <xref:Microsoft.SqlServer.Management.Smo.Trigger> object, such as the <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> property. This is a Boolean property that specifies whether the trigger is fired by an **UPDATE** of records on the parent table.  
+  In SMO, triggers are represented by using the <xref:Microsoft.SqlServer.Management.Smo.Trigger> object. The [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] code that runs when the trigger that is fired is set by the <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> property of the Trigger object. The type of trigger is set by using other properties of the <xref:Microsoft.SqlServer.Management.Smo.Trigger> object, such as the <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> property. This is a Boolean property that specifies whether the trigger is fired by an **UPDATE** of records on the parent table.  
   
- The <xref:Microsoft.SqlServer.Management.Smo.Trigger> object represents traditional, data manipulation language (DML) triggers. In [!INCLUDE[ssKatmai](../../../analysis-services/data-mining/includes/sskatmai-md.md)] and later versions, data definition language (DDL) triggers are also supported. DDL triggers are represented by the <xref:Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger> object and the <xref:Microsoft.SqlServer.Management.Smo.ServerDdlTrigger> object.  
+ The <xref:Microsoft.SqlServer.Management.Smo.Trigger> object represents traditional, data manipulation language (DML) triggers. In [!INCLUDE[ssKatmai](../../../a9notintoc/includes/sskatmai-md.md)] and later versions, data definition language (DDL) triggers are also supported. DDL triggers are represented by the <xref:Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger> object and the <xref:Microsoft.SqlServer.Management.Smo.ServerDdlTrigger> object.  
   
 ## Example  
-To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20Basic%20SMO%20Project%20in%20Visual%20Studio%20.NET.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20C%23%20SMO%20Project%20in%20Visual%20Studio%20.NET.md).  
+To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-.net.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-.net.md).  
  
   
 ## Creating, Altering, and Removing a Trigger in Visual Basic  
- This code example shows how to create and insert an update trigger on an existing table, named `Sales`, in the [!INCLUDE[ssSampleDBnormal](../../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. The trigger sends a reminder message when the table is updated or a new record is inserted.  
+ This code example shows how to create and insert an update trigger on an existing table, named `Sales`, in the [!INCLUDE[ssSampleDBnormal](../../../a9notintoc/includes/sssampledbnormal-md.md)] database. The trigger sends a reminder message when the table is updated or a new record is inserted.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -57,7 +57,7 @@ tr.Drop()
 ``` 
   
 ## Creating, Altering, and Removing a Trigger in Visual C#  
- This code example shows how to create and insert an update trigger on an existing table, named `Sales`, in the [!INCLUDE[ssSampleDBnormal](../../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. The trigger sends a reminder message when the table is updated or a new record is inserted.  
+ This code example shows how to create and insert an update trigger on an existing table, named `Sales`, in the [!INCLUDE[ssSampleDBnormal](../../../a9notintoc/includes/sssampledbnormal-md.md)] database. The trigger sends a reminder message when the table is updated or a new record is inserted.  
   
 ```C#  
 {  
@@ -90,7 +90,7 @@ tr.Drop()
 ```  
   
 ## Creating, Altering, and Removing a Trigger in PowerShell  
- This code example shows how to create and insert an update trigger on an existing table, named `Sales`, in the [!INCLUDE[ssSampleDBnormal](../../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. The trigger sends a reminder message when the table is updated or a new record is inserted.  
+ This code example shows how to create and insert an update trigger on an existing table, named `Sales`, in the [!INCLUDE[ssSampleDBnormal](../../../a9notintoc/includes/sssampledbnormal-md.md)] database. The trigger sends a reminder message when the table is updated or a new record is inserted.  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server and to the  

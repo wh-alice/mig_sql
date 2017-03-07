@@ -22,7 +22,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Delete a Member or Collection (Master Data Services)
-  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], delete a member or collection when you no longer need it. If you want to delete members in bulk, use the staging tables instead. For more information, see [Import Data from Tables &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
+  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], delete a member or collection when you no longer need it. If you want to delete members in bulk, use the staging tables instead. For more information, see [Import Data from Tables &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   
 > [!NOTE]  
 >  You cannot delete a member if it is used as a domain-based attribute value for another member.  
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 ### To delete a member or collection  
   
-1.  On the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] home page, from the **Model** list, select a model.  
+1.  On the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] home page, from the **Model** list, select a model.  
   
 2.  From the **Version** list, select a version.  
   

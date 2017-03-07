@@ -17,9 +17,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Lesson 3-2 - Running the Package Installation Wizard
-In this task, you will run the Package Installation Wizard to deploy the packages from the Deployment Tutorial project to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Only packages can be installed in the sysssispackages table in the msdb [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database, the supporting files that the deployment bundle includes will be deployed to the file system.  
+In this task, you will run the Package Installation Wizard to deploy the packages from the Deployment Tutorial project to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Only packages can be installed in the sysssispackages table in the msdb [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database, the supporting files that the deployment bundle includes will be deployed to the file system.  
   
-The Package Installation Wizard will guide you through the steps to install and configure the packages. You will install the packages to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] on the destination computer (the computer to which you copied the deployment bundle. You will also create a folder, C:\DeploymentTutorialInstall, in which the wizard will install the non-package files.  
+The Package Installation Wizard will guide you through the steps to install and configure the packages. You will install the packages to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] on the destination computer (the computer to which you copied the deployment bundle. You will also create a folder, C:\DeploymentTutorialInstall, in which the wizard will install the non-package files.  
   
 In an earlier lesson, you modified the packages in the tutorial to use configurations. Using the Package Installation Wizard, you will edit these configurations to enable packages to run successfully in the installed-to environment.  
   
@@ -98,7 +98,7 @@ In an earlier lesson, you modified the packages in the tutorial to use configura
     > A temporary log file is created to use in the package validation. This file is not used when the package runs.  
   
 ## Next Task in Lesson  
-[Step 3: Testing the Deployed Packages](../Topic/Step%203:%20Testing%20the%20Deployed%20Packages.md)  
+[Step 3: Testing the Deployed Packages](../../integration-services/tutorials/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## See Also  
 [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md)  

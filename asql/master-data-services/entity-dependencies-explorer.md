@@ -18,7 +18,7 @@ manager: "jhubbard"
 ---
 # Entity Dependencies Explorer
   
-[!INCLUDE[ssMDSshort_md](../analysis-services/includes/ssmdsshort-md.md)] 2016 adds a new explorer page, Entity Dependencies, that provides an alternate way to visualize relationships between entity members within a model, as specified by their domain-based attribute (DBA) values, but without having to first define a Derived Hierarchy.   
+[!INCLUDE[ssMDSshort_md](../a9notintoc/includes/ssmdsshort-md.md)] 2016 adds a new explorer page, Entity Dependencies, that provides an alternate way to visualize relationships between entity members within a model, as specified by their domain-based attribute (DBA) values, but without having to first define a Derived Hierarchy.   
   
 It helps answer the question “who is consuming my entity, and how?”. The view is similar to the Derived Hierarchy explorer page, but it is more inclusive. It shows all DBA relationships, not just those defined as part of a particular hierarchy. A hierarchy definition is not required because the displayed hierarchical structure is simply inferred from existing DBAs.  
   

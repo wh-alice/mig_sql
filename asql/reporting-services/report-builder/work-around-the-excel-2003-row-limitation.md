@@ -19,13 +19,13 @@ manager: "erikre"
   This topic explains how to work around the Excel 2003 row limitation when you export paginated reports to Excel. The workaround is for a report that contains only a table.  
   
 > [!IMPORTANT]  
->  The [!INCLUDE[ofprexcel](../../analysis-services/data-mining/includes/ofprexcel-md.md)] 2003 (.xls) rendering extension is deprecated. For more information, see [Deprecated Features in SQL Server Reporting Services in SQL Server 2016](Deprecated%20features%20in%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md).  
+>  The [!INCLUDE[ofprexcel](../../a9retired/includes/ofprexcel-md.md)] 2003 (.xls) rendering extension is deprecated. For more information, see [Deprecated Features in SQL Server Reporting Services in SQL Server 2016](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  Excel 2003 supports a maximum of 65,536 rows per worksheet. You can work around this limitation by forcing an explicit page break after a certain number of rows. The Excel renderer creates a new worksheet for each explicit page break.  
   
 ### To create an explicit page break  
   
-1.  Open the report in [!INCLUDE[ss_dtbi](../../analysis-services/includes/ss-dtbi-md.md)] or the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal.  
+1.  Open the report in [!INCLUDE[ss_dtbi](../../analysis-services/includes/ss-dtbi-md.md)] or the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal.  
   
 2.  Right click the Data row in the table, and then click **Add Group** > **Parent Group** to add an outer table group.  
   

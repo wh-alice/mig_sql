@@ -17,7 +17,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Integration Services Tutorials
-This section contains tutorials [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)].  
+This section contains tutorials [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)].  
   
 -   [SSIS How to Create an ETL Package](../../integration-services/tutorials/ssis-how-to-create-an-etl-package.md)  
   

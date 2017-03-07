@@ -18,9 +18,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Active Operations Dialog Box
-  Use the **Active Operations** dialog box to view the status of currently running [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] operations on the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] server, such as deployment, validation, and package execution. This data is stored in the SSISDB catalog.  
+  Use the **Active Operations** dialog box to view the status of currently running [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] operations on the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] server, such as deployment, validation, and package execution. This data is stored in the SSISDB catalog.  
   
- For more information about related [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] views, see [catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system/views/catalog.operations-ssisdb-database.md), [catalog.validations &#40;SSISDB Database&#41;](../../integration-services/system/views/catalog.validations-ssisdb-database.md), and [catalog.executions &#40;SSISDB Database&#41;](../../integration-services/system/views/catalog.executions-ssisdb-database.md)  
+ For more information about related [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] views, see [catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system/views/catalog.operations-ssisdb-database.md), [catalog.validations &#40;SSISDB Database&#41;](../../integration-services/system/views/catalog.validations-ssisdb-database.md), and [catalog.executions &#40;SSISDB Database&#41;](../../integration-services/system/views/catalog.executions-ssisdb-database.md)  
   
  **What do you want to do?**  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 ##  <a name="open_dialog"></a> Open the Active Operations Dialog Box  
   
-1.  Open [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)].  
+1.  Open [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)].  
   
 2.  Connect Microsoft SQL Server Database Engine  
   

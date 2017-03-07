@@ -17,7 +17,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Delete Power Pivot Gallery
-  Deleting a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery also deletes all of its items, including the data refresh history for [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbooks that are configured for scheduled data refresh.  
+  Deleting a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery also deletes all of its items, including the data refresh history for [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbooks that are configured for scheduled data refresh.  
   
 > [!NOTE]  
 >  This topic provides instructions on how to delete a SharePoint library. For instructions on how to delete individual documents in the library, see [Use Power Pivot Gallery](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md).  
@@ -26,13 +26,13 @@ manager: "erikre"
   
 ### Delete Power Pivot Gallery SharePoint 2013  
   
-1.  Click Settings ![SharePoint Settings](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings"), then click **Site settings**.  
+1.  Click Settings ![SharePoint Settings](../../a9retired/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings"), then click **Site settings**.  
   
 2.  Click **Site Settings**.  
   
 3.  Under Site Administration, click **Site libraries and lists**.  
   
-4.  Click **Customize "[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery"**.  
+4.  Click **Customize "[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery"**.  
   
 5.  Under Permissions and Management, click **Delete this document library**.  
   
@@ -44,11 +44,11 @@ manager: "erikre"
   
 3.  Under Site Administration, click **Sites libraries and lists**.  
   
-4.  Click **Customize "[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery"**.  
+4.  Click **Customize "[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery"**.  
   
 5.  Under Permissions and Management, click **Delete this library**.  
   
 ## See Also  
- [Power Pivot Gallery](../Topic/Power%20Pivot%20Gallery.md)  
+ [Power Pivot Gallery](../../a9retired/power-pivot-gallery.md)  
   
   

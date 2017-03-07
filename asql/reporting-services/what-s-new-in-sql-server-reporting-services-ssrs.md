@@ -20,19 +20,19 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # What&#39;s new in SQL Server Reporting Services (SSRS)
-Learn about what is new in the SQL Server [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]. This covers the major feature areas and is updated as new items are released.
+Learn about what is new in the SQL Server [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)]. This covers the major feature areas and is updated as new items are released.
   
   For information on what's new in other areas of SQL Server, see [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md) or [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
   
- **Download** ![download](../analysis-services/media/download.png "download")
+ **Download** ![download](../a9notintoc/media/download.png "download")
  
 - To download the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services, along with the Power BI Desktop release (SQL Server Reporting Services), go to the **[Microsoft download center](https://go.microsoft.com/fwlink/?linkid=839351)**.
   
--   To download [!INCLUDE[ssSQL15](../analysis-services/powershell/includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
+-   To download [!INCLUDE[ssSQL15](../a9notintoc/includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
   
--   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1enterprisewindowsserver2016/)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)] already installed.  
+-   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1enterprisewindowsserver2016/)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)] already installed.  
   
- ![note](../analysis-services/instances/install/windows/media/ssrs-fyi-note.png "note") For the current release notes, see [Technical Preview of Power BI reports in SSRS - Release notes](Technical%20Preview%20of%20Power%20BI%20reports%20in%20SSRS%20-%20Release%20notes.md) or  [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).  
+ ![note](../a9retired/media/ssrs-fyi-note.png "note") For the current release notes, see [Technical Preview of Power BI reports in SSRS - Release notes](../reporting-services/reporting-services-release-notes.md) or  [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).  
 
 ## What's new in the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services
 
@@ -42,7 +42,7 @@ Reporting Services can now be installed outside of the SQL Server setup. The set
 
 ![ssrs-standalone-setup1](../reporting-services/media/ssrs-standalone-setup1.png)
 
-For more information, see [Install the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services](Install%20the%20January%202017%20Technical%20Preview%20of%20Power%20BI%20reports%20in%20SQL%20Server%20Reporting%20Services.md).
+For more information, see [Install the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services](../reporting-services/install/windows/install-the-january-2017-preview-of-power-bi-reports-in-ssrs.md).
 
 ### Host Power BI reports within the web portal
 
@@ -59,9 +59,9 @@ For more information, see [Power BI reports in Reporting Services](../reporting-
 ## What's new in SQL Server 2016
   
 ### Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../database-engine/availability-groups/windows/includes/ssrswebportal-non-markdown-md.md)]  
- A new [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../database-engine/availability-groups/windows/includes/ssrswebportal-non-markdown-md.md)] is available. This is an updated, modern, portal which incorporates KPIs, Mobile Reports, Paginated Reports, Excel and Power BI Desktop files. The [!INCLUDE[ssRSWebPortal](../reporting-services/includes/ssrswebportal.md)] replaces Report Manager from previous releases. You can also download Mobile Report Publisher and Report Builder from the [!INCLUDE[ssRSWebPortal](../reporting-services/includes/ssrswebportal.md)] without the need of ClickOnce technology.
+ A new [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../database-engine/availability-groups/windows/includes/ssrswebportal-non-markdown-md.md)] is available. This is an updated, modern, portal which incorporates KPIs, Mobile Reports, Paginated Reports, Excel and Power BI Desktop files. The [!INCLUDE[ssRSWebPortal](../reporting-services/includes/ssrswebportal.md)] replaces Report Manager from previous releases. You can also download Mobile Report Publisher and Report Builder from the [!INCLUDE[ssRSWebPortal](../reporting-services/includes/ssrswebportal.md)] without the need of ClickOnce technology.
  
- To create Mobile Reports, you will need the [!INCLUDE[SS_MobileReptPub_Short](../reporting-services/includes/ss-mobilereptpub-short-md.md)].  
+ To create Mobile Reports, you will need the [!INCLUDE[SS_MobileReptPub_Short](../a9notintoc/includes/ss-mobilereptpub-short-md.md)].  
   
  For more information about the [!INCLUDE[ssRSWebPortal-Non-Markdown](../database-engine/availability-groups/windows/includes/ssrswebportal-non-markdown-md.md)], see [Web portal (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -86,7 +86,7 @@ You can create KPIs direct in the [!INCLUDE[ssRSWebPortal-Non-Markdown](../datab
 Reporting Services mobile reports are dedicated reports optimized for a wide variety of form factors and provide an optimal experience for users accessing reports on mobile devices. Mobile reports feature a assortment of visualizations, from time, category, and comparison charts, to treemaps and custom maps. Connect your mobile reports to a range of data sources, including on-premises SQL Server Analysis Services multidimensional and tabular data. Lay out your mobile reports on a design surface with adjusting grid rows and columns, and flexible mobile report elements that scale well to any screen size. Then save these mobile reports to a Reporting Service server, and view and interact with them in a browser or in the Power BI mobile app on iPads, iPhones, Android phones and Windows 10 devices.
   
 #### Mobile Report Publisher  
- The [!INCLUDE[SS_MobileReptPub_Long](../reporting-services/includes/ss-mobilereptpub-long-md.md)]allows you to create and publish SQL Server mobile reports to your [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../database-engine/availability-groups/windows/includes/ssrswebportal-non-markdown-md.md)].  
+ The [!INCLUDE[SS_MobileReptPub_Long](../reporting-services/includes/ss-mobilereptpub-long-md.md)]allows you to create and publish SQL Server mobile reports to your [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../database-engine/availability-groups/windows/includes/ssrswebportal-non-markdown-md.md)].  
   
  ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
   
@@ -100,7 +100,7 @@ Reporting Services mobile reports are dedicated reports optimized for a wide var
  You can't connect by default without some configuration changes. For more information on how to allow the Power BI Mobile app to connect to your report server, see [Enable a report server for Power BI Mobile access](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md).
   
 ### Support of SharePoint mode and SharePoint 2016  
- [!INCLUDE[ssSQL15](../analysis-services/powershell/includes/sssql15-md.md)] [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] supports integration with SharePoint 2013 and SharePoint 2016.
+ [!INCLUDE[ssSQL15](../a9notintoc/includes/sssql15-md.md)] [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] supports integration with SharePoint 2013 and SharePoint 2016.
  
 For more information, see:  
   
@@ -111,7 +111,7 @@ For more information, see:
 -   [Install Reporting Services SharePoint Mode](../reporting-services/install/windows/install-reporting-services-sharepoint-mode.md)  
 
 ### Microsoft .NET Framework 4 Support  
- [!INCLUDE[ssRSCurrent](../reporting-services/includes/ssrscurrent-md.md)] supports the current versions of Microsoft .NET Framework 4. This includes version 4.0 and 4.5.1. If no version of .Net Framework 4.x is installed, [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup installs .NET 4.0 during the feature installation step.  
+ [!INCLUDE[ssRSCurrent](../a9notintoc/includes/ssrscurrent-md.md)] supports the current versions of Microsoft .NET Framework 4. This includes version 4.0 and 4.5.1. If no version of .Net Framework 4.x is installed, [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] setup installs .NET 4.0 during the feature installation step.  
 
 ### Report improvements
 
@@ -125,13 +125,13 @@ For more information, see:
 
 **Report embedding:** You can now embed mobile and paginated reports in other web pages, and applications, by using an iframe along with URL parameters.  
 
-**Pin Report Items to a Power BI Dashboard:** While viewing a report in the [!INCLUDE[ssRSWebPortal](../reporting-services/includes/ssrswebportal.md)], you can select report items and pin them to a [!INCLUDE[sspowerbi](../reporting-services/includes/sspowerbi-md.md)] dashboard.   The items you can pin are charts, gauge panels, maps, and images. You can **(1)** select the group that contains the dashboard you want to pin to, **(2)** select the dashboard you want to pin the item too and **(3)** select how frequently you want the tile updated in the dashboard.   ![note](../analysis-services/instances/install/windows/media/ssrs-fyi-note.png "note") The refresh is managed by  [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] subscriptions and after the item is pinned, you can edit the subscription and configure a different  refresh schedule.  
+**Pin Report Items to a Power BI Dashboard:** While viewing a report in the [!INCLUDE[ssRSWebPortal](../reporting-services/includes/ssrswebportal.md)], you can select report items and pin them to a [!INCLUDE[sspowerbi](../reporting-services/includes/sspowerbi-md.md)] dashboard.   The items you can pin are charts, gauge panels, maps, and images. You can **(1)** select the group that contains the dashboard you want to pin to, **(2)** select the dashboard you want to pin the item too and **(3)** select how frequently you want the tile updated in the dashboard.   ![note](../a9retired/media/ssrs-fyi-note.png "note") The refresh is managed by  [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] subscriptions and after the item is pinned, you can edit the subscription and configure a different  refresh schedule.  
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
  For more information, see [Power BI Report Server Integration &#40;Configuration Manager&#41;](../reporting-services/install/windows/power-bi-report-server-integration-configuration-manager.md) and [Pin Reporting Services items to Power BI Dashboards](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
  
- **PowerPoint Rendering and Export:** The Microsoft PowerPoint (PPTX) format is a new [!INCLUDE[ssRSCurrent](../reporting-services/includes/ssrscurrent-md.md)] rendering extension. You can export reports in the PPTX format from the usual applications; Report Builder, Report Designer (in SSDT), and the [!INCLUDE[ssRSWebPortal](../reporting-services/includes/ssrswebportal.md)]. For the example the following image shows the export menu from the [!INCLUDE[ssRSWebPortal](../reporting-services/includes/ssrswebportal.md)]. 
+ **PowerPoint Rendering and Export:** The Microsoft PowerPoint (PPTX) format is a new [!INCLUDE[ssRSCurrent](../a9notintoc/includes/ssrscurrent-md.md)] rendering extension. You can export reports in the PPTX format from the usual applications; Report Builder, Report Designer (in SSDT), and the [!INCLUDE[ssRSWebPortal](../reporting-services/includes/ssrswebportal.md)]. For the example the following image shows the export menu from the [!INCLUDE[ssRSWebPortal](../reporting-services/includes/ssrswebportal.md)]. 
   
  ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
   
@@ -143,7 +143,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
  For more information, see [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).  
  
- **PDF Replaces ActiveX for Remote Printing:** The report viewer toolbar ActiveX print experience has been replaced with a modern PDF based experience that works across the matrix of supported browsers, including Microsoft Edge. No more ActiveX controls to download! Depending on the browser you use and the PDF viewing applications and services you have installed, [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] will either open  a print dialog to print your report or prompt you to download a .PDF file of your report.  As an administrator, you can still disable client side printing from [!INCLUDE[ssManStudio](../advanced-analytics/r-services/includes/ssmanstudio-md.md)]. For more information, see [Enable and Disable Client-Side Printing for Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
+ **PDF Replaces ActiveX for Remote Printing:** The report viewer toolbar ActiveX print experience has been replaced with a modern PDF based experience that works across the matrix of supported browsers, including Microsoft Edge. No more ActiveX controls to download! Depending on the browser you use and the PDF viewing applications and services you have installed, [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] will either open  a print dialog to print your report or prompt you to download a .PDF file of your report.  As an administrator, you can still disable client side printing from [!INCLUDE[ssManStudio](../a9notintoc/includes/ssmanstudio-md.md)]. For more information, see [Enable and Disable Client-Side Printing for Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
 ![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
 
@@ -153,15 +153,15 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 |-------------|---------------------------|  
 |**Enable and disable subscriptions**. New user interface options to quickly disable and enable subscriptions. The disabled subscriptions maintain their other configuration properties such as schedule and can be easily enabled.<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> For more information, see [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|Native mode|  
 |**Subscription description**. When you create a new subscription, you can now include a description of the report as part of the subscription properties. The description is included on the subscription summary page.|SharePoint and Native mode|  
-|**Change subscription owner**. Enhanced user interface to quickly change the owner of a subscription. Previous versions of [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] allow administrators to change subscription owners using script. Starting with the [!INCLUDE[ssSQL15](../analysis-services/powershell/includes/sssql15-md.md)] release, you can change subscription owners using the user interface or script. Changing the subscription owner is a common administrative task when users leave or change roles in your organization.|SharePoint and Native mode|  
-|**Shared credential for file share subscriptions**. Two workflows now exist with [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] file share subscriptions:<br /><br /> New in this release, your [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] administrator can configure a single file share account, that is used for one to many subscriptions. The file share account is configured in the [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] native mode configuration manager **Specify a file share account**, and then on the subscription configuration page, users select **Use file share account**.<br /><br /> Configure individual subscriptions with specific credentials for the destination file share.<br /><br /> You can also mix the two approaches and have some file share subscriptions use the central file share account while other subscriptions use specific credentials.|Native mode|  
+|**Change subscription owner**. Enhanced user interface to quickly change the owner of a subscription. Previous versions of [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] allow administrators to change subscription owners using script. Starting with the [!INCLUDE[ssSQL15](../a9notintoc/includes/sssql15-md.md)] release, you can change subscription owners using the user interface or script. Changing the subscription owner is a common administrative task when users leave or change roles in your organization.|SharePoint and Native mode|  
+|**Shared credential for file share subscriptions**. Two workflows now exist with [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] file share subscriptions:<br /><br /> New in this release, your [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] administrator can configure a single file share account, that is used for one to many subscriptions. The file share account is configured in the [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] native mode configuration manager **Specify a file share account**, and then on the subscription configuration page, users select **Use file share account**.<br /><br /> Configure individual subscriptions with specific credentials for the destination file share.<br /><br /> You can also mix the two approaches and have some file share subscriptions use the central file share account while other subscriptions use specific credentials.|Native mode|  
 
 ### SQL Server Data Tools (SSDT)  
- The new release of SSDT includes the project templates for [!INCLUDE[ssRSCurrent](../reporting-services/includes/ssrscurrent-md.md)]: Report Server Project Wizard and Report Server Project. For information about downloading SSDT, see [SQL Server Data Tools for Visual Studio 2015](http://go.microsoft.com/fwlink/?LinkId=827542).  
+ The new release of SSDT includes the project templates for [!INCLUDE[ssRSCurrent](../a9notintoc/includes/ssrscurrent-md.md)]: Report Server Project Wizard and Report Server Project. For information about downloading SSDT, see [SQL Server Data Tools for Visual Studio 2015](http://go.microsoft.com/fwlink/?LinkId=827542).  
 
 ### Report Builder improvements
 
-**New Report Builder User Interface:** The core [!INCLUDE[ssRBnoversion](../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] user interface is now a modern look and feel with streamlined UI elements.  
+**New Report Builder User Interface:** The core [!INCLUDE[ssRBnoversion](../a9notintoc/includes/ssrbnoversion-md.md)] user interface is now a modern look and feel with streamlined UI elements.  
   
 |||  
 |-|-|  
@@ -173,7 +173,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
  ![Parameter list in Report Data pane and in parameters pane](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Parameter list in Report Data pane and in parameters pane")  
 
   
-**High DPI Support:** [!INCLUDE[ssRBnoversion](../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] for [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)] supports High DPI (Dots Per Inch) scaling and devices.  For more information on High DPI, see the following:  
+**High DPI Support:** [!INCLUDE[ssRBnoversion](../a9notintoc/includes/ssrbnoversion-md.md)] for [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)] supports High DPI (Dots Per Inch) scaling and devices.  For more information on High DPI, see the following:  
   
 -   [Windows 8.1 DPI Scaling Enhancements](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
   
@@ -181,11 +181,11 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
 ## See Also  
  [What's New in Analysis Services](http://msdn.microsoft.com/en-us/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
- [Technical Preview of Power BI reports in SSRS - Release notes](Technical%20Preview%20of%20Power%20BI%20reports%20in%20SSRS%20-%20Release%20notes.md)  
+ [Technical Preview of Power BI reports in SSRS - Release notes](../reporting-services/reporting-services-release-notes.md)  
  [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)   
  [Backward Compatibility](http://msdn.microsoft.com/en-us/675b0e0e-cfee-4790-9675-80fc3ea6d30f)   
  [Reporting Services Features Supported by the Editions of SQL Server 2016](http://msdn.microsoft.com/en-us/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
  [Upgrade and Migrate Reporting Services](../reporting-services/install/windows/upgrade-and-migrate-reporting-services.md)   
- [Reporting Services &#40;SSRS&#41;](../Topic/Reporting%20Services%20\(SSRS\).md)  
+ [Reporting Services &#40;SSRS&#41;](../reporting-services/b8d18d3d-9db0-43e7-8286-7b46cc3a37ed.md)  
   
   

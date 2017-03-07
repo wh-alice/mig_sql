@@ -63,9 +63,9 @@ manager: "erikre"
  The **CubeInfo** element contains one **Cube** element for each cube referenced in the multidimensional dataset.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] returns only a single **Cube** element in this collection because [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] does not support statements that reference multiple cubes in the FROM clause of the Multidimensional Expressions (MDX) language.  
+>  [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] returns only a single **Cube** element in this collection because [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] does not support statements that reference multiple cubes in the FROM clause of the Multidimensional Expressions (MDX) language.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

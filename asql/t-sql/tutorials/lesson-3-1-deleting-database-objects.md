@@ -46,7 +46,7 @@ To remove all traces of this tutorial, you could just delete the database. Howev
   
     ```  
   
-4.  Use the `DROP` statement to remove permission for `Mary` to access this instance of [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)]:  
+4.  Use the `DROP` statement to remove permission for `Mary` to access this instance of [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)]:  
   
     ```  
     DROP LOGIN [<computer_name>\Mary];  
@@ -96,7 +96,7 @@ To remove all traces of this tutorial, you could just delete the database. Howev
   
     ```  
   
-This concludes the Writing [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] Statements tutorial. Remember, this tutorial is a brief overview and it does not describe all the options to the statements that are used. Designing and creating an efficient database structure and configuring secure access to the data requires a more complex database than that shown in this tutorial.  
+This concludes the Writing [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] Statements tutorial. Remember, this tutorial is a brief overview and it does not describe all the options to the statements that are used. Designing and creating an efficient database structure and configuring secure access to the data requires a more complex database than that shown in this tutorial.  
   
 ## Return to SQL Server Tools Portal  
 [Tutorial: Writing Transact-SQL Statements](../../t-sql/tutorials/tutorial-writing-transact-sql-statements.md)  

@@ -21,7 +21,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Configure a Report Server for Remote Administration
-  In [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], you can configure report server instances locally or remotely. To configure a remote report server instance, you can use the Reporting Services Configuration tool or write custom code that uses the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) provider. The Reporting Services Configuration tool provides a graphical interface to the WMI provider so that you can configure a report server without having to write code. When you start the tool, you can specify a remote server to connect to.  
+  In [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)], you can configure report server instances locally or remotely. To configure a remote report server instance, you can use the Reporting Services Configuration tool or write custom code that uses the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) provider. The Reporting Services Configuration tool provides a graphical interface to the WMI provider so that you can configure a report server without having to write code. When you start the tool, you can specify a remote server to connect to.  
   
  Before you can use the tool to configure a remote report server, you must follow the instructions in this topic to enable ports in Windows Firewall, enable remote connections, and enable remote WMI requests.  
   
@@ -47,7 +47,7 @@ manager: "erikre"
   
 -   Enable remote connections to the instance of the Database Engine instance that hosts the report server database. A remote connection is necessary for configuring the report server database connection and managing the encryption keys.  
   
--   Enable remote WMI requests to pass through the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows firewall.  
+-   Enable remote WMI requests to pass through the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows firewall.  
   
 -   If you are configuring a remote report server for administration by a non-administrative user, you must set DCOM permissions to enable remote WMI access to a standard Windows user account. Because WMI uses DCOM as transport for remote calls, you must set the DCOM permissions so that users who are not logged on as the local administrator can configure the server.  
   
@@ -57,11 +57,11 @@ manager: "erikre"
   
 ### To configure remote connections to the report server database  
   
-1.  Click **Start**, point to **Programs**, point to [!INCLUDE[ssCurrentUI](../../analysis-services/instances/install/windows/includes/sscurrentui-md.md)], point to **Configuration Tools**, and click **SQL Server Configuration Manager**.  
+1.  Click **Start**, point to **Programs**, point to [!INCLUDE[ssCurrentUI](../../a9notintoc/includes/sscurrentui-md.md)], point to **Configuration Tools**, and click **SQL Server Configuration Manager**.  
   
-2.  In the left pane, expand **SQL Server Network Configuration**, and then click **Protocols** for the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+2.  In the left pane, expand **SQL Server Network Configuration**, and then click **Protocols** for the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
-3.  In the details pane, enable the TCP/IP and Named Pipes protocols, and then restart the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service.  
+3.  In the details pane, enable the TCP/IP and Named Pipes protocols, and then restart the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service.  
   
 ### To enable remote administration in Windows Firewall  
   

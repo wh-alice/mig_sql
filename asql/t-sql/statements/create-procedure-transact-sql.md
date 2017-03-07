@@ -50,9 +50,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CREATE PROCEDURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Creates a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] or common language runtime (CLR) stored procedure in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)], Azure SQL Data Warehouse and Parallel Data Warehouse. Stored procedures are similar to procedures in other programming languages in that they can:  
+  Creates a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] or common language runtime (CLR) stored procedure in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)], Azure SQL Data Warehouse and Parallel Data Warehouse. Stored procedures are similar to procedures in other programming languages in that they can:  
   
 -   Accept input parameters and return multiple values in the form of output parameters to the calling procedure or batch.  
   
@@ -63,11 +63,11 @@ manager: "jhubbard"
  Use this statement to create a permanent procedure in the current database or a temporary procedure in the **tempdb** database.  
   
 > [!NOTE]  
->  The integration of .NET Framework CLR into SQL Server is discussed in this topic. CLR integration does not apply to Azure [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].
+>  The integration of .NET Framework CLR into SQL Server is discussed in this topic. CLR integration does not apply to Azure [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].
 
 Jump to [Simple Examples](#Simple) to skip the details of the syntax and get to a quick example of a basic stored procedure.
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -137,7 +137,7 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 OR ALTER  
  ||  
 |-|  
-|**Applies to**: Azure [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] SP1).|  
+|**Applies to**: Azure [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] SP1).|  
   
  Alters the procedure if it already exists.
  
@@ -147,7 +147,7 @@ OR ALTER
  *procedure_name*  
  The name of the procedure. Procedure names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md) and must be unique within the schema.  
   
- Avoid the use of the **sp_** prefix when naming procedures. This prefix is used by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to designate system procedures. Using the prefix can cause application code to break if there is a system procedure with the same name.  
+ Avoid the use of the **sp_** prefix when naming procedures. This prefix is used by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to designate system procedures. Using the prefix can cause application code to break if there is a system procedure with the same name.  
   
  Local or global temporary procedures can be created by using one number sign (#) before *procedure_name* (*#procedure_name*) for local temporary procedures, and two number signs for global temporary procedures (*##procedure_name*). A local temporary procedure is visible only to the connection that created it and is dropped when that connection is closed. A global temporary procedure is available to all connections and is dropped at the end of the last session using the procedure. Temporary names cannot be specified for CLR procedures.  
   
@@ -156,7 +156,7 @@ OR ALTER
  **;** *number*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
  An optional integer that is used to group procedures of the same name. These grouped procedures can be dropped together by using one DROP PROCEDURE statement.  
   
@@ -168,16 +168,16 @@ OR ALTER
  **@** *parameter*  
  A parameter declared in the procedure. Specify a parameter name by using the at sign (**@**) as the first character. The parameter name must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). Parameters are local to the procedure; the same parameter names can be used in other procedures.  
   
- One or more parameters can be declared; the maximum is 2,100. The value of each declared parameter must be supplied by the user when the procedure is called unless a default value for the parameter is defined or the value is set to equal another parameter. If a procedure contains [table-valued parameters](../../relational-databases/tables/use-table-valued-parameters-database-engine.md), and the parameter is missing in the call, an empty table is passed in. Parameters can take the place only of constant expressions; they cannot be used instead of table names, column names, or the names of other database objects. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../Topic/EXECUTE%20\(Transact-SQL\).md).  
+ One or more parameters can be declared; the maximum is 2,100. The value of each declared parameter must be supplied by the user when the procedure is called unless a default value for the parameter is defined or the value is set to equal another parameter. If a procedure contains [table-valued parameters](../../relational-databases/tables/use-table-valued-parameters-database-engine.md), and the parameter is missing in the call, an empty table is passed in. Parameters can take the place only of constant expressions; they cannot be used instead of table names, column names, or the names of other database objects. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
  Parameters cannot be declared if FOR REPLICATION is specified.  
   
  [ *type_schema_name***.** ] *data_type*  
  The data type of the parameter and the schema to which the data type belongs.  
   
- **Guidelines for [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] procedures**:  
+ **Guidelines for [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] procedures**:  
   
--   All [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] data types can be used as parameters.  
+-   All [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] data types can be used as parameters.  
   
 -   You can use the user-defined table type to create table-valued parameters. Table-valued parameters can only be INPUT parameters and must be accompanied by the READONLY keyword. For more information, see [Use Table-Valued Parameters &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
   
@@ -185,7 +185,7 @@ OR ALTER
   
  **Guidelines for CLR procedures**:  
   
--   All of the native [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data types that have an equivalent in managed code can be used as parameters. For more information about the correspondence between CLR types and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system data types, see [Mapping CLR Parameter Data](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md). For more information about [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system data types and their syntax, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
+-   All of the native [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data types that have an equivalent in managed code can be used as parameters. For more information about the correspondence between CLR types and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system data types, see [Mapping CLR Parameter Data](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md). For more information about [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system data types and their syntax, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
 -   Table-valued or **cursor** data types cannot be used as parameters.  
   
@@ -197,7 +197,7 @@ OR ALTER
  *default*  
  A default value for a parameter. If a default value is defined for a parameter, the procedure can be executed without specifying a value for that parameter. The default value must be a constant or it can be NULL. The constant value can be in the form of a wildcard, making it possible to use the LIKE keyword when passing the parameter into the procedure. See Example C below.  
   
- Default values are recorded in the **sys.parameters.default** column only for CLR procedures. That column will be NULL for [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] procedure parameters.  
+ Default values are recorded in the **sys.parameters.default** column only for CLR procedures. That column will be NULL for [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] procedure parameters.  
   
  OUT | OUTPUT  
  Indicates that the parameter is an output parameter. Use OUTPUT parameters to return values to the caller of the procedure. **text**, **ntext**, and **image** parameters cannot be used as OUTPUT parameters, unless the procedure is a CLR procedure. An output parameter can be a cursor placeholder, unless the procedure is a CLR procedure. A table-value data type cannot be specified as an OUTPUT parameter of a procedure.  
@@ -206,48 +206,48 @@ OR ALTER
  Indicates that the parameter cannot be updated or modified within the body of the procedure. If the parameter type is a table-value type, READONLY must be specified.  
   
  RECOMPILE  
- Indicates that the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] does not cache a query plan for this procedure, forcing it to be compiled each time it is executed. For more information regarding the reasons for forcing a recompile, see [Recompile a Stored Procedure](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md). This option cannot be used when FOR REPLICATION is specified or for CLR procedures.  
+ Indicates that the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] does not cache a query plan for this procedure, forcing it to be compiled each time it is executed. For more information regarding the reasons for forcing a recompile, see [Recompile a Stored Procedure](../../relational-databases/reference/stored-procedures/recompile-a-stored-procedure.md). This option cannot be used when FOR REPLICATION is specified or for CLR procedures.  
   
- To instruct the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] to discard query plans for individual queries inside a procedure, use the RECOMPILE query hint in the definition of the query. For more information, see [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).  
+ To instruct the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] to discard query plans for individual queries inside a procedure, use the RECOMPILE query hint in the definition of the query. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
  ENCRYPTION  
  ||  
 |-|  
-|**Applies to**: SQL Server ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: SQL Server ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
- Indicates that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will convert the original text of the CREATE PROCEDURE statement to an obfuscated format. The output of the obfuscation is not directly visible in any of the catalog views in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Users who have no access to system tables or database files cannot retrieve the obfuscated text. However, the text will be available to privileged users who can either access system tables over the [DAC port](../../database-engine/configure/windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users who can attach a debugger to the server process can retrieve the decrypted procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Indicates that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will convert the original text of the CREATE PROCEDURE statement to an obfuscated format. The output of the obfuscation is not directly visible in any of the catalog views in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Users who have no access to system tables or database files cannot retrieve the obfuscated text. However, the text will be available to privileged users who can either access system tables over the [DAC port](../../database-engine/configure/windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users who can attach a debugger to the server process can retrieve the decrypted procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  This option is not valid for CLR procedures.  
   
- Procedures created with this option cannot be published as part of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] replication.  
+ Procedures created with this option cannot be published as part of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] replication.  
   
  EXECUTE AS *clause*  
  Specifies the security context under which to execute the procedure.  
   
- For natively compiled stored procedures, starting [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] and in [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)], there are no limitations on the EXECUTE AS clause. In [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] the SELF, OWNER, and *‘user_name’* clauses are supported with natively compiled stored procedures.  
+ For natively compiled stored procedures, starting [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] and in [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)], there are no limitations on the EXECUTE AS clause. In [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] the SELF, OWNER, and *‘user_name’* clauses are supported with natively compiled stored procedures.  
   
  For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
  FOR REPLICATION  
  ||  
 |-|  
-|**Applies to**: SQL Server ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: SQL Server ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
  Specifies that the procedure is created for replication. Consequently, it cannot be executed on the Subscriber. A procedure created with the FOR REPLICATION option is used as a procedure filter and is executed only during replication. Parameters cannot be declared if FOR REPLICATION is specified. FOR REPLICATION cannot be specified for CLR procedures. The RECOMPILE option is ignored for procedures created with FOR REPLICATION.  
   
  A FOR REPLICATION procedure will have an object type **RF** in **sys.objects** and **sys.procedures**.  
   
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
- One or more [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements comprising the body of the procedure. You can use the optional BEGIN and END keywords to enclose the statements. For information, see the Best Practices, General Remarks, and Limitations and Restrictions sections that follow.  
+ One or more [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements comprising the body of the procedure. You can use the optional BEGIN and END keywords to enclose the statements. For information, see the Best Practices, General Remarks, and Limitations and Restrictions sections that follow.  
   
  EXTERNAL NAME *assembly_name***.***class_name***.***method_name*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
- Specifies the method of a [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] assembly for a CLR procedure to reference. *class_name* must be a valid  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] identifier and must exist as a class in the assembly. If the class has a namespace-qualified name that uses a period (**.**) to separate namespace parts, the class name must be delimited by using brackets (**[]**) or quotation marks (**""**). The specified method must be a static method of the class.  
+ Specifies the method of a [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] assembly for a CLR procedure to reference. *class_name* must be a valid  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] identifier and must exist as a class in the assembly. If the class has a namespace-qualified name that uses a period (**.**) to separate namespace parts, the class name must be delimited by using brackets (**[]**) or quotation marks (**""**). The specified method must be a static method of the class.  
   
- By default, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] cannot execute CLR code. You can create, modify, and drop database objects that reference common language runtime modules; however, you cannot execute these references in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] until you enable the [clr enabled option](../../database-engine/configure/windows/clr-enabled-server-configuration-option.md). To enable the option, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ By default, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] cannot execute CLR code. You can create, modify, and drop database objects that reference common language runtime modules; however, you cannot execute these references in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] until you enable the [clr enabled option](../../database-engine/configure/windows/clr-enabled-server-configuration-option.md). To enable the option, use [sp_configure](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md).  
   
 > [!NOTE]  
 >  CLR procedures are not supported in a contained database.  
@@ -255,13 +255,13 @@ OR ALTER
  ATOMIC WITH  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
  Indicates atomic stored procedure execution. Changes are either committed or all of the changes rolled back by throwing an exception. The ATOMIC WITH block is required for natively compiled stored procedures.  
   
  If the procedure RETURNs (explicitly through the RETURN statement, or implicitly by completing execution), the work performed by the procedure is committed. If the procedure THROWs, the work performed by the procedure is rolled back.  
   
- XACT_ABORT is ON by default inside an atomic block and cannot be changed. XACT_ABORT specifies whether [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] automatically rolls back the current transaction when a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement raises a run-time error.  
+ XACT_ABORT is ON by default inside an atomic block and cannot be changed. XACT_ABORT specifies whether [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] automatically rolls back the current transaction when a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement raises a run-time error.  
   
  The following SET options are always ON in the ATOMIC block; the options cannot be changed.  
   
@@ -287,28 +287,28 @@ OR ALTER
  NATIVE_COMPILATION  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
  Indicates that the procedure is natively compiled. NATIVE_COMPILATION, SCHEMABINDING, and EXECUTE AS can be specified in any order. For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
  SCHEMABINDING  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
  Ensures that tables that are referenced by a procedure cannot be dropped or altered. SCHEMABINDING is required in natively compiled stored procedures. (For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).) The SCHEMABINDING restrictions are the same as they are for user-defined functions. For more information, see the SCHEMABINDING section in [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
  LANGUAGE = [N] ‘language’  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
  Equivalent to [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) session option. LANGUAGE = [N] 'language' is required.  
   
  TRANSACTION ISOLATION LEVEL  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
  Required for natively compiled stored procedures. Specifies the transaction isolation level for the stored procedure. The options are as follows:  
   
@@ -332,7 +332,7 @@ OR ALTER
  DATEFIRST = *number*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
  Specifies the first day of the week to a number from 1 through 7. DATEFIRST is optional. If it is not specified, the setting is inferred from the specified language.  
   
@@ -341,7 +341,7 @@ OR ALTER
  DATEFORMAT = *format*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
  Specifies the order of the month, day, and year date parts for interpreting date, smalldatetime, datetime, datetime2 and datetimeoffset character strings. DATEFORMAT is optional. If it is not specified, the setting is inferred from the specified language.  
   
@@ -350,9 +350,9 @@ OR ALTER
  DELAYED_DURABILITY = { OFF | ON }  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] transaction commits can be either fully durable, the default, or delayed durable.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] transaction commits can be either fully durable, the default, or delayed durable.  
   
  For more information, see [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md).  
 
@@ -381,27 +381,27 @@ See [Examples](#Examples) towards the end of this topic for many more examples.
 ## Best Practices  
  Although this is not an exhaustive list of best practices, these suggestions may improve procedure performance.  
   
--   Use the SET NOCOUNT ON statement as the first statement in the body of the procedure. That is, place it just after the AS keyword. This turns off messages that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] sends back to the client after any SELECT, INSERT, UPDATE, MERGE, and DELETE statements are executed. Overall performance of the database and application is improved by eliminating this unnecessary network overhead. For information, see [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
+-   Use the SET NOCOUNT ON statement as the first statement in the body of the procedure. That is, place it just after the AS keyword. This turns off messages that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] sends back to the client after any SELECT, INSERT, UPDATE, MERGE, and DELETE statements are executed. Overall performance of the database and application is improved by eliminating this unnecessary network overhead. For information, see [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
   
--   Use schema names when creating or referencing database objects in the procedure. It will take less processing time for the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] to resolve object names if it does not have to search multiple schemas. It will also prevent permission and access problems caused by a user’s default schema being assigned when objects are created without specifying the schema.  
+-   Use schema names when creating or referencing database objects in the procedure. It will take less processing time for the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] to resolve object names if it does not have to search multiple schemas. It will also prevent permission and access problems caused by a user’s default schema being assigned when objects are created without specifying the schema.  
   
 -   Avoid wrapping functions around columns specified in the WHERE and JOIN clauses. Doing so makes the columns non-deterministic and prevents the query processor from using indexes.  
   
 -   Avoid using scalar functions in SELECT statements that return many rows of data. Because the scalar function must be applied to every row, the resulting behavior is like row-based processing and degrades performance.  
   
--   Avoid the use of SELECT *. Instead, specify the required column names. This can prevent some [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] errors that stop procedure execution. For example, a SELECT \* statement that returns data from a 12 column table and then inserts that data into a 12 column temporary table will succeed until the number or order of columns in either table is changed.  
+-   Avoid the use of SELECT *. Instead, specify the required column names. This can prevent some [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] errors that stop procedure execution. For example, a SELECT \* statement that returns data from a 12 column table and then inserts that data into a 12 column temporary table will succeed until the number or order of columns in either table is changed.  
   
 -   Avoid processing or returning too much data. Narrow the results as early as possible in the procedure code so that any subsequent operations performed by the procedure are done using the smallest data set possible. Send just the essential data to the client application. It is more efficient than sending extra data across the network and forcing the client application to work through unnecessarily large result sets.  
   
 -   Use explicit transactions by using BEGIN/COMMIT TRANSACTION and keep transactions as short as possible. Longer transactions mean longer record locking and a greater potential for deadlocking.  
   
--   Use the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] TRY…CATCH feature for error handling inside a procedure. TRY…CATCH can encapsulate an entire block of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements. This not only creates less performance overhead, it also makes error reporting more accurate with significantly less programming.  
+-   Use the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] TRY…CATCH feature for error handling inside a procedure. TRY…CATCH can encapsulate an entire block of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements. This not only creates less performance overhead, it also makes error reporting more accurate with significantly less programming.  
   
--   Use the DEFAULT keyword on all table columns that are referenced by CREATE TABLE or ALTER TABLE [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements in the body of the procedure. This will prevent passing NULL to columns that do not allow null values.  
+-   Use the DEFAULT keyword on all table columns that are referenced by CREATE TABLE or ALTER TABLE [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements in the body of the procedure. This will prevent passing NULL to columns that do not allow null values.  
   
--   Use NULL or NOT NULL for each column in a temporary table. The ANSI_DFLT_ON and ANSI_DFLT_OFF options control the way the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] assigns the NULL or NOT NULL attributes to columns when these attributes are not specified in a CREATE TABLE or ALTER TABLE statement. If a connection executes a procedure with different settings for these options than the connection that created the procedure, the columns of the table created for the second connection can have different nullability and exhibit different behavior. If NULL or NOT NULL is explicitly stated for each column, the temporary tables are created by using the same nullability for all connections that execute the procedure.  
+-   Use NULL or NOT NULL for each column in a temporary table. The ANSI_DFLT_ON and ANSI_DFLT_OFF options control the way the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] assigns the NULL or NOT NULL attributes to columns when these attributes are not specified in a CREATE TABLE or ALTER TABLE statement. If a connection executes a procedure with different settings for these options than the connection that created the procedure, the columns of the table created for the second connection can have different nullability and exhibit different behavior. If NULL or NOT NULL is explicitly stated for each column, the temporary tables are created by using the same nullability for all connections that execute the procedure.  
   
--   Use modification statements that convert nulls and include logic that eliminates rows with null values from queries. Be aware that in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], NULL is not an empty or “nothing” value. It is a placeholder for an unknown value and can cause unexpected behavior, especially when querying for result sets or using AGGREGATE functions.  
+-   Use modification statements that convert nulls and include logic that eliminates rows with null values from queries. Be aware that in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], NULL is not an empty or “nothing” value. It is a placeholder for an unknown value and can cause unexpected behavior, especially when querying for result sets or using AGGREGATE functions.  
   
 -   Use the UNION ALL operator instead of the UNION or OR operators, unless there is a specific need for distinct values. The UNION ALL operator requires less processing overhead because duplicates are not filtered out of the result set.  
   
@@ -410,16 +410,16 @@ See [Examples](#Examples) towards the end of this topic for many more examples.
   
  Variables specified in the procedure can be user-defined or system variables, such as @@SPID.  
   
- When a procedure is executed for the first time, it is compiled to determine an optimal access plan to retrieve the data. Subsequent executions of the procedure may reuse the plan already generated if it still remains in the plan cache of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+ When a procedure is executed for the first time, it is compiled to determine an optimal access plan to retrieve the data. Subsequent executions of the procedure may reuse the plan already generated if it still remains in the plan cache of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
- One or more procedures can execute automatically when [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] starts. The procedures must be created by the system administrator in the **master** database and executed under the **sysadmin** fixed server role as a background process. The procedures cannot have any input or output parameters. For more information, see [Execute a Stored Procedure](../../relational-databases/stored-procedures/execute-a-stored-procedure.md).  
+ One or more procedures can execute automatically when [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] starts. The procedures must be created by the system administrator in the **master** database and executed under the **sysadmin** fixed server role as a background process. The procedures cannot have any input or output parameters. For more information, see [Execute a Stored Procedure](../../relational-databases/reference/stored-procedures/execute-a-stored-procedure.md).  
   
  Procedures are nested when one procedure call another or executes managed code by referencing a CLR routine, type, or aggregate. Procedures and managed code references can be nested up to 32 levels. The nesting level increases by one when the called procedure or managed code reference begins execution and decreases by one when the called procedure or managed code reference completes execution. Methods invoked from within the managed code do not count against the nesting level limit. However, when a CLR stored procedure performs data access operations through the SQL Server managed provider, an additional nesting level is added in the transition from managed code to SQL.  
   
  Attempting to exceed the maximum nesting level causes the entire calling chain to fail. You can use the @@NESTLEVEL function to return the nesting level of the current stored procedure execution.  
   
 ## Interoperability  
- The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] saves the settings of both SET QUOTED_IDENTIFIER and SET ANSI_NULLS when a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] procedure is created or modified. These original settings are used when the procedure is executed. Therefore, any client session settings for SET QUOTED_IDENTIFIER and SET ANSI_NULLS are ignored when the procedure is running.  
+ The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] saves the settings of both SET QUOTED_IDENTIFIER and SET ANSI_NULLS when a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] procedure is created or modified. These original settings are used when the procedure is executed. Therefore, any client session settings for SET QUOTED_IDENTIFIER and SET ANSI_NULLS are ignored when the procedure is running.  
   
  Other SET options, such as SET ARITHABORT, SET ANSI_WARNINGS, or SET ANSI_PADDINGS are not saved when a procedure is created or modified. If the logic of the procedure depends on a particular setting, include a SET statement at the start of the procedure to guarantee the appropriate setting. When a SET statement is executed from a procedure, the setting remains in effect only until the procedure has finished running. The setting is then restored to the value the procedure had when it was called. This enables individual clients to set the options they want without affecting the logic of the procedure.  
   
@@ -429,7 +429,7 @@ See [Examples](#Examples) towards the end of this topic for many more examples.
 >  SET ANSI_WARNINGS is not honored when passing parameters in a procedure, user-defined function, or when declaring and setting variables in a batch statement. For example, if a variable is defined as **char**(3), and then set to a value larger than three characters, the data is truncated to the defined size and the INSERT or UPDATE statement succeeds.  
   
 ## Limitations and Restrictions  
- The CREATE PROCEDURE statement cannot be combined with other [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements in a single batch.  
+ The CREATE PROCEDURE statement cannot be combined with other [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements in a single batch.  
   
  The following statements cannot be used anywhere in the body of a stored procedure.  
   
@@ -452,25 +452,25 @@ EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;
 GO  
 ```  
   
- If the procedure makes changes on a remote instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the changes cannot be rolled back. Remote procedures do not take part in transactions.  
+ If the procedure makes changes on a remote instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], the changes cannot be rolled back. Remote procedures do not take part in transactions.  
   
- For the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] to reference the correct method when it is overloaded in the .NET Framework, the method specified in the EXTERNAL NAME clause must have the following characteristics:  
+ For the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] to reference the correct method when it is overloaded in the .NET Framework, the method specified in the EXTERNAL NAME clause must have the following characteristics:  
   
 -   Be declared as a static method.  
   
 -   Receive the same number of parameters as the number of parameters of the procedure.  
   
--   Use parameter types that are compatible with the data types of the corresponding parameters of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] procedure. For information about matching [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data types to the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] data types, see [Mapping CLR Parameter Data](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+-   Use parameter types that are compatible with the data types of the corresponding parameters of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] procedure. For information about matching [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data types to the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] data types, see [Mapping CLR Parameter Data](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
 ## Metadata  
  The following table lists the catalog views and dynamic management views that you can use to return information about stored procedures.  
   
 |View|Description|  
 |----------|-----------------|  
-|[sys.sql_modules](../../relational-databases/system-catalog-views/sys.sql-modules-transact-sql.md)|Returns the definition of a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] procedure. The text of a procedure created with the ENCRYPTION option cannot be viewed by using the **sys.sql_modules** catalog view.|  
-|[sys.assembly_modules](../../relational-databases/system-catalog-views/sys.assembly-modules-transact-sql.md)|Returns information about a CLR procedure.|  
-|[sys.parameters](../../relational-databases/system-catalog-views/sys.parameters-transact-sql.md)|Returns information about the parameters that are defined in a procedure|  
-|[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md) [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys.dm-sql-referenced-entities-transact-sql.md) [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys.dm-sql-referencing-entities-transact-sql.md)|Returns the objects that are referenced by a procedure.|  
+|[sys.sql_modules](../../relational-databases/reference/system-catalog-views/sys.sql-modules-transact-sql.md)|Returns the definition of a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] procedure. The text of a procedure created with the ENCRYPTION option cannot be viewed by using the **sys.sql_modules** catalog view.|  
+|[sys.assembly_modules](../../relational-databases/reference/system-catalog-views/sys.assembly-modules-transact-sql.md)|Returns information about a CLR procedure.|  
+|[sys.parameters](../../relational-databases/reference/system-catalog-views/sys.parameters-transact-sql.md)|Returns information about the parameters that are defined in a procedure|  
+|[sys.sql_expression_dependencies](../../relational-databases/reference/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md) [sys.dm_sql_referenced_entities](../../relational-databases/reference/system-dynamic-management-views/sys.dm-sql-referenced-entities-transact-sql.md) [sys.dm_sql_referencing_entities](../../relational-databases/reference/system-dynamic-management-views/sys.dm-sql-referencing-entities-transact-sql.md)|Returns the objects that are referenced by a procedure.|  
   
  To estimate the size of a compiled procedure, use the following Performance Monitor Counters.  
   
@@ -480,7 +480,7 @@ GO
 ||Cache Pages|  
 ||Cache Object Counts*|  
   
- *These counters are available for various categories of cache objects including ad hoc [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], prepared [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], procedures, triggers, and so on. For more information, see [SQL Server, Plan Cache Object](../../relational-databases/monitor/performance-monitor/sql-server-plan-cache-object.md).  
+ *These counters are available for various categories of cache objects including ad hoc [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], prepared [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], procedures, triggers, and so on. For more information, see [SQL Server, Plan Cache Object](../../relational-databases/monitor/performance-monitor/sql-server-plan-cache-object.md).  
   
 ## Security  
   
@@ -528,7 +528,7 @@ GO
  Examples in this section demonstrate the basic functionality of the CREATE PROCEDURE statement using the minimum required syntax.  
   
 #### A. Creating a simple Transact-SQL procedure  
- The following example creates a stored procedure that returns all employees (first and last names supplied), their job titles, and their department names from a view in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. This procedure does not use any parameters. The example then demonstrates three methods of executing the procedure.  
+ The following example creates a stored procedure that returns all employees (first and last names supplied), their job titles, and their department names from a view in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database. This procedure does not use any parameters. The example then demonstrates three methods of executing the procedure.  
   
 ```  
 IF OBJECT_ID ( 'HumanResources.uspGetAllEmployees', 'P' ) IS NOT NULL   
@@ -574,7 +574,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)] (if using an assembly created from *assembly_bits.*|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)] (if using an assembly created from *assembly_bits.*|  
   
 ```  
 CREATE ASSEMBLY HandlingLOBUsingCLR  
@@ -664,7 +664,7 @@ EXECUTE HumanResources.uspGetEmployees2 N'H%', N'S%';
 ```  
   
 #### F. Using OUTPUT parameters  
- The following example creates the `uspGetList` procedure. This procedures returns a list of products that have prices that do not exceed a specified amount. The example shows using multiple `SELECT` statements and multiple `OUTPUT` parameters. OUTPUT parameters enable an external procedure, a batch, or more than one [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement to access a value set during the procedure execution.  
+ The following example creates the `uspGetList` procedure. This procedures returns a list of products that have prices that do not exceed a specified amount. The example shows using multiple `SELECT` statements and multiple `OUTPUT` parameters. OUTPUT parameters enable an external procedure, a batch, or more than one [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement to access a value set during the procedure execution.  
   
 ```  
 IF OBJECT_ID ( 'Production.uspGetList', 'P' ) IS NOT NULL   
@@ -693,7 +693,7 @@ GO
   
 ```  
   
- Execute `uspGetList` to return a list of [!INCLUDE[ssSampleDBCoShort](../../analysis-services/data-mining/includes/sssampledbcoshort-md.md)] products (Bikes) that cost less than `$700`. The `OUTPUT` parameters `@Cost` and `@ComparePrices` are used with control-of-flow language to return a message in the **Messages** window.  
+ Execute `uspGetList` to return a list of [!INCLUDE[ssSampleDBCoShort](../../a9notintoc/includes/sssampledbcoshort-md.md)] products (Bikes) that cost less than `$700`. The `OUTPUT` parameters `@Cost` and `@ComparePrices` are used with control-of-flow language to return a message in the **Messages** window.  
   
 > [!NOTE]  
 >  The OUTPUT variable must be defined when the procedure is created and also when the variable is used. The parameter name and variable name do not have to match; however, the data type and parameter positioning must match, unless `@ListPrice` = *variable* is used.  
@@ -921,7 +921,7 @@ DROP PROCEDURE Production.uspDeleteWorkOrder;
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], SQL Database.|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], SQL Database.|  
   
 ```  
 IF OBJECT_ID ( 'HumanResources.uspEncryptThis', 'P' ) IS NOT NULL   
@@ -1024,7 +1024,7 @@ WITH EXECUTE AS SELF
 AS TRUNCATE TABLE MyDB..MyTable;  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### O. Create a Stored Procedure that runs a SELECT statement  
  This example shows the basic syntax for creating and running a procedure. When running a batch, CREATE PROCEDURE must be the first statement. For example, to create the following stored procedure in [!INCLUDE[ssawPDW](../../t-sql/database-console-commands/includes/ssawpdw-md.md)], set the database context first, and then run the CREATE PROCEDURE statement.  
@@ -1057,23 +1057,23 @@ DROP PROCEDURE Get10TopResellers;
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../Topic/DECLARE%20@local_variable%20\(Transact-SQL\).md)   
  [DROP PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
- [EXECUTE &#40;Transact-SQL&#41;](../Topic/EXECUTE%20\(Transact-SQL\).md)   
+ [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
- [Stored Procedures &#40;Database Engine&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
- [sp_procoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)   
- [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)   
- [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.sql-modules-transact-sql.md)   
- [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.parameters-transact-sql.md)   
- [sys.procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.procedures-transact-sql.md)   
- [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md)   
- [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.assembly-modules-transact-sql.md)   
- [sys.numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.numbered-procedures-transact-sql.md)   
- [sys.numbered_procedure_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.numbered-procedure-parameters-transact-sql.md)   
+ [Stored Procedures &#40;Database Engine&#41;](../../relational-databases/reference/stored-procedures/stored-procedures-database-engine.md)   
+ [sp_procoption &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-procoption-transact-sql.md)   
+ [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-recompile-transact-sql.md)   
+ [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.sql-modules-transact-sql.md)   
+ [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.parameters-transact-sql.md)   
+ [sys.procedures &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.procedures-transact-sql.md)   
+ [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md)   
+ [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.assembly-modules-transact-sql.md)   
+ [sys.numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.numbered-procedures-transact-sql.md)   
+ [sys.numbered_procedure_parameters &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.numbered-procedure-parameters-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
- [Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
+ [Create a Stored Procedure](../../relational-databases/reference/stored-procedures/create-a-stored-procedure.md)   
  [Use Table-Valued Parameters &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)   
- [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-sql-referenced-entities-transact-sql.md)   
- [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-sql-referencing-entities-transact-sql.md)  
+ [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-sql-referenced-entities-transact-sql.md)   
+ [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-sql-referencing-entities-transact-sql.md)  
   
   
 

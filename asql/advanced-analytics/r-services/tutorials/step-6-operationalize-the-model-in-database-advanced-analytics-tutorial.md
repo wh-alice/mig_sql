@@ -62,7 +62,7 @@ GO
   
 -   The  SELECT statement gets the serialized model from the database, and stores the model in the R variable `mod` for further processing using R.  
   
--   The new cases that will be scored are obtained from the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] query specified in `@inquery`, the first parameter to the stored procedure. As the query data is read, the rows are saved in the default data frame, `InputDataSet`. This data frame is passed to the `rxPredict` function in R, which generates the scores.  
+-   The new cases that will be scored are obtained from the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] query specified in `@inquery`, the first parameter to the stored procedure. As the query data is read, the rows are saved in the default data frame, `InputDataSet`. This data frame is passed to the `rxPredict` function in R, which generates the scores.  
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL,            predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`  
   
@@ -115,7 +115,7 @@ Now let's see how batch scoring works.
   
 You'll use this query as input to the stored procedure, _PredictTipBatchMode_, which was provided as part of the download.  
   
-2.  First, take a minute to review the code of the stored procedure _PredictTipBatchMode_ in [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)].  
+2.  First, take a minute to review the code of the stored procedure _PredictTipBatchMode_ in [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)].  
   
     ```  
     /****** Object:  StoredProcedure [dbo].[PredictTipBatchMode]  ******/  
@@ -147,7 +147,7 @@ You'll use this query as input to the stored procedure, _PredictTipBatchMode_, w
     END  
     ```  
   
-3.  To create predictions,  you'll provide the query text in a variable and pass it as a parameter to the stored procedure, using a [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statement like this.  
+3.  To create predictions,  you'll provide the query text in a variable and pass it as a parameter to the stored procedure, using a [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statement like this.  
   
     ```  
     -- Specify input query  
@@ -263,7 +263,7 @@ In this section, you'll learn how to create single predictions using  a stored p
 3.  The results indicate that the probability of getting a tip is very low on these top 10 trips, all of which are single-passenger trips over a relatively short distance.  
   
 ## Conclusions  
-In this tutorial, you've learned how to work with R code embedded in stored procedures. The integration with [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] makes it much easier to deploy R models for prediction and to incorporate model retraining as part of an enterprise data workflow.  
+In this tutorial, you've learned how to work with R code embedded in stored procedures. The integration with [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] makes it much easier to deploy R models for prediction and to incorporate model retraining as part of an enterprise data workflow.  
   
   
 ## Previous Step  

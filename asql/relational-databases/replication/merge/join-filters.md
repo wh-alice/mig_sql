@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  Join filters typically follow the primary key/foreign key relationships defined for the tables to which they are applied, but they are not limited strictly to primary key/foreign key relationships. The join filter can be based on any logic that compares related data in two tables.  
   
- Consider the following tables in the [!INCLUDE[ssSampleDBCoShort](../../../analysis-services/data-mining/includes/sssampledbcoshort-md.md)] sample database, which are related through primary key to foreign key relationships:  
+ Consider the following tables in the [!INCLUDE[ssSampleDBCoShort](../../../a9notintoc/includes/sssampledbcoshort-md.md)] sample database, which are related through primary key to foreign key relationships:  
   
 -   **HumanResources.Employee**  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
 LoginID = SUSER_SNAME()  
 ```  
   
- This filter ensures that each employee's subscription only contains data from the **HumanResources.Employee** table that is relevant to that employee (which in this case is a single row). For more information, see [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md).  
+ This filter ensures that each employee's subscription only contains data from the **HumanResources.Employee** table that is relevant to that employee (which in this case is a single row). For more information, see [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  The next step is to extend this filter to each of the related tables, using syntax similar to that used to specify a join between two tables. The first join filter clause is:  
   
@@ -85,6 +85,6 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
 ## See Also  
  [Filter Published Data for Merge Replication](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
- [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md)  
+ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

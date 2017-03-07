@@ -25,7 +25,7 @@ manager: "erikre"
 # DISCOVER_XML_METADATA Rowset
   Returns an XML document describing a requested object. The rowset that is returned always consists of one row and one column.  
   
- If you call the [Discover](../Topic/Discover%20Method%20\(XMLA\).md) method with the **DISCOVER_XML_METATDATA** enumeration value in the [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) element, the **Discover** method returns the **DISCOVER_XML_METATDATA** rowset.  
+ If you call the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method with the **DISCOVER_XML_METATDATA** enumeration value in the [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) element, the **Discover** method returns the **DISCOVER_XML_METATDATA** rowset.  
   
 ## Rowset Columns  
  The **DISCOVER_XML_METADATA** rowset contains the following column.  
@@ -67,7 +67,7 @@ manager: "erikre"
 |**DataSourcePermissionID**|**DBTYPE_WSTR**|Optional.|  
 |**ObjectExpansion**|**DBTYPE_WSTR**|Optional.|  
   
- The restriction, **ObjectExpansion**, is available for every major object of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)]. The client typically uses restrictions to describe the OLAP objects for which the DDL is to be returned, and uses the **ObjectExpansion** restriction to define the degree of expansion in the returned DDL. The following table indicates whether the enumeration value is allowed for [Alter Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md) commands.  
+ The restriction, **ObjectExpansion**, is available for every major object of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)]. The client typically uses restrictions to describe the OLAP objects for which the DDL is to be returned, and uses the **ObjectExpansion** restriction to define the degree of expansion in the returned DDL. The following table indicates whether the enumeration value is allowed for [Alter Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md) commands.  
   
 |Enumeration Value|Description|  
 |-----------------------|-----------------|  

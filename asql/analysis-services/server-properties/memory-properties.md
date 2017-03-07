@@ -28,7 +28,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Memory Properties
-  [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] preallocates a modest amount of memory at start up so that requests can be handled immediately. Additional memory is allocated as query and processing workloads increase. 
+  [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] preallocates a modest amount of memory at start up so that requests can be handled immediately. Additional memory is allocated as query and processing workloads increase. 
   
   By specifying configuration settings, you can control the thresholds at which memory is released. For example, the **HardMemoryLimit** setting specifies a self-imposed out-of-memory condition (by default, this threshold is not enabled), where new requests are rejected outright until more resources become available.
   
@@ -65,7 +65,7 @@ The following properties apply to both tabular and multidimensional modes unless
  Specifies a memory threshold after which the instance aggressively terminates active user sessions to reduce memory usage. All terminated sessions will receive an error about being cancelled by memory pressure. The default value, zero (0), means the **HardMemoryLimit** will be set to a midway value between **TotalMemoryLimit** and the total physical memory of the system; if the physical memory of the system is larger than the virtual address space of the process, then virtual address space will be used instead to calculate **HardMemoryLimit**.  
   
  **VirtualMemoryLimit**  
-  An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support.  
+  An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support.  
   
  **VertiPaqPagingPolicy**  
   For tabular instances only, specifies the paging behavior in the event the server runs low on memory. Valid values are as follows:  
@@ -89,10 +89,10 @@ When set to 1, processing is less likely to fail due to memory constraints becau
  For tabular instances only, if paging to disk is allowed, this property specifies the level of memory consumption (as a percentage of total memory) at which paging starts. The default is 60. If memory consumption is less than 60 percent, the server will not page to disk. This property depends on the **VertiPaqPagingPolicyProperty**, which must be set to 1 in order for paging to occur.  
   
  **HighMemoryPrice**  
- An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support.  
+ An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support.  
   
  **MemoryHeapType**  
-  An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support. Valid values in SQL Server 2016 SP1 and later Analysis Services are as follows:
+  An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support. Valid values in SQL Server 2016 SP1 and later Analysis Services are as follows:
   
   Setting | Description
 --------|------------
@@ -104,7 +104,7 @@ When set to 1, processing is less likely to fail due to memory constraints becau
   
   
  **HeapTypeForObjects**  
-  An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support. Valid values are as follows:
+  An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support. Valid values are as follows:
   
    Setting | Description
 --------|------------
@@ -114,25 +114,25 @@ When set to 1, processing is less likely to fail due to memory constraints becau
 
  
  **DefaultPagesCountToReuse**  
- An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support.  
+ An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support.  
   
  **HandleIA64AlignmentFaults**  
- An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support.  
+ An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support.  
   
  **MidMemoryPrice**  
- An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support.  
+ An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support.  
   
  **MinimumAllocatedMemory**  
- An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support.  
+ An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support.  
   
  **PreAllocate**  
- An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support.  
+ An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support.  
   
  **SessionMemoryLimit**  
- An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support.  
+ An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support.  
   
  **WaitCountIfHighMemory**  
- An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support.  
+ An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support.  
   
 ## See Also  
  [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   

@@ -36,16 +36,16 @@ manager: "jhubbard"
   
  ![A For Loop container repeats a task four times](../../integration-services/control-flow/media/ssis-forloop.gif "A For Loop container repeats a task four times")  
   
- The expressions must be valid [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] expressions.  
+ The expressions must be valid [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] expressions.  
   
- To create the initialization and assignment expressions, you can use the assignment operator (=). This operator is not otherwise supported by the Integration Services expression grammar and can only be used by the initialization and assignment expression types in the For Loop container. Any expression that uses the assignment operator must have the syntax `@Var = <expression>`, where **Var** is a run-time variable and \<expression> is an expression that follows the rules of the [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] expression syntax. The expression can include the variables, literals, and any operators and functions that the SSIS expression grammar supports. The expression must evaluate to a data type that can be cast to the data type of the variable.  
+ To create the initialization and assignment expressions, you can use the assignment operator (=). This operator is not otherwise supported by the Integration Services expression grammar and can only be used by the initialization and assignment expression types in the For Loop container. Any expression that uses the assignment operator must have the syntax `@Var = <expression>`, where **Var** is a run-time variable and \<expression> is an expression that follows the rules of the [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] expression syntax. The expression can include the variables, literals, and any operators and functions that the SSIS expression grammar supports. The expression must evaluate to a data type that can be cast to the data type of the variable.  
   
  A For Loop container can have only one evaluation expression. This means that the For Loop container runs all its control flow elements the same number of times. Because the For Loop container can include other For Loop containers, you can build nested loops and implement complex looping in packages.  
   
  You can set a transaction property on the For Loop container to define a transaction for a subset of the package control flow. In this way, you can manage transactions at a more granular level. For example, if a For Loop container repeats a control flow that updates data in a table multiple times, you can configure the For Loop and its control flow to use a transaction to ensure that if not all data is updated successfully, no data is updated. For more information, see [Integration Services Transactions](../../integration-services/integration-services-transactions.md).  
   
 ## Add iteration to a control flow with the For Loop container
-  [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] includes the For Loop container, a control flow element that makes it simple to include looping that conditionally repeats a control flow in a package. For more information, see [For Loop Container](../../integration-services/control-flow/for-loop-container.md).  
+  [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] includes the For Loop container, a control flow element that makes it simple to include looping that conditionally repeats a control flow in a package. For more information, see [For Loop Container](../../integration-services/control-flow/for-loop-container.md).  
   
  The For Loop container evaluates a condition on each iteration of the loop, and stops when the condition evaluates to false. The For Loop container includes expressions for initializing the loop, specifying the evaluation condition that stops execution of the repeating control flow, and assigning a value to an expression that updates the value against which the evaluation condition is compared. You must provide an evaluation condition, but initialization and assignment expressions are optional.  
   
@@ -59,16 +59,16 @@ manager: "jhubbard"
   
 2.  Add tasks and containers to the For Loop container. For more information, see [Add or Delete a Task or a Container in a Control Flow](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
-3.  Connect tasks and containers in the For Loop container using precedence constraints. For more information, see [Connect Tasks and Containers by Using a Default Precedence Constraint](../Topic/Connect%20Tasks%20and%20Containers%20by%20Using%20a%20Default%20Precedence%20Constraint.md).  
+3.  Connect tasks and containers in the For Loop container using precedence constraints. For more information, see [Connect Tasks and Containers by Using a Default Precedence Constraint](../../a9retired/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md).  
   
-4.  Configure the For Loop container. For more information, see [Configure a For Loop Container](../Topic/Configure%20a%20For%20Loop%20Container.md).  
+4.  Configure the For Loop container. For more information, see [Configure a For Loop Container](../../a9retired/configure-a-for-loop-container.md).  
 
 ##  Configure the For Loop container
 This procedure describes how to configure a For Loop container by using the **For Loop Editor** dialog box.  
   
  For an example of the For Loop container, see [SSIS Loops that do not fail](http://go.microsoft.com/fwlink/?LinkId=240295) on bimonkey.com.  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], double-click the For Loop container to open the **For Loop Editor**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], double-click the For Loop container to open the **For Loop Editor**.  
   
 2.  Optionally, modify the name and description of the For Loop container.  
   
@@ -116,9 +116,9 @@ Use the **For Loop** page of the **For Loop Editor** dialog box to configure a l
   
  When you specify a variable in an expression, you must preface the variable name with the at sign (@). For example, for a variable named **Counter**, enter @Counter in the expression that the For Loop container uses. If you include the namespace property on the variable, you must enclose the variable and namespace in brackets. For example, for a **Counter** variable in the **MyNamespace** namespace, type [@MyNamespace::Counter].  
   
- The variables that the For Loop container uses must be defined in the scope of the For Loop container or in the scope of any container that is higher in the package container hierarchy. For example, a For Loop container can use variables defined in its scope and also variables defined in package scope. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](../Topic/Use%20Variables%20in%20Packages.md).  
+ The variables that the For Loop container uses must be defined in the scope of the For Loop container or in the scope of any container that is higher in the package container hierarchy. For example, a For Loop container can use variables defined in its scope and also variables defined in package scope. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](../../a9retired/use-variables-in-packages.md).  
   
- The [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] expression grammar provides a complete set of operators and functions for implementing complex expressions used for evaluation, initialization, or assignment. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md).  
+ The [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] expression grammar provides a complete set of operators and functions for implementing complex expressions used for evaluation, initialization, or assignment. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
   
 ## See Also  

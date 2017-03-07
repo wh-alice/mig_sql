@@ -17,10 +17,10 @@ manager: "jhubbard"
 # Resource Governance for R Services
   One pain point with R is that analyzing large amounts of data in production requires additional hardware, and data is often moved outside the database to computers not controlled by IT.  To perform advanced analytics operations, customers want to leverage database server resources, and to protect their data, they require that such operations meet enterprise-level compliance requirements, such as security and performance.  
   
- This section provides information about how you can manage resources used by the R runtime and by R jobs running using the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance as the compute context.  
+ This section provides information about how you can manage resources used by the R runtime and by R jobs running using the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance as the compute context.  
   
 ## What is Resource Governance?  
- Resource governance is designed to identify and prevent problems that are common in a database server environment, where there are often multiple dependent applications and multiple services to support and balance. For [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)], resource governance involves these tasks:  
+ Resource governance is designed to identify and prevent problems that are common in a database server environment, where there are often multiple dependent applications and multiple services to support and balance. For [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)], resource governance involves these tasks:  
   
 -   Identifying scripts that use excessive server resources.  
   
@@ -34,12 +34,12 @@ manager: "jhubbard"
   
      The administrator or architect needs to be able to specify workloads that must take precedence, or guarantee certain workloads to complete if there is resource contention.  
   
- In [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)], you can use [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) to manage the resources used by the R runtime and by remote R jobs.  
+ In [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)], you can use [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) to manage the resources used by the R runtime and by remote R jobs.  
   
 ## How to Use Resource Governor to Manage R jobs  
- In general, you manage resources allocated to R jobs by creating *external resource pools* and assigning workloads to the pool or pools. An external resource pool is a new type of resource pool introduced in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], to help manage the R runtime and other processes external to the database engine.  
+ In general, you manage resources allocated to R jobs by creating *external resource pools* and assigning workloads to the pool or pools. An external resource pool is a new type of resource pool introduced in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], to help manage the R runtime and other processes external to the database engine.  
   
- In [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], there are now three types of default resource pools .  
+ In [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], there are now three types of default resource pools .  
   
 -   The *internal pool* represents the resources used by the SQL Server itself and cannot be altered or restricted.  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
  For a good introduction to terminology and general concepts, see [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md).  
   
 > [!NOTE]  
->  Currently the new Resource Governor properties are available only via DDL statements or scripting; external resource groups cannot be created by using the user interface in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)].  
+>  Currently the new Resource Governor properties are available only via DDL statements or scripting; external resource groups cannot be created by using the user interface in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)].  
   
 ## Resource Management using Resource Governor 
 
@@ -66,14 +66,14 @@ manager: "jhubbard"
   
 -   Satellite processes launched by LaunchPad  
   
- However,  direct management of the Launchpad service by using Resource Governor is not supported. That is because the [!INCLUDE[rsql_launchpad](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)] is a trusted service that can by design host only launchers that are provided by Microsoft. Trusted launchers are also configured to avoid consuming excessive resources.  
+ However,  direct management of the Launchpad service by using Resource Governor is not supported. That is because the [!INCLUDE[rsql_launchpad](../../a9notintoc/includes/rsql-launchpad-md.md)] is a trusted service that can by design host only launchers that are provided by Microsoft. Trusted launchers are also configured to avoid consuming excessive resources.  
   
  We recommend that you manage satellite processes using Resource Governor and tune them to meet the needs of the individual database configuration and workload.  For example, any individual satellite process can be created or destroyed on demand during execution.  
   
 ## Disable External Script Execution  
- Support for external scripts is optional in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup. Even after installing [!INCLUDE[rsql_productname_md](../../advanced-analytics/r-services/includes/rsql-productname-md.md)], the ability to execute external scripts is OFF by default, and you must manually reconfigure the property and restart the instance to enable script execution.  
+ Support for external scripts is optional in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] setup. Even after installing [!INCLUDE[rsql_productname_md](../../a9notintoc/includes/rsql-productname-md.md)], the ability to execute external scripts is OFF by default, and you must manually reconfigure the property and restart the instance to enable script execution.  
   
- Therefore, if there is a resource issue that needs to be mitigated immediately, or a security issue, an administrator can immediately disable any external script execution by using [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) and setting the property `external scripts enabled` to FALSE, or 0.  
+ Therefore, if there is a resource issue that needs to be mitigated immediately, or a security issue, an administrator can immediately disable any external script execution by using [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md) and setting the property `external scripts enabled` to FALSE, or 0.  
   
 ## See Also  
  [Managing and Monitoring R Solutions](../../advanced-analytics/r-services/managing-and-monitoring-r-solutions.md)  

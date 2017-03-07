@@ -18,21 +18,21 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLPutData
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  The following restrictions apply when using SQLPutData to send more than 65,535 bytes of data (for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] version 4.21a) or 400 KB of data (for SQL Server version 6.0 and later) for a SQL_LONGVARCHAR (**text**), SQL_WLONGVARCHAR (**ntext**) or SQL_LONGVARBINARY (**image**) column:  
+  The following restrictions apply when using SQLPutData to send more than 65,535 bytes of data (for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] version 4.21a) or 400 KB of data (for SQL Server version 6.0 and later) for a SQL_LONGVARCHAR (**text**), SQL_WLONGVARCHAR (**ntext**) or SQL_LONGVARBINARY (**image**) column:  
   
 -   The referenced parameter can be the *insert_value* in an INSERT statement.  
   
 -   The referenced parameter can be an *expression* in the SET clause of an UPDATE statement.  
   
- Canceling a sequence of SQLPutData calls that provide data in blocks to a server running [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] causes a partial update of the column's value when using version 6.5 or earlier. The **text**, **ntext**, or **image** column that was referenced when SQLCancel was called is set to an intermediate placeholder value.  
+ Canceling a sequence of SQLPutData calls that provide data in blocks to a server running [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] causes a partial update of the column's value when using version 6.5 or earlier. The **text**, **ntext**, or **image** column that was referenced when SQLCancel was called is set to an intermediate placeholder value.  
   
 > [!NOTE]  
->  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver does not support connecting to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] version 6.5 and earlier.  
+>  The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver does not support connecting to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] version 6.5 and earlier.  
   
 ## Diagnostics  
- There is one [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client specific SQLSTATE for SQLPutData:  
+ There is one [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client specific SQLSTATE for SQLPutData:  
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
@@ -54,7 +54,7 @@ manager: "jhubbard"
  For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## SQLPutData Support for Enhanced Date and Time Features  
- Parameter values of date/time types are converted as described in [Conversions from C to SQL](../Topic/Conversions%20from%20C%20to%20SQL.md).  
+ Parameter values of date/time types are converted as described in [Conversions from C to SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md).  
   
  For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   

@@ -93,7 +93,7 @@ manager: "erikre"
 |**Report format**|HTML5, HTML3, Excel, or PDF.|  
   
 > [!NOTE]  
->  In [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], you can specify Transport Layer Security (https:) in the server name property.  
+>  In [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], you can specify Transport Layer Security (https:) in the server name property.  
   
  **Parameters (Optional)**  
  The parameters are sent to the server as part of the URL string when the action is created. They include **Parameter Name** and **Parameter Value**, which is an MDX expression.  

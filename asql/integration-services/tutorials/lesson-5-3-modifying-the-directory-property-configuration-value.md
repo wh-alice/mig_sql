@@ -32,7 +32,7 @@ In this task, you will modify the configuration setting, stored in the SSISTutor
 3.  Save the change, and then close the text editor.  
   
 ## Next Task in Lesson  
-[Step 4: Testing the Lesson 5 Tutorial Package](../Topic/Step%204:%20Testing%20the%20Lesson%205%20Tutorial%20Package.md)  
+[Step 4: Testing the Lesson 5 Tutorial Package](../../integration-services/tutorials/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   
   
   

@@ -17,11 +17,11 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Schedule Data Refresh and Data Sources - No Windows Authentication
-  This topic describes a workflow of [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint schedule data fresh that can use data sources that do **NOT** support Windows Authentication. For example Oracle or IDM DB2 data sources. The illustrations and steps in this topic reference Oracle data sources but the same workflow applies to other data sources.  
+  This topic describes a workflow of [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint schedule data fresh that can use data sources that do **NOT** support Windows Authentication. For example Oracle or IDM DB2 data sources. The illustrations and steps in this topic reference Oracle data sources but the same workflow applies to other data sources.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../analysis-services/includes/applies-md.md)]**  SharePoint 2010 &#124; SharePoint 2013.|  
+|**[!INCLUDE[applies](../../a9retired/includes/applies-md.md)]**  SharePoint 2010 &#124; SharePoint 2013.|  
   
  **Overview:** Create two Secure Store Target Applications. Configure the first target application (PowerPivotDataRefresh) to use Windows credentials. Configure the second target application with the credentials for a data source that does not support windows authentication, for example, an Oracle database. The second target application also uses the first target application for the unattended data refresh account.  
   
@@ -31,17 +31,17 @@ manager: "erikre"
   
 -   **(2) OracleAuthentication:** A Secure Store Target Application ID that is set with Oracle credentials.  
   
--   **(3)** The [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Service application is configure to use the target application “PowerPivotDataRefresh” for the **Unattended Data Refresh Account**.  
+-   **(3)** The [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Service application is configure to use the target application “PowerPivotDataRefresh” for the **Unattended Data Refresh Account**.  
   
 -   **(4)** PowerePivot Workbook uses Oracle data. The workbook refresh settings specify the data source connection to use the target application **(2)** for credentials.  
   
 ## Prerequisites  
   
--   A [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Service Application exists.  
+-   A [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Service Application exists.  
   
 -   A Secure Store Service Application exists.  
   
--   An Excel workbook with a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data model exists.  
+-   An Excel workbook with a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data model exists.  
   
 ## To Create a Target Application ID that uses Windows Authentication  
   
@@ -119,17 +119,17 @@ manager: "erikre"
   
 1.  In SharePoint central administration, click Manage Service Applications.  
   
-2.  Click the name of your [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Service Application, for example “Default [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Service Application”.  
+2.  Click the name of your [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Service Application, for example “Default [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Service Application”.  
   
 3.  Click **Configure service application settings** in the Actions section.  
   
-4.  In the **Data Refresh** section, set the **[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Unattended Data Refresh Account**to**PowerPivotDataRefresh** and then click **OK**.  
+4.  In the **Data Refresh** section, set the **[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Unattended Data Refresh Account**to**PowerPivotDataRefresh** and then click **OK**.  
   
      ![as_powerpivot_refresh_new_refresh_acount](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-new-refresh-acount.gif "as_powerpivot_refresh_new_refresh_acount")  
   
 ## To configure the workbook  
   
-1.  Browse to your workbook in the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery and click **Manage Data Refresh**![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh").  
+1.  Browse to your workbook in the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery and click **Manage Data Refresh**![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh").  
   
 2.  If you see the **Data Refresh History** page, click **Configure Schedule**.  
   
@@ -160,7 +160,7 @@ manager: "erikre"
     -   Verify that you set credentials for the Target Application.  
   
 ## To Verify Data Refresh with the new authentication  
- When you click **ok**, you see the **Refresh History** page. Within a few minutes, you should see a new item in the refresh history because in the previous steps you selected **Also Refresh as soon as possible**. The default value for the timer job **[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Data Refresh Timer Job** is 1 minute. If you do not see a new item in the refresh history, wait a few minutes and refresh your browser. If you still do not see the new item, verify the current value of the timer job.  
+ When you click **ok**, you see the **Refresh History** page. Within a few minutes, you should see a new item in the refresh history because in the previous steps you selected **Also Refresh as soon as possible**. The default value for the timer job **[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Data Refresh Timer Job** is 1 minute. If you do not see a new item in the refresh history, wait a few minutes and refresh your browser. If you still do not see the new item, verify the current value of the timer job.  
   
 ## More Information  
   

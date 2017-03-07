@@ -25,7 +25,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # CREATE MINING STRUCTURE (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a new mining structure in a database and optionally defines training and testing partitions. After you have created the mining structure, you can use the [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md) statement to add models to the mining structure.  
   
@@ -115,13 +115,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  You can define multiple modeling flags values for a column. However, you can have only one content type and one data type for a column.  
   
 ### Column Relationships  
- You can add a clause to any column definition statement to describe the relationship between two columns. [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] supports the use of the following \<column relationship> clause.  
+ You can add a clause to any column definition statement to describe the relationship between two columns. [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] supports the use of the following \<column relationship> clause.  
   
  **RELATED TO**  
  Indicates a value hierarchy. The target of a RELATED TO column can be a key column in a nested table, a discretely-valued column in the case row, or another column with a RELATED TO clause, which indicates a deeper hierarchy.  
   
 ## Holdout Parameters  
- When you specify holdout parameters, you create a partition of the structure data. The amount that you specify for holdout is reserved for testing, and the remaining data is used for training. By default, if you create a mining structure by using [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], a holdout partition is created for you that contains 30 percent testing data and 70 percent training data. For more information, see [Training and Testing Data Sets](../analysis-services/data-mining/training-and-testing-data-sets.md).  
+ When you specify holdout parameters, you create a partition of the structure data. The amount that you specify for holdout is reserved for testing, and the remaining data is used for training. By default, if you create a mining structure by using [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], a holdout partition is created for you that contains 30 percent testing data and 70 percent training data. For more information, see [Training and Testing Data Sets](../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
  If you create a mining structure by using Data Mining Extensions (DMX), you must manually specify that a holdout partition be created.  
   
@@ -137,10 +137,10 @@ WITH HOLDOUT (20 PERCENT OR 2000 CASES)
 WITH HOLDOUT (2000 CASES OR 20 PERCENT)  
 ```  
   
- The holdout seed controls the starting point of the process that randomly assigns cases to either the training or testing data sets. By setting a holdout seed, you can ensure that the partition can be repeated. If you do not specify a holdout seed, [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] uses the name of the mining structure to create a seed. If you rename the structure, the seed value will change. The holdout seed parameter can be used with either or both of the other holdout parameters.  
+ The holdout seed controls the starting point of the process that randomly assigns cases to either the training or testing data sets. By setting a holdout seed, you can ensure that the partition can be repeated. If you do not specify a holdout seed, [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] uses the name of the mining structure to create a seed. If you rename the structure, the seed value will change. The holdout seed parameter can be used with either or both of the other holdout parameters.  
   
 > [!NOTE]  
->  Because the partition information is cached with the training data, to use holdout, you must ensure that the **CacheMode** property of the mining structure is set to **KeepTrainingData**. This is the default setting in [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] for new mining structures. Changing the **CacheMode** property to **ClearTrainingCases** on an existing mining structure that contains a holdout partition will not affect any mining models that have been processed. However, if <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> is not set to **KeepTrainingData**, holdout parameters will have no effect. This means that all the source data will be used for training and no test set will be available. The definition of the partition is cached with the structure; if you clear the cache of training cases, you also clear the cache of test data, and the definition of the holdout set.  
+>  Because the partition information is cached with the training data, to use holdout, you must ensure that the **CacheMode** property of the mining structure is set to **KeepTrainingData**. This is the default setting in [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] for new mining structures. Changing the **CacheMode** property to **ClearTrainingCases** on an existing mining structure that contains a holdout partition will not affect any mining models that have been processed. However, if <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> is not set to **KeepTrainingData**, holdout parameters will have no effect. This means that all the source data will be used for training and no test set will be available. The definition of the partition is cached with the structure; if you clear the cache of training cases, you also clear the cache of test data, and the definition of the holdout set.  
   
 ## Examples  
  The following examples demonstrate how to create a mining structure with holdout by using DMX.  
@@ -187,8 +187,8 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ```  
   
 ## See Also  
- [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Definition%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Manipulation%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)  
+ [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

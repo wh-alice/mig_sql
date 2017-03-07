@@ -25,11 +25,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CHARINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Searches an expression for another expression and returns its starting position if found.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -71,7 +71,7 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 ## Examples  
   
 ### A. Returning the starting position of an expression  
- The following example returns the position at which the sequence of characters `bicycle` starts in the `DocumentSummary` column of the `Document` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example returns the position at which the sequence of characters `bicycle` starts in the `DocumentSummary` column of the `Document` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 DECLARE @document varchar(64);  
@@ -89,7 +89,7 @@ GO
 ```  
   
 ### B. Searching from a specific position  
- The following example uses the optional *start_location* parameter to start looking for `vital` at the fifth character of the `DocumentSummary` column in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example uses the optional *start_location* parameter to start looking for `vital` at the fifth character of the `DocumentSummary` column in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 DECLARE @document varchar(64);  
@@ -183,7 +183,7 @@ GO
   
  `13`  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### F. Searching from the start of a string expression  
  The following example returns the first location of the `is` string in `This is a string`, starting from position 1 (the first character) in the string.  

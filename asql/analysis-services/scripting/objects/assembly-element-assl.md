@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Assembly Element (ASSL)
-  Represents a [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] assembly or a COM dynamic link library (DLL) associated with a [Server](../../../analysis-services/scripting/objects/server-element-assl.md) element or a [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element.  
+  Represents a [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] assembly or a COM dynamic link library (DLL) associated with a [Server](../../../analysis-services/scripting/objects/server-element-assl.md) element or a [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element.  
   
 ## Syntax  
   

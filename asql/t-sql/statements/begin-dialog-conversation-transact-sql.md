@@ -35,15 +35,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # BEGIN DIALOG CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Begins a dialog from one service to another service. A dialog is a conversation that provides exactly-once-in-order messaging between two services.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -102,10 +102,10 @@ WHERE database_id = DB_ID() ;
  Specifies the maximum amount of time the dialog will remain open. For the dialog to complete successfully, both endpoints must explicitly end the dialog before the lifetime expires. The *dialog_lifetime* value must be expressed in seconds. Lifetime is of type **int**. When no LIFETIME clause is specified, the dialog lifetime is the maximum value of the **int** data type.  
   
  ENCRYPTION  
- Specifies whether or not messages sent and received on this dialog must be encrypted when they are sent outside of an instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. A dialog that must be encrypted is a *secured dialog*. When ENCRYPTION = ON and the certificates required to support encryption are not configured, [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] returns an error message on the conversation. If ENCRYPTION = OFF, encryption is used if a remote service binding is configured for the *target_service_name*; otherwise messages are sent unencrypted. If this clause is not present, the default value is ON.  
+ Specifies whether or not messages sent and received on this dialog must be encrypted when they are sent outside of an instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. A dialog that must be encrypted is a *secured dialog*. When ENCRYPTION = ON and the certificates required to support encryption are not configured, [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] returns an error message on the conversation. If ENCRYPTION = OFF, encryption is used if a remote service binding is configured for the *target_service_name*; otherwise messages are sent unencrypted. If this clause is not present, the default value is ON.  
   
 > [!NOTE]  
->  Messages exchanged with services in the same instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] are never encrypted. However, a database master key and the certificates for encryption are still required for conversations that use encryption if the services for the conversation are in different databases. This allows conversations to continue in the event that one of the databases is moved to a different instance while the conversation is in progress.  
+>  Messages exchanged with services in the same instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] are never encrypted. However, a database master key and the certificates for encryption are still required for conversations that use encryption if the services for the conversation are in different databases. This allows conversations to continue in the event that one of the databases is moved to a different instance while the conversation is in progress.  
   
 ## Remarks  
  All messages are part of a conversation. Therefore, an initiating service must begin a conversation with the target service before sending a message to the target service. The information specified in the BEGIN DIALOG CONVERSATION statement is similar to the address on a letter; [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] uses the information to deliver messages to the correct service. The service specified in the TO SERVICE clause is the address that messages are sent to. The service specified in the FROM SERVICE clause is the return address used for reply messages.  
@@ -215,6 +215,6 @@ BEGIN DIALOG CONVERSATION @dialog_handle
  [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
  [MOVE CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)   
- [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.conversation-endpoints-transact-sql.md)  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.conversation-endpoints-transact-sql.md)  
   
   

@@ -17,15 +17,15 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # CDC Source
-  The CDC source reads a range of change data from [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] change tables and delivers the changes downstream to other SSIS components.  
+  The CDC source reads a range of change data from [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] change tables and delivers the changes downstream to other SSIS components.  
   
  The range of change data read by the CDC source is called the CDC Processing Range and is determine by the CDC Control task that is executed before the current data flow starts. The CDC Processing Range is derived from the value of a package variable that maintains the state of the CDC processing for a group of tables.  
   
- The CDC source extracts data from a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database by using a database table, a view, or an SQL statement.  
+ The CDC source extracts data from a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database by using a database table, a view, or an SQL statement.  
   
  The CDC source uses the following configurations:  
   
--   A [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ADO.NET connection manager to access the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] CDC database. For more information about configuring the CDC source connection, see [CDC Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md).  
+-   A [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ADO.NET connection manager to access the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] CDC database. For more information about configuring the CDC source connection, see [CDC Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md).  
   
 -   A table enabled for CDC.  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   The name of the CDC state package variable based on which the CDC Processing range is determined. The CDC source does not modify that variable.  
   
- The data returned by the CDC Source is the same as that returned by the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] CDC functions **cdc.fn_cdc_get_all_changes_\<capture-instance-name>** or **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** (when available). The only optional addition is the column, **__$initial_processing** that indicates whether the current processing range can overlap with an initial load of the table. For more information about initial processing, see [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
+ The data returned by the CDC Source is the same as that returned by the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] CDC functions **cdc.fn_cdc_get_all_changes_\<capture-instance-name>** or **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** (when available). The only optional addition is the column, **__$initial_processing** that indicates whether the current processing range can overlap with an initial load of the table. For more information about initial processing, see [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
   
  The CDC source has one regular output and one error output.  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
  Depending on the error behavior setting, the CDC source supports returning errors (data conversion, truncation) that occur during the extraction process in the error output. For more information, see [CDC Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md).  
   
 ## Data Type Support  
- The CDC source component for Microsoft supports all [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data types, which are mapped to the correct SSIS data types.  
+ The CDC source component for Microsoft supports all [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data types, which are mapped to the correct SSIS data types.  
   
 ## Troubleshooting the CDC Source  
  The following contains information on troubleshooting the CDC source.  
@@ -72,7 +72,7 @@ use <cdc-enabled-database-name>
   
  where:  
   
--   \<cdc-enabled-database-name> is the name of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database containing the change tables.  
+-   \<cdc-enabled-database-name> is the name of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database containing the change tables.  
   
 -   \<value-from-state-cs> is the value that appears in the CDC state variable as CS/\<value-from-state-cs>/ (CS stands for Current-processing-range-Start).  
   
@@ -80,10 +80,10 @@ use <cdc-enabled-database-name>
   
 -   \<mode> are the CDC processing modes. The processing modes have one of the following values **All**, **All with Old Values**, **Net**, **Net with Update Mask**, **Net with Merge**.  
   
- This script helps isolate problems by reproducing them in the [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], where it is easy to reproduce and identify errors.  
+ This script helps isolate problems by reproducing them in the [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], where it is easy to reproduce and identify errors.  
   
 #### SQL Server Error Message  
- The following message may be returned by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]:  
+ The following message may be returned by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]:  
   
  **An insufficient number of arguments were supplied for the procedure or function cdc.fn_cdc_get_net_changes_\<..>.**  
   
@@ -104,7 +104,7 @@ use <cdc-enabled-database-name>
   
  To open the **Advanced Editor** dialog box:  
   
--   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../../analysis-services/data-mining/includes/ssiscurrent-md.md)] project, right click the CDC source and select **Show Advanced Editor**.  
+-   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../../a9retired/includes/ssiscurrent-md.md)] project, right click the CDC source and select **Show Advanced Editor**.  
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box, see [CDC Source Custom Properties](../../integration-services/data-flow/cdc-source-custom-properties.md).  
   

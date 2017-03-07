@@ -24,13 +24,13 @@ manager: "erikre"
   
 ### To view a report  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md).  
   
 2.  Find a report by browsing folders or searching for a report by name. Browse folder contents by clicking a folder name or folder icon in the **Contents** page. Search for a report by typing all or part of the report name in the **Search for** text box at the top of the page.  
   
 3.  To view a report, click a report name or an icon. The following icon indicates a report:  
   
-     ![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")  
+     ![Report icon](../../a9retired/media/hlp-16doc.gif "Report icon")  
   
      Some reports require you to provide either a user name and password or a parameter value  
   
@@ -40,7 +40,7 @@ manager: "erikre"
   
 ## See Also  
  [Searching for Reports and Other Items &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Contents Page &#40;Report Manager&#41;](../Topic/Contents%20Page%20\(Report%20Manager\).md)   
+ [Contents Page &#40;Report Manager&#41;](../../a9retired/contents-page-report-manager.md)   
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Report Server Content Management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   

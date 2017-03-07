@@ -29,7 +29,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Data Definition - CREATE CELL CALCULATION
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a calculation that evaluates a Multidimensional Expressions (MDX) expression over a specified set of tuples within a cube.  
   
@@ -87,12 +87,12 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
 >  The Backus-Naur Form (BNF) of `{*(<comment> | <whitespace> | <newline>)}` will be parsed as `{*}` for backwards compatibility.  
   
 ## See Also  
- [Creating Session-Scoped Calculated Cells](../Topic/Creating%20Session-Scoped%20Calculated%20Cells.md)   
- [Creating Query-Scoped Cell Calculations &#40;MDX&#41;](../Topic/Creating%20Query-Scoped%20Cell%20Calculations%20\(MDX\).md)   
- [Building Cell Calculations in MDX &#40;MDX&#41;](../Topic/Building%20Cell%20Calculations%20in%20MDX%20\(MDX\).md)   
- [Using Cell Properties &#40;MDX&#41;](../Topic/Using%20Cell%20Properties%20\(MDX\).md)   
- [FORMAT_STRING Contents &#40;MDX&#41;](../Topic/FORMAT_STRING%20Contents%20\(MDX\).md)   
- [FORE_COLOR and BACK_COLOR Contents &#40;MDX&#41;](../Topic/FORE_COLOR%20and%20BACK_COLOR%20Contents%20\(MDX\).md)   
+ [Creating Session-Scoped Calculated Cells](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md)   
+ [Creating Query-Scoped Cell Calculations &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
+ [Building Cell Calculations in MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)   
+ [Using Cell Properties &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [FORMAT_STRING Contents &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
+ [FORE_COLOR and BACK_COLOR Contents &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)   
  [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

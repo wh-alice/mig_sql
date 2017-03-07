@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # &lt;source data query&gt; - OPENQUERY
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Replaces the source data query with a query to an existing data source. The INSERT, SELECT FROM PREDICTION JOIN, and SELECT FROM NATURAL PREDICTION JOIN statements support **OPENQUERY**.  
   
@@ -35,7 +35,7 @@ OPENQUERY(<named datasource>, <query syntax>)
   
 ## Arguments  
  *named datasource*  
- A data source that exists on the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] database.  
+ A data source that exists on the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] database.  
   
  *query syntax*  
  A query syntax that returns a rowset.  
@@ -50,7 +50,7 @@ OPENQUERY(<named datasource>, <query syntax>)
  `SELECT * FROM $system.MDSCHEMA_INPUT_DATASOURCES`  
   
 ## Examples  
- The following example uses the MyDS data source already defined in the [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] database to create a connection to the [!INCLUDE[ssSampleDBDWobject](../analysis-services/data-mining/includes/sssampledbdwobject-md.md)] database and query the **vTargetMail** view.  
+ The following example uses the MyDS data source already defined in the [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] database to create a connection to the [!INCLUDE[ssSampleDBDWobject](../a9notintoc/includes/sssampledbdwobject-md.md)] database and query the **vTargetMail** view.  
   
 ```  
 OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')  
@@ -58,7 +58,7 @@ OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')
   
 ## See Also  
  [&#60;source data query&#62;](../dmx/source-data-query.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Manipulation%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)  
+ [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

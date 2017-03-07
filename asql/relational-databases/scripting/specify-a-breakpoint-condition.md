@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Specify a Breakpoint Condition
-  A breakpoint condition is a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] expression that is evaluated by the debugger when the breakpoint is reached. If the condition is satisfied and any specified hit count reached, the debugger either breaks or performs the action specified for the breakpoint.  
+  A breakpoint condition is a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] expression that is evaluated by the debugger when the breakpoint is reached. If the condition is satisfied and any specified hit count reached, the debugger either breaks or performs the action specified for the breakpoint.  
   
 ## Specifying Conditions  
  The expression specified must be a valid Transact-SQL expression that evaluates to a Boolean value. For more information, see [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  

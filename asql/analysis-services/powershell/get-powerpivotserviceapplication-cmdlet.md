@@ -15,7 +15,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Get-PowerPivotServiceApplication cmdlet
-  Returns one or more [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service applications.  
+  Returns one or more [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service applications.  
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   
@@ -26,7 +26,7 @@ Get-PowerPivotServiceApplication [[-Identity] <SPGeminiServiceApplicationPipeBin
 ```  
   
 ## Description  
- The Get-PowerPivotServiceApplication cmdlet returns the service application specified by the Identity parameter. If no parameter is specified, the cmdlet returns all [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service applications in the farm. Each application is identified by its display name, application type, and GUID. To view additional properties of a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application, add the format-list option to the cmdlet.  
+ The Get-PowerPivotServiceApplication cmdlet returns the service application specified by the Identity parameter. If no parameter is specified, the cmdlet returns all [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service applications in the farm. Each application is identified by its display name, application type, and GUID. To view additional properties of a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application, add the format-list option to the cmdlet.  
   
 ## Parameters  
   
@@ -66,7 +66,7 @@ C:\PS>Get-PowerPivotServiceApplication
 C:\PS>Get-PowerPivotServiceApplication | format-list  
 ```  
   
- This example returns all of the properties of a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application.  
+ This example returns all of the properties of a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application.  
   
 ## Example 3  
   

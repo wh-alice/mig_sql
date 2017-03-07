@@ -22,11 +22,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Drops a cryptographic provider within [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Drops a cryptographic provider within [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -44,7 +44,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
   
  An EKM provider can only be dropped if there are no credentials mapped to it.  
   
- If there are keys mapped to an EKM provider when it is dropped the GUIDs for the keys remain stored in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. If a provider is created later with the same key GUIDs, the keys will be reused.  
+ If there are keys mapped to an EKM provider when it is dropped the GUIDs for the keys remain stored in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. If a provider is created later with the same key GUIDs, the keys will be reused.  
   
 ## Permissions  
  Requires CONTROL permission on the symmetric key.  

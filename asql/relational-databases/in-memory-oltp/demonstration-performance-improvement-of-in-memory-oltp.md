@@ -15,9 +15,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Demonstration: Performance Improvement of In-Memory OLTP
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  The code sample in this topic demonstrates the fast performance of memory-optimized tables. The performance improvement is evident when data in a memory-optimized table is accessed from traditional, interpreted [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. This performance improvement is even greater when data in a memory-optimized table is accessed from a natively compiled stored procedure (NCSProc).  
+  The code sample in this topic demonstrates the fast performance of memory-optimized tables. The performance improvement is evident when data in a memory-optimized table is accessed from traditional, interpreted [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. This performance improvement is even greater when data in a memory-optimized table is accessed from a natively compiled stored procedure (NCSProc).  
  
 To see a more comprehensive demonstration of the potential performance improvements of In-Memory OLTP see [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0). 
   
@@ -28,10 +28,10 @@ To see a more comprehensive demonstration of the potential performance improveme
 ## Code Example  
  The following subsections describe each step.  
   
-### Step 1a: Prerequisite If Using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]  
- The steps in this first subsection applies only if you are running in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and does not apply if you are running in [!INCLUDE[ssSDSFull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)]. Do the following:  
+### Step 1a: Prerequisite If Using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]  
+ The steps in this first subsection applies only if you are running in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], and does not apply if you are running in [!INCLUDE[ssSDSFull](../../a9retired/includes/sssdsfull-md.md)]. Do the following:  
   
-1.  Use SQL Server Management Studio (SSMS.exe) to connect to your [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Or any tool similar to SSMS.exe is fine.  
+1.  Use SQL Server Management Studio (SSMS.exe) to connect to your [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Or any tool similar to SSMS.exe is fine.  
   
 2.  Manually create a directory named **C:\data\\**. The sample Transact-SQL code expects the directory to pre-exist.  
   
@@ -54,8 +54,8 @@ USE imoltp;
 go  
 ```  
   
-### Step 1b: Prerequisite If Using [!INCLUDE[ssSDSFull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)]  
- This subsection applies only if you are using [!INCLUDE[ssSDSFull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)]. Do the following:  
+### Step 1b: Prerequisite If Using [!INCLUDE[ssSDSFull](../../a9retired/includes/sssdsfull-md.md)]  
+ This subsection applies only if you are using [!INCLUDE[ssSDSFull](../../a9retired/includes/sssdsfull-md.md)]. Do the following:  
   
 1.  Decide which existing test database you will use for the code example.  
   

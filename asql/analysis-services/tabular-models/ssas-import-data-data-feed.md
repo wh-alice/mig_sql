@@ -50,7 +50,7 @@ manager: "erikre"
   
 #### To import data from an Azure DataMarket dataset  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Import from Data Source**. The Table Import Wizard opens.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Import from Data Source**. The Table Import Wizard opens.  
   
 2.  On the **Connect to a Data Source** page, under **Data Feeds**, select **Azure DataMarket Dataset**, and then click **Next**.  
   
@@ -77,7 +77,7 @@ manager: "erikre"
   
 #### To import data from public or corporate data feeds  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Import from Data Source**. The Table Import Wizard opens.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Import from Data Source**. The Table Import Wizard opens.  
   
 2.  On the **Connect to a Data Source** page, under **Data Feeds**, select **Other Feeds**, and then click **Next**.  
   
@@ -115,7 +115,7 @@ manager: "erikre"
   
 #### To import data feeds from a SharePoint list  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Import from Data Source**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Import from Data Source**.  
   
 2.  On the **Connect to a Data Source** page, under **Data Feeds**, select **Other Data Feeds**, and then click **Next**.  
   
@@ -143,11 +143,11 @@ manager: "erikre"
 10. In the **Select Tables and Views** page, click **Finish**.  
   
 ##  <a name="importreport"></a> Import data feeds from Reporting Services Reports  
- If you have a deployment of [!INCLUDE[ssKilimanjaro](../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)] Reporting Services, you can use the Atom rendering extension to generate a data feed from an existing report.  
+ If you have a deployment of [!INCLUDE[ssKilimanjaro](../../a9notintoc/includes/sskilimanjaro-md.md)] Reporting Services, you can use the Atom rendering extension to generate a data feed from an existing report.  
   
 #### To import report data from a published Reporting Services report  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Import from Data Source**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Import from Data Source**.  
   
 2.  On the **Connect to a Data Source** page, under **Data Feeds**, select **Report**, and then click **Next**.  
   
@@ -193,6 +193,6 @@ manager: "erikre"
  [Data Types Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)   
  [Impersonation &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
  [Process Data &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
- [Import Data &#40;SSAS Tabular&#41;](../Topic/Import%20Data%20\(SSAS%20Tabular\).md)  
+ [Import Data &#40;SSAS Tabular&#41;](../../a9retired/import-data-ssas-tabular.md)  
   
   

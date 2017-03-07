@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Transaction Log Backups (SQL Server)
-  This topic is relevant only for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases that are using the full or bulk-logged recovery models. This topic discusses backing up the transaction log of a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database.  
+  This topic is relevant only for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] databases that are using the full or bulk-logged recovery models. This topic discusses backing up the transaction log of a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database.  
   
  Minimally, you must have created at least one full backup before you can create any log backups. After that, the transaction log can be backed up at any time unless the log is already being backed up. 
  
@@ -47,7 +47,7 @@ A database administrator typically creates a full database backup occasionally, 
   
 -   If a database is damaged or you are about to restore the database, we recommend that you create a [tail-log backup](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) to enable you to restore the database to the current point in time.  
   
--   By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log and in the system event log. If back up the log very frequently, these success messages accumulate quickly, resulting in huge error logs that can make finding other messages difficult. In such cases you can suppress these log entries by using trace flag 3226 if none of your scripts depend on those entries. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md).  
+-   By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error log and in the system event log. If back up the log very frequently, these success messages accumulate quickly, resulting in huge error logs that can make finding other messages difficult. In such cases you can suppress these log entries by using trace flag 3226 if none of your scripts depend on those entries. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To create a transaction log backup**  

@@ -73,7 +73,7 @@ manager: "erikre"
   
  `cell properties VALUE, FORMAT_STRING, LANGUAGE, FORMATTED_VALUE`  
   
- The results, transposed, when the above MDX query was run using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] over a server and client with locale 1033 are as follows:  
+ The results, transposed, when the above MDX query was run using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] over a server and client with locale 1033 are as follows:  
   
 |Member|FORMATTED_VALUE|Explanation|  
 |------------|----------------------|-----------------|  
@@ -123,7 +123,7 @@ manager: "erikre"
   
  `cell properties VALUE, FORMAT_STRING, LANGUAGE, FORMATTED_VALUE`  
   
- The results, transposed, when the above MDX query was run using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] over a server and client with locale 1033 are as follows:  
+ The results, transposed, when the above MDX query was run using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] over a server and client with locale 1033 are as follows:  
   
 |Member|FORMATTED_VALUE|Explanation|  
 |------------|----------------------|-----------------|  
@@ -141,9 +141,9 @@ manager: "erikre"
 |L|06:30|FORMAT_STRING is set explicitly to `Short Time` and LANGUAGE is set explicitly to `1041` (Japanese).|  
   
 ## See Also  
- [FORMAT_STRING Contents &#40;MDX&#41;](../Topic/FORMAT_STRING%20Contents%20\(MDX\).md)   
- [Using Cell Properties &#40;MDX&#41;](../Topic/Using%20Cell%20Properties%20\(MDX\).md)   
- [Creating and Using Property Values &#40;MDX&#41;](../Topic/Creating%20and%20Using%20Property%20Values%20\(MDX\).md)   
+ [FORMAT_STRING Contents &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
+ [Using Cell Properties &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [Creating and Using Property Values &#40;MDX&#41;](../../../a9retired/creating-and-using-property-values-mdx.md)   
  [MDX Query Fundamentals &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

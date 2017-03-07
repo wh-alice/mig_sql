@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SCM Services - Configure SQL Server Error Logs
-  This topic describes how to view or modify the way [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error logs are recycled.  
+  This topic describes how to view or modify the way [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] error logs are recycled.  
   
 ## To open the Configure SQL Server Error Logs dialog box  
   
@@ -26,9 +26,9 @@ manager: "jhubbard"
 2.  In the **Configure SQL Server Error Logs** dialog box, choose from the following options.  
   
      **Limit the number of the error log files before they are recycled**  
-     Check to limit the number of error logs created before they are recycled. A new error log is created each time an instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is started. [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] retains backups of the previous six logs, unless you check this option, and specify a different maximum number of error log files below.  
+     Check to limit the number of error logs created before they are recycled. A new error log is created each time an instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is started. [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] retains backups of the previous six logs, unless you check this option, and specify a different maximum number of error log files below.  
   
      **Maximum number of error log files**  
-     Specify the maximum number of error log files created before they are recycled. The default is 6, which is the number of previous backup logs [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] retains before recycling them.  
+     Specify the maximum number of error log files created before they are recycled. The default is 6, which is the number of previous backup logs [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] retains before recycling them.  
   
   

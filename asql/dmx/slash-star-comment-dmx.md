@@ -22,9 +22,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Slash Star (Comment) (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Indicates a text string that [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] should not execute. The server does not evaluate the text between the comment characters /* and \*/. You can nest comments within a Data Mining Extensions (DMX) statement, include them at the end of a line of code, or insert them on a separate line.  
+  Indicates a text string that [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] should not execute. The server does not evaluate the text between the comment characters /* and \*/. You can nest comments within a Data Mining Extensions (DMX) statement, include them at the end of a line of code, or insert them on a separate line.  
   
 ## Syntax  
   

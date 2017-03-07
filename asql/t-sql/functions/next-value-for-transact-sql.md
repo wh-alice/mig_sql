@@ -31,9 +31,9 @@ manager: "jhubbard"
 
   Generates a sequence number from the specified sequence object.  
   
- For a complete discussion of both creating and using sequences, see [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md). Use [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) to generate reserve a range of sequence numbers.  
+ For a complete discussion of both creating and using sequences, see [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md). Use [sp_sequence_get_range](../../relational-databases/reference/system-stored-procedures/sp-sequence-get-range-transact-sql.md) to generate reserve a range of sequence numbers.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -54,7 +54,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
  The name of the sequence object that generates the number.  
   
  *over_order_by_clause*  
- Determines the order in which the sequence value is assigned to the rows in a partition. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../Topic/OVER%20Clause%20\(Transact-SQL\).md).  
+ Determines the order in which the sequence value is assigned to the rows in a partition. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## Return Types  
  Returns a number using the type of the sequence.  
@@ -144,7 +144,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 -   If another process is accessing the sequence object at the same time, the numbers returned could have gaps.  
   
 ## Metadata  
- For information about sequences, query the [sys.sequences](../../relational-databases/system-catalog-views/sys.sequences-transact-sql.md) catalog view.  
+ For information about sequences, query the [sys.sequences](../../relational-databases/reference/system-catalog-views/sys.sequences-transact-sql.md) catalog view.  
   
 ## Security  
   
@@ -166,7 +166,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 ## Examples  
  For examples of both creating sequences and using the **NEXT VALUE FOR** function to generate sequence numbers, see [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- The following examples use a sequence named `CountBy1` in a schema named `Test`. Execute the following statement to create the `Test.CountBy1` sequence. Examples C and E use the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database, so the `CountBy1` sequence is created in that database.  
+ The following examples use a sequence named `CountBy1` in a schema named `Test`. Execute the following statement to create the `Test.CountBy1` sequence. Examples C and E use the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database, so the `CountBy1` sequence is created in that database.  
   
 ```  
 USE AdventureWorks2012 ;  

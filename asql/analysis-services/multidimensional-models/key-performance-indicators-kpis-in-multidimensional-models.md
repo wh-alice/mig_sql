@@ -28,7 +28,7 @@ manager: "erikre"
 # Key Performance Indicators (KPIs) in Multidimensional Models
   In business terminology, a Key Performance Indicator (KPI) is a quantifiable measurement for gauging business success.  
   
- In [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], a KPI is a collection of calculations that are associated with a measure group in a cube that are used to evaluate business success. Typically, these calculations are a combination of Multidimensional Expressions (MDX) expressions or calculated members. KPIs also have additional metadata that provides information about how client applications should display the results of the KPI's calculations.  
+ In [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], a KPI is a collection of calculations that are associated with a measure group in a cube that are used to evaluate business success. Typically, these calculations are a combination of Multidimensional Expressions (MDX) expressions or calculated members. KPIs also have additional metadata that provides information about how client applications should display the results of the KPI's calculations.  
   
  A KPI handles information about a goal set, the actual formula of the performance recorded in the cube, and measurement to show the trend and the status of the performance. AMO is used to define the formulas and other definitions about the values of a KPI. A query interface, such as ADOMD.NET, is used by the client application to retrieve and expose the KPI values to the end user. For more information see [Developing with ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd.net.md).  
   
@@ -36,12 +36,12 @@ manager: "erikre"
   
  In business terminology, a Key Performance Indicator (KPI) is a quantifiable measurement for gauging business success. A KPI is frequently evaluated over time. For example, the sales department of an organization may use monthly gross profit as a KPI, but the human resources department of the same organization may use quarterly employee turnover. Each is an example of a KPI. Business executives frequently consume KPIs that are grouped together in a business scorecard to obtain a quick and accurate historical summary of business success.  
   
- In [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], a KPI is a collection of calculations, which are associated with a measure group in a cube, that are used to evaluate business success. Typically, these calculations are a combination of Multidimensional Expressions (MDX) expressions and calculated members. KPIs also have additional metadata that provides information about how client applications should display the results of a KPI's calculation.  
+ In [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], a KPI is a collection of calculations, which are associated with a measure group in a cube, that are used to evaluate business success. Typically, these calculations are a combination of Multidimensional Expressions (MDX) expressions and calculated members. KPIs also have additional metadata that provides information about how client applications should display the results of a KPI's calculation.  
   
- One key advantage of KPIs in [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] is that they are server-based KPIs that are consumable by different client applications. A server-based KPI presents a single version of the truth, compared to separate versions of the truth from separate client applications. Moreover, performing the sometimes complex calculations on the server instead of on each client computer may have performance benefits.  
+ One key advantage of KPIs in [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] is that they are server-based KPIs that are consumable by different client applications. A server-based KPI presents a single version of the truth, compared to separate versions of the truth from separate client applications. Moreover, performing the sometimes complex calculations on the server instead of on each client computer may have performance benefits.  
   
 ## Common KPI Terms  
- The following table provides definitions for common KPI terms in [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)].  
+ The following table provides definitions for common KPI terms in [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)].  
   
 |Term|Definition|  
 |----------|----------------|  
@@ -59,10 +59,10 @@ manager: "erikre"
 ## Parent KPIs  
  An organization may track different business metrics at different levels. For example, only two or three KPIs may be used to gauge business success for the whole company, but these company-wide KPIs may be based on three or four other KPIs tracked by the business units throughout the company. Also, business units in a company may use different statistics to calculate the same KPI, the results of which are rolled up to the company-wide KPI.  
   
- [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] lets you define a parent-child relationship between KPIs. This parent-child relationship lets the results of the child KPI be used to calculate the results of the parent KPI. Client applications can also use this relationship to appropriately display parent and child KPIs.  
+ [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] lets you define a parent-child relationship between KPIs. This parent-child relationship lets the results of the child KPI be used to calculate the results of the parent KPI. Client applications can also use this relationship to appropriately display parent and child KPIs.  
   
 ## Weights  
- Weights can also be assigned to child KPIs. Weights enable [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] to proportionally adjust the results of the child KPI when calculating the value of the parent KPI.  
+ Weights can also be assigned to child KPIs. Weights enable [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] to proportionally adjust the results of the child KPI when calculating the value of the parent KPI.  
   
 ## Retrieving and Displaying KPIs  
  The display of KPIs depends on the implementation of the client application. For example, selecting **Browser View** on the toolbar on the **KPIs** tab of Cube Designer demonstrates one possible client implementation, with graphics used to display status and trend indicators, display folders used to group KPIs, and child KPIs displayed under parent KPIs.  

@@ -20,7 +20,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Delete a Push Subscription
-  This topic describes how to delete a push subscription in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], or Replication Management Objects (RMO).  
+  This topic describes how to delete a push subscription in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
  **In This Topic**  
   
@@ -33,11 +33,11 @@ manager: "jhubbard"
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Delete a push subscription at the Publisher (from the **Local Publications** folder in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]) or the Subscriber (from the **Local Subscriptions** folder). Deleting a subscription does not remove objects or data from the subscription; they must be removed manually.  
+ Delete a push subscription at the Publisher (from the **Local Publications** folder in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]) or the Subscriber (from the **Local Subscriptions** folder). Deleting a subscription does not remove objects or data from the subscription; they must be removed manually.  
   
 #### To delete a push subscription at the Publisher  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Publications** folder.  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 #### To delete a push subscription at the Subscriber  
   
-1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Subscriptions** folder.  
   
@@ -62,24 +62,24 @@ manager: "jhubbard"
   
 #### To delete a push subscription to a snapshot or transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). Specify **@publication** and **@subscriber**. Specify a value of **all** for **@article**. (Optional) If the Distributor cannot be accessed, specify a value of **1** for **@ignore_distributor** to delete the subscription without removing related objects at the Distributor.  
+1.  At the Publisher on the publication database, execute [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-dropsubscription-transact-sql.md). Specify **@publication** and **@subscriber**. Specify a value of **all** for **@article**. (Optional) If the Distributor cannot be accessed, specify a value of **1** for **@ignore_distributor** to delete the subscription without removing related objects at the Distributor.  
   
-2.  At the Subscriber on the subscription database, execute [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md) to remove replication metadata in the subscription database.  
+2.  At the Subscriber on the subscription database, execute [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-subscription-cleanup-transact-sql.md) to remove replication metadata in the subscription database.  
   
 #### To delete a push subscription to a merge publication  
   
-1.  At the Publisher, execute [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md), specifying **@publication**, **@subscriber** and **@subscriber_db**. (Optional) If the Distributor cannot be accessed, specify a value of **1** for **@ignore_distributor** to delete the subscription without removing related objects at the Distributor.  
+1.  At the Publisher, execute [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-dropmergesubscription-transact-sql.md), specifying **@publication**, **@subscriber** and **@subscriber_db**. (Optional) If the Distributor cannot be accessed, specify a value of **1** for **@ignore_distributor** to delete the subscription without removing related objects at the Distributor.  
   
-2.  At the Subscriber on the subscription database, execute [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md). Specify **@publisher**, **@publisher_db**, and **@publication**. This removes merge metadata from the subscription database.  
+2.  At the Subscriber on the subscription database, execute [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md). Specify **@publisher**, **@publisher_db**, and **@publication**. This removes merge metadata from the subscription database.  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example deletes a push subscription to a transactional publication.  
   
- [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-push-subscription_1.sql)]  
+ [!code-sql[HowTo#sp_droptransubscription](../../a9retired/codesnippet/tsql/delete-a-push-subscription_1.sql)]  
   
  This example deletes a push subscription to a merge publication.  
   
- [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-push-subscription_2.sql)]  
+ [!code-sql[HowTo#sp_dropmergesubscription](../../a9retired/codesnippet/tsql/delete-a-push-subscription_2.sql)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  The RMO classes that you use to delete a push subscription depend on the type of publication to which the push subscription is subscribed.  
@@ -115,9 +115,9 @@ manager: "jhubbard"
 ###  <a name="PShellExample"></a> Examples (RMO)  
  You can delete push subscriptions programmatically by using Replication Management Objects (RMO).  
   
- [!code-cs[HowTo#rmo_DropTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_droptranpushsub)]  
+ [!code-cs[HowTo#rmo_DropTranPushSub](../../a9retired/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_droptranpushsub)]  
   
- [!code-vb[HowTo#rmo_vb_DropTranPushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_droptranpushsub)]  
+ [!code-vb[HowTo#rmo_vb_DropTranPushSub](../../a9retired/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_droptranpushsub)]  
   
 ## See Also  
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   

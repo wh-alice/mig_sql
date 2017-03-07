@@ -18,7 +18,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Copy a Version (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], copy a version of the model to create a new version of it.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], copy a version of the model to create a new version of it.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -31,12 +31,12 @@ manager: "jhubbard"
   
 ### To copy a version  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **Version Management**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **Version Management**.  
   
 2.  On the **Manage Versions** page, select the row for the version that you want to copy.  
   
     > [!NOTE]  
-    >  Depending on a setting in [!INCLUDE[ssMDScfgmgr](../database-engine/install/windows/includes/ssmdscfgmgr-md.md)], you might be able to copy versions with the **Committed** status only. For more information, see [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
+    >  Depending on a setting in [!INCLUDE[ssMDScfgmgr](../a9retired/includes/ssmdscfgmgr-md.md)], you might be able to copy versions with the **Committed** status only. For more information, see [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
 3.  Click **Copy**.  
   

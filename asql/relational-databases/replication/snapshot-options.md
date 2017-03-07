@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 -   Compress snapshots for storage on removable media or for transfer over a slow network. For more information, see [Compressed Snapshots](../../relational-databases/replication/compressed-snapshots.md).  
   
--   Execute [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] scripts before or after the snapshot is applied. For more information, see [Execute Scripts Before and After the Snapshot Is Applied](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).  
+-   Execute [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] scripts before or after the snapshot is applied. For more information, see [Execute Scripts Before and After the Snapshot Is Applied](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).  
   
 -   Transfer snapshot files using File Transfer Protocol (FTP). For more information, see [Transfer Snapshots Through FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
   

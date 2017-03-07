@@ -25,19 +25,19 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Hints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Hints are options or strategies specified for enforcement by the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] query processor on SELECT, INSERT, UPDATE, or DELETE statements. The hints override any execution plan the query optimizer might select for a query.  
+  Hints are options or strategies specified for enforcement by the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] query processor on SELECT, INSERT, UPDATE, or DELETE statements. The hints override any execution plan the query optimizer might select for a query.  
   
 > [!CAUTION]  
->  Because the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that <join_hint>, <query_hint>, and <table_hint> be used only as a last resort by experienced developers and database administrators.  
+>  Because the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that <join_hint>, <query_hint>, and <table_hint> be used only as a last resort by experienced developers and database administrators.  
   
  The following hints are described in this section:  
   
--   [Join Hints](../Topic/Join%20Hints%20\(Transact-SQL\).md)  
+-   [Join Hints](../../t-sql/queries/hints-transact-sql-join.md)  
   
--   [Query Hints](../Topic/Query%20Hints%20\(Transact-SQL\).md)  
+-   [Query Hints](../../t-sql/queries/hints-transact-sql-query.md)  
   
--   [Table Hint](../Topic/Table%20Hints%20\(Transact-SQL\).md)  
+-   [Table Hint](../../t-sql/queries/hints-transact-sql-table.md)  
   
   

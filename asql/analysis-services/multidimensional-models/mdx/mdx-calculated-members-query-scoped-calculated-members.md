@@ -25,7 +25,7 @@ manager: "erikre"
  As discussed in this topic, the syntax of the WITH keyword is quite flexible, even allowing a calculated member to be based on another calculated member.  
   
 > [!NOTE]  
->  For more information about calculated members, see [Building Calculated Members in MDX &#40;MDX&#41;](../Topic/Building%20Calculated%20Members%20in%20MDX%20\(MDX\).md).  
+>  For more information about calculated members, see [Building Calculated Members in MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
   
 ## WITH Keyword Syntax  
  Use the following syntax to add the WITH keyword to an MDX SELECT statement:  
@@ -91,7 +91,7 @@ WHERE [Product].[Category].[Bikes]
   
 ## See Also  
  [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)   
- [SELECT Statement &#40;MDX&#41;](../Topic/SELECT%20Statement%20\(MDX\).md)   
- [Creating Session-Scoped Calculated Members &#40;MDX&#41;](../Topic/Creating%20Session-Scoped%20Calculated%20Members%20\(MDX\).md)  
+ [SELECT Statement &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
+ [Creating Session-Scoped Calculated Members &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

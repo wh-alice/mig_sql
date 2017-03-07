@@ -17,7 +17,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Configure Maximum File Upload Size (Power Pivot for SharePoint)
-  [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbooks often contain large amounts of data that result in files that exceed the maximum file size allowed for SharePoint uploads. When you try to upload a file that exceeds the upper limit, you will get the following error on SharePoint:  
+  [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbooks often contain large amounts of data that result in files that exceed the maximum file size allowed for SharePoint uploads. When you try to upload a file that exceeds the upper limit, you will get the following error on SharePoint:  
   
 -   "The specified file is larger than the maximum supported file size."  
   

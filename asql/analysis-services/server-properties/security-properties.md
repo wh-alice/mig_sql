@@ -24,7 +24,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Security Properties
-  [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] supports the security server properties listed in the following table. For more information about additional server properties and how to set them, see [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+  [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] supports the security server properties listed in the following table. For more information about additional server properties and how to set them, see [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Applies to:** Multidimensional and Tabular server mode  
   
@@ -43,7 +43,7 @@ manager: "erikre"
  The default value for this property is False, which indicates that client impersonation is enabled.  
   
  **BuiltinAdminsAreServerAdmins**  
- A Boolean property that indicates whether members of the local machine administrators group are [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] administrators.  
+ A Boolean property that indicates whether members of the local machine administrators group are [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] administrators.  
   
  **ServiceAccountIsServerAdmin**  
  A Boolean property that indicates whether the service account is a server administrator.  
@@ -51,7 +51,7 @@ manager: "erikre"
  The default value for this property is True, which indicates that the service account is a server administrator.  
   
  **ErrorMessageMode**  
- An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support.  
+ An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support.  
   
  **DataProtection\ RequiredProtectionLevel**  
  A signed 32-bit integer property that defines the required protection level for all client requests. This property has one of the values listed in the following table.  
@@ -63,7 +63,7 @@ manager: "erikre"
 |*2*|Clear-text requests allowed but only with signatures (weaker protection than encryption).|  
   
  **AdministrativeDataProtection\ RequiredProtectionLevel**  
- An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] support.  
+ An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] support.  
   
 ## See Also  
  [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   

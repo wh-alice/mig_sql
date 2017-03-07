@@ -15,9 +15,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Native Client Support for LocalDB
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
-  Beginning in [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)], a lightweight version of SQL Server, called LocalDB, will be available. This topic discusses how to connect to a database in a LocalDB instance.  
+  Beginning in [!INCLUDE[ssSQL11](../../../a9notintoc/includes/sssql11-md.md)], a lightweight version of SQL Server, called LocalDB, will be available. This topic discusses how to connect to a database in a LocalDB instance.  
   
 ## Remarks  
  For more information about LocalDB, including how to install LocalDB and configure your LocalDB instance, see:  

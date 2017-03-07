@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Open Log File Viewer
-  You can use Log File Viewer in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to access information about errors and events that are captured in the following logs:  
+  You can use Log File Viewer in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] to access information about errors and events that are captured in the following logs:  
   
 -   Audit Collection  
   
@@ -33,14 +33,14 @@ manager: "jhubbard"
   
 -   Windows events (These Windows events can also be accessed from Event Viewer.)  
   
- Beginning in [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)], you can use Registered Servers to view [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] log files from local or remote instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. By using Registered Servers, you can view the log files when the instances are either online or offline. For more information about online access, see the procedure "To view online log files from Registered Servers" later in this topic. For more information about how to access offline [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] log files, see [View Offline Log Files](../../relational-databases/logs/view-offline-log-files.md).  
+ Beginning in [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)], you can use Registered Servers to view [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] log files from local or remote instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. By using Registered Servers, you can view the log files when the instances are either online or offline. For more information about online access, see the procedure "To view online log files from Registered Servers" later in this topic. For more information about how to access offline [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] log files, see [View Offline Log Files](../../relational-databases/logs/view-offline-log-files.md).  
   
  You can open Log File Viewer in several ways, depending on the information that you want to view.  
   
 ##  <a name="BeforeYouBegin"></a> Permissions  
- To access log files for instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that are online, this requires membership in the securityadmin fixed server role.  
+ To access log files for instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that are online, this requires membership in the securityadmin fixed server role.  
   
- To access log files for instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that are offline, you must have read access to both the **Root\Microsoft\SqlServer\ComputerManagement10** WMI namespace, and to the folder where the log files are stored. For more information, see the Security section of the topic [View Offline Log Files](../../relational-databases/logs/view-offline-log-files.md).  
+ To access log files for instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that are offline, you must have read access to both the **Root\Microsoft\SqlServer\ComputerManagement10** WMI namespace, and to the folder where the log files are stored. For more information, see the Security section of the topic [View Offline Log Files](../../relational-databases/logs/view-offline-log-files.md).  
   
 ### Security  
  Requires membership in the securityadmin fixed server role.  

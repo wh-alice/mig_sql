@@ -21,7 +21,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 2-2 - Populating a Hierarchical Table Using Hierarchical Methods
-[!INCLUDE[ssSampleDBobject](../../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] has 8 employees working in the Marketing department. The employee hierarchy looks like this:  
+[!INCLUDE[ssSampleDBobject](../../../a9retired/includes/sssampledbobject-md.md)] has 8 employees working in the Marketing department. The employee hierarchy looks like this:  
   
 **David**, **EmployeeID** 6, is the Marketing Manager. Three Marketing Specialists report to **David**:  
   
@@ -164,7 +164,7 @@ As in the previous lesson, we use the `ToString()` method to convert the **hiera
 The table is now fully populated with the Marketing organization.  
   
 ## Next Task in Lesson  
-[Querying a Hierarchical Table Using Hierarchy Methods](../Topic/Querying%20a%20Hierarchical%20Table%20Using%20Hierarchy%20Methods.md)  
+[Querying a Hierarchical Table Using Hierarchy Methods](../../../relational-databases/data-types/tutorials/lesson-2-3-querying-a-hierarchical-table-using-hierarchy-methods.md)  
   
   
   

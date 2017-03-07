@@ -12,12 +12,12 @@ ms.topic: "get-started-article"
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
-caps.latest.revision: 29
+caps.latest.revision: 30
 ms.author: "owend"
 manager: "erikre"
 ---
 # Lesson 1: Create a New Tabular Model Project
-In this lesson, you will create a new, blank tabular model project in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)]. Once your new project is created, you can begin adding data by using the Table Import Wizard. This lesson also gives you a brief introduction to the tabular model authoring environment in SSDT.  
+In this lesson, you will create a new, blank tabular model project in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)]. Once your new project is created, you can begin adding data by using the Table Import Wizard. This lesson also gives you a brief introduction to the tabular model authoring environment in SSDT.  
   
 Estimated time to complete this lesson: **10 minutes**  
   
@@ -28,7 +28,7 @@ This topic is the first lesson in a tabular model authoring tutorial. To complet
   
 #### To create a new tabular model project  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], on the **File** menu, click **New**, and then click **Project**.  
+1.  In [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], on the **File** menu, click **New**, and then click **Project**.  
   
 2.  In the **New Project** dialog box, expand **Installed** > **Business Intelligence** > **Analysis Services**, and then click **Analysis Services Tabular Project**.  
   
@@ -63,7 +63,7 @@ Now, let’s look at the model properties. In **Solution Explorer**, click **Mod
   
 When you create a new model, certain model properties are set automatically according to the Data Modeling settings that can be specified in the Tools > Options dialog box. Data Backup, Workspace Retention, and Workspace Server properties specify how and where the workspace database (your model authoring database) is backed up, retained in-memory, and built. You can change these settings later if necessary, but for now, just leave these properties as they are.  
   
-When you installed SSDT, several new menu items were added to the Visual Studio environment. Let’s look at the new menu items that are specific to authoring tabular models. Click on the **Model** menu. From here, you can launch the Table Import Wizard, view and edit existing connections, refresh workspace data, browse your model in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Excel with the Analyze in Excel feature, create perspectives and roles, select the model view, and set calculation options.  
+When you installed SSDT, several new menu items were added to the Visual Studio environment. Let’s look at the new menu items that are specific to authoring tabular models. Click on the **Model** menu. From here, you can launch the Table Import Wizard, view and edit existing connections, refresh workspace data, browse your model in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Excel with the Analyze in Excel feature, create perspectives and roles, select the model view, and set calculation options.  
   
 Click on the **Table** menu. Here, you can create and manage relationships between tables, create and manage, specify date table settings, create partitions, and edit table properties.  
   
@@ -76,7 +76,7 @@ Explore some of the dialogs and locations for various features specific to autho
 To learn more about the different types of tabular model projects, see [Tabular Model Projects &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). To learn more about the tabular model authoring environment, see [Tabular Model Designer &#40;SSAS&#41;](../../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
   
 ## Next Steps  
-To continue this tutorial, go to the next lesson: [Lesson 2: Add Data](../../analysis-services/tutorials/lesson-2-add-data.md).  
+To continue this tutorial, go to the next lesson: [Add data](../../analysis-services/tutorials/lesson-2-add-data.md)
   
   
   

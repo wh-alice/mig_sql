@@ -27,11 +27,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # RECONFIGURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Updates the currently configured value (the **config_value** column in the **sp_configure** result set) of a configuration option changed with the **sp_configure** system stored procedure. Because some configuration options require a server stop and restart to update the currently running value, RECONFIGURE does not always update the currently running value (the **run_value** column in the **sp_configure** result set) for a changed configuration value.    
     
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)    
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## Syntax    
     
@@ -60,7 +60,7 @@ RECONFIGURE [ WITH OVERRIDE ]
  RECONFIGURE permissions default to grantees of the ALTER SETTINGS permission. The **sysadmin** and **serveradmin** fixed server roles implicitly hold this permission.    
     
 ## Examples    
- The following example sets the upper limit for the `recovery interval` configuration option to `75` minutes and uses `RECONFIGURE WITH OVERRIDE` to install it. Recovery intervals greater than 60 minutes are not recommended and disallowed by default. However, because the `WITH OVERRIDE` option is specified, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not check whether the value specified (`90`) is a valid value for the `recovery interval` configuration option.    
+ The following example sets the upper limit for the `recovery interval` configuration option to `75` minutes and uses `RECONFIGURE WITH OVERRIDE` to install it. Recovery intervals greater than 60 minutes are not recommended and disallowed by default. However, because the `WITH OVERRIDE` option is specified, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not check whether the value specified (`90`) is a valid value for the `recovery interval` configuration option.    
     
 ```    
 EXEC sp_configure 'recovery interval', 75'    
@@ -70,6 +70,6 @@ GO
     
 ## See Also    
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure/windows/server-configuration-options-sql-server.md)     
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)    
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md)    
     
   

@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Database Dimensions - Browse Dimension Data in Dimension Designer
-  You can browse the data in a dimension by using the **Browser** view in Dimension Designer, which is accessed from [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+  You can browse the data in a dimension by using the **Browser** view in Dimension Designer, which is accessed from [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
  In order for dimension data to be displayed in the **Browser** view, the dimension must be in a processed state. For more information, see [Processing a multidimensional model &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
@@ -34,7 +34,7 @@ manager: "erikre"
     >  You must have a translation defined in the dimension for the selected language.  
   
 ## See Also  
- [Introduction to Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../Topic/Introduction%20to%20Dimensions%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
+ [Introduction to Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)   
  [Dimensions in Multidimensional Models](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

@@ -36,16 +36,16 @@ EnvelopeAngle( )
 ```  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **float**  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] return type: **float**  
   
  CLR return type: **SqlDouble**  
   
 ## Remarks  
  This method returns a point in the **geography** instance in degrees. When used with EnvelopeCenter(), `EnvelopeAngle()` returns a bounding circle of a **geography** instance.  
   
- In [!INCLUDE[ssSQL11](../../../analysis-services/includes/sssql11-md.md)], this method has been extended to **FullGlobe** instances.  
+ In [!INCLUDE[ssSQL11](../../../a9notintoc/includes/sssql11-md.md)], this method has been extended to **FullGlobe** instances.  
   
- The hemisphere limitation applied to `EnvelopeAngle()` in [!INCLUDE[ssKatmai](../../../analysis-services/data-mining/includes/sskatmai-md.md)] has been removed. However, for instances with angles greater than 90 degrees, 180 degrees will be returned. `EnvelopeAngle()` is not precise for **geography** instances that span more than one hemisphere.  
+ The hemisphere limitation applied to `EnvelopeAngle()` in [!INCLUDE[ssKatmai](../../../a9notintoc/includes/sskatmai-md.md)] has been removed. However, for instances with angles greater than 90 degrees, 180 degrees will be returned. `EnvelopeAngle()` is not precise for **geography** instances that span more than one hemisphere.  
   
 ## Examples  
   

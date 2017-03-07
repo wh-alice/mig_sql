@@ -100,7 +100,7 @@ manager: "erikre"
  [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
  [Working with Members, Tuples, and Sets &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [MDX Query Fundamentals &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [The Basic MDX Query &#40;MDX&#41;](../Topic/The%20Basic%20MDX%20Query%20\(MDX\).md)   
+ [The Basic MDX Query &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
  [Restricting the Query with Query and Slicer Axes &#40;MDX&#41;](../Topic/Restricting%20the%20Query%20with%20Query%20and%20Slicer%20Axes%20\(MDX\).md)   
  [Establishing Cube Context in a Query &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)  
   

@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Fetching BLOB Data Using IRow::Open and ISequentialStream
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   **IRow::Open** supports only DBGUID_STREAM and DBGUID_NULL type of objects to be opened.  
   
@@ -78,6 +78,6 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
  Large data can be bound or retrieved by using the **ISequentialStream** interface. For bound columns, the status flag indicates if the data is truncated by setting DBSTATUS_S_TRUNCATED.  
   
 ## See Also  
- [Fetching BLOB Data Using IRow](../Topic/Fetching%20BLOB%20Data%20Using%20IRow.md)  
+ [Fetching BLOB Data Using IRow](../../a9retired/fetching-blob-data-using-irow.md)  
   
   

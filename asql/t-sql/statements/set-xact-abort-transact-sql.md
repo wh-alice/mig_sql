@@ -32,15 +32,15 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SET XACT_ABORT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
     
 > [!NOTE]  
 >  The **THROW** statement honors **SET XACT_ABORT RAISERROR** does not. New Applications should use **THROW** instead of **RAISERROR**.  
   
- Specifies whether [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] automatically rolls back the current transaction when a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement raises a run-time error.  
+ Specifies whether [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] automatically rolls back the current transaction when a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement raises a run-time error.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -57,13 +57,13 @@ SET XACT_ABORT ON
 ```  
   
 ## Remarks  
- When SET XACT_ABORT is ON, if a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement raises a run-time error, the entire transaction is terminated and rolled back.  
+ When SET XACT_ABORT is ON, if a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement raises a run-time error, the entire transaction is terminated and rolled back.  
   
- When SET XACT_ABORT is OFF, in some cases only the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement that raised the error is rolled back and the transaction continues processing. Depending upon the severity of the error, the entire transaction may be rolled back even when SET XACT_ABORT is OFF. OFF is the default setting.  
+ When SET XACT_ABORT is OFF, in some cases only the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement that raised the error is rolled back and the transaction continues processing. Depending upon the severity of the error, the entire transaction may be rolled back even when SET XACT_ABORT is OFF. OFF is the default setting.  
   
  Compile errors, such as syntax errors, are not affected by SET XACT_ABORT.  
   
- XACT_ABORT must be set ON for data modification statements in an implicit or explicit transaction against most OLE DB providers, including [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The only case where this option is not required is if the provider supports nested transactions.  
+ XACT_ABORT must be set ON for data modification statements in an implicit or explicit transaction against most OLE DB providers, including [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The only case where this option is not required is if the provider supports nested transactions.  
   
  When ANSI_WARNINGS=OFF, permissions violations cause transactions to abort.  
   
@@ -79,7 +79,7 @@ SELECT @XACT_ABORT AS XACT_ABORT;
 ```  
   
 ## Examples  
- The following code example causes a foreign key violation error in a transaction that has other [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements. In the first set of statements, the error is generated, but the other statements execute successfully and the transaction is successfully committed. In the second set of statements, `SET XACT_ABORT` is set to `ON`. This causes the statement error to terminate the batch and the transaction is rolled back.  
+ The following code example causes a foreign key violation error in a transaction that has other [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements. In the first set of statements, the error is generated, but the other statements execute successfully and the transaction is successfully committed. In the second set of statements, `SET XACT_ABORT` is set to `ON`. This causes the statement error to terminate the batch and the transaction is rolled back.  
   
 ```  
 USE AdventureWorks2012;  

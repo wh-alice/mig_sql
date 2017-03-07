@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # Restrictions Element (XMLA)
-  Contains restriction columns and data used by the [Discover](../Topic/Discover%20Method%20\(XMLA\).md) method.  
+  Contains restriction columns and data used by the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method.  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "erikre"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[Discover](../Topic/Discover%20Method%20\(XMLA\).md)|  
+|Parent elements|[Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)|  
 |Child elements|[RestrictionList](../../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md)|  
   
 ## Remarks  
@@ -77,6 +77,6 @@ manager: "erikre"
 ```  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

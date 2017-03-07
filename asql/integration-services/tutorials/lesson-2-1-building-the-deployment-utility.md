@@ -21,11 +21,11 @@ In this task, you will configure and build a deployment utility for the Deployme
   
 Before you can build the deployment utility, you must modify the properties of the Deployment Tutorial project. You will use the **Deployment Tutorial Property Pages** dialog box to configure these properties. In this dialog box, you must enable the ability to update configurations during deployment and specify that the build process generates a deployment utility. After you set the properties, you will build the project.  
   
-[!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] provides a set of windows that you can use to debug packages. You can view error, warning, and information messages, track about the status of packages at run time, or view the progress and results of build processes. For this lesson, you will use the Output window to view the progress and results of building the deployment utility.  
+[!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] provides a set of windows that you can use to debug packages. You can view error, warning, and information messages, track about the status of packages at run time, or view the progress and results of build processes. For this lesson, you will use the Output window to view the progress and results of building the deployment utility.  
   
 ### To set the deployment utility properties  
   
-1.  If [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] is not already open, click **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then click **Business Intelligence Development Studio**.  
+1.  If [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] is not already open, click **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then click **Business Intelligence Development Studio**.  
   
 2.  On the **File** menu, click **Open**, click **Project/Solution**, click the **Deployment Tutorial** folder and click **Open**, and then double-click **Deployment Tutorial.sln**.  
   
@@ -41,7 +41,7 @@ Before you can build the deployment utility, you must modify the properties of t
   
 1.  In Solution Explorer, click **Deployment Tutorial**.  
   
-2.  On the **View** menu, click **Output**. By default, the Output window is located in the bottom left corner of [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+2.  On the **View** menu, click **Output**. By default, the Output window is located in the bottom left corner of [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
 3.  On the **Build** menu, click **Build Deployment Tutorial**.  
   
@@ -60,7 +60,7 @@ Before you can build the deployment utility, you must modify the properties of t
 5.  On the **File** menu, click **Exit**. If prompted to save changes to Deployment Tutorial items, click **Yes**.  
   
 ## Next Task in Lesson  
-[Step 2: Verifying the Deployment Bundle](../Topic/Step%202:%20Verifying%20the%20Deployment%20Bundle.md)  
+[Step 2: Verifying the Deployment Bundle](../../integration-services/tutorials/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## See Also  
 [Create a Deployment Utility](../../integration-services/packages/create-a-deployment-utility.md)  

@@ -18,7 +18,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Add Custom Locations to a Map (Report Builder and SSRS)
-  After you add a map to a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report, you can add your own point locations.  
+  After you add a map to a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report, you can add your own point locations.  
   
  Display properties for all points on a layer are controlled by setting options for the point properties for the layer. For a selected embedded point, you can override the display properties.  
   
@@ -28,7 +28,7 @@ manager: "erikre"
  For more information, see [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/7f1f5584-37b4-4fa2-ae44-8988c5f0c744.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## To add a point layer  
   

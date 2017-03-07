@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Data Manipulation - DRILLTHROUGH
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retrieves the underlying table rows that were used to create a specified cell in a cube.  
   
@@ -49,7 +49,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  A comma-separated list of dimension attributes and measures.  
   
 ## Remarks  
- Drillthrough is an operation in which an end user selects a single cell from a cube and retrieves a result set from the source data for that cell in order to get more detailed information. By default, a drillthrough result set is derived from the table rows that were evaluated to calculate the value of the selected cube cell. For end users to drill through, their client applications must support this capability. In [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)], the results are retrieved directly from MOLAP storage, unless ROLAP partitions or dimensions are queried.  
+ Drillthrough is an operation in which an end user selects a single cell from a cube and retrieves a result set from the source data for that cell in order to get more detailed information. By default, a drillthrough result set is derived from the table rows that were evaluated to calculate the value of the selected cube cell. For end users to drill through, their client applications must support this capability. In [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)], the results are retrieved directly from MOLAP storage, unless ROLAP partitions or dimensions are queried.  
   
 > [!IMPORTANT]  
 >  Drillthrough security is based on the general security options defined on the cube. If a user cannot get some data by using MDX, drillthrough will also restrict the user in the exactly the same manner.  

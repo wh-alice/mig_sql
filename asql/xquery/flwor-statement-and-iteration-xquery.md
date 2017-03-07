@@ -1,7 +1,7 @@
 ---
 title: "FLWOR Statement and Iteration (XQuery) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "03/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,7 +30,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # FLWOR Statement and Iteration (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery defines the FLWOR iteration syntax. FLWOR is the acronym for `for`, `let`, `where`, `order by`, and `return`.  
   
@@ -38,9 +38,9 @@ manager: "jhubbard"
   
 -   One or more FOR clauses that bind one or more iterator variables to input sequences.  
   
-     Input sequences can be other XQuery expressions such as XPath expressions. They are either sequences of nodes or sequences of atomic values. Atomic value sequences can be constructed using literals or constructor functions. Constructed XML nodes are not allowed as input sequences in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+     Input sequences can be other XQuery expressions such as XPath expressions. They are either sequences of nodes or sequences of atomic values. Atomic value sequences can be constructed using literals or constructor functions. Constructed XML nodes are not allowed as input sequences in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)].  
   
--   An optional `let` clause. This clause assigns a value to the given variable for a specific iteration. The assigned expression can be an XQuery expression such as an XPath expression, and can return either a sequence of nodes or a sequence of atomic values. Atomic value sequences can be constructed by using literals or constructor functions. Constructed XML nodes are not allowed as input sequences in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   An optional `let` clause. This clause assigns a value to the given variable for a specific iteration. The assigned expression can be an XQuery expression such as an XPath expression, and can return either a sequence of nodes or a sequence of atomic values. Atomic value sequences can be constructed by using literals or constructor functions. Constructed XML nodes are not allowed as input sequences in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)].  
   
 -   An iterator variable. This variable can have an optional type assertion by using the `as` keyword.  
   
@@ -101,7 +101,7 @@ where ProductModelID=7
   
 -   The `return` expression returns a string value from the <`step`> element.  
   
- The [string function (XQuery)](../Topic/string%20Function%20\(XQuery\).md) is used to retrieve the string value of the <`step`> node.  
+ The [string function (XQuery)](../xquery/data-accessor-functions-string-xquery.md) is used to retrieve the string value of the <`step`> node.  
   
  This is the partial result:  
   
@@ -138,7 +138,7 @@ SELECT @x.query('
 -- result test 12 111  
 ```  
   
- In [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], heterogeneous sequences are not allowed. Specifically, sequences that contain a mixture of atomic values and nodes are not allowed.  
+ In [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], heterogeneous sequences are not allowed. Specifically, sequences that contain a mixture of atomic values and nodes are not allowed.  
   
  Iteration is frequently used together with the [XML Construction](../xquery/xml-construction-xquery.md) syntax in transforming XML formats, as shown in the next query.  
   
@@ -188,7 +188,7 @@ where ProductModelID=7
   
 -   The FLWOR statement retrieves a sequence of <`Location`> elements for a specific product.  
   
--   The [data function (XQuery)](../Topic/data%20Function%20\(XQuery\).md) is used to extract the value of each attribute so they will be added to the resulting XML as text nodes instead of as attributes.  
+-   The [data function (XQuery)](../xquery/data-accessor-functions-data-xquery.md) is used to extract the value of each attribute so they will be added to the resulting XML as text nodes instead of as attributes.  
   
 -   The expression in the RETURN clause constructs the XML that you want.  
   
@@ -210,7 +210,7 @@ where ProductModelID=7
 ## Using the let Clause  
  You can use the `let` clause to name repeating expressions that you can refer to by referring to the variable. The expression assigned to a `let` variable is inserted into the query every time the variable is referenced in the query. This means that the statement is executed as many times as the expression gets referenced.  
   
- In the [!INCLUDE[ssSampleDBobject](../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database, the manufacturing instructions contain information about the tools required and the location where the tools are used. The following query uses the `let` clause to list the tools required to build a production model, as well as the locations where each tool is needed.  
+ In the [!INCLUDE[ssSampleDBobject](../a9retired/includes/sssampledbobject-md.md)] database, the manufacturing instructions contain information about the tools required and the location where the tools are used. The following query uses the `let` clause to list the tools required to build a production model, as well as the locations where each tool is needed.  
   
 ```  
 SELECT Instructions.query('  
@@ -354,7 +354,7 @@ WHERE ProductModelID=7
  Sorting in XQuery is performed by using the `order by` clause in the FLWOR expression. The sorting expressions passed to the `order by` clause must return values whose types are valid for the **gt** operator. Each sorting expression must result in a singleton a sequence with one item. By default, sorting is performed in ascending order. You can optionally specify ascending or descending order for each sorting expression.  
   
 > [!NOTE]  
->  Sorting comparisons on string values performed by the XQuery implementation in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] are always performed by using the binary Unicode codepoint collation.  
+>  Sorting comparisons on string values performed by the XQuery implementation in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] are always performed by using the binary Unicode codepoint collation.  
   
  The following query retrieves all the telephone numbers for a specific customer from the AdditionalContactInfo column. The results are sorted by telephone number.  
   

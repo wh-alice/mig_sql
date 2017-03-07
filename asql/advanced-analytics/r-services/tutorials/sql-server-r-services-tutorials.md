@@ -20,7 +20,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # SQL Server R Services Tutorials
-Use these tutorials to learn about [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)] and the data science scenarios it supports, including:
+Use these tutorials to learn about [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)] and the data science scenarios it supports, including:
 
 + Developing models in R and deploying them to SQL Server
 + Putting R code into production, by deploying an R solution to a server or other production environment.
@@ -33,10 +33,10 @@ Be sure to complete any [prerequisites](#bkmk_Prerequisites), such as setup, bef
 
 [Data Science End-to-End Walkthrough](../../../advanced-analytics/r-services/tutorials/data-science-end-to-end-walkthrough.md) 
 
-Experience the data science process end-to-end, from data acquisition and analysis to scoring. Learn how to use data in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and operationalize your model by saving it to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
-You'll import the New York City taxi data set to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] using PowerShell, and explore the data using R. 
+Experience the data science process end-to-end, from data acquisition and analysis to scoring. Learn how to use data in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], and operationalize your model by saving it to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
+You'll import the New York City taxi data set to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] using PowerShell, and explore the data using R. 
 
-You'll then build a predictive model and deploy the R model to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] for scoring in bath and single-prediction mode. 
+You'll then build a predictive model and deploy the R model to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] for scoring in bath and single-prediction mode. 
   
 This tutorial is intended for people who have some familiarity with R as well as developer tools such as PowerShell and SQL Server Management Studio. You should have access to an  R development environment and familiarity with R commands. 
   
@@ -54,10 +54,10 @@ This tutorial is intended for people who have been using R and want to learn mor
   
 [In-Database Advanced Analytics for SQL Developers &#40;Tutorial&#41;](../../../advanced-analytics/r-services/tutorials/in-database-advanced-analytics-for-sql-developers-tutorial.md)
 
-Build and deploy a complete advanced analytics solution using [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]. 
-This example focuses on how  to integrate the open source R language with the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database engine. You'll learn how to wrap R code in a stored procedure, save an R model to a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database, and make parameterized calls to the R model for prediction. 
+Build and deploy a complete advanced analytics solution using [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]. 
+This example focuses on how  to integrate the open source R language with the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] database engine. You'll learn how to wrap R code in a stored procedure, save an R model to a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] database, and make parameterized calls to the R model for prediction. 
   
-This tutorial is intended for SQL developers, application developers, or SQL DBAs who will be supporting R solutions and want to learn how to deploy R models to SQL Server.  No R environment is needed; all R code is provided and you can build the complete solution using only [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and familiar business intelligence and SQL development tools.   
+This tutorial is intended for SQL developers, application developers, or SQL DBAs who will be supporting R solutions and want to learn how to deploy R models to SQL Server.  No R environment is needed; all R code is provided and you can build the complete solution using only [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] and familiar business intelligence and SQL development tools.   
 
 ## Use R Services in an Application
 
@@ -75,7 +75,7 @@ This example demonstrates how to use unsupervised learning, using the rxKmeans l
 
 [Using R Code in Transact-SQL &#40;SQL Server R Services&#41;](../../../advanced-analytics/r-services/tutorials/using-r-code-in-transact-sql-sql-server-r-services.md)  
 
-This is a series of short standalone examples that demonstrate the basic syntax for using R in [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]. 
+This is a series of short standalone examples that demonstrate the basic syntax for using R in [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]. 
 
 You'll learn how to call the R runtime from SQL, learn key differences in data types between R and SQL, wrap R functions in SQL code, and run a stored procedure that saves R output and R models to a SQL table.
   
@@ -106,7 +106,7 @@ All T-SQL and R code is provided, along with instructions on how to train and de
 
 + Want to know the real story behind R Services? Read [Why did we build it?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/01/10/sql-server-r-services-why-did-we-build-it/)  
   
-+ The original [SQL Server 2016 Product Samples](https://www.microsoft.com/en-us/download/details.aspx?id=49502), available on Github and on the Microsoft Download Center, contains some  datasets and code samples for R Services, including a demo of insurance fraud detection based on Benford's law. To get only the samples for [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)], select the zip file, and open the folder **Advanced Analytics**.  The setup instructions are for earlier releases and should be disregarded.
++ The original [SQL Server 2016 Product Samples](https://www.microsoft.com/en-us/download/details.aspx?id=49502), available on Github and on the Microsoft Download Center, contains some  datasets and code samples for R Services, including a demo of insurance fraud detection based on Benford's law. To get only the samples for [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)], select the zip file, and open the folder **Advanced Analytics**.  The setup instructions are for earlier releases and should be disregarded.
 
 + New to R? See this R Server quickstart: [Explore R and Scale R in 25 Short Functions](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started-tutorial)   
 

@@ -15,9 +15,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.execution_parameter_values (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Displays the actual parameter values that are used by [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] packages during an instance of execution.  
+  Displays the actual parameter values that are used by [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] packages during an instance of execution.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

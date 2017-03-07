@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Maintenance Plan
-  This topic describes how to create a single server or multiserver maintenance plan in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. Using [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], you can create these maintenance plans in one of two ways: by either using the Maintenance Plan Wizard or the design surface. The Wizard is best for creating basic maintenance plans, while creating a plan using the design surface allows you to utilize enhanced workflow.  
+  This topic describes how to create a single server or multiserver maintenance plan in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. Using [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], you can create these maintenance plans in one of two ways: by either using the Maintenance Plan Wizard or the design surface. The Wizard is best for creating basic maintenance plans, while creating a plan using the design surface allows you to utilize enhanced workflow.  
   
  **In This Topic**  
   
@@ -74,7 +74,7 @@ The [Agent XPs Server Configuration Option](../../database-engine/configure/wind
   
 #### To create a maintenance plan  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -139,12 +139,12 @@ The [Agent XPs Server Configuration Option](../../database-engine/configure/wind
   
  For more information, see:  
   
--   [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
+-   [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-add-job-transact-sql.md)  
   
--   [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
+-   [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
   
--   [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
+-   [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
--   [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
+-   [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

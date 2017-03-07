@@ -19,7 +19,7 @@ manager: "jhubbard"
   
 ## 1. Create an Integration Services Project  
   
-1.  Launch **SQL Server Data Tools** or [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)].  
+1.  Launch **SQL Server Data Tools** or [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)].  
   
 2.  Click **File**, point to **New**, and click **Project**.  
   

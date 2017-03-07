@@ -29,7 +29,7 @@ Actions performed by the script include:
   
 -   Installing the SQL Native Client and SQL command-line utilities, if not already installed. These utilities are required for bulk-loading the data to the database using **bcp**.  
   
--   Creating a database and a table on the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance, and bulk-inserting data into the table.  
+-   Creating a database and a table on the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance, and bulk-inserting data into the table.  
   
 -   Creating multiple SQL functions and stored procedures.  
   
@@ -42,7 +42,7 @@ Actions performed by the script include:
   
     You will be prompted to input the following information:  
   
-    -   The name or address of a [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] instance where [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)] has been installed  
+    -   The name or address of a [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] instance where [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)] has been installed  
   
     -   The user name and password for an account on the instance. The account you use must have the ability to create databases, create tables and stored procedures, and upload data to tables.  
   
@@ -50,7 +50,7 @@ Actions performed by the script include:
   
         `C:\tempRSQL\nyctaxi1pct.csv`  
   
-2.  As part of this step, all the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] scripts are also modified to replace placeholders with the database name and user name that you provide as script inputs.  
+2.  As part of this step, all the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] scripts are also modified to replace placeholders with the database name and user name that you provide as script inputs.  
   
     Take a minute to review the stored procedures and functions created by the script.  
   
@@ -73,7 +73,7 @@ Actions performed by the script include:
     |PlotInOutputFiles.sql|Creates a stored procedure for data exploration. This stored procedure creates a graphic using an R function and then saves the output as a local PDF file.|  
     |TrainTipPredictionModel.sql|Creates a stored procedure that trains a logistic regression model by calling an R package. The model predicts the value of the  tipped column, and is trained using a randomly selected 70% of the data. The output of the stored procedure is the trained model, which is saved in the table nyc_taxi_models.|  
   
-3.  Log in to the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and the login you specified, to verify that you can see the database, tables, functions, and stored procedures that were created.  
+3.  Log in to the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] and the login you specified, to verify that you can see the database, tables, functions, and stored procedures that were created.  
   
     ![rsql_devtut_BrowseTables](../../../advanced-analytics/r-services/tutorials/media/rsql-devtut-browsetables.PNG "rsql_devtut_BrowseTables")  
   

@@ -15,7 +15,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Objects Supported by the Generate Scripts Wizard
-  The Generate and Publish Scripts wizard supports a subset of the objects supported by the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)].  
+  The Generate and Publish Scripts wizard supports a subset of the objects supported by the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)].  
   
 ## Supported Objects  
  The following table lists the objects that can be published supported by the Generate and Publish Scripts Wizard.  

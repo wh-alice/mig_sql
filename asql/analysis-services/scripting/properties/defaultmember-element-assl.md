@@ -56,11 +56,11 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- The **DefaultMember** element defines the default member for the parent element. If **DefaultMember** is not specified or is set to an empty string, [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] chooses a member to use as the default member.  
+ The **DefaultMember** element defines the default member for the parent element. If **DefaultMember** is not specified or is set to an empty string, [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] chooses a member to use as the default member.  
   
  For **ManyToManyMeasureGroupDimension** elements, the **DefaultMember** element contains an MDX expression that specifies a member in the dimension identified in the **CubeDimensionID** element of the **ManyToManyMeasureGroupDimension**. The MDX expression is similar to the [StrToMember](../../../mdx/strtomember-mdx.md) MDX function with the CONSTRAINED keyword, in that it cannot include MDX or user-defined functions.  
   
- For more information about default members, see [Define a Default Member](../Topic/Define%20a%20Default%20Member.md).  
+ For more information about default members, see [Define a Default Member](../../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md).  
   
  The elements that correspond to the parents of **DefaultMember** in the Analysis Management Objects (AMO) object model are <xref:Microsoft.AnalysisServices.AttributePermission>, <xref:Microsoft.AnalysisServices.DimensionAttribute>, and <xref:Microsoft.AnalysisServices.PerspectiveAttribute>.  
   

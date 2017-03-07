@@ -44,15 +44,15 @@ manager: "erikre"
  You cannot add images, extra columns or other supplementary items to the legend.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Ordering Legend Items in the Legend  
- Series are ordered in the legend according to the order that they are processed by the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] processing engine. You can change the order by changing the order of fields in the data fields drop-zone. If you are using series grouping, the series data is not known until processing, so that there is no way for you to re-order these items. The changes can be seen in Preview. For more information about series grouping, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
+ Series are ordered in the legend according to the order that they are processed by the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] processing engine. You can change the order by changing the order of fields in the data fields drop-zone. If you are using series grouping, the series data is not known until processing, so that there is no way for you to re-order these items. The changes can be seen in Preview. For more information about series grouping, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
- You can hide any series from being shown in the legend. If you are using series grouping, all series related to the data field will be hidden. For more information, see [Hide Legend Items on the Chart &#40;Report Builder and SSRS&#41;](../Topic/Hide%20Legend%20Items%20on%20the%20Chart%20\(Report%20Builder%20and%20SSRS\).md).  
+ You can hide any series from being shown in the legend. If you are using series grouping, all series related to the data field will be hidden. For more information, see [Hide Legend Items on the Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md).  
   
 ## Changing the Text or Color of a Legend Item in the Legend  
- When a field is placed in the data field drop-zone of a chart, a legend item is automatically generated that contains the name of this field. By default, the text of each legend item is taken from the name of the data field. Every legend item is connected to an individual series on the chart with the exception of Shape charts, where the legend is connected to individual data points instead of individual series. When a category group is defined on a Shape chart, the text of each legend item is taken from the string representation of the category group. You can specify custom label text for pie, doughnut and funnel charts to show information other than the category group label that relates to each individual data point in the legend. To do this, select the legend and specify legend text in either the **Series Properties** dialog box or the **LegendText** property in the Properties pane. For more information, see [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](../Topic/Change%20the%20Text%20of%20a%20Legend%20Item%20\(Report%20Builder%20and%20SSRS\).md).  
+ When a field is placed in the data field drop-zone of a chart, a legend item is automatically generated that contains the name of this field. By default, the text of each legend item is taken from the name of the data field. Every legend item is connected to an individual series on the chart with the exception of Shape charts, where the legend is connected to individual data points instead of individual series. When a category group is defined on a Shape chart, the text of each legend item is taken from the string representation of the category group. You can specify custom label text for pie, doughnut and funnel charts to show information other than the category group label that relates to each individual data point in the legend. To do this, select the legend and specify legend text in either the **Series Properties** dialog box or the **LegendText** property in the Properties pane. For more information, see [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
  You can also specify chart-specific, case-sensitive keywords for commonly referenced attributes in the **LegendText** property or in the **Series Properties** dialog box. The chart control replaces these keywords at run time with their data representation. This approach is useful on Shape charts because you are able to show information relating to specific data points. For more information, see [Formatting Data Points on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
@@ -77,12 +77,12 @@ manager: "erikre"
  By default, the legend text is not optimized to fit the legend area. To cause the legend text to automatically fit the allocated space, set the AutoFitTextDisabled property to **False** and set a minimum font size for the MinFontSize property to the lowest font size that you think will be presentable and still allow for legend optimization.  
   
 ## See Also  
- [Legend Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](../Topic/Legend%20Properties%20Dialog%20Box,%20General%20\(Report%20Builder%20and%20SSRS\).md)   
- [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](../Topic/Change%20the%20Text%20of%20a%20Legend%20Item%20\(Report%20Builder%20and%20SSRS\).md)   
+ [Legend Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](../../a9retired/legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
  [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Hide Legend Items on the Chart &#40;Report Builder and SSRS&#41;](../Topic/Hide%20Legend%20Items%20on%20the%20Chart%20\(Report%20Builder%20and%20SSRS\).md)   
+ [Hide Legend Items on the Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
  [Define Colors on a Chart Using a Palette &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   

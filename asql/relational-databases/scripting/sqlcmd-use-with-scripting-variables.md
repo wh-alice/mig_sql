@@ -338,7 +338,7 @@ manager: "jhubbard"
  `>2 GO`  
   
 ## See Also  
- [Use the sqlcmd Utility](../Topic/Use%20the%20sqlcmd%20Utility.md)   
+ [Use the sqlcmd Utility](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
  [Command Prompt Utility Reference &#40;Database Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   

@@ -19,11 +19,11 @@ manager: "jhubbard"
 ---
 # Connect Components in a Data Flow
   This procedure describes how to connect the output of components in a data flow to other components within the same data flow.  
-You construct the data flow in a package on the design surface of the **Data Flow** tab in the [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer. If a data flow contains two data flow components, you can connect them by connecting the output of a source or transformation to the input of a transformation or destination. The connector between two data flow components is called a path.  
+You construct the data flow in a package on the design surface of the **Data Flow** tab in the [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer. If a data flow contains two data flow components, you can connect them by connecting the output of a source or transformation to the input of a transformation or destination. The connector between two data flow components is called a path.  
   
  The following diagram shows a simple data flow with a source component, two transformations, a destination component, and the paths that connect them.  
   
- ![Data flow](../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
+ ![Data flow](../../a9retired/media/mw-dts-08.gif "Data flow")  
   
  After two components are connected, you can view the metadata of the data that moves through the path and the properties of the path in **Data Flow Path Editor**. For more information, see [Integration Services Paths](../../integration-services/data-flow/integration-services-paths.md).  
   
@@ -31,7 +31,7 @@ You construct the data flow in a package on the design surface of the **Data Flo
   
 ### Connect components in a data flow  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  In Solution Explorer, double-click the package to open it.  
   

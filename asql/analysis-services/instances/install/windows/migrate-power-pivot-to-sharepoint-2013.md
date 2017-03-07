@@ -19,18 +19,18 @@ manager: "erikre"
   
  SharePoint 2013 does not support in-place upgrade. However the procedure of **database-attach upgrade is supported**. The behavior is different from upgrading to SharePoint 2010, where a customer could choose between the two basic upgrade approaches, in-place upgrade and database-attach upgrade.  
   
- If you have a [!INCLUDE[ssGeminiShort](../../../../analysis-services/includes/ssgeminishort-md.md)] installation integrated with SharePoint 2010, you cannot upgrade in-place the SharePoint server. However you can migrate content databases and service application databases from the SharePoint 2010 farm to a SharePoint 2013 farm. This topic is an overview of the steps required to complete a database-attach upgrade and complete a migration related to [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)]:  
+ If you have a [!INCLUDE[ssGeminiShort](../../../../a9notintoc/includes/ssgeminishort-md.md)] installation integrated with SharePoint 2010, you cannot upgrade in-place the SharePoint server. However you can migrate content databases and service application databases from the SharePoint 2010 farm to a SharePoint 2013 farm. This topic is an overview of the steps required to complete a database-attach upgrade and complete a migration related to [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)]:  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../../analysis-services/includes/applies-md.md)]**  SharePoint 2013|  
+|**[!INCLUDE[applies](../../../../a9retired/includes/applies-md.md)]**  SharePoint 2013|  
   
 ### Migration Overview  
   
 |1|2|3|4|  
 |-------|-------|-------|-------|  
-|Prepare the SharePoint 2013 farm|Backup, copy, restore databases.|Mount content databases|Migrate [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] Schedules|  
-||[!INCLUDE[ssManStudioFull](../../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]|-SharePoint Central Administration<br /><br /> -Windows PowerShell|-SharePoint application Pages<br /><br /> -Windows PowerShell|  
+|Prepare the SharePoint 2013 farm|Backup, copy, restore databases.|Mount content databases|Migrate [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] Schedules|  
+||[!INCLUDE[ssManStudioFull](../../../../a9notintoc/includes/ssmanstudiofull-md.md)]|-SharePoint Central Administration<br /><br /> -Windows PowerShell|-SharePoint application Pages<br /><br /> -Windows PowerShell|  
   
  **In this topic:**  
   
@@ -51,22 +51,22 @@ manager: "erikre"
   
 2.  Install a new SharePoint Server 2013 farm.  
   
-3.  Install an instance of a [!INCLUDE[ssCurrent](../../../../advanced-analytics/r-services/includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../../analysis-services/includes/ssasnoversion-md.md)] server in SharePoint mode. For more information, see [Install Analysis Services in Power Pivot Mode](../../../../analysis-services/instances/install/windows/install-analysis-services-in-power-pivot-mode.md).  
+3.  Install an instance of a [!INCLUDE[ssCurrent](../../../../a9notintoc/includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../../a9notintoc/includes/ssasnoversion-md.md)] server in SharePoint mode. For more information, see [Install Analysis Services in Power Pivot Mode](../../../../analysis-services/instances/install/windows/install-analysis-services-in-power-pivot-mode.md).  
   
-4.  Run the [!INCLUDE[ssGeminiShort](../../../../analysis-services/includes/ssgeminishort-md.md)] 2013 installation package **spPowerPivot.msi** on each server in the SharePoint farm. For more information, see [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../../../analysis-services/instances/install/windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+4.  Run the [!INCLUDE[ssGeminiShort](../../../../a9notintoc/includes/ssgeminishort-md.md)] 2013 installation package **spPowerPivot.msi** on each server in the SharePoint farm. For more information, see [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../../../analysis-services/instances/install/windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
-5.  In SharePoint 2013 Central Administration, configure the Excel Services service application to use the [!INCLUDE[ssASnoversion](../../../../analysis-services/includes/ssasnoversion-md.md)] SharePoint mode server created in the previous step. For more information, see the “Configure Basic Analysis Services SharePoint Integration” section of [Install Analysis Services in Power Pivot Mode](../../../../analysis-services/instances/install/windows/install-analysis-services-in-power-pivot-mode.md).  
+5.  In SharePoint 2013 Central Administration, configure the Excel Services service application to use the [!INCLUDE[ssASnoversion](../../../../a9notintoc/includes/ssasnoversion-md.md)] SharePoint mode server created in the previous step. For more information, see the “Configure Basic Analysis Services SharePoint Integration” section of [Install Analysis Services in Power Pivot Mode](../../../../analysis-services/instances/install/windows/install-analysis-services-in-power-pivot-mode.md).  
   
 ##  <a name="bkmk_backup_restore"></a> 2) Backup, Copy, Restore the Databases  
- The “SharePoint database-attach upgrade” process is a sequence of steps to back up, copy, and restore [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] related content and service application databases to the SharePoint 2013 farm.  
+ The “SharePoint database-attach upgrade” process is a sequence of steps to back up, copy, and restore [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] related content and service application databases to the SharePoint 2013 farm.  
   
-1.  **Set Database to read-only:** In [!INCLUDE[ssManStudioFull](../../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], right-click the database name and click **Properties**. On the **Options** page, set the **Database read-Only** property to **True**.  
+1.  **Set Database to read-only:** In [!INCLUDE[ssManStudioFull](../../../../a9notintoc/includes/ssmanstudiofull-md.md)], right-click the database name and click **Properties**. On the **Options** page, set the **Database read-Only** property to **True**.  
   
-2.  **Back up:** Back up each content database and service application database that you want to migrate to the SharePoint 2013 farm. In [!INCLUDE[ssManStudioFull](../../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], right-click the database name, click **Tasks**, and click **Back up**.  
+2.  **Back up:** Back up each content database and service application database that you want to migrate to the SharePoint 2013 farm. In [!INCLUDE[ssManStudioFull](../../../../a9notintoc/includes/ssmanstudiofull-md.md)], right-click the database name, click **Tasks**, and click **Back up**.  
   
 3.  File copy the database backup files (.bak) to the desired destination server.  
   
-4.  **Restore:** Restore the databases to the destination [!INCLUDE[ssDEnoversion](../../../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]. This step can be completed using [!INCLUDE[ssManStudioFull](../../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+4.  **Restore:** Restore the databases to the destination [!INCLUDE[ssDEnoversion](../../../../a9notintoc/includes/ssdenoversion-md.md)]. This step can be completed using [!INCLUDE[ssManStudioFull](../../../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 5.  **Set Database to read-write:** Set the **Database read-Only** to **False**.  
   
@@ -100,35 +100,35 @@ manager: "erikre"
      **Status when the step is complete:**  When the mount operation is complete, users can see files that were in the old content database. Therefore users can see and open the workbooks in the document library.  
   
     -   > [!TIP]  
-        >  It is possible at this point in the migration process to create new schedules for the migrated workbooks. However, the schedules are created in the new [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] service application database, and not the database you copied from the old SharePoint farm. Therefore it will not contain any of the old schedules. After you complete the following steps to use the old database and migrate the old schedules, the new schedules are not available.  
+        >  It is possible at this point in the migration process to create new schedules for the migrated workbooks. However, the schedules are created in the new [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] service application database, and not the database you copied from the old SharePoint farm. Therefore it will not contain any of the old schedules. After you complete the following steps to use the old database and migrate the old schedules, the new schedules are not available.  
   
 ### Troubleshoot issues when you attempt to mount databases  
  This section summarizes possible issues encountered when mounting the database.  
   
 1.  **Authentication errors:** If you see errors related to authentication, review what authentication mode the source web applications are using. The error could be caused by a mismatch in authentication between the SharePoint 2013 web application and the SharePoint 2010 web application. See the [1) Prepare the SharePoint 2013 Farm](#bkmk_prepare_sharepoint2013) for more information.  
   
-2.  **Missing PowerPivot.Files:** If you see errors related to missing [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] .dlls, the **spPowerPivot.msi** has not been installed or the [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] Configuration Tool has not been used to configure [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)].  
+2.  **Missing PowerPivot.Files:** If you see errors related to missing [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] .dlls, the **spPowerPivot.msi** has not been installed or the [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] Configuration Tool has not been used to configure [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)].  
   
 ##  <a name="bkmk_upgrade_powerpivot_schedules"></a> 4) Upgrade Power Pivot Schedules  
- This section describes the details and options for migrating [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] schedules. Schedule migration is a two-step process. First configure the [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] service application to use the migrated service application database. Second, choose one of two options for schedule migration.  
+ This section describes the details and options for migrating [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] schedules. Schedule migration is a two-step process. First configure the [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] service application to use the migrated service application database. Second, choose one of two options for schedule migration.  
   
  **Configure the service application to use the migrated service application database.**  
   
- In SharePoint Central Administration to configure the [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] services application to use the old service application database you copied over. The [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] Service upgrades the service application database to the new schema.  
+ In SharePoint Central Administration to configure the [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] services application to use the old service application database you copied over. The [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] Service upgrades the service application database to the new schema.  
   
 1.  In SharePoint Central Administration, click **Manage Service Applications**.  
   
-2.  Find the [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] service application, for example “Default [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] Service Application”, click the name of the service application and click **Properties** in the SharePoint ribbon.  
+2.  Find the [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] service application, for example “Default [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] Service Application”, click the name of the service application and click **Properties** in the SharePoint ribbon.  
   
 3.  Update the database server name-instance and the database name. To the correct names for the database you backed up, copied, and restored. Once you click **Ok**, the service application database is upgraded. Errors will be in the ULS log.  
   
- **Upgrade [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] schedules**  
+ **Upgrade [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] schedules**  
   
- Configure the [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] service application to migrate refresh schedules.  
+ Configure the [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] service application to migrate refresh schedules.  
   
 -   **Migrate Schedules option1: SharePoint farm administrator**  
   
-    1.  In the SharePoint 2013 Management Run the `Set-PowerPivotServiceApplication` cmdlet with the `-StartMigratingRefreshSchedules` switch to enable automatic on demand schedule migration ![PowerShell related content](../../../../analysis-services/instances/install/windows/media/rs-powershellicon.jpg "PowerShell related content"). The following Windows PowerShell script assumes that there is only one [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] service application.  
+    1.  In the SharePoint 2013 Management Run the `Set-PowerPivotServiceApplication` cmdlet with the `-StartMigratingRefreshSchedules` switch to enable automatic on demand schedule migration ![PowerShell related content](../../../../analysis-services/instances/install/windows/media/rs-powershellicon.jpg "PowerShell related content"). The following Windows PowerShell script assumes that there is only one [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] service application.  
   
         ```  
         $app=Get-PowerPivotServiceApplication  
@@ -137,7 +137,7 @@ manager: "erikre"
   
          After the Windows PowerShell script is run, the schedules are active and the schedules will run at the next appropriate time. However, the status one the schedule refresh page is not enabled. When the schedule runs the first time it will be migrated and on the schedule refresh page, **Enabled**  will be true.  
   
-    2.  If you want to check the current value of the StartMigratingRefreshSchedules property, run the following PowerShell script. The Script loops through all [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] service application objects and display the name and property values:  
+    2.  If you want to check the current value of the StartMigratingRefreshSchedules property, run the following PowerShell script. The Script loops through all [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] service application objects and display the name and property values:  
   
         ```  
         $apps = Get-PowerPivotServiceApplication  
@@ -149,7 +149,7 @@ manager: "erikre"
   
     1.  Another option to migrate schedules is to enable the schedule refresh for each workbook. Navigate to the document library that contains the workbooks.  
   
-    2.  Open the context menu and click **Manage [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] Data Refresh**.  
+    2.  Open the context menu and click **Manage [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] Data Refresh**.  
   
     3.  In the **schedule refresh** section, click **Enable**.  
   
@@ -157,16 +157,16 @@ manager: "erikre"
   
     5.  Click **Ok**. The refresh history is now visible in the refresh page, the schedule will fire at the normal time.  
   
- **SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] workbooks**  
+ **SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] workbooks**  
   
--   SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] workbooks do not automatically upgrade when they are used in [!INCLUDE[ssCurrent](../../../../advanced-analytics/r-services/includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] for SharePoint 2013. After you migrate a content database containing the 2008 R2 workbooks, you can use the workbooks but the schedules do not upgrade.  
+-   SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] workbooks do not automatically upgrade when they are used in [!INCLUDE[ssCurrent](../../../../a9notintoc/includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] for SharePoint 2013. After you migrate a content database containing the 2008 R2 workbooks, you can use the workbooks but the schedules do not upgrade.  
   
 -   For more information, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../../../../analysis-services/instances/install/windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="bkmk_additional_resources"></a> Additional Resources  
   
 > [!NOTE]  
->  For more information on [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] and SharePoint database-attach upgrade, see the following:  
+>  For more information on [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] and SharePoint database-attach upgrade, see the following:  
   
 -   [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../../../../analysis-services/instances/install/windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   

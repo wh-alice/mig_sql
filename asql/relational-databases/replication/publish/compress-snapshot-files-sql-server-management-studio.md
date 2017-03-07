@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 2.  Select **Compress snapshot files in this folder**.  
   
-3.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 ## See Also  
  [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)   

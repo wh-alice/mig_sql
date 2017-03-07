@@ -17,9 +17,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 1-9 - Summary - Basic Navigation
-The [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] design surface can be customized to your personal preference and work requirements.  
+The [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] design surface can be customized to your personal preference and work requirements.  
   
-The following are best practices for using the [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] workspace efficiently:  
+The following are best practices for using the [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)] workspace efficiently:  
   
 -   Close windows you do not expect to use right away.  
   

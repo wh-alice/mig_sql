@@ -22,7 +22,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # STBuffer (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns a geography object that represents the union of all points whose distance from a **geography** instance is less than or equal to a specified value.  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
  The maximum distance of the buffer cannot exceed 0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Earth’s circumference) or the full globe.  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **geography**  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] return type: **geography**  
   
  CLR return type: **SqlGeography**  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
  The maximum distance limit allows the construction of the buffer to be as flexible as possible.  
   
- The error between the theorectical and computed buffer is max(tolerance, extents * 1.E-7) where tolerance = distance \* .001. For more information on extents, see [geography Data Type Method Reference](../Topic/geography%20Data%20Type%20Method%20Reference.md).  
+ The error between the theorectical and computed buffer is max(tolerance, extents * 1.E-7) where tolerance = distance \* .001. For more information on extents, see [geography Data Type Method Reference](../../../a9retired/geography-data-type-method-reference.md).  
   
 ## Examples  
  The following example creates a `LineString``geography` instance. It then uses `STBuffer()` to return the region within 1 meter of the instance.  

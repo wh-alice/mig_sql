@@ -24,11 +24,11 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Create, Modify, and Delete Shared Data Sources (SSRS)
-  A shared data source is a set of data source connection properties that can be referenced by multiple reports, models, and data-driven subscriptions that run on a [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report server.  Shared data sources provide an easy way to manage data source properties that often change over time. If a user account or password changes, or if you move the database to a different server, you can update the connection information in one place.  
+  A shared data source is a set of data source connection properties that can be referenced by multiple reports, models, and data-driven subscriptions that run on a [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] report server.  Shared data sources provide an easy way to manage data source properties that often change over time. If a user account or password changes, or if you move the database to a different server, you can update the connection information in one place.  
   
  The following icon indicates a shared data source in the Report Manager folder hierarchy:  
   
- ![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
+ ![Shared data source icon](../../a9retired/media/hlp-16datasource.png "Shared data source icon")  
 shared data source icon  
   
  Shared data sources are optional for reports and data-driven subscriptions, but required for report models. If you plan to use report models for ad hoc reporting, you must create and maintain a shared data source item to provide connection information to the model.  
@@ -39,7 +39,7 @@ shared data source icon
 |----------|-----------------|  
 |Name|A name that identifies the item within the report server folder hierarchy.|  
 |Description|A description that appears with the item in Report Manager when you view the contents of the folder.|  
-|Connection type|The data processing extension used with the data source. You can only use data processing extensions that are deployed on the report server. For more information about data processing extensions included with [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
+|Connection type|The data processing extension used with the data source. You can only use data processing extensions that are deployed on the report server. For more information about data processing extensions included with [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)], see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Connection string|The connection string for the database. For more information and to view examples of connection strings to frequently used data sources, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
 |Credential type|Specifies how credentials are obtained for the connection and whether they are to be used after the connection is made. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
   
@@ -65,7 +65,7 @@ shared data source icon
   
     1.  Click **New**. In the **Shared Data Source** properties dialog box, follow steps 2 and 3 to create a new data source.  
   
-    2.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+    2.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
          The new shared data source appears in the Shared Data Sources folder in Solution Explorer.  
   
@@ -75,7 +75,7 @@ shared data source icon
   
  **To create a shared data source in Report Manager**  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md).  
   
 2.  In Report Manager, navigate to the **Contents** page.  
   
@@ -89,7 +89,7 @@ shared data source icon
   
 7.  For **Connection string**, specify the connection string that the report server uses to connect to the data source. It is recommended that you do not specify credentials in the connection string.  
   
-     The following example illustrates a connection string for connecting to the local [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database:  
+     The following example illustrates a connection string for connecting to the local [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -139,7 +139,7 @@ shared data source icon
   
          Hover over the item, click the drop-down list, and from the context menu, click **Delete**.  
   
-         [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+         [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
  Deleting a shared data source will deactivate any report, model, or data-driven subscription that uses it. Without the data source connection information, the items will no longer run. To activate these items, you must open each one and do the following:  
   
@@ -156,7 +156,7 @@ shared data source icon
   
 2.  Navigate to an existing Report Definition Shared data source (rds) file and then click **Open**.  
   
-3.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## Shared Data Sources in SharePoint  
  When you run a report from a SharePoint library, connection information can be defined inside the report or in an external file that is linked to the report. If the connection information is embedded within the report, it is called a custom data source. If the connection information is defined in an external file, it is called a shared data source. The external file can be a report server data source (.rsds) file or an Office Data Connection (.odc) file.  
@@ -188,7 +188,7 @@ shared data source icon
   
     -   Select **Prompt for credentials** if you want the user to enter his or her credentials each time he or she runs the report. Do not select this option if you want to schedule subscription or data processing for this report.  
   
-    -   Select **Stored credentials** if you want to access the data using a single set of credentials. The credentials are encrypted before they are stored. You can select options that determine how the stored credentials are authenticated. Select Use as Windows credentials if the stored credentials belong to a Windows user account. Select **Set execution context to this account** if you want to set the execution context on the database server. For [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases, this option sets the SETUSER function. For more information, see [SETUSER &#40;Transact-SQL&#41;](../../t-sql/statements/setuser-transact-sql.md).  
+    -   Select **Stored credentials** if you want to access the data using a single set of credentials. The credentials are encrypted before they are stored. You can select options that determine how the stored credentials are authenticated. Select Use as Windows credentials if the stored credentials belong to a Windows user account. Select **Set execution context to this account** if you want to set the execution context on the database server. For [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] databases, this option sets the SETUSER function. For more information, see [SETUSER &#40;Transact-SQL&#41;](../../t-sql/statements/setuser-transact-sql.md).  
   
     -   Select **Credentials are not required** if you want to specify credentials in the connection string, or if you want to run the report using a least-privilege account that is configured on the report server. If this account is not configured on the report server, users will be prompted for credentials and any scheduled operations that you define for the report will not run.  
   
@@ -227,13 +227,13 @@ shared data source icon
      For report models, the list of dependent items shows the reports that were created in Report Builder. For shared data sources, the dependent items list can include both reports and report models.  
   
 ## See Also  
- [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](../Topic/Create%20and%20Manage%20Shared%20Data%20Sources%20\(Reporting%20Services%20in%20SharePoint%20Integrated%20Mode\).md)   
+ [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../a9retired/2d3428e4-a810-4e66-a287-ff18e57fad76.md)   
  [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
- [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md)   
- [Data Sources Properties Page &#40;Report Manager&#41;](../Topic/Data%20Sources%20Properties%20Page%20\(Report%20Manager\).md)   
- [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Shared%20Data%20Source%20\(Report%20Manager\).md)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md)   
+ [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../a9retired/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Data Sources Properties Page &#40;Report Manager&#41;](../../a9retired/data-sources-properties-page-report-manager.md)   
+ [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../../a9retired/create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

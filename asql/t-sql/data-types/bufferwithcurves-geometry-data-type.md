@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # BufferWithCurves (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../integration-services/includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Returns a **geometry** instance that represents the set of all points whose distance from the calling **geometry** instance is less than or equal to the *distance* parameter.  
   

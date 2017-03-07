@@ -21,8 +21,8 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Create a Data-Driven Subscription (SSRS Tutorial)
-This [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] tutorial teaches you the concepts of data-driven subscriptions by walking you through a simple example that creates a data data-driven subscription to generate and save filtered report output to a file share. 
-[!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] data-driven subscriptions allow you to customize and automate the distribution of a report based on dynamic subscriber data. Data-driven subscriptions are intended for the following kinds of scenarios:  
+This [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] tutorial teaches you the concepts of data-driven subscriptions by walking you through a simple example that creates a data data-driven subscription to generate and save filtered report output to a file share. 
+[!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] data-driven subscriptions allow you to customize and automate the distribution of a report based on dynamic subscriber data. Data-driven subscriptions are intended for the following kinds of scenarios:  
   
 -   Distributing reports to a large recipient pool whose membership may change from one distribution to the next. For example, email a monthly report to all current customers.  
   
@@ -33,7 +33,7 @@ This [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsn
  This tutorial is divided into three lessons:  
  Lesson | Comments
  ------- | --------------
- [Lesson 1: Create a Sample Subscriber Database](../../reporting-services/tutorials/lesson-1-creating-a-sample-subscriber-database.md) | In this lesson you will create a table local [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database that contains subscriber information. the information Order Numbers to use for filtering and output file foramts.
+ [Lesson 1: Create a Sample Subscriber Database](../../reporting-services/tutorials/lesson-1-creating-a-sample-subscriber-database.md) | In this lesson you will create a table local [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database that contains subscriber information. the information Order Numbers to use for filtering and output file foramts.
 [Lesson 2: Configure Report Data Source Properties](../../reporting-services/tutorials/lesson-2-modifying-the-report-data-source-properties.md) |In this lesson, you will configure a report data source so that the report can run unattended on a schedule. Unattended processing requires stored credentials. You will also modify the report dataset to include a parameter that is supplied by the subscriber data. This parameter is used to filter the report data based on order number.
  [Lesson 3: Define a Data-Driven Subscription](../../reporting-services/tutorials/lesson-3-defining-a-data-driven-subscription.md) | In this lesson you will create a data-driven subscription. This lesson guides you through each page in the Data-Driven Subscription Wizard.
 
@@ -57,7 +57,7 @@ The tutorial uses the *Sales order* report created in the tutorial [Create a Bas
   
 Your computer must have the following installed to use this tutorial:  
   
--   An edition of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that supports data-driven subscriptions. For more information, see [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
+-   An edition of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that supports data-driven subscriptions. For more information, see [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 -   The report server must be running in native mode. The user interface described in this tutorial is based on a native mode report server. Subscriptions are supported on SharePoint mode report servers but the user interface will be different than what is described in this tutorial.  
   
@@ -67,7 +67,7 @@ Your computer must have the following installed to use this tutorial:
   
 -   The **AdventureWorks2014** sample database, which provides data to the sample report.  
   
--   A [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] role assignment that includes the Manage all subscriptions task on the sample report. This task is required for defining a data-driven subscription. If you are an administrator on the computer, the default role assignment for local administrators provides the permissions necessary for creating data-driven subscriptions. For more information, see [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
+-   A [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] role assignment that includes the Manage all subscriptions task on the sample report. This task is required for defining a data-driven subscription. If you are an administrator on the computer, the default role assignment for local administrators provides the permissions necessary for creating data-driven subscriptions. For more information, see [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 -   A shared folder for which you have write permissions. The shared folder must be accessible over a network connection.  
   

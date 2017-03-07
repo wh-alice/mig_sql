@@ -33,7 +33,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  You do not need to iterate through the nodes to get a count or description of the clusters; the model parent node also counts and lists the clusters.  
   
- The parent node contains useful statistics that describe the actual distribution of all the training cases. These statistics are found in the nested table column, NODE_DISTRIBUTION. For example, the following table shows several rows from the NODE_DISTRIBUTION table that describe the distribution of customer demographics for the clustering model, `TM_Clustering`, that you create in the [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md):  
+ The parent node contains useful statistics that describe the actual distribution of all the training cases. These statistics are found in the nested table column, NODE_DISTRIBUTION. For example, the following table shows several rows from the NODE_DISTRIBUTION table that describe the distribution of customer demographics for the clustering model, `TM_Clustering`, that you create in the [Basic Data Mining Tutorial](../../a9notintoc/basic-data-mining-tutorial.md):  
   
 |ATTRIBUTE_NAME|ATRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
@@ -151,7 +151,7 @@ manager: "jhubbard"
  **Cluster nodes** The name of the cluster. Example: Cluster 1.  
   
 ## Remarks  
- [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] provides multiple methods for creating a clustering model. If you do not know which method was used to create the model that you are working with, you can retrieve the model metadata programmatically, by using an ADOMD client or AMO, or by querying the data mining schema rowset. For more information, see [Query the Parameters Used to Create a Mining Model](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
+ [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] provides multiple methods for creating a clustering model. If you do not know which method was used to create the model that you are working with, you can retrieve the model metadata programmatically, by using an ADOMD client or AMO, or by querying the data mining schema rowset. For more information, see [Query the Parameters Used to Create a Mining Model](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
 > [!NOTE]  
 >  The structure and content of the model stay the same, regardless of which clustering method or parameters you use.  

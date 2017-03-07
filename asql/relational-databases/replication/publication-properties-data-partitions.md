@@ -41,7 +41,7 @@ manager: "jhubbard"
 ## See Also  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md)   
+ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
   

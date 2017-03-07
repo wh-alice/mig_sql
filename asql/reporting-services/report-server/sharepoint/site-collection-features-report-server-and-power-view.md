@@ -16,11 +16,11 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Site Collection Features - Report Server and Power View
-  The [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] site collection features are usually activated by default after you install the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../../reporting-services/includes/ssrscurrent-md.md)] Add-in for SharePoint products. In some situations you will need to manually activate the features.  
+  The [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] site collection features are usually activated by default after you install the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../../a9notintoc/includes/ssrscurrent-md.md)] Add-in for SharePoint products. In some situations you will need to manually activate the features.  
   
- If you install the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] add-in for SharePoint 2010 Products after the installation of the SharePoint product, then the Report Server integration feature and the Power View integration feature will only be activated for root site collections. For other site collections, you will need to manually activate the features. For example if you have a site collection of **http://[my server name]/sites/[site collection name]** you will need to manually activate the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] site collection features.  
+ If you install the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] add-in for SharePoint 2010 Products after the installation of the SharePoint product, then the Report Server integration feature and the Power View integration feature will only be activated for root site collections. For other site collections, you will need to manually activate the features. For example if you have a site collection of **http://[my server name]/sites/[site collection name]** you will need to manually activate the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] site collection features.  
   
- When there is no root site collection, the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] add-in will log a message similar to the following.  
+ When there is no root site collection, the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] add-in will log a message similar to the following.  
   
  "SharePoint web app 80 does not have root site collection"  
   
@@ -34,7 +34,7 @@ manager: "erikre"
   
 ##  <a name="bkmk_features"></a> To Activate the Report Server and Power View Integration Site Collection Features:  
   
-1.  Open your browser to the site where you want the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] features active.  
+1.  Open your browser to the site where you want the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] features active.  
   
 2.  Click **Site Actions**.  
   

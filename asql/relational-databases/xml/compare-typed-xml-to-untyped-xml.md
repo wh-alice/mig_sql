@@ -138,13 +138,13 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
  You can convert DTDs to XML schema documents by using third-party tools, and load the XML schemas into the database.  
   
 ## Upgrading Typed XML from SQL Server 2005  
- [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] made several extensions to the XML Schema support, including support for lax validation, improved handling of **xs:date**, **xs:time** and **xs:dateTime** instance data, and added support for list and union types. In most cases the changes do not affect the upgrade experience. However if you used an XML Schema collection in [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] that allowed values of type **xs:date**, **xs:time**, or **xs:dateTime** (or any subtype) then the following upgrade steps occur when you attach your [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] database to a later version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]:  
+ [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] made several extensions to the XML Schema support, including support for lax validation, improved handling of **xs:date**, **xs:time** and **xs:dateTime** instance data, and added support for list and union types. In most cases the changes do not affect the upgrade experience. However if you used an XML Schema collection in [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] that allowed values of type **xs:date**, **xs:time**, or **xs:dateTime** (or any subtype) then the following upgrade steps occur when you attach your [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] database to a later version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]:  
   
 1.  For every XML column, that is typed with an XML Schema Collection that contains elements or attributes that are typed as either **xs:anyType**, **xs:anySimpleType**, **xs:date** or any of its subtypes, **xs:time** or any subtype thereof, or **xs:dateTime** or any of its subtypes, or are union or list types containing any of these types the following occurs:  
   
     1.  All XML indices on the column will be disabled.  
   
-    2.  All [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] values will continue to be represented in the Z timezone, because they have been normalized to the Z timezone.  
+    2.  All [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] values will continue to be represented in the Z timezone, because they have been normalized to the Z timezone.  
   
     3.  Any **xs:date** or **xs:dateTime** values that are smaller than January 1st of year 1 will lead to a runtime error when the index gets rebuild or an XQuery or XML-DML statements gets executed against the XML data type containing that value.  
   

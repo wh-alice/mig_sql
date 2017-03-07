@@ -15,7 +15,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Remove-PowerPivotServiceApplication cmdlet
-  Deletes a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application.  
+  Deletes a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application.  
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   
@@ -26,14 +26,14 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 ```  
   
 ## Description  
- The Remove-PowerPivotServiceApplication cmdlet deletes a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application from the farm. Use DeleteAll to delete all service applications at once, or use the Identity parameter to remove a single instance. To get instance information, run Get-PowerPivotServiceApplication to return all instances in the farm.  
+ The Remove-PowerPivotServiceApplication cmdlet deletes a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application from the farm. Use DeleteAll to delete all service applications at once, or use the Identity parameter to remove a single instance. To get instance information, run Get-PowerPivotServiceApplication to return all instances in the farm.  
   
- Use the RemoveData parameter to optionally remove service application databases and cached files. [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbooks remain in content libraries, but are no longer functional once the service application is removed.  
+ Use the RemoveData parameter to optionally remove service application databases and cached files. [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbooks remain in content libraries, but are no longer functional once the service application is removed.  
   
 ## Parameters  
   
 ### -Identity \<SPGeminiServiceApplicationPipeBind>  
- Specifies the GUID of a single [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application in the farm. You must specify the GUID if you want to remove just one application, leaving other service applications intact.  
+ Specifies the GUID of a single [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application in the farm. You must specify the GUID if you want to remove just one application, leaving other service applications intact.  
   
 |||  
 |-|-|  
@@ -55,7 +55,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |Accept wildcard characters?|false|  
   
 ### -DeleteAll \<switch>  
- Deletes all [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service applications, but does not delete the service application database, nor the service instance objects in the farm. [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service and [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Engine Service objects remain instantiated, but unusable, after you remove the service applications.  
+ Deletes all [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service applications, but does not delete the service application database, nor the service instance objects in the farm. [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service and [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Engine Service objects remain instantiated, but unusable, after you remove the service applications.  
   
 |||  
 |-|-|  
@@ -93,7 +93,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 C:\PS>Remove-PowerPivotServiceApplication -identity 12345678-90ab-cdef-ghijklmnop  
 ```  
   
- This example deletes a single [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application, but does not remove its database or cache. If you do not specify an identity, you will be prompted to provide one.  
+ This example deletes a single [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application, but does not remove its database or cache. If you do not specify an identity, you will be prompted to provide one.  
   
 ## Example 2  
   
@@ -101,7 +101,7 @@ C:\PS>Remove-PowerPivotServiceApplication -identity 12345678-90ab-cdef-ghijklmno
 C:\PS>Remove-PowerPivotServiceApplication -DeleteAll  
 ```  
   
- This example deletes all [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service applications in the farm. Databases and cache are not deleted.  
+ This example deletes all [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service applications in the farm. Databases and cache are not deleted.  
   
 ## Example 3  
   
@@ -109,6 +109,6 @@ C:\PS>Remove-PowerPivotServiceApplication -DeleteAll
 CC:\PS>Remove-PowerPivotServiceApplication -identity 12345678-90ab-cdef-ghijklmnop -RemoveData  
 ```  
   
- This example deletes a single [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application, and its database and cache files.  
+ This example deletes a single [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application, and its database and cache files.  
   
   

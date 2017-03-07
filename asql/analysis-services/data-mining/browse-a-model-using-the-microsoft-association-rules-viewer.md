@@ -26,21 +26,21 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Browse a Model Using the Microsoft Association Rules Viewer
-  The [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Association Rules Viewer in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] displays mining models that are built with the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Association algorithm. The [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Association algorithm is an association algorithm for use in creating data mining models that you can use for market basket analysis. For more information about this algorithm, see [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md).  
+  The [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Association Rules Viewer in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] displays mining models that are built with the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Association algorithm. The [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Association algorithm is an association algorithm for use in creating data mining models that you can use for market basket analysis. For more information about this algorithm, see [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md).  
   
- Following are the primary reasons for using the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Association algorithm:  
+ Following are the primary reasons for using the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Association algorithm:  
   
 -   To find itemsets that describe items that are typically found together in a transaction.  
   
 -   To discover rules that predict the presence of other items in a transaction based on existing items.  
   
 > [!NOTE]  
->  To view detailed information about the equations used in the model and the patterns that were discovered, use the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Generic Content Tree viewer. For more information, see [Browse a Model Using the Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) or [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md).  
+>  To view detailed information about the equations used in the model and the patterns that were discovered, use the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Generic Content Tree viewer. For more information, see [Browse a Model Using the Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) or [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../../a9retired/microsoft-generic-content-tree-viewer-data-mining.md).  
   
- For a walkthrough of how to create, explore, and use an association mining model, see [Lesson 3: Building a Market Basket Scenario &#40;Intermediate Data Mining Tutorial&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md).  
+ For a walkthrough of how to create, explore, and use an association mining model, see [Lesson 3: Building a Market Basket Scenario &#40;Intermediate Data Mining Tutorial&#41;](../../a9notintoc/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md).  
   
 ##  <a name="BKMK_ViewerTabs"></a> Viewer Tabs  
- When you browse a mining model in [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], the model is displayed on the **Mining Model Viewer** tab of Data Mining Designer in the appropriate viewer for the model. The [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Association Rules Viewer includes the following tabs:  
+ When you browse a mining model in [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], the model is displayed on the **Mining Model Viewer** tab of Data Mining Designer in the appropriate viewer for the model. The [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Association Rules Viewer includes the following tabs:  
   
 -   [Itemsets](#BKMK_Itemsets)  
   

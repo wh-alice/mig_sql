@@ -31,7 +31,7 @@ manager: "erikre"
  This topic discusses the general rules that are applied by Reporting Services. For more information, see [Rendering Report Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md), [Rendering Data Regions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/rendering-data-regions-report-builder-and-ssrs.md), and [Rendering Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/rendering-data-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## General Behaviors for HTML, MHTML, Word, and Excel (Soft Page-Break Renderers)  
  Reports exported using HTML and MHTML formats are optimized for a computer screen-based experience where pages can be various lengths. Page breaks are inserted vertically only at approximate locations within the report body. These approximate locations are determined by the interactive height setting in the Properties pane. For example, suppose the interactive height is set to 5 inches. When the report is rendered, the page height is approximately 5 inches in length. Word and Excel paginate based on logical page breaks and ignore the interactive height setting.  

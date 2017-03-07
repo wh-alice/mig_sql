@@ -21,7 +21,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Shrink Database Task
-  The Shrink Database task reduces the size of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database data and log files.  
+  The Shrink Database task reduces the size of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database data and log files.  
   
  By using the Shrink Database task, a package can shrink files for a single database or multiple databases.  
   
@@ -42,14 +42,14 @@ manager: "jhubbard"
  If the Shrink Database task shrinks multiple databases, the task runs multiple SHRINKDATABASE commands, one for each database. All instances of the SHRINKDATABASE command use the same argument values, except for the *database_name* argument. For more information, see [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
 ## Configuration of the Shrink Database Task  
- You can set properties through the [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer. This task is in the **Maintenance Plan Tasks** section of the **Toolbox** in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer.  
+ You can set properties through the [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer. This task is in the **Maintenance Plan Tasks** section of the **Toolbox** in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer.  
   
- For more information about the properties that you can set in the [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about the properties that you can set in the [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Shrink Database Task &#40;Maintenance Plan&#41;](../../relational-databases/maintenance-plans/shrink-database-task-maintenance-plan.md)  
   
- For more information about setting these properties in the [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about setting these properties in the [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Set the Properties of a Task or Container](../../a9retired/set-the-properties-of-a-task-or-container.md)  
   
   

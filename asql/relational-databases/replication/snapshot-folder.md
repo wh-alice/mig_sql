@@ -26,7 +26,7 @@ manager: "jhubbard"
  Enter the path for the folder where you want snapshot files stored.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] recommends that you use a network share as a snapshot folder location. Local paths (those starting with a drive letter, such as C:\\) are not accessible to agents on other computers.  
+>  [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] recommends that you use a network share as a snapshot folder location. Local paths (those starting with a drive letter, such as C:\\) are not accessible to agents on other computers.  
   
 ## See Also  
  [Alternate Snapshot Folder Locations](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   

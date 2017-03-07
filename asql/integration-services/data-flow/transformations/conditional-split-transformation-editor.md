@@ -44,7 +44,7 @@ manager: "jhubbard"
  Type a name for the default output, or use the default.  
   
  **Configure error output**  
- Specify how to handle errors by using the [Configure Error Output](../Topic/Configure%20Error%20Output.md) dialog box.  
+ Specify how to handle errors by using the [Configure Error Output](../../../a9retired/configure-error-output.md) dialog box.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   

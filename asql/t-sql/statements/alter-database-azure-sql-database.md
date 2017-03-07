@@ -18,11 +18,11 @@ ms.author: "carlrab"
 manager: "jhubbard"
 ---
 # ALTER DATABASE (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Modifies a  [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)]. Changes the name of a database, the edition and service objective of a database, join an elastic pool, and sets database options.  
+  Modifies a  [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)]. Changes the name of a database, the edition and service objective of a database, join an elastic pool, and sets database options.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -168,7 +168,7 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
 <temporal_history_retention>  ::=  TEMPORAL_HISTORY_RETENTION { ON | OFF }
 ```  
   
- For full descriptions of the set options, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) and [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ For full descriptions of the set options, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) and [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## Arguments  
  *database_name*  
@@ -182,12 +182,12 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
   
  MODIFY (EDITION **=** [ 'basic' | 'standard' | 'premium' ] )  
  > [!NOTE]  
->  [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] V11, which is retired, also supports Web and Business editions. See [Web and Business FAQ](http://go.microsoft.com/fwlink/?LinkId=396320).  
+>  [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] V11, which is retired, also supports Web and Business editions. See [Web and Business FAQ](http://go.microsoft.com/fwlink/?LinkId=396320).  
   
  Changes the service tier of the database.  EDITION change will fail if the MAXSIZE property for the database is set to a value outside the valid range supported by that edition.  
   
  MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 5 | 10 | 20 | 30 … 150…500] GB)  
- Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database may cause the database EDITION to be changed. Following table lists the supported MAXSIZE values and the defaults (D) for the [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] service tiers.  
+ Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database may cause the database EDITION to be changed. Following table lists the supported MAXSIZE values and the defaults (D) for the [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] service tiers.  
   
 |**MAXSIZE**|**Basic**|**Standard**|**Premium**|  
 |-----------------|---------------|------------------|-----------------|  
@@ -285,7 +285,7 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
   
  The ALTER DATABASE statement must run in autocommit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.  
   
- Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log contains the following informational message: "[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
+ Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error log contains the following informational message: "[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
   
  The procedure cache is also flushed in the following scenarios:  
   
@@ -362,14 +362,14 @@ ALTER DATABASE db1 FAILOVER
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md)   
- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-files-transact-sql.md)   
- [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../Topic/sys.database_mirroring_witnesses%20\(Transact-SQL\).md)   
- [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.data-spaces-transact-sql.md)   
- [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.filegroups-transact-sql.md)   
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.master-files-transact-sql.md)   
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-spaceused-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-files-transact-sql.md)   
+ [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/database-mirroring-witness-catalog-views-sys.database-mirroring-witnesses.md)   
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.data-spaces-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.filegroups-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.master-files-transact-sql.md)   
  [System Databases](../../relational-databases/databases/system-databases.md)  
   
   

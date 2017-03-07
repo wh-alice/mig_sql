@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Edit a Breakpoint Location
-  The breakpoint location specifies the line and character where the breakpoint resides in a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] script file. You can edit the breakpoint location to move the breakpoint to another location in the script, or to a different script.  
+  The breakpoint location specifies the line and character where the breakpoint resides in a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] script file. You can edit the breakpoint location to move the breakpoint to another location in the script, or to a different script.  
   
 ## Editing a Location  
  When you edit a breakpoint location, the breakpoint moves to the new location, carrying with it all of the existing properties, such as a hit count or condition.  
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 2.  In the **File Breakpoint** dialog box, edit **File** to specify a new file, **Line** to specify a new line, or **Character** to specify a new location within the line. If the new file you specify is already open in a query editor window, the breakpoint is moved to that editor window. If the file is not opened, a new editor window is opened, the file is loaded in, and the breakpoint moved to the new location.  
   
-     The **Allow the source code to be different from the original version** option has no effect when debugging [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+     The **Allow the source code to be different from the original version** option has no effect when debugging [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
 ## See Also  
  [Specify a Hit Count](../../relational-databases/scripting/specify-a-hit-count.md)   

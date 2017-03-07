@@ -20,15 +20,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Path Expressions - Specifying Node Test
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   An axis step in a path expression includes the following components:  
   
--   [An axis](../Topic/Specifying%20Axis%20in%20a%20Path%20Expression%20Step.md)  
+-   [An axis](../xquery/path-expressions-specifying-axis.md)  
   
 -   A node test  
   
--   [Zero or more step qualifiers (optional)](../Topic/Specifying%20Predicates%20in%20a%20Path%20Expression%20Step.md)  
+-   [Zero or more step qualifiers (optional)](../xquery/path-expressions-specifying-predicates.md)  
   
  For more information, see [Path Expressions &#40;XQuery&#41;](../xquery/path-expressions-xquery.md).  
   
@@ -212,7 +212,7 @@ WHERE ProductModelID=19
   
  Note the following from the previous query:  
   
--   The `namespace` keyword in the XQuery prolog defines a prefix that is used in the query body. For more information, about the XQuery prolog, see [XQuery Prolog](../Topic/XQuery%20Prolog.md) .  
+-   The `namespace` keyword in the XQuery prolog defines a prefix that is used in the query body. For more information, about the XQuery prolog, see [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md) .  
   
 -   All three steps in the path expression specify the child axis and a node name as the node test.  
   

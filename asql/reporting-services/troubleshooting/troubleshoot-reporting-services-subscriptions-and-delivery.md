@@ -21,7 +21,7 @@ manager: "erikre"
 Use this topic to troubleshoot problems that you encounter when working with [!INCLUDE[ssRSnoversion](../../reporting-services/mobile-reports/includes/ssrsnoversion.md)] report subscriptions, schedules, and delivery.  
 ## Log information
  
-The Subscription page in [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] includes a status of a subscription but if there is a problem with the subscription, the detailed information is in the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] logs. 
+The Subscription page in [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] includes a status of a subscription but if there is a problem with the subscription, the detailed information is in the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] logs. 
 ![ssrs_tutorial_datadriven_subscription_status_ReportManager](../../reporting-services/troubleshooting/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png)
 
 **Trace logs:**
@@ -32,14 +32,14 @@ The following is an example log entry:
 ```
    subscription WindowsService_10   4c7c    05/24/2016-01:05:06  e ERROR     Failure writing file \\ServerName\SalesReports\so71949.xls : Microsoft.ReportingServices.FileShareDeliveryProvider.FileShareProvider+NetworkErrorException: An impersonation error occurred using the security context of the current user. ---> System.ArgumentException: Value does not fall within the expected range.  05/24/2016
 ```
-For more information on [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] trace logs, see: 
+For more information on [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] trace logs, see: 
 + [Report Server Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).
 + [Reporting Services log files](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).
 
 **Execution Log views:**
 
 The execution logs are views in the ReportServer SQL database
-For more information on [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] see [Reporting Services ExecutionLog and ExecutionLog3 views](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
+For more information on [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] see [Reporting Services ExecutionLog and ExecutionLog3 views](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
 
 ----------
 ## Unable to Send Reports Using E-Mail With Windows Server 2003 and POP3  

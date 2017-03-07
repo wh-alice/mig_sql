@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Excel Source Editor (Connection Manager Page)
-  Use the **Connection Manager** node of the **Excel Source Editor** dialog box to select the [!INCLUDE[ofprexcel](../../analysis-services/data-mining/includes/ofprexcel-md.md)] workbook for the source to use. The Excel source reads data from a worksheet or named range in an existing workbook.  
+  Use the **Connection Manager** node of the **Excel Source Editor** dialog box to select the [!INCLUDE[ofprexcel](../../a9retired/includes/ofprexcel-md.md)] workbook for the source to use. The Excel source reads data from a worksheet or named range in an existing workbook.  
   
 > [!NOTE]  
 >  The **CommandTimeout** property of the Excel source is not available in the **Excel Source Editor**, but can be set by using the **Advanced Editor**. For more information on this property, see the Excel Source section of [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md).  
@@ -39,7 +39,7 @@ manager: "jhubbard"
 |Value|Description|  
 |-----------|-----------------|  
 |Table or view|Retrieve data from a worksheet or named range in the Excel file.|  
-|Table name or view name variable|Specify the worksheet or range name in a variable.<br /><br /> **Related information:** [Use Variables in Packages](../Topic/Use%20Variables%20in%20Packages.md)|  
+|Table name or view name variable|Specify the worksheet or range name in a variable.<br /><br /> **Related information:** [Use Variables in Packages](../../a9retired/use-variables-in-packages.md)|  
 |SQL command|Retrieve data from the Excel file by using a SQL query. For information about query syntax, see [Excel Source](../../integration-services/data-flow/excel-source.md).|  
 |SQL command from variable|Specify the SQL query text in a variable.|  
   

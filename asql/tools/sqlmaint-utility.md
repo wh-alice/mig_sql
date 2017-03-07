@@ -23,10 +23,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # sqlmaint Utility
-  The**sqlmaint** utility performs a specified set of maintenance operations on one or more databases. Use **sqlmaint** to run DBCC checks, back up a database and its transaction log, update statistics, and rebuild indexes. All database maintenance activities generate a report that can be sent to a designated text file, HTML file, or e-mail account. **sqlmaint** executes database maintenance plans created with previous versions of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. To run [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] maintenance plans from the command prompt, use the [dtexec Utility](../integration-services/packages/dtexec-utility.md).  
+  The**sqlmaint** utility performs a specified set of maintenance operations on one or more databases. Use **sqlmaint** to run DBCC checks, back up a database and its transaction log, update statistics, and rebuild indexes. All database maintenance activities generate a report that can be sent to a designated text file, HTML file, or e-mail account. **sqlmaint** executes database maintenance plans created with previous versions of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]. To run [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] maintenance plans from the command prompt, use the [dtexec Utility](../integration-services/packages/dtexec-utility.md).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../analysis-services/multidimensional-models-olap-logical-dimension-objects/includes/ssnotedepnextavoid-md.md)] Use [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] maintenance plan feature instead. For more information on maintenance plans, see [Maintenance Plans](../relational-databases/maintenance-plans/maintenance-plans.md).  
+>  [!INCLUDE[ssNoteDepNextAvoid](../analysis-services/multidimensional-models-olap-logical-dimension-objects/includes/ssnotedepnextavoid-md.md)] Use [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] maintenance plan feature instead. For more information on maintenance plans, see [Maintenance Plans](../relational-databases/maintenance-plans/maintenance-plans.md).  
   
 ## Syntax  
   
@@ -77,10 +77,10 @@ number[minutes | hours | days | weeks | months]
  Specifies that the syntax diagram for **sqlmaint** be returned. This parameter must be used alone.  
   
  **-S** *server_name*[ **\\***instance_name*]  
- Specifies the target instance of [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Specify *server_name* to connect to the default instance of [!INCLUDE[ssDEnoversion](../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] on that server. Specify *server_name***\\***instance_name* to connect to a named instance of [!INCLUDE[ssDE](../analysis-services/instances/install/windows/includes/ssde-md.md)] on that server. If no server is specified, **sqlmaint** connects to the default instance of [!INCLUDE[ssDE](../analysis-services/instances/install/windows/includes/ssde-md.md)] on the local computer.  
+ Specifies the target instance of [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]. Specify *server_name* to connect to the default instance of [!INCLUDE[ssDEnoversion](../a9notintoc/includes/ssdenoversion-md.md)] on that server. Specify *server_name***\\***instance_name* to connect to a named instance of [!INCLUDE[ssDE](../a9notintoc/includes/ssde-md.md)] on that server. If no server is specified, **sqlmaint** connects to the default instance of [!INCLUDE[ssDE](../a9notintoc/includes/ssde-md.md)] on the local computer.  
   
  **-U** *login_ID*  
- Specifies the login ID to use when connecting to the server. If not supplied, **sqlmaint** attempts to use [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows Authentication. If *login_ID* contains special characters, it must be enclosed in double quotation marks ("); otherwise, the double quotation marks are optional.  
+ Specifies the login ID to use when connecting to the server. If not supplied, **sqlmaint** attempts to use [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Windows Authentication. If *login_ID* contains special characters, it must be enclosed in double quotation marks ("); otherwise, the double quotation marks are optional.  
   
 > [!IMPORTANT]  
 >  When possible, use Windows Authentication.  
@@ -202,7 +202,7 @@ dbname_log_yyyymmddhhmm.BAK
  For disk backups, specifies that a subdirectory be created in the [*backup_path*] directory or in the default backup directory if **-UseDefDir** is also specified. The name of the subdirectory is generated from the database name specified in **-D**. **-CrBkSubDir** offers an easy way to put all the backups for different databases into separate subdirectories without having to change the *backup_path* parameter.  
   
  **-UseDefDir**  
- For disk backups, specifies that the backup file be created in the default backup directory. **UseDefDir** overrides *backup_path* if both are specified. With a default [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup, the default backup directory is C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup.  
+ For disk backups, specifies that the backup file be created in the default backup directory. **UseDefDir** overrides *backup_path* if both are specified. With a default [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] setup, the default backup directory is C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup.  
   
  **TAPE**  
  Specifies that the backup medium is tape.  
@@ -236,7 +236,7 @@ dbname_log_yyyymmddhhmm.BAK
 -   If a general failure is encountered.  
   
 ## Permissions  
- The **sqlmaint** utility can be executed by any Windows user with **Read and Execute** permission on `sqlmaint.exe`, which by default is stored in the `x:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER1\MSSQL\Binn` folder. Additionally, the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] login specified with **-login_ID** must have the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] permissions required to perform the specified action. If the connection to [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses Windows Authentication, the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] login mapped to the authenticated Windows user must have the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] permissions required to perform the specified action.  
+ The **sqlmaint** utility can be executed by any Windows user with **Read and Execute** permission on `sqlmaint.exe`, which by default is stored in the `x:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER1\MSSQL\Binn` folder. Additionally, the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] login specified with **-login_ID** must have the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] permissions required to perform the specified action. If the connection to [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] uses Windows Authentication, the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] login mapped to the authenticated Windows user must have the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] permissions required to perform the specified action.  
   
  For example, using the **-BkUpDB** requires permission to execute the BACKUP statement. And using the **-UpdOptiStats** argument requires permission to execute the UPDATE STATISTICS statement. For more information, see the "Permissions" sections of the corresponding topics in Books Online.  
   

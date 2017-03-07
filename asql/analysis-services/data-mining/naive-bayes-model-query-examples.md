@@ -65,7 +65,7 @@ WHERE MODEL_NAME = 'TM_NaiveBayes_Filtered'
 |PREDICTION_ENTITY|Bike Buyer,Yearly Income|  
 |FILTER|[Region] = 'Europe' OR [Region] = 'North America'|  
   
- The model used for this example is based on the Naive Bayes model you create in the [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md), but was modified by adding a second predictable attribute and applying a filter to the training data.  
+ The model used for this example is based on the Naive Bayes model you create in the [Basic Data Mining Tutorial](../../a9notintoc/basic-data-mining-tutorial.md), but was modified by adding a second predictable attribute and applying a filter to the training data.  
   
 ###  <a name="bkmk_Query2"></a> Sample Query 2: Retrieving a Summary of Training Data  
  In a Naive Bayes model, the marginal statistics node stores aggregated information about the distribution of values in the training data. This summary is convenient and saves you from having to create SQL queries against the training data to find the same information.  
@@ -211,7 +211,7 @@ NATURAL PREDICTION JOIN
  The final row in the table shows the adjustments to support and probability for the missing value. Variance and standard deviation values are always 0, because Naive Bayes models cannot model continuous values.  
   
 ###  <a name="bkmk_Query7"></a> Sample Query 7: Predicting Associations  
- The Microsoft Naive Bayes algorithm can be used for association analysis, if the mining structure contains a nested table with the predictable attribute as the key. For example, you could build a Naive Bayes model by using the mining structure created in [Lesson 3: Building a Market Basket Scenario &#40;Intermediate Data Mining Tutorial&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md) of the data mining tutorial. The model used in this example was modified to add information about income and customer region in the case table.  
+ The Microsoft Naive Bayes algorithm can be used for association analysis, if the mining structure contains a nested table with the predictable attribute as the key. For example, you could build a Naive Bayes model by using the mining structure created in [Lesson 3: Building a Market Basket Scenario &#40;Intermediate Data Mining Tutorial&#41;](../../a9notintoc/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) of the data mining tutorial. The model used in this example was modified to add information about income and customer region in the case table.  
   
  The following query example shows a singleton query that predicts products that are related to purchases of the product, `'Road Tire Tube'`. You might use this information to recommend products to a specific type of customer.  
   
@@ -237,7 +237,7 @@ AS t
 |Touring-1000|  
   
 ## Function List  
- All [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Naive Bayes algorithm supports the additional functions that are listed in the following table.  
+ All [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Naive Bayes algorithm supports the additional functions that are listed in the following table.  
   
 |||  
 |-|-|  

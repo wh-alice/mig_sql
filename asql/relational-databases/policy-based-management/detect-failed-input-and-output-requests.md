@@ -20,7 +20,7 @@ manager: "jhubbard"
   This rule checks the system event log for EventId 50. This error is caused by a failed I/O request.  
   
 ## Best Practices Recommendations  
- Review the following [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Knowledge Base articles for more information about how to troubleshoot this error:  
+ Review the following [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Knowledge Base articles for more information about how to troubleshoot this error:  
   
 -   [Microsoft Knowledge Base article 311081](http://go.microsoft.com/fwlink/?linkid=117744)  
   

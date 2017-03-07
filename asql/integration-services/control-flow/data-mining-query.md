@@ -61,6 +61,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Data Mining Query Tools](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)  
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -27,13 +27,13 @@ manager: "erikre"
   
 1.  In Dimension Designer, open the dimension that contains the attribute you want to rename.  
   
-2.  In the **Attributes** pane of the Dimension Builder view, change the display format to either **Tree** or **List**. For more information about how to change the format of the Attributes pane, see [View Attributes in a Tree, List or Grid in Dimension Designer](../Topic/View%20Attributes%20in%20a%20Tree,%20List%20or%20Grid%20in%20Dimension%20Designer.md).  
+2.  In the **Attributes** pane of the Dimension Builder view, change the display format to either **Tree** or **List**. For more information about how to change the format of the Attributes pane, see [View Attributes in a Tree, List or Grid in Dimension Designer](../../analysis-services/multidimensional-models/view-attributes-in-dimension-designer.md).  
   
 3.  Right-click the attribute you want to configure, and then click **Rename**.  
   
 4.  Type the new name.  
   
     > [!NOTE]  
-    >  You can also set the **Name** property of a selected attribute in the **Properties** window of [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+    >  You can also set the **Name** property of a selected attribute in the **Properties** window of [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
   

@@ -17,12 +17,12 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Queries
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Data Manipulation Language (DML) is a vocabulary used to retrieve and work with data in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. Use these statements to add, modify, query, or remove data from a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database.  
+  Data Manipulation Language (DML) is a vocabulary used to retrieve and work with data in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. Use these statements to add, modify, query, or remove data from a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database.  
   
 ## In This Section  
- The following table lists the DML statements that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses.  
+ The following table lists the DML statements that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses.  
   
 |||  
 |-|-|  

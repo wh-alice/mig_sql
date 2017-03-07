@@ -40,7 +40,7 @@ manager: "erikre"
 >  Adding the total number of pages to the footer may slow performance when you run or preview your report.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ### To add a page number or other report properties  
   
@@ -66,7 +66,7 @@ manager: "erikre"
   
      The expression is now  ="Page "&Globals!PageNumber  
   
-3.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To add total number of pages after the page number  
   
@@ -78,7 +78,7 @@ manager: "erikre"
   
      The expression is now ="Page "&Globals!PageNumber &" of "&Globals!TotalPages  
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## See Also  
  [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   

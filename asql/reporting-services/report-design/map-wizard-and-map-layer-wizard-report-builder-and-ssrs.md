@@ -20,11 +20,11 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Map Wizard and Map Layer Wizard (Report Builder and SSRS)
- In [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports, the Map Wizard and Map Layer Wizard automate the task of creating a map, adding a map layer, or changing map layer options on an existing layer.  
+ In [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports, the Map Wizard and Map Layer Wizard automate the task of creating a map, adding a map layer, or changing map layer options on an existing layer.  
   
  Before you add a map to a report or a map layer to a map, gather the following information:  
   
--   **Spatial data source.** The location or connection to a source that provides spatial data, for example, the name of a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance and a database that contains spatial data, or the name of an Environmental Systems Research Institute, Inc. (ESRI) Shapefile.  
+-   **Spatial data source.** The location or connection to a source that provides spatial data, for example, the name of a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance and a database that contains spatial data, or the name of an Environmental Systems Research Institute, Inc. (ESRI) Shapefile.  
   
 -   **Spatial data.** From the spatial data source, a field that contains sets of coordinates that specify locations.  
   
@@ -44,7 +44,7 @@ manager: "erikre"
   
  Click the title of the wizard page for the corresponding help content. The pages that you see vary depending on your choices for the type of map, the source of spatial data, and the source of analytical data.  
   
-1.  [Choose a source of spatial data](#SpatialDataSource). Spatial data can come from the map gallery, an Environmental Systems Research Institute, Inc. (ESRI) Shapefile, or from spatial data in a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] relational database.  
+1.  [Choose a source of spatial data](#SpatialDataSource). Spatial data can come from the map gallery, an Environmental Systems Research Institute, Inc. (ESRI) Shapefile, or from spatial data in a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] relational database.  
   
     -   [What is spatial data?](#SpatialData)  
   
@@ -56,7 +56,7 @@ manager: "erikre"
   
     -   [What is a SQL Server spatial query?](#SqlServerSpatial)  
   
-2.  [Choose spatial data and map view options](#MapView). Set the map view, the map resolution, specify whether to embed spatial data in the report, and specify whether to include a tile background of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Bing map tiles.  
+2.  [Choose spatial data and map view options](#MapView). Set the map view, the map resolution, specify whether to embed spatial data in the report, and specify whether to include a tile background of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Bing map tiles.  
   
     -   [What is the map view or viewport?](#Viewport)  
   
@@ -101,7 +101,7 @@ manager: "erikre"
  For more information about maps, see [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). For step-by-step instructions to add a map to a report, see [Tutorial: Map Report &#40;Report Builder&#41;](../../reporting-services/tutorials/tutorial-map-report-report-builder.md).  
   
 ##  <a name="SpatialDataSource"></a> Choose a source of spatial data  
- On this page, specify the spatial data source and which spatial data to include. Spatial data can come from the map gallery, an ESRI Shapefile, or a dataset query that specifies [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] spatial data from a [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] or later version database.  
+ On this page, specify the spatial data source and which spatial data to include. Spatial data can come from the map gallery, an ESRI Shapefile, or a dataset query that specifies [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] spatial data from a [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] or later version database.  
   
  You can use the same source or a different source of spatial data for each layer, but you must specify the source every time you add a layer. When the spatial data is from the map gallery or an ESRI Shapefile, the spatial data source is not a separate report item. It does not appear in the Report Data pane.  
   
@@ -114,7 +114,7 @@ manager: "erikre"
  The map gallery contains maps from reports that are located in the map gallery folder for the report authoring environment. Maps from the gallery provide a quick start to add a map to your report. The predefined maps in the gallery are provided by a map provider.  
   
 > [!NOTE]  
->  This [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] mapping feature uses data from TIGER/Line Shapefiles provided courtesy of the U.S. Census Bureau ([http://www.census.gov/](http://www.census.gov/)). TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. TIGER/Line Shapefiles are available without charge from the U.S. Census Bureau. To obtain more information about the TIGER/Line Shapefiles go to [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). The boundary information in the TIGER/Line Shapefiles are for statistical data collection and tabulation purposes only; their depiction and designation for statistical purposes does not constitute a determination of jurisdictional authority or rights of ownership or entitlement and they are not legal land descriptions. Census TIGER and TIGER/Line are registered trademarks of the U.S. Bureau of the Census.  
+>  This [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] mapping feature uses data from TIGER/Line Shapefiles provided courtesy of the U.S. Census Bureau ([http://www.census.gov/](http://www.census.gov/)). TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. TIGER/Line Shapefiles are available without charge from the U.S. Census Bureau. To obtain more information about the TIGER/Line Shapefiles go to [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). The boundary information in the TIGER/Line Shapefiles are for statistical data collection and tabulation purposes only; their depiction and designation for statistical purposes does not constitute a determination of jurisdictional authority or rights of ownership or entitlement and they are not legal land descriptions. Census TIGER and TIGER/Line are registered trademarks of the U.S. Bureau of the Census.  
   
  To extend the map gallery, you can add or remove reports from the map gallery directory, and add folders to organize the maps. For more information, see [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
@@ -125,16 +125,16 @@ manager: "erikre"
   
  In Report Builder, upload both the .shp file and the .dbf file to the same folder on a report server, and then link to the .shp file as the spatial data source.  
   
- In Report Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], add both the .shp file and the .dbf file to the report project, and then specify the name of the .shp file as the spatial data source.  
+ In Report Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], add both the .shp file and the .dbf file to the report project, and then specify the name of the .shp file as the spatial data source.  
   
 ###  <a name="GetShapefiles"></a> Where can I get ESRI shapefiles?  
  ESRI shapefiles are available on the Web. For more information, see [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814).  
   
 ###  <a name="SqlServerSpatial"></a> What is a SQL Server spatial query?  
- A [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] spatial query is a dataset query that specifies data that is either a SQLGeometry or a SQLGeography data type from a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] relational database.  
+ A [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] spatial query is a dataset query that specifies data that is either a SQLGeometry or a SQLGeography data type from a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] relational database.  
   
 > [!NOTE]  
->  When you define a data source in the wizard, you will see different query designers in the Design a Query page, depending on what type of data source you are connecting to. For more information, see [Query Designers &#40;Report Builder&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md).  
+>  When you define a data source in the wizard, you will see different query designers in the Design a Query page, depending on what type of data source you are connecting to. For more information, see [Query Designers &#40;Report Builder&#41;](../../a9retired/query-designers-report-builder.md).  
   
  When you run the query in the query designer, the result set displays a column with spatial data that appears as text. For example, one row might contain spatial data that is a single point and the next row might contain spatial data that defines a set of points. Each row becomes one map element. You can vary the display of each map element as an indivisible unit.  
   
@@ -151,7 +151,7 @@ manager: "erikre"
   
 -   For embedded data, specify whether to include all data or just the data in the current view.  
   
--   Specify whether to include a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Bing map tiles background.  
+-   Specify whether to include a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Bing map tiles background.  
   
 ###  <a name="Viewport"></a> What is the map view or viewport?  
  The map viewport defines the map area to display for all layers in your report.  

@@ -18,20 +18,20 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Schedule Properties (General Page)
-  Use the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] page in [!INCLUDE[ssManStudioFull_md](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to view or modify a shared schedule. Shared schedules can be used in place of report-specific or subscription-specific schedules. Changes to the schedule are applied after you save the schedule. Editing a schedule has no effect on jobs that are currently in progress. If you edit a schedule while it is being used, all currently processing reports and subscriptions triggered from that schedule will be allowed to finish.  
+  Use the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] page in [!INCLUDE[ssManStudioFull_md](../../a9notintoc/includes/ssmanstudiofull-md.md)] to view or modify a shared schedule. Shared schedules can be used in place of report-specific or subscription-specific schedules. Changes to the schedule are applied after you save the schedule. Editing a schedule has no effect on jobs that are currently in progress. If you edit a schedule while it is being used, all currently processing reports and subscriptions triggered from that schedule will be allowed to finish.  
   
  Not all frequency combinations can be supported in a single schedule. For example, if you want to run a report at 12:00 P.M. and 4:00 P.M. every Friday, you must create two daily schedules that specify a Friday run date, one with a start time of 12:00 P.M. and another with a start time of 4:00 P.M.  
   
  Schedule processing is based on the local time of the report server that hosts and processes the schedule.  
   
  To open this page:
- 1) Start [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].
+ 1) Start [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].
  2) Connect to a report server.
  3) Expand the **Shared Schedules** folder.
  4) Right-click a shared schedule, and select **Properties**.  
   
 > [!NOTE]  
->This feature is not available in every edition of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and this page does not appear when you are running an edition which does not have this feature. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Features supported by the edition in SQL Server 2016](Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+>This feature is not available in every edition of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and this page does not appear when you are running an edition which does not have this feature. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Features supported by the edition in SQL Server 2016](Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
   
 ## Options  
  **Name**  

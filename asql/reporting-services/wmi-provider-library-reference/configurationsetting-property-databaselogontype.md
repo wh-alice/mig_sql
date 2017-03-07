@@ -23,7 +23,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # ConfigurationSetting Property - DatabaseLogonType
-  Specifies whether the report server uses a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows service account, a Windows user account, or a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login to access the report server database. Read-only.  
+  Specifies whether the report server uses a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows service account, a Windows user account, or a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login to access the report server database. Read-only.  
   
 ## Syntax  
   
@@ -46,13 +46,13 @@ public int DatabaseLogonType;
   
 -   0 for Windows login  
   
--   1 for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login  
+-   1 for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login  
   
 -   2 to log in as a service  
   
- If you specify 0 (Windows), you must set the value in the [DatabaseLogonAccount](../Topic/DatabaseLogonAccount%20Property%20\(WMI%20MSReportServer_ConfigurationSetting\).md) property to a corresponding a valid Windows user account.  
+ If you specify 0 (Windows), you must set the value in the [DatabaseLogonAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md) property to a corresponding a valid Windows user account.  
   
- If you specify 1 (SQL Server), make sure the value of the [DatabaseLogonAccount](../Topic/DatabaseLogonAccount%20Property%20\(WMI%20MSReportServer_ConfigurationSetting\).md) corresponds to a valid [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login.  
+ If you specify 1 (SQL Server), make sure the value of the [DatabaseLogonAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md) corresponds to a valid [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login.  
   
  If you specify 2 (Windows service), the report server uses an [!INCLUDE[vstecasp](../../database-engine/configure/windows/includes/vstecasp-md.md)] account and the Windows service account to access the report server database. The DatabaseLogonAccount property is ignored.  
   

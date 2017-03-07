@@ -30,7 +30,7 @@ manager: "jhubbard"
 |Value|Description|  
 |-----------|-----------------|  
 |XML file location|Retrieve data from an XML file.|  
-|XML file from variable|Specify the XML file name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](../Topic/Use%20Variables%20in%20Packages.md)|  
+|XML file from variable|Specify the XML file name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](../../a9retired/use-variables-in-packages.md)|  
 |XML data from variable|Retrieve XML data from a variable.|  
   
  **Use inline schema**  

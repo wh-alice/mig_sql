@@ -87,13 +87,13 @@ rskeymgmt {-?}
  (Required for **-f**) Specifies the password used to back up or apply a symmetric key. This value cannot be empty.  
   
  **-i**  
- Specifies a local report server instance. This argument is optional if you installed the report server on the default [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance (the default value for **-i** is MSSQLSERVER). If you installed the report server as a named instance, **-i** is required.  
+ Specifies a local report server instance. This argument is optional if you installed the report server on the default [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance (the default value for **-i** is MSSQLSERVER). If you installed the report server as a named instance, **-i** is required.  
   
  **-m**  
  Specifies the name of the remote computer that hosts the report server instance you are joining to the report server scale-out deployment. Use the name of the computer that identifies it on your network.  
   
  **-n**  
- Specifies the name of the report server instance on a remote computer. This argument is optional if you installed the report server on the default [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance (the default value for **-n** is MSSQLSERVER). If you installed the report server as a named instance, **-n** is required.  
+ Specifies the name of the report server instance on a remote computer. This argument is optional if you installed the report server on the default [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance (the default value for **-n** is MSSQLSERVER). If you installed the report server as a named instance, **-n** is required.  
   
  **-u**  *useraccount*  
  Specifies the administrator account on the remote computer that you are joining to the scale-out deployment. If an account is not specified, the credentials of the current user are used.  
@@ -128,7 +128,7 @@ rskeymgmt -a -f a:\backupkey\keys -p <password>
 ```  
   
 #### Deleting Encryption Keys and Encrypted Content  
- This example shows how to delete all encryption keys stored in a report server. If your installation is a report server scale-out deployment, the encryption keys for all report server instances that are included in the deployment will be deleted. Deleting an encryption key also deletes any existing encrypted values in the report server database. For more information about encrypted content, see [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../Topic/Store%20Encrypted%20Report%20Server%20Data%20\(SSRS%20Configuration%20Manager\).md).  
+ This example shows how to delete all encryption keys stored in a report server. If your installation is a report server scale-out deployment, the encryption keys for all report server instances that are included in the deployment will be deleted. Deleting an encryption key also deletes any existing encrypted values in the report server database. For more information about encrypted content, see [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
 ```  
 rskeymgmt -d  
@@ -170,12 +170,12 @@ rskeymgmt -r <installationID>
   
  The **rskeymgmt** utility is used to manage the key set that is defined during Setup or during initialization. It connects to the local Report Server Windows service through a Remote Procedure Call (RPC) endpoint. The Report Server Windows service must be running in order for this utility to work.  
   
- For more information about the encryption keys, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../Topic/Configure%20and%20Manage%20Encryption%20Keys%20\(SSRS%20Configuration%20Manager\).md) and [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../Topic/Initialize%20a%20Report%20Server%20\(SSRS%20Configuration%20Manager\).md).  
+ For more information about the encryption keys, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/ssrs-encryption-keys-manage-encryption-keys.md) and [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ## See Also  
- [Scale-out Deployment  - Reporting Services Native mode &#40;Configuration Manager&#41;](../Topic/Scale-out%20Deployment%20%20-%20Reporting%20Services%20Native%20mode%20\(Configuration%20Manager\).md)   
+ [Scale-out Deployment  - Reporting Services Native mode &#40;Configuration Manager&#41;](../../a9retired/scale-out-deployment-reporting-services-native-mode-configuration-manager.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Report Server Command Prompt Utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../Topic/Configure%20and%20Manage%20Encryption%20Keys%20\(SSRS%20Configuration%20Manager\).md)  
+ [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

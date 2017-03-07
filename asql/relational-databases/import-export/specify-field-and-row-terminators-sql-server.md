@@ -24,7 +24,7 @@ manager: "jhubbard"
   For character data fields, optional terminating characters allow you to mark the end of each field in a data file with a *field terminator* and the end of each row with a *row terminator*. Terminating characters are one way to indicate to programs that read the data file where one field or row ends and another field or row begins.  
   
 > [!IMPORTANT]  
->  When you use native or Unicode native format, use length prefixes rather than field terminators. Native format data can conflict with terminators because a native-format data file is stored in the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] internal binary data format.  
+>  When you use native or Unicode native format, use length prefixes rather than field terminators. Native format data can conflict with terminators because a native-format data file is stored in the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] internal binary data format.  
   
 ## Characters Supported As Terminators  
  The **bcp** command, BULK INSERT statement, and the OPENROWSET bulk rowset provider support a variety of characters as field or row terminators and always look for the first instance of each terminator. The following table lists the supported characters for terminators.  
@@ -99,11 +99,11 @@ manager: "jhubbard"
 |**-c**|Specifies that the data fields be loaded as character data.|  
 |**-t** `,`|Specifies a comma (,) as the field terminator.|  
 |**-r** \n|Specifies the row terminator as a newline character. This is the default row terminator, so specifying it is optional.|  
-|**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you need to specify **-U** and **-P** to successfully log in.|  
+|**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you need to specify **-U** and **-P** to successfully log in.|  
   
  For more information, see [bcp Utility](../../tools/bcp-utility.md).  
   
- At the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows command prompt enter:  
+ At the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows command prompt enter:  
   
 ```  
 bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, -r \n -T  
@@ -136,7 +136,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
      For more information about the OPENROWSET BULK clause, see [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
 ### Examples  
- The examples in this section bulk import character data form the `Department-c-t.txt` data file created in the preceding example into the `myDepartment` table in the [!INCLUDE[ssSampleDBUserInputNonLocal](../../integration-services/control-flow/includes/sssampledbuserinputnonlocal-md.md)] sample database. Before you can run the examples, you must create this table. To create this table under the **dbo** schema, in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
+ The examples in this section bulk import character data form the `Department-c-t.txt` data file created in the preceding example into the `myDepartment` table in the [!INCLUDE[ssSampleDBUserInputNonLocal](../../a9retired/includes/sssampledbuserinputnonlocal-md.md)] sample database. Before you can run the examples, you must create this table. To create this table under the **dbo** schema, in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
   
 ```tsql  
 USE AdventureWorks;  
@@ -169,7 +169,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 |FIELDTERMINATOR **='**`,`**'**|Specifies a comma (`,`) as the field terminator.|  
 |ROWTERMINATOR **='**`\n`**'**|Specifies the row terminator as a newline character.|  
   
- In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
+ In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
   
 ```tsql  
 USE AdventureWorks;  

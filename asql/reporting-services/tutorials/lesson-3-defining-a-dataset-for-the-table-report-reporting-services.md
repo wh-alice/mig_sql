@@ -17,7 +17,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Lesson 3: Defining a Dataset for the Table Report (Reporting Services)
-After you define the data source, you need to define a dataset. In [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], data that you use in reports is contained in a *dataset*. A dataset includes a pointer to a data source and a query to be used by the report, as well as calculated fields and variables.  
+After you define the data source, you need to define a dataset. In [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)], data that you use in reports is contained in a *dataset*. A dataset includes a pointer to a data source and a query to be used by the report, as well as calculated fields and variables.  
   
 Use the query designer in Report Designer to design the dataset. For this tutorial, you will create a query that retrieves sales order information from the [!INCLUDE [ssSampleDBAdventureworks2014_md](../../reporting-services/tutorials/includes/sssampledbadventureworks2014-md.md)] database.  
   

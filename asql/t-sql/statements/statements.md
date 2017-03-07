@@ -17,9 +17,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Statements
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  Data Definition Language (DDL) is a vocabulary used to define data structures in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. Use these statements to create, alter, or drop data structures in an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Data Definition Language (DDL) is a vocabulary used to define data structures in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. Use these statements to create, alter, or drop data structures in an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## In This Section  
  [ALTER Statements &#40;Transact-SQL&#41;](../../t-sql/statements/alter-statements-transact-sql.md)  

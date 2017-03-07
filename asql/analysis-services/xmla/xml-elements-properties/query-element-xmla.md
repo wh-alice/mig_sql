@@ -58,9 +58,9 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- The **DesignAggregations** command supports usage-based optimization by including one or more **Query** elements in the **Queries** collection of the command. Each **Query** element represents a goal query that the design process uses to define aggregations that target the most frequently used queries. You can either specify your own goal queries, or you can use the information stored by an instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] in the query log to retrieve information about the most frequently used queries.  
+ The **DesignAggregations** command supports usage-based optimization by including one or more **Query** elements in the **Queries** collection of the command. Each **Query** element represents a goal query that the design process uses to define aggregations that target the most frequently used queries. You can either specify your own goal queries, or you can use the information stored by an instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] in the query log to retrieve information about the most frequently used queries.  
   
- If you are iteratively designing aggregations, you only have to pass goal queries in the first **DesignAggregations** command because the [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance stores these goal queries and uses these queries during subsequent **DesignAggregations** commands. After you pass goal queries in the first **DesignAggregations** command of an iterative process, any subsequent **DesignAggregations** command that contains goal queries in the **Queries** property generates an error.  
+ If you are iteratively designing aggregations, you only have to pass goal queries in the first **DesignAggregations** command because the [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance stores these goal queries and uses these queries during subsequent **DesignAggregations** commands. After you pass goal queries in the first **DesignAggregations** command of an iterative process, any subsequent **DesignAggregations** command that contains goal queries in the **Queries** property generates an error.  
   
  The **Query** element contains a comma-delimited value that contains the following arguments:  
   
@@ -81,6 +81,6 @@ manager: "erikre"
   
 ## See Also  
  [Designing Aggregations &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)   
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

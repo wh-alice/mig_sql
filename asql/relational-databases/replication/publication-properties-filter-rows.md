@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 -   Avoid or reduce conflicts if Subscribers are updating data, because different data partitions can be sent to different Subscribers (no two Subscribers will be updating the same data values).  
   
--   Avoid transmitting sensitive data. Row filters and column filters can be used to restrict a Subscriber's access to data. For merge replication, there are security considerations if you use a parameterized filter that includes HOST_NAME(). For more information, see the section "Filtering with HOST_NAME()" in [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md).  
+-   Avoid transmitting sensitive data. Row filters and column filters can be used to restrict a Subscriber's access to data. For merge replication, there are security considerations if you use a parameterized filter that includes HOST_NAME(). For more information, see the section "Filtering with HOST_NAME()" in [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 ## Options  
  **Filtered Tables**  
@@ -75,7 +75,7 @@ manager: "jhubbard"
  Select a shortcut node in the pane and click **Find Table** The pane is expanded and the table is highlighted. If you click **Find Table** without a shortcut node selected, a **Find Table** dialog box is launched.  
   
  **Filter**  
- Contains the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] definition for the filter selected in the filter pane.  
+ Contains the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] definition for the filter selected in the filter pane.  
   
 ## See Also  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
@@ -84,7 +84,7 @@ manager: "jhubbard"
  [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filter Published Data](../../relational-databases/replication/publish/filter-published-data.md)   
  [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
- [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md)   
+ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

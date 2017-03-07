@@ -21,7 +21,7 @@ manager: "jhubbard"
   This topic compares a single-level FOR XML query to a nested FOR XML query. One of the benefits of using nested FOR XML queries is that you can specify a combination of attribute-centric and element-centric XML for query results. The example demonstrates this.  
   
 ## Example  
- The following `SELECT` query retrieves product category and subcategory information in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database. There is no nested FOR XML in the query.  
+ The following `SELECT` query retrieves product category and subcategory information in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database. There is no nested FOR XML in the query.  
   
 ```  
 USE AdventureWorks2012;  
@@ -133,7 +133,7 @@ FOR XML AUTO, TYPE
 </ProductCategory>  
 ```  
   
- The following query is just an extension of the previous query. It shows the full product hierarchy in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database. This includes the following:  
+ The following query is just an extension of the previous query. It shows the full product hierarchy in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database. This includes the following:  
   
 -   Product categories  
   
@@ -143,7 +143,7 @@ FOR XML AUTO, TYPE
   
 -   Products in each model  
   
- You might find the following query useful in understanding the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database:  
+ You might find the following query useful in understanding the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database:  
   
 ```  
 SELECT ProductCategoryID, Name as CategoryName,  

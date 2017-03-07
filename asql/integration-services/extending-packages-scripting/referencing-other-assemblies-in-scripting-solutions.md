@@ -31,24 +31,24 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Referencing Other Assemblies in Scripting Solutions
-  The [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] class library provides the script developer with a powerful set of tools for implementing custom functionality in [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] packages. The Script task and the Script component can also use custom managed assemblies.  
+  The [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] class library provides the script developer with a powerful set of tools for implementing custom functionality in [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] packages. The Script task and the Script component can also use custom managed assemblies.  
   
 > [!NOTE]  
->  To enable your packages to use the objects and methods from a Web service, use the **Add Web Reference** command available in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] Tools for Applications (VSTA). In earlier versions of [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)], you had to generate a proxy class to use a Web service.  
+>  To enable your packages to use the objects and methods from a Web service, use the **Add Web Reference** command available in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] Tools for Applications (VSTA). In earlier versions of [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)], you had to generate a proxy class to use a Web service.  
   
 ## Using a Managed Assembly  
- For [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] to find a managed assembly at design time, you must do the following steps:  
+ For [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] to find a managed assembly at design time, you must do the following steps:  
   
 1.  Store the managed assembly in any folder on your computer.  
   
     > [!NOTE]  
-    >  In earlier versions of [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)], you could only add a reference to a managed assembly that was stored in the %windir%\Microsoft.NET\Framework\vx.x.xxxxx folder or the %ProgramFiles%\Microsoft SQL Server\100\SDK\Assemblies folder.  
+    >  In earlier versions of [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)], you could only add a reference to a managed assembly that was stored in the %windir%\Microsoft.NET\Framework\vx.x.xxxxx folder or the %ProgramFiles%\Microsoft SQL Server\100\SDK\Assemblies folder.  
   
 2.  Add a reference to the managed assembly.  
   
      To add the reference, in VSTA, in the **Add Reference** dialog box, on the **Browse** tab, locate and add the managed assembly.  
   
- For [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] to find the managed assembly at run time, you must do the following steps:  
+ For [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] to find the managed assembly at run time, you must do the following steps:  
   
 1.  Sign the managed assembly with a strong name.  
   
@@ -57,9 +57,9 @@ manager: "jhubbard"
      For more information, see [Building, Deploying, and Debugging Custom Objects](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).  
   
 ## Using the Microsoft .NET Framework Class Library  
- The Script task and the Script component can take advantage of all the other objects and functionality exposed by the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] class library. For example, by using the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)], you can retrieve information about your environment and interact with the computer that is running the package.  
+ The Script task and the Script component can take advantage of all the other objects and functionality exposed by the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] class library. For example, by using the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)], you can retrieve information about your environment and interact with the computer that is running the package.  
   
- This list describes several of the more frequently used [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] classes:  
+ This list describes several of the more frequently used [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] classes:  
   
 -   **System.Data** Contains the ADO.NET architecture.  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
   
 -   **System.Threading** Enables multithreaded programming.  
   
- For more information about the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)], see the MSDN Library.  
+ For more information about the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)], see the MSDN Library.  
   
 ## See Also  
  [Extending Packages with Scripting](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  

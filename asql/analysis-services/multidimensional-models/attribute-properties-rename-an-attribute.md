@@ -22,9 +22,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Attribute Properties - Rename an Attribute
-  The name of an attribute in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] is defined by its **Name** property. To rename an attribute, right-click the attribute in the **Attributes** pane of the **Dimension Structure** tab of Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], and then click **Rename**. If the **Attributes** pane is in grid view, click the attribute's name and edit it directly in the grid. You can also select an attribute and set its **Name** property in the **Properties** window.  
+  The name of an attribute in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] is defined by its **Name** property. To rename an attribute, right-click the attribute in the **Attributes** pane of the **Dimension Structure** tab of Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], and then click **Rename**. If the **Attributes** pane is in grid view, click the attribute's name and edit it directly in the grid. You can also select an attribute and set its **Name** property in the **Properties** window.  
   
- For more information about how to rename an attribute, see [Bind an attribute to a Key column](../Topic/Bind%20an%20attribute%20to%20a%20Key%20column.md).  
+ For more information about how to rename an attribute, see [Bind an attribute to a Key column](../../analysis-services/multidimensional-models/attribute-properties-bind-an-attribute-to-a-key-column.md).  
   
 ## See Also  
  [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  

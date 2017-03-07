@@ -27,6 +27,6 @@ manager: "jhubbard"
 |[Modify the Controller and Client Services Accounts](../../tools/distributed-replay/modify-the-controller-and-client-services-accounts.md)|Procedural topic for how to start and stop the Distributed Replay controller and client services, and modify the service accounts.|  
   
 ## See Also  
- [Install SQL Server 2016](../Topic/Install%20SQL%20Server%202016.md)  
+ [Install SQL Server 2016](../../database-engine/install/windows/install-sql-server.md)  
   
   

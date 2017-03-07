@@ -26,7 +26,7 @@ manager: "erikre"
 # Monitor Analysis Services with SQL Server Extended Events
   Extended Events (*xEvents*) is a light-weight tracing and performance monitoring system that uses very few system resources, making it an ideal tool for diagnosing problems on both production and test servers. It's also highly scalable, configurable, and in SQL Server 2016 ,  easier to use through new built-in tool support. In SQL Server Management Studio, on connections to Analysis Services instances, you can configure, run, and monitor a live trace, similar to using SQL Server Profiler. The addition of better tooling should make xEvents a more reasonable replacement for SQL Server Profiler and creates more symmetry in how you diagnose issues in your database engine and Analysis Services workloads.  
   
- Besides [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], you can also configure  [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Extended Event sessions the old way,  through XMLA scripting, as was supported in previous releases.  
+ Besides [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], you can also configure  [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Extended Event sessions the old way,  through XMLA scripting, as was supported in previous releases.  
   
  All Analysis Services events can be captured and targeted to specific consumers, as defined in [Extended Events](../../relational-databases/extended-events/extended-events.md).  
   
@@ -40,7 +40,7 @@ manager: "erikre"
 -   [XMLA Script to Start Extended Events in Analysis Services](#bkmk_script_start)  
   
 ##  <a name="bkmk_ssas_extended_events_ssms"></a> Use Management Studio to Configure Analysis Services  
- For both tabular and multidimensional instances, Management Studio provides a new Management folder that contains user-initiated xEvent sessions. You can run multiple sessions at once. However, in the current implementation, the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Extended Events user interface does not support updating or replaying an existing session.  
+ For both tabular and multidimensional instances, Management Studio provides a new Management folder that contains user-initiated xEvent sessions. You can run multiple sessions at once. However, in the current implementation, the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Extended Events user interface does not support updating or replaying an existing session.  
   
  ![ssas_extended_events_ssms_start](../../analysis-services/instances/media/ssas-extended-events-ssms-start.png "ssas_extended_events_ssms_start")  
   
@@ -76,7 +76,7 @@ manager: "erikre"
   
  In configuration, on the Event Fields tab, select **TextData** so that this field appears adjacent to the event, showing return values, including queries that are executing on the server.  
   
- After you configure a session for the desired events and data storage, you can click the script button to send your configuration to one of supported destinations including a file, a new query in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], and the clipboard.  
+ After you configure a session for the desired events and data storage, you can click the script button to send your configuration to one of supported destinations including a file, a new query in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], and the clipboard.  
   
  **Refresh Sessions**  
   
@@ -134,7 +134,7 @@ manager: "erikre"
   
 ||  
 |-|  
-|![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In this topic](#bkmk_top)|  
+|![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In this topic](#bkmk_top)|  
   
 ##  <a name="bkmk_script_stop"></a> XMLA Script to Stop Extended Events in Analysis Services  
  To stop the Extended Events tracing object you need to delete that object using a similar XMLA delete object script command as shown below:  
@@ -162,7 +162,7 @@ manager: "erikre"
   
 ||  
 |-|  
-|![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In this topic](#bkmk_top)|  
+|![Arrow icon used with Back to Top link](../../a9retired/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In this topic](#bkmk_top)|  
   
 ## See Also  
  [Extended Events](../../relational-databases/extended-events/extended-events.md)  

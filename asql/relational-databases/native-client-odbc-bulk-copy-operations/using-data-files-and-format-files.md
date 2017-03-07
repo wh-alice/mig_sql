@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using Data Files and Format Files
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   The simplest bulk copy program does the following:  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
  The data file is created in native mode; therefore, data from all columns in the table or view are stored in the data file in the same format as in the database. The file can then be bulk copied into a server by using these same steps and setting DB_IN instead of DB_OUT. This works only if both the source and target tables have exactly the same structure. The resulting data file can also be input to the **bcp** utility by using the **/n** (native mode) switch.  
   
- To bulk copy out the result set of a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement instead of directly from a table or view:  
+ To bulk copy out the result set of a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement instead of directly from a table or view:  
   
 1.  Call **bcp_init** to specify bulk copying out, but specify NULL for the table name.  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 3.  Call **bcp_exec** to execute the bulk copy operation.  
   
- The [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement can be any statement that generates a result set. The data file is created containing the first result set of the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement. Bulk copy ignores any result set after the first if the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement generates multiple result sets.  
+ The [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement can be any statement that generates a result set. The data file is created containing the first result set of the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement. Bulk copy ignores any result set after the first if the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement generates multiple result sets.  
   
  To create a data file in which column data is stored in a different format than in the table, call [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) to specify how many columns will be changed, then call [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) for each column whose format you want to change. This is done after calling **bcp_init** but before calling **bcp_exec**. **bcp_colfmt** specifies the format in which the column's data is stored in the data file. It can be used when bulk copying in or out. You can also use **bcp_colfmt** to set the row and column terminators. For example, if your data contains no tab characters, you can create a tab-delimited file by using **bcp_colfmt** to set the tab character as the terminator for each column.  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
  When bulk copying in from a data file described by a format file, read the format file by calling [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) after **bcp_init** but before **bcp_exec**.  
   
- The **bcp_control** function controls several options when bulk copying into [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from a data file. **bcp_control** sets options, such as the maximum number of errors before termination, the row in the file on which to start the bulk copy, the row to stop on, and the batch size.  
+ The **bcp_control** function controls several options when bulk copying into [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] from a data file. **bcp_control** sets options, such as the maximum number of errors before termination, the row in the file on which to start the bulk copy, the row to stop on, and the batch size.  
   
 ## See Also  
  [Performing Bulk Copy Operations &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  

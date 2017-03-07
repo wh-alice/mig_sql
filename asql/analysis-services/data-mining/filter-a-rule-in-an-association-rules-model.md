@@ -22,14 +22,14 @@ manager: "jhubbard"
 # Filter a Rule in an Association Rules Model
   You can use filtering with association models to restrict the results to just the associations that interest you. For example, you might filter the rules to show only those that include a specific product.  
   
- In Data Mining Designer, you use the controls on the **Rules** tab of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Association Rules Viewer to filter the rules that are displayed.  You can also create a query on the model to see only itemset that contains a particular value.  
+ In Data Mining Designer, you use the controls on the **Rules** tab of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Association Rules Viewer to filter the rules that are displayed.  You can also create a query on the model to see only itemset that contains a particular value.  
   
 > [!NOTE]  
 >  This option is available only for mining models that have been created by using the Microsoft Association Algorithm.  
   
 ### Filter a rule in an association model  
   
-1.  Open the mining model by using the **Association Rules Viewer**. To do this in SQL Server Management Studio, right click the model name and select **Browse**. To do this in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], double-click the mining structure that contains the model, and then click the **Mining Model Viewer** tab of **Data Mining Designer**.  
+1.  Open the mining model by using the **Association Rules Viewer**. To do this in SQL Server Management Studio, right click the model name and select **Browse**. To do this in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], double-click the mining structure that contains the model, and then click the **Mining Model Viewer** tab of **Data Mining Designer**.  
   
 2.  Click the **Rules** tab of the **Association Rules Viewer**.  
   
@@ -59,6 +59,6 @@ manager: "jhubbard"
 ## See Also  
  [Mining Model Viewer Tasks and How-tos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Browse a Model Using the Microsoft Association Rules Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Lesson 3: Building a Market Basket Scenario &#40;Intermediate Data Mining Tutorial&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md)  
+ [Lesson 3: Building a Market Basket Scenario &#40;Intermediate Data Mining Tutorial&#41;](../../a9notintoc/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

@@ -29,15 +29,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # GET CONVERSATION GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the conversation group identifier for the next message to be received, and locks the conversation group for the conversation that contains the message. The conversation group identifier can be used to retrieve conversation state information before retrieving the message itself.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -80,9 +80,9 @@ manager: "jhubbard"
 ## Remarks  
   
 > [!IMPORTANT]  
->  If the GET CONVERSATION GROUP statement is not the first statement in a batch or stored procedure, the preceding statement must be terminated with a semicolon (**;**), the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement terminator.  
+>  If the GET CONVERSATION GROUP statement is not the first statement in a batch or stored procedure, the preceding statement must be terminated with a semicolon (**;**), the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement terminator.  
   
- If the queue specified in the GET CONVERSATION GROUP statement is unavailable, the statement fails with a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] error.  
+ If the queue specified in the GET CONVERSATION GROUP statement is unavailable, the statement fails with a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] error.  
   
  This statement returns the next conversation group where all of the following is true:  
   

@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # XML Format Files (SQL Server)
-  [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] provides an XML schema that defines syntax for writing *XML format files* to use for bulk importing data into a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table. XML format files must adhere to this schema, which is defined in the XML Schema Definition Language (XSDL). XML format files are only supported when [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] tools are installed together with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client.  
+  [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] provides an XML schema that defines syntax for writing *XML format files* to use for bulk importing data into a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] table. XML format files must adhere to this schema, which is defined in the XML Schema Definition Language (XSDL). XML format files are only supported when [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] tools are installed together with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client.  
   
  You can use an XML format file with a **bcp** command, BULK INSERT statement, or INSERT ... SELECT \* FROM OPENROWSET(BULK...) statement. The **bcp** command allows you to automatically generate an XML format file for a table; for more information, see [bcp Utility](../../tools/bcp-utility.md).  
   
@@ -80,7 +80,7 @@ manager: "jhubbard"
   
      A field in a data file can be either of fixed/variable length or character terminated. A *field value* can be represented as: a character (using single-byte representation), a wide character (using Unicode two-byte representation), native database format, or a file name. If a field value is represented as a file name, the file name points to the file that contains the value of a BLOB column in the target table.  
   
--   \<ROW> describes how to construct data rows from a data file when the data from the file is imported into a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table.  
+-   \<ROW> describes how to construct data rows from a data file when the data from the file is imported into a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] table.  
   
      A \<ROW> element contains a set of \<COLUMN> elements. These elements correspond to table columns. The basic syntax is as follows:  
   
@@ -220,7 +220,7 @@ manager: "jhubbard"
 |**CharTerm**|**TERMINATOR**|MAX_LENGTH, COLLATION|  
 |**NCharTerm**|**TERMINATOR**|MAX_LENGTH, COLLATION|  
   
- For more information about [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
+ For more information about [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
 ####  <a name="AttrOfColumnElement"></a> Attributes of the \<COLUMN> Element  
  This section describes the attributes of the \<COLUMN> element, which are summarized in the following schema syntax:  
@@ -274,7 +274,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  To bulk export or import SQLXML data, use one of the following data types in your format file: SQLCHAR or SQLVARYCHAR (the data is sent in the client code page or in the code page implied by the collation), SQLNCHAR or SQLNVARCHAR (the data is sent as Unicode), or SQLBINARY or SQLVARYBIN (the data is sent without any conversion).  
   
- For more information about [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
+ For more information about [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
 ###  <a name="HowUsesROW"></a> How Bulk Import Uses the \<ROW> Element  
  The \<ROW> element is ignored in some contexts. Whether the \<ROW> element affects a bulk-import operation depends on how the operation is performed:  
@@ -283,9 +283,9 @@ manager: "jhubbard"
   
      When data is loaded into a target table, **bcp** ignores the \<ROW> component. Instead, **bcp** loads the data based on the column types of the target table.  
   
--   [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements (BULK INSERT and OPENROWSET's Bulk rowset provider)  
+-   [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements (BULK INSERT and OPENROWSET's Bulk rowset provider)  
   
-     When bulk importing data into a table, [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements use the \<ROW> component to generate the input rowset. Also, [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements perform appropriate type conversions based on the column types specified under \<ROW> and the corresponding column in the target table. If a mismatch exists between column types as specified in the format file and in the target table, an extra type conversion occurs. This extra type conversion may lead to some discrepancy (that is, a loss of precision) in behavior in BULK INSERT or OPENROWSET's Bulk rowset provider as compared to **bcp**.  
+     When bulk importing data into a table, [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements use the \<ROW> component to generate the input rowset. Also, [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements perform appropriate type conversions based on the column types specified under \<ROW> and the corresponding column in the target table. If a mismatch exists between column types as specified in the format file and in the target table, an extra type conversion occurs. This extra type conversion may lead to some discrepancy (that is, a loss of precision) in behavior in BULK INSERT or OPENROWSET's Bulk rowset provider as compared to **bcp**.  
   
      The information in the \<ROW> element allows a row to be constructed without requiring any additional information. For this reason, you can generate a rowset using a SELECT statement (SELECT \* FROM OPENROWSET(BULK *datafile* FORMATFILE=*xmlformatfile*).  
   
@@ -318,7 +318,7 @@ for(int i=0;i<ColumnList.Count;i++)
 ```  
   
 ##  <a name="SampleXmlFFs"></a> Sample XML Format Files  
- This section contains information on using XML format files in a variety of cases, including an [!INCLUDE[ssSampleDBCoShort](../../analysis-services/data-mining/includes/sssampledbcoshort-md.md)] example.  
+ This section contains information on using XML format files in a variety of cases, including an [!INCLUDE[ssSampleDBCoShort](../../a9notintoc/includes/sssampledbcoshort-md.md)] example.  
   
 > [!NOTE]  
 >  In the data files shown in the following examples, `<tab>` indicates a tab character in a data file, and `<return>` indicates a carriage return.  
@@ -378,7 +378,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
   
 > [!NOTE]  
->  For an equivalent [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] example, see [Create a Format File &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md).  
+>  For an equivalent [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] example, see [Create a Format File &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md).  
   
 ###  <a name="OrderFieldsAndColsDifferently"></a> B. Ordering data fields and table columns differently  
  The following example shows an XML format file that describes a data file containing three fields of character data. The format file maps the data file to a table that contains three columns that are ordered differently from the fields of the data file.  
@@ -413,7 +413,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
   
 > [!NOTE]  
->  For an equivalent [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] example, see [Use a Format File to Map Table Columns to Data-File Fields &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md).  
+>  For an equivalent [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] example, see [Use a Format File to Map Table Columns to Data-File Fields &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md).  
   
 ###  <a name="OmitField"></a> C. Omitting a data field  
  The following example shows an XML format file that describes a data file containing four fields of character data. The format file maps the data file to a table that contains three columns. The second data field does not correspond to any table column.  
@@ -452,7 +452,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
   
 > [!NOTE]  
->  For an equivalent [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] example, see [Use a Format File to Skip a Data Field &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md).  
+>  For an equivalent [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] example, see [Use a Format File to Skip a Data Field &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md).  
   
 ###  <a name="MapXSItype"></a> D. Mapping \<FIELD> xsi:type to \<COLUMN> xsi:type  
  The following example shows different types of fields and their mappings to columns.  

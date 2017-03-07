@@ -15,27 +15,27 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Deploy and Execute SSIS Packages using Stored Procedures
-  When you configure an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project to use the project deployment model, you can use stored procedures in the [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] catalog to deploy the project and execute the packages. For information about the project deployment model, see [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+  When you configure an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project to use the project deployment model, you can use stored procedures in the [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] catalog to deploy the project and execute the packages. For information about the project deployment model, see [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
   
- You can also use [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] to deploy the project and execute the packages. For more information, see the topics in the **See Also** section.  
+ You can also use [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] to deploy the project and execute the packages. For more information, see the topics in the **See Also** section.  
   
 > [!TIP]  
 >  You can easily generate the Transact-SQL statements for the stored procedures listed in the procedure below, with the exception of catalog.deploy_project, by doing the following:  
 >   
->  1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], expand the **Integration Services Catalogs** node in Object Explorer and navigate to the package you want to execute.  
+>  1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], expand the **Integration Services Catalogs** node in Object Explorer and navigate to the package you want to execute.  
 > 2.  Right-click the package, and then click **Execute**.  
 > 3.  As needed, set parameters values, connection manager properties, and options in the **Advanced** tab such as the logging level.  
 >   
 >      For more information about logging levels, see [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/enable-logging-for-package-execution-on-the-ssis-server.md).  
-> 4.  Before clicking **OK** to execute the package, click **Script**. The Transact-SQL appears in a Query Editor window in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+> 4.  Before clicking **OK** to execute the package, click **Script**. The Transact-SQL appears in a Query Editor window in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 ## To deploy and execute a package using stored procedures  
   
-1.  Call [catalog.deploy_project &#40;SSISDB Database&#41;](../../integration-services/system/stored-procedures/catalog.deploy-project-ssisdb-database.md) to deploy the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package to the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] server.  
+1.  Call [catalog.deploy_project &#40;SSISDB Database&#41;](../../integration-services/system/stored-procedures/catalog.deploy-project-ssisdb-database.md) to deploy the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package to the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] server.  
   
-     To retrieve the binary contents of the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project deployment file, for the *@project_stream* parameter, use a SELECT statement with the OPENROWSET function and the BULK rowset provider. The BULK rowset provider enables you to read data from a file. The SINGLE_BLOB argument for the BULK rowset provider returns the contents of the data file as a single-row, single-column rowset of type varbinary(max). For more information, see [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
+     To retrieve the binary contents of the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project deployment file, for the *@project_stream* parameter, use a SELECT statement with the OPENROWSET function and the BULK rowset provider. The BULK rowset provider enables you to read data from a file. The SINGLE_BLOB argument for the BULK rowset provider returns the contents of the data file as a single-row, single-column rowset of type varbinary(max). For more information, see [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
-     In the following example, the SSISPackages_ProjectDeployment project is deployed to the SSIS Packages folder on the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] server. The binary data is read from the project file (SSISPackage_ProjectDeployment.ispac) and is stored in the *@ProjectBinary* parameter of type varbinary(max). The *@ProjectBinary* parameter value is assigned to the *@project_stream* parameter.  
+     In the following example, the SSISPackages_ProjectDeployment project is deployed to the SSIS Packages folder on the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] server. The binary data is read from the project file (SSISPackage_ProjectDeployment.ispac) and is stored in the *@ProjectBinary* parameter of type varbinary(max). The *@ProjectBinary* parameter value is assigned to the *@project_stream* parameter.  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  

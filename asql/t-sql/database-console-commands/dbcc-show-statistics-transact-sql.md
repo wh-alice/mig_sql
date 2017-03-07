@@ -37,17 +37,17 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # DBCC SHOW_STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   DBCC SHOW_STATISTICS displays current query optimization statistics for a table or indexed view. The query optimizer uses statistics to estimate the cardinality or number of rows in the query result, which enables the query optimizer to create a high quality query plan. For example, the query optimizer could use cardinality estimates to choose the index seek operator instead of the index scan operator in the query plan, improving query performance by avoiding a resource-intensive index scan.  
   
- The query optimizer stores statistics for a table or indexed view in a statistics object. For a table, the statistics object is created on either an index or a list of table columns. The statistics object includes a header with metadata about the statistics, a histogram with the distribution of values in the first key column of the statistics object, and a density vector to measure cross-column correlation. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] can compute cardinality estimates with any of the data in the statistics object.  
+ The query optimizer stores statistics for a table or indexed view in a statistics object. For a table, the statistics object is created on either an index or a list of table columns. The statistics object includes a header with metadata about the statistics, a histogram with the distribution of values in the first key column of the statistics object, and a density vector to measure cross-column correlation. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] can compute cardinality estimates with any of the data in the statistics object.  
   
  DBCC SHOW_STATISTICS displays the header, histogram, and density vector based on data stored in the statistics object. The syntax lets you specify a table or indexed view along with a target index name, statistics name, or column name. This topic describes how to display the statistics and how to understand the displayed results.  
   
  For more information, see [Statistics](../../relational-databases/statistics/statistics.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -78,7 +78,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  *target*  
  Name of the index, statistics, or column for which to display statistics information. *target* is enclosed in brackets, single quotes, double quotes, or no quotes. If *target* is a name of an existing index or statistics on a table or indexed view, the statistics information about this target is returned. If *target* is the name of an existing column, and an automatically created statistics on this column exists, information about that auto-created statistic is returned. If an automatically created statistic does not exist for a column target, error message 2767 is returned.  
   
- In [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)], *target* cannot be a column name.  
+ In [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)], *target* cannot be a column name.  
   
  NO_INFOMSGS  
  Suppresses all informational messages that have severity levels from 0 through 10.  
@@ -98,7 +98,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |Rows|Total number of rows in the table or indexed view when the statistics were last updated. If the statistics are filtered or correspond to a filtered index, the number of rows might be less than the number of rows in the table. For more information, see[Statistics](../../relational-databases/statistics/statistics.md).|  
 |Rows Sampled|Total number of rows sampled for statistics calculations. If Rows Sampled < Rows, the displayed histogram and density results are estimates based on the sampled rows.|  
 |Steps|Number of steps in the histogram. Each step spans a range of column values followed by an upper bound column value. The histogram steps are defined on the first key column in the statistics. The maximum number of steps is 200.|  
-|Density|Calculated as 1 / *distinct values* for all values in the first key column of the statistics object, excluding the histogram boundary values. This Density value is not used by the query optimizer and is displayed for backward compatibility with versions before [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)].|  
+|Density|Calculated as 1 / *distinct values* for all values in the first key column of the statistics object, excluding the histogram boundary values. This Density value is not used by the query optimizer and is displayed for backward compatibility with versions before [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)].|  
 |Average Key Length|Average number of bytes per value for all of the key columns in the statistics object.|  
 |String Index|Yes indicates the statistics object contains string summary statistics to improve the cardinality estimates for query predicates that use the LIKE operator; for example, `WHERE ProductName LIKE '%Bike'`. String summary statistics are stored separately from the histogram and are created on the first key column of the statistics object when it is of type **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**, or **ntext.**.|  
 |Filter Expression|Predicate for the subset of table rows included in the statistics object. NULL = non-filtered statistics. For more information about filtered predicates, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md). For more information about filtered statistics, see [Statistics](../../relational-databases/statistics/statistics.md).|  
@@ -131,7 +131,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
  The following diagram shows a histogram with six steps. The area to the left of the first upper boundary value is the first step.  
   
- ![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")  
+ ![](../../a9retired/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")  
   
  For each histogram step:  
   
@@ -155,7 +155,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## Restrictions  
  DBCC SHOW_STATISTICS does not provide statistics for spatial or xVelocity memory optimized columnstore indexes.  
   
-## Permissions for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)]  
+## Permissions for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)]  
  In order to view the statistics object, the user must own the table or the user must be a member of the `sysadmin` fixed server role, the `db_owner` fixed database role, or the `db_ddladmin` fixed database role.  
   
  SQL Server 2012 SP1 modifies the permission restrictions and allows users with SELECT permission to use this command. Note that the following requirements exist for SELECT permissions to be sufficient to run the command:  
@@ -168,7 +168,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
  To disable this behavior, use traceflag 9485.  
   
-## Permissions for [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Permissions for [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
  DBCC SHOW_STATISTICS requires SELECT permission on the table or membership in one of the following:  
   
 -   sysadmin fixed server role  
@@ -177,15 +177,15 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 -   db_ddladmin fixed database role  
   
-## Limitations and Restrictions for [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
- DBCC SHOW_STATISTICS shows statistics stored in the Shell database at the Control node level. It does not show statistics that are auto-created by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] on the Compute nodes.  
+## Limitations and Restrictions for [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
+ DBCC SHOW_STATISTICS shows statistics stored in the Shell database at the Control node level. It does not show statistics that are auto-created by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] on the Compute nodes.  
   
  DBCC SHOW_STATISTICS is not supported on external tables.  
   
-## Examples: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)]  
+## Examples: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)]  
   
 ### A. Returning all statistics information  
- The following example displays all statistics information for the `AK_Address_rowguid` index of the `Person.Address` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example displays all statistics information for the `AK_Address_rowguid` index of the `Person.Address` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid);  
@@ -200,7 +200,7 @@ DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid) WITH HISTOGRAM;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### C. Display the contents of one statistics object  
  The following example displays the contents of the Customer_LastName statistics on the DimCustomer table.  
@@ -218,7 +218,7 @@ GO
   
  The results show the header, the density vector, and part of the histogram.  
   
- ![DBCC SHOW_STATISTICS results](../../t-sql/database-console-commands/media/aps-sql-dbccshow-statistics.JPG "DBCC SHOW_STATISTICS results")  
+ ![DBCC SHOW_STATISTICS results](../../a9retired/media/aps-sql-dbccshow-statistics.JPG "DBCC SHOW_STATISTICS results")  
   
 ### D. Specifying the HISTOGRAM option  
  This limits the statistics information displayed for Customer_LastName to the HISTOGRAM data.  
@@ -233,8 +233,8 @@ GO
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
- [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
- [sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
+ [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-createstats-transact-sql.md)   
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
   

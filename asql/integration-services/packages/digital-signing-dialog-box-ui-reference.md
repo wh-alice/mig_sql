@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Digital Signing Dialog Box UI Reference
-  Use the **Digital Signing** dialog box to sign a package with a digital signature or to remove the signature. The **Digital Signing** dialog box is available from the **Digital Signing** option on the **SSIS** menu in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+  Use the **Digital Signing** dialog box to sign a package with a digital signature or to remove the signature. The **Digital Signing** dialog box is available from the **Digital Signing** option on the **SSIS** menu in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
  For more information, see [Identify the Source of Packages with Digital Signatures](../../integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md) and [Sign a Package by Using a Digital Certificate](../../integration-services/packages/sign-a-package-by-using-a-digital-certificate.md).  
   

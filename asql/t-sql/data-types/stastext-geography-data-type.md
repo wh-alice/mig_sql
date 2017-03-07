@@ -36,14 +36,14 @@ manager: "jhubbard"
 ```  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **nvarchar(max)**  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] return type: **nvarchar(max)**  
   
  CLR return type: **SqlChars**  
   
 ## Remarks  
  The OGC type of a **geography** instance can be determined by invoking [STGeometryType()](../../t-sql/data-types/stgeometrytype-geography-data-type.md).  
   
- In [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)], the set of possible results returned on the server has been extended to **FullGlobe** instances.  
+ In [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)], the set of possible results returned on the server has been extended to **FullGlobe** instances.  
   
 ## Examples  
  The following example uses `STAsText()` to create a `LineString``geography` instance from (-122.360, 47.656) to (-122.343, 47.656) from text. It then returns the result in text.  

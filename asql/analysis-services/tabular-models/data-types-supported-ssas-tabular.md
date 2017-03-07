@@ -79,7 +79,7 @@ manager: "erikre"
   
 -   If you add values in two columns, and one value happens to be represented as text ("12") and the other as a number (12), DAX implicitly converts the string to a number and then does the addition for a numeric result. The following expression returns 44: = "22" + 22  
   
--   If you attempt to concatenate two numbers, the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] add-in will present them as strings and then concatenate. The following expression returns "1234": = 12 & 34  
+-   If you attempt to concatenate two numbers, the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] add-in will present them as strings and then concatenate. The following expression returns "1234": = 12 & 34  
   
  The following table summarizes the implicit data type conversions that are performed in formulas. In general, semantic model designer behaves like Microsoft Excel, and performs implicit conversions whenever possible when required by the specified operation.  
   
@@ -167,6 +167,6 @@ Only a limited set of mixed data-type combinations for comparison operations is 
   
 ## See Also  
  [Data Sources &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Import Data &#40;SSAS Tabular&#41;](../Topic/Import%20Data%20\(SSAS%20Tabular\).md)  
+ [Import Data &#40;SSAS Tabular&#41;](../../a9retired/import-data-ssas-tabular.md)  
   
   

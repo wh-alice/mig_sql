@@ -16,9 +16,9 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Upgrade and Installation FAQ (SQL Server R Services)
-  This topic provides answers to common questions about installation and upgrades. It also contains questions about upgrades from  preview releases of [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)].
+  This topic provides answers to common questions about installation and upgrades. It also contains questions about upgrades from  preview releases of [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)].
   
- If you are installing [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] for the first time,  follow the procedures for setting up [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and the R components as described here: [Set up SQL Server R Services &#40;In-Database&#41;](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).  
+ If you are installing [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] for the first time,  follow the procedures for setting up [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and the R components as described here: [Set up SQL Server R Services &#40;In-Database&#41;](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).  
 
  
   This topic also contains some issues related to setup and upgrade of R Server (Standalone). For issues related to Microsoft R Server on other platforms, see [Microsoft R Server Release Notes](https://msdn.microsoft.com/microsoft-r/notes/r-server-notes) and [Run Microsoft R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows). 
@@ -27,8 +27,8 @@ manager: "jhubbard"
  If you installed any pre-release version of SQL Server 2016, or if you are using setup instructions that were published prior to the public release of SQL Server 2016, it is important to be aware that the setup process is completely different between pre-release and RTM versions. These changes include both the options available in the SQL Server setup wizard and post-installation steps. 
    
 > [!WARNING]
-> New installation of any pre-release version of [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] is no longer supported. We recommend that you upgrade as soon as possible.  
-+ If you installed [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] in CTP3, CTP3.1, CTP3.2, RC0, or RC1, you will need to re-run the post-configuration installation script to uninstall the previous versions of the R components and of R Services. 
+> New installation of any pre-release version of [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] is no longer supported. We recommend that you upgrade as soon as possible.  
++ If you installed [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] in CTP3, CTP3.1, CTP3.2, RC0, or RC1, you will need to re-run the post-configuration installation script to uninstall the previous versions of the R components and of R Services. 
 + The post-configuration installation script is provided solely to help customers uninstall pre-release versions.  Do not run the script when installing any newer version.
 
 
@@ -59,16 +59,16 @@ For more information, see this blog by the R Services Support team: [Deploying R
 
 
 ## New license agreement for R components required for unattended installs  
- If you use the command line to upgrade an instance of [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] that already has [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] installed, you must modify the command line to use the new license agreement parameter, */IACCEPTROPENLICENSEAGREEMENT*. 
+ If you use the command line to upgrade an instance of [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] that already has [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] installed, you must modify the command line to use the new license agreement parameter, */IACCEPTROPENLICENSEAGREEMENT*. 
  
- Failure to use the correct argument can cause [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup to fail.  
+ Failure to use the correct argument can cause [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] setup to fail.  
   
-## After running setup, [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] is still not enabled  
+## After running setup, [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] is still not enabled  
  The feature that supports running external scripts is disabled by default, even if installed. This is by design, for surface area reduction.  
   
- To enable R scripts, an administrator can run the following statement in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]:  
+ To enable R scripts, an administrator can run the following statement in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]:  
   
-1.  On the [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] instance where you want to use R, run this statement.  
+1.  On the [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] instance where you want to use R, run this statement.  
   
     ```  
     sp_configure 'external scripts enabled',1 
@@ -77,16 +77,16 @@ For more information, see this blog by the R Services Support team: [Deploying R
   
 2.  Restart the instance.  
   
-3.  After the instance has restarted, open **SQL Server Configuration Manager** or the **Services** panel and verify that the [!INCLUDE[rsql_launchpad](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)] service is running.  
+3.  After the instance has restarted, open **SQL Server Configuration Manager** or the **Services** panel and verify that the [!INCLUDE[rsql_launchpad](../../a9notintoc/includes/rsql-launchpad-md.md)] service is running.  
 
 > [!TIP]
 > To install an instance of R Services that is preconfigured, use the Azure Virtual machine image that includes Enterprises Edition with R Services enabled. For more information, see [Installing SQL Server R Services on an Azure Virtual Machine](../../advanced-analytics/r-services/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
  
 
-## Setup of [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] not available in a failover cluster  
- Currently, it is not possible to install [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] on a failover cluster.  
+## Setup of [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] not available in a failover cluster  
+ Currently, it is not possible to install [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] on a failover cluster.  
     
- However, you can install [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] on a standalone computer that uses Always On and is part of an availability group. For more information about using R Services in an Always On availability group, see [Always On Availability Groups: Interoperability](../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md).  
+ However, you can install [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] on a standalone computer that uses Always On and is part of an availability group. For more information about using R Services in an Always On availability group, see [Always On Availability Groups: Interoperability](../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md).  
 
 Another option is to set up a replica on a different SQL Server instance for the purpose of running R scripts. The replica could be created using either replication or log shipping.
 
@@ -95,7 +95,7 @@ Another option is to set up a replica on a different SQL Server instance for the
 There are several issues that can prevent LaunchPad from starting.
 + **8dot3 notation not enabled**.  To install R Services (In-Database), the drive where the feature is installed must support creation of short file names using the **8dot3** notation.  An 8.3 filename is also called a short filename and is used for compatibility with older versions of Microsoft Windows prior or as an alternate filename to the long filename. 
 
-  If the volume where you are installing [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] does not support the short filenames, the processes that launch R from SQL Server might not be able to locate the correct executable and the [!INCLUDE[rsql_launchpad](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)] will not start.  
+  If the volume where you are installing [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] does not support the short filenames, the processes that launch R from SQL Server might not be able to locate the correct executable and the [!INCLUDE[rsql_launchpad](../../a9notintoc/includes/rsql-launchpad-md.md)] will not start.  
   
    As a workaround, you should enable the 8dot3 notation on the volume where SQL Server is installed and R Services is installed. You must then provide the short name for the working directory in the R Services configuration file. 
 
@@ -110,7 +110,7 @@ Alternatively, you can specify a different directory for WORKING_DIRECTORY that 
    > [!NOTE]
    > This restriction will be removed in a later release. 
  
-+ **The account that runs Launchpad has been changed or necessary permissions have been removed.** By default, [!INCLUDE[rsql_launchpad_md](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)] uses the following account on startup, which is configured by [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup to have all necessary permissions:  NT Service\MSSQLLaunchpad
++ **The account that runs Launchpad has been changed or necessary permissions have been removed.** By default, [!INCLUDE[rsql_launchpad_md](../../a9notintoc/includes/rsql-launchpad-md.md)] uses the following account on startup, which is configured by [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] setup to have all necessary permissions:  NT Service\MSSQLLaunchpad
 
   Therefore, if you assign a different account to the Launchpad or the right is removed by a policy on the SQL Server machine, the account might not have necessary permissionsand you might see this error: *ERROR_LOGON_TYPE_NOT_GRANTED
 1385 (0x569) Logon failure: the user has not been granted the requested logon type at this computer.*
@@ -134,7 +134,7 @@ The language identifier used for the R components must be the same as the SQL Se
 For more information, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-r-components-without-internet-access.md). 
   
 ## Unable to launch runtime for R script
-[!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] creates a Windows users group that is used by the [!INCLUDE[rsql_launchpad](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)] to run R jobs. This user group must have the ability to log into the instance that is running R Services in order to execute R on the behalf of remote users who are using Windows integrated authentication.
+[!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] creates a Windows users group that is used by the [!INCLUDE[rsql_launchpad](../../a9notintoc/includes/rsql-launchpad-md.md)] to run R jobs. This user group must have the ability to log into the instance that is running R Services in order to execute R on the behalf of remote users who are using Windows integrated authentication.
   
  In an environment where the Windows group for R users (**SQLRUsers**) does not have this permission, you might see the following errors:  
   
@@ -144,7 +144,7 @@ For more information, see [Installing R Components without Internet Access](../.
   
      *An external script error occurred. Unable to launch the runtime.*  
   
--   Errors generated by the [!INCLUDE[rsql_launchpad](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)] service:  
+-   Errors generated by the [!INCLUDE[rsql_launchpad](../../a9notintoc/includes/rsql-launchpad-md.md)] service:  
   
      *Failed to initialize the launcher RLauncher.dll*  
   
@@ -159,7 +159,7 @@ For information about how to give this user group the necessary permissions, see
 
   
 ## Remote execution via ODBC   
- If you use a data science workstation and connect to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer to run R commands using the **RevoScaleR** functions, you might get an error when using ODBC calls that write data to the server. 
+ If you use a data science workstation and connect to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] computer to run R commands using the **RevoScaleR** functions, you might get an error when using ODBC calls that write data to the server. 
  
  The reason is the same as described in the previous section: at setup, R Services creates a group of worker accounts that are used for running R tasks. However, if these accounts cannot connect to the server, ODBC calls cannot be executed on your behalf. 
  
@@ -167,7 +167,7 @@ For information about how to give this user group the necessary permissions, see
   
 To enable implied authentication, you must give this group of worker accounts permissions as follows:  
     
-1. Open [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] as an administrator on the instance where you will run R code. 
+1. Open [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] as an administrator on the instance where you will run R code. 
 
 2. Run the following script. Be sureto edit the user group name, if you changed the default, and the computer and instance name.
     ```sql
@@ -178,15 +178,15 @@ To enable implied authentication, you must give this group of worker accounts pe
     GO  
     ```
 
-For more information and the steps for doing this using the [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] UI, see [Set up SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).
+For more information and the steps for doing this using the [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] UI, see [Set up SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).
 
 
 ## How to uninstall previous versions of R Services
 
-It is important that you uninstall previous versions of [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] and its related R components in the correct order, particularly if you installed any of the pre-reelease versions.
+It is important that you uninstall previous versions of [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] and its related R components in the correct order, particularly if you installed any of the pre-reelease versions.
 
 ### 1. Run script to deregister Windows user group and components before uninstalling previous components
-If you installed a pre-release version of [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)], you must first run run the script `RegisteREext.exe` with the `/uninstall` argument.
+If you installed a pre-release version of [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)], you must first run run the script `RegisteREext.exe` with the `/uninstall` argument.
 
 By doing so, you deregister old components and remove the Windows user group associated with Launchpad. If you do not do this, you will be unable to create the Windows user group required for any new instances that you install.
   
@@ -214,7 +214,7 @@ You might need to run the script more than once to remove all components.
 
 ### 2. Uninstall any older versions of the Revolution Enterprise tools, including components installed with CTP releases.
 
-The order of uninstallation of the R components is critical. Always uninstall [!INCLUDE[rsql_rre-noversion](../../advanced-analytics/r-services/includes/rsql-rre-noversion-md.md)] first. Then, uninstall [!INCLUDE[rsql_rro-noversion](../../advanced-analytics/r-services/includes/rsql-rro-noversion-md.md)].  
+The order of uninstallation of the R components is critical. Always uninstall [!INCLUDE[rsql_rre-noversion](../../a9notintoc/includes/rsql-rre-noversion-md.md)] first. Then, uninstall [!INCLUDE[rsql_rro-noversion](../../a9notintoc/includes/rsql-rro-noversion-md.md)].  
 
  If you mistakenly uninstall R Open first and then get an error when trying to uninstall Revolution R Enterprise, one workaround is to reinstall Revolution R Open or Microsoft R Open, and then uninstall both components in the correct order.  
 
@@ -226,9 +226,9 @@ Finally, uninstall all other versions of Microsoft R Open.
   
 After all pre-release components have been uninstalled, restart the computer. This is a requirement of SQL Server setup and you will not be able to proceed with an updated installation until a restart is completed.     
 
-After this is done, run SQL Server setup and follow these instructions to install [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)]: [Set up SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).  
+After this is done, run SQL Server setup and follow these instructions to install [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)]: [Set up SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).  
   
-No additional components are needed; the R packages and connectivity packages are installed by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup. 
+No additional components are needed; the R packages and connectivity packages are installed by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] setup. 
 
 ## Problems uninstalling older versions of R  
 In some cases, older versions of Revolution R Open or Revolution R Enterprise are not completely removed by the uninstall process.  
@@ -252,13 +252,13 @@ In some cases, older versions of Revolution R Open or Revolution R Enterprise ar
   
 ## Upgrade of R Server (Standalone) to RC3 requires uninstallation using the RC2 setup utility
 
- Microsoft R Server (Standalone) first became available in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] RC2. To upgrade to the RC3 version of Microsoft R Server, you must first uninstall using [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] RC2 setup, and then reinstall using [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] RC3 setup.  
+ Microsoft R Server (Standalone) first became available in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] RC2. To upgrade to the RC3 version of Microsoft R Server, you must first uninstall using [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] RC2 setup, and then reinstall using [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] RC3 setup.  
   
-1.  Uninstall R Server (Standalone) for [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] RC2 using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup.  
+1.  Uninstall R Server (Standalone) for [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] RC2 using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] setup.  
   
-2.  Upgrade [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] to RC3 and select the option to install R Services (In-Database). This upgrades the instance of [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] to RC3; no additional configuration is necessary.  
+2.  Upgrade [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] to RC3 and select the option to install R Services (In-Database). This upgrades the instance of [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] to RC3; no additional configuration is necessary.  
   
-3.  Run [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] setup for RC3 once more, and install Microsoft R Server (Standalone).  
+3.  Run [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] setup for RC3 once more, and install Microsoft R Server (Standalone).  
 
 > [!NOTE] 
 > This workaround is not required when upgrading to the RTM version of Microsoft R Server. 

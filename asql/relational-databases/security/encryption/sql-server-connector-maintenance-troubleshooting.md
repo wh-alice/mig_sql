@@ -17,20 +17,20 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SQL Server Connector Maintenance &amp; Troubleshooting
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Supplemental information about the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector is provided in this topic. For more information about the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] connector, see [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md),  and [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
+  Supplemental information about the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector is provided in this topic. For more information about the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] connector, see [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md),  and [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
   
   
-##  <a name="AppendixA"></a> A. Maintenance Instructions for [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector  
+##  <a name="AppendixA"></a> A. Maintenance Instructions for [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector  
   
 ### Key Rollover  
   
 > [!IMPORTANT]  
->  The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector requires the key name to only use the characters “a-z”, “A-Z”, “0-9”, and “-“, with a 26-character limit.   
-> Different key versions under the same key name in Azure Key Vault will not work with [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector. To rotate an Azure Key Vault key that’s being used by [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], a new key with a new key name must be created.  
+>  The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector requires the key name to only use the characters “a-z”, “A-Z”, “0-9”, and “-“, with a 26-character limit.   
+> Different key versions under the same key name in Azure Key Vault will not work with [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector. To rotate an Azure Key Vault key that’s being used by [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], a new key with a new key name must be created.  
   
- Typically  server asymmetric keys for [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] encryption  need to be versioned every 1-2 years. It's important to note that although the Key Vault allows keys to be versioned, customers should not use that feature to implement versioning. The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector cannot deal with changes in Key Vault key version. To implement key versioning, the customer must create a new key in the Key Vault and then re-encrypt the data encryption key in [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)].  
+ Typically  server asymmetric keys for [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] encryption  need to be versioned every 1-2 years. It's important to note that although the Key Vault allows keys to be versioned, customers should not use that feature to implement versioning. The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector cannot deal with changes in Key Vault key version. To implement key versioning, the customer must create a new key in the Key Vault and then re-encrypt the data encryption key in [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)].  
   
  For TDE, this is how this would be achieved:  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **Using [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] or sqlcmd.exe:** Use the following statements as shown in Step 3, section 3.  
+-   **Using [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)] or sqlcmd.exe:** Use the following statements as shown in Step 3, section 3.  
   
      Import the new asymmetric key.  
   
@@ -91,15 +91,15 @@ manager: "jhubbard"
     GO  
     ```  
   
-### Upgrade of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector  
+### Upgrade of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector  
 
 Versions 1.0.0.440 and older have been replaced and are no longer supported in production environments. Versions 1.0.1.0 and newer are supported in production environments. Please use the following instructions to upgrade to the latest version available on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344).
 
-If you are currently using Version 1.0.1.0 or newer, follow these steps to update to the latest version of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector. These instructions avoid the need to restart the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance.
+If you are currently using Version 1.0.1.0 or newer, follow these steps to update to the latest version of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector. These instructions avoid the need to restart the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance.
  
-1. Install the newest version of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344). In the installer wizard, save the new DLL file under a file path different from your original [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector DLL's file path. For example, the new file path could be: `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
+1. Install the newest version of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344). In the installer wizard, save the new DLL file under a file path different from your original [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector DLL's file path. For example, the new file path could be: `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
  
-2. In the instance of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], run the following Transact-SQL command to point your [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance to your new version of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector:
+2. In the instance of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], run the following Transact-SQL command to point your [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance to your new version of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector:
 
     ``` 
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
@@ -108,21 +108,21 @@ If you are currently using Version 1.0.1.0 or newer, follow these steps to updat
     GO  
     ```
 
-If you are currently using Version 1.0.0.440 or older, follow these steps to update to the latest version of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector.
+If you are currently using Version 1.0.0.440 or older, follow these steps to update to the latest version of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector.
   
-1.  Stop the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+1.  Stop the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
-2.  Stop the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector service.  
+2.  Stop the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector service.  
   
-3.  Uninstall the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector using the Windows Programs and Features feature.  
+3.  Uninstall the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector using the Windows Programs and Features feature.  
   
-     (Alternatively, you can rename the folder that the DLL file is in. The default name of the folder is  “[!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] for Microsoft Azure Key Vault”.  
+     (Alternatively, you can rename the folder that the DLL file is in. The default name of the folder is  “[!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] for Microsoft Azure Key Vault”.  
   
-4.  Install the newest version of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector from the Microsoft Download Center.  
+4.  Install the newest version of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector from the Microsoft Download Center.  
   
-5.  Restart the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+5.  Restart the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
-6.  Run the following statement to alter the EKM Provider to start using the newest version of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector. Make sure that the file path is pointing to where you downloaded the newest version. (This step can be skipped if the new version is being installed in the same location as the original version.) 
+6.  Run the following statement to alter the EKM Provider to start using the newest version of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector. Make sure that the file path is pointing to where you downloaded the newest version. (This step can be skipped if the new version is being installed in the same location as the original version.) 
   
     ```tsql  
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
@@ -133,10 +133,10 @@ If you are currently using Version 1.0.0.440 or older, follow these steps to upd
   
 7.  Check that the databases using TDE are accessible.  
   
-8.  After validating that the update works, you may delete the old [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector folder (if you chose to rename it instead of uninstalling in Step 3.)  
+8.  After validating that the update works, you may delete the old [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector folder (if you chose to rename it instead of uninstalling in Step 3.)  
   
-### Rolling the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Service Principal  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses Service Principals created in Azure Active Directory as credentials to access the Key Vault.  Service Principal has a Client ID and Authentication Key.  A [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] credential is set up with the **VaultName**, **Client ID**, and **Authentication Key**.  The **Authentication Key** is valid for a certain period of time (1 or 2 years).   Before the time period expires a new key must be generated in Azure AD for the Service Principal.  Then the credential has to be changed in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] maintains a cache for the credential in the current session, so when a credential is changed, [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] should be restarted.  
+### Rolling the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Service Principal  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] uses Service Principals created in Azure Active Directory as credentials to access the Key Vault.  Service Principal has a Client ID and Authentication Key.  A [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] credential is set up with the **VaultName**, **Client ID**, and **Authentication Key**.  The **Authentication Key** is valid for a certain period of time (1 or 2 years).   Before the time period expires a new key must be generated in Azure AD for the Service Principal.  Then the credential has to be changed in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)] maintains a cache for the credential in the current session, so when a credential is changed, [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)] should be restarted.  
   
 ### Key Backup and Recovery  
 The Key vault should be regularly backed up. If an asymmetric key in the vault is lost, it can be restored from backup. The key must be restored using the same name as before, which the Restore PowerShell command will do (see below steps).  
@@ -156,15 +156,15 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 ### On Azure Key Vault  
   
 **How do key operations work with Azure Key Vault?**  
- The asymmetric key in the key vault is used to protect [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] encryption keys. Only the public portion of the asymmetric key ever leaves the vault; the private portion is never exported by the vault. All cryptographic operations using the asymmetric key are done within the Azure Key Vault service, and are protected by the service’s security.  
+ The asymmetric key in the key vault is used to protect [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] encryption keys. Only the public portion of the asymmetric key ever leaves the vault; the private portion is never exported by the vault. All cryptographic operations using the asymmetric key are done within the Azure Key Vault service, and are protected by the service’s security.  
   
  **What is a Key URI?**  
  Every key in Azure Key Vault has a Uniform Resource Identifier (URI), which you can use to reference the key in your application. Use the format **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey** to get the current version, and use the format **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87** to get a specific version.  
   
-### On Configuring [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]  
+### On Configuring [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]  
   
-**What are the minimum permission levels required for each configuration step in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]?**  
- Though you could perform all the configuration steps as a member of the sysadmin fixed server role, [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] encourages you to minimize the permissions you use. The following list defines the minimum permission level for each action.  
+**What are the minimum permission levels required for each configuration step in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]?**  
+ Though you could perform all the configuration steps as a member of the sysadmin fixed server role, [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] encourages you to minimize the permissions you use. The following list defines the minimum permission level for each action.  
   
 -   To create a cryptographic provider, requires `CONTROL SERVER` permission or membership in the **sysadmin** fixed server role.  
   
@@ -176,7 +176,7 @@ Key backups can be restored across Azure regions, as long as they remain in the 
   
 -   To create an asymmetric key, requires `CREATE ASYMMETRIC KEY` permission.  
 
-### How do I change my default Active Directory so my key vault is created in the same subscription and Active Directory as the service principal I created for the [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector?
+### How do I change my default Active Directory so my key vault is created in the same subscription and Active Directory as the service principal I created for the [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)] Connector?
 
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
@@ -192,7 +192,7 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 
 To learn more about Active Directory, read [How Azure subscription are related to Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-how-subscriptions-associated-directory/)
   
-##  <a name="AppendixC"></a> C. Error Code Explanations for [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector  
+##  <a name="AppendixC"></a> C. Error Code Explanations for [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Connector  
  **Provider Error Codes:**  
   
 Error code  |Symbol  |Description    
@@ -239,7 +239,7 @@ If you don’t see your error code in this table, here are some other reasons th
   
 -   The Azure Key Vault service may be down. Please try again at another time.  
   
--   You may have dropped the asymmetric key from Azure Key Vault or [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Please restore the key.  
+-   You may have dropped the asymmetric key from Azure Key Vault or [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. Please restore the key.  
   
 -   If you receive a “Cannot load library” error, make sure you have the appropriate version of the Visual Studio C++ redistributable installed based on the version of SQL Server that you are running. The table below specifies which version to install from the Microsoft Download Center.   
   
@@ -262,9 +262,9 @@ SQL Server Version  |Redistributable Install Link
   
 -   [Create an Encrypted Backup](../../../relational-databases/backup-restore/create-an-encrypted-backup.md)  
   
- Related [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] Commands:  
+ Related [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] Commands:  
   
--   [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+-   [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md)  
   
 -   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-cryptographic-provider-transact-sql.md)  
   

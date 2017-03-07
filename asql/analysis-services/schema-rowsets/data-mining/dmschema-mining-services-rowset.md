@@ -31,7 +31,7 @@ manager: "erikre"
 |Column name|Type indicator|Description|  
 |-----------------|--------------------|-----------------|  
 |**SERVICE_NAME**|**DBTYPE_WSTR**|The name of the algorithm. This column is provider-specific.|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|This column contains a bitmap that describes the mining service. [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] populates this column with one of the following values:<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|This column contains a bitmap that describes the mining service. [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] populates this column with one of the following values:<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
 |**SERVICE_DISPLAY_NAME**|**DBTYPE_WSTR**|A localizable display name for the algorithm.|  
 |**SERVICE_GUID**|**DBTYPE_GUID**|The GUID for the algorithm.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**|A user-friendly description of the algorithm.|  

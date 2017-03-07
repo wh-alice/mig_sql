@@ -18,14 +18,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # clr enabled Server Configuration Option
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Use the clr enabled option to specify whether user assemblies can be run by [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The clr enabled option provides the following values: 
+  Use the clr enabled option to specify whether user assemblies can be run by [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. The clr enabled option provides the following values: 
   
 |Value|Description|  
 |-----------|-----------------|  
-|0|Assembly execution not allowed on [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].|  
-|1|Assembly execution allowed on [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].|  
+|0|Assembly execution not allowed on [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].|  
+|1|Assembly execution allowed on [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].|  
   
 WOW64 only. Restart WOW64 servers to effect the settings changes. No restart required for other server types.  
 
@@ -45,7 +45,7 @@ RECONFIGURE;
 ## See Also  
  [lightweight pooling Server Configuration Option](../../../database-engine/configure/windows/lightweight-pooling-server-configuration-option.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../../database-engine/configure/windows/server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md)   
  [lightweight pooling Server Configuration Option](../../../database-engine/configure/windows/lightweight-pooling-server-configuration-option.md)  
   
   

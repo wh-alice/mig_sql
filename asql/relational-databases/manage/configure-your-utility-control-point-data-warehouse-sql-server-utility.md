@@ -15,11 +15,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure Your Utility Control Point Data Warehouse (SQL Server Utility)
-  Data collected by managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] are stored in the utility management data warehouse (UMDW); the UMDW file name is sysutility_mdw.  
+  Data collected by managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] are stored in the utility management data warehouse (UMDW); the UMDW file name is sysutility_mdw.  
   
- You can configure the UMDW data retention period. For more information, see [Utility Administration &#40;SQL Server Utility&#41;](../Topic/Utility%20Administration%20\(SQL%20Server%20Utility\).md).  
+ You can configure the UMDW data retention period. For more information, see [Utility Administration &#40;SQL Server Utility&#41;](../../a9retired/utility-administration-sql-server-utility.md).  
   
- The following configuration settings are not configurable in this release of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]:  
+ The following configuration settings are not configurable in this release of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]:  
   
 -   UMDW name: Sysutility_mdw.  
   

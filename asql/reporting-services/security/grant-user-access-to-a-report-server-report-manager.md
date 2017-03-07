@@ -22,7 +22,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Grant User Access to a Report Server (Report Manager)
-  [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] uses role-based security to grant user access to a report server. On a new report server installation, only users who are members of the local Administrators group have permissions to report server content and operations. To make the report server available to other users, you must create role assignments that map  user or group accounts to a predefined role that specifies a collection of tasks.  
+  [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] uses role-based security to grant user access to a report server. On a new report server installation, only users who are members of the local Administrators group have permissions to report server content and operations. To make the report server available to other users, you must create role assignments that map  user or group accounts to a predefined role that specifies a collection of tasks.  
   
  **SharePoint mode report servers:** For a report server that is configured for SharePoint integrated mode, you configure access from a SharePoint site using SharePoint permissions. Permission levels on the SharePoint site determine access to report server content and operations. You must be a site administrator to grant permissions on a SharePoint site. For more information, see [Granting Permissions on Report Server Items on a SharePoint Site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
   
@@ -32,22 +32,22 @@ manager: "erikre"
   
 -   System-level roles grant access to site-wide operations that are not bound to any specific item. Examples include using Report Builder and using shared schedules.  
   
-     The two types of roles complement each other and should be used together. For this reason, adding a user to a report server is a two-part operation. If you assign a user to an item-level role, you should also assign them to a system-level role. When assigning a user to a role, you must select a role that is already defined. To create, modify, or delete roles, use [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)]. For more information, see [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Role%20\(Management%20Studio\).md).  
+     The two types of roles complement each other and should be used together. For this reason, adding a user to a report server is a two-part operation. If you assign a user to an item-level role, you should also assign them to a system-level role. When assigning a user to a role, you must select a role that is already defined. To create, modify, or delete roles, use [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)]. For more information, see [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).  
   
 ## Before you start  
  Review the following list before adding users to a native mode report server.  
   
--   You must be a member of the local Administrators group on the report server computer. If you are deploying [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] on [!INCLUDE[wiprlhlong](../../relational-databases/replication/includes/wiprlhlong-md.md)] or Windows Server 2008, additional configuration is required before you can administer a report server locally. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+-   You must be a member of the local Administrators group on the report server computer. If you are deploying [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] on [!INCLUDE[wiprlhlong](../../a9retired/includes/wiprlhlong-md.md)] or Windows Server 2008, additional configuration is required before you can administer a report server locally. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 -   To delegate this task to other users, create role assignments that map user accounts to Content Manager and System Administrator roles. Users who have Content Manager and System Administrator permissions can add users to a report server.  
   
--   In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], view the predefined roles for System Roles and User Roles so that you are familiar with the kinds of tasks in each role. Task descriptions are not visible in Report Manager, so you will want to be familiar with the roles before you begin adding users.  
+-   In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], view the predefined roles for System Roles and User Roles so that you are familiar with the kinds of tasks in each role. Task descriptions are not visible in Report Manager, so you will want to be familiar with the roles before you begin adding users.  
   
 -   Optionally, customize the roles or define additional roles to include the collection of tasks that you require. For example, if you plan to use custom security settings for individual items, you might want to create a new role definition that grants view-access to folders.  
   
 ### To add a user or group to a system role  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md).  
   
 2.  Click **Site Settings**.  
   
@@ -84,8 +84,8 @@ manager: "erikre"
   
 ## See Also  
  [Create and Manage Role Assignments](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [New Role Assignment: Edit Role Assignment Page &#40;Report Manager&#41;](../Topic/New%20Role%20Assignment:%20Edit%20Role%20Assignment%20Page%20\(Report%20Manager\).md)   
- [Security Properties Page, Items &#40;Report Manager&#41;](../Topic/Security%20Properties%20Page,%20Items%20\(Report%20Manager\).md)   
+ [New Role Assignment: Edit Role Assignment Page &#40;Report Manager&#41;](../../a9retired/new-role-assignment-edit-role-assignment-page-report-manager.md)   
+ [Security Properties Page, Items &#40;Report Manager&#41;](../../a9retired/security-properties-page-items-report-manager.md)   
  [Role Assignments](../../reporting-services/security/role-assignments.md)   
  [Role Definitions](../../reporting-services/security/role-definitions.md)  
   

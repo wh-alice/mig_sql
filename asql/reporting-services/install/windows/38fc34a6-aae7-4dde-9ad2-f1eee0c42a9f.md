@@ -15,11 +15,11 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Configure E-mail for a Reporting Services Service Application (SharePoint 2013 and SharePoint 2016)
-  [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] data alerting sends alerts in e-mail messages. To send e-mail you may need to configure your [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] service application and you may need to modify the e-mail delivery extension for the service application. The e-mail settings are also required if you plan to use the e-mail delivery extension for the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] subscription feature.  
+  [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] data alerting sends alerts in e-mail messages. To send e-mail you may need to configure your [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] service application and you may need to modify the e-mail delivery extension for the service application. The e-mail settings are also required if you plan to use the e-mail delivery extension for the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] subscription feature.  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../../analysis-services/includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] SharePoint mode &#124; SharePoint 2013 and SharePoint 2016.|  
+|[!INCLUDE[applies](../../../a9retired/includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] SharePoint mode &#124; SharePoint 2013 and SharePoint 2016.|  
   
 ### To configure e-mail for the shared service  
   
@@ -27,7 +27,7 @@ manager: "erikre"
   
 2.  In the **Service Applications** group, click **Manage service applications**.  
   
-3.  In the **Name** list, click the name of your [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] service application.  
+3.  In the **Name** list, click the name of your [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] service application.  
   
 4.  Click **E-mail Settings** on the **Manage Reporting Services Application** page.  
   
@@ -39,13 +39,13 @@ manager: "erikre"
   
      This address is the sender of all alert e-mail messages.  
   
-     The account of the user specified in **From address** must be a managed account that you specified when you configured the application pool for the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] service application. If you have permission, you can view a list of existing managed accounts on the Service Accounts page in SharePoint Central Administration.  
+     The account of the user specified in **From address** must be a managed account that you specified when you configured the application pool for the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] service application. If you have permission, you can view a list of existing managed accounts on the Service Accounts page in SharePoint Central Administration.  
   
-8.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 ### NTLM Authentication  
   
-1.  If your email environment requires NTLM authentication and does not allow anonymous access, you need to modify the e-mail delivery extension configuration for your [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] service applications. For example, if you see the following message in the for the **Last Results** on the **Manage Subscriptions** page:subscriptions.  
+1.  If your email environment requires NTLM authentication and does not allow anonymous access, you need to modify the e-mail delivery extension configuration for your [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] service applications. For example, if you see the following message in the for the **Last Results** on the **Manage Subscriptions** page:subscriptions.  
   
     -   Failure sending mail: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.1 Client was not authenticatedMail will not be resent.  
   

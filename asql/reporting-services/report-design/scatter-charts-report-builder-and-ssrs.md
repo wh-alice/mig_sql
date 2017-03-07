@@ -23,7 +23,7 @@ manager: "erikre"
  ![Scatter chart](../../reporting-services/report-design/media/rs-scatterchart.gif "Scatter chart")  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Variations  
   

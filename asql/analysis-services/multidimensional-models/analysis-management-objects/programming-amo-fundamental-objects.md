@@ -189,7 +189,7 @@ static Database ProcessDatabase(Database db, ProcessType pt)
 ```  
   
 ##  <a name="DataSource"></a> DataSource Objects  
- A <xref:Microsoft.AnalysisServices.DataSource> object is the link between [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] and the database where the data resides. The schema that represents the underlying model for [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] is defined by the <xref:Microsoft.AnalysisServices.DataSourceView> object. A <xref:Microsoft.AnalysisServices.DataSource> object can be seen as a connection string to the database where the data resides.  
+ A <xref:Microsoft.AnalysisServices.DataSource> object is the link between [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] and the database where the data resides. The schema that represents the underlying model for [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] is defined by the <xref:Microsoft.AnalysisServices.DataSourceView> object. A <xref:Microsoft.AnalysisServices.DataSource> object can be seen as a connection string to the database where the data resides.  
   
  The following sample code shows how to create a <xref:Microsoft.AnalysisServices.DataSource> object. The sample verifies that the server still exists, the <xref:Microsoft.AnalysisServices.Server> object is connected, and the database exists. If the <xref:Microsoft.AnalysisServices.DataSource> object exists, then it is dropped are re-created. The <xref:Microsoft.AnalysisServices.DataSource> object is created having the same name and internal ID. In this sample, no checking is performed on the connection string to verify it.  
   
@@ -212,7 +212,7 @@ static string CreateDataSource(Database db, string strDataSourceName, string str
 ```  
   
 ##  <a name="DSV"></a> DataSourceView Objects  
- <xref:Microsoft.AnalysisServices.DataSourceView> object is responsible for holding the schema model for [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)]. For the <xref:Microsoft.AnalysisServices.DataSourceView> object to hold the schema, the schema must first be constructed. Schemas are constructed over DataSet objects, from the System.Data namespace.  
+ <xref:Microsoft.AnalysisServices.DataSourceView> object is responsible for holding the schema model for [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)]. For the <xref:Microsoft.AnalysisServices.DataSourceView> object to hold the schema, the schema must first be constructed. Schemas are constructed over DataSet objects, from the System.Data namespace.  
   
  The following sample code will create part of the schema that is included in the Analysis Services sample project based on AdventureWorks. The sample creates schema definitions for tables, computed columns, relations, and composite relations. Schemas are persisted data sets.  
   
@@ -369,7 +369,7 @@ static string CreateDataSource(Database db, string strDataSourceName, string str
   
 ```  
   
- In the sample code, the `AddTable` and `AddComputedColumn` methods use the `FillSchema` method of the **DataAdapter** object to add a **DataTable** to a **DataSet** and to configure the schema to match that in the data source. The extended properties add required info to configure the schema for [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].  
+ In the sample code, the `AddTable` and `AddComputedColumn` methods use the `FillSchema` method of the **DataAdapter** object to add a **DataTable** to a **DataSet** and to configure the schema to match that in the data source. The extended properties add required info to configure the schema for [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].  
   
  In the sample code, the `AddRelation` and `AddCompositeRelation` methods add the relation columns, depending on the existing schema and the existing columns on the model. Columns must be part of the tables defined in the schema for these methods to work.  
   
@@ -553,9 +553,9 @@ static void AddCompositeRelation(DataSourceView dsv, String fkTableName, String 
   
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
- [Introducing AMO Classes](../Topic/Introducing%20AMO%20Classes.md)   
+ [Introducing AMO Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO Fundamental Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
- [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../Topic/Logical%20Architecture%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
+ [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

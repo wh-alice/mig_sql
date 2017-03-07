@@ -15,7 +15,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SQL Server Browser Properties (Advanced Tab)
-  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Browser program runs as a service on the server. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Browser listens for incoming requests for [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] resources and provides information about [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instances installed on the computer.  
+  The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Browser program runs as a service on the server. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Browser listens for incoming requests for [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] resources and provides information about [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instances installed on the computer.  
   
 ## Options  
  **Clustered**  
@@ -28,10 +28,10 @@ manager: "jhubbard"
  The location where memory dumps are placed in case of an error.  
   
  **Error Reporting**  
- When set to **Yes**, the Dr. Watson program forwards information to either [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] or your error server if a serious failure occurs. For more information on Error Reporting, search Books Online for the topic, "Error and Usage Report Settings."  
+ When set to **Yes**, the Dr. Watson program forwards information to either [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] or your error server if a serious failure occurs. For more information on Error Reporting, search Books Online for the topic, "Error and Usage Report Settings."  
   
  **Instance ID**  
- Indicates the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance that used this [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent instance. The default instance is **MSSQL10_50.MSSQLSERVER**.  
+ Indicates the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance that used this [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent instance. The default instance is **MSSQL10_50.MSSQLSERVER**.  
   
 ## See Also  
  [SQL Server Browser Service](../../tools/configuration-manager/sql-server-browser-service.md)  

@@ -19,7 +19,7 @@ manager: "erikre"
   The Built-in fields collection, which includes both the **Globals** and the **User** collections, represent global values provided by Reporting Services when a report is processed. The **Globals** collection provides values such as the name of the report, the time when report processing began, and current page numbers for the report header or footer. The **User** collection provides the user identifier and language settings. These values can be used in expressions to filter results in a report.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Using the Globals Collection  
  The **Globals** collection contains the global variables for the report. On the design surface, these variables appear prefixed by an & (ampersand), for example, `[&ReportName]`. The following table describes the members of the **Globals** collection.  
@@ -55,7 +55,7 @@ manager: "erikre"
   
      `=Globals.PageNumber & " of " & Globals.TotalPages`  
   
--   This expression provides the name of the report and the time it was run. The time is formatted with the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] formatting string for short date:  
+-   This expression provides the name of the report and the time it was run. The time is formatted with the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] formatting string for short date:  
   
      `=Globals.ReportName & ", dated " & Format(Globals.ExecutionTime, "d")`  
   
@@ -73,9 +73,9 @@ manager: "erikre"
 |**Member**|**Type**|**Description**|  
 |----------------|--------------|---------------------|  
 |**Language**|**String**|The language of the user running the report. For example, `en-US`.|  
-|**UserID**|**String**|The ID of the user running the report. If you are using Windows Authentication, this value is the domain account of the current user. The value is determined by the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] security extension, which can use Windows Authentication or custom authentication.|  
+|**UserID**|**String**|The ID of the user running the report. If you are using Windows Authentication, this value is the domain account of the current user. The value is determined by the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] security extension, which can use Windows Authentication or custom authentication.|  
   
- For more information about supporting multiple languages in a report, see "Solution Design Considerations for Multi-Lingual or Global Deployments" in the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] documentation in [SQL Server Books Online](http://go.microsoft.com/fwlink/?LinkId=120955).  
+ For more information about supporting multiple languages in a report, see "Solution Design Considerations for Multi-Lingual or Global Deployments" in the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] documentation in [SQL Server Books Online](http://go.microsoft.com/fwlink/?LinkId=120955).  
   
 ### Using Locale Settings  
  You can use expressions to refer to the locale settings on a client computer through the **User.Language** value to determine how a report appears to the user. For example, you can create a report that uses a different query expression based on the locale value. The query may change to retrieve localized information from a different column depending on the language returned. You can also use an expression in the language settings of the report or report items based on this variable.  
@@ -88,7 +88,7 @@ manager: "erikre"
   
 ## See Also  
  [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Expression Dialog Box &#40;Report Builder&#41;](../Topic/Expression%20Dialog%20Box%20\(Report%20Builder\).md)   
+ [Expression Dialog Box &#40;Report Builder&#41;](../../a9retired/expression-dialog-box-report-builder.md)   
  [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  

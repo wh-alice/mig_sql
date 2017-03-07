@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Switch Between Update Modes for an Updatable Transactional Subscription
-  This topic describes how to switch between update modes for an updatable transaction subscription in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]. Specify the mode for updatable subscriptions using the New Subscription Wizard. For information about setting the mode when using this wizard, see [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+  This topic describes how to switch between update modes for an updatable transaction subscription in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]. Specify the mode for updatable subscriptions using the New Subscription Wizard. For information about setting the mode when using this wizard, see [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
  **In This Topic**  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   When an updating subscription to a transactional publication supports failover from one updating mode to another, you can programmatically switch update modes to handle situations when connectivity changes for a short period of time. The update mode can be set programmatically and on demand using replication stored procedures. For more information, see [Updatable Subscriptions for Transactional Replication](../Topic/Updatable%20Subscriptions%20for%20Transactional%20Replication.md).  
+-   When an updating subscription to a transactional publication supports failover from one updating mode to another, you can programmatically switch update modes to handle situations when connectivity changes for a short period of time. The update mode can be set programmatically and on demand using replication stored procedures. For more information, see [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 #### To set the updating mode for a push subscription  
   
-1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Subscriptions** folder.  
   
@@ -60,13 +60,13 @@ manager: "jhubbard"
   
 4.  In the **Set Update Method - \<Subscriber>: \<SubscriptionDatabase>** dialog box, select **Immediate updating** or **Queued updating**.  
   
-5.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 #### To set the updating mode for a pull subscription  
   
 1.  In the **Subscription Properties - \<Publisher>: \<PublicationDatabase>** dialog box, select a value of **Immediately replicate changes** or **Queue changes** for the **Subscriber update method** option.  
   
-2.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+2.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
  For more information about accessing the **Subscription Properties - \<Publisher>: \<PublicationDatabase>** dialog box, see [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
@@ -74,15 +74,15 @@ manager: "jhubbard"
   
 #### To switch between update modes  
   
-1.  Verify that the subscription supports failover by executing [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) for a pull subscription or [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) for a push subscription. If the value of **update mode** in the result set is **3** or **4**, failover is supported.  
+1.  Verify that the subscription supports failover by executing [sp_helppullsubscription](../../../relational-databases/reference/system-stored-procedures/sp-helppullsubscription-transact-sql.md) for a pull subscription or [sp_helpsubscription](../../../relational-databases/reference/system-stored-procedures/sp-helpsubscription-transact-sql.md) for a push subscription. If the value of **update mode** in the result set is **3** or **4**, failover is supported.  
   
-2.  At the Subscriber on the subscription database, execute [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md). Specify **@publisher**, **@publisher_db**, **@publication**, and one of the following values for **@failover_mode**:  
+2.  At the Subscriber on the subscription database, execute [sp_setreplfailovermode](../../../relational-databases/reference/system-stored-procedures/sp-setreplfailovermode-transact-sql.md). Specify **@publisher**, **@publisher_db**, **@publication**, and one of the following values for **@failover_mode**:  
   
     -   **queued** - fail over to queued updating when connectivity has been temporarily lost.  
   
     -   **immediate** - fail over to immediate updating when connectivity has been restored.  
   
 ## See Also  
- [Updatable Subscriptions for Transactional Replication](../Topic/Updatable%20Subscriptions%20for%20Transactional%20Replication.md)  
+ [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

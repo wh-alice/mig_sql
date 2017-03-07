@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # Binding Element (XMLA)
-  Defines an out-of-line binding for an [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] object, such as an attribute in a dimension, for the [Bindings](../../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md) collection of a [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) or [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) command.  
+  Defines an out-of-line binding for an [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] object, such as an attribute in a dimension, for the [Bindings](../../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md) collection of a [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) or [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) command.  
   
 ## Syntax  
   
@@ -60,11 +60,11 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- **Binding** elements define out-of-line bindings, other than data sources and data source views, for [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] objects to be processed by a **Batch** or **Process** command. For more information about processing objects, see [Processing Objects &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md).  
+ **Binding** elements define out-of-line bindings, other than data sources and data source views, for [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] objects to be processed by a **Batch** or **Process** command. For more information about processing objects, see [Processing Objects &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md).  
   
  For more information about out-of-line bindings, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

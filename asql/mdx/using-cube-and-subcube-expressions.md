@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Using Cube and Subcube Expressions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   You use cube and subcube expressions in Multidimensional Expressions (MDX) statements to define, manipulate, or retrieve data from a cube or subcube.  
   
@@ -76,10 +76,10 @@ manager: "erikre"
  A subcube identifier appears as *Subcube_Name*. in BNF notation descriptions of MDX statements.  
   
 ## See Also  
- [The Basic MDX Query &#40;MDX&#41;](../Topic/The%20Basic%20MDX%20Query%20\(MDX\).md)   
+ [The Basic MDX Query &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
  [Building Subcubes in MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
- [CREATE SUBCUBE Statement &#40;MDX&#41;](../Topic/CREATE%20SUBCUBE%20Statement%20\(MDX\).md)   
+ [CREATE SUBCUBE Statement &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
  [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [SCOPE Statement &#40;MDX&#41;](../Topic/SCOPE%20Statement%20\(MDX\).md)  
+ [SCOPE Statement &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
   
   

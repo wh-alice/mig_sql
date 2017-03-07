@@ -18,10 +18,10 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Server Properties (Security Page) - Reporting Services
-  Use this [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] page in [!INCLUDE[ssManStudioFull_md](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to turn off features that can potentially compromise a report server. Turning off these features will limit some functionality, but can improve the overall security of the report server by mitigating specific threats.  
+  Use this [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] page in [!INCLUDE[ssManStudioFull_md](../../a9notintoc/includes/ssmanstudiofull-md.md)] to turn off features that can potentially compromise a report server. Turning off these features will limit some functionality, but can improve the overall security of the report server by mitigating specific threats.  
   
  To open this page:
- 1) Start [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].
+ 1) Start [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].
  2) Connect to a report server instance.
  3) Right-click the report server name, and select **Properties**. 
  4) Click **Security** to open this page.  

@@ -26,7 +26,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  The XMLDATA directive to the FOR XML option is deprecated. Use XSD generation in the case of RAW and AUTO modes. There is no replacement for the XMLDATA directive in EXPLICT mode. [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)]  
   
- Following is the basic syntax that is described in [FOR Clause (Transact-SQL)](../Topic/FOR%20Clause%20\(Transact-SQL\).md):  
+ Following is the basic syntax that is described in [FOR Clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md):  
   
 ```  
 [ FOR { BROWSE | <XML> } ]  

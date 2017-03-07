@@ -37,7 +37,7 @@ manager: "erikre"
  Type a description that explains how to use the role and enumerates what the role supports.  
   
  **Task**  
- Select the tasks that can be performed through this role. You cannot create new tasks or modify the existing tasks that are supported by [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]. Only item-level tasks can be used in an item-level role definition.  
+ Select the tasks that can be performed through this role. You cannot create new tasks or modify the existing tasks that are supported by [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]. Only item-level tasks can be used in an item-level role definition.  
   
  **Task Description**  
  Shows a description of the task that enumerates the operations or permissions that the task supports.  

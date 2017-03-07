@@ -17,10 +17,10 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Report Builder Tutorials
-Use the following Report Builder tutorials to learn how to create basic [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports.  
+Use the following Report Builder tutorials to learn how to create basic [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports.  
   
 [Prerequisites for Tutorials &#40;Report Builder&#41;](../../reporting-services/tutorials/prerequisites-for-tutorials-report-builder.md)  
-To use these tutorials, you must have read-only access to a [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] database and permissions to access a [!INCLUDE[ssRSCurrent](../../reporting-services/includes/ssrscurrent-md.md)] report server.  
+To use these tutorials, you must have read-only access to a [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] database and permissions to access a [!INCLUDE[ssRSCurrent](../../a9notintoc/includes/ssrscurrent-md.md)] report server.  
   
 For help with these prerequisites, contact your report server administrator.  
   

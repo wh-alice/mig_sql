@@ -26,7 +26,7 @@ manager: "erikre"
  The following procedures describe how to show or hide a report item in a rendered report based on a constant or an expression.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ### To hide a report item  
   

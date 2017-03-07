@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # CInstance Class - InstanceName Property
-  Gets the name of the instance of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] client.  
+  Gets the name of the instance of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] client.  
   
 ## Syntax  
   
@@ -33,10 +33,10 @@ object.InstanceName [= value]
   
 ## Parts  
  *object*  
- A [CInstance Class](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md) object that represents a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] client instance.  
+ A [CInstance Class](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md) object that represents a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] client instance.  
   
 ## Property Value/Return Value  
- A string value that specifies the name of the instance of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] client.  
+ A string value that specifies the name of the instance of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] client.  
   
 ## Remarks  
   

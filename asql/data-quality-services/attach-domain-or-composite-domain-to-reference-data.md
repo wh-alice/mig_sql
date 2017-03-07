@@ -30,7 +30,7 @@ manager: "jhubbard"
 ## Before You Begin  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
- You must have configured [!INCLUDE[ssDQSnoversion](../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS) to use reference data services. See [Configure DQS to Use Reference Data](../data-quality-services/configure-dqs-to-use-reference-data.md).  
+ You must have configured [!INCLUDE[ssDQSnoversion](../a9retired/includes/ssdqsnoversion-md.md)] (DQS) to use reference data services. See [Configure DQS to Use Reference Data](../data-quality-services/configure-dqs-to-use-reference-data.md).  
   
 ###  <a name="Security"></a> Security  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssDQSInitialStep](../data-quality-services/includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] home screen, under **Knowledge Base Management**, click **New knowledge base**.  
+2.  In the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] home screen, under **Knowledge Base Management**, click **New knowledge base**.  
   
 3.  In the **New knowledge base** screen, type a name for the new knowledge base, click the **Domain Management** activity, and click **Create**.  
   

@@ -29,7 +29,7 @@ manager: "erikre"
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install/windows/reporting-services-configuration-manager-native-mode.md)  
  Provides steps for starting the Reporting Services Configuration tool.  
   
- [Configure a Service Account &#40;SSRS Configuration Manager&#41;](../Topic/Configure%20a%20Service%20Account%20\(SSRS%20Configuration%20Manager\).md)  
+ [Configure a Service Account &#40;SSRS Configuration Manager&#41;](../../a9retired/configure-a-service-account-ssrs-configuration-manager.md)  
  Explains how to specify account and password information for the Report Server service.  
   
  [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
@@ -38,7 +38,7 @@ manager: "erikre"
  [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/configure-a-url-ssrs-configuration-manager.md)  
  Explains how to establish one or more URLs used to access the Report Server Web service and Report Manager.  
   
- [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../Topic/Create%20a%20Native%20Mode%20Report%20Server%20Database%20%20\(SSRS%20Configuration%20Manager\).md)  
+ [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  Provides steps for creating a report server database. This step is required for deploying a Reporting Services installation.  
   
 ### Advanced or Optional Configuration  

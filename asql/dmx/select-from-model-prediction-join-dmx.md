@@ -32,7 +32,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # SELECT FROM &lt;model&gt; PREDICTION JOIN (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Uses a mining model to predict the states of columns in an external data source. The **PREDICTION JOIN** statement matches each case from the source query to the model.  
   
@@ -121,7 +121,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## Example 2: Using OPENQUERY  
- The following example shows how to create a batch prediction query by using a list of potential customers stored in an external dataset. Because the table is part of a data source view that has been defined on an instance of [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)], the query can use [OPENQUERY](../Topic/OPENQUERY%20\(DMX\).md) to retrieve the data. Because the names of the columns in the table are different from those in the mining model, the **ON** clause must be used to map the columns in the table to the columns in the model.  
+ The following example shows how to create a batch prediction query by using a list of potential customers stored in an external dataset. Because the table is part of a data source view that has been defined on an instance of [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)], the query can use [OPENQUERY](../dmx/source-data-query-openquery.md) to retrieve the data. Because the names of the columns in the table are different from those in the mining model, the **ON** clause must be used to map the columns in the table to the columns in the model.  
   
  The query returns the first and last name of each person in the table, together with a Boolean column that indicates whether each person is likely to buy a bike, where 0 means "probably will not buy a bike" and 1 means "probably will buy a bike". The last column contains the probability for the predicted result.  
   
@@ -170,7 +170,7 @@ ORDER BY [LastName] ASC
 ```  
   
 ## Example 3: Predicting Associations  
- The following example shows how to create a prediction by using a model that is built from the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Association algorithm. Predictions on an association model can be used to recommend related products. For example, the following query returns the three products that are most likely to be purchased together:  
+ The following example shows how to create a prediction by using a model that is built from the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Association algorithm. Predictions on an association model can be used to recommend related products. For example, the following query returns the three products that are most likely to be purchased together:  
   
 -   Mountain Bottle Cage  
   
@@ -203,8 +203,8 @@ NATURAL PREDICTION JOIN
   
 ## See Also  
  [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Definition%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Manipulation%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)  
+ [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

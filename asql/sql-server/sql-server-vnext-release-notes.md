@@ -20,10 +20,10 @@ This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../advan
 - To read what's new in this release, see [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md).
 - [SQL Server on Linux Release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes) 
 are published on our new and growing documentation platform.
-- [SQL Server Reporting Services release notes](Technical%20Preview%20of%20Power%20BI%20reports%20in%20SSRS%20-%20Release%20notes.md) are published within the Reporting Services section.
+- [SQL Server Reporting Services release notes](../reporting-services/reporting-services-release-notes.md) are published within the Reporting Services section.
 
  **Try it out:**    
-   -   [![Download from Evaluation Center](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Download [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] from the **[Evaluation Center](http://go.microsoft.com/fwlink/?LinkID=829477)**
+   -   [![Download from Evaluation Center](../a9notintoc/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Download [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] from the **[Evaluation Center](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
 
 ## SQL Server vNext CTP 1.3 (February  2017)
@@ -31,7 +31,7 @@ are published on our new and growing documentation platform.
 [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] is intended as a test version only.  Production deployments are not supported. It is recommneded you install and test [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] on a virtual machine.
 
 ### Documentation (CTP 1.3)
-- **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../analysis-services/powershell/includes/sssql15-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] will be noted with **Applies To**. 
+- **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../a9notintoc/includes/sssql15-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] will be noted with **Applies To**. 
 - **Issue and customer impact:** No offline content is available for [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)].
 
 ### SQL Server Integration Services (SSIS) (CTP 1.3)
@@ -40,7 +40,7 @@ are published on our new and growing documentation platform.
 -   **Workaround**: There is no workaround.
 
 
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
+![horizontal_bar](../a9notintoc/media/horizontal-bar.png)
 
 ## SQL Server vNext CTP 1.2 (January  2017)
 ### Supported installation scenarios (CTP 1.2)
@@ -53,7 +53,7 @@ are published on our new and growing documentation platform.
   - Reboot the computer.
 
 ### Documentation (CTP 1.2)
-- **Issue and customer impact:** Documentaion for [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] is limited and content is inlcuded with the [!INCLUDE[ssSQL15_md](../analysis-services/powershell/includes/sssql15-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] will be noted with **Applies To:**. 
+- **Issue and customer impact:** Documentaion for [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] is limited and content is inlcuded with the [!INCLUDE[ssSQL15_md](../a9notintoc/includes/sssql15-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] will be noted with **Applies To:**. 
 - **Issue and customer impact:** No offline content is available for [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)].
  
 ### SQL Server Integration Services (SSIS) (CTP 1.2)
@@ -68,7 +68,7 @@ You can now delete the SSISDB catalog database.
 
 ### SQL Server Master Data Services (CTP 1.2)
 #### Transaction may not work when the entity transaction log type is set to attribute
-**Issue and customer impact:** When the entity transaction log type is set to **Attribute** in [!INCLUDE[ssMDSshort_md](../analysis-services/includes/ssmdsshort-md.md)] (default value is **Member**), the following scenarios fail:
+**Issue and customer impact:** When the entity transaction log type is set to **Attribute** in [!INCLUDE[ssMDSshort_md](../a9notintoc/includes/ssmdsshort-md.md)] (default value is **Member**), the following scenarios fail:
 
 * Transactions for entity changes are not shown in the website.
 * Unable to open the **Transactions** page on the website and reverse a transaction.
@@ -80,7 +80,7 @@ You can now delete the SSISDB catalog database.
 -  **Issue and customer impact:** When the **Copy only committed version** setting is set to **No** (default value is **Yes**), the copy version operation may fail. There is no error message.
 -  **Workaround**: There is no workaround.
 
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
+![horizontal_bar](../a9notintoc/media/horizontal-bar.png)
 
 ## SQL Server vNext CTP 1.1 (December  2016)
 ### Supported installation scenarios (CTP 1.1)
@@ -93,12 +93,12 @@ Specifically, while the following scenarios may work for you, they have not been
 - No SQL Server feature pack components are available as part of the [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] installation.
 
 ### Documentation (CTP 1.1)
-- **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../analysis-services/powershell/includes/sssql15-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] will be noted with **Applies To:**. 
+- **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../a9notintoc/includes/sssql15-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] will be noted with **Applies To:**. 
 - **Issue and customer impact:** No offline content is available for [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)].
 
 ### SQL Server Master Data Services (CTP 1.1)
 #### Transaction may not work when the entity transaction log type is set to attribute
-**Issue and customer impact:** When the entity transaction log type is set to **Attribute** in [!INCLUDE[ssMDSshort_md](../analysis-services/includes/ssmdsshort-md.md)] (default value is **Member**), the following scenarios fail:
+**Issue and customer impact:** When the entity transaction log type is set to **Attribute** in [!INCLUDE[ssMDSshort_md](../a9notintoc/includes/ssmdsshort-md.md)] (default value is **Member**), the following scenarios fail:
 
 * Transactions for entity changes are not shown in the website.
 * Unable to open the **Transactions** page on the website and reverse a transaction.
@@ -125,7 +125,7 @@ You can now delete the SSISDB catalog database.
 
 **Workaround**: There is no workaround.
 
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
+![horizontal_bar](../a9notintoc/media/horizontal-bar.png)
 
 ## SQL Server vNext CTP 1.0 (November 2016)
 ### Supported installation scenarios (CTP1.0)
@@ -138,7 +138,7 @@ Specifically, while the following scenarios may work for you, they have not been
 - No SQL Server feature pack components are available as part of the [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] installation.
 
 ### Documentation (CTP 1.0)
-- **Issue and customer impact:** Documentaion for [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] is limited and content is inlcuded with the [!INCLUDE[ssSQL15_md](../analysis-services/powershell/includes/sssql15-md.md)] documentation set.  Content in artilces that is specific to [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] will be noted with **Applies To:**. 
+- **Issue and customer impact:** Documentaion for [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] is limited and content is inlcuded with the [!INCLUDE[ssSQL15_md](../a9notintoc/includes/sssql15-md.md)] documentation set.  Content in artilces that is specific to [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)] will be noted with **Applies To:**. 
 - **Issue and customer impact:** No offline content is avaiable for [!INCLUDE[ssSQLv14_md](../advanced-analytics/r-services/includes/sssqlv14-md.md)].
 
 ### SQL Server Database Engine (CTP 1.0)
@@ -151,7 +151,7 @@ Specifically, while the following scenarios may work for you, they have not been
 
 ### SQL Server Integration Services (CTP 1.0)
 #### Stop Operation in SSIS Catalog may fail
-**Issue and customer impact:** Stopping an operation in [!INCLUDE[ssIS_md](../analysis-services/instances/includes/ssis-md.md)] using [!INCLUDE[ssManStudio_md](../advanced-analytics/r-services/includes/ssmanstudio-md.md)] or the catalog.stop_operation stored procedure, may fail with following error: “A .NET Framework error occurred during execution of user-defined routine or aggregate 'stop_operation_internal'”.
+**Issue and customer impact:** Stopping an operation in [!INCLUDE[ssIS_md](../a9retired/includes/ssis-md.md)] using [!INCLUDE[ssManStudio_md](../a9notintoc/includes/ssmanstudio-md.md)] or the catalog.stop_operation stored procedure, may fail with following error: “A .NET Framework error occurred during execution of user-defined routine or aggregate 'stop_operation_internal'”.
 
 -  **Workaround:** Open the Windows Task Manager. On the **Processes** Tab, find the process named **ISServerExec** and click **End Task** to end the process.
 
@@ -161,12 +161,12 @@ Specifically, while the following scenarios may work for you, they have not been
 -  **Workaround:** Open the Windows Task Manager. On the **Processes** Tab, find the process named **ISServerExec**, right click the process, and then click **Create dump file**.
 
 #### Get Perf Counter of SSIS Package Execution may fail
-**Issue and customer impact:** Querying the [!INCLUDE[ssIS_md](../analysis-services/instances/includes/ssis-md.md)] perf counters by using the table-valued function, catalog.dm_execution_performance_counters, may fail with following error: “A .NET Framework error occurred during execution of user-defined routine or aggregate 'get_execution_perf_counters'”.
+**Issue and customer impact:** Querying the [!INCLUDE[ssIS_md](../a9retired/includes/ssis-md.md)] perf counters by using the table-valued function, catalog.dm_execution_performance_counters, may fail with following error: “A .NET Framework error occurred during execution of user-defined routine or aggregate 'get_execution_perf_counters'”.
 
 -  **Workaround**: Use the Windows Performance Monitor to monitor the perf counters values directly. There is no workaround for perf counters that are for a specific package execution.
 
 #### Deleting Catalog may fail when SSIS Scale Out Master is installed
-**Issue and customer impact:** When the [!INCLUDE[ssIS_md](../analysis-services/instances/includes/ssis-md.md)] Scale Out feature is installed on a machine, deleting the **SSISDB** catalog may fail with following error: “Could not drop login ‘…’ as the user is currently logged in”. 
+**Issue and customer impact:** When the [!INCLUDE[ssIS_md](../a9retired/includes/ssis-md.md)] Scale Out feature is installed on a machine, deleting the **SSISDB** catalog may fail with following error: “Could not drop login ‘…’ as the user is currently logged in”. 
 
 **Workaround**: 
 * On a Scale Out Master machine, run the command “services.msc” to open the **Services** window and stop the **SQL Server Integration Services Cluster Master** service. 
@@ -176,7 +176,7 @@ Specifically, while the following scenarios may work for you, they have not been
 You should now be able to delete the **SSISDB** catalog.
 
 #### ODBC connector in SSIS is not supported
--  **Issue and customer impact:** ODCB connector in [!INCLUDE[ssIS_md](../analysis-services/instances/includes/ssis-md.md)] is not supported.
+-  **Issue and customer impact:** ODCB connector in [!INCLUDE[ssIS_md](../a9retired/includes/ssis-md.md)] is not supported.
 -  **Workaround:** There is no workaround.
 
 ### SQL Server Reporting Services (CTP 1.0)
@@ -185,7 +185,7 @@ SQL Server Reporting Services isn't releasing any new features for [!INCLUDE[ssS
 
 ### SQL Server Master Data Services (CTP 1.0)
 #### Transaction may not work when the entity transaction log type is set to attribute
-**Issue and customer impact:** When the entity transaction log type is set to **Attribute** in [!INCLUDE[ssMDSshort_md](../analysis-services/includes/ssmdsshort-md.md)] (default value is **Member**), the following scenarios fail:
+**Issue and customer impact:** When the entity transaction log type is set to **Attribute** in [!INCLUDE[ssMDSshort_md](../a9notintoc/includes/ssmdsshort-md.md)] (default value is **Member**), the following scenarios fail:
 
 * Transactions for entity changes are not shown in the website.
 * Unable to open the **Transactions** page on the website and reverse a transaction.
@@ -208,4 +208,4 @@ SQL Server Management Studio is a seperate downlaod.  For the latest information
 - [Reddit - general discussion about R](https://www.reddit.com/r/SQLServer/)
 
 
-![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
+![MS_Logo_X-Small](../a9notintoc/media/ms-logo-x-small.png)

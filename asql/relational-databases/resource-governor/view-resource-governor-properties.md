@@ -19,9 +19,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View Resource Governor Properties
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  You can create or configure Resource Governor entities, such as resource pools and workload groups, by using the Resource Governor Properties page in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+  You can create or configure Resource Governor entities, such as resource pools and workload groups, by using the Resource Governor Properties page in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
  ##  <a name="BeforeYouBegin"></a> Related topics 
  In addition to viewing the properties of Resource Governor entities, you can perform several configuration tasks using the **Resource Governor Properties** page. For more information, see these topics:  
@@ -44,15 +44,15 @@ manager: "jhubbard"
   
  If the create or reconfigure operation for the resource pool or workload group fails, a summary error message appears below the title of the property page. To see a detailed error message, click the down arrow on the error message.  
   
- You can determine whether there is a configuration pending by querying the [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys.dm-resource-governor-configuration-transact-sql.md) dynamic management view to get the current status of is_configuration_pending.  
+ You can determine whether there is a configuration pending by querying the [sys.dm_resource_governor_configuration](../../relational-databases/reference/system-dynamic-management-views/sys.dm-resource-governor-configuration-transact-sql.md) dynamic management view to get the current status of is_configuration_pending.  
   
 ##  <a name="Permissions"></a> Permissions  
  Viewing resource governor properties requires VIEW SERVER STATER permission. The resource governor configuration tasks require CONTROL SERVER permission.  
   
 ##  <a name="ViewRGProp"></a> Resource Governor properties page  
- **To view resource governor properties by using the Resource Governor Properties page in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]**  
+ **To view resource governor properties by using the Resource Governor Properties page in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]**  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to **Resource Governor**.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to **Resource Governor**.  
   
 2.  Right-click **Resource Governor** and then click **Properties**, this opens the **Resource Governor Properties** page.  
   
@@ -116,9 +116,9 @@ manager: "jhubbard"
 ## View Resource Governor properties using Transact-SQL  
  **View resource governor properties by using Transact-SQL**  
   
-1.  To view the definitions of resource governor entities, use the [Resource Governor Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md).  
+1.  To view the definitions of resource governor entities, use the [Resource Governor Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/resource-governor-catalog-views-transact-sql.md).  
   
-2.  To view the current configuration of resource governor entities, use the [Resource Governor Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).  
+2.  To view the current configuration of resource governor entities, use the [Resource Governor Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).  
   
 ## More information
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   

@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Enable Stretch Database for a database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   To configure an existing database for Stretch Database, select **Tasks | Stretch | Enable** for a database in SQL Server Management Studio to open the **Enable Database for Stretch** wizard. You can also use Transact-SQL to enable Stretch Database for a database.  
   
@@ -58,7 +58,7 @@ RECONFIGURE;
 GO  
 ```  
   
- For more info, see [Configure the remote data archive Server Configuration Option](../../database-engine/configure/windows/configure-the-remote-data-archive-server-configuration-option.md) and [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ For more info, see [Configure the remote data archive Server Configuration Option](../../database-engine/configure/windows/configure-the-remote-data-archive-server-configuration-option.md) and [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md).  
   
 ##  <a name="Wizard"></a> Use the wizard to enable Stretch Database on a database  
  For info about the Enable Database for Stretch Wizard, including the info that you have to enter and the choices that you have to make, see [Get started by running the Enable Database for Stretch Wizard](../../sql-server/install/get-started-by-running-the-enable-database-for-stretch-wizard.md).  
@@ -146,6 +146,6 @@ GO
   
 ## See Also  
  [Identify databases and tables for Stretch Database by running Stretch Database Advisor](../../sql-server/install/81bd93d8-eef8-4572-88d7-5c37ab5ac2bf.md)   
- [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+ [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
   

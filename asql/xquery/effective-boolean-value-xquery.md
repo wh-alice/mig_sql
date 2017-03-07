@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Effective Boolean Value (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   These are the effective Boolean values:  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 -   Logical expressions  
   
--   The [not function](../Topic/not%20Function%20\(XQuery\).md)  
+-   The [not function](../xquery/functions-on-boolean-values-not-function.md)  
   
 -   The WHERE clause of a FLWOR expression  
   

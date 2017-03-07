@@ -18,7 +18,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Report Server in Management Studio F1 Help
-  This section includes topics about the dialog boxes in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] that can be used to manage report servers.  
+  This section includes topics about the dialog boxes in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] that can be used to manage report servers.  
   
 ## In This Section  
   

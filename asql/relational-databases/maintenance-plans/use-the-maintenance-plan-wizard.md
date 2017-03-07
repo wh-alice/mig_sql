@@ -38,16 +38,16 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use the Maintenance Plan Wizard
-  This topic describes how to create a single  or multiserver maintenance plan using the Maintenance Plan Wizard in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. The Maintenance Plan Wizard creates a maintenance plan that [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent can run on a regular basis. This allows you to perform various database administration tasks, including backups, database integrity checks, or database statistics updates, at specified intervals.  
+  This topic describes how to create a single  or multiserver maintenance plan using the Maintenance Plan Wizard in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. The Maintenance Plan Wizard creates a maintenance plan that [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent can run on a regular basis. This allows you to perform various database administration tasks, including backups, database integrity checks, or database statistics updates, at specified intervals.  
     
  
 ##  <a name="Restrictions"></a> Limitations and Restrictions  
   
 -   To create a multiserver maintenance plan, you must configure a a multiserver environment with one master server, and one or more target servers. You must create and maintain multiserver maintenance plans on the master server. You can view plans on target servers.   
 
--   Members of the **db_ssisadmin** and **dc_admin** roles may be able to elevate their privileges to **sysadmin**. This elevation of privilege can occur because these roles can modify [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] packages; these packages can be executed by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] using the **sysadmin** security context of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent. 
+-   Members of the **db_ssisadmin** and **dc_admin** roles may be able to elevate their privileges to **sysadmin**. This elevation of privilege can occur because these roles can modify [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] packages; these packages can be executed by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] using the **sysadmin** security context of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent. 
 
-To guard against this elevation of privilege when running maintenance plans, data collection sets, and other [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] packages, configure [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent jobs that run packages to use a proxy account with limited privileges or only add **sysadmin** members to the **db_ssisadmin** and **dc_admin** roles.  
+To guard against this elevation of privilege when running maintenance plans, data collection sets, and other [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] packages, configure [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent jobs that run packages to use a proxy account with limited privileges or only add **sysadmin** members to the **db_ssisadmin** and **dc_admin** roles.  
 
 ##  <a name="Prerequisite"></a> Prerequisite 
 You must enable [Agent XPs Server Configuration Option](../../database-engine/configure/windows/agent-xps-server-configuration-option.md).
@@ -129,7 +129,7 @@ You must enable [Agent XPs Server Configuration Option](../../database-engine/co
   
     6.  Click **Next**.  
   
-6.  On the **Select Target Servers** page, select the servers where you want to run the maintenance plan. This page is only visible on [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instances that are configured as master servers.  
+6.  On the **Select Target Servers** page, select the servers where you want to run the maintenance plan. This page is only visible on [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instances that are configured as master servers.  
   
     > **NOTE:** To create a multiserver maintenance plan, a multiserver environment containing one master server and one or more target servers must be configured, and the local server should be configured as a master server. In multiserver environments, this page displays the **(local)** master server and all corresponding target servers.  
   
@@ -143,7 +143,7 @@ You must enable [Agent XPs Server Configuration Option](../../database-engine/co
   
 ## Define Database Check Integrity (CHECKDB)  
   
- On the **Define Database Check Integrity Task** page, choose the database or databases where the allocation and structural integrity of user and system tables and indexes will be checked. By running the `DBCC CHECKDB`[!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement, this task ensures that any integrity problems with the database are reported, thereby allowing them to be addressed later by a system administrator or database owner. For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)When complete, click **Next**.  
+ On the **Define Database Check Integrity Task** page, choose the database or databases where the allocation and structural integrity of user and system tables and indexes will be checked. By running the `DBCC CHECKDB`[!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement, this task ensures that any integrity problems with the database are reported, thereby allowing them to be addressed later by a system administrator or database owner. For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)When complete, click **Next**.  
   
 The following options are available on this page.  
   
@@ -152,15 +152,15 @@ The following options are available on this page.
   
  -  **All databases**  
   
-Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases except **tempdb**.  
+Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] databases except **tempdb**.  
   
 **System databases**  
   
-  - Generate a maintenance plan that runs this task against [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system databases except **tempdb** and user-created databases.  
+  - Generate a maintenance plan that runs this task against [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system databases except **tempdb** and user-created databases.  
   
  **All user databases (excluding master, model, msdb, tempdb)**  
   
- - Generate a maintenance plan that runs this task against all user-created databases. No maintenance tasks are run against the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system databases.  
+ - Generate a maintenance plan that runs this task against all user-created databases. No maintenance tasks are run against the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system databases.  
   
  **These databases**  
   
@@ -252,7 +252,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
   
      Selecting this option also activates Low Priority Used, which uses the `WAIT_AT_LOW_PRIORITY` option. Online index rebuild operations will wait for low priority locks for `MAX_DURATION` minutes, allowing other operations to proceed while the online index build operation is waiting.  
   
-    > **NOTE:** Online index operations are not available in every edition of [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+    > **NOTE:** Online index operations are not available in every edition of [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
   
      **MAXDOP** check box  
      Overrides the max degree of parallelism configuration option of sp_configure for DBCC CHECKDB. For more information, see For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
@@ -300,7 +300,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      Chose the type of task data to delete/  
   
      **Backup and restore history**  
-     Retaining records of when recent backups were created can help [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] create a recovery plan when you want to restore a database. The retention period should be at least the frequency of full database backups.  
+     Retaining records of when recent backups were created can help [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] create a recovery plan when you want to restore a database. The retention period should be at least the frequency of full database backups.  
   
      **SQL Server Agent Job history**  
      This history can help you troubleshoot failed jobs, or determine why database actions occurred.  
@@ -313,7 +313,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
   
 #### Define the Execute Agent Job Task  
   
-1.  On the **Define Execute Agent Job Task** page, under **Available SQL Server Agent jobs**, choose the job or jobs to run. This option will not be available if you have no SQL Agent jobs. This task uses the `EXEC sp_start_job` statement. For more information, see [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)When finished, click **Next**.  
+1.  On the **Define Execute Agent Job Task** page, under **Available SQL Server Agent jobs**, choose the job or jobs to run. This option will not be available if you have no SQL Agent jobs. This task uses the `EXEC sp_start_job` statement. For more information, see [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-start-job-transact-sql.md)When finished, click **Next**.  
   
 #### Define Backup Tasks  
   
@@ -464,7 +464,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
   
 #### Select Report Options  
   
-1.  On the **Select Report Options** page, select options for saving or distributing a report of the maintenance plan actions. This task uses the `EXEC sp_notify_operator` statement. For more information, see [sp_notify_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md).When finished, click **Next**.  
+1.  On the **Select Report Options** page, select options for saving or distributing a report of the maintenance plan actions. This task uses the `EXEC sp_notify_operator` statement. For more information, see [sp_notify_operator &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-notify-operator-transact-sql.md).When finished, click **Next**.  
   
      The following options are available on this page.  
   
@@ -475,7 +475,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      Specify the location of the file that will contain the report.  
   
      **E-mail report** check box  
-     Send an e-mail when a task fails. To use this task you must have Database Mail enabled and correctly configured with MSDB as a Mail Host Database, and have a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent operator with a valid e-mail address.  
+     Send an e-mail when a task fails. To use this task you must have Database Mail enabled and correctly configured with MSDB as a Mail Host Database, and have a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent operator with a valid e-mail address.  
   
      **Agent operator**  
      Specify the recipient of the e-mail.  

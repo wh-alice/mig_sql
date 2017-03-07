@@ -21,7 +21,7 @@ In this task, you will create a copy of the Lesson 4.dtsx package that you creat
   
 ### To copy the Lesson 4 package  
   
-1.  If [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Data Tools is not already open, click **Start**, point to **All Programs**, point to **Microsoft SQL Server 2012**, and then click **SQL Server Data Tools**.  
+1.  If [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Data Tools is not already open, click **Start**, point to **All Programs**, point to **Microsoft SQL Server 2012**, and then click **SQL Server Data Tools**.  
   
 2.  On the **File** menu, click **Open**, click **Project/Solution**, select **SSIS Tutorial** and click **Open**, and then double-click **SSIS Tutorial.sln**.  
   
@@ -41,7 +41,7 @@ In this task, you will create a copy of the Lesson 4.dtsx package that you creat
   
 ### To add the completed Lesson 4 package  
   
-1.  Open [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Data Tools and open the SSIS Tutorial project.  
+1.  Open [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Data Tools and open the SSIS Tutorial project.  
   
 2.  In Solution Explorer, right-click **SSIS Packages**, and click **Add Existing Package**.  
   
@@ -60,5 +60,5 @@ In this task, you will create a copy of the Lesson 4.dtsx package that you creat
 5.  Copy and paste the Lesson 4 package as described in steps 3-8 in the previous procedure.  
   
 ## Next Task in Lesson  
-[Step 2: Enabling and Configuring Package Configurations](../Topic/Step%202:%20Enabling%20and%20Configuring%20Package%20Configurations.md)  
+[Step 2: Enabling and Configuring Package Configurations](../../integration-services/tutorials/lesson-5-2-enabling-and-configuring-package-configurations.md)  
   

@@ -18,14 +18,14 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Expression Uses in Reports (Report Builder and SSRS)
-In [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports, expressions are used throughout the report definition to specify or calculate values for parameters, queries, filters, report item properties, group and sort definitions, text box properties, bookmarks, document maps, dynamic page header and footer content, images, and dynamic data source definitions. This topic provides examples of the many places you can use expressions to vary the content or appearance of a report. This list is not comprehensive. You can set an expression for any property in a dialog box that displays the expression (**fx**) button or in a drop-down list that displays **\<Expression...>**.  
+In [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports, expressions are used throughout the report definition to specify or calculate values for parameters, queries, filters, report item properties, group and sort definitions, text box properties, bookmarks, document maps, dynamic page header and footer content, images, and dynamic data source definitions. This topic provides examples of the many places you can use expressions to vary the content or appearance of a report. This list is not comprehensive. You can set an expression for any property in a dialog box that displays the expression (**fx**) button or in a drop-down list that displays **\<Expression...>**.  
   
  Expressions can be simple or complex. *Simple expressions* contain a reference to a single dataset field, parameter, or built-in field. Complex expressions can contain multiple built-in references, operators, and function calls. For example, a complex expression might include the Sum function applied to the Sales field.  
   
- Expressions are written in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)]. An expression begins with an equal sign (=) followed by a combination of references to built-in collections such as dataset fields and parameters, constants, functions, and operators.  
+ Expressions are written in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)]. An expression begins with an equal sign (=) followed by a combination of references to built-in collections such as dataset fields and parameters, constants, functions, and operators.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ##  <a name="Simple"></a> Using Simple Expressions  
  Simple expressions appear on the design surface and in dialog boxes in brackets, for example, a dataset field appears as `[ProductID]`. Simple expressions are created for you automatically when you drag a field from a dataset onto a text box. A placeholder is created and the expression defines the underlying value. You can also type expressions directly into a data region cell or text box, both on the design surface or in a dialog box, (for example, `[ProductID]`).  

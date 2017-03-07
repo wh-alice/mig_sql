@@ -25,7 +25,7 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 
 
 **Try it out:**    
-   -   [![Download from Evaluation Center](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **[Download the SQL Server vNext Community Technology Preview](http://go.microsoft.com/fwlink/?LinkID=829477)**
+   -   [![Download from Evaluation Center](../a9notintoc/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **[Download the SQL Server vNext Community Technology Preview](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
 
 ## What's New in SQL Server vNext CTP 1.3 (February 2017)
@@ -37,8 +37,8 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 - Temporal Tables Retention Policy support added,
 - New DMV SYS.DM_DB_STATS_HISTOGRAM
 - Online non-clustered columnstore index buill and rebuild support added
-- 5 new dynamic management views to return information about Linux process. For more information, see [Linux Process Dynamic Management Views](../relational-databases/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md).   
-- [sys.dm_db_stats_histogram (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys.dm-db-stats-histogram-transact-sql.md) is added for examining statistics.
+- 5 new dynamic management views to return information about Linux process. For more information, see [Linux Process Dynamic Management Views](../relational-databases/reference/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md).   
+- [sys.dm_db_stats_histogram (Transact-SQL)](../relational-databases/reference/system-dynamic-management-views/sys.dm-db-stats-histogram-transact-sql.md) is added for examining statistics.
 
 ### SQL Server Analysis Services (SSAS) (CTP 1.3)
 - Encoding hints - an advanced feature used to optimize processing (data refresh) of large in-memory tabular models. To learn more, see [What's New in Analysis Services vNext](../analysis-services/what-s-new-in-sql-server-analysis-services-vnext.md). 
@@ -55,7 +55,7 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 
 ### SQL Server Reporting Services (SSRS)
 - There are no new SSRS features in this CTP.
-- For more detailed SSRS what's new information, including details from previous releases, see [What's new in Reporting Services](What's%20new%20in%20Reporting%20Services%20\(SSRS\).md). 
+- For more detailed SSRS what's new information, including details from previous releases, see [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md). 
 
 ### SQL Server Analysis Services (SSAS)
 - There are no new SSAS features in this CTP.  
@@ -75,11 +75,11 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 - [Reddit - general discussion about R](https://www.reddit.com/r/SQLServer/)
 
 ## See also    
- + [![Release Notes](../analysis-services/instances/install/windows/media/ssrs-fyi-note.png)](SQL%20Server%20vNext%20Release%20Notes.md)[ SQL Server VNext Release Notes](../sql-server/sql-server-vnext-release-notes.md). 
+ + [![Release Notes](../a9retired/media/ssrs-fyi-note.png)](SQL%20Server%20vNext%20Release%20Notes.md)[ SQL Server VNext Release Notes](../sql-server/sql-server-vnext-release-notes.md). 
 + [Features supported by Edition](https://msdn.microsoft.com/library/cc645993.aspx)
- + [[Installation hardware and software requirements](../Topic/Hardware%20and%20Software%20Requirements%20for%20Installing%20SQL%20Server%202016.md)](Hardware%20and%20Software%20Requirements%20for%20Installing%20SQL%20Server%202016.md)
- + [Installation Wizard](Install%20SQL%20Server%202016%20from%20the%20Installation%20Wizard%20\(Setup\).md)
+ + [[Installation hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)](Hardware%20and%20Software%20Requirements%20for%20Installing%20SQL%20Server%202016.md)
+ + [Installation Wizard](../database-engine/install/windows/install-sql-server-from-the-installation-wizard-setup.md)
  
- + [Setup and Servicing Installation](Setup%20and%20Servicing%20Installation.md)
+ + [Setup and Servicing Installation](../a9retired/setup-and-servicing-installation.md)
  
- ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
+ ![MS_Logo_X-Small](../a9notintoc/media/ms-logo-x-small.png)

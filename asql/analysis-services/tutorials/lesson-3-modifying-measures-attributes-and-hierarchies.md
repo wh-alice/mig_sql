@@ -24,19 +24,19 @@ After defining your initial cube, you are ready to improve the usefulness and fr
   
 This lesson contains the following tasks:  
   
-[Modifying Measures](../Topic/Modifying%20Measures.md)  
-In this task, you specify formatting properties for the currency and percentage measures in the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial cube.  
+[Modifying Measures](../../analysis-services/tutorials/lesson-3-1-modifying-measures.md)  
+In this task, you specify formatting properties for the currency and percentage measures in the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial cube.  
   
-[Modifying the Customer Dimension](../Topic/Modifying%20the%20Customer%20Dimension.md)  
+[Modifying the Customer Dimension](../../analysis-services/tutorials/lesson-3-2-modifying-the-customer-dimension.md)  
 In this task, you define a user hierarchy, create named calculations, modify attributes to use named calculations, and group attributes and user hierarchies into display folders.  
   
-[Modifying the Product Dimension](../Topic/Modifying%20the%20Product%20Dimension.md)  
+[Modifying the Product Dimension](../../analysis-services/tutorials/lesson-3-3-modifying-the-product-dimension.md)  
 In this task, you define a user hierarchy, create named calculations, define the All member name, and define display folders.  
   
-[Modifying the Date Dimension](../Topic/Modifying%20the%20Date%20Dimension.md)  
+[Modifying the Date Dimension](../../analysis-services/tutorials/lesson-3-4-modifying-the-date-dimension.md)  
 In this task, you define a user hierarchy, modify attribute member names, and use composite keys to specify unique attribute members.  
   
-[Browsing the Deployed Cube](../Topic/Browsing%20the%20Deployed%20Cube.md)  
+[Browsing the Deployed Cube](../../analysis-services/tutorials/lesson-3-5-browsing-the-deployed-cube.md)  
 In this task, you browse cube data by using the browser in Cube Designer.  
   
 ## See Also  

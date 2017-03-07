@@ -17,7 +17,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Change table, column, or row filter mappings (SSAS Tabular)
-  This topic describes how to change table, column, or row filter mappings by using the **Edit Table Properties** dialog box in [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)].  
+  This topic describes how to change table, column, or row filter mappings by using the **Edit Table Properties** dialog box in [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)].  
   
  Options in the **Edit Table Properties** dialog box are different depending on whether you originally imported data by selecting tables from a list or by using a SQL query. If you originally imported the data by selecting from a list, the **Edit Table Properties** dialog box displays the Table Preview mode. This mode displays only a subset limited to the first fifty rows of the source table. If you originally imported the data by using a SQL statement, the **Edit Table Properties** dialog box only displays a SQL statement. Using a SQL query statement, you can retrieve a subset of rows, either by designing a filter, or by manually editing the SQL statement.  
   
@@ -43,6 +43,6 @@ manager: "erikre"
          If you make a mistake and need to start over, click **Clear Row Filters**.  
   
 ## See Also  
- [Edit Table Properties Dialog Box &#40;SSAS&#41;](../Topic/Edit%20Table%20Properties%20Dialog%20Box%20\(SSAS\).md)  
+ [Edit Table Properties Dialog Box &#40;SSAS&#41;](../../a9retired/edit-table-properties-dialog-box-ssas.md)  
   
   

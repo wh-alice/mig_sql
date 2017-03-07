@@ -17,9 +17,9 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Tutorial: Add a Sparkline to Your Report (Report Builder)
-In this tutorial in [!INCLUDE[ssRBnoversion_md](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)], you create a basic table with a sparkline chart in a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report.   
+In this tutorial in [!INCLUDE[ssRBnoversion_md](../../a9notintoc/includes/ssrbnoversion-md.md)], you create a basic table with a sparkline chart in a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report.   
   
-Sparklines and data bars are small, simple charts that convey a lot of information in a little space, often in tables and matrices in [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] reports. The following illustration shows a report similar to the one that you will create.  
+Sparklines and data bars are small, simple charts that convey a lot of information in a little space, often in tables and matrices in [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] reports. The following illustration shows a report similar to the one that you will create.  
   
 ![report-builder-sparkline-final](../../reporting-services/tutorials/media/report-builder-sparkline-final.png)  
      
@@ -30,7 +30,7 @@ For more information about requirements, see [Prerequisites for Tutorials &#40;R
   
 ## <a name="CreateTable"></a>1. Create a Report with a Table  
   
-1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
+1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
   
     The **New Report or Dataset** dialog box opens.  
   
@@ -43,7 +43,7 @@ For more information about requirements, see [Prerequisites for Tutorials &#40;R
 4.  On the **Choose a dataset** page, select **Create a dataset** > **Next**. The **Choose a connection to a data source** page opens.  
   
     > [!NOTE]  
-    > This tutorial doesn't need specific data; it just needs a connection to a [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] database. If you already have a data source connection listed under **Data Source Connections**, you can select it and go to step 10. For more information, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../../reporting-services/tutorials/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > This tutorial doesn't need specific data; it just needs a connection to a [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] database. If you already have a data source connection listed under **Data Source Connections**, you can select it and go to step 10. For more information, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../../reporting-services/tutorials/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  Click **New**. The **Data Source Properties** dialog box opens.  
   
@@ -59,7 +59,7 @@ For more information about requirements, see [Prerequisites for Tutorials &#40;R
   
 9. Click **Credentials**. Enter the credentials that you need to access the external data source.  
   
-10. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
     You are back on the **Choose a connection to a data source** page.  
   
@@ -67,7 +67,7 @@ For more information about requirements, see [Prerequisites for Tutorials &#40;R
   
     The message "Connection created successfully" appears.  
   
-12. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+12. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 13. Click **Next**.  
   
@@ -83,7 +83,7 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
   
 2.  Click **Edit As Text**. The text-based query designer displays a query pane and a results pane.  
   
-3.  Paste the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] query into the **Query** box.  
+3.  Paste the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] query into the **Query** box.  
   
     ```  
     SELECT CAST('2015-01-04' AS date) as SalesDate, 'Accessories' as Subcategory,   
@@ -283,10 +283,10 @@ The text can be further enhanced by applying different font styles, sizes, and c
   
 7.  Select **Bold**.  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## <a name="Save"></a>9. Save the Report  
-Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available.  
+Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available.  
   
 ### To save the report on a report server  
   

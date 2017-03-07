@@ -28,11 +28,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ALTER DATABASE (Transact-SQL) SET HADR 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  This topic contains the ALTER DATABASE syntax for setting [!INCLUDE[ssHADR](../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] options on a secondary database. Only one SET HADR option is permitted per ALTER DATABASE statement. These options are supported only on secondary replicas.  
+  This topic contains the ALTER DATABASE syntax for setting [!INCLUDE[ssHADR](../../a9notintoc/includes/sshadr-md.md)] options on a secondary database. Only one SET HADR option is permitted per ALTER DATABASE statement. These options are supported only on secondary replicas.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -52,7 +52,7 @@ ALTER DATABASE database_name
  Is the name of the secondary database to be modified.  
   
  SET HADR  
- Executes the specified [!INCLUDE[ssHADR](../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] command on the specified database.  
+ Executes the specified [!INCLUDE[ssHADR](../../a9notintoc/includes/sshadr-md.md)] command on the specified database.  
   
  { AVAILABILITY GROUP **=***group_name* | OFF }  
  Joins or removes the availability database from the specified availability group, as follows:  
@@ -136,7 +136,7 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
 ```  
   
 > [!NOTE]  
->  To see this [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement used in context, see [Create an Availability Group &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md).  
+>  To see this [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement used in context, see [Create an Availability Group &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md).  
   
 ## See Also  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

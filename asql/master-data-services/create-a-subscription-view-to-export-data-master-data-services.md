@@ -19,7 +19,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Create a Subscription View to Export Data (Master Data Services)
-  Create a subscription view to export Master Data Services data to subscribing systems. You're creating a view of your data in the [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] database.  
+  Create a subscription view to export Master Data Services data to subscribing systems. You're creating a view of your data in the [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] database.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 ### To create and edit a subscription view  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **Integration Management**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **Integration Management**.  
   
 2.  From the menu bar, click **Create Views**.  
   

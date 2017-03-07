@@ -37,6 +37,6 @@ manager: "jhubbard"
  For more information, see [XML Source](../../integration-services/data-flow/xml-source.md).  
   
 ## See Also  
- [Common Properties](../Topic/Common%20Properties.md)  
+ [Common Properties](../../a9retired/common-properties.md)  
   
   

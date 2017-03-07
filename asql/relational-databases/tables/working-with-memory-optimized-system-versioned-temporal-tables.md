@@ -16,15 +16,15 @@ ms.author: "carlrab"
 manager: "jhubbard"
 ---
 # Working with Memory-Optimized System-Versioned Temporal Tables
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   This topic discusses how working with a memory-optimized system-versioned temporal table is different from working with a disk-based system-versioned temporal table.  
   
 > [!NOTE]  
->  Using Temporal with memory optimized tables only applies to [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and does not apply to [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].  
+>  Using Temporal with memory optimized tables only applies to [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and does not apply to [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].  
   
 ## Discovering Metadata  
- To discover metadata about a memory-optimized system-versioned temporal table, you need to combine information from [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.tables-transact-sql.md) and [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.internal-tables-transact-sql.md). A system-versioned temporal table is presented as parent_object_id of the internal in-memory history table  
+ To discover metadata about a memory-optimized system-versioned temporal table, you need to combine information from [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.tables-transact-sql.md) and [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.internal-tables-transact-sql.md). A system-versioned temporal table is presented as parent_object_id of the internal in-memory history table  
   
  This example shows how to query and join these tables.  
   

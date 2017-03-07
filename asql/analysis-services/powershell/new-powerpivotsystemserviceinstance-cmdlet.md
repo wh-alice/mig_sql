@@ -15,7 +15,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # New-PowerPivotSystemServiceInstance cmdlet
-  Adds a new instance of [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service to an application server.  
+  Adds a new instance of [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service to an application server.  
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   
@@ -26,12 +26,12 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 ```  
   
 ## Description  
- The New-PowerPivotSystemServiceInstance cmdlet provisions a new PowerPivotSystemService object at the farm-level after you have used SQL Server Setup to install [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint on the local application server. You can only provision one service instance on each application server.  If the service is already provisioned, you cannot run this cmdlet.  
+ The New-PowerPivotSystemServiceInstance cmdlet provisions a new PowerPivotSystemService object at the farm-level after you have used SQL Server Setup to install [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint on the local application server. You can only provision one service instance on each application server.  If the service is already provisioned, you cannot run this cmdlet.  
   
 ## Parameters  
   
 ### -ParentService \<PowerPivotMidTierServicePipeBind>  
- Specifies the GUID of the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service parent object in the farm. In this release, there is only one parent object allowed. You can use Get-PowerPivotSystemService to return the service object or its GUID.  
+ Specifies the GUID of the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service parent object in the farm. In this release, there is only one parent object allowed. You can use Get-PowerPivotSystemService to return the service object or its GUID.  
   
 |||  
 |-|-|  
@@ -80,7 +80,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 C:\PS>New-PowerPivotSystemServiceInstance -Provision:$true  
 ```  
   
- This example shows the most common form of the cmdlet. It registers the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service on the local application server with the farm.  
+ This example shows the most common form of the cmdlet. It registers the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service on the local application server with the farm.  
   
 ## Example 2  
   
@@ -88,6 +88,6 @@ C:\PS>New-PowerPivotSystemServiceInstance -Provision:$true
 C:\PS>New-PowerPivotSystemServiceInstance -SystemServiceInstanceName "MyPSSInstance" -provision:$false  
 ```  
   
- This example names the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service instance, but without provisioning it. If you do not provide a name, the default name, SQL Server Analysis Services System Service Instance, is used instead. Creating a custom name for the service is optional. You might name the service to support test scenarios, or if you have a custom tool or script that provisions the instance in a later step.  
+ This example names the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service instance, but without provisioning it. If you do not provide a name, the default name, SQL Server Analysis Services System Service Instance, is used instead. Creating a custom name for the service is optional. You might name the service to support test scenarios, or if you have a custom tool or script that provisions the instance in a later step.  
   
   

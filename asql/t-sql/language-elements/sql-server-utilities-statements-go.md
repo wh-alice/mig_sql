@@ -26,17 +26,17 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SQL Server Utilities Statements - GO
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provides commands that are not [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements, but are recognized by the **sqlcmd** and **osql** utilities and [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] Code Editor. These commands can be used to facilitate the readability and execution of batches and scripts.  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] provides commands that are not [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements, but are recognized by the **sqlcmd** and **osql** utilities and [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] Code Editor. These commands can be used to facilitate the readability and execution of batches and scripts.  
   
-  GO signals the end of a batch of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] utilities.  
+  GO signals the end of a batch of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] utilities.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -50,11 +50,11 @@ GO [count]
  Is a positive integer. The batch preceding GO will execute the specified number of times.  
   
 ## Remarks  
- GO is not a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement; it is a command recognized by the **sqlcmd** and **osql** utilities and [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] Code editor.  
+ GO is not a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement; it is a command recognized by the **sqlcmd** and **osql** utilities and [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] Code editor.  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] utilities interpret GO as a signal that they should send the current batch of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The current batch of statements is composed of all statements entered since the last GO, or since the start of the ad hoc session or script if this is the first GO.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] utilities interpret GO as a signal that they should send the current batch of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The current batch of statements is composed of all statements entered since the last GO, or since the start of the ad hoc session or script if this is the first GO.  
   
- A [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement cannot occupy the same line as a GO command. However, the line can contain comments.  
+ A [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement cannot occupy the same line as a GO command. However, the line can contain comments.  
   
  Users must follow the rules for batches. For example, any execution of a stored procedure after the first statement in a batch must include the EXECUTE keyword. The scope of local (user-defined) variables is limited to a batch, and cannot be referenced after a GO command.  
   
@@ -76,9 +76,9 @@ sp_who
 GO  
 ```  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] applications can send multiple [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] for execution as a batch. The statements in the batch are then compiled into a single execution plan. Programmers executing ad hoc statements in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] utilities, or building scripts of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements to run through the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] utilities, use GO to signal the end of a batch.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] applications can send multiple [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] for execution as a batch. The statements in the batch are then compiled into a single execution plan. Programmers executing ad hoc statements in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] utilities, or building scripts of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements to run through the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] utilities, use GO to signal the end of a batch.  
   
- Applications based on the ODBC or OLE DB APIs receive a syntax error if they try to execute a GO command. The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] utilities never send a GO command to the server.  
+ Applications based on the ODBC or OLE DB APIs receive a syntax error if they try to execute a GO command. The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] utilities never send a GO command to the server.  
   
  Do not use a semicolon as a statement terminator after GO.  
   

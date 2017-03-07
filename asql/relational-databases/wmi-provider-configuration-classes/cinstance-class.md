@@ -21,8 +21,8 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # CInstance Class
-  The [CInstance Class](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md) represents an instance of a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] client.  
+  The [CInstance Class](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md) represents an instance of a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] client.  
   
- This class can be used to manage protocols and network libraries associated with the instance of a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] client.  
+ This class can be used to manage protocols and network libraries associated with the instance of a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] client.  
   
   

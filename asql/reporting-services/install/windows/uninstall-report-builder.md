@@ -28,7 +28,7 @@ manager: "erikre"
   
 2.  In the Control Panel, click **Programs and Features**.  
   
-3.  Locate [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] Report Builder in the **Name** list and click it.  
+3.  Locate [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] Report Builder in the **Name** list and click it.  
   
 4.  Click **Uninstall**.  
   

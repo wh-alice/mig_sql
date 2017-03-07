@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Functions on Nodes - namespace-uri
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the namespace URI of the QName specified in *$arg* as a xs:string.  
   
@@ -105,7 +105,7 @@ WHERE ProductModelID=19
 -   The **namespace-uri()** function returns instances of type xs:string instead of xs:anyURI.  
   
 ## See Also  
- [Functions on Nodes](../Topic/Functions%20on%20Nodes.md)   
- [local-name Function &#40;XQuery&#41;](../Topic/local-name%20Function%20\(XQuery\).md)  
+ [Functions on Nodes](../a9retired/functions-on-nodes.md)   
+ [local-name Function &#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
   
   

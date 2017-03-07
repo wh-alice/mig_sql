@@ -26,11 +26,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Creates a database credential. A database credential is not mapped to a server login or database user. The credential is used by the database to access to the external location anytime the database is performing an operation that requires access.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -55,26 +55,26 @@ WITH IDENTITY = 'identity_name'
 >  The SAS key value might begin with a '?' (question mark). When you use the SAS key, you must remove the leading '?'. Otherwise your efforts might be blocked.  
   
 ## Remarks  
- A database scoped credential is a record that contains the authentication information that is required to connect to a resource outside [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Most credentials include a Windows user and password.  
+ A database scoped credential is a record that contains the authentication information that is required to connect to a resource outside [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Most credentials include a Windows user and password.  
   
  Before creating a database scoped credential, the database must have a master key to protect the credential. For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).  
   
  When IDENTITY is a Windows user, the secret can be the password. The secret is encrypted using the service master key. If the service master key is regenerated, the secret is re-encrypted using the new service master key.  
    
- Information about database scoped credentials is visible in the [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys.database-scoped-credentials-transact-sql.md) catalog view.  
+ Information about database scoped credentials is visible in the [sys.database_scoped_credentials](../../relational-databases/reference/system-catalog-views/sys.database-scoped-credentials-transact-sql.md) catalog view.  
   
  
  Hereare some applications of database scoped credentials:  
   
-- [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses a database scoped credential to access non-public Azure blob storage or Kerberos-secured Hadoop clusters with PolyBase. To learn more, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+- [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] uses a database scoped credential to access non-public Azure blob storage or Kerberos-secured Hadoop clusters with PolyBase. To learn more, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).  
 
-- [!INCLUDE[ssSDW_md](../../database-engine/configure/windows/includes/sssdw-md.md)] uses a database scoped credential to access non-public Azure blob storage with PolyBase. To learn more, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
+- [!INCLUDE[ssSDW_md](../../a9retired/includes/sssdw-md.md)] uses a database scoped credential to access non-public Azure blob storage with PolyBase. To learn more, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
   
-- [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] uses database scoped credentials for its global query feature. This is the ability to query across multiple database shards.  
+- [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] uses database scoped credentials for its global query feature. This is the ability to query across multiple database shards.  
   
-- [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] uses database scoped credentials to write extended event files to Azure blob storage.  
+- [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] uses database scoped credentials to write extended event files to Azure blob storage.  
   
-- [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] uses database scoped credentials for elastic pools. For more information, see [Tame explosive growth with elastic databases](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)  
+- [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] uses database scoped credentials for elastic pools. For more information, see [Tame explosive growth with elastic databases](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)  
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) use database scoped credentials to access data from Azure blob storage. For more information, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md). 
   
@@ -123,8 +123,8 @@ WITH
  [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [ALTER DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
  [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
- [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys.database-scoped-credentials-transact-sql.md)   
+ [sys.database_scoped_credentials](../../relational-databases/reference/system-catalog-views/sys.database-scoped-credentials-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.credentials-transact-sql.md)  
+ [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.credentials-transact-sql.md)  
   
   

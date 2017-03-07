@@ -25,14 +25,14 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # UPDATETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Updates an existing **text**, **ntext**, or **image** field. Use UPDATETEXT to change only a part of a **text**, **ntext**, or **image** column in place. Use WRITETEXT to update and replace a whole **text**, **ntext**, or **image** field.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)] Use the large-value data types and the **.**WRITE clause of the [UPDATE](../../t-sql/queries/update-transact-sql.md) statement instead.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -51,7 +51,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  Enables upload tools to upload a binary data stream. The stream must be provided by the tool at the TDS protocol level. When the data stream is not present the query processor ignores the BULK option.  
   
 > [!IMPORTANT]  
->  We recommend that the BULK option not be used in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]-based applications. This option might be changed or removed in a future version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+>  We recommend that the BULK option not be used in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]-based applications. This option might be changed or removed in a future version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  *table_name* **.** *dest_column_name*  
  Is the name of the table and **text**, **ntext**, or **image** column to be updated. Table names and column names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). Specifying the database name and owner names is optional.  
@@ -91,7 +91,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
   
  For best performance we recommend that **text**, **ntext** and **image** data be inserted or updated in chunks sizes that are multiples of 8,040 bytes.  
   
- In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], in-row text pointers to **text**, **ntext**, or **image** data may exist but may not be valid. For information about the text in row option, see [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). For information about invalidating text pointers, see [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], in-row text pointers to **text**, **ntext**, or **image** data may exist but may not be valid. For information about the text in row option, see [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-tableoption-transact-sql.md). For information about invalidating text pointers, see [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
  To initialize **text** columns to NULL, use WRITETEXT; UPDATETEXT initializes **text** columns to an empty string.  
   
@@ -122,7 +122,7 @@ GO
   
 ## See Also  
  [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
- [TEXTPTR &#40;Transact-SQL&#41;](../Topic/TEXTPTR%20\(Transact-SQL\).md)   
+ [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
   
   

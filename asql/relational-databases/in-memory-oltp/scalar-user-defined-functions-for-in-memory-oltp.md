@@ -16,9 +16,9 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Scalar User-Defined Functions for In-Memory OLTP
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  In [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)], you can create and drop natively compiled, scalar user-defined functions. You can also alter these user-defined functions. Native compilation improves performance of the evaluation of user-defined functions in Transact-SQL.  
+  In [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)], you can create and drop natively compiled, scalar user-defined functions. You can also alter these user-defined functions. Native compilation improves performance of the evaluation of user-defined functions in Transact-SQL.  
   
  When you alter a natively compiled, scalar user-defined function, the application remains available while the operation is being run and the new version of the function is being compiled.  
   
@@ -37,9 +37,9 @@ manager: "jhubbard"
   
      The DROP FUNCTION syntax for natively compiled, scalar user-defined functions is the same as for interpreted user-defined functions.  
   
--   [EXECUTE &#40;Transact-SQL&#41;](../Topic/EXECUTE%20\(Transact-SQL\).md)  
+-   [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)  
   
- The [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)stored procedure can be used with the natively compiled, scalar user-defined function. It will result in the function being recompiled using the definition that exists in metadata.  
+ The [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-recompile-transact-sql.md)stored procedure can be used with the natively compiled, scalar user-defined function. It will result in the function being recompiled using the definition that exists in metadata.  
   
  The following sample shows a scalar UDF from the [AdventureWorks2016CTP3](https://www.microsoft.com/download/details.aspx?id=49502) sample database.  
   
@@ -72,9 +72,9 @@ END
   
  You can use these scalar user-defined functions in interop mode, wherever an interpreted scalar user-defined function can be used. This use is subject to cross-container transaction limitations, as described in **Supported Isolation Levels for Cross-Container Transactions** section in [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md). For more information about interop mode, see [Accessing Memory-Optimized Tables Using Interpreted Transact-SQL](../../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
   
- Natively compiled, scalar user-defined functions do require an explicit execution context. For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md). EXECUTE AS CALLER is not supported. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../Topic/EXECUTE%20\(Transact-SQL\).md).  
+ Natively compiled, scalar user-defined functions do require an explicit execution context. For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md). EXECUTE AS CALLER is not supported. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
- For the supported syntax for Transact-SQL Execute statements, for natively compiled, scalar user-defined functions, see [EXECUTE &#40;Transact-SQL&#41;](../Topic/EXECUTE%20\(Transact-SQL\).md). For the supported syntax for executing the user-defined functions in a natively compiled stored procedure, see [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
+ For the supported syntax for Transact-SQL Execute statements, for natively compiled, scalar user-defined functions, see [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md). For the supported syntax for executing the user-defined functions in a natively compiled stored procedure, see [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
 ## Hints and Parameters  
  Support for table, join, and query hints inside natively compiled, scalar user-defined functions is equal to support for these hints for natively compiled stored procedures. As with interpreted scalar user-defined functions, the query hints included with a Transact-SQL query that reference a natively compiled, scalar user-defined function do not impact the query plan for this user-defined function.  

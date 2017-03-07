@@ -23,9 +23,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # DISCOVER_ENUMERATORS Rowset
-  Returns a list of names, data types, and enumeration values of enumerators supported by the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] XML for Analysis (XMLA) provider for a specific data source. The XMLA Provider publishes all the enumeration constants that it recognizes.  
+  Returns a list of names, data types, and enumeration values of enumerators supported by the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] XML for Analysis (XMLA) provider for a specific data source. The XMLA Provider publishes all the enumeration constants that it recognizes.  
   
- If you call the [Discover](../Topic/Discover%20Method%20\(XMLA\).md) method with the **DISCOVER_ENUMERATORS** enumeration value in the [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) element, the **Discover** method returns the **DISCOVER_ENUMERATORS** schema rowset.  
+ If you call the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method with the **DISCOVER_ENUMERATORS** enumeration value in the [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) element, the **Discover** method returns the **DISCOVER_ENUMERATORS** schema rowset.  
   
 ## Rowset Columns  
  For each enumerator, there are multiple elements, one for each value in the enumeration. The rowset that represents each enumerator is flat, and the name of the enumerator may be repeated for elements belonging to the same enumeration.  

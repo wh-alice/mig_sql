@@ -17,7 +17,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Implementation of Child Packages
-  When you implement load balancing using [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)], child packages are installed on other servers to take advantage of the available CPU or server time. To create and run the child packages requires the following steps:  
+  When you implement load balancing using [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)], child packages are installed on other servers to take advantage of the available CPU or server time. To create and run the child packages requires the following steps:  
   
 -   Designing the child packages.  
   
@@ -29,16 +29,16 @@ manager: "jhubbard"
   
  When you design the child packages, the packages have no limitations in their design, and you can put in any functionality you desire. However, if the package accesses data, you must ensure that the server that runs the package has access to the data.  
   
- To identify the parent package that executes child packages, in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] right click the package in Solution Explorer and then click **Entry-point Package**.  
+ To identify the parent package that executes child packages, in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] right click the package in Solution Explorer and then click **Entry-point Package**.  
   
  After the child packages have been designed, the next step is to deploy them on the remote servers.  
   
 ## Moving the Child Package to the Remote Instance  
  There are multiple ways to move packages to other servers. The two suggested methods are:  
   
--   Exporting packages by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+-   Exporting packages by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
--   Deploying packages by building a deployment utility for the project that contains the packages you want to deploy, and then running the Package Installation Wizard to install the packages to the file system or to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information, see [Legacy Package Deployment &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
+-   Deploying packages by building a deployment utility for the project that contains the packages you want to deploy, and then running the Package Installation Wizard to install the packages to the file system or to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For more information, see [Legacy Package Deployment &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
  You must repeat the deployment to each remote server you want to use.  
   
@@ -50,13 +50,13 @@ manager: "jhubbard"
   
 -   Running each child package in SSIS Designer, by clicking **Debug** / **Start Without Debugging**.  
   
--   Running the individual SQL Server Agent job on the remote computer by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], to make sure that the package runs.  
+-   Running the individual SQL Server Agent job on the remote computer by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], to make sure that the package runs.  
   
- For information about how to troubleshoot packages that you run from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent jobs, see [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](http://support.microsoft.com/kb/918760) in the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Support Knowledge Base.  
+ For information about how to troubleshoot packages that you run from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent jobs, see [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](http://support.microsoft.com/kb/918760) in the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Support Knowledge Base.  
   
  The SQL Server Agent checks subsystem access for a proxy and gives access to the proxy every time the job step runs.  
   
- You can create a proxy in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+ You can create a proxy in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 ## Related Tasks  
   

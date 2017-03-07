@@ -24,7 +24,7 @@ manager: "jhubbard"
 Replication is a good solution to the problem of moving data between continuously connected servers. Using replication's wizards, you can easily configure and administer a replication topology. This tutorial shows you how to configure a replication topology for continuously connected servers.  
   
 ## What You Will Learn  
-This tutorial will show you how to publish data from one database to another using transactional replication. The first lesson shows how to use [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to create a publication. Later lessons show how to create and validate a subscription and how to measure latency.  
+This tutorial will show you how to publish data from one database to another using transactional replication. The first lesson shows how to use [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] to create a publication. Later lessons show how to create and validate a subscription and how to measure latency.  
   
 ## Requirements  
 This tutorial is intended for users who are familiar with basic database operations, but who have limited experience with replication. This tutorial requires that you have completed the previous tutorial, [Preparing the Server for Replication](../../../relational-databases/replication/tutorials/tutorial-preparing-the-server-for-replication.md).  
@@ -33,19 +33,19 @@ To use this tutorial, your system must have the following components:
   
 -   At the Publisher server (source):  
   
-    -   Any edition of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], except Express ([!INCLUDE[ssExpress](../../../database-engine/configure/windows/includes/ssexpress-md.md)]) or [!INCLUDE[ssEW](../../../analysis-services/instances/includes/ssew-md.md)]. These editions cannot be replication Publishers.  
+    -   Any edition of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], except Express ([!INCLUDE[ssExpress](../../../a9notintoc/includes/ssexpress-md.md)]) or [!INCLUDE[ssEW](../../../a9retired/includes/ssew-md.md)]. These editions cannot be replication Publishers.  
   
-    -   [!INCLUDE[ssSampleDBUserInputNonLocal](../../../integration-services/control-flow/includes/sssampledbuserinputnonlocal-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
+    -   [!INCLUDE[ssSampleDBUserInputNonLocal](../../../a9retired/includes/sssampledbuserinputnonlocal-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
   
 -   Subscriber server (destination):  
   
-    -   Any edition of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], except [!INCLUDE[ssEW](../../../analysis-services/instances/includes/ssew-md.md)]. [!INCLUDE[ssEW](../../../analysis-services/instances/includes/ssew-md.md)] cannot be a Subscriber in transactional replication.  
+    -   Any edition of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], except [!INCLUDE[ssEW](../../../a9retired/includes/ssew-md.md)]. [!INCLUDE[ssEW](../../../a9retired/includes/ssew-md.md)] cannot be a Subscriber in transactional replication.  
   
     > [!NOTE]  
-    > Replication is not installed on [!INCLUDE[ssExpress](../../../database-engine/configure/windows/includes/ssexpress-md.md)] by default.  
+    > Replication is not installed on [!INCLUDE[ssExpress](../../../a9notintoc/includes/ssexpress-md.md)] by default.  
   
 > [!NOTE]  
-> In [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], you must connect to the Publisher and Subscriber using a login that is a member of the **sysadmin** fixed server role.  
+> In [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], you must connect to the Publisher and Subscriber using a login that is a member of the **sysadmin** fixed server role.  
   
 **Estimated time to complete this tutorial: 30 minutes.**  
   

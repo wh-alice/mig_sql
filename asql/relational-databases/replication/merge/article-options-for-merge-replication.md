@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   Specify that a set of related records should be processed as a unit (by default, merge replication processes changes to tables on a row-by-row basis). For more information, see [Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
--   Use conflict detection and resolution for cases in which the same data could be changed at more than one node in a topology. For more information, see [Detect and Resolve Merge Replication Conflicts](../Topic/Detect%20and%20Resolve%20Merge%20Replication%20Conflicts.md).  
+-   Use conflict detection and resolution for cases in which the same data could be changed at more than one node in a topology. For more information, see [Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
   
 -   Specify schema options, such as whether constraints and triggers are copied to the Subscriber. For more information, see [Specify Schema Options](../../../relational-databases/replication/publish/specify-schema-options.md).  
   

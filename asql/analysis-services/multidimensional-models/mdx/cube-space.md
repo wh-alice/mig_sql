@@ -54,7 +54,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Notice that 0 is used to designate the column axis, which is shorthand for axis(0) - which is the column axis.  
   
- The previous query only returns cells for members from each attribute hierarchy in the query that exist with each other. The previous query can also be written using the new * variant of the [* (Crossjoin) (MDX)](../Topic/*%20\(Crossjoin\)%20\(MDX\).md) function.  
+ The previous query only returns cells for members from each attribute hierarchy in the query that exist with each other. The previous query can also be written using the new * variant of the [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx-operator-reference.md) function.  
   
 ```  
 SELECT   
@@ -77,7 +77,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  The cells values returned will be identical, although the metadata in the result set will be different. For example, with the previous query, the Country hierarchy was moved to the slicer axis (in the WHERE clause) and therefore does not appear explicitly in the result set.  
   
- Each of these three previous queries demonstrates the effect of the auto-exists behavior in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].  
+ Each of these three previous queries demonstrates the effect of the auto-exists behavior in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].  
   
 ## User-Defined Hierarchies and Cube Space  
  The previous examples in this topic define positions in cube space by using attribute hierarchies. However, you can also define a position in cube space by using user-defined hierarchies that have been defined based on attribute hierarchies in a dimension. A user-defined hierarchy is a hierarchy of attribute hierarchies designed to facilitate browsing of cube data by users.  
@@ -111,7 +111,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Notice that the **WITH** keyword is used with the [CurrentMember (MDX)](../../../mdx/currentmember-mdx.md) and [Name (MDX)](../../../mdx/name-mdx.md) functions to create a calculated member for use in the query. For more information, see [The Basic MDX Query &#40;MDX&#41;](../Topic/The%20Basic%20MDX%20Query%20\(MDX\).md).  
+>  Notice that the **WITH** keyword is used with the [CurrentMember (MDX)](../../../mdx/currentmember-mdx.md) and [Name (MDX)](../../../mdx/name-mdx.md) functions to create a calculated member for use in the query. For more information, see [The Basic MDX Query &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md).  
   
  In the previous query, the name of the member of the Country attribute hierarchy that is associated with each member of the State attribute hierarchy is returned. The expected Country member appears (because an attribute relationship is defined between the City and Country attributes). However, if no attribute relationship were defined between attribute hierarchies in the same dimension, the (All) member would be returned, as illustrated in the following query.  
   

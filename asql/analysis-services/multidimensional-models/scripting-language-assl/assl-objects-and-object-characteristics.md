@@ -30,7 +30,7 @@ manager: "erikre"
   Objects in Analysis Services Scripting Language (ASSL) follow specific guidelines in regards to object groups, inheritance, naming, expansion, and processing.  
   
 ## Object Groups  
- All [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] objects have an XML representation. The objects are divided into two groups:  
+ All [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] objects have an XML representation. The objects are divided into two groups:  
   
  **Major objects**  
  Major objects can be independently created, altered, and deleted. Major objects include:  
@@ -66,7 +66,7 @@ manager: "erikre"
 -   **LastProcessed** (where appropriate)  
   
 > [!NOTE]  
->  The classification of an object as a major object affects how an instance of [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] treats that object and how that object is handled in the object definition language. However, this classification does not guarantee that [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] management and development tools will allow the independent creation, modification, or deletion of these objects.  
+>  The classification of an object as a major object affects how an instance of [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] treats that object and how that object is handled in the object definition language. However, this classification does not guarantee that [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] management and development tools will allow the independent creation, modification, or deletion of these objects.  
   
  **Minor objects**  
  Minor objects can only be created, altered, or deleted as part of creating, altering, or deleting the parent major object. Minor objects include:  
@@ -96,8 +96,8 @@ manager: "erikre"
  This ASSL reference section describes the *ExpandFull* representation. All other **ObjectExpansion** levels are derived from this level.  
   
 ## Object Processing  
- ASSL includes read-only elements or properties (for example, **LastProcessed**) that can be read from the [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance, but which are omitted when command scripts are submitted to the instance. [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] ignores modified values for read-only elements without warning or error.  
+ ASSL includes read-only elements or properties (for example, **LastProcessed**) that can be read from the [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance, but which are omitted when command scripts are submitted to the instance. [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] ignores modified values for read-only elements without warning or error.  
   
- [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] also ignores inappropriate or irrelevant properties without raising validation errors. For example, the X element should only be present when the Y element has a particular value. The [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance ignores the X element instead of validating that element against the value of the Y element.  
+ [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] also ignores inappropriate or irrelevant properties without raising validation errors. For example, the X element should only be present when the Y element has a particular value. The [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance ignores the X element instead of validating that element against the value of the Y element.  
   
   

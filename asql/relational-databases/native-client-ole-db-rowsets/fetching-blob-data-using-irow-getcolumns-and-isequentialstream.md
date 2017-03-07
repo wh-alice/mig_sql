@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Fetching BLOB Data Using IRow::GetColumns and ISequentialStream
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   The following function uses **IRow::GetColumns** and **ISequentialStream** to fetch large data:  
   
@@ -84,6 +84,6 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 ```  
   
 ## See Also  
- [Fetching BLOB Data Using IRow](../Topic/Fetching%20BLOB%20Data%20Using%20IRow.md)  
+ [Fetching BLOB Data Using IRow](../../a9retired/fetching-blob-data-using-irow.md)  
   
   

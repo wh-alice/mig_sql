@@ -30,7 +30,7 @@ manager: "jhubbard"
 
   Changes the properties of a symmetric key.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -66,7 +66,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  Specifies the certificate that is used to encrypt the symmetric key. This certificate must already exist in the database.  
   
  PASSWORD **='***password***'**  
- Specifies the password that is used to encrypt the symmetric key. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Specifies the password that is used to encrypt the symmetric key. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  SYMMETRIC KEY *Symmetric_Key_Name*  
  Specifies the symmetric key that is used to encrypt the symmetric key that is being changed. This symmetric key must already exist in the database and must be open.  
@@ -84,7 +84,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  To change the owner of a symmetric key, use [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
 > [!NOTE]  
->  The RC4 algorithm is only supported for backward compatibility. New material can only be encrypted using RC4 or RC4_128 when the database is in compatibility level 90 or 100. (Not recommended.) Use a newer algorithm such as one of the AES algorithms instead. In [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] material encrypted using RC4 or RC4_128 can be decrypted in any compatibility level.  
+>  The RC4 algorithm is only supported for backward compatibility. New material can only be encrypted using RC4 or RC4_128 when the database is in compatibility level 90 or 100. (Not recommended.) Use a newer algorithm such as one of the AES algorithms instead. In [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] material encrypted using RC4 or RC4_128 can be decrypted in any compatibility level.  
   
 ## Permissions  
  Requires ALTER permission on the symmetric key. If adding encryption by a certificate or asymmetric key, requires VIEW DEFINITION permission on the certificate or asymmetric key. If dropping encryption by a certificate or asymmetric key, requires CONTROL permission on the certificate or asymmetric key.  

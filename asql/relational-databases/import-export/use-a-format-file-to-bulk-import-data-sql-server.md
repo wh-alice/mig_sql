@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use a Format File to Bulk Import Data (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
 This topic illustrates the use of a format file in bulk-import operations.  A format file maps the fields of the data file to the columns of the table.  Please review [Create a Format File (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) for additional information.
 
@@ -41,7 +41,7 @@ This topic illustrates the use of a format file in bulk-import operations.  A fo
 The examples of format files in this topic are based on the table and data file defined below.
 
 ### **Sample Table**<a name="sample_table"></a>
-The script below creates a test database and a table named `myFirstImport`.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+The script below creates a test database and a table named `myFirstImport`.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 CREATE DATABASE TestDatabase;
 GO
@@ -180,7 +180,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport;"
 
 
 ### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_nonxml"></a>
-Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;  
 GO
@@ -196,7 +196,7 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
 ### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [XML Format File](../../relational-databases/import-export/xml-format-files-sql-server.md)**<a name="bulk_xml"></a>
-Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;  
 GO
@@ -212,7 +212,7 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
 ### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_nonxml"></a>	
-Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -231,7 +231,7 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
 ### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and [XML Format File](../../relational-databases/import-export/xml-format-files-sql-server.md)**<a name="openrowset_xml"></a>
-Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;  
 GO

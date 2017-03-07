@@ -17,7 +17,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Tutorial: Map Report (Report Builder)
-In this [!INCLUDE[ssRBnoversion_md](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] tutorial, you learn about map features you can use to display data on a geographic background in an [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report. 
+In this [!INCLUDE[ssRBnoversion_md](../../a9notintoc/includes/ssrbnoversion-md.md)] tutorial, you learn about map features you can use to display data on a geographic background in an [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report. 
   
 Maps are based on spatial data that typically consists of points, lines, and polygons. For example, a polygon can represent the outline of a county, a line can represent a road, and a point can represent the location of a city. Each type of spatial data is displayed on a separate map layer as a set of map elements.  
   
@@ -42,7 +42,7 @@ In this section, you add a map to your report from the map gallery. The map has 
   
 ### To add a map with the map wizard in a new report  
   
-1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
+1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
   
     The **New Report or Dataset** dialog box opens.  
   
@@ -218,7 +218,7 @@ In this section, you use the map layer wizard to add a point layer that displays
   
 23. On the **General** tab, select **Bottom** for **Placement**.
 
-24. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+24. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 24. Click **Run** to preview the report.  
 
@@ -305,7 +305,7 @@ In this section, you add a map layer that displays a Bing Maps tile background.
 
     ![report-builder-map-bing-aerial](../../reporting-services/tutorials/media/report-builder-map-bing-aerial.png)
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## <a name="Transparent"></a>5. Make a Layer Transparent  
 In this section, to let the items on one layer show through another layer, you adjust the order and transparency of the layers for the effect that you want. You start with the first layer you created, PolygonLayer1. 
@@ -316,7 +316,7 @@ In this section, to let the items on one layer show through another layer, you a
   
 4.  On the **Visibility** tab, under **Transparency (percent)**, type **30**.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
      The design surface displays the counties as semi-transparent.  
 
@@ -346,7 +346,7 @@ To vary the county shapes by color based on analytical data, you first need to a
 
     ![report-builder-map-county-colors](../../reporting-services/tutorials/media/report-builder-map-county-colors.png)
   
-9. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 10. Preview the report.  
 
@@ -391,7 +391,7 @@ To create a rule that varies the color of each county based store sales, you mus
   
 13. In **Show in this legend**, from the drop-down list, select the blank line. For now, you will show the color ranges only in the color scale.  
   
-14. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+14. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
 
 15. Preview the report.
 
@@ -443,7 +443,7 @@ You can set the default display options for all map elements on a layer. Color r
   
 6.  In **Color**, select **Light Steel Blue**.  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 8.  Preview the report.  
   
@@ -484,7 +484,7 @@ To represent a new store that has not yet been built, in this section you specif
 
     ![report-builder-map-custom-point-font](../../reporting-services/tutorials/media/report-builder-map-custom-point-font.png)
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 7.  Preview the report.  
   
@@ -503,7 +503,7 @@ In this section, you learn to change the map center, and another way to change t
 
 4. Set **Zoom level (percent)** to **125**.
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 5.  Click the map, and drag to center it where you want it.  
   
@@ -529,7 +529,7 @@ This title will appear at the top of the report. Items at the top of the report 
  
 3.  In **Name**, type **Store Sales in New York**.  
 
-3. Save it to your local computer or to a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] server.
+3. Save it to your local computer or to a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] server.
   
 4. Click **Save**. 
 

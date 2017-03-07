@@ -19,9 +19,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Execute Process Task
-  The Execute Process task runs an application or batch file as part of a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package workflow. Although you can use the Execute Process task to open any standard application, such as [!INCLUDE[ofprexcel](../../analysis-services/data-mining/includes/ofprexcel-md.md)] or [!INCLUDE[ofprword](../../integration-services/control-flow/includes/ofprword-md.md)], you typically use it to run business applications or batch files that work against a data source. For example, you can use the Execute Process task to expand a compressed text file. Then the package can use the text file as a data source for the data flow in the package. As another example, you can use the Execute Process task to run a custom [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] application that generates a daily sales report. Then you can attach the report to a Send Mail task and forward the report to a distribution list.  
+  The Execute Process task runs an application or batch file as part of a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package workflow. Although you can use the Execute Process task to open any standard application, such as [!INCLUDE[ofprexcel](../../a9retired/includes/ofprexcel-md.md)] or [!INCLUDE[ofprword](../../a9retired/includes/ofprword-md.md)], you typically use it to run business applications or batch files that work against a data source. For example, you can use the Execute Process task to expand a compressed text file. Then the package can use the text file as a data source for the data flow in the package. As another example, you can use the Execute Process task to run a custom [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] application that generates a daily sales report. Then you can attach the report to a Send Mail task and forward the report to a distribution list.  
   
- [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] includes other tasks that perform workflow operations such as executing packages. For more information, see [Execute Package Task](../../integration-services/control-flow/execute-package-task.md)  
+ [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] includes other tasks that perform workflow operations such as executing packages. For more information, see [Execute Package Task](../../integration-services/control-flow/execute-package-task.md)  
   
 ## Custom Log Entries Available on the Execute Process Task  
  The following table lists the custom log entries for the Execute Process task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md).  
@@ -32,22 +32,22 @@ manager: "jhubbard"
 |**ExecuteProcessVariableRouting**|Provides information about which variables are routed to the input and outputs of the executable. Log entries are written for stdin (the input), stdout (the output), and stderr (the error output).|  
   
 ## Configuration of the Execute Process Task  
- You can set properties through [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click one of the following topics:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [Execute Process Task Editor &#40;General Page&#41;](../../integration-services/control-flow/execute-process-task-editor-general-page.md)  
   
 -   [Execute Process Task Editor &#40;Process Page&#41;](../../integration-services/control-flow/execute-process-task-editor-process-page.md)  
   
- For more information about how to set these properties in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Set the Properties of a Task or Container](../../a9retired/set-the-properties-of-a-task-or-container.md)  
   
 ### Property Settings  
  When the Execute Process task runs a custom application, the task provides input to the application through one or both of the following methods:  
   
--   A variable that you specify in the **StandardInputVariable** property setting. For more information about variables, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](../Topic/Use%20Variables%20in%20Packages.md).  
+-   A variable that you specify in the **StandardInputVariable** property setting. For more information about variables, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](../../a9retired/use-variables-in-packages.md).  
   
 -   An argument that you specify in the **Arguments** property setting. (For example, if the task opens a document in Word, the argument can name the .doc file.)  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
  You can use an expression to set various Execute Process task properties.  
   
- When you use the **StandardInputVariable** property to configure the Execute Process task to provide input, call the **Console.ReadLine** method from the application to read the input. For more information, see [Console.ReadLine Method](http://go.microsoft.com/fwlink/?LinkId=129201)the topic, , in the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] Class Library.  
+ When you use the **StandardInputVariable** property to configure the Execute Process task to provide input, call the **Console.ReadLine** method from the application to read the input. For more information, see [Console.ReadLine Method](http://go.microsoft.com/fwlink/?LinkId=129201)the topic, , in the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] Class Library.  
   
  When you use the **Arguments** property to configure the Execute Process task to provide input, do one of the following steps to obtain the arguments:  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  
   
-     For more information, see the topic, [My.Application.CommandLineArgs Property](http://go.microsoft.com/fwlink/?LinkId=129200), in the [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] reference.  
+     For more information, see the topic, [My.Application.CommandLineArgs Property](http://go.microsoft.com/fwlink/?LinkId=129200), in the [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] reference.  
   
 -   If you use Microsoft Visual C# to write the applicate, use the **Main** method.  
   

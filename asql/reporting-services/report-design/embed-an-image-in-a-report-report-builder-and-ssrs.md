@@ -24,7 +24,7 @@ manager: "erikre"
  You might want to embed an image in the report definition before adding the image to the design surface. For more information, see [Add a Background Image &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ### To embed an image in a report  
   
@@ -63,6 +63,6 @@ manager: "erikre"
 ## See Also  
  [Images &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
  [Add a Data-Bound Image &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
- [Image Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](../Topic/Image%20Properties%20Dialog%20Box,%20General%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Image Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](../../a9retired/image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

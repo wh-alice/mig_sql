@@ -27,7 +27,7 @@ manager: "jhubbard"
 
 Changes the membership of a server role or changes name of a user-defined server role. Fixed server roles cannot be renamed.  
   
-![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -108,7 +108,7 @@ ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;
 ```  
   
 ### C. Adding a SQL Server login to a server role  
-The following example adds a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login named `Ted` to the `diskadmin` fixed server role.  
+The following example adds a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login named `Ted` to the `diskadmin` fixed server role.  
   
 ```  
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
@@ -123,7 +123,7 @@ ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;
 ```  
   
 ### E. Removing a SQL Server login from a server role  
-The following example removes the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login `Ted` from the `diskadmin` fixed server role.  
+The following example removes the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login `Ted` from the `diskadmin` fixed server role.  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
@@ -139,7 +139,7 @@ GO
 ```  
   
 ### G. To view role membership  
-To view role membership, use the **Server Role (Members)** page in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or execute the following query:  
+To view role membership, use the **Server Role (Members)** page in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or execute the following query:  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
@@ -152,7 +152,7 @@ JOIN sys.server_principals AS SP2
 ORDER BY  SP.name,  SP2.name  
 ```  
   
-## Examples: [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### H. Basic Syntax  
 The following example adds the login `Anna` to the `LargeRC` server role.  
@@ -174,9 +174,9 @@ ALTER SERVER ROLE LargeRC DROP MEMBER Anna;
 [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
 [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
 [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
-[Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+[Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/security-stored-procedures-transact-sql.md)   
 [Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
 [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
-[sys.server_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-role-members-transact-sql.md)   
-[sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-principals-transact-sql.md)  
+[sys.server_role_members &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-role-members-transact-sql.md)   
+[sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-principals-transact-sql.md)  
   

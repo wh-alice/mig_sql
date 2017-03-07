@@ -22,14 +22,14 @@ manager: "jhubbard"
 ## Feature Summary for Product Releases  
  This table summarizes key features for PolyBase and the products in which they are available.  
   
-### [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)]  
- These features apply to [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] running on-premises or in an Azure virtual machine.  PolyBase is not available in SQL Server 2014 and earlier versions.  
+### [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)]  
+ These features apply to [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] running on-premises or in an Azure virtual machine.  PolyBase is not available in SQL Server 2014 and earlier versions.  
   
 |||  
 |-|-|  
 |**Feature**|**Availability**|  
-|Query Hadoop data with [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]|yes|  
-|Query Azure blob storage with [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]|yes|  
+|Query Hadoop data with [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]|yes|  
+|Query Azure blob storage with [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]|yes|  
 |Import data from Hadoop|yes|  
 |Import data from Azure blob storage|yes| 
 |Import data from Azure Data Lake Store|no|   
@@ -39,14 +39,14 @@ manager: "jhubbard"
 |Run PolyBase queries from Microsoft's BI tools|yes|  
 |Push down query computations to Hadoop|yes|  
   
-### [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)]  
- These features apply to [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)].  
+### [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)]  
+ These features apply to [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)].  
   
 |||  
 |-|-|  
 |**Feature**|**Availability**|  
-|Query Hadoop data with [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]|no|  
-|Query Azure blob storage with [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]|yes|  
+|Query Hadoop data with [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]|no|  
+|Query Azure blob storage with [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]|yes|  
 |Import data from Hadoop|no|  
 |Import data from Azure blob storage|yes|
 |Import data from Azure Data Lake Store|yes|     
@@ -56,14 +56,14 @@ manager: "jhubbard"
 |Run PolyBase queries from Microsoft's BI tools|yes|  
 |Push down query computations to Hadoop|no|  
   
-### [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
- These features apply to [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)].  
+### [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
+ These features apply to [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)].  
   
 |||  
 |-|-|  
 |**Feature**|**Availability**|  
-|Query Hadoop data with [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]|yes|  
-|Query Azure blob storage with [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]|yes|  
+|Query Hadoop data with [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]|yes|  
+|Query Azure blob storage with [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]|yes|  
 |Import data from Hadoop|yes|  
 |Import data from Azure blob storage|yes|  
 |Import data from Azure Data Lake Store|no|   

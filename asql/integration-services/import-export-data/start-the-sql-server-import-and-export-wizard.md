@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Start the SQL Server Import and Export Wizard
-You can start the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard in one of the following ways to import data from and export data to any supported data source. This topic briefly describes the steps for each method.
+You can start the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard in one of the following ways to import data from and export data to any supported data source. This topic briefly describes the steps for each method.
 -   From the [Start menu](#startStart).
 -   From the [command prompt](#startCmd). 
 -   From [SQL Server Management Studio (SSMS)](#startSSMS).
@@ -29,7 +29,7 @@ You can start the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/inc
 This topic describes only how to **start** the wizard. If you're looking for something else, see [Related tasks and content](#related).
 
 ## Get the wizard
-If you want to run the wizard, but you don't have [!INCLUDE[msCoName] (../Token/msCoName_md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] installed on your computer, you can install the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard  by installing SQL Server Data Tools (SSDT). For more info, see [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+If you want to run the wizard, but you don't have [!INCLUDE[msCoName] (../Token/msCoName_md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] installed on your computer, you can install the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard  by installing SQL Server Data Tools (SSDT). For more info, see [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="startStart"></a> Start menu  
 ### Start the SQL Server Import and Export Wizard from the Start menu
@@ -58,7 +58,7 @@ Run the 64-bit version of the wizard unless you know that your data source requi
   
 ## <a name="startSSMS"></a> SQL Server Management Studio (SSMS)
 ### Start the SQL Server Import and Export Wizard from SQL Server Management Studio (SSMS)    
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], connect to an instance of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], connect to an instance of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].
     
 2.  Expand **Databases**.
 3.  Right-click a database.
@@ -75,7 +75,7 @@ If you don't have SQL Server installed, or you have SQL Server but don't have SQ
   
 ## <a name="startVS"></a> Visual Studio
 ### Start the SQL Server Import and Export Wizard from Visual Studio with SQL Server Data Tools (SSDT) 
- In Visual Studio with [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], with an Integration Services project open, do one of the following things. 
+ In Visual Studio with [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], with an Integration Services project open, do one of the following things. 
   
 -   On the **Project** menu, click **SSIS Import and Export Wizard**. 
 

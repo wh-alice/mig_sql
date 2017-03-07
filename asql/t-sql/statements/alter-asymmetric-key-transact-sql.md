@@ -31,7 +31,7 @@ manager: "jhubbard"
 
   Changes the properties of an asymmetric key.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -62,7 +62,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  Changes the protection of the private key.  
   
  ENCRYPTION BY PASSWORD **='***stongPassword***'**  
- Specifies a new password for protecting the private key. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. If this option is omitted, the private key will be encrypted by the database master key.  
+ Specifies a new password for protecting the private key. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. If this option is omitted, the private key will be encrypted by the database master key.  
   
  DECRYPTION BY PASSWORD **='***oldPassword***'**  
  Specifies the old password, with which the private key is currently protected. Is not required if the private key is encrypted with the database master key.  

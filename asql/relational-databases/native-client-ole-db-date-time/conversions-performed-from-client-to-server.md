@@ -17,12 +17,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Conversions Performed from Client to Server
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  This topic describes date/time conversions performed between a client application written with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB and [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] (or later).  
+  This topic describes date/time conversions performed between a client application written with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB and [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] (or later).  
   
 ## Conversions  
- This topic describes conversions made on the client. If the client specifies fractional seconds precision for a parameter that differs from that defined on the server, the client conversion might cause a failure in cases where the server would allow the operation to succeed. In particular, the client treats any truncation of fractional seconds as an error, whereas [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] rounds time values to the nearest whole second.  
+ This topic describes conversions made on the client. If the client specifies fractional seconds precision for a parameter that differs from that defined on the server, the client conversion might cause a failure in cases where the server would allow the operation to succeed. In particular, the client treats any truncation of fractional seconds as an error, whereas [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] rounds time values to the nearest whole second.  
   
  If ICommandWithParameters::SetParameterInfo is not called, DBTYPE_DBTIMESTAMP bindings are converted as if they were **datetime2**.  
   
@@ -57,12 +57,12 @@ manager: "jhubbard"
 |7|The date is set to the current date.|  
 |8|The time is converted to UTC. If an error occurs during this conversion, DBSTATUS_E_CANTCONVERTVALUE is set.|  
 |9|The string is parsed as an ISO literal and converted to the target type. If this fails, the string is parsed as an OLE date literal (which also has time components) and converted from an OLE date (DBTYPE_DATE) to the target type.<br /><br /> If the target type is DBTIMESTAMP, **smalldatetime**, **datetime**, or **datetime2**, the string must conform to the syntax for date, time, or **datetime2** literals, or the syntax recognized by OLE. If the string is a date literal, all time components are set to zero. If the string is a time literal, the date is set to the current date.<br /><br /> For all other target types, the string must conform to the syntax for literals of the target type.|  
-|10|If truncation of fractional seconds with data loss occurs, DBSTATUS_E_DATAOVERFLOW is set. For string conversions, overflow checking is only possible when the string conforms to ISO syntax. If the string is an OLE date literal, fractional seconds are rounded.<br /><br /> For conversion from DBTIMESTAMP (datetime) to smalldatetime [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client will silently truncate the seconds value instead of raising the DBSTATUS_E_DATAOVERFLOW error.|  
+|10|If truncation of fractional seconds with data loss occurs, DBSTATUS_E_DATAOVERFLOW is set. For string conversions, overflow checking is only possible when the string conforms to ISO syntax. If the string is an OLE date literal, fractional seconds are rounded.<br /><br /> For conversion from DBTIMESTAMP (datetime) to smalldatetime [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client will silently truncate the seconds value instead of raising the DBSTATUS_E_DATAOVERFLOW error.|  
 |11|The number of fractional second digits (the scale) is determined from the destination column's size, according to the table below. For column sizes larger than the range in the table, a scale of 9 is implied. This conversion should allow for up to nine fractional second digits, the maximum allowed by OLE DB.<br /><br /> However, if the source type is DBTIMESTAMP and the fractional seconds is zero, no fractional second digits or decimal point are generated. This behavior ensures backwards compatibility for applications developed using older OLE DB providers.<br /><br /> A column size of ~0 implies unlimited size in OLE DB (9 digits, unless the 3-digit rule for DBTIMESTAMP applies).|  
-|12|Conversion semantics prior to [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] for DBTYPE_DATE are maintained. Fractional seconds are truncated to zero.|  
-|13|Conversion semantics prior to [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] for DBTYPE_FILETIME are maintained. If you use the Windows FileTimeToSystemTime API, the fractional seconds precision is limited to 1 millisecond.|  
-|14|Conversion semantics prior to [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] for **smalldatetime** are maintained. Seconds are set to zero.|  
-|15|Conversion semantics prior to [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] for **datetime** are maintained. Seconds are rounded to the nearest 300th of a second.|  
+|12|Conversion semantics prior to [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] for DBTYPE_DATE are maintained. Fractional seconds are truncated to zero.|  
+|13|Conversion semantics prior to [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] for DBTYPE_FILETIME are maintained. If you use the Windows FileTimeToSystemTime API, the fractional seconds precision is limited to 1 millisecond.|  
+|14|Conversion semantics prior to [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] for **smalldatetime** are maintained. Seconds are set to zero.|  
+|15|Conversion semantics prior to [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] for **datetime** are maintained. Seconds are rounded to the nearest 300th of a second.|  
 |16|The conversion behavior of a value (of a given type) embedded in a SSVARIANT client struct is the same as the behavior of the same value and type when not embedded in a SSVARIANT client struct.|  
   
 ||||  
@@ -73,6 +73,6 @@ manager: "jhubbard"
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  
   
 ## See Also  
- [Bindings and Conversions &#40;OLE DB&#41;](../Topic/Bindings%20and%20Conversions%20\(OLE%20DB\).md)  
+ [Bindings and Conversions &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
   
   

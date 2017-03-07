@@ -51,7 +51,7 @@ REPLACENULL(MyColumn, "1900-01-01")
 ```  
   
 > [!NOTE]  
->  The following example shows how it was done in [!INCLUDE[ssISversion2005](../../database-engine/install/windows/includes/ssisversion2005-md.md)]/[!INCLUDE[ssISversion10](../../integration-services/control-flow/includes/ssisversion10-md.md)].  
+>  The following example shows how it was done in [!INCLUDE[ssISversion2005](../../a9retired/includes/ssisversion2005-md.md)]/[!INCLUDE[ssISversion10](../../a9retired/includes/ssisversion10-md.md)].  
   
 ```  
 (DT_DBTIMESTAMP) (ISNULL(MyColumn) ? “1900-01-01” : MyColumn)   

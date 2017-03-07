@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # Create Element (XMLA)
-  Contains Analysis Services Scripting Language (ASSL) elements used by the **Execute** method to create objects on a [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance.  
+  Contains Analysis Services Scripting Language (ASSL) elements used by the **Execute** method to create objects on a [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance.  
   
 ## Syntax  
   
@@ -62,14 +62,14 @@ manager: "erikre"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|AllowOverwrite|Optional **Boolean** attribute. If set to True, the objects defined in the **ObjectDefinition** element can overwrite existing objects on the [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance. If this attribute is omitted or set to False, the presence of an existing object generates an error.|  
-|Scope|Optional **Enum** attribute. Defines the duration of objects defined in the **ObjectDefinition** element. If this attribute is omitted, the objects defined in the **ObjectDefinition** element are persisted on the [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance. The following value is available:<br /><br /> *Session*: The objects defined in the **ObjectDefinition** element exist only for the duration of the XML for Analysis (XMLA) session.<br />                  Note that when using the *Session* setting, the **ObjectDefinition** element can only contain [Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md), [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md), or [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) ASSL elements.|  
+|AllowOverwrite|Optional **Boolean** attribute. If set to True, the objects defined in the **ObjectDefinition** element can overwrite existing objects on the [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance. If this attribute is omitted or set to False, the presence of an existing object generates an error.|  
+|Scope|Optional **Enum** attribute. Defines the duration of objects defined in the **ObjectDefinition** element. If this attribute is omitted, the objects defined in the **ObjectDefinition** element are persisted on the [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance. The following value is available:<br /><br /> *Session*: The objects defined in the **ObjectDefinition** element exist only for the duration of the XML for Analysis (XMLA) session.<br />                  Note that when using the *Session* setting, the **ObjectDefinition** element can only contain [Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md), [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md), or [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) ASSL elements.|  
   
 ## Remarks  
- Each **Create** operation creates one major object under a parent given by the **ParentObject** element. If the parent object is omitted, it is assumed to be the destination [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance. This generates an error if the parent of a major object is not the destination instance.  
+ Each **Create** operation creates one major object under a parent given by the **ParentObject** element. If the parent object is omitted, it is assumed to be the destination [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance. This generates an error if the parent of a major object is not the destination instance.  
   
 ## Example  
- The following example creates an empty database named **Test Database** on an [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance.  
+ The following example creates an empty database named **Test Database** on an [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance.  
   
 ```  
   
@@ -84,6 +84,6 @@ manager: "erikre"
 ```  
   
 ## See Also  
- [Commands &#40;XMLA&#41;](../Topic/Commands%20\(XMLA\).md)  
+ [Commands &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

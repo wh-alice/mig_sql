@@ -45,7 +45,7 @@ manager: "jhubbard"
   
      If the witness lacks an endpoint, see [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
-2.  If the partner instances are running under different domain user accounts, create a login for the different accounts in the master database of each instance. For more information, see [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../Topic/Allow%20Network%20Access%20to%20a%20Database%20Mirroring%20Endpoint%20Using%20Windows%20Authentication%20\(SQL%20Server\).md).  
+2.  If the partner instances are running under different domain user accounts, create a login for the different accounts in the master database of each instance. For more information, see [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
 3.  Connect to the principal server and issue the following statement:  
   
@@ -125,9 +125,9 @@ manager: "jhubbard"
   
 ## See Also  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../Topic/Allow%20Network%20Access%20to%20a%20Database%20Mirroring%20Endpoint%20Using%20Windows%20Authentication%20\(SQL%20Server\).md)   
+ [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)   
  [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/143c68a5-589f-4e7f-be59-02707e1a430a.md)   
+ [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)   
  [Remove the Witness from a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
  [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   

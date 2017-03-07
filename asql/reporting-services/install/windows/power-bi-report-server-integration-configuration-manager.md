@@ -20,7 +20,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Power BI Report Server Integration (Configuration Manager)
-  The  **Power BI Integration** page  in [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Configuration Manager is used to register the report server with the desired Azure Active Directory (AD) managed tenant to allow users of the report server to pin supported report items to [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)] dashboards. For a list of the supported items you can pin, see [Pin Reporting Services items to Power BI Dashboards](../../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
+  The  **Power BI Integration** page  in [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Configuration Manager is used to register the report server with the desired Azure Active Directory (AD) managed tenant to allow users of the report server to pin supported report items to [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)] dashboards. For a list of the supported items you can pin, see [Pin Reporting Services items to Power BI Dashboards](../../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
   
  ![rs_powerbi_icon](../../../reporting-services/media/ssrs-powerbi-icon.png "rs_powerbi_icon")  
   
@@ -31,17 +31,17 @@ manager: "erikre"
   
 -   **Managed Tenant:** The [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)] dashboard you want to pin report items to must be part of an Azure AD managed tenant.  A managed tenant is created automatically the first time your organization subscribes to Azure services such as Office 365 and Microsoft Intune.   Viral tenants are currently not supported supported.  For more information, see  the sections "What is an Azure AD tenant" and "how to get an Azure AD Directory" in [What is an Azure AD directory?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)  
   
--   The user performing the [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)] integration needs to be a member of the Azure AD tenant, a [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] system administrator and a system administrator for the ReportServer catalog database.  
+-   The user performing the [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)] integration needs to be a member of the Azure AD tenant, a [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] system administrator and a system administrator for the ReportServer catalog database.  
   
--   The user performing the [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)] integration needs to start the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Configuration Manager either with the account used to install [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], or the account the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] service is running under  
+-   The user performing the [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)] integration needs to start the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Configuration Manager either with the account used to install [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)], or the account the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] service is running under  
   
--   Reports that you want to pin from must use stored credentials. This is not a requirement of the [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)] integration itself but of the refresh process for the pinned items.  The action of pinning a report item creates a [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] subscription to manage the refresh schedule of the tiles in [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)]. [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] subscriptions require stored credentials. If a report does not use stored credentials, a user can still pin report items but when the associated subscription attempts to refresh the data to [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)], you will see an error message similar to the following on the **My Subscriptions** page.  
+-   Reports that you want to pin from must use stored credentials. This is not a requirement of the [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)] integration itself but of the refresh process for the pinned items.  The action of pinning a report item creates a [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] subscription to manage the refresh schedule of the tiles in [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)]. [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] subscriptions require stored credentials. If a report does not use stored credentials, a user can still pin report items but when the associated subscription attempts to refresh the data to [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)], you will see an error message similar to the following on the **My Subscriptions** page.  
   
         PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
  
  For more information on how to store credentials, see the section "Configure stored credentials for a report-specific data source (Native mode)" in [Store Credentials in a Reporting Services Data Source](../../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).  
   
-An administrator can review the  [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] log files for more information.  They will see messages similar to the following. ![note](../../../analysis-services/instances/install/windows/media/ssrs-fyi-note.png "note") A great way to  review and monitor [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] logs files is to use [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Power Query over the files.  for more information and a short video, see [Report Server Service Trace Log](../../../reporting-services/report-server/report-server-service-trace-log.md).  
+An administrator can review the  [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] log files for more information.  They will see messages similar to the following. ![note](../../../a9retired/media/ssrs-fyi-note.png "note") A great way to  review and monitor [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] logs files is to use [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Power Query over the files.  for more information and a short video, see [Report Server Service Trace Log](../../../reporting-services/report-server/report-server-service-trace-log.md).  
   
     subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.  
   
@@ -49,7 +49,7 @@ An administrator can review the  [!INCLUDE[ssRSnoversion](../../../advanced-anal
   
   
 ##  <a name="bkmk_steps2integrate"></a> To Integrate and Register the Report Server  
- Complete the following steps from the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Configuration Manager. For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../reporting-services/install/windows/reporting-services-configuration-manager-native-mode.md).  
+ Complete the following steps from the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Configuration Manager. For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../reporting-services/install/windows/reporting-services-configuration-manager-native-mode.md).  
   
 1.  Select the [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)] integration page.  
   
@@ -57,11 +57,11 @@ An administrator can review the  [!INCLUDE[ssRSnoversion](../../../advanced-anal
   
 2.  Select **Register with Power BI**.  
   
-3.  At the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] sign-in dialog, enter the credentials you use to sign into [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)].  
+3.  At the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] sign-in dialog, enter the credentials you use to sign into [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)].  
   
 4.  After the registration is complete, the **Power BI Registration Details** section will note the Azure Tenant ID and the Redirect URL(s).  The URLs are used as part of the sign-in and communication process for the [!INCLUDE[sspowerbi](../../../reporting-services/includes/sspowerbi-md.md)] dashboard to communicate back to the registered report server.  
   
-5.  ![note](../../../analysis-services/instances/install/windows/media/ssrs-fyi-note.png "note") Select the **Copy** button in the **Results** window to copy the registration details to the Windows clipboard so you can save them for future reference.  
+5.  ![note](../../../a9retired/media/ssrs-fyi-note.png "note") Select the **Copy** button in the **Results** window to copy the registration details to the Windows clipboard so you can save them for future reference.  
   
 ##  <a name="bkmk_unregister"></a> Unregister With Power BI  
  **Unregister:** Un-registering the report server from Azure Active Directory will result in the following:  
@@ -70,7 +70,7 @@ An administrator can review the  [!INCLUDE[ssRSnoversion](../../../advanced-anal
   
 -   Report items that have already been pinned will still be pinned to dashboards, however the tiles will no longer be updated on the dashboard.  
   
--   The [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] subscriptions that were updating the tiles will still  exist on the report server but when they run on their configured schedule, they will show an error message similar to the following.  
+-   The [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] subscriptions that were updating the tiles will still  exist on the report server but when they run on their configured schedule, they will show an error message similar to the following.  
   
     **The delivery extension for this subscription could not be loaded**  
   
@@ -79,7 +79,7 @@ From the **Power BI** page of configuration manager, select  the **Unregister wi
 ##  <a name="bkmk_updateregistration"></a> Update Registration  
  Use the **Update Registration** if the configuration of your report server has changed. For example if you want to add or remove the URLS your users use to browse to the [!INCLUDE[ssRSWebPortal](../../../reporting-services/includes/ssrswebportal.md)].  
   
--   In [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Configuration Manager, select the **Web Portal URL**  
+-   In [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Configuration Manager, select the **Web Portal URL**  
   
      Select **Advanced**.  
   
@@ -110,9 +110,9 @@ From the **Power BI** page of configuration manager, select  the **Unregister wi
   
  **When a user pins a report item to a dashboard:**  
   
-1. Users preview reports in the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../../reporting-services/includes/ssrswebportal.md)] and the first time they click to pin a report item from the [!INCLUDE[ssRSWebPortal](../../../reporting-services/includes/ssrswebportal.md)].
+1. Users preview reports in the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../../reporting-services/includes/ssrswebportal.md)] and the first time they click to pin a report item from the [!INCLUDE[ssRSWebPortal](../../../reporting-services/includes/ssrswebportal.md)].
 
-2. They will be redirected to the Azure AD sign-in page. They can also sign in from the [!INCLUDE[ssRSWebPortal](../../../reporting-services/includes/ssrswebportal.md)] **My Settings** page. When users sign in to the Azure managed tenant, a relationship is established between their Azure account and the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] permissions.  For more information, see [My Settings for Power BI Integration &#40;web portal&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
+2. They will be redirected to the Azure AD sign-in page. They can also sign in from the [!INCLUDE[ssRSWebPortal](../../../reporting-services/includes/ssrswebportal.md)] **My Settings** page. When users sign in to the Azure managed tenant, a relationship is established between their Azure account and the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] permissions.  For more information, see [My Settings for Power BI Integration &#40;web portal&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
   
 3. A user security token is returned to the report server.
 
@@ -122,9 +122,9 @@ From the **Power BI** page of configuration manager, select  the **Unregister wi
 
 6. The report item is pinned to the dashboard.  
   
-7. A [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] subscription is created to manage the scheduled refresh of the report item to the dashboard tile. The subscription uses the security token that was created when the user signed in.  
+7. A [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] subscription is created to manage the scheduled refresh of the report item to the dashboard tile. The subscription uses the security token that was created when the user signed in.  
   
-     **NOTE:**  The token is good for **90 days**, after which users need to sign in again to create a new user token. When the token is expired,  the pinned tiles will still be displayed on the dashboard but the data will no longer be refreshed.  The [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] subscriptions used for the pinned items will error until a new user token is created. See [My Settings for Power BI Integration &#40;web portal&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5). for more information.  
+     **NOTE:**  The token is good for **90 days**, after which users need to sign in again to create a new user token. When the token is expired,  the pinned tiles will still be displayed on the dashboard but the data will no longer be refreshed.  The [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] subscriptions used for the pinned items will error until a new user token is created. See [My Settings for Power BI Integration &#40;web portal&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5). for more information.  
   
 The second time a user pins an item, the steps 1-4 are skipped and instead the App id and URLS are retrieved from the ReportServer database and the flow continues with step 5.  
   
@@ -132,7 +132,7 @@ The second time a user pins an item, the steps 1-4 are skipped and instead the A
   
  **When a subscription fires to refresh a dashboard tile:**  
   
-1. When the [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] subscription fires, the report is rendered.
+1. When the [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] subscription fires, the report is rendered.
 
 2. The user token is retrieved from the ReportServer database.  
   

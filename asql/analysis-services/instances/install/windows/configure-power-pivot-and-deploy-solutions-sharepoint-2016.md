@@ -15,15 +15,15 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Configure Power Pivot and Deploy Solutions (SharePoint 2016)
-  This topics describes the deployment and configuration of middle-tier enhancements to the [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] features in [!INCLUDE[SPS2016](../../../../analysis-services/instances/install/windows/includes/sps2016-md.md)] including [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] Gallery, Schedule data refresh, Management Dashboard, and data providers. Run **[!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] for SharePoint 2016 Configuration** tool to complete the following:  
+  This topics describes the deployment and configuration of middle-tier enhancements to the [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] features in [!INCLUDE[SPS2016](../../../../analysis-services/instances/install/windows/includes/sps2016-md.md)] including [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] Gallery, Schedule data refresh, Management Dashboard, and data providers. Run **[!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] for SharePoint 2016 Configuration** tool to complete the following:  
   
 -   Deploy SharePoint solution files.  
   
--   Create a [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] service application.  
+-   Create a [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] service application.  
   
--   For information on backend services and installing a [!INCLUDE[ssASnoversion](../../../../analysis-services/includes/ssasnoversion-md.md)] server in [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] mode, see [Install Analysis Services in Power Pivot Mode](../../../../analysis-services/instances/install/windows/install-analysis-services-in-power-pivot-mode.md).  
+-   For information on backend services and installing a [!INCLUDE[ssASnoversion](../../../../a9notintoc/includes/ssasnoversion-md.md)] server in [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] mode, see [Install Analysis Services in Power Pivot Mode](../../../../analysis-services/instances/install/windows/install-analysis-services-in-power-pivot-mode.md).  
   
- For information on installing the [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] for SharePoint 2016 Configuration tool, see [Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2016)](../../../../analysis-services/instances/install/windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
+ For information on installing the [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] for SharePoint 2016 Configuration tool, see [Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2016)](../../../../analysis-services/instances/install/windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
   
  This topic contains the following sections:  
   
@@ -35,7 +35,7 @@ manager: "erikre"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../../analysis-services/includes/applies-md.md)]**  SharePoint 2016|  
+|**[!INCLUDE[applies](../../../../a9retired/includes/applies-md.md)]**  SharePoint 2016|  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Run Power Pivot for SharePoint 2016 configuration  
  **Note:** To complete the following steps, you must be a farm administrator. If you see an error message similar to the following:  
@@ -44,15 +44,15 @@ manager: "erikre"
   
  Either login as the account that installed SharePoint or configure the setup account as the primary administrator of the SharePoint Central Administration Site.  
   
-1.  On the **Start** menu, select **All Programs**, and then select [!INCLUDE[ssCurrentUI](../../../../analysis-services/instances/install/windows/includes/sscurrentui-md.md)], select **Configuration Tools**, and then select **[!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] For SharePoint 2016 Configuration**. Tools is listed only when [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] for SharePoint is installed on the local server.  
+1.  On the **Start** menu, select **All Programs**, and then select [!INCLUDE[ssCurrentUI](../../../../a9notintoc/includes/sscurrentui-md.md)], select **Configuration Tools**, and then select **[!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] For SharePoint 2016 Configuration**. Tools is listed only when [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] for SharePoint is installed on the local server.  
   
-2.  Select **Configure or Repair [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] for SharePoint** and then select **OK**.  
+2.  Select **Configure or Repair [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] for SharePoint** and then select **OK**.  
   
-3.  The tool runs validation to verify the current state of [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] and what steps are required to complete configuration. Expand the window to full size. You should see a button bar at the bottom of the window that includes **Validate**, **Run**, and **Exit** commands.  
+3.  The tool runs validation to verify the current state of [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] and what steps are required to complete configuration. Expand the window to full size. You should see a button bar at the bottom of the window that includes **Validate**, **Run**, and **Exit** commands.  
   
 4.  On the **Parameters** tab:  
   
-    1.  **Default Account UserName**: Enter a domain user account for the default account. This account will be used to provision services, including the [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] service application pool. Do not specify a built-in account such as Network Service or Local System. The tool blocks configurations that specify built-in accounts.  
+    1.  **Default Account UserName**: Enter a domain user account for the default account. This account will be used to provision services, including the [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] service application pool. Do not specify a built-in account such as Network Service or Local System. The tool blocks configurations that specify built-in accounts.  
   
     2.  **Database Server**: You can use SQL Server Database engine that is supported for the SharePoint farm.  
   
@@ -75,31 +75,31 @@ manager: "erikre"
   
 1.  In Central Administration, in System Settings, select **Manage services on server**.  
   
-2.  Verify that **SQL Server [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] System Service** is started.  
+2.  Verify that **SQL Server [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] System Service** is started.  
   
  **Farm Feature:**  
   
 1.  In Central Administration, in System Settings, select **Manage farm features**.  
   
-2.  Verify that **[!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] Integration Feature** is **Active**.  
+2.  Verify that **[!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] Integration Feature** is **Active**.  
   
  **Site Collection Feature:**  
   
 1.  Browse to your site URL that was created by the Configuration tool.  
   
-     Select **Settings**![SharePoint Settings](../../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings"), and then click **Site Settings**.  
+     Select **Settings**![SharePoint Settings](../../../../a9retired/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings"), and then click **Site Settings**.  
   
      Select **Site Collection Features**.  
   
-2.  Verify that **[!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] Feature Integration for Site Collections** is **Active**.  
+2.  Verify that **[!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] Feature Integration for Site Collections** is **Active**.  
   
- **[!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] Service Application:**  
+ **[!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] Service Application:**  
   
 1.  In Central Administration, in the **Application Management**, select **Manage service applications**.  
   
-2.  Verify the service application status is **started**. The default name is **Default [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] Service Application**.  
+2.  Verify the service application status is **started**. The default name is **Default [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] Service Application**.  
   
-     Select the name of the services application to open the [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] Management Dashboard for the service application opens. On first use, the dashboard takes several minutes to load.  
+     Select the name of the services application to open the [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] Management Dashboard for the service application opens. On first use, the dashboard takes several minutes to load.  
   
  For more information, see [Verify a Power Pivot for SharePoint Installation](../../../../analysis-services/instances/install/windows/verify-a-power-pivot-for-sharepoint-installation.md).  
   
@@ -114,13 +114,13 @@ manager: "erikre"
   
     -   Definition of usage fields for Education telemetry  
   
-    -   [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] Connections  
+    -   [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] Connections  
   
-    -   [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] Load Data Usage  
+    -   [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] Load Data Usage  
   
-    -   [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] Query Usage  
+    -   [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] Query Usage  
   
-    -   [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] Unload Data Usage  
+    -   [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] Unload Data Usage  
   
 4.  Verify **Enable health data collection** is selected.  
   

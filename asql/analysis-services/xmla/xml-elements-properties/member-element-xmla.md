@@ -85,6 +85,6 @@ manager: "erikre"
  The **Member** element contains the information needed to identify and display a member within a given hierarchy. For parent **Members** elements, the hierarchy is already specified by the **Hierarchy** attribute of the parent element. For parent **Tuple** elements, the hierarchy is specified using the **Hierarchy** attribute of the **Member** element.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

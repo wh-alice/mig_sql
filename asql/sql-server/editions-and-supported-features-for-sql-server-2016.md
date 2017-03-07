@@ -18,9 +18,9 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Editions and Supported Features for SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  This topic provides details of features supported by the different editions of [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  This topic provides details of features supported by the different editions of [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)].  
   
  The SQL Server Evaluation edition is available for a 180-day trial period.  
   
@@ -31,30 +31,30 @@ manager: "jhubbard"
     
  **Try SQL Server 2016!**    
     
- > [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
+ > [![Download from Evaluation Center](../a9notintoc/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
 > ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**    
     
 **Developer and Evaluation Editions**  
  For features supported by Developer and Evaluation editions, see features listed for the SQL Server Enterprise Edition in the tables below.
-For a list of features that were added to the Developer edition for [!INCLUDE[ssSQL15](../analysis-services/powershell/includes/sssql15-md.md)] SP1, see [SQL Server 2016 SP1 editions](https://aka.ms/uw6cw4).   
+For a list of features that were added to the Developer edition for [!INCLUDE[ssSQL15](../a9notintoc/includes/sssql15-md.md)] SP1, see [SQL Server 2016 SP1 editions](https://aka.ms/uw6cw4).   
   
 ##  <a name="Cross-BoxScaleLimits"></a> Scale Limits  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express| 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|
-|Maximum compute capacity used by a single instance - [!INCLUDE[ssDEnoversion](../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]<sup>1</sup>|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|Limited to lesser of 1 socket or 4 cores| 
-|Maximum compute capacity used by a single instance - [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] or [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|Limited to lesser of 1 socket or 4 cores|  
-|Maximum memory for buffer pool per instance of [!INCLUDE[ssDEnoversion](../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]|Operating System Maximum|128 GB|64 GB|1410 MB|1410 MB|
-|Maximum memory for Columnstore segment cache per instance of [!INCLUDE[ssDEnoversion](../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
-|Maximum memory-optimized data size per database in [!INCLUDE[ssDEnoversion](../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
-|Maximum memory utilized per instance of [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)]|Operating System Maximum|Tabular: 16 GB<br /><br /> MOLAP: 64 GB|N/A|N/A|N/A|  
-|Maximum memory utilized per instance of [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]|Operating System Maximum|64 GB|64 GB|4 GB|N/A|
+|Maximum compute capacity used by a single instance - [!INCLUDE[ssDEnoversion](../a9notintoc/includes/ssdenoversion-md.md)]<sup>1</sup>|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|Limited to lesser of 1 socket or 4 cores| 
+|Maximum compute capacity used by a single instance - [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] or [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)]|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|Limited to lesser of 1 socket or 4 cores|  
+|Maximum memory for buffer pool per instance of [!INCLUDE[ssDEnoversion](../a9notintoc/includes/ssdenoversion-md.md)]|Operating System Maximum|128 GB|64 GB|1410 MB|1410 MB|
+|Maximum memory for Columnstore segment cache per instance of [!INCLUDE[ssDEnoversion](../a9notintoc/includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
+|Maximum memory-optimized data size per database in [!INCLUDE[ssDEnoversion](../a9notintoc/includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
+|Maximum memory utilized per instance of [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)]|Operating System Maximum|Tabular: 16 GB<br /><br /> MOLAP: 64 GB|N/A|N/A|N/A|  
+|Maximum memory utilized per instance of [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)]|Operating System Maximum|64 GB|64 GB|4 GB|N/A|
 |Maximum relational database size|524 PB|524 PB|524 PB|10 GB|10 GB|  
   
 <sup>1</sup> Enterprise Edition with Server + Client Access License (CAL) based licensing (not available for new agreements) is limited to a maximum of 20 cores per SQL Server instance. There are no limits under the Core-based Server Licensing model. For more information, see [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
-<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../analysis-services/powershell/includes/sssql15-md.md)] SP1. 
+<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../a9notintoc/includes/sssql15-md.md)] SP1. 
 
 ##  <a name="RDBMSHA"></a> RDBMS High Availability  
   
@@ -79,11 +79,11 @@ For a list of features that were added to the Developer edition for [!INCLUDE[ss
 |Encrypted backup|Yes|Yes|No|No|No|
 |Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|No|  
   
- <sup>1</sup> For more information on installing SQL Server 2016 on Server Core,  see [Install SQL Server 2016 on Server Core](../Topic/Install%20SQL%20Server%202016%20on%20Server%20Core.md). 
+ <sup>1</sup> For more information on installing SQL Server 2016 on Server Core,  see [Install SQL Server 2016 on Server Core](../database-engine/install/windows/install-sql-server-on-server-core.md). 
 
 <sup>2</sup> For more information about Basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
 
-<sup>3</sup> Applies to [!INCLUDE[ssNoVersion_md](../advanced-analytics/r-services/includes/ssnoversion-md.md)] 2016 SP1.
+<sup>3</sup> Applies to [!INCLUDE[ssNoVersion_md](../a9notintoc/includes/ssnoversion-md.md)] 2016 SP1.
   
 ##  <a name="RDBMSSP"></a> RDBMS Scalability and Performance  
   
@@ -106,7 +106,7 @@ For a list of features that were added to the Developer edition for [!INCLUDE[ss
 
 <sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
-<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../analysis-services/powershell/includes/sssql15-md.md)] SP1. 
+<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../a9notintoc/includes/sssql15-md.md)] SP1. 
 
 <sup>3</sup> This feature is not included in the LocalDB installation option.
 ##  <a name="RDBMSS"></a> RDBMS Security  
@@ -124,7 +124,7 @@ For a list of features that were added to the Developer edition for [!INCLUDE[ss
 |Contained databases|Yes|Yes|Yes|Yes|Yes| 
 |Encryption for backups|Yes|Yes|No|No|No|  
 
-<sup>1</sup> Applies to [!INCLUDE[ssNoVersion_md](../advanced-analytics/r-services/includes/ssnoversion-md.md)] 2016 SP1.  
+<sup>1</sup> Applies to [!INCLUDE[ssNoVersion_md](../a9notintoc/includes/ssnoversion-md.md)] 2016 SP1.  
 ##  <a name="Replication"></a> Replication  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|   
@@ -184,7 +184,7 @@ For a list of features that were added to the Developer edition for [!INCLUDE[ss
   
  <sup>1</sup> For more information, see [Considerations for Installing SQL Server Using SysPrep](../database-engine/install/windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
-<sup>2</sup> Applies to [!INCLUDE[ssNoVersion_md](../advanced-analytics/r-services/includes/ssnoversion-md.md)] 2016 SP1. 
+<sup>2</sup> Applies to [!INCLUDE[ssNoVersion_md](../a9notintoc/includes/ssnoversion-md.md)] 2016 SP1. 
   
 ##  <a name="DevTools"></a> Development Tools  
   
@@ -222,14 +222,14 @@ For a list of features that were added to the Developer edition for [!INCLUDE[ss
 
 <sup>1</sup> Scale out with multiple compute nodes requires a head node.
 
-<sup>2</sup> Applies to [!INCLUDE[ssNoVersion_md](../advanced-analytics/r-services/includes/ssnoversion-md.md)] 2016 SP1.
+<sup>2</sup> Applies to [!INCLUDE[ssNoVersion_md](../a9notintoc/includes/ssnoversion-md.md)] 2016 SP1.
   
 ## <a name="IS"></a> Integration Services
 
-For info about the Integration Services (SSIS) features supported by the editions of [!INCLUDE[ssNoVersion_md](../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Integration Services Features Supported by the Editions of SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
+For info about the Integration Services (SSIS) features supported by the editions of [!INCLUDE[ssNoVersion_md](../a9notintoc/includes/ssnoversion-md.md)], see [Integration Services Features Supported by the Editions of SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
 ##  <a name="MDS"></a> Master Data Services  
- For information about the [!INCLUDE[ssMDSshort_md](../analysis-services/includes/ssmdsshort-md.md)] and Data Quality Services features supported by the editions of [!INCLUDE[ssCurrent_md](../advanced-analytics/r-services/includes/sscurrent-md.md)], see [Master Data Services and Data Quality Services Features Supported by the Editions of SQL Server 2016](Master%20Data%20Services%20and%20Data%20Quality%20Services%20Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md). 
+ For information about the [!INCLUDE[ssMDSshort_md](../a9notintoc/includes/ssmdsshort-md.md)] and Data Quality Services features supported by the editions of [!INCLUDE[ssCurrent_md](../a9notintoc/includes/sscurrent-md.md)], see [Master Data Services and Data Quality Services Features Supported by the Editions of SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md). 
 
   
 ##  <a name="DW"></a> Data Warehouse  
@@ -244,34 +244,34 @@ For info about the Integration Services (SSIS) features supported by the edition
 |Parallel query processing on partitioned tables and indexes|Yes|No|No|No|No|   
 |Global batch aggregation|Yes|No|No|No|No| 
 
-<sup>1</sup> Applies to [!INCLUDE[ssSQL15_md](../analysis-services/powershell/includes/sssql15-md.md)] SP1.  
+<sup>1</sup> Applies to [!INCLUDE[ssSQL15_md](../a9notintoc/includes/sssql15-md.md)] SP1.  
 ##  <a name="SSAS"></a> Analysis Services  
   
-For information about the Analysis Services features supported by the editions of [!INCLUDE[ssCurrent_md](../advanced-analytics/r-services/includes/sscurrent-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server 2016](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md). 
+For information about the Analysis Services features supported by the editions of [!INCLUDE[ssCurrent_md](../a9notintoc/includes/sscurrent-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server 2016](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md). 
   
 ##  <a name="BIMD"></a> BI Semantic Model (Multi Dimensional)  
   
-For information about the Analysis Services features supported by the editions of [!INCLUDE[ssCurrent_md](../advanced-analytics/r-services/includes/sscurrent-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server 2016](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+For information about the Analysis Services features supported by the editions of [!INCLUDE[ssCurrent_md](../a9notintoc/includes/sscurrent-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server 2016](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
    
 ##  <a name="BIT"></a> BI Semantic Model (Tabular)  
   
-For information about the Analysis Services features supported by the editions of [!INCLUDE[ssCurrent_md](../advanced-analytics/r-services/includes/sscurrent-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server 2016](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+For information about the Analysis Services features supported by the editions of [!INCLUDE[ssCurrent_md](../a9notintoc/includes/sscurrent-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server 2016](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
   
 ##  <a name="PPSP"></a> Power Pivot for SharePoint  
   
-For information about the Power Pivot for SharePoint features supported by the editions of [!INCLUDE[ssCurrent_md](../advanced-analytics/r-services/includes/sscurrent-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server 2016](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+For information about the Power Pivot for SharePoint features supported by the editions of [!INCLUDE[ssCurrent_md](../a9notintoc/includes/sscurrent-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server 2016](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
   
 ##  <a name="DM"></a> Data Mining  
   
-For information about the Data Mining features supported by the editions of [!INCLUDE[ssCurrent_md](../advanced-analytics/r-services/includes/sscurrent-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server 2016](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+For information about the Data Mining features supported by the editions of [!INCLUDE[ssCurrent_md](../a9notintoc/includes/sscurrent-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server 2016](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
   
 ##  <a name="SSRS"></a> Reporting Services  
   
-For information about the Reporting Services features supported by the editions of [!INCLUDE[ssCurrent_md](../advanced-analytics/r-services/includes/sscurrent-md.md)], see [Reporting Services Features Supported by the Editions of SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+For information about the Reporting Services features supported by the editions of [!INCLUDE[ssCurrent_md](../a9notintoc/includes/sscurrent-md.md)], see [Reporting Services Features Supported by the Editions of SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
 ##  <a name="BIC"></a> Business Intelligence Clients  
 
-For information about the Business Intelligence Client features supported by the editions of [!INCLUDE[ssCurrent_md](../advanced-analytics/r-services/includes/sscurrent-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server 2016](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) or [Reporting Services Features Supported by the Editions of SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+For information about the Business Intelligence Client features supported by the editions of [!INCLUDE[ssCurrent_md](../a9notintoc/includes/sscurrent-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server 2016](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) or [Reporting Services Features Supported by the Editions of SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
   
 ##  <a name="SLS"></a> Spatial and Location Services  
   
@@ -286,7 +286,7 @@ For information about the Business Intelligence Client features supported by the
   
 |Feature Name|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|[!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Migration Assistant|Yes|Yes|Yes|Yes|Yes|   
+|[!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Migration Assistant|Yes|Yes|Yes|Yes|Yes|   
 |Database mail|Yes|Yes|Yes|No|No| 
   
 ##  <a name="Other"></a> Other Components  
@@ -296,10 +296,10 @@ For information about the Business Intelligence Client features supported by the
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|No|No| 
 |StreamInsight HA|StreamInsight Premium Edition|No|No|No|No|   
   
-> [![Download SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[Download the latest version of SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**    
+> [![Download SSMS](../a9notintoc/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[Download the latest version of SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**    
   
 ## See Also  
- [Product Specifications for SQL Server 2016](../Topic/Product%20Specifications%20for%20SQL%20Server%202016.md)   
+ [Product Specifications for SQL Server 2016](../a9retired/product-specifications-for-sql-server-2016.md)   
  [Installation for SQL Server 2016](../database-engine/install/windows/installation-for-sql-server-2016.md)  
   
   

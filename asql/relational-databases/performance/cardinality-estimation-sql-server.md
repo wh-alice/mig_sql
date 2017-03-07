@@ -19,7 +19,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Cardinality Estimation (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
 This article illustrates how you can assess and choose the best cardinality estimation (CE) configuration for your SQL system. Most systems benefit from the latest CE because it is the most accurate. The CE predicts how many rows your query will likely return. The cardinality prediction is used by the query optimizer to generate the optimal query plan. The more accurate the CE, the more optimal the query plan, usually.  
@@ -34,9 +34,9 @@ You have techniques for identifying a query that performs slower with the new CE
   
 ## Versions of the CE  
   
- In 1998, a major update of the CE was part of Microsoft SQL Server 7.0, for which the compatibility level was 70. Subsequent updates came with [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] 2016, meaning compatibility levels 120 and 130. The CE updates for levels 120 and 130 incorporate assumptions and algorithms that work well on modern data warehousing workloads and on OLTP (online transaction processing).  
+ In 1998, a major update of the CE was part of Microsoft SQL Server 7.0, for which the compatibility level was 70. Subsequent updates came with [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] 2016, meaning compatibility levels 120 and 130. The CE updates for levels 120 and 130 incorporate assumptions and algorithms that work well on modern data warehousing workloads and on OLTP (online transaction processing).  
   
- **Compatibility level:** You can ensure your database is at a particular level by using the following Transact-SQL code for [COMPATIBILITY_LEVEL](ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ **Compatibility level:** You can ensure your database is at a particular level by using the following Transact-SQL code for [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ```tsql  
 SELECT ServerProperty('ProductVersion');  
@@ -68,7 +68,7 @@ SELECT  name, value
     WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';  
 ```  
   
- **Query store:**Starting with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] 2016 the query store is a handy tool for examining the performance of your queries.  In SQL Server Management Studio (SSMS.exe), in the **Object Explorer** under your database node, a **Query Store** node is displayed  when the query store is ON.  
+ **Query store:**Starting with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] 2016 the query store is a handy tool for examining the performance of your queries.  In SQL Server Management Studio (SSMS.exe), in the **Object Explorer** under your database node, a **Query Store** node is displayed  when the query store is ON.  
   
 ```tsql  
 ALTER DATABASE <yourDatabase>  
@@ -89,7 +89,7 @@ ALTER DATABASE <yourDatabase>
   
  *Tip:* We recommend that each month you install the latest release of [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx).  
   
- Another option for tracking the cardinality predictions of the CE is to use the extended event named **query_optimizer_estimate_cardinality**.  The following T-SQL code sample runs on [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. It writes a .xel file to C:\Temp\ (although you can change the path). When you open the .xel file in SSMS, its detailed information is displayed in a user friendly manner.  
+ Another option for tracking the cardinality predictions of the CE is to use the extended event named **query_optimizer_estimate_cardinality**.  The following T-SQL code sample runs on [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. It writes a .xel file to C:\Temp\ (although you can change the path). When you open the .xel file in SSMS, its detailed information is displayed in a user friendly manner.  
   
 ```tsql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -125,13 +125,13 @@ go
   
  Next are steps you can use to assess whether any of your most important queries perform less well under the latest CE. Some of the steps are performed by running a code sample presented in a preceding section.  
   
-1.  Open SSMS. Ensure your  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]database is set to the highest available compatibility level.  
+1.  Open SSMS. Ensure your  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]database is set to the highest available compatibility level.  
   
 2.  Perform the following preliminary steps:  
   
     1.  Open SSMS.  
   
-    2.  Run the T-SQL to ensure that your  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database is set to the highest available compatibility level.  
+    2.  Run the T-SQL to ensure that your  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database is set to the highest available compatibility level.  
   
     3.  Ensure that your database has its LEGACY_CARDINALITY_ESTIMATION configuration turned OFF.  
   

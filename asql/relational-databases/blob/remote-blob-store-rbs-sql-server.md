@@ -18,11 +18,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Remote Blob Store (RBS) (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Remote BLOB Store (RBS) is an optional add-on component that lets database administrators store binary large objects in commodity storage solutions instead of directly on the main database server.  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Remote BLOB Store (RBS) is an optional add-on component that lets database administrators store binary large objects in commodity storage solutions instead of directly on the main database server.  
   
- RBS is included on the [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] installation media, but is not installed by the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Setup program.  
+ RBS is included on the [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] installation media, but is not installed by the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Setup program.  
   
  
   
@@ -46,24 +46,24 @@ manager: "jhubbard"
  A number of third-party storage solution vendors have developed RBS providers that conform to these standard APIs and support BLOB storage on various storage platforms.  
   
 ## RBS Requirements  
- RBS requires [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Enterprise for the main database server in which the BLOB metadata is stored.  However, if you use the supplied FILESTREAM provider, you can store the BLOBs themselves on [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Standard. To connect to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], RBS requires at least ODBC driver version 11 for [!INCLUDE[ssSQL14_md](../../analysis-services/includes/sssql14-md.md)] and ODBC Driver version 13 for [!INCLUDE[ssSQL15_md](../../analysis-services/powershell/includes/sssql15-md.md)]. Drivers are available at [Download ODBC Driver for SQL Server](https://msdn.microsoft.com/library/mt703139.aspx).   
+ RBS requires [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Enterprise for the main database server in which the BLOB metadata is stored.  However, if you use the supplied FILESTREAM provider, you can store the BLOBs themselves on [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Standard. To connect to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], RBS requires at least ODBC driver version 11 for [!INCLUDE[ssSQL14_md](../../a9notintoc/includes/sssql14-md.md)] and ODBC Driver version 13 for [!INCLUDE[ssSQL15_md](../../a9notintoc/includes/sssql15-md.md)]. Drivers are available at [Download ODBC Driver for SQL Server](https://msdn.microsoft.com/library/mt703139.aspx).   
   
- RBS includes a FILESTREAM provider that lets you use RBS to store BLOBs on an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. If you want use RBS to store BLOBs in a different storage solution, you have to use a third party RBS provider developed for that storage solution, or develop a custom RBS provider using the RBS API. A sample provider that stores BLOBs in the NTFS file system is available as a learning resource on [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190).  
+ RBS includes a FILESTREAM provider that lets you use RBS to store BLOBs on an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. If you want use RBS to store BLOBs in a different storage solution, you have to use a third party RBS provider developed for that storage solution, or develop a custom RBS provider using the RBS API. A sample provider that stores BLOBs in the NTFS file system is available as a learning resource on [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190).  
   
 ## RBS Security  
  The SQL Remote Blob Storage Team Blog is a good source of information about this feature. The RBS security model is described in the post at [RBS Security Model](http://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx).  
   
 ### Custom providers  
- When you use a custom provider to store BLOBs outside of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], make sure that you protect the stored BLOBs with permissions and encryption options that are appropriate to the storage medium used by the custom provider.  
+ When you use a custom provider to store BLOBs outside of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], make sure that you protect the stored BLOBs with permissions and encryption options that are appropriate to the storage medium used by the custom provider.  
   
 ### Credential store symmetric key  
  If a provider requires the setup and use of a secret stored within the credential store, RBS uses a symmetric key to encrypt the  provider secrets which a client may use to gain authorization to the provider’s blob store.  
   
--   RBS 2016 uses an **AES_128** symmetric key. [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] does not allow the creation of new **TRIPLE_DES** keys except for backwards compatibility reasons. For more information, see [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
+-   RBS 2016 uses an **AES_128** symmetric key. [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] does not allow the creation of new **TRIPLE_DES** keys except for backwards compatibility reasons. For more information, see [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
   
--   RBS 2014 and prior versions use a credential store which holds secrets encrypted using the **TRIPLE_DES** symmetric key algorithm which is outdated. If you are currently using **TRIPLE_DES**[!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] recommends that you enhance your security by following the steps in this topic to rotate your key to a stronger encryption method.  
+-   RBS 2014 and prior versions use a credential store which holds secrets encrypted using the **TRIPLE_DES** symmetric key algorithm which is outdated. If you are currently using **TRIPLE_DES**[!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] recommends that you enhance your security by following the steps in this topic to rotate your key to a stronger encryption method.  
   
- You can determine the RBS credential store symmetric key properties by executing the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement in the RBS database:   
+ You can determine the RBS credential store symmetric key properties by executing the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement in the RBS database:   
 `SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';` If the output from that statement shows that **TRIPLE_DES** is still used, then you should rotate this key.  
   
 ### Rotating the symmetric key  

@@ -32,7 +32,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Attribute Relationships
-  In [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], attributes within a dimension are always related either directly or indirectly to the key attribute. When you define a dimension based on a star schema, which is where all dimension attributes are derived from the same relational table, an attribute relationship is automatically defined between the key attribute and each non-key attribute of the dimension. When you define a dimension based on a snowflake schema, which is where dimension attributes are derived from multiple related tables, an attribute relationship is automatically defined as follows:  
+  In [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], attributes within a dimension are always related either directly or indirectly to the key attribute. When you define a dimension based on a star schema, which is where all dimension attributes are derived from the same relational table, an attribute relationship is automatically defined between the key attribute and each non-key attribute of the dimension. When you define a dimension based on a snowflake schema, which is where dimension attributes are derived from multiple related tables, an attribute relationship is automatically defined as follows:  
   
 -   Between the key attribute and each non-key attribute bound to columns in the main dimension table.  
   
@@ -70,7 +70,7 @@ manager: "erikre"
   
 -   Age, Gender, Email, City, Region, Country  
   
- Relationships representing natural hierarchies are enforced by creating an attribute relationship between the attribute for a level and the attribute for the level below it. For [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], this specifies a natural relationship and potential aggregation. In the Customer dimension, a natural hierarchy exists for the Country, Region, City, and Customer attributes. The natural hierarchy for `{Country, Region, City, Customer}` is described by adding the following attribute relationships:  
+ Relationships representing natural hierarchies are enforced by creating an attribute relationship between the attribute for a level and the attribute for the level below it. For [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], this specifies a natural relationship and potential aggregation. In the Customer dimension, a natural hierarchy exists for the Country, Region, City, and Customer attributes. The natural hierarchy for `{Country, Region, City, Customer}` is described by adding the following attribute relationships:  
   
 -   The Country attribute as an attribute relationship to the Region attribute.  
   
@@ -82,7 +82,7 @@ manager: "erikre"
   
  The **SourceAttribute** property of a level determines which attribute is used to describe the level. The **KeyColumns** property on the attribute specifies the column in the data source view that supplies the members. The **NameColumn** property on the attribute can specify a different name column for the members.  
   
- To define a level in a user-defined hierarchy using [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], the **Dimension Designer** allows you to select a dimension attribute, a column in a dimension table, or a column from a related table included in the data source view for the cube. For more information about creating user-defined hierarchies, see [Create User-Defined Hierarchies](../Topic/Create%20User-Defined%20Hierarchies.md).  
+ To define a level in a user-defined hierarchy using [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], the **Dimension Designer** allows you to select a dimension attribute, a column in a dimension table, or a column from a related table included in the data source view for the cube. For more information about creating user-defined hierarchies, see [Create User-Defined Hierarchies](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md).  
   
  In Analysis Services, an assumption is usually made about the content of members. Leaf members have no descendents and contain data derived from underlying data sources. Nonleaf members have descendents and contain data derived from aggregations performed on child members. In aggregated levels, members are based on aggregations of subordinate levels. Therefore, when the **IsAggregatable** property is set to **False** on a source attribute for a level, no aggregatable attributes should be added as levels above it.  
   
@@ -90,12 +90,12 @@ manager: "erikre"
  The main constraint when you create an attribute relationship is to make sure that the attribute referred to by the attribute relationship has no more than one value for any member in the attribute to which the attribute relationship belongs. For example, if you define a relationship between a City attribute and a State attribute, each city can only relate to a single state.  
   
 ## Attribute Relationship Queries  
- You can use MDX queries to retrieve data from attribute relationships, in the form of member properties, with the **PROPERTIES** keyword of the MDX **SELECT** statement. For more information about how to use MDX to retrieve member properties, see [Using Member Properties &#40;MDX&#41;](../Topic/Using%20Member%20Properties%20\(MDX\).md).  
+ You can use MDX queries to retrieve data from attribute relationships, in the form of member properties, with the **PROPERTIES** keyword of the MDX **SELECT** statement. For more information about how to use MDX to retrieve member properties, see [Using Member Properties &#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md).  
   
 ## See Also  
  [Attributes and Attribute Hierarchies](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [User Hierarchies](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
- [User Hierarchy Properties](../Topic/User%20Hierarchy%20Properties.md)  
+ [User Hierarchy Properties](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   
   

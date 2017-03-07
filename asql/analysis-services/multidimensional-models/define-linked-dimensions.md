@@ -46,9 +46,9 @@ manager: "erikre"
   
 ## Create a linked dimension in SQL Server Data Tools  
   
-1.  Start the wizard. In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], right-click the **Dimensions** folder in an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] database or project, and then click **New Linked Dimension**.  
+1.  Start the wizard. In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], right-click the **Dimensions** folder in an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] database or project, and then click **New Linked Dimension**.  
   
-2.  Connect to the Analysis Services database that provides the dimension. On the **Select a Data Source** page of the Linked Object Wizard, choose the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] data source or create a new one.  
+2.  Connect to the Analysis Services database that provides the dimension. On the **Select a Data Source** page of the Linked Object Wizard, choose the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] data source or create a new one.  
   
 3.  On the **Select Objects** page of the wizard, choose the dimensions you want to link to in the remote database.  
   

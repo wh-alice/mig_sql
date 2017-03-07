@@ -18,7 +18,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # View Cluster Quorum NodeWeight Settings
-  This topic describes how to view NodeWeight settings for each member node in a Windows Server Failover Clustering (WSFC) cluster. NodeWeight settings are used during quorum voting to support disaster recovery and multi-subnet scenarios for [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] and [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Failover Cluster Instances.  
+  This topic describes how to view NodeWeight settings for each member node in a Windows Server Failover Clustering (WSFC) cluster. NodeWeight settings are used during quorum voting to support disaster recovery and multi-subnet scenarios for [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] and [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Failover Cluster Instances.  
   
 -   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 ##### To view NodeWeight settings  
   
-1.  Connect to any [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance in the cluster.  
+1.  Connect to any [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance in the cluster.  
   
 2.  Query the [sys].[dm_hadr_cluster_members] view.  
   
@@ -101,7 +101,7 @@ cluster.exe Cluster001 node /status /properties
 ## See Also  
  [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Configure Cluster Quorum NodeWeight Settings](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)   
- [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys.dm-hadr-cluster-members-transact-sql.md)   
+ [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-hadr-cluster-members-transact-sql.md)   
  [Failover Cluster Cmdlets in Windows PowerShell Listed by Task Focus](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
   
   

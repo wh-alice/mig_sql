@@ -64,7 +64,7 @@ manager: "erikre"
  The **Source** element is an object reference to a single partition to be merged into a target partition specified by the **Target** element of the parent **MergePartitions** element.  
   
 ## Example  
- The following example combines all four partitions of the `Internet Sales` measure group into the `Internet_Sales_2004` target partition. The example refers to the **Adventure Works** cube of the [!INCLUDE[ssAWDWsp](../../../analysis-services/includes/ssawdwsp-md.md)] sample [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] database.  
+ The following example combines all four partitions of the `Internet Sales` measure group into the `Internet_Sales_2004` target partition. The example refers to the **Adventure Works** cube of the [!INCLUDE[ssAWDWsp](../../../a9notintoc/includes/ssawdwsp-md.md)] sample [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] database.  
   
 ```  
 <MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -82,6 +82,6 @@ manager: "erikre"
   
 ## See Also  
  [Target Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)   
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

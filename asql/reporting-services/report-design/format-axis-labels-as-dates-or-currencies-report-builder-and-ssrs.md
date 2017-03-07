@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Format Axis Labels as Dates or Currencies (Report Builder and SSRS)
-When you show properly formatted DateTime values on an axis in a [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report, a chart will automatically display these values as days. To specify a date/time interval for the x-axis, such as an interval of months or an interval of hours, you must format the axis labels and set the type of axis interval to a valid date or time interval.  
+When you show properly formatted DateTime values on an axis in a [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report, a chart will automatically display these values as days. To specify a date/time interval for the x-axis, such as an interval of months or an interval of hours, you must format the axis labels and set the type of axis interval to a valid date or time interval.  
   
 > [!NOTE]  
 >  In column and scatter charts, the horizontal, or x-axis, is the category axis. In bar charts, the vertical, or y-axis, is the category axis.  
@@ -26,7 +26,7 @@ When you show properly formatted DateTime values on an axis in a [!INCLUDE[ssRSn
  When a numeric value is added to the y-axis, by default, the chart does not format the number before displaying it. If your numeric field is a sales figure, consider formatting the numbers as currencies to increase the readability of the chart.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## To format x-axis labels as monthly intervals  
   
@@ -43,7 +43,7 @@ When you show properly formatted DateTime values on an axis in a [!INCLUDE[ssRSn
     > [!NOTE]  
     >  If you do not specify an interval type, the chart will calculate intervals in terms of days.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## To format y-axis labels using a currency format  
   
@@ -53,7 +53,7 @@ When you show properly formatted DateTime values on an axis in a [!INCLUDE[ssRSn
   
 3.  From the **Category** list, select **Currency**. From the **Symbol** list, select a currency format to apply to the y-axis labels.  
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## See Also  
  [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

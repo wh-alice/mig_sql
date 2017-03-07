@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # PredictCaseLikelihood (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   This function returns the likelihood that an input case will fit in the existing model. Used only with clustering models.  
   
@@ -41,7 +41,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  Return value contains the raw probability of the case, which is the product of the probabilities of the case attributes.  
   
 ## Applies To  
- Models that are built by using the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Clustering and [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Sequence Clustering algorithms.  
+ Models that are built by using the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Clustering and [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Sequence Clustering algorithms.  
   
 ## Return Type  
  Double-precision floating point number between 0 and 1. A number closer to 1 indicates that the case has a higher probability of occurring in this model. A number closer to 0 indicates that the case is less likely to occur in this model.  
@@ -60,7 +60,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  Normalized = (z/ (1+z))  
   
 ## Examples  
- The following example returns the likelihood that the specified case will occur within the clustering model, which is based on the [!INCLUDE[ssSampleDBCoShort](../analysis-services/data-mining/includes/sssampledbcoshort-md.md)] DW database.  
+ The following example returns the likelihood that the specified case will occur within the clustering model, which is based on the [!INCLUDE[ssSampleDBCoShort](../a9notintoc/includes/sssampledbcoshort-md.md)] DW database.  
   
 ```  
 SELECT  

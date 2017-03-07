@@ -37,13 +37,13 @@ manager: "erikre"
   
  Visually, files that you upload to a report server database are represented in the folder hierarchy with the following icons.  
   
- ![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")  
+ ![Report icon](../../a9retired/media/hlp-16doc.gif "Report icon")  
 report icon  
   
- ![Model icon](../../reporting-services/report-server/media/model-icon.gif "Model icon")  
+ ![Model icon](../../a9retired/media/model-icon.gif "Model icon")  
 report model icon  
   
- ![generic resource icon](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")  
+ ![generic resource icon](../../a9retired/media/hlp-16file.gif "generic resource icon")  
 generic resource icon  
   
  When you upload a file, it is always placed in the folder that is currently selected. You can navigate to the folder that you want to contain the item first, or you can upload a file and then move it to a final location later.  
@@ -57,7 +57,7 @@ generic resource icon
 |View the contents of a folder|View resources, View reports|  
   
 ## See Also  
- [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md)   
  [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)   
  [Upload a File or Report &#40;Report Manager&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  

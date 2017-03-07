@@ -21,7 +21,7 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Configure Always Encrypted using SQL Server Management Studio
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 This article describes tasks for configuring Always Encrypted and managing databases that use Always Encrypted with [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
 
@@ -465,8 +465,8 @@ For more information, see [Create and Store Column Master Keys (Always Encrypted
 - [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 - [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md)
 - [DROP COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/drop-column-encryption-key-transact-sql.md) 
-- [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys.column-master-keys-transact-sql.md)
-- [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys.column-encryption-keys-transact-sql.md)
+- [sys.column_master_keys (Transact-SQL)](../../../relational-databases/reference/system-catalog-views/sys.column-master-keys-transact-sql.md)
+- [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/reference/system-catalog-views/sys.column-encryption-keys-transact-sql.md)
 - [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 
 

@@ -40,8 +40,8 @@ manager: "jhubbard"
 |-----------------------------|-----------------|  
 |**_Total**|Information for all cursors.|  
 |**API Cursor**|Only the API cursor information.|  
-|**TSQL Global Cursor**|Only the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] global cursor information.|  
-|**TSQL Local Cursor**|Only the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] local cursor information.|  
+|**TSQL Global Cursor**|Only the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] global cursor information.|  
+|**TSQL Local Cursor**|Only the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] local cursor information.|  
   
 ## See Also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../../relational-databases/monitor/performance-monitor/monitor-resource-usage-system-monitor.md)  

@@ -15,10 +15,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Backward Compatibility in SMO
-  SMO applications that were written using previous versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] can be recompiled by using SMO in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  SMO applications that were written using previous versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] can be recompiled by using SMO in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
 ## Migrating SMO Applications  
- References to SMO dlls in older versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] must be removed, and references to the new SMO dlls that are provided with [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] must be included.  
+ References to SMO dlls in older versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] must be removed, and references to the new SMO dlls that are provided with [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] must be included.  
   
  Minimally, you would reference the following:  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
  These files are required for connection classes, SMO utility classes, and foundation classes.  
   
 > [!NOTE]  
->  SmoEnum.dll has been removed so references to it must be removed from the SMO [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] project.  
+>  SmoEnum.dll has been removed so references to it must be removed from the SMO [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] project.  
   
  The namespaces have also changed, so you can use the following:  
   
@@ -53,6 +53,6 @@ Imports Microsoft.SqlServer.Management.Common
   
  If your code uses the Transfer object directly, you will have to link to the Microsoft.SqlServer.Management.SmoExtended namespace.  
   
- When you migrate code, you might have to modify the code. This is because several [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] and [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] features have been deprecated in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. For more information about deprecated features, see [Deprecated Database Engine Features in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md) in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] Books Online.  
+ When you migrate code, you might have to modify the code. This is because several [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] and [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] features have been deprecated in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. For more information about deprecated features, see [Deprecated Database Engine Features in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md) in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] Books Online.  
   
   

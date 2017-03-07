@@ -149,7 +149,7 @@ You can add a named calculation to a table in a data source view. In the followi
 9. On the **File** menu, click **Save All**.  
   
 ## Defining Attribute Relationships  
-If the underlying data supports it, you should define attribute relationships between attributes. Defining attribute relationships speeds up dimension, partition, and query processing. For more information, see [Define Attribute Relationships](../Topic/Define%20Attribute%20Relationships.md) and [Attribute Relationships](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
+If the underlying data supports it, you should define attribute relationships between attributes. Defining attribute relationships speeds up dimension, partition, and query processing. For more information, see [Define Attribute Relationships](../../analysis-services/multidimensional-models/attribute-relationships-define.md) and [Attribute Relationships](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
 #### To define attribute relationships  
   
@@ -169,7 +169,7 @@ If the underlying data supports it, you should define attribute relationships be
   
 #### To review the Product dimension changes  
   
-1.  On the **Build** menu of [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], click **Deploy Analysis Services Tutorial**.  
+1.  On the **Build** menu of [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], click **Deploy Analysis Services Tutorial**.  
   
 2.  After you have received the **Deployment Completed Successfully** message, click the **Browser** tab of **Dimension Designer** for the **Product** dimension, and then click the Reconnect button on the toolbar of the designer.  
   
@@ -178,10 +178,10 @@ If the underlying data supports it, you should define attribute relationships be
     Notice that the name of the **All** member appears as **All Products**. This is because you changed the **AllMemberName** property for the hierarchy to **All Products** earlier in the lesson. Also, the members of the **Product Line** level now have user-friendly names, instead of single-letter abbreviations.  
   
 ## Next Task in Lesson  
-[Modifying the Date Dimension](../Topic/Modifying%20the%20Date%20Dimension.md)  
+[Modifying the Date Dimension](../../analysis-services/tutorials/lesson-3-4-modifying-the-date-dimension.md)  
   
 ## See Also  
 [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
-[Create User-Defined Hierarchies](../Topic/Create%20User-Defined%20Hierarchies.md)  
-[Configure the &#40;All&#41; Level for Attribute Hierarchies](../Topic/Configure%20the%20(All)%20Level%20for%20Attribute%20Hierarchies.md)  
+[Create User-Defined Hierarchies](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
+[Configure the &#40;All&#41; Level for Attribute Hierarchies](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

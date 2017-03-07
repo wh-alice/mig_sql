@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Mining Model Tasks and How-tos
-  Use the **Mining Models** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] to manage and process mining models in a mining structure.  
+  Use the **Mining Models** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] to manage and process mining models in a mining structure.  
   
 ## In This Section  
   

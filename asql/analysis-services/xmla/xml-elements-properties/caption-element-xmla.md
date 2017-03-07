@@ -63,6 +63,6 @@ manager: "erikre"
  For **Member** elements, the **Caption** element contains the caption of the parent **Member** element in the language specified for the XML for Analysis (XMLA) session. If no caption is available, this element contains the unique name of the member.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

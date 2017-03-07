@@ -16,19 +16,19 @@ manager: "jhubbard"
 ---
 # R Interoperability in SQL Server R Services
 
-This topic focuses on the mechanism for running for R within [!INCLUDE[rsql_productname_md](../../advanced-analytics/r-services/includes/rsql-productname-md.md)], and describes the differences between Microsoft R and open source R.
+This topic focuses on the mechanism for running for R within [!INCLUDE[rsql_productname_md](../../a9notintoc/includes/rsql-productname-md.md)], and describes the differences between Microsoft R and open source R.
 For information about additional components, see [New Components in SQL Server](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r-services.md).
 
 ### Open Source R Components
 
-[!INCLUDE[rsql_productname_md](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] includes a complete distribution of the base R packages and tools. For more information about what is included with the base distribution, see the documentation installed during setup in the following default location:
+[!INCLUDE[rsql_productname_md](../../a9notintoc/includes/rsql-productname-md.md)] includes a complete distribution of the base R packages and tools. For more information about what is included with the base distribution, see the documentation installed during setup in the following default location:
 `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
 
-As part of the installation of [!INCLUDE[rsql_productname_md](../../advanced-analytics/r-services/includes/rsql-productname-md.md)], you must consent to the terms of the GNU Public License. Thereafter, you can run standard R packages without further modification just as you would in any other open source distribution of R.
+As part of the installation of [!INCLUDE[rsql_productname_md](../../a9notintoc/includes/rsql-productname-md.md)], you must consent to the terms of the GNU Public License. Thereafter, you can run standard R packages without further modification just as you would in any other open source distribution of R.
 
-[!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not modify the R runtime in any way. The R runtime is executed outside of the [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] process and can be run independently of [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. However, we strongly recommend that you do not run these tools while [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is using R, to avoid resource contention.
+[!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] does not modify the R runtime in any way. The R runtime is executed outside of the [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] process and can be run independently of [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)]. However, we strongly recommend that you do not run these tools while [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] is using R, to avoid resource contention.
 
-The R base package distribution that is associated with a specific [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance can be found in the folder associated with the instance. For example, if you installed R Services on the default instance, the R libraries are located in 
+The R base package distribution that is associated with a specific [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] instance can be found in the folder associated with the instance. For example, if you installed R Services on the default instance, the R libraries are located in 
 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`.
 
 Similarly, the R tools associated with the default instance would be located in `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`,
@@ -37,7 +37,7 @@ For more information about the base distribution, see [Packages installed with M
 
 ### Additional R Packages
 
-In addition to the base R distribution, [!INCLUDE[rsql_productname_md](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] includes some proprietary R packages as well as a framework for parallel execution of R, and libraries that support execution of R in remote compute contexts. 
+In addition to the base R distribution, [!INCLUDE[rsql_productname_md](../../a9notintoc/includes/rsql-productname-md.md)] includes some proprietary R packages as well as a framework for parallel execution of R, and libraries that support execution of R in remote compute contexts. 
 
 This combined set of R features - the R base distribution plus the enhanced R features and packages - is referred to as **Microsoft R**. If you install Microsoft R Server (Standalone), you get  exactly the same set of packages that are installed with SQL Server R Services (In-Database) but in a different folder. 
 

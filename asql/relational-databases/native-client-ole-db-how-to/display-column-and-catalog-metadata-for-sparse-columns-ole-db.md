@@ -15,11 +15,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Display Column and Catalog Metadata for Sparse Columns (OLE DB)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   This sample creates a table with three columns: a sparse column, a column that is not a sparse column, and a columnset column. The sample then displays OLE DB flags showing the column and catalog metadata for the non-sparse column and the columnset column.  
   
- This sample works with [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] or later. For more information about sparse columns, see [Sparse Columns Support in SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
+ This sample works with [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] or later. For more information about sparse columns, see [Sparse Columns Support in SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## Example  
  Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  

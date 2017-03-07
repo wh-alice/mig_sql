@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Functions on String Values - string-length
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns the length of the string in characters.  
   
@@ -41,9 +41,9 @@ fn:string-length($arg as xs:string?) as xs:integer
 ## Remarks  
  If the value of *$arg* is an empty sequence, an **xs:integer** value of 0 is returned.  
   
- The behavior of surrogate pairs in XQuery functions depends on the database compatibility level. If the compatibility level is 110 or later, each surrogate pair is counted as a single character. For earlier compatibility levels, they are counted as two characters. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md) and [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ The behavior of surrogate pairs in XQuery functions depends on the database compatibility level. If the compatibility level is 110 or later, each surrogate pair is counted as a single character. For earlier compatibility levels, they are counted as two characters. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) and [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
- If the value contains a 4-byte Unicode character that is represented by two surrogate characters, [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] will count the surrogate characters individually.  
+ If the value contains a 4-byte Unicode character that is represented by two surrogate characters, [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] will count the surrogate characters individually.  
   
  The **string-length()** without a parameter can only be used inside a predicate. For example, the following query returns the <`ROOT`> element:  
   
@@ -54,7 +54,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ```  
   
 ## Supplementary Characters (Surrogate Pairs)  
- The behavior of surrogate pairs in XQuery functions depends on the database compatibility level and, in some cases, on the default namespace URI for functions. For more information, see the section "XQuery Functions Are Surrogate-Aware" in the topic [Breaking Changes to Database Engine Features in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Also see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md) and [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ The behavior of surrogate pairs in XQuery functions depends on the database compatibility level and, in some cases, on the default namespace URI for functions. For more information, see the section "XQuery Functions Are Surrogate-Aware" in the topic [Breaking Changes to Database Engine Features in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Also see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) and [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## Examples  
  This topic provides XQuery examples against XML instances stored in various **xml** type columns in the AdventureWorks database.  

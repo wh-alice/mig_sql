@@ -27,16 +27,16 @@ manager: "jhubbard"
 
   Spatial data represents information about the physical location and shape of geometric objects. These objects can be point locations or more complex objects such as countries, roads, or lakes.  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports two spatial data types: the **geometry** data type and the **geography** data type.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports two spatial data types: the **geometry** data type and the **geography** data type.  
   
 -   The **geometry** type represents data in a Euclidean (flat) coordinate system.  
   
 -   The **geography** type represents data in a round-earth coordinate system.  
   
- Both data types are implemented as .NET common language runtime (CLR) data types in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Both data types are implemented as .NET common language runtime (CLR) data types in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  For a detailed description and examples of spatial features introduced in [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)], download the white paper, [New Spatial Features in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  For a detailed description and examples of spatial features introduced in [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)], download the white paper, [New Spatial Features in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ##  <a name="reltasks"></a> Related Tasks  
  [Create, Construct, and Query geometry Instances](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  

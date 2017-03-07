@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   Detach and then attach the database specifying separate locations for the data and log devices.  
   
--   Specify a new location by running the ALTER DATABASE statement with the MODIFY FILE option, and then restarting the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   Specify a new location by running the ALTER DATABASE statement with the MODIFY FILE option, and then restarting the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## For More Information  
  [Move Database Files](../../relational-databases/databases/move-database-files.md)  

@@ -29,7 +29,7 @@ manager: "erikre"
   
  You can upgrade each instance in-place, independently of other instances running on the same hardware. However, most administrators choose to install a new instance of the new version  for application testing before transferring production workloads onto the new server. But for development or test servers, an in-place upgrade might be more convenient.  
   
- Before upgrading to [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)], review the following:  
+ Before upgrading to [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)], review the following:  
   
 -   [SQL Server 2016 Release Notes](http://go.microsoft.com/fwlink/?LinkID=398124) describes known problems and workarounds.  
   
@@ -38,14 +38,14 @@ manager: "erikre"
 ## Server Upgrade  
  There are two basic approaches for upgrading servers and databases:  
   
--   **In-place upgrades** replace the existing program files with [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] program files. Databases remain in the same location. Program folders are updated to reflect the new name.  
+-   **In-place upgrades** replace the existing program files with [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] program files. Databases remain in the same location. Program folders are updated to reflect the new name.  
   
--   **Side-by-side upgrades** create a new installation of [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)], usually on the same computer unless you are upgrading hardware at the same time. This approach requires you to move databases over to the new instance, and then optionally uninstall the previous version to free up disk space.  
+-   **Side-by-side upgrades** create a new installation of [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)], usually on the same computer unless you are upgrading hardware at the same time. This approach requires you to move databases over to the new instance, and then optionally uninstall the previous version to free up disk space.  
   
  The compatibility levels of databases that are attached to a given server remain the same unless you manually change them.  
   
 ### In-place upgrade  
- You can upgrade an existing instance of [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] to [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] and, as part of the upgrade process, automatically migrate existing databases from the old instance to the new instance. Because the metadata and binary data is compatible between the two versions, you will retain the data after you upgrade and you do not have to manually migrate the data.  
+ You can upgrade an existing instance of [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] to [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] and, as part of the upgrade process, automatically migrate existing databases from the old instance to the new instance. Because the metadata and binary data is compatible between the two versions, you will retain the data after you upgrade and you do not have to manually migrate the data.  
   
  To upgrade an existing instance, run Setup and specify the name of the existing instance as the name of the new instance.  
   
@@ -61,7 +61,7 @@ manager: "erikre"
   
 -   Attach or restore each database.  
   
--   Run DBCC to check for database integrity. Tabular models undergo more thorough checking, with tests for orphaned objects throughout the model hierarchy. For multidimensional models, only the partition indexes are checked. See [Database Consistency Checker &#40;DBCC&#41; for Analysis Services tabular and multidimensional databases](../Topic/Database%20Consistency%20Checker%20\(DBCC\)%20for%20Analysis%20Services%20tabular%20and%20multidimensional%20databases.md).  
+-   Run DBCC to check for database integrity. Tabular models undergo more thorough checking, with tests for orphaned objects throughout the model hierarchy. For multidimensional models, only the partition indexes are checked. See [Database Consistency Checker &#40;DBCC&#41; for Analysis Services tabular and multidimensional databases](../../../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md).  
   
 -   Test reports, spreadsheets, and dashboards to confirm there is no adverse change to behavior or calculations. You should see faster performance for both multidimensional and tabular workloads.  
   
@@ -70,7 +70,7 @@ manager: "erikre"
 -   Test backup and restore operations on the upgraded server, adjusting scripts to use the new server name.  
   
 ## Database upgrade  
- Databases that were created in previous versions of [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] run on the upgraded server under an older database compatibility level setting. Generally, you can upgrade a database or model to operate at a higher compatibility level to gain access to new features, but be aware that doing so binds you to a specific server version.  
+ Databases that were created in previous versions of [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] run on the upgraded server under an older database compatibility level setting. Generally, you can upgrade a database or model to operate at a higher compatibility level to gain access to new features, but be aware that doing so binds you to a specific server version.  
   
  To upgrade a database, you typically upgrade the model in SQL Server Data Tools (SSDT) and then deploy the solution to an upgraded server instance. See [Download SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx) to get the newest version.  
   
@@ -142,7 +142,7 @@ manager: "erikre"
   
 3.  Save and rebuild or deploy the model.  
   
-4.  Turn **DirectQuery** back on. See [DirectQuery for Tabular 1200 models](../Topic/DirectQuery%20for%20Tabular%201200%20models.md) for more guidance.  
+4.  Turn **DirectQuery** back on. See [DirectQuery for Tabular 1200 models](../../../a9retired/directquery-for-tabular-1200-models.md) for more guidance.  
   
 ## See Also  
  [DirectQuery Mode &#40;SSAS Tabular&#41;](../../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
@@ -150,7 +150,7 @@ manager: "erikre"
  [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
  [Planning a SQL Server Installation](../../../sql-server/install/planning-a-sql-server-installation.md)   
  [Upgrade Power Pivot for SharePoint](../../../database-engine/install/windows/upgrade-power-pivot-for-sharepoint.md)   
- [Install Analysis Services in Multidimensional and Data Mining Mode](../Topic/Install%20Analysis%20Services%20in%20Multidimensional%20and%20Data%20Mining%20Mode.md)   
- [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../Topic/Upgrade%20to%20SQL%20Server%202016%20Using%20the%20Installation%20Wizard%20\(Setup\).md)  
+ [Install Analysis Services in Multidimensional and Data Mining Mode](../../../a9retired/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
+ [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../../database-engine/install/windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

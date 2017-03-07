@@ -16,7 +16,7 @@ ms.author: "carlrab"
 manager: "jhubbard"
 ---
 # System-Versioned Temporal Tables with Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   System-versioned temporal tables for [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) are designed to provide cost-effective solution for scenarios where [data audit and point in time analysis](http://msdn.microsoft.com/library/mt631669.aspx) are required on top of data collected with In-Memory OLTP workloads. They provide high transactional throughput, lock-free concurrency and at the same time, ability to store large amount of history data that can be easily queried.  
   
@@ -40,9 +40,9 @@ manager: "jhubbard"
   
 -   When **SYSTEM_VERSIONING = ON**, an internal memory-optimized staging table is automatically created to accept the most recent system-versioned changes that are results of update and delete operations on memory-optimized current table.  
   
--   Data from the internal memory-optimized staging table is regularly moved to the disk-based history table by the asynchronous data flush task. This data flush mechanism has a goal to keep the internal memory buffers at less than 10% of the memory consumption of their parent objects. You can track the total memory consumption of memory-optimized system-versioned temporal table by querying [sys.dm_db_xtp_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-xtp-memory-consumers-transact-sql.md) and summarizing the data for the internal memory-optimized staging table and the current temporal table.  
+-   Data from the internal memory-optimized staging table is regularly moved to the disk-based history table by the asynchronous data flush task. This data flush mechanism has a goal to keep the internal memory buffers at less than 10% of the memory consumption of their parent objects. You can track the total memory consumption of memory-optimized system-versioned temporal table by querying [sys.dm_db_xtp_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-xtp-memory-consumers-transact-sql.md) and summarizing the data for the internal memory-optimized staging table and the current temporal table.  
   
--   You can enforce a data flush by invoking [sp_xtp_flush_temporal_history](../Topic/sp_xtp_flush_temporal_history.md).  
+-   You can enforce a data flush by invoking [sp_xtp_flush_temporal_history](../../relational-databases/reference/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md).  
   
 -   When **SYSTEM_VERSIONING = OFF** or when schema of system-versioned table is modified by adding, dropping or altering columns, the entire contents of the internal staging buffer is moved into the disk-based history table.  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 -   The internal memory-optimized staging table is not represented in Object Explorer of SQL Server Management Studio.  
   
--   Metadata about this table as well as its connection with current temporal table can be found in [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.internal-tables-transact-sql.md).  
+-   Metadata about this table as well as its connection with current temporal table can be found in [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.internal-tables-transact-sql.md).  
   
 ## The Data Flush Task  
  The data flush is a regularly activated task that checks whether any memory-optimized table meets a memory size-based condition for data movement. Data movement starts when memory consumption of internal staging table reaches 8% of memory consumption of current temporal table.  
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
  Data flush deletes all records from in-memory internal buffer that are older than the oldest currently running transaction to move these records to the disk-based history table.  
   
- You can enforce a data flush by invoking [sp_xtp_flush_temporal_history](../Topic/sp_xtp_flush_temporal_history.md) and specifying the schema and table name:   
+ You can enforce a data flush by invoking [sp_xtp_flush_temporal_history](../../relational-databases/reference/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) and specifying the schema and table name:   
 **sys.sp_xtp_flush_temporal_history  @schema_name, @object_name**. With this user-executed command, the same data movement process is invoked as when data flush task is invoked by the system on internal schedule.  
   
 ## Did this Article Help You? We’re Listening  

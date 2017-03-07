@@ -95,12 +95,12 @@ To remove a KPI, you can do the following.
   
 ## Refreshing a KPI  
   
-To refresh the KPI, you will need to configure a caching for the shared dataset. For more information regarding cache refresh plans, see [Work with Shared Datasets - web portal](Working%20with%20shared%20datasets%20\(web%20portal\).md).  
+To refresh the KPI, you will need to configure a caching for the shared dataset. For more information regarding cache refresh plans, see [Work with Shared Datasets - web portal](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
 ## See also  
   
 - [Web portal (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)  
-- [Work with Shared Datasets - web portal](Working%20with%20shared%20datasets%20\(web%20portal\).md)
+- [Work with Shared Datasets - web portal](../reporting-services/work-with-shared-datasets-web-portal.md)
 - More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)  
   
     

@@ -17,7 +17,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Lesson 1-3 - Defining a Data Source View
-After you define the data sources that you will use in an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] project, the next step is generally to define a data source view for the project. A data source view is a single, unified view of the metadata from the specified tables and views that the data source defines in the project. Storing the metadata in the data source view enables you to work with the metadata during development without an open connection to any underlying data source. For more information, see [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+After you define the data sources that you will use in an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] project, the next step is generally to define a data source view for the project. A data source view is a single, unified view of the metadata from the specified tables and views that the data source defines in the project. Storing the metadata in the data source view enables you to work with the metadata during development without an open connection to any underlying data source. For more information, see [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
 In the following task, you define a data source view that includes five tables from the **AdventureWorksDW2012** data source.  
   
@@ -30,7 +30,7 @@ In the following task, you define a data source view that includes five tables f
 3.  Under **Relational data sources**, the **Adventure Works DW 2012** data source is selected. Click **Next**.  
   
     > [!NOTE]  
-    > To create a data source view that is based on multiple data sources, first define a data source view that is based on a single data source. This data source is then called the primary data source. You can then add tables and views from a secondary data source. When designing dimensions that contain attributes based on related tables in multiple data sources, you might need to define a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data source as the primary data source to use its distributed query engine capabilities.  
+    > To create a data source view that is based on multiple data sources, first define a data source view that is based on a single data source. This data source is then called the primary data source. You can then add tables and views from a secondary data source. When designing dimensions that contain attributes based on related tables in multiple data sources, you might need to define a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data source as the primary data source to use its distributed query engine capabilities.  
   
 4.  On the **Select Tables and Views** page, select tables and views from the list of objects that are available from the selected data source. You can filter this list to help you select tables and views.  
   
@@ -55,7 +55,7 @@ In the following task, you define a data source view that includes five tables f
   
 7.  In the Name field, make sure **Adventure Works DW 2012** displays, and then click **Finish**.  
   
-    The **Adventure Works DW 2012** data source view appears in the **Data Source Views** folder in Solution Explorer. The content of the data source view is also displayed in Data Source View Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)]. This designer contains the following elements:  
+    The **Adventure Works DW 2012** data source view appears in the **Data Source Views** folder in Solution Explorer. The content of the data source view is also displayed in Data Source View Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)]. This designer contains the following elements:  
   
     -   A **Diagram** pane in which the tables and their relationships are represented graphically.  
   
@@ -65,7 +65,7 @@ In the following task, you define a data source view that includes five tables f
   
     -   A toolbar that is specific to Data Source View Designer.  
   
-8.  To maximize the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] development environment, click the **Maximize** button.  
+8.  To maximize the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] development environment, click the **Maximize** button.  
   
 9. To view the tables in the **Diagram** pane at 50 percent, click the **Zoom** icon on the Data Source View Designer toolbar. This will hide the column details of each table.  
   
@@ -76,7 +76,7 @@ In the following task, you define a data source view that includes five tables f
     You can now view all the tables and their relationships in the **Diagram** pane. Notice that there are three relationships between the FactInternetSales table and the DimDate table. Each sale has three dates associated with the sale: an order date, a due date, and a ship date. To view the details of any relationship, double-click the relationship arrow in the **Diagram** pane.  
   
 ## Next Task in Lesson  
-[Modifying Default Table Names](../Topic/Modifying%20Default%20Table%20Names.md)  
+[Modifying Default Table Names](../../analysis-services/tutorials/lesson-1-4-modifying-default-table-names.md)  
   
 ## See Also  
 [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  

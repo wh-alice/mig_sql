@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # Exception Element (XMLA)
-  Indicates that an exception was returned from a [Discover](../Topic/Discover%20Method%20\(XMLA\).md) or [Execute](../Topic/Execute%20Method%20\(XMLA\).md) method call.  
+  Indicates that an exception was returned from a [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) or [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method call.  
   
  **Namespace** http://schemas.microsoft.com/analysisservices/2003/exception  
   
@@ -64,6 +64,6 @@ manager: "erikre"
   
 ## See Also  
  [Messages Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)   
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

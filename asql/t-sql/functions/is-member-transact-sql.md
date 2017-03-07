@@ -31,11 +31,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # IS_MEMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Indicates whether the current user is a member of the specified [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows group or [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database role.  
+  Indicates whether the current user is a member of the specified [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows group or [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database role.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -48,12 +48,12 @@ IS_MEMBER ( { 'group' | 'role' } )
  **'** *group* **'**  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Is the name of the Windows group that is being checked; must be in the format *Domain*\\*Group*. *group* is **sysname**.  
   
  **'** *role* **'**  
- Is the name of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] role that is being checked. *role* is **sysname** and can include the database fixed roles or user-defined roles, but not server roles.  
+ Is the name of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] role that is being checked. *role* is **sysname** and can include the database fixed roles or user-defined roles, but not server roles.  
   
 ## Return Types  
  **int**  
@@ -65,9 +65,9 @@ IS_MEMBER ( { 'group' | 'role' } )
 |------------------|-----------------|  
 |0|Current user is not a member of *group* or *role*.|  
 |1|Current user is a member of *group* or *role*.|  
-|NULL|Either *group* or *role* is not valid. When queried by a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login or a login using an application role, returns NULL for a Windows group.|  
+|NULL|Either *group* or *role* is not valid. When queried by a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login or a login using an application role, returns NULL for a Windows group.|  
   
- IS_MEMBER determines Windows group membership by examining an access token that is created by Windows. The access token does not reflect changes in group membership that are made after a user connects to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Windows group membership cannot be queried by a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login or a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] application role.  
+ IS_MEMBER determines Windows group membership by examining an access token that is created by Windows. The access token does not reflect changes in group membership that are made after a user connects to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Windows group membership cannot be queried by a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login or a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] application role.  
   
  To add and remove members from a database role, use [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md). To add and remove members from a server role, use [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
@@ -76,7 +76,7 @@ IS_MEMBER ( { 'group' | 'role' } )
  Members of the **sysadmin** fixed server role enter every database as the **dbo** user. Checking permission for member of the **sysadmin** fixed server role, checks permissions for **dbo**, not the original login. Since **dbo** can't be added to a database role and doesn’t exist in Windows groups, **dbo** will always return 0 (or NULL if the role doesn't exist).  
   
 ## Related Functions  
- To determine whether another [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login is a member of a database role, use [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md). To determine whether a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login is a member of a server role, use [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
+ To determine whether another [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login is a member of a database role, use [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md). To determine whether a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login is a member of a server role, use [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
   
 ## Examples  
  The following example checks whether the current user is a member of a database role or a Windows domain group.  
@@ -100,7 +100,7 @@ GO
 ## See Also  
  [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)   
  [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

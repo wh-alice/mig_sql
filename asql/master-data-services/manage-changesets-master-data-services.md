@@ -16,7 +16,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Manage Changesets (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] you can manage all changes by model and version.  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] you can manage all changes by model and version.  
   
 ## Prerequisites  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 ## To manage the changesets  
   
-1.  In the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], select the model and version and then click **Explorer**.  
+1.  In the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], select the model and version and then click **Explorer**.  
   
 2.  Click **Changesets**. All the changesets that you can manage for the selected model and version, are displayed.  
   

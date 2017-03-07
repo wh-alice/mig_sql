@@ -18,15 +18,15 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Deploy a Model Deployment Package by Using the Wizard
-  Use the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] model deployment wizard to deploy packages that contain model objects only. If you need to deploy a package with data, see [Deploy a Model Deployment Package by Using MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
+  Use the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] model deployment wizard to deploy packages that contain model objects only. If you need to deploy a package with data, see [Deploy a Model Deployment Package by Using MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
 > [!IMPORTANT]  
->  Packages can be deployed to the edition of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] they were created in only. This means that packages created in [!INCLUDE[ssSQL11](../analysis-services/includes/sssql11-md.md)] cannot be deployed to [!INCLUDE[ssSQL14](../analysis-services/includes/sssql14-md.md)].  
+>  Packages can be deployed to the edition of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] they were created in only. This means that packages created in [!INCLUDE[ssSQL11](../a9notintoc/includes/sssql11-md.md)] cannot be deployed to [!INCLUDE[ssSQL14](../a9notintoc/includes/sssql14-md.md)].  
   
 ## Prerequisites  
  To perform this procedure:  
   
--   You must have permission to access the **System Administration** functional area in the target [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] environment.  
+-   You must have permission to access the **System Administration** functional area in the target [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] environment.  
   
 -   A model deployment package must exist. For more information, see [Create a Model Deployment Package by Using the Wizard](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 ### To deploy a model deployment package of model objects only  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **System Administration**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **System Administration**.  
   
 2.  On the **Model View** page, from the menu bar, point to **System** and click **Deployment**.  
   

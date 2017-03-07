@@ -30,11 +30,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # CREATE QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a new queue in a database. Queues store messages. When a message arrives for a service, [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] puts the message on the queue associated with the service.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -78,7 +78,7 @@ CREATE QUEUE <object>
  Is the name of the schema to which the new queue belongs. The schema defaults to the default schema for the user that executes the statement. If the CREATE QUEUE statement is executed by a member of the sysadmin fixed server role, or a member of the db_dbowner or db_ddladmin fixed database roles in the database specified by *database_name*, *schema_name* can specify a schema other than the one associated with the login of the current connection. Otherwise, *schema_name* must be the default schema for the user who executes the statement.  
   
  *queue_name*  
- Is the name of the queue to create. This name must meet the guidelines for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] identifiers.  
+ Is the name of the queue to create. This name must meet the guidelines for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] identifiers.  
   
  STATUS (Queue)  
  Specifies whether the queue is available (ON) or unavailable (OFF). When the queue is unavailable, no messages can be added to the queue or removed from the queue. You can create the queue in an unavailable state to keep messages from arriving on the queue until the queue is made available with an ALTER QUEUE statement. If this clause is omitted, the default is ON, and the queue is available.  
@@ -96,7 +96,7 @@ CREATE QUEUE <object>
  Specifies whether [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] starts the stored procedure. When STATUS = ON, the queue starts the stored procedure specified with PROCEDURE_NAME when the number of procedures currently running is less than MAX_QUEUE_READERS and when messages arrive on the queue faster than the stored procedures receive messages. When STATUS = OFF, the queue does not start the stored procedure. If this clause is not specified, the default is ON.  
   
  PROCEDURE_NAME = \<procedure>  
- Specifies the name of the stored procedure to start to process messages in this queue. This value must be a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] identifier.  
+ Specifies the name of the stored procedure to start to process messages in this queue. This value must be a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] identifier.  
   
  *database_name*(procedure)  
  Is the name of the database that contains the stored procedure.  
@@ -111,13 +111,13 @@ CREATE QUEUE <object>
  Specifies the maximum number of instances of the activation stored procedure that the queue starts at the same time. The value of *max_readers* must be a number between **0** and **32767**.  
   
  EXECUTE AS  
- Specifies the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database user account under which the activation stored procedure runs. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] must be able to check the permissions for this user at the time that the queue starts the stored procedure. For a domain user, the server must be connected to the domain when the procedure is started or activation fails. For a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] user, the server can always check permissions.  
+ Specifies the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database user account under which the activation stored procedure runs. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] must be able to check the permissions for this user at the time that the queue starts the stored procedure. For a domain user, the server must be connected to the domain when the procedure is started or activation fails. For a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] user, the server can always check permissions.  
   
  SELF  
  Specifies that the stored procedure executes as the current user. (The database principal executing this CREATE QUEUE statement.)  
   
  '*user_name*'  
- Is the name of the user who the stored procedure executes as. The *user_name* parameter must be a valid [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] user specified as a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] identifier. The current user must have IMPERSONATE permission for the *user_name* specified.  
+ Is the name of the user who the stored procedure executes as. The *user_name* parameter must be a valid [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] user specified as a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] identifier. The current user must have IMPERSONATE permission for the *user_name* specified.  
   
  OWNER  
  Specifies that the stored procedure executes as the owner of the queue.  
@@ -128,7 +128,7 @@ CREATE QUEUE <object>
  A queue that has poison message handling set to OFF will not be disabled after five consecutive transaction rollbacks. This allows for a custom poison message handing system to be defined by the application.  
   
  ON *filegroup |* [**DEFAULT**]  
- Specifies the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] filegroup on which to create this queue. You can use the *filegroup* parameter to identify a filegroup, or use the DEFAULT identifier to use the default filegroup for the service broker database. In the context of this clause, DEFAULT is not a keyword, and must be delimited as an identifier. When no filegroup is specified, the queue uses the default filegroup for the database.  
+ Specifies the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] filegroup on which to create this queue. You can use the *filegroup* parameter to identify a filegroup, or use the DEFAULT identifier to use the default filegroup for the service broker database. In the context of this clause, DEFAULT is not a keyword, and must be delimited as an identifier. When no filegroup is specified, the queue uses the default filegroup for the database.  
   
 ## Remarks  
  A queue can be the target of a SELECT statement. However, the contents of a queue can only be modified using statements that operate on [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] conversations, such as SEND, RECEIVE, and END CONVERSATION. A queue cannot be the target of an INSERT, UPDATE, DELETE, or TRUNCATE statement.  
@@ -156,11 +156,11 @@ CREATE QUEUE <object>
 |conversation_handle|**uniqueidentifier**|Handle for the conversation that this message is part of.|  
 |message_sequence_number|**bigint**|Sequence number of the message in the conversation.|  
 |service_name|**nvarchar(512)**|Name of the service that the conversation is to.|  
-|service_id|**int**|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] object identifier of the service that the conversation is to.|  
+|service_id|**int**|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] object identifier of the service that the conversation is to.|  
 |service_contract_name|**nvarchar(256)**|Name of the contract that the conversation follows.|  
-|service_contract_id|**int**|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] object identifier of the contract that the conversation follows.|  
+|service_contract_id|**int**|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] object identifier of the contract that the conversation follows.|  
 |message_type_name|**nvarchar(256)**|Name of the message type that describes the message.|  
-|message_type_id|**int**|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] object identifier of the message type that describes the message.|  
+|message_type_id|**int**|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] object identifier of the message type that describes the message.|  
 |validation|**nchar(2)**|Validation used for the message.<br /><br /> E=Empty<br /><br /> N=None<br /><br /> X=XML|  
 |message_body|**varbinary(MAX)**|Content of the message.|  
 |message_id|**uniqueidentifier**|Unique identifier for the message.|  

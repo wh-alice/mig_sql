@@ -20,9 +20,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Running Stored Procedures
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  A stored procedure is an executable object stored in a database. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports:  
+  A stored procedure is an executable object stored in a database. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports:  
   
 -   Stored procedures:  
   
@@ -52,9 +52,9 @@ manager: "jhubbard"
   
 -   Added functionality  
   
-     Extended stored procedures can use C and C++ features not available in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements.  
+     Extended stored procedures can use C and C++ features not available in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements.  
   
-     For an example of how to call a stored procedure, see [Process Return Codes and Output Parameters &#40;ODBC&#41;](../Topic/Process%20Return%20Codes%20and%20Output%20Parameters%20\(ODBC\).md).  
+     For an example of how to call a stored procedure, see [Process Return Codes and Output Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
 ## In This Section  
   
@@ -66,6 +66,6 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Running Stored Procedures How-to Topics &#40;ODBC&#41;](../Topic/Running%20Stored%20Procedures%20How-to%20Topics%20\(ODBC\).md)  
+ [Running Stored Procedures How-to Topics &#40;ODBC&#41;](../../a9retired/running-stored-procedures-odbc.md)  
   
   

@@ -30,9 +30,9 @@ manager: "jhubbard"
   
 ## Server and Network  
   
--   Set the minimum and maximum amount of memory allocated to [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)].  
+-   Set the minimum and maximum amount of memory allocated to [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../a9notintoc/includes/ssdenoversion-md.md)].  
   
-     By default, the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] changes its memory requirements dynamically based on available system resources. To avoid low memory availability during replication activities, use the **min server memory** option to set the minimum available memory. To avoid having the operating system page to disc for memory, you can also set a maximum amount of memory with the **max server memory** option. For more information, see [Server Memory Server Configuration Options](../../../database-engine/configure/windows/server-memory-server-configuration-options.md).  
+     By default, the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] changes its memory requirements dynamically based on available system resources. To avoid low memory availability during replication activities, use the **min server memory** option to set the minimum available memory. To avoid having the operating system page to disc for memory, you can also set a maximum amount of memory with the **max server memory** option. For more information, see [Server Memory Server Configuration Options](../../../database-engine/configure/windows/server-memory-server-configuration-options.md).  
   
 -   Ensure proper allocation of database data files and log files. Use a separate disk drive for the transaction log for all databases involved in replication.  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
   
      Business logic in user-defined triggers at the Subscriber can slow down the replication of changes to the Subscriber:  
   
-    -   For transactional replication, it can be more efficient to include this logic in custom stored procedures used to apply the replicated commands. For more information, see [Specify How Changes Are Propagated for Transactional Articles](../Topic/Specify%20How%20Changes%20Are%20Propagated%20for%20Transactional%20Articles.md).  
+    -   For transactional replication, it can be more efficient to include this logic in custom stored procedures used to apply the replicated commands. For more information, see [Specify How Changes Are Propagated for Transactional Articles](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
     -   For merge replication, it can be more efficient to use business logic handlers. For more information, see [Execute Business Logic During Merge Synchronization](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
@@ -93,7 +93,7 @@ manager: "jhubbard"
   
      Changes can be partitioned by publishing subsets of data to each Subscriber or by having an application direct changes for a given row to a given node:  
   
-    -   Merge replication supports publishing subsets of data using parameterized filters with a single publication. For more information, see [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md).  
+    -   Merge replication supports publishing subsets of data using parameterized filters with a single publication. For more information, see [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
     -   Transactional replication supports publishing subsets of data using static filters with multiple publications. For more information, see [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md).  
   
@@ -123,7 +123,7 @@ manager: "jhubbard"
   
 -   Use a native mode snapshot unless a character mode snapshot is required.  
   
-     Use the default native mode snapshot for all Subscribers except non-[!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Subscribers and Subscribers running [!INCLUDE[ssEW](../../../analysis-services/instances/includes/ssew-md.md)], which require a character mode snapshot.  
+     Use the default native mode snapshot for all Subscribers except non-[!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Subscribers and Subscribers running [!INCLUDE[ssEW](../../../a9retired/includes/ssew-md.md)], which require a character mode snapshot.  
   
 -   Use a single snapshot folder for a publication.  
   

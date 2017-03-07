@@ -62,7 +62,7 @@ manager: "erikre"
  When creating, replacing, or altering a model object, specify all read-write properties of the object definition. Omission of a read-write property is considered a deletion.  
   
 ## Partial Syntax  
- Because this object definition is so large, only the first level properties are listed. See [Object Definitions in Tabular Model Scripting Language &#40;TMSL&#41;](../Topic/Object%20Definitions%20in%20Tabular%20Model%20Scripting%20Language%20\(TMSL\).md) for a list of child objects.  
+ Because this object definition is so large, only the first level properties are listed. See [Object Definitions in Tabular Model Scripting Language &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) for a list of child objects.  
   
 ```  
     "model": {  

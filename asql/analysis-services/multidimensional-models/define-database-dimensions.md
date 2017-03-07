@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Define Database Dimensions
-  Use Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] to configure an existing database dimension in a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] project or database. You can use Dimension Designer to do the following:  
+  Use Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] to configure an existing database dimension in a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] project or database. You can use Dimension Designer to do the following:  
   
 -   Configure the dimension-level properties.  
   
@@ -33,9 +33,9 @@ manager: "erikre"
   
 -   For processed dimensions, you can browse the dimension structure and view data.  
   
- After you modify a dimension, attribute, or hierarchy, you must process that dimension to view the changes. When working in project mode, you deploy the changes to the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance before processing.  
+ After you modify a dimension, attribute, or hierarchy, you must process that dimension to view the changes. When working in project mode, you deploy the changes to the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance before processing.  
   
- For more information about how to open a dimension in Dimension Designer, see [Modify or Delete a Database Dimension in Solution Explorer](../Topic/Modify%20or%20Delete%20a%20Database%20Dimension%20in%20Solution%20Explorer.md).  
+ For more information about how to open a dimension in Dimension Designer, see [Modify or Delete a Database Dimension in Solution Explorer](../../analysis-services/multidimensional-models/database-dimensions-modify-or-delete-a-database-dimension-in-solution-explorer.md).  
   
  Dimension Designer has three different tabs, which are described in the following table.  
   
@@ -51,13 +51,13 @@ manager: "erikre"
  [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
  Describes how to define and configure a dimension attribute.  
   
- [Create User-Defined Hierarchies](../Topic/Create%20User-Defined%20Hierarchies.md)  
+ [Create User-Defined Hierarchies](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
  Describes how to define and configure a user-defined hierarchy.  
   
- [Define Attribute Relationships](../Topic/Define%20Attribute%20Relationships.md)  
+ [Define Attribute Relationships](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
  Describes how to define and configure an attribute relationship.  
   
- [Use the Business Intelligence Wizard to Enhance Dimensions](../Topic/Use%20the%20Business%20Intelligence%20Wizard%20to%20Enhance%20Dimensions.md)  
+ [Use the Business Intelligence Wizard to Enhance Dimensions](../../a9retired/use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  Describes how to use the Business Intelligence Wizard to enhance a dimension.  
   
   

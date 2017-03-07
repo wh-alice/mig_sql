@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Monitor and troubleshoot data migration (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   To monitor data migration in Stretch Database Monitor, select **Tasks | Stretch | Monitor** for a database in SQL Server Management Studio .  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
  ![Stretch Database Monitor](../../sql-server/install/media/stretch-monitor.PNG "Stretch Database Monitor")  
   
 ##  <a name="Migration"></a> Check the status of data migration in a dynamic management view  
- Open the dynamic management view **sys.dm_db_rda_migration_status** to see how many batches and rows of data have been migrated. For more info, see [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../Topic/sys.dm_db_rda_migration_status%20\(Transact-SQL\).md).  
+ Open the dynamic management view **sys.dm_db_rda_migration_status** to see how many batches and rows of data have been migrated. For more info, see [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/stretch-database-sys.dm-db-rda-migration-status.md).  
   
 ##  <a name="Firewall"></a> Troubleshoot data migration  
  **Rows from my Stretch-enabled table are not being migrated to Azure. What’s the problem?**  
@@ -46,9 +46,9 @@ manager: "jhubbard"
   
 -   Check the dynamic management view **sys.dm_db_rda_migration_status** for the status of the latest batch. If an error has occurred, check the error_number, error_state, and error_severity values for the batch.  
   
-    -   For more info about the view, see [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../Topic/sys.dm_db_rda_migration_status%20\(Transact-SQL\).md).  
+    -   For more info about the view, see [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/stretch-database-sys.dm-db-rda-migration-status.md).  
   
-    -   For more info about the content of a SQL Server error message, see [sys.messages &#40;Transact-SQL&#41;](../Topic/sys.messages%20\(Transact-SQL\).md).  
+    -   For more info about the content of a SQL Server error message, see [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/messages-for-errors-catalog-views-sys.messages.md).  
   
  **The Azure firewall is blocking connections from my local server.**  
  You may have to add a rule in the Azure firewall settings of the Azure server to let SQL Server communicate with the remote Azure server.  

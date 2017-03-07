@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # XQuery Extension Functions - sql:column()
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   As described in the topic, [Binding Relational Data Inside XML](../t-sql/data-types/binding-relational-data-inside-xml-data.md), you can use the **sql:column(()** function when you use [XML Data Type Methods](../t-sql/xml/xml-data-type-methods.md) to expose a relational value inside XQuery.  
   
@@ -40,7 +40,7 @@ sql:column("columnName")
 ## Remarks  
  Note that reference to a column specified in the **sql:column()** function inside an XQuery refers to a column in the row that is being processed.  
   
- In [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], you can only refer to an **xml** instance in the context of the source expression of an XML-DML insert statement; otherwise, you cannot refer to columns that are of type **xml** or a CLR user-defined type.  
+ In [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], you can only refer to an **xml** instance in the context of the source expression of an XML-DML insert statement; otherwise, you cannot refer to columns that are of type **xml** or a CLR user-defined type.  
   
  The **sql:column()** function is not supported in JOIN operations. The APPLY operation can be used instead.  
   
@@ -89,7 +89,7 @@ sql:column("columnName")
   
 -   Because the values are retrieved from two different tables, the FROM clause specifies two tables. The condition in the WHERE clause filters the result and retrieves only products whose product models have catalog descriptions.  
   
--   The **namespace** keyword in the [XQuery Prolog](../Topic/XQuery%20Prolog.md) defines the XML namespace prefix, "pd", that is used in the query body. Note that the table aliases, "P" and "PM", are defined in the FROM clause of the query itself.  
+-   The **namespace** keyword in the [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md) defines the XML namespace prefix, "pd", that is used in the query body. Note that the table aliases, "P" and "PM", are defined in the FROM clause of the query itself.  
   
 -   The **sql:column()** function is used to bring non-XML values inside XML.  
   
@@ -129,7 +129,7 @@ select @x
 ```  
   
 ## See Also  
- [SQL Server XQuery Extension Functions](../Topic/SQL%20Server%20XQuery%20Extension%20Functions.md)   
+ [SQL Server XQuery Extension Functions](../a9retired/xquery-extension-functions.md)   
  [Compare Typed XML to Untyped XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Create Instances of XML Data](../relational-databases/xml/create-instances-of-xml-data.md)   

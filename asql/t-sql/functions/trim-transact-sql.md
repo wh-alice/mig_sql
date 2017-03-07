@@ -22,7 +22,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # TRIM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../t-sql/functions/includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../a9notintoc/includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
 
 Removes the space character `char(32)` or other specified characters from the start or end of a string.  
  

@@ -17,19 +17,19 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # File-Snapshot Backups for Database Files in Azure
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] File-snapshot backup uses Azure snapshots to provide nearly instantaneous backups and quicker restores for database files stored using the Azure Blob storage service. This capability enables you to simplify your backup and restore policies. For a live demo, see [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo). For more information on storing database files using the Azure Blog storage service, see [SQL Server Data Files in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] File-snapshot backup uses Azure snapshots to provide nearly instantaneous backups and quicker restores for database files stored using the Azure Blob storage service. This capability enables you to simplify your backup and restore policies. For a live demo, see [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo). For more information on storing database files using the Azure Blog storage service, see [SQL Server Data Files in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
   
  ![snapshot backup architectural diagram](../../relational-databases/backup-restore/media/snapshotbackups.PNG "snapshot backup architectural diagram")  
   
  **Download**  
   
--   To download [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
+-   To download [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
--   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] already installed.  
+-   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] already installed.  
   
 ## Using Azure snapshots to back up database files stored in Azure  
   
-### What is a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] file-snapshot backup  
+### What is a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] file-snapshot backup  
  A file-snapshot backup consists of a set of Azure snapshots of the blobs containing the database files plus a backup file containing pointers to these file-snapshots. Each file-snapshot is stored in the container with the base blob. You can specify that the backup file itself to be written to URL, disk or tape. Backup to URL is recommended. For more information on backing up, see [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md) and on backing up to URL, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
  ![architecture of snapshot feature](../../relational-databases/backup-restore/media/snapshotbackups-flat.png "architecture of snapshot feature")  
@@ -56,7 +56,7 @@ manager: "jhubbard"
 ### File-backup set maintenance  
  **Deleting a file-snapshot backup set:** You cannot overwrite a file-snapshot backup set using the FORMAT argument. The FORMAT argument is not permitted to avoid leaving orphaned file-snapshots that were created with the original file-snapshot backup. To delete a file-snapshot backup set, use the **sys.sp_delete_backup** system stored procedure. This stored procedure deletes the backup file and the file-snapshots that comprise the backup set. Using another method to delete a file-snapshot backup set may delete the backup file without deleting the file-snapshots in the backup set.  
   
- **Deleting orphaned backup file-snapshots:** You may have orphaned file-snapshots if the backup file was deleted without using the **sys.sp_delete_backup** system stored procedure or if a database or database file was dropped while the blob(s) containing the database or database file had backup file-snapshots associated with them. To identify file-snapshots that may be orphaned, use the **sys.fn_db_backup_file_snapshots** system function to list all file-snapshots of the database files. To identify the file-snapshots that are part of a specific file-snapshot backup set, use the RESTORE FILELISTONLY system stored procedure. You can then use the **sys.sp_delete_backup_file_snapshot** system stored procedure to delete an individual backup file-snapshot that was orphaned. Examples using this system function and these system stored procedures are at the end of this topic. For more information, see [sp_delete_backup &#40;Transact-SQL&#41;](../Topic/sp_delete_backup%20\(Transact-SQL\).md), [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-db-backup-file-snapshots-transact-sql.md), [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../Topic/sp_delete_backup_file_snapshot%20\(Transact-SQL\).md), and [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md).  
+ **Deleting orphaned backup file-snapshots:** You may have orphaned file-snapshots if the backup file was deleted without using the **sys.sp_delete_backup** system stored procedure or if a database or database file was dropped while the blob(s) containing the database or database file had backup file-snapshots associated with them. To identify file-snapshots that may be orphaned, use the **sys.fn_db_backup_file_snapshots** system function to list all file-snapshots of the database files. To identify the file-snapshots that are part of a specific file-snapshot backup set, use the RESTORE FILELISTONLY system stored procedure. You can then use the **sys.sp_delete_backup_file_snapshot** system stored procedure to delete an individual backup file-snapshot that was orphaned. Examples using this system function and these system stored procedures are at the end of this topic. For more information, see [sp_delete_backup &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/snapshot-backup-sp-delete-backup.md), [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-db-backup-file-snapshots-transact-sql.md), [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md), and [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
 ### Considerations and Limitations  
  **Premium storage:** When using premium storage, the following limitations apply:  
@@ -109,7 +109,7 @@ BACKUP LOG AdventureWorks2016
 GO  
 ```  
   
-## Restoring from a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] file-snapshot backup  
+## Restoring from a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] file-snapshot backup  
  The following example restores the AdventureWorks2016 database using a transaction log file-snapshot backup set, and shows a recovery operation. Notice that you can restore a database from a single transactional log file-snapshot backup set.  
   
 ```  
@@ -118,7 +118,7 @@ WITH RECOVERY, REPLACE;
 GO  
 ```  
   
-## Restoring from a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] file-snapshot backup to a point in time  
+## Restoring from a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] file-snapshot backup to a point in time  
  The following example restores the AdventureWorks2016 to its state at a specified point in time using two transaction log file-snapshot backup sets, and shows a recovery operation.  
   
 ```  
@@ -132,7 +132,7 @@ GO
 ```  
   
 ## Deleting a database file-snapshot backup set  
- To delete a file-snapshot backup set, use the **sys.sp_delete_backup** system stored procedure. Specify the database name to have the system verify that the specified file-snapshot backup set is a indeed a backup for the database specified. If no database name is specified, the specified backup set with its file-snapshots will be deleted without such a validation. For more information, see [sp_delete_backup &#40;Transact-SQL&#41;](../Topic/sp_delete_backup%20\(Transact-SQL\).md).  
+ To delete a file-snapshot backup set, use the **sys.sp_delete_backup** system stored procedure. Specify the database name to have the system verify that the specified file-snapshot backup set is a indeed a backup for the database specified. If no database name is specified, the specified backup set with its file-snapshots will be deleted without such a validation. For more information, see [sp_delete_backup &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/snapshot-backup-sp-delete-backup.md).  
   
 > [!WARNING]  
 >  Attempting to delete a file-snapshot backup set using another method, such as the Microsoft Azure Management Portal or the Azure Storage viewer in SQL Server Management Studio will not delete the file-snapshots in the backup set. These tools will only delete the backup file itself that contains the pointers to the file-snapshots in the file-snapshot backup set. To identify backup file-snapshots that remain after a backup file was improperly deleted, use the **sys.fn_db_backup_file_snapshots** system function and then use the **sys.sp_delete_backup_file_snapshot** system stored procedure to delete an individual backup file-snapshot.  
@@ -146,7 +146,7 @@ GO
 ```  
   
 ## Viewing database backup file-snapshots  
- To view file-snapshots of the base blob for each database file, use the **sys.fn_db_backup_file_snapshots** system function. This system function enables you to view all backup file-snapshots of each base blob for a database stored using the Azure Blob storage service. A primary use case for this function is to identify backup file-snapshots of a database that remain when the backup file for a file-snapshot backup set is deleted using a mechanism other than the **sys.sp_delete_backup** system stored procedure. To determine the backup file-snapshots that are part of intact backup sets and the ones that are not part of intact backup sets, use the **RESTORE FILELISTONLY**  system stored procedure to list the file-snapshots belonging to each backup file. For more information, see [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-db-backup-file-snapshots-transact-sql.md) and [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md).  
+ To view file-snapshots of the base blob for each database file, use the **sys.fn_db_backup_file_snapshots** system function. This system function enables you to view all backup file-snapshots of each base blob for a database stored using the Azure Blob storage service. A primary use case for this function is to identify backup file-snapshots of a database that remain when the backup file for a file-snapshot backup set is deleted using a mechanism other than the **sys.sp_delete_backup** system stored procedure. To determine the backup file-snapshots that are part of intact backup sets and the ones that are not part of intact backup sets, use the **RESTORE FILELISTONLY**  system stored procedure to list the file-snapshots belonging to each backup file. For more information, see [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-db-backup-file-snapshots-transact-sql.md) and [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
  The following example returns the list of all backup file-snapshots for the specified database.  
   
@@ -161,7 +161,7 @@ GO
 ```  
   
 ## Deleting an individual database backup file-snapshot  
- To delete an individual backup file-snapshot of a database base blob, use the **sys.sp_delete_backup_file_snapshot** system stored procedure. A primary use case for this system stored procedure is to delete orphaned file-snapshot files that remain after a backup file was deleted using a method other than the **sys.sp_delete_backup** system stored procedure. For more information, see [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../Topic/sp_delete_backup_file_snapshot%20\(Transact-SQL\).md).  
+ To delete an individual backup file-snapshot of a database base blob, use the **sys.sp_delete_backup_file_snapshot** system stored procedure. A primary use case for this system stored procedure is to delete orphaned file-snapshot files that remain after a backup file was deleted using a method other than the **sys.sp_delete_backup** system stored procedure. For more information, see [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md).  
   
 > [!WARNING]  
 >  Deleting an individual file-snapshot that is part of a file-snapshot backup set will invalidate the backup set.  

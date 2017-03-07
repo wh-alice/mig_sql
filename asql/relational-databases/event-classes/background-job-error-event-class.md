@@ -33,7 +33,7 @@ manager: "jhubbard"
 |**IntegerData**|**int**|Number of tries attempted by the job (**EventSubClass** 1 only).|25|Yes|  
 |**IntegerData2**|**int**|Job sequence number.|55|Yes|  
 |**ObjectID**|**int**|System-assigned ID of the object.|22|Yes|  
-|**SessionLoginName**|**nvarchar**|Login name of the user that originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, **SessionLoginName** shows Login1 and **LoginName** shows Login2. This column displays both [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows logins.|64|Yes|  
+|**SessionLoginName**|**nvarchar**|Login name of the user that originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, **SessionLoginName** shows Login1 and **LoginName** shows Login2. This column displays both [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows logins.|64|Yes|  
 |**Severity**|**int**|Severity level of the error on the last attempt (**EventSubClass** 1 only).|20|Yes|  
 |**StartTime**|**datetime**|Time at which the job was created.|14|Yes|  
 |**State**|**int**|State of the error on the last attempt (**EventSubClass** 1 only).|30|Yes|  
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Extended Events](../../relational-databases/extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Auto Stats Event Class](../../relational-databases/event-classes/auto-stats-event-class.md)  
   
   

@@ -44,13 +44,13 @@ manager: "jhubbard"
   
 -   Update the cache file name at runtime by using an expression to set the ConnectionString property. For more information, see [Use Property Expressions in Packages](../../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
- You can set properties through [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] Designer, see [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).  
+ For more information about the properties that you can set in [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] Designer, see [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).  
   
  For information about how to configure a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## Related Tasks  
- [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](../Topic/Implement%20a%20Lookup%20Transformation%20in%20Full%20Cache%20Mode%20Using%20the%20Cache%20Connection%20Manager.md)  
+ [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   

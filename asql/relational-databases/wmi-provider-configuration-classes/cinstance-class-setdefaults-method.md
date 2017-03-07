@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # CInstance Class - SetDefaults Method
-  Sets all the default values for the instance of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] client with the option to overwrite existing data.  
+  Sets all the default values for the instance of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] client with the option to overwrite existing data.  
   
 ## Syntax  
   
@@ -33,13 +33,13 @@ object.SetDefaults(OverwriteAll)
   
 ## Parts  
  *object*  
- A [CInstance Class](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md) object that represents a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] client instance.  
+ A [CInstance Class](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md) object that represents a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] client instance.  
   
 #### Parameters  
   
 |Parameter|Description|  
 |---------------|-----------------|  
-|*OverwriteAll*|A Boolean value that specifies whether to overwrite existing values on the instance of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] client: **true** to overwrite existing data, or **false** if existing data is not to be overwritten.|  
+|*OverwriteAll*|A Boolean value that specifies whether to overwrite existing values on the instance of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] client: **true** to overwrite existing data, or **false** if existing data is not to be overwritten.|  
   
 ## Property Value/Return Value  
  A **uint32** value, which is 0 if the service was successfully modified, 1 if the request is not supported, and any other number to indicate an error.  

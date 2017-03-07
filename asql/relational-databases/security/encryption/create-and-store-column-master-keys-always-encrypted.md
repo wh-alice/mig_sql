@@ -15,7 +15,7 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Create and Store Column Master Keys (Always Encrypted)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 *Column Master Keys* are key-protecting keys used in Always Encrypted to encrypt column encryption keys. Column master keys must be stored in a trusted key store, and the keys need to be accessible to applications that need to encrypt or decrypt data, and tools for configuring Always Encrypted and managing Always Encrypted keys.
 

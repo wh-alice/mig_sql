@@ -23,7 +23,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Script Task Examples
-  The Script task is a multi-purpose tool that you can use in a package to fill almost any requirement that is not met by the tasks included with [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)]. This topic lists Script task code samples that demonstrate some of the available functionality.  
+  The Script task is a multi-purpose tool that you can use in a package to fill almost any requirement that is not met by the tasks included with [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)]. This topic lists Script task code samples that demonstrate some of the available functionality.  
   
 > [!NOTE]  
 >  If you want to create tasks that you can more easily reuse across multiple packages, consider using the code in these Script task samples as the starting point for custom tasks. For more information, see [Developing a Custom Task](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
@@ -31,7 +31,7 @@ manager: "jhubbard"
 ## In This Section  
   
 ### Example Topics  
- This section contains code examples that demonstrate various uses of the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] classes that you can incorporate into an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] Script task:  
+ This section contains code examples that demonstrate various uses of the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] classes that you can incorporate into an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] Script task:  
   
  [Detecting an Empty Flat File with the Script Task](../../integration-services/extending-packages-scripting-task-examples/detecting-an-empty-flat-file-with-the-script-task.md)  
  Checks a flat file to determine whether it contains rows of data, and saves the result to a variable for use in control flow branching.  
@@ -40,10 +40,10 @@ manager: "jhubbard"
  Gathers a list of files that meet user-specified criteria, and populates a variable for later use by the Foreach from Variable Enumerator.  
   
  [Querying the Active Directory with the Script Task](../../integration-services/extending-packages-scripting-task-examples/querying-the-active-directory-with-the-script-task.md)  
- Retrieves user information from Active Directory based on the value of an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] variable, by using classes in the System.DirectoryServices namespace.  
+ Retrieves user information from Active Directory based on the value of an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] variable, by using classes in the System.DirectoryServices namespace.  
   
  [Monitoring Performance Counters with the Script Task](../../integration-services/extending-packages-scripting-task-examples/monitoring-performance-counters-with-the-script-task.md)  
- Creates a custom performance counter that can be used to track the execution progress of an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package, by using classes in the System.Diagnostics namespace.  
+ Creates a custom performance counter that can be used to track the execution progress of an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package, by using classes in the System.Diagnostics namespace.  
   
  [Working with Images with the Script Task](../../integration-services/extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)  
  Compresses images into the JPEG format and creates thumbnail images from them, by using classes in the System.Drawing namespace.  

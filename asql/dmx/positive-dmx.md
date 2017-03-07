@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # + (Positive) (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Performs a unary operation that returns the positive value of a numeric expression.  
   
@@ -42,6 +42,6 @@ manager: "erikre"
 ## See Also  
  [Data Mining Extensions &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)   
- [Unary Operators &#40;DMX&#41;](../Topic/Unary%20Operators%20\(DMX\).md)  
+ [Unary Operators &#40;DMX&#41;](../dmx/operators-unary.md)  
   
   

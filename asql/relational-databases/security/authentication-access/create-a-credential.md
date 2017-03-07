@@ -19,11 +19,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create a Credential
-  This topic describes how to create a credential in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to create a credential in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)].  
   
- Credentials provide a way to allow [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication users to have an identity outside of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. This is primarily used to execute code in Assemblies with EXTERNAL_ACCESS permission set. Credentials can also be used when a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication user needs access to a domain resource, such as a file location to store a backup.  
+ Credentials provide a way to allow [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Authentication users to have an identity outside of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. This is primarily used to execute code in Assemblies with EXTERNAL_ACCESS permission set. Credentials can also be used when a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Authentication user needs access to a domain resource, such as a file location to store a backup.  
   
- A credential can be mapped to several [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] logins at the same time. A [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login can only be mapped to one credential at a time. After a credential is created, use the **Login Properties (General Page)** to map a login to a credential.  
+ A credential can be mapped to several [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] logins at the same time. A [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] login can only be mapped to one credential at a time. After a credential is created, use the **Login Properties (General Page)** to map a login to a credential.  
   
  **In This Topic**  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   If there is no login mapped credential for the provider, the credential mapped to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service account is used.  
+-   If there is no login mapped credential for the provider, the credential mapped to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] service account is used.  
   
 -   A login can have multiple credentials mapped to it as long as they are used with distinctive providers. There must be only one mapped credential per provider per login. The same credential can be mapped to other logins.  
   
@@ -62,7 +62,7 @@ manager: "jhubbard"
   
 3.  In the **New Credential** dialog box, in the **Credential Name** box, type a name for the credential.  
   
-4.  In the **Identity** box, type the name of the account used for outgoing connections (when leaving the context of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]). Typically, this will be a Windows user account, but the identity can be an account of another type.  
+4.  In the **Identity** box, type the name of the account used for outgoing connections (when leaving the context of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]). Typically, this will be a Windows user account, but the identity can be an account of another type.  
   
      Alternately, click the ellipsis **(…)** to open the **Select User or Group** dialog box.  
   
@@ -70,13 +70,13 @@ manager: "jhubbard"
   
 6.  Select **Use Encryption Provider** to set the credential to be verified by an Extensible Key Management (EKM) Provider. For more information, see [Extensible Key Management &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
-7.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To create a credential  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

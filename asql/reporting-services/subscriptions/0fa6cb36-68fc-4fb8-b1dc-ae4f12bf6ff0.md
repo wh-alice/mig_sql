@@ -18,13 +18,13 @@ manager: "erikre"
 # Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../integration-services/includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-  Starting with [!INCLUDE[ssKilimanjaro](../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] you can programmatically transfer the ownership of a [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] subscription from one user to another. This topic provides several Windows PowerShell scripts you can use to change or simply list subscription ownership. Each sample includes sample syntax for both Native mode and SharePoint mode. After you change the subscription owner, the subscription will then execute in the security context of the new owner, and the User!UserID field in the report will display the value of new owner. For more information on the object model the PowerShell samples call, see <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+  Starting with [!INCLUDE[ssKilimanjaro](../../a9notintoc/includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] you can programmatically transfer the ownership of a [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] subscription from one user to another. This topic provides several Windows PowerShell scripts you can use to change or simply list subscription ownership. Each sample includes sample syntax for both Native mode and SharePoint mode. After you change the subscription owner, the subscription will then execute in the security context of the new owner, and the User!UserID field in the report will display the value of new owner. For more information on the object model the PowerShell samples call, see <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  ![PowerShell related content](../../analysis-services/instances/install/windows/media/rs-powershellicon.jpg "PowerShell related content")  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../analysis-services/includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Native mode &#124; [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] SharePoint mode|  
+|**[!INCLUDE[applies](../../a9retired/includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] Native mode &#124; [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] SharePoint mode|  
   
 ##  <a name="bkmk_top"></a> In this topic:  
   
@@ -45,7 +45,7 @@ manager: "erikre"
 ##  <a name="bkmk_how_to"></a> How to use the scripts  
   
 ### Permissions  
- This section summarizes the permission levels required to use each of the methods for both Native and SharePoint mode [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]. The scripts in this topic use the following [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] methods:  
+ This section summarizes the permission levels required to use each of the methods for both Native and SharePoint mode [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]. The scripts in this topic use the following [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] methods:  
   
 -   [ReportingService2010.ListSubscriptions Method](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
   
@@ -90,13 +90,13 @@ manager: "erikre"
   
  **Tested environments**  
   
- The scripts in this topic were tested on PowerShell version 3 and with the following versions of [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]:  
+ The scripts in this topic were tested on PowerShell version 3 and with the following versions of [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]:  
   
--   [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)]  
+-   [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)]  
   
--   [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)]  
+-   [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)]  
   
--   [!INCLUDE[ssKilimanjaro](../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)]  
+-   [!INCLUDE[ssKilimanjaro](../../a9notintoc/includes/sskilimanjaro-md.md)]  
   
 ##  <a name="bkmk_list_ownership_all"></a> Script: List the ownership of all subscriptions  
  This script lists all of the subscriptions on a site. You can use this script to test your connection or to verify the report path and subscription id for use in the other scripts. This is also a useful script to simply audit what subscriptions exist and who owns them.  

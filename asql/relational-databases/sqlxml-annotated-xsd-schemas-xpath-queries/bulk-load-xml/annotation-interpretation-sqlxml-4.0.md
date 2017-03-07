@@ -27,19 +27,19 @@ manager: "jhubbard"
 >  The information in these topics describes only the annotations used by XML Bulk Load in its processing. For a complete list of annotations for the XSD schema that are supported by SQLXML 4.0, see [Using Annotations in XSD Schemas &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4.0.md). For a list of supported annotations for XDR schemas, see [Annotated XDR Schemas &#40;Deprecated in SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4.0.md).  
   
 ## In This Section  
- [sql:relationship and the Key Ordering Rule &#40;SQLXML 4.0&#41;](../Topic/sql:relationship%20and%20the%20Key%20Ordering%20Rule%20\(SQLXML%204.0\).md)  
+ [sql:relationship and the Key Ordering Rule &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-relationship-and-key-ordering-rule.md)  
  Describes how the **sql:relationship** annotation is interpreted in XML Bulk Load.  
   
- [sql:mapped &#40;SQLXML 4.0&#41;](../Topic/sql:mapped%20\(SQLXML%204.0\).md)  
+ [sql:mapped &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-mapped.md)  
  Describes how the **sql:mapped** annotation is interpreted in XML Bulk Load.  
   
- [sql:limit-field and sql:limit-value &#40;SQLXML 4.0&#41;](../Topic/sql:limit-field%20and%20sql:limit-value%20\(SQLXML%204.0\).md)  
+ [sql:limit-field and sql:limit-value &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
  Describes how the **sql:limit-field** and **sql:limit-value** annotations are interpreted in XML Bulk Load.  
   
- [sql:overflow-field &#40;SQLXML 4.0&#41;](../Topic/sql:overflow-field%20\(SQLXML%204.0\).md)  
+ [sql:overflow-field &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)  
  Describes how the **sql:overflow** annotation is interpreted in XML Bulk Load.  
   
- [Other Annotations &#40;SQLXML 4.0&#41;](../Topic/Other%20Annotations%20\(SQLXML%204.0\).md)  
+ [Other Annotations &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-other-annotations.md)  
  Describes how the following annotations are interpreted in XML Bulk Load: **sql:id-prefix**, **sql:use-cdata**, **sql:url-encode**, **sql:is-mapping-schema**, **sql:key-fields**.  
   
   

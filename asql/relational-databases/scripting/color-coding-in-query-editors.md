@@ -31,11 +31,11 @@ manager: "jhubbard"
 |Green|System table, view, or table-valued function. Also, the system schemas sys and INFORMATION_SCHEMA.|  
 |Blue|Keyword|  
 |Teal|Line numbers or template parameter|  
-|Maroon|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] stored procedure|  
+|Maroon|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] stored procedure|  
 |Dark gray|Operators|  
   
 ## Status Bar  
- You can configure registered servers or [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] servers in Object Explorer to have different colors in the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Query Editor status bar. This helps you identify which server each editor window is connected to when you have many windows open at the same time. For more information about setting status bar colors, see [Status Bar &#40;Database Engine Query Editor&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md).  
+ You can configure registered servers or [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] servers in Object Explorer to have different colors in the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Query Editor status bar. This helps you identify which server each editor window is connected to when you have many windows open at the same time. For more information about setting status bar colors, see [Status Bar &#40;Database Engine Query Editor&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md).  
   
  Some types of editors do not display the status bar, or do not support multiple colors.  
   

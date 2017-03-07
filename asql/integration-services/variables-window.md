@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Variables Window
   Use the **Variables** window to create and modify user-defined variables and view system variables.  
   
- By default, the **Variables** window is located below the **Connection Managers** area in the SSIS Designer, in [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)]. If you don’t see the **Variables** window, click **Variables** on the **SSIS** menu to display the window.  
+ By default, the **Variables** window is located below the **Connection Managers** area in the SSIS Designer, in [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)]. If you don’t see the **Variables** window, click **Variables** on the **SSIS** menu to display the window.  
   
  You can optionally display the **Variables** window by mapping the View.Variables command to a key combination of your choosing on the **Keyboard** page of the **Options** dialog box.  
   
@@ -108,7 +108,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md)   
- [Use Variables in Packages](../Topic/Use%20Variables%20in%20Packages.md)   
+ [Use Variables in Packages](../a9retired/use-variables-in-packages.md)   
  [Integration Services &#40;SSIS&#41; Expressions](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   

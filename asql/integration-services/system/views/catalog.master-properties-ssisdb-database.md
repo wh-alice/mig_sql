@@ -15,9 +15,9 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # catalog.master_properties (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Displays the properties of the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] Scale Out Master.
+Displays the properties of the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] Scale Out Master.
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

@@ -17,7 +17,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Tutorial: Creating Drillthrough and Main Reports (Report Builder)
-This tutorial teaches you how to create two kinds of [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports: a drillthrough report and a main report. The sample sales data used in these reports is retrieved from an Analysis Services cube. 
+This tutorial teaches you how to create two kinds of [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports: a drillthrough report and a main report. The sample sales data used in these reports is retrieved from an Analysis Services cube. 
 
 The following illustration shows the reports you will create, and shows how the field value, Games and Toys, in the main report displays in the drillthrough report’s title. The data in the drillthrough report pertains to the Games and Toys product category.  
   
@@ -32,7 +32,7 @@ The other file, ContosoBIdemoBAK.exe, is for the ContosoDW data warehouse, which
   
 The Web site includes instructions extracting and restoring the ContosoRetail.abf backup file to the Contoso_Retail OLAP database.  
 
-You must have access to an instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] on which to install the OLAP database.  
+You must have access to an instance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] on which to install the OLAP database.  
     
 For more about general requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../reporting-services/tutorials/prerequisites-for-tutorials-report-builder.md).  
   
@@ -41,7 +41,7 @@ From the Getting Started dialog box, create a matrix report by using the **Table
   
 #### To create a new report  
   
-1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
+1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
   
     The **New Report or Dataset** dialog box opens.  
   
@@ -52,7 +52,7 @@ From the Getting Started dialog box, create a matrix report by using the **Table
 3.  In the right pane, verify that **Table or Matrix Wizard** is selected.  
   
 ## <a name="DConnection"></a>1a. Specify a Data Connection  
-A data connection contains the information necessary to connect to an external data source such as an Analysis Services cube or a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database. To specify a data connection, you can use a shared data source from the report server or create an embedded data source that is used only in this report. In this tutorial, you will use an embedded data source. To learn more about using a shared data source, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../../reporting-services/tutorials/alternative-ways-to-get-a-data-connection-report-builder.md).  
+A data connection contains the information necessary to connect to an external data source such as an Analysis Services cube or a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database. To specify a data connection, you can use a shared data source from the report server or create an embedded data source that is used only in this report. In this tutorial, you will use an embedded data source. To learn more about using a shared data source, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../../reporting-services/tutorials/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### To create an embedded data source  
   
@@ -70,7 +70,7 @@ A data connection contains the information necessary to connect to an external d
   
 7.  In **Select or enter a database name**, select the Contoso cube.  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 9. Verify that **Connection string** contains the following syntax:  
   
@@ -78,14 +78,14 @@ A data connection contains the information necessary to connect to an external d
     Data Source=<servername>; Initial Catalog = Contoso  
     ```  
   
-    The `<servername>` is the name of an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] with Analysis Services installed.  
+    The `<servername>` is the name of an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] with Analysis Services installed.  
   
 10. Click **Credentials type**.  
   
     > [!NOTE]  
     > Depending on how permissions are configured on the data source, you might need to change the default authentication options. For more information, see [Security &#40;Report Builder&#41;](../../reporting-services/report-builder/security-report-builder.md).  
   
-11. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+11. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
     The **Choose a connection to a data source** page appears.  
   
@@ -93,7 +93,7 @@ A data connection contains the information necessary to connect to an external d
   
     The message **Connection created successfully** appears.  
   
-13. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+13. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 14. Click **Next**.  
   
@@ -107,7 +107,7 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
 2.  In the **Cube Selection** dialog box, click Sales, and then click **OK**.  
   
     > [!TIP]  
-    > If you do not want to build the MDX query manually, click the ![Switch to Design mode](../../reporting-services/report-data/media/rsqdicon-designmode.gif "Switch to Design mode") icon, toggle the query designer to Query mode, paste the completed MDX to the query designer, and then proceed to step 6 in [To create the dataset](#DSkip).  
+    > If you do not want to build the MDX query manually, click the ![Switch to Design mode](../../a9retired/media/rsqdicon-designmode.gif "Switch to Design mode") icon, toggle the query designer to Query mode, paste the completed MDX to the query designer, and then proceed to step 6 in [To create the dataset](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -237,7 +237,7 @@ Instead of showing sales and sales returns as currency values, the report shows 
   
 5.  In the **Select Sparkline Type** dialog box, verify that **Column** type is selected.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 7.  Right-click the sparkline.  
   
@@ -301,10 +301,10 @@ By default parameters are visible, which is not appropriate for this report. You
   
 5.  Optionally, click **Available Values** and **Default Values** and review their options. Do not change any options on these tabs.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## <a name="DSave"></a>6. Save the Report to a SharePoint Library  
-You can save the report to a SharePoint library, report server, or your computer. If you save the report to your computer, a number of [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available. In this tutorial, you will save the report to a SharePoint library.  
+You can save the report to a SharePoint library, report server, or your computer. If you save the report to your computer, a number of [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available. In this tutorial, you will save the report to a SharePoint library.  
   
 #### To save the report  
   
@@ -341,7 +341,7 @@ From the **Getting Started** dialog box, create a matrix report by using the **T
   
 #### To create the main report  
   
-1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
+1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
   
     The **New Report or Dataset** dialog box opens.  
   
@@ -364,11 +364,11 @@ You will add an embedded data source to the main report.
   
 5.  In **Data source**, verify that the data source is **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
-6.  In **Server name**, type the name of a server where an instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] is installed.  
+6.  In **Server name**, type the name of a server where an instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] is installed.  
   
 7.  In **Select or enter a database name**, select the Contoso cube.  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 9. Verify that the **Connection string** contains the following syntax:  
   
@@ -380,11 +380,11 @@ You will add an embedded data source to the main report.
   
     Depending on how permissions are configured on the data source, you might need to change the default authentication.  
   
-11. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+11. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 12. To verify that you can connect to the data source, click **Test Connection**.  
   
-13. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+13. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 14. Click **Next**.  
   
@@ -398,7 +398,7 @@ Next, create an embedded dataset. To do so, you will use the query designer to c
 2.  In the **Cube Selection** dialog box, click Sales, and then click **OK**.  
   
     > [!TIP]  
-    > If you do not want to build the MDX query manually, click the ![Switch to Design mode](../../reporting-services/report-data/media/rsqdicon-designmode.gif "Switch to Design mode") icon, toggle the query designer to Query mode, paste the completed MDX to the query designer, and then proceed to step 5 in [To create the dataset](#MSkip).  
+    > If you do not want to build the MDX query manually, click the ![Switch to Design mode](../../a9retired/media/rsqdicon-designmode.gif "Switch to Design mode") icon, toggle the query designer to Query mode, paste the completed MDX to the query designer, and then proceed to step 5 in [To create the dataset](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -557,7 +557,7 @@ To enable the drillthrough, specify an action on a text box in the main report.
     > [!IMPORTANT]  
     > You must include the **UniqueName** property because the drillthrough action requires a unique value.  
   
-9. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 #### To format the drillthrough field  
   
@@ -569,7 +569,7 @@ To enable the drillthrough, specify an action on a text box in the main report.
   
 4.  In the **Color** list, select **Blue**.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 6.  To preview your report, click **Run**.  
   
@@ -619,7 +619,7 @@ By default, parameters are visible, which is not appropriate for this report. Yo
   
 4.  Optionally, click the **Available Values** and **Default Values** tabs and review their options. Do not change any options on these tabs.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## <a name="MTitle"></a>6. Add a Report Title  
 Add a title to the main report.  

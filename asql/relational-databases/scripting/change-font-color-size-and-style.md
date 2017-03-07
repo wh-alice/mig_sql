@@ -22,7 +22,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Change Font Color, Size, and Style
-  You can customize the way the text appears in the Editor as well as other places in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+  You can customize the way the text appears in the Editor as well as other places in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 ### To change font color, size, and style in the Editor  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Click **Use Defaults** to return to the default settings.  
   
- There is only one font setting for the Editor and it affects all editors in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. You can change the color based on the text type (such as comments and statements). Monospace fonts appear in bold in the Font list, and you can apply bold settings on a per-text-type basis. For example, you can format comments and operators bold, and the other text types are unaffected.  
+ There is only one font setting for the Editor and it affects all editors in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. You can change the color based on the text type (such as comments and statements). Monospace fonts appear in bold in the Font list, and you can apply bold settings on a per-text-type basis. For example, you can format comments and operators bold, and the other text types are unaffected.  
   
  The settings for text color and font type are global for all text element types, such as comments, strings, and so on.  
   

@@ -19,7 +19,7 @@ manager: "jhubbard"
 # Lesson 1-9 - Testing the Lesson 1 Tutorial Package
 In this lesson, you have done the following tasks:  
   
--   Created a new [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] project.  
+-   Created a new [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] project.  
   
 -   Configured the connection managers that the package needs to connect to the source and destination data.  
   

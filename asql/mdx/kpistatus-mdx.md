@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # KPIStatus (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns a normalized value that represents the status portion of the specified Key Performance Indicator (KPI).  
   

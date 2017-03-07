@@ -17,14 +17,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure Data Collection Parameters (Transact-SQL)
-  Before you create a custom collection set, you must first configure data collection parameters. You can do this by using the stored procedures that are provided with the data collector. Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to carry out the following procedure.  
+  Before you create a custom collection set, you must first configure data collection parameters. You can do this by using the stored procedures that are provided with the data collector. Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] to carry out the following procedure.  
   
 > [!NOTE]  
 >  You only configure data collection parameters once. After configuration, these parameters are used for any additional collection sets that you create.  
   
 ### Configure data collection parameters  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], connect to the database where you want to create a custom collection set.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], connect to the database where you want to create a custom collection set.  
   
 2.  In Query Editor, issue the following statements.  
   
@@ -37,6 +37,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Data Collection](../../relational-databases/data-collection/data-collection.md)   
- [Data Collector Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
+ [Data Collector Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

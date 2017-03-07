@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 2-1 - Creating a Table Using the hierarchyid Data Type
-The following example creates a table named EmployeeOrg, which includes employee data together with their reporting hierarchy. The example creates the table in the [!INCLUDE[ssSampleDBobject](../../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database, but that is optional. To keep the example simple, this table includes only five columns:  
+The following example creates a table named EmployeeOrg, which includes employee data together with their reporting hierarchy. The example creates the table in the [!INCLUDE[ssSampleDBobject](../../../a9retired/includes/sssampledbobject-md.md)] database, but that is optional. To keep the example simple, this table includes only five columns:  
   
 -   OrgNode is a **hierarchyid** column that stores the hierarchical relationship.  
   
@@ -60,7 +60,7 @@ The following example creates a table named EmployeeOrg, which includes employee
 The table is now ready for data. The next task will populate the table by using hierarchical methods.  
   
 ## Next Task in Lesson  
-[Populating a Hierarchical Table Using Hierarchical Methods](../Topic/Populating%20a%20Hierarchical%20Table%20Using%20Hierarchical%20Methods.md)  
+[Populating a Hierarchical Table Using Hierarchical Methods](../../../relational-databases/data-types/tutorials/lesson-2-2-populating-a-hierarchical-table-using-hierarchical-methods.md)  
   
   
   

@@ -16,11 +16,11 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Extended Field Properties for an Analysis Services Database (SSRS)
-  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] data processing extension supports extended field properties. Extended field properties are properties in addition to the field properties **Value** and **IsMissing** that are available on the data source and supported by the data processing extension. Extended properties do not appear in the Report Data pane as part of the field collection for a report dataset. You can include extended field property values in your report by writing expressions that specify them by name using the built-in **Fields** collection.  
+  The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] data processing extension supports extended field properties. Extended field properties are properties in addition to the field properties **Value** and **IsMissing** that are available on the data source and supported by the data processing extension. Extended properties do not appear in the Report Data pane as part of the field collection for a report dataset. You can include extended field property values in your report by writing expressions that specify them by name using the built-in **Fields** collection.  
   
  Extended properties include predefined properties and custom properties. Predefined properties are properties common to multiple data sources that are mapped to specific field property names and can be accessed through the built-in **Fields** collection by name. Custom properties are specific to each data provider and can be accessed through the built-in **Fields** collection only through syntax using the extended property name as a string.  
   
- When you use the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] MDX query designer in graphical mode to define your query, a predefined set of cell properties and dimension properties are automatically added to the MDX query. You can only use extended properties that are specifically listed in the MDX query in your report. Depending on your report, you may want to modify the default MDX command text to include other dimension or custom properties defined in the cube. For more information about extended fields available in [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] data sources, see [Creating and Using Property Values &#40;MDX&#41;](../Topic/Creating%20and%20Using%20Property%20Values%20\(MDX\).md).  
+ When you use the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] MDX query designer in graphical mode to define your query, a predefined set of cell properties and dimension properties are automatically added to the MDX query. You can only use extended properties that are specifically listed in the MDX query in your report. Depending on your report, you may want to modify the default MDX command text to include other dimension or custom properties defined in the cube. For more information about extended fields available in [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] data sources, see [Creating and Using Property Values &#40;MDX&#41;](../../a9retired/creating-and-using-property-values-mdx.md).  
   
 ## Working with Field Properties in a Report  
  Extended field properties include predefined properties and data provider-specific properties. Field properties do not appear with the field list in the **Report Data** pane, even though they are in the query built for a dataset; therefore, you cannot drag field properties onto your report design surface. Instead, you must drag the field onto the report and then change the **Value** property of the field to the property that you want to use. For example, if the cell data from a cube has already been formatted, you can use the FormattedValue field property by using the following expression: `=Fields!FieldName.FormattedValue`.  
@@ -30,7 +30,7 @@ manager: "erikre"
 -   *Fields!FieldName("PropertyName")*  
   
 ## Predefined Field Properties  
- In most cases, predefined field properties apply to measures, levels, or dimensions. A predefined field property must have a corresponding value stored in the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] data source. If a value does not exist, or if you specify a measure-only field property on a level (for example), the property returns a null value.  
+ In most cases, predefined field properties apply to measures, levels, or dimensions. A predefined field property must have a corresponding value stored in the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] data source. If a value does not exist, or if you specify a measure-only field property on a level (for example), the property returns a null value.  
   
  You can use either of the following syntaxes to refer to a predefined property from an expression:  
   
@@ -58,12 +58,12 @@ manager: "erikre"
 |**ParentUniqueName**|**String**|For parent-child hierarchies, returns a fully qualified name of the parent level.|  
   
 > [!NOTE]  
->  Values exist for these extended field properties only if the data source (for example, the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] cube) provides these values when your report runs and retrieves the data for its datasets. You can then refer to those field property values from any expression using the syntax described in the following section. However, because these fields are specific to this data provider, changes that you make to these values are not saved with the report definition.  
+>  Values exist for these extended field properties only if the data source (for example, the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] cube) provides these values when your report runs and retrieves the data for its datasets. You can then refer to those field property values from any expression using the syntax described in the following section. However, because these fields are specific to this data provider, changes that you make to these values are not saved with the report definition.  
   
 ### Example Extended Properties  
  To illustrate extended properties, the following MDX query and result set include several member properties available from a dimension attribute defined for a cube. The member properties included are MEMBER_CAPTION, UNIQUENAME, Properties("Day Name"), MEMBER_VALUE, PARENT_UNIQUE_NAME, and MEMBER_KEY.  
   
- This MDX query runs against the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] cube in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] DW database, included with the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] sample databases.  
+ This MDX query runs against the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] cube in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] DW database, included with the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] sample databases.  
   
 ```  
 WITH MEMBER [Measures].[DateCaption]   
@@ -124,7 +124,7 @@ CELL PROPERTIES
 |March|2,749|  
 |April|2,739|  
   
- Even though the properties are part of the MDX select statement, they do not appear in the result set columns. Nevertheless, the data is available for a report by using the extended properties feature. In an MDX query result pane in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], you can double-click on the cell and see the cell property values if they are set in the cube. If you double-click on the first Order Count cell that contains 1,379, you will see a pop-up window with the following cell properties:  
+ Even though the properties are part of the MDX select statement, they do not appear in the result set columns. Nevertheless, the data is available for a report by using the extended properties feature. In an MDX query result pane in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], you can double-click on the cell and see the cell property values if they are set in the cube. If you double-click on the first Order Count cell that contains 1,379, you will see a pop-up window with the following cell properties:  
   
 |Property|Value|  
 |--------------|-----------|  
@@ -148,7 +148,7 @@ CELL PROPERTIES
   
 ## See Also  
  [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../Topic/Built-in%20Collections%20in%20Expressions%20\(Report%20Builder%20and%20SSRS\).md)   
+ [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

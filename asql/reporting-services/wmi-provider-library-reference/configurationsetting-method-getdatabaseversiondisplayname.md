@@ -53,7 +53,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
 |RS 2000 RTM|@DBVersion = 'C.0.6.43'|SQL Server 2000|  
 |Hotfix||Closest applicable version|  
   
- For a *Version* prior to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] 2000 an HRESULT of ACT_E_BAD_VERSION is returned.  
+ For a *Version* prior to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] 2000 an HRESULT of ACT_E_BAD_VERSION is returned.  
   
 ## Return Value  
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  

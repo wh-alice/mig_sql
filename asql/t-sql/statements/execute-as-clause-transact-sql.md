@@ -32,11 +32,11 @@ manager: "jhubbard"
 # EXECUTE AS Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] you can define the execution context of the following user-defined modules: functions (except inline table-valued functions), procedures, queues, and triggers.  
+  In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] you can define the execution context of the following user-defined modules: functions (except inline table-valued functions), procedures, queues, and triggers.  
   
- By specifying the context in which the module is executed, you can control which user account the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] uses to validate permissions on objects that are referenced by the module. This provides additional flexibility and control in managing permissions across the object chain that exists between user-defined modules and the objects referenced by those modules. Permissions must be granted to users only on the module itself, without having to grant them explicit permissions on the referenced objects. Only the user that the module is running as must have permissions on the objects accessed by the module.  
+ By specifying the context in which the module is executed, you can control which user account the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] uses to validate permissions on objects that are referenced by the module. This provides additional flexibility and control in managing permissions across the object chain that exists between user-defined modules and the objects referenced by those modules. Permissions must be granted to users only on the module itself, without having to grant them explicit permissions on the referenced objects. Only the user that the module is running as must have permissions on the objects accessed by the module.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -72,7 +72,7 @@ DDL Triggers with Database Scope
  **CALLER**  
  Specifies the statements inside the module are executed in the context of the caller of the module. The user executing the module must have appropriate permissions not only on the module itself, but also on any database objects that are referenced by the module.  
   
- CALLER is the default for all modules except queues, and is the same as [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] behavior.  
+ CALLER is the default for all modules except queues, and is the same as [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] behavior.  
   
  CALLER cannot be specified in a CREATE QUEUE or ALTER QUEUE statement.  
   
@@ -98,12 +98,12 @@ DDL Triggers with Database Scope
  The user ID of the execution context is stored in metadata and can be viewed in the **execute_as_principal_id** column in the **sys.sql_modules** or **sys.assembly_modules** catalog view.  
   
  **'** *login_name* **'**  
- Specifies the statements inside the module execute in the context of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login specified in *login_name*. Permissions for any objects within the module are verified against *login_name*. *login_name* can be specified only for DDL triggers with server scope or logon triggers.  
+ Specifies the statements inside the module execute in the context of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login specified in *login_name*. Permissions for any objects within the module are verified against *login_name*. *login_name* can be specified only for DDL triggers with server scope or logon triggers.  
   
  *login_name* cannot be a group, role, certificate, key, or built-in account, such as NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService, or NT AUTHORITY\LocalSystem.  
   
 ## Remarks  
- How the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] evaluates permissions on the objects that are referenced in the module depends on the ownership chain that exists between calling objects and referenced objects. In earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], ownership chaining was the only method available to avoid having to grant the calling user access to all referenced objects.  
+ How the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] evaluates permissions on the objects that are referenced in the module depends on the ownership chain that exists between calling objects and referenced objects. In earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], ownership chaining was the only method available to avoid having to grant the calling user access to all referenced objects.  
   
  Ownership chaining has the following limitations:  
   
@@ -115,7 +115,7 @@ DDL Triggers with Database Scope
   
  Regardless of the execution context that is specified in the module, the following actions always apply:  
   
--   When the module is executed, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] first verifies that the user executing the module has EXECUTE permission on the module.  
+-   When the module is executed, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] first verifies that the user executing the module has EXECUTE permission on the module.  
   
 -   Ownership chaining rules continue to apply. This means if the owners of the calling and called objects are the same, no permissions are checked on the underlying objects.  
   
@@ -128,7 +128,7 @@ DDL Triggers with Database Scope
   
  The user or login name specified in EXECUTE AS clause must exist as a principal in **sys.database_principals** or **sys.server_principals**, respectively, or else the create or alter module operation fails. Additionally, the user that creates or alters the module must have IMPERSONATE permissions on the principal.  
   
- If the user has implicit access to the database or instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] through a Windows group membership, the user specified in the EXECUTE AS clause is implicitly created when the module is created when one of the following requirements exist:  
+ If the user has implicit access to the database or instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] through a Windows group membership, the user specified in the EXECUTE AS clause is implicitly created when the module is created when one of the following requirements exist:  
   
 -   The specified user or login is a member of the **sysadmin** fixed server role.  
   
@@ -137,7 +137,7 @@ DDL Triggers with Database Scope
  When neither of these requirements are met, the create module operation fails.  
   
 > [!IMPORTANT]  
->  If the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (MSSQLSERVER) service is running as a local account (local service or local user account), it will not have privileges to obtain the group memberships of a Windows domain account that is specified in the EXECUTE AS clause. This will cause the execution of the module to fail.  
+>  If the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] (MSSQLSERVER) service is running as a local account (local service or local user account), it will not have privileges to obtain the group memberships of a Windows domain account that is specified in the EXECUTE AS clause. This will cause the execution of the module to fail.  
   
  For example, assume the following conditions:  
   
@@ -179,7 +179,7 @@ GO
 ## Using EXECUTE AS to Define Custom Permission Sets  
  Specifying an execution context for a module can be very useful when you want to define custom permission sets. For example, some actions, such as TRUNCATE TABLE, do not have grantable permissions. By incorporating the TRUNCATE TABLE statement within a module and specifying that module execute as a user who has permissions to alter the table, you can extend the permissions to truncate the table to the user to whom you grant EXECUTE permissions on the module.  
   
- To view the definition of the module with the specified execution context, use the [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.sql-modules-transact-sql.md) catalog view.  
+ To view the definition of the module with the specified execution context, use the [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.sql-modules-transact-sql.md) catalog view.  
   
 ## Best Practice  
  Specify a login or user that has the least privileges required to perform the operations defined in the module. For example, do not specify a database owner account unless those permissions are required.  
@@ -194,7 +194,7 @@ GO
  To specify a *login_name* or *user_name* that has implicit access to the database through a Windows group membership, you must have CONTROL permissions on the database.  
   
 ## Examples  
- The following example creates a stored procedure in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database and assigns the execution context to `OWNER`.  
+ The following example creates a stored procedure in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database and assigns the execution context to `OWNER`.  
   
 ```  
 CREATE PROCEDURE HumanResources.uspEmployeesInDepartment   
@@ -219,9 +219,9 @@ GO
 ```  
   
 ## See Also  
- [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.assembly-modules-transact-sql.md)   
- [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.sql-modules-transact-sql.md)   
- [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.service-queues-transact-sql.md)   
+ [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.assembly-modules-transact-sql.md)   
+ [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.sql-modules-transact-sql.md)   
+ [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.service-queues-transact-sql.md)   
  [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   

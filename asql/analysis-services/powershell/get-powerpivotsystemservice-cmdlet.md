@@ -15,7 +15,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Get-PowerPivotSystemService cmdlet
-  Returns the global properties of the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service object in a farm.  
+  Returns the global properties of the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service object in a farm.  
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   
@@ -26,7 +26,7 @@ Get-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [<Com
 ```  
   
 ## Description  
- The Get-PowerPivotSystemService cmdlet returns the global properties of the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service object. There is one parent object per farm, but each farm can have multiple instances of the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service that run on individual application servers in the farm. The parent object shows farm-level settings that do not vary by instance. If the farm includes multiple [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint installations, a comma-delimited list of the instances will indicate how many [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service instances are in the farm.  
+ The Get-PowerPivotSystemService cmdlet returns the global properties of the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service object. There is one parent object per farm, but each farm can have multiple instances of the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service that run on individual application servers in the farm. The parent object shows farm-level settings that do not vary by instance. If the farm includes multiple [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint installations, a comma-delimited list of the instances will indicate how many [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service instances are in the farm.  
   
 ## Parameters  
   
@@ -58,6 +58,6 @@ Get-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [<Com
 C:\PS>Get-PowerPivotSystemService  
 ```  
   
- This example returns the global properties of the parent object, showing properties that are shared by all instances of [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service in the farm.  
+ This example returns the global properties of the parent object, showing properties that are shared by all instances of [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service in the farm.  
   
   

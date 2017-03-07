@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Host Protection Attributes and CLR Integration Programming
-  The common language runtime (CLR) provides a mechanism to annotate managed application programming interfaces (APIs) that are part of the .NET Framework with certain attributes that may be of interest to a host of the CLR, such as [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], beginning with [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)]. Examples of such host protection attributes (HPAs) include:  
+  The common language runtime (CLR) provides a mechanism to annotate managed application programming interfaces (APIs) that are part of the .NET Framework with certain attributes that may be of interest to a host of the CLR, such as [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], beginning with [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)]. Examples of such host protection attributes (HPAs) include:  
   
 -   **SharedState**, which indicates whether the API exposes the ability to create or manage shared state (for example, static class fields).  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   **ExternalProcessMgmt**, which indicates whether the API exposes a way to control the host process.  
   
- Given these attributes, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] specifies a list of HPAs that are disallowed in the hosted environment through code access security (CAS). The CAS requirements are specified by one of three [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] permission sets: **SAFE**, **EXTERNAL_ACCESS**, or **UNSAFE**. One of these three security levels is specified when the assembly is registered on the server, using the **CREATE ASSEMBLY** statement. Code executing within the **SAFE** or **EXTERNAL_ACCESS** permission sets must avoid certain types or members that have the **System.Security.Permissions.HostProtectionAttribute** attribute applied. For more information, see [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) and [CLR Integration Programming Model Restrictions](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ Given these attributes, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] specifies a list of HPAs that are disallowed in the hosted environment through code access security (CAS). The CAS requirements are specified by one of three [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] permission sets: **SAFE**, **EXTERNAL_ACCESS**, or **UNSAFE**. One of these three security levels is specified when the assembly is registered on the server, using the **CREATE ASSEMBLY** statement. Code executing within the **SAFE** or **EXTERNAL_ACCESS** permission sets must avoid certain types or members that have the **System.Security.Permissions.HostProtectionAttribute** attribute applied. For more information, see [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) and [CLR Integration Programming Model Restrictions](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
  The **HostProtectionAttribute** is not a security permission as much as a way to improve reliability, in that it identifies specific code constructs, either types or methods, that the host may disallow. The use of the **HostProtectionAttribute** enforces a programming model that helps protect the stability of the host.  
   
@@ -43,10 +43,10 @@ manager: "jhubbard"
   
 -   Could lead to destabilization of the server process itself.  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] disallows the use of a type or member that has a **HostProtectionAttribute** that specifies a **System.Security.Permissions.HostProtectionResource** enumeration with a value of **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**, or **UI**. This prevents the assemblies from calling members that enable sharing state, perform synchronization, might cause a resource leak on termination, or affect the integrity of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] process.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] disallows the use of a type or member that has a **HostProtectionAttribute** that specifies a **System.Security.Permissions.HostProtectionResource** enumeration with a value of **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**, or **UI**. This prevents the assemblies from calling members that enable sharing state, perform synchronization, might cause a resource leak on termination, or affect the integrity of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] process.  
   
 ### Disallowed Types and Members  
- The following topics identify types and members whose **HostProtectionResource** values are disallowed by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ The following topics identify types and members whose **HostProtectionResource** values are disallowed by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  The lists in these topics were generated from the supported assemblies.  For more information, see [Supported .NET Framework Libraries](../../relational-databases/clr-integration/database-objects/supported-.net-framework-libraries.md).  

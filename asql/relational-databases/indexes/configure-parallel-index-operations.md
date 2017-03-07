@@ -21,12 +21,12 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Configure Parallel Index Operations
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  This topic defines max degree of parallelism and explains how to modify this setting in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. On multiprocessor computers that are running [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Enterprise or higher, index statements may use multiple processors to perform the scan, sort, and index operations associated with the index statement just like other queries do. The number of processors used to run a single index statement is determined by the [max degree of parallelism](../../database-engine/configure/windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) configuration option, the current workload, and the index statistics. The max degree of parallelism option determines the maximum number of processors to use in parallel plan execution. If the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] detects that the system is busy, the degree of parallelism of the index operation is automatically reduced before statement execution starts. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] can also reduce the degree of parallelism if the leading key column of a non-partitioned index has a limited number of distinct values or the frequency of each distinct value varies significantly.  
+  This topic defines max degree of parallelism and explains how to modify this setting in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. On multiprocessor computers that are running [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Enterprise or higher, index statements may use multiple processors to perform the scan, sort, and index operations associated with the index statement just like other queries do. The number of processors used to run a single index statement is determined by the [max degree of parallelism](../../database-engine/configure/windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) configuration option, the current workload, and the index statistics. The max degree of parallelism option determines the maximum number of processors to use in parallel plan execution. If the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] detects that the system is busy, the degree of parallelism of the index operation is automatically reduced before statement execution starts. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] can also reduce the degree of parallelism if the leading key column of a non-partitioned index has a limited number of distinct values or the frequency of each distinct value varies significantly.  
   
 > [!NOTE]  
->  Parallel index operations are not available in every [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] edition. For more information, see Features Supported by the Editions of SQL Server 2016  
+>  Parallel index operations are not available in every [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] edition. For more information, see Features Supported by the Editions of SQL Server 2016  
   
  **In This Topic**  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
     |1|Suppresses parallel plan generation. The operation will be executed serially.|  
     |2-64|Limits the number of processors to the specified value. Fewer processors may be used depending on the current workload. If a value larger than the number of available CPUs is specified, the actual number of available CPUs is used.|  
   
--   Parallel index execution and the MAXDOP index option apply to the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements:  
+-   Parallel index execution and the MAXDOP index option apply to the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements:  
   
     -   CREATE INDEX  
   
@@ -101,7 +101,7 @@ manager: "jhubbard"
   
 #### To set max degree of parallelism on an existing index  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -121,7 +121,7 @@ manager: "jhubbard"
   
 #### Set max degree of parallelism on a new index  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

@@ -26,17 +26,17 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Logging In to SQL Server
-  You can log in to an instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] by using any of the graphical administration tools or from a command prompt.  
+  You can log in to an instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] by using any of the graphical administration tools or from a command prompt.  
   
- When you log in to an instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] by using a graphical administration tool such as [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], you are prompted to supply the server name, a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login, and a password, if necessary. If you log in to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] using Windows Authentication, you do not have to provide a SQL Server login each time you access an instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Instead, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses your [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows account to log you in automatically. If [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running in mixed mode authentication ([!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and Windows Authentication Mode), and you choose to log in using [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication, you must provide a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login and password. When possible, use Windows Authentication.  
+ When you log in to an instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] by using a graphical administration tool such as [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], you are prompted to supply the server name, a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] login, and a password, if necessary. If you log in to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] using Windows Authentication, you do not have to provide a SQL Server login each time you access an instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. Instead, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] uses your [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Windows account to log you in automatically. If [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is running in mixed mode authentication ([!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] and Windows Authentication Mode), and you choose to log in using [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Authentication, you must provide a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] login and password. When possible, use Windows Authentication.  
   
 > [!NOTE]  
->  If you selected a case-sensitive collation when you installed [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], your [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login is also case sensitive.  
+>  If you selected a case-sensitive collation when you installed [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], your [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] login is also case sensitive.  
   
 ## Format for Specifying the Name of SQL Server  
- When connecting to an instance of the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] you must specify the name of the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. If the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is the default instance (an unnamed instance), then specify the name of the computer where [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is installed, or the IP address of the computer. If the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is a named instance (such as SQLEXPRESS), then specify the name of the computer where [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is installed, or the IP address of the computer, and add a slash and the instance name.  
+ When connecting to an instance of the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] you must specify the name of the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. If the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is the default instance (an unnamed instance), then specify the name of the computer where [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is installed, or the IP address of the computer. If the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is a named instance (such as SQLEXPRESS), then specify the name of the computer where [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is installed, or the IP address of the computer, and add a slash and the instance name.  
   
- The following examples connect to an instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] running on a computer named APPHOST. When specifying a named instance, the examples use an instance name SQLEXPRESS.  
+ The following examples connect to an instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] running on a computer named APPHOST. When specifying a named instance, the examples use an instance name SQLEXPRESS.  
   
  **Examples:**  
   
@@ -54,8 +54,8 @@ manager: "jhubbard"
 |Connection to a named instance on the same computer forcing a shared memory connection.|lpc:APPHOST\SQLEXPRESS|  
 |Connection to a default instance listening on TCP address 192.168.17.28 using an IP address.|192.168.17.28|  
 |Connection to a named instance listening on TCP address 192.168.17.28 using an IP address.|192.168.17.28\SQLEXPRESS|  
-|Connection to a default instance that is not listening on the default TCP port, by specifying the port that is being used, in this case 2828. (This is not necessary if the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] is listening on the default port (1433).)|APPHOST,2828|  
-|Connection to a named instance on a designated TCP port, in this case 2828. (This is often necessary if the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Browser service is not running on the host computer.)|APPHOST,2828|  
+|Connection to a default instance that is not listening on the default TCP port, by specifying the port that is being used, in this case 2828. (This is not necessary if the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] is listening on the default port (1433).)|APPHOST,2828|  
+|Connection to a named instance on a designated TCP port, in this case 2828. (This is often necessary if the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Browser service is not running on the host computer.)|APPHOST,2828|  
 |Connection to a default instance that is not listening on the default TCP port, by specifying both the IP address and the TCP port that is being used, in this case 2828.|192.168.17.28,2828|  
 |Connection to a named instance by specifying both the IP address and the TCP port that is being used, in this case 2828.|192.168.17.28,2828|  
 |Connecting to default instance by name, forcing a TCP connection.|tcp:APPHOST|  
@@ -66,7 +66,7 @@ manager: "jhubbard"
 |Connecting to named instance by name, forcing a named pipes connection.|np:APPHOST\SQLEXPRESS|  
   
 ## Verifying your Connection Protocol  
- When connected to the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)], the following query will return the protocol  used for the current connection, along with the authentication method (NTLM or Kerberos), and will indicate if the connection is encrypted.  
+ When connected to the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)], the following query will return the protocol  used for the current connection, along with the authentication method (NTLM or Kerberos), and will indicate if the connection is encrypted.  
   
 ```tsql  
 SELECT net_transport, auth_scheme, encrypt_option   
@@ -86,8 +86,8 @@ WHERE session_id = @@SPID;
 ## Related Content  
  [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md)  
   
- [Use the sqlcmd Utility](../Topic/Use%20the%20sqlcmd%20Utility.md)  
+ [Use the sqlcmd Utility](../../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
- [Creating a Login](../Topic/Creating%20a%20Login.md)  
+ [Creating a Login](../../../t-sql/tutorials/lesson-2-1-creating-a-login.md)  
   
   

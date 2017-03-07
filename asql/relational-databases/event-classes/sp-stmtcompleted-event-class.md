@@ -17,13 +17,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SP:StmtCompleted Event Class
-  The SP:StmtCompleted event class indicates that a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement within a stored procedure has completed.  
+  The SP:StmtCompleted event class indicates that a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement within a stored procedure has completed.  
   
 ## SP:StmtCompleted Event Class Data Columns  
   
 |Data column name|**Data type**|Description|Column ID|Filterable|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
-|ApplicationName|**nvarchar**|Name of the client application that created the connection to an instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. This column is populated with the values passed by the application rather than the displayed name of the program.|10|Yes|  
+|ApplicationName|**nvarchar**|Name of the client application that created the connection to an instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. This column is populated with the values passed by the application rather than the displayed name of the program.|10|Yes|  
 |ClientProcessID|**int**|ID assigned by the host computer to the process where the client application is running. This data column is populated if the client provides the client process ID.|9|Yes|  
 |CPU|**int**|Amount of CPU time (in milliseconds) used by the event.|18|Yes|  
 |DatabaseID|**int**|ID of the database in which the stored procedure is running. Determine the value for a database by using the DB_ID function.|3|Yes|  
@@ -38,7 +38,7 @@ manager: "jhubbard"
 |IntegerData2|**int**|End offset (in bytes) of the statement that is being executed.|55|Yes|  
 |IsSystem|**int**|Indicates whether the event occurred on a system process or a user process. 1 = system, 0 = user.|60|Yes|  
 |LineNumber|**int**|Line number of the statement being executed.|5|Yes|  
-|LoginName|**nvarchar**|Name of the login of the user (either [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] security login or the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows login credentials in the form of DOMAIN\username).|11|Yes|  
+|LoginName|**nvarchar**|Name of the login of the user (either [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] security login or the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows login credentials in the form of DOMAIN\username).|11|Yes|  
 |LoginSid|**image**|Security identification number (SID) of the logged-in user. You can find this information in the sys.server_principals catalog view. Each SID is unique for each login in the server.|41|Yes|  
 |NestLevel|**int**|Integer representing the data returned by @@NESTLEVEL.|29|Yes|  
 |NTDomainName|**nvarchar**|Windows domain to which the user belongs.|7|Yes|  
@@ -50,8 +50,8 @@ manager: "jhubbard"
 |Reads|**bigint**|Number of logical disk reads performed by the server on behalf of the event.|16|Yes|  
 |RequestID|**int**|ID of the request containing the statement.|49|Yes|  
 |RowCounts|**bigint**|The number of rows affected by an event.|48|Yes|  
-|ServerName|**nvarchar**|Name of the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] being traced.|26|No|  
-|SessionLoginName|**nvarchar**|Login name of the user who originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, SessionLoginName shows Login1 and LoginName shows Login2. This column displays both [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and Windows logins.|64|Yes|  
+|ServerName|**nvarchar**|Name of the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] being traced.|26|No|  
+|SessionLoginName|**nvarchar**|Login name of the user who originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, SessionLoginName shows Login1 and LoginName shows Login2. This column displays both [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and Windows logins.|64|Yes|  
 |SourceDatabaseID|**int**|The ID of the database the object exists in.|62|Yes|  
 |SPID|**int**|ID of the session on which the event occurred.|12|Yes|  
 |StartTime|**datetime**|Time at which the event started, if available.|14|Yes|  
@@ -62,6 +62,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Extended Events](../../relational-databases/extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

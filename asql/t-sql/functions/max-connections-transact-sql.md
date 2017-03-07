@@ -26,11 +26,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # @@MAX_CONNECTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns the maximum number of simultaneous user connections allowed on an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The number returned is not necessarily the number currently configured.  
+  Returns the maximum number of simultaneous user connections allowed on an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The number returned is not necessarily the number currently configured.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -43,12 +43,12 @@ manager: "jhubbard"
  **integer**  
   
 ## Remarks  
- The actual number of user connections allowed also depends on the version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that is installed and the limitations of your applications and hardware.  
+ The actual number of user connections allowed also depends on the version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that is installed and the limitations of your applications and hardware.  
   
- To reconfigure [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] for fewer connections, use **sp_configure**.  
+ To reconfigure [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] for fewer connections, use **sp_configure**.  
   
 ## Examples  
- The following example shows returning the maximum number of user connections on an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The example assumes that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] has not been reconfigured for fewer user connections.  
+ The following example shows returning the maximum number of user connections on an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The example assumes that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] has not been reconfigured for fewer user connections.  
   
 ```  
 SELECT @@MAX_CONNECTIONS AS 'Max Connections';  
@@ -63,7 +63,7 @@ Max Connections
 ```  
   
 ## See Also  
- [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md)   
  [Configuration Functions](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Configure the user connections Server Configuration Option](../../database-engine/configure/windows/configure-the-user-connections-server-configuration-option.md)  
   

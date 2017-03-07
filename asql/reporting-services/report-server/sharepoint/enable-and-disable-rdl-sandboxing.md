@@ -28,7 +28,7 @@ manager: "erikre"
   
 -   Custom code in the **\<Code>** element of a report definition.  
   
--   RDL backward compatibility mode for [!INCLUDE[ssRSversion2005](../../../reporting-services/extensions/data-processing/includes/ssrsversion2005-md.md)] custom report items.  
+-   RDL backward compatibility mode for [!INCLUDE[ssRSversion2005](../../../a9retired/includes/ssrsversion2005-md.md)] custom report items.  
   
 -   Named parameters in expressions.  
   
@@ -94,7 +94,7 @@ manager: "erikre"
   
 -   Static members of a type.  
   
--   The [!INCLUDE[vbprvb](../../../analysis-services/data-mining/includes/vbprvb-md.md)] **New** method.  
+-   The [!INCLUDE[vbprvb](../../../a9retired/includes/vbprvb-md.md)] **New** method.  
   
 -   The **\<Classes>** element in the report definition.  
   
@@ -116,17 +116,17 @@ manager: "erikre"
   
 -   Add that new class to the allow list.  
   
- To add [!INCLUDE[vbprvb](../../../analysis-services/data-mining/includes/vbprvb-md.md)] .NET Framework functions to the allow list, add the corresponding types from the Microsoft.VisualBasic namespace to the allow list.  
+ To add [!INCLUDE[vbprvb](../../../a9retired/includes/vbprvb-md.md)] .NET Framework functions to the allow list, add the corresponding types from the Microsoft.VisualBasic namespace to the allow list.  
   
- To add [!INCLUDE[vbprvb](../../../analysis-services/data-mining/includes/vbprvb-md.md)] .NET Framework type keywords to the allow list, add the corresponding CLR type to the allow list. For example, to use the [!INCLUDE[vbprvb](../../../analysis-services/data-mining/includes/vbprvb-md.md)] .NET Framework keyword **Integer**, add the following XML fragment to the **\<RDLSandboxing>** element:  
+ To add [!INCLUDE[vbprvb](../../../a9retired/includes/vbprvb-md.md)] .NET Framework type keywords to the allow list, add the corresponding CLR type to the allow list. For example, to use the [!INCLUDE[vbprvb](../../../a9retired/includes/vbprvb-md.md)] .NET Framework keyword **Integer**, add the following XML fragment to the **\<RDLSandboxing>** element:  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
 ```  
   
- To add a generic or a [!INCLUDE[vbprvb](../../../analysis-services/data-mining/includes/vbprvb-md.md)] .NET Framework nullable type to the allow list, you must do the following:  
+ To add a generic or a [!INCLUDE[vbprvb](../../../a9retired/includes/vbprvb-md.md)] .NET Framework nullable type to the allow list, you must do the following:  
   
--   Create a proxy type for the generic or [!INCLUDE[vbprvb](../../../analysis-services/data-mining/includes/vbprvb-md.md)] .NET Framework nullable type.  
+-   Create a proxy type for the generic or [!INCLUDE[vbprvb](../../../a9retired/includes/vbprvb-md.md)] .NET Framework nullable type.  
   
 -   Add the proxy type to the allow list.  
   
@@ -139,14 +139,14 @@ manager: "erikre"
   
 -   When you add members to the types in the allow list.  
   
--   When you update the [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] on the report server.  
+-   When you update the [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] on the report server.  
   
--   When you upgrade the report server to a later version of [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)].  
+-   When you upgrade the report server to a later version of [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)].  
   
 -   When you update a report server to handle a later RDL schema, because new members might have been added to RDL types.  
   
 ### Working with Operators and New  
- By default, [!INCLUDE[vbprvb](../../../analysis-services/data-mining/includes/vbprvb-md.md)] .NET Framework language operators, except for **New**, are always allowed. The **New** operator is controlled by the **AllowNew** attribute on the **\<Allow>** element. Other language operators, such as the default collection accessor operator **!** and [!INCLUDE[vbprvb](../../../analysis-services/data-mining/includes/vbprvb-md.md)] .NET Framework cast macros such as **CInt**, are always allowed.  
+ By default, [!INCLUDE[vbprvb](../../../a9retired/includes/vbprvb-md.md)] .NET Framework language operators, except for **New**, are always allowed. The **New** operator is controlled by the **AllowNew** attribute on the **\<Allow>** element. Other language operators, such as the default collection accessor operator **!** and [!INCLUDE[vbprvb](../../../a9retired/includes/vbprvb-md.md)] .NET Framework cast macros such as **CInt**, are always allowed.  
   
  Adding operators to a block list, including custom operators, is not supported. To exclude operators for a type, you must do the following:  
   

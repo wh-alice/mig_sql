@@ -58,9 +58,9 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- The **Value** element can store any simple XML type, as well as the XML for Analysis (XMLA) **Rowset** data type, for parameters used by XMLA commands in the [Execute](../Topic/Execute%20Method%20\(XMLA\).md) method.  
+ The **Value** element can store any simple XML type, as well as the XML for Analysis (XMLA) **Rowset** data type, for parameters used by XMLA commands in the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

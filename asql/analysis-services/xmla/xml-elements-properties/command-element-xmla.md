@@ -30,7 +30,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # Command Element (XMLA)
-  Contains the command to be executed by the [Execute](../Topic/Execute%20Method%20\(XMLA\).md) method.  
+  Contains the command to be executed by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.  
   
 ## Syntax  
   
@@ -105,14 +105,14 @@ manager: "erikre"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[Execute](../Topic/Execute%20Method%20\(XMLA\).md)|  
+|Parent elements|[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
 |Child elements|[Alter](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md), [Backup](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md), [BeginTransaction](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md), [Cancel](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md), [ClearCache](../../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md), [CommitTransaction](../../../analysis-services/xmla/xml-elements-commands/committransaction-element-xmla.md), [Create](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md), [Delete](../../../analysis-services/xmla/xml-elements-commands/delete-element-xmla.md), [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md), [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md), [Insert](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [Lock](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md), [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md), [NotifyTableChange](../../../analysis-services/xmla/xml-elements-commands/notifytablechange-element-xmla.md), [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md), [Restore](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md), [RollbackTransaction](../../../analysis-services/xmla/xml-elements-commands/rollbacktransaction-element-xmla.md), [SetPasswordEncryptionKey](http://msdn.microsoft.com/en-us/fb262737-f0f4-4441-985e-3b2a94d00a9e), [Statement](../../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md), [Subscribe](../../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md), [Synchronize](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md), [Unlock](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md), [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)|  
   
 ## Remarks  
- The **Command** element is used by the **Execute** method to relay commands to a data source. While the XML for Analysis (XMLA) 1.1 Specification supports only the **Statement** command, [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] supports many new XMLA commands. For more information about the XMLA command supported by [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)], see [Commands &#40;XMLA&#41;](../Topic/Commands%20\(XMLA\).md).  
+ The **Command** element is used by the **Execute** method to relay commands to a data source. While the XML for Analysis (XMLA) 1.1 Specification supports only the **Statement** command, [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] supports many new XMLA commands. For more information about the XMLA command supported by [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)], see [Commands &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md).  
   
 ## See Also  
  [XML Data Types &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

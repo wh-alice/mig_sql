@@ -22,11 +22,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Windows Collation Name (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Specifies the Windows collation name in the COLLATE clause in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The Windows collation name is composed of the collation designator and the comparison styles.  
+  Specifies the Windows collation name in the COLLATE clause in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The Windows collation name is composed of the collation designator and the comparison styles.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -86,7 +86,7 @@ GO
   
  When working with some languages, it can be critical to avoid the older collations. For example, this is true for Telegu.  
   
- In some cases Windows collations and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] collations can generate different query plans for the same query.  
+ In some cases Windows collations and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] collations can generate different query plans for the same query.  
   
 ## Examples  
  The following are some examples of Windows collation names:  
@@ -104,13 +104,13 @@ GO
      Collation uses code page 1252 and binary sorting rules. The Latin1 General dictionary sorting rules are ignored.  
   
 ## Windows Collations  
- To list the Windows collations supported by your instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], execute the following query.  
+ To list the Windows collations supported by your instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], execute the following query.  
   
 ```  
 SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';  
 ```  
   
- The following table lists all Windows collations supported in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+ The following table lists all Windows collations supported in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
 |Windows locale|Collation Version 100|Collation Version 90|  
 |--------------------|---------------------------|--------------------------|  
@@ -209,10 +209,10 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Yi (PRC)|Latin1_General_100_|Not available|  
 |Yoruba (Nigeria)|Latin1_General_100_|Not available|  
 |Zulu/isiZulu (South Africa)|Latin1_General_100_|Not available|  
-|Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] or later|Hindi|Hindi|  
-|Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] or later|Korean_Wansung_Unicode|Korean_Wansung_Unicode|  
-|Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] or later|Lithuanian_Classic|Lithuanian_Classic|  
-|Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] or later|Macedonian|Macedonian|  
+|Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] or later|Hindi|Hindi|  
+|Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] or later|Korean_Wansung_Unicode|Korean_Wansung_Unicode|  
+|Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] or later|Lithuanian_Classic|Lithuanian_Classic|  
+|Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] or later|Macedonian|Macedonian|  
   
  <sup>1</sup>Unicode-only Windows collations can only be applied to column-level or expression-level data. They cannot be used as server or database collations.  
   
@@ -226,6 +226,6 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../Topic/DECLARE%20@local_variable%20\(Transact-SQL\).md)   
  [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
- [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-helpcollations-transact-sql.md)  
+ [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-helpcollations-transact-sql.md)  
   
   

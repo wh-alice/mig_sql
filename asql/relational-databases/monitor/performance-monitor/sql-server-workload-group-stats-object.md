@@ -32,7 +32,7 @@ manager: "jhubbard"
 |**CPU delayed % base**|For internal use only.| 
 |**CPU effective %**|System CPU usage by all requests in the specified instance of the performance object as a percentage of the total time active.| 
 |**CPU effective % base**|For internal use only.| 
-|**CPU usage %**|The CPU bandwidth usage by all requests in this workload group measured relative to the computer and normalized to all the CPUs on the system. This value will change as the amount of CPU available to the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] process changes. It is not normalized to what the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] process receives.| 
+|**CPU usage %**|The CPU bandwidth usage by all requests in this workload group measured relative to the computer and normalized to all the CPUs on the system. This value will change as the amount of CPU available to the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] process changes. It is not normalized to what the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] process receives.| 
 |**CPU usage % base**|For internal use only.| 
 |**CPU  violated %**|The difference between the CPU reservation and the effective scheduling percentage.|  
 |**Max request CPU time (ms)**|The maximum CPU time, in milliseconds, used by a request currently running in the workload group.|  

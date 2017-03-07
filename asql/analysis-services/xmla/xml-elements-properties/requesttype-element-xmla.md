@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # RequestType Element (XMLA)
-  Determines the type of metadata returned by the [Discover](../Topic/Discover%20Method%20\(XMLA\).md) method.  
+  Determines the type of metadata returned by the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method.  
   
 ## Syntax  
   
@@ -54,16 +54,16 @@ manager: "erikre"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[Discover](../Topic/Discover%20Method%20\(XMLA\).md)|  
+|Parent elements|[Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)|  
 |Child elements|None|  
   
 ## Remarks  
- The **RequestType** element determines the schema rowset from which the **Discover** method returns data. This enumeration is limited to the names of the schema rowsets supported by [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)]. For more information about schema rowsets, see [Analysis Services Schema Rowsets](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).  
+ The **RequestType** element determines the schema rowset from which the **Discover** method returns data. This enumeration is limited to the names of the schema rowsets supported by [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)]. For more information about schema rowsets, see [Analysis Services Schema Rowsets](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).  
   
 > [!NOTE]  
 >  The **RequestType** element enumerates only schema rowset names. An error occurs if the schema rowset GUID is used.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

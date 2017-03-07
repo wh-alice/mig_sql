@@ -108,7 +108,7 @@ WHERE model_name = 'default model'
 
 ## Output additional variables
 
-In SQL Server 2016, the output of R from the stored procedure [sp_execute_external_script](../../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) is limited to a single data frame. (This limitation might be removed in future.)   
+In SQL Server 2016, the output of R from the stored procedure [sp_execute_external_script](../../../relational-databases/reference/system-stored-procedures/sp-execute-external-script-transact-sql.md) is limited to a single data frame. (This limitation might be removed in future.)   
 
 However, you can return outputs of other types, such as scalars, in addition to the data frame. 
 

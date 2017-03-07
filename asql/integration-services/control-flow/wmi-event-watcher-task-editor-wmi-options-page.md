@@ -39,13 +39,13 @@ manager: "jhubbard"
 |**Variable**|Set the source to a variable that defines WQL query. Selecting this value displays the dynamic option, **WQLQuerySource**.|  
   
  **ActionAtEvent**  
- Specify whether the WMI event logs the event and initiates an [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] action, or only logs the event.  
+ Specify whether the WMI event logs the event and initiates an [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] action, or only logs the event.  
   
  **AfterEvent**  
  Specify whether the task succeeds or fails after it receives the WMI event, or if the task continues watching for the event to occur again.  
   
  **ActionAtTimeout**  
- Specify whether the task logs a WMI query time-out and initiates an [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] event in response, or only logs the time-out.  
+ Specify whether the task logs a WMI query time-out and initiates an [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] event in response, or only logs the time-out.  
   
  **AfterTimeout**  
  Specify whether the task succeeds or fails in response to a time-out, or if the task continues watching for another time-out to recur.  
@@ -72,7 +72,7 @@ manager: "jhubbard"
  **WQLQuerySource**  
  Select a variable in the list, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../Topic/Add%20Variable.md)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../../a9retired/add-variable.md)  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   

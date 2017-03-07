@@ -15,11 +15,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Replay Option (Distributed Replay Administration Tool)
-  The [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Distributed Replay administration tool, **DReplay.exe**, is a command-line tool that you can use to communicate with the distributed replay controller. This topic describes the **replay** command-line option and corresponding syntax.  
+  The [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Distributed Replay administration tool, **DReplay.exe**, is a command-line tool that you can use to communicate with the distributed replay controller. This topic describes the **replay** command-line option and corresponding syntax.  
   
  The **replay** option initiates the event replay stage, in which the controller dispatches replay data to the specified clients, launches the distributed replay and synchronizes the clients. Optionally, each client participating in the replay can record the replay activity and save a result trace file locally.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") For more information about the syntax conventions that are used with the administration tool syntax, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md).  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") For more information about the syntax conventions that are used with the administration tool syntax, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## Syntax  
   
@@ -55,7 +55,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
  When the **–o** parameter is not specified, the result trace file is not generated. The console output returns summary information at the end of replay, but no other replay statistics are available.  
   
  **-s** *target_server*  
- Specifies the target instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that the distributed workload should be replayed against. You must specify this parameter in the format **server_name[\instance name]**.  
+ Specifies the target instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that the distributed workload should be replayed against. You must specify this parameter in the format **server_name[\instance name]**.  
   
  You cannot use "`localhost`" or "`.`" as the target server.  
   

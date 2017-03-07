@@ -1,7 +1,7 @@
 ---
 title: "Description Element (ASSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -58,9 +58,9 @@ manager: "erikre"
 ## Remarks  
  The value of a **Description** element has the following restrictions:  
   
--   The value cannot contain leading or trailing spaces. If leading or trailing spaces are included in the value of a **Description** element, those spaces will be implicitly removed by [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].  
+-   The value cannot contain leading or trailing spaces. If leading or trailing spaces are included in the value of a **Description** element, those spaces will be implicitly removed by [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].  
   
--   The value cannot contain control characters. If control characters are included in the value of a **Description** element, those characters will be implicitly removed by [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].  
+-   The value cannot contain control characters. If control characters are included in the value of a **Description** element, those characters will be implicitly removed by [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].  
   
 ## See Also  
  [Name Element &#40;ASSL&#41;](../../../analysis-services/scripting/properties/name-element-assl.md)   

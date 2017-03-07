@@ -18,10 +18,10 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Report Designer F1 Help
-  This section provides F1 Help for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Report Designer wizards, views, and dialog boxes in [!INCLUDE[ssBIDevStudioFull_md](../../analysis-services/includes/ssbidevstudiofull-md.md)]. Alternatively, you can open the F1 Help while working with the dialog box by pressing F1 or by clicking the Help button displayed in the dialog box.  
+  This section provides F1 Help for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] Report Designer wizards, views, and dialog boxes in [!INCLUDE[ssBIDevStudioFull_md](../../a9notintoc/includes/ssbidevstudiofull-md.md)]. Alternatively, you can open the F1 Help while working with the dialog box by pressing F1 or by clicking the Help button displayed in the dialog box.  
   
 ## See Also  
-+ [Install SQL Server Data Tools - Business Intelligence for Visual Studio](../Topic/Install%20SQL%20Server%20Data%20Tools%20-%20Business%20Intelligence%20for%20Visual%20Studio.md)
++ [Install SQL Server Data Tools - Business Intelligence for Visual Studio](../../a9retired/install-sql-server-data-tools-business-intelligence-for-visual-studio.md)
 + [Feature Refernce (Reporting Services)](../../reporting-services/feature-reference-reporting-services.md)
 + [Reporting Services Reports (SSRS)](../../reporting-services/reports/reporting-services-reports-ssrs.md) 
    

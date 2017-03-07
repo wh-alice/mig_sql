@@ -19,9 +19,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Improve Access to Trace Data
-  [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] uses space in the **temp** directory to improve access to trace data. [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] requires at least 10 megabytes (MB) of free space. If free space drops below 10 MB while you are using [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)], all [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] functions stop.  
+  [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] uses space in the **temp** directory to improve access to trace data. [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] requires at least 10 megabytes (MB) of free space. If free space drops below 10 MB while you are using [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)], all [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] functions stop.  
   
- When [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] uses space in the **temp** directory, this space usage may cause the **temp** directory to grow rapidly. To avoid file-growth problems, you can place the **temp** directory on a drive that is not a system drive by changing the value for the TEMP environment variable.  
+ When [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] uses space in the **temp** directory, this space usage may cause the **temp** directory to grow rapidly. To avoid file-growth problems, you can place the **temp** directory on a drive that is not a system drive by changing the value for the TEMP environment variable.  
   
  The following procedure describes how to change the value for the TEMP environment variable in most Microsoft Windows operating systems. For more information about setting environment variables, see your Windows operating system documentation.  
   

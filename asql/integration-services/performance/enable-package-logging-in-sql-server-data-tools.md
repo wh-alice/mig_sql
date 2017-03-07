@@ -20,13 +20,13 @@ manager: "jhubbard"
   This procedure describes how to add logs to a package, configure package-level logging, and save the logging configuration to an XML file. You can add logs only at the package level, but the package does not have to perform logging to enable logging in the containers that the package includes.  
   
 > [!IMPORTANT]  
->  If you deploy the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project to the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] server, the logging level that you set for the package execution overrides the package logging that you configure using [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+>  If you deploy the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project to the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] server, the logging level that you set for the package execution overrides the package logging that you configure using [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
  By default, the containers in the package use the same logging configuration as their parent container. For information about setting logging options for individual containers, see [Configure Logging by Using a Saved Configuration File](../../integration-services/performance/configure-logging-by-using-a-saved-configuration-file.md).  
   
 ### To enable logging in a package  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  On the **SSIS** menu, click **Logging**.  
   
@@ -36,11 +36,11 @@ manager: "jhubbard"
   
     -   For Text files, use a File connection manager. For more information, see [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
-    -   For [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)], use a File connection manager.  
+    -   For [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)], use a File connection manager.  
   
-    -   For [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], use an OLE DB connection manager. For more information, see [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+    -   For [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], use an OLE DB connection manager. For more information, see [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-    -   For Windows Event Log, do nothing. [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] automatically creates the log.  
+    -   For Windows Event Log, do nothing. [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] automatically creates the log.  
   
     -   For XML files, use a File connection manager.  
   

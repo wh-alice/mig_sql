@@ -21,7 +21,7 @@ ms.author: "carlasab"
 manager: "erikre"
 ---
 # Deploying a Rendering Extension
-  After you have written and compiled your [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report rendering extension into a [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] library, you need to make it discoverable by the report server and by Report Designer. To do so, copy the extension to the appropriate directory and add entries to the appropriate [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] configuration files.  
+  After you have written and compiled your [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] report rendering extension into a [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] library, you need to make it discoverable by the report server and by Report Designer. To do so, copy the extension to the appropriate directory and add entries to the appropriate [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] configuration files.  
   
 ## Configuration File Rendering Extension Element  
  Once a rendering extension has been compiled into a .DLL, you add an entry into the rsreportserver.config file. By default, the location is %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer. The parent element is \<Render>. Under the Render element is an Extension element for each rendering extension. The **Extension** element contains two attributes, Name and Type.  
@@ -44,7 +44,7 @@ manager: "erikre"
   
 1.  Copy your assembly from your staging location to the bin directory of the report server on which you want to use the rendering extension. The default location of the report server Bin directory is %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer\Bin.  
   
-2.  After the assembly file is copied, open the rsreportserver.config file. The rsreportserver.config file is also located in the report server bin directory. You need to make an entry in the configuration file for your extension assembly file. You can open the file with [!INCLUDE[vsprvs](../../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] or a simple text editor.  
+2.  After the assembly file is copied, open the rsreportserver.config file. The rsreportserver.config file is also located in the report server bin directory. You need to make an entry in the configuration file for your extension assembly file. You can open the file with [!INCLUDE[vsprvs](../../../a9retired/includes/vsprvs-md.md)] or a simple text editor.  
   
      For more information, see [RsReportServer.config Configuration File](../../../reporting-services/report-server/rsreportserver.config-configuration-file.md).  
   

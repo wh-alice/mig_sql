@@ -28,11 +28,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SET IMPLICIT_TRANSACTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Sets the BEGIN TRANSACTION mode to *implicit*, for the connection.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -67,7 +67,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
   
      IMPLICIT_TRANSACTIONS ON is not popular. In most cases where IMPLICIT_TRANSACTIONS is ON, it is because the choice of SET ANSI_DEFAULTS ON has been made.  
   
--   The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver, automatically set IMPLICIT_TRANSACTIONS to OFF when connecting. SET IMPLICIT_TRANSACTIONS defaults to OFF for connections with the SQLClient managed provider, and for SOAP requests received through HTTP endpoints.  
+-   The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], and the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver, automatically set IMPLICIT_TRANSACTIONS to OFF when connecting. SET IMPLICIT_TRANSACTIONS defaults to OFF for connections with the SQLClient managed provider, and for SOAP requests received through HTTP endpoints.  
   
  To view the current setting for IMPLICIT_TRANSACTIONS, run the following query.  
   

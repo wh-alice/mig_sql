@@ -20,14 +20,14 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Reporting Services Tutorials (SSRS)
-Explore the capabilities of [!INCLUDE[ssRSCurrent_md](../../reporting-services/includes/ssrscurrent-md.md)], [!INCLUDE[ssBIDevStudioFull_md](../../analysis-services/includes/ssbidevstudiofull-md.md)], and Report Builder with sample data in these tutorials.  
+Explore the capabilities of [!INCLUDE[ssRSCurrent_md](../../a9notintoc/includes/ssrscurrent-md.md)], [!INCLUDE[ssBIDevStudioFull_md](../../a9notintoc/includes/ssbidevstudiofull-md.md)], and Report Builder with sample data in these tutorials.  
   
   
 ## [Create a Basic Table Report](../../reporting-services/tutorials/create-a-basic-table-report-ssrs-tutorial.md)  
-Follow the steps in this tutorial to learn how to create your first report. This tutorial shows you how to work with [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] to create a data connection (data source), define a simple query (dataset), and configure a data region to contain your data.  
+Follow the steps in this tutorial to learn how to create your first report. This tutorial shows you how to work with [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] to create a data connection (data source), define a simple query (dataset), and configure a data region to contain your data.  
   
 ## [Create a Data-Driven Subscription](../../reporting-services/tutorials/create-a-data-driven-subscription-ssrs-tutorial.md)  
-[!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] provides data-driven subscriptions so that you can customize the distribution of a report based on dynamic list of subscribers that will receive the report. Data-driven subscriptions are typically created and maintained by report server administrators. The ability to create data-driven subscriptions requires expertise in building queries, knowledge of data sources that contain subscriber data, and elevated permissions on a report server.  
+[!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] provides data-driven subscriptions so that you can customize the distribution of a report based on dynamic list of subscribers that will receive the report. Data-driven subscriptions are typically created and maintained by report server administrators. The ability to create data-driven subscriptions requires expertise in building queries, knowledge of data sources that contain subscriber data, and elevated permissions on a report server.  
    
 ## [Create a Drillthrough &#40;RDLC&#41; Report with Parameters using ReportViewer](../../reporting-services/tutorials/628c8775-c62d-45ac-b349-23db86fa4e6c.md)  
 Follow the steps in this tutorial to learn how to create a drillthrough report with parameters and a filter using the ReportViewer control.  

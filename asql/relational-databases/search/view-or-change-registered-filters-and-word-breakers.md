@@ -20,11 +20,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View or Change Registered Filters and Word Breakers
-  After any word breakers or filters are installed or uninstalled on a system, the changes do not automatically take effect on server instances. This topic describes how to view the currently registered word breaker or filters and how to register newly installed word breakers and filters on an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  After any word breakers or filters are installed or uninstalled on a system, the changes do not automatically take effect on server instances. This topic describes how to view the currently registered word breaker or filters and how to register newly installed word breakers and filters on an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ### To view a list of languages whose word breakers are currently registered  
   
-1.  Use the [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys.fulltext-languages-transact-sql.md) catalog view, as follows:  
+1.  Use the [sys.fulltext_languages](../../relational-databases/reference/system-catalog-views/sys.fulltext-languages-transact-sql.md) catalog view, as follows:  
   
     ```  
     SELECT * FROM sys.fulltext_languages;   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 ### To view a list of the filters that are currently registered  
   
-1.  Use the [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) system stored procedure, as follows:  
+1.  Use the [sp_help_fulltext_system_components](../../relational-databases/reference/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) system stored procedure, as follows:  
   
     ```  
     EXEC sp_help_fulltext_system_components 'filter';    
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 ### To register newly installed word breakers and filters  
   
-1.  Use the [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) system stored procedure to update the list of languages, as follows:  
+1.  Use the [sp_fulltext_service](../../relational-databases/reference/system-stored-procedures/sp-fulltext-service-transact-sql.md) system stored procedure to update the list of languages, as follows:  
   
     ```  
     exec sp_fulltext_service 'update_languages';   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 1.  When preparing to install a DLL file that contains new word breakers or filters, verify that it has a different filename from any of the existing DLL files installed on your server instance.  
   
-2.  Copy the new DLL file into the directory containing the standard [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] DLL files for the server instance. The default location is:  
+2.  Copy the new DLL file into the directory containing the standard [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] DLL files for the server instance. The default location is:  
   
      C:\Program Files\Microsoft SQL Server\MSSQL.*instance_name*\MSSQL\Binn  
   

@@ -24,13 +24,13 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Permissions (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Every [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] securable has associated permissions that can be granted to a principal. Permissions in the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] are managed at the server level assigned to logins and server roles, and at the database level assigned to database users and database roles. The model for [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] has the same system for the  database permissions, but the server level permissions are not available. This topic contains the complete list of permissions. For a typical implementation of the permissions, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
+  Every [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] securable has associated permissions that can be granted to a principal. Permissions in the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] are managed at the server level assigned to logins and server roles, and at the database level assigned to database users and database roles. The model for [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] has the same system for the  database permissions, but the server level permissions are not available. This topic contains the complete list of permissions. For a typical implementation of the permissions, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-The total number of permissions for [!INCLUDE[ssSQLv14_md](../../advanced-analytics/r-services/includes/sssqlv14-md.md)] and [!INCLUDE[ssSDS_md](../../analysis-services/multidimensional-models/includes/sssds-md.md)] is 237. Most permissions apply to all platforms, but some do not. For example server level permissions cannot be granted on SQL Database, and a few permissions only make sense on [!INCLUDE[ssSDS_md](../../analysis-services/multidimensional-models/includes/sssds-md.md)]. [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] exposed 230 permissions. [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] exposed 219 permissions. [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] exposed 214 permissions. [!INCLUDE[ssKilimanjaro](../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)] exposed 195 permissions. The [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys.fn-builtin-permissions-transact-sql.md) topic specifies which topics are new in recent versions. The following graphic shows the permissions and their relationships to each other. Some of the higher level permissions (such as `CONTROL SERVER`) are listed many times. Click the image to download the **Database Engine Permissions Poster** in pdf format.  
+The total number of permissions for [!INCLUDE[ssSQLv14_md](../../advanced-analytics/r-services/includes/sssqlv14-md.md)] and [!INCLUDE[ssSDS_md](../../a9retired/includes/sssds-md.md)] is 237. Most permissions apply to all platforms, but some do not. For example server level permissions cannot be granted on SQL Database, and a few permissions only make sense on [!INCLUDE[ssSDS_md](../../a9retired/includes/sssds-md.md)]. [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] exposed 230 permissions. [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] exposed 219 permissions. [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] exposed 214 permissions. [!INCLUDE[ssKilimanjaro](../../a9notintoc/includes/sskilimanjaro-md.md)] exposed 195 permissions. The [sys.fn_builtin_permissions](../../relational-databases/reference/system-functions/sys.fn-builtin-permissions-transact-sql.md) topic specifies which topics are new in recent versions. The following graphic shows the permissions and their relationships to each other. Some of the higher level permissions (such as `CONTROL SERVER`) are listed many times. Click the image to download the **Database Engine Permissions Poster** in pdf format.  
   
-[![Database Engine Permissions](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+[![Database Engine Permissions](../../relational-databases/reference/system-functions/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
 Once you understand the permissions, apply server level permissions to logins and database level permissions users with the [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md), and [DENY](../../t-sql/statements/deny-transact-sql.md) statements. For Example:   
 ```tsql
@@ -44,7 +44,7 @@ For tips on planning a permissions system, see [Getting Started with Database En
   
 -   CONTROL  
   
-     Confers ownership-like capabilities on the grantee. The grantee effectively has all defined permissions on the securable. A principal that has been granted CONTROL can also grant permissions on the securable. Because the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] security model is hierarchical, CONTROL at a particular scope implicitly includes CONTROL on all the securables under that scope. For example, CONTROL on a database implies all permissions on the database, all permissions on all assemblies in the database, all permissions on all schemas in the database, and all permissions on objects within all schemas within the database.  
+     Confers ownership-like capabilities on the grantee. The grantee effectively has all defined permissions on the securable. A principal that has been granted CONTROL can also grant permissions on the securable. Because the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] security model is hierarchical, CONTROL at a particular scope implicitly includes CONTROL on all the securables under that scope. For example, CONTROL on a database implies all permissions on the database, all permissions on all assemblies in the database, all permissions on all schemas in the database, and all permissions on objects within all schemas within the database.  
   
 -   ALTER  
   
@@ -93,7 +93,7 @@ For tips on planning a permissions system, see [Getting Started with Database En
      The REFERENCES permission is needed on an object to create a FUNCTION or VIEW with the `WITH SCHEMABINDING` clause that references that object.  
   
 ## Chart of SQL Server Permissions  
- For a poster sized chart of all [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] permissions in pdf format, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ For a poster sized chart of all [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] permissions in pdf format, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
 ##  <a name="_securables"></a> Permissions Applicable to Specific Securables  
  The following table lists major classes of permissions and the kinds of securables to which they may be applied.  
@@ -103,7 +103,7 @@ For tips on planning a permissions system, see [Getting Started with Database En
 |ALTER|All classes of objects except TYPE.|  
 |CONTROL|All classes of objects: <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE, USER,<br />VIEW, and<br />XML SCHEMA COLLECTION|  
 |DELETE|All classes of objects except DATABASE SCOPED CONFIGURATION, and SERVER.|  
-|EXECUTE|CLR types, external scripts, procedures ([!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] and CLR), scalar and aggregate functions ([!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] and CLR), and synonyms|  
+|EXECUTE|CLR types, external scripts, procedures ([!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] and CLR), scalar and aggregate functions ([!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] and CLR), and synonyms|  
 |IMPERSONATE|Logins and users|  
 |INSERT|Synonyms, tables and columns, views and columns. Permission can be granted at the database, schema, or object level.|  
 |RECEIVE|[!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] queues|  
@@ -115,10 +115,10 @@ For tips on planning a permissions system, see [Getting Started with Database En
 |VIEW DEFINITION|All classes of objects except DATABASE SCOPED CONFIGURATION, and SERVER.|  
   
 > [!CAUTION]  
->  The default permissions that are granted to system objects at the time of setup are carefully evaluated against possible threats and need not be altered as part of hardening the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] installation. Any changes to the permissions on the system objects could limit or break the functionality and could potentially leave your [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] installation in an unsupported state.  
+>  The default permissions that are granted to system objects at the time of setup are carefully evaluated against possible threats and need not be altered as part of hardening the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] installation. Any changes to the permissions on the system objects could limit or break the functionality and could potentially leave your [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] installation in an unsupported state.  
   
 ##  <a name="_permissions"></a> SQL Server Permissions  
- The following table provides a complete list of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] permissions. [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] permissions are only available for base securables that are supported. Server level permissions cannot be granted in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)], however in some cases database permissions are available instead.  
+ The following table provides a complete list of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] permissions. [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] permissions are only available for base securables that are supported. Server level permissions cannot be granted in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)], however in some cases database permissions are available instead.  
   
 |Base securable|Granular permissions on base securable|Permission type code|Securable that contains base securable|Permission on container securable that implies granular permission on base securable|  
 |--------------------|--------------------------------------------|--------------------------|--------------------------------------------|------------------------------------------------------------------------------------------|  
@@ -155,25 +155,25 @@ For tips on planning a permissions system, see [Getting Started with Database En
 |DATABASE|ALTER ANY ASSEMBLY|ALAS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ASYMMETRIC KEY|ALAK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CERTIFICATE|ALCF|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through current), [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through current), [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through current), [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through current), [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CONTRACT|ALSC|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Applies to [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
-|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through current), [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Applies to [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through current), [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY EXTERNAL DATA SOURCE|AEDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY EXTERNAL FILE FORMAT|AEFF|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY MASK|AAMK<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through current).|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY MASK|AAMK<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through current).|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY REMOTE SERVICE BINDING|ALSB|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through current), [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through current), [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -211,18 +211,18 @@ For tips on planning a permissions system, see [Getting Started with Database En
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
-|DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through current).|SERVER|CONTROL SERVER|  
+|DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through current).|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Only applies to [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)]. Use ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Only applies to [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)]. Use ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
 |DATABASE|SUBSCRIBE QUERY NOTIFICATIONS|SUQN|SERVER|CONTROL SERVER|  
 |DATABASE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
-|DATABASE|UNMASK|UMSK<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through current).|SERVER|CONTROL SERVER|  
+|DATABASE|UNMASK|UMSK<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through current).|SERVER|CONTROL SERVER|  
 |DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|  
-|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through current), [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].|SERVER|VIEW SERVER STATE|  
-|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|vWCM<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through current), [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].|SERVER|VIEW SERVER STATE|  
+|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through current), [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].|SERVER|VIEW SERVER STATE|  
+|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|vWCM<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through current), [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DATABASE STATE|VWDS|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |DATABASE SCOPED CREDENTIAL|ALTER|AL|DATABASE|CONTROL|
@@ -425,7 +425,7 @@ A DENY on the table is overridden by a GRANT on a column. However, a subsequent 
  The examples in this section show how to retrieve permissions information.  
   
 ### A. Returning the complete list of grantable permissions  
- The following statement returns all [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] permission by using the `fn_builtin_permissions` function. For more information, see [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-builtin-permissions-transact-sql.md).  
+ The following statement returns all [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] permission by using the `fn_builtin_permissions` function. For more information, see [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-builtin-permissions-transact-sql.md).  
   
 ```tsql  
 SELECT * FROM fn_builtin_permissions(default);  
@@ -441,7 +441,7 @@ GO
 ```  
   
 ### C. Returning the permissions granted to the executing principal on an object  
- The following example uses `fn_my_permissions` to return a list of the effective permissions that are held by the calling principal on a specified securable. The example returns permissions on an object named `Orders55`. For more information, see [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-my-permissions-transact-sql.md).  
+ The following example uses `fn_my_permissions` to return a list of the effective permissions that are held by the calling principal on a specified securable. The example returns permissions on an object named `Orders55`. For more information, see [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-my-permissions-transact-sql.md).  
   
 ```tsql  
 SELECT * FROM fn_my_permissions('Orders55', 'object');  
@@ -459,6 +459,6 @@ GO
   
 ## See Also  
  [Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-permissions-transact-sql.md)  
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-permissions-transact-sql.md)  
   
   

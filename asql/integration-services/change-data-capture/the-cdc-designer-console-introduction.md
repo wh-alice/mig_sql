@@ -54,7 +54,7 @@ manager: "jhubbard"
   
  **SQL Server Database**  
   
--   [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] edition with support for SQL Server CDC  
+-   [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] edition with support for SQL Server CDC  
   
 ## Software Prerequisites  
  You have to use the 32-bit or 64-bit version of the Oracle client software according to the version of the Oracle CDC Designer console installed.  

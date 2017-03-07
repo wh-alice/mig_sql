@@ -22,11 +22,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Reserved Keywords-Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses reserved keywords for defining, manipulating, and accessing databases. Reserved keywords are part of the grammar of the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] language that is used by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to parse and understand [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements and batches. Although it is syntactically possible to use [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] reserved keywords as identifiers and object names in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] scripts, you can do this only by using delimited identifiers.  
+  [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses reserved keywords for defining, manipulating, and accessing databases. Reserved keywords are part of the grammar of the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] language that is used by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to parse and understand [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements and batches. Although it is syntactically possible to use [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] reserved keywords as identifiers and object names in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] scripts, you can do this only by using delimited identifiers.  
   
- The following table lists [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] reserved keywords.  
+ The following table lists [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] reserved keywords.  
   
 ||||  
 |-|-|-|  
@@ -96,9 +96,9 @@ manager: "jhubbard"
  Additionally, the ISO standard defines a list of reserved keywords. Avoid using ISO reserved keywords for object names and identifiers. The ODBC reserved keyword list, shown in the following table, is the same as the ISO reserved keyword list.  
   
 > [!NOTE]  
->  The ISO standards reserved keywords list sometimes can be more restrictive than [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and at other times less restrictive. For example, the ISO reserved keywords list contains **INT**. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not have to distinguish this as a reserved keyword.  
+>  The ISO standards reserved keywords list sometimes can be more restrictive than [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and at other times less restrictive. For example, the ISO reserved keywords list contains **INT**. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not have to distinguish this as a reserved keyword.  
   
- [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] reserved keywords can be used as identifiers or names of databases or database objects, such as tables, columns, views, and so on. Use either quoted identifiers or delimited identifiers. Using reserved keywords as the names of variables and stored procedure parameters is not restricted.  
+ [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] reserved keywords can be used as identifiers or names of databases or database objects, such as tables, columns, views, and so on. Use either quoted identifiers or delimited identifiers. Using reserved keywords as the names of variables and stored procedure parameters is not restricted.  
   
 ## ODBC Reserved Keywords  
  The following words are reserved for use in ODBC function calls. These words do not constrain the minimum SQL grammar; however, to ensure compatibility with drivers that support the core SQL grammar, applications should avoid using these keywords.  
@@ -188,7 +188,7 @@ manager: "jhubbard"
 |**EXCEPTION**|||  
   
 ## Future Keywords  
- The following keywords could be reserved in future releases of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] as new features are implemented. Consider avoiding the use of these words as identifiers.  
+ The following keywords could be reserved in future releases of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] as new features are implemented. Consider avoiding the use of these words as identifiers.  
   
 ||||  
 |-|-|-|  
@@ -286,6 +286,6 @@ manager: "jhubbard"
   
 ## See Also  
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)  
+ [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

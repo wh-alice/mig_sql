@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 ##  <a name="open"></a> Open the Raw File Destination Editor  
   
-1.  Add the Raw File destination to an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package, in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+1.  Add the Raw File destination to an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package, in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
 2.  Right-click the component and then click **Edit**.  
   

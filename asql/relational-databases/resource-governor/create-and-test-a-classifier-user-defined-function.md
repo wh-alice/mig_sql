@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create and Test a Classifier User-Defined Function
-  This topic shows how to create and test a classifier user-defined function (UDF). The steps involve executing [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements in the [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] Query Editor.  
+  This topic shows how to create and test a classifier user-defined function (UDF). The steps involve executing [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements in the [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] Query Editor.  
   
  The example shown in the following procedure illustrates the possibilities for creating a fairly complex classifier user-defined function.  
   
@@ -115,7 +115,7 @@ manager: "jhubbard"
 4.  Create the classifier function that uses time functions and values that can be evaluated against the times in the lookup table. For information about using Lookup Tables in a classifier function, see “Best practices for using Lookup Tables in a classifier function” in this topic.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] introduced an expanded set of date and time data types and functions. For more information, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+    >  [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] introduced an expanded set of date and time data types and functions. For more information, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
     ```  
     CREATE FUNCTION fnTimeClassifier()  

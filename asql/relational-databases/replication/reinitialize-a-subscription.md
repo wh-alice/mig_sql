@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Reinitialize a Subscription
-  This topic describes how to reinitialize a subscription in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], or Replication Management Objects (RMO). Individual subscriptions can be marked for reinitialization so that a new snapshot is applied during the next synchronization.  
+  This topic describes how to reinitialize a subscription in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], or Replication Management Objects (RMO). Individual subscriptions can be marked for reinitialization so that a new snapshot is applied during the next synchronization.  
   
  **In This Topic**  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Reinitializing a subscription is a two-part process:  
   
-1.  A single subscription or all subscriptions to a publication are *marked* for reinitialization. Mark subscriptions for reinitialization in the **Reinitialize Subscription(s)** dialog box, which is available from the **Local Publications** folder and the **Local Subscriptions** folder in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. You can also mark subscriptions from the **All Subscriptions** tab and the publications node in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md). When you mark a subscription for reinitialization, you have the following options:  
+1.  A single subscription or all subscriptions to a publication are *marked* for reinitialization. Mark subscriptions for reinitialization in the **Reinitialize Subscription(s)** dialog box, which is available from the **Local Publications** folder and the **Local Subscriptions** folder in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. You can also mark subscriptions from the **All Subscriptions** tab and the publications node in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md). When you mark a subscription for reinitialization, you have the following options:  
   
      **Use the current snapshot**  
      Select to apply the current snapshot to the Subscriber the next time the Distribution Agent or Merge Agent runs. If there is no valid snapshot available, this option cannot be selected.  
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 #### To mark a single push or pull subscription for reinitialization in Management Studio (at the Publisher)  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Publications** folder.  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 #### To mark a single pull subscription for reinitialization in Management Studio (at the Subscriber)  
   
-1.  Connect to the Subscriber in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Subscriber in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Subscriptions** folder.  
   
@@ -73,7 +73,7 @@ manager: "jhubbard"
   
 #### To mark all subscriptions for reinitialization in Management Studio  
   
-1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Publications** folder.  
   
@@ -104,19 +104,19 @@ manager: "jhubbard"
   
 #### To reinitialize a pull subscription to a transactional publication  
   
-1.  At the Subscriber on the subscription database, execute [sp_reinitpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md). Specify **@publisher**, **@publisher_db**, and **@publication**. This marks the subscription for reinitialization the next time the Distribution Agent runs.  
+1.  At the Subscriber on the subscription database, execute [sp_reinitpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md). Specify **@publisher**, **@publisher_db**, and **@publication**. This marks the subscription for reinitialization the next time the Distribution Agent runs.  
   
 2.  (Optional) Start the Distribution Agent at the Subscriber to synchronize the subscription. For more information, see [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 #### To reinitialize a push subscription to a transactional publication  
   
-1.  At the Publisher, execute [sp_reinitsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md). Specify **@publication**, **@subscriber**, and **@destination_db**. This marks the subscription for reinitialization the next time the Distribution Agent runs.  
+1.  At the Publisher, execute [sp_reinitsubscription &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-reinitsubscription-transact-sql.md). Specify **@publication**, **@subscriber**, and **@destination_db**. This marks the subscription for reinitialization the next time the Distribution Agent runs.  
   
 2.  (Optional) Start the Distribution Agent at the Distributor to synchronize the subscription. For more information, see [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
 #### To reinitialize a pull subscription to a merge publication  
   
-1.  At the Subscriber on the subscription database, execute [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md). Specify **@publisher**, **@publisher_db**, and **@publication**. To upload changes from the Subscriber before reinitialization occurs, specify a value of **true** for **@upload_first**. This marks the subscription for reinitialization the next time the Merge Agent runs.  
+1.  At the Subscriber on the subscription database, execute [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md). Specify **@publisher**, **@publisher_db**, and **@publication**. To upload changes from the Subscriber before reinitialization occurs, specify a value of **true** for **@upload_first**. This marks the subscription for reinitialization the next time the Merge Agent runs.  
   
     > [!IMPORTANT]  
     >  If you add, drop, or change a parameterized filter, pending changes at the Subscriber cannot be uploaded to the Publisher during reinitialization. If you want to upload pending changes, synchronize all subscriptions before changing the filter.  
@@ -125,7 +125,7 @@ manager: "jhubbard"
   
 #### To reinitialize a push subscription to a merge publication  
   
-1.  At the Publisher, execute [sp_reinitmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md). Specify **@publication**, **@subscriber**, and **@subscriber_db**. To upload changes from the Subscriber before reinitialization occurs, specify a value of **true** for **@upload_first**. This marks the subscription for reinitialization the next time the Distribution Agent runs.  
+1.  At the Publisher, execute [sp_reinitmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md). Specify **@publication**, **@subscriber**, and **@subscriber_db**. To upload changes from the Subscriber before reinitialization occurs, specify a value of **true** for **@upload_first**. This marks the subscription for reinitialization the next time the Distribution Agent runs.  
   
     > [!IMPORTANT]  
     >  If you add, drop, or change a parameterized filter, pending changes at the Subscriber cannot be uploaded to the Publisher during reinitialization. If you want to upload pending changes, synchronize all subscriptions before changing the filter.  
@@ -134,7 +134,7 @@ manager: "jhubbard"
   
 #### To set the reinitialization policy when creating a new merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), specifying one of the following values for **@automatic_reinitialization_policy**:  
+1.  At the Publisher on the publication database, execute [sp_addmergepublication](../../relational-databases/reference/system-stored-procedures/sp-addmergepublication-transact-sql.md), specifying one of the following values for **@automatic_reinitialization_policy**:  
   
     -   **1** - changes are uploaded from the Subscriber before a subscription is automatically reinitialized as required by a change to the publication.  
   
@@ -147,7 +147,7 @@ manager: "jhubbard"
   
 #### To change the reinitialization policy for an existing merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying **automatic_reinitialization_policy** for **@property** and one of the following values for **@value**:  
+1.  At the Publisher on the publication database, execute [sp_changemergepublication](../../relational-databases/reference/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying **automatic_reinitialization_policy** for **@property** and one of the following values for **@value**:  
   
     -   **1** - changes are uploaded from the Subscriber before a subscription is automatically reinitialized as required by a change to the publication.  
   
@@ -230,15 +230,15 @@ manager: "jhubbard"
 ###  <a name="PShellExample"></a> Examples (RMO)  
  This example reinitializes a pull subscription to a transactional publication.  
   
- [!code-cs[HowTo#rmo_ReinitTranPullSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_reinittranpullsub)]  
+ [!code-cs[HowTo#rmo_ReinitTranPullSub](../../a9retired/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_reinittranpullsub)]  
   
- [!code-vb[HowTo#rmo_vb_ReinitTranPullSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_reinittranpullsub)]  
+ [!code-vb[HowTo#rmo_vb_ReinitTranPullSub](../../a9retired/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_reinittranpullsub)]  
   
  This example reinitializes a pull subscription to a merge publication after first uploading pending changes at the Subscriber.  
   
- [!code-cs[HowTo#rmo_ReinitMergePullSub_WithUpload](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_reinitmergepullsub_withupload)]  
+ [!code-cs[HowTo#rmo_ReinitMergePullSub_WithUpload](../../a9retired/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_reinitmergepullsub_withupload)]  
   
- [!code-vb[HowTo#rmo_vb_ReinitMergePullSub_WithUpload](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_reinitmergepullsub_withupload)]  
+ [!code-vb[HowTo#rmo_vb_ReinitMergePullSub_WithUpload](../../a9retired/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_reinitmergepullsub_withupload)]  
   
 ## See Also  
  [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md)   

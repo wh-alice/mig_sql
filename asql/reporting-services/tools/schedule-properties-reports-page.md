@@ -18,21 +18,21 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Schedule Properties (Reports Page)
-  Use the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] schedule properties page in [!INCLUDE[ssManStudioFull_md](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to view a list of all reports that use the specific shared schedule. Schedules can be used to refresh report snapshots, generate report history, trigger a subscription, or expire a cached copy of the report. To find out how the schedule is used, view the property and subscription information of the report.  
+  Use the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] schedule properties page in [!INCLUDE[ssManStudioFull_md](../../a9notintoc/includes/ssmanstudiofull-md.md)] to view a list of all reports that use the specific shared schedule. Schedules can be used to refresh report snapshots, generate report history, trigger a subscription, or expire a cached copy of the report. To find out how the schedule is used, view the property and subscription information of the report.  
   
  Although this page shows each report that uses the shared schedule, it does not indicate how many times the shared schedule is used within that single report. For example, suppose 20 different subscribers to the Company Sales report all use the same shared schedule to trigger subscription processing. In this case, the Company Sales report will only appear once in this list, even though the report has 20 references to the shared schedule.  
   
  To open the schedule properties page:
- 1. Start [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].
+ 1. Start [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].
  2. Connect to a report server.
  3. Open the **Shared Schedules** folder.
  4. Right-click a shared schedule, select **Properties**.
  5. click **Reports**.  
   
-  You can also manage shared schedules from the **Site Settings** of the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Web Portal.
+  You can also manage shared schedules from the **Site Settings** of the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] Web Portal.
   
 > [!NOTE]  
->  This feature is not available in every edition of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Features Supported by the edition of SQL Server 2016](Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+>  This feature is not available in every edition of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Features Supported by the edition of SQL Server 2016](Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
   
 ## Options  
  **Folder**  

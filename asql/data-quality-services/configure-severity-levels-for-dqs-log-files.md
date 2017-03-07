@@ -23,7 +23,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure Severity Levels for DQS Log Files
-  This topic describes how to configure severity levels for various activities and modules in [!INCLUDE[ssDQSnoversion](../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS) by using [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)]. Severity levels define the intensity of events that occur in DQS. DQS events have the following severity levels, in the decreasing order of severity:  
+  This topic describes how to configure severity levels for various activities and modules in [!INCLUDE[ssDQSnoversion](../a9retired/includes/ssdqsnoversion-md.md)] (DQS) by using [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)]. Severity levels define the intensity of events that occur in DQS. DQS events have the following severity levels, in the decreasing order of severity:  
   
 -   **Fatal**: Critical runtime errors that might cause severe/unexpected results.  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssDQSInitialStep](../data-quality-services/includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] home screen, click **Configuration**.  
+2.  In the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] home screen, click **Configuration**.  
   
 3.  Next, click the **Log Settings** tab. The following DQS activities are listed for which you can select a severity level: **Domain Management**, **Knowledge Discovery**, **Cleansing Project (Ex. RDS)**, **Matching Policy and Matching Project**, and **RDS**.  
   

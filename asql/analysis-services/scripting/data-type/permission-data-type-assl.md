@@ -64,7 +64,7 @@ manager: "erikre"
 |Derived elements|None|  
   
 ## Remarks  
- **Permission** serves as the abstract base type for a number of derived permission types used in an instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].  
+ **Permission** serves as the abstract base type for a number of derived permission types used in an instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].  
   
  This data type has the following validations under DeploymentMode value 2 (tabular server mode).  
   

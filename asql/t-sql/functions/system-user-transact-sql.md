@@ -30,11 +30,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SYSTEM_USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Allows a system-supplied value for the current login to be inserted into a table when no default value is specified.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -52,7 +52,7 @@ SYSTEM_USER
   
  If the user name and login name are different, SYSTEM_USER returns the login name.  
   
- If the current user is logged in to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] by using Windows Authentication, SYSTEM_USER returns the Windows login identification name in the form: *DOMAIN*\\*user_login_name*. However, if the current user is logged in to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] by using SQL Server Authentication, SYSTEM_USER returns the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login identification name, such as `WillisJo` for a user logged in as `WillisJo`.  
+ If the current user is logged in to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] by using Windows Authentication, SYSTEM_USER returns the Windows login identification name in the form: *DOMAIN*\\*user_login_name*. However, if the current user is logged in to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] by using SQL Server Authentication, SYSTEM_USER returns the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login identification name, such as `WillisJo` for a user logged in as `WillisJo`.  
   
  SYSTEM_USER returns the name of the currently executing context. If the EXECUTE AS statement has been used to switch context, SYSTEM_USER returns the name of the impersonated context.  
   
@@ -128,7 +128,7 @@ GO
   
  `(5 row(s) affected)`  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### C: Using SYSTEM_USER to return the current system user name  
  The following example returns the current value of `SYSTEM_USER`.  
@@ -143,7 +143,7 @@ SELECT SYSTEM_USER;
  [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
  [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-transact-sql.md)   
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/system-functions-transact-sql.md)   
  [USER &#40;Transact-SQL&#41;](../../t-sql/functions/user-transact-sql.md)  
   
   

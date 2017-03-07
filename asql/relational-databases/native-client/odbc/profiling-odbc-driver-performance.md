@@ -24,9 +24,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Profiling ODBC Driver Performance
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
-  The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver can profile two types of performance data:  
+  The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver can profile two types of performance data:  
   
 -   Long-running queries.  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 -   Calling [SQLSetConnectAttr](../../../relational-databases/extended-stored-procedures-reference/sqlsetconnectattr.md) to set driver-specific attributes that control profiling.  
   
- Each application process gets its own copy of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver, and profiling is global to the combination of a driver copy and an application process. When anything in the application turns on profiling, profiling records information for all connections active in the driver from that application. Even connections that did not specifically call for profiling are included.  
+ Each application process gets its own copy of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver, and profiling is global to the combination of a driver copy and an application process. When anything in the application turns on profiling, profiling records information for all connections active in the driver from that application. Even connections that did not specifically call for profiling are included.  
   
  After the driver has opened a profiling log (either the performance data or long-running query log), it does not close the log until the driver is unloaded by the ODBC Driver Manager, when an application frees all the environment handles it opened in the driver. If the application opens a new environment handle, a new copy of the driver is loaded. If the application then either connects to a data source that specifies the same log file or sets the driver-specific attributes to log to the same file, the driver overwrites the old log.  
   
@@ -57,7 +57,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
    the log file, logging disabled.  
 ```  
   
- The driver stops gathering performance data when an environment handle is closed. If an [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client application has multiple connections, each with its own environment handle, then the driver will stop gathering performance data when any of the associated environment handles are closed.  
+ The driver stops gathering performance data when an environment handle is closed. If an [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client application has multiple connections, each with its own environment handle, then the driver will stop gathering performance data when any of the associated environment handles are closed.  
   
  The driver's performance data can either be stored in the SQLPERF data structure or logged in a tab-delimited file. The data includes the following categories of statistics:  
   
@@ -104,10 +104,10 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |AvgTimeOpened|Equals SumConnectionsOpened/ SumConnectionTime.|  
 |**Network Statistics:**||  
 |ServerRndTrips|The number of times the driver sent commands to the server and got a reply back.|  
-|BuffersSent|Number of Tabular Data Stream (TDS) packets sent to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] by the driver after SQL_PERF_START. Large commands can take multiple buffers, so if a large command is sent to the server and it fills six packets, ServerRndTrips is incremented by one and BuffersSent is incremented by six.|  
-|BuffersRec|Number of TDS packets received by the driver from [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] after the application started using the driver.|  
-|BytesSent|Number of bytes of data sent to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in TDS packets after the application started using the driver.|  
-|BytesRec|Number of bytes of data in TDS packets received by the driver from [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] after the application started using the driver.|  
+|BuffersSent|Number of Tabular Data Stream (TDS) packets sent to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] by the driver after SQL_PERF_START. Large commands can take multiple buffers, so if a large command is sent to the server and it fills six packets, ServerRndTrips is incremented by one and BuffersSent is incremented by six.|  
+|BuffersRec|Number of TDS packets received by the driver from [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] after the application started using the driver.|  
+|BytesSent|Number of bytes of data sent to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] in TDS packets after the application started using the driver.|  
+|BytesRec|Number of bytes of data in TDS packets received by the driver from [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] after the application started using the driver.|  
   
 ### Time Statistics  
   
@@ -118,6 +118,6 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ## See Also  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Profiling ODBC Driver Performance How-to Topics &#40;ODBC&#41;](../Topic/Profiling%20ODBC%20Driver%20Performance%20How-to%20Topics%20\(ODBC\).md)  
+ [Profiling ODBC Driver Performance How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

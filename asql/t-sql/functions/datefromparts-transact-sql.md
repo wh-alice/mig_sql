@@ -26,7 +26,7 @@ manager: "jhubbard"
 
   Returns a **date** value for the specified year, month, and day.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -52,7 +52,7 @@ DATEFROMPARTS ( year, month, day )
 ## Remarks  
  **DATEFROMPARTS** returns a **date** value with the date portion set to the specified year, month and day, and the time portion set to the default. If the arguments are not valid, then an error is raised. If required arguments are null, then null is returned.  
   
- This function is capable of being remoted to [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] servers and above. It will not be remoted to servers with a version below [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)].  
+ This function is capable of being remoted to [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] servers and above. It will not be remoted to servers with a version below [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)].  
   
 ## Examples  
  The following example demonstrates the **DATEFROMPARTS** function.  
@@ -71,7 +71,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
  The following example demonstrates the **DATEFROMPARTS** function.  
   
 ```  

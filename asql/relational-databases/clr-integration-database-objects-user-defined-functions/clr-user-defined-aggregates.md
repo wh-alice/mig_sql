@@ -20,14 +20,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # CLR User-Defined Aggregates
-  Aggregate functions perform a calculation on a set of values and return a single value. Traditionally, [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] has supported only built-in aggregate functions, such as **SUM** or **MAX**, that operate on a set of input scalar values and generate a single aggregate value from that set. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] integration with the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] .NET Framework common language runtime (CLR) now allows developers to create custom aggregate functions in managed code, and to make these functions accessible to [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] or other managed code.  
+  Aggregate functions perform a calculation on a set of values and return a single value. Traditionally, [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] has supported only built-in aggregate functions, such as **SUM** or **MAX**, that operate on a set of input scalar values and generate a single aggregate value from that set. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] integration with the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] .NET Framework common language runtime (CLR) now allows developers to create custom aggregate functions in managed code, and to make these functions accessible to [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] or other managed code.  
   
  The following table lists the topics in this section.  
   
- [Requirements for CLR User-Defined Aggregates](../Topic/Requirements%20for%20CLR%20User-Defined%20Aggregates.md)  
+ [Requirements for CLR User-Defined Aggregates](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates-requirements.md)  
  Provides an overview of the requirements for implementing CLR user-defined aggregate functions.  
   
- [Invoking CLR User-Defined Aggregate Functions](../Topic/Invoking%20CLR%20User-Defined%20Aggregate%20Functions.md)  
+ [Invoking CLR User-Defined Aggregate Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)  
  Explains how to invoke user-defined aggregates.  
   
   

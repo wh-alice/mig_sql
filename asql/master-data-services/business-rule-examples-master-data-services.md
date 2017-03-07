@@ -15,7 +15,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Business Rule Examples (Master Data Services)
-This article shows examples of business rules for [!INCLUDE[ssMDSshort_md](../analysis-services/includes/ssmdsshort-md.md)]. You'll find these examples in the sample models that are included with your installation of [!INCLUDE[ssMDSshort_md](../analysis-services/includes/ssmdsshort-md.md)].   
+This article shows examples of business rules for [!INCLUDE[ssMDSshort_md](../a9notintoc/includes/ssmdsshort-md.md)]. You'll find these examples in the sample models that are included with your installation of [!INCLUDE[ssMDSshort_md](../a9notintoc/includes/ssmdsshort-md.md)].   
   
 For instructions on how to deploy the sample models, see [Master Data Services Installation and Configuration](../master-data-services/master-data-services-installation-and-configuration.md).  
   
@@ -144,7 +144,7 @@ Else
   
   
 **To view the business rule examples in the sample models**  
-1. Navigate to the [!INCLUDE[ssMDSshort_md](../analysis-services/includes/ssmdsshort-md.md)] Web site that you set up after installing MDS, and click the **System Administration** box.   
+1. Navigate to the [!INCLUDE[ssMDSshort_md](../a9notintoc/includes/ssmdsshort-md.md)] Web site that you set up after installing MDS, and click the **System Administration** box.   
 For instructions on setting up the Web site, see [Master Data Services Installation and Configuration](../master-data-services/master-data-services-installation-and-configuration.md).  
 2. Click the sample model that contains the business rule, as listed in the tables above, and then click **Entities**.  
 3. Click the entity to which the rule applies, as listed in the tables above, and then click **Business Rules**.  

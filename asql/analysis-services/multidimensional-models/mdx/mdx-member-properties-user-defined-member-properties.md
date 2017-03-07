@@ -24,7 +24,7 @@ manager: "erikre"
 ## Creating User-Defined Member Properties  
  User-defined member properties can be added to server-based dimensions or cubes either through the user interface or programmatically:  
   
--   To add user-defined member properties through the user interface, you use Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../../analysis-services/includes/ssbidevstudiofull-md.md)]. For more information, see [Define Attribute Relationships](../Topic/Define%20Attribute%20Relationships.md).  
+-   To add user-defined member properties through the user interface, you use Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../../a9notintoc/includes/ssbidevstudiofull-md.md)]. For more information, see [Define Attribute Relationships](../../../analysis-services/multidimensional-models/attribute-relationships-define.md).  
   
 -   To add user-defined member properties programmatically, your application can use either Analysis Manager Objects (AMO) or a combination of XML for Analysis (XMLA) and Analysis Services Scripting Language (ASSL). For more information, see [Attribute Relationships](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
@@ -63,10 +63,10 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- For more information about building calculated members, see [Building Calculated Members in MDX &#40;MDX&#41;](../Topic/Building%20Calculated%20Members%20in%20MDX%20\(MDX\).md).  
+ For more information about building calculated members, see [Building Calculated Members in MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
   
 ## See Also  
- [Using Member Properties &#40;MDX&#41;](../Topic/Using%20Member%20Properties%20\(MDX\).md)   
+ [Using Member Properties &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
  [Properties &#40;MDX&#41;](../../../mdx/properties-mdx.md)  
   
   

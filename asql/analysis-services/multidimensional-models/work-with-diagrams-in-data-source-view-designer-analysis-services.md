@@ -87,6 +87,6 @@ manager: "erikre"
   
 ## See Also  
  [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](../Topic/Data%20Source%20View%20Designer%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)  
+ [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](../../a9retired/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

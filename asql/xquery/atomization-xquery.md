@@ -20,9 +20,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Atomization (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Atomization is the process of extracting the typed value of an item. This process is implied under certain circumstances. Some of the XQuery operators, such as arithmetic and comparison operators, depend on this process. For example, when you apply arithmetic operators directly to nodes, the typed value of a node is first retrieved by implicitly invoking the [data function](../Topic/data%20Function%20\(XQuery\).md). This passes the atomic value as an operand to the arithmetic operator.  
+  Atomization is the process of extracting the typed value of an item. This process is implied under certain circumstances. Some of the XQuery operators, such as arithmetic and comparison operators, depend on this process. For example, when you apply arithmetic operators directly to nodes, the typed value of a node is first retrieved by implicitly invoking the [data function](../xquery/data-accessor-functions-data-xquery.md). This passes the atomic value as an operand to the arithmetic operator.  
   
  For example, the following query returns the total of the LaborHours attributes. In this case, **data()** is implicitly applied to the attribute nodes.  
   

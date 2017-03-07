@@ -45,7 +45,7 @@ manager: "erikre"
 |NTCanonicalUserName|40|8|Contains the Windows user name associated with the server state discover event. The user name is in canonical form. For example, engineering.microsoft.com/software/user.|  
 |SPID|41|1|Contains the server process ID (SPID) that uniquely identifies the user session associated with the server state discover event. The SPID directly corresponds to the session GUID used by XMLA.|  
 |TextData|42|9|Contains the text data associated with the event.|  
-|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] on which the server state discover event occurred.|  
+|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] on which the server state discover event occurred.|  
 |RequestProperties|45|9|Contains the properties of the current XMLA request.|  
   
 ## Server State Discover Data Class—Data Columns  
@@ -61,7 +61,7 @@ manager: "erikre"
 |SessionID|39|8|Contains the session ID associated with the server state discover event.|  
 |SPID|41|1|Contains the server process ID (SPID) that uniquely identifies the user session associated with the server state discover event. The SPID directly corresponds to the session GUID used by XMLA.|  
 |TextData|42|9|Contains the text data associated with server response to the discover request.|  
-|ServerName|43|8|Contains the name of the instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] on which the server state discover event occurred.|  
+|ServerName|43|8|Contains the name of the instance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] on which the server state discover event occurred.|  
   
 ## Server State Discover End Class—Data Columns  
   
@@ -84,7 +84,7 @@ manager: "erikre"
 |NTCanonicalUserName|40|8|Contains the Windows user name associated with the server state discover event. The user name is in canonical form. For example, engineering.microsoft.com/software/user.|  
 |SPID|41|1|Contains the server process ID (SPID) that uniquely identifies the user session associated with the server state discover event. The SPID directly corresponds to the session GUID used by XMLA.|  
 |TextData|42|9|Contains the text data associated with server response to the discover request.|  
-|ServerName|43|8|Contains the name of the instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] on which the server state discover event occurred.|  
+|ServerName|43|8|Contains the name of the instance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] on which the server state discover event occurred.|  
   
 ## See Also  
  [Discover Server State Event Category](../../analysis-services/trace-events/discover-server-state-event-category.md)  

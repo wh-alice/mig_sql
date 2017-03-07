@@ -28,11 +28,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # DBCC INPUTBUFFER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Displays the last statement sent from a client to an instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Displays the last statement sent from a client to an instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -85,7 +85,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## Permissions  
- On [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] requires one of the following:  
+ On [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] requires one of the following:  
   
 -   User must be a member of the **sysadmin** fixed server role.  
   
@@ -97,7 +97,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
     SELECT @@spid;  
     ```  
   
- On [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] Premium Tiers requires the VIEW DATABASE STATE permission in the database. On [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] Standard and Basic Tiers requires the [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] admin account.  
+ On [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] Premium Tiers requires the VIEW DATABASE STATE permission in the database. On [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] Standard and Basic Tiers requires the [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] admin account.  
   
 ## Examples  
  The following example runs `DBCC INPUTBUFFER` on a second connection while a long transaction is running on a previous connection.  
@@ -120,6 +120,6 @@ DBCC INPUTBUFFER (52);
   
 ## See Also  
  [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
- [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
+ [sp_who &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-who-transact-sql.md)  
   
   

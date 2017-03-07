@@ -22,7 +22,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Locking pages in memory may boost performance when paging memory to disk is expected.  
   
- Use the Windows Group Policy tool (gpedit.msc) to enable this policy for the account used by [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. You must be a system administrator to change this policy.  
+ Use the Windows Group Policy tool (gpedit.msc) to enable this policy for the account used by [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. You must be a system administrator to change this policy.  
   
 ### To enable the lock pages in memory option  
   

@@ -47,10 +47,10 @@ manager: "erikre"
   
 -   Linked measure groups cannot be used in multiple many-to-many relationships, especially when those relationships are in different cubes. Doing so can result in ambiguous aggregations. For more information, see [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
   
- The measures contained in a linked measure group can be directly organized only along linked dimensions retrieved from the same [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] database. However, you can use calculated members to relate information from linked measure groups to the other, non-linked dimensions in your cube. You can also use an indirect relationship, such as a reference or many-to-many relationship, to relate non-linked dimensions to a linked measure group.  
+ The measures contained in a linked measure group can be directly organized only along linked dimensions retrieved from the same [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] database. However, you can use calculated members to relate information from linked measure groups to the other, non-linked dimensions in your cube. You can also use an indirect relationship, such as a reference or many-to-many relationship, to relate non-linked dimensions to a linked measure group.  
   
 ## Create or modify a linked measure  
- Use [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)] to create a linked measure group.  
+ Use [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)] to create a linked measure group.  
   
 1.  Finalize any modifications to the original measure group now, in the source cube, so that you don't have to recreate the linked measure groups later in subsequent cubes. You can rename a linked object, but you cannot change any other properties.  
   
@@ -67,7 +67,7 @@ manager: "erikre"
 ## Secure a linked measure  
  After the link has been defined, access to the measures in a linked measure group, is managed in the same manner as access to other measure groups. A linked object appears alongside its non-linked counterparts in Role Designer. For more information on managing security for a measure group, see [Grant cube or model permissions &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
- In order to define or use a linked measure group, the Windows service account for the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance must belong to an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] database role that has **ReadDefinition** and **Read** access rights on the source [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance to the source cube and measure group, or must belong to the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Administrators role for the source [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance.  
+ In order to define or use a linked measure group, the Windows service account for the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance must belong to an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] database role that has **ReadDefinition** and **Read** access rights on the source [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance to the source cube and measure group, or must belong to the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Administrators role for the source [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance.  
   
 ## See Also  
  [Define Linked Dimensions](../../analysis-services/multidimensional-models/define-linked-dimensions.md)  

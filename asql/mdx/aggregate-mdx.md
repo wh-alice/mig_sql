@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Aggregate (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns a number that is calculated by aggregating over the cells returned by the set expression. If a numeric expression is not provided, this function aggregates each measure within the current query context by using the default aggregation operator that is specified for each measure. If a numeric expression is provided, this function first evaluates, and then sums, the numeric expression for each cell in the specified set.  
   

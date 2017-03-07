@@ -20,10 +20,10 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 2-2 - Create Graphs and Plots Using R
-In this lesson, you'll learn techniques for generating plots and maps using R with [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data.  You'll see how easy it is to view plots that are created on the server, and how you can pass graphics objects to the server.  
+In this lesson, you'll learn techniques for generating plots and maps using R with [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data.  You'll see how easy it is to view plots that are created on the server, and how you can pass graphics objects to the server.  
   
 ## Creating Graphics
-In [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)], graphics objects as well as models and results are serialized between your computer and the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] compute context.
+In [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)], graphics objects as well as models and results are serialized between your computer and the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] compute context.
 
 When using a SQL Server compute context, you might not be able to download the map representation, because most production database servers completely block Internet access.  Therefore, to create the second set of plots, you will generate the map representation in the client and then overlay on the map the points that are stored as attributes in the *nyctaxi_sample* table.   
 
@@ -32,7 +32,7 @@ To do this, you first create the map representation by calling into Google maps,
 This is a pattern that you might find useful when developing your own applications.   
   
 ### Create a Histogram  
-To create a histogram, you'll use the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data source you created earlier, together with the `rxHistogram` function provided in R Services.  
+To create a histogram, you'll use the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data source you created earlier, together with the `rxHistogram` function provided in R Services.  
   
 1.  Generate the first plot, using the *rxHistogram* function.  The *rxHistogram* function provides functionality similar to that in open source R packages, but can run in a remote execution context. 
   
@@ -52,7 +52,7 @@ To create a histogram, you'll use the [!INCLUDE[ssNoVersion](../../../advanced-a
     >  Because the ordering of rows using TOP is non-deterministic  without an ORDER BY clause, you might see very different results. We recommend that you experiment with different numbers of rows to get different graphs, and note how long it takes to return the results in your environment.  This particular image was generated using ~10,000 rows of data.
   
 ### Create a Map Plot  
-In this example, you'll generate a plot object using the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance as the compute context, and then return the plot object to the local compute context for rendering.  
+In this example, you'll generate a plot object using the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance as the compute context, and then return the plot object to the local compute context for rendering.  
    
 1.  First, define the function that creates the plot object.  
 
@@ -69,7 +69,7 @@ In this example, you'll generate a plot object using the [!INCLUDE[ssNoVersion](
     ```  
     + The custom R function *mapPlot* creates a  scatter plot that uses the taxi pickup locations to plot the number of rides that started from each location. It uses the **ggplot2** and  **ggmap** packages, which should already be installed and loaded.  
     + The *mapPlot* function takes two arguments: an existing data object, which you defined earlier using *RxSqlServerData*, and the map representation passed from the client.    
-    + Note the use of the *ds* variable to load data from the previously created data source, *inDataSource*.  Whenever you use open source R functions, data must be loaded into data frames in memory. You can do this by using the *rxImport* function in the **RevoScaleR** package.  However, this function runs in memory in the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] context defined earlier. That is, the function is not using the memory of your local workstation.  
+    + Note the use of the *ds* variable to load data from the previously created data source, *inDataSource*.  Whenever you use open source R functions, data must be loaded into data frames in memory. You can do this by using the *rxImport* function in the **RevoScaleR** package.  However, this function runs in memory in the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] context defined earlier. That is, the function is not using the memory of your local workstation.  
   
 2.  Next, load the libraries required for creating the maps in your local R environment.  
   
@@ -93,7 +93,7 @@ In this example, you'll generate a plot object using the [!INCLUDE[ssNoVersion](
     plot(myplots[[1]][["myplot"]]);  
   
     ```  
-    + In the first line, you can see that the map data is passed as an argument (*googMap*) to the  remotely executed function *mapPlot*. That is because the maps were generated in your local environment, and must be passed to the function in order to create the plot in the context of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].   
+    + In the first line, you can see that the map data is passed as an argument (*googMap*) to the  remotely executed function *mapPlot*. That is because the maps were generated in your local environment, and must be passed to the function in order to create the plot in the context of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].   
   
         The rendered data is then serialized back to the local R environment so that you can view it, using the **Plot** window in RStudio or other R graphics device.  
   

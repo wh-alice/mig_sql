@@ -31,7 +31,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # sqlcmd Utility
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   The **sqlcmd** utility lets you enter Transact-SQL statements, system procedures, and script files at the command prompt, in **Query Editor** in SQLCMD mode, in a Windows script file or in an operating system (Cmd.exe) job step of a  SQL Server  Agent job. This utility uses ODBC to execute Transact-SQL batches. 
   
@@ -41,14 +41,14 @@ manager: "jhubbard"
   To run sqlcmd statements in SSMS, select SQLCMD Mode from the top navigation Query Menu dropdown.  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS) uses the Microsoft [!INCLUDE[dnprdnshort_md](../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] SqlClient for execution in regular and SQLCMD mode in **Query Editor**. When **sqlcmd** is run from the command line, **sqlcmd** uses the ODBC driver. Because different default options may apply, you might see different behavior when you execute the same query in [!INCLUDE[ssManStudioFull_md](../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] in SQLCMD Mode and in the **sqlcmd** utility.  
+> [!INCLUDE[ssManStudioFull_md](../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS) uses the Microsoft [!INCLUDE[dnprdnshort_md](../a9retired/includes/dnprdnshort-md.md)] SqlClient for execution in regular and SQLCMD mode in **Query Editor**. When **sqlcmd** is run from the command line, **sqlcmd** uses the ODBC driver. Because different default options may apply, you might see different behavior when you execute the same query in [!INCLUDE[ssManStudioFull_md](../a9notintoc/includes/ssmanstudiofull-md.md)] in SQLCMD Mode and in the **sqlcmd** utility.  
 >   
   
  Currently, **sqlcmd** does not require a space between the command line option and the value. However, in a future release, a space may be required between the command line option and the value.  
  
  Other topics:
-- [Start the sqlcmd Utility](../Topic/Start%20the%20sqlcmd%20Utility.md)   
--  [Use the sqlcmd Utility](../Topic/Use%20the%20sqlcmd%20Utility.md)   
+- [Start the sqlcmd Utility](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
+-  [Use the sqlcmd Utility](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
   
 ## Syntax  
   
@@ -171,7 +171,7 @@ Prints raw error messages to the screen.
  Declares the application workload type when connecting to a server. The only currently supported value is **ReadOnly**. If **-K** is not specified, the sqlcmd utility will not support connectivity to a secondary replica in an Always On availability group. For more information, see [Active Secondaries: Readable Secondary Replica (Always On Availability Groups)](https://msdn.microsoft.com/library/ff878253.aspx)  
   
  **-M** *multisubnet_failover*  
- Always specify **-M** when connecting to the availability group listener of a  SQL Server  availability group or a  SQL Server  Failover Cluster Instance. **-M** provides for faster detection of and connection to the (currently) active server. If **–M** is not specified, **-M** is off. For more information about [!INCLUDE[ssHADR](../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)], see [Availability Group Listeners, Client Connectivity, and Application Failover (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx), [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failover Clustering and Always On Availability Groups (SQL Server)](https://msdn.microsoft.comlibrary/ff929171.aspx, and [Active Secondaries: Readable Secondary Replicas(Always On Availability Groups)](https://msdn.microsoft.com/library/ff878253.aspx.  
+ Always specify **-M** when connecting to the availability group listener of a  SQL Server  availability group or a  SQL Server  Failover Cluster Instance. **-M** provides for faster detection of and connection to the (currently) active server. If **–M** is not specified, **-M** is off. For more information about [!INCLUDE[ssHADR](../a9notintoc/includes/sshadr-md.md)], see [Availability Group Listeners, Client Connectivity, and Application Failover (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx), [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failover Clustering and Always On Availability Groups (SQL Server)](https://msdn.microsoft.comlibrary/ff929171.aspx, and [Active Secondaries: Readable Secondary Replicas(Always On Availability Groups)](https://msdn.microsoft.com/library/ff878253.aspx.  
   
  **-N**  
  This switch is used by the client to request an encrypted connection.  

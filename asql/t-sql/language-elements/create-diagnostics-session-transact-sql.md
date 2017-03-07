@@ -17,7 +17,7 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # CREATE DIAGNOSTICS SESSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Diagnostics sessions allow you to save detailed, user-defined diagnostic information on system or query performance.  
   

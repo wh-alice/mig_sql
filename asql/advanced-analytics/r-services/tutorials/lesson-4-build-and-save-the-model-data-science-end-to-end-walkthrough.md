@@ -19,7 +19,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 4: Build and Save the Model (Data Science End-to-End Walkthrough)
-In this lesson, you'll learn how to build a machine learning model and save the model in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+In this lesson, you'll learn how to build a machine learning model and save the model in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## Creating a Classification Model  
 The model you'll build is a binary classifier that predicts whether the taxi driver is likely to get a tip on a particular ride or not. You'll use the data source you created in the previous lesson, `featureDataSource,` to train the tip classifier, using logistic regression.  
@@ -145,9 +145,9 @@ In this section, you'll use both techniques.
   
 ## Deploying a Model  
 
-After you have built a model and ascertained that it is performing well, you might want to *operationalize* the model. Because [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)] lets you invoke an R model using a [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] stored procedure, it is extremely easy to use R in a client application.  
+After you have built a model and ascertained that it is performing well, you might want to *operationalize* the model. Because [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)] lets you invoke an R model using a [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] stored procedure, it is extremely easy to use R in a client application.  
   
-However, before you can call the model from an external application, you must save the model to the database used for production. In [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)], trained models are stored in binary form, in a single column of type **varbinary(max)**.
+However, before you can call the model from an external application, you must save the model to the database used for production. In [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)], trained models are stored in binary form, in a single column of type **varbinary(max)**.
 
 Therefore, moving a trained model from R to SQL Server includes these steps:  
   
@@ -196,17 +196,17 @@ BEGIN
 END   
 ```  
 > [!TIP]
-> We recommend creating helper functions such as this stored procedure to make it easier to manage and update your R models in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+> We recommend creating helper functions such as this stored procedure to make it easier to manage and update your R models in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
   
 ### Invoke the saved model  
-After you have saved the model to the database, you can call it directly from [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] code, using the system stored procedure, [sp_execute_external_script &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
+After you have saved the model to the database, you can call it directly from [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] code, using the system stored procedure, [sp_execute_external_script &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
   
 For example, to generate predictions, you simply connect to the database and run a stored procedure that uses the saved model as an input, together with some input data.  
   
 However, if you have a model you use often, it's easier to wrap the input query and the call to the model, as well as any other parameters,  in a custom stored procedure.  
   
-In the next lesson, you'll learn how to perform scoring against the saved model using [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)].  
+In the next lesson, you'll learn how to perform scoring against the saved model using [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)].  
   
 ## Next Lesson  
 [Lesson 5: Deploy and Use the Model &#40;Data Science End-to-End Walkthrough&#41;](../../../advanced-analytics/r-services/tutorials/lesson-5-deploy-and-use-the-model-data-science-end-to-end-walkthrough.md)  

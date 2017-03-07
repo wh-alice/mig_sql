@@ -19,16 +19,16 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Insert Surround-with Transact-SQL snippets
-  A surround-with snippet is a template you can use as a starting point when enclosing a set of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements in a BEGIN, IF, or WHILE block.  
+  A surround-with snippet is a template you can use as a starting point when enclosing a set of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements in a BEGIN, IF, or WHILE block.  
   
 ## Inserting Surround-with Snippets  
  Surround-with snippets can be launched by one of three ways: through a keyboard shortcut, through the **Edit** menu, and through the context menu.  
   
- After inserting the snippet, you must change the replacement text to form a valid [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement. For more information, see [Complete Transact-SQL Snippets](../../relational-databases/scripting/complete-transact-sql-snippets.md).  
+ After inserting the snippet, you must change the replacement text to form a valid [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement. For more information, see [Complete Transact-SQL Snippets](../../relational-databases/scripting/complete-transact-sql-snippets.md).  
   
 #### To insert a surround-with snippet  
   
-1.  In the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] Query Editor window, select the set of statements to be included in the block.  
+1.  In the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] Query Editor window, select the set of statements to be included in the block.  
   
 2.  Use one of these three methods to display the list of surround-with snippets:  
   

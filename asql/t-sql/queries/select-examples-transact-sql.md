@@ -40,11 +40,11 @@ manager: "jhubbard"
   This topic provides examples of using the [SELECT](../../t-sql/queries/select-transact-sql.md) statement.  
   
 ## A. Using SELECT to retrieve rows and columns  
- The following example shows three code examples. This first code example returns all rows (no WHERE clause is specified) and all columns (using the `*`) from the `Product` table in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+ The following example shows three code examples. This first code example returns all rows (no WHERE clause is specified) and all columns (using the `*`) from the `Product` table in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database.  
   
  [!code-sql[Select#SelectExamples1](../../t-sql/queries/codesnippet/tsql/select-examples-transact_1.sql)]  
   
- This example returns all rows (no WHERE clause is specified), and only a subset of the columns (`Name`, `ProductNumber`, `ListPrice`) from the `Product` table in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database. Additionally, a column heading is added.  
+ This example returns all rows (no WHERE clause is specified), and only a subset of the columns (`Name`, `ProductNumber`, `ListPrice`) from the `Product` table in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database. Additionally, a column heading is added.  
   
  [!code-sql[Select#SelectExamples2](../../t-sql/queries/codesnippet/tsql/select-examples-transact_2.sql)]  
   
@@ -84,7 +84,7 @@ manager: "jhubbard"
   
  [!code-sql[Select#SelectExamples10](../../t-sql/queries/codesnippet/tsql/select-examples-transact_10.sql)]  
   
- The previous subquery in this statement cannot be evaluated independently of the outer query. It requires a value for `Employee.EmployeeID`, but this value changes as the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] examines different rows in `Employee`.  
+ The previous subquery in this statement cannot be evaluated independently of the outer query. It requires a value for `Employee.EmployeeID`, but this value changes as the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] examines different rows in `Employee`.  
   
  A correlated subquery can also be used in the `HAVING` clause of an outer query. This example finds the product models for which the maximum list price is more than twice the average for the model.  
   
@@ -198,7 +198,7 @@ GO
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [EXECUTE &#40;Transact-SQL&#41;](../Topic/EXECUTE%20\(Transact-SQL\).md)   
+ [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [LIKE &#40;Transact-SQL&#41;](../Topic/LIKE%20\(Transact-SQL\).md)   
@@ -206,7 +206,7 @@ GO
  [EXCEPT and INTERSECT &#40;Transact-SQL&#41;](../Topic/EXCEPT%20and%20INTERSECT%20\(Transact-SQL\).md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [PathName &#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
- [INTO Clause &#40;Transact-SQL&#41;](../Topic/INTO%20Clause%20\(Transact-SQL\).md)  
+ [PathName &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/pathname-transact-sql.md)   
+ [INTO Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-into-clause-transact-sql.md)  
   
   

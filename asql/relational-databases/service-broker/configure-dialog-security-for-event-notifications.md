@@ -54,7 +54,7 @@ manager: "jhubbard"
 ||If not already connected to the database as the target database user, do so now.|  
 ||[Create a queue](../../t-sql/statements/create-queue-transact-sql.md) to receive the event notification messages and [create a service](../../t-sql/statements/create-service-transact-sql.md) to deliver the messages.|  
 ||[Grant SEND permission](../../t-sql/statements/grant-transact-sql.md) on the target service to the source database user.|  
-|Provide the service broker identifier of the source database to the target server. This identifier can be obtained by querying the **service_broker_guid** column of the [sys.databases](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view. For a server-level event notification, use the service broker identifier of **msdb**.|Provide the service broker identifier of the target database to the source server.|  
+|Provide the service broker identifier of the source database to the target server. This identifier can be obtained by querying the **service_broker_guid** column of the [sys.databases](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view. For a server-level event notification, use the service broker identifier of **msdb**.|Provide the service broker identifier of the target database to the source server.|  
   
  **Step 4: Create routes and set up server-level authentication.**  
   
@@ -85,7 +85,7 @@ manager: "jhubbard"
 ## See Also  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md)   
  [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Implement Event Notifications](../../relational-databases/service-broker/implement-event-notifications.md)   
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   

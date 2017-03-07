@@ -42,7 +42,7 @@ For this tutorial, you will configure the Flat File source to use the **Sample F
 9. In the Properties window, verify that the **LocaleID** property is set to **English (United States)**.  
   
 ## Next Task in Lesson  
-[Step 6: Adding and Configuring the Lookup Transformations](../Topic/Step%206:%20Adding%20and%20Configuring%20the%20Lookup%20Transformations.md)  
+[Step 6: Adding and Configuring the Lookup Transformations](../../integration-services/tutorials/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 ## See Also  
 [Flat File Source](../../integration-services/data-flow/flat-file-source.md)  

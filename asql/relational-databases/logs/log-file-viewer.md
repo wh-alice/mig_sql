@@ -17,10 +17,10 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Log File Viewer
-  Log File Viewer in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] is used to access information about errors and events that are captured in log files.  
+  Log File Viewer in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] is used to access information about errors and events that are captured in log files.  
   
 ## Benefits of using Log File Viewer  
- You can view [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] log files from a local or remote instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] when the target instance is offline or cannot start. You can access the offline log files from Registered Servers, or programmatically through WMI and WQL (WMI Query Language) queries. For more information, see [View Offline Log Files](../../relational-databases/logs/view-offline-log-files.md). Following are the types of log files you can access using Log File Viewer:  
+ You can view [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] log files from a local or remote instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] when the target instance is offline or cannot start. You can access the offline log files from Registered Servers, or programmatically through WMI and WQL (WMI Query Language) queries. For more information, see [View Offline Log Files](../../relational-databases/logs/view-offline-log-files.md). Following are the types of log files you can access using Log File Viewer:  
   
 -   Audit Collection  
   

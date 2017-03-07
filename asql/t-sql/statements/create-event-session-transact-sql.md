@@ -31,7 +31,7 @@ manager: "jhubbard"
 
   Creates an Extended Events session that identifies the source of the events, the event session targets, and the event session options.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md).  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## Syntax  
   
@@ -104,7 +104,7 @@ ON SERVER
   
 ## Arguments  
  *event_session_name*  
- Is the user-defined name for the event session. *event_session_name* is alphanumeric, can be up to 128 characters, must be unique within an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and must comply with the rules for [Identifiers](../../relational-databases/databases/database-identifiers.md).  
+ Is the user-defined name for the event session. *event_session_name* is alphanumeric, can be up to 128 characters, must be unique within an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], and must comply with the rules for [Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
  ADD EVENT [ *event_module_guid* ].*event_package_name*.*event_name*  
  Is the event to associate with the event session, where:  
@@ -174,7 +174,7 @@ ON SERVER
  Sets a target parameter. Target parameters appear in the sys.dm_xe_object_columns view as column_type 'customizable' and object_name = *target_name*.  
   
 > [!IMPORTANT]  
->  If you are using the ring buffer target, we recommend that you set the max_memory target parameter to 2048 kilobytes (KB) to help avoid possible data truncation of the XML output. For more information about when to use the different target types, see [SQL Server Extended Events Targets](../Topic/SQL%20Server%20Extended%20Events%20Targets.md).  
+>  If you are using the ring buffer target, we recommend that you set the max_memory target parameter to 2048 kilobytes (KB) to help avoid possible data truncation of the XML output. For more information about when to use the different target types, see [SQL Server Extended Events Targets](../../a9retired/sql-server-extended-events-targets.md).  
   
  WITH ( <event_session_options> [ ,...*n*] )  
  Specifies options to use with the event session.  
@@ -186,7 +186,7 @@ ON SERVER
  Specifies the event retention mode to use for handling event loss.  
   
  **ALLOW_SINGLE_EVENT_LOSS**  
- An event can be lost from the session. A single event is only dropped when all the event buffers are full. Losing a single event when event buffers are full allows for acceptable [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] performance characteristics, while minimizing the loss of data in the processed event stream.  
+ An event can be lost from the session. A single event is only dropped when all the event buffers are full. Losing a single event when event buffers are full allows for acceptable [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] performance characteristics, while minimizing the loss of data in the processed event stream.  
   
  ALLOW_MULTIPLE_EVENT_LOSS  
  Full event buffers containing multiple events can be lost from the session. The number of events lost is dependant upon the memory size allocated to the session, the partitioning of the memory, and the size of the events in the buffer. This option minimizes performance impact on the server when event buffers are quickly filled, but large numbers of events can be lost from the session.  
@@ -213,7 +213,7 @@ ON SERVER
  Specifies the location where event buffers are created.  
   
  **NONE**  
- A single set of buffers are created within the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance.  
+ A single set of buffers are created within the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance.  
   
  PER_NODE  
  A set of buffers are created for each NUMA node.  
@@ -225,7 +225,7 @@ ON SERVER
  Specifies whether or not causality is tracked. If enabled, causality allows related events on different server connections to be correlated together.  
   
  STARTUP_STATE = { ON | **OFF** }  
- Specifies whether or not to start this event session automatically when [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] starts.  
+ Specifies whether or not to start this event session automatically when [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] starts.  
   
 > [!NOTE]  
 >  If STARTUP_STATE = ON, the event session will only start if SQL Server is stopped and then restarted.  
@@ -262,8 +262,8 @@ GO
 ## See Also  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
- [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-event-sessions-transact-sql.md)   
- [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-xe-objects-transact-sql.md)   
- [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-xe-object-columns-transact-sql.md)  
+ [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-event-sessions-transact-sql.md)   
+ [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-xe-objects-transact-sql.md)   
+ [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-xe-object-columns-transact-sql.md)  
   
   

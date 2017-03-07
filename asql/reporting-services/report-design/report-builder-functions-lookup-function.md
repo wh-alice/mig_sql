@@ -19,7 +19,7 @@ manager: "erikre"
   Returns the first matching value for the specified name from a dataset that contains name/value pairs.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Syntax  
   
@@ -57,7 +57,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Returns the result expression value.  
   
- To retrieve multiple values for a single name or key field where there is a 1-to-many relationship, use [LookupSet Function &#40;Report Builder and SSRS&#41;](../Topic/LookupSet%20Function%20\(Report%20Builder%20and%20SSRS\).md). To call **Lookup** for a set of values, use [Multilookup Function &#40;Report Builder and SSRS&#41;](../Topic/Multilookup%20Function%20\(Report%20Builder%20and%20SSRS\).md).  
+ To retrieve multiple values for a single name or key field where there is a 1-to-many relationship, use [LookupSet Function &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md). To call **Lookup** for a set of values, use [Multilookup Function &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
   
  The following restrictions apply:  
   
@@ -83,7 +83,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
     -   The Report.Language property.  
   
- For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../Topic/Aggregate%20Functions%20Reference%20\(Report%20Builder%20and%20SSRS\).md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/a8d24287-8557-4b03-bea7-ca087f449b62.md).  
+ For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/a8d24287-8557-4b03-bea7-ca087f449b62.md).  
   
 ## Example  
  In the following example, assume that a table is bound to a dataset that includes a field for the product identifier ProductID. A separate dataset called "Product" contains the corresponding product identifier ID and the product name Name.  

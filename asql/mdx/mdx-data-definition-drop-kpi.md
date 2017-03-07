@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Data Definition - DROP KPI
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Drops the specified key performance indicator (KPI) from the specified cube.  
   
@@ -42,7 +42,7 @@ DROP KPI CURRENTCUBE | Cube_Name.KPI_Name
  A valid string that specifies the name of the KPI that is to be dropped.  
   
 ## See Also  
- [CREATE KPI Statement &#40;MDX&#41;](../Topic/CREATE%20KPI%20Statement%20\(MDX\).md)   
+ [CREATE KPI Statement &#40;MDX&#41;](../mdx/mdx-data-definition-create-kpi.md)   
  [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

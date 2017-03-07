@@ -19,7 +19,7 @@ manager: "erikre"
   Returns the set of matching values for the specified name from a dataset that contains name/value pairs.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Syntax  
   
@@ -57,7 +57,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Returns the set of result expression values.  
   
- To retrieve a single value from a dataset with name/value pairs for a specified name where there is a 1-to-1 relationship, use [Lookup Function &#40;Report Builder and SSRS&#41;](../Topic/Lookup%20Function%20\(Report%20Builder%20and%20SSRS\).md). To call **Lookup** for a set of values, use [Multilookup Function &#40;Report Builder and SSRS&#41;](../Topic/Multilookup%20Function%20\(Report%20Builder%20and%20SSRS\).md).  
+ To retrieve a single value from a dataset with name/value pairs for a specified name where there is a 1-to-1 relationship, use [Lookup Function &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md). To call **Lookup** for a set of values, use [Multilookup Function &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
   
  The following restrictions apply:  
   
@@ -83,7 +83,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
     -   The Report.Language property.  
   
- For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../Topic/Aggregate%20Functions%20Reference%20\(Report%20Builder%20and%20SSRS\).md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/a8d24287-8557-4b03-bea7-ca087f449b62.md).  
+ For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/a8d24287-8557-4b03-bea7-ca087f449b62.md).  
   
 ## Example  
  In the following example, assume the table is bound to a dataset that includes a sales territory identifier TerritoryGroupID. A separate dataset called "Stores" contains the list of all stores in a territory and includes the territory identifier ID and the name of the store StoreName.  
@@ -97,7 +97,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## Example  
  Because **LookupSet** returns a collection of objects, you cannot display the result expression directly in a text box. You can concatenate the value of each object in the collection as a string.  
   
- Use the [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] function **Join** create a delimited string from a set of objects. Use a comma as a separator to combine the objects in a single line. In some renderers, you might use a [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] line feed (`vbCrLF`) as a separator to list each value on a new line.  
+ Use the [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] function **Join** create a delimited string from a set of objects. Use a comma as a separator to combine the objects in a single line. In some renderers, you might use a [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] line feed (`vbCrLF`) as a separator to list each value on a new line.  
   
  The following expression, when it is used as the Value property for a text box, uses **Join** to create a list.  
   
@@ -108,7 +108,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## Example  
  For text boxes that only render a few times, you might choose to add custom code to generate HTML to display values in a text box. HTML in a text box requires extra processing, so this would not be a good choice for a text box that is rendered thousands of times.  
   
- Copy the following [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] functions to a Code block in a report definition. **MakeList** takes the object array that is returned in *result_expression* and builds an unordered list by using HTML tags. **Length** returns the number of items in the object array.  
+ Copy the following [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] functions to a Code block in a report definition. **MakeList** takes the object array that is returned in *result_expression* and builds an unordered list by using HTML tags. **Length** returns the number of items in the object array.  
   
 ```  
 Function MakeList(ByVal items As Object()) As String  

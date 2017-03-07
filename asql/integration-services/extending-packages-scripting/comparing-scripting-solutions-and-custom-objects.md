@@ -24,7 +24,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Comparing Scripting Solutions and Custom Objects
-  An [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] Script task or Script component can implement much of the same functionality that is possible in a custom managed task or data flow component. Here are some considerations to help you choose the appropriate type of task for your needs:  
+  An [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] Script task or Script component can implement much of the same functionality that is possible in a custom managed task or data flow component. Here are some considerations to help you choose the appropriate type of task for your needs:  
   
 -   If the configuration or functionality is specific to an individual package, you should use the Script task or the Script component instead of a developing a custom object.  
   

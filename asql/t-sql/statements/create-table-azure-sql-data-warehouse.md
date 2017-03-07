@@ -18,15 +18,15 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # CREATE TABLE (Azure SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../a9retired/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Creates a new table in [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)].  
+  Creates a new table in [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)].  
  
 To understand tables and how to use them, see [Tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/).
 
 NOTE: Discussions about SQL Data Warehouse in this article apply to both SQL Data Warehouse and Parallel Data Warehouse unless otherwise noted. 
  
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 \<!-- Some browsers jump to the line after an H2 when jumping to a bookmark.  Putting this 2 lines above the H2.
      H3's seem to render correctly, so their bookmarks can be on the same line.
@@ -109,7 +109,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="ColumnOptions"></a> Column options
 
  `COLLATE` *Windows_collation_name*  
- Specifies the collation for the expression. The collation must be one of the Windows collations supported by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For a list of Windows collations supported by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Windows Collation Name (Transact-SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/).  
+ Specifies the collation for the expression. The collation must be one of the Windows collations supported by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For a list of Windows collations supported by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Windows Collation Name (Transact-SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/).  
   
  `NULL` | `NOT NULL`  
  Specifies whether `NULL` values are allowed in the column. The default is `NULL`.  
@@ -127,10 +127,10 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 For guidance on choosing the type of table, see [Indexing tables in Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/).
   
  `CLUSTERED COLUMNSTORE INDEX`  
-Stores the table as a clustered columnstore index. The clustered columnstore index applies to all of the table data. This is the default for [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)].   
+Stores the table as a clustered columnstore index. The clustered columnstore index applies to all of the table data. This is the default for [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)].   
  
  `HEAP`   
-  Stores the table as a heap. This is the default for [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)].  
+  Stores the table as a heap. This is the default for [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)].  
   
  `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
  Stores the table as a clustered index with one or more key columns. This stores the data by row. Use *index_column_name* to specify the name of one or more key columns in the index.  For more information, see Rowstore Tables in the General Remarks.
@@ -145,10 +145,10 @@ To understand how to choose the best distribution method and use distributed tab
 Assigns each row to one distribution by hashing the value stored in *distribution_column_name*. The algorithm is deterministic which means it always hashes the same value to the same distribution.  The distribution column should be defined as NOT NULL since all rows that have NULL will be assigned to the same distribution.
 
 `DISTRIBUTION = ROUND_ROBIN`   
-Distributes the rows evenly across all the distributions in a round-robin fashion. This is the default for [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)].
+Distributes the rows evenly across all the distributions in a round-robin fashion. This is the default for [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)].
 
-`DISTRIBUTION = REPLICATE` -- Applies only to [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)].    
-Stores one copy of the table in full on each Compute node. Within each Compute node, the table is stored in a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] filegroup that spans the Compute node. This is the default for [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)].
+`DISTRIBUTION = REPLICATE` -- Applies only to [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)].    
+Stores one copy of the table in full on each Compute node. Within each Compute node, the table is stored in a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] filegroup that spans the Compute node. This is the default for [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)].
   
 ### <a name="TablePartitionOptions"></a> Table partition options
 For guidance on using table partitions, see [Partitioning tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
@@ -158,15 +158,15 @@ Creates one or more table partitions. These are horizontal table slices that all
  
 | Argument | Explanation |
 | -------- | ----------- |
-|*partition_column_name*| Specifies the column that [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] will use to partition the rows. This column can be any data type. [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] sorts the partition column values in ascending order. The low-to-high ordering goes from `LEFT` to `RIGHT` for the purpose of the `RANGE` specification. |  
+|*partition_column_name*| Specifies the column that [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] will use to partition the rows. This column can be any data type. [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] sorts the partition column values in ascending order. The low-to-high ordering goes from `LEFT` to `RIGHT` for the purpose of the `RANGE` specification. |  
 | `RANGE LEFT` | Specifies the boundary value belongs to the partition on the left (lower values). The default is LEFT. |
 | `RANGE RIGHT` | Specifies the boundary value belongs to the partition on the right (higher values). | 
-| `FOR VALUES` ( *boundary_value* [,...*n*] ) | Specifies the boundary values for the partition. *boundary_value* is a constant expression. It cannot be NULL. It must either match or be implicitly convertible to the data type of *partition_column_name*. It cannot be truncated during implicit conversion so that the size and scale of the value do not match the data type of *partition_column_name*<br></br><br></br>If you specify the `PARTITION` clause, but do not specify a boundary value, [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] will create a partitioned table with one partition. If applicable, you an split the table into two partitions at a later time.<br></br><br></br>If you specify one boundary value, the resulting table has two partitions; one for the values lower than the boundary value and one for the values higher than the boundary value. Note that if you move a partition into a non-partitioned table, the non-partitioned table will receive the data, but will not have the partition boundaries in its metadata.| 
+| `FOR VALUES` ( *boundary_value* [,...*n*] ) | Specifies the boundary values for the partition. *boundary_value* is a constant expression. It cannot be NULL. It must either match or be implicitly convertible to the data type of *partition_column_name*. It cannot be truncated during implicit conversion so that the size and scale of the value do not match the data type of *partition_column_name*<br></br><br></br>If you specify the `PARTITION` clause, but do not specify a boundary value, [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] will create a partitioned table with one partition. If applicable, you an split the table into two partitions at a later time.<br></br><br></br>If you specify one boundary value, the resulting table has two partitions; one for the values lower than the boundary value and one for the values higher than the boundary value. Note that if you move a partition into a non-partitioned table, the non-partitioned table will receive the data, but will not have the partition boundaries in its metadata.| 
  
  See [Create a partitioned table](#PartitionedTable) in the Examples section.
 
 ### <a name="DataTypes"></a> Data types
-[!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] supports the most commonly used data types. Below is a list of the supported data types along with their details and storage bytes. To better understand data types and how to use them, see [ Data types for tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
+[!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] supports the most commonly used data types. Below is a list of the supported data types along with their details and storage bytes. To better understand data types and how to use them, see [ Data types for tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
 For a table of data type conversions, see the Implicit Conversions section, of [CAST and CONVERT (Transact-SQL)](http://msdn.microsoft.com/library/ms187928/).
 
@@ -207,9 +207,9 @@ Same as `datetime`, except that you can specify the number of fractional seconds
 | 1-24   | 7 digits  | 4 bytes      |  
 | 25-53  | 15 digits | 8 bytes      |  
   
- [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] treats *n* as one of two possible values. If `1`<= *n* <= `24`, *n* is treated as `24`. If `25` <= *n* <= `53`, *n* is treated as `53`.  
+ [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] treats *n* as one of two possible values. If `1`<= *n* <= `24`, *n* is treated as `24`. If `25` <= *n* <= `53`, *n* is treated as `53`.  
   
- The [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] `float` data type complies with the ISO standard for all values of *n* from `1` through `53`. The synonym for double precision is `float(53)`.  
+ The [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] `float` data type complies with the ISO standard for all values of *n* from `1` through `53`. The synonym for double precision is `float(53)`.  
   
  `real` [ ( *n* ) ]  
  The definition of real is the same as float. The ISO synonym for `real` is `float(24)`.  
@@ -249,21 +249,21 @@ Same as `datetime`, except that you can specify the number of fractional seconds
 | `tinyint` |1|  
   
  `bit`  
- An integer data type that can take the value of `1`, `0`, or `NULL. [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] optimizes storage of bit columns. If there are 8 or fewer bit columns in a table, the columns are stored as 1 byte. If there are from 9-16 bit columns, the columns are stored as 2 bytes, and so on.  
+ An integer data type that can take the value of `1`, `0`, or `NULL. [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] optimizes storage of bit columns. If there are 8 or fewer bit columns in a table, the columns are stored as 1 byte. If there are from 9-16 bit columns, the columns are stored as 2 bytes, and so on.  
   
- `nvarchar` [ ( *n* | `max` ) ]  -- `max` applies only to [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)].  
+ `nvarchar` [ ( *n* | `max` ) ]  -- `max` applies only to [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)].  
  Variable-length Unicode character data. *n* can be a value from 1 through 4000. `max` indicates that the maximum storage size is 2^31-1 bytes (2 GB). Storage size in bytes is two times the number of characters entered + 2 bytes. The data entered can be 0 characters in length.  
   
  `nchar` [ ( *n* ) ]  
  Fixed-length Unicode character data with a length of *n* characters. *n* must be a value from `1` through `4000`. The storage size is two times *n* bytes.  
   
- `varchar` [ ( *n*  | `max` ) ]  -- `max` applies only to [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)].   
+ `varchar` [ ( *n*  | `max` ) ]  -- `max` applies only to [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)].   
  Variable-length, non-Unicode character data with a length of *n* bytes. *n* must be a value from `1` to `8000`. `max` indicates that the maximum storage size is 2^31-1 bytes (2 GB).The storage size is the actual length of data entered + 2 bytes.  
   
  `char` [ ( *n* ) ]  
  Fixed-length, non-Unicode character data with a length of *n* bytes. *n* must be a value from `1` to `8000`. The storage size is *n* bytes. The default for *n* is `1`.  
   
- `varbinary` [ ( *n*  | `max` ) ]  -- `max` applies only to [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)].  
+ `varbinary` [ ( *n*  | `max` ) ]  -- `max` applies only to [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)].  
  Variable-length binary data. *n* can be a value from `1` to `8000`. `max` indicates that the maximum storage size is 2^31-1 bytes (2 GB). The storage size is the actual length of data entered + 2 bytes. The default value for *n* is 7.  
   
  `binary` [ ( *n* ) ]  
@@ -290,7 +290,7 @@ Creating a partitioned table requires permission in the `db_ddladmin` fixed data
 For minimum and maximum limits, see [SQL Data Warehouse capacity limits](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-service-capacity-limits/). 
  
 ### Determining the number of table partitions
-Each user-defined table is divided into multiple smaller tables which are stored in separate locations called distributions. [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] uses 60 distributions. In [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)], the number of distributions depends on the number of Compute nodes.
+Each user-defined table is divided into multiple smaller tables which are stored in separate locations called distributions. [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] uses 60 distributions. In [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)], the number of distributions depends on the number of Compute nodes.
  
 Each distribution contains all table partitions. For example, if there are 60 distributions and four table partitions, there will be 320 partitions. If the table is a clustered columnstore index, there will be one columnstore index per partition which means you will have 320 columnstore indexes.
 
@@ -298,7 +298,7 @@ We recommend using fewer table partitions to ensure each columnstore index has e
 
   
  ### Rowstore table (heap or clustered index)  
- A rowstore table is a table stored in row-by-row order. It is a heap or clustered index. [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] creates all rowstore tables with page compression; this is not user-configurable.   
+ A rowstore table is a table stored in row-by-row order. It is a heap or clustered index. [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] creates all rowstore tables with page compression; this is not user-configurable.   
  
  ### Columnstore table (columnstore index)
 A columnstore table is a table stored in column-by-column order. The columnstore index is the technology that manages data stored in a columnstore table.  The clustered columnstore index does not affect how data are distributed; it affects how the data are stored within each distribution.
@@ -319,7 +319,7 @@ For more information, see these articles:
   
  `CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION (c1 RANGE FOR VALUES (N'')))`  
  
- If *boundary_value* is a literal value that must be implicitly converted to the data type in *partition_column_name*, a discrepancy will occur. The literal value is displayed through the [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] system views, but the converted value is used for [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] operations. 
+ If *boundary_value* is a literal value that must be implicitly converted to the data type in *partition_column_name*, a discrepancy will occur. The literal value is displayed through the [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] system views, but the converted value is used for [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] operations. 
  
   
  ### Temporary tables
@@ -327,12 +327,12 @@ For more information, see these articles:
   
  Local temporary tables have the following limitations and restrictions:  
   
--   They are visible only to the current session. [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] drops them automatically at the end of the session. To drop them explicitlt, use the DROP TABLE statement.   
+-   They are visible only to the current session. [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] drops them automatically at the end of the session. To drop them explicitlt, use the DROP TABLE statement.   
 -   They cannot be renamed. 
 -   They cannot have partitions or views.  
 -   Their permissions cannot be changed. `GRANT`, `DENY`, and `REVOKE` statements cannot be used with local temporary tables.   
 -   Database console commands are blocked for temporary tables.   
--   If more than one local temporary table is used within a batch, each must have a unique name. If multiple sessions are running the same batch and creating the same local temporary table, [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] internally appends a numeric suffix to the local temporary table name to maintain a unique name for each local temporary table.  
+-   If more than one local temporary table is used within a batch, each must have a unique name. If multiple sessions are running the same batch and creating the same local temporary table, [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] internally appends a numeric suffix to the local temporary table name to maintain a unique name for each local temporary table.  
     
 <a name="LockingBehavior"></a>   
 ## Locking behavior  

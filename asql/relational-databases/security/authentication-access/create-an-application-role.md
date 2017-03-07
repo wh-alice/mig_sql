@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create an Application Role
-  This topic describes how to create an application role in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]. Application roles restrict user access to a database except through specific applications. Application roles have no users, so the **Role Members** list is not displayed when **Application role** is selected.  
+  This topic describes how to create an application role in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]. Application roles restrict user access to a database except through specific applications. Application roles have no users, so the **Role Members** list is not displayed when **Application role** is selected.  
   
 > [!IMPORTANT]  
 >  Password complexity is checked when application role passwords are set. Applications that invoke application roles must store their passwords. Application role passwords should always be stored encrypted.  
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 8.  Under **Schemas owned by this role**, select or view schemas that will be owned by this role. A schema can be owned by only one schema or role.  
   
-9. [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 ### Additional Options  
  The **Application Role – New** dialog box also offers options on two additional pages: **Securables** and **Extended Properties**.  
@@ -76,7 +76,7 @@ manager: "jhubbard"
   
 #### To create an application role  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

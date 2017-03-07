@@ -19,7 +19,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Database Mirroring - Use Certificates for Inbound Connections
-  This topic describes the steps for configuring server instances to use certificates to authenticate inbound connections for database mirroring. Before you can set up inbound connections, you must configure outbound connections on each server instance. For more information, see [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../Topic/Allow%20a%20Database%20Mirroring%20Endpoint%20to%20Use%20Certificates%20for%20Outbound%20Connections%20\(Transact-SQL\).md).  
+  This topic describes the steps for configuring server instances to use certificates to authenticate inbound connections for database mirroring. Before you can set up inbound connections, you must configure outbound connections on each server instance. For more information, see [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
   
  The process of configuring inbound connections, involves the following general steps:  
   
@@ -52,13 +52,13 @@ manager: "jhubbard"
   
      For more information, see [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
   
-     To view the logins on this server instance, you can use the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement:  
+     To view the logins on this server instance, you can use the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement:  
   
     ```  
     SELECT * FROM sys.server_principals  
     ```  
   
-     For more information, see [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.server-principals-transact-sql.md).  
+     For more information, see [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.server-principals-transact-sql.md).  
   
 2.  Create a user for that login.  
   
@@ -72,17 +72,17 @@ manager: "jhubbard"
   
      For more information, see [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md).  
   
-     To view the users on this server instance, you can use the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement:  
+     To view the users on this server instance, you can use the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement:  
   
     ```  
     SELECT * FROM sys.sysusers;  
     ```  
   
-     For more information, see [sys.sysusers &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys.sysusers-transact-sql.md).  
+     For more information, see [sys.sysusers &#40;Transact-SQL&#41;](../../relational-databases/reference/system-compatibility-views/sys.sysusers-transact-sql.md).  
   
 3.  Obtain the certificate for the mirroring endpoint of the other server instance.  
   
-     If you have not already done so when configuring outbound connections, obtain a copy of the certificate for the mirroring endpoint of the remote server instance. To do this, back up the certificate on that server instance as described in [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../Topic/Allow%20a%20Database%20Mirroring%20Endpoint%20to%20Use%20Certificates%20for%20Outbound%20Connections%20\(Transact-SQL\).md). When copying a certificate to another system, use a secure copy method. Be extremely careful to keep all of your certificates secure.  
+     If you have not already done so when configuring outbound connections, obtain a copy of the certificate for the mirroring endpoint of the remote server instance. To do this, back up the certificate on that server instance as described in [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md). When copying a certificate to another system, use a secure copy method. Be extremely careful to keep all of your certificates secure.  
   
      For more information, see [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md).  
   
@@ -100,17 +100,17 @@ manager: "jhubbard"
   
      For more information, see [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md).  
   
-     To view the certificates on this server instance, use the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement:  
+     To view the certificates on this server instance, use the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement:  
   
     ```  
     SELECT * FROM sys.certificates  
     ```  
   
-     For more information, see [sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.certificates-transact-sql.md).  
+     For more information, see [sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.certificates-transact-sql.md).  
   
 5.  Grant CONNECT permission on the login for the remote mirroring endpoint.  
   
-     For example, to grant permission on HOST_A to the remote server instance on HOST_B to connect to its local login—that is, to connect to `HOST_B_login`—use the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements:  
+     For example, to grant permission on HOST_A to the remote server instance on HOST_B to connect to its local login—that is, to connect to `HOST_B_login`—use the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements:  
   
     ```  
     USE master;  
@@ -128,7 +128,7 @@ manager: "jhubbard"
  The following example demonstrates configuring HOST_B for inbound connections.  
   
 > [!NOTE]  
->  This example uses a certificate file containing the HOST_A certificate that is created by a code snippet in [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../Topic/Allow%20a%20Database%20Mirroring%20Endpoint%20to%20Use%20Certificates%20for%20Outbound%20Connections%20\(Transact-SQL\).md).  
+>  This example uses a certificate file containing the HOST_A certificate that is created by a code snippet in [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
   
 ```  
 USE master;  
@@ -160,7 +160,7 @@ GO
  When copying a certificate to another system, use a secure copy method. Be extremely careful to keep all of your certificates secure.  
   
 ## See Also  
- [Transport Security for Database Mirroring and Always On Availability Groups &#40;SQL Server&#41;](../Topic/Transport%20Security%20for%20Database%20Mirroring%20and%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md)   
+ [Transport Security for Database Mirroring and Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Endpoint%20Permissions%20\(Transact-SQL\).md)   
  [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   

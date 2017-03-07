@@ -19,14 +19,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SMO Programming - Getting Started in Visual Basic .NET
-  [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Visual Basic .NET in one of the managed programming languages that is supported by the common runtime library in [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] .NET. Many of the samples in this documentation are written in [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] .NET. You can use [!INCLUDE[vsprvslong](../../relational-databases/server-management-objects-smo/includes/vsprvslong-md.md)] and [!INCLUDE[vsOrcas](../../relational-databases/server-management-objects-smo/includes/vsorcas-md.md)] to develop SMO applications.  
+  [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Visual Basic .NET in one of the managed programming languages that is supported by the common runtime library in [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] .NET. Many of the samples in this documentation are written in [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] .NET. You can use [!INCLUDE[vsprvslong](../../relational-databases/server-management-objects-smo/includes/vsprvslong-md.md)] and [!INCLUDE[vsOrcas](../../relational-databases/server-management-objects-smo/includes/vsorcas-md.md)] to develop SMO applications.  
   
 ## References and Imports  
- After you have started the [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] project, you must add references to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Management Objects (SMO) assemblies. Then, import the required namespaces so that your program can recognize the SMO types.  
+ After you have started the [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] project, you must add references to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Management Objects (SMO) assemblies. Then, import the required namespaces so that your program can recognize the SMO types.  
   
- In [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], the SMO assemblies are located in the C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\ folder.  
+ In [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], the SMO assemblies are located in the C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\ folder.  
   
 ## See Also  
- [Create a Visual Basic SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20Basic%20SMO%20Project%20in%20Visual%20Studio%20.NET.md)  
+ [Create a Visual Basic SMO Project in Visual Studio .NET](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-.net.md)  
   
   

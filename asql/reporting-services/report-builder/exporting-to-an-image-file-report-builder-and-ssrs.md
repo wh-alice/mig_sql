@@ -21,7 +21,7 @@ manager: "erikre"
  The Image rendering extension can generate files in any of the formats supported by [!INCLUDE[ndptecgdiplus](../../reporting-services/report-builder/includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG, and TIFF. For TIFF format, the file name of the primary stream is *ReportName*.tif. For all other formats, which render as a single page per file, the file name is *ReportName_Page.ext* where. *ext* is the file extension for the chosen format. To produce a file in another Image-supported format, specify any of the above listed strings in the **OutputFormatDeviceInfo** setting.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ##  <a name="SupportedImageFormats"></a> Supported Image Formats  
  The following table shows the file extension and MimeType for each Image renderer format.  

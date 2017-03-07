@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # TopPercent (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   The **TopPercent** function returns, in order of decreasing rank, the top-most rows of a table whose cumulative total is at least a specified percentage.  
   
@@ -43,7 +43,7 @@ TopPercent(<table expression>, <rank expression>, <percent>)
  The **TopPercent** function returns the top-most rows in decreasing order of rank based on the evaluated value of the \<rank expression> argument for each row, such that the sum of the \<rank expression> values is at least the given percentage that is specified by the \<percent> argument. **TopPercent** returns the smallest number of elements possible while still meeting the specified percent value.  
   
 ## Examples  
- The following example creates a prediction query against the Association model that you build by using the [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md).  
+ The following example creates a prediction query against the Association model that you build by using the [Basic Data Mining Tutorial](../a9notintoc/basic-data-mining-tutorial.md).  
   
  To understand how TopPercent works, it might be helpful to first execute a prediction query that returns only the nested table.  
   

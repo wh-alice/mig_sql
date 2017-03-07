@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 3-4 - Summary - Solutions and Script Projects
-By leveraging the extensive developer features of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Visual Studio, [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] offers the functionality that developers need for enterprise-level code management. You can create custom templates to support your repetitive tasks, save and manage complex script projects in a centralized and coordinated environment.  
+By leveraging the extensive developer features of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Visual Studio, [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] offers the functionality that developers need for enterprise-level code management. You can create custom templates to support your repetitive tasks, save and manage complex script projects in a centralized and coordinated environment.  
   
 ## Return to SQL Server Tools Tutorials Portal  
 [Tutorial: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorials/tutorial-sql-server-management-studio.md)  

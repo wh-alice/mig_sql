@@ -23,7 +23,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Add Data or Log Files to a Database
-  This topic describes how to add data or log files to a database in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to add data or log files to a database in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 #### To add data or log files to a database  
   
-1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, right-click the database from which to add the files, and then click **Properties**.  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
     3.  To prevent the file from growing, clear the **Enable Autogrowth** check box. The size of the file will not grow beyond the value specified in the **Initial Size (MB)** column.  
   
     > [!NOTE]  
-    >  The maximum database size is determined by the amount of disk space available and the licensing limits determined by the version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that you are using.  
+    >  The maximum database size is determined by the amount of disk space available and the licensing limits determined by the version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that you are using.  
   
 11. Specify the path for the file location. The specified path must exist before adding the file.  
   
@@ -102,15 +102,15 @@ manager: "jhubbard"
   
 #### To add data or log files to a database  
   
-1.  Connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. The example adds a filegroup with two files to a database. The example creates the filegroup `Test1FG1` in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database and adds two 5-MB files to the filegroup.  
+3.  Copy and paste the following example into the query window and click **Execute**. The example adds a filegroup with two files to a database. The example creates the filegroup `Test1FG1` in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database and adds two 5-MB files to the filegroup.  
   
  [!code-sql[DatabaseDDL#AlterDatabase2](../../relational-databases/databases/codesnippet/tsql/add-data-or-log-files-to_1.sql)]  
   
- For more examples, see [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md).  
+ For more examples, see [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
 ## See Also  
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   

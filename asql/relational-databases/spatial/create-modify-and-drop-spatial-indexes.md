@@ -38,7 +38,7 @@ manager: "jhubbard"
  **To create a spatial index by using the New Index dialog box in Management Studio**  
  ##### To create a spatial index in Management Studio  
   
-1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] and then expand that instance.  
+1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, expand the database that contains the table with the specified index, and then expand **Tables**.  
   
@@ -62,9 +62,9 @@ manager: "jhubbard"
   
      When creating an index on a **geometry** type column, you must specify the **(***X-min***,***Y-min***)** and **(***X-max***,***Y-max***)** coordinates of the bounding box. For an index on a **geography** type column, the bounding-box fields become read-only after you specify the **Geography grid** tessellation scheme, because geography grid tessellation does not use a bounding box.  
   
-     Optionally, you can specify nondefault values for the **Cells Per Object** field and for the grid density at any level of the tessellation scheme. The default number of cells per object is 16 for [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] or 8 for [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] or higher, and the default grid density is **Medium** for [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)].  
+     Optionally, you can specify nondefault values for the **Cells Per Object** field and for the grid density at any level of the tessellation scheme. The default number of cells per object is 16 for [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] or 8 for [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] or higher, and the default grid density is **Medium** for [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)].  
   
-     You can select GEOMETRY_AUTO_GRID or GEOGRAPHY_AUTO_GRID for tessellation scheme in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. When GEOMETRY_AUTO_GRID or GEOGRAPHY_AUTO_GRID is selected, then Level 1, Level 2, Level 3, and Level 4 grid density options are disabled.  
+     You can select GEOMETRY_AUTO_GRID or GEOGRAPHY_AUTO_GRID for tessellation scheme in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. When GEOMETRY_AUTO_GRID or GEOGRAPHY_AUTO_GRID is selected, then Level 1, Level 2, Level 3, and Level 4 grid density options are disabled.  
   
      For more information about these properties, see [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).  
   
@@ -147,7 +147,7 @@ manager: "jhubbard"
  An index build can use available process parallelism.  
   
 ### Version Restrictions  
- Spatial tessellations introduced in [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] cannot be replicated to [!INCLUDE[ssKilimanjaro](../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)]. You must use [!INCLUDE[ssKilimanjaro](../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] spatial tessellations for spatial indexes when backward compatibility with [!INCLUDE[ssKilimanjaro](../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] databases is a requirement.  
+ Spatial tessellations introduced in [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] cannot be replicated to [!INCLUDE[ssKilimanjaro](../../a9notintoc/includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)]. You must use [!INCLUDE[ssKilimanjaro](../../a9notintoc/includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] spatial tessellations for spatial indexes when backward compatibility with [!INCLUDE[ssKilimanjaro](../../a9notintoc/includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] databases is a requirement.  
   
   
 ## See Also  

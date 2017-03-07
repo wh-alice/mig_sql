@@ -31,11 +31,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # DBCC CHECKALLOC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Checks the consistency of disk space allocation structures for a specified database.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -118,7 +118,7 @@ DBCC CHECKALLOC
 >  Running DBCC CHECKALLOC against tempdb does not perform any checks. This is because, for performance reasons, database snapshots are not available on tempdb. This means that the required transactional consistency cannot be obtained. Stop and start the MSSQLSERVER service to resolve any tempdb allocation issues. This action drops and re-creates the tempdb database.  
   
 ## Understanding DBCC Error Messages  
- After the DBCC CHECKALLOC command finishes, a message is written to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log. If the DBCC command successfully executes, the message indicates a successful completion and the amount of time that the command ran. If the DBCC command stops before completing the check because of an error, the message indicates the command was terminated, a state value, and the amount of time the command ran. The following table lists and describes the state values that can be included in the message.  
+ After the DBCC CHECKALLOC command finishes, a message is written to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error log. If the DBCC command successfully executes, the message indicates a successful completion and the amount of time that the command ran. If the DBCC command stops before completing the check because of an error, the message indicates the command was terminated, a state value, and the amount of time the command ran. The following table lists and describes the state values that can be included in the message.  
   
 |State|Description|  
 |-----------|-----------------|  
@@ -130,9 +130,9 @@ DBCC CHECKALLOC
 |5|An unknown error occurred that terminated the DBCC command.|  
   
 ## Error Reporting  
- A mini-dump file (SQLDUMP*nnnn*.txt) is created in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] LOG directory whenever DBCC CHECKALLOC detects a corruption error. When the Feature Usage data collection and Error Reporting features are enabled for the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the file is automatically forwarded to [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)]. The collected data is used to improve [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] functionality.  
+ A mini-dump file (SQLDUMP*nnnn*.txt) is created in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] LOG directory whenever DBCC CHECKALLOC detects a corruption error. When the Feature Usage data collection and Error Reporting features are enabled for the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], the file is automatically forwarded to [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)]. The collected data is used to improve [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] functionality.  
   
- The dump file contains the results of the DBCC CHECKALLOC command and additional diagnostic output. The file has restricted discretionary access-control lists (DACLs). Access is limited to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service account and members of the sysadmin role. By default, the sysadmin role contains all members of the Windows BUILTIN\Administrators group and the local administrator's group. The DBCC command does not fail if the data collection process fails.  
+ The dump file contains the results of the DBCC CHECKALLOC command and additional diagnostic output. The file has restricted discretionary access-control lists (DACLs). Access is limited to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service account and members of the sysadmin role. By default, the sysadmin role contains all members of the Windows BUILTIN\Administrators group and the local administrator's group. The DBCC command does not fail if the data collection process fails.  
   
 ## Resolving Errors  
  If DBCC CHECKALLOC reports any errors, we recommend that you restore the database from the database backup instead of running a repair. If a backup does not exist, running a repair can correct the reported errors; however, correcting the errors might require some pages, and therefore data, to be deleted.  

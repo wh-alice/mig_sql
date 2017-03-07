@@ -22,14 +22,14 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SCM Services - Configure Server Startup Options
-  This topic describes how to to configure startup options that will be used every time the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] starts in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager. For a list of startup options, see [Database Engine Service Startup Options](../../../database-engine/configure/windows/database-engine-service-startup-options.md).  
+  This topic describes how to to configure startup options that will be used every time the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] starts in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager. For a list of startup options, see [Database Engine Service Startup Options](../../../database-engine/configure/windows/database-engine-service-startup-options.md).  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ### Limitations and Restrictions  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager writes startup parameters to the registry. They take effect upon the next startup of the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager writes startup parameters to the registry. They take effect upon the next startup of the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
- On a cluster, changes must be made on the active server when [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is online, and will take effect when the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] is restarted. The registry update of the startup options on the other node will occur upon the next failover.  
+ On a cluster, changes must be made on the active server when [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is online, and will take effect when the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] is restarted. The registry update of the startup options on the other node will occur upon the next failover.  
   
 ###  <a name="Security"></a> Security  
   
@@ -38,36 +38,36 @@ manager: "jhubbard"
   
 -   Members of the local administrators group.  
   
--   The domain account that is used by [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], if the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] is configured to run under a domain account.  
+-   The domain account that is used by [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], if the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] is configured to run under a domain account.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Configuration Manager  
   
 #### To configure startup options  
   
-1.  Click the **Start** button, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../../analysis-services/instances/install/windows/includes/sscurrentui-md.md)], point to **Configuration Tools**, and then click **SQL Server Configuration Manager**.  
+1.  Click the **Start** button, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../../a9notintoc/includes/sscurrentui-md.md)], point to **Configuration Tools**, and then click **SQL Server Configuration Manager**.  
   
     > [!NOTE]  
-    >  Because [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager is a snap-in for the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Management Console program and not a stand-alone program, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager does not appear as an application in newer versions of Windows.  
+    >  Because [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager is a snap-in for the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Management Console program and not a stand-alone program, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager does not appear as an application in newer versions of Windows.  
     >   
     >  -   **Windows 10**:  
-    >          To open [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager, on the **Start Page**, type SQLServerManager13.msc (for [!INCLUDE[ssSQL15](../../../analysis-services/powershell/includes/sssql15-md.md)]). For previous versions of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] replace 13 with a smaller number. Clicking SQLServerManager13.msc opens the Configuration Manager. To pin the Configuration Manager to the Start Page or Task Bar, right-click SQLServerManager13.msc, and then click **Open file location**. In the Windows File Explorer, right-click SQLServerManager13.msc, and then click **Pin to Start** or **Pin to taskbar**.  
+    >          To open [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager, on the **Start Page**, type SQLServerManager13.msc (for [!INCLUDE[ssSQL15](../../../a9notintoc/includes/sssql15-md.md)]). For previous versions of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] replace 13 with a smaller number. Clicking SQLServerManager13.msc opens the Configuration Manager. To pin the Configuration Manager to the Start Page or Task Bar, right-click SQLServerManager13.msc, and then click **Open file location**. In the Windows File Explorer, right-click SQLServerManager13.msc, and then click **Pin to Start** or **Pin to taskbar**.  
     > -   **Windows 8**:  
-    >          To open [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager, in the **Search** charm, under **Apps**, type **SQLServerManager\<version>.msc** such as **SQLServerManager13.msc**, and then press **Enter**.  
+    >          To open [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager, in the **Search** charm, under **Apps**, type **SQLServerManager\<version>.msc** such as **SQLServerManager13.msc**, and then press **Enter**.  
   
-2.  In [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager, click **SQL Server Services**.  
+2.  In [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager, click **SQL Server Services**.  
   
 3.  In the right pane, right-click **SQL Server (***<instance_name>***)**, and then click **Properties**.  
   
 4.  On the **Startup Parameters** tab, in the **Specify a startup parameter** box, type the parameter, and then click **Add**.  
   
-     For example, to start in single-user mode, type **-m** in the **Specify a startup parameter** box and then click **Add**. (When you restart [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in single-user mode, stop the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent. Otherwise, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent might connect first and prevent you from connecting as a second user.)  
+     For example, to start in single-user mode, type **-m** in the **Specify a startup parameter** box and then click **Add**. (When you restart [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] in single-user mode, stop the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Agent. Otherwise, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Agent might connect first and prevent you from connecting as a second user.)  
   
-5.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
-6.  Restart the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+6.  Restart the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
     > [!WARNING]  
-    >  After you are finished using single-user mode, in the Startup Parameters box, select the **-m** parameter in the **Existing Parameters** box, and then click **Remove**. Restart the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] to restore [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to the typical multi-user mode.  
+    >  After you are finished using single-user mode, in the Startup Parameters box, select the **-m** parameter in the **Existing Parameters** box, and then click **Remove**. Restart the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] to restore [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] to the typical multi-user mode.  
   
 ## See Also  
  [Start SQL Server in Single-User Mode](../../../database-engine/configure/windows/start-sql-server-in-single-user-mode.md)   

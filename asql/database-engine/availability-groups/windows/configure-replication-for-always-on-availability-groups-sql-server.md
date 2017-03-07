@@ -18,9 +18,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Configure Replication for Always On Availability Groups (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Configuring [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] replication and Always On availability groups involves seven steps. Each step is described in more detail in the following sections.  
+  Configuring [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] replication and Always On availability groups involves seven steps. Each step is described in more detail in the following sections.  
   
 1.  [Configure the database publications and subscriptions.](#step1)  
   
@@ -63,10 +63,10 @@ manager: "jhubbard"
         @security_mode = 1;  
     ```  
   
-3.  Configure the remote publisher. If stored procedures are being used to configure the distributor, run **sp_adddistpublisher**. The *@security_mode* parameter is used to determine how the publisher validation stored procedure that is run from the replication agents, connects to the current primary. If set to 1 Windows authentication is used to connect to the current primary. If set to 0, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] authentication is used with the specified *@login* and *@password* values. The login and password specified must be valid at each secondary replica for the validation stored procedure to successfully connect to that replica.  
+3.  Configure the remote publisher. If stored procedures are being used to configure the distributor, run **sp_adddistpublisher**. The *@security_mode* parameter is used to determine how the publisher validation stored procedure that is run from the replication agents, connects to the current primary. If set to 1 Windows authentication is used to connect to the current primary. If set to 0, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] authentication is used with the specified *@login* and *@password* values. The login and password specified must be valid at each secondary replica for the validation stored procedure to successfully connect to that replica.  
   
     > [!NOTE]  
-    >  If any modified replication agents run on a computer other than the distributor, use of Windows authentication for the connection to the primary will require Kerberos authentication to be configured for the communication between the replica host computers. Use of a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login for the connection to the current primary will not require Kerberos authentication.  
+    >  If any modified replication agents run on a computer other than the distributor, use of Windows authentication for the connection to the primary will require Kerberos authentication to be configured for the communication between the replica host computers. Use of a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] login for the connection to the current primary will not require Kerberos authentication.  
   
     ```  
     USE master;  
@@ -79,7 +79,7 @@ manager: "jhubbard"
         @password = '**Strong password for publisher**';  
     ```  
   
- For more information, see [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
+ For more information, see [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
  **Configure the publisher at the original publisher**  
   
@@ -122,7 +122,7 @@ ALTER AVAILABILITY GROUP 'MyAG'
  For more information, see [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md).  
   
 ##  <a name="step3"></a> 3. Insure that all of the Secondary Replica Hosts are Configured for Replication  
- At each secondary replica host, verify that [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] has been configured to support replication. The following query can be run at each secondary replica host to determine whether replication is installed:  
+ At each secondary replica host, verify that [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] has been configured to support replication. The following query can be run at each secondary replica host to determine whether replication is installed:  
   
 ```  
 USE master;  
@@ -132,7 +132,7 @@ EXEC @installed = sys.sp_MS_replication_installed;
 SELECT @installed;  
 ```  
   
- If *@installed* is 0, replication must be added to the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] installation.  
+ If *@installed* is 0, replication must be added to the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] installation.  
   
 ##  <a name="step4"></a> 4. Configure the Secondary Replica Hosts as Replication Publishers  
  A secondary replica cannot act as a replication publisher or republisher but replication must be configured so that the secondary can take over after a failover. At the distributor, configure distribution for each secondary replica host. Specify the same distribution database and working directory as was specified when the original publisher was added to the distributor. If you are using stored procedures to configure distribution, use **sp_adddistpublisher** to associate the remote publishers with the distributor. If *@login* and *@password* were used for the original publisher, specify the same values for each when you add the secondary replica hosts as publishers.  
@@ -193,7 +193,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  Msg 21899, Level 11, State 1, Procedure **sp_hadr_verify_subscribers_at_publisher**, Line 109  
 >   
->  The query at the redirected publisher 'MyReplicaHostName' to determine whether there were sysserver entries for the subscribers of the original publisher 'MyOriginalPublisher' failed with error '976', error message 'Error 976, Level 14, State 1, Message: The target database, 'MyPublishedDB', is participating in an availability group and is currently not accessible for queries. Either data movement is suspended or the availability replica is not enabled for read access. To allow read-only access to this and other databases in the availability group, enable read access to one or more secondary availability replicas in the group.  For more information, see the **ALTER AVAILABILITY GROUP** statement in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Books Online.'.  
+>  The query at the redirected publisher 'MyReplicaHostName' to determine whether there were sysserver entries for the subscribers of the original publisher 'MyOriginalPublisher' failed with error '976', error message 'Error 976, Level 14, State 1, Message: The target database, 'MyPublishedDB', is participating in an availability group and is currently not accessible for queries. Either data movement is suspended or the availability replica is not enabled for read access. To allow read-only access to this and other databases in the availability group, enable read access to one or more secondary availability replicas in the group.  For more information, see the **ALTER AVAILABILITY GROUP** statement in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Books Online.'.  
 >   
 >  One or more publisher validation errors were encountered for replica host 'MyReplicaHostName'.  
   
@@ -207,7 +207,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Maintaining an Always On Publication Database &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Replication, Change Tracking, Change Data Capture, and Always On Availability Groups &#40;SQL Server&#41;](../Topic/Replication,%20Change%20Tracking,%20Change%20Data%20Capture,%20and%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md)  
+-   [Replication, Change Tracking, Change Data Capture, and Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
 -   [Administration &#40;Replication&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
   
@@ -221,9 +221,9 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Create an Availability Group &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)  
   
--   [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../Topic/Specify%20the%20Endpoint%20URL%20When%20Adding%20or%20Modifying%20an%20Availability%20Replica%20\(SQL%20Server\).md)  
+-   [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Create a Database Mirroring Endpoint for Always On Availability Groups &#40;SQL Server PowerShell&#41;](../Topic/Create%20a%20Database%20Mirroring%20Endpoint%20for%20Always%20On%20Availability%20Groups%20\(SQL%20Server%20PowerShell\).md)  
+-   [Create a Database Mirroring Endpoint for Always On Availability Groups &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
@@ -234,7 +234,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 -   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
 ## See Also  
- [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../Topic/Prerequisites,%20Restrictions,%20and%20Recommendations%20for%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md)   
+ [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Always On Availability Groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server Replication](../../../relational-databases/replication/sql-server-replication.md)  

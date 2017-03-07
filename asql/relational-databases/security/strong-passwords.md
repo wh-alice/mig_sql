@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 -   Is significantly different from previous passwords.  
   
- [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] passwords can contain up to 128 characters, including letters, symbols, and digits. Because logins, user names, roles, and passwords are frequently used in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements, certain symbols must be enclosed by double quotation marks (") or square brackets ([ ]). Use these delimiters in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements when the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login, user, role, or password has the following characteristics:  
+ [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] passwords can contain up to 128 characters, including letters, symbols, and digits. Because logins, user names, roles, and passwords are frequently used in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements, certain symbols must be enclosed by double quotation marks (") or square brackets ([ ]). Use these delimiters in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements when the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login, user, role, or password has the following characteristics:  
   
 -   Contains or starts with a space character.  
   

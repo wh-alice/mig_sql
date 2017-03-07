@@ -28,9 +28,9 @@ manager: "jhubbard"
 # ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Changes the properties of a full-text index in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Changes the properties of a full-text index in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -67,24 +67,24 @@ ALTER FULLTEXT INDEX ON table_name
  Is the name of the table or indexed view that contains the column or columns included in the full-text index. Specifying database and table owner names is optional.  
   
  ENABLE | DISABLE  
- Tells [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] whether to gather full-text index data for *table_name*. ENABLE activates the full-text index; DISABLE turns off the full-text index. The table will not support full-text queries while the index is disabled.  
+ Tells [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] whether to gather full-text index data for *table_name*. ENABLE activates the full-text index; DISABLE turns off the full-text index. The table will not support full-text queries while the index is disabled.  
   
  Disabling a full-text index allows you to turn off change tracking but keep the full-text index, which you can reactivate at any time using ENABLE. When the full-text index is disabled, the full-text index metadata remains in the system tables. If CHANGE_TRACKING is in the enabled state (automatic or manual update) when the full-text index is disabled, the state of the index freezes, any ongoing crawl stops, and new changes to the table data are not tracked or propagated to the index.  
   
  SET CHANGE_TRACKING {MANUAL | AUTO | OFF}  
- Specifies whether changes (updates, deletes, or inserts) made to table columns that are covered by the full-text index will be propagated by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to the full-text index. Data changes through WRITETEXT and UPDATETEXT are not reflected in the full-text index, and are not picked up with change tracking.  
+ Specifies whether changes (updates, deletes, or inserts) made to table columns that are covered by the full-text index will be propagated by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to the full-text index. Data changes through WRITETEXT and UPDATETEXT are not reflected in the full-text index, and are not picked up with change tracking.  
   
 > [!NOTE]  
 >  For information about the interaction of change tracking and WITH NO POPULATION, see "Remarks," later in this topic.  
   
  MANUAL  
- Specifies that the tracked changes will be propagated manually by calling the ALTER FULLTEXT INDEX … START UPDATE POPULATION [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement (*manual population*). You can use [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent to call this [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement periodically.  
+ Specifies that the tracked changes will be propagated manually by calling the ALTER FULLTEXT INDEX … START UPDATE POPULATION [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement (*manual population*). You can use [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent to call this [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement periodically.  
   
  AUTO  
  Specifies that the tracked changes will be propagated automatically as data is modified in the base table (*automatic population*). Although changes are propagated automatically, these changes might not be reflected immediately in the full-text index. AUTO is the default.  
   
  OFF  
- Specifies that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will not keep a list of changes to the indexed data.  
+ Specifies that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will not keep a list of changes to the indexed data.  
   
  ADD | DROP *column_name*  
  Specifies the columns to be added or deleted from a full-text index. The column or columns must be of type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**, or **varbinary(max)**.  
@@ -99,7 +99,7 @@ ALTER FULLTEXT INDEX ON table_name
  TYPE COLUMN *type_column_name*  
  Specifies the name of a table column, *type_column_name*, that is used to hold the document type for a **varbinary**, **varbinary(max)**, or **image** document. This column, known as the type column, contains a user-supplied file extension (.doc, .pdf, .xls, and so forth). The type column must be of type **char**, **nchar**, **varchar**, or **nvarchar**.  
   
- Specify TYPE COLUMN *type_column_name* only if *column_name* specifies a **varbinary**, **varbinary(max)** or **image** column, in which data is stored as binary data; otherwise, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns an error.  
+ Specify TYPE COLUMN *type_column_name* only if *column_name* specifies a **varbinary**, **varbinary(max)** or **image** column, in which data is stored as binary data; otherwise, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns an error.  
   
 > [!NOTE]  
 >  At indexing time, the Full-Text Engine uses the abbreviation in the type column of each table row to identify which full-text search filter to use for the document in *column_name*. The filter loads the document as a binary stream, removes the formatting information, and sends the text from the document to the word-breaker component. For more information, see [Configure and Manage Filters for Search](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
@@ -107,22 +107,22 @@ ALTER FULLTEXT INDEX ON table_name
  LANGUAGE *language_term*  
  Is the language of the data stored in **column_name**.  
   
- *language_term* is optional and can be specified as a string, integer, or hexadecimal value corresponding to the locale identifier (LCID) of a language. If *language_term* is specified, the language it represents will be applied to all elements of the search condition. If no value is specified, the default full-text language of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance is used.  
+ *language_term* is optional and can be specified as a string, integer, or hexadecimal value corresponding to the locale identifier (LCID) of a language. If *language_term* is specified, the language it represents will be applied to all elements of the search condition. If no value is specified, the default full-text language of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance is used.  
   
- Use the **sp_configure** stored procedure to access information about the default full-text language of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance.  
+ Use the **sp_configure** stored procedure to access information about the default full-text language of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance.  
   
  When specified as a string, *language_term* corresponds to the **alias** column value in the **syslanguages** system table. The string must be enclosed in single quotation marks, as in '*language_term*'. When specified as an integer, *language_term* is the actual LCID that identifies the language. When specified as a hexadecimal value, *language_term* is 0x followed by the hex value of the LCID. The hex value must not exceed eight digits, including leading zeros.  
   
- If the value is in double-byte character set (DBCS) format, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will convert it to Unicode.  
+ If the value is in double-byte character set (DBCS) format, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will convert it to Unicode.  
   
- Resources, such as word breakers and stemmers, must be enabled for the language specified as *language_term*. If such resources do not support the specified language, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns an error.  
+ Resources, such as word breakers and stemmers, must be enabled for the language specified as *language_term*. If such resources do not support the specified language, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns an error.  
   
  For non-BLOB and non-XML columns containing text data in multiple languages, or for cases when the language of the text stored in the column is unknown, use the neutral (0x0) language resource. For documents stored in XML- or BLOB-type columns, the language encoding within the document will be used at indexing time. For example, in XML columns, the xml:lang attribute in XML documents will identify the language. At query time, the value previously specified in *language_term* becomes the default language used for full-text queries unless *language_term* is specified as part of a full-text query.  
   
  STATISTICAL_SEMANTICS  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Creates the additional key phrase and document similarity indexes that are part of statistical semantic indexing. For more information, see [Semantic Search &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -132,9 +132,9 @@ ALTER FULLTEXT INDEX ON table_name
  WITH NO POPULATION  
  Specifies that the full-text index will not be populated after an ADD or DROP column operation or a SET STOPLIST operation. The index will only be populated if the user executes a START...POPULATION command.  
   
- When NO POPULATION is specified, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not populate an index. The index is populated only after the user gives an ALTER FULLTEXT INDEX...START POPULATION command. When NO POPULATION is not specified, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] populates the index.  
+ When NO POPULATION is specified, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not populate an index. The index is populated only after the user gives an ALTER FULLTEXT INDEX...START POPULATION command. When NO POPULATION is not specified, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] populates the index.  
   
- If CHANGE_TRACKING is enabled and WITH NO POPULATION is specified, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns an error. If CHANGE_TRACKING is enabled and WITH NO POPULATION is not specified, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] performs a full population on the index.  
+ If CHANGE_TRACKING is enabled and WITH NO POPULATION is specified, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns an error. If CHANGE_TRACKING is enabled and WITH NO POPULATION is not specified, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] performs a full population on the index.  
   
 > [!NOTE]  
 >  For more information about the interaction of change tracking and WITH NO POPULATION, see "Remarks," later in this topic.  
@@ -142,12 +142,12 @@ ALTER FULLTEXT INDEX ON table_name
  {ADD | DROP } STATISTICAL_SEMANTICS  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Enables or disables statistical semantic indexing for the specified columns. For more information, see [Semantic Search &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
  START {FULL|INCREMENTAL|UPDATE} POPULATION  
- Tells [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to begin population of the full-text index of *table_name*. If a full-text index population is already in progress, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns a warning and does not start a new population.  
+ Tells [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to begin population of the full-text index of *table_name*. If a full-text index population is already in progress, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns a warning and does not start a new population.  
   
  FULL  
  Specifies that every row of the table be retrieved for full-text indexing even if the rows have already been indexed.  
@@ -182,7 +182,7 @@ ALTER FULLTEXT INDEX ON table_name
  SET SEARCH PROPERTY LIST { OFF | *property_list_name* } [ WITH NO POPULATION ]  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Changes the search property list that is associated with the index, if any.  
   
@@ -204,7 +204,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  **To find the search property lists on the current database**  
   
--   [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys.registered-search-property-lists-transact-sql.md)  
+-   [sys.registered_search_property_lists](../../relational-databases/reference/system-catalog-views/sys.registered-search-property-lists-transact-sql.md)  
   
  For more information about search property lists, see [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
@@ -295,7 +295,7 @@ ALTER FULLTEXT INDEX ON table_name
  If SET STOPLIST is specified, the user must have REFERENCES permission on the stoplist. If SET SEARCH PROPERTY LIST is specified, the user must have REFERENCES permission on the search property list. The owner of the specified stoplist or search property list can grant REFERENCES permission, if the owner has  ALTER FULLTEXT CATALOG permissions.  
   
 > [!NOTE]  
->  The public is granted REFERENCES permission to the default stoplist that is shipped with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+>  The public is granted REFERENCES permission to the default stoplist that is shipped with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## Examples  
   
@@ -314,7 +314,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  The following example associates the `DocumentPropertyList` property list with the full-text index on the `Production.Document` table. This ALTER FULLTEXT INDEX statement starts a full population, which is the default behavior of the SET SEARCH PROPERTY LIST clause.  
   
@@ -333,7 +333,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  The following example removes the `DocumentPropertyList` property list from the full-text index on the `Production.Document`. In this example, there is no hurry for removing the properties from the index, so the WITH NO POPULATION option is specified. However, property-level searching is longer allowed against this full-text index.  
   
@@ -357,7 +357,7 @@ GO
 ```  
   
 ## See Also  
- [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-indexes-transact-sql.md)   
+ [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-indexes-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
  [Full-Text Search](../../relational-databases/search/full-text-search.md)   

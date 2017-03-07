@@ -17,11 +17,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 1-6 - Select the Keyboard Shortcut Scheme
-Instead of the standard [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] keyboard scheme, you can configure [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to use a keyboard scheme compatible with [!INCLUDE[vs_dev10_long](../../../reporting-services/includes/vs-dev10-long-md.md)].  
+Instead of the standard [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] keyboard scheme, you can configure [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] to use a keyboard scheme compatible with [!INCLUDE[vs_dev10_long](../../../a9retired/includes/vs-dev10-long-md.md)].  
   
-## Changing to the [!INCLUDE[vs_dev10_long](../../../reporting-services/includes/vs-dev10-long-md.md)] Keyboard Scheme  
+## Changing to the [!INCLUDE[vs_dev10_long](../../../a9retired/includes/vs-dev10-long-md.md)] Keyboard Scheme  
   
-#### To apply [!INCLUDE[vs_dev10_long](../../../reporting-services/includes/vs-dev10-long-md.md)] compatible keyboard scheme  
+#### To apply [!INCLUDE[vs_dev10_long](../../../a9retired/includes/vs-dev10-long-md.md)] compatible keyboard scheme  
   
 1.  On the **Tools** menu, click **Options**.  
   
@@ -32,7 +32,7 @@ Instead of the standard [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r
 4.  Click **OK** if you want to use the new keyboard scheme, otherwise click **Cancel**.  
   
 ## Next Task in Lesson  
-[Set the Startup Options](../Topic/Set%20the%20Startup%20Options.md)  
+[Set the Startup Options](../../../tools/sql-server-management-studio/tutorials/lesson-1-7-set-the-startup-options.md)  
   
 ## See Also  
 [SQL Server Management Studio Keyboard Shortcuts](../../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  

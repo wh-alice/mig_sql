@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # DrilldownLevel (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Drills down the members of a set to one level below the lowest level represented in the set.  
   
@@ -57,7 +57,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  If neither a level expression nor an index value is specified, the function constructs a set in a hierarchical order by retrieving the children of only those members that are at the lowest level of the first dimension referenced in the specified set.  
   
- Querying the XMLA property MdpropMdxDrillFunctions enables you to verify the level of support that the server provides for the drilling functions; see [Supported XMLA Properties &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md) for details.  
+ Querying the XMLA property MdpropMdxDrillFunctions enables you to verify the level of support that the server provides for the drilling functions; see [Supported XMLA Properties &#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) for details.  
   
 ## Examples  
  You can try the following examples in the MDX query window in SSMS, using the Adventure Works cube.  

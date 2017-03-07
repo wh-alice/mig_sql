@@ -18,19 +18,19 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Best Practice with the Query Store
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   This topic outlines the best practices for using the Query Store with your workload.  
   
 ##  <a name="SSMS"></a> Use the Latest SQL Server Management Studio  
- [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] has set of user interfaces designed for configuring Query Store as well as for consuming collected data about your workload.  
-Download the latest version of [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] from : [https://msdn.microsoft.com/library/mt238290.aspx](https://msdn.microsoft.com/library/mt238290.aspx)  
+ [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] has set of user interfaces designed for configuring Query Store as well as for consuming collected data about your workload.  
+Download the latest version of [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] from : [https://msdn.microsoft.com/library/mt238290.aspx](https://msdn.microsoft.com/library/mt238290.aspx)  
   
  For a quick description on how to use Query Store in troubleshooting scenarios refer to [Query Store @Azure Blogs](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
 ##  <a name="Insight"></a> Use Query Performance Insight in Azure SQL Database  
- If you run Query Store in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] you can use **Query Performance Insight** to analyze DTU consumption over time.  
-While you can use [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] to get detailed resource consumption for all your queries (CPU, memory, IO, etc.), Query Performance Insight gives you a quick and efficient way to determine their impact on overall DTU consumption for your database.  
+ If you run Query Store in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] you can use **Query Performance Insight** to analyze DTU consumption over time.  
+While you can use [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] to get detailed resource consumption for all your queries (CPU, memory, IO, etc.), Query Performance Insight gives you a quick and efficient way to determine their impact on overall DTU consumption for your database.  
 For more information, see [Azure SQL Database Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).    
 
 ##  Using Query Store with Elastic Pool Databases
@@ -47,7 +47,7 @@ The default parameters are good for a quick start but you should monitor how Que
   
  While Query Store collects queries, execution plans and statistics, its size in the database grows until this limit is reached. When that happens, Query Store automatically changes the operation mode to read-only and stops collecting new data, which means that your performance analysis is no longer accurate.  
   
- The default value (100 MB) may not be sufficient if your workload generates large number of different queries and plans or if you want to keep query history for a longer period of time. Keep track of current space usage and increase the Max Size (MB) to prevent Query Store from transitioning to read-only mode.  Use [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] or execute the following script to get the latest information about Query Store size:  
+ The default value (100 MB) may not be sufficient if your workload generates large number of different queries and plans or if you want to keep query history for a longer period of time. Keep track of current space usage and increase the Max Size (MB) to prevent Query Store from transitioning to read-only mode.  Use [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] or execute the following script to get the latest information about Query Store size:  
   
 ```  
 USE [QueryStoreDB];  
@@ -74,7 +74,7 @@ ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);
  **Stale Query Threshold (Days):** Time-based cleanup policy that controls the retention period of persisted runtime statistics and inactive queries.  
 By default, Query Store is configured to keep the data for 30 days which may be unnecessarily long for your scenario.  
   
- Avoid keeping historical data that you do not plan to use. This will reduce changes to read-only status. The size of Query Store data as well as the time to detect and mitigate the issue will be more predictable. Use [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] or the following script to configure time-based cleanup policy:  
+ Avoid keeping historical data that you do not plan to use. This will reduce changes to read-only status. The size of Query Store data as well as the time to detect and mitigate the issue will be more predictable. Use [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] or the following script to configure time-based cleanup policy:  
   
 ```  
 ALTER DATABASE [QueryStoreDB]   
@@ -110,15 +110,15 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  ![query-store-troubleshooting](../../relational-databases/performance/media/query-store-troubleshooting.png "query-store-troubleshooting")  
   
- Enable Query Store by using [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] as described in the previous section, or execute the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement:  
+ Enable Query Store by using [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] as described in the previous section, or execute the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement:  
   
 ```  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
  It will take some time until Query Store collects the data set that accurately represents your workload. Usually, one day is enough even for very complex workloads. However, you can start exploring the data and identify queries that need your attention immediately after you enabled the feature.   
-Navigate to the Query Store sub-folder under the database node in Object Explorer of [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] to open troubleshooting views for specific scenarios.   
-[!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] Query Store views operate with the set of execution metrics, each expressed as any of the following statistic functions:  
+Navigate to the Query Store sub-folder under the database node in Object Explorer of [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] to open troubleshooting views for specific scenarios.   
+[!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] Query Store views operate with the set of execution metrics, each expressed as any of the following statistic functions:  
   
 |Execution metric|Statistic function|  
 |----------------------|------------------------|  
@@ -138,11 +138,11 @@ Navigate to the Query Store sub-folder under the database node in Object Explore
 |Overall Resource Consumption|Analyze the total resource consumption for the database for any of the execution metrics.<br />Use this view to identify resource patterns (daily vs. nightly workloads) and optimize overall consumption for your database.|  
   
 > [!TIP]  
->  For a detailed description how to use [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] to identify the top resource consuming queries and fix those that regressed due to the change of a plan choice, see [Query Store @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
+>  For a detailed description how to use [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] to identify the top resource consuming queries and fix those that regressed due to the change of a plan choice, see [Query Store @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
  When you identify a query with sub-optimal performance, your action depends on the nature of the  problem.  
   
--   If the query was executed with multiple plans and the last plan is significantly worse than previous plan, you can use the plan forcing mechanism to force [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to always use the optimal plan for future executions.  
+-   If the query was executed with multiple plans and the last plan is significantly worse than previous plan, you can use the plan forcing mechanism to force [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to always use the optimal plan for future executions.  
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
   
@@ -150,7 +150,7 @@ Navigate to the Query Store sub-folder under the database node in Object Explore
   
      ![query-store-show-plan](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")  
   
-     If you run your workload on [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)], sign up for [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] Index Advisor to automatically receive index recommendations.  
+     If you run your workload on [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)], sign up for [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] Index Advisor to automatically receive index recommendations.  
   
 -   In some cases you may enforce statistic recompilation if you see that the difference between the estimated and the actual number of rows in the execution plan is significant.  
   
@@ -172,7 +172,7 @@ FROM sys.database_query_store_options;
   
  The difference between the `actual_state_desc` and `desired_state_desc` indicates that a change of operations mode occurred automatically. The most common change is for the Query Store to silently switch to read-only mode. In extremely rarely circumstances, Query Store can end up in the ERROR state because of internal errors.  
   
- When the actual state is read-only, use the **readonly_reason** column to determine the root cause. Typically you will find that Query Store transitioned to read-only mode because the size quota was exceeded. In that case the **readonly_reason** is set to 65536. For other reasons, see [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-query-store-options-transact-sql.md).  
+ When the actual state is read-only, use the **readonly_reason** column to determine the root cause. Typically you will find that Query Store transitioned to read-only mode because the size quota was exceeded. In that case the **readonly_reason** is set to 65536. For other reasons, see [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-query-store-options-transact-sql.md).  
   
  Consider the following steps to switch Query Store to read-write mode and activate data collection:  
   
@@ -276,7 +276,7 @@ As a result, performance of your workload will be sub-optimal and Query Store mi
  Query Store associates query entry with a containing object (stored procedure, function, and trigger).  When you recreate a containing object, a new query entry will be generated for the same query text. This will prevent you from tracking performance statistics for that query over time and use plan forcing mechanism. To avoid this, use the `ALTER <object>` process to change a containing object definition whenever it is possible.  
   
 ##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
- Plan forcing is a convenient mechanism to fix performance for the critical queries and make them more predictable. However, as with plan hints and plan guides, forcing a plan is not a guarantee that it will be used in future executions. Typically, when database schema changes in a way that objects referenced by the execution plan are altered or dropped, plan forcing will start failing. In that case [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] falls back to query recompilation while the actual forcing failure reason is surfaced in [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.query-store-plan-transact-sql.md). The following query returns information about forced plans:  
+ Plan forcing is a convenient mechanism to fix performance for the critical queries and make them more predictable. However, as with plan hints and plan guides, forcing a plan is not a guarantee that it will be used in future executions. Typically, when database schema changes in a way that objects referenced by the execution plan are altered or dropped, plan forcing will start failing. In that case [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] falls back to query recompilation while the actual forcing failure reason is surfaced in [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.query-store-plan-transact-sql.md). The following query returns information about forced plans:  
   
 ```  
 USE [QueryStoreDB];  
@@ -289,15 +289,15 @@ JOIN sys.query_store_query AS q on p.query_id = q.query_id
 WHERE is_forced_plan = 1;  
 ```  
   
- For full list of reasons, refer to [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.query-store-plan-transact-sql.md). You can also use the **query_store_plan_forcing_failed** XEvent to track troubleshoot plan forcing failures.  
+ For full list of reasons, refer to [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.query-store-plan-transact-sql.md). You can also use the **query_store_plan_forcing_failed** XEvent to track troubleshoot plan forcing failures.  
   
 ##  <a name="Renaming"></a> Avoid Renaming Databases if you have Queries with Forced Plans  
  Execution plans reference objects using three-part names (`database.schema.object`).   
 If you rename a database, plan forcing will fail which will cause recompilation in all subsequent query executions.  
   
 ## See Also  
- [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/query-store-catalog-views-transact-sql.md)   
+ [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Using the Query Store with In-Memory OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   

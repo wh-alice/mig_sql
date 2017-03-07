@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Database Dimensions - Finance Account of parent-child type
-  In [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], an account type dimension is a dimension whose attributes represent a chart of accounts for financial reporting purposes.  
+  In [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], an account type dimension is a dimension whose attributes represent a chart of accounts for financial reporting purposes.  
   
  An account dimension lets you selectively manage aggregation behavior across accounts over time. An account dimension also lets use a standard mechanism to resolve most of the nonstandard aggregation issues typically encountered in business intelligence solutions that handle financial data. If you did not have such a standard mechanism, resolving these nonstandard aggregation issues would require custom rollup formulas, calculated members, or Multidimensional Expressions (MDX) scripts.  
   
@@ -39,7 +39,7 @@ manager: "erikre"
   
  Account dimensions can optionally contain the following attributes:  
   
--   An account type attribute—an attribute that defines the account type for each account in the dimension. The member names of the account type attribute map to the account types defined for the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] database or project, and indicate the aggregation function used by [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] for those accounts. You can also use unary operators or custom rollup formulas to determine aggregation behavior for account attributes, but account types let you to easily apply consistent behavior to a chart of accounts without requiring changes to the underlying relational database.  
+-   An account type attribute—an attribute that defines the account type for each account in the dimension. The member names of the account type attribute map to the account types defined for the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] database or project, and indicate the aggregation function used by [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] for those accounts. You can also use unary operators or custom rollup formulas to determine aggregation behavior for account attributes, but account types let you to easily apply consistent behavior to a chart of accounts without requiring changes to the underlying relational database.  
   
      To identify an account type attribute, set the **Type** property of the attribute to **AccountType**.  
   
@@ -47,14 +47,14 @@ manager: "erikre"
   
 -   An account number attribute—an attribute that is used for reporting purposes. You identify an account number attribute by setting the **Type** property of the attribute to **AccountNumber**.  
   
- For more information about attribute types, see [Configure Attribute Types](../Topic/Configure%20Attribute%20Types.md).  
+ For more information about attribute types, see [Configure Attribute Types](../../analysis-services/multidimensional-models/attribute-properties-configure-attribute-types.md).  
   
 ## Adding Account Intelligence with the Business Intelligence Wizard  
- After you have defined an account dimension and added that dimension to a cube, you can use the Business Intelligence Wizard to adding account intelligence functionality, such as identifying and mapping account types, to the dimension. For more information, see [Add Account Intelligence to a Dimension](../Topic/Add%20Account%20Intelligence%20to%20a%20Dimension.md).  
+ After you have defined an account dimension and added that dimension to a cube, you can use the Business Intelligence Wizard to adding account intelligence functionality, such as identifying and mapping account types, to the dimension. For more information, see [Add Account Intelligence to a Dimension](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
 ## See Also  
  [Attributes and Attribute Hierarchies](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Business Intelligence Wizard F1 Help](../Topic/Business%20Intelligence%20Wizard%20F1%20Help.md)   
- [Dimension Types](../Topic/Dimension%20Types.md)  
+ [Business Intelligence Wizard F1 Help](../../a9retired/business-intelligence-wizard-f1-help.md)   
+ [Dimension Types](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

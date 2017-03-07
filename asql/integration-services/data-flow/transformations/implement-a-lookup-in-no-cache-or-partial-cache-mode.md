@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 ### To implement a Lookup transformation in no cache or partial cache mode  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want, and then open the package.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want, and then open the package.  
   
 2.  On the **Data Flow** tab, add a Lookup transformation.  
   

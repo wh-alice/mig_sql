@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Columnstore indexes - what&#39;s new
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../relational-databases/indexes/includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Summary of columnstore features available for each version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and the latest releases of Azure SQL Database Premium Edition, Azure SQL Data Warehouse, and Parallel Data Warehouse.  
+  Summary of columnstore features available for each version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], and the latest releases of Azure SQL Database Premium Edition, Azure SQL Data Warehouse, and Parallel Data Warehouse.  
 
  >[!NOTE]
  > For Azure SQL Database, columnstore indexes are only available in Premium Edition.
@@ -27,7 +27,7 @@ manager: "jhubbard"
  This table summarizes key features for columnstore indexes and the products in which they are available.  
 
   
-|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)]|[!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)] Premium Edition|[!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)]|  
+|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)]|[!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)] Premium Edition|[!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|  
 |Batch execution for multi-threaded queries|yes|yes|yes|yes|yes|  
 |Batch execution for single-threaded queries|||yes|yes|yes|  
@@ -48,8 +48,8 @@ manager: "jhubbard"
   
  *To create a readable nonclustered columnstore index, store the index on a read-only filegroup.  
   
-## [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)]  
- [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] adds key enhancements to improve the performance and flexibility of columnstore indexes. This enhances data warehousing scenarios and enables real-time operational analytics.  
+## [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)]  
+ [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] adds key enhancements to improve the performance and flexibility of columnstore indexes. This enhances data warehousing scenarios and enables real-time operational analytics.  
   
 ### Functional  
   
@@ -73,7 +73,7 @@ manager: "jhubbard"
   
 -   Columnstore indexes can be access on an AlwaysOn readable secondary replica. You can improve performance for operational analytics by offloading analytics queries to an AlwaysOn secondary replica.  
   
--   To improve performance, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computes the aggregate functions MIN, MAX, SUM, COUNT, AVG during table scans when the data type uses no more than eight bytes, and is not of a string type. Aggregate pushdown is supported with or  without Group By clause for both clustered columnstore indexes and nonclustered columnstore indexes.  
+-   To improve performance, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] computes the aggregate functions MIN, MAX, SUM, COUNT, AVG during table scans when the data type uses no more than eight bytes, and is not of a string type. Aggregate pushdown is supported with or  without Group By clause for both clustered columnstore indexes and nonclustered columnstore indexes.  
   
 -   Predicate pushdown speeds up queries that compare strings of type [v]char or n[v]char. This applies to the common comparison operators and includes operators such as LIKE that use bitmap filters. This works with all collations that SQL Server supports.  
   
@@ -98,33 +98,33 @@ manager: "jhubbard"
 ### Supportability  
  These system views are new for columnstore:  
   
--   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.column-store-row-groups-transact-sql.md)  
+-   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.column-store-row-groups-transact-sql.md)  
   
--   [sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-column-store-object-pool-transact-sql.md)  
+-   [sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-column-store-object-pool-transact-sql.md)  
   
--   [sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-column-store-row-group-operational-stats-transact-sql.md)  
+-   [sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-column-store-row-group-operational-stats-transact-sql.md)  
   
--   [sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-column-store-row-group-physical-stats-transact-sql.md)  
+-   [sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-column-store-row-group-physical-stats-transact-sql.md)  
   
--   [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-index-operational-stats-transact-sql.md)  
+-   [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-index-operational-stats-transact-sql.md)  
   
--   [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md)  
+-   [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md)  
   
--   [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.internal-partitions-transact-sql.md)  
+-   [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.internal-partitions-transact-sql.md)  
   
  These in-memory OLTP-based DMVs contain updates for columnstore:  
   
--   [sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-xtp-hash-index-stats-transact-sql.md)  
+-   [sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-xtp-hash-index-stats-transact-sql.md)  
   
--   [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-xtp-index-stats-transact-sql.md)  
+-   [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-xtp-index-stats-transact-sql.md)  
   
--   [sys.dm_db_xtp_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-xtp-memory-consumers-transact-sql.md)  
+-   [sys.dm_db_xtp_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-xtp-memory-consumers-transact-sql.md)  
   
--   [sys.dm_db_xtp_nonclustered_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-xtp-nonclustered-index-stats-transact-sql.md)  
+-   [sys.dm_db_xtp_nonclustered_index_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-xtp-nonclustered-index-stats-transact-sql.md)  
   
--   [sys.dm_db_xtp_object_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-xtp-object-stats-transact-sql.md)  
+-   [sys.dm_db_xtp_object_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-xtp-object-stats-transact-sql.md)  
   
--   [sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-xtp-table-memory-stats-transact-sql.md)  
+-   [sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-xtp-table-memory-stats-transact-sql.md)  
   
 ### Limitations  
   

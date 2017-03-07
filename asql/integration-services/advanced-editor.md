@@ -21,11 +21,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Advanced Editor
-  Use the **Advanced Editor** dialog box to configure to configure properties for the selected [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] object.  
+  Use the **Advanced Editor** dialog box to configure to configure properties for the selected [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] object.  
   
- The **Advanced Editor** is available for most [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] objects that have configurable properties. It is the only editor available for those objects that do not expose a custom user interface.  
+ The **Advanced Editor** is available for most [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] objects that have configurable properties. It is the only editor available for those objects that do not expose a custom user interface.  
   
- [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data flow objects have properties that can be set at the component level, the input and output level, and the input and output column level. The **Advanced Editor** enumerates all the common and custom properties of the selected object and displays them on up to four of the following five tabs as applicable:  
+ [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] data flow objects have properties that can be set at the component level, the input and output level, and the input and output column level. The **Advanced Editor** enumerates all the common and custom properties of the selected object and displays them on up to four of the following five tabs as applicable:  
   
 -   **Connection Managers** -- use this tab to set connection properties  
   
@@ -39,13 +39,13 @@ manager: "jhubbard"
   
  The properties displayed vary by component. For more information on the properties that may be displayed in the **Advanced Editor**, see the following topics:  
   
--   [Common Properties](../Topic/Common%20Properties.md)  
+-   [Common Properties](../a9retired/common-properties.md)  
   
 -   [Transformation Custom Properties](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [Path Properties](../Topic/Path%20Properties.md)  
+-   [Path Properties](../a9retired/path-properties.md)  
   
- For more information about the specific component that you are editing, see the description of the component in the Data Flow Elements section of the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] Objects and Concepts documentation:  
+ For more information about the specific component that you are editing, see the description of the component in the Data Flow Elements section of the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] Objects and Concepts documentation:  
   
 -   [Integration Services Transformations](../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

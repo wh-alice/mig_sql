@@ -15,17 +15,17 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Estimate Memory Requirements for Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 Memory-optimized tables require that sufficient memory exist to keep all of the rows and indexes in memory. Because memory is a finite resource, it is important that you understand and manage memory usage on your system. The topics in this section cover common memory use and management scenarios.
 
-Whether you are creating a new memory-optimized table or migrating an existing disk-based table to an [!INCLUDE[hek_2](../../relational-databases/in-memory-oltp/includes/hek-2-md.md)] memory-optimized table, it is important to have a reasonable estimate of each table’s memory needs so you can provision the server with sufficient memory. This section describes how to estimate the amount of memory that you need to hold data for a memory-optimized table.  
+Whether you are creating a new memory-optimized table or migrating an existing disk-based table to an [!INCLUDE[hek_2](../../a9retired/includes/hek-2-md.md)] memory-optimized table, it is important to have a reasonable estimate of each table’s memory needs so you can provision the server with sufficient memory. This section describes how to estimate the amount of memory that you need to hold data for a memory-optimized table.  
   
 If you are contemplating migrating from disk-based tables to memory-optimized tables, before you proceed in this topic, see the topic [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) for guidance on which tables are best to migrate. All the topics under [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) provide guidance on migrating from disk-based to memory-optimized tables. 
   
 ## Basic Guidance for Estimating Memory Requirements
 
-Starting with [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)], there is no limit on the size of memory-optimized tables, though the tables do need to fit in memory.  In [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] the supported data size is 256GB for SCHEMA_AND_DATA tables.
+Starting with [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)], there is no limit on the size of memory-optimized tables, though the tables do need to fit in memory.  In [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] the supported data size is 256GB for SCHEMA_AND_DATA tables.
 
 The size of a memory-optimized table corresponds to the size of data plus some overhead for row headers. When migrating a disk-based table to memory-optimized, the size of the memory-optimized table will roughly correspond to the size of the clustered index or heap of the original disk-based table.
 
@@ -128,7 +128,7 @@ SELECT COUNT(DISTINCT [Col2])
   
 If you are creating a new table, you’ll need to estimate the array size or gather data from your testing prior to deployment.  
   
-For information on how hash indexes work in [!INCLUDE[hek_2](../../relational-databases/in-memory-oltp/includes/hek-2-md.md)] memory-optimized tables, see [Hash Indexes](../Topic/Hash%20Indexes.md).  
+For information on how hash indexes work in [!INCLUDE[hek_2](../../a9retired/includes/hek-2-md.md)] memory-optimized tables, see [Hash Indexes](../../a9retired/hash-indexes.md).  
   
 #### Setting the hash index array size  
   

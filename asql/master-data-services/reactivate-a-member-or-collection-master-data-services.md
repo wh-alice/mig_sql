@@ -22,13 +22,13 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Reactivate a Member or Collection (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], you can reactivate a member that was either:  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], you can reactivate a member that was either:  
   
 -   Deactivated by the staging process.  
   
--   Deleted in the MDS [!INCLUDE[ssMDSXLS](../analysis-services/includes/ssmdsxls-md.md)].  
+-   Deleted in the MDS [!INCLUDE[ssMDSXLS](../a9notintoc/includes/ssmdsxls-md.md)].  
   
--   Deleted in the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] web application.  
+-   Deleted in the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] web application.  
   
  When you reactivate a member, its attributes and its membership in hierarchies and collections are restored.  
   
@@ -39,13 +39,13 @@ manager: "jhubbard"
 ## Prerequisites  
  To perform this procedure:  
   
--   In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], you must have permission to the **Version Management** functional area.  
+-   In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], you must have permission to the **Version Management** functional area.  
   
 -   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### To reactivate a member or collection  
   
-1.  On the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] home page, click **Version Management**.  
+1.  On the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] home page, click **Version Management**.  
   
 2.  On the menu bar, click **Transactions**.  
   

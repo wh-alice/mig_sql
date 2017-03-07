@@ -32,9 +32,9 @@ manager: "jhubbard"
 # UPDATE() (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns a Boolean value that indicates whether an INSERT or UPDATE attempt was made on a specified column of a table or view. UPDATE() is used anywhere inside the body of a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] INSERT or UPDATE trigger to test whether the trigger should execute certain actions.  
+  Returns a Boolean value that indicates whether an INSERT or UPDATE attempt was made on a specified column of a table or view. UPDATE() is used anywhere inside the body of a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] INSERT or UPDATE trigger to test whether the trigger should execute certain actions.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -45,7 +45,7 @@ UPDATE ( column )
   
 ## Arguments  
  *column*  
- Is the name of the column to test for either an INSERT or UPDATE action. Because the table name is specified in the ON clause of the trigger, do not include the table name before the column name. The column can be of any [data type](../../t-sql/data-types/data-types-transact-sql.md) supported by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. However, computed columns cannot be used in this context.  
+ Is the name of the column to test for either an INSERT or UPDATE action. Because the table name is specified in the ON clause of the trigger, do not include the table name before the column name. The column can be of any [data type](../../t-sql/data-types/data-types-transact-sql.md) supported by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. However, computed columns cannot be used in this context.  
   
 ## Return Types  
  Boolean  
@@ -60,7 +60,7 @@ UPDATE ( column )
 > [!NOTE]  
 >  The IF UPDATE(*colum*n) clause functions the same as an IF, IF...ELSE, or WHILE clause and can use the BEGIN...END block. For more information, see [Control-of-Flow Language &#40;Transact-SQL&#41;](../Topic/Control-of-Flow%20Language%20\(Transact-SQL\).md).  
   
- UPDATE(*column*) can be used anywhere inside the body of a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] trigger.  
+ UPDATE(*column*) can be used anywhere inside the body of a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] trigger.  
   
 ## Examples  
  The following example creates a trigger that prints a message to the client when anyone tries to update the `StateProvinceID` or `PostalCode` columns of the `Address` table.  

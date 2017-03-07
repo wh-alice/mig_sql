@@ -38,7 +38,7 @@ manager: "erikre"
 -   [CaptureLog class and CaptureXML attribute](#CL)  
   
 ##  <a name="Assembly"></a> Assembly Class  
- Assemblies let users extend the functionality of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] by adding new stored procedures or Multidimensional Expressions (MDX) functions. For more information, see [AMO Other Classes and Methods](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md).  
+ Assemblies let users extend the functionality of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] by adding new stored procedures or Multidimensional Expressions (MDX) functions. For more information, see [AMO Other Classes and Methods](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md).  
   
  Adding and dropping assemblies is simple and can be performed online. You must be a database administrator to add an assembly to the database or a server administrator to add the assembly to the server object.  
   
@@ -74,7 +74,7 @@ static public void CreateStoredProcedures(Database db)
 ##  <a name="BU"></a> Backup and Restore Methods  
  The Backup and Restore methods let administrators back up databases and restore them.  
   
- The following sample creates backups for all databases in the specified server. If a backup file already exists, then it is overwritten. Backup files are saved in the BackUp folder in the [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] Data folder.  
+ The following sample creates backups for all databases in the specified server. If a backup file already exists, then it is overwritten. Backup files are saved in the BackUp folder in the [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] Data folder.  
   
 ```  
 static public void BackUpAllDatabases(Server svr)  
@@ -167,7 +167,7 @@ static public void DefaultTrace_Stopped(ITrace sender, TraceStoppedEventArgs e)
   
 4.  Drop the trace when no longer needed.  
   
- In the following sample, if the trace already exists, it is dropped and then recreated. Trace files are saved in the Log folder of [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] data folders.  
+ In the following sample, if the trace already exists, it is dropped and then recreated. Trace files are saved in the Log folder of [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] data folders.  
   
 ```  
 static public void TestServerTraces(Server svr)  
@@ -277,9 +277,9 @@ static public string TestCaptureLog(Server svr)
   
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
- [Introducing AMO Classes](../Topic/Introducing%20AMO%20Classes.md)   
+ [Introducing AMO Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO Other Classes and Methods](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)   
- [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../Topic/Logical%20Architecture%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
+ [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Processing a multidimensional model &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   

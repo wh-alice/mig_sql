@@ -18,7 +18,7 @@ manager: "jhubbard"
   To view and manage all the open breakpoints, you can use the **Breakpoints** window. Use the window to view breakpoint information and to take actions such as deleting, disabling, or enabling breakpoints.  
   
 ## The Breakpoints Window  
- The **Breakpoints** window lists information such as which line of code the breakpoint is located on. In the **Breakpoints** window, you can also delete, disable, and enable breakpoints. For more information about the **Breakpoints** window, see [Breakpoints Window](../Topic/Breakpoints%20Window.md)  
+ The **Breakpoints** window lists information such as which line of code the breakpoint is located on. In the **Breakpoints** window, you can also delete, disable, and enable breakpoints. For more information about the **Breakpoints** window, see [Breakpoints Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)  
   
  Disabling a breakpoint prevents it from pausing execution, but leaves the definition in place in case you want to enable the breakpoint later. Deleting a breakpoint removes it permanently. You must toggle a new breakpoint to pause execution on the statement.  
   

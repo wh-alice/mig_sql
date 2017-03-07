@@ -46,7 +46,7 @@ Failover Clustering comes with a built-in safeguard to prevent accidental downti
   
 4.  To view help topics that will help you interpret the results, click **More about cluster validation tests**.  
   
- To view help topics about cluster validation after you close the wizard, in the Failover Cluster snap-in, click **Help**, click **Help Topics**, click the **Contents** tab, expand the contents for the failover cluster help, and click **Validating a Failover Cluster Configuration**.  After the validation wizard has completed, the **Summary Report** will display the results. All tests must pass with either a green check mark or in some cases a yellow triangle (warning). When looking for problem areas (red Xs or yellow question marks), in the part of the report that summarizes the test results, click an individual test to review the details. Any red X issues will need to be resolved prior to troubleshooting [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] issues.  
+ To view help topics about cluster validation after you close the wizard, in the Failover Cluster snap-in, click **Help**, click **Help Topics**, click the **Contents** tab, expand the contents for the failover cluster help, and click **Validating a Failover Cluster Configuration**.  After the validation wizard has completed, the **Summary Report** will display the results. All tests must pass with either a green check mark or in some cases a yellow triangle (warning). When looking for problem areas (red Xs or yellow question marks), in the part of the report that summarizes the test results, click an individual test to review the details. Any red X issues will need to be resolved prior to troubleshooting [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] issues.  
   
  **Install Updates**  
   
@@ -65,13 +65,13 @@ Failover Clustering comes with a built-in safeguard to prevent accidental downti
   
 -   Hardware failure in one node of a two-node cluster. This hardware failure could be caused by a failure in the SCSI card or in the operating system.  
   
-     To recover from this failure, remove the failed node from the failover cluster using the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Setup program, address the hardware failure with the computer offline, bring the machine back up, and then add the repaired node back to the failover cluster instance.  
+     To recover from this failure, remove the failed node from the failover cluster using the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Setup program, address the hardware failure with the computer offline, bring the machine back up, and then add the repaired node back to the failover cluster instance.  
   
      For more information, see [Create a New SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) and [Recover from Failover Cluster Instance Failure](../../../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md).  
   
 -   Operating system failure. In this case, the node is offline, but is not irretrievably broken.  
   
-     To recover from an operating system failure, recover the node and test failover. If the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance does not fail over properly, you must use the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Setup program to remove [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from the failover cluster, make necessary repairs, bring the computer back up, and then add the repaired node back to the failover cluster instance.  
+     To recover from an operating system failure, recover the node and test failover. If the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance does not fail over properly, you must use the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Setup program to remove [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] from the failover cluster, make necessary repairs, bring the computer back up, and then add the repaired node back to the failover cluster instance.  
   
      Recovering from operating system failure this way can take time. If the operating system failure can be recovered easily, avoid using this technique.  
   
@@ -86,13 +86,13 @@ Failover Clustering comes with a built-in safeguard to prevent accidental downti
  **Resolution 1**: Use the **/qb** switch instead of the **/qn** switch. If you use the **/qb** switch, the basic UI in each step will be displayed, including error messages.  
   
 ### Problem: SQL Server cannot log on to the network after it migrates to another node  
- **Issue 1:** [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service accounts are unable to contact a domain controller.  
+ **Issue 1:** [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] service accounts are unable to contact a domain controller.  
   
  **Resolution 1**: Check your event logs for signs of networking issues such as adapter failures or DNS problems. Verify that you can ping your domain controller.  
   
- **Issue 2:** [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service account passwords are not identical on all cluster nodes, or the node does not restart a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service that has migrated from a failed node.  
+ **Issue 2:** [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] service account passwords are not identical on all cluster nodes, or the node does not restart a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] service that has migrated from a failed node.  
   
- **Resolution 2:** Change the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service account passwords using [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager. If you do not, and you change the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service account passwords on one node, you must also change the passwords on all other nodes. [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager does this automatically.  
+ **Resolution 2:** Change the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] service account passwords using [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager. If you do not, and you change the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] service account passwords on one node, you must also change the passwords on all other nodes. [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager does this automatically.  
   
 ### Problem: SQL Server cannot access the cluster disks  
  **Issue 1:** Firmware or drivers are not updated on all nodes.  
@@ -101,15 +101,15 @@ Failover Clustering comes with a built-in safeguard to prevent accidental downti
   
  **Issue 2:** A node cannot recover cluster disks that have migrated from a failed node on a shared cluster disk with a different drive letter.  
   
- **Resolution 2:** Disk drive letters for the cluster disks must be the same on both servers. If they are not, review your original installation of the operating system and [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Cluster Service (MSCS).  
+ **Resolution 2:** Disk drive letters for the cluster disks must be the same on both servers. If they are not, review your original installation of the operating system and [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Cluster Service (MSCS).  
   
 ### Problem: Failure of a SQL Server service causes failover  
- **Resolution:** To prevent the failure of specific services from causing the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] group to fail over, configure those services using Cluster Administrator in Windows, as follows:  
+ **Resolution:** To prevent the failure of specific services from causing the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] group to fail over, configure those services using Cluster Administrator in Windows, as follows:  
   
--   Clear the **Affect the Group** check box on the **Advanced** tab of the **Full Text Properties** dialog box. However, if [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] causes a failover, the full-text search service restarts.  
+-   Clear the **Affect the Group** check box on the **Advanced** tab of the **Full Text Properties** dialog box. However, if [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] causes a failover, the full-text search service restarts.  
   
 ### Problem: SQL Server does not start automatically  
- **Resolution:** Use Cluster Administrator in MSCS to automatically start a failover cluster. The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service should be set to start manually; the Cluster Administrator should be configured in MSCS to start the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service. For more information, see [Managing Services](https://msdn.microsoft.com/library/ms178096\(v=sql.105\).aspx).  
+ **Resolution:** Use Cluster Administrator in MSCS to automatically start a failover cluster. The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] service should be set to start manually; the Cluster Administrator should be configured in MSCS to start the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] service. For more information, see [Managing Services](https://msdn.microsoft.com/library/ms178096\(v=sql.105\).aspx).  
   
 ### Problem: The Network Name is offline and you cannot connect to SQL Server using TCP/IP  
  **Issue 1:** DNS is failing with cluster resource set to require DNS.  
@@ -120,15 +120,15 @@ Failover Clustering comes with a built-in safeguard to prevent accidental downti
   
  **Resolution 2:** Use NBTSTAT to find the duplicate name and then correct the issue.  
   
- **Issue 3:** [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is not connecting using Named Pipes.  
+ **Issue 3:** [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is not connecting using Named Pipes.  
   
  **Resolution 3:** To connect using Named Pipes, create an alias using the SQL Server Configuration Manager to connect to the appropriate computer. For example, if you have a cluster with two nodes (**Node A** and **Node B**), and a failover cluster instance (**Virtsql**) with a default instance, you can connect to the server that has the Network Name resource offline using the following steps:  
   
-1.  Determine on which node the group containing the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running by using the Cluster Administrator. For this example, it is **Node A**.  
+1.  Determine on which node the group containing the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is running by using the Cluster Administrator. For this example, it is **Node A**.  
   
-2.  Start the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service on that computer using **net start**. For more information about using **net start**, see [Starting SQL Server Manually](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx).  
+2.  Start the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] service on that computer using **net start**. For more information about using **net start**, see [Starting SQL Server Manually](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx).  
   
-3.  Start the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] SQL Server Configuration Manager on **Node A**. View the pipe name on which the server is listening. It should be similar to \\\\.\\$$\VIRTSQL\pipe\sql\query.  
+3.  Start the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] SQL Server Configuration Manager on **Node A**. View the pipe name on which the server is listening. It should be similar to \\\\.\\$$\VIRTSQL\pipe\sql\query.  
   
 4.  On the client computer, start the SQL Server Configuration Manager.  
   
@@ -156,12 +156,12 @@ Failover Clustering comes with a built-in safeguard to prevent accidental downti
   
 5.  Add the disk to the cluster using Cluster Administrator (cluadmin).  
   
-6.  Run [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Setup.  
+6.  Run [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Setup.  
   
 ### Problem: Applications fail to enlist SQL Server resources in a distributed transaction  
- **Issue:** Because the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) is not completely configured in Windows, applications may fail to enlist [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] resources in a distributed transaction. This problem can affect linked servers, distributed queries, and remote stored procedures that use distributed transactions. For more information about how to configure MS DTC, see [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
+ **Issue:** Because the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) is not completely configured in Windows, applications may fail to enlist [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] resources in a distributed transaction. This problem can affect linked servers, distributed queries, and remote stored procedures that use distributed transactions. For more information about how to configure MS DTC, see [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
- **Resolution:** To prevent such problems, you must fully enable MS DTC services on the servers where [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is installed and MS DTC is configured.  
+ **Resolution:** To prevent such problems, you must fully enable MS DTC services on the servers where [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is installed and MS DTC is configured.  
   
  To fully enable MS DTC, use the following steps:  
   
@@ -178,7 +178,7 @@ Failover Clustering comes with a built-in safeguard to prevent accidental downti
 6.  Click **Apply** and **OK** to close the **Distributed Transaction Coordinator** window. Close the **Computer Management** window. Close the **Administrative Tools** window.  
   
 ## Using Extended Stored Procedures and COM Objects  
- When you use extended stored procedures with a failover clustering configuration, all extended stored procedures must be installed on a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]-dependent cluster disk. Doing so ensures that when a node fails over, the extended stored procedures can still be used.  
+ When you use extended stored procedures with a failover clustering configuration, all extended stored procedures must be installed on a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]-dependent cluster disk. Doing so ensures that when a node fails over, the extended stored procedures can still be used.  
   
  If the extended stored procedures use COM components, the administrator must register the COM components on each node of the cluster. The information for loading and executing COM components must be in the registry of the active node in order for the components to be created. Otherwise, the information remains in the registry of the computer on which the COM components were first registered.  
   

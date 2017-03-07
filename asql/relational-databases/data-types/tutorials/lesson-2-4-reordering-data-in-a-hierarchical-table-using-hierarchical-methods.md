@@ -122,7 +122,7 @@ The entire organizational tree that had reported to Jill (both Wanida and Kevin)
 For a stored procedure to reorganize a section of a hierarchy, see the "Moving Subtrees" section of [Moving Subtrees](../../../relational-databases/hierarchical-data-sql-server.md#BKMK_MovingSubtrees).  
   
 ## Next Task in Lesson  
-[Summary: Managing Data in a Hierarchical Table](../Topic/Summary:%20Managing%20Data%20in%20a%20Hierarchical%20Table.md)  
+[Summary: Managing Data in a Hierarchical Table](../../../relational-databases/data-types/tutorials/lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
   
   
   

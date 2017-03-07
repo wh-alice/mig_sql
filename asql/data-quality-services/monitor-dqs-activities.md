@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Monitor DQS Activities
-  This topic describes how to centrally monitor the following activities in [!INCLUDE[ssDQSnoversion](../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS): knowledge discovery, domain management, matching policy, data cleansing, data matching, and SSIS cleansing.  
+  This topic describes how to centrally monitor the following activities in [!INCLUDE[ssDQSnoversion](../a9retired/includes/ssdqsnoversion-md.md)] (DQS): knowledge discovery, domain management, matching policy, data cleansing, data matching, and SSIS cleansing.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssDQSInitialStep](../data-quality-services/includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] home screen, click **Activity Monitoring**. The activity monitoring screen appears.  
+2.  In the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] home screen, click **Activity Monitoring**. The activity monitoring screen appears.  
   
      ![Activity Monitoring screen](../data-quality-services/media/dqs-activitymonitoring.gif "Activity Monitoring screen")  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
     -   **Ended**: Activity is finished.  
   
-    -   **Terminated**: Activity has been terminated using the activity monitoring screen by the DQS administrator or the activity has been canceled by the user while running it in the respective feature area in [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)].  
+    -   **Terminated**: Activity has been terminated using the activity monitoring screen by the DQS administrator or the activity has been canceled by the user while running it in the respective feature area in [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)].  
   
      **Type**: Indicates the type of activity. **Sub Type** indicates the specific workflow that is executed for an activity type. The following types of activities are monitored:  
   
@@ -138,7 +138,7 @@ manager: "jhubbard"
     |Profiler - Fields|For **Cleansing** and **SSIS Cleansing** sub types, contains the following information about the activity:   Field, Domain, Corrected Values, Suggested Values, Completeness, and Accuracy.<br /><br /> For **Knowledge Discovery**, **Domain Management**, **Matching Policy**, and **Matching** sub types, contains the following information about the activity:   Field, Domain, New, Unique, Valid in Domain, and Completeness.|  
   
 ##  <a name="Terminate"></a> Terminate a DQS Activity  
- DQS administrators (dqs_administrator role) can terminate a running (active) activity that is not of the type **SSIS Cleansing**. Terminating an activity will stop all the running processes in the activity, and remove everything that is related to the activity. This operation cannot be undone. Terminating an activity in the activity monitoring screen is equivalent to canceling the respective activity by clicking **Cancel** while running it in the feature area in [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)]. To terminate an activity:  
+ DQS administrators (dqs_administrator role) can terminate a running (active) activity that is not of the type **SSIS Cleansing**. Terminating an activity will stop all the running processes in the activity, and remove everything that is related to the activity. This operation cannot be undone. Terminating an activity in the activity monitoring screen is equivalent to canceling the respective activity by clicking **Cancel** while running it in the feature area in [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)]. To terminate an activity:  
   
 1.  Select a running activity in the activity grid (in the upper pane).  
   
@@ -147,7 +147,7 @@ manager: "jhubbard"
 3.  A message is displayed to confirm your action. Click **Yes**.  
   
 ##  <a name="Stop"></a> Stop a Process in DQS Activity  
- DQS administrators (dqs_administrator role) can stop a running (active) process in an activity that is not of the type **SSIS Cleansing**. Stopping a process in the activity monitoring screen is equivalent to stopping the process within the respective activity in the feature area in [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)]. For example, stopping the computer-assisted cleansing process within a cleansing activity, or stopping the matching process within a matching activity. A stopped process cannot be restarted from the activity monitoring screen. You will have to restart the process from the respective feature area in [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)]. In that case, an additional row is added to the processes grid in the **Activity Steps** tab. The stopped process status continues to display **Stopped**. To stop a process:  
+ DQS administrators (dqs_administrator role) can stop a running (active) process in an activity that is not of the type **SSIS Cleansing**. Stopping a process in the activity monitoring screen is equivalent to stopping the process within the respective activity in the feature area in [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)]. For example, stopping the computer-assisted cleansing process within a cleansing activity, or stopping the matching process within a matching activity. A stopped process cannot be restarted from the activity monitoring screen. You will have to restart the process from the respective feature area in [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)]. In that case, an additional row is added to the processes grid in the **Activity Steps** tab. The stopped process status continues to display **Stopped**. To stop a process:  
   
 1.  Select a running process in the activity details grid (in the lower pane).  
   

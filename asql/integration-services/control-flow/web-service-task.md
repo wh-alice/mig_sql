@@ -33,7 +33,7 @@ manager: "jhubbard"
   
  The HTTP connection manager can point to a Web site or to a Web Service Description Language (WSDL) file. The URL of the HTTP connection manager that points to a WSDL file includes the `?WSDL` parameter: for example, `http://MyServer/MyWebService/MyPage.asmx?WSDL`.  
   
- The WSDL file must be available locally to configure the Web Service task using the **Web Service Task Editor** dialog box that [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer provides.  
+ The WSDL file must be available locally to configure the Web Service task using the **Web Service Task Editor** dialog box that [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer provides.  
   
 -   If the HTTP connection manager points to a Web site, the WSDL file must be copied manually to a local computer.  
   
@@ -57,9 +57,9 @@ manager: "jhubbard"
 |**WSTaskInfo**|Descriptive information about the task.|  
   
 ## Configuration of the Web Service Task  
- You can set properties through [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click one of the following topics:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [Web Service Task Editor &#40;General Page&#41;](../../integration-services/control-flow/web-service-task-editor-general-page.md)  
   
@@ -69,9 +69,9 @@ manager: "jhubbard"
   
 -   [Expressions Page](../../integration-services/expressions/expressions-page.md)  
   
- For more information about how to set these properties in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, click the following topic:  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Set the Properties of a Task or Container](../../a9retired/set-the-properties-of-a-task-or-container.md)  
   
 ## Programmatic Configuration of the Web Service Task  
  For more information about programmatically setting these properties, click one of the following topics:  

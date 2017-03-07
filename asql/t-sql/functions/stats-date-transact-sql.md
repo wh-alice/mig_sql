@@ -25,13 +25,13 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # STATS_DATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the date of the most recent update for statistics on a table or indexed view.  
   
  For more information about updating statistics, see [Statistics](../../relational-databases/statistics/statistics.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -72,7 +72,7 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
- If statistics correspond to an index, the *stats_id* value in the [sys.stats](../../relational-databases/system-catalog-views/sys.stats-transact-sql.md) catalog view is the same as the *index_id* value in the [sys.indexes](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md) catalog view, and the following query returns the same results as the preceding query. If statistics do not correspond to an index, they are in the sys.stats results but not in the sys.indexes results.  
+ If statistics correspond to an index, the *stats_id* value in the [sys.stats](../../relational-databases/reference/system-catalog-views/sys.stats-transact-sql.md) catalog view is the same as the *index_id* value in the [sys.indexes](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md) catalog view, and the following query returns the same results as the preceding query. If statistics do not correspond to an index, they are in the sys.stats results but not in the sys.indexes results.  
   
 ```  
 USE AdventureWorks2012;  
@@ -84,7 +84,7 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### B. Learn when a named statistics was last updated  
  The following example creates statistics on the LastName column of the DimCustomer table. It then runs a query to show the date of the statistics. Then it udpates the statistics and runs the query again to show the updated date.  
@@ -135,7 +135,7 @@ WHERE s.object_id = OBJECT_ID('dbo.DimCustomer');
 GO  
 ```  
   
- If statistics correspond to an index, the *stats_id* value in the [sys.stats](../../relational-databases/system-catalog-views/sys.stats-transact-sql.md) catalog view is the same as the *index_id* value in the [sys.indexes](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md) catalog view, and the following query returns the same results as the preceding query. If statistics do not correspond to an index, they are in the sys.stats results but not in the sys.indexes results.  
+ If statistics correspond to an index, the *stats_id* value in the [sys.stats](../../relational-databases/reference/system-catalog-views/sys.stats-transact-sql.md) catalog view is the same as the *index_id* value in the [sys.indexes](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md) catalog view, and the following query returns the same results as the preceding query. If statistics do not correspond to an index, they are in the sys.stats results but not in the sys.indexes results.  
   
 ```  
 USE AdventureWorksPDW2012;  
@@ -148,9 +148,9 @@ GO
 ```  
   
 ## See Also  
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-transact-sql.md)   
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/system-functions-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
- [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-autostats-transact-sql.md)   
  [Statistics](../../relational-databases/statistics/statistics.md)  
   
   

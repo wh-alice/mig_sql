@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Metadata - Parameter and Result
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   This topic describes what is returned in the implementation parameter descriptor (IPD) and implementation row descriptor (IRD) fields for date and time data types.  
   
@@ -92,6 +92,6 @@ manager: "jhubbard"
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|  
   
 ## See Also  
- [Metadata &#40;ODBC&#41;](../Topic/Metadata%20\(ODBC\).md)  
+ [Metadata &#40;ODBC&#41;](../../a9retired/metadata-odbc.md)  
   
   

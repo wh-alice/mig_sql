@@ -28,12 +28,12 @@ manager: "erikre"
  **The Object Model**  
  The ADOMD.NET object model is generally easier to use than schema rowsets. For most scenarios, you can access the metadata of various database objects just by using the object model. ADOMD.NET exposes the object model through the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
   
- For more information: [Working with the ADOMD.NET Object Model](../Topic/Working%20with%20the%20ADOMD.NET%20Object%20Model.md)  
+ For more information: [Working with the ADOMD.NET Object Model](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-adomd.net-object-model.md)  
   
  **Schema Rowsets**  
  A complete, but more difficult approach to retrieving metadata is through using schema rowsets. A schema rowset is an OLE DB rowset that encapsulates the description for all objects of a particular type in the database. Schema information in an analytical data source includes databases or catalogs available from the data source, cubes and mining models in a database, roles that exist for cubes at the data source, and so on. This metadata can be retrieved by using the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.GetSchemaDataSet%2A> method, passing in either a **GUID** or an XML for Analysis (XMLA) name.  
   
- For more information: [Working with Schema Rowsets in ADOMD.NET](../Topic/Working%20with%20Schema%20Rowsets%20in%20ADOMD.NET.md)  
+ For more information: [Working with Schema Rowsets in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets.md)  
   
  Each of these metadata retrieval methods access different types of metadata. The following table describes the different metadata available for each method, and the methods used to access it.  
   

@@ -18,18 +18,18 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Always Encrypted Cryptography
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  This document describes encryption algorithms and mechanisms to derive cryptographic material used in the [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSFull](../../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].  
+  This document describes encryption algorithms and mechanisms to derive cryptographic material used in the [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSFull](../../../a9retired/includes/sssdsfull-md.md)].  
   
 ## Keys, Key Stores and Key Encryption Algorithms  
  Always Encrypted uses two types of keys: Column master keys and column encryption keys.  
   
- A column master key (CMK) is a key encrypting key (i.e. a key used to encrypt other keys) that is always in client’s control and is stored in an external key store. An Always Encrypted-enabled client driver interacts with the key store via a CMK store provider, which can be either part of the driver library (a [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)]/system provider) or part of the client application (a custom provider). Client driver libraries currently include [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] key store providers for [Windows Certificate Store](https://msdn.microsoft.com/library/windows/desktop/aa388160) and hardware security modules (HSMs).  (For the current list of providers, see [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) An application developer can supply a custom provider for an arbitrary store.  
+ A column master key (CMK) is a key encrypting key (i.e. a key used to encrypt other keys) that is always in client’s control and is stored in an external key store. An Always Encrypted-enabled client driver interacts with the key store via a CMK store provider, which can be either part of the driver library (a [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)]/system provider) or part of the client application (a custom provider). Client driver libraries currently include [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] key store providers for [Windows Certificate Store](https://msdn.microsoft.com/library/windows/desktop/aa388160) and hardware security modules (HSMs).  (For the current list of providers, see [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) An application developer can supply a custom provider for an arbitrary store.  
   
  A column encryption key (CEK), is a content encryption key (i.e. a key used to protect data) that is protected by a CMK.  
   
- All [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] CMK store providers encrypt CEKs by using RSA with Optimal Asymmetric Encryption Padding (RSA-OAEP) with the default parameters specified by RFC 3447 in Section A.2.1. Those default parameters are using a hash function of SHA-1 and a mask generation function of MGF1 with SHA-1.  
+ All [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] CMK store providers encrypt CEKs by using RSA with Optimal Asymmetric Encryption Padding (RSA-OAEP) with the default parameters specified by RFC 3447 in Section A.2.1. Those default parameters are using a hash function of SHA-1 and a mask generation function of MGF1 with SHA-1.  
   
 ## Data Encryption Algorithm  
  Always Encrypted uses the **AEAD_AES_256_CBC_HMAC_SHA_256** algorithm to encrypt data in the database.  

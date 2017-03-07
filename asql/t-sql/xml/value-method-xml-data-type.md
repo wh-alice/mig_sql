@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
 ## Syntax  
   
@@ -44,7 +44,7 @@ value (XQuery, SQLType)
  *SQLType*  
  Is the preferred SQL type, a string literal, to be returned. The return type of this method matches the *SQLType* parameter. *SQLType* cannot be an **xml** data type, a common language runtime (CLR) user-defined type, **image**, **text**, **ntext**, or **sql_variant** data type. *SQLType* can be an SQL, user-defined data type.  
   
- The **value()** method uses the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] CONVERT operator implicitly and tries to convert the result of the XQuery expression, the serialized string representation, from XSD type to the corresponding SQL type specified by [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] conversion. For more information about type casting rules for CONVERT, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+ The **value()** method uses the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] CONVERT operator implicitly and tries to convert the result of the XQuery expression, the serialized string representation, from XSD type to the corresponding SQL type specified by [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] conversion. For more information about type casting rules for CONVERT, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 > [!NOTE]  
 >  For performance reasons, instead of using the **value()** method in a predicate to compare with a relational value, use **exist()** with **sql:column()**. This is shown in example D that follows.  
@@ -120,7 +120,7 @@ WHERE CatalogDescription.exist('
   
  Note the following from the previous query:  
   
--   The `CatalogDescription` column is a typed XML column. This means that it has a schema collection associated with it. In the [XQuery Prolog](../Topic/XQuery%20Prolog.md), the namespace declaration is used to define the prefix that is used later in the query body.  
+-   The `CatalogDescription` column is a typed XML column. This means that it has a schema collection associated with it. In the [XQuery Prolog](../../xquery/modules-and-prologs-xquery-prolog.md), the namespace declaration is used to define the prefix that is used later in the query body.  
   
 -   If the `exist()` method returns a `1` (True), it indicates that the XML instance includes the <`Warranty`> child element as one of the features.  
   

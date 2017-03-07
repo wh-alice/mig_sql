@@ -28,7 +28,7 @@ manager: "erikre"
   When you have a complex calculation that is used more than once in expressions in a report, you might want to create a variable. You can create a report variable or a group variable. Variable names must be unique in a report.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Report Variables  
  Use a report variable to hold a value for time-dependent calculations, such as currency rates or time stamps, or for a complex calculation that is referenced multiple times. By default, a report variable is calculated once and can be used in expressions throughout a report. Report variables are read-only by default. You can change the default to enable a report variable as read-write. The value in a report variable is preserved throughout a session, until the report is processed again.  
@@ -71,7 +71,7 @@ manager: "erikre"
   
 ## See Also  
  [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../Topic/Built-in%20Collections%20in%20Expressions%20\(Report%20Builder%20and%20SSRS\).md)   
+ [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

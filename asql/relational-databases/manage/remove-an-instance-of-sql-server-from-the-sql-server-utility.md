@@ -17,27 +17,27 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Remove an Instance of SQL Server from the SQL Server Utility
-  Use the following steps to remove a managed instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility. This procedure removes the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from the UCP list view and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility data collection stops. The instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is not uninstalled.  
+  Use the following steps to remove a managed instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] from the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility. This procedure removes the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] from the UCP list view and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility data collection stops. The instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is not uninstalled.  
   
 > [!IMPORTANT]  
->  Before you use this procedure to remove an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility, make sure that the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and SQL Server Agent services are running on the instance to remove.  
+>  Before you use this procedure to remove an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] from the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility, make sure that the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and SQL Server Agent services are running on the instance to remove.  
   
-1.  From the Utility Explorer in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], click on **Managed Instances**. Observe the list view of managed instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in the Utility Explorer content pane.  
+1.  From the Utility Explorer in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], click on **Managed Instances**. Observe the list view of managed instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] in the Utility Explorer content pane.  
   
-2.  In the **SQL Server Instance Name** column of the list view, select the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance to remove from the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility. Right-click on the instance to remove, and select **Remove Managed Instance…**.  
+2.  In the **SQL Server Instance Name** column of the list view, select the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance to remove from the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility. Right-click on the instance to remove, and select **Remove Managed Instance…**.  
   
-3.  Specify credentials with administrator privileges for the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]: Click **Connect…**, verify the information in the **Connect to Server** dialog box, then click **Connect**. You will see the login information on the **Remove Managed Instance** dialog.  
+3.  Specify credentials with administrator privileges for the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]: Click **Connect…**, verify the information in the **Connect to Server** dialog box, then click **Connect**. You will see the login information on the **Remove Managed Instance** dialog.  
   
 4.  To confirm the operation, click **OK**. To quit the operation, click **Cancel**.  
   
 ## Manually Remove a Managed Instance of SQL Server from a SQL Server Utility  
- This procedure removes the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from the UCP list view and stops [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility data collection. The instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is not uninstalled.  
+ This procedure removes the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] from the UCP list view and stops [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility data collection. The instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is not uninstalled.  
   
- To use PowerShell to remove a managed instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility. This script performs the following operations:  
+ To use PowerShell to remove a managed instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] from the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility. This script performs the following operations:  
   
 -   Gets the UCP by server instance name.  
   
--   Removes the managed instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility.  
+-   Removes the managed instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] from the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility.  
   
 ```  
 # Get Ucp connection  
@@ -54,16 +54,16 @@ $ManagedInstance = $Utility.ManagedInstances[$ServerInstanceName];
 $ManagedInstance.Remove($InstanceConnection);  
 ```  
   
- Note that it is important to refer to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance name exactly as it is stored in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. On a case-sensitive instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you must specify the instance name using the exact casing as returned by @@SERVERNAME. To get the instance name for the managed instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], run this query on the managed instance:  
+ Note that it is important to refer to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance name exactly as it is stored in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. On a case-sensitive instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], you must specify the instance name using the exact casing as returned by @@SERVERNAME. To get the instance name for the managed instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], run this query on the managed instance:  
   
 ```  
 select @@SERVERNAME AS instance_name  
 ```  
   
- At this point, the managed instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is fully removed from the UCP. It disappears from the list view the next time you refresh data for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Utility. This state is identical to a user successfully going through the remove managed instance operation in the SSMS user interface.  
+ At this point, the managed instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is fully removed from the UCP. It disappears from the list view the next time you refresh data for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Utility. This state is identical to a user successfully going through the remove managed instance operation in the SSMS user interface.  
   
 ## See Also  
  [Use Utility Explorer to Manage the SQL Server Utility](../../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
- [Troubleshoot the SQL Server Utility](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md)  
+ [Troubleshoot the SQL Server Utility](../../a9retired/troubleshoot-the-sql-server-utility.md)  
   
   

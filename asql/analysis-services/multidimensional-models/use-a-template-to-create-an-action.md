@@ -17,7 +17,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Use a Template to Create an Action
-  The **Actions** view in Cube Designer contains a number of templates that you can use to create common actions. Cube Designer can be accessed from [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+  The **Actions** view in Cube Designer contains a number of templates that you can use to create common actions. Cube Designer can be accessed from [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
 >  After you create the action, it will become available to users after you update or reprocess the cube. For more information, see [Processing a multidimensional model &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  

@@ -24,7 +24,7 @@ manager: "jhubbard"
 -   [Install Distributed Replay Using a Configuration File](#bkmk_configuration_file)  
   
 ##  <a name="bkmk_wizard"></a> Install Distributed Replay from the Installation Wizard  
- Install the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Distributed Replay features with the [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] Installation Wizard. When planning where to install the features, consider the following:  
+ Install the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Distributed Replay features with the [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] Installation Wizard. When planning where to install the features, consider the following:  
   
 -   You can install the administration tool on the same computer as the Distributed Replay controller, or on different computers.  
   
@@ -34,12 +34,12 @@ manager: "jhubbard"
   
 -   Only one instance of the client service can be installed on the Distributed Replay controller computer. If your Distributed Replay environment will have more than one client, we do not recommend installing the client service on the same computer as the controller. Doing so may decrease the overall speed of the distributed replay.  
   
--   For performance testing scenarios, we do not recommend installing the administration tool, Distributed Replay controller service, or client service on the target instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Installing all of these features on the target server should be limited to functional testing for application compatibility.  
+-   For performance testing scenarios, we do not recommend installing the administration tool, Distributed Replay controller service, or client service on the target instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Installing all of these features on the target server should be limited to functional testing for application compatibility.  
   
--   After installation, the controller service, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Distributed Replay controller, must be running before you start the Distributed Replay client service on the clients.  
+-   After installation, the controller service, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Distributed Replay controller, must be running before you start the Distributed Replay client service on the clients.  
   
 > [!NOTE]  
->  To remove or change the Distributed Replay features, use the Windows **Programs and Features** window in **Control Panel**. Select [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] in the **Uninstall or change a program** window, and then click **Remove** to open the [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] Installation Wizard. On the **Select Features** page, check the Distributed Replay features you want to remove.  
+>  To remove or change the Distributed Replay features, use the Windows **Programs and Features** window in **Control Panel**. Select [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] in the **Uninstall or change a program** window, and then click **Remove** to open the [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] Installation Wizard. On the **Select Features** page, check the Distributed Replay features you want to remove.  
   
  **Prerequisites:**  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 -   On a 32-bit system:  
   
-     [!INCLUDE[ssInstallPath](../../database-engine/configure/windows/includes/ssinstallpath-md.md)]Tools  
+     [!INCLUDE[ssInstallPath](../../a9retired/includes/ssinstallpath-md.md)]Tools  
   
      \- OR -  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 -   On a 64-bit system:  
   
-     C:\Program Files\\[!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (x86)\130\Tools  
+     C:\Program Files\\[!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] (x86)\130\Tools  
   
      \- OR -  
   
@@ -72,17 +72,17 @@ manager: "jhubbard"
   
 #### To install Distributed Replay features  
   
-1.  To start the installation of any of the Distributed Replay features, start the [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] Installation Wizard.  
+1.  To start the installation of any of the Distributed Replay features, start the [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] Installation Wizard.  
   
 2.  The **Setup Support Rules** page identifies issues that might occur when installing the SQL Server Setup support files. You must correct any Setup support failures before continuing with Setup.  
   
-3.  On the **Product Key** page, select an option button to indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], or a production version of the product that has a PID key. For more information, see [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
+3.  On the **Product Key** page, select an option button to indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], or a production version of the product that has a PID key. For more information, see [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
-4.  On the **License Terms** page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)].  
+4.  On the **License Terms** page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)].  
   
-5.  On the **Setup Support Files** page, click **Install** to install or update the Setup Support files for [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+5.  On the **Setup Support Files** page, click **Install** to install or update the Setup Support files for [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
-6.  On the **Setup Role** page, select **[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Feature Installation**, and then click **Next** to continue to the **Feature Selection** page.  
+6.  On the **Setup Role** page, select **[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Feature Installation**, and then click **Next** to continue to the **Feature Selection** page.  
   
 7.  On the **Feature Selection** page, configure which features you want to install.  
   
@@ -108,19 +108,19 @@ manager: "jhubbard"
   
 8.  Optionally, click the ellipsis (…) button to change the shared feature directory path.  
   
-    1.  On 32-bit computers, the default installation path is **C:\Program Files\\[!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]\\**  
+    1.  On 32-bit computers, the default installation path is **C:\Program Files\\[!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]\\**  
   
-    2.  On 64-bit computers, the default installation path is **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]\\**  
+    2.  On 64-bit computers, the default installation path is **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]\\**  
   
 9. When you are finished, click **Next**.  
   
-10. On the **Installation Rules** page, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Setup validates your computer configuration. Once the validation process is completed, click **Next**.  
+10. On the **Installation Rules** page, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Setup validates your computer configuration. Once the validation process is completed, click **Next**.  
   
 11. The **Disk Space Requirements** page calculates the required disk space for the features that you specify. Then it compares the required space to the available disk space.  
   
-12. On the **Error Reporting** page, specify the information that you want to send to [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] to help improve [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. By default, option for error reporting is enabled.  
+12. On the **Error Reporting** page, specify the information that you want to send to [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] to help improve [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. By default, option for error reporting is enabled.  
   
-13. On the **Installation Configuration Rules** page, the System Configuration Checker will run one more set of rules to validate your computer configuration with the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] features that you have specified.  
+13. On the **Installation Configuration Rules** page, the System Configuration Checker will run one more set of rules to validate your computer configuration with the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] features that you have specified.  
   
 14. On the **Ready to Install the Program** page, click **Install**.  
   
@@ -128,16 +128,16 @@ manager: "jhubbard"
     >  After you install Distributed Replay you must create firewall rules on the controller and client computers, and grant each client computer permissions on the target server. For more information, see [Complete the Post-Installation Steps](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
   
 ### .NET Framework Security  
- You must have administrative permissions in order to install any of the Distributed Replay features. Only a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login having sysadmin permissions can add the client service accounts to the sysadmin server role of the test server. For more information about Distributed Replay security considerations, see [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
+ You must have administrative permissions in order to install any of the Distributed Replay features. Only a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login having sysadmin permissions can add the client service accounts to the sysadmin server role of the test server. For more information about Distributed Replay security considerations, see [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
 ##  <a name="bkmk_command_prompt"></a> Install Distributed Replay from the Command Prompt  
- Installing a new instance of Distributed Replay at the command prompt enables you to specify the features to install and how they should be configured. The command prompt installation supports installing, repairing, upgrading, and uninstalling of the Distributed Replay components. When installing through the command prompt, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports full quiet mode by using the /Q parameter.  
+ Installing a new instance of Distributed Replay at the command prompt enables you to specify the features to install and how they should be configured. The command prompt installation supports installing, repairing, upgrading, and uninstalling of the Distributed Replay components. When installing through the command prompt, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports full quiet mode by using the /Q parameter.  
   
 > [!NOTE]  
->  For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
+>  For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
   
 ### Installation Parameters  
- The list of top-level features include [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)], and Tools. The Tools feature will install [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Management Tools, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Books Online, [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], and other shared components. To install the Distributed Replay components, specify the following parameters:  
+ The list of top-level features include [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)], and Tools. The Tools feature will install [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Management Tools, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Books Online, [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], and other shared components. To install the Distributed Replay components, specify the following parameters:  
   
 |Component|Parameter|  
 |---------------|---------------|  
@@ -177,7 +177,7 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
 ```  
   
 ##  <a name="bkmk_configuration_file"></a> Install Distributed Replay Using a Configuration File  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Setup provides the ability to generate a configuration file based on user input and system defaults. If you specify that you want the Management tools installed, you can use the configuration file to deploy the three Distributed Replay components (administration tool, Distributed Replay controller, and the Distributed Replay client). It supports Installing, repairing, and uninstalling of the Distributed Replay components.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Setup provides the ability to generate a configuration file based on user input and system defaults. If you specify that you want the Management tools installed, you can use the configuration file to deploy the three Distributed Replay components (administration tool, Distributed Replay controller, and the Distributed Replay client). It supports Installing, repairing, and uninstalling of the Distributed Replay components.  
   
  Setup supports the use of the configuration file only through the command-line. The processing order of the parameters while using the configuration file is outlined below:  
   

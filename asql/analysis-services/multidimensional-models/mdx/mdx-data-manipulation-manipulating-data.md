@@ -27,9 +27,9 @@ manager: "erikre"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Using DRILLTHROUGH to Retrieve Source Data &#40;MDX&#41;](../Topic/Using%20DRILLTHROUGH%20to%20Retrieve%20Source%20Data%20\(MDX\).md)|Discusses the use of the MDX [DRILLTHROUGH](../Topic/DRILLTHROUGH%20Statement%20\(MDX\).md) statement to retrieve the rowsets of source data applicable to a cell in a multidimensional data source|  
-|[Working with the RollupChildren Function &#40;MDX&#41;](../Topic/Working%20with%20the%20RollupChildren%20Function%20\(MDX\).md)|Discusses the impact of the MDX [RollupChildren](../../../mdx/rollupchildren-mdx.md)function on the analysis of multidimensional data.|  
-|[Understanding Pass Order and Solve Order &#40;MDX&#41;](../Topic/Understanding%20Pass%20Order%20and%20Solve%20Order%20\(MDX\).md)|Details the concepts of solve order, and how this feature affects MDX expressions, statements, and scripts.|  
+|[Using DRILLTHROUGH to Retrieve Source Data &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-retrieve-source-data-using-drillthrough.md)|Discusses the use of the MDX [DRILLTHROUGH](../../../mdx/mdx-data-manipulation-drillthrough.md) statement to retrieve the rowsets of source data applicable to a cell in a multidimensional data source|  
+|[Working with the RollupChildren Function &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-rollupchildren-function.md)|Discusses the impact of the MDX [RollupChildren](../../../mdx/rollupchildren-mdx.md)function on the analysis of multidimensional data.|  
+|[Understanding Pass Order and Solve Order &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|Details the concepts of solve order, and how this feature affects MDX expressions, statements, and scripts.|  
   
 ## See Also  
  [MDX Query Fundamentals &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  

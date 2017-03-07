@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 2-2 - Granting Access to a Database
-Mary now has access to this instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], but does not have permission to access the databases. She does not even have access to her default database **TestData** until you authorize her as a database user.  
+Mary now has access to this instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], but does not have permission to access the databases. She does not even have access to her default database **TestData** until you authorize her as a database user.  
   
 To grant Mary access, switch to the **TestData** database, and then use the CREATE USER statement to map her login to a user named Mary.  
   
@@ -36,10 +36,10 @@ To grant Mary access, switch to the **TestData** database, and then use the CREA
   
     ```  
   
-    Now, Mary has access to both [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and the `TestData` database.  
+    Now, Mary has access to both [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and the `TestData` database.  
   
 ## Next Task in Lesson  
-[Creating Views and Stored Procedures](../Topic/Creating%20Views%20and%20Stored%20Procedures.md)  
+[Creating Views and Stored Procedures](../../t-sql/tutorials/lesson-2-3-creating-views-and-stored-procedures.md)  
   
   
   

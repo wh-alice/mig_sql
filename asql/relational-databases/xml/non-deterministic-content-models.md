@@ -18,9 +18,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Non-Deterministic Content Models
-  Before [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] Service Pack 1 (SP1), [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] rejected XML schemas that had non-deterministic content models.  
+  Before [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] Service Pack 1 (SP1), [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] rejected XML schemas that had non-deterministic content models.  
   
- Beginning with [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] SP1, however, non-deterministic content models are accepted if the occurrence constraints are 0,1, or unbounded.  
+ Beginning with [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] SP1, however, non-deterministic content models are accepted if the occurrence constraints are 0,1, or unbounded.  
   
 ## Example: Non-deterministic content model rejected  
  The following example attempts to create an XML schema with a non-deterministic content model. The code fails because it is not clear whether the `<root>` element should have a sequence of two `<a>` elements or if the `<root>` element should have two sequences, each with an `<a>` element.  
@@ -57,7 +57,7 @@ GO
 ```  
   
 ## Example: Non-deterministic content model accepted  
- The following schema would be rejected in versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] before [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] SP1.  
+ The following schema would be rejected in versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] before [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] SP1.  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS '  

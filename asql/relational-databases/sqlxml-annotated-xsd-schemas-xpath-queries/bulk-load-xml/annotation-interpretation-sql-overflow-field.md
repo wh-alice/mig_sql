@@ -122,7 +122,7 @@ manager: "jhubbard"
     </ROOT>  
     ```  
   
-4.  To execute XML Bulk Load, save and execute this [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) example as Sample.vbs:  
+4.  To execute XML Bulk Load, save and execute this [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) example as Sample.vbs:  
   
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  

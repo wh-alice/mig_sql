@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLDrivers
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   The ODBC Driver Manager returns all **SQLDrivers** attribute specification strings. For more information about attribute string and value definition, see the [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink/?LinkId=4173), or you can view the [ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45250) online.  
   

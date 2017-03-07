@@ -24,7 +24,7 @@ manager: "erikre"
 You can, however, add a smaller amount of sample data to your model's working database for use at design time. Sample data is specified via a query on a sample partition used only during design. It's cached in-memory with the model. This will help you validate modeling decisions as you go without impacting the data source. You can test your modeling decisions with the sample dataset when using **Analyze in Excel** in SQL Server Data Tools (SSDT), or from other client applications that connect to your workspace database.  
   
 > [!TIP]  
->  Even in DirectQuery mode on an empty model, you can always view a small built-in rowset for each table. In [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], click **Table** > **Table Properties** to view the 50-row dataset.  
+>  Even in DirectQuery mode on an empty model, you can always view a small built-in rowset for each table. In [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], click **Table** > **Table Properties** to view the 50-row dataset.  
   
 ## Create a sample partition
  These instructions are for tabular models created at or upgraded to compatibility level 1200. Models at lower compatibility levels use different properties to get cached data. See [Enable DirectQuery mode in SSMS](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md) for property descriptions.  
@@ -39,7 +39,7 @@ You can, however, add a smaller amount of sample data to your model's working da
 
     This creates a copy of the default partition, however, this copy will contain sample data you specify in a query. For example:
   
-     ![ssas_tabularproject_copypartition](../../analysis-services/tabular-models/media/ssas-tabularproject-copypartition.jpg "ssas_tabularproject_copypartition")  
+     ![ssas_tabularproject_copypartition](../../a9retired/media/ssas-tabularproject-copypartition.jpg "ssas_tabularproject_copypartition")  
   
 5.  Select the copied partition and then click the **SQL Query Editor** button to add a filter. Reduce your sample data size while authoring your model. For example, if you selected **FactInternetSales** from AdventureWorksDW, your filter might look like the following:  
   

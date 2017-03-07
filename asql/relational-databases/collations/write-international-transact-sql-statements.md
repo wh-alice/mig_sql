@@ -23,7 +23,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Write International Transact-SQL Statements
-  Databases and database applications that use [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements will become more portable from one language to another, or will support multiple languages, if the following guidelines are followed:  
+  Databases and database applications that use [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements will become more portable from one language to another, or will support multiple languages, if the following guidelines are followed:  
   
 -   Replace all uses of the **char**, **varchar**, and **text** data types with **nchar**, **nvarchar**, and **nvarchar(max)**. By doing this, you do not have to consider code page conversion issues. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
@@ -39,9 +39,9 @@ manager: "jhubbard"
   
          **{ t'** *hh* **:** *mm* **:** *ss* **'}** such as: **{ t'**10:02:20**'}**  
   
-    -   Applications that use other APIs, or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] scripts, stored procedures, and triggers, should use the unseparated numeric strings. For example, *yyyymmdd* as 19980924.  
+    -   Applications that use other APIs, or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] scripts, stored procedures, and triggers, should use the unseparated numeric strings. For example, *yyyymmdd* as 19980924.  
   
-    -   Applications that use other APIs, or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] scripts, stored procedures, and triggers should use the CONVERT statement with an explicit style parameter for all conversions between the **time**, **date**, **smalldate**, **datetime**, **datetime2**, and **datetimeoffset** data types and character string data types. For example, the following statement is interpreted in the same way for all language or date format connection settings:  
+    -   Applications that use other APIs, or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] scripts, stored procedures, and triggers should use the CONVERT statement with an explicit style parameter for all conversions between the **time**, **date**, **smalldate**, **datetime**, **datetime2**, and **datetimeoffset** data types and character string data types. For example, the following statement is interpreted in the same way for all language or date format connection settings:  
   
         ```  
         SELECT *  

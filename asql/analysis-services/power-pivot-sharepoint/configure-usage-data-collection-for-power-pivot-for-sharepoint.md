@@ -17,9 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Configure Usage Data Collection for (Power Pivot for SharePoint
-  Usage data collection is a farm-level SharePoint feature. [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint uses and extends this system to provide reports in the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Management Dashboard that show how [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data and services are used. Depending on how you install SharePoint, usage data collection might be turned off for the farm. A farm administrator must enable usage logging to create the usage data that appears in the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Management Dashboard.  
+  Usage data collection is a farm-level SharePoint feature. [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint uses and extends this system to provide reports in the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Management Dashboard that show how [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data and services are used. Depending on how you install SharePoint, usage data collection might be turned off for the farm. A farm administrator must enable usage logging to create the usage data that appears in the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Management Dashboard.  
   
- For information on usage data in the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Management Dashboard, see [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
+ For information on usage data in the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Management Dashboard, see [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
  **In this topic:**  
   
@@ -55,10 +55,10 @@ manager: "erikre"
   
     |Event|Description|  
     |-----------|-----------------|  
-    |**[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Connections**|[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Connection event is used to monitor [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] server connections that are made on behalf of a user.|  
-    |**[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Load Data Usage**|[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Load Data Usage is used to monitor requests that load [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data into server memory. A load event is generated for [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data files loaded from a content database or from cache.|  
-    |**[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Unload Data Usage**|[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Unload Data Usage is used to monitor requests for unloading a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data source after a period of inactivity. Caching a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data source to disk will be reported as an unload event.|  
-    |**[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Query Usage**|[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Query Usage is used to monitor query processing times for data that is loaded in an [!INCLUDE[ssGeminiSrv](../../analysis-services/instances/install/windows/includes/ssgeminisrv-md.md)] instance.|  
+    |**[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Connections**|[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Connection event is used to monitor [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] server connections that are made on behalf of a user.|  
+    |**[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Load Data Usage**|[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Load Data Usage is used to monitor requests that load [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data into server memory. A load event is generated for [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data files loaded from a content database or from cache.|  
+    |**[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Unload Data Usage**|[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Unload Data Usage is used to monitor requests for unloading a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data source after a period of inactivity. Caching a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data source to disk will be reported as an unload event.|  
+    |**[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Query Usage**|[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Query Usage is used to monitor query processing times for data that is loaded in an [!INCLUDE[ssGeminiSrv](../../analysis-services/instances/install/windows/includes/ssgeminisrv-md.md)] instance.|  
   
     > [!NOTE]  
     >  Server health and data refresh operations also generate usage data, but there is no event associated with these processes.  
@@ -70,7 +70,7 @@ manager: "erikre"
 7.  Optionally, you can specify whether all messages or just errors are logged. For more information on how to throttle event messages, see [Configure and View SharePoint Log Files  and Diagnostic Logging &#40;Power Pivot for SharePoint&#41;](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md).  
   
 ##  <a name="configdb"></a> Set log file location  
- [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] usage data is initially stored in usage log files on the local server, and then moved at regular intervals to the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application databases. The log file location is set in Central Administration. The default location is:  
+ [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] usage data is initially stored in usage log files on the local server, and then moved at regular intervals to the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application databases. The log file location is set in Central Administration. The default location is:  
   
  `C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\logs`  
   
@@ -83,13 +83,13 @@ manager: "erikre"
 3.  In Usage Data Collection Settings, view or modify the file location, name, or maximum file size. If you specify a file size that is too low, the file size will reach the maximum limit and no new entries will be added to it until its contents are moved to the central usage data collection database.  
   
 ##  <a name="jobs"></a> Configure the timer jobs used in usage data collection  
- [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] server health and usage data is moved to different locations in the usage data collection system through two timer jobs.:  
+ [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] server health and usage data is moved to different locations in the usage data collection system through two timer jobs.:  
   
--   The “Microsoft SharePoint Foundation Usage Data Import” timer job moves [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] usage to the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application database.  
+-   The “Microsoft SharePoint Foundation Usage Data Import” timer job moves [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] usage to the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application database.  
   
--   The “[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Management Dashboard Processing timer job” the data to [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbook that is the source of data for built-in administrative reports.  
+-   The “[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Management Dashboard Processing timer job” the data to [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbook that is the source of data for built-in administrative reports.  
   
- If you need to refresh the administrative reports that appear in the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Management Dashboard more frequently, follow these steps.  
+ If you need to refresh the administrative reports that appear in the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Management Dashboard more frequently, follow these steps.  
   
 1.  In Central Administration, click **Monitoring**.  
   
@@ -99,14 +99,14 @@ manager: "erikre"
   
 4.  Click **Run Now**. If the **Run Now** button is disabled, click **Enable** and then click **Run Now**.  
   
-5.  In the Job Definitions list, click **[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Data Management Dashboard Processing Timer Job**.  
+5.  In the Job Definitions list, click **[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Data Management Dashboard Processing Timer Job**.  
   
 6.  Click **Run Now**.  
   
 7.  Check the reports to view the refresh data. For more information, see [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
 ##  <a name="confighist"></a> Limit how long usage data history is stored  
- Usage data history is stored for events (connections, load, unload, and on-demand query processing) and data refresh (scheduled data processing). Although usage data is collected through the SharePoint usage data collection system, the reporting data is moved to a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] application database and a reporting database for longer term storage. The usage data history setting controls how long usage data is retained in the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] application databases. The same limit is applied equally to all types of stored usage data in the same [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application database.  
+ Usage data history is stored for events (connections, load, unload, and on-demand query processing) and data refresh (scheduled data processing). Although usage data is collected through the SharePoint usage data collection system, the reporting data is moved to a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] application database and a reporting database for longer term storage. The usage data history setting controls how long usage data is retained in the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] application databases. The same limit is applied equally to all types of stored usage data in the same [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application database.  
   
 1.  [Open the Power Pivot Service Application Page](#openconfig).  
   
@@ -127,9 +127,9 @@ manager: "erikre"
  For more information about how usage data is collected and stored, see [Power Pivot Usage Data Collection](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Define fast, medium and slow query response categories for reporting purposes  
- Query processing performance is measured against predefined categories that define a request-response cycle by how long it takes to complete. Predefined categories include: Trivial, Quick, Expected, Long-running, and Exceeded. Every request to a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] server will fall into one of the categories based on time to completion.  
+ Query processing performance is measured against predefined categories that define a request-response cycle by how long it takes to complete. Predefined categories include: Trivial, Quick, Expected, Long-running, and Exceeded. Every request to a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] server will fall into one of the categories based on time to completion.  
   
- Query response information is used in activity reports. Within the reports, each category is used differently to better reveal the performance trends of the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] system. For example, trivial requests are excluded completely because doing so removes noise in the data and shows more meaningful trends using the remaining categories. In contrast, Long-running or Exceeded request statistics are prominent in the report so that administrators or workbook owners can take corrective action immediately.  
+ Query response information is used in activity reports. Within the reports, each category is used differently to better reveal the performance trends of the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] system. For example, trivial requests are excluded completely because doing so removes noise in the data and shows more meaningful trends using the remaining categories. In contrast, Long-running or Exceeded request statistics are prominent in the report so that administrators or workbook owners can take corrective action immediately.  
   
  Although you cannot add or delete categories, you can define the upper and lower limits that determine where one category stops and the next one begins. If your organization uses Service Level Agreements (SLA) to define acceptable levels of server availability and performance, you can tune these categories to reflect the SLA you create.  
   
@@ -163,18 +163,18 @@ manager: "erikre"
 3.  Click **OK**.  
   
 ##  <a name="openconfig"></a> Open the Power Pivot Service Application page to access configuration settings  
- You must be a farm or service administrator to modify service application settings. If you defined multiple [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service applications in the farm, you must modify each one individually.  
+ You must be a farm or service administrator to modify service application settings. If you defined multiple [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service applications in the farm, you must modify each one individually.  
   
 1.  In SharePoint Central Administration, in **Application Management**, click **Manage service applications**.  
   
-2.  Find the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Service application. You can identify a service application by its type. A [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application type is **[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Service Application**.  
+2.  Find the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Service application. You can identify a service application by its type. A [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application type is **[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Service Application**.  
   
-3.  Click the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application name. The [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Management Dashboard opens.  
+3.  Click the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application name. The [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Management Dashboard opens.  
   
-4.  In **Actions**, click **Configure service application settings**. The [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Service Application Settings page will open.  
+4.  In **Actions**, click **Configure service application settings**. The [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Service Application Settings page will open.  
   
 ##  <a name="defaultconfig"></a> The default configuration for Power Pivot usage data collection  
- Usage data collection for [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service operations can be enabled with default settings to make it immediately available in applications that support the Analysis Services integration feature. The default settings include events that trigger usage data collection, limits on how long usage data is stored, and thresholds for categorizing query response times.  
+ Usage data collection for [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service operations can be enabled with default settings to make it immediately available in applications that support the Analysis Services integration feature. The default settings include events that trigger usage data collection, limits on how long usage data is stored, and thresholds for categorizing query response times.  
   
  The following table shows the default values for usage data collection configuration.  
   

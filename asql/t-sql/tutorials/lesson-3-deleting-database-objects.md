@@ -23,10 +23,10 @@ This short lesson removes the objects that you created in Lesson 1 and Lesson 2,
   
 This lesson contains one topic:  
   
--   [Deleting Database Objects](../Topic/Deleting%20Database%20Objects.md)  
+-   [Deleting Database Objects](../../t-sql/tutorials/lesson-3-1-deleting-database-objects.md)  
   
 ## Next Task in Lesson  
-[Deleting Database Objects](../Topic/Deleting%20Database%20Objects.md)  
+[Deleting Database Objects](../../t-sql/tutorials/lesson-3-1-deleting-database-objects.md)  
   
   
   

@@ -23,18 +23,18 @@ In Lesson 1, you modified an existing table to use the **hierarchyid** data type
   
 This lesson contains the following topics:  
   
--   [Creating a Table Using the hierarchyid Data Type](../Topic/Creating%20a%20Table%20Using%20the%20hierarchyid%20Data%20Type.md)  
+-   [Creating a Table Using the hierarchyid Data Type](../../../relational-databases/data-types/tutorials/lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md)  
   
--   [Populating a Hierarchical Table Using Hierarchical Methods](../Topic/Populating%20a%20Hierarchical%20Table%20Using%20Hierarchical%20Methods.md)  
+-   [Populating a Hierarchical Table Using Hierarchical Methods](../../../relational-databases/data-types/tutorials/lesson-2-2-populating-a-hierarchical-table-using-hierarchical-methods.md)  
   
--   [Querying a Hierarchical Table Using Hierarchy Methods](../Topic/Querying%20a%20Hierarchical%20Table%20Using%20Hierarchy%20Methods.md)  
+-   [Querying a Hierarchical Table Using Hierarchy Methods](../../../relational-databases/data-types/tutorials/lesson-2-3-querying-a-hierarchical-table-using-hierarchy-methods.md)  
   
--   [Reordering Data in a Hierarchical Table Using Hierarchical Methods](../Topic/Reordering%20Data%20in%20a%20Hierarchical%20Table%20Using%20Hierarchical%20Methods.md)  
+-   [Reordering Data in a Hierarchical Table Using Hierarchical Methods](../../../relational-databases/data-types/tutorials/lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md)  
   
--   [Summary: Managing Data in a Hierarchical Table](../Topic/Summary:%20Managing%20Data%20in%20a%20Hierarchical%20Table.md)  
+-   [Summary: Managing Data in a Hierarchical Table](../../../relational-databases/data-types/tutorials/lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
   
 ## Next Task in Lesson  
-[Creating a Table Using the hierarchyid Data Type](../Topic/Creating%20a%20Table%20Using%20the%20hierarchyid%20Data%20Type.md)  
+[Creating a Table Using the hierarchyid Data Type](../../../relational-databases/data-types/tutorials/lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md)  
   
 ## See Also  
 [Lesson 1: Converting a Table to a Hierarchical Structure](../../../relational-databases/data-types/tutorials/lesson-1-converting-a-table-to-a-hierarchical-structure.md)  

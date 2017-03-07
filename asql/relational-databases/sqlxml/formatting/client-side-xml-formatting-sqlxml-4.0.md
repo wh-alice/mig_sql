@@ -25,7 +25,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  This topic provides additional information about using the FOR XML clause on the client side, and assumes you are already familiar with the FOR XML clause. For more information about FOR XML, see [Constructing XML Using FOR XML](../../../relational-databases/xml/for-xml-sql-server.md).  
   
- **Important** To use client-side FOR XML functionality with the new **xml** data type, clients should always use the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client (SQLNCLI11) data provider instead of the SQLOLEDB provider. SQLNCLI11 is the latest version of the SQL Server provider and fully understands data types introduced in [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)]. The behavior for client side FOR XML with the SQLOLEDB provider will treat **xml** data types as strings.  
+ **Important** To use client-side FOR XML functionality with the new **xml** data type, clients should always use the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client (SQLNCLI11) data provider instead of the SQLOLEDB provider. SQLNCLI11 is the latest version of the SQL Server provider and fully understands data types introduced in [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)]. The behavior for client side FOR XML with the SQLOLEDB provider will treat **xml** data types as strings.  
   
 ## Formatting XML Documents on the Client Side  
  When a client application executes the following query:  
@@ -56,7 +56,7 @@ FROM   Person.Contact
 |EXPLICIT|Is similar to server-side FOR XML EXPLICIT mode.|  
   
 > [!NOTE]  
->  If you specify AUTO mode and request client-side XML formatting, the entire query is sent to the server; that is, XML formatting occurs on the server. This is done for convenience, but note that the NESTED mode returns base table names as element names in the XML document that is generated. Some of the applications you write might require base table names. For example, you might execute a stored procedure and load the resulting data in a Dataset (in the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] .NET Framework), and then later generate a DiffGram to update data in the tables. In such a case, you would need the base table information and you would have to use the NESTED mode.  
+>  If you specify AUTO mode and request client-side XML formatting, the entire query is sent to the server; that is, XML formatting occurs on the server. This is done for convenience, but note that the NESTED mode returns base table names as element names in the XML document that is generated. Some of the applications you write might require base table names. For example, you might execute a stored procedure and load the resulting data in a Dataset (in the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] .NET Framework), and then later generate a DiffGram to update data in the tables. In such a case, you would need the base table information and you would have to use the NESTED mode.  
   
 ## Benefits of Client-side XML formatting  
  The following are some benefits of formatting XML on the client.  
@@ -114,7 +114,7 @@ AS
      You can specify client-side formatting by setting this property of the SQLXML managed classes to true.  
   
 ## Enhanced XML Template Support  
- Beginning with [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)], the XML template in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] has been enhanced with the addition of the **client-side-xml** attribute. If this attribute is set to true, XML is formatted on the client. Note that this template attribute is identical in functionality to the SQLXMLOLEDB Provider-specific ClientSideXML property.  
+ Beginning with [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)], the XML template in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] has been enhanced with the addition of the **client-side-xml** attribute. If this attribute is set to true, XML is formatted on the client. Note that this template attribute is identical in functionality to the SQLXMLOLEDB Provider-specific ClientSideXML property.  
   
 > [!NOTE]  
 >  If you execute an XML template in an ADO application that is using the SQLXMLOLEDB Provider, and you specify both the **client-side-xml** attribute in the template and the provider ClientSideXML property, the value specified in the template takes precedence.  
@@ -124,9 +124,9 @@ AS
  [FOR XML &#40;SQL Server&#41;](../../../relational-databases/xml/for-xml-sql-server.md)   
  [FOR XML Security Considerations &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4.0.md)   
  [xml Data Type Support in SQLXML 4.0](../../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4.0.md)   
- [SQLXML Managed Classes](../Topic/SQLXML%20Managed%20Classes.md)   
+ [SQLXML Managed Classes](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4.0-.net-framework-support-managed-classes.md)   
  [Client-side vs. Server-side XML Formatting &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-vs.-server-side-xml-formatting-sqlxml-4.0.md)   
- [SqlXmlCommand Object &#40;SQLXML Managed Classes&#41;](../Topic/SqlXmlCommand%20Object%20\(SQLXML%20Managed%20Classes\).md)   
+ [SqlXmlCommand Object &#40;SQLXML Managed Classes&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
  [XML Data &#40;SQL Server&#41;](../../../relational-databases/xml/xml-data-sql-server.md)  
   
   

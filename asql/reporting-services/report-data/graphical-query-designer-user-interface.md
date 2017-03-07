@@ -25,18 +25,18 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Graphical Query Designer User Interface
-  [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] provides both a graphical query designer and a text-based query designer for creating queries to retrieve data from a relational database for a report dataset in Report Designer. Use the graphical query designer to interactively build a query and view the results for data source types [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], Oracle, OLE DB, and ODBC. Use the text-based query designer to specify multiple [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements, complex query or command syntax, and expression-based queries. For more information, see [Text-based Query Designer User Interface](../Topic/Text-based%20Query%20Designer%20User%20Interface.md). For more information about working with specific data source types, see [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
+  [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] provides both a graphical query designer and a text-based query designer for creating queries to retrieve data from a relational database for a report dataset in Report Designer. Use the graphical query designer to interactively build a query and view the results for data source types [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], Oracle, OLE DB, and ODBC. Use the text-based query designer to specify multiple [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements, complex query or command syntax, and expression-based queries. For more information, see [Text-based Query Designer User Interface](../../a9retired/text-based-query-designer-user-interface.md). For more information about working with specific data source types, see [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
  .  
   
 ## Graphical Query Designer  
- This graphical query designer supports three types of query commands: **Text**, **StoredProcedure**, or **TableDirect**. Before you create a query for your dataset, you must select a command type option on the Query page of the [Dataset Properties](../Topic/Dataset%20Properties%20Dialog%20Box,%20Query.md) dialog box.  
+ This graphical query designer supports three types of query commands: **Text**, **StoredProcedure**, or **TableDirect**. Before you create a query for your dataset, you must select a command type option on the Query page of the [Dataset Properties](../../a9retired/dataset-properties-dialog-box-query.md) dialog box.  
   
  The following options are available for query type:  
   
--   **Text** Supports standard [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] query text for relational database data sources, including data processing extensions for [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and Oracle.  
+-   **Text** Supports standard [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] query text for relational database data sources, including data processing extensions for [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and Oracle.  
   
--   **TableDirect** Selects all the columns from the specified table. For example, for a table named Customers, this is the equivalent of the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement `SELECT * FROM Customers`.  
+-   **TableDirect** Selects all the columns from the specified table. For example, for a table named Customers, this is the equivalent of the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement `SELECT * FROM Customers`.  
   
 -   **StoredProcedure** Supports calls to stored procedures on the data source. To use this option, you must have been granted Execute permissions on the stored procedure by the database administrator on the data source.  
   
@@ -46,7 +46,7 @@ manager: "erikre"
 >  Not all data processing extensions support all types. The underlying data provider must support a command type before the option is available.  
   
 ### Command Type Text  
- In **Text** type, the graphical query designer presents four areas, or panes. You can specify columns, aliases, sort values, and filter values for a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] query. You can view the query text generated from your selections, run the query, and view the result set. The following figure shows the four panes.  
+ In **Text** type, the graphical query designer presents four areas, or panes. You can specify columns, aliases, sort values, and filter values for a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] query. You can view the query text generated from your selections, run the query, and view the result set. The following figure shows the four panes.  
   
  ![Graphical query designer for sql query](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "Graphical query designer for sql query")  
   
@@ -56,15 +56,15 @@ manager: "erikre"
 |----------|--------------|  
 |Diagram|Displays graphic representations of the tables in the query. Use this pane to select fields and define relationships between tables.|  
 |Grid|Displays a list of fields returned by the query. Use this pane to define aliases, sort order, filters, groups, and parameters.|  
-|SQL|Displays the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] query represented by the diagram and Grid panes. Use this pane to write or update a query using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].|  
+|SQL|Displays the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] query represented by the diagram and Grid panes. Use this pane to write or update a query using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].|  
 |Result|Displays the results of the query. To run the query, right-click in any pane, and then click **Run**, or click the **Run** button on the toolbar.|  
   
- When you change information in any one of the first three panes, those changes will appear in the other panes. For example, if you add a table in the Diagram pane, it will automatically be added to the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] query in the SQL pane. Adding a field to the query in the SQL pane will automatically add the field to the list in the Grid pane and update the table in the Diagram pane.  
+ When you change information in any one of the first three panes, those changes will appear in the other panes. For example, if you add a table in the Diagram pane, it will automatically be added to the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] query in the SQL pane. Adding a field to the query in the SQL pane will automatically add the field to the list in the Grid pane and update the table in the Diagram pane.  
   
  For more information, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](../Topic/Query%20and%20View%20Designer%20Tools%20\(Visual%20Database%20Tools\).md).  
   
 #### Toolbar for the Graphical Query Designer  
- The graphical query designer toolbar provides buttons to help you design [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] queries using the graphical interface.  
+ The graphical query designer toolbar provides buttons to help you design [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] queries using the graphical interface.  
   
 |Button|Description|  
 |------------|-----------------|  
@@ -74,7 +74,7 @@ manager: "erikre"
 |![Show or Hide Grid pane toggle](../../reporting-services/report-data/media/rsqdicon-showhidegrid.gif "Show or Hide Grid pane toggle")|Show or hide the Grid pane.|  
 |![Show or hide sql pane toggle](../../reporting-services/report-data/media/rsqdicon-showhidesql.gif "Show or hide sql pane toggle")|Show or hide the SQL pane.|  
 |![Show or Hide Result pane toggle](../../reporting-services/report-data/media/rsqdicon-showhideresult.gif "Show or Hide Result pane toggle")|Show or hide the Result pane.|  
-|![Run the query](../../reporting-services/report-data/media/rsqdicon-run.gif "Run the query")|Run the query.|  
+|![Run the query](../../a9retired/media/rsqdicon-run.gif "Run the query")|Run the query.|  
 |![Verify SQL in SQL pane button](../../reporting-services/report-data/media/rsqdicon-verifysql.gif "Verify SQL in SQL pane button")|Check that the syntax of the query text is correct.|  
 |![Set Sort Ascending on selected field](../../reporting-services/report-data/media/rsqdicon-sortascending.gif "Set Sort Ascending on selected field")|Set the sort order to **Sort Ascending** for the selected column in the Diagram pane,|  
 |![Set Sort Descending on selected field](../../reporting-services/report-data/media/rsqdicon-sortdescending.gif "Set Sort Descending on selected field")|Set the sort order to **Sort Descending** for the selected column in the Diagram pane,|  
@@ -83,13 +83,13 @@ manager: "erikre"
 |![Add a new table to the diagram pane](../../reporting-services/report-data/media/rsqdicon-addtable.gif "Add a new table to the diagram pane")|Add a new table from the data source to the Diagram pane.<br /><br /> **Note** When you add a new table, the query designer tries to match up foreign key relationships from the data source. After you add a table, confirm that the foreign key relationships represented by linkages between the tables are correct.|  
   
 #### Example  
- The following query returns the list of last names from the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database **Person** table:  
+ The following query returns the list of last names from the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database **Person** table:  
   
 ```  
 SELECT LastName FROM Person.Person;  
 ```  
   
- You can also run stored procedures from the SQL pane. The following query runs the stored procedure **uspGetEmployeeManagers** in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database:  
+ You can also run stored procedures from the SQL pane. The following query runs the stored procedure **uspGetEmployeeManagers** in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database:  
   
 ```  
 EXEC uspGetEmployeeManagers '1';  
@@ -116,7 +116,7 @@ EXEC uspGetEmployeeManagers '1';
 |**Edit As Text**|Toggle between the text-based query designer and the graphical query designer.|  
 |**Import**|Import an existing query from a file or report. Only file types .sql and .rdl are supported. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Icon of the Generic Query Designer button](../../reporting-services/report-data/media/icongenericquerydesigner.gif "Icon of the Generic Query Designer button")|Toggle between generic query designer and graphical query designer, preserving the query text or stored procedure view.|  
-|![Run the query](../../reporting-services/report-data/media/rsqdicon-run.gif "Run the query")|Select all columns from the selected table.|  
+|![Run the query](../../a9retired/media/rsqdicon-run.gif "Run the query")|Select all columns from the selected table.|  
   
 ### Command Type StoredProcedure  
  In **StoredProcedure** type, the graphical query designer displays a drop-down list of the available stored procedures from the data source and a Result pane. The following table describes the function of each pane.  
@@ -133,11 +133,11 @@ EXEC uspGetEmployeeManagers '1';
 |------------|-----------------|  
 |**Edit As Text**|Toggle between the text-based query designer and the graphical query designer.|  
 |**Import**|Import an existing query from a file or report. Only file types .sql and .rdl are supported. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Run the query](../../reporting-services/report-data/media/rsqdicon-run.gif "Run the query")|Run the selected stored procedure.|  
+|![Run the query](../../a9retired/media/rsqdicon-run.gif "Run the query")|Run the selected stored procedure.|  
 |Stored procedure drop-down list|Click the down arrow to display a list of available stored procedures from the data source. Click any stored procedure from the list to select it.|  
   
 #### Example  
- The following stored procedure calls a chain-of-command list of managers from the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database. This stored procedure accepts *BusinessEntityID* as parameter. You can enter any small integer.  
+ The following stored procedure calls a chain-of-command list of managers from the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database. This stored procedure accepts *BusinessEntityID* as parameter. You can enter any small integer.  
   
  `uspGetEmployeeManagers '1';`  
   

@@ -19,9 +19,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 2-5 - Summary - Configuring Permissions on Database Objects
-Logins give users permissions to connect to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Users are logins that can access a specific database. Use the GRANT statement to give users permission to read and to access and change the data.  
+Logins give users permissions to connect to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Users are logins that can access a specific database. Use the GRANT statement to give users permission to read and to access and change the data.  
   
-A view is a single SELECT statement and looks like a table to the user. A stored procedure is one or more [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements that execute as a batch.  
+A view is a single SELECT statement and looks like a table to the user. A stored procedure is one or more [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements that execute as a batch.  
   
 ## Next Lesson in Tutorial  
 [Lesson 3: Deleting Database Objects](../../t-sql/tutorials/lesson-3-deleting-database-objects.md)  

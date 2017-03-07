@@ -16,11 +16,11 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Install Analysis Services in Power Pivot Mode
-  The procedures in this topic guide you through a single server installation of a [!INCLUDE[ssASnoversion](../../../../analysis-services/includes/ssasnoversion-md.md)] server in [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] mode for a SharePoint deployment. The steps include running the SQL Server installation wizard as well as configuration tasks that use SharePoint Central Administration.  
+  The procedures in this topic guide you through a single server installation of a [!INCLUDE[ssASnoversion](../../../../a9notintoc/includes/ssasnoversion-md.md)] server in [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] mode for a SharePoint deployment. The steps include running the SQL Server installation wizard as well as configuration tasks that use SharePoint Central Administration.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../../analysis-services/includes/applies-md.md)]**  SharePoint 2016 &#124; SharePoint 2013|  
+|**[!INCLUDE[applies](../../../../a9retired/includes/applies-md.md)]**  SharePoint 2016 &#124; SharePoint 2013|  
   
  **In this topic:**  
   
@@ -41,13 +41,13 @@ manager: "erikre"
  [Beyond the Single-Server Installation – Power Pivot for Microsoft SharePoint](#bkmk_multiple_servers)  
   
 ##  <a name="bkmk_background"></a> Background  
- [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] for SharePoint is a collection of middle-tier and backend services that provide [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] data access in a SharePoint 2016, or SharePoint 2013, farm.  
+ [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] for SharePoint is a collection of middle-tier and backend services that provide [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] data access in a SharePoint 2016, or SharePoint 2013, farm.  
   
--   **Backend services:** If you use [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] for Excel to create workbooks that contain analytical data, you must have [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] for SharePoint to access that data in a server environment. You can run [!INCLUDE[ssNoVersion](../../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Setup on a computer that has SharePoint Server installed, or on a different computer that has no SharePoint software. [!INCLUDE[ssASnoversion](../../../../analysis-services/includes/ssasnoversion-md.md)] does not have any dependencies on SharePoint.  
+-   **Backend services:** If you use [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] for Excel to create workbooks that contain analytical data, you must have [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] for SharePoint to access that data in a server environment. You can run [!INCLUDE[ssNoVersion](../../../../a9notintoc/includes/ssnoversion-md.md)] Setup on a computer that has SharePoint Server installed, or on a different computer that has no SharePoint software. [!INCLUDE[ssASnoversion](../../../../a9notintoc/includes/ssasnoversion-md.md)] does not have any dependencies on SharePoint.  
   
-     **Note:** This topic describes the installation of the [!INCLUDE[ssASnoversion](../../../../analysis-services/includes/ssasnoversion-md.md)] server and the backend services.  
+     **Note:** This topic describes the installation of the [!INCLUDE[ssASnoversion](../../../../a9notintoc/includes/ssasnoversion-md.md)] server and the backend services.  
   
--   **Middle-tier:** Enhancements to the [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] experiences in SharePoint including [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] Gallery, Schedule data refresh, Management dashboard, and data providers. For more information on installing and configuring the middle-tier, see the following:  
+-   **Middle-tier:** Enhancements to the [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] experiences in SharePoint including [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] Gallery, Schedule data refresh, Management dashboard, and data providers. For more information on installing and configuring the middle-tier, see the following:  
   
     -   [Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2016)](../../../../analysis-services/instances/install/windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
   
@@ -59,25 +59,25 @@ manager: "erikre"
   
 ##  <a name="bkmk_prereq"></a> Prerequisites  
   
-1.  You must be a local administrator to run [!INCLUDE[ssNoVersion](../../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Setup.  
+1.  You must be a local administrator to run [!INCLUDE[ssNoVersion](../../../../a9notintoc/includes/ssnoversion-md.md)] Setup.  
   
-2.  SharePoint Server enterprise edition is required for [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] for SharePoint. You can also use the evaluation enterprise edition.  
+2.  SharePoint Server enterprise edition is required for [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] for SharePoint. You can also use the evaluation enterprise edition.  
   
 3.  The computer must be joined to a domain in the same Active Directory forest as the Office Online Server (SharePoint 2016) or  Excel Services (SharePoint 2013).  
   
-4.  The [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] instance name must be available. You cannot have an existing [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)]-named instance on the computer on which you are installing Analysis Services in [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] mode.  
+4.  The [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] instance name must be available. You cannot have an existing [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)]-named instance on the computer on which you are installing Analysis Services in [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] mode.  
   
      **Note:** The instance name must be POWERPIVOT.  
   
-5.  Review [Hardware and Software Requirements for Analysis Services Server in SharePoint Mode](../Topic/Hardware%20and%20Software%20Requirements%20for%20Analysis%20Services%20Server%20in%20SharePoint%20Mode.md).  
+5.  Review [Hardware and Software Requirements for Analysis Services Server in SharePoint Mode](../../../../a9retired/fb86ca0a-518c-4c61-ae78-7680c57fae1f.md).  
   
 6.  Review the release notes at [SQL Server 2016 Release Notes](../../../../sql-server/sql-server-2016-release-notes.md).  
   
 ###  <a name="bkmk_sqleditions"></a> SQL Server Edition Requirements  
- Business intelligence features are not all available in all editions of [!INCLUDE[ssCurrent](../../../../advanced-analytics/r-services/includes/sscurrent-md.md)]. For details, see [Analysis Services Features Supported by the Editions of SQL Server 2016](../../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) and [Editions and Components of SQL Server 2016](../../../../sql-server/editions-and-components-of-sql-server-2016.md).  
+ Business intelligence features are not all available in all editions of [!INCLUDE[ssCurrent](../../../../a9notintoc/includes/sscurrent-md.md)]. For details, see [Analysis Services Features Supported by the Editions of SQL Server 2016](../../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) and [Editions and Components of SQL Server 2016](../../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 ##  <a name="InstallSQL"></a> Step 1: Install Power Pivot for SharePoint  
- In this step, you run SQL Server Setup to install an [!INCLUDE[ssASnoversion](../../../../analysis-services/includes/ssasnoversion-md.md)] server in [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] mode. In a subsequent step, you configure Excel Services to use this server for workbook data models.  
+ In this step, you run SQL Server Setup to install an [!INCLUDE[ssASnoversion](../../../../a9notintoc/includes/ssasnoversion-md.md)] server in [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] mode. In a subsequent step, you configure Excel Services to use this server for workbook data models.  
   
 1.  Run the SQL Server Installation Wizard (Setup.exe).  
   
@@ -103,7 +103,7 @@ manager: "erikre"
   
      Select **Next**.  
   
-11. On the Feature Selection page, select **Analysis Services**. This option allows you to install any of the three [!INCLUDE[ssASnoversion](../../../../analysis-services/includes/ssasnoversion-md.md)] modes. You will select the mode in a later step. Select **Next**.  
+11. On the Feature Selection page, select **Analysis Services**. This option allows you to install any of the three [!INCLUDE[ssASnoversion](../../../../a9notintoc/includes/ssasnoversion-md.md)] modes. You will select the mode in a later step. Select **Next**.  
   
 12. On the **Instance Configuration** page, select **Named Instance** and type **POWERPIVOT** for the instance name Click **Next**.  
   
@@ -111,7 +111,7 @@ manager: "erikre"
   
 13. On the **Server Configuration** page, configure all of the services for Automatic **Startup Type**. Specify the desired domain account and password for **SQL Server Analysis Services**, **(1)** in the following diagram.  
   
-    -   For [!INCLUDE[ssASnoversion](../../../../analysis-services/includes/ssasnoversion-md.md)], you can use a **domain user** account or **NetworkService** account. Do not use LocalSystem or LocalService accounts.  
+    -   For [!INCLUDE[ssASnoversion](../../../../a9notintoc/includes/ssasnoversion-md.md)], you can use a **domain user** account or **NetworkService** account. Do not use LocalSystem or LocalService accounts.  
   
     -   If you added the SQL Server Database Engine and SQL Server Agent, you can configure the services to run under domain user accounts or under the default virtual account.  
   
@@ -121,7 +121,7 @@ manager: "erikre"
   
      ![SQL Setup - Server Configuration landing page](../../../../analysis-services/instances/install/windows/media/sql2016-pp-server-config-landing-page.png "SQL Setup - Server Configuration landing page")  
   
-14. If you are installing the [!INCLUDE[ssDE](../../../../analysis-services/instances/install/windows/includes/ssde-md.md)], the **Database Engine Configuration** page appears. In [!INCLUDE[ssDE](../../../../analysis-services/instances/install/windows/includes/ssde-md.md)] Configuration, select **Add Current User** to grant your user account administrator permissions on the Database Engine instance.  
+14. If you are installing the [!INCLUDE[ssDE](../../../../a9notintoc/includes/ssde-md.md)], the **Database Engine Configuration** page appears. In [!INCLUDE[ssDE](../../../../a9notintoc/includes/ssde-md.md)] Configuration, select **Add Current User** to grant your user account administrator permissions on the Database Engine instance.  
   
      Select **Next**.  
   
@@ -131,7 +131,7 @@ manager: "erikre"
   
 16. On the **Analysis Services Configuration** page, select **Add Current User** to grant your user account administrative permissions. You will need administrative permission to configure the server after Setup is finished.  
   
-    -   In the same page, add the Windows user account of any person who also requires administrative permissions. For example, any user who wants to connect to the [!INCLUDE[ssGeminiSrv](../../../../analysis-services/instances/install/windows/includes/ssgeminisrv-md.md)] instance in [!INCLUDE[ssManStudioFull](../../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to troubleshoot database connection problems must have system administrator permissions. Add the user account of any person who might need to troubleshoot or administer the server now.  
+    -   In the same page, add the Windows user account of any person who also requires administrative permissions. For example, any user who wants to connect to the [!INCLUDE[ssGeminiSrv](../../../../analysis-services/instances/install/windows/includes/ssgeminisrv-md.md)] instance in [!INCLUDE[ssManStudioFull](../../../../a9notintoc/includes/ssmanstudiofull-md.md)] to troubleshoot database connection problems must have system administrator permissions. Add the user account of any person who might need to troubleshoot or administer the server now.  
   
     -   > [!NOTE]  
         >  All service applications that require access to the Analysis Services server instance need to have Analysis Services Administrative permissions. For example, add the service accounts for Excel Services, Power View, and Performance Point Services. Also, add the SharePoint farm account, which is used as the identity of the web application that hosts Central Administration.  
@@ -216,7 +216,7 @@ manager: "erikre"
   
 4.  Click **Add Server**.  
   
-5.  In **Server Name**, type the Analysis Services server name and the [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] instance name. For example `MyServer\POWERPIVOT`. The [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] instance name is required.  
+5.  In **Server Name**, type the Analysis Services server name and the [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] instance name. For example `MyServer\POWERPIVOT`. The [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] instance name is required.  
   
      Type a description.  
   
@@ -276,13 +276,13 @@ manager: "erikre"
 18. Select the name of your workbook to view it in Excel Online and click the slicer or change the filter that you previously added. If a data update occurs, you know that Analysis Services is installed and available to Excel. If you open the workbook in Excel you will be using a cached copy and not using the Analysis Services server.  
   
 ##  <a name="bkmk_firewall"></a> Configure the Windows Firewall to Allow Analysis Services Access  
- Use the information in the topic [Configure the Windows Firewall to Allow Analysis Services Access](../../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) to determine whether you need to unblock ports in a firewall to allow access to Analysis Services or [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] for SharePoint. You can follow the steps provided in the topic to configure both port and firewall settings. In practice, you should perform these steps together to allow access to your Analysis Services server.  
+ Use the information in the topic [Configure the Windows Firewall to Allow Analysis Services Access](../../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) to determine whether you need to unblock ports in a firewall to allow access to Analysis Services or [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] for SharePoint. You can follow the steps provided in the topic to configure both port and firewall settings. In practice, you should perform these steps together to allow access to your Analysis Services server.  
   
 ##  <a name="bkmk_upgrade_workbook"></a> Upgrade Workbooks and Scheduled Data Refresh  
- The steps required to upgrade workbooks created in previous versions of [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] depend on what version of [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] created the workbook. For more information, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../../../../analysis-services/instances/install/windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+ The steps required to upgrade workbooks created in previous versions of [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] depend on what version of [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] created the workbook. For more information, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../../../../analysis-services/instances/install/windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="bkmk_multiple_servers"></a> Beyond the Single-Server Installation – Power Pivot for Microsoft SharePoint  
- **Web front-end (WFE)** or **Middle-tier:**: To use an [!INCLUDE[ssASnoversion](../../../../analysis-services/includes/ssasnoversion-md.md)] server in SharePoint mode in a larger SharePoint farm and to install additional [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] features into the farm, run the installer package **spPowerPivot16.msi (SharePoint 2016), or spPowerPivot.msi (SharePoint 2013),** on each of the SharePoint servers. The spPowerPivot16.msi, or spPowerPivot.msi, installs required data providers and the [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] for SharePoint 2016, or 2013, Configuration tool.  
+ **Web front-end (WFE)** or **Middle-tier:**: To use an [!INCLUDE[ssASnoversion](../../../../a9notintoc/includes/ssasnoversion-md.md)] server in SharePoint mode in a larger SharePoint farm and to install additional [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] features into the farm, run the installer package **spPowerPivot16.msi (SharePoint 2016), or spPowerPivot.msi (SharePoint 2013),** on each of the SharePoint servers. The spPowerPivot16.msi, or spPowerPivot.msi, installs required data providers and the [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] for SharePoint 2016, or 2013, Configuration tool.  
   
  For more information on installing and configuring the middle-tier, see the following:  
   
@@ -294,13 +294,13 @@ manager: "erikre"
   
 -   [Configure Power Pivot and Deploy Solutions &#40;SharePoint 2013&#41;](../../../../analysis-services/instances/install/windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)  
   
- **Redundancy and server load:** Installing a second, or more [!INCLUDE[ssASnoversion](../../../../analysis-services/includes/ssasnoversion-md.md)] servers in [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] mode will provide redundancy of the [!INCLUDE[ssASnoversion](../../../../analysis-services/includes/ssasnoversion-md.md)] server functionality. Additional servers will also spread the load across servers. For more information, see the following:  
+ **Redundancy and server load:** Installing a second, or more [!INCLUDE[ssASnoversion](../../../../a9notintoc/includes/ssasnoversion-md.md)] servers in [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] mode will provide redundancy of the [!INCLUDE[ssASnoversion](../../../../a9notintoc/includes/ssasnoversion-md.md)] server functionality. Additional servers will also spread the load across servers. For more information, see the following:  
   
 -   [Configure Analysis Services for processing data models in Excel Services (SharePoint 2013)](http://technet.microsoft.com/library/jj614437\(v=office.15\)) (http://technet.microsoft.com/library/jj614437(v=office.15)).  
   
 -   [Manage Excel Services data model settings (SharePoint 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\)) (http://technet.microsoft.com/library/jj219780(v=office.15)).  
   
- ![SharePoint Settings](../../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Submit feedback and contact information through Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![SharePoint Settings](../../../../a9retired/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Submit feedback and contact information through Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
 ## See Also  
  [Migrate Power Pivot to SharePoint 2013](../../../../analysis-services/instances/install/windows/migrate-power-pivot-to-sharepoint-2013.md)   

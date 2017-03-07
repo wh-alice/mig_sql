@@ -22,7 +22,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Parsing Non-Standard Text File Formats with the Script Component
-  When your source data is arranged in a non-standard format, you may find it more convenient to consolidate all your parsing logic in a single script than to chain together multiple [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] transformations to achieve the same result.  
+  When your source data is arranged in a non-standard format, you may find it more convenient to consolidate all your parsing logic in a single script than to chain together multiple [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] transformations to achieve the same result.  
   
  [Example 1: Parsing Row-Delimited Records](#example1)  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
     ```  
   
-2.  Open [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] and connect to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+2.  Open [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] and connect to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 3.  Select a destination database, and open a new query window. In the query window, execute the following script to create the destination table:  
   
@@ -77,11 +77,11 @@ manager: "jhubbard"
   
     ```  
   
-4.  Open [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)] and create a new [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package named ParseRowDelim.dtsx.  
+4.  Open [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)] and create a new [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package named ParseRowDelim.dtsx.  
   
 5.  Add a Flat File connection manager to the package, name it RowDelimitedData, and configure it to connect to the rowdelimiteddata.txt file that you created in a previous step.  
   
-6.  Add an OLE DB connection manager to the package and configure it to connect to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and the database in which you created the destination table.  
+6.  Add an OLE DB connection manager to the package and configure it to connect to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and the database in which you created the destination table.  
   
 7.  Add a Data Flow task to the package and click the **Data Flow** tab of SSIS Designer.  
   
@@ -109,7 +109,7 @@ manager: "jhubbard"
   
 14. Add a SQL Server Destination to the data flow. Configure it to use the OLE DB connection manager and the RowDelimitedData table. Connect the output of the Script Component to this destination.  
   
-15. Run the package. After the package has finished, examine the records in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] destination table.  
+15. Run the package. After the package has finished, examine the records in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] destination table.  
   
 ```vb#  
 Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)  
@@ -215,7 +215,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
     ```  
   
-2.  Open [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and connect to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+2.  Open [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] and connect to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 3.  Select a destination database, and open a new query window. In the query window, execute the following script to create the destination tables:  
   
@@ -236,11 +236,11 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
     ```  
   
-4.  Open [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] and create a new [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package named SplitParentChild.dtsx.  
+4.  Open [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] and create a new [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package named SplitParentChild.dtsx.  
   
 5.  Add a Flat File connection manager to the package, name it ParentChildData, and configure it to connect to the parentchilddata.txt file that you created in a previous step.  
   
-6.  Add an OLE DB connection manager to the package and configure it to connect to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and the database in which you created the destination tables.  
+6.  Add an OLE DB connection manager to the package and configure it to connect to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and the database in which you created the destination tables.  
   
 7.  Add a Data Flow task to the package and click the **Data Flow** tab of SSIS Designer.  
   
@@ -272,7 +272,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 16. Add another SQL Server Destination to the data flow. Connect the ChildRecords output of the Script Component to this destination. Configure it to use the OLE DB connection manager and the Children table.  
   
-17. Run the package. After the package has finished, examine the parent and child records in the two [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] destination tables.  
+17. Run the package. After the package has finished, examine the parent and child records in the two [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] destination tables.  
   
 ```vb#  
 Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)  

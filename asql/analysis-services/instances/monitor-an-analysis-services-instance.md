@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Monitor an Analysis Services Instance
-  You can monitor the performance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] by using [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] or Performance Monitor, an application sometimes referred to as **PerfMon**. [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] lets you create and manage traces and analyze and replay trace results. Performance Monitor reports on server status, as indexed through certain counters, which are discussed in the next section.  
+  You can monitor the performance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] by using [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] or Performance Monitor, an application sometimes referred to as **PerfMon**. [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] lets you create and manage traces and analyze and replay trace results. Performance Monitor reports on server status, as indexed through certain counters, which are discussed in the next section.  
   
 > [!NOTE]  
 >  For more information about monitoring, see the [SQL Server 2008 R2 Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539).  

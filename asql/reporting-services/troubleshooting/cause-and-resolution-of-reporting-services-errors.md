@@ -20,7 +20,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Cause and Resolution of Reporting Services Errors
-  This topic contains cause and resolution information for a number of errors related to [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]. The error message topics in this section provide an explanation of the error message, possible causes, and any actions you can take to correct the problem.  
+  This topic contains cause and resolution information for a number of errors related to [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]. The error message topics in this section provide an explanation of the error message, possible causes, and any actions you can take to correct the problem.  
   
 ## In This Section  
   

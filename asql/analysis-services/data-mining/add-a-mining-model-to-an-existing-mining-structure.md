@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ### To add a mining model to the structure  
   
-1.  From the **Mining Model** menu item in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], select **New Mining Model**.  
+1.  From the **Mining Model** menu item in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], select **New Mining Model**.  
   
      The **New Mining Model** dialog box opens.  
   

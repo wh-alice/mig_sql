@@ -17,11 +17,11 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Activate Power Pivot Integration for Site Collections in CA
-  Activating [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] feature integration for specific site collections is required if you used the Existing Farm installation option to install SQL Server [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint. If you installed [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint using the New Server option, you can skip this task because SQL Server Setup already activated [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] feature integration for the root site collection when it configured your deployment.  
+  Activating [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] feature integration for specific site collections is required if you used the Existing Farm installation option to install SQL Server [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint. If you installed [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint using the New Server option, you can skip this task because SQL Server Setup already activated [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] feature integration for the root site collection when it configured your deployment.  
   
- Feature activation at the site collection level is necessary to make application pages and templates available to your sites, including configuration pages for scheduled data refresh and application pages for [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Gallery and Data Feed libraries.  
+ Feature activation at the site collection level is necessary to make application pages and templates available to your sites, including configuration pages for scheduled data refresh and application pages for [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Gallery and Data Feed libraries.  
   
- You must activate [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] integration for each site collection that supports [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] query processing.  
+ You must activate [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] integration for each site collection that supports [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] query processing.  
   
 ## Prerequisites  
  You must be a site collection administrator.  
@@ -36,7 +36,7 @@ manager: "erikre"
   
 3.  In Site Collection Administration, click **Site collection features**.  
   
-4.  Scroll down the page until you find **[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Integration Site Collection Feature**.  
+4.  Scroll down the page until you find **[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Integration Site Collection Feature**.  
   
 5.  Click **Activate**.  
   

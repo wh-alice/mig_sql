@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Except (MDX) Operator
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Performs a set operation that returns the difference between two sets, removing duplicate members.  
   
@@ -41,7 +41,7 @@ Set_Expression - Set_Expression
  A set that contains members that are not shared by both specified parameters.  
   
 ## Remarks  
- The **- (Except)** operator is functionally equivalent to the [Except](../Topic/Except%20\(MDX\).md) function.  
+ The **- (Except)** operator is functionally equivalent to the [Except](../mdx/except-mdx-function.md) function.  
   
 ## Examples  
  The following example demonstrates the use of this operator:  

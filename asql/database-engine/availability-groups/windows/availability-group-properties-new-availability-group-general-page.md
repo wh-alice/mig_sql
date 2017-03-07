@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 ## Availability Replicas  
  **Server instance**  
- Server name of the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that is hosting this replica and, for a non-default instance, its instance name.  
+ Server name of the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] that is hosting this replica and, for a non-default instance, its instance name.  
   
  **Role**  
  **Primary**  
@@ -98,7 +98,7 @@ manager: "jhubbard"
  The number of seconds for the session-timeout period on this replica.  
   
  **Endpoint URL**  
- The URL of the endpoint. For information the format of these URLs, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../Topic/Specify%20the%20Endpoint%20URL%20When%20Adding%20or%20Modifying%20an%20Availability%20Replica%20\(SQL%20Server\).md).  
+ The URL of the endpoint. For information the format of these URLs, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
  **Add**  
  Click to add a secondary replica to the availability group.  

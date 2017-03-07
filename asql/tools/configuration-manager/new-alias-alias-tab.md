@@ -29,16 +29,16 @@ manager: "jhubbard"
  The protocol used for the connection.  
   
  **Server**  
- The name of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance being connected to.  
+ The name of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance being connected to.  
   
 ## When to Use an Alias  
- By default, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] connects to a local instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] using the **Shared Memory** protocol, and to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] on another computer using either **TCP/IP** or **Named Pipes**. Create an alias when you are using TCP/IP or named pipes, and you want to provide a customized connection string, or when you want to use a name other than the server name for the connection.  
+ By default, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] connects to a local instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] using the **Shared Memory** protocol, and to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] on another computer using either **TCP/IP** or **Named Pipes**. Create an alias when you are using TCP/IP or named pipes, and you want to provide a customized connection string, or when you want to use a name other than the server name for the connection.  
   
 ### Examples  
   
--   [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is not listening on the default TCP/IP port of 1433 so you want to provide a connection string with a different port number.  
+-   [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is not listening on the default TCP/IP port of 1433 so you want to provide a connection string with a different port number.  
   
--   [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is not listening on the default named pipe so you want to provide a connection string with a different pipe name.  
+-   [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is not listening on the default named pipe so you want to provide a connection string with a different pipe name.  
   
 -   An application expects to connect to a database on the server named `ACCT`, but that database has been consolidated as an instance named `ACCT` on a server named `CENTRAL`. The application cannot easily be changed. Create an alias named `ACCT`, with a connection string pointing to `CENTRAL\ACCT`.  
   

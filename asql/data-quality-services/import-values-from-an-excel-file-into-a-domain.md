@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Import Values from an Excel File into a Domain
-  This topic describes how to import values from an Excel file into a domain in [!INCLUDE[ssDQSnoversion](../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS). Using an Excel file to import domain values into the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] application simplifies the knowledge generation process, saving time and effort. It enables people who have a list of valid data values in an Excel file or a text file to import those values into a domain. From an Excel file you can import domain values into a domain or domains into a knowledge base. (See [Import Domains from an Excel File in Knowledge Discovery](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) for more information about importing domains into a knowledge base.) Exporting to an Excel file is not supported.  
+  This topic describes how to import values from an Excel file into a domain in [!INCLUDE[ssDQSnoversion](../a9retired/includes/ssdqsnoversion-md.md)] (DQS). Using an Excel file to import domain values into the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] application simplifies the knowledge generation process, saving time and effort. It enables people who have a list of valid data values in an Excel file or a text file to import those values into a domain. From an Excel file you can import domain values into a domain or domains into a knowledge base. (See [Import Domains from an Excel File in Knowledge Discovery](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) for more information about importing domains into a knowledge base.) Exporting to an Excel file is not supported.  
   
  You can import data values in two ways:  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
- To import domains from an Excel file, Excel must be installed on the computer that the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] application is installed on in order to import domain values or a complete domain; you must have created an Excel file with domain values (see [How the import works](#How)); and you must have created and opened a knowledge base to import the domain into.  
+ To import domains from an Excel file, Excel must be installed on the computer that the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] application is installed on in order to import domain values or a complete domain; you must have created an Excel file with domain values (see [How the import works](#How)); and you must have created and opened a knowledge base to import the domain into.  
   
 ###  <a name="Security"></a> Security  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssDQSInitialStep](../data-quality-services/includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] home screen, open a knowledge base in the Domain Management activity.  
+2.  In the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] home screen, open a knowledge base in the Domain Management activity.  
   
 3.  If adding values to a new domain, create a new domain using the **Create a Domain** icon, and then select the new domain in the domain list.  
   
@@ -112,7 +112,7 @@ manager: "jhubbard"
   
  The following rules apply to the Excel file being used for the import:  
   
--   The Excel file can have the extension .xlsx, .xls, or .csv. Microsoft Excel must be installed on the computer that the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] application is installed on in order to import domain values or a complete domain. Excel versions 2003 and later are supported. If the 64-bit version of Excel is used, only Excel 2003 files are supported; Excel 2007 or 2010 files are not supported.  
+-   The Excel file can have the extension .xlsx, .xls, or .csv. Microsoft Excel must be installed on the computer that the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] application is installed on in order to import domain values or a complete domain. Excel versions 2003 and later are supported. If the 64-bit version of Excel is used, only Excel 2003 files are supported; Excel 2007 or 2010 files are not supported.  
   
 -   Excel files of type .xlsx are not supported for an Excel 64-bit installation. If you are using 64-bit Excel, save the spreadsheet file as an .xls file or a .csv file, or install an Excel 32-bit installation instead.  
   

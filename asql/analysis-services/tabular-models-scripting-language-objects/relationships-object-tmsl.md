@@ -25,7 +25,7 @@ manager: "erikre"
  A Boolean that indicates whether the relationship is marked as Active or Inactive. An Active relationship is automatically used for filtering across tables. An Inactive relationship can be used explicitly by DAX calculations with the USERELATIONSHIP function.  
   
  crossFilteringBehavior  
- Indicates how relationships influence filtering of data. See [Bi-directional cross filters for tabular models in SQL Server 2016 Analysis Services](../Topic/Bi-directional%20cross%20filters%20for%20tabular%20models%20in%20SQL%20Server%202016%20Analysis%20Services.md) for more information. Valid values are as follows:  
+ Indicates how relationships influence filtering of data. See [Bi-directional cross filters for tabular models in SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) for more information. Valid values are as follows:  
   
 -   OneDirection (1) - The rows selected in the "To" end of the relationship will automatically filter scans of the table in the "From" end of the relationship.  
   

@@ -22,14 +22,14 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Report Server Content Management (SSRS Native Mode)
-  In [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], content management refers to the management of report server items. All items can be managed independently of each other through properties and security settings. Any item can be moved to a different location in the report server folder namespace. To manage items effectively, you need to know which tasks a content manager performs. Starting in [!INCLUDE[ssRSCurrent](../../reporting-services/includes/ssrscurrent-md.md)] CTP 3.2, the  [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal is available. This article will look at Report Manager and the new web portal experience.  
+  In [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)], content management refers to the management of report server items. All items can be managed independently of each other through properties and security settings. Any item can be moved to a different location in the report server folder namespace. To manage items effectively, you need to know which tasks a content manager performs. Starting in [!INCLUDE[ssRSCurrent](../../a9notintoc/includes/ssrscurrent-md.md)] CTP 3.2, the  [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal is available. This article will look at Report Manager and the new web portal experience.  
   
 > [!NOTE]  
 >  Content management is different from report server administration. For more information about how to manage the environment in which a report server runs, see [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
  Content management includes the following tasks:  
   
--   Secure report server site and items by applying the role-based security provided with [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)].  
+-   Secure report server site and items by applying the role-based security provided with [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)].  
   
 -   Create a report server folder hierarchy by adding, modifying, and deleting folders.  
   
@@ -45,7 +45,7 @@ manager: "erikre"
   
 -   Provide permission to perform management tasks by using predefined roles: **System Administrator** and **Content Manager**. Effective management of report server content requires that you are assigned to both roles.  
   
- Tools for managing report server content include [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)],  Report Manager or the web portal. [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] allows you to set defaults and enable features. Report Manager is used to grant user access to report server items and operations, view and use reports and other content types, and view and use all shared items and report distribution features. The web portal is a updated site that allows for much of the functionality of Report Manager. For more information, see [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md).  
+ Tools for managing report server content include [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)],  Report Manager or the web portal. [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] allows you to set defaults and enable features. Report Manager is used to grant user access to report server items and operations, view and use reports and other content types, and view and use all shared items and report distribution features. The web portal is a updated site that allows for much of the functionality of Report Manager. For more information, see [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md).  
   
 ##  <a name="bkmk_ReportServerItems"></a> Report Server Items  
  Report server items include reports, shared data sources, shared datasets, report parts, resources (items that are stored on but not processed by a report server), and folders. Items can depend on other items, for example, a report can depend on the shared data sources it references. If you move a dependent item, the report server updates the reference information automatically.  
@@ -59,11 +59,11 @@ manager: "erikre"
   
 |Icon|Moveable item|  
 |----------|-------------------|  
-|![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")|Report|  
-|![Linked report icon](../../reporting-services/report-server/media/hlp-16linked.gif "Linked report icon")|Linked report|  
-|![Folder icon](../../reporting-services/report-server/media/hlp-16folder.gif "Folder icon")|Folder|  
-|![generic resource icon](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")|Generic resource|  
-|![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")|Shared data source|  
+|![Report icon](../../a9retired/media/hlp-16doc.gif "Report icon")|Report|  
+|![Linked report icon](../../a9retired/media/hlp-16linked.gif "Linked report icon")|Linked report|  
+|![Folder icon](../../a9retired/media/hlp-16folder.gif "Folder icon")|Folder|  
+|![generic resource icon](../../a9retired/media/hlp-16file.gif "generic resource icon")|Generic resource|  
+|![Shared data source icon](../../a9retired/media/hlp-16datasource.png "Shared data source icon")|Shared data source|  
 ||Shared dataset|  
   
  Not all items that you work with can be moved. You cannot move items that are associated with a report, such as subscriptions or report history. Those items move with their associated reports. Similarly, you cannot move items, such as shared schedules, that exist outside of the folder hierarchy. You cannot move items if you lack permission to do so. Permission to move an item is conveyed when the following tasks are selected in your role assignment for the item in question: "Manage reports," "Manage models", "Manage folders," and "Manage data sources."  

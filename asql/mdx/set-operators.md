@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Set Operators
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   In Multidimensional Expressions (MDX), set operators perform operations on members or sets, and return a set. You often use set operators as an alternate to several set functions in MDX expressions.  
   
@@ -27,10 +27,10 @@ manager: "erikre"
   
 |Operator|Description|  
 |--------------|-----------------|  
-|[- (Except)](../Topic/-%20\(Except\)%20\(MDX\).md)|Returns the difference between two sets, removing duplicate members.<br /><br /> This operator is functionally equivalent to the [Except](../Topic/Except%20\(MDX\).md) function.|  
-|[* (Crossjoin)](../Topic/*%20\(Crossjoin\)%20\(MDX\).md)|Returns the cross product of two sets.<br /><br /> This operator is functionally equivalent to the [Crossjoin](../mdx/crossjoin-mdx.md) function.|  
+|[- (Except)](../mdx/except-mdx-operator.md)|Returns the difference between two sets, removing duplicate members.<br /><br /> This operator is functionally equivalent to the [Except](../mdx/except-mdx-function.md) function.|  
+|[* (Crossjoin)](../mdx/crossjoin-mdx-operator-reference.md)|Returns the cross product of two sets.<br /><br /> This operator is functionally equivalent to the [Crossjoin](../mdx/crossjoin-mdx.md) function.|  
 |[: (Range)](../mdx/range-mdx.md)|Returns a naturally ordered set, with the two specified members as endpoints and all members between the two specified members included as members of the set.|  
-|[+ (Union)](../Topic/+%20\(Union\)%20\(MDX\).md)|Returns a union of two sets, excluding duplicate members.<br /><br /> This operator is functionally equivalent to the [Union  &#40;MDX&#41;](../mdx/union-mdx.md) function.|  
+|[+ (Union)](../mdx/union-mdx-operator-reference.md)|Returns a union of two sets, excluding duplicate members.<br /><br /> This operator is functionally equivalent to the [Union  &#40;MDX&#41;](../mdx/union-mdx.md) function.|  
   
 ## See Also  
  [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   

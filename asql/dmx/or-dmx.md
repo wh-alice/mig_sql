@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # OR (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   A logical operator that performs a logical disjunction on two numeric expressions.  
   
@@ -57,7 +57,7 @@ Expression1 OR Expression2
   
 ## See Also  
  [Data Mining Extensions &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Logical Operators &#40;DMX&#41;](../Topic/Logical%20Operators%20\(DMX\).md)   
+ [Logical Operators &#40;DMX&#41;](../dmx/operators-logical.md)   
  [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

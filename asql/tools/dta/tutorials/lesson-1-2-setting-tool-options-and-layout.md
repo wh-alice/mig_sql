@@ -23,7 +23,7 @@ You can set options that configure what the Database Engine Tuning Advisor graph
   
 ### Set the tool options  
   
-1.  Start the Database Engine Tuning Advisor. On the Windows **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../../analysis-services/instances/install/windows/includes/sscurrentui-md.md)], point to **Performance Tools**, and click **Database Engine Tuning Advisor**.  
+1.  Start the Database Engine Tuning Advisor. On the Windows **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../../a9notintoc/includes/sscurrentui-md.md)], point to **Performance Tools**, and click **Database Engine Tuning Advisor**.  
   
 2.  On the **Tools** menu, click **Options**.  
   

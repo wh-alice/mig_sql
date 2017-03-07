@@ -80,7 +80,7 @@ manager: "erikre"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Create a Calculated Column &#40;SSAS Tabular&#41;](../Topic/Create%20a%20Calculated%20Column%20\(SSAS%20Tabular\).md)|Tasks in this topic describe how to add a new calculated column to a table.|  
+|[Create a Calculated Column &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|Tasks in this topic describe how to add a new calculated column to a table.|  
   
 ## See Also  
  [Tables and Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   

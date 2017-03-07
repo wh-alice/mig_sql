@@ -19,7 +19,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 4: Analyze Data in Local Compute Context (Data Science Deep Dive)
-Although typically it is much faster to run complex R code using the server context, it is sometimes more convenient to get your data out of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and analyze it on your private workstation.  
+Although typically it is much faster to run complex R code using the server context, it is sometimes more convenient to get your data out of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] and analyze it on your private workstation.  
   
 In this section, you'll learn how to switch back to a local compute context, and move data between contexts to optimize performance.  
   
@@ -31,7 +31,7 @@ In this section, you'll learn how to switch back to a local compute context, and
     rxSetComputeContext ("local")    
     ```  
   
-2.  When extracting data from [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you can often get better performance by increasing the number of rows extracted for each read.  To do this, increase the value for the *rowsPerRead* parameter on the data source.  
+2.  When extracting data from [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], you can often get better performance by increasing the number of rows extracted for each read.  To do this, increase the value for the *rowsPerRead* parameter on the data source.  
   
     ```R  
     sqlServerDS1 <- RxSqlServerData(  
@@ -49,14 +49,14 @@ In this section, you'll learn how to switch back to a local compute context, and
     rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlServerDS1)    
     ```  
   
-    The actual results should be the same as when you run *rxSummary* in the context of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer.  However, the operation might be faster or slower. Much depends on the connection to your database, because the data is being transferred to your local computer for analysis.  
+    The actual results should be the same as when you run *rxSummary* in the context of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] computer.  However, the operation might be faster or slower. Much depends on the connection to your database, because the data is being transferred to your local computer for analysis.  
   
 
 ## Next  Step  
-[Move Data between SQL Server and XDF File &#40;Data Science Deep Dive&#41;](Move%20Data%20between%20SQL%20Server%20and%20XDF%20File%20\(Data%20Science%20Deep%20Dive\).md)  
+[Move Data between SQL Server and XDF File &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-4-1-move-data-between-sql-server-and-xdf-file.md)  
   
 ## Previous Step  
-[Perform Chunking Analysis using rxDataStep &#40;Data Science Deep Dive&#41;](Perform%20Chunking%20Analysis%20using%20rxDataStep%20\(Data%20Science%20Deep%20Dive\).md)  
+[Perform Chunking Analysis using rxDataStep &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-3-3-perform-chunking-analysis-using-rxdatastep.md)  
   
   
   

@@ -29,7 +29,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Resultset Data Type (XMLA)
-  Defines an abstract primitive data type that represents data returned from a [Discover](../Topic/Discover%20Method%20\(XMLA\).md) or [Execute](../Topic/Execute%20Method%20\(XMLA\).md) method call.  
+  Defines an abstract primitive data type that represents data returned from a [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) or [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method call.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis:resultset  
   

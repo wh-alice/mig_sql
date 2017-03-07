@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Message Queue Task Editor (Receive Page)
-  Use the **Receive** page of the **Message Queue Task Editor** dialog box to configure a Message Queue task to receive [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Message Queuing (MSMQ) messages.  
+  Use the **Receive** page of the **Message Queue Task Editor** dialog box to configure a Message Queue task to receive [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Message Queuing (MSMQ) messages.  
   
  To learn about this task, see [Message Queue Task](../../integration-services/control-flow/message-queue-task.md).  
   
@@ -84,7 +84,7 @@ manager: "jhubbard"
  **Variable**  
  Type the variable name, or click \<**New variable…**> and then configure a new variable.  
   
- **Related Topics:** [Add Variable](../Topic/Add%20Variable.md)  
+ **Related Topics:** [Add Variable](../../a9retired/add-variable.md)  
   
 ### Filter Dynamic Options  
   
@@ -129,7 +129,7 @@ manager: "jhubbard"
  **Variable**  
  Type the name of the variable to hold the received message, or click \<**New variable…**> and then configure a new variable.  
   
- **Related Topics:** [Add Variable](../Topic/Add%20Variable.md)  
+ **Related Topics:** [Add Variable](../../a9retired/add-variable.md)  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   

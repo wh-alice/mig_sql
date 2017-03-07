@@ -22,17 +22,17 @@ ms.author: "carlasab"
 manager: "erikre"
 ---
 # How to: Debug Custom Assemblies
-  The [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] provides several debugging tools that can help you analyze your custom assembly code and locate errors in it. The best tool to use will depend on what you are trying to accomplish. This example uses [!INCLUDE[vsOrcas](../../relational-databases/server-management-objects-smo/includes/vsorcas-md.md)].  
+  The [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] provides several debugging tools that can help you analyze your custom assembly code and locate errors in it. The best tool to use will depend on what you are trying to accomplish. This example uses [!INCLUDE[vsOrcas](../../relational-databases/server-management-objects-smo/includes/vsorcas-md.md)].  
   
- The recommended way to design, develop, and test custom assemblies for [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] is to create a solution that contains both your test reports and your custom assembly.  
+ The recommended way to design, develop, and test custom assemblies for [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] is to create a solution that contains both your test reports and your custom assembly.  
   
 ### To debug assemblies using a single instance of Visual Studio  
   
-1.  Create a new report project using [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)].  
+1.  Create a new report project using [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)].  
   
-     At the time you create a report project, [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] also creates a solution to contain it.  
+     At the time you create a report project, [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] also creates a solution to contain it.  
   
-2.  Add a new Class Library project to the existing solution. Make sure that the report project is set as the startup project. For more information about how to accomplish this, see your [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] documentation.  
+2.  Add a new Class Library project to the existing solution. Make sure that the report project is set as the startup project. For more information about how to accomplish this, see your [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] documentation.  
   
 3.  In Solution Explorer, select the solution.  
   
@@ -50,7 +50,7 @@ manager: "erikre"
   
      The **Project Property Pages** dialog box opens.  
   
-9. Click the **Build** tab if you're in a C# project or the **Compile** tab if you're in a [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)] project.  
+9. Click the **Build** tab if you're in a C# project or the **Compile** tab if you're in a [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)] project.  
   
 10. On the **Build**/**Compile** page, enter the path to the Report Designer folder. By default, this is C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE) in the **Output Path** text box. This builds and deploys an updated version of your custom assembly directly to Report Designer before your report is executed.  
   
@@ -60,13 +60,13 @@ manager: "erikre"
   
 ### To debug assemblies using two instances of Visual Studio  
   
-1.  Start [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] and open your custom assembly project.  
+1.  Start [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] and open your custom assembly project.  
   
 2.  Build the project, and deploy your custom assembly and the accompanying .pdb file to the Report Designer. For more information about deployment, see [Deploying a Custom Assembly](../../reporting-services/custom-assemblies/deploying-a-custom-assembly.md).  
   
-3.  Open up a report project that uses your custom assembly while leaving your custom assembly code open in a separate instance of [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)].  
+3.  Open up a report project that uses your custom assembly while leaving your custom assembly code open in a separate instance of [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)].  
   
-4.  Navigate to the instance of [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] that contains your custom assembly project and set some break points in your code.  
+4.  Navigate to the instance of [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] that contains your custom assembly project and set some break points in your code.  
   
 5.  With the custom assembly project still the active window, click **Attach to Process** on the **Debug** menu.  
   
@@ -83,7 +83,7 @@ manager: "erikre"
     > [!NOTE]  
     >  Using the **Preview** tab does not enforce code permissions for the assembly. For a complete test, which includes any code access security errors, start the report project under the **DebugLocal** configuration setting.  
   
-9. Step through your code using the F11 key. For more information about debugging using [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)], see the [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] documentation.  
+9. Step through your code using the F11 key. For more information about debugging using [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)], see the [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] documentation.  
   
 ## See Also  
  [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  

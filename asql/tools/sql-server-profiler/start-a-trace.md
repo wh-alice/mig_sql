@@ -28,14 +28,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Start a Trace
-  After you have defined a new trace or created a template by using [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)], you can start, pause, or stop capturing data by using the new trace definition or template.  
+  After you have defined a new trace or created a template by using [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)], you can start, pause, or stop capturing data by using the new trace definition or template.  
   
 ## Starting a Trace  
- When you start a trace and the defined source is an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] or [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] creates a queue that provides a temporary holding place for captured server events.  
+ When you start a trace and the defined source is an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] or [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] creates a queue that provides a temporary holding place for captured server events.  
   
- When you use [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] to access SQL Trace, a new trace window opens (if one is not already open) when a trace is started, and data is immediately captured.  
+ When you use [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] to access SQL Trace, a new trace window opens (if one is not already open) when a trace is started, and data is immediately captured.  
   
- When you use [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] system stored procedures to access SQL Trace, you must start a trace every time an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] starts for data to be captured. When a trace has been started, you can modify only the name of the trace.  
+ When you use [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] system stored procedures to access SQL Trace, you must start a trace every time an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] starts for data to be captured. When a trace has been started, you can modify only the name of the trace.  
   
 > [!NOTE]  
 >  When working with existing traces, you can view the properties, but you cannot modify the properties. To modify the properties, stop or pause the trace.  

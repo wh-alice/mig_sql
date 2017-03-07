@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 2.  In the **Publisher Settings** dialog box, set the **Auto refresh** and **Refresh rate** options. The **Auto refresh** setting affects the main window in Replication Monitor. The **Refresh rate** setting also affects any detail windows that are set to refresh automatically (changes to the setting only affect the detail windows opened after the change).  
   
-3.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 ### To specify that a detail window should automatically refresh  
   
@@ -42,6 +42,6 @@ manager: "jhubbard"
 2.  In the **Subscription \<SubscriptionName>** detail window, click **Action**, and then click **Auto Refresh**. The refresh rate is determined by the **Refresh rate** setting in the **Publisher Settings** dialog box.  
   
 ## See Also  
- [Monitoring Replication](../Topic/Monitoring%20Replication.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

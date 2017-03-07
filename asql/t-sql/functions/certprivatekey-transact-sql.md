@@ -89,6 +89,6 @@ SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');
  [Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
- [sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.certificates-transact-sql.md)  
+ [sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.certificates-transact-sql.md)  
   
   

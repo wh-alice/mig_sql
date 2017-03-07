@@ -34,14 +34,14 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Data Mining Extensions (DMX) Reference
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Data Mining Extensions (DMX) is a language that you can use to create and work with data mining models in [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)]. You can use DMX to create the structure of new data mining models, to train these models, and to browse, manage, and predict against them. DMX is composed of data definition language (DDL) statements, data manipulation language (DML) statements, and functions and operators.  
+  Data Mining Extensions (DMX) is a language that you can use to create and work with data mining models in [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)]. You can use DMX to create the structure of new data mining models, to train these models, and to browse, manage, and predict against them. DMX is composed of data definition language (DDL) statements, data manipulation language (DML) statements, and functions and operators.  
   
 ## Microsoft OLE DB for Data Mining Specification  
- The data mining features in [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] are built to comply with the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] OLE DB for Data Mining specification.  
+ The data mining features in [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] are built to comply with the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] OLE DB for Data Mining specification.  
   
- The [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] OLE DB for Data Mining specification defines the following:  
+ The [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] OLE DB for Data Mining specification defines the following:  
   
 -   A structure to hold the information that defines a data mining model.  
   
@@ -77,7 +77,7 @@ manager: "erikre"
   
 -   Completely remove a mining model from a database by using the [DROP MINING MODEL](../dmx/drop-mining-model-dmx.md) statement. Completely remove a mining structure and all its associated mining models from the database by using the [DROP MINING STRUCTURE](../dmx/drop-mining-structure-dmx.md) statement.  
   
- To learn more about the data mining tasks that you can perform by using DMX statements, see [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md).  
+ To learn more about the data mining tasks that you can perform by using DMX statements, see [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md).  
   
  [Back to DMX Statements](#BKMK_DMXStatements)  
   
@@ -104,7 +104,7 @@ manager: "erikre"
   
 -   Remove all the trained data from a model or a structure by using the [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md) statement.  
   
- To learn more about the data mining tasks that you can perform by using DMX statements, see [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md).  
+ To learn more about the data mining tasks that you can perform by using DMX statements, see [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md).  
   
  [Back to DMX Statements](#BKMK_DMXStatements)  
   
@@ -120,7 +120,7 @@ manager: "erikre"
 ## See Also  
  [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40;DMX&#41; Syntax Conventions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Data Mining Extensions &#40;DMX&#41; Syntax Elements](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   

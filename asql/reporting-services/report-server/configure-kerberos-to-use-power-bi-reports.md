@@ -17,7 +17,7 @@ manager: "erikre"
 # Configure Kerberos to use Power BI reports
  ||  
 |-|  
-|**[!INCLUDE[applies](../../analysis-services/includes/applies-md.md)]**  January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services|
+|**[!INCLUDE[applies](../../a9retired/includes/applies-md.md)]**  January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services|
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/vCH8Fa3OpQ0?showinfo=0" frameborder="0" allowfullscreen></iframe>
 
@@ -223,5 +223,5 @@ While this configuration should work in most cases, with Kerberos, there can be 
 
 ## See also
 [Power BI reports in Reporting Services](../../reporting-services/power-bi-reports-in-reporting-services.md)  
-[Install the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services](Install%20the%20January%202017%20Technical%20Preview%20of%20Power%20BI%20reports%20in%20SQL%20Server%20Reporting%20Services.md)
+[Install the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services](../../reporting-services/install/windows/install-the-january-2017-preview-of-power-bi-reports-in-ssrs.md)
 

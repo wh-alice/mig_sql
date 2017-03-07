@@ -27,11 +27,11 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # ALTER AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Alters an existing Always On availability group in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Most ALTER AVAILABILITY GROUP arguments are supported only the current primary replica. However the JOIN, FAILOVER, and FORCE_FAILOVER_ALLOW_DATA_LOSS arguments are supported only on secondary replicas.  
+  Alters an existing Always On availability group in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Most ALTER AVAILABILITY GROUP arguments are supported only the current primary replica. However the JOIN, FAILOVER, and FORCE_FAILOVER_ALLOW_DATA_LOSS arguments are supported only on secondary replicas.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -152,10 +152,10 @@ ALTER AVAILABILITY GROUP group_name
   
 ## Arguments  
  *group_name*  
- Specifies the name of the new availability group. *group_name* must be a valid [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] identifier, and it must be unique across all availability groups in the WSFC cluster.  
+ Specifies the name of the new availability group. *group_name* must be a valid [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] identifier, and it must be unique across all availability groups in the WSFC cluster.  
   
  AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
- Specifies a preference about how a backup job should evaluate the primary replica when choosing where to perform backups. You can script a given backup job to take the automated backup preference into account. It is important to understand that the preference is not enforced by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], so it has no impact on ad-hoc backups.  
+ Specifies a preference about how a backup job should evaluate the primary replica when choosing where to perform backups. You can script a given backup job to take the automated backup preference into account. It is important to understand that the preference is not enforced by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], so it has no impact on ad-hoc backups.  
   
  Supported only on the primary replica.  
   
@@ -180,7 +180,7 @@ ALTER AVAILABILITY GROUP group_name
 >  There is no enforcement of the AUTOMATED_BACKUP_PREFERENCE setting. The interpretation of this preference depends on the logic, if any, that you script into back jobs for the databases in a given availability group. The automated backup preference setting has no impact on ad-hoc backups. For more information, see [Configure Backup on Availability Replicas &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
   
 > [!NOTE]  
->  To view the automated backup preference of an existing availability group, select the **automated_backup_preference** or **automated_backup_preference_desc** column of the [sys.availability_groups](../../relational-databases/system-catalog-views/sys.availability-groups-transact-sql.md) catalog view. Additionally, [sys.fn_hadr_backup_is_preferred_replica  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-hadr-backup-is-preferred-replica-transact-sql.md) can be used to determine the preferred backup replica.  This function will always return 1 for at least one of the replicas, even when `AUTOMATED_BACKUP_PREFERENCE = NONE`.  
+>  To view the automated backup preference of an existing availability group, select the **automated_backup_preference** or **automated_backup_preference_desc** column of the [sys.availability_groups](../../relational-databases/reference/system-catalog-views/sys.availability-groups-transact-sql.md) catalog view. Additionally, [sys.fn_hadr_backup_is_preferred_replica  &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-hadr-backup-is-preferred-replica-transact-sql.md) can be used to determine the preferred backup replica.  This function will always return 1 for at least one of the replicas, even when `AUTOMATED_BACKUP_PREFERENCE = NONE`.  
   
  FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
  Specifies what failure conditions will trigger an automatic failover for this availability group. FAILURE_CONDITION_LEVEL is set at the group level but is relevant only on availability replicas that are configured for synchronous-commit availability mode (AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT). Furthermore, failure conditions can trigger an automatic failover only if both the primary and secondary replicas are configured for automatic failover mode (FAILOVER_MODE **=** AUTOMATIC) and the secondary replica is currently synchronized with the primary replica.  
@@ -191,19 +191,19 @@ ALTER AVAILABILITY GROUP group_name
   
 |Level|Failure Condition|  
 |-----------|-----------------------|  
-|1|Specifies that an automatic failover should be initiated when any of the following occurs:<br /><br /> The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service is down.<br /><br /> The lease of the availability group for connecting to the WSFC cluster expires because no ACK is received from the server instance. For more information, see [How It Works: SQL Server Always On Lease Timeout](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
-|2|Specifies that an automatic failover should be initiated when any of the following occurs:<br /><br /> The instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not connect to cluster, and the user-specified HEALTH_CHECK_TIMEOUT threshold of the availability group is exceeded.<br /><br /> The availability replica is in failed state.|  
-|3|Specifies that an automatic failover should be initiated on critical [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] internal errors, such as orphaned spinlocks, serious write-access violations, or too much dumping.<br /><br /> This is the default behavior.|  
-|4|Specifies that an automatic failover should be initiated on moderate [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] internal errors, such as a persistent out-of-memory condition in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] internal resource pool.|  
+|1|Specifies that an automatic failover should be initiated when any of the following occurs:<br /><br /> The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service is down.<br /><br /> The lease of the availability group for connecting to the WSFC cluster expires because no ACK is received from the server instance. For more information, see [How It Works: SQL Server Always On Lease Timeout](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
+|2|Specifies that an automatic failover should be initiated when any of the following occurs:<br /><br /> The instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not connect to cluster, and the user-specified HEALTH_CHECK_TIMEOUT threshold of the availability group is exceeded.<br /><br /> The availability replica is in failed state.|  
+|3|Specifies that an automatic failover should be initiated on critical [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] internal errors, such as orphaned spinlocks, serious write-access violations, or too much dumping.<br /><br /> This is the default behavior.|  
+|4|Specifies that an automatic failover should be initiated on moderate [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] internal errors, such as a persistent out-of-memory condition in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] internal resource pool.|  
 |5|Specifies that an automatic failover should be initiated on any qualified failure conditions, including:<br /><br /> Exhaustion of SQL Engine worker-threads.<br /><br /> Detection of an unsolvable deadlock.|  
   
 > [!NOTE]  
->  Lack of response by an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to client requests is not relevant to availability groups.  
+>  Lack of response by an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to client requests is not relevant to availability groups.  
   
- The FAILURE_CONDITION_LEVEL and HEALTH_CHECK_TIMEOUT values, define a *flexible failover policy* for a given group. This flexible failover policy provides you with granular control over what conditions must cause an automatic failover. For more information, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](../Topic/Flexible%20Failover%20Policy%20for%20Automatic%20Failover%20of%20an%20Availability%20Group%20\(SQL%20Server\).md).  
+ The FAILURE_CONDITION_LEVEL and HEALTH_CHECK_TIMEOUT values, define a *flexible failover policy* for a given group. This flexible failover policy provides you with granular control over what conditions must cause an automatic failover. For more information, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
  HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
- Specifies the wait time (in milliseconds) for the [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) system stored procedure to return server-health information before WSFC cluster assumes that the server instance is slow or hung. HEALTH_CHECK_TIMEOUT is set at the group level but is relevant only on availability replicas that are configured for synchronous-commit availability mode with automatic failover (AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT).  Furthermore, a health-check timeout can trigger an automatic failover only if both the primary and secondary replicas are configured for automatic failover mode (FAILOVER_MODE **=** AUTOMATIC) and the secondary replica is currently synchronized with the primary replica.  
+ Specifies the wait time (in milliseconds) for the [sp_server_diagnostics](../../relational-databases/reference/system-stored-procedures/sp-server-diagnostics-transact-sql.md) system stored procedure to return server-health information before WSFC cluster assumes that the server instance is slow or hung. HEALTH_CHECK_TIMEOUT is set at the group level but is relevant only on availability replicas that are configured for synchronous-commit availability mode with automatic failover (AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT).  Furthermore, a health-check timeout can trigger an automatic failover only if both the primary and secondary replicas are configured for automatic failover mode (FAILOVER_MODE **=** AUTOMATIC) and the secondary replica is currently synchronized with the primary replica.  
   
  The default HEALTH_CHECK_TIMEOUT value is 30000 milliseconds (30 seconds). The minimum value is 15000 milliseconds (15 seconds), and the maximum value is 4294967295 milliseconds.  
   
@@ -215,14 +215,14 @@ ALTER AVAILABILITY GROUP group_name
  DB_FAILOVER  **=** { ON | OFF }  
  Specifies the response to take when a database on the primary replica is offline. When set to ON, any status other than ONLINE for a database in the availability group triggers an automatic failover. When this option is set to OFF, only the health of the instance is used to trigger automatic failover.  
  
- For more information regarding this setting, see [Database Level Health Detection Option](Database%20Health%20Detection%20Failover%20Option.md) 
+ For more information regarding this setting, see [Database Level Health Detection Option](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) 
 
  
  REQUIRED_COPIES_TO_COMMIT   
  Introduced in SQL Server vNext CTP 1.3. Used to set a minimum number of secondary replicas required to commit before the primary commits a transaction. Guarantees that SQL Server transactions will wait until the transaction logs are updated on the minimum number of secondary replicas. The default is 0 which gives the same behavior as SQL Server 2016. The minimum value is 0. The maximum value is the number of replicas minus 1. This option relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode writes on the primary replica wait until writes on the secondary synchronous replicas are committed to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica will mark that secondary replica as NOT SYNCHRONIZED and proceed. When the unresponsive database comes back online it will be in a "not synced" state and the replica will be marked as unhealthy until the primary can make it synchronous again. This setting guarantees that the primary replica will not proceed until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available then commits on the primary will fail.
   
  ADD DATABASE *database_name*  
- Specifies a list of one or more user databases that you want to add to the availability group. These databases must reside on the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that hosts the current primary replica. You can specify multiple databases for an availability group, but each database can belong to only one availability group. For information about the type of databases that an availability group can support, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../Topic/Prerequisites,%20Restrictions,%20and%20Recommendations%20for%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md). To find out which local databases already belong to an availability group, see the **replica_id** column in the [sys.databases](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view.  
+ Specifies a list of one or more user databases that you want to add to the availability group. These databases must reside on the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that hosts the current primary replica. You can specify multiple databases for an availability group, but each database can belong to only one availability group. For information about the type of databases that an availability group can support, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). To find out which local databases already belong to an availability group, see the **replica_id** column in the [sys.databases](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view.  
   
  Supported only on the primary replica.  
   
@@ -242,30 +242,30 @@ ALTER AVAILABILITY GROUP group_name
  You need to join every new secondary replica to the availability group. For more information, see the description of the JOIN option, later in this section.  
   
  <server_instance>  
- Specifies the address of the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that is the host for a replica. The address format depends on whether the instance is the default instance or a named instance and whether it is a standalone instance or a failover cluster instance (FCI). The syntax is as follows:  
+ Specifies the address of the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that is the host for a replica. The address format depends on whether the instance is the default instance or a named instance and whether it is a standalone instance or a failover cluster instance (FCI). The syntax is as follows:  
   
  { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
   
  The components of this address are as follows:  
   
  *system_name*  
- Is the NetBIOS name of the computer system on which the target instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] resides. This computer must be a WSFC node.  
+ Is the NetBIOS name of the computer system on which the target instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] resides. This computer must be a WSFC node.  
   
  *FCI_network_name*  
- Is the network name that is used to access a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] failover cluster. Use this if the server instance participates as a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] failover partner. Executing SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) on an FCI server instance returns its entire '*FCI_network_name*[\\*instance_name*]'  string (which is the full replica name).  
+ Is the network name that is used to access a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] failover cluster. Use this if the server instance participates as a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] failover partner. Executing SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) on an FCI server instance returns its entire '*FCI_network_name*[\\*instance_name*]'  string (which is the full replica name).  
   
  *instance_name*  
- Is the name of an instance of a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that is hosted by *system_name* or *FCI_network_name* and that has Always On enabled. For a default server instance, *instance_name* is optional. The instance name is case insensitive. On a stand-alone server instance, this value name is the same as the value returned by executing SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md).  
+ Is the name of an instance of a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that is hosted by *system_name* or *FCI_network_name* and that has Always On enabled. For a default server instance, *instance_name* is optional. The instance name is case insensitive. On a stand-alone server instance, this value name is the same as the value returned by executing SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md).  
   
  \  
  Is a separator used only when specifying *instance_name*, in order to separate it from *system_name* or *FCI_network_name*.  
   
- For information about the prerequisites for WSFC nodes and server instances, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../Topic/Prerequisites,%20Restrictions,%20and%20Recommendations%20for%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md).  
+ For information about the prerequisites for WSFC nodes and server instances, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
  ENDPOINT_URL ='TCP://*system-address*:*port*'  
- Specifies the URL path for the [database mirroring endpoint](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) on the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that will host the availability replica that you are adding or modifying.  
+ Specifies the URL path for the [database mirroring endpoint](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) on the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that will host the availability replica that you are adding or modifying.  
   
- ENDPOINT_URL is required in the ADD REPLICA ON clause and optional in the MODIFY REPLICA ON clause.  For more information, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../Topic/Specify%20the%20Endpoint%20URL%20When%20Adding%20or%20Modifying%20an%20Availability%20Replica%20\(SQL%20Server\).md).  
+ ENDPOINT_URL is required in the ADD REPLICA ON clause and optional in the MODIFY REPLICA ON clause.  For more information, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
  **'**TCP**://***system-address***:***port***'**  
  Specifies a URL for specifying an endpoint URL or read-only routing URL. The URL parameters are as follows:  
@@ -274,7 +274,7 @@ ALTER AVAILABILITY GROUP group_name
  Is a string, such as a system name, a fully qualified domain name, or an IP address, that unambiguously identifies the destination computer system.  
   
  *port*  
- Is a port number that is associated with the mirroring endpoint of the server instance (for the ENDPOINT_URL option) or the port number used by the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] of the server instance (for the READ_ONLY_ROUTING_URL option).  
+ Is a port number that is associated with the mirroring endpoint of the server instance (for the ENDPOINT_URL option) or the port number used by the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] of the server instance (for the READ_ONLY_ROUTING_URL option).  
   
  AVAILABILITY_MODE **=** { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
  Specifies whether the primary replica has to wait for the secondary replica to acknowledge the hardening (writing) of the log records to disk before the primary replica can commit the transaction on a given primary database. The transactions on different databases on the same primary replica can commit independently.  
@@ -344,12 +344,12 @@ ALTER AVAILABILITY GROUP group_name
  READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***'**  
  Specifies the URL to be used for routing read-intent connection requests to this availability replica. This is the URL on which the SQL Server Database Engine listens. Typically, the default instance of the SQL Server Database Engine listens on TCP port 1433.  
   
- For a named instance, you can obtain the port number by querying the **port** and **type_desc** columns of the [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys.dm-tcp-listener-states-transact-sql.md) dynamic management view. The server instance uses the Transact-SQL listener (**type_desc='TSQL'**).  
+ For a named instance, you can obtain the port number by querying the **port** and **type_desc** columns of the [sys.dm_tcp_listener_states](../../relational-databases/reference/system-dynamic-management-views/sys.dm-tcp-listener-states-transact-sql.md) dynamic management view. The server instance uses the Transact-SQL listener (**type_desc='TSQL'**).  
   
  For more information about calculating the read-only routing URL for an availability replica, see [Calculating read_only_routing_url for Always On](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
   
 > [!NOTE]  
->  For a named instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the Transact-SQL listener should be configured to use a specific port. For more information, see [Configure a Server to Listen on a Specific TCP Port &#40;SQL Server Configuration Manager&#41;](../Topic/Configure%20a%20Server%20to%20Listen%20on%20a%20Specific%20TCP%20Port%20\(SQL%20Server%20Configuration%20Manager\).md).  
+>  For a named instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], the Transact-SQL listener should be configured to use a specific port. For more information, see [Configure a Server to Listen on a Specific TCP Port &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure/windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
  PRIMARY_ROLE **(** … **)**  
  Specifies role-specific settings that will take effect if this availability replica currently owns the primary role (that is, whenever it is the primary replica). Within the parentheses,  specify either or both primary-role options. If you specify both, use a comma-separated list.  
@@ -375,11 +375,11 @@ ALTER AVAILABILITY GROUP group_name
  The READ_ONLY_ROUTING_LIST values are as follows:  
   
  <server_instance>  
- Specifies the address of the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that is the host for an availability replica that is a readable secondary replica when running under the secondary role.  
+ Specifies the address of the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that is the host for an availability replica that is a readable secondary replica when running under the secondary role.  
   
  Use a comma-separated list to specify all of the server instances that might host a readable secondary replica. Read-only routing will follow the order in which server instances are specified in the list. If you include a replica's host server instance on the replica's read-only routing list, placing this server instance at the end of the list is typically a good practice, so that read-intent connections go to a secondary replica, if one is available.  
   
- Beginning with [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)], you can load-balance read-intent requests across readable secondary replicas. You specify this by placing the replicas in a nested set of parentheses within the read-only routing list. For more information and examples, see [Configure load-balancing across read-only replicas](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
+ Beginning with [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)], you can load-balance read-intent requests across readable secondary replicas. You specify this by placing the replicas in a nested set of parentheses within the read-only routing list. For more information and examples, see [Configure load-balancing across read-only replicas](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
   
  NONE  
  Specifies that when this availability replica is the primary replica, read-only routing will not be supported. This is the default behavior. When used with MODIFY REPLICA ON, this value disables an existing list, if any.  
@@ -573,14 +573,14 @@ ALTER AVAILABILITY GROUP group_name
  OFFLINE  
  Takes an online availability group offline. There is no data loss for synchronous-commit databases.  
   
- After an availability group goes offline, its databases become unavailable to clients, and you cannot bring the availability group back online. Therefore, use the OFFLINE option only during a cross-cluster migration of [!INCLUDE[ssHADR](../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)], when migrating availability group resources to a new WSFC cluster.  
+ After an availability group goes offline, its databases become unavailable to clients, and you cannot bring the availability group back online. Therefore, use the OFFLINE option only during a cross-cluster migration of [!INCLUDE[ssHADR](../../a9notintoc/includes/sshadr-md.md)], when migrating availability group resources to a new WSFC cluster.  
   
  For more information, see [Take an Availability Group Offline &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/take-an-availability-group-offline-sql-server.md).  
   
 ## Prerequisites and Restrictions  
- For information about prerequisites and restrictions on availability replicas and on their host server instances and computers, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../Topic/Prerequisites,%20Restrictions,%20and%20Recommendations%20for%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md).  
+ For information about prerequisites and restrictions on availability replicas and on their host server instances and computers, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- For information about restrictions on the AVAILABILITY GROUP Transact-SQL statements, see [Overview of Transact-SQL Statements for Always On Availability Groups &#40;SQL Server&#41;](../Topic/Overview%20of%20Transact-SQL%20Statements%20for%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md).  
+ For information about restrictions on the AVAILABILITY GROUP Transact-SQL statements, see [Overview of Transact-SQL Statements for Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md).  
   
 ## Security  
   
@@ -607,12 +607,12 @@ GO
   
 ## See Also  
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md)   
+ [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
  [DROP AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
- [sys.availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.availability-replicas-transact-sql.md)   
- [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.availability-groups-transact-sql.md)   
+ [sys.availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.availability-replicas-transact-sql.md)   
+ [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.availability-groups-transact-sql.md)   
  [Troubleshoot Always On Availability Groups Configuration &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../Topic/Availability%20Group%20Listeners,%20Client%20Connectivity,%20and%20Application%20Failover%20\(SQL%20Server\).md)  
+ [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   

@@ -19,10 +19,10 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transfer Jobs Task Editor (Jobs Page)
-  Use the **Jobs** page of the **Transfer Jobs Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent jobs from one instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to another. For more information about the Transfer Jobs task, see [Transfer Jobs Task](../../integration-services/control-flow/transfer-jobs-task.md).  
+  Use the **Jobs** page of the **Transfer Jobs Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent jobs from one instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to another. For more information about the Transfer Jobs task, see [Transfer Jobs Task](../../integration-services/control-flow/transfer-jobs-task.md).  
   
 > [!NOTE]  
->  To access jobs on the source server, users must be a member of at least the **SQLAgentUserRole** fixed database role on the server. To successfully create jobs on the destination server, the user must be a member of the **sysadmin** fixed server role or one of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent fixed database roles. For more information about [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent fixed database roles and their permissions, see [SQL Server Agent Fixed Database Roles](../Topic/SQL%20Server%20Agent%20Fixed%20Database%20Roles.md).  
+>  To access jobs on the source server, users must be a member of at least the **SQLAgentUserRole** fixed database role on the server. To successfully create jobs on the destination server, the user must be a member of the **sysadmin** fixed server role or one of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent fixed database roles. For more information about [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent fixed database roles and their permissions, see [SQL Server Agent Fixed Database Roles](../Topic/SQL%20Server%20Agent%20Fixed%20Database%20Roles.md).  
   
 ## Options  
  **SourceConnection**  
@@ -32,7 +32,7 @@ manager: "jhubbard"
  Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the destination server.  
   
  **TransferAllJobs**  
- Select whether the task should copy all or only the specified [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent jobs from the source to the destination server.  
+ Select whether the task should copy all or only the specified [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent jobs from the source to the destination server.  
   
  This property has the options listed in the following table:  
   

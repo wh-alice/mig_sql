@@ -22,20 +22,20 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ALTER DATABASE (Transact-SQL) Database Mirroring 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../a9notintoc/includes/sshadr-md.md)] instead.  
   
  Controls database mirroring for a database. Values specified with the database mirroring options apply to both copies of the database and to the database mirroring session as a whole. Only one <database_mirroring_option> is permitted per ALTER DATABASE statement.  
   
 > [!NOTE]  
 >  We recommend that you configure database mirroring during off-peak hours because configuration can affect performance.  
   
- For ALTER DATABASE options, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md). For ALTER DATABASE SET options, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+ For ALTER DATABASE options, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md). For ALTER DATABASE SET options, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -74,7 +74,7 @@ SET { <partner_option> | <witness_option> }
  PARTNER <partner_option>  
  Controls the database properties that define the failover partners of a database mirroring session and their behavior. Some SET PARTNER options can be set on either partner; others are restricted to the principal server or to the mirror server. For more information, see the individual PARTNER options that follow. A SET PARTNER clause affects both copies of the database, regardless of the partner on which it is specified.  
   
- To execute a SET PARTNER statement, the STATE of the endpoints of both partners must be set to STARTED. Note, also, that the ROLE of the database mirroring endpoint of each partner server instance must be set to either PARTNER or ALL. For information about how to specify an endpoint, see [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md). To learn the role and state of the database mirroring endpoint of a server instance, on that instance, use the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement:  
+ To execute a SET PARTNER statement, the STATE of the endpoints of both partners must be set to STARTED. Note, also, that the ROLE of the database mirroring endpoint of each partner server instance must be set to either PARTNER or ALL. For information about how to specify an endpoint, see [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md). To learn the role and state of the database mirroring endpoint of a server instance, on that instance, use the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement:  
   
 ```  
 SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
@@ -86,7 +86,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 >  Only one <partner_option> is permitted per SET PARTNER clause.  
   
  **'** *partner_server* **'**  
- Specifies the server network address of an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to act as a failover partner in a new database mirroring session. Each session requires two partners: one starts as the principal server, and the other starts as the mirror server. We recommend that these partners reside on different computers.  
+ Specifies the server network address of an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to act as a failover partner in a new database mirroring session. Each session requires two partners: one starts as the principal server, and the other starts as the mirror server. We recommend that these partners reside on different computers.  
   
  This option is specified one time per session on each partner. Initiating a database mirroring session requires two ALTER DATABASE *database* SET PARTNER **='***partner_server***'** statements. Their order is significant. First, connect to the mirror server, and specify the principal server instance as *partner_server* (SET PARTNER **='***principal_server***'**). Second, connect to the principal server, and specify the mirror server instance as *partner_server* (SET PARTNER **='***mirror_server***'**); this starts a database mirroring session between these two partners. For more information, see [Setting Up Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
@@ -109,7 +109,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 ```  
   
 > [!IMPORTANT]  
->  If a session is set up by using the ALTER DATABASE statement instead of [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], the session is set to full transaction safety by default (SAFETY is set to FULL) and runs in high-safety mode without automatic failover. To allow automatic failover, configure a witness; to run in high-performance mode, turn off transaction safety (SAFETY OFF).  
+>  If a session is set up by using the ALTER DATABASE statement instead of [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], the session is set to full transaction safety by default (SAFETY is set to FULL) and runs in high-safety mode without automatic failover. To allow automatic failover, configure a witness; to run in high-performance mode, turn off transaction safety (SAFETY OFF).  
   
  FAILOVER  
  Manually fails over the principal server to the mirror server. You can specify FAILOVER only on the principal server. This option is valid only when the SAFETY setting is FULL (the default).  
@@ -177,7 +177,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
  To execute a SET WITNESS statement, the STATE of the endpoints of both the principal and witness server instances must be set to STARTED. Note, also, that the ROLE of the database mirroring endpoint of a witness server instance must be set to either WITNESS or ALL. For information about specifying an endpoint, see [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   
- To learn the role and state of the database mirroring endpoint of a server instance, on that instance, use the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement:  
+ To learn the role and state of the database mirroring endpoint of a server instance, on that instance, use the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement:  
   
 ```  
 SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
@@ -192,7 +192,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 >  Only one <witness_option> is permitted per SET WITNESS clause.  
   
  **'** *witness_server* **'**  
- Specifies an instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] to act as the witness server for a database mirroring session. You can specify SET WITNESS statements only on the principal server.  
+ Specifies an instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] to act as the witness server for a database mirroring session. You can specify SET WITNESS statements only on the principal server.  
   
  In a SET WITNESS **='***witness_server***'** statement, the syntax of *witness_server* is the same as the syntax of *partner_server*.  
   
@@ -207,7 +207,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  Setting up database mirroring with a witness requires configuring security and preparing the mirror database, and also using ALTER DATABASE to set the partners. For an example of the complete setup process, see [Setting Up Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
 ### B. Manually failing over a database mirroring session  
- Manual failover can be initiated from either database mirroring partner. Before failing over, you should verify that the server you believe to be the current principal server actually is the principal server. For example, for the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database, on that server instance that you think is the current principal server, execute the following query:  
+ Manual failover can be initiated from either database mirroring partner. Before failing over, you should verify that the server you believe to be the current principal server actually is the principal server. For example, for the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database, on that server instance that you think is the current principal server, execute the following query:  
   
 ```  
 SELECT db.name, m.mirroring_role_desc   
@@ -245,6 +245,6 @@ GO
 ## See Also  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
- [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../Topic/sys.database_mirroring_witnesses%20\(Transact-SQL\).md)  
+ [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/database-mirroring-witness-catalog-views-sys.database-mirroring-witnesses.md)  
   
   

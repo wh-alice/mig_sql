@@ -24,7 +24,7 @@ manager: "jhubbard"
 # Association Model Query Examples
   When you create a query against a data mining model, you can create either a content query, which provides details about the rules and itemsets discovered during analysis, or you can create a prediction query, which uses the associations discovered in the data to make predictions. For an association model, predictions typically are based on rules, and can be used to make recommendations, whereas queries on content typically explore the relationship among itemsets. You can also retrieve metadata about the model.  
   
- This section explains how to create these kinds of queries for models that are based on the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Association Rules algorithm.  
+ This section explains how to create these kinds of queries for models that are based on the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Association Rules algorithm.  
   
  **Content Queries**  
   
@@ -45,7 +45,7 @@ manager: "jhubbard"
  [Determining confidence for related itemsets](#bkmk_Query7)  
   
 ##  <a name="bkmk_top2"></a> Finding Information about the Model  
- All mining models expose the content learned by the algorithm according to a standardized schema, which is named the mining model schema rowset. You can create queries against the mining model schema rowset either by using Data Mining Extensions (DMX) statements, or by using [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] stored procedures. In [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], you can also query the schema rowsets directly as system tables, by using a SQL-like syntax.  
+ All mining models expose the content learned by the algorithm according to a standardized schema, which is named the mining model schema rowset. You can create queries against the mining model schema rowset either by using Data Mining Extensions (DMX) statements, or by using [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] stored procedures. In [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], you can also query the schema rowsets directly as system tables, by using a SQL-like syntax.  
   
 ###  <a name="bkmk_Query1"></a> Sample Query 1: Getting Model Metadata by Using DMX  
  The following query returns basic metadata about the association model, `Association`, such as the name of the model, the database where the model is stored, and the number of child nodes in the model. This query uses a DMX content query to retrieve the metadata from the parent node of the model:  
@@ -164,7 +164,7 @@ WHERE NODE_TYPE = 7
  Another example of where queries on an association model might be useful is to return the confidence for various rules and itemsets so that you can compare the effectiveness of different cross-sell strategies. The following examples illustrate how to create such queries.  
   
 ###  <a name="bkmk_Query6"></a> Sample Query 6: Predicting Associated Items  
- This example uses the Association model created in the [Intermediate Data Mining Tutorial &#40;Analysis Services - Data Mining&#41;](../Topic/Intermediate%20Data%20Mining%20Tutorial%20\(Analysis%20Services%20-%20Data%20Mining\).md). It demonstrates how to create a prediction query that tells you what products to recommend to a customer who has purchased a particular product. This type of query, where you provide values to the model in a **SELECT…UNION** statement, is called a singleton query. Because the predictable model column that corresponds to the new values is a nested table, you must use one **SELECT** clause to map the new value to the nested table column, `[Model]`, and another **SELECT** clause to map the nested table column to the case-level column, `[v Assoc Seq Line Items]`. Adding the keyword INCLUDE-STATISTICS to the query lets you see the probability and support for the recommendations.  
+ This example uses the Association model created in the [Intermediate Data Mining Tutorial &#40;Analysis Services - Data Mining&#41;](../../a9notintoc/intermediate-data-mining-tutorial-analysis-services-data-mining.md). It demonstrates how to create a prediction query that tells you what products to recommend to a customer who has purchased a particular product. This type of query, where you provide values to the model in a **SELECT…UNION** statement, is called a singleton query. Because the predictable model column that corresponds to the new values is a nested table, you must use one **SELECT** clause to map the new value to the nested table column, `[Model]`, and another **SELECT** clause to map the nested table column to the case-level column, `[v Assoc Seq Line Items]`. Adding the keyword INCLUDE-STATISTICS to the query lets you see the probability and support for the recommendations.  
   
 ```  
 SELECT PredictAssociation([Association].[vAssocSeqLineItems],INCLUDE_STATISTICS, 3)  
@@ -187,7 +187,7 @@ AS t
  [Return to Top](#bkmk_top2)  
   
 ###  <a name="bkmk_Query7"></a> Sample Query 7: Determining Confidence for Related Itemsets  
- Whereas rules are useful for generating recommendations, itemsets are more interesting for deeper analysis of the patterns in the data set. For example, if you were not satisfied with the recommendation that are returned by the previous sample query, you could examine other itemsets that contain Product A, to can get a better idea of whether Product A is an accessory that people tend to buy with all kinds of products, or whether A is strongly correlated with purchases of particular products. The easiest way to explore these relationships is by filtering the itemsets in the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Association Viewer; however, you can retrieve the same information with a query.  
+ Whereas rules are useful for generating recommendations, itemsets are more interesting for deeper analysis of the patterns in the data set. For example, if you were not satisfied with the recommendation that are returned by the previous sample query, you could examine other itemsets that contain Product A, to can get a better idea of whether Product A is an accessory that people tend to buy with all kinds of products, or whether A is strongly correlated with purchases of particular products. The easiest way to explore these relationships is by filtering the itemsets in the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Association Viewer; however, you can retrieve the same information with a query.  
   
  The following sample query returns all itemsets that include the Water Bottle item, including the single item Water bottle.  
   
@@ -218,7 +218,7 @@ ORDER BY NODE_SUPPORT DESC
  [Return to Top](#bkmk_top2)  
   
 ## Function List  
- All [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Association algorithm supports the additional functions listed in the following table.  
+ All [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Association algorithm supports the additional functions listed in the following table.  
   
 |||  
 |-|-|  

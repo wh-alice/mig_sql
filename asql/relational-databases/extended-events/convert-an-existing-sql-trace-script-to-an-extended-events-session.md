@@ -19,7 +19,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Convert an Existing SQL Trace Script to an Extended Events Session
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   If you have an existing SQL Trace script that you want to convert to an Extended Events session, you can use the procedures in this topic to create an equivalent Extended Events session. By using the information in the trace_xe_action_map and trace_xe_event_map system tables, you can collect the information that you must have to do the conversion.  
   
@@ -175,7 +175,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  Casting the event data as XML is optional.  
   
-     For more information about the sys.fn_xe_file_target_read_file function, see [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-xe-file-target-read-file-transact-sql.md).  
+     For more information about the sys.fn_xe_file_target_read_file function, see [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-xe-file-target-read-file-transact-sql.md).  
   
     ```  
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  

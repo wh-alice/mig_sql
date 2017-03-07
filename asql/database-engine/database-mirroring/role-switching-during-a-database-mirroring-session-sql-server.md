@@ -104,7 +104,7 @@ manager: "jhubbard"
 2.  The mirror server records the log sequence number (LSN) of the last log record received from the principal as the failover LSN.  
   
     > [!NOTE]  
-    >  To view this LSN, select the **mirroring_failover_lsn** column from [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-mirroring-transact-sql.md).  
+    >  To view this LSN, select the **mirroring_failover_lsn** column from [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-mirroring-transact-sql.md).  
   
 3.  If any log is waiting in the redo queue, the mirror server finishes rolling forward the mirror database. The amount of time required depends on the speed of the system, the recent workload, and the amount of log in the redo queue. For a synchronous operating mode, the failover time can be regulated by limiting the size of the redo queue. However, this can cause the principal server to slow down to allow the mirror server to keep up.  
   
@@ -185,7 +185,7 @@ manager: "jhubbard"
  After failover, clients must reconnect to the current principal database. For more information, see [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 > [!NOTE]  
->  Transactions that have been prepared using the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Distributed Transaction Coordinator but are still not committed when a failover occurs, are considered aborted after the database has failed over.  
+>  Transactions that have been prepared using the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Distributed Transaction Coordinator but are still not committed when a failover occurs, are considered aborted after the database has failed over.  
   
 ###  <a name="DisableAutoSSMS"></a> To Disable Automatic Failover (SQL Server Management Studio)  
  Open the **Database PropertiesMirroring** page, and change the operating mode by selecting one of the following options:  
@@ -305,7 +305,7 @@ manager: "jhubbard"
   
 -   [Setting Up Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)  
   
--   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../Topic/Establish%20a%20Database%20Mirroring%20Session%20Using%20Windows%20Authentication%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
 ## See Also  
  [Estimate the Interruption of Service During Role Switching &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   

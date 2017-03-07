@@ -28,14 +28,14 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CREATE CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a server-level credential. A credential is a record that contains the authentication information that is required to connect to a resource outside SQL Server. Most credentials include a Windows user and password. For example, saving a database backup to some location might require SQL Server to provide special credentials to access that location. For more information, see [Credentials (Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
   
 > [!NOTE]  
->  To make the credential  at the database-level use [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Use a server-level credential when you need to use the same credential for multiple databases on the server. Use a database-scoped credential to make the database more portable. When a database is moved to a new server, the database scoped credential will move with it. Use database scoped credentials on [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+>  To make the credential  at the database-level use [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Use a server-level credential when you need to use the same credential for multiple databases on the server. Use a database-scoped credential to make the database more portable. When a database is moved to a new server, the database scoped credential will move with it. Use database scoped credentials on [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -66,11 +66,11 @@ WITH IDENTITY = 'identity_name'
 
  When IDENTITY is a Windows user, the secret can be the password. The secret is encrypted using the service master key. If the service master key is regenerated, the secret is re-encrypted using the new service master key.  
   
- After creating a credential, you can map it to a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login by using [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) or [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md). A [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login can be mapped to only one credential, but a single credential can be mapped to multiple [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] logins. For more information, see [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md). A server-level credential can only be mapped to a login, not to a database user. 
+ After creating a credential, you can map it to a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login by using [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) or [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md). A [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login can be mapped to only one credential, but a single credential can be mapped to multiple [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] logins. For more information, see [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md). A server-level credential can only be mapped to a login, not to a database user. 
   
- Information about credentials is visible in the [sys.credentials](../../relational-databases/system-catalog-views/sys.credentials-transact-sql.md) catalog view.  
+ Information about credentials is visible in the [sys.credentials](../../relational-databases/reference/system-catalog-views/sys.credentials-transact-sql.md) catalog view.  
   
- If there is no login mapped credential for the provider, the credential mapped to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service account is used.  
+ If there is no login mapped credential for the provider, the credential mapped to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service account is used.  
   
  A login can have multiple credentials mapped to it as long as they are used with distinctive providers. There must be only one mapped credential per provider per login. The same credential can be mapped to other logins.  
   
@@ -89,7 +89,7 @@ GO
 ```  
   
 ### B. Creating a Credential for EKM  
- The following example uses a previously created account called `User1OnEKM` on an EKM module through the EKM’s Management tools, with a basic account type and password. The **sysadmin** account on the server creates a credential that is used to connect to the EKM account, and assigns it to the `User1`[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] account:  
+ The following example uses a previously created account called `User1OnEKM` on an EKM module through the EKM’s Management tools, with a basic account type and password. The **sysadmin** account on the server creates a credential that is used to connect to the EKM account, and assigns it to the `User1`[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] account:  
   
 ```  
 CREATE CREDENTIAL CredentialForEKM  
@@ -108,7 +108,7 @@ GO
 ```  
   
 ### C. Creating a Credential for EKM Using the Azure Key Vault  
- The following example creates a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] credential for the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] to use when accessing the Azure Key Vault using the **SQL Server Connector for Microsoft Azure Key Vault**. For a complete example of using the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Connector, see [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
+ The following example creates a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] credential for the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] to use when accessing the Azure Key Vault using the **SQL Server Connector for Microsoft Azure Key Vault**. For a complete example of using the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Connector, see [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 > [!IMPORTANT]  
 >  The **IDENTITY** argument of **CREATE CREDENTIAL** requires the key vault name. The **SECRET** argument of **CREATE CREDENTIAL** requires the *\<Client ID>* (without hyphens) and *\<Secret>* to be passed together without a space between them.  
@@ -136,7 +136,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ```  
   
 ### D. Creating a Credential using a SAS Token  
- **Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ **Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
  The following example creates a shared access signature credential using a SAS token.  For a tutorial on creating a stored access policy and a shared access signature on an Azure container, and then creating a credential using the shared access signature, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases.md).  
   
@@ -158,7 +158,7 @@ GO
  [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.credentials-transact-sql.md)   
+ [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.credentials-transact-sql.md)   
  [Lesson 2: Create a SQL Server credential using a shared access signature](../../relational-databases/tutorials/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
  [Shared Access Signatures](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
   

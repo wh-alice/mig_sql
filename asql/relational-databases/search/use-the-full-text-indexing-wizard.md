@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 3.  **Available Columns.** Check the box next to all column names for columns you want to include.  check box next to the column name. Ineligible columns are greyed out and their check boxes disabled.  
   
-4. **Language for Word Breaker.** Select a language from the drop-down list. This choice will be used  to identify the correct word breakers for the index. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses word breakers to identify word boundaries in the full-text indexed data.  
+4. **Language for Word Breaker.** Select a language from the drop-down list. This choice will be used  to identify the correct word breakers for the index. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses word breakers to identify word boundaries in the full-text indexed data.  
   
 5.  **Type Column.** Select the name of the column that holds the document type of column being full-text indexed.  
 > **NOTE:** The  **Type Column** is enabled only when the column named in the **Available Columns** column is of type **varbinary(max)** or **image**.  

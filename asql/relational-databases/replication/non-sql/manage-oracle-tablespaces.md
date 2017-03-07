@@ -18,7 +18,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Manage Oracle Tablespaces
-  A tablespace is a unit of database storage that is roughly equivalent to a file group in [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Tablespaces allow storage and management of database objects within individual groups. For more information, see the Oracle documentation.  
+  A tablespace is a unit of database storage that is roughly equivalent to a file group in [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. Tablespaces allow storage and management of database objects within individual groups. For more information, see the Oracle documentation.  
   
  When you configure a table as part of an Oracle publication, you can optionally specify an existing Oracle tablespace to be used when storing replication logging information. If unspecified, the tablespace for the replication objects is the default tablespace associated with the replication administrative user schema that was configured when configuring the Publisher.  
   
@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   Specify a tablespace in the **Article Properties** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
--   Use [sp_changearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). To use **sp_changearticle**, specify the following:  
+-   Use [sp_changearticle &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-changearticle-transact-sql.md). To use **sp_changearticle**, specify the following:  
   
     -   The name of the Oracle Publisher for the parameter **@publisher**.  
   

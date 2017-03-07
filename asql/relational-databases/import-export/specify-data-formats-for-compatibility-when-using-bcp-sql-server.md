@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Specify Data Formats for Compatibility when Using bcp (SQL Server)
-  This topic describes the data-format attributes, field-specific prompts, and storing field-by-field data in a non-xml format file of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]**bcp** command. Understanding these can be helpful when you bulk export [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data for bulk import into another program, such as another database program. The default data formats (native, character, or Unicode) in the source table might be incompatible with the data layout expected by the other program If an incompatibility exists, when you export the data, you must describe the data layout.  
+  This topic describes the data-format attributes, field-specific prompts, and storing field-by-field data in a non-xml format file of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]**bcp** command. Understanding these can be helpful when you bulk export [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data for bulk import into another program, such as another database program. The default data formats (native, character, or Unicode) in the source table might be incompatible with the data layout expected by the other program If an incompatibility exists, when you export the data, you must describe the data layout.  
   
 > [!NOTE]  
 >  If you are unfamiliar with data formats for importing or exporting data, see [Data Formats for Bulk Import or Bulk Export &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md).  
@@ -48,12 +48,12 @@ manager: "jhubbard"
   
   
 ##  <a name="FieldSpecificPrompts"></a> Overview of the Field-Specific Prompts  
- If an interactive **bcp** command contains the **in** or **out** option but does not also contain either the format file switch (**-f**) or a data-format switch (**-n**, **-c**, **-w**, or **-N**),  each column in the source or target table, the command prompts for each of the preceding attributes, in turn. In each prompt, the **bcp** command provides a default value based on the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data type of the table column. Accepting the default value for all of the prompts produces the same result as specifying native format (**-n**) on the command line. Each prompt displays a default value in brackets: [*default*]. Pressing ENTER accepts the displayed default. To specify a value other than the default, enter the new value at the prompt.  
+ If an interactive **bcp** command contains the **in** or **out** option but does not also contain either the format file switch (**-f**) or a data-format switch (**-n**, **-c**, **-w**, or **-N**),  each column in the source or target table, the command prompts for each of the preceding attributes, in turn. In each prompt, the **bcp** command provides a default value based on the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data type of the table column. Accepting the default value for all of the prompts produces the same result as specifying native format (**-n**) on the command line. Each prompt displays a default value in brackets: [*default*]. Pressing ENTER accepts the displayed default. To specify a value other than the default, enter the new value at the prompt.  
   
 ### Example  
  The following example uses the **bcp** command to bulk export data from the `HumanResources.myTeam` table interactively to the `myTeam.txt` file. Before you can run the example, you must create this table. For information about the table and how to create it, see [HumanResources.myTeam Sample Table &#40;SQL Server&#41;](../../relational-databases/import-export/humanresources.myteam-sample-table-sql-server.md).  
   
- The command specifies neither a format file nor a data type, causing **bcp** to prompt for data-format information. At the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows command prompt, enter:  
+ The command specifies neither a format file nor a data type, causing **bcp** to prompt for data-format information. At the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows command prompt, enter:  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T  
@@ -83,10 +83,10 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
   
   
 ##  <a name="FieldByFieldNonXmlFF"></a> Storing Field-by-Field Data in a Non-XML Format File  
- After all of the table columns are specified, the **bcp** command prompts you to optionally generate a non-XML format file that stores the field-by-field information just supplied (see the preceding example). If you choose to generate a format file, you can whenever you export data out of that table or import like-structured data into [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ After all of the table columns are specified, the **bcp** command prompts you to optionally generate a non-XML format file that stores the field-by-field information just supplied (see the preceding example). If you choose to generate a format file, you can whenever you export data out of that table or import like-structured data into [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  You can use the format file to bulk import data from the data file into an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or to bulk export data from the table, without needing to respecify the format. For more information, see [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
+>  You can use the format file to bulk import data from the data file into an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] or to bulk export data from the table, without needing to respecify the format. For more information, see [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
  The following example creates a non-XML format file named `myFormatFile.fmt`:  
   

@@ -15,7 +15,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # DQS Knowledge Bases and Domains
-  This topic describes what a knowledge base is in [!INCLUDE[ssDQSnoversion](../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS). To cleanse data, you have to have knowledge about the data. To prepare knowledge for a data quality project, you build and maintain a knowledge base (KB) that DQS can use to identify incorrect or invalid data. DQS enables you to use both computer-assisted and interactive processes to create, build, and update your knowledge base. Knowledge in a knowledge base is maintained in domains, each of which is specific to a data field. The knowledge base is a repository of knowledge about your data that enables you to understand your data and maintain its integrity.  
+  This topic describes what a knowledge base is in [!INCLUDE[ssDQSnoversion](../a9retired/includes/ssdqsnoversion-md.md)] (DQS). To cleanse data, you have to have knowledge about the data. To prepare knowledge for a data quality project, you build and maintain a knowledge base (KB) that DQS can use to identify incorrect or invalid data. DQS enables you to use both computer-assisted and interactive processes to create, build, and update your knowledge base. Knowledge in a knowledge base is maintained in domains, each of which is specific to a data field. The knowledge base is a repository of knowledge about your data that enables you to understand your data and maintain its integrity.  
   
  DQS knowledge bases have the following benefits:  
   
@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   There is a clear separation between building a knowledge base and applying it in the data correction process, which gives you flexibility in how you build and update the knowledge base.  
   
- The data steward uses the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] application both to execute and control the computer-assisted steps, and to perform the interactive steps.  
+ The data steward uses the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] application both to execute and control the computer-assisted steps, and to perform the interactive steps.  
   
  The following illustration displays various components in a knowledge base and a domain in DQS:  
   
@@ -91,7 +91,7 @@ manager: "jhubbard"
  Domain properties define and drive the processing that will be applied to the associated values. You can set the data type and language of the values, specify that the source data will be cleansed with the leading value (if this option is unchecked, the source data will be cleansed with the correct term but not with the leading value), ensure data standardization by configuring the formatting that will be applied when the data values in the domain are output, and define which algorithms (syntax error, speller, and string normalization) will be applied.  
   
 ### Reference Data Services  
- In the domain management process, you can attach online reference data to a domain. This is how you compare the data in your domain to the data maintained by a reference data provider. You must first configure the reference data provider through the DQS configuration capabilities in the **Administration** section of the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] application. For more information, see [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
+ In the domain management process, you can attach online reference data to a domain. This is how you compare the data in your domain to the data maintained by a reference data provider. You must first configure the reference data provider through the DQS configuration capabilities in the **Administration** section of the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] application. For more information, see [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
   
 ### Applying Domain Rules  
  You can create domain rules for data validation. A domain rule ensures the accuracy of data, ranging from a basic constraint, such as the possible terms that a string value can be, to a more complex regular expression, such as the valid forms of an email address.  

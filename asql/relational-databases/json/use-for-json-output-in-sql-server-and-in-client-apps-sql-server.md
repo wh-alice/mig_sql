@@ -19,9 +19,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Use FOR JSON output in SQL Server and in client apps (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  The following examples demonstrate some of the ways to use the **FOR JSON** clause or its output in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or in client apps.  
+  The following examples demonstrate some of the ways to use the **FOR JSON** clause or its output in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] or in client apps.  
   
 ## Use FOR JSON output in SQL Server variables  
  The output of the FOR JSON clause is of type NVARCHAR(MAX), so it can be assigned to any variable, as shown in the following example.  

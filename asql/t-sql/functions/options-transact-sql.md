@@ -28,7 +28,7 @@ manager: "jhubbard"
 
   Returns information about the current SET options.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
  **integer**  
   
 ## Remarks  
- The options can come from use of the **SET** command or from the **sp_configure user options** value. Session values configured with the **SET** command override the **sp_configure** options. Many tools (such as [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] automatically configure set options. Each user has an @@OPTIONS function that represents the configuration.  
+ The options can come from use of the **SET** command or from the **sp_configure user options** value. Session values configured with the **SET** command override the **sp_configure** options. Many tools (such as [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] automatically configure set options. Each user has an @@OPTIONS function that represents the configuration.  
   
  You can change the language and query-processing options for a specific user session by using the SET statement. **@@OPTIONS** can only detect the options which are set to ON or OFF.  
   
@@ -74,7 +74,7 @@ RAISERROR ('Current user has SET NOCOUNT turned on.', 1, 1)
   
 ## See Also  
  [Configuration Functions &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md)   
  [Configure the user options Server Configuration Option](../../database-engine/configure/windows/configure-the-user-options-server-configuration-option.md)  
   
   

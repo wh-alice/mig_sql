@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Type System - Sequence Type Matching
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   An XQuery expression value is always a sequence of zero or more items. An item can be either an atomic value or a node. The sequence type refers to the ability to match the sequence type returned by a query expression with a specific type. For example:  
   
@@ -159,7 +159,7 @@ GO
  If both are true, the `instance of` expression returns True.  
   
 ### Example: Querying against an xml type column  
- In the following example, a query is specified against an Instructions column of **xml** type in the [!INCLUDE[ssSampleDBobject](../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database. It is a typed XML column because it has a schema associated with it. The XML schema defines the `LocationID` attribute of the integer type. Therefore, in the sequence expression, the `instance of xs:integer?` returns True.  
+ In the following example, a query is specified against an Instructions column of **xml** type in the [!INCLUDE[ssSampleDBobject](../a9retired/includes/sssampledbobject-md.md)] database. It is a typed XML column because it has a schema associated with it. The XML schema defines the `LocationID` attribute of the integer type. Therefore, in the sequence expression, the `instance of xs:integer?` returns True.  
   
 ```  
 SELECT Instructions.query('   

@@ -20,20 +20,20 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Task Host Container
-  The task host container encapsulates a single task. In [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, the task host is not configured separately; instead, it is configured when you set the properties of the task it encapsulates. For more information about the tasks that the task host containers encapsulate, see [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  
+  The task host container encapsulates a single task. In [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, the task host is not configured separately; instead, it is configured when you set the properties of the task it encapsulates. For more information about the tasks that the task host containers encapsulate, see [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  
   
  This container extends the use of variables and event handlers to the task level. For more information, see [Integration Services &#40;SSIS&#41; Event Handlers](../../integration-services/integration-services-ssis-event-handlers.md) and [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md).  
   
 ## Configuration of the Task Host  
- You can set properties in the **Properties** window of [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] or programmatically.  
+ You can set properties in the **Properties** window of [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] or programmatically.  
   
- For information about setting these properties in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], see [Set the Properties of a Task or Container](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md).  
+ For information about setting these properties in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], see [Set the Properties of a Task or Container](../../a9retired/set-the-properties-of-a-task-or-container.md).  
   
  For information about programmatically setting these properties, see <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>.  
   
 ## Related Tasks  
   
--   [Set the Properties of a Task or Container](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Set the Properties of a Task or Container](../../a9retired/set-the-properties-of-a-task-or-container.md)  
   
 ## See Also  
  [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)  

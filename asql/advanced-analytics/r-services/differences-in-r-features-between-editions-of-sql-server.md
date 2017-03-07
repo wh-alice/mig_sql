@@ -15,7 +15,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Differences in R Features between Editions of SQL Server
-  [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] is available in the following editions of [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and SQL Server vNext:  
+  [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] is available in the following editions of [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and SQL Server vNext:  
   
 -   **Enterprise Edition**  
     
@@ -48,7 +48,7 @@ manager: "jhubbard"
 > + Microsoft R Client can work with all editions.
   
 ## Enterprise Edition  
- Performance of R solutions in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is expected to generally be better than any conventional R implementation, given the same hardware, because R can be run using server resources and sometimes distributed to multiple processes using the **ScaleR** functions.  
+ Performance of R solutions in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is expected to generally be better than any conventional R implementation, given the same hardware, because R can be run using server resources and sometimes distributed to multiple processes using the **ScaleR** functions.  
   
  Users can also expect to see considerable differences in performance and scalability for the same R functions if run in Enterprise Edition vs. Standard Edition. Reasons include support for parallel processing, streaming, and increased threads available for R worker processing.  
   

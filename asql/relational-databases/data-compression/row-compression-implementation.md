@@ -18,9 +18,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Row Compression Implementation
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  This topic summarizes how [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] implements row compression. This summary provides basic information to help you plan the storage space that you need for your data.  
+  This topic summarizes how [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] implements row compression. This summary provides basic information to help you plan the storage space that you need for your data.  
   
  Enabling compression only changes the physical storage format of the data that is associated with a data type but not its syntax or semantics. Application changes are not required when one or more tables are enabled for compression. The new record storage format has the following main changes:  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
 >  NULL and 0 values across all data types are optimized and take no bytes.  
   
 ## How Row Compression Affects Storage  
- The following table describes how row compression affects the existing types in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull_md](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)]. The table does not include the savings that can be achieved by using page compression.  
+ The following table describes how row compression affects the existing types in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull_md](../../a9retired/includes/sssdsfull-md.md)]. The table does not include the savings that can be achieved by using page compression.  
   
 |Data type|Is storage affected?|Description|  
 |---------------|--------------------------|-----------------|  
@@ -55,10 +55,10 @@ manager: "jhubbard"
 |**time**|No|Uses the integer data representation by using 3 to 6 bytes. There are various precisions that start with 0 to 9 that can take 3 to 6 bytes. Compressed space is used as follows:<br /><br /> **Precision = 0. Bytes = 3**. Each integer value represents a second. Compression can represent time up to 6PM by using 2 bytes, potentially saving 1 byte.<br /><br /> **Precision = 1. Bytes = 3**. Each integer value represents 1/10 seconds. Compression uses the third byte before 2AM. Results in little savings.<br /><br /> **Precision = 2. Bytes = 3**. Similar to the previous case, it is unlikely to achieve savings.<br /><br /> **Precision = 3. Bytes = 4**. Because the first 3 bytes are taken by 5AM, achieves little savings.<br /><br /> **Precision = 4. Bytes = 4**. The first 3 bytes are taken in the first 27 seconds. No savings are expected.<br /><br /> **Precision = 5, Bytes = 5**. Fifth byte will be used after 12-noon.<br /><br /> **Precision = 6 and 7, Bytes = 5**. Achieves no savings.<br /><br /> **Precision = 8, Bytes = 6**. Sixth byte will be used after 3AM.<br /><br /> <br /><br /> Note that there is no change in storage for row compression. Overall, not much savings can be expected from compressing the **time** data type.|  
 |**datetime2**|Yes|Uses the integer data representation by using 6 to 9 bytes. The first 4 bytes represent the date. The bytes taken by the time will depend on the precision of the time that is specified.<br /><br /> The integer value represents the number of days since 1/1/0001 with an upper bound of 12/31/9999. To represent a date in year 2005, compression takes 3 bytes.<br /><br /> There is no savings on time because it allows for 2 to 4 bytes for various time precisions. Therefore, for one-second time precision, compression uses 2 bytes for time, which takes the second byte after 255 seconds.|  
 |**datetimeoffset**|Yes|Resembles **datetime2**, except that there are 2 bytes of time zone of the format (HH:MM).<br /><br /> Like **datetime2**, compression can save 2 bytes.<br /><br /> For time zone values, MM value might be 0 for most cases. Therefore, compression can possibly save 1 byte.<br /><br /> There are no changes in storage for row compression.|  
-|**char**|Yes|Trailing padding characters are removed. Note that the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] inserts the same padding character regardless of the collation that is used.|  
+|**char**|Yes|Trailing padding characters are removed. Note that the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] inserts the same padding character regardless of the collation that is used.|  
 |**varchar**|No|No effect.|  
 |**text**|No|No effect.|  
-|**nchar**|Yes|Trailing padding characters are removed. Note that the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] inserts the same padding character regardless of the collation that is used.|  
+|**nchar**|Yes|Trailing padding characters are removed. Note that the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] inserts the same padding character regardless of the collation that is used.|  
 |**nvarchar**|No|No effect.|  
 |**ntext**|No|No effect.|  
 |**binary**|Yes|Trailing zeros are removed.|  

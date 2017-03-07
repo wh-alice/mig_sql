@@ -25,14 +25,14 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Data Connections, Data Sources, and Connection Strings (Report Builder and SSRS)
-  To include data in [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] and  [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports, you must first create *data sources* and *datasets*. This topic explains the type of data sources, how to create data sources, and important information related to data source credentials. A data source includes the data source type, connection information, and the type of credentials to use. There are two types of data sources: embedded and shared. An embedded data source is defined in the report and used only by that report. A shared data source is defined independently from a report and can be used by multiple reports. For more information, see [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
+  To include data in [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] and  [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports, you must first create *data sources* and *datasets*. This topic explains the type of data sources, how to create data sources, and important information related to data source credentials. A data source includes the data source type, connection information, and the type of credentials to use. There are two types of data sources: embedded and shared. An embedded data source is defined in the report and used only by that report. A shared data source is defined independently from a report and can be used by multiple reports. For more information, see [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../analysis-services/includes/applies-md.md)]**  [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] &#124; [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Native mode &#124; [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] SharePoint mode|  
+|**[!INCLUDE[applies](../../a9retired/includes/applies-md.md)]**  [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] &#124; [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] Native mode &#124; [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] SharePoint mode|  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]
   
 ##  <a name="bkmk_data_sources"></a> Embedded and shared data sources  
  Shared data sources are useful when you have data sources that you use often. It is recommended that you use shared data sources as much as possible. They make reports and report access easier to manage, and help to keep reports and the data sources they access more secure. If you need a shared data source, ask your system administrator to create one for you.  
@@ -41,26 +41,26 @@ manager: "erikre"
   
  The difference between the embedded and shared data sources is in how they are created, stored, and managed.  
   
--   In Report Designer, create embedded or shared data sources as part of a [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] project. You can control whether to use them locally for preview or to deploy them as part of the project to a report server or SharePoint site. You can use custom data extensions that have been installed on your computer and on the report server or SharePoint site where you deploy your reports.  
+-   In Report Designer, create embedded or shared data sources as part of a [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] project. You can control whether to use them locally for preview or to deploy them as part of the project to a report server or SharePoint site. You can use custom data extensions that have been installed on your computer and on the report server or SharePoint site where you deploy your reports.  
   
      System administrators can install and configure additional data processing extensions and .NET Framework data providers. For more information, see [Data Processing Extensions and .NET Framework Data Providers &#40;SSRS&#41;](../../reporting-services/report-data/data-processing-extensions-and-.net-framework-data-providers-ssrs.md).  
   
      Developers can use the <xref:Microsoft.ReportingServices.DataProcessing> API to create data processing extensions to support additional types of data sources.  
   
--   In [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)], browse to a report server or SharePoint site and select shared data sources or create embedded data sources in the report. You cannot create a shared data source in [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)]. You cannot use custom data extensions in [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)].  
+-   In [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)], browse to a report server or SharePoint site and select shared data sources or create embedded data sources in the report. You cannot create a shared data source in [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)]. You cannot use custom data extensions in [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)].  
   
  The following table summarizes the differences between embedded and shared data sources.  
   
 |Description|Embedded<br /><br /> Data Source|Shared<br /><br /> Data Source|  
 |-----------------|------------------------------|----------------------------|  
-|Data connection is embedded in the report definition.|![Available](../../reporting-services/report-data/media/greencheck.gif "Available")||  
-|Pointer to the data connection on the report server is embedded in the report definition.||![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|  
-|Managed on the report server|![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|  
-|Required for shared datasets||![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|  
-|Required for components||![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|  
+|Data connection is embedded in the report definition.|![Available](../../a9retired/media/greencheck.gif "Available")||  
+|Pointer to the data connection on the report server is embedded in the report definition.||![Available](../../a9retired/media/greencheck.gif "Available")|  
+|Managed on the report server|![Available](../../a9retired/media/greencheck.gif "Available")|![Available](../../a9retired/media/greencheck.gif "Available")|  
+|Required for shared datasets||![Available](../../a9retired/media/greencheck.gif "Available")|  
+|Required for components||![Available](../../a9retired/media/greencheck.gif "Available")|  
   
 ##  <a name="bkmk_DataConnections"></a> Built-in data extensions  
- Default data extensions in [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] include the following types of data connections:  
+ Default data extensions in [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] include the following types of data connections:  
   
 -   Microsoft SQL Server and Microsoft Azure SQL Database
   
@@ -68,7 +68,7 @@ manager: "erikre"
   
 -   Microsoft SharePoint List  
   
--   [!INCLUDE[ssSDSFull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)]  
+-   [!INCLUDE[ssSDSFull](../../a9retired/includes/sssdsfull-md.md)]  
   
 -   Microsoft SQL Server Parallel Data Warehouse  
   
@@ -86,12 +86,12 @@ manager: "erikre"
   
 -   ODBC  
   
--   Microsoft BI Semantic Model for Power View: On a SharePoint site that has been configured for a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] gallery and [!INCLUDE[ssCrescent](../../analysis-services/includes/sscrescent-md.md)], this data source type is available. This data source type is used only for [!INCLUDE[ssCrescent](../../analysis-services/includes/sscrescent-md.md)] presentations. For more information, see [Building the Perfect BI Semantic Tabular Models for Power View](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
+-   Microsoft BI Semantic Model for Power View: On a SharePoint site that has been configured for a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] gallery and [!INCLUDE[ssCrescent](../../a9notintoc/includes/sscrescent-md.md)], this data source type is available. This data source type is used only for [!INCLUDE[ssCrescent](../../a9notintoc/includes/sscrescent-md.md)] presentations. For more information, see [Building the Perfect BI Semantic Tabular Models for Power View](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
- For a full list of data sources and versions [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] supports, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ For a full list of data sources and versions [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] supports, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-## Data in [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)]  
- ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
+## Data in [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)]  
+ ![rs_DataSourcesStory](../../a9retired/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
 1.  **Data sources in the Report Data pane** A data source appears in the Report Data pane after you create an embedded data source or add a shared data source.  
   
@@ -122,7 +122,7 @@ manager: "erikre"
 |Analysis Services tabular model database with Sales perspective|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|Set data source type to **Microsoft SQL Server Analysis Services**. Specify perspective name in cube= setting. For more information, see [Perspectives &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
 |Report model data source on a report server configured in native mode|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Specify the report server or document library URL and the path to the published model in the report server folder or document library folder namespace. For more information, see [Report Model Connection &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md).|  
 |Report model data source on a report server configured in SharePoint integrated mode|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|Specify the report server or document library URL and the path to the published model in the report server folder or document library folder namespace.|  
-|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] server|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Set the data source type to **OLE DB Provider for OLAP Services 8.0**.<br /><br /> You can achieve a faster connection to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] data sources if you set the **ConnectTo** property to **8.0**. To set this property, use the **Connection Properties** dialog box, **Advanced Properties** tab.|  
+|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] server|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Set the data source type to **OLE DB Provider for OLAP Services 8.0**.<br /><br /> You can achieve a faster connection to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] data sources if you set the **ConnectTo** property to **8.0**. To set this property, use the **Connection Properties** dialog box, **Advanced Properties** tab.|  
 |Oracle server|`data source=myserver`|Set the data source type to **Oracle**. The Oracle client tools must be installed on the Report Designer computer and on the report server. For more information, see [Oracle Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md).|  
 |SAP NetWeaver BI data source|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Set the data source type to **SAP NetWeaver BI**. For more information, see [SAP NetWeaver BI Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md).|  
 |Hyperion Essbase data source|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Set the data source type to **Hyperion Essbase**. For more information, see [Hyperion Essbase Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md).|  
@@ -138,18 +138,18 @@ manager: "erikre"
  For more information about the configurations needed to connect to these data source types, see the specific data connection topic under [Add Data from External Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) or [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ##  <a name="bkmk_special_password_characters"></a> Special characters in a password  
- If you configure your ODBC or SQL data source to prompt for a password or to include the password in the connection string, and a user enters the password with special characters like punctuation marks, some underlying data source drivers cannot validate the special characters. When you process the report, the message "Not a valid password" may indicate this problem. If changing the password is impractical, you can work with your database administrator to store the appropriate credentials on the server as part of a system ODBC data source name (DSN). For more information, see "OdbcConnection.ConnectionString" in the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] SDK documentation.  
+ If you configure your ODBC or SQL data source to prompt for a password or to include the password in the connection string, and a user enters the password with special characters like punctuation marks, some underlying data source drivers cannot validate the special characters. When you process the report, the message "Not a valid password" may indicate this problem. If changing the password is impractical, you can work with your database administrator to store the appropriate credentials on the server as part of a system ODBC data source name (DSN). For more information, see "OdbcConnection.ConnectionString" in the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] SDK documentation.  
   
 ##  <a name="bkmk_Expressions_in_connection_strings"></a> Expression-based Connection Strings  
  Expression-based connection strings are evaluated at run time. For example, you can specify the data source as a parameter, include the parameter reference in the connection string, and allow the user to choose a data source for the report. For example, suppose a multinational firm has data servers in several countries. With an expression-based connection string, a user who is running a sales report can select a data source for a particular country before running the report.  
   
- The following example illustrates the use of a data source expression in a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] connection string. The example assumes you have created a report parameter named `ServerName`:  
+ The following example illustrates the use of a data source expression in a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] connection string. The example assumes you have created a report parameter named `ServerName`:  
   
 ```  
 ="data source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks"  
 ```  
   
- Data source expressions are processed at run time or when a report is previewed. The expression must be written in [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)]. Use the following guidelines when defining a data source expression:  
+ Data source expressions are processed at run time or when a report is previewed. The expression must be written in [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)]. Use the following guidelines when defining a data source expression:  
   
 -   Design the report using a static connection string. A static connection string refers to a connection string that is not set through an expression (for example, when you follow the steps for creating a report-specific or shared data source, you are defining a static connection string). Using a static connection string allows you to connect to the data source in Report Designer so that you can get the query results you need to create the report.  
   

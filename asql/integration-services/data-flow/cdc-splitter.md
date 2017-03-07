@@ -17,7 +17,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # CDC Splitter
-  The CDC splitter splits a single flow of change rows from a CDC source data flow into different data flows for Insert, Update and Delete operations. The data flow is split based on the required column `__$operation` and its standard values in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] change tables.  
+  The CDC splitter splits a single flow of change rows from a CDC source data flow into different data flows for Insert, Update and Delete operations. The data flow is split based on the required column `__$operation` and its standard values in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] change tables.  
   
 |Value of Operation|Output|Description|  
 |------------------------|------------|-----------------|  
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
  To open the **Advanced Editor** dialog box:  
   
--   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../../analysis-services/data-mining/includes/ssiscurrent-md.md)] project, right click the CDC splitter and select **Show Advanced Editor**.  
+-   In the **Data Flow** screen of your [!INCLUDE[ssISCurrent](../../a9retired/includes/ssiscurrent-md.md)] project, right click the CDC splitter and select **Show Advanced Editor**.  
   
 ## See Also  
  [Direct the CDC Stream According to the Type of Change](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  

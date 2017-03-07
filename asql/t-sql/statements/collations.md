@@ -23,11 +23,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Collations
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Is a clause that can be applied to a database definition or a column definition to define the collation, or to a character string expression to apply a collation cast.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -56,14 +56,14 @@ COLLATE { <collation_name> | database_default }
   
 1.  Creating or altering a database.  
   
-     You can use the COLLATE clause of the CREATE DATABASE or ALTER DATABASE statement to specify the default collation of the database. You can also specify a collation when you create a database using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. If you do not specify a collation, the database is assigned the default collation of the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+     You can use the COLLATE clause of the CREATE DATABASE or ALTER DATABASE statement to specify the default collation of the database. You can also specify a collation when you create a database using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. If you do not specify a collation, the database is assigned the default collation of the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
     >  Windows Unicode-only collations can only be used with the COLLATE clause to apply collations to the **nchar**, **nvarchar**, and **ntext** data types on column-level and expression-level data; they cannot be used with the COLLATE clause to change the collation of a database or server instance.  
   
 2.  Creating or altering a table column.  
   
-     You can specify collations for each character string column using the COLLATE clause of the CREATE TABLE or ALTER TABLE statement. You can also specify a collation when you create a table using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. If you do not specify a collation, the column is assigned the default collation of the database.  
+     You can specify collations for each character string column using the COLLATE clause of the CREATE TABLE or ALTER TABLE statement. You can also specify a collation when you create a table using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. If you do not specify a collation, the column is assigned the default collation of the database.  
   
      You can also use the `database_default` option in the COLLATE clause to specify that a column in a temporary table use the collation default of the current user database for the connection instead of **tempdb**.  
   
@@ -81,14 +81,14 @@ COLLATE { <collation_name> | database_default }
   
  Collations are generally identified by a collation name, except in Setup. In Setup you instead specify the root collation designator (the collation locale) for Windows collations, and then specify sort options that are sensitive or insensitive to case or accents.  
   
- You can execute the system function [fn_helpcollations](../../relational-databases/system-functions/sys.fn-helpcollations-transact-sql.md) to retrieve a list of all the valid collation names for Windows collations and SQL Server collations:  
+ You can execute the system function [fn_helpcollations](../../relational-databases/reference/system-functions/sys.fn-helpcollations-transact-sql.md) to retrieve a list of all the valid collation names for Windows collations and SQL Server collations:  
   
 ```  
 SELECT name, description  
 FROM fn_helpcollations();  
 ```  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] can support only code pages that are supported by the underlying operating system. When you perform an action that depends on collations, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] collation used by the referenced object must use a code page supported by the operating system running on the computer. These actions can include the following:  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] can support only code pages that are supported by the underlying operating system. When you perform an action that depends on collations, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] collation used by the referenced object must use a code page supported by the operating system running on the computer. These actions can include the following:  
   
 -   Specifying a default collation for a database when you create or alter the database.  
   
@@ -98,7 +98,7 @@ FROM fn_helpcollations();
   
      Code page translations are supported for **char** and **varchar** data types, but not for **text** data type. Data loss during code page translations is not reported.  
   
- If the collation specified or the collation used by the referenced object uses a code page not supported by Windows, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] displays an error.  
+ If the collation specified or the collation used by the referenced object uses a code page not supported by Windows, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] displays an error.  
   
 ## Examples  
   

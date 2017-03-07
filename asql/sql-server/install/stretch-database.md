@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Stretch Database migrates your cold data transparently and securely to the Microsoft Azure cloud.  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
 ## What kind of databases and tables are candidates for Stretch Database?  
  Stretch Database targets transactional databases with large amounts of cold data, typically stored in a small number of tables. These tables may contain more than a billion rows.  
   
- If you use the temporal table feature of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], use Stretch Database to migrate all or part of the associated history table to cost-effective storage in Azure. For more info, see [Manage Retention of Historical Data in System-Versioned Temporal Tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).  
+ If you use the temporal table feature of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], use Stretch Database to migrate all or part of the associated history table to cost-effective storage in Azure. For more info, see [Manage Retention of Historical Data in System-Versioned Temporal Tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).  
   
  Use Stretch Database Advisor, a feature of SQL Server 2016 Upgrade Advisor, to identify databases and tables for Stretch Database. For more info, see [Identify databases and tables for Stretch Database by running Stretch Database Advisor](../../sql-server/install/81bd93d8-eef8-4572-88d7-5c37ab5ac2bf.md). To learn more about potential blocking issues, see [Limitations for Stretch Database](../../sql-server/install/limitations-for-stretch-database.md).  
 

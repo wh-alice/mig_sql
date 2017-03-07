@@ -23,16 +23,16 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Examples of Bulk Import and Export of XML Documents (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
     
 ##  <a name="top"></a>
- You can bulk import XML documents into a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database or bulk export them from a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database. This topic provides examples of both.  
+ You can bulk import XML documents into a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database or bulk export them from a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database. This topic provides examples of both.  
   
- To bulk import data from a data file into a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table or non-partitioned view, you can use the following:  
+ To bulk import data from a data file into a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] table or non-partitioned view, you can use the following:  
   
 -   **bcp** utility  
- You can also use the **bcp** utility to export data from anywhere in a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database that a SELECT statement works, including partitioned views.  
+ You can also use the **bcp** utility to export data from anywhere in a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database that a SELECT statement works, including partitioned views.  
   
 -   BULK INSERT  
   
@@ -58,7 +58,7 @@ manager: "jhubbard"
 -  [E. Bulk exporting XML data](#bulk_export_xml_data)  
   
 ## <a name="binary_byte_stream"></a>Bulk importing XML data as a binary byte stream  
- When you bulk import XML data from a file that contains an encoding declaration that you want to apply, specify the SINGLE_BLOB option in the OPENROWSET(BULK…) clause. The SINGLE_BLOB option ensures that the XML parser in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] imports the data according to the encoding scheme specified in the XML declaration.  
+ When you bulk import XML data from a file that contains an encoding declaration that you want to apply, specify the SINGLE_BLOB option in the OPENROWSET(BULK…) clause. The SINGLE_BLOB option ensures that the XML parser in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] imports the data according to the encoding scheme specified in the XML declaration.  
   
 #### Sample Table  
  To test example A below, create sample table `T`.  
@@ -256,7 +256,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not save the XML encoding when XML data is persisted in the database. Therefore, the original encoding of XML fields is not available when XML data is exported. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses UTF-16 encoding when exporting XML data.  
+>  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not save the XML encoding when XML data is persisted in the database. Therefore, the original encoding of XML fields is not available when XML data is exported. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses UTF-16 encoding when exporting XML data.  
   
 
 ## See Also  

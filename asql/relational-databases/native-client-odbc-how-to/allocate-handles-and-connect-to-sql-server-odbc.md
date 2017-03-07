@@ -19,14 +19,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Allocate Handles and Connect to SQL Server (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
     
 ### To allocate handles and connect to SQL Server  
   
 1.  Include the ODBC header files Sql.h, Sqlext.h, Sqltypes.h.  
   
-2.  Include the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] driver-specific header file, Odbcss.h.  
+2.  Include the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] driver-specific header file, Odbcss.h.  
   
 3.  Call [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) with a **HandleType** of SQL_HANDLE_ENV to initialize ODBC and allocate an environment handle.  
   
@@ -38,13 +38,13 @@ manager: "jhubbard"
   
 7.  Optionally, call [SQLSetConnectAttr](../../relational-databases/extended-stored-procedures-reference/sqlsetconnectattr.md) to set connection options, or call [SQLGetConnectAttr](../../relational-databases/extended-stored-procedures-reference/sqlgetconnectattr.md) to get connection options.  
   
-8.  Call SQLConnect to use an existing data source to connect to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+8.  Call SQLConnect to use an existing data source to connect to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
      Or  
   
-     Call [SQLDriverConnect](../../relational-databases/extended-stored-procedures-reference/sqldriverconnect.md) to use a connection string to connect to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+     Call [SQLDriverConnect](../../relational-databases/extended-stored-procedures-reference/sqldriverconnect.md) to use a connection string to connect to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
-     A minimum complete [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] connection string has one of two forms:  
+     A minimum complete [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] connection string has one of two forms:  
   
     ```  
     DSN=dsn_name;Trusted_connection=yes;  
@@ -55,13 +55,13 @@ manager: "jhubbard"
   
      \- or -  
   
-     Call [SQLBrowseConnect](../../relational-databases/extended-stored-procedures-reference/sqlbrowseconnect.md) multiple times in an iterative fashion to build the connection string and connect to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+     Call [SQLBrowseConnect](../../relational-databases/extended-stored-procedures-reference/sqlbrowseconnect.md) multiple times in an iterative fashion to build the connection string and connect to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
-9. Optionally, call [SQLGetInfo](../../relational-databases/extended-stored-procedures-reference/sqlgetinfo.md) to get driver attributes and behavior for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data source.  
+9. Optionally, call [SQLGetInfo](../../relational-databases/extended-stored-procedures-reference/sqlgetinfo.md) to get driver attributes and behavior for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data source.  
   
 10. Allocate and use statements.  
   
-11. Call SQLDisconnect to disconnect from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and make the connection handle available for a new connection.  
+11. Call SQLDisconnect to disconnect from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and make the connection handle available for a new connection.  
   
 12. Call [SQLFreeHandle](../../relational-databases/extended-stored-procedures-reference/sqlfreehandle.md) with a **HandleType** of SQL_HANDLE_DBC to free the connection handle.  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
 >  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## Example  
- This example shows a call to **SQLDriverConnect** to connect to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] without requiring an existing ODBC data source. By passing an incomplete connection string to **SQLDriverConnect**, it causes the ODBC driver to prompt the user to enter the missing information.  
+ This example shows a call to **SQLDriverConnect** to connect to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] without requiring an existing ODBC data source. By passing an incomplete connection string to **SQLDriverConnect**, it causes the ODBC driver to prompt the user to enter the missing information.  
   
 ```  
 #define MAXBUFLEN   255  

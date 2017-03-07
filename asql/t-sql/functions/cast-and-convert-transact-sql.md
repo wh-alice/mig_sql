@@ -39,13 +39,13 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CAST and CONVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Converts an expression of one data type to another.   
 > [!TIP]
 > Many [examples](#BKMK_examples) are at the bottom of this topic.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -80,9 +80,9 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 ## Remarks  
   
 ## Date and Time Styles  
- When *expression* is a date or time data type,  *style* can be one of the values shown in the following table. Other values are processed as 0. . Beginning with [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)], the only styles that are supported when converting from date and time types to **datetimeoffset** are 0 or 1. All other conversion styles return error 9809.  
+ When *expression* is a date or time data type,  *style* can be one of the values shown in the following table. Other values are processed as 0. . Beginning with [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)], the only styles that are supported when converting from date and time types to **datetimeoffset** are 0 or 1. All other conversion styles return error 9809.  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports the date format in Arabic style by using the Kuwaiti algorithm.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports the date format in Arabic style by using the Kuwaiti algorithm.  
   
 |Without century (yy) (<sup>1</sup>)|With century (yyyy)|Standard|Input/Output (<sup>3</sup>)|  
 |---------------------------------------------|---------------------------|--------------|------------------------------------|  
@@ -116,14 +116,14 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
   
  <sup>4</sup> Designed for XML use. For conversion from **datetime** or **smalldatetime** to character data, the output format is as described in the previous table.  
   
- <sup>5</sup> Hijri is a calendar system with several variations. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses the Kuwaiti algorithm.  
+ <sup>5</sup> Hijri is a calendar system with several variations. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses the Kuwaiti algorithm.  
   
 > [!IMPORTANT]  
->  By default, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] interprets two-digit years based on a cutoff year of 2049. That is, the two-digit year 49 is interpreted as 2049 and the two-digit year 50 is interpreted as 1950. Many client applications, such as those based on Automation objects, use a cutoff year of 2030. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provides the two digit year cutoff configuration option that changes the cutoff year used by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and allows for the consistent treatment of dates. We recommend specifying four-digit years.  
+>  By default, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] interprets two-digit years based on a cutoff year of 2049. That is, the two-digit year 49 is interpreted as 2049 and the two-digit year 50 is interpreted as 1950. Many client applications, such as those based on Automation objects, use a cutoff year of 2030. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] provides the two digit year cutoff configuration option that changes the cutoff year used by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and allows for the consistent treatment of dates. We recommend specifying four-digit years.  
   
  <sup>6</sup> Only supported when casting from character data to **datetime** or **smalldatetime**. When character data that represents only date or only time components is cast to the **datetime** or **smalldatetime** data types, the unspecified time component is set to 00:00:00.000, and the unspecified date component is set to 1900-01-01.  
   
- <sup>7</sup>The optional time zone indicator, Z, is used to make it easier to map XML **datetime** values that have time zone information to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] **datetime** values that have no time zone. Z is the indicator for time zone UTC-0. Other time zones are indicated with HH:MM offset in the + or - direction. For example: `2006-12-12T23:45:12-08:00`.  
+ <sup>7</sup>The optional time zone indicator, Z, is used to make it easier to map XML **datetime** values that have time zone information to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] **datetime** values that have no time zone. Z is the indicator for time zone UTC-0. Other time zones are indicated with HH:MM offset in the + or - direction. For example: `2006-12-12T23:45:12-08:00`.  
   
  When you convert to character data from **smalldatetime**, the styles that include seconds or milliseconds show zeros in these positions. You can truncate unwanted date parts when you convert from **datetime** or **smalldatetime** values by using an appropriate **char** or **varchar** data type length.  
   
@@ -137,7 +137,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |**0** (default)|A maximum of 6 digits. Use in scientific notation, when appropriate.|  
 |**1**|Always 8 digits. Always use in scientific notation.|  
 |**2**|Always 16 digits. Always use in scientific notation.|  
-|**3**|Always 17 digits. Use for lossless conversion. With this style, every distinct float or real value is guaranteed to convert to a distinct character string.<br /><br /> *Applies to:* [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)], and starting in [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)].|  
+|**3**|Always 17 digits. Use for lossless conversion. With this style, every distinct float or real value is guaranteed to convert to a distinct character string.<br /><br /> *Applies to:* [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)], and starting in [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)].|  
 |**126, 128, 129**|Included for legacy reasons and might be deprecated in a future release.|  
   
 ## money and smallmoney Styles  
@@ -155,7 +155,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
   
 |Value|Output|  
 |-----------|------------|  
-|**0** (default)|Use default parsing behavior that discards insignificant white space and does not allow for an internal DTD subset.<br /><br /> Note: When you convert to the **xml** data type, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] insignificant white space is handled differently than in XML 1.0. For more information, see [Create Instances of XML Data](../../relational-databases/xml/create-instances-of-xml-data.md).|  
+|**0** (default)|Use default parsing behavior that discards insignificant white space and does not allow for an internal DTD subset.<br /><br /> Note: When you convert to the **xml** data type, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] insignificant white space is handled differently than in XML 1.0. For more information, see [Create Instances of XML Data](../../relational-databases/xml/create-instances-of-xml-data.md).|  
 |**1**|Preserve insignificant white space. This style setting sets the default **xml:space** handling to behave the same as if **xml:space="preserve"** has been specified instead.|  
 |**2**|Enable limited internal DTD subset processing.<br /><br /> If enabled, the server can use the following information that is provided in an internal DTD subset to perform nonvalidating parse operations.<br /><br /> -Defaults for attributes are applied.<br /><br /> -Internal entity references are resolved and expanded.<br /><br /> -The DTD content model will be checked for syntactical correctness.<br /><br /> <br /><br /> The parser will ignore external DTD subsets. It also does not evaluate the XML declaration to see whether the **standalone** attribute is set **yes** or **no**, but instead parses the XML instance as if it is a stand-alone document.|  
 |**3**|Preserve insignificant white space and enable limited internal DTD subset processing.|  
@@ -169,7 +169,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |**1**, **2**|If the *data_type* is a binary type, the expression must be a character expression. The *expression* must be composed of an even number of hexadecimal digits (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). If the *style* is set to 1 the characters 0x must be the first two characters in the expression. If the expression contains an odd number of characters or if any of the characters are invalid an error is raised.<br /><br /> If the length of the converted expression is greater than the length of the *data_type* the result will be right truncated.<br /><br /> Fixed length *data_types* that are larger then the converted result will have zeros added to the right of the result.<br /><br /> If the data_type is a character type, the expression must be a binary expression. Each binary character is converted into two hexadecimal characters. If the length of the converted expression is greater than the *data_type* length it will be right truncated.<br /><br /> If the *data_type* is a fix sized character type and the length of the converted result is less than its length of the *data_type*; spaces are added to the right of the converted expression to maintain an even number of hexadecimal digits.<br /><br /> The characters 0x will be added to the left of the converted result for *style* 1.|  
   
 ## Implicit Conversions  
- Implicit conversions are those conversions that occur without specifying either the CAST or CONVERT function. Explicit conversions are those conversions that require the CAST or CONVERT function to be specified. The following illustration shows all explicit and implicit data type conversions that are allowed for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system-supplied data types. These include **xml**, **bigint**, and **sql_variant**. There is no implicit conversion on assignment from the **sql_variant** data type, but there is implicit conversion to **sql_variant**.  
+ Implicit conversions are those conversions that occur without specifying either the CAST or CONVERT function. Explicit conversions are those conversions that require the CAST or CONVERT function to be specified. The following illustration shows all explicit and implicit data type conversions that are allowed for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system-supplied data types. These include **xml**, **bigint**, and **sql_variant**. There is no implicit conversion on assignment from the **sql_variant** data type, but there is implicit conversion to **sql_variant**.  
   
 > [!TIP]  
 >  This chart is available as a downloadable PDF file at the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=35834).  
@@ -200,7 +200,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
  When you explicitly or implicitly cast the **xml** data type to a string or binary data type, the content of the **xml** data type is serialized based on a set of rules. For information about these rules, see [Define the Serialization of XML Data](../../relational-databases/xml/define-the-serialization-of-xml-data.md). For information about how to convert from other data types to the **xml** data type, see [Create Instances of XML Data](../../relational-databases/xml/create-instances-of-xml-data.md).  
   
 ## text and image Data Types  
- Automatic data type conversion is not supported for the **text** and **image** data types. You can explicitly convert **text** data to character data, and **image** data to **binary** or **varbinary**, but the maximum length is 8000 bytes. If you try an incorrect conversion such as trying to convert a character expression that includes letters to an **int**, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns an error message.  
+ Automatic data type conversion is not supported for the **text** and **image** data types. You can explicitly convert **text** data to character data, and **image** data to **binary** or **varbinary**, but the maximum length is 8000 bytes. If you try an incorrect conversion such as trying to convert a character expression that includes letters to an **int**, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns an error message.  
   
 ## Output Collation  
  When the output of CAST or CONVERT is a character string, and the input is a character string, the output has the same collation and collation label as the input. If the input is not a character string, the output has the default collation of the database, and a collation label of coercible-default. For more information, see [Collation Precedence &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
@@ -225,7 +225,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
   
  \* = Result length too short to display. E = Error returned because result length is too short to display.  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] guarantees that only roundtrip conversions, conversions that convert a data type from its original data type and back again, will yield the same values from version to version. The following example shows such a roundtrip conversion:  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] guarantees that only roundtrip conversions, conversions that convert a data type from its original data type and back again, will yield the same values from version to version. The following example shows such a roundtrip conversion:  
   
 ```  
 DECLARE @myval decimal (5, 2);  
@@ -236,7 +236,7 @@ SELECT CONVERT(decimal(10,5), CONVERT(varbinary(20), @myval));
 ```  
   
 > [!NOTE]  
->  Do not try to construct **binary** values and then convert them to a data type of the numeric data type category. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not guarantee that the result of a **decimal** or **numeric** data type conversion to **binary** will be the same between versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+>  Do not try to construct **binary** values and then convert them to a data type of the numeric data type category. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not guarantee that the result of a **decimal** or **numeric** data type conversion to **binary** will be the same between versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  The following example shows a resulting expression that is too small to display.  
   
@@ -298,7 +298,7 @@ WHERE NOT e.BusinessEntityID >5;
   
  `SELECT CAST(10.3496847 AS money);`  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns an error message when nonnumeric **char**, **nchar**, **varchar**, or **nvarchar** data is converted to **int**, **float**, **numeric**, or **decimal**. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] also returns an error when an empty string (" ") is converted to **numeric** or **decimal**.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns an error message when nonnumeric **char**, **nchar**, **varchar**, or **nvarchar** data is converted to **int**, **float**, **numeric**, or **decimal**. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] also returns an error when an empty string (" ") is converted to **numeric** or **decimal**.  
   
 ## Certain datetime Conversions Are Nondeterministic  
  The following table lists the styles for which the string-to-datetime conversion is nondeterministic.  
@@ -312,7 +312,7 @@ WHERE NOT e.BusinessEntityID >5;
  <sup>1</sup> With the exception of styles 20 and 21  
   
 ## Supplementary Characters (Surrogate Pairs)  
- Beginning in [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)], if you use supplementary character (SC) collations, a CAST operation from **nchar** or **nvarchar** to an **nchar** or **nvarchar** type of smaller length will not truncate inside a surrogate pair; it truncates before the supplementary character. For example, the following code fragment leaves `@x` holding just `'ab'`. There is not enough space to hold the supplementary character.  
+ Beginning in [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)], if you use supplementary character (SC) collations, a CAST operation from **nchar** or **nvarchar** to an **nchar** or **nvarchar** type of smaller length will not truncate inside a surrogate pair; it truncates before the supplementary character. For example, the following code fragment leaves `@x` holding just `'ab'`. There is not enough space to hold the supplementary character.  
   
 ```  
 DECLARE @x NVARCHAR(10) = 'ab' + NCHAR(0x10000);  
@@ -323,7 +323,7 @@ SELECT CAST (@x AS NVARCHAR(3));
  When using SC collations the behavior of `CONVERT`, is analogous to that of `CAST`.  
   
 ## Compatibility Support  
- In earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the default style for CAST and CONVERT operations on **time** and **datetime2** data types is 121 except when either type is used in a computed column expression. For computed columns, the default style is 0. This behavior impacts computed columns when they are created, used in queries involving auto-parameterization, or used in constraint definitions.  
+ In earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], the default style for CAST and CONVERT operations on **time** and **datetime2** data types is 121 except when either type is used in a computed column expression. For computed columns, the default style is 0. This behavior impacts computed columns when they are created, used in queries involving auto-parameterization, or used in constraint definitions.  
   
  Under compatibility level 110 and higher, the default style for CAST and CONVERT operations on **time** and **datetime2** data types is always 121. If your query relies on the old behavior, use a compatibility level less than 110, or explicitly specify the 0 style in the affected query.  
   
@@ -663,7 +663,7 @@ SELECT @t1 AS [time], CAST (@t1 AS datetime) AS [time as datetime];
 SELECT @dt1 AS [datetime], CAST (@dt1 AS date) AS [datetime as date], CAST (@dt1 AS time) AS [datetime as time];  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### J. Using CAST and CONVERT  
  This example retrieves the name of the product for those products that have a `3` in the first digit of their list price and converts their `ListPrice` to **int**.  
@@ -821,7 +821,7 @@ FROM dbo.DimCustomer;
 ## See Also  
  [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-transact-sql.md)   
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/system-functions-transact-sql.md)   
  [Write International Transact-SQL Statements](../../relational-databases/collations/write-international-transact-sql-statements.md)  
   
   

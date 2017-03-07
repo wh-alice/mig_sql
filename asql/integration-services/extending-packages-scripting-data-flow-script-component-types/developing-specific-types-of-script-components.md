@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Developing Specific Types of Script Components
-  The Script component is a configurable tool that you can use in the data flow of a package to fill almost any requirement that is not met by the sources, transformations, and destinations that are included with [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)]. This section contains Script component code samples that demonstrate the four options for configuring the Script component:  
+  The Script component is a configurable tool that you can use in the data flow of a package to fill almost any requirement that is not met by the sources, transformations, and destinations that are included with [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)]. This section contains Script component code samples that demonstrate the four options for configuring the Script component:  
   
 -   As a source.  
   

@@ -31,7 +31,7 @@ manager: "jhubbard"
  Name of the availability group. This is a user-specified name that must be unique within the Windows Server Failover Cluster (WSFC).  
   
  **Server instance**  
- Server name of the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that is hosting this replica and, for a non-default instance, its instance name.  
+ Server name of the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] that is hosting this replica and, for a non-default instance, its instance name.  
   
  **Role**  
  **Primary**  
@@ -93,7 +93,7 @@ manager: "jhubbard"
 >  Session timeouts do not cause automatic failovers.  
   
  **Endpoint URL**  
- String representation of the user-specified database mirroring endpoint that is used by connections between primary and secondary replicas for data synchronization. For information about the syntax of endpoint URLs, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../Topic/Specify%20the%20Endpoint%20URL%20When%20Adding%20or%20Modifying%20an%20Availability%20Replica%20\(SQL%20Server\).md).  
+ String representation of the user-specified database mirroring endpoint that is used by connections between primary and secondary replicas for data synchronization. For information about the syntax of endpoint URLs, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  

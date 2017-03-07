@@ -17,12 +17,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Conversions Performed from Server to Client
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  This topic describes date/time conversions performed between [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] (or later) and a client application written with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB.  
+  This topic describes date/time conversions performed between [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] (or later) and a client application written with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB.  
   
 ## Conversions  
- The following table describes conversions between the type returned to the client and the type in the binding. For output parameters, if ICommandWithParameters::SetParameterInfo has been called and the type specified in *pwszDataSourceType* does not match the actual type on the server, an implicit conversion will be performed by the server, and the type returned to the client will match the type specified through ICommandWithParameters::SetParameterInfo. This can lead to unexpected conversion results when the server’s conversion rules are different from those described in this topic. For example, when a default date must be provided, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses 1900-1-1 rather than 1899-12-30.  
+ The following table describes conversions between the type returned to the client and the type in the binding. For output parameters, if ICommandWithParameters::SetParameterInfo has been called and the type specified in *pwszDataSourceType* does not match the actual type on the server, an implicit conversion will be performed by the server, and the type returned to the client will match the type specified through ICommandWithParameters::SetParameterInfo. This can lead to unexpected conversion results when the server’s conversion rules are different from those described in this topic. For example, when a default date must be provided, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses 1900-1-1 rather than 1899-12-30.  
   
 |To -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
@@ -61,6 +61,6 @@ manager: "jhubbard"
 |13|The string is parsed as an ISO literal and converted to the target type. If this fails, the string is parsed as an OLE date literal (which also has time components) and converted from an OLE date (DBTYPE_DATE) to the target type. The string must conform to the syntax for datetime literals, unless the destination is DBTYPE_DATE or DBTYPE_DBTIMESTAMP. If this is the case, either a datetime or time literal is allowed for ISO format parsing to succeed. For OLE parsing to succeed, the string must conform to the syntax recognized by OLE. If the string cannot be parsed, DBSTATUS_E_CANTCONVERTVALUE is set. If any component values are out of range, DBSTATUS_E_DATAOVERFLOW is set.|  
   
 ## See Also  
- [Bindings and Conversions &#40;OLE DB&#41;](../Topic/Bindings%20and%20Conversions%20\(OLE%20DB\).md)  
+ [Bindings and Conversions &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
   
   

@@ -15,14 +15,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Prepare the Input Trace Data
-  Before you can start a distributed replay with the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Distributed Replay feature, you must prepare the input trace data by initiating the preprocess stage from the distributed replay administration tool. In the preprocess stage, the distributed replay controller processes the trace data and generates an intermediate file:  
+  Before you can start a distributed replay with the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Distributed Replay feature, you must prepare the input trace data by initiating the preprocess stage from the distributed replay administration tool. In the preprocess stage, the distributed replay controller processes the trace data and generates an intermediate file:  
   
  ![Distributed replay preprocess stage](../../tools/distributed-replay/media/preprocess.gif "Distributed replay preprocess stage")  
   
  For more information about the preprocess stage, see [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   
 > [!NOTE]  
->  The input trace data must be captured in a version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that is compatible with Distributed Replay. The input trace data must also be compatible with the target server that you want to replay the trace data against. For more information about version requirements, see [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md).  
+>  The input trace data must be captured in a version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that is compatible with Distributed Replay. The input trace data must also be compatible with the target server that you want to replay the trace data against. For more information about version requirements, see [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md).  
   
 ### To prepare the input trace data  
   

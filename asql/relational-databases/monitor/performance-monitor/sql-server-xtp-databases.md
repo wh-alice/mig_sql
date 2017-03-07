@@ -17,7 +17,7 @@ ms.author: "v-dagir"
 manager: "jhubbard"
 ---
 # SQL Server XTP Databases
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 The **SQL Server XTP Databases** performance object provides In-Memory OLTP database-specific counters.
 

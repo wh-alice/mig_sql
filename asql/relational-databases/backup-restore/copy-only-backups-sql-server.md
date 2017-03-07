@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Copy-Only Backups (SQL Server)
-  A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backups. Usually, taking a backup changes the database and affects how later backups are restored. However, occasionally, it is useful to take a backup for a special purpose without affecting the overall backup and restore procedures for the database. Copy-only backups serve this purpose.  
+  A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] backups. Usually, taking a backup changes the database and affects how later backups are restored. However, occasionally, it is useful to take a backup for a special purpose without affecting the overall backup and restore procedures for the database. Copy-only backups serve this purpose.  
   
  The types of copy-only backups are as follows:  
   
@@ -35,10 +35,10 @@ manager: "jhubbard"
   
      The transaction log is never truncated after a copy-only backup.  
   
- Copy-only backups are recorded in the **is_copy_only** column of the [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) table.  
+ Copy-only backups are recorded in the **is_copy_only** column of the [backupset](../../relational-databases/reference/system-tables/backupset-transact-sql.md) table.  
   
 ## To Create a Copy-Only Backup  
- You can create a copy-only backup by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], or PowerShell.  
+ You can create a copy-only backup by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], or PowerShell.  
 
 ### Examples  
 ###  <a name="SSMSProcedure"></a> A.  Using SQL Server Management Studio  
@@ -85,7 +85,7 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
  **To view copy-only backups**  
   
--   [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)  
+-   [backupset &#40;Transact-SQL&#41;](../../relational-databases/reference/system-tables/backupset-transact-sql.md)  
   
  **To set up and use the SQL Server PowerShell provider**  
   

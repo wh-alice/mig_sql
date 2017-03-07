@@ -26,7 +26,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 ```  
   
 ## Description  
- The Set-PowerPivotSystemService cmdlet updates the properties of the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service parent object in the farm.  
+ The Set-PowerPivotSystemService cmdlet updates the properties of the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service parent object in the farm.  
   
 ## Parameters  
   
@@ -53,7 +53,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Accept wildcard characters?|false|  
   
 ### -WorkbookUpgradeOnDataRefresh \<boolean>  
- Used to automatically upgrade a [!INCLUDE[ssKilimanjaro](../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)] workbook at the start of a scheduled data refresh on the server. Data refresh is supported only for workbooks that match the current version of the server. If you enable this property, a workbook will be automatically upgraded so that data refresh can continue. This property is set at the server instance level. You cannot vary it for specific workbooks, libraries, sites, or users.  
+ Used to automatically upgrade a [!INCLUDE[ssKilimanjaro](../../a9notintoc/includes/sskilimanjaro-md.md)] workbook at the start of a scheduled data refresh on the server. Data refresh is supported only for workbooks that match the current version of the server. If you enable this property, a workbook will be automatically upgraded so that data refresh can continue. This property is set at the server instance level. You cannot vary it for specific workbooks, libraries, sites, or users.  
   
 |||  
 |-|-|  
@@ -64,11 +64,11 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Accept wildcard characters?|false|  
   
 ### -DirectTCPConnections \<boolean>  
- Specifies that Excel Services sends all queries directly to the instance of SQL Server Analysis Services (POWERPIVOT) that loaded a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] database, bypassing the MSOLAP data provider and channel transport that are otherwise used for every query request sent to a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] database.  
+ Specifies that Excel Services sends all queries directly to the instance of SQL Server Analysis Services (POWERPIVOT) that loaded a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] database, bypassing the MSOLAP data provider and channel transport that are otherwise used for every query request sent to a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] database.  
   
- Setting this parameter improves the performance and scalability of [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] queries by making the connections to loaded databases more efficiently. Note that this parameter does not change the behavior of how the initial load request is allocated. Other parameters, such as –RoundRobinAllocation and –HealthBasedAllocation, that are used to allocate database load requests among multiple [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint instance in the farm are unaffected because –DirectTCPConnections applies only to queries that are issued after the database is loaded.  
+ Setting this parameter improves the performance and scalability of [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] queries by making the connections to loaded databases more efficiently. Note that this parameter does not change the behavior of how the initial load request is allocated. Other parameters, such as –RoundRobinAllocation and –HealthBasedAllocation, that are used to allocate database load requests among multiple [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint instance in the farm are unaffected because –DirectTCPConnections applies only to queries that are issued after the database is loaded.  
   
- For farm topologies that include Excel Services and [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint running on separate application servers, you must open a port in the firewall to ensure that requests reach the SQL Server Analysis Services (POWERPIVOT) instance. For instructions on how to enable in-bound connections for a named instance of Analysis Services, see [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ For farm topologies that include Excel Services and [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint running on separate application servers, you must open a port in the firewall to ensure that requests reach the SQL Server Analysis Services (POWERPIVOT) instance. For instructions on how to enable in-bound connections for a named instance of Analysis Services, see [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 |||  
 |-|-|  

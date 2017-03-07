@@ -28,11 +28,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Alters an assembly by modifying the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] catalog properties of an assembly. ALTER ASSEMBLY refreshes it to the latest copy of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] modules that hold its implementation and adds or removes files associated with it. Assemblies are created by using [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
+  Alters an assembly by modifying the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] catalog properties of an assembly. ALTER ASSEMBLY refreshes it to the latest copy of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] modules that hold its implementation and adds or removes files associated with it. Assemblies are created by using [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -67,7 +67,7 @@ ALTER ASSEMBLY assembly_name
  Is the name of the assembly you want to modify. *assembly_name* must already exist in the database.  
   
  FROM <client_assembly_specifier> | <assembly_bits>  
- Updates an assembly to the latest copy of the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] modules that hold its implementation. This option can only be used if there are no associated files with the specified assembly.  
+ Updates an assembly to the latest copy of the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] modules that hold its implementation. This option can only be used if there are no associated files with the specified assembly.  
   
  <client_assembly_specifier> specifies the network or local location where the assembly being refreshed is located. The network location includes the computer name, the share name and a path within that share. *manifest_file_name* specifies the name of the file that contains the manifest of the assembly.  
   
@@ -76,7 +76,7 @@ ALTER ASSEMBLY assembly_name
  Separate ALTER ASSEMBLY statements must be issued for any dependent assemblies that also require updating.  
   
  PERMISSION_SET = { SAFE | EXTERNAL_ACCESS | UNSAFE }  
- Specifies the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] code access permission set property of the assembly. For more information about this property, see [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md).  
+ Specifies the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] code access permission set property of the assembly. For more information about this property, see [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md).  
   
 > [!NOTE]  
 >  The EXTERNAL_ACCESS and UNSAFE options are not available in a contained database.  
@@ -85,9 +85,9 @@ ALTER ASSEMBLY assembly_name
  Indicates whether the assembly is visible for creating common language runtime (CLR) functions, stored procedures, triggers, user-defined types, and user-defined aggregate functions against it. If set to OFF, the assembly is intended to be called only by other assemblies. If there are existing CLR database objects already created against the assembly, the visibility of the assembly cannot be changed. Any assemblies referenced by *assembly_name* are uploaded as not visible by default.  
   
  UNCHECKED DATA  
- By default, ALTER ASSEMBLY fails if it must verify the consistency of individual table rows. This option allows postponing the checks until a later time by using DBCC CHECKTABLE. If specified, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] executes the ALTER ASSEMBLY statement even if there are tables in the database that contain the following:  
+ By default, ALTER ASSEMBLY fails if it must verify the consistency of individual table rows. This option allows postponing the checks until a later time by using DBCC CHECKTABLE. If specified, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] executes the ALTER ASSEMBLY statement even if there are tables in the database that contain the following:  
   
--   Persisted computed columns that either directly or indirectly reference methods in the assembly, through [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] functions or methods.  
+-   Persisted computed columns that either directly or indirectly reference methods in the assembly, through [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] functions or methods.  
   
 -   CHECK constraints that directly or indirectly reference methods in the assembly.  
   
@@ -101,7 +101,7 @@ ALTER ASSEMBLY assembly_name
   
  Requires the **ALTER ANY SCHEMA** permission to specify this option.  
   
- For more information, see [Implementing Assemblies](../Topic/Implementing%20Assemblies.md).  
+ For more information, see [Implementing Assemblies](../../relational-databases/clr-integration/assemblies-implementing.md).  
   
  [ DROP FILE { *file_name*[ **,***...n*] | ALL } ]  
  Removes the file name associated with the assembly, or all files associated with the assembly, from the database. If used with ADD FILE that follows, DROP FILE executes first. This lets you to replace a file with the same file name.  
@@ -110,7 +110,7 @@ ALTER ASSEMBLY assembly_name
 >  This option is not available in a contained database.  
   
  [ ADD FILE FROM { *client_file_specifier* [ AS *file_name*] | *file_bits*AS *file_name*}  
- Uploads a file to be associated with the assembly, such as source code, debug files or other related information, into the server and made visible in the **sys.assembly_files** catalog view. *client_file_specifier* specifies the location from which to upload the file. *file_bits* can be used instead to specify the list of binary values that make up the file. *file_name* specifies the name under which the file should be stored in the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. *file_name* must be specified if *file_bits* is specified, and is optional if *client_file_specifier* is specified. If *file_name* is not specified, the file_name part of *client_file_specifier* is used as *file_name*.  
+ Uploads a file to be associated with the assembly, such as source code, debug files or other related information, into the server and made visible in the **sys.assembly_files** catalog view. *client_file_specifier* specifies the location from which to upload the file. *file_bits* can be used instead to specify the list of binary values that make up the file. *file_name* specifies the name under which the file should be stored in the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. *file_name* must be specified if *file_bits* is specified, and is optional if *client_file_specifier* is specified. If *file_name* is not specified, the file_name part of *client_file_specifier* is used as *file_name*.  
   
 > [!NOTE]  
 >  This option is not available in a contained database.  
@@ -118,16 +118,16 @@ ALTER ASSEMBLY assembly_name
 ## Remarks  
  ALTER ASSEMBLY does not disrupt currently running sessions that are running code in the assembly being modified. Current sessions complete execution by using the unaltered bits of the assembly.  
   
- If the FROM clause is specified, ALTER ASSEMBLY updates the assembly with respect to the latest copies of the modules provided. Because there might be CLR functions, stored procedures, triggers, data types, and user-defined aggregate functions in the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that are already defined against the assembly, the ALTER ASSEMBLY statement rebinds them to the latest implementation of the assembly. To accomplish this rebinding, the methods that map to CLR functions, stored procedures, and triggers must still exist in the modified assembly with the same signatures. The classes that implement CLR user-defined types and user-defined aggregate functions must still satisfy the requirements for being a user-defined type or aggregate.  
+ If the FROM clause is specified, ALTER ASSEMBLY updates the assembly with respect to the latest copies of the modules provided. Because there might be CLR functions, stored procedures, triggers, data types, and user-defined aggregate functions in the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that are already defined against the assembly, the ALTER ASSEMBLY statement rebinds them to the latest implementation of the assembly. To accomplish this rebinding, the methods that map to CLR functions, stored procedures, and triggers must still exist in the modified assembly with the same signatures. The classes that implement CLR user-defined types and user-defined aggregate functions must still satisfy the requirements for being a user-defined type or aggregate.  
   
 > [!CAUTION]  
->  If WITH UNCHECKED DATA is not specified, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] tries to prevent ALTER ASSEMBLY from executing if the new assembly version affects existing data in tables, indexes, or other persistent sites. However, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not guarantee that computed columns, indexes, indexed views or expressions will be consistent with the underlying routines and types when the CLR assembly is updated. Use caution when you execute ALTER ASSEMBLY to make sure that there is not a mismatch between the result of an expression and a value based on that expression stored in the assembly.  
+>  If WITH UNCHECKED DATA is not specified, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] tries to prevent ALTER ASSEMBLY from executing if the new assembly version affects existing data in tables, indexes, or other persistent sites. However, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not guarantee that computed columns, indexes, indexed views or expressions will be consistent with the underlying routines and types when the CLR assembly is updated. Use caution when you execute ALTER ASSEMBLY to make sure that there is not a mismatch between the result of an expression and a value based on that expression stored in the assembly.  
   
  ALTER ASSEMBLY changes the assembly version. The culture and public key token of the assembly remain the same.  
   
  ALTER ASSEMBLY statement cannot be used to change the following:  
   
--   The signatures of CLR functions, aggregate functions, stored procedures, and triggers in an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that reference the assembly. ALTER ASSEMBLY fails when [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] cannot rebind [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] database objects in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] with the new version of the assembly.  
+-   The signatures of CLR functions, aggregate functions, stored procedures, and triggers in an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that reference the assembly. ALTER ASSEMBLY fails when [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] cannot rebind [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] database objects in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] with the new version of the assembly.  
   
 -   The signatures of methods in the assembly that are called from other assemblies.  
   
@@ -170,19 +170,19 @@ ALTER ASSEMBLY assembly_name
   
 -   Specifying WITH UNCHECKED DATA, requires **ALTER ANY SCHEMA** permission.  
   
- For more information about assembly permission sets, see [Designing Assemblies](../Topic/Designing%20Assemblies.md).  
+ For more information about assembly permission sets, see [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md).  
   
 ## Examples  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ### A. Refreshing an assembly  
- The following example updates assembly `ComplexNumber` to the latest copy of the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] modules that hold its implementation.  
+ The following example updates assembly `ComplexNumber` to the latest copy of the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] modules that hold its implementation.  
   
 > [!NOTE]  
->  Assembly `ComplexNumber` can be created by running the UserDefinedDataType sample scripts. For more information, see [User Defined Type](../Topic/User%20Defined%20Type.md).  
+>  Assembly `ComplexNumber` can be created by running the UserDefinedDataType sample scripts. For more information, see [User Defined Type](../../a9retired/user-defined-type.md).  
   
  `ALTER ASSEMBLY ComplexNumber`  
   

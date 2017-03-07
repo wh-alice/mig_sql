@@ -22,11 +22,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ALTER WORKLOAD GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Changes an existing Resource Governor workload group configuration, and optionally assigns it to a to a Resource Governor resource pool.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md).  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## Syntax  
   
@@ -50,7 +50,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Is the name of an existing user-defined workload group or the Resource Governor default workload group.  
   
 > [!NOTE]  
->  Resource Governor creates the "default" and internal groups when [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is installed.  
+>  Resource Governor creates the "default" and internal groups when [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is installed.  
   
  The option "default" must be enclosed by quotation marks ("") or brackets ([]) when used with ALTER WORKLOAD GROUP to avoid conflict with DEFAULT, which is a system reserved word. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
@@ -112,7 +112,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Specifies the maximum degree of parallelism (DOP) for parallel requests. *value* must be 0 or a positive integer, 1 though 255. When *value* is 0, the server chooses the max degree of parallelism. This is the default and recommended setting.  
   
 > [!NOTE]  
->  The actual value that the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] sets for MAX_DOP by might be less than the specified value. The final value is determined by the formula min(255, *number of CPUs)*.  
+>  The actual value that the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] sets for MAX_DOP by might be less than the specified value. The final value is determined by the formula min(255, *number of CPUs)*.  
   
 > [!CAUTION]  
 >  Changing MAX_DOP can adversely affect a server's performance. If you must change MAX_DOP, we recommend that it be set to a value that is less than or equal to the maximum number of hardware schedulers that are present in a single NUMA node. We recommend that you do not set MAX_DOP to a value greater than 8.  
@@ -154,11 +154,11 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  When you are executing DDL statements, we recommend that you be familiar with Resource Governor states. For more information, see [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
- REQUEST_MEMORY_GRANT_PERCENT: In [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)], index creation is allowed to use more workspace memory than initially granted for improved performance. This special handling is supported by Resource Governor in later versions, however, the initial grant and any additional memory grant are limited by resource pool and workload group settings.  
+ REQUEST_MEMORY_GRANT_PERCENT: In [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)], index creation is allowed to use more workspace memory than initially granted for improved performance. This special handling is supported by Resource Governor in later versions, however, the initial grant and any additional memory grant are limited by resource pool and workload group settings.  
   
  **Index Creation on a Partitioned Table**  
   
- The memory consumed by index creation on non-aligned partitioned table is proportional to the number of partitions involved.  If the total required memory exceeds the per-query limit (REQUEST_MAX_MEMORY_GRANT_PERCENT) imposed by the Resource Governor workload group setting, this index creation may fail to execute. Because the "default" workload group allows a query to exceed the per-query limit with the minimum required memory to start for [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] compatibility, the user may be able to run the same index creation in "default" workload group, if the "default" resource pool has enough total memory configured to run such query.  
+ The memory consumed by index creation on non-aligned partitioned table is proportional to the number of partitions involved.  If the total required memory exceeds the per-query limit (REQUEST_MAX_MEMORY_GRANT_PERCENT) imposed by the Resource Governor workload group setting, this index creation may fail to execute. Because the "default" workload group allows a query to exceed the per-query limit with the minimum required memory to start for [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] compatibility, the user may be able to run the same index creation in "default" workload group, if the "default" resource pool has enough total memory configured to run such query.  
   
 ## Permissions  
  Requires CONTROL SERVER permission.  

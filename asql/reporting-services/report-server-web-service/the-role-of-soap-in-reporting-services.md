@@ -29,7 +29,7 @@ manager: "erikre"
   
  A report server acts as a SOAP server, a SOAP-aware service that can accept requests from SOAP clients and create appropriate responses. The server handles the requests and sends encoded responses back to the client.  
   
- SOAP messages in [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] take many different forms, depending on the type of request made by the client. The following example represents a simple SOAP client request to remove an item from the report server database.  
+ SOAP messages in [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] take many different forms, depending on the type of request made by the client. The following example represents a simple SOAP client request to remove an item from the report server database.  
   
 ```  
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -41,7 +41,7 @@ manager: "erikre"
 </soap:Envelope>  
 ```  
   
- The SOAP itself requires that messages be put into an **Envelope** element, with the bulk of the message inside a **Body** element. In this example, the body contains a call to the <xref:ReportService2010.ReportingService2010.DeleteItem%2A> method, which takes a string parameter representing the path of the item to delete. You can create a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] client proxy class that encapsulates all SOAP operations into methods. The following [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[csprcs](../../integration-services/includes/csprcs-md.md)] method represents the SOAP example given earlier.  
+ The SOAP itself requires that messages be put into an **Envelope** element, with the bulk of the message inside a **Body** element. In this example, the body contains a call to the <xref:ReportService2010.ReportingService2010.DeleteItem%2A> method, which takes a string parameter representing the path of the item to delete. You can create a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] client proxy class that encapsulates all SOAP operations into methods. The following [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[csprcs](../../a9retired/includes/csprcs-md.md)] method represents the SOAP example given earlier.  
   
 ```  
 public void DeleteItem(string item);  
@@ -61,7 +61,7 @@ public void DeleteItem(string item);
   
 ## See Also  
  [Accessing the SOAP API](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md)   
  [Reporting Services Report Server](../../reporting-services/report-server/sharepoint/reporting-services-report-server.md)   
  [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   

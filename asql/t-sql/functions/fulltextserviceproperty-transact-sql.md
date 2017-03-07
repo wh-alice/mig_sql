@@ -29,7 +29,7 @@ manager: "jhubbard"
 
   Returns information related to the properties of the Full-Text Engine. These properties can be set and retrieved by using **sp_fulltext_service**.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -43,16 +43,16 @@ FULLTEXTSERVICEPROPERTY ('property')
  Is an expression containing the name of the full-text service-level property. The table lists the properties and provides descriptions of the information returned.  
   
 > [!NOTE]  
->  The following properties will be removed in a future release of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout**, and **ResourceUsage**. Avoid using these properties in new development work, and plan to modify applications that currently use any of them.  
+>  The following properties will be removed in a future release of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout**, and **ResourceUsage**. Avoid using these properties in new development work, and plan to modify applications that currently use any of them.  
   
 |Property|Value|  
 |--------------|-----------|  
 |**ResourceUsage**|Returns 0. Supported for backward compatibility only.|  
 |**ConnectTimeout**|Returns 0. Supported for backward compatibility only.|  
-|**IsFulltextInstalled**|The full-text component is installed with the current instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].<br /><br /> 0 = Full-text is not installed.<br /><br /> 1 = Full-text is installed.<br /><br /> NULL = Invalid input, or error.|  
+|**IsFulltextInstalled**|The full-text component is installed with the current instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].<br /><br /> 0 = Full-text is not installed.<br /><br /> 1 = Full-text is installed.<br /><br /> NULL = Invalid input, or error.|  
 |**DataTimeout**|Returns 0. Supported for backward compatibility only.|  
-|**LoadOSResources**|Indicates whether operating system word breakers and filters are registered and used with this instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. By default, this property is disabled to prevent inadvertent behavior changes by updates made to the operating system (OS). Enabling use of OS resources provides access to resources for languages and document types registered with [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Indexing Service, but that do not have an instance-specific resource installed. If you enable the loading of OS resources, ensure that the OS resources are trusted signed binaries; otherwise, they cannot be loaded when **VerifySignature** is set to 1.<br /><br /> 0 = Use only filters and word breakers specific to this instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].<br /><br /> 1 = Load OS filters and word breakers.|  
-|**VerifySignature**|Specifies whether only signed binaries are loaded by the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Search Service. By default, only trusted, signed binaries are loaded.<br /><br /> 0 = Do not verify whether or not binaries are signed.<br /><br /> 1 = Verify that only trusted, signed binaries are loaded.|  
+|**LoadOSResources**|Indicates whether operating system word breakers and filters are registered and used with this instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. By default, this property is disabled to prevent inadvertent behavior changes by updates made to the operating system (OS). Enabling use of OS resources provides access to resources for languages and document types registered with [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Indexing Service, but that do not have an instance-specific resource installed. If you enable the loading of OS resources, ensure that the OS resources are trusted signed binaries; otherwise, they cannot be loaded when **VerifySignature** is set to 1.<br /><br /> 0 = Use only filters and word breakers specific to this instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].<br /><br /> 1 = Load OS filters and word breakers.|  
+|**VerifySignature**|Specifies whether only signed binaries are loaded by the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Search Service. By default, only trusted, signed binaries are loaded.<br /><br /> 0 = Do not verify whether or not binaries are signed.<br /><br /> 1 = Verify that only trusted, signed binaries are loaded.|  
   
 ## Return Types  
  **int**  
@@ -81,6 +81,6 @@ GO
 ## See Also  
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
  [Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
+ [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
   
   

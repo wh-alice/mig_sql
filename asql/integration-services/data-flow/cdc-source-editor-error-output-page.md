@@ -24,7 +24,7 @@ manager: "jhubbard"
 ## Task List  
  **To open the CDC Source Editor Error Output Page**  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent](../../analysis-services/data-mining/includes/ssiscurrent-md.md)] package that has the CDC source.  
+1.  In [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent](../../a9retired/includes/ssiscurrent-md.md)] package that has the CDC source.  
   
 2.  On the **Data Flow** tab, double-click the CDC source.  
   

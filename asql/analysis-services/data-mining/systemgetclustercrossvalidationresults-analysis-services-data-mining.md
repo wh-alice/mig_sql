@@ -130,7 +130,7 @@ CALL SystemGetClusterCrossValidationResults(
 |Cluster 2|||3|1288|Clustering|Case Likelihood|0.924724595688798|  
   
 ## Requirements  
- Cross-validation is available only in [!INCLUDE[ssEnterprise](../../analysis-services/data-mining/includes/ssenterprise-md.md)] beginning in [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)].  
+ Cross-validation is available only in [!INCLUDE[ssEnterprise](../../analysis-services/data-mining/includes/ssenterprise-md.md)] beginning in [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)].  
   
 ## See Also  
  [SystemGetCrossValidationResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   

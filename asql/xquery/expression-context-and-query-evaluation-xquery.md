@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Expression Context and Query Evaluation (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   The context of an expression is the information that is used to analyze and evaluate it. Following are the two phases in which XQuery is evaluated:  
   

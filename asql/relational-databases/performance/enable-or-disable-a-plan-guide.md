@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Enable or Disable a Plan Guide
-  You can disable and enable plan guides in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. Either a single plan guides or all plan guides in a database can be enabled or disabled.  
+  You can disable and enable plan guides in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. Either a single plan guides or all plan guides in a database can be enabled or disabled.  
   
  **In This Topic**  
   
@@ -73,7 +73,7 @@ manager: "jhubbard"
   
 #### To disable or enable a plan guide  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -117,7 +117,7 @@ manager: "jhubbard"
   
 #### To disable or enable all plan guides in a database  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -133,6 +133,6 @@ manager: "jhubbard"
   
     ```  
   
- For more information, see [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md).  
+ For more information, see [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-control-plan-guide-transact-sql.md).  
   
   

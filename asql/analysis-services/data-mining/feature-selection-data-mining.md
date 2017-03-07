@@ -47,7 +47,7 @@ manager: "jhubbard"
 ## How Feature Selection Works in SQL Server Data Mining  
  Feature selection is always performed before the model is trained. With some algorithms, feature selection techniques are "built-in" so that irrelevant columns are excluded and the best features are automatically discovered. Each algorithm has its own set of default techniques for intelligently applying feature reduction.  However, you can also manually set parameters to influence feature selection behavior.  
   
- During automatic feature selection, a score is calculated for each attribute, and only the attributes that have the best scores are selected for the model. You can also adjust the threshold for the top scores. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Data Mining  provides multiple methods for calculating these scores, and the exact method that is applied in any model depends on these factors:  
+ During automatic feature selection, a score is calculated for each attribute, and only the attributes that have the best scores are selected for the model. You can also adjust the threshold for the top scores. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Data Mining  provides multiple methods for calculating these scores, and the exact method that is applied in any model depends on these factors:  
   
 -   The algorithm used in your model  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
 >  Feature selection affects only the columns that are used in the model, and has no effect on storage of the mining structure. The columns that you leave out of the mining model are still available in the structure, and data in the mining structure columns will be cached.  
   
 ### Feature Selection Scores  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Data Mining supports these popular and well-established methods for scoring attributes. The specific method used in any particular algorithm or data set depends on the data types, and the column usage.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Data Mining supports these popular and well-established methods for scoring attributes. The specific method used in any particular algorithm or data set depends on the data types, and the column usage.  
   
 -   The *interestingness* score is used to rank and sort attributes in columns that contain nonbinary continuous numeric data.  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
 #### Interestingness score  
  A feature is interesting if it tells you some useful piece of information. However, *interestingness* can be measured in many ways.  *Novelty* might be valuable for outlier detection, but the ability to discriminate between closely related items, or *discriminating weight*, might be more interesting for classification.  
   
- The measure of interestingness that is used in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Data Mining is *entropy-based*, meaning that attributes with random distributions have higher entropy and lower information gain; therefore, such attributes are less interesting. The entropy for any particular attribute is compared to the entropy of all other attributes, as follows:  
+ The measure of interestingness that is used in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Data Mining is *entropy-based*, meaning that attributes with random distributions have higher entropy and lower information gain; therefore, such attributes are less interesting. The entropy for any particular attribute is compared to the entropy of all other attributes, as follows:  
   
  Interestingness(Attribute) = - (m - Entropy(Attribute)) * (m - Entropy(Attribute))  
   
@@ -88,7 +88,7 @@ manager: "jhubbard"
  This scoring method is available for discrete and discretized attributes.  
   
 #### Bayesian with K2 Prior  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Data Mining provides two feature selection scores that are based on Bayesian networks. A Bayesian network is a *directed* or *acyclic* graph of states and transitions between states, meaning that some states are always prior to the current state, some states are posterior, and the graph does not repeat or loop. By definition, Bayesian networks allow the use of prior knowledge. However, the question of which prior states to use in calculating probabilities of later states is important for algorithm design, performance, and accuracy.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Data Mining provides two feature selection scores that are based on Bayesian networks. A Bayesian network is a *directed* or *acyclic* graph of states and transitions between states, meaning that some states are always prior to the current state, some states are posterior, and the graph does not repeat or loop. By definition, Bayesian networks allow the use of prior knowledge. However, the question of which prior states to use in calculating probabilities of later states is important for algorithm design, performance, and accuracy.  
   
  The K2 algorithm for learning from a Bayesian network was developed by Cooper and Herskovits and is often used in data mining. It is scalable and can analyze multiple variables, but requires ordering on variables used as input. For more information, see [Learning Bayesian Networks](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf) by Chickering, Geiger, and Heckerman.  
   

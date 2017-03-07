@@ -20,7 +20,7 @@ After the packages are deployed to the Integration Services server, you can exec
 ## Run packages with **Execute Package In Scale Out** dialog 
 
 1. ### Open the Execute Package In Scale Out dialog box ###
-    In [!INCLUDE[ssManStudioFull_md](../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], connect to the Integration Services server. In Object Explorer, expand the tree to display the nodes under **Integration Services Catalogs**. Right-click the **SSISDB** node or the project or the package you want to run, and then click **Execute in Scale Out**.
+    In [!INCLUDE[ssManStudioFull_md](../a9notintoc/includes/ssmanstudiofull-md.md)], connect to the Integration Services server. In Object Explorer, expand the tree to display the nodes under **Integration Services Catalogs**. Right-click the **SSISDB** node or the project or the package you want to run, and then click **Execute in Scale Out**.
 2. ### Select packages and set the options ###
     On the **Package Selection** page, you select multiple packages to run and set the environment, parameters, connection managers, and advanced options for each package. Click a package to set these options.
     

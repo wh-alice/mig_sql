@@ -19,11 +19,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 3: Synchronizing the Subscription to the Merge Publication
-In this lesson, you will start the Merge Agent to initialize the subscription using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. You also use this procedure to synchronize with the Publisher. This lesson requires that you have completed the previous lesson, [Lesson 2: Creating a Subscription to the Merge Publication](../../../relational-databases/replication/tutorials/lesson-2-creating-a-subscription-to-the-merge-publication.md).  
+In this lesson, you will start the Merge Agent to initialize the subscription using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)]. You also use this procedure to synchronize with the Publisher. This lesson requires that you have completed the previous lesson, [Lesson 2: Creating a Subscription to the Merge Publication](../../../relational-databases/replication/tutorials/lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
 ### To start synchronization and initialize the subscription  
   
-1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
+1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
   
 2.  In the **Local Subscriptions** folder, right-click the subscription in the **SalesOrdersReplica** database, and then click **View Synchronization Status**.  
   

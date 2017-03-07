@@ -34,7 +34,7 @@ manager: "erikre"
                 or readOnlyExclusive. See [High availability and Scalability in Analysis Services](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md) and [Switch an Analysis Services database between ReadOnly and ReadWrite modes](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md) for more information about when this property is used.  
   
 ## Usage  
- **Database** objects are used in almost every command. See [Commands in Tabular Model Scripting Language &#40;TMSL&#41;](../Topic/Commands%20in%20Tabular%20Model%20Scripting%20Language%20\(TMSL\).md) for a list. A **Database** object is a child of a Server object.  
+ **Database** objects are used in almost every command. See [Commands in Tabular Model Scripting Language &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md) for a list. A **Database** object is a child of a Server object.  
   
  When creating, replacing, or altering a database object, specify all read-write properties of the object definition. Omission of a read-write property is considered a deletion.  
   

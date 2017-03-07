@@ -22,9 +22,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Programming AMO Security Objects
-  In [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)], programming security objects or running applications that use AMO security objects requires being a member of the Server Administrator group or the Database Administrator group. Server Administrator and Database Administrator are an access levels supplied by [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].  
+  In [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)], programming security objects or running applications that use AMO security objects requires being a member of the Server Administrator group or the Database Administrator group. Server Administrator and Database Administrator are an access levels supplied by [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].  
   
- In [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] the user access to any object is obtained through the combination of Roles and Permissions assigned to that object. For more information, see [AMO Security Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md).  
+ In [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] the user access to any object is obtained through the combination of Roles and Permissions assigned to that object. For more information, see [AMO Security Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md).  
   
 ## Role and Permission Objects  
  Server roles contain one and only one role in the collection, the Administrators role. New roles cannot be added to the server roles collection. Membership in the Administrators role permits complete access to every object in the server  
@@ -140,10 +140,10 @@ static public void CreateRolesAndPermissions(Database db, Cube cube)
   
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
- [Introducing AMO Classes](../Topic/Introducing%20AMO%20Classes.md)   
+ [Introducing AMO Classes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Programming AMO Security objects](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-security-objects.md)   
  [Permissions and Access Rights &#40;Analysis Services - Multidimensional Data&#41;](../Topic/Permissions%20and%20Access%20Rights%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
- [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../Topic/Logical%20Architecture%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
+ [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

@@ -29,7 +29,7 @@ manager: "jhubbard"
 # Set a Session Language
   The session language can be used to set how the following elements are displayed on the server, based on language and cultural preference:  
   
--   The language that will be used for error and other system messages. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports having multiple copies of all system error strings and messages in all the languages in which [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is available. These messages can be viewed in the [sys.messages](../Topic/sys.messages%20\(Transact-SQL\).md) catalog view. When you install a localized version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], these system messages are translated for the language version that you install. By default, you also obtain the U.S. English set of these messages. Additionally, you can add user-defined messages in a specific language by using [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md).  
+-   The language that will be used for error and other system messages. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports having multiple copies of all system error strings and messages in all the languages in which [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is available. These messages can be viewed in the [sys.messages](../../relational-databases/reference/system-catalog-views/messages-for-errors-catalog-views-sys.messages.md) catalog view. When you install a localized version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], these system messages are translated for the language version that you install. By default, you also obtain the U.S. English set of these messages. Additionally, you can add user-defined messages in a specific language by using [sp_addmessage](../../relational-databases/reference/system-stored-procedures/sp-addmessage-transact-sql.md).  
   
 -   The format of date and time data.  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 -   Currency data.  
   
- There are 33 languages available for use as session settings. For a list of languages, see [sys.syslanguages](../../relational-databases/system-compatibility-views/sys.syslanguages-transact-sql.md).  
+ There are 33 languages available for use as session settings. For a list of languages, see [sys.syslanguages](../../relational-databases/reference/system-compatibility-views/sys.syslanguages-transact-sql.md).  
   
 ## Setting the Session Language from the Server  
  To set the session language from the server side, use [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md).  
@@ -49,6 +49,6 @@ manager: "jhubbard"
   
  For ODBC, use the Language keyword. For more information, see [SQLConfigDataSource](../../relational-databases/extended-stored-procedures-reference/sqlconfigdatasource.md).  
   
- For ADO.NET, use the **Current Language** parameter of the **ConnectionString** object. For more information, see the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Data Access Components (MDAC) software development kit (SDK) documentation.  
+ For ADO.NET, use the **Current Language** parameter of the **ConnectionString** object. For more information, see the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Data Access Components (MDAC) software development kit (SDK) documentation.  
   
   

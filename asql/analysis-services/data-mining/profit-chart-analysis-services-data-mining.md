@@ -31,7 +31,7 @@ manager: "jhubbard"
   
  For this example, we used the Targeted Mailing decision tree model. The model identifies customers who are likely to buy a bike. You can apply the **Profit Chart** to determine how many of your customers to target to maximize your profit.  
   
- If you don’t have the sample model, you can create it using the [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md).  
+ If you don’t have the sample model, you can create it using the [Basic Data Mining Tutorial](../../a9notintoc/basic-data-mining-tutorial.md).  
   
 1.  Open the mining accuracy chart builder.  
   
@@ -89,13 +89,13 @@ manager: "jhubbard"
   
 |Topics|Links|  
 |------------|-----------|  
-|Provides a walkthrough of how to create a lift chart for the Targeted Mailing model.|[Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)<br /><br /> [Testing Accuracy with Lift Charts &#40;Basic Data Mining Tutorial&#41;](../Topic/Testing%20Accuracy%20with%20Lift%20Charts%20\(Basic%20Data%20Mining%20Tutorial\).md)|  
+|Provides a walkthrough of how to create a lift chart for the Targeted Mailing model.|[Basic Data Mining Tutorial](../../a9notintoc/basic-data-mining-tutorial.md)<br /><br /> [Testing Accuracy with Lift Charts &#40;Basic Data Mining Tutorial&#41;](../../a9notintoc/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
 |Explains related chart types.|[Lift Chart &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Classification Matrix &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Scatter Plot &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |Describes cross-validation for mining models and mining structures.|[Cross-Validation &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
 |Describes steps for creating lift charts and other accuracy charts.|[Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## See Also  
  [Testing and Validation &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [Testing Accuracy with Lift Charts &#40;Basic Data Mining Tutorial&#41;](../Topic/Testing%20Accuracy%20with%20Lift%20Charts%20\(Basic%20Data%20Mining%20Tutorial\).md)  
+ [Testing Accuracy with Lift Charts &#40;Basic Data Mining Tutorial&#41;](../../a9notintoc/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
   

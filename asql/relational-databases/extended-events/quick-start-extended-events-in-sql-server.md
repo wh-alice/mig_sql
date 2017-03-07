@@ -16,7 +16,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Quick Start: Extended events in SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
 This article aims to help the SQL developer who is new to extended events, and who wants create an event session in just a few minutes. By using extended events, you can see details about the inner operations of the SQL system and your application. When you create an extended event session, you tell the system:
@@ -412,7 +412,7 @@ Specific scenarios for event sessions aimed at assessing locks are described in 
 - [Find the Objects That Have the Most Locks Taken on Them](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - This scenario uses the target package0.histogram, which processes the raw event data before displaying it to you.
 - [Determine Which Queries Are Holding Locks](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
-  - This scenario uses the [target package0.pair_matching](Event%20Pairing%20Target.md), where the pair of events is sqlserver.lock_acquire and lock_release.
+  - This scenario uses the [target package0.pair_matching](../../a9retired/event-pairing-target.md), where the pair of events is sqlserver.lock_acquire and lock_release.
 
 
 ## Terms and concepts in extended events
@@ -642,7 +642,7 @@ SELECT HAS_PERMS_BY_NAME(
 Here are links to documentation related to these SELECTs, and to permissions:
 
 - Details of built-in function [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)
-- [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys.fn-my-permissions-transact-sql.md)
+- [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/reference/system-functions/sys.fn-my-permissions-transact-sql.md)
 - [GRANT Server Permissions (Transact-SQL)](GRANT%20Server%20Permissions%20%28Transact%2dSQL%29.md)
 - [sys.server_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms188786.aspx)
 - For Azure SQL Database especially, [sys.database_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms187328.aspx)
@@ -654,5 +654,5 @@ Here are links to documentation related to these SELECTs, and to permissions:
 ## Links to supporting information
 
 
-- [sys.fn_xe_file_target_read_file (Transact-SQL)](../../relational-databases/system-functions/sys.fn-xe-file-target-read-file-transact-sql.md)
+- [sys.fn_xe_file_target_read_file (Transact-SQL)](../../relational-databases/reference/system-functions/sys.fn-xe-file-target-read-file-transact-sql.md)
 

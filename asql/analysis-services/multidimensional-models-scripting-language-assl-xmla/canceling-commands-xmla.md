@@ -50,9 +50,9 @@ manager: "erikre"
  By specifying a connection identifier in the [ConnectionID](../../analysis-services/xmla/xml-elements-properties/connectionid-element-xmla.md) property of the **Cancel** command, a server administrator can cancel all of the sessions associated with a given connection, including all running commands, and cancel the connection.  
   
 > [!NOTE]  
->  If the instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] cannot locate and cancel the sessions associated with a connection, such as when the data pump opens multiple sessions while providing HTTP connectivity, the instance cannot cancel the connection. If this case is encountered during the execution of a **Cancel** command, an error occurs.  
+>  If the instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] cannot locate and cancel the sessions associated with a connection, such as when the data pump opens multiple sessions while providing HTTP connectivity, the instance cannot cancel the connection. If this case is encountered during the execution of a **Cancel** command, an error occurs.  
   
- A server administrator can retrieve the active connections for an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance by retrieving the DISCOVER_CONNECTIONS schema rowset using the XMLA **Discover** method.  
+ A server administrator can retrieve the active connections for an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance by retrieving the DISCOVER_CONNECTIONS schema rowset using the XMLA **Discover** method.  
   
 ## Canceling Server Processes  
  By specifying a server process identifier (SPID) in the [SPID](../../analysis-services/xmla/xml-elements-properties/spid-element-xmla.md) property of the **Cancel** command, a server administrator can cancel the commands associated with a given SPID.  
@@ -61,7 +61,7 @@ manager: "erikre"
  You can set the [CancelAssociated](../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md) property to true to cancel the connections, sessions, and commands associated with the connection, session, or SPID specified in the **Cancel** command.  
   
 ## See Also  
- [Discover Method &#40;XMLA&#41;](../Topic/Discover%20Method%20\(XMLA\).md)   
+ [Discover Method &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
  [Developing with XMLA in Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

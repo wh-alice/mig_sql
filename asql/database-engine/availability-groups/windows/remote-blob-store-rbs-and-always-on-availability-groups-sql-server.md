@@ -15,17 +15,17 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Remote Blob Store (RBS) and Always On Availability Groups (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] can provide a high-availability and disaster recovery solution for [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)][Remote Blob Store (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) BLOB objects (blobs). [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] protects any RBS metadata and schemas stored in an availability database by replicating them to the secondary replicas. This is the SharePoint Content Database. Generally speaking, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] stores this RBS metadata independently from the blob.  
+  [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] can provide a high-availability and disaster recovery solution for [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)][Remote Blob Store (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) BLOB objects (blobs). [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] protects any RBS metadata and schemas stored in an availability database by replicating them to the secondary replicas. This is the SharePoint Content Database. Generally speaking, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] stores this RBS metadata independently from the blob.  
   
  The protection for RBS BLOB data depends on the BLOB Store Location, as follows:  
   
 |BLOB Store Location|Can Availability Groups Protect This BLOB Data?|  
 |-------------------------|-----------------------------------------------------|  
 |The same database that contains the RBS metadata  (stored using a RBS remote FILESTREAM provider)|Yes|  
-|Another database in the same instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (stored using a RBS remote FILESTREAM provider)|Yes<br /><br /> We recommend that you put this database in the same availability group as the database that contains the RBS metadata.|  
-|Another database in a different instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (stored using a RBS remote FILESTREAM provider)|Yes<br /><br /> This database must be in a separate availability group.|  
+|Another database in the same instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] (stored using a RBS remote FILESTREAM provider)|Yes<br /><br /> We recommend that you put this database in the same availability group as the database that contains the RBS metadata.|  
+|Another database in a different instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] (stored using a RBS remote FILESTREAM provider)|Yes<br /><br /> This database must be in a separate availability group.|  
 |A third-party BLOB store|No<br /><br /> To protect this BLOB data, use the high-availability mechanisms of the BLOB store provider.|  
   
 ##  <a name="Limitations"></a> Limitations  
@@ -34,11 +34,11 @@ manager: "jhubbard"
   
 ##  <a name="Recommendations"></a> Recommendations  
   
--   Use an availability group listener. For more information, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../Topic/Availability%20Group%20Listeners,%20Client%20Connectivity,%20and%20Application%20Failover%20\(SQL%20Server\).md).  
+-   Use an availability group listener. For more information, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Maintaining Remote BLOB Store](http://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (in [!INCLUDE[ssKilimanjaro](../../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)] Books Online)  
+-   [Maintaining Remote BLOB Store](http://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (in [!INCLUDE[ssKilimanjaro](../../../a9notintoc/includes/sskilimanjaro-md.md)] Books Online)  
   
 -   [Running RBS Maintainer](http://blogs.msdn.com/b/sqlrbs/archive/2010/03/19/running-rbs-maintainer.aspx) (blog)  
   

@@ -31,7 +31,7 @@ manager: "jhubbard"
   
  A sequence is a user-defined schema bound object that generates a sequence of numeric values according to a specification. New values are generated from a sequence by calling the NEXT VALUE FOR function. Use **sp_sequence_get_range** to get multiple sequence numbers at once. For information and scenarios that use both CREATE SEQUENCE, **sp_sequence_get_range**, and the NEXT VALUE FOR function, see [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -80,7 +80,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
  The MINVALUE for ascending sequences and the MAXVALUE for descending sequences cannot be altered to a value that does not permit the START WITH value of the sequence. To change the MINVALUE of an ascending sequence to a number larger than the START WITH value or to change the MAXVALUE of a descending sequence to a number smaller than the START WITH value, include the RESTART WITH argument to restart the sequence at a desired point that falls within the minimum and maximum range.  
   
 ## Metadata  
- For information about sequences, query [sys.sequences](../../relational-databases/system-catalog-views/sys.sequences-transact-sql.md).  
+ For information about sequences, query [sys.sequences](../../relational-databases/reference/system-catalog-views/sys.sequences-transact-sql.md).  
   
 ## Security  
   
@@ -179,6 +179,6 @@ ALTER SEQUENCE Test.CountBy1
  [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
  [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md)   
- [sp_sequence_get_range &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
+ [sp_sequence_get_range &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
   
   

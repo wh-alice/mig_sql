@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Unary Operators
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   In Multidimensional Expressions (MDX), unary operators perform an operation on a single operand, such as returning the negative or positive value of a numeric expression.  
   
@@ -43,7 +43,7 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
- In addition, MDX uses special unary operators to determine the aggregation operation performed by the [RollupChildren](../mdx/rollupchildren-mdx.md) function. For more information on these special unary operators, see [Add a Custom Aggregation to a Dimension](../Topic/Add%20a%20Custom%20Aggregation%20to%20a%20Dimension.md).  
+ In addition, MDX uses special unary operators to determine the aggregation operation performed by the [RollupChildren](../mdx/rollupchildren-mdx.md) function. For more information on these special unary operators, see [Add a Custom Aggregation to a Dimension](../analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md).  
   
 ## See Also  
  [Operators &#40;MDX Syntax&#41;](../mdx/operators-mdx-syntax.md)  

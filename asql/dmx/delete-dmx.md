@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # DELETE (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Clears a mining model, a mining structure, or a mining structure and all its associated mining models, depending on the Data Mining Extensions (DMX) clauses that you use.  
   
@@ -47,7 +47,7 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
  A structure identifier.  
   
 ## Remarks  
- If you do not specify **MINING MODEL** or **MINING STRUCTURE**, [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] searches for the object type based on the name, and processes the correct object. If the server contains a mining structure and a mining model that have the same name, an error is returned.  
+ If you do not specify **MINING MODEL** or **MINING STRUCTURE**, [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] searches for the object type based on the name, and processes the correct object. If the server contains a mining structure and a mining model that have the same name, an error is returned.  
   
  The following table describes the result of using different forms of the syntax.  
   
@@ -67,8 +67,8 @@ DELETE FROM NB_Sample.CONTENT
 ```  
   
 ## See Also  
- [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Definition%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Manipulation%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)  
+ [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

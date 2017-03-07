@@ -38,7 +38,7 @@ EnvelopeCenter( )
 ```  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **geography**  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] return type: **geography**  
   
  CLR return type: **SqlGeography**  
   
@@ -48,7 +48,7 @@ EnvelopeCenter( )
 > [!NOTE]  
 >  `EnvelopeCenter()` returns a bounding circle for a **geography** instance, but the results are not guaranteed to produce the minimal bounding circle. In contrast, the **geometry** data type method `STEnvelope()` is guaranteed to return the minimum bounding box when it is applied to a **geometry** instance.  
   
- In [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] and higher, returns the center of the circle representing the envelope of this instance as a **point**. For all large objects as defined by `EnvelopeAngle()` = 180, `EnvelopeCenter()` will return (90,0).  
+ In [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] and higher, returns the center of the circle representing the envelope of this instance as a **point**. For all large objects as defined by `EnvelopeAngle()` = 180, `EnvelopeCenter()` will return (90,0).  
   
  This method is not precise.  
   

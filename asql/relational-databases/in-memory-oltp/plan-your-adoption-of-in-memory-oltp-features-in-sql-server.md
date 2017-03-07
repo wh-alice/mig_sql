@@ -15,7 +15,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Plan your adoption of In-Memory OLTP Features in SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
 This article describes the ways in which the adoption of In-Memory features affects other aspects of your business system.
@@ -141,7 +141,7 @@ Table variables are not transactional. Therefore, [memory-optimized table variab
 
 ### B.3 READPAST table hint
 
-No query can apply the READPAST [table hint](Table%20Hints%20%28Transact-SQL%29.md) to any memory-optimized table.
+No query can apply the READPAST [table hint](../../t-sql/queries/hints-transact-sql-table.md) to any memory-optimized table.
 
 The READPAST hint is helpful in scenarios where several sessions are each accessing and modifying the same small set of rows, such as in processing a queue.
 

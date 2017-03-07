@@ -34,7 +34,7 @@ manager: "erikre"
 |Success|23|1|Contains the success or failure of the error event. Values are:<br /><br /> 0 = Failure<br /><br /> 1 = Success|  
 |Error|24|1|Contains the error number of any error associated with the error event.|  
 |ConnectionID|25|1|Contains the unique connection ID associated with the error event.|  
-|DatabaseName|28|8|Contains the name of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance on which the error event occurred.|  
+|DatabaseName|28|8|Contains the name of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance on which the error event occurred.|  
 |NTUserName|32|8|Contains the Windows user name associated with the error event.|  
 |NTDomainName|33|8|Contains the Windows domain account associated with the login event.|  
 |ClientHostName|35|8|Contains the name of the computer on which the client is running. This data column is populated if the host name is provided by the client.|  
@@ -43,7 +43,7 @@ manager: "erikre"
 |SessionID|39|8|Contains the server process ID (SPID) that uniquely identifies the user session associated with the error event. The SPID directly corresponds to the session GUID used by XML for Analysis (XMLA).|  
 |SPID|41|1|Contains the server process ID (SPID) that uniquely identifies the user session associated with the error event. The SPID directly corresponds to the session GUID used by XML for Analysis (XMLA).|  
 |TextData|42|9|Contains the text data associated with the error event.|  
-|ServerName|43|8|Contains the name of the server running [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance on which the error event occurred.|  
+|ServerName|43|8|Contains the name of the server running [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance on which the error event occurred.|  
   
 ## See Also  
  [Security Audit Event Category](../../analysis-services/trace-events/security-audit-event-category.md)  

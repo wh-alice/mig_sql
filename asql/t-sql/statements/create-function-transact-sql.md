@@ -42,9 +42,9 @@ manager: "jhubbard"
 # CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Creates a user-defined function in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] or common language runtime (CLR) routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. The return value can either be a scalar (single) value or a table. Use this statement to create a reusable routine that can be used in these ways:  
+  Creates a user-defined function in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] or common language runtime (CLR) routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. The return value can either be a scalar (single) value or a table. Use this statement to create a reusable routine that can be used in these ways:  
   
--   In [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements such as SELECT  
+-   In [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements such as SELECT  
   
 -   In applications calling the function  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The integration of .NET Framework CLR into SQL Server is discussed in this topic. CLR integration does not apply to Azure SQL Database.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -259,12 +259,12 @@ RETURNS return_data_type
 *OR ALTER*  
  ||  
 |-|  
-|**Applies to**: Azure [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] SP1).|  
+|**Applies to**: Azure [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] SP1).|  
   
  Conditionally alters the function only if it already exists. 
  
 > [!NOTE]  
->  Optional [OR ALTER] syntax for CLR is available starting with [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] SP1 CU1.   
+>  Optional [OR ALTER] syntax for CLR is available starting with [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] SP1 CU1.   
  
  *schema_name*  
  Is the name of the schema to which the user-defined function belongs.  
@@ -286,11 +286,11 @@ RETURNS return_data_type
 >  ANSI_WARNINGS is not honored when you pass parameters in a stored procedure, user-defined function, or when you declare and set variables in a batch statement. For example, if a variable is defined as **char(3)**, and then set to a value larger than three characters, the data is truncated to the defined size and the INSERT or UPDATE statement succeeds.  
   
  [ *type_schema_name*. ] *parameter_data_type*  
- Is the parameter data type, and optionally the schema to which it belongs. For [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] functions, all data types, including CLR user-defined types and user-defined table types, are allowed except the **timestamp** data type. For CLR functions, all data types, including CLR user-defined types, are allowed except **text**, **ntext**, **image**, user-defined table types and **timestamp** data types. The nonscalar types, **cursor** and **table**, cannot be specified as a parameter data type in either [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] or CLR functions.  
+ Is the parameter data type, and optionally the schema to which it belongs. For [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] functions, all data types, including CLR user-defined types and user-defined table types, are allowed except the **timestamp** data type. For CLR functions, all data types, including CLR user-defined types, are allowed except **text**, **ntext**, **image**, user-defined table types and **timestamp** data types. The nonscalar types, **cursor** and **table**, cannot be specified as a parameter data type in either [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] or CLR functions.  
   
- If *type_schema_name* is not specified, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] looks for the *scalar_parameter_data_type* in the following order:  
+ If *type_schema_name* is not specified, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] looks for the *scalar_parameter_data_type* in the following order:  
   
--   The schema that contains the names of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system data types.  
+-   The schema that contains the names of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system data types.  
   
 -   The default schema of the current user in the current database.  
   
@@ -308,14 +308,14 @@ RETURNS return_data_type
  Indicates that the parameter cannot be updated or modified within the definition of the function. If the parameter type is a user-defined table type, READONLY should be specified.  
   
  *return_data_type*  
- Is the return value of a scalar user-defined function. For [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] functions, all data types, including CLR user-defined types, are allowed except the **timestamp** data type. For CLR functions, all data types, including CLR user-defined types, are allowed except the **text**, **ntext**, **image**, and **timestamp** data types. The nonscalar types, **cursor** and **table**, cannot be specified as a return data type in either [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] or CLR functions.  
+ Is the return value of a scalar user-defined function. For [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] functions, all data types, including CLR user-defined types, are allowed except the **timestamp** data type. For CLR functions, all data types, including CLR user-defined types, are allowed except the **text**, **ntext**, **image**, and **timestamp** data types. The nonscalar types, **cursor** and **table**, cannot be specified as a return data type in either [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] or CLR functions.  
   
  *function_body*  
- Specifies that a series of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements, which together do not produce a side effect such as modifying a table, define the value of the function. *function_body* is used only in scalar functions and multistatement table-valued functions.  
+ Specifies that a series of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements, which together do not produce a side effect such as modifying a table, define the value of the function. *function_body* is used only in scalar functions and multistatement table-valued functions.  
   
- In scalar functions, *function_body* is a series of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements that together evaluate to a scalar value.  
+ In scalar functions, *function_body* is a series of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements that together evaluate to a scalar value.  
   
- In multistatement table-valued functions, *function_body* is a series of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements that populate a TABLE return variable.  
+ In multistatement table-valued functions, *function_body* is a series of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements that populate a TABLE return variable.  
   
  *scalar_expression*  
  Specifies the scalar value that the scalar function returns.  
@@ -325,10 +325,10 @@ RETURNS return_data_type
   
  In inline table-valued functions, the TABLE return value is defined through a single SELECT statement. Inline functions do not have associated return variables.  
   
- In multistatement table-valued functions, @*return_variable* is a TABLE variable, used to store and accumulate the rows that should be returned as the value of the function. @*return_variable* can be specified only for [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] functions and not for CLR functions.  
+ In multistatement table-valued functions, @*return_variable* is a TABLE variable, used to store and accumulate the rows that should be returned as the value of the function. @*return_variable* can be specified only for [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] functions and not for CLR functions.  
   
 > [!WARNING]  
->  Joining to a multistatement table valued function in a **FROM** clause is possible, but can give poor performance. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is unable to use all the optimized techniques against some statements that can be included in a multistatement function, resulting in a suboptimal query plan. To obtain the best possible performance, whenever possible use joins between base tables instead of functions.  
+>  Joining to a multistatement table valued function in a **FROM** clause is possible, but can give poor performance. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is unable to use all the optimized techniques against some statements that can be included in a multistatement function, resulting in a suboptimal query plan. To obtain the best possible performance, whenever possible use joins between base tables instead of functions.  
   
  *select_stmt*  
  Is the single SELECT statement that defines the return value of an inline table-valued function.  
@@ -339,7 +339,7 @@ RETURNS return_data_type
  EXTERNAL NAME <method_specifier> *assembly_name*.*class_name*.*method_name*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Specifies the assembly and method to which the created function name shall refer.  
   
@@ -359,18 +359,18 @@ RETURNS return_data_type
 `MyFood.[MyFood.MyClass].MyStaticMethod`  
   
 > [!NOTE]  
->  By default, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] cannot execute CLR code. You can create, modify, and drop database objects that reference common language runtime modules; however, you cannot execute these references in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] until you enable the [clr enabled option](../../database-engine/configure/windows/clr-enabled-server-configuration-option.md). To enable this option, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+>  By default, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] cannot execute CLR code. You can create, modify, and drop database objects that reference common language runtime modules; however, you cannot execute these references in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] until you enable the [clr enabled option](../../database-engine/configure/windows/clr-enabled-server-configuration-option.md). To enable this option, use [sp_configure](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md).  
   
 > [!NOTE]  
 >  This option is not available in a contained database.  
   
  *\<*table_type_definition*>* ( { <column_definition> <column_constraint>    | <computed_column_definition> }    [ <table_constraint> ] [ ,...*n* ] )  
- Defines the table data type for a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints. The table is always put in the primary filegroup.  
+ Defines the table data type for a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints. The table is always put in the primary filegroup.  
   
  \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
  Defines the table data types for a CLR function. The table declaration includes only column names and data types. The table is always put in the primary filegroup.  
   
@@ -381,7 +381,7 @@ RETURNS return_data_type
  Indicates whether a user-defined function is natively compiled. This argument is required for natively compiled, scalar user-defined functions.  
   
  BEGIN ATOMIC WITH  
- Supported only for natively compiled, scalar user-defined functions, and is required. For more information, see [Atomic Blocks](../Topic/Atomic%20Blocks.md).  
+ Supported only for natively compiled, scalar user-defined functions, and is required. For more information, see [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
   
  SCHEMABINDING  
  The SCHEMABINDING argument is required for natively compiled, scalar user-defined functions.  
@@ -396,11 +396,11 @@ RETURNS return_data_type
  ENCRYPTION  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
- Indicates that the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] will convert the original text of the CREATE FUNCTION statement to an obfuscated format. The output of the obfuscation is not directly visible in any catalog views. Users that have no access to system tables or database files cannot retrieve the obfuscated text. However, the text will be available to privileged users that can either access system tables over the [DAC port](../../database-engine/configure/windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users that can attach a debugger to the server process can retrieve the original procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Indicates that the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] will convert the original text of the CREATE FUNCTION statement to an obfuscated format. The output of the obfuscation is not directly visible in any catalog views. Users that have no access to system tables or database files cannot retrieve the obfuscated text. However, the text will be available to privileged users that can either access system tables over the [DAC port](../../database-engine/configure/windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users that can attach a debugger to the server process can retrieve the original procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
- Using this option prevents the function from being published as part of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] replication. This option cannot be specified for CLR functions.  
+ Using this option prevents the function from being published as part of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] replication. This option cannot be specified for CLR functions.  
   
  SCHEMABINDING  
  Specifies that the function is bound to the database objects that it references. When SCHEMABINDING is specified, the base objects cannot be modified in a way that would affect the function definition. The function definition itself must first be modified or dropped to remove dependencies on the object that is to be modified.  
@@ -413,7 +413,7 @@ RETURNS return_data_type
   
  A function can be schema bound only if the following conditions are true:  
   
--   The function is a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] function.  
+-   The function is a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] function.  
   
 -   The user-defined functions and views referenced by the function are also schema-bound.  
   
@@ -426,10 +426,10 @@ RETURNS return_data_type
  RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
  Specifies the **OnNULLCall** attribute of a scalar-valued function. If not specified, CALLED ON NULL INPUT is implied by default. This means that the function body executes even if NULL is passed as an argument.  
   
- If RETURNS NULL ON NULL INPUT is specified in a CLR function, it indicates that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] can return NULL when any of the arguments it receives is NULL, without actually invoking the body of the function. If the method of a CLR function specified in <method_specifier> already has a custom attribute that indicates RETURNS NULL ON NULL INPUT, but the CREATE FUNCTION statement indicates CALLED ON NULL INPUT, the CREATE FUNCTION statement takes precedence. The **OnNULLCall** attribute cannot be specified for CLR table-valued functions.  
+ If RETURNS NULL ON NULL INPUT is specified in a CLR function, it indicates that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] can return NULL when any of the arguments it receives is NULL, without actually invoking the body of the function. If the method of a CLR function specified in <method_specifier> already has a custom attribute that indicates RETURNS NULL ON NULL INPUT, but the CREATE FUNCTION statement indicates CALLED ON NULL INPUT, the CREATE FUNCTION statement takes precedence. The **OnNULLCall** attribute cannot be specified for CLR table-valued functions.  
   
  EXECUTE AS Clause  
- Specifies the security context under which the user-defined function is executed. Therefore, you can control which user account [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses to validate permissions on any database objects that are referenced by the function.  
+ Specifies the security context under which the user-defined function is executed. Therefore, you can control which user account [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses to validate permissions on any database objects that are referenced by the function.  
   
 > [!NOTE]  
 >  EXECUTE AS cannot be specified for inline user-defined functions.  
@@ -444,7 +444,7 @@ RETURNS return_data_type
  Is the name of a column in the table. Column names must comply with the rules for identifiers and must be unique in the table. *column_name* can consist of 1 through 128 characters.  
   
  *data_type*  
- Specifies the column data type. For [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] functions, all data types, including CLR user-defined types, are allowed except **timestamp**. For CLR functions, all data types, including CLR user-defined types, are allowed except **text**, **ntext**, **image**, **char**, **varchar**, **varchar(max)**, and **timestamp**.The nonscalar type **cursor** cannot be specified as a column data type in either [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] or CLR functions.  
+ Specifies the column data type. For [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] functions, all data types, including CLR user-defined types, are allowed except **timestamp**. For CLR functions, all data types, including CLR user-defined types, are allowed except **text**, **ntext**, **image**, **char**, **varchar**, **varchar(max)**, and **timestamp**.The nonscalar type **cursor** cannot be specified as a column data type in either [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] or CLR functions.  
   
  DEFAULT *constant_expression*  
  Specifies the value provided for the column when a value is not explicitly supplied during an insert. *constant_expression* is a constant, NULL, or a system function value. DEFAULT definitions can be applied to any column except those that have the IDENTITY property. DEFAULT cannot be specified for CLR table-valued functions.  
@@ -462,7 +462,7 @@ RETURNS return_data_type
  The ROWGUIDCOL property does not enforce uniqueness of the values stored in the column. It also does not automatically generate values for new rows inserted into the table. To generate unique values for each column, use the NEWID function on INSERT statements. A default value can be specified; however, NEWID cannot be specified as the default.  
   
  IDENTITY  
- Indicates that the new column is an identity column. When a new row is added to the table, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provides a unique, incremental value for the column. Identity columns are typically used together with PRIMARY KEY constraints to serve as the unique row identifier for the table. The IDENTITY property can be assigned to **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)**, or **numeric(p,0)** columns. Only one identity column can be created per table. Bound defaults and DEFAULT constraints cannot be used with an identity column. You must specify both the *seed* and *increment* or neither. If neither is specified, the default is (1,1).  
+ Indicates that the new column is an identity column. When a new row is added to the table, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] provides a unique, incremental value for the column. Identity columns are typically used together with PRIMARY KEY constraints to serve as the unique row identifier for the table. The IDENTITY property can be assigned to **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)**, or **numeric(p,0)** columns. Only one identity column can be created per table. Bound defaults and DEFAULT constraints cannot be used with an identity column. You must specify both the *seed* and *increment* or neither. If neither is specified, the default is (1,1).  
   
  IDENTITY cannot be specified for CLR table-valued functions.  
   
@@ -516,7 +516,7 @@ RETURNS return_data_type
  Specifies index padding. The default is OFF.  
   
  FILLFACTOR = *fillfactor*  
- Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] should make the leaf level of each index page during index creation or change. *fillfactor* must be an integer value from 1 to 100. The default is 0.  
+ Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] should make the leaf level of each index page during index creation or change. *fillfactor* must be an integer value from 1 to 100. The default is 0.  
   
  IGNORE_DUP_KEY = { ON | **OFF** }  
  Specifies the error response when an insert operation attempts to insert duplicate key values into a unique index. The IGNORE_DUP_KEY option applies only to insert operations after the index is created or rebuilt. The default is OFF.  
@@ -535,25 +535,25 @@ RETURNS return_data_type
   
 -   Specify the WITH SCHEMABINDING clause when you are creating the function. This ensures that the objects referenced in the function definition cannot be modified unless the function is also modified.  
   
--   Execute the [sp_refreshsqlmodule](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md) stored procedure after modifying any object that is specified in the definition of the function.  
+-   Execute the [sp_refreshsqlmodule](../../relational-databases/reference/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md) stored procedure after modifying any object that is specified in the definition of the function.  
   
 ## Data Types  
- If parameters are specified in a CLR function, they should be [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] types as defined previously for *scalar_parameter_data_type*. For information about comparing [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system data types to CLR integration data types or [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] common language runtime data types, see [Mapping CLR Parameter Data](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ If parameters are specified in a CLR function, they should be [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] types as defined previously for *scalar_parameter_data_type*. For information about comparing [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system data types to CLR integration data types or [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] common language runtime data types, see [Mapping CLR Parameter Data](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
- For [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to reference the correct method when it is overloaded in a class, the method indicated in <method_specifier> must have the following characteristics:  
+ For [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to reference the correct method when it is overloaded in a class, the method indicated in <method_specifier> must have the following characteristics:  
   
 -   Receive the same number of parameters as specified in [ ,...*n* ].  
   
 -   Receive all the parameters by value, not by reference.  
   
--   Use parameter types that are compatible with those specified in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] function.  
+-   Use parameter types that are compatible with those specified in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] function.  
   
- If the return data type of the CLR function specifies a table type (RETURNS TABLE), the return data type of the method in <method_specifier> should be of type **IEnumerator** or **IEnumerable**, and it is assumed that the interface is implemented by the creator of the function. Unlike [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] functions, CLR functions cannot include PRIMARY KEY, UNIQUE, or CHECK constraints in <table_type_definition>. The data types of columns specified in <table_type_definition> must match the types of the corresponding columns of the result set returned by the method in <method_specifier> at execution time. This type-checking is not performed at the time the function is created.  
+ If the return data type of the CLR function specifies a table type (RETURNS TABLE), the return data type of the method in <method_specifier> should be of type **IEnumerator** or **IEnumerable**, and it is assumed that the interface is implemented by the creator of the function. Unlike [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] functions, CLR functions cannot include PRIMARY KEY, UNIQUE, or CHECK constraints in <table_type_definition>. The data types of columns specified in <table_type_definition> must match the types of the corresponding columns of the result set returned by the method in <method_specifier> at execution time. This type-checking is not performed at the time the function is created.  
   
  For more information about how to program CLR functions, see [CLR User-Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md).  
   
 ## General Remarks  
- Scalar-valued functions can be invoked where scalar expressions are used. This includes computed columns and CHECK constraint definitions. Scalar-valued functions can also be executed by using the [EXECUTE](../Topic/EXECUTE%20\(Transact-SQL\).md) statement. Scalar-valued functions must be invoked by using at least the two-part name of the function. For more information about multipart names, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md). Table-valued functions can be invoked where table expressions are allowed in the FROM clause of SELECT, INSERT, UPDATE, or DELETE statements. For more information, see [Execute User-defined Functions](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
+ Scalar-valued functions can be invoked where scalar expressions are used. This includes computed columns and CHECK constraint definitions. Scalar-valued functions can also be executed by using the [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) statement. Scalar-valued functions must be invoked by using at least the two-part name of the function. For more information about multipart names, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Table-valued functions can be invoked where table expressions are allowed in the FROM clause of SELECT, INSERT, UPDATE, or DELETE statements. For more information, see [Execute User-defined Functions](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
   
 ## Interoperability  
  The following statements are valid in a function:  
@@ -581,11 +581,11 @@ RETURNS return_data_type
 |--------------|-----------------|-----------|  
 |**IsDeterministic**|Function is deterministic or nondeterministic.|Local data access is allowed in deterministic functions. For example, functions that always return the same result any time they are called by using a specific set of input values and with the same state of the database would be labeled deterministic.|  
 |**IsPrecise**|Function is precise or imprecise.|Imprecise functions contain operations such as floating point operations.|  
-|**IsSystemVerified**|The precision and determinism properties of the function can be verified by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].||  
-|**SystemDataAccess**|Function accesses system data (system catalogs or virtual system tables) in the local instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].||  
-|**UserDataAccess**|Function accesses user data in the local instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].|Includes user-defined tables and temp tables, but not table variables.|  
+|**IsSystemVerified**|The precision and determinism properties of the function can be verified by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].||  
+|**SystemDataAccess**|Function accesses system data (system catalogs or virtual system tables) in the local instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].||  
+|**UserDataAccess**|Function accesses user data in the local instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].|Includes user-defined tables and temp tables, but not table variables.|  
   
- The precision and determinism properties of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] functions are determined automatically by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The data access and determinism properties of CLR functions can be specified by the user. For more information, see [Overview of CLR Integration Custom Attributes](../Topic/Overview%20of%20CLR%20Integration%20Custom%20Attributes.md).  
+ The precision and determinism properties of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] functions are determined automatically by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The data access and determinism properties of CLR functions can be specified by the user. For more information, see [Overview of CLR Integration Custom Attributes](../Topic/Overview%20of%20CLR%20Integration%20Custom%20Attributes.md).  
   
  To display the current values for these properties, use [OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md).  
   
@@ -604,16 +604,16 @@ RETURNS return_data_type
  For more information, see [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).  
   
 ### Calling Extended Stored Procedures from Functions  
- The extended stored procedure, when it is called from inside a function, cannot return result sets to the client. Any ODS APIs that return result sets to the client will return FAIL. The extended stored procedure could connect back to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]; however, it should not try to join the same transaction as the function that invoked the extended stored procedure.  
+ The extended stored procedure, when it is called from inside a function, cannot return result sets to the client. Any ODS APIs that return result sets to the client will return FAIL. The extended stored procedure could connect back to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]; however, it should not try to join the same transaction as the function that invoked the extended stored procedure.  
   
- Similar to invocations from a batch or stored procedure, the extended stored procedure will be executed in the context of the Windows security account under which [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running. The owner of the stored procedure should consider this when giving EXECUTE permission on it to users.  
+ Similar to invocations from a batch or stored procedure, the extended stored procedure will be executed in the context of the Windows security account under which [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is running. The owner of the stored procedure should consider this when giving EXECUTE permission on it to users.  
   
 ## Limitations and Restrictions  
  User-defined functions cannot be used to perform actions that modify the database state.  
   
  User-defined functions cannot contain an OUTPUT INTO clause that has a table as its target.  
   
- The following [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] statements cannot be included in the definition of a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] user-defined function:  
+ The following [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] statements cannot be included in the definition of a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] user-defined function:  
   
 -   BEGIN DIALOG CONVERSATION  
   
@@ -627,18 +627,18 @@ RETURNS return_data_type
   
 -   SEND  
   
- User-defined functions can be nested; that is, one user-defined function can call another. The nesting level is incremented when the called function starts execution, and decremented when the called function finishes execution. User-defined functions can be nested up to 32 levels. Exceeding the maximum levels of nesting causes the whole calling function chain to fail. Any reference to managed code from a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] user-defined function counts as one level against the 32-level nesting limit. Methods invoked from within managed code do not count against this limit.  
+ User-defined functions can be nested; that is, one user-defined function can call another. The nesting level is incremented when the called function starts execution, and decremented when the called function finishes execution. User-defined functions can be nested up to 32 levels. Exceeding the maximum levels of nesting causes the whole calling function chain to fail. Any reference to managed code from a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] user-defined function counts as one level against the 32-level nesting limit. Methods invoked from within managed code do not count against this limit.  
   
 ### Using Sort Order in CLR Table-valued Functions  
  When using the ORDER clause in CLR table-valued functions, follow these guidelines:  
   
--   You must ensure that results are always ordered in the specified order. If the results are not in the specified order, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will generate an error message when the query is executed.  
+-   You must ensure that results are always ordered in the specified order. If the results are not in the specified order, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will generate an error message when the query is executed.  
   
 -   If an ORDER clause is specified, the output of the table-valued function must be sorted according to the collation of the column (explicit or implicit). For example, if the column collation is Chinese (either specified in the DDL for the table-valued function or obtained from the database collation), the returned results must be sorted according to Chinese sorting rules.  
   
--   The ORDER clause, if specified, is always verified by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] while returning results, whether or not it is used by the query processor to perform further optimizations. Only use the ORDER clause if you know it is useful to the query processor.  
+-   The ORDER clause, if specified, is always verified by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] while returning results, whether or not it is used by the query processor to perform further optimizations. Only use the ORDER clause if you know it is useful to the query processor.  
   
--   The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] query processor takes advantage of the ORDER clause automatically in following cases:  
+-   The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] query processor takes advantage of the ORDER clause automatically in following cases:  
   
     -   Insert queries where the ORDER clause is compatible with an index.  
   
@@ -648,17 +648,17 @@ RETURNS return_data_type
   
     -   DISTINCT aggregates where the distinct columns are compatible with the ORDER clause.  
   
- The ORDER clause does not guarantee ordered results when a SELECT query is executed, unless ORDER BY is also specified in the query. See [sys.function_order_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.function-order-columns-transact-sql.md) for information on how to query for columns included in the sort-order for table-valued functions.  
+ The ORDER clause does not guarantee ordered results when a SELECT query is executed, unless ORDER BY is also specified in the query. See [sys.function_order_columns &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.function-order-columns-transact-sql.md) for information on how to query for columns included in the sort-order for table-valued functions.  
   
 ## Metadata  
  The following table lists the system catalog views that you can use to return metadata about user-defined functions.  
   
 |System View|Description|  
 |-----------------|-----------------|  
-|[sys.sql_modules](../../relational-databases/system-catalog-views/sys.sql-modules-transact-sql.md)|See example E in the Examples section below.|  
-|[sys.assembly_modules](../../relational-databases/system-catalog-views/sys.assembly-modules-transact-sql.md)|Displays information about CLR user-defined functions.|  
-|[sys.parameters](../../relational-databases/system-catalog-views/sys.parameters-transact-sql.md)|Displays information about the parameters defined in user-defined functions.|  
-|[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md)|Displays the underlying objects referenced by a function.|  
+|[sys.sql_modules](../../relational-databases/reference/system-catalog-views/sys.sql-modules-transact-sql.md)|See example E in the Examples section below.|  
+|[sys.assembly_modules](../../relational-databases/reference/system-catalog-views/sys.assembly-modules-transact-sql.md)|Displays information about CLR user-defined functions.|  
+|[sys.parameters](../../relational-databases/reference/system-catalog-views/sys.parameters-transact-sql.md)|Displays information about the parameters defined in user-defined functions.|  
+|[sys.sql_expression_dependencies](../../relational-databases/reference/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md)|Displays the underlying objects referenced by a function.|  
   
 ## Permissions  
  Requires CREATE FUNCTION permission in the database and ALTER permission on the schema in which the function is being created. If the function specifies a user-defined type, requires EXECUTE permission on the type.  
@@ -709,7 +709,7 @@ SELECT dbo.ISOweek(CONVERT(DATETIME,'12/26/2004',101)) AS 'ISO Week';
  `52`  
   
 ### B. Creating an inline table-valued function  
- The following example returns an inline table-valued function in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. It returns three columns `ProductID`, `Name` and the aggregate of year-to-date totals by store as `YTD Total` for each product sold to the store.  
+ The following example returns an inline table-valued function in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database. It returns three columns `ProductID`, `Name` and the aggregate of year-to-date totals by store as `YTD Total` for each product sold to the store.  
   
 ```  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
@@ -795,7 +795,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 DECLARE @SamplesPath nvarchar(1024);  
@@ -818,7 +818,7 @@ GO
   
  For an example of how to create a CLR table-valued function, see [CLR Table-Valued Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md).  
   
-## E. Displaying the definition of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] user-defined functions  
+## E. Displaying the definition of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] user-defined functions  
   
 ```  
 SELECT definition, type   
@@ -835,9 +835,9 @@ GO
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)   
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
- [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.sql-modules-transact-sql.md)   
- [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.assembly-modules-transact-sql.md)   
- [EXECUTE &#40;Transact-SQL&#41;](../Topic/EXECUTE%20\(Transact-SQL\).md)   
+ [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.sql-modules-transact-sql.md)   
+ [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.assembly-modules-transact-sql.md)   
+ [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [CLR User-Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)  

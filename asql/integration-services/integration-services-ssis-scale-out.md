@@ -15,15 +15,15 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Integration Services (SSIS) Scale Out
-[!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] Scale Out provides high performance package execution by distributing executions to multiple machines. You are able to submit a request for multiple package executions in SQL Server Management Studio. These packages will be executed in parallel, in a scale out mode.  
+[!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] Scale Out provides high performance package execution by distributing executions to multiple machines. You are able to submit a request for multiple package executions in SQL Server Management Studio. These packages will be executed in parallel, in a scale out mode.  
 
 
 ## SSIS Scale Out Master and Scale Out Worker
-[!INCLUDE[ssIS_md](../analysis-services/instances/includes/ssis-md.md)] Scale Out consists of a [!INCLUDE[ssIS_md](../analysis-services/instances/includes/ssis-md.md)] Scale Out Master and several [!INCLUDE[ssIS_md](../analysis-services/instances/includes/ssis-md.md)] Scale Out Workers. The Scale Out Master is responsible for Scale Out management and receives package execution requests from users. Scale Out Workers pull execution tasks from the Scale Out Master and do the package execution work. For more information, see [Scale Out Master](../integration-services/integration-services-ssis-scale-out-master.md), [Scale Out Worker](../integration-services/integration-services-ssis-scale-out-worker.md).
+[!INCLUDE[ssIS_md](../a9retired/includes/ssis-md.md)] Scale Out consists of a [!INCLUDE[ssIS_md](../a9retired/includes/ssis-md.md)] Scale Out Master and several [!INCLUDE[ssIS_md](../a9retired/includes/ssis-md.md)] Scale Out Workers. The Scale Out Master is responsible for Scale Out management and receives package execution requests from users. Scale Out Workers pull execution tasks from the Scale Out Master and do the package execution work. For more information, see [Scale Out Master](../integration-services/integration-services-ssis-scale-out-master.md), [Scale Out Worker](../integration-services/integration-services-ssis-scale-out-worker.md).
 
 
 ## How to set up Scale Out
-[!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] Scale Out can run on one machine, where a Scale Out Master and a Scale Out Worker are set up side-by-side on the machine. Scale Out can also run on multiple machines, where each Scale Out Worker is on a different machine.
+[!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] Scale Out can run on one machine, where a Scale Out Master and a Scale Out Worker are set up side-by-side on the machine. Scale Out can also run on multiple machines, where each Scale Out Worker is on a different machine.
 - [Walkthrough: Set up Integration Services Scale Out](../integration-services/walkthrough-set-up-integration-services-scale-out.md)
 
 

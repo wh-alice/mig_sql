@@ -24,7 +24,7 @@ You can change attribute names with the **Dimension Structure** tab of Dimension
   
 #### To rename an attribute  
   
-1.  Switch to **Dimension Designer** for the Customer dimension in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)]. To do this, double-click the **Customer** dimension in the **Dimensions** node of Solution Explorer.  
+1.  Switch to **Dimension Designer** for the Customer dimension in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)]. To do this, double-click the **Customer** dimension in the **Dimensions** node of Solution Explorer.  
   
 2.  In the **Attributes** pane, right-click **English Country Region Name**, and then click **Rename**. Change the name of the attribute to **Country-Region**.  
   
@@ -60,7 +60,7 @@ You can add a named calculation, which is a SQL expression that is represented a
   
 #### To add a named calculation  
   
-1.  Open the **[!INCLUDE[ssSampleDBCoShort](../../analysis-services/data-mining/includes/sssampledbcoshort-md.md)] DW 2012** data source view by double-clicking it in the **Data Source Views** folder in Solution Explorer.  
+1.  Open the **[!INCLUDE[ssSampleDBCoShort](../../a9notintoc/includes/sssampledbcoshort-md.md)] DW 2012** data source view by double-clicking it in the **Data Source Views** folder in Solution Explorer.  
   
 2.  In the **Tables** pane on the left, right-click **Customer**, and then click **New Named Calculation**.  
   
@@ -168,7 +168,7 @@ You can use display folders to group user and attribute hierarchies into folder 
 9. On the **File** menu, click **Save All**.  
   
 ## Defining Composite KeyColumns  
-The **KeyColumns** property contains the column or columns that represent the key for the attribute. In this lesson, you create a composite key for the **City** and **State-Province** attributes. Composite keys can be helpful when you need to uniquely identify an attribute. For example, when you define attribute relationships later in this tutorial, a **City** attribute must uniquely identify a **State-Province** attribute. However, there could be several cities with the same name in different states. For this reason, you will create a composite key that is composed of the **StateProvinceName** and **City** columns for the **City** attribute. For more information, see [Modify the KeyColumn Property of an Attribute](../Topic/Modify%20the%20KeyColumn%20Property%20of%20an%20Attribute.md).  
+The **KeyColumns** property contains the column or columns that represent the key for the attribute. In this lesson, you create a composite key for the **City** and **State-Province** attributes. Composite keys can be helpful when you need to uniquely identify an attribute. For example, when you define attribute relationships later in this tutorial, a **City** attribute must uniquely identify a **State-Province** attribute. However, there could be several cities with the same name in different states. For this reason, you will create a composite key that is composed of the **StateProvinceName** and **City** columns for the **City** attribute. For more information, see [Modify the KeyColumn Property of an Attribute](../../analysis-services/multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
   
 #### To define composite KeyColumns for the City attribute  
   
@@ -211,7 +211,7 @@ The **KeyColumns** property contains the column or columns that represent the ke
 8.  On the **File** menu, click **Save All**.  
   
 ## Defining Attribute Relationships  
-If the underlying data supports it, you should define attribute relationships between attributes. Defining attribute relationships speeds up dimension, partition, and query processing. For more information, see [Define Attribute Relationships](../Topic/Define%20Attribute%20Relationships.md) and [Attribute Relationships](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
+If the underlying data supports it, you should define attribute relationships between attributes. Defining attribute relationships speeds up dimension, partition, and query processing. For more information, see [Define Attribute Relationships](../../analysis-services/multidimensional-models/attribute-relationships-define.md) and [Attribute Relationships](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
 #### To define attribute relationships  
   
@@ -225,7 +225,7 @@ If the underlying data supports it, you should define attribute relationships be
   
     The relationship type is **Rigid** because relationships between the members will not change over time. For example, it would be unusual for a city to become part of a different state or province.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 6.  In the diagram, right-click the **State-Province** attribute and then select **New Attribute Relationship**.  
   
@@ -242,7 +242,7 @@ After you have changed attributes and hierarchies, you must deploy the changes a
   
 #### To deploy the changes, process the objects, and view the changes  
   
-1.  On the **Build** menu of [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], click **Deploy Analysis Services Tutorial**.  
+1.  On the **Build** menu of [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], click **Deploy Analysis Services Tutorial**.  
   
 2.  After you receive the **Deployment Completed Successfully** message, click the **Browser** tab of Dimension Designer for the Customer dimension, and then click the Reconnect button on the left side of the toolbar of the designer.  
   
@@ -250,7 +250,7 @@ After you have changed attributes and hierarchies, you must deploy the changes a
   
     The browser displays the customers in the city.  
   
-4.  Switch to **Cube Designer** for the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial cube. To do this, double-click the **Analysis Services Tutorial** cube in the **Cubes** node of **Solution Explorer**.  
+4.  Switch to **Cube Designer** for the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial cube. To do this, double-click the **Analysis Services Tutorial** cube in the **Cubes** node of **Solution Explorer**.  
   
 5.  Click the **Browser** tab, and then click the Reconnect button on the toolbar of the designer.  
   
@@ -261,11 +261,11 @@ After you have changed attributes and hierarchies, you must deploy the changes a
 7.  On the **File** menu, click **Save All**.  
   
 ## Next Task in Lesson  
-[Modifying the Product Dimension](../Topic/Modifying%20the%20Product%20Dimension.md)  
+[Modifying the Product Dimension](../../analysis-services/tutorials/lesson-3-3-modifying-the-product-dimension.md)  
   
 ## See Also  
 [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
-[Remove an Attribute from a Dimension](../Topic/Remove%20an%20Attribute%20from%20a%20Dimension.md)  
-[Rename an Attribute](../Topic/Rename%20an%20Attribute.md)  
+[Remove an Attribute from a Dimension](../../analysis-services/multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)  
+[Rename an Attribute](../../analysis-services/multidimensional-models/attribute-properties-rename-an-attribute.md)  
 [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   

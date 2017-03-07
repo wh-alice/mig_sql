@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Bookmarks F1 Help
-  This section contains the F1 Help for the **Bookmarks** pages in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+  This section contains the F1 Help for the **Bookmarks** pages in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
  [Manage Bookmarks](../../relational-databases/scripting/manage-bookmarks.md)  
   

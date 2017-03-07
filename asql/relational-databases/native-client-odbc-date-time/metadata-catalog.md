@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Metadata - Catalog
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   This topic describes the column metadata returned by **SQLColumns** and **SQLProcedureColumns**, and the data type metadata returned by **SQLGetTypeInfo**.  
   
@@ -63,6 +63,6 @@ manager: "jhubbard"
 |USERTYPE|0|0|12|22|0|0|  
   
 ## See Also  
- [Metadata &#40;ODBC&#41;](../Topic/Metadata%20\(ODBC\).md)  
+ [Metadata &#40;ODBC&#41;](../../a9retired/metadata-odbc.md)  
   
   

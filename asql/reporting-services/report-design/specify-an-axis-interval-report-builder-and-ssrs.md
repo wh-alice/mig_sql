@@ -16,11 +16,11 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Specify an Axis Interval (Report Builder and SSRS)
-Learn to change the number of labels and tick marks on the category (x) axis in a chart by setting the axis interval in a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report.
+Learn to change the number of labels and tick marks on the category (x) axis in a chart by setting the axis interval in a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report.
  
 On the value axis (usually the y axis), axis intervals provide a consistent measure of the data points on the chart. 
 
-But on the category axis (usually the x axis), sometimes an automatic axis interval results in categories without axis labels. You can specify the number of intervals you want in the axis Interval property. [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] calculates the number of intervals at run time, based on the data in the result set. For more information about how axis intervals are calculated, see [Formatting Axis Labels on a Chart](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+But on the category axis (usually the x axis), sometimes an automatic axis interval results in categories without axis labels. You can specify the number of intervals you want in the axis Interval property. [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] calculates the number of intervals at run time, based on the data in the result set. For more information about how axis intervals are calculated, see [Formatting Axis Labels on a Chart](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
 
 To try setting the axis interval with sample data, see [Tutorial: Add a Column Chart to Your Report (Report Builder)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md).
   
@@ -45,7 +45,7 @@ In this column chart, the horizontal label interval is set to Auto.
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
-3.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
 
     Now the column chart displays all its horizontal axis labels.
 
@@ -74,19 +74,19 @@ You can also set the label interval in the Properties pane.
   
 ## To enable a variable interval calculation on an axis  
 
-By default, [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] sets the axis interval to Auto. This procedure explains how to set it back to the default. 
+By default, [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] sets the axis interval to Auto. This procedure explains how to set it back to the default. 
   
 1.  Right-click the chart axis that you want to change, and then click **Axis Properties**. 
   
 2.  In the **Horizontal Axis Properties** dialog box > **Axis Options** tab, set **Interval** to **Auto**. The chart will display the optimal number of category labels that can fit along the axis.  
   
-3.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## See Also  
  [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Formatting Data Points on a Chart (Report Builder and SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Sort Data in a Data Region (Report Builder and SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Axis Properties Dialog Box, Axis Options &#40;Report Builder and SSRS&#41;](../Topic/Axis%20Properties%20Dialog%20Box,%20Axis%20Options%20\(Report%20Builder%20and%20SSRS\).md)   
+ [Axis Properties Dialog Box, Axis Options &#40;Report Builder and SSRS&#41;](../../a9retired/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
  [Specify a Logarithmic Scale &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
  [Plot Data on a Secondary Axis &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   

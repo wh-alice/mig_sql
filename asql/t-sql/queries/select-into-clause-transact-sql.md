@@ -39,9 +39,9 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
  The format of *new_table* is determined by evaluating the expressions in the select list. The columns in *new_table* are created in the order specified by the select list. Each column in *new_table* has the same name, data type, nullability, and value as the corresponding expression in the select list. The IDENTITY property of a column is transferred except under the conditions defined in "Working with Identity Columns" in the Remarks section.  
   
- To create the table in another database on the same instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], specify *new_table* as a fully qualified name in the form *database.schema.table_name*.  
+ To create the table in another database on the same instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], specify *new_table* as a fully qualified name in the form *database.schema.table_name*.  
   
  You cannot create *new_table* on a remote server; however, you can populate *new_table* from a remote data source. To create *new_table* from a remote source table, specify the source table using a four-part name in the form *linked_server*.*catalog*.*schema*.*object* in the FROM clause of the SELECT statement. Alternatively, you can use the [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) function or the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) function in the FROM clause to specify the remote data source.  
   
@@ -99,7 +99,7 @@ manager: "jhubbard"
 ## Examples  
   
 ### A. Creating a table by specifying columns from multiple sources  
- The following example creates the table `dbo.EmployeeAddresses` in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database by selecting seven columns from various employee-related and address-related tables.  
+ The following example creates the table `dbo.EmployeeAddresses` in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database by selecting seven columns from various employee-related and address-related tables.  
   
 ```  
   
@@ -120,7 +120,7 @@ GO
 ```  
   
 ### B. Inserting rows using minimal logging  
- The following example creates the table `dbo.NewProducts` and inserts rows from the `Production.Product` table. The example assumes that the recovery model of the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database is set to FULL. To ensure minimal logging is used, the recovery model of the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database is set to BULK_LOGGED before rows are inserted and reset to FULL after the SELECT...INTO statement. This process ensures that the SELECT...INTO statement uses minimal space in the transaction log and performs efficiently.  
+ The following example creates the table `dbo.NewProducts` and inserts rows from the `Production.Product` table. The example assumes that the recovery model of the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database is set to FULL. To ensure minimal logging is used, the recovery model of the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database is set to BULK_LOGGED before rows are inserted and reset to FULL after the SELECT...INTO statement. This process ensures that the SELECT...INTO statement uses minimal space in the transaction log and performs efficiently.  
   
 ```  
 IF OBJECT_ID('dbo.NewProducts', 'U') IS NOT NULL  
@@ -139,7 +139,7 @@ GO
 ```  
   
 ### C. Creating an identity column using the IDENTITY function  
- The following example uses the IDENTITY function to create an identity column in the new table `Person.USAddress` in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. This is required because the SELECT statement that defines the table contains a join, which causes the IDENTITY property to not transfer to the new table. Notice that the seed and increment values specified in the IDENTITY function are different from those of the `AddressID` column in the source table `Person.Address`.  
+ The following example uses the IDENTITY function to create an identity column in the new table `Person.USAddress` in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database. This is required because the SELECT statement that defines the table contains a join, which causes the IDENTITY property to not transfer to the new table. Notice that the seed and increment values specified in the IDENTITY function are different from those of the `AddressID` column in the source table `Person.Address`.  
   
 ```  
   
@@ -170,7 +170,7 @@ WHERE name = 'AddressID';
 ### D. Creating a table by specifying columns from a remote data source  
  The following example demonstrates three methods of creating a new table on the local server from a remote data source. The example begins by creating a link to the remote data source. The linked server name, `MyLinkServer,` is then specified in the FROM clause of the first SELECT...INTO statement and in the OPENQUERY function of the second SELECT...INTO statement. The third SELECT...INTO statement uses the OPENDATASOURCE function, which specifies the remote data source directly instead of using the linked server name.  
   
- **Applies to:** [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+ **Applies to:** [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
 ```  
 USE master;  
@@ -210,7 +210,7 @@ GO
 ### E. Import from an external table created with  PolyBase  
  Import data from Hadoop or Azure Storage into SQL Server for persistent storage. Use `SELECT INTO` to import data referenced by an external table for persistent storage in SQL Server. Create a relational table on-the-fly and then create a column-store index on top of the table in a second step.  
   
- **Applies to:** [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+ **Applies to:** [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
 ```  
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  

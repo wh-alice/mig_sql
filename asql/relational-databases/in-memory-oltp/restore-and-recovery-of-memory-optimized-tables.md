@@ -15,7 +15,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Restore and Recovery of Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   The basic mechanism to recover or restore a database with memory-optimized tables is similar to databases with only disk-based tables. But unlike disk-based tables, memory-optimized tables must be loaded into memory before database is available for user access. This adds a new step in the database recovery.  
   
@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   The amount of log records in the active portion of the log that need to be redone.  
   
- When the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] restarts, each database goes through a recovery phase that consists of the following three phases:  
+ When the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] restarts, each database goes through a recovery phase that consists of the following three phases:  
   
 1.  The analysis phase. During this phase, a pass is made on the active transaction logs to detect committed and uncommitted transactions. The In-Memory OLTP engine identifies the checkpoint to load and preloads its system table log entries. It will also process some file allocation log records.  
   
@@ -58,6 +58,6 @@ manager: "jhubbard"
 -   Large memory-optimized tables with one or more nonclustered indexes, unlike a hash index whose bucket count is sized at create time, the nonclustered indexes grow dynamically, resulting in high CPU utilization.  
   
 ## See Also  
- [Backup, Restore, and Recovery of Memory-Optimized Tables](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+ [Backup, Restore, and Recovery of Memory-Optimized Tables](../../a9retired/backup-restore-and-recovery-of-memory-optimized-tables.md)  
   
   

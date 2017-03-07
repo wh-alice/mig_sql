@@ -60,7 +60,7 @@ manager: "erikre"
 ## Remarks  
  Dimensions, whose [Type](../../../analysis-services/scripting/properties/type-element-dimension-assl.md) element is set to *Accounts*, can have an attribute that specifies the account type, such as Income, Expense, and so on, represented by members in the dimension. The account type is then used by [Measure](../../../analysis-services/scripting/objects/measure-element-assl.md) elements, whose [AggregationFunction](../../../analysis-services/scripting/properties/aggregatefunction-element-assl.md) element is set to *ByAccount*, to determine the aggregation function to use when aggregating the members of that dimension. The **Accounts** element holds a collection of **Account** elements, which represent account types and the aggregation function that should be used for each account type.  
   
- An account type must be listed if the aggregate function is different from the default used by [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] for each account type.  
+ An account type must be listed if the aggregate function is different from the default used by [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] for each account type.  
   
  The set of valid account types is fixed.  
   

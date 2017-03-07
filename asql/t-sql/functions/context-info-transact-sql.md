@@ -30,7 +30,7 @@ manager: "jhubbard"
 
   Returns the **context_info** value that was set for the current session or batch by using the [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) statement.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -44,9 +44,9 @@ CONTEXT_INFO()
   
  If **context_info** was not set:  
   
--   In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns NULL.  
+-   In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns NULL.  
   
--   In [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] returns a unique session-specific GUID.  
+-   In [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] returns a unique session-specific GUID.  
   
 ## Remarks  
  Multiple active result sets (MARS) enables applications to run multiple batches, or requests, at the same time on the same connection. When one of the batches on a MARS connection runs SET CONTEXT_INFO, the new context value is returned by the CONTEXT_INFO function when it is run in the same batch as the SET statement. The new value is not returned by the CONTEXT_INFO function run in one or more of the other batches on the connection, unless they started after the batch that ran the SET statement completed.  

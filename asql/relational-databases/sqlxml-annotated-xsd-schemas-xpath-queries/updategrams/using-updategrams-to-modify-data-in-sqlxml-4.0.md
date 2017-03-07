@@ -29,7 +29,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Using Updategrams to Modify Data in SQLXML 4.0
-  You can modify (insert, update, or delete) a database in [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from an existing XML document by using an updategram or the OPENXML [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] function.  
+  You can modify (insert, update, or delete) a database in [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] from an existing XML document by using an updategram or the OPENXML [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] function.  
   
  This section provides information about updategrams and examples of their usage.  
   
@@ -58,7 +58,7 @@ manager: "jhubbard"
  [Handling Database Concurrency Issues in Updategrams &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/handling-database-concurrency-issues-in-updategrams-sqlxml-4.0.md)  
  Describes the various levels of protection possible for handling concurrency issues in updategrams, and provides examples.  
   
- [Updategram Sample Applications &#40;SQLXML 4.0&#41;](../Topic/Updategram%20Sample%20Applications%20\(SQLXML%204.0\).md)  
+ [Updategram Sample Applications &#40;SQLXML 4.0&#41;](../../../a9retired/updategram-sample-applications-sqlxml-4.0.md)  
  Provides sample applications that use updategrams.  
   
  [Guidelines and Limitations of XML Updategrams &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/guidelines-and-limitations-of-xml-updategrams-sqlxml-4.0.md)  

@@ -21,11 +21,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Changes Resource Governor external pool that was defined resources for external processes. For R Services the external pool governs `rterm.exe`, `BxlServer.exe`, and other processes spawned by them.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md).  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## Syntax  
   
@@ -51,7 +51,7 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
   
 ## Arguments  
  { *pool_name* | "default" }  
- Is the name of an existing user-defined external resource pool or the default external resource pool that is created when [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is installed.  
+ Is the name of an existing user-defined external resource pool or the default external resource pool that is created when [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is installed.  
 "default" must be enclosed by quotation marks ("") or brackets ([]) when used with `ALTER EXTERNAL RESOURCE POOL` to avoid conflict with `DEFAULT`, which is a system reserved word.  
   
  MAX_CPU_PERCENT =*value*  
@@ -60,9 +60,9 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
  AFFINITY {CPU = AUTO | ( <CPU_range_spec> ) | NUMANODE = (<NUMA_node_range_spec>)}  
  Attach the external resource pool to specific CPUs. The default value is AUTO.  
   
- AFFINITY CPU = **(** <CPU_range_spec> **)** maps the external resource pool to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] CPUs identified by the given CPU_IDs.  
+ AFFINITY CPU = **(** <CPU_range_spec> **)** maps the external resource pool to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] CPUs identified by the given CPU_IDs.  
   
- When you use AFFINITY NUMANODE = **(** <NUMA_node_range_spec> **)**, the external resource pool is affinitized to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] physical CPUs that correspond to the given NUMA node or range of nodes.  
+ When you use AFFINITY NUMANODE = **(** <NUMA_node_range_spec> **)**, the external resource pool is affinitized to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] physical CPUs that correspond to the given NUMA node or range of nodes.  
   
  MAX_MEMORY_PERCENT =*value*  
  Specifies the total server memory that can be used by requests in this external resource pool. *value* is an integer with a default setting of 100. The allowed range for *value* is from 1 through 100.  
@@ -71,9 +71,9 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
  Specifies the maximum number of processes allowed for the external resource pool. Specify 0 to set an unlimited threshold for the pool which will be bound only be computer resources. The default is 0.  
   
 ## Remarks  
- The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] implements resource pool when you execute the [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) statement.  
+ The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] implements resource pool when you execute the [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) statement.  
   
- For more information on resource pools, see [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md), [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.resource-governor-external-resource-pools-transact-sql.md), and [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-resource-governor-external-resource-pool-affinity-transact-sql.md).  
+ For more information on resource pools, see [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md), [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.resource-governor-external-resource-pools-transact-sql.md), and [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-resource-governor-external-resource-pool-affinity-transact-sql.md).  
   
 ## Permissions  
  Requires `CONTROL SERVER` permission.  

@@ -26,7 +26,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # View Publication and Subscription Status in Replication Monitor
-  [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Replication Monitor displays status information for publications and subscriptions:  
+  [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Replication Monitor displays status information for publications and subscriptions:  
   
 -   The status of a publication is determined by the highest priority status of its subscriptions. For example, if one subscription to a publication has an error and another has a performance issue, a status of error is displayed for the publication.  
   
@@ -108,6 +108,6 @@ manager: "jhubbard"
 |Not Synchronizing|![UI icon: replication agent stopped](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
   
 ## See Also  
- [Monitoring Replication](../Topic/Monitoring%20Replication.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

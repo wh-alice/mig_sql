@@ -16,14 +16,14 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Change a Chart Type (Report Builder and SSRS)
-When you first insert a chart into a [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report, the **Select Chart Type** dialog appears. If you cancel this dialog, a Column chart type is added by default.  
+When you first insert a chart into a [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report, the **Select Chart Type** dialog appears. If you cancel this dialog, a Column chart type is added by default.  
   
  At any point when designing the report, you can change the chart type to something more suitable to the report. It is important to select the correct chart type for your data so that it can be interpreted correctly. You should understand each chart type's characteristics to determine what chart type is best suited for your data. For more information, see [Chart Types &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
   
  When multiple series are displayed on a chart, you may want to change the chart type of an individual series. You can only change the chart type of an individual series if the chart type is Area, Column, Line, or Scatter. For all other chart types, all series in your chart will be changed to the selected chart type.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## To change the chart type  
   

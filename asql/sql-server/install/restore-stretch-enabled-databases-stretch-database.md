@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Restore Stretch-enabled databases (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Restore a backed up database when necessary to recover from many types of failures, errors, and disasters.
   
@@ -59,9 +59,9 @@ To restore a deleted Azure database to the point when it was deletedby using the
 
 ## <a name="reconnect"></a>Restore the connection between the SQL Server database and the remote Azure database
 
-1.  If you're going to connect to a restored Azure database with a different name or in a different region, run the stored procedure [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys.sp-rda-deauthorize-db-transact-sql.md) to disconnect from the previous Azure database.  
+1.  If you're going to connect to a restored Azure database with a different name or in a different region, run the stored procedure [sys.sp_rda_deauthorize_db](../../relational-databases/reference/system-stored-procedures/sys.sp-rda-deauthorize-db-transact-sql.md) to disconnect from the previous Azure database.  
   
-2.  Run the stored procedure [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys.sp-rda-reauthorize-db-transact-sql.md) to reconnect the local Stretch-enabled database to the Azure database.  
+2.  Run the stored procedure [sys.sp_rda_reauthorize_db](../../relational-databases/reference/system-stored-procedures/sys.sp-rda-reauthorize-db-transact-sql.md) to reconnect the local Stretch-enabled database to the Azure database.  
   
     -   Provide the existing database scoped credential as a sysname or a varchar(128) value. (Don't use varchar(max).) You can look up the credential name in the view **sys.database_scoped_credentials**.  
   
@@ -79,8 +79,8 @@ To restore a deleted Azure database to the point when it was deletedby using the
   ## See Also  
  [Backup Stretch-enabled databases](../../sql-server/install/backup-stretch-enabled-databases-stretch-database.md)  
  [Manage and troubleshoot Stretch Database](../../sql-server/install/manage-and-troubleshoot-stretch-database.md)   
- [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys.sp-rda-reauthorize-db-transact-sql.md) 
- [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys.sp-rda-deauthorize-db-transact-sql.md)  
+ [sys.sp_rda_reauthorize_db](../../relational-databases/reference/system-stored-procedures/sys.sp-rda-reauthorize-db-transact-sql.md) 
+ [sys.sp_rda_deauthorize_db](../../relational-databases/reference/system-stored-procedures/sys.sp-rda-deauthorize-db-transact-sql.md)  
  [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
  
  [Azure portal]: https://portal.azure.com/

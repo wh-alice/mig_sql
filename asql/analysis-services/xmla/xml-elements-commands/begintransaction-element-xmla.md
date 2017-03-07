@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # BeginTransaction Element (XMLA)
-  Begins a transaction on the current session with an instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].  
+  Begins a transaction on the current session with an instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- The **BeginTransaction** command begins an active transaction on the current session. If an active transaction already exists, the [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance increments the reference count of transactions for the current session. If not, the instance will begin a new transaction and set the reference count for the current session to 1. If an active transaction is explicitly specified using the **BeginTransaction** command, all subsequent commands are executed inside the explicitly specified transaction.  
+ The **BeginTransaction** command begins an active transaction on the current session. If an active transaction already exists, the [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance increments the reference count of transactions for the current session. If not, the instance will begin a new transaction and set the reference count for the current session to 1. If an active transaction is explicitly specified using the **BeginTransaction** command, all subsequent commands are executed inside the explicitly specified transaction.  
   
  When the current session is ended and the reference count for transactions is higher than zero, all active transactions are rolled back.  
   
@@ -66,6 +66,6 @@ manager: "erikre"
  [Cancel Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)   
  [CommitTransaction Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/committransaction-element-xmla.md)   
  [RollbackTransaction Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/rollbacktransaction-element-xmla.md)   
- [Commands &#40;XMLA&#41;](../Topic/Commands%20\(XMLA\).md)  
+ [Commands &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

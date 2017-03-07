@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Exists (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns **true** if the specified sub-query returns at least one row.  
   
@@ -48,7 +48,7 @@ EXISTS(<subquery>)
 ## Examples  
  You can use EXISTS and NOT EXISTS to check for conditions in a nested table. This is useful when creating a filter that controls the data used to train or test a data mining model. For more information, see [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
- The following example is based on the `[Association]` mining structure and mining model that you created in the [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md). The query returns only those cases where the customer purchased at least one patch kit.  
+ The following example is based on the `[Association]` mining structure and mining model that you created in the [Basic Data Mining Tutorial](../a9notintoc/basic-data-mining-tutorial.md). The query returns only those cases where the customer purchased at least one patch kit.  
   
 ```  
 SELECT * FROM [Association].CASES  

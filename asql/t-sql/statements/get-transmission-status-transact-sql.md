@@ -30,15 +30,15 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # GET_TRANSMISSION_STATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the status for the last transmission for one side of a conversation.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -78,10 +78,10 @@ SELECT Status =
   
  `The Service Broker protocol transport is disabled or not configured.`  
   
- In this case, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is not configured to allow [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] to communicate over the network.  
+ In this case, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is not configured to allow [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] to communicate over the network.  
   
 ## See Also  
- [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.conversation-endpoints-transact-sql.md)   
- [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.transmission-queue-transact-sql.md)  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.conversation-endpoints-transact-sql.md)   
+ [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.transmission-queue-transact-sql.md)  
   
   

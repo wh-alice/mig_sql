@@ -18,11 +18,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLGetDescField
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver exposes driver-specific descriptor fields for the implementation row descriptor (IRD) only. Within the IRD, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] descriptor fields are referenced through driver-specific column attributes. For information about a complete list of available driver-specific descriptor fields, see [SQLColAttribute](../../relational-databases/extended-stored-procedures-reference/sqlcolattribute.md).  
+  The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver exposes driver-specific descriptor fields for the implementation row descriptor (IRD) only. Within the IRD, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] descriptor fields are referenced through driver-specific column attributes. For information about a complete list of available driver-specific descriptor fields, see [SQLColAttribute](../../relational-databases/extended-stored-procedures-reference/sqlcolattribute.md).  
   
- Descriptor fields that contain column identifier strings are often zero-length strings. All [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]-specific descriptor field values are read-only.  
+ Descriptor fields that contain column identifier strings are often zero-length strings. All [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]-specific descriptor field values are read-only.  
   
  Like attributes retrieved with SQLColAttribute, descriptor fields that report row-level attributes (such as SQL_CA_SS_COMPUTE_ID) are reported for all columns in the result set.  
   
@@ -30,11 +30,11 @@ manager: "jhubbard"
  SQLGetDescField can be used to get values for extended attributes of table-valued parameters and table-valued parameter columns. For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## SQLGetDescField Support for Enhanced Date and Time Features  
- For information about the descriptor fields available with the new date/time types, see [Parameter and Result Metadata](../Topic/Parameter%20and%20Result%20Metadata.md).  
+ For information about the descriptor fields available with the new date/time types, see [Parameter and Result Metadata](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
  For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
- Beginning in [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)], SQLGetDescField can return **SQL_C_SS_TIME2** (for **time** types) or **SQL_C_SS_TIMESTAMPOFFSET** (for **datetimeoffset**) instead of **SQL_C_BINARY**, if your application uses ODBC 3.8.  
+ Beginning in [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)], SQLGetDescField can return **SQL_C_SS_TIME2** (for **time** types) or **SQL_C_SS_TIMESTAMPOFFSET** (for **datetimeoffset**) instead of **SQL_C_BINARY**, if your application uses ODBC 3.8.  
   
 ## SQLGetDescField Support for Large CLR UDTs  
  **SQLGetDescField** supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  

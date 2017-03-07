@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Mining Model Content for Time Series Models (Analysis Services - Data Mining)
-  All mining models use the same structure to store their content. This structure is defined according to the data mining content schema rowset. However, within that standard structure, the nodes that contain information are arranged in different ways to represent various kinds of trees. This topic describes how the nodes are organized, and what each node means, for mining models that are based on the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Time Series algorithm.  
+  All mining models use the same structure to store their content. This structure is defined according to the data mining content schema rowset. However, within that standard structure, the nodes that contain information are arranged in different ways to represent various kinds of trees. This topic describes how the nodes are organized, and what each node means, for mining models that are based on the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Time Series algorithm.  
   
  For an explanation of general mining model content that applies to all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
@@ -223,7 +223,7 @@ manager: "jhubbard"
   
  For example, if there is a direct correlation between time and sales for most of the data series, each series would be contained within a time series tree (NODE_TYPE =16) that has no child nodes for each data series, only a regression equation. However, if the relationship is not linear, an ARTXP time series tree can split on conditions into child nodes, just like a decision tree model. By viewing the model content in the **Microsoft Generic Content Tree Viewer** you can see where the splits occur, and how it affects the trend line.  
   
- To better understand this behavior, you can review the time series model created in the [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md). This model, based on the AdventureWorks data warehouse, does not use particularly complex data. Therefore, there are not many splits in the ARTXP tree. However, even this relatively simple model illustrates three different kinds of splits:  
+ To better understand this behavior, you can review the time series model created in the [Basic Data Mining Tutorial](../../a9notintoc/basic-data-mining-tutorial.md). This model, based on the AdventureWorks data warehouse, does not use particularly complex data. Therefore, there are not many splits in the ARTXP tree. However, even this relatively simple model illustrates three different kinds of splits:  
   
 -   The [Amount] trend line for the Pacific region splits on the time key. A split on the time key means that there is a change in the trend at a certain point in time. The trend line was linear only up to a certain point, and then the curve assumed a different shape. For example, one time series might continue until August 6, 2002, and another time series start after that date.  
   
@@ -264,7 +264,7 @@ manager: "jhubbard"
  There are multiple elements in this equation because the model has calculated that the quantity of the R250 model in the Europe region is dependent on the values of several other data series.  
   
 #### Model Content for an ARTXP Formula  
- The following table shows the same information for the formula, using the contents of the relevant node as displayed in the [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md).  
+ The following table shows the same information for the formula, using the contents of the relevant node as displayed in the [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../../a9retired/microsoft-generic-content-tree-viewer-data-mining.md).  
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
@@ -331,7 +331,7 @@ WHERE NODE_TYPE = 27
 |Forecasting|T1000 North America:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
 |Forecasting|T1`000 Pacific:Quantity|TA0000000b|27|ARIMA (1,0,3)|  
   
- From these results, which you can also browse by using the [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md), you can tell at a glance which series are completely linear, which have multiple periodic structures, and what the discovered periodicities are.  
+ From these results, which you can also browse by using the [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../../a9retired/microsoft-generic-content-tree-viewer-data-mining.md), you can tell at a glance which series are completely linear, which have multiple periodic structures, and what the discovered periodicities are.  
   
  For example, the short form of the ARIMA Equation for the M200 Europe series tells you that only the default, or daily, cycle was detected. The short form of the equation is provided in the NODE_CAPTION column.  
   

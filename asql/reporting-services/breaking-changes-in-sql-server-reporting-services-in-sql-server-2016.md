@@ -21,7 +21,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Breaking changes in SQL Server Reporting Services in SQL Server 2016
-  This topic describes breaking changes in [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade, or in custom scripts or reports.  
+  This topic describes breaking changes in [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade, or in custom scripts or reports.  
   
   ## Security Extensions
   
@@ -35,9 +35,9 @@ manager: "erikre"
 
 [Behavior changes to SQL Server Reporting Services  in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)
 
-[What's New in Reporting Services (SSRS)](What's%20new%20in%20Reporting%20Services%20\(SSRS\).md)
+[What's New in Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
  
- [Deprecated features in SQL Server Reporting Services in SQL Server 2016](Deprecated%20features%20in%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md)
+ [Deprecated features in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)
   
-[Discontinued functionality to SQL Server Reporting Services in SQL Server 2016](Discontinued%20functionality%20to%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md)
+[Discontinued functionality to SQL Server Reporting Services in SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)
 

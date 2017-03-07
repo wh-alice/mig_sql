@@ -19,7 +19,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # View Availability Group Listener Properties (SQL Server)
-  This topic describes how to view the properties of an Always On *availability group listener* by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  This topic describes how to view the properties of an Always On *availability group listener* by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)].  
   
 -   **To view listener properties, using:**  
   
@@ -66,23 +66,23 @@ manager: "jhubbard"
   
  To monitor the availability group listeners, use the following views:  
   
- [sys.availability_group_listener_ip_addresses](../../../relational-databases/system-catalog-views/sys.availability-group-listener-ip-addresses-transact-sql.md)  
+ [sys.availability_group_listener_ip_addresses](../../../relational-databases/reference/system-catalog-views/sys.availability-group-listener-ip-addresses-transact-sql.md)  
  Returns a row for every conformant virtual IP address that is currently online for an availability group listener.  
   
  **Column names:** listener_id, ip_address, ip_subnet_mask, is_dhcp, network_subnet_ip, network_subnet_prefix_length, network_subnet_ipv4_mask, state, state_desc  
   
- [sys.availability_group_listeners](../../../relational-databases/system-catalog-views/sys.availability-group-listeners-transact-sql.md)  
+ [sys.availability_group_listeners](../../../relational-databases/reference/system-catalog-views/sys.availability-group-listeners-transact-sql.md)  
  For a given availability group, returns either zero rows indicating that no network name is associated with the availability group, or returns a row for each availability-group listener configuration in the WSFC cluster.  
   
  **Column names:** group_id, listener_id, dns_name, port, is_conformant, ip_configuration_string_from_cluster  
   
- [sys.dm_tcp_listener_states](../../../relational-databases/system-dynamic-management-views/sys.dm-tcp-listener-states-transact-sql.md)  
+ [sys.dm_tcp_listener_states](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-tcp-listener-states-transact-sql.md)  
  Returns a row containing dynamic-state information for each TCP listener.  
   
  **Column names:** listener_id, ip_address, is_ipv4, port, type, type_desc, state, state_desc, start_time  
   
 > [!NOTE]  
->  For more information about using [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] to monitor your [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] environment, see [Monitor Availability Groups &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md).  
+>  For more information about using [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] to monitor your [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] environment, see [Monitor Availability Groups &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
@@ -92,7 +92,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../Topic/Availability%20Group%20Listeners,%20Client%20Connectivity,%20and%20Application%20Failover%20\(SQL%20Server\).md)   
+ [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Monitor Availability Groups &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

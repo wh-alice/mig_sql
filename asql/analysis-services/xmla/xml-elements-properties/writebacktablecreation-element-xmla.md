@@ -69,6 +69,6 @@ manager: "erikre"
 |*UseExisting*|Use the existing writeback table, if one already exists. If one does not exist, an error occurs.|  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

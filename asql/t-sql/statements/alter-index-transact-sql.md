@@ -48,11 +48,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Modifies an existing table or view index (relational or XML) by disabling, rebuilding, or reorganizing the index; or by setting options on the index.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -197,12 +197,12 @@ ALTER INDEX { index_name | ALL }
  Is the name of the schema to which the table or view belongs.  
   
  *table_or_view_name*  
- Is the name of the table or view associated with the index. To display a report of the indexes on an object, use the [sys.indexes](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md) catalog view.  
+ Is the name of the table or view associated with the index. To display a report of the indexes on an object, use the [sys.indexes](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md) catalog view.  
   
  SQL Database supports the three-part name format database_name.[schema_name].table_or_view_name when the database_name is the current database or the database_name is tempdb and the table_or_view_name starts with #.  
   
  REBUILD [ WITH **(**<rebuild_index_option> [ **,**... *n*]**)** ]  
- Specifies the index will be rebuilt using the same columns, index type, uniqueness attribute, and sort order. This clause is equivalent to [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md). REBUILD enables a disabled index. Rebuilding a clustered index does not rebuild associated nonclustered indexes unless the keyword ALL is specified. If index options are not specified, the existing index option values stored in [sys.indexes](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md) are applied. For any index option whose value is not stored in **sys.indexes**, the default indicated in the argument definition of the option applies.  
+ Specifies the index will be rebuilt using the same columns, index type, uniqueness attribute, and sort order. This clause is equivalent to [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md). REBUILD enables a disabled index. Rebuilding a clustered index does not rebuild associated nonclustered indexes unless the keyword ALL is specified. If index options are not specified, the existing index option values stored in [sys.indexes](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md) are applied. For any index option whose value is not stored in **sys.indexes**, the default indicated in the argument definition of the option applies.  
   
  If ALL is specified and the underlying table is a heap, the rebuild operation has no effect on the table. Any nonclustered indexes associated with the table are rebuilt.  
   
@@ -221,7 +221,7 @@ ALTER INDEX { index_name | ALL }
   
 2.  Acquires an exclusive lock on the table or partition while the rebuild occurs.  The data is “offline” and unavailable during the rebuild, even when using NOLOCK, RCSI, or SI.  
   
-3.  Re-compresses all data into the columnstore. Two copies of the columnstore index exist while the rebuild is taking place. When the rebuild is finished, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] deletes the original columnstore index.  
+3.  Re-compresses all data into the columnstore. Two copies of the columnstore index exist while the rebuild is taking place. When the rebuild is finished, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] deletes the original columnstore index.  
   
  For more information about rebuilding columnstore indexes, see [Columnstore indexes - defragmentation](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
@@ -242,7 +242,7 @@ ALTER INDEX { index_name | ALL }
 |-|  
 |**Applies to**: SQL Server (starting with SQL Server 2008), SQL Database.|  
   
- Is the partition number of a partitioned index that is to be rebuilt or reorganized. *partition_number* is a constant expression that can reference variables. These include user-defined type variables or functions and user-defined functions, but cannot reference a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement. *partition_number* must exist or the statement fails.  
+ Is the partition number of a partitioned index that is to be rebuilt or reorganized. *partition_number* is a constant expression that can reference variables. These include user-defined type variables or functions and user-defined functions, but cannot reference a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement. *partition_number* must exist or the statement fails.  
   
  WITH **(**<single_partition_rebuild_index_option>**)**  
  ||  
@@ -252,7 +252,7 @@ ALTER INDEX { index_name | ALL }
  SORT_IN_TEMPDB, MAXDOP, and DATA_COMPRESSION are the options that can be specified when you rebuild a single partition (PARTITION = *n*). XML indexes cannot be specified in a single partition rebuild operation.  
   
  DISABLE  
- Marks the index as disabled and unavailable for use by the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)]. Any index can be disabled. The index definition of a disabled index remains in the system catalog with no underlying index data. Disabling a clustered index prevents user access to the underlying table data. To enable an index, use ALTER INDEX REBUILD or CREATE INDEX WITH DROP_EXISTING. For more information, see [Disable Indexes and Constraints](../../relational-databases/indexes/disable-indexes-and-constraints.md) and [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md).  
+ Marks the index as disabled and unavailable for use by the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)]. Any index can be disabled. The index definition of a disabled index remains in the system catalog with no underlying index data. Disabling a clustered index prevents user access to the underlying table data. To enable an index, use ALTER INDEX REBUILD or CREATE INDEX WITH DROP_EXISTING. For more information, see [Disable Indexes and Constraints](../../relational-databases/indexes/disable-indexes-and-constraints.md) and [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md).  
   
  REORGANIZE  a rowstore index  
  For rowstore indexes, REORGANIZE specifies to reorganize the index leaf level.  The REORGANIZE operation is:  
@@ -319,7 +319,7 @@ ALTER INDEX { index_name | ALL }
  Specifies index padding. The default is OFF.  
   
  ON  
- The percentage of free space that is specified by FILLFACTOR is applied to the intermediate-level pages of the index. If FILLFACTOR is not specified at the same time PAD_INDEX is set to ON, the fill factor value stored in [sys.indexes](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md) is used.  
+ The percentage of free space that is specified by FILLFACTOR is applied to the intermediate-level pages of the index. If FILLFACTOR is not specified at the same time PAD_INDEX is set to ON, the fill factor value stored in [sys.indexes](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md) is used.  
   
  OFF or *fillfactor* is not specified  
  The intermediate-level pages are filled to near capacity. This leaves sufficient space for at least one row of the maximum size that the index can have, based on the set of keys on the intermediate pages.  
@@ -331,14 +331,14 @@ ALTER INDEX { index_name | ALL }
 |-|  
 |**Applies to**: SQL Server (starting with SQL Server 2008), SQL Database.|  
   
- Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] should make the leaf level of each index page during index creation or alteration. *fillfactor* must be an integer value from 1 to 100. The default is 0. Fill factor values 0 and 100 are the same in all respects.  
+ Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] should make the leaf level of each index page during index creation or alteration. *fillfactor* must be an integer value from 1 to 100. The default is 0. Fill factor values 0 and 100 are the same in all respects.  
   
- An explicit FILLFACTOR setting applies only when the index is first created or rebuilt. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] does not dynamically keep the specified percentage of empty space in the pages. For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
+ An explicit FILLFACTOR setting applies only when the index is first created or rebuilt. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] does not dynamically keep the specified percentage of empty space in the pages. For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
  To view the fill factor setting, use **sys.indexes**.  
   
 > [!IMPORTANT]
->  Creating or altering a clustered index with a FILLFACTOR value affects the amount of storage space the data occupies, because the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] redistributes the data when it creates the clustered index.  
+>  Creating or altering a clustered index with a FILLFACTOR value affects the amount of storage space the data occupies, because the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] redistributes the data when it creates the clustered index.  
   
  SORT_IN_TEMPDB = { ON | **OFF** }  
  ||  
@@ -368,7 +368,7 @@ ALTER INDEX { index_name | ALL }
   
  IGNORE_DUP_KEY cannot be set to ON   for indexes created on a view, non-unique indexes, XML indexes, spatial indexes, and filtered indexes.  
   
- To view IGNORE_DUP_KEY, use [sys.indexes](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md).  
+ To view IGNORE_DUP_KEY, use [sys.indexes](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md).  
   
  In backward compatible syntax, WITH IGNORE_DUP_KEY is equivalent to WITH IGNORE_DUP_KEY = ON.  
   
@@ -387,7 +387,7 @@ ALTER INDEX { index_name | ALL }
 >  Disabling automatic recomputation of distribution statistics may prevent the query optimizer from picking optimal execution plans for queries that involve the table.  
   
  STATISTICS_INCREMENTAL = { ON | **OFF** }  
- When **ON**, the statistics created are per partition statistics. When **OFF**, the statistics tree is dropped and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] re-computes the statistics. The default is **OFF**.  
+ When **ON**, the statistics created are per partition statistics. When **OFF**, the statistics tree is dropped and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] re-computes the statistics. The default is **OFF**.  
   
  If per partition statistics are not supported the option is ignored and a warning is generated. Incremental stats are not supported for following statistics types:  
   
@@ -415,7 +415,7 @@ ALTER INDEX { index_name | ALL }
  For an XML index or spatial index, only ONLINE = OFF is supported, and if ONLINE is set to ON an error is raised.  
   
 > [!NOTE]
->  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ON  
  Long-term table locks are not held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source table. This allows queries or updates to the underlying table and indexes to continue. At the start of the operation, a Shared (S) lock is very briefly held on the source object. At the end of the operation, an S lock is very briefly held on the source if a nonclustered index is being created, or an SCH-M (Schema Modification) lock is acquired when a clustered index is created or dropped online, or when a clustered or nonclustered index is being rebuilt. ONLINE cannot be set to ON when an index is being created on a local temporary table.  
@@ -464,7 +464,7 @@ Indicates time (an integer value specified in minutes) that a resumable online i
  Specifies whether row locks are allowed. The default is ON.  
   
  ON  
- Row locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] determines when row locks are used.  
+ Row locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] determines when row locks are used.  
   
  OFF  
  Row locks are not used.  
@@ -477,7 +477,7 @@ Indicates time (an integer value specified in minutes) that a resumable online i
  Specifies whether page locks are allowed. The default is ON.  
   
  ON  
- Page locks are allowed when you access the index. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] determines when page locks are used.  
+ Page locks are allowed when you access the index. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] determines when page locks are used.  
   
  OFF  
  Page locks are not used.  
@@ -509,7 +509,7 @@ Indicates time (an integer value specified in minutes) that a resumable online i
  For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]
->  Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }  
  This feature is available starting with SQL Server 2016  
@@ -659,7 +659,7 @@ Abort a running or paused index operation that was declared as resumable. You ha
 ## Remarks  
  ALTER INDEX cannot be used to repartition an index or move it to a different filegroup. This statement cannot be used to modify the index definition, such as adding or deleting columns or changing the column order. Use CREATE INDEX with the DROP_EXISTING clause to perform these operations.  
   
- When an option is not explicitly specified, the current setting is applied. For example, if a FILLFACTOR setting is not specified in the REBUILD clause, the fill factor value stored in the system catalog will be used during the rebuild process. To view the current index option settings, use [sys.indexes](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md).  
+ When an option is not explicitly specified, the current setting is applied. For example, if a FILLFACTOR setting is not specified in the REBUILD clause, the fill factor value stored in the system catalog will be used during the rebuild process. To view the current index option settings, use [sys.indexes](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md).  
   
 > [!NOTE]
 >  The values for ONLINE, MAXDOP, and SORT_IN_TEMPDB are not stored in the system catalog. Unless specified in the index statement, the default value for the option is used.
@@ -669,15 +669,15 @@ Abort a running or paused index operation that was declared as resumable. You ha
  An index cannot be reorganized or rebuilt if the filegroup in which it is located is offline or set to read-only. When the keyword ALL is specified and one or more indexes are in an offline or read-only filegroup, the statement fails.  
   
 ## Rebuilding Indexes  
- Rebuilding an index drops and re-creates the index. This removes fragmentation, reclaims disk space by compacting the pages based on the specified or existing fill factor setting, and reorders the index rows in contiguous pages. When ALL is specified, all indexes on the table are dropped and rebuilt in a single transaction. FOREIGN KEY constraints do not have to be dropped in advance. When indexes with 128 extents or more are rebuilt, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] defers the actual page deallocations, and their associated locks, until after the transaction commits.  
+ Rebuilding an index drops and re-creates the index. This removes fragmentation, reclaims disk space by compacting the pages based on the specified or existing fill factor setting, and reorders the index rows in contiguous pages. When ALL is specified, all indexes on the table are dropped and rebuilt in a single transaction. FOREIGN KEY constraints do not have to be dropped in advance. When indexes with 128 extents or more are rebuilt, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] defers the actual page deallocations, and their associated locks, until after the transaction commits.  
   
  Rebuilding or reorganizing small indexes often does not reduce fragmentation. The pages of small indexes are sometimes stored on mixed extents. Mixed extents are shared by up to eight objects, so the fragmentation in a small index might not be reduced after reorganizing or rebuilding it.  
   
- Starting with [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)], statistics are not created by scanning all the rows in the table when a partitioned index is created or rebuilt. Instead, the query optimizer uses the default sampling algorithm to generate statistics. To obtain statistics on partitioned indexes by scanning all the rows in the table, use CREATE STATISTICS or UPDATE STATISTICS with the FULLSCAN clause.  
+ Starting with [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)], statistics are not created by scanning all the rows in the table when a partitioned index is created or rebuilt. Instead, the query optimizer uses the default sampling algorithm to generate statistics. To obtain statistics on partitioned indexes by scanning all the rows in the table, use CREATE STATISTICS or UPDATE STATISTICS with the FULLSCAN clause.  
   
- In earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you could sometimes rebuild a nonclustered index to correct inconsistencies caused by hardware failures. In [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] and later, you may still be able to repair such inconsistencies between the index and the clustered index by rebuilding a nonclustered index offline. However, you cannot repair nonclustered index inconsistencies by rebuilding the index online, because the online rebuild mechanism will use the existing nonclustered index as the basis for the rebuild and thus persist the inconsistency. Rebuilding the index offline can sometimes force a scan of the clustered index (or heap) and so remove the inconsistency. To assure a rebuild from the clustered index, drop and recreate the non-clustered index. As with earlier versions, we recommend recovering from inconsistencies by restoring the affected data from a backup; however, you may be able to repair the index inconsistencies by rebuilding the nonclustered index offline. For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).  
+ In earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], you could sometimes rebuild a nonclustered index to correct inconsistencies caused by hardware failures. In [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] and later, you may still be able to repair such inconsistencies between the index and the clustered index by rebuilding a nonclustered index offline. However, you cannot repair nonclustered index inconsistencies by rebuilding the index online, because the online rebuild mechanism will use the existing nonclustered index as the basis for the rebuild and thus persist the inconsistency. Rebuilding the index offline can sometimes force a scan of the clustered index (or heap) and so remove the inconsistency. To assure a rebuild from the clustered index, drop and recreate the non-clustered index. As with earlier versions, we recommend recovering from inconsistencies by restoring the affected data from a backup; however, you may be able to repair the index inconsistencies by rebuilding the nonclustered index offline. For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).  
   
- To rebuild a clustered columnstore index, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]:  
+ To rebuild a clustered columnstore index, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]:  
   
 1.  Acquires an exclusive lock on the table or partition while the rebuild occurs. The data is “offline” and unavailable during the rebuild.  
   
@@ -685,10 +685,10 @@ Abort a running or paused index operation that was declared as resumable. You ha
   
 3.  Reads all data from the original columnstore index, including the deltastore. It combines the data into new rowgroups, and compresses the rowgroups into the columnstore.  
   
-4.  Requires space on the physical media to store two copies of the columnstore index while the rebuild is taking place. When the rebuild is finished, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] deletes the original clustered columnstore index.  
+4.  Requires space on the physical media to store two copies of the columnstore index while the rebuild is taking place. When the rebuild is finished, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] deletes the original clustered columnstore index.  
   
 ## Reorganizing Indexes  
- Reorganizing an index uses minimal system resources. It defragments the leaf level of clustered and nonclustered indexes on tables and views by physically reordering the leaf-level pages to match the logical, left to right, order of the leaf nodes. Reorganizing also compacts the index pages. Compaction is based on the existing fill factor value. To view the fill factor setting, use [sys.indexes](../../relational-databases/system-catalog-views/sys.indexes-transact-sql.md).  
+ Reorganizing an index uses minimal system resources. It defragments the leaf level of clustered and nonclustered indexes on tables and views by physically reordering the leaf-level pages to match the logical, left to right, order of the leaf nodes. Reorganizing also compacts the index pages. Compaction is based on the existing fill factor value. To view the fill factor setting, use [sys.indexes](../../relational-databases/reference/system-catalog-views/sys.indexes-transact-sql.md).  
   
  When ALL is specified, relational indexes, both clustered and nonclustered, and XML indexes on the table are reorganized. Some restrictions apply when specifying ALL, see the definition for ALL in the Arguments section.  
   
@@ -705,7 +705,7 @@ Abort a running or paused index operation that was declared as resumable. You ha
  You can set the options ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, IGNORE_DUP_KEY and STATISTICS_NORECOMPUTE for a specified index without rebuilding or reorganizing that index. The modified values are immediately applied to the index. To view these settings, use **sys.indexes**. For more information, see [Set Index Options](../../relational-databases/indexes/set-index-options.md).  
   
 ### Row and Page Locks Options  
- When ALLOW_ROW_LOCKS = ON and ALLOW_PAGE_LOCK = ON, row-level, page-level, and table-level locks are allowed when you access the index. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] chooses the appropriate lock and can escalate the lock from a row or page lock to a table lock.  
+ When ALLOW_ROW_LOCKS = ON and ALLOW_PAGE_LOCK = ON, row-level, page-level, and table-level locks are allowed when you access the index. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] chooses the appropriate lock and can escalate the lock from a row or page lock to a table lock.  
   
  When ALLOW_ROW_LOCKS = OFF and ALLOW_PAGE_LOCK = OFF, only a table-level lock is allowed when you access the index.  
   
@@ -715,7 +715,7 @@ Abort a running or paused index operation that was declared as resumable. You ha
 |-|-|  
 |ALLOW_ROW_LOCKS = ON or OFF|To the heap and any associated nonclustered indexes.|  
 |ALLOW_PAGE_LOCKS = ON|To the heap and any associated nonclustered indexes.|  
-|ALLOW_PAGE_LOCKS = OFF|Fully to the nonclustered indexes. This means that all page locks are not allowed on the nonclustered indexes. On the heap, only the shared (S), update (U) and exclusive (X) locks for the page are not allowed. The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] can still acquire an intent page lock (IS, IU or IX) for internal purposes.|  
+|ALLOW_PAGE_LOCKS = OFF|Fully to the nonclustered indexes. This means that all page locks are not allowed on the nonclustered indexes. On the heap, only the shared (S), update (U) and exclusive (X) locks for the page are not allowed. The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] can still acquire an intent page lock (IS, IU or IX) for internal purposes.|  
   
 ## Online Index Operations  
  When rebuilding an index and the ONLINE option is set to ON, the underlying objects, the tables and associated indexes, are available for queries and data modification. You can also rebuild online a portion of an index residing on a single partition. Exclusive table locks are held only for a very short amount of time during the alteration process.  
@@ -765,7 +765,7 @@ The following functionality is disabled for resumable index rebuild operations
    -	The SORT_IN_TEMPDB=ON option is not supported for resumable index 
 
 > [!NOTE]
-> The DDL command runs until it completes, pauses or fails. In case the command pauses, an error will be issued indicating that the operation was paused and that the index creation did not complete. More information about the current index status can be obtained from **[sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys.index-resumable-operations.md)**.  As before in case of a failure an error will be issued as well. 
+> The DDL command runs until it completes, pauses or fails. In case the command pauses, an error will be issued indicating that the operation was paused and that the index creation did not complete. More information about the current index status can be obtained from **[sys.index_resumable_operations](../../relational-databases/reference/system-catalog-views/sys.index-resumable-operations.md)**.  As before in case of a failure an error will be issued as well. 
 
   
  For more information, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
@@ -786,7 +786,7 @@ The following functionality is disabled for resumable index rebuild operations
 ## Data Compression  
  For a more information about data compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
- To evaluate how changing PAGE and ROW compression will affect a table, an index, or a partition, use the [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) stored procedure.  
+ To evaluate how changing PAGE and ROW compression will affect a table, an index, or a partition, use the [sp_estimate_data_compression_savings](../../relational-databases/reference/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) stored procedure.  
   
  The following restrictions apply to partitioned indexes:  
   
@@ -808,7 +808,7 @@ The following functionality is disabled for resumable index rebuild operations
   
 -   Columnstore indexes are not available prior to SQL Server 2012. 
 
- -  Resumable index operations in or after [!INCLUDE[ssSQLv14_md](../../advanced-analytics/r-services/includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] (public preview).|   
+ -  Resumable index operations in or after [!INCLUDE[ssSQLv14_md](../../advanced-analytics/r-services/includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)] (public preview).|   
   
 ## Examples: Columnstore Indexes  
  These examples apply to columnstore indexes.  
@@ -936,7 +936,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;
 ### D. Rebuild a clustered columnstore index offline  
  Applies to: SQL Server 2012, SQL Server 2014  
   
- Starting with SQL Server 2016 and in [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)], we recommend using ALTER INDEX REORGANIZE instead of ALTER INDEX REBUILD.  
+ Starting with SQL Server 2016 and in [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)], we recommend using ALTER INDEX REORGANIZE instead of ALTER INDEX REBUILD.  
   
 > [!NOTE]
 >  In SQL Server 2012 and 2014, REORGANIZE is only used to compress CLOSED rowgroups into the columnstore. The only way to perform defragmentation operations and to force all delta rowgroups into the columnstore is to rebuild the index.  
@@ -962,7 +962,7 @@ FROM dbo.FactInternetSales;
 SELECT * FROM sys.column_store_row_groups;  
 ```  
   
- The results show there is one OPEN rowgroup, which means [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will wait for more rows to be added before it closes the rowgroup and moves the data to the columnstore. This next statement rebuilds the clustered columnstore index, which forces all rows into the columnstore.  
+ The results show there is one OPEN rowgroup, which means [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will wait for more rows to be added before it closes the rowgroup and moves the data to the columnstore. This next statement rebuilds the clustered columnstore index, which forces all rows into the columnstore.  
   
 ```  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REBUILD;  
@@ -1019,14 +1019,14 @@ GO
 ## Examples: Rowstore indexes  
   
 ### A. Rebuilding an index  
- The following example rebuilds a single index on the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example rebuilds a single index on the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
 ```  
   
 ### B. Rebuilding all indexes on a table and specifying options  
- The following example specifies the keyword `ALL`. This rebuilds all indexes associated with the table Production.Product in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. Three options are specified.  
+ The following example specifies the keyword `ALL`. This rebuilds all indexes associated with the table Production.Product in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database. Three options are specified.  
   
 ||  
 |-|  
@@ -1056,14 +1056,14 @@ REBUILD WITH
 ```  
   
 ### D. Reorganizing an index with LOB compaction  
- The following example reorganizes a single clustered index in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. Because the index contains a LOB data type in the leaf level, the statement also compacts all pages that contain the large object data. Note that specifying the WITH (LOB_COMPACTION) option is not required because the default value is ON.  
+ The following example reorganizes a single clustered index in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database. Because the index contains a LOB data type in the leaf level, the statement also compacts all pages that contain the large object data. Note that specifying the WITH (LOB_COMPACTION) option is not required because the default value is ON.  
   
 ```  
 ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION);  
 ```  
   
 ### E. Setting options on an index  
- The following example sets several options on the index `AK_SalesOrderHeader_SalesOrderNumber` in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example sets several options on the index `AK_SalesOrderHeader_SalesOrderNumber` in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ||  
 |-|  
@@ -1081,14 +1081,14 @@ GO
 ```  
   
 ### F. Disabling an index  
- The following example disables a nonclustered index on the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example disables a nonclustered index on the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 ALTER INDEX IX_Employee_ManagerID ON HumanResources.Employee DISABLE;
 ```  
   
 ### G. Disabling constraints  
- The following example disables a PRIMARY KEY constraint by disabling the PRIMARY KEY index in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. The FOREIGN KEY constraint on the underlying table is automatically disabled and warning message is displayed.  
+ The following example disables a PRIMARY KEY constraint by disabling the PRIMARY KEY index in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database. The FOREIGN KEY constraint on the underlying table is automatically disabled and warning message is displayed.  
   
 ```  
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department DISABLE;  
@@ -1120,7 +1120,7 @@ GO
 ```  
   
 ### I. Rebuilding a partitioned index  
- The following example rebuilds a single partition, partition number `5`, of the partitioned index `IX_TransactionHistory_TransactionDate` in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. Partition 5 is rebuilt online and the 10 minutes wait time for the low priority lock applies separately to every lock acquired by index rebuild operation. If during this time the lock cannot be obtained to complete index rebuild, the rebuild operation statement is aborted.  
+ The following example rebuilds a single partition, partition number `5`, of the partitioned index `IX_TransactionHistory_TransactionDate` in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database. Partition 5 is rebuilt online and the 10 minutes wait time for the low priority lock applies separately to every lock acquired by index rebuild operation. If during this time the lock cannot be obtained to complete index rebuild, the rebuild operation statement is aborted.  
   
 ||  
 |-|  
@@ -1190,7 +1190,7 @@ GO
    ``` 
 
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### A. Basic Syntax
 ``` 
@@ -1210,7 +1210,7 @@ ALTER INDEX ALL ON dbo.table1 REBUILD;
  [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)   
  [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)   
- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md)   
+ [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-db-index-physical-stats-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

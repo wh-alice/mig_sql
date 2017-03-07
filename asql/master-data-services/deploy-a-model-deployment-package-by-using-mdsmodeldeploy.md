@@ -16,21 +16,21 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Deploy a Model Deployment Package by Using MDSModelDeploy
-  In [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)], use the MDSModelDeploy tool to deploy a package that contains either:  
+  In [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)], use the MDSModelDeploy tool to deploy a package that contains either:  
   
 -   Model objects only.  
   
 -   Model objects and data.  
   
- If you want to deploy a package that contains model objects only, you can use the model deployment wizard in the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] web application instead. For more information, see [Deploy a Model Deployment Package by Using the Wizard](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md).  
+ If you want to deploy a package that contains model objects only, you can use the model deployment wizard in the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] web application instead. For more information, see [Deploy a Model Deployment Package by Using the Wizard](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md).  
   
 > [!IMPORTANT]  
->  Packages can be deployed to the edition of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] they were created in only. This means that packages created in [!INCLUDE[ssSQL11](../analysis-services/includes/sssql11-md.md)] cannot be deployed to [!INCLUDE[ssSQL14](../analysis-services/includes/sssql14-md.md)] or higher.  
+>  Packages can be deployed to the edition of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] they were created in only. This means that packages created in [!INCLUDE[ssSQL11](../a9notintoc/includes/sssql11-md.md)] cannot be deployed to [!INCLUDE[ssSQL14](../a9notintoc/includes/sssql14-md.md)] or higher.  
   
 ## Prerequisites  
  To perform this procedure:  
   
--   You must have permission to access the **System Administration** functional area in the target [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] environment.  
+-   You must have permission to access the **System Administration** functional area in the target [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] environment.  
   
 -   A model deployment package must exist. For more information, see  [Create a Model Deployment Package by Using MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   

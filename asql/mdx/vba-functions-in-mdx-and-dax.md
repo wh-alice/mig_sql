@@ -15,7 +15,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # VBA functions in MDX and DAX
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   This document contains a crossed reference of all VBA functions available in [Microsoft Visual Basic for Applications Language Reference for Office 2010](https://msdn.microsoft.com/library/gg264383(v=office.14).aspx) that are supported in MDX; also, the list includes a note when there is functional equivalence with the DAX language.  
   

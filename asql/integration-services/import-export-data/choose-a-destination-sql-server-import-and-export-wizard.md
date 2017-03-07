@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Choose a Destination (SQL Server Import and Export Wizard)
- After you provide info about the source of your data and about how to connect to it, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard shows **Choose a Destination**. On this page, you provide info about the destination for your data and about how to connect to it.
+ After you provide info about the source of your data and about how to connect to it, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard shows **Choose a Destination**. On this page, you provide info about the destination for your data and about how to connect to it.
   
 For info about the data destinations that you can use, see [What data sources and destinations can I use?](Import%20and%20Export%20Data%20with%20the%20SQL%20Server%20Import%20and%20Export%20Wizard.md\#wizardSources). 
 
@@ -33,7 +33,7 @@ The following screen shot shows the first part of the **Choose a Destination** p
  
 -   **The data provider that you need is typically obvious from its name**, because the name of the provider typically contains the name of the data source - for example, SQL Server, Oracle, flat files, Excel, or Access.
 -   **If you have an ODBC driver for your data source**, select the .Net Framework Data Provider for ODBC. Then enter the driver-specific info. ODBC drivers aren't listed in the drop-down list of data sources. The .Net Framework Data Provider for ODBC acts as a wrapper around the ODBC driver.  
--   **There may be more than one provider available for your data source.** Typically you can select any provider that works with your source. For example, to connect to Microsoft [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you can use the .NET Framework Data Provider for SQL Server or the SQL Server ODBC driver. (Other providers are also still in the list but are no longer supported.) 
+-   **There may be more than one provider available for your data source.** Typically you can select any provider that works with your source. For example, to connect to Microsoft [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], you can use the .NET Framework Data Provider for SQL Server or the SQL Server ODBC driver. (Other providers are also still in the list but are no longer supported.) 
 -   **You may have to download the data provider** from Microsoft or from a third party. For info about the data sources that you can use, see [What data sources and destinations can I use?](Import%20and%20Export%20Data%20with%20the%20SQL%20Server%20Import%20and%20Export%20Wizard.md\#wizardSources)
 
 The list of available data providers in the **Destination** list depends on the providers installed on your computer. It also depends on whether you're running the 64-bit or the 32-bit wizard. If you're running the 64-bit wizard, for example, you won't see data sources for which only a 32-bit provider is installed.

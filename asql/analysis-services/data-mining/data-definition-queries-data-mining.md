@@ -35,12 +35,12 @@ manager: "jhubbard"
  [Scripting Data Definition Statements](#bkmk_Export)  
   
 ##  <a name="bkmk_Create"></a> Creating Data Definition Queries  
- You can create data definition queries (statements) by using the Prediction Query Builder in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], or by using the DMX Query window in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. Data definition statements in DMX are part of the Analysis Services data definition language (DDL).  
+ You can create data definition queries (statements) by using the Prediction Query Builder in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], or by using the DMX Query window in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. Data definition statements in DMX are part of the Analysis Services data definition language (DDL).  
   
  For information about the syntax of specific data definition statements, see [Data Mining Extensions &#40;DMX&#41; Reference](../../dmx/data-mining-extensions-dmx-reference.md).  
   
 ###  <a name="bkmk_ssdt"></a> Data Definition Queries in SQL Server Data Tools  
- The Data Mining Wizard is the preferred tool in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] for creating and modifying mining models and mining structures, and for defining the data sources that are used in prediction queries and for training.  
+ The Data Mining Wizard is the preferred tool in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] for creating and modifying mining models and mining structures, and for defining the data sources that are used in prediction queries and for training.  
   
  However, if you want to know what statements are being sent to the server by the wizard to create data structures or mining models, you can use SQL Server Profiler to capture the data definition statements. For more information, see [Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
@@ -57,19 +57,19 @@ manager: "jhubbard"
   
 -   Define the data set used for training a model, by using [INSERT INTO &#40;DMX&#41;](../../dmx/insert-into-dmx.md) together with a data source query such as OPENROWSET.  
   
- [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] provides query templates that can help you create data definition queries. For more information, see [Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md).  
+ [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] provides query templates that can help you create data definition queries. For more information, see [Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md).  
   
- In general, the templates that are provided for [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] contain only the general syntax definition, which you must customize, either by typing in the **Query** window, or by using the dialog box provided for entering parameters.  
+ In general, the templates that are provided for [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] contain only the general syntax definition, which you must customize, either by typing in the **Query** window, or by using the dialog box provided for entering parameters.  
   
  For an example of how to enter parameters using the interface, see [Create a Singleton Prediction Query from a Template](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md).  
   
 ###  <a name="bkmk_Scripts"></a> Scripting Data Definition Statements  
- [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] provides multiple scripting and programming languages that you can use to create or alter data mining objects, or to define data sources.  Although DMX is designed for expediting data mining tasks, you can also use both XMLA and AMO to manipulate objects in scripts or in custom code.  
+ [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] provides multiple scripting and programming languages that you can use to create or alter data mining objects, or to define data sources.  Although DMX is designed for expediting data mining tasks, you can also use both XMLA and AMO to manipulate objects in scripts or in custom code.  
   
  The Data Mining Add-in for Excel also includes many query templates, and provides the **Advanced Query Editor**, which helps you compose complex DMX statements. You can build a query interactively and then switch to SQL View to capture the DMX statement.  
   
 ##  <a name="bkmk_Export"></a> Exporting and Importing Models  
- You can use data definition statements in DMX to export the definition of a model and its required structure and data sources, and then import that definition into a different server. Using export and import is the fastest and easiest way to move data mining models and mining structures between instances of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)]. For more information, see [Management of Data Mining Solutions and Objects](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md).  
+ You can use data definition statements in DMX to export the definition of a model and its required structure and data sources, and then import that definition into a different server. Using export and import is the fastest and easiest way to move data mining models and mining structures between instances of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)]. For more information, see [Management of Data Mining Solutions and Objects](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md).  
   
 > [!WARNING]  
 >  If your model is based on data from a cube data srouce, you cannot use DMX to export the model, and should use backup and restore instead.  
@@ -81,9 +81,9 @@ manager: "jhubbard"
 |-|-|  
 |Work with templates for DMX queries.|[Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Design queries of all kinds, using Prediction Query Builder.|[Create a Prediction Query Using the Prediction Query Builder](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
-|Capture query definitions by using SQL Server Profiler, and use traces to monitor [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)].|[Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
-|Learn more about the scripting languages and programming languages provided for [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)].|[XML for Analysis  &#40;XMLA&#41; Reference](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [Developing with Analysis Management Objects &#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
-|Learn how to manage models in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].|[Export and Import Data Mining Objects](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORT &#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](../../dmx/import-dmx.md)|  
+|Capture query definitions by using SQL Server Profiler, and use traces to monitor [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)].|[Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
+|Learn more about the scripting languages and programming languages provided for [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)].|[XML for Analysis  &#40;XMLA&#41; Reference](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [Developing with Analysis Management Objects &#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
+|Learn how to manage models in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].|[Export and Import Data Mining Objects](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORT &#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](../../dmx/import-dmx.md)|  
 |Learn more about OPENROWSET and other ways to query external data.|[&#60;source data query&#62;](../../dmx/source-data-query.md).|  
   
 ## See Also  

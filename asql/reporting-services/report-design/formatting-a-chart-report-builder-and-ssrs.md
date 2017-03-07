@@ -64,7 +64,7 @@ manager: "erikre"
  To effectively format the chart using a minimal number of steps, change the default border style, palette and drawing style. These three features produce the largest visible change on the chart. Drawing styles are only applicable to pie, doughnut, bar and column charts.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## In This Section  
  [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
@@ -73,13 +73,13 @@ manager: "erikre"
  [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)  
  Discusses how to display gridlines, tick marks, and titles, and how to format numbers and dates on the axis scale.  
   
- [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](../Topic/Formatting%20the%20Legend%20on%20a%20Chart%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)  
  Discusses how to re-order and format items in the chart legend.  
   
  [Formatting Data Points on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
  Discusses how to position data point labels and format data point markers for every series on the chart.  
   
- [3D, Bevel, and Other Effects in a Chart &#40;Report Builder and SSRS&#41;](../Topic/3D,%20Bevel,%20and%20Other%20Effects%20in%20a%20Chart%20\(Report%20Builder%20and%20SSRS\).md)  
+ [3D, Bevel, and Other Effects in a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)  
  Discusses various 3D effects that you can apply to a chart.  
   
  [Add a Border Frame to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)  
@@ -89,6 +89,6 @@ manager: "erikre"
  [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Add a Border Frame to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)   
  [Define Colors on a Chart Using a Palette &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [Add Bevel, Emboss, and Texture Styles to a Chart &#40;Report Builder and SSRS&#41;](../Topic/Add%20Bevel,%20Emboss,%20and%20Texture%20Styles%20to%20a%20Chart%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Add Bevel, Emboss, and Texture Styles to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
   
   

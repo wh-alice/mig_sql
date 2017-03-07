@@ -30,7 +30,7 @@ manager: "jhubbard"
 
   Returns the number of rows affected by the last statement. If the number of rows is more than 2 billion, use [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
  **int**  
   
 ## Remarks  
- [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements can set the value in @@ROWCOUNT in the following ways:  
+ [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements can set the value in @@ROWCOUNT in the following ways:  
   
 -   Set @@ROWCOUNT to the number of rows affected or read. Rows may or may not be sent to the client.  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
  Statements such as USE, SET \<option>, DEALLOCATE CURSOR, CLOSE CURSOR, BEGIN TRANSACTION or COMMIT TRANSACTION reset the ROWCOUNT value to 0.  
   
- Natively compiled stored procedures preserve the previous @@ROWCOUNT. [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements inside natively compiled stored procedures do not set @@ROWCOUNT. For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ Natively compiled stored procedures preserve the previous @@ROWCOUNT. [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements inside natively compiled stored procedures do not set @@ROWCOUNT. For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
 ## Examples  
  The following example executes an `UPDATE` statement and uses `@@ROWCOUNT` to detect if any rows were changed.  
@@ -80,7 +80,7 @@ GO
 ```  
   
 ## See Also  
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-transact-sql.md)   
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/system-functions-transact-sql.md)   
  [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md)  
   
   

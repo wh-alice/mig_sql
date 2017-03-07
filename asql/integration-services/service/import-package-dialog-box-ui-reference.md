@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Import Package Dialog Box UI Reference
-  Use the **Import Package** dialog box, available in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], to import a [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package and to set or modify the protection level of the package.  
+  Use the **Import Package** dialog box, available in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], to import a [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package and to set or modify the protection level of the package.  
   
 ## Options  
  **Package location**  
@@ -35,7 +35,7 @@ manager: "jhubbard"
  Type a server name or select a server from the list.  
   
  **Authentication**  
- Select Windows Authentication or [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication. This option is available only if the storage location is [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Select Windows Authentication or [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication. This option is available only if the storage location is [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  Whenever possible, use Windows Authentication.  
@@ -44,10 +44,10 @@ manager: "jhubbard"
  Select an authentication type.  
   
  **User name**  
- If using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication, provide a user name.  
+ If using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication, provide a user name.  
   
  **Password**  
- If using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication, provide a password.  
+ If using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication, provide a password.  
   
  **Package path**  
  Type the package path, or click the browse button **(…)** and locate the package.  
@@ -59,7 +59,7 @@ manager: "jhubbard"
  Click the browse button **(…)** and, in the **Package Protection Level** dialog box, update the protection level. For more information, see [Package and Project Protection Level Dialog Box](../../integration-services/packages/package-and-project-protection-level-dialog-box.md).  
   
 ## See Also  
- [Save Copy of Package](../Topic/Save%20Copy%20of%20Package.md)   
+ [Save Copy of Package](../../a9retired/save-copy-of-package.md)   
  [Export Package Dialog Box UI Reference](../../integration-services/service/export-package-dialog-box-ui-reference.md)   
  [Save Packages](../../integration-services/save-packages.md)   
  [Import and Export Packages &#40;SSIS Service&#41;](../../integration-services/service/import-and-export-packages-ssis-service.md)  

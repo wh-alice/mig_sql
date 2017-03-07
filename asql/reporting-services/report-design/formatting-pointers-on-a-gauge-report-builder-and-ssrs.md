@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Formatting Pointers on a Gauge (Report Builder and SSRS)
- In a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report, the gauge pointer indicates the current value of the gauge.   
+ In a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report, the gauge pointer indicates the current value of the gauge.   
    
  By default, when a field is added, the values that are contained in the field are aggregated into one value that is shown by the pointer on the gauge. You can add multiple pointers to the gauge to point at multiple values on the same scale, or add multiple scales and a pointer for every scale you have added. After you add a field to a gauge, you must set the maximum and minimum values on the corresponding scale to give context to the pointer value. You also have the option of setting the minimum and maximum values on a range, which shows a critical area on the scale.  
   
@@ -27,7 +27,7 @@ manager: "erikre"
 -   On a linear gauge, you can specify a thermometer pointer, which is a variation of the bar pointer. The thermometer pointer lets you specify the shape of the bulb.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ##  <a name="HowPointer"></a> How the Pointer is Connected to Data  
  By default, when a gauge is added, it contains one pointer that has no associated field. This is known as an empty pointer. It will display zero until a field is added to the data pane. When you add a field to the data pane, the pointer is connected to that field. If you delete a field from the data pane, the pointer that is associated with that field is also deleted.  

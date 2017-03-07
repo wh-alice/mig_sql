@@ -16,10 +16,10 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Plan a Map Report (Report Builder and SSRS)
-Good reports present information that leads to actions or insights. To present analytical data such as sales totals or demographics against a geographic background, you can add a map to your [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report. A map can contain multiple layers, where each layer displays map elements that are defined by a specific type of spatial data: points that represent locations, lines that represent routes, or polygons that represent areas. You can associate your analytical data with map elements on each layer.  
+Good reports present information that leads to actions or insights. To present analytical data such as sales totals or demographics against a geographic background, you can add a map to your [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report. A map can contain multiple layers, where each layer displays map elements that are defined by a specific type of spatial data: points that represent locations, lines that represent routes, or polygons that represent areas. You can associate your analytical data with map elements on each layer.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ##  <a name="MapPurpose"></a> Specify the Purpose of the Map  
  Good report design provides information that help users take actions to address issues. To create a useful, easily understood map display, decide what questions you want the map to help answer. For example, on a map you can visualize the following types of data to identify market opportunities:  
@@ -54,11 +54,11 @@ Good reports present information that leads to actions or insights. To present a
   
 -   ESRI Shapefiles, including publicly available Shapefiles that you can search for on the Internet.  
   
--   Spatial data from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] spatial data sources.  
+-   Spatial data from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] spatial data sources.  
   
 -   Maps from reports in the Map Gallery.  
   
--   Third-party sites that offer spatial data as ESRI Shapefiles or [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] spatial data.  
+-   Third-party sites that offer spatial data as ESRI Shapefiles or [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] spatial data.  
   
 -   Bing map tiles, which provide a background for the map view. To display tiles in a map, the report server must be configured to support Bing Maps Web Services.  
   
@@ -146,7 +146,7 @@ Good reports present information that leads to actions or insights. To present a
   
 -   When the source of spatial data is located on the your computer, map elements are always embedded in the report definition. This includes spatial data from the Map Gallery or ESRI Shapefiles that have been installed locally.  
   
- To use dynamic spatial data, the spatial data source must be on the report server. When reports are designed in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], spatial data sources can be added to a project and published to the report server together with the report definition. If you are using Report Builder to design reports, you must upload the spatial data to the report server first, and then, in the wizard or in the layer properties, specify that source of spatial data for the map layer.  
+ To use dynamic spatial data, the spatial data source must be on the report server. When reports are designed in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], spatial data sources can be added to a project and published to the report server together with the report definition. If you are using Report Builder to design reports, you must upload the spatial data to the report server first, and then, in the wizard or in the layer properties, specify that source of spatial data for the map layer.  
   
 ## See Also  
  [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   

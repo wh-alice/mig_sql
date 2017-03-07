@@ -24,7 +24,7 @@ When you open multiple query windows, they are displayed as tabbed document wind
     Note how the windows appear as tabbed windows to the right of Object Explorer.  
   
 ## Next Task in Lesson  
-[Show the Object Explorer Details Page](../Topic/Show%20the%20Object%20Explorer%20Details%20Page.md)  
+[Show the Object Explorer Details Page](../../../tools/sql-server-management-studio/tutorials/lesson-1-5-show-the-object-explorer-details-page.md)  
   
   
   

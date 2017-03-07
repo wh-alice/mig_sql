@@ -18,11 +18,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # JSON Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Use the following functions to validate or change JSON text or  to extract simple or complex values.  
   
- For more info about the built-in support for JSON in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md).  
+ For more info about the built-in support for JSON in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md).  
   
 |Function|Description|  
 |--------------|-----------------|  

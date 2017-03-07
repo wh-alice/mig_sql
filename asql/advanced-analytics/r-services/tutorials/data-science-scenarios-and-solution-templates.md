@@ -19,7 +19,7 @@ manager: "jhubbard"
 # Data Science Scenarios and Solution Templates
 Templates are sample solutions that demonstrate best practices and provide building blocks to help you implement a solution fast. Each template is designed to solve a specific problem, and includes sample data, R code (Microsoft R Server) and SQL stored procedures. The tasks in each template extend from data preparation and feature engineering to model training and scoring. The code can be run in an R IDE, with computations done in SQL Server, or by using a SQL client tool such as SQL Server management Studio.  
   
-You can use these templates to learn how [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)] works, and build and deploy your own solution by customizing he template to fit your own scenario.  
+You can use these templates to learn how [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)] works, and build and deploy your own solution by customizing he template to fit your own scenario.  
   
 For download and setup instructions, see [How to Use the Templates](#bkmk_HowTo) at the end of this topic.  
   
@@ -65,7 +65,7 @@ To download the files included in each template, you can use GitHub commands, or
   
 -   **R**: Contains all the R development code you need for the solution. The solution requires the libraries provided by Microsoft R Server, but can be opened and edited in any R IDE. The R code has been optimized so that computations are performed "in-database", by setting the compute context to a SQL Server instance.  
   
--   **SQLR**: Contains multiple .sql files that you can run in a SQL environment such as [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to create the stored procedures that perform related tasks such as data processing, feature engineering, and model deployment.  
+-   **SQLR**: Contains multiple .sql files that you can run in a SQL environment such as [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] to create the stored procedures that perform related tasks such as data processing, feature engineering, and model deployment.  
   
     The folder also contains a PowerShell script that you can run to invoke all scripts and create the end-to-end environment.  
   

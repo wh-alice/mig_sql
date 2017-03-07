@@ -16,22 +16,22 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Master Data Services Add-in for Microsoft Excel
-  With the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../analysis-services/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../analysis-services/includes/ssmdsxls-md.md)], you can load filtered lists of data from MDS into Excel, where you can work with it just as you would any other data. When you are done, you can publish the data back to MDS, where it is centrally stored. Security determines which data you can view and update.  
+  With the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../a9notintoc/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../a9notintoc/includes/ssmdsxls-md.md)], you can load filtered lists of data from MDS into Excel, where you can work with it just as you would any other data. When you are done, you can publish the data back to MDS, where it is centrally stored. Security determines which data you can view and update.  
   
- If you are an administrator, use the [!INCLUDE[ssMDSXLS](../../analysis-services/includes/ssmdsxls-md.md)] to create entities and attributes and to load them with data. This eliminates the need to use any other tools to load data into your models.  
+ If you are an administrator, use the [!INCLUDE[ssMDSXLS](../../a9notintoc/includes/ssmdsxls-md.md)] to create entities and attributes and to load them with data. This eliminates the need to use any other tools to load data into your models.  
   
- In the [!INCLUDE[ssMDSXLS](../../analysis-services/includes/ssmdsxls-md.md)], you can use Data Quality Services (DQS) to match data before loading it into MDS. This helps to prevent duplicate data in MDS.  
+ In the [!INCLUDE[ssMDSXLS](../../a9notintoc/includes/ssmdsxls-md.md)], you can use Data Quality Services (DQS) to match data before loading it into MDS. This helps to prevent duplicate data in MDS.  
 
 ## Downloads 
->*  Download the [!INCLUDE[ssMDSshort](../../analysis-services/includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../analysis-services/includes/ssmdsxls-md.md)] for [!INCLUDE[ssCurrent_md](../../advanced-analytics/r-services/includes/sscurrent-md.md)] SP1 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836866).
->* Download the [!INCLUDE[ssMDSshort](../../analysis-services/includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../analysis-services/includes/ssmdsxls-md.md)] for SQL Server vNext CTP1 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836867).
+>*  Download the [!INCLUDE[ssMDSshort](../../a9notintoc/includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../a9notintoc/includes/ssmdsxls-md.md)] for [!INCLUDE[ssCurrent_md](../../a9notintoc/includes/sscurrent-md.md)] SP1 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836866).
+>* Download the [!INCLUDE[ssMDSshort](../../a9notintoc/includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../a9notintoc/includes/ssmdsxls-md.md)] for SQL Server vNext CTP1 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836867).
 
  
   
 ## Terms  
  When working with the Add-in, you may encounter the following terms. For more information about these concepts, see [Master Data Services Overview &#40;MDS&#41;](../../master-data-services/master-data-services-overview-mds.md).  
   
--   The *MDS repository* is where all master data is stored. It is a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database that is configured to store MDS data. To work with data from the repository, you load data it into Excel; when you’re done working with it, you publish changes back to the repository. Administrators can add new entities and attributes to the repository.  
+-   The *MDS repository* is where all master data is stored. It is a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database that is configured to store MDS data. To work with data from the repository, you load data it into Excel; when you’re done working with it, you publish changes back to the repository. Administrators can add new entities and attributes to the repository.  
   
 -   *MDS-managed data* is data that is stored in the MDS repository and that you load into Excel, where the data is displayed as highlighted rows. You can add data that is not MDS-managed to your worksheet, and it is not affected when you refresh the MDS-managed data.  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Create a connection to a [!INCLUDE[ssMDSshort](../../analysis-services/includes/ssmdsshort-md.md)] repository.|[Connect to an MDS Repository &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|Create a connection to a [!INCLUDE[ssMDSshort](../../a9notintoc/includes/ssmdsshort-md.md)] repository.|[Connect to an MDS Repository &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |Load MDS-managed data into Excel.|[Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
 |Save a shortcut query that you can use open the currently displayed MDS-managed data in the future.|[Save a Shortcut Query File &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
 |Share shortcuts with others.|[Email a Shortcut Query File &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md)|  

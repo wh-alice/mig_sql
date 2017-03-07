@@ -27,27 +27,27 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Backup Overview (SQL Server)
-  This topic introduces the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backup component. Backing up your [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database is essential for protecting your data. This discussion covers backup types, and backup restrictions. The topic also introduces [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backup devices and backup media.  
+  This topic introduces the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] backup component. Backing up your [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database is essential for protecting your data. This discussion covers backup types, and backup restrictions. The topic also introduces [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] backup devices and backup media.  
   
   
 ## Terms
  
  **back up [verb]**  
- Copies the data or log records from a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database or its transaction log to a backup device, such as a disk, to create a data backup or log backup.  
+ Copies the data or log records from a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database or its transaction log to a backup device, such as a disk, to create a data backup or log backup.  
   
 **backup [noun]**  
- A copy of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data that can be used to restore and recover the data after a failure. A backup of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data is created at the level of a database or one or more of its files or filegroups. Table-level backups cannot be created. In addition to data backups, the full recovery model requires creating backups of the transaction log.  
+ A copy of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data that can be used to restore and recover the data after a failure. A backup of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data is created at the level of a database or one or more of its files or filegroups. Table-level backups cannot be created. In addition to data backups, the full recovery model requires creating backups of the transaction log.  
   
 **[recovery model](../../relational-databases/backup-restore/recovery-models-sql-server.md)**  
  A database property that controls transaction log maintenance on a database. Three recovery models exist: simple, full, and bulk-logged. The recovery model of database determines its backup and restore requirements.  
   
  **[restore](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)**  
- A multi-phase process that copies all the data and log pages from a specified [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backup to a specified database, and then rolls forward all the transactions that are logged in the backup by applying logged changes to bring the data forward in time.  
+ A multi-phase process that copies all the data and log pages from a specified [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] backup to a specified database, and then rolls forward all the transactions that are logged in the backup by applying logged changes to bring the data forward in time.  
   
  ## Types of backups  
   
  **[copy-only backup](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)**  
- A special-use backup that is independent of the regular sequence of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backups.  
+ A special-use backup that is independent of the regular sequence of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] backups.  
   
 **data backup**   
  A backup of data in a complete database (a database backup), a partial database (a partial backup), or a set of data files or filegroups (a file backup).  
@@ -75,7 +75,7 @@ manager: "jhubbard"
 ## Backup media terms and definitions  
   
  **[backup device](../../relational-databases/backup-restore/backup-devices-sql-server.md)**  
- A disk or tape device to which [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backups are written and from which they can be restored. SQL Server backups can also be written to a Windows Azure Blob storage service, and **URL** format is used to specify the destination and the name of the backup file.. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ A disk or tape device to which [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] backups are written and from which they can be restored. SQL Server backups can also be written to a Windows Azure Blob storage service, and **URL** format is used to specify the destination and the name of the backup file.. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **[backup media](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)**  
  One or more tapes or disk files to which one or more backup have been written.  
@@ -93,7 +93,7 @@ manager: "jhubbard"
  Multiple copies (mirrors) of a media set.  
   
 ##  <a name="BackupCompression"></a> Backup compression  
- [!INCLUDE[ssEnterpriseEd10](../../analysis-services/data-mining/includes/ssenterpriseed10-md.md)] and later versions support compressing backups, and [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] and later versions can restore a compressed backup. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
+ [!INCLUDE[ssEnterpriseEd10](../../analysis-services/data-mining/includes/ssenterpriseed10-md.md)] and later versions support compressing backups, and [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] and later versions can restore a compressed backup. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
 ##  <a name="Restrictions"></a>  Backup operations restrictions 
  Backup can occur while the database is online and being used. However, the following restrictions exist.  
@@ -112,7 +112,7 @@ manager: "jhubbard"
  Typically, a log backup succeeds even if one or more data files are unavailable. However, if any file contains bulk-logged changes made under the bulk-logged recovery model, all the files must be online for the backup to succeed.  
   
 ### Concurrency restrictions   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses an online backup process to allow for a database backup while the database is still being used. During a backup, most operations are possible; for example, INSERT, UPDATE, or DELETE statements are allowed during a backup operation. However, if you try to start a backup operation while a database file is being created or deleted, the backup operation waits until the create or delete operation is finished or the backup times out.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses an online backup process to allow for a database backup while the database is still being used. During a backup, most operations are possible; for example, INSERT, UPDATE, or DELETE statements are allowed during a backup operation. However, if you try to start a backup operation while a database file is being created or deleted, the backup operation waits until the create or delete operation is finished or the backup times out.  
   
  Operations that cannot run during a database backup or transaction log backup include the following:  
   
@@ -150,7 +150,7 @@ manager: "jhubbard"
  **Create a backup**  
   
 > [!NOTE]  
->  For partial or copy-only backups, you must use the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) statement with the PARTIAL or COPY_ONLY option, respectively.  
+>  For partial or copy-only backups, you must use the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) statement with the PARTIAL or COPY_ONLY option, respectively.  
   
 -   [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
@@ -164,7 +164,7 @@ manager: "jhubbard"
   
 -   [Enable or Disable Backup Checksums During Backup or Restore &#40;SQL Server&#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
--   [Specify Whether a Backup or Restore Operation Continues or Stops After Encountering an Error &#40;SQL Server&#41;](../Topic/Specify%20Whether%20a%20Backup%20or%20Restore%20Operation%20Continues%20or%20Stops%20After%20Encountering%20an%20Error%20\(SQL%20Server\).md)  
+-   [Specify Whether a Backup or Restore Operation Continues or Stops After Encountering an Error &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
 -   [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   

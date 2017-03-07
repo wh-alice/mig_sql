@@ -17,13 +17,13 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Objects Created on the Oracle Publisher
-  [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] replication installs database objects on the Oracle Publisher to enable change tracking and forwarding ([!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not install any binary files on the Oracle Publisher). The following table lists the objects that are created at the Oracle Publisher when it is identified as a Publisher at the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Distributor. The object descriptions are provided for informational purposes only. These objects should not be modified.  
+  [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] replication installs database objects on the Oracle Publisher to enable change tracking and forwarding ([!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] does not install any binary files on the Oracle Publisher). The following table lists the objects that are created at the Oracle Publisher when it is identified as a Publisher at the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Distributor. The object descriptions are provided for informational purposes only. These objects should not be modified.  
   
 |Object Name|Object Type|Description|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|Table|Change tracking table used to store information as changes are made to the published table. A change tracking table is created for each published table.|  
 |HREPL_Changes|Table|Table used internally by the Xactset Job to determine the number of changes waiting to be assigned to a transaction set. For more information about this job, see [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  
-|HREPL_Distributor|Table|Distributor status table used to maintain information about the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Distributor associated with the Oracle Publisher.|  
+|HREPL_Distributor|Table|Distributor status table used to maintain information about the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Distributor associated with the Oracle Publisher.|  
 |HREPL_Event|Table|Event table used for synchronizing snapshots and row count requests.|  
 |HREPL_Mutex|Table|Table used to ensure that the Oracle package procedure PopulatePollTable is not executed concurrently by both the Log Reader Agent and the database job.|  
 |HREPL_Poll|Table|Table used to identify log table entries associated with sets of changes to published tables.|  

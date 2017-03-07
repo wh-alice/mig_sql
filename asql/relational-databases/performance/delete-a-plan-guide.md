@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Delete a Plan Guide
-  You can delete (drop) a plan guide in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. Using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], you can also delete all of the plan guides in a database.  
+  You can delete (drop) a plan guide in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. Using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], you can also delete all of the plan guides in a database.  
   
  **In This Topic**  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 #### To delete a single plan guide  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -95,7 +95,7 @@ manager: "jhubbard"
   
 #### To delete all plan guides in a database  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -108,6 +108,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md).  
+ For more information, see [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-control-plan-guide-transact-sql.md).  
   
   

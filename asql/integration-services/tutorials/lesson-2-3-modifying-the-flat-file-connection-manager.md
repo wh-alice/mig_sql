@@ -40,7 +40,7 @@ By modifying the connection manager to use the value of the user-defined variabl
 8.  Click **OK** again to close the **Property Expressions Editor** dialog box.  
   
 ## Next Lesson Task  
-[Step 4: Testing the Lesson 2 Tutorial Package](../Topic/Step%204:%20Testing%20the%20Lesson%202%20Tutorial%20Package.md)  
+[Step 4: Testing the Lesson 2 Tutorial Package](../../integration-services/tutorials/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   
   

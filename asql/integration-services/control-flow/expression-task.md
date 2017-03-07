@@ -27,7 +27,7 @@ manager: "jhubbard"
  For examples of using expressions to set properties, see the **Sample Property Expressions** section in [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
 ## Related Tasks  
- [Use an Expression in a Data Flow Component](../Topic/Use%20an%20Expression%20in%20a%20Data%20Flow%20Component.md)  
+ [Use an Expression in a Data Flow Component](../../a9retired/use-an-expression-in-a-data-flow-component.md)  
   
 ## Related Content  
  Technical article, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=746575), on pragmaticworks.com  

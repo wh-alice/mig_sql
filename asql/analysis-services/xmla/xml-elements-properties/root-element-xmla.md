@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # root Element (XMLA)
-  Contains a result returned by the [Discover](../Topic/Discover%20Method%20\(XMLA\).md) method or an XML for Analysis (XMLA) command executed using the [Execute](../Topic/Execute%20Method%20\(XMLA\).md) method.  
+  Contains a result returned by the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method or an XML for Analysis (XMLA) command executed using the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.  
   
 ## Syntax  
   
@@ -56,8 +56,8 @@ manager: "erikre"
   
 |Ancestor|Data type|  
 |--------------|---------------|  
-|[DiscoverResponse](../Topic/DiscoverResponse%20Element%20\(XMLA\).md)|[Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md), [olapxmla_EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|  
-|[ExecuteResponse](../Topic/ExecuteResponse%20Element%20\(XMLA\).md)|[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md), [Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md), [olapxmla_EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|  
+|[DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)|[Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md), [olapxmla_EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|  
+|[ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md)|[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md), [Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md), [olapxmla_EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|  
   
 ## Element Relationships  
   
@@ -67,9 +67,9 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- The **root** element contains the information returned in either the [DiscoverResponse](../Topic/DiscoverResponse%20Element%20\(XMLA\).md) element returned by a single **Discover** method call, or in the [ExecuteResponse](../Topic/ExecuteResponse%20Element%20\(XMLA\).md) element returned by a single XMLA command executed by a single **Execute** method call.  
+ The **root** element contains the information returned in either the [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) element returned by a single **Discover** method call, or in the [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) element returned by a single XMLA command executed by a single **Execute** method call.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -27,7 +27,7 @@ manager: "jhubbard"
  The name used to locate the database on a network. Replication produces a connection string for the database using the data source name, combined with the login, password, and any connection options you specify in the **Distribution Agent Security** page in this wizard.  
   
 > [!NOTE]  
->  The data source name and connection string are not validated by [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] until the Distribution Agent attempts to initialize the subscription.  
+>  The data source name and connection string are not validated by [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] until the Distribution Agent attempts to initialize the subscription.  
   
 ## See Also  
  [Create a Subscription for a Non-SQL Server Subscriber](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   

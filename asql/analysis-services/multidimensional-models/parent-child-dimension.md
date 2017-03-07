@@ -32,7 +32,7 @@ manager: "erikre"
  Because of parent-child relationships between levels in a parent-child hierarchy, some nonleaf members can also have data derived from underlying data sources, in addition to data aggregated from child members.  
   
 ## Dimension Schema  
- The dimension schema of a parent-child hierarchy depends on a self-referencing relationship present on the dimension main table. For example, the following diagram illustrates the **DimOrganization** dimension main table in the [!INCLUDE[ssSampleDBDWobject](../../analysis-services/data-mining/includes/sssampledbdwobject-md.md)] sample database.  
+ The dimension schema of a parent-child hierarchy depends on a self-referencing relationship present on the dimension main table. For example, the following diagram illustrates the **DimOrganization** dimension main table in the [!INCLUDE[ssSampleDBDWobject](../../a9notintoc/includes/sssampledbdwobject-md.md)] sample database.  
   
  ![Self-referencing join in DimOrganization table](../../analysis-services/multidimensional-models/media/dimorganization.gif "Self-referencing join in DimOrganization table")  
   
@@ -48,10 +48,10 @@ manager: "erikre"
 ## Data Members  
  Typically, leaf members in a dimension contain data derived directly from underlying data sources, whereas nonleaf members contain data derived from aggregations performed on child members.  
   
- However, parent-child hierarchies might have some nonleaf members whose data is derived from underlying data sources, in addition to data aggregated from child members. For these nonleaf members in a parent-child hierarchy, special system-generated child members can be created that contain the underlying fact table data. Referred to as *data members*, these special child members contain a value that is directly associated with a nonleaf member and is independent of the summary value calculated from the descendants of the nonleaf member. For more information about data members, see [Attributes in Parent-Child Hierarchies](../Topic/Attributes%20in%20Parent-Child%20Hierarchies.md).  
+ However, parent-child hierarchies might have some nonleaf members whose data is derived from underlying data sources, in addition to data aggregated from child members. For these nonleaf members in a parent-child hierarchy, special system-generated child members can be created that contain the underlying fact table data. Referred to as *data members*, these special child members contain a value that is directly associated with a nonleaf member and is independent of the summary value calculated from the descendants of the nonleaf member. For more information about data members, see [Attributes in Parent-Child Hierarchies](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
   
 ## See Also  
- [Attributes in Parent-Child Hierarchies](../Topic/Attributes%20in%20Parent-Child%20Hierarchies.md)   
+ [Attributes in Parent-Child Hierarchies](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)   
  [Database Dimension Properties](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
   
   

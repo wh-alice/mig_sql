@@ -21,9 +21,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Attribute Properties - View Attributes in Dimension Designer
-  Attributes are created on dimension objects. You can view and configure attributes by using Dimension Designer in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)]. The **Attributes** pane of the **Dimension Structure** tab of Dimension Designer lists the attributes that are in a dimension. Use this pane to add, remove, or configure attributes. You can also select attributes to use as a level in a new hierarchy or to add as a level in an existing hierarchy.  
+  Attributes are created on dimension objects. You can view and configure attributes by using Dimension Designer in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)]. The **Attributes** pane of the **Dimension Structure** tab of Dimension Designer lists the attributes that are in a dimension. Use this pane to add, remove, or configure attributes. You can also select attributes to use as a level in a new hierarchy or to add as a level in an existing hierarchy.  
   
- To view the attributes in a dimension, open Dimension Designer for the dimension. The **Attributes** pane of the **Dimension Structure**  tab of the designer shows the attributes that are in the dimension. You can switch between a list, tree, or grid view by pointing to **Show Attributes in** on the **Dimension** menu of [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] and then clicking one of the following commands:  
+ To view the attributes in a dimension, open Dimension Designer for the dimension. The **Attributes** pane of the **Dimension Structure**  tab of the designer shows the attributes that are in the dimension. You can switch between a list, tree, or grid view by pointing to **Show Attributes in** on the **Dimension** menu of [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] and then clicking one of the following commands:  
   
 1.  Show Attributes in a **List**. Displays the attributes in list format. Right-click an attribute to delete it from the list, to rename the attribute, or to change the usage of the attribute. Use this view for building hierarchies. Attribute information and member properties are not visible.  
   
@@ -51,7 +51,7 @@ manager: "erikre"
   
      Use this view for creating and configuring attributes.  
   
- In [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], the icons shown in the following table mark attributes according to their usage.  
+ In [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], the icons shown in the following table mark attributes according to their usage.  
   
 |Icon|Attribute Usage|  
 |----------|---------------------|  

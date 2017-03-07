@@ -21,7 +21,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Partition Processing Destination
-  The Partition Processing destination loads and processes an [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] partition. For more information about partitions, see [Partitions &#40;Analysis Services - Multidimensional Data&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
+  The Partition Processing destination loads and processes an [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] partition. For more information about partitions, see [Partitions &#40;Analysis Services - Multidimensional Data&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
   
  The Partition Processing destination includes the following features:  
   
@@ -31,17 +31,17 @@ manager: "jhubbard"
   
 -   Mapping of input columns to partition columns.  
   
- For more information about processing [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] objects, see [Processing Options and Settings &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
+ For more information about processing [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] objects, see [Processing Options and Settings &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
 > [!NOTE]  
 >  Tasks described here do not apply to Analysis Services tabular models.  You cannot map input columns to partition columns for tabular models. You can instead use the Analysis Services Execute DDL task [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) to process the partition.  
   
 ## Configuration of the Partition Processing Destination  
- The Partition Processing destination uses an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] connection manager to connect to the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] project or the instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] that contains the cubes and partitions the destination processes. For more information, see [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
+ The Partition Processing destination uses an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] connection manager to connect to the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] project or the instance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] that contains the cubes and partitions the destination processes. For more information, see [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
  This destination has one input. It does not support an error output.  
   
- You can set properties through [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the Partition Processing **Destination Editor** dialog box, click one of the following topics:  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](../Topic/Common%20Properties.md)  
+-   [Common Properties](../../a9retired/common-properties.md)  
   
 -   [Partition Processing Destination Custom Properties](../../integration-services/data-flow/partition-processing-destination-custom-properties.md)  
   

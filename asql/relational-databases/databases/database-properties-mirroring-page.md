@@ -23,7 +23,7 @@ manager: "jhubbard"
   
  **Configure database mirroring by using SQL Server Management Studio**  
   
--   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../Topic/Establish%20a%20Database%20Mirroring%20Session%20Using%20Windows%20Authentication%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
 ## Options  
  **Configure Security**  
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 -   *port* is the port assigned to the database mirroring endpoint of the server instance.  
   
-     To participate in database mirroring, a server requires a database mirroring endpoint. When you use the Configure Database Mirroring Security Wizard to establish the first mirroring session for a server instance, the wizard automatically creates the endpoint and configures it to use Windows Authentication. For information about how to use the wizard with certificate-based authentication, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../Topic/Establish%20a%20Database%20Mirroring%20Session%20Using%20Windows%20Authentication%20\(SQL%20Server%20Management%20Studio\).md).  
+     To participate in database mirroring, a server requires a database mirroring endpoint. When you use the Configure Database Mirroring Security Wizard to establish the first mirroring session for a server instance, the wizard automatically creates the endpoint and configures it to use Windows Authentication. For information about how to use the wizard with certificate-based authentication, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
     >**IMPORTANT!!**  Each server instance requires one and only one database mirroring endpoint, regardless of the number of mirroring session to be supported.  
   
@@ -97,7 +97,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 > **NOTE:** If the mirroring session is running in high-performance mode, manual failover is not supported. To fail over manually, you must first change the operating mode to **High safety without automatic failover (synchronous)**. After failover completes, you can change the mode back to **High performance (asynchronous)** on the new principal server instance.  
   
- A prompt asks for confirmation. If you click **Yes**, failover is attempted. The principal server begins by trying to connect to the mirror server by using Windows Authentication. If Windows Authentication does not work, the principal server displays the **Connect to Server** dialog box. If the mirror server uses [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication, select **SQL Server Authentication** in the **Authentication** box. In the **Login** text box, specify the login account to connect with on the mirror server, and in the **Password** text box, specify the password for that account.  
+ A prompt asks for confirmation. If you click **Yes**, failover is attempted. The principal server begins by trying to connect to the mirror server by using Windows Authentication. If Windows Authentication does not work, the principal server displays the **Connect to Server** dialog box. If the mirror server uses [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication, select **SQL Server Authentication** in the **Authentication** box. In the **Login** text box, specify the login account to connect with on the mirror server, and in the **Password** text box, specify the password for that account.  
   
  If failover succeeds, the **Database Properties** dialog box closes. The principal and mirror server roles are switched: the former mirror database becomes the principal database, and vice versa. Note that the **Database Properties** dialog box becomes unavailable on the old principal database immediately because it has become the mirror database; this dialog box will become available on the new principal database after failover.  
   
@@ -159,7 +159,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 -   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
--   [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
+-   [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
  For more information, see [Monitoring Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md).  
   
@@ -167,12 +167,12 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 -   [Specify a Server Network Address &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../Topic/Establish%20a%20Database%20Mirroring%20Session%20Using%20Windows%20Authentication%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
 -   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
 ## See Also  
- [Transport Security for Database Mirroring and Always On Availability Groups &#40;SQL Server&#41;](../Topic/Transport%20Security%20for%20Database%20Mirroring%20and%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md)   
+ [Transport Security for Database Mirroring and Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Monitoring Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   

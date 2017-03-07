@@ -75,6 +75,6 @@ New-Volume –StoragePool (Get-StoragePool –FriendlyName NVDIMM_Pool) –Frien
  [Windows Storage Spaces in Windows 10](http://windows.microsoft.com/en-us/windows-10/storage-spaces-windows-10)   
  [Windows Storage Spaces in Windows 2012 R2](https://technet.microsoft.com/en-us/library/hh831739.aspx)   
  [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [View or Change the Default Locations for Data and Log Files &#40;SQL Server Management Studio&#41;](../Topic/View%20or%20Change%20the%20Default%20Locations%20for%20Data%20and%20Log%20Files%20\(SQL%20Server%20Management%20Studio\).md)  
+ [View or Change the Default Locations for Data and Log Files &#40;SQL Server Management Studio&#41;](../../database-engine/configure/windows/view-or-change-the-default-locations-for-data-and-log-files.md)  
   
   

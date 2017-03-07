@@ -26,7 +26,7 @@ manager: "jhubbard"
 
   Returns a string that is the result of concatenating two or more string values. (To add a separating value during concatenation, see [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md).) 
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -59,7 +59,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
   
  If none of the input arguments is of a supported large object (LOB) type, then the return type is truncated to 8000 in length, regardless of the return type. This truncation preserves space and supports efficiency in plan generation.  
   
- The CONCAT function can be executed remotely on a linked server which is version [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] and above. For older linked servers, the CONCAT operation will be performed locally after the non-concatenated values are returned from the linked server.  
+ The CONCAT function can be executed remotely on a linked server which is version [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] and above. For older linked servers, the CONCAT operation will be performed locally after the non-concatenated values are returned from the linked server.  
   
 ## Examples  
   
@@ -102,7 +102,7 @@ NameLastname
 (1 row(s) affected)  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### C. Using CONCAT  
   

@@ -19,9 +19,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Rename Indexes
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  This topic describes how to rename an index in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. Renaming an index replaces the current index name with the new name that you provide. The specified name must be unique within the table or view. For example, two tables can have an index named **XPK_1**, but the same table cannot have two indexes named **XPK_1**. You cannot create an index with the same name as an existing disabled index. Renaming an index does not cause the index to be rebuilt.  
+  This topic describes how to rename an index in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. Renaming an index replaces the current index name with the new name that you provide. The specified name must be unique within the table or view. For example, two tables can have an index named **XPK_1**, but the same table cannot have two indexes named **XPK_1**. You cannot create an index with the same name as an existing disabled index. Renaming an index does not cause the index to be rebuilt.  
   
  **In This Topic**  
   
@@ -85,7 +85,7 @@ manager: "jhubbard"
   
 #### To rename an index  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -100,6 +100,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md).  
+ For more information, see  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-rename-transact-sql.md).  
   
   

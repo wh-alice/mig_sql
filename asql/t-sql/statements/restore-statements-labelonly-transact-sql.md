@@ -25,14 +25,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # RESTORE Statements - LABELONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns a result set containing information about the backup media identified by the given backup device.  
   
 > [!NOTE]  
->  For the descriptions of the arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+>  For the descriptions of the arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -68,7 +68,7 @@ FROM <backup_device>
 ```  
   
 ## Arguments  
- For descriptions of the RESTORE LABELONLY arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+ For descriptions of the RESTORE LABELONLY arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 ## Result Sets  
  The result set from RESTORE LABELONLY consists of a single row with this information.  
@@ -81,7 +81,7 @@ FROM <backup_device>
 |**FamilySequenceNumber**|**int**|Sequence number of this family.|  
 |**MediaFamilyId**|**uniqueidentifier**|Unique identification number for the media family.|  
 |**MediaSequenceNumber**|**int**|Sequence number of this media in the media family.|  
-|**MediaLabelPresent**|**tinyint**|Whether the media description contains:<br /><br /> **1** = [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Tape Format media label<br /><br /> **0** = Media description|  
+|**MediaLabelPresent**|**tinyint**|Whether the media description contains:<br /><br /> **1** = [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Tape Format media label<br /><br /> **0** = Media description|  
 |**MediaDescription**|**nvarchar(255)**|Media description, in free-form text, or the Tape Format media label.|  
 |**SoftwareName**|**nvarchar(128)**|Name of the backup software that wrote the label.|  
 |**SoftwareVendorId**|**int**|Unique vendor identification number of the software vendor that wrote the backup.|  
@@ -96,20 +96,20 @@ FROM <backup_device>
  Executing RESTORE LABELONLY is a quick way to find out what the backup media contains. Because RESTORE LABELONLY reads only the media header, this statement finishes quickly even when using high-capacity tape devices.  
   
 ## Security  
- A backup operation may optionally specify passwords for a media set. When a password has been defined on a media set, you must specify the correct password in the RESTORE statement. The password prevents unauthorized restore operations and unauthorized appends of backup sets to media using [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] tools. However, a password does not prevent overwrite of media using the BACKUP statement's FORMAT option.  
+ A backup operation may optionally specify passwords for a media set. When a password has been defined on a media set, you must specify the correct password in the RESTORE statement. The password prevents unauthorized restore operations and unauthorized appends of backup sets to media using [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] tools. However, a password does not prevent overwrite of media using the BACKUP statement's FORMAT option.  
   
 > [!IMPORTANT]  
->  The protection provided by this password is weak. It is intended to prevent an incorrect restore using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] tools by authorized or unauthorized users. It does not prevent the reading of the backup data by other means or the replacement of the password. [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)]The best practice for protecting backups is to store backup tapes in a secure location or back up to disk files that are protected by adequate access control lists (ACLs). The ACLs should be set on the directory root under which backups are created.  
+>  The protection provided by this password is weak. It is intended to prevent an incorrect restore using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] tools by authorized or unauthorized users. It does not prevent the reading of the backup data by other means or the replacement of the password. [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)]The best practice for protecting backups is to store backup tapes in a secure location or back up to disk files that are protected by adequate access control lists (ACLs). The ACLs should be set on the directory root under which backups are created.  
   
 ### Permissions  
- In [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] and later versions, obtaining information about a backup set or backup device requires CREATE DATABASE permission. For more information, see [GRANT Database Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Database%20Permissions%20\(Transact-SQL\).md).  
+ In [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] and later versions, obtaining information about a backup set or backup device requires CREATE DATABASE permission. For more information, see [GRANT Database Permissions &#40;Transact-SQL&#41;](../Topic/GRANT%20Database%20Permissions%20\(Transact-SQL\).md).  
   
 ## See Also  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20REWINDONLY%20\(Transact-SQL\).md)   
- [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
+ [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Backup History and Header Information &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

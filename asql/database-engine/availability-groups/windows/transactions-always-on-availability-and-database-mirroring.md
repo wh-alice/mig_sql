@@ -21,7 +21,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Transactions - Always On Availability and Database Mirroring
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 This topic describes cross-database and distributed transactions support for Always On Availability Groups and database mirroring.  
   

@@ -23,7 +23,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # ConfigurationSetting Property - ConnectionPoolSize
-  The connection pool size used by the report server to communicate with the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance that hosts the report server database. Read-only.  
+  The connection pool size used by the report server to communicate with the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance that hosts the report server database. Read-only.  
   
 ## Syntax  
   

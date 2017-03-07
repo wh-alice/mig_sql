@@ -15,8 +15,8 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Implementing an Outer Join
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  LEFT and RIGHT OUTER JOIN is supported in natively compiled T-SQL modules starting [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)].  
+  LEFT and RIGHT OUTER JOIN is supported in natively compiled T-SQL modules starting [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)].  
   
   

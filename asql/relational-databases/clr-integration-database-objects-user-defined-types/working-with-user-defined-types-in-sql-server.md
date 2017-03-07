@@ -21,14 +21,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Working with User-Defined Types in SQL Server
-  You can access user-defined type (UDT) functionality in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] language by using regular query syntax. UDTs can be used in the definition of database objects, as variables in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] batches, in functions and stored procedures, and as arguments in functions and stored procedures.  
+  You can access user-defined type (UDT) functionality in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] from the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] language by using regular query syntax. UDTs can be used in the definition of database objects, as variables in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] batches, in functions and stored procedures, and as arguments in functions and stored procedures.  
   
 ## In This Section  
- [Defining UDT Tables and Columns](../Topic/Defining%20UDT%20Tables%20and%20Columns.md)  
- Describes how to use [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] to create a UDT column in a table.  
+ [Defining UDT Tables and Columns](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md)  
+ Describes how to use [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] to create a UDT column in a table.  
   
- [Manipulating UDT Data](../Topic/Manipulating%20UDT%20Data.md)  
- Describes how to use [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] to work with UDT data in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ [Manipulating UDT Data](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md)  
+ Describes how to use [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] to work with UDT data in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## See Also  
  [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  

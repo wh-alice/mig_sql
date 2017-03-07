@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Replay a Trace File (SQL Server Profiler)
-  Replay is the ability to open a saved trace and replay it again. [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] features a multithreaded playback engine that can simulate user connections and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication. Replay is useful to troubleshoot an application or process problem. When you identify the problem and implement corrections, run the trace that found the potential problem against the corrected application or process. Then, replay the original trace and compare results.  
+  Replay is the ability to open a saved trace and replay it again. [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] features a multithreaded playback engine that can simulate user connections and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication. Replay is useful to troubleshoot an application or process problem. When you identify the problem and implement corrections, run the trace that found the potential problem against the corrected application or process. Then, replay the original trace and compare results.  
   
  In addition to any other event classes you want to monitor, specific event classes must be captured to enable replay. These events are captured by default if you use the **TSQL_Replay** trace template. For more information, see [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md).  
   

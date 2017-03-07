@@ -53,11 +53,11 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful; an error code indicates the call was not successful.  
   
 ## Remarks  
- *UrlString* does not include the Virtual Directory name – the [SetVirtualDirectory Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../Topic/SetVirtualDirectory%20Method%20\(WMI%20MSReportServer_ConfigurationSetting\).md) method is provided for that purpose.  
+ *UrlString* does not include the Virtual Directory name – the [SetVirtualDirectory Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) method is provided for that purpose.  
   
- Before calling the [ReserveURL](../Topic/ReserveURL%20Method%20\(WMI%20MSReportServer_ConfigurationSetting\).md) method, you must supply a value for the VirtualDirectory configuration property for the *Application* parameter. Use the [SetVirtualDirectory Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../Topic/SetVirtualDirectory%20Method%20\(WMI%20MSReportServer_ConfigurationSetting\).md) method to set the VirtualDirectory property.  
+ Before calling the [ReserveURL](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-reserveurl.md) method, you must supply a value for the VirtualDirectory configuration property for the *Application* parameter. Use the [SetVirtualDirectory Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) method to set the VirtualDirectory property.  
   
- If an SSL Certificate was provisioned by [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] and no other URLs need it, it is removed.  
+ If an SSL Certificate was provisioned by [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] and no other URLs need it, it is removed.  
   
  This method causes all non-configuration app domains to hard recycle and stop during this operation; app domains are restarted after this operation complete.  
   

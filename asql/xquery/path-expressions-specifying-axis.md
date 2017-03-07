@@ -28,19 +28,19 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Path Expressions - Specifying Axis
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   An axis step in a path expression includes the following components:  
   
 -   An axis  
   
--   A [node test](../Topic/Specifying%20Node%20Test%20in%20a%20Path%20Expression%20Step.md)  
+-   A [node test](../xquery/path-expressions-specifying-node-test.md)  
   
--   [Zero or more step qualifiers (optional)](../Topic/Specifying%20Predicates%20in%20a%20Path%20Expression%20Step.md)  
+-   [Zero or more step qualifiers (optional)](../xquery/path-expressions-specifying-predicates.md)  
   
  For more information, see [Path Expressions &#40;XQuery&#41;](../xquery/path-expressions-xquery.md).  
   
- The XQuery implementation in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports the following axis steps,  
+ The XQuery implementation in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] supports the following axis steps,  
   
 |Axis|Description|  
 |----------|-----------------|  
@@ -73,7 +73,7 @@ WHERE ProductModelID=19
   
 -   The `query()` method of the **xml** data type specifies the path expression.  
   
--   Both steps in the path expression specify a `child` axis and the node names, `ProductDescription` and `Features`, as node tests. For information about node tests, see [Specifying Node Test in a Path Expression Step](../Topic/Specifying%20Node%20Test%20in%20a%20Path%20Expression%20Step.md).  
+-   Both steps in the path expression specify a `child` axis and the node names, `ProductDescription` and `Features`, as node tests. For information about node tests, see [Specifying Node Test in a Path Expression Step](../xquery/path-expressions-specifying-node-test.md).  
   
 ### B. Specifying descendant and descendant-or-self axes  
  The following example uses descendant and descendant-or-self axes. The query in this example is specified against an **xml** type variable. The XML instance is simplified in order to easily illustrate the difference in the generated results.  
@@ -109,7 +109,7 @@ select @y
   
  `/child::a/child::b/descendant::*`, you are asking for all descendants of the <`b`> element node.  
   
- The asterisk (*) in the node test represents the node name as a node test. Therefore, the primary node type of the descendant axis, the element node, determines the types of nodes returned. That is, the expression returns all the element nodes.. Text nodes are not returned. For more information about the primary node type and its relationship with the node test, see [Specifying Node Test in a Path Expression Step](../Topic/Specifying%20Node%20Test%20in%20a%20Path%20Expression%20Step.md) topic.  
+ The asterisk (*) in the node test represents the node name as a node test. Therefore, the primary node type of the descendant axis, the element node, determines the types of nodes returned. That is, the expression returns all the element nodes.. Text nodes are not returned. For more information about the primary node type and its relationship with the node test, see [Specifying Node Test in a Path Expression Step](../xquery/path-expressions-specifying-node-test.md) topic.  
   
  The element nodes <`c`> and <`d`> are returned, as shown in the following result:  
   

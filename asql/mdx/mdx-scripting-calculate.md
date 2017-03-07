@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Scripting - CALCULATE
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Populates each cell in a cube with an aggregate value.  
   
@@ -36,9 +36,9 @@ CALCULATE
  None  
   
 ## Remarks  
- The CALCULATE statement is automatically included as the first statement in a cube's MDX script when you create a cube by using [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)]. The CALCULATE statement tells each cell in the cube to aggregate from lower granularity cells. After a cell is aggregated, if you subsequently populate lower granularity cells by using expressions, it impacts the aggregated value of higher granularity cells. You almost always want this aggregation to happen, but you can remove it or cause other statements to execute before this statement.  
+ The CALCULATE statement is automatically included as the first statement in a cube's MDX script when you create a cube by using [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)]. The CALCULATE statement tells each cell in the cube to aggregate from lower granularity cells. After a cell is aggregated, if you subsequently populate lower granularity cells by using expressions, it impacts the aggregated value of higher granularity cells. You almost always want this aggregation to happen, but you can remove it or cause other statements to execute before this statement.  
   
- The CALCULATE statement cannot be included in a nested subcube within the MDX script. A nested subcube is defined by using the SCOPE statement. For more information about the SCOPE statement, see [SCOPE Statement &#40;MDX&#41;](../Topic/SCOPE%20Statement%20\(MDX\).md).  
+ The CALCULATE statement cannot be included in a nested subcube within the MDX script. A nested subcube is defined by using the SCOPE statement. For more information about the SCOPE statement, see [SCOPE Statement &#40;MDX&#41;](../mdx/mdx-scripting-scope.md).  
   
 > [!NOTE]  
 >  Calculated members are not aggregated.  

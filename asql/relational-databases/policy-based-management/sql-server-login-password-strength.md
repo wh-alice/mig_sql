@@ -17,14 +17,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Login Password Strength
-  This rule checks whether "Enforce password policy" of each [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login is enabled. If [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication is enabled and if the operating system version is earlier than [!INCLUDE[winxpsvr](../../database-engine/configure/windows/includes/winxpsvr-md.md)], an attacker could repeatedly exploit a known [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login password.  
+  This rule checks whether "Enforce password policy" of each [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login is enabled. If [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication is enabled and if the operating system version is earlier than [!INCLUDE[winxpsvr](../../database-engine/configure/windows/includes/winxpsvr-md.md)], an attacker could repeatedly exploit a known [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login password.  
   
 ## Best Practices Recommendations  
  We recommend that you upgrade the operating system to [!INCLUDE[winxpsvr](../../database-engine/configure/windows/includes/winxpsvr-md.md)].  
   
- If [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication is not required in your environment, use Windows Authentication.  
+ If [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication is not required in your environment, use Windows Authentication.  
   
- Enable "Enforce password policy" for all the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] logins. Use [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) to configure the password policy for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login.  
+ Enable "Enforce password policy" for all the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] logins. Use [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) to configure the password policy for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login.  
   
 ## For More Information  
  [Password Policy](../../relational-databases/security/password-policy.md)  

@@ -23,7 +23,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ALTER EXTERNAL DATA SOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Modifies an external data source used to create an external table. The external data source can be Hadoop or Azure blob storage (WASB).  
   

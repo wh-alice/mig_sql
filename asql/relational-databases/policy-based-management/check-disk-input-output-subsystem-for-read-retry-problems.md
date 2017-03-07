@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Check Disk Input-Output Subsystem for Read Retry Problems
-  This rule checks the event log for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error message 825. This message indicates that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] was unable to read data from the disk on the first try. This message indicates a major problem with the disk I/O subsystem. This message does not currently indicate a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] problem. However, the disk problem could cause data loss or database corruption if it is not resolved.  
+  This rule checks the event log for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error message 825. This message indicates that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] was unable to read data from the disk on the first try. This message indicates a major problem with the disk I/O subsystem. This message does not currently indicate a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] problem. However, the disk problem could cause data loss or database corruption if it is not resolved.  
   
 ## Best Practices Recommendations  
  The following actions might help you discover and resolve the underlying hardware problem:  
@@ -31,7 +31,7 @@ manager: "jhubbard"
 -   Contact the disk manufacturer for the latest driver updates.  
   
 ## For More Information  
- [MSSQLSERVER_825](../Topic/MSSQLSERVER_825.md)  
+ [MSSQLSERVER_825](../../a9notintoc/mssqlserver-825.md)  
   
  [SQL Server I/O Basics, Chapter 2](http://go.microsoft.com/fwlink/?linkid=69370)  
   

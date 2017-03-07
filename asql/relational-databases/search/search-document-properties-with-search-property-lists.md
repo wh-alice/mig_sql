@@ -83,9 +83,9 @@ manager: "jhubbard"
   
     -   **Create from an existing search property list**  
   
-     For more information, see [New Search Property List](../Topic/New%20Search%20Property%20List.md).  
+     For more information, see [New Search Property List](../../a9retired/new-search-property-list.md).  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ###  <a name="adding"></a> Adding Properties to a Search Property List  
  Property searching requires creating a *search property list* and specifying one or more properties that you want to make searchable. When you add a property to a search property list, the property is registered for that particular list. To add a property to a search property list you need the following values:  
@@ -196,9 +196,9 @@ GO
   
     2.  To add a document property, click in the empty row at the bottom of the list, to the right of the **\***, and enter the values for the new property.  
   
-         For information about these values, see [Search Property List Editor](../Topic/Search%20Property%20List%20Editor.md). For information about how to obtain these values for properties defined by Microsoft, see [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). For information about properties defined by an independent software vendor (ISV), see the documentation of that vendor.  
+         For information about these values, see [Search Property List Editor](../../a9retired/search-property-list-editor.md). For information about how to obtain these values for properties defined by Microsoft, see [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). For information about properties defined by an independent software vendor (ISV), see the documentation of that vendor.  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ###  <a name="deleting"></a> Deleting a Search Property List  
  You cannot drop a property list from a database while the list is associated with any full-text index.  
@@ -217,7 +217,7 @@ GO
   
 4.  Right-click the property list that you want to delete, and click **Delete**.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## See Also  
  [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   

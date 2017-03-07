@@ -32,7 +32,7 @@ The easiest way to copy the deployment bundle to the destination computer is to 
 3.  Locate the public share to which you want to copy the folder on the target computer and click **Paste**.  
   
 ## Next Task in Lesson  
-[Step 2: Running the Package Installation Wizard](../Topic/Step%202:%20Running%20the%20Package%20Installation%20Wizard.md)  
+[Step 2: Running the Package Installation Wizard](../../integration-services/tutorials/lesson-3-2-running-the-package-installation-wizard.md)  
   
   
   

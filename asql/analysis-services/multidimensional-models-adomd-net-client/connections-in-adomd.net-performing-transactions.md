@@ -25,7 +25,7 @@ manager: "erikre"
   In ADOMD.NET, you use the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> object to manage transaction context for a given <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> object. This functionality allows you to run several commands within the same context. Each command will read the same data without the read data changing between each command execution.  
   
 > [!NOTE]  
->  The <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> class is the implementation of the **System.Data.IDbTransaction** interface, part of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] .NET Framework Class Library and implemented by all .NET Framework data providers that support transactions.  
+>  The <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> class is the implementation of the **System.Data.IDbTransaction** interface, part of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] .NET Framework Class Library and implemented by all .NET Framework data providers that support transactions.  
   
  The <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> object only supports read-committed transactions, in which shared locks are held while the data is being read to avoid dirty reads.  
   
@@ -46,7 +46,7 @@ AdomdTransaction objTransaction = objConnection.BeginTransaction();
  After you call the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.BeginTransaction%2A> method to start a transaction, you can complete the transaction by calling the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction.Commit%2A> method of the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> object. If this method is called on an existing, complete transaction, an exception is thrown.  
   
 ## See Also  
- [Establishing Connections in ADOMD.NET](../Topic/Establishing%20Connections%20in%20ADOMD.NET.md)   
+ [Establishing Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd.net.md)   
  [ADOMD.NET Client Programming](../../analysis-services/multidimensional-models-adomd-net-client/adomd.net-client-programming.md)  
   
   

@@ -18,7 +18,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Determining Effective Database Engine Permissions
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
 This topic describes how to determine who has permissions to various objects in the SQL Server Database Engine. SQL Server implements two permission systems for the Database Engine. An older system of fixed roles has preconfigured permissions. Beginning with SQL Server 2005 a more flexible and precise system is available. (The information in this topic applies to SQL Server, beginning with 2005. Some types of permissions are not available in some versions of SQL Server.)
 
@@ -83,7 +83,7 @@ This system is extremely flexible, which means it can be complicated if the peop
 
 The following graphic shows the permissions and their relationships to each other. Some of the higher level permissions (such as `CONTROL SERVER`) are listed many times. In this topic, the poster is far to small to read. Click the image to download the **Database Engine Permissions Poster** in pdf format.  
   
- [![Database Engine Permissions](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+ [![Database Engine Permissions](../../../relational-databases/reference/system-functions/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
 ### Security Classes
 

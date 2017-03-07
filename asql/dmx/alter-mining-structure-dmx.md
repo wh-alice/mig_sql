@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # ALTER MINING STRUCTURE (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a new mining model that is based on an existing mining structure.  When you use the **ALTER MINING STRUCTURE** statement to create a new mining model, the structure must already exist. In contrast, when you use the statement, [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), you create a model and automatically generate its underlying mining structure at the same time.  
   
@@ -66,7 +66,7 @@ USING <algorithm> [(<parameter list>)]
  The name of a data mining algorithm, as defined by the provider.  
   
 > [!NOTE]  
->  A list of the algorithms supported by the current provider can be retrieved by using [DMSCHEMA_MINING_SERVICES Rowset](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). To view the algorithms supported in the current instance of [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)], see [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
+>  A list of the algorithms supported by the current provider can be retrieved by using [DMSCHEMA_MINING_SERVICES Rowset](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). To view the algorithms supported in the current instance of [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)], see [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
   
  *parameter list*  
  Optional. A comma-separated list of provider-defined parameters for the algorithm.  
@@ -77,7 +77,7 @@ USING <algorithm> [(<parameter list>)]
 ## Remarks  
  If the mining structure contains composite keys, the mining model must include all the key columns that are defined in the structure.  
   
- If the model does not require a predictable column, for example, models that are built by using the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Clustering and [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Sequence Clustering algorithms, you do not have to include a column definition in the statement. All the attributes in the resulting model will be treated as inputs.  
+ If the model does not require a predictable column, for example, models that are built by using the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Clustering and [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Sequence Clustering algorithms, you do not have to include a column definition in the statement. All the attributes in the resulting model will be treated as inputs.  
   
  In the **WITH** clause that applies to the case table, you can specify options for both filtering and drillthrough:  
   
@@ -114,7 +114,7 @@ USING <algorithm> [(<parameter list>)]
  You can define a filter expression that is applied to the nested table by affixing a filter criteria expression after the nested table column definition.  
   
 ### Modeling Flags  
- [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] supports the following modeling flags for use in mining model columns:  
+ [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] supports the following modeling flags for use in mining model columns:  
   
 > [!NOTE]  
 >  The NOT_NULL modeling flag applies to the mining structure column. For more information, see [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
@@ -212,8 +212,8 @@ USING Microsoft_Decision Trees
 ```  
   
 ## See Also  
- [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Definition%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Manipulation%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)  
+ [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

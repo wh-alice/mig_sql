@@ -21,9 +21,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Move an Existing Index to a Different Filegroup
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes how to move an existing index from its current filegroup to a different filegroup in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to move an existing index from its current filegroup to a different filegroup in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 -   If a table has a clustered index, moving the clustered index to a new filegroup moves the table to that filegroup.  
   
--   You cannot move indexes created using a UNIQUE or PRIMARY KEY constraint using [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)]. To move these indexes use the [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) statement with the (DROP_EXISTING=ON) option in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+-   You cannot move indexes created using a UNIQUE or PRIMARY KEY constraint using [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)]. To move these indexes use the [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) statement with the (DROP_EXISTING=ON) option in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
 ###  <a name="Security"></a> Security  
   
@@ -94,7 +94,7 @@ manager: "jhubbard"
   
      If you are moving a clustered index, you can use online processing. Online processing allows concurrent user access to the underlying data and to nonclustered indexes during the index operation. For more information, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
-     On multiprocessor computers using [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], you can configure the number of processors used to execute the index statement by specifying a maximum degree of parallelism value. The Parallel indexed operations feature is not available in every edition of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see Features Supported by the Editions of SQL Server 2016. For more information about Parallel indexed operations, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+     On multiprocessor computers using [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], you can configure the number of processors used to execute the index statement by specifying a maximum degree of parallelism value. The Parallel indexed operations feature is not available in every edition of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see Features Supported by the Editions of SQL Server 2016. For more information about Parallel indexed operations, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 8.  Click **OK**.  
   
@@ -144,7 +144,7 @@ manager: "jhubbard"
   
 #### To move an existing index to a different filegroup  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Translation support in Analysis Services
-  In an [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] data models, you can embed multiple translations of a caption or description to provide culture-specific strings based on the LCID. For multidimensional models, translations can be added for the database name, cube objects, and database dimension objects. For tabular models, you can translate table and column captions and descriptions.  
+  In an [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] data models, you can embed multiple translations of a caption or description to provide culture-specific strings based on the LCID. For multidimensional models, translations can be added for the database name, cube objects, and database dimension objects. For tabular models, you can translate table and column captions and descriptions.  
   
  Defining a translation creates the metadata and translated caption inside the model, but to render localized strings in a client application, you must either set the **Language** property on the object, or pass a **Culture** or **Locale Identifier** parameter on the connection string (for example, by setting `LocaleIdentifier=1036` to return French strings).  
   

@@ -24,12 +24,12 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Integrating Reporting Services into Applications
-  [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] is an open and extensible reporting platform designed to provide developers with a comprehensive set of APIs for developing solutions.  
+  [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] is an open and extensible reporting platform designed to provide developers with a comprehensive set of APIs for developing solutions.  
   
- There are three options for integrating [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] into custom applications: the Report Server Web service, also known as the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] SOAP API, the ReportViewer controls for [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../relational-databases/server-management-objects-smo/includes/vsorcas-md.md)], and URL access. Each option provides a different approach for integrating [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] into your applications.  
+ There are three options for integrating [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] into custom applications: the Report Server Web service, also known as the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] SOAP API, the ReportViewer controls for [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../relational-databases/server-management-objects-smo/includes/vsorcas-md.md)], and URL access. Each option provides a different approach for integrating [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] into your applications.  
   
 ## Report Server Web Service  
- The Report Server Web service is the primary interface for developing against [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]. Whether you are developing code to manage your report catalog or developing code to render reports to a supported format, the Web service exposes all the necessary methods to integrate [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] into your applications. An example of one such application is Report Manager, which is included with [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]; it uses the Web service to manage the report server database.  
+ The Report Server Web service is the primary interface for developing against [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]. Whether you are developing code to manage your report catalog or developing code to render reports to a supported format, the Web service exposes all the necessary methods to integrate [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] into your applications. An example of one such application is Report Manager, which is included with [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]; it uses the Web service to manage the report server database.  
   
 ## ReportViewer Controls for Visual Studio  
  The ReportViewer controls included with [!INCLUDE[vsOrcas](../../relational-databases/server-management-objects-smo/includes/vsorcas-md.md)] are used for integrating report viewing into your applications. There are two controls: one for Windows Forms-based applications and one for Web Forms applications. Each control provides the capability for viewing reports that have been deployed to a report server as well as the ability to render reports that exist in an environment where a report server has not been installed.  
@@ -39,16 +39,16 @@ manager: "erikre"
   
 ## In This Section  
  [Integrating Reporting Services Using SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)  
- Describes how to integrate [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report navigation and management into your existing business applications using the Report Server Web service.  
+ Describes how to integrate [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] report navigation and management into your existing business applications using the Report Server Web service.  
   
- [Integrating Reporting Services Using the ReportViewer Controls](../Topic/Integrating%20Reporting%20Services%20Using%20the%20ReportViewer%20Controls.md)  
+ [Integrating Reporting Services Using the ReportViewer Controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
  Describes how to integrate report viewing into your existing applications using the ReportViewer controls.  
   
  [Integrating Reporting Services Using URL Access](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
- Describes how to integrate [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report navigation into your existing business applications using URL access.  
+ Describes how to integrate [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] report navigation into your existing business applications using URL access.  
   
 ## See Also  
- [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md)   
  [Choosing Between URL Access and SOAP](../../reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
  [Technical Reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
  [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)  

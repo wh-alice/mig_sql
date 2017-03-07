@@ -17,7 +17,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Configure Flat File Destination (SQL Server Import and Export Wizard)
-  If you selected a flat file destination, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard shows **Configure Flat File Destination** after you specify that you want to copy tables or after you provide a query. On this page, you specify formatting options for the destination flat file. Optionally, you review the mapping of individual columns and preview sample data.  
+  If you selected a flat file destination, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard shows **Configure Flat File Destination** after you specify that you want to copy tables or after you provide a query. On this page, you specify formatting options for the destination flat file. Optionally, you review the mapping of individual columns and preview sample data.  
   
 ## Screen shot of the Configure Flat File Destination page  
  The following screen shot shows the **Configure Flat File Destination** page of the Wizard.
@@ -77,4 +77,4 @@ Optionally click **Preview** to preview up to 200 rows of sample data in the **P
 After you preview the data, you may want to change the options that you selected on previous pages of the wizard. To make these changes, return to the **Configure Flat File Destination** page, and then click **Back** to return to previous pages where you can change your selections.  
 
 ## What's next?  
- After you specify formatting options for the destination flat file, the next page is **Save and Execute Package**. On this page, you specify whether you want to run the operation immediately. Depending on your configuration, you may also be able to save your settings as a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package to customize it and to reuse it later. For more info, see [Save and Run Package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
+ After you specify formatting options for the destination flat file, the next page is **Save and Execute Package**. On this page, you specify whether you want to run the operation immediately. Depending on your configuration, you may also be able to save your settings as a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package to customize it and to reuse it later. For more info, see [Save and Run Package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  

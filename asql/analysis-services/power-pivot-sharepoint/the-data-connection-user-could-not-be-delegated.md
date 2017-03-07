@@ -15,19 +15,19 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # The data connection user could not be delegated
-  For Excel workbooks that contain [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data, Excel Services returns this error if it cannot connect to a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] server instance in SharePoint.  
+  For Excel workbooks that contain [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data, Excel Services returns this error if it cannot connect to a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] server instance in SharePoint.  
   
 ## Details  
   
 |||  
 |-|-|  
-|Applies to|[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint|  
-|Product Version|[!INCLUDE[ssKilimanjaro](../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)]|  
-|Cause|Connection failed when attempting to use a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data provider.|  
-|Message Text|The data connection uses Windows Authentication and user credentials could not be delegated. The following connections failed to refresh: [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Data|  
+|Applies to|[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint|  
+|Product Version|[!INCLUDE[ssKilimanjaro](../../a9notintoc/includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)]|  
+|Cause|Connection failed when attempting to use a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data provider.|  
+|Message Text|The data connection uses Windows Authentication and user credentials could not be delegated. The following connections failed to refresh: [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Data|  
   
 ## Explanation  
- There are multiple causes for this error message. The common factor behind all of them is that Excel Services cannot get a valid Windows user identity from a claims token in SharePoint. In the case of Excel workbooks that contain [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data, this error occurs when any of the following conditions exist:  
+ There are multiple causes for this error message. The common factor behind all of them is that Excel Services cannot get a valid Windows user identity from a claims token in SharePoint. In the case of Excel workbooks that contain [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data, this error occurs when any of the following conditions exist:  
   
 -   The Claims to Windows Token Service is not running. You can confirm the cause of this error by viewing the SharePoint log file. If the SharePoint logs include the message "The pipe endpoint 'net.pipe://localhost/s4u/022694f3-9fbd-422b-b4b2-312e25dae2a2' could not be found on your local machine", the Claims to Windows Token Service is not running. To start it, use Central Administration and then verify the service is running in the Services console application.  
   

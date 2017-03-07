@@ -28,7 +28,7 @@ manager: "jhubbard"
 
   Encrypts data with an asymmetric key.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -53,7 +53,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 ## Remarks  
  Encryption and decryption with an asymmetric key is very costly compared with encryption and decryption with a symmetric key. We recommend that you not encrypt large datasets, such as user data in tables, using an asymmetric key. Instead, you should encrypt the data using a strong symmetric key and encrypt the symmetric key using an asymmetric key.  
   
- **EncryptByAsymKey** return **NULL** if the input exceeds a certain number of bytes, depending on the algorithm. The limits are: a 512 bit RSA key can encrypt up to 53 bytes, a 1024 bit key can encrypt up to 117 bytes, and a 2048 bit key can encrypt up to 245 bytes. (Note that in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], both certificates and asymmetric keys are wrappers over RSA keys.)  
+ **EncryptByAsymKey** return **NULL** if the input exceeds a certain number of bytes, depending on the algorithm. The limits are: a 512 bit RSA key can encrypt up to 53 bytes, a 1024 bit key can encrypt up to 117 bytes, and a 2048 bit key can encrypt up to 245 bytes. (Note that in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], both certificates and asymmetric keys are wrappers over RSA keys.)  
   
 ## Examples  
  The following example encrypts the text stored in `@cleartext` with the asymmetric key `JanainaAsymKey02`. The encrypted data is inserted into the `ProtectedData04` table.  

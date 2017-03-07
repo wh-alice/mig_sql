@@ -20,7 +20,7 @@ manager: "erikre"
 # Server Properties (Advanced Page) - Reporting Services
   Use this page to set system properties on the report server. There are a number of ways to set system properties. This tool provides a graphical user interface so that you can set properties without having to write code.  
   
- To open this page, start [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], connect to a report server instance, right-click the report server name, and select **Properties**. Click **Advanced** to open this page.  
+ To open this page, start [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], connect to a report server instance, right-click the report server name, and select **Properties**. Click **Advanced** to open this page.  
   
 ## Options  
  **EnableMyReports**  
@@ -45,7 +45,7 @@ manager: "erikre"
  This is a read-only property that indicates the server mode. If this value is False, the report server runs in native mode.  
   
  **SiteName**  
- The name of the report server site displayed in the page title of the web portal. The default value is [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]. This property can be an empty string. The maximum length is 8,000 characters.  
+ The name of the report server site displayed in the page title of the web portal. The default value is [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]. This property can be an empty string. The maximum length is 8,000 characters.  
   
  **StoredParametersLifetime**  
  Specifies the maximum number of days that a stored parameter can be stored. Valid values are **-1**, **+1** through **2,147,483,647**. The default value is **180** days.  
@@ -108,7 +108,7 @@ manager: "erikre"
  [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Reporting Services Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md)   
  [Report Server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Report Server System Properties](../Topic/Report%20Server%20System%20Properties.md)   
+ [Report Server System Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
  [Script Deployment and Administrative Tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
  [Enable and Disable My Reports](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
   

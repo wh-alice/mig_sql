@@ -22,11 +22,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Updatable Subscriptions - For Transactional Replication
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!NOTE]  
->  This feature remains supported in versions of [!INCLUDE[ssNoVersion_md](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from 2012 through 2016. [!INCLUDE[ssNoteDepFutureAvoid](../../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)]  
+>  This feature remains supported in versions of [!INCLUDE[ssNoVersion_md](../../../a9notintoc/includes/ssnoversion-md.md)] from 2012 through 2016. [!INCLUDE[ssNoteDepFutureAvoid](../../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)]  
   
  Transactional replication supports updates at Subscribers through updatable subscriptions and peer-to-peer replication. The following are the two types of updatable subscriptions:  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
  When using updatable subscriptions you can specify that a subscription should use one update mode and then switch to the other if the application requires it. For example, you can specify that a subscription should use immediate updating, but switch to queued updating if a system failure results in the loss of network connectivity.  
   
 > [!NOTE]  
->  Replication does not switch automatically between update modes. You must set the update mode through SQL Server Management Studio or your application must call [sp_setreplfailovermode &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md) to switch between modes.  
+>  Replication does not switch automatically between update modes. You must set the update mode through SQL Server Management Studio or your application must call [sp_setreplfailovermode &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-setreplfailovermode-transact-sql.md) to switch between modes.  
   
  If you switch from immediate updating to queued updating, you cannot switch back to immediate updating until the Subscriber and Publisher are connected and the Queue Reader Agent has applied all pending messages in the queue to the Publisher.  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
   
 -   If the application requires triggers at the Subscriber, the triggers should be defined with the `NOT FOR REPLICATION` option at the Publisher and Subscriber. This ensures that triggers fire only for the original data change, but not when that change is replicated.  
   
-     Ensure that the user-defined trigger does not fire when the replication trigger updates the table. This is accomplished by calling the procedure **sp_check_for_sync_trigger** in the body of the user-defined trigger. For more information, see [sp_check_for_sync_trigger &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql.md).  
+     Ensure that the user-defined trigger does not fire when the replication trigger updates the table. This is accomplished by calling the procedure **sp_check_for_sync_trigger** in the body of the user-defined trigger. For more information, see [sp_check_for_sync_trigger &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-check-for-sync-trigger-transact-sql.md).  
   
 ### Immediate Updating  
   
@@ -122,7 +122,7 @@ manager: "jhubbard"
     -   If conflicts are expected: you should not use foreign key constraints at the Publisher or Subscriber if you use "Subscriber wins" conflict resolution; you should not use foreign key constraints at the Subscriber if you use "Publisher wins" conflict resolution.  
   
 ## See Also  
- [Peer-to-Peer Transactional Replication](../Topic/Peer-to-Peer%20Transactional%20Replication.md)   
+ [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Publication Types for Transactional Replication](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)   
  [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  

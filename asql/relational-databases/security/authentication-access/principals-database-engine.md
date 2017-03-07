@@ -33,13 +33,13 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Principals (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  *Principals* are entities that can request [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] resources. Like other components of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] authorization model, principals can be arranged in a hierarchy. The scope of influence of a principal depends on the scope of the definition of the principal: Windows, server, database; and whether the principal is indivisible or a collection. A Windows Login is an example of an indivisible principal, and a Windows Group is an example of a principal that is a collection. Every principal has a security identifier (SID). This topic applies to all version of SQL Server, but there are some restictions on server-level principals in SQL Database or SQL Data Warehouse. 
+  *Principals* are entities that can request [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] resources. Like other components of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] authorization model, principals can be arranged in a hierarchy. The scope of influence of a principal depends on the scope of the definition of the principal: Windows, server, database; and whether the principal is indivisible or a collection. A Windows Login is an example of an indivisible principal, and a Windows Group is an example of a principal that is a collection. Every principal has a security identifier (SID). This topic applies to all version of SQL Server, but there are some restictions on server-level principals in SQL Database or SQL Data Warehouse. 
   
 ## SQL Server-level principals  
   
--  [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] authentication Login   
+-  [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] authentication Login   
 -  Windows authentication login for a Windows user  
 -  Windows authentication login for a Windows group   
 -  Azure Active Directory authentication login for a AD user
@@ -53,7 +53,7 @@ manager: "jhubbard"
 -   Application Role  
   
 ## sa Login  
- The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] `sa` log in is a server-level principal. By default, it is created when an instance is installed. Beginning in [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)], the default database of sa is master. This is a change of behavior from earlier versions of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The `sa` login is a member of the `sysadmin` fixed database role. The `sa` login has all permissions on the server and cannot be limited. The `sa` login cannot be dropped, but it can be disabled so that no one can use it.
+ The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] `sa` log in is a server-level principal. By default, it is created when an instance is installed. Beginning in [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)], the default database of sa is master. This is a change of behavior from earlier versions of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. The `sa` login is a member of the `sysadmin` fixed database role. The `sa` login has all permissions on the server and cannot be limited. The `sa` login cannot be dropped, but it can be disabled so that no one can use it.
 
 ## dbo User and dbo Schema
 
@@ -67,7 +67,7 @@ Every login belongs to the `public` fixed server role, and every database user b
  Every database includes two entities that appear as users in catalog views: `INFORMATION_SCHEMA` and `sys`. These entities are required for internal use by the Database Engine. They cannot be modified or dropped.  
   
 ## Certificate-based SQL Server Logins  
- Server principals with names enclosed by double hash marks (##) are for internal system use only. The following principals are created from certificates when [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is installed, and should not be deleted.  
+ Server principals with names enclosed by double hash marks (##) are for internal system use only. The following principals are created from certificates when [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is installed, and should not be deleted.  
   
 -   \##MS_SQLResourceSigningCertificate##    
 -   \##MS_SQLReplicationSigningCertificate##    
@@ -84,7 +84,7 @@ Every login belongs to the `public` fixed server role, and every database user b
 ## Related Tasks  
  For information about designing a permissions system, see [Getting Started with Database Engine Permissions](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
- The following topics are included in this section of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Books Online:  
+ The following topics are included in this section of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Books Online:  
   
 -   [Managing Logins, Users, and Schemas How-to Topics](../../../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md)  
   
@@ -96,10 +96,10 @@ Every login belongs to the `public` fixed server role, and every database user b
   
 ## See Also  
  [Securing SQL Server](../../../relational-databases/security/securing-sql-server.md)   
- [sys.database_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.database-principals-transact-sql.md)   
- [sys.server_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.server-principals-transact-sql.md)   
- [sys.sql_logins &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.sql-logins-transact-sql.md)   
- [sys.database_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.database-role-members-transact-sql.md)   
+ [sys.database_principals &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.database-principals-transact-sql.md)   
+ [sys.server_principals &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.server-principals-transact-sql.md)   
+ [sys.sql_logins &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.sql-logins-transact-sql.md)   
+ [sys.database_role_members &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.database-role-members-transact-sql.md)   
  [Server-Level Roles](../../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Database-Level Roles](../../../relational-databases/security/authentication-access/database-level-roles.md)  
   

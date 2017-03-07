@@ -15,20 +15,20 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Open Integration Services Projects in Data Quality Client
-  The DQs Cleansing component in Integration Services enables you to run a cleansing project in batch mode. However, at times you might want to review the cleansing results in an Integration Services package similar to how you can review the cleansing results in the **Manage and View Results** tab of a cleansing activity in a data quality project in DQS. DQS enables you to open Integration Services projects in [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] just like any other data quality project from the **Open project** screen, and have an interactive cleansing experience of the cleansing results in an Integration Services project.  
+  The DQs Cleansing component in Integration Services enables you to run a cleansing project in batch mode. However, at times you might want to review the cleansing results in an Integration Services package similar to how you can review the cleansing results in the **Manage and View Results** tab of a cleansing activity in a data quality project in DQS. DQS enables you to open Integration Services projects in [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] just like any other data quality project from the **Open project** screen, and have an interactive cleansing experience of the cleansing results in an Integration Services project.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
   
--   Only completed Integration Services projects are available in the **Open project** screen in [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)]. Failed or running projects are not available in the **Open project** screen.  
+-   Only completed Integration Services projects are available in the **Open project** screen in [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)]. Failed or running projects are not available in the **Open project** screen.  
   
--   Integration Services projects open at the interactive cleansing stage (**Manage View and Results** tab) in [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)]. You cannot go to the **Cleanse** or **Map** tabs. You can only go to the **Export** tab by clicking **Next**.  
+-   Integration Services projects open at the interactive cleansing stage (**Manage View and Results** tab) in [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)]. You cannot go to the **Cleanse** or **Map** tabs. You can only go to the **Export** tab by clicking **Next**.  
   
--   You cannot delete a locked Integration Services project from [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)]. You must first unlock it to delete.  
+-   You cannot delete a locked Integration Services project from [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)]. You must first unlock it to delete.  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
- You must have successfully completed running an Integration Services project containing a package with a DQS Cleansing component to see and open it in [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)].  
+ You must have successfully completed running an Integration Services project containing a package with a DQS Cleansing component to see and open it in [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)].  
   
 ###  <a name="Security"></a> Security  
   
@@ -40,11 +40,11 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssDQSInitialStep](../data-quality-services/includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] home screen, click **Open Data Quality Project**. The **Open project** screen appears.  
+2.  In the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] home screen, click **Open Data Quality Project**. The **Open project** screen appears.  
   
 3.  In the **Open project** screen, you can identify an Integration Services project in either of the following ways:  
   
-    1.  **Project Name**: Integration Services projects are listed using the following naming terminology: “Package.DQS Cleansing_*\<DATE>**\<TIME>*_{GUID}.” Every time you successfully run the same package in [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], a new project is listed in the **Open project** screen.  
+    1.  **Project Name**: Integration Services projects are listed using the following naming terminology: “Package.DQS Cleansing_*\<DATE>**\<TIME>*_{GUID}.” Every time you successfully run the same package in [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], a new project is listed in the **Open project** screen.  
   
     2.  **Project Type**: Integration Services projects have **SSIS** as the project type in the **Open project** screen.  
   

@@ -23,11 +23,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Native Client (OLE DB)
-  The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider is a low-level COM API that is used for accessing data. The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider is recommended for developing tools, utilities, or low-level components that need high performance. The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider is a native, high performance provider that accesses the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Tabular Data Stream (TDS) protocol directly.  
+  The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider is a low-level COM API that is used for accessing data. The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider is recommended for developing tools, utilities, or low-level components that need high performance. The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider is a native, high performance provider that accesses the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Tabular Data Stream (TDS) protocol directly.  
   
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client provides OLE DB support to applications connecting to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client provides OLE DB support to applications connecting to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
- The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider is an OLE DB version 2.0–compliant provider.  
+ The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider is an OLE DB version 2.0–compliant provider.  
   
 ## In This Section  
   
@@ -65,7 +65,7 @@ manager: "jhubbard"
   
 -   [Sparse Columns Support &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md)  
   
--   [SQL Server Native Client &#40;OLE DB&#41; Reference](../Topic/SQL%20Server%20Native%20Client%20\(OLE%20DB\)%20Reference.md)  
+-   [SQL Server Native Client &#40;OLE DB&#41; Reference](../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
 -   [OLE DB How-to Topics](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   

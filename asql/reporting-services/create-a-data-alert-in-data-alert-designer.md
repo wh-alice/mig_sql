@@ -38,7 +38,7 @@ manager: "erikre"
      The Data Alert Designer opens, showing the first 100 rows of the first data feed that the report generates in a table.  
   
     > [!NOTE]  
-    >  If you do not see the **New Data Alert** option, the alerting service is not configured on the SharePoint site or the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] edition does not include data alerts. For more information, see [Reporting Services SharePoint Service and Service Applications](../reporting-services/report-server/sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
+    >  If you do not see the **New Data Alert** option, the alerting service is not configured on the SharePoint site or the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] edition does not include data alerts. For more information, see [Reporting Services SharePoint Service and Service Applications](../reporting-services/report-server/sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
     >   
     >  If the **New Data Alert** option is grayed, the report data source is configured to use integrated security credentials or prompt for credentials. To make the **New Data Alert** option available, you must update the data source to use stored credentials or no credentials.  
   

@@ -65,7 +65,7 @@ GO
 ```  
   
 ## Creating the Event Notification  
- Event notifications are created by using the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] CREATE EVENT NOTIFICATION statement, and are dropped by using the DROP EVENT NOTIFICATION STATEMENT. To modify an event notification, you must drop and re-create the event notification.  
+ Event notifications are created by using the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] CREATE EVENT NOTIFICATION statement, and are dropped by using the DROP EVENT NOTIFICATION STATEMENT. To modify an event notification, you must drop and re-create the event notification.  
   
  The following example creates the event notification `CreateDatabaseNotification`. This notification sends a message about any `CREATE_DATABASE` event that occurs on the server to the `NotifyService` service that was previously created.  
   

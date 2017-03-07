@@ -22,7 +22,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Limitations for Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Learn about limitations for Stretch-enabled tables, and about limitations that currently prevent you from enabling Stretch for a table.  
   
@@ -41,7 +41,7 @@ Stretch-enabled tables have the following limitations.
 ### Indexes  
 -   You can't create an index for a view that includes Stretch-enabled tables.  
   
--   Filters on [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] indexes are not propagated to the remote table.  
+-   Filters on [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] indexes are not propagated to the remote table.  
   
 ##  <a name="Limitations"></a> Limitations that currently prevent you from enabling Stretch for a table  
    

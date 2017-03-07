@@ -43,15 +43,15 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SELECT - ORDER BY Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Sorts data returned by a query in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Use this clause to:  
+  Sorts data returned by a query in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Use this clause to:  
   
 -   Order the result set of a query by the specified column list and, optionally, limit the rows returned to a specified range. The order in which rows are returned in a result set are not guaranteed unless an ORDER BY clause is specified.  
   
 -   Determine the order in which [ranking function](../../t-sql/functions/ranking-functions-transact-sql.md) values are applied to the result set.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -103,7 +103,7 @@ ORDER BY order_by_expression
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
  *offset_row_count_expression* can be a variable, parameter, or constant scalar subquery. When a subquery is used, it cannot reference any columns defined in the outer query scope. That is, it cannot be correlated with the outer query.  
   
@@ -116,7 +116,7 @@ ORDER BY order_by_expression
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
  *fetch_row_count_expression* can be a variable, parameter, or constant scalar subquery. When a subquery is used, it cannot reference any columns defined in the outer query scope. That is, it cannot be correlated with the outer query.  
   
@@ -141,7 +141,7 @@ ORDER BY order_by_expression
   
  Columns of type **ntext**, **text**, **image**, **geography**, **geometry**, and **xml** cannot be used in an ORDER BY clause.  
   
- An integer or constant cannot be specified when *order_by_expression* appears in a ranking function. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../Topic/OVER%20Clause%20\(Transact-SQL\).md).  
+ An integer or constant cannot be specified when *order_by_expression* appears in a ranking function. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  If a table name is aliased in the FROM clause, only the alias name can be used to qualify its columns in the ORDER BY clause.  
   
@@ -184,7 +184,7 @@ ORDER BY order_by_expression
   
  See the example "Running multiple queries in a single transaction" in the Examples section later in this topic.  
   
- If consistent execution plans are important in your paging solution, consider using the OPTIMIZE FOR query hint for the OFFSET and FETCH parameters. See "Specifying expressions for OFFSET and FETCH values" in the Examples section later in this topic. For more information about OPTIMZE FOR, see [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).  
+ If consistent execution plans are important in your paging solution, consider using the OPTIMIZE FOR query hint for the OFFSET and FETCH parameters. See "Specifying expressions for OFFSET and FETCH values" in the Examples section later in this topic. For more information about OPTIMZE FOR, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## Examples  
   
@@ -355,7 +355,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
 #### A. Specifying integer constants for OFFSET and FETCH values  
  The following example specifies an integer constant as the value for the OFFSET and FETCH clauses. The first query returns all rows sorted by the column `DepartmentID`. Compare the results returned by this query with the results of the two queries that follow it. The next query uses the clause `OFFSET 5 ROWS` to skip the first 5 rows and return all remaining rows. The final query uses the clause `OFFSET 0 ROWS` to start with the first row and then uses `FETCH NEXT 10 ROWS ONLY` to limit the rows returned to 10 rows from the sorted result set.  
@@ -400,7 +400,7 @@ ORDER BY DepartmentID ASC
 ```  
   
 #### C. Specifying expressions for OFFSET and FETCH values  
- The following example uses the expression `@StartingRowNumber - 1` to specify the OFFSET value and the expression `@EndingRowNumber - @StartingRowNumber + 1` to specify the FETCH value. In addition, the query hint, OPTIMIZE FOR, is specified. This hint can be used to provide a particular value for a local variable when the query is compiled and optimized. The value is used only during query optimization, and not during query execution. For more information, see [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).  
+ The following example uses the expression `@StartingRowNumber - 1` to specify the OFFSET value and the expression `@EndingRowNumber - @StartingRowNumber + 1` to specify the FETCH value. In addition, the query hint, OPTIMIZE FOR, is specified. This hint can be used to provide a particular value for a local variable when the query is compiled and optimized. The value is used only during query optimization, and not during query execution. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ```  
 USE AdventureWorks2012;  
@@ -482,7 +482,7 @@ GO
   
 ```  
   
-### Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+### Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
  The following example demonstrates ordering of a result set by the numerical `EmployeeKey` column in ascending order.  
   
 ```  
@@ -547,7 +547,7 @@ ORDER BY ListPrice ASC;
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Ranking Functions &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)   
- [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md)   
+ [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)   
  [EXCEPT and INTERSECT &#40;Transact-SQL&#41;](../Topic/EXCEPT%20and%20INTERSECT%20\(Transact-SQL\).md)   
  [UNION &#40;Transact-SQL&#41;](../Topic/UNION%20\(Transact-SQL\).md)   
  [CASE &#40;Transact-SQL&#41;](../Topic/CASE%20\(Transact-SQL\).md)  

@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  Different exception classes exist in the SMO. Information about the exception can be extracted from the exception properties such as the **Message** property that gives a text message about the exception.  
   
- The exception handling statements are specific to the programming language. For example, in [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Visual Basic it is the **Catch** statement.  
+ The exception handling statements are specific to the programming language. For example, in [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Visual Basic it is the **Catch** statement.  
   
 ## Inner Exceptions  
  Exceptions can either be general or specific. General exceptions contain a set of specific exceptions. Several **Catch** statements can be used to handle anticipated errors and let remaining errors fall through to general exception handling code. Exceptions often occur in a cascading sequence. Frequently, an SMO exception might have been caused by an SQL exception. The way to detect this is to use the **InnerException** property successively to determine the original exception that caused the final, top-level exception.  
@@ -37,10 +37,10 @@ manager: "jhubbard"
  The diagram shows the flow of exceptions through the layers of the application.  
   
 ## Example  
- To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20C%23%20SMO%20Project%20in%20Visual%20Studio%20.NET.md) or [Create a Visual Basic SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20Basic%20SMO%20Project%20in%20Visual%20Studio%20.NET.md).  
+ To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-.net.md) or [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-.net.md).  
   
 ## Catching an Exception in Visual Basic  
- This code example shows how to use the **Try…Catch…Finally**[!INCLUDE[vbprvb](../../../analysis-services/data-mining/includes/vbprvb-md.md)] statement to catch a SMO exception. All SMO exceptions have the type SmoException, and are listed in the SMO reference. The sequence of inner exceptions is displayed to show the root of the error. For more information, see the [!INCLUDE[vbprvb](../../../analysis-services/data-mining/includes/vbprvb-md.md)] .NET documentation.  
+ This code example shows how to use the **Try…Catch…Finally**[!INCLUDE[vbprvb](../../../a9retired/includes/vbprvb-md.md)] statement to catch a SMO exception. All SMO exceptions have the type SmoException, and are listed in the SMO reference. The sequence of inner exceptions is displayed to show the root of the error. For more information, see the [!INCLUDE[vbprvb](../../../a9retired/includes/vbprvb-md.md)] .NET documentation.  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.

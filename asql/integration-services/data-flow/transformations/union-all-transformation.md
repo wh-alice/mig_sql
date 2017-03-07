@@ -36,11 +36,11 @@ manager: "jhubbard"
  This transformation has multiple inputs and one output. It does not support an error output.  
   
 ## Configuration of the Union All Transformation  
- You can set properties through [!INCLUDE[ssIS](../../../analysis-services/instances/includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../../../a9retired/includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Union All Transformation Editor** dialog box, see [Union All Transformation Editor](../../../integration-services/data-flow/transformations/union-all-transformation-editor.md).  
   
- For more information about the properties that you can set programmatically, see [Common Properties](../Topic/Common%20Properties.md).  
+ For more information about the properties that you can set programmatically, see [Common Properties](../../../a9retired/common-properties.md).  
   
  For more information about how to set properties, click one of the following topics:  
   

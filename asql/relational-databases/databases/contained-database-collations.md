@@ -17,9 +17,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Contained Database Collations
-  Various properties affect the sort order and equality semantics of textual data, including case sensitivity, accent sensitivity, and the base language being used. These qualities are expressed to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] through the choice of collation for the data. For a more in-depth discussion of collations themselves, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+  Various properties affect the sort order and equality semantics of textual data, including case sensitivity, accent sensitivity, and the base language being used. These qualities are expressed to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] through the choice of collation for the data. For a more in-depth discussion of collations themselves, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- Collations apply not only to data stored in user tables, but to all text handled by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], including metadata, temporary objects, variable names, etc. The handling of these differs in contained and non-contained databases. This change will not affect many users, but helps provide instance independence and uniformity. But this may also cause some confusion, as well as problems for sessions that access both contained and non-contained databases.  
+ Collations apply not only to data stored in user tables, but to all text handled by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], including metadata, temporary objects, variable names, etc. The handling of these differs in contained and non-contained databases. This change will not affect many users, but helps provide instance independence and uniformity. But this may also cause some confusion, as well as problems for sessions that access both contained and non-contained databases.  
   
  This topic clarifies the content of the change, and examines areas where the change may cause problems.  
   
@@ -82,7 +82,7 @@ JOIN #T2
   
  Cannot resolve the collation conflict between "Latin1_General_100_CI_AS_KS_WS_SC" and Chinese_Simplified_Pinyin_100_CI_AS" in the equal to operation.  
   
- We can fix this by explicitly collating the temporary table. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] makes this somewhat easier by providing the **DATABASE_DEFAULT** keyword for the **COLLATE** clause.  
+ We can fix this by explicitly collating the temporary table. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] makes this somewhat easier by providing the **DATABASE_DEFAULT** keyword for the **COLLATE** clause.  
   
 ```tsql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
@@ -113,7 +113,7 @@ END;
 ## Contained Databases  
  Since a design objective of contained databases is to make them self-contained, the dependence on the instance and **tempdb** collations must be severed. To do this, contained databases introduce the concept of the catalog collation. The catalog collation is used for system metadata and transient objects. Details are provided below.  
   
- In a contained database, the catalog collation **Latin1_General_100_CI_AS_WS_KS_SC**. This collation is the same for all contained databases on all instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and cannot be changed.  
+ In a contained database, the catalog collation **Latin1_General_100_CI_AS_WS_KS_SC**. This collation is the same for all contained databases on all instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and cannot be changed.  
   
  The database collation is retained, but is only used as the default collation for user data. By default, the database collation is equal to the model database collation, but can be changed by the user through a **CREATE** or **ALTER DATABASE** command as with non-contained databases.  
   

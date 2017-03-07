@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Functions Related to QNames - local-name-from-QName
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns an xs:NCNAME that represents the local part of QName specified by *$arg*. The result is an empty sequence if *$arg* is the empty sequence.  
   
@@ -35,7 +35,7 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  Is the QName that the local name should be extracted from.  
   
 ## Examples  
- This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the [!INCLUDE[ssSampleDBobject](../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+ This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the [!INCLUDE[ssSampleDBobject](../a9retired/includes/sssampledbobject-md.md)] database.  
   
  The following example uses the **local-name-from-QName()** function to retrieve the local name and namespace URI parts from a QName type value. The example performs the following:  
   
@@ -73,6 +73,6 @@ FROM T
 ```  
   
 ## See Also  
- [Functions Related to QNames &#40;XQuery&#41;](../Topic/Functions%20Related%20to%20QNames%20\(XQuery\).md)  
+ [Functions Related to QNames &#40;XQuery&#41;](../a9retired/functions-related-to-qnames-xquery.md)  
   
   

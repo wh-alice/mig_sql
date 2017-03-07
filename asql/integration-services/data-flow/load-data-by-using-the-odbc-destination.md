@@ -19,7 +19,7 @@ manager: "jhubbard"
   
 ### To load data using an ODBC destination  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package you want.  
+1.  In [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package you want.  
   
 2.  Click the **Data Flow** tab, and then, from the **Toolbox**, drag the ODBC destination to the design surface.  
   

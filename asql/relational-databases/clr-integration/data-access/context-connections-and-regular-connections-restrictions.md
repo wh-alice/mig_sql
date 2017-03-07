@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Context Connections and Regular Connections - Restrictions
-  This topic discusses the restrictions associated with code executing in the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] process through context and regular connections.  
+  This topic discusses the restrictions associated with code executing in the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] process through context and regular connections.  
   
 ## Restrictions on Context Connections  
  When developing your application, take into account the following restrictions that apply to context connections:  
@@ -37,14 +37,14 @@ manager: "jhubbard"
   
 -   No other connection string keywords can be used when you use "context connection=true".  
   
--   The **SqlConnection.DataSource** property returns null if the connection string for the **SqlConnection** is "context connection=true", instead of the name of the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   The **SqlConnection.DataSource** property returns null if the connection string for the **SqlConnection** is "context connection=true", instead of the name of the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
 -   Setting the **SqlCommand.CommandTimeout** property has no effect when the command is executed against a context connection.  
   
 ## Restrictions on Regular Connections  
  When developing your application, take into account the following restrictions that apply to regular connections:  
   
--   Asynchronous command execution against internal servers is not supported. Including "async=true" in the connection string of a command, and then executing the command, results in **System.NotSupportedException** being thrown. This message appears: "Asynchronous processing is not supported when running inside the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] process."  
+-   Asynchronous command execution against internal servers is not supported. Including "async=true" in the connection string of a command, and then executing the command, results in **System.NotSupportedException** being thrown. This message appears: "Asynchronous processing is not supported when running inside the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] process."  
   
 -   **SqlDependency** object is not supported.  
   

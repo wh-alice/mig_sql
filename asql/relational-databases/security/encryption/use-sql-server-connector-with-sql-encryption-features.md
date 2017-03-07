@@ -18,9 +18,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Use SQL Server Connector with SQL Encryption Features
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Common [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] encryption activities using an asymmetric key protected by the Azure Key Vault include the following three areas.  
+  Common [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] encryption activities using an asymmetric key protected by the Azure Key Vault include the following three areas.  
   
 -   Transparent Data Encryption by using an Asymmetric Key from Azure Key Vault  
   
@@ -37,13 +37,13 @@ manager: "jhubbard"
  After completing Parts I through IV of the topic Setup Steps for Extensible Key Management Using the Azure Key Vault, use the Azure Key Vault key to encrypt the database encryption key using TDE.  
 You will need to create a credential and a login, and create a database encryption key which will encrypt the data and logs in the database. To encrypt a database requires **CONTROL** permission on the database. The following graphic shows the hierarchy of the encryption key when using the Azure Key Vault.  
   
- ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
+ ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../a9notintoc/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
   
-1.  **Create a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] credential for the Database Engine to use for TDE**  
+1.  **Create a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] credential for the Database Engine to use for TDE**  
   
-     The Database Engine uses the credential to access the Key Vault during database load. We recommend creating another Azure Active Directory **Client ID** and **Secret** in Part I for the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)], to limit the Key Vault permissions that are granted.  
+     The Database Engine uses the credential to access the Key Vault during database load. We recommend creating another Azure Active Directory **Client ID** and **Secret** in Part I for the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)], to limit the Key Vault permissions that are granted.  
   
-     Modify the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] script below in the following ways:  
+     Modify the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] script below in the following ways:  
   
     -   Edit the `IDENTITY` argument (`ContosoDevKeyVault`) to point to your Azure Key Vault.
         - If you're using **public Azure**, replace the `IDENTITY` argument with the name of your Azure Key Vault from Part II.
@@ -67,9 +67,9 @@ You will need to create a credential and a login, and create a database encrypti
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
     ```  
   
-2.  **Create a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login for the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] for TDE**  
+2.  **Create a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] login for the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] for TDE**  
   
-     Create a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login and add the credential from Step 1 to it. This [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] example uses the same key that was imported earlier.  
+     Create a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] login and add the credential from Step 1 to it. This [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] example uses the same key that was imported earlier.  
   
     ```tsql  
     USE master;  
@@ -89,7 +89,7 @@ You will need to create a credential and a login, and create a database encrypti
   
 3.  **Create the Database Encryption Key (DEK)**  
   
-     The DEK will encrypt your data and log files in the database instance, and in turn be encrypted by the Azure Key Vault asymmetric key. The DEK can be created using any [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supported algorithm or key length.  
+     The DEK will encrypt your data and log files in the database instance, and in turn be encrypted by the Azure Key Vault asymmetric key. The DEK can be created using any [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] supported algorithm or key length.  
   
     ```tsql  
     USE ContosoDatabase;  
@@ -110,7 +110,7 @@ You will need to create a credential and a login, and create a database encrypti
     GO  
     ```  
   
-     Using [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)],  verify that TDE has been turned on by connecting to your database with Object Explorer. Right-click your database, point to **Tasks**, and then click **Manage Database Encryption**.  
+     Using [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)],  verify that TDE has been turned on by connecting to your database with Object Explorer. Right-click your database, point to **Tasks**, and then click **Manage Database Encryption**.  
   
      ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
   
@@ -118,7 +118,7 @@ You will need to create a credential and a login, and create a database encrypti
   
      ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
   
-     Alternatively, you can execute the following [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] script. An encryption state of 3 indicates an encrypted database.  
+     Alternatively, you can execute the following [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] script. An encryption state of 3 indicates an encrypted database.  
   
     ```tsql  
     USE MASTER  
@@ -135,12 +135,12 @@ You will need to create a credential and a login, and create a database encrypti
     >  The `tempdb` database is automatically encrypted whenever any database enables TDE.  
   
 ## Encrypting Backups by Using an Asymmetric Key from the Key Vault  
- Encrypted backups are supported starting with [!INCLUDE[ssSQL14](../../../analysis-services/includes/sssql14-md.md)]. The following example creates and restores a backup encrypted a data encryption key protected by the asymmetric key in the key vault.  
-The [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] needs the credential when accessing the Key Vault during database load. We recommend creating another Azure Active Directory Client ID and Secret in Part I for the Database Engine, to limit the Key Vault permissions that are granted.  
+ Encrypted backups are supported starting with [!INCLUDE[ssSQL14](../../../a9notintoc/includes/sssql14-md.md)]. The following example creates and restores a backup encrypted a data encryption key protected by the asymmetric key in the key vault.  
+The [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] needs the credential when accessing the Key Vault during database load. We recommend creating another Azure Active Directory Client ID and Secret in Part I for the Database Engine, to limit the Key Vault permissions that are granted.  
   
 1.  **Create a SQL Server credential for the Database Engine to use for Backup Encryption**  
   
-     Modify the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] script below in the following ways:  
+     Modify the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] script below in the following ways:  
   
     -   Edit the `IDENTITY` argument (`ContosoDevKeyVault`) to point to your Azure Key Vault.
         - If you're using **public Azure**, replace the `IDENTITY` argument with the name of your Azure Key Vault from Part II.
@@ -165,9 +165,9 @@ The [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/include
         FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;    
         ```  
   
-2.  **Create a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login for the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] for Backup Encryption**  
+2.  **Create a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] login for the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] for Backup Encryption**  
   
-     Create a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login to be used by the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)]e for encryption backups, and add the credential from Step 1 to it. This [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] example uses the same key that was imported earlier.  
+     Create a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] login to be used by the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)]e for encryption backups, and add the credential from Step 1 to it. This [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] example uses the same key that was imported earlier.  
   
     > [!IMPORTANT]  
     >  You cannot use the same asymmetric key for backup encryption if you’ve already used that key for TDE (the above example) or column level Encryption (the following example).  
@@ -194,7 +194,7 @@ The [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/include
   
      Backup the database specifying encryption with the asymmetric key stored in the key vault.
      
-     In the below example, note that if the database was already encrypted with TDE, and the asymmetric key `CONTOSO_KEY_BACKUP` is different from the TDE asymmetric key, the backup will be encrypted by both the TDE asymmetric key and `CONTOSO_KEY_BACKUP`. The target [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance will need both keys in order to decrypt the backup.
+     In the below example, note that if the database was already encrypted with TDE, and the asymmetric key `CONTOSO_KEY_BACKUP` is different from the TDE asymmetric key, the backup will be encrypted by both the TDE asymmetric key and `CONTOSO_KEY_BACKUP`. The target [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance will need both keys in order to decrypt the backup.
   
     ```tsql  
     USE master;  
@@ -209,13 +209,13 @@ The [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/include
   
 4.  **Restore the Database**  
     
-    To restore a database backup that is encrypted with TDE, the target [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance must first have a copy of the asymmetric Key Vault key used for encryption. This is how this would be achieved:  
+    To restore a database backup that is encrypted with TDE, the target [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance must first have a copy of the asymmetric Key Vault key used for encryption. This is how this would be achieved:  
     
     - If the original asymmetric key used for TDE is no longer in Key Vault, restore the Key Vault key backup or reimport the key from a local HSM. **Important:** In order to have the key’s thumbprint match the thumbprint recorded on the database backup, the key must be named the **same Key Vault key name** as it was originally named before.
     
-    - Apply Steps 1 and 2 on the target [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance.
+    - Apply Steps 1 and 2 on the target [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance.
     
-    - Once the target [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance has access to the asymmetric key(s) used to encrypt the backup, restore the database on the server.
+    - Once the target [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance has access to the asymmetric key(s) used to encrypt the backup, restore the database on the server.
     
      Sample restore code:  
   

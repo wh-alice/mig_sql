@@ -23,11 +23,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # $PARTITION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns the partition number into which a set of partitioning column values would be mapped for any specified partition function in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  Returns the partition number into which a set of partitioning column values would be mapped for any specified partition function in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -72,7 +72,7 @@ GO
 ### B. Getting the number of rows in each nonempty partition of a partitioned table or index  
  The following example returns the number of rows in each partition of table `TransactionHistory` that contains data. The `TransactionHistory` table uses partition function `TransactionRangePF1` and is partitioned on the `TransactionDate` column.  
   
- To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] sample database. For more information, see [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015).  
+ To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] sample database. For more information, see [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015).  
   
 ```  
 USE AdventureWorks2012;  
@@ -88,7 +88,7 @@ GO
  The following example returns all rows that are in partition `5` of the table `TransactionHistory`.  
   
 > [!NOTE]  
->  To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] sample database. For more information, see [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015).  
+>  To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] sample database. For more information, see [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015).  
   
 ```  
 SELECT * FROM Production.TransactionHistory  

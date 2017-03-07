@@ -48,7 +48,7 @@ public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {
 }   
 ```  
   
- After the assembly is registered and a user-defined [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] function is created, **SqlXslTransform()** corresponding to **TransformXml()**, the function can be invoked from Transact-SQL as shown in the following query:  
+ After the assembly is registered and a user-defined [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] function is created, **SqlXslTransform()** corresponding to **TransformXml()**, the function can be invoked from Transact-SQL as shown in the following query:  
   
 ```  
 SELECT SqlXslTransform (xCol, 'C:\MyFile\xsltransform.xsl')  
@@ -58,6 +58,6 @@ WHERE  xCol.exist('/book/title/text()[contains(.,"custom")]') =1;
   
  The query result contains a rowset of the transformed XML.  
   
- The CLR integration into [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] expands the possibilities for decomposing XML data into tables or property promotion, and querying XML data by using managed classes in the System.Xml namespace. For more information, see [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md).  
+ The CLR integration into [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] expands the possibilities for decomposing XML data into tables or property promotion, and querying XML data by using managed classes in the System.Xml namespace. For more information, see [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md).  
   
   

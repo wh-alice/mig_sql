@@ -35,13 +35,13 @@ GO
 ###  <a name="BasicsSemanticSearch"></a> Install Semantic Search  
  To install Semantic Search, select **Full-Text and Semantic Extractions for Search** on the **Features to Install** page during SQL Server setup.  
   
- Statistical Semantic Search depends on Full-Text Search. These two optional features of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] are installed together.  
+ Statistical Semantic Search depends on Full-Text Search. These two optional features of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] are installed together.  
   
 ## Install the Semantic Language Statistics Database  
  Semantic Search has an additional external dependency that is called the semantic language statistics database. This database contains the statistical language models required by semantic search. A single semantic language statistics database contains the language models for all the languages that are supported for semantic indexing.  
   
 ###  <a name="HowToCheckDatabase"></a> Check whether the Semantic Language Statistics Database is installed  
- Query the catalog view [sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-semantic-language-statistics-database-transact-sql.md).  
+ Query the catalog view [sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-semantic-language-statistics-database-transact-sql.md).  
   
  If the semantic language statistics database is installed and registered for the instance, then the query results contain a single row of information about the database.  
   
@@ -51,15 +51,15 @@ GO
 ```  
   
 ###  <a name="HowToInstallModel"></a> Install, attach, and register the Semantic Language Statistics Database  
- The semantic language statistics database is not installed by the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup program. To set up the Semantic Language Statistics database as a prerequisite for semantic indexing, do the following things:  
+ The semantic language statistics database is not installed by the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] setup program. To set up the Semantic Language Statistics database as a prerequisite for semantic indexing, do the following things:  
   
  **1. Install the semantic language statistics database.**  
  
- 1.  Locate the semantic language statistics database on the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] installation media or download it from the Web.  
+ 1.  Locate the semantic language statistics database on the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] installation media or download it from the Web.  
   
-        1.  Locate the Windows installer package named **SemanticLanguageDatabase.msi** on the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] installation media.  
+        1.  Locate the Windows installer package named **SemanticLanguageDatabase.msi** on the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] installation media.  
   
-        2.  Download the installer package from the [Microsoft® SQL Server® 2016 Semantic Language Statistics](https://www.microsoft.com/en-us/download/details.aspx?id=52681) page on the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Download Center.  
+        2.  Download the installer package from the [Microsoft® SQL Server® 2016 Semantic Language Statistics](https://www.microsoft.com/en-us/download/details.aspx?id=52681) page on the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Download Center.  
   
 2.  Run the **SemanticLanguageDatabase.msi** Windows installer package to extract the database and log file.  
   
@@ -67,14 +67,14 @@ GO
   
 3.  Move the extracted database file and log file to a suitable location in the file system.  
   
-     If you leave the files in their default location, it will not be possible to extract another copy of the database for another instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+     If you leave the files in their default location, it will not be possible to extract another copy of the database for another instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
     > [!IMPORTANT]  
     >  When the semantic language statistics database is extracted, restricted permissions are assigned to the database file and log file in the default location in the file system. As a result, you may not have permission to attach the database if you leave it in the default location. If an error is raised when you try to attach the database, move the files, or check and fix file system permissions as appropriate.  
   
  **2. Attach the semantic language statistics database.**
    
- Attach the database to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] or by calling [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) with the **FOR ATTACH** syntax. For more information, see [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
+ Attach the database to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] or by calling [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) with the **FOR ATTACH** syntax. For more information, see [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
  By default, the name of the database is **semanticsdb**. You can optionally give the database a different name when you attach it. You have to provide this name when you register the database in the subsequent step.  
   
@@ -90,7 +90,7 @@ GO
   
  **3. Register the semantic language statistics database.** 
   
- Call the stored procedure [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md) and provide the name that you gave to the database when you attached it.  
+ Call the stored procedure [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md) and provide the name that you gave to the database when you attached it.  
   
 ```tsql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
@@ -99,9 +99,9 @@ GO
 
 ##  <a name="reqinstall"></a> Requirements and restrictions for the Semantic Language Statistics Database  
   
--   You can only attach and register one semantic language statistics database on an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   You can only attach and register one semantic language statistics database on an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
-     Each instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] on a single computer requires a separate physical copy of the semantic language statistics database. Attach one copy to each instance.  
+     Each instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] on a single computer requires a separate physical copy of the semantic language statistics database. Attach one copy to each instance.  
   
 -   You cannot detach a valid and registered semantic language statistics database and replace it with an arbitrary database that has the same name. Doing so will cause active or future index populations to fail.  
   
@@ -115,7 +115,7 @@ GO
 
  **1. Unregister the semantic language statistics database.**
    
- Call the stored procedure [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md). You do not have to provide the name of the database since an instance can have only one semantic language statistics database.  
+ Call the stored procedure [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md). You do not have to provide the name of the database since an instance can have only one semantic language statistics database.  
   
 ```tsql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
@@ -124,7 +124,7 @@ GO
   
  **2. Detach the semantic language statistics database.**  
  
- Call the stored procedure [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) and provide the name of the database.  
+ Call the stored procedure [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-detach-db-transact-sql.md) and provide the name of the database.  
   
 ```tsql  
 USE master;  
@@ -141,6 +141,6 @@ GO
 ## Install optional support for newer document types  
   
 ###  <a name="office"></a> Install the latest filters for Microsoft Office and other Microsoft document types  
-[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] installs the latest [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] word breakers and stemmers, but does not install the latest filters for [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Office documents and other [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] document types. These filters are required for indexing documents created with recent versions of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Office and other [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] applications. To download the latest filters, see [Microsoft Office 2010 Filter Packs](http://go.microsoft.com/fwlink/?LinkId=218293). (There does not appear to be a Filter Pack release for Office 2013 or Office 2016.)
+[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] installs the latest [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] word breakers and stemmers, but does not install the latest filters for [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Office documents and other [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] document types. These filters are required for indexing documents created with recent versions of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Office and other [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] applications. To download the latest filters, see [Microsoft Office 2010 Filter Packs](http://go.microsoft.com/fwlink/?LinkId=218293). (There does not appear to be a Filter Pack release for Office 2013 or Office 2016.)
   
   

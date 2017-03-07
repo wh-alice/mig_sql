@@ -24,11 +24,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # PWDCOMPARE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Hashes a password and compares the hash to the hash of an existing password. PWDCOMPARE can be used to search for blank [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login passwords or common weak passwords.  
+  Hashes a password and compares the hash to the hash of an existing password. PWDCOMPARE can be used to search for blank [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login passwords or common weak passwords.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -47,7 +47,7 @@ PWDCOMPARE ( 'clear_text_password'
  Is the encryption hash of a password. *password_hash* is **varbinary(128)**.  
   
  *version*  
- Obsolete parameter that can be set to 1 if *password_hash* represents a value from a login earlier than [!INCLUDE[ssVersion2000](../../analysis-services/multidimensional-models/includes/ssversion2000-md.md)] that was migrated to [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] or later but never converted to the [!INCLUDE[ssVersion2000](../../analysis-services/multidimensional-models/includes/ssversion2000-md.md)] system. *version* is **int**.  
+ Obsolete parameter that can be set to 1 if *password_hash* represents a value from a login earlier than [!INCLUDE[ssVersion2000](../../a9notintoc/includes/ssversion2000-md.md)] that was migrated to [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] or later but never converted to the [!INCLUDE[ssVersion2000](../../a9notintoc/includes/ssversion2000-md.md)] system. *version* is **int**.  
   
 > [!CAUTION]  
 >  This parameter is provided for backwards compatibility, but is ignored because password hash blobs now contain their own version descriptions. [!INCLUDE[ssNoteDepNextDontUse](../../database-engine/configure/windows/includes/ssnotedepnextdontuse-md.md)]  
@@ -70,7 +70,7 @@ PWDCOMPARE ( 'clear_text_password'
 ## Examples  
   
 ### A. Identifying logins that have no passwords  
- The following example identifies [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] logins that have no passwords.  
+ The following example identifies [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] logins that have no passwords.  
   
 ```  
 SELECT name FROM sys.sql_logins   

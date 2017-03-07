@@ -43,10 +43,10 @@ Launch the wizard by either:
 ##  <a name="ProjectModel"></a> Project Deployment Model  
   
 ### Select Source  
- To deploy a project deployment file that you created, select **Project deployment file** and enter the path to the .ispac file. To deploy a project that resides in the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog, select **Integration Services catalog**, and then enter the server name and the path to the project in the catalog. Click **Next** to see the **Select Destination** page.  
+ To deploy a project deployment file that you created, select **Project deployment file** and enter the path to the .ispac file. To deploy a project that resides in the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] catalog, select **Integration Services catalog**, and then enter the server name and the path to the project in the catalog. Click **Next** to see the **Select Destination** page.  
   
 ### Select Destination  
- To select the destination folder for the project in the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] catalog, enter the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance or click **Browse** to select from a list of servers. Enter the project path in SSISDB or click **Browse** to select it. Click **Next** to see the **Review** page.  
+ To select the destination folder for the project in the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] catalog, enter the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance or click **Browse** to select from a list of servers. Enter the project path in SSISDB or click **Browse** to select it. Click **Next** to see the **Review** page.  
   
 ### Review (and deploy)  
  The page allows you to review the settings you have selected. You can change your selections by clicking **Previous**, or by clicking any of the steps in the left pane. Click **Deploy** to start the deployment process.  

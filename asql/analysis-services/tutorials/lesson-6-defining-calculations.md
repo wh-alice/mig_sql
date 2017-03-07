@@ -17,7 +17,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Lesson 6: Defining Calculations
-In this lesson, you learn to define calculations, which are Multidimensional Expressions (MDX) expressions or scripts. Calculations enable you to define calculated members, named sets, and execute other script commands to extend the capabilities of an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] cube. For example, you can run a script command to define a subcube and then assign a calculation to the cells in the subcube.  
+In this lesson, you learn to define calculations, which are Multidimensional Expressions (MDX) expressions or scripts. Calculations enable you to define calculated members, named sets, and execute other script commands to extend the capabilities of an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] cube. For example, you can run a script command to define a subcube and then assign a calculation to the cells in the subcube.  
   
 When you define a new calculation in Cube Designer, the calculation is added to the **Script Organizer** pane of the **Calculations** tab of Cube Designer, and the fields for the particular calculation type are displayed in a calculations form in the **Calculation Expressions** pane. Calculations are executed in the order in which they are listed in the **Script Organizer** pane. You can reorder the calculations by right-clicking on a particular calculation and then selecting **Move Up** or **Move Down**, or by clicking a particular calculation and then using the **Move Up** or **Move Down** icons on the toolbar of the **Calculations** tab.  
   
@@ -30,7 +30,7 @@ On the **Calculations** tab, you can add new calculations and view or edit exist
 To switch between these views in the **Calculation Expressions** pane, click **Form View** or **Script View** on the toolbar of the **Calculations** tab.  
   
 > [!NOTE]  
-> If [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] detects a syntax error in any calculation, the Form view will not display until the error is corrected in the Script view.  
+> If [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] detects a syntax error in any calculation, the Form view will not display until the error is corrected in the Script view.  
   
 You can also use the Business Intelligence Wizard to add certain calculations to a cube. For example, you can use this wizard to add time intelligence to a cube, which means defining calculated members for time-related calculations such as period-to-date, moving averages, or period over period growth. For more information, see [Define Time Intelligence Calculations using the Business Intelligence Wizard](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md).  
   
@@ -44,10 +44,10 @@ For more information, see [Calculations](../../analysis-services/multidimensiona
   
 This lesson contains the following tasks:  
   
-[Defining Calculated Members](../Topic/Defining%20Calculated%20Members.md)  
+[Defining Calculated Members](../../analysis-services/tutorials/lesson-6-1-defining-calculated-members.md)  
 In this task, you learn to define calculated members.  
   
-[Defining Named Sets](../Topic/Defining%20Named%20Sets.md)  
+[Defining Named Sets](../../analysis-services/tutorials/lesson-6-2-defining-named-sets.md)  
 In this task, you learn to define named sets.  
   
 ## Next Lesson  

@@ -18,9 +18,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Resource Pool
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  You can create a resource pool by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. To understand the principals of resource pools, see [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md).  
+  You can create a resource pool by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. To understand the principals of resource pools, see [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md).  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -37,9 +37,9 @@ manager: "jhubbard"
  Creating a resource pool requires CONTROL SERVER permission.  
   
 ##  <a name="CreRPProp"></a> Create a Resource Pool Using SQL Server Management Studio  
- **To create a resource pool by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]**  
+ **To create a resource pool by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]**  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to and including **Resource Governor**.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to and including **Resource Governor**.  
   
 2.  Right-click **Resource Governor**, and then click **Properties**.  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
 6.  To save the changes, click **OK**  
   
 ##  <a name="CreRPTSQL"></a> Create a Resource Pool Using Transact-SQL  
- **To create a resource pool by using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]**  
+ **To create a resource pool by using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]**  
   
 1.  Run the [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md) or [CREATE EXTERNAL RESOURCE POOL](../../t-sql/statements/create-external-resource-pool-transact-sql.md) statement specifying the property values to be set.  
   

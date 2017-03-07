@@ -18,9 +18,9 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Master Data Services Database
-  The database contains all of the information for the [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] system. It is central to a [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] deployment. The [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] database:  
+  The database contains all of the information for the [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] system. It is central to a [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] deployment. The [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] database:  
   
--   Stores the settings, database objects, and data required by the [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] system.  
+-   Stores the settings, database objects, and data required by the [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] system.  
   
 -   Contains staging tables that are used to process data from source systems.  
   

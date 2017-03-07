@@ -25,10 +25,10 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Assembly Data Type (ASSL)
-  Defines an abstract primitive data type that represents a [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] assembly or a COM dynamic link library (DLL) associated with a [Server](../../../analysis-services/scripting/objects/server-element-assl.md) or [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element.  
+  Defines an abstract primitive data type that represents a [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] assembly or a COM dynamic link library (DLL) associated with a [Server](../../../analysis-services/scripting/objects/server-element-assl.md) or [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element.  
   
 > [!IMPORTANT]  
->  COM assemblies might pose a security risk. Due to this risk and other considerations, COM assemblies were deprecated in [!INCLUDE[ssASversion10](../../../analysis-services/multidimensional-models/includes/ssasversion10-md.md)]. COM assemblies might not be supported in future releases.  
+>  COM assemblies might pose a security risk. Due to this risk and other considerations, COM assemblies were deprecated in [!INCLUDE[ssASversion10](../../../a9notintoc/includes/ssasversion10-md.md)]. COM assemblies might not be supported in future releases.  
   
 ## Syntax  
   
@@ -61,7 +61,7 @@ manager: "erikre"
 |Derived elements|None|  
   
 ## Remarks  
- The **Assembly** data type serves as the base data type for the **ComAssembly** element, which represents COM libraries associated with the instance or database, and the **ClrAssembly** element, which represents [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] assemblies associated with the instance or database. For more information about assemblies, see [Multidimensional Model Assemblies Management](../../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md).  
+ The **Assembly** data type serves as the base data type for the **ComAssembly** element, which represents COM libraries associated with the instance or database, and the **ClrAssembly** element, which represents [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] assemblies associated with the instance or database. For more information about assemblies, see [Multidimensional Model Assemblies Management](../../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.Assembly>.  
   

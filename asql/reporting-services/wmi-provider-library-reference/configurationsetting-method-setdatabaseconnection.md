@@ -41,7 +41,7 @@ public void BackupEncryptionKey(string Server,
   
 ## Parameters  
  *Server*  
- The name of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance that is used to host the report server database.  
+ The name of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance that is used to host the report server database.  
   
  *DatabaseName*  
  The name of the report server database.  
@@ -51,7 +51,7 @@ public void BackupEncryptionKey(string Server,
   
 -   0 - Windows  
   
--   1 – [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]  
+-   1 – [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]  
   
 -   2 - Windows Service  
   
@@ -70,7 +70,7 @@ public void BackupEncryptionKey(string Server,
 ## Remarks  
  When the *CredentialsType* parameter is set to 0 (Windows), the *UserName* and *Password* parameters must be set. The *UserName* parameter must be in the form "domain\username", and the value must represent a valid Windows logon.  
   
- When the *CredentialsType* parameter is set to 1 ([!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]), the value passed in the *UserName* parameter must conform to the requirements of a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login name.  
+ When the *CredentialsType* parameter is set to 1 ([!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]), the value passed in the *UserName* parameter must conform to the requirements of a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login name.  
   
  When the *CredentialsType* parameter is set to 2 (Windows Service), the report server uses integrated security to connect to the report server database and the *UserName* and *Password* parameters are ignored. The Reporting Server Web service will use either the [!INCLUDE[vstecasp](../../database-engine/configure/windows/includes/vstecasp-md.md)] account or an application pool’s account and the Windows service account to access the report server database.  
   
@@ -80,7 +80,7 @@ public void BackupEncryptionKey(string Server,
   
  When set for the first time, the ConnectionPoolSize property is set based on the following processors: ConnectionPoolSize = #Processors * 75.  
   
- The SetDatabaseConnection method does not grant permissions to the specified account(s). You must call the [GenerateDatabaseRightsScript](../Topic/GenerateDatabaseRightsScript%20Method%20\(WMI%20MSReportServer_ConfigurationSetting\).md) method for each account that requires access to the report server database and run the resulting script.  
+ The SetDatabaseConnection method does not grant permissions to the specified account(s). You must call the [GenerateDatabaseRightsScript](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md) method for each account that requires access to the report server database and run the resulting script.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../reporting-services/wmi-provider-library-reference/includes/ssrswminmspca-md.md)]  

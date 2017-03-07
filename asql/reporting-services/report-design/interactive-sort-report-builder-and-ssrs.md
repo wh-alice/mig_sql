@@ -21,7 +21,7 @@ manager: "erikre"
  However, you can add an interactive sort button to any text box, not just column headers. For example, for a text box in a row outside a row group, you can specify a sort for the parent group rows or columns, for child group rows or columns, or for the detail rows or columns. You can also combine fields into a single group expression, and then sort by multiple fields.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
  When you add an interactive sort, you must specify the following items:  
   

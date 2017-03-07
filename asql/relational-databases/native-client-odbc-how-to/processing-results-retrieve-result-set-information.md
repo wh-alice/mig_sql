@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Processing Results - Retrieve Result Set Information
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
     
 ### To get information about a result set  
@@ -34,7 +34,7 @@ manager: "jhubbard"
     -   Call [SQLColAttribute](../../relational-databases/extended-stored-procedures-reference/sqlcolattribute.md) to get specific descriptor information about the result column.  
   
 ## See Also  
-[Process Results &#40;ODBC&#41;](../Topic/Process%20Results%20\(ODBC\).md)
+[Process Results &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)
 
 [Determining the Characteristics of a Result Set &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   

@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Encrypt a Column of Data
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  This topic describes how to encrypt a column of data by using symmetric encryption in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] using [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]. This is sometimes known as column-level encryption, or cell-level encryption.  
+  This topic describes how to encrypt a column of data by using symmetric encryption in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] using [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]. This is sometimes known as column-level encryption, or cell-level encryption.  
   
  **In This Topic**  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 #### To encrypt a column of data using a simple symmetric encryption  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -114,7 +114,7 @@ manager: "jhubbard"
   
 #### To encrypt a column of data using symmetric encryption that includes an authenticator  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

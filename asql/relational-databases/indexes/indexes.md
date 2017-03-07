@@ -17,14 +17,14 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Indexes
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  The following table lists the types of indexes available in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and provides links to additional information.  
+  The following table lists the types of indexes available in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and provides links to additional information.  
   
 |Index type|Description|Additional information|  
 |----------------|-----------------|----------------------------|  
-|Hash|With a hash index, data is accessed through an in-memory hash table. Hash indexes consume a fixed amount of memory, which is a function of the bucket count.|[Guidelines for Using Indexes on Memory-Optimized Tables](../Topic/Guidelines%20for%20Using%20Indexes%20on%20Memory-Optimized%20Tables.md)|  
-|memory-optimized nonclustered indexes|For memory-optimized nonclustered indexes, memory consumption is a function of the row count and the size of the index key columns|[Guidelines for Using Indexes on Memory-Optimized Tables](../Topic/Guidelines%20for%20Using%20Indexes%20on%20Memory-Optimized%20Tables.md)|  
+|Hash|With a hash index, data is accessed through an in-memory hash table. Hash indexes consume a fixed amount of memory, which is a function of the bucket count.|[Guidelines for Using Indexes on Memory-Optimized Tables](../../a9retired/guidelines-for-using-indexes-on-memory-optimized-tables.md)|  
+|memory-optimized nonclustered indexes|For memory-optimized nonclustered indexes, memory consumption is a function of the row count and the size of the index key columns|[Guidelines for Using Indexes on Memory-Optimized Tables](../../a9retired/guidelines-for-using-indexes-on-memory-optimized-tables.md)|  
 |Clustered|A clustered index sorts and stores the data rows of the table or view in order based on the clustered index key. The clustered index is implemented as a B-tree index structure that supports fast retrieval of the rows, based on their clustered index key values.|[Clustered and Nonclustered Indexes Described](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)<br /><br /> [Create Clustered Indexes](../../relational-databases/indexes/create-clustered-indexes.md)|  
 |Nonclustered|A nonclustered index can be defined on a table or view with a clustered index or on a heap. Each index row in the nonclustered index contains the nonclustered key value and a row locator. This locator points to the data row in the clustered index or heap having the key value. The rows in the index are stored in the order of the index key values, but the data rows are not guaranteed to be in any particular order unless a clustered index is created on the table.|[Clustered and Nonclustered Indexes Described](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)<br /><br /> [Create Nonclustered Indexes](../../relational-databases/indexes/create-nonclustered-indexes.md)|  
 |Unique|A unique index ensures that the index key contains no duplicate values and therefore every row in the table or view is in some way unique.<br /><br /> Uniqueness can be a property of both clustered and nonclustered indexes.|[Create Unique Indexes](../../relational-databases/indexes/create-unique-indexes.md)|  
@@ -34,7 +34,7 @@ manager: "jhubbard"
 |Filtered|An optimized nonclustered index, especially suited to cover queries that select from a well-defined subset of data. It uses a filter predicate to index a portion of rows in the table. A well-designed filtered index can improve query performance, reduce index maintenance costs, and reduce index storage costs compared with full-table indexes.|[Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)|  
 |Spatial|A spatial index provides the ability to perform certain operations more efficiently on spatial objects (*spatial data*) in a column of the **geometry** data type. The spatial index reduces the number of objects on which relatively costly spatial operations need to be applied.|[Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md)|  
 |XML|A shredded, and persisted, representation of the XML binary large objects (BLOBs) in the **xml** data type column.|[XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)|  
-|Full-text|A special type of token-based functional index that is built and maintained by the Microsoft Full-Text Engine for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. It provides efficient support for sophisticated word searches in character string data.|[Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md)|  
+|Full-text|A special type of token-based functional index that is built and maintained by the Microsoft Full-Text Engine for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. It provides efficient support for sophisticated word searches in character string data.|[Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md)|  
   
 ## Related Tasks  
   

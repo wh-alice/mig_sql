@@ -117,8 +117,8 @@ this.GetAncestor(1)
   
 ## See Also  
  [IsDescendantOf &#40;Database Engine&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)   
- [hierarchyid Data Type Method Reference](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)   
+ [hierarchyid Data Type Method Reference](../../a9retired/hierarchyid-data-type-method-reference.md)   
  [Hierarchical Data &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)   
- [hierarchyid &#40;Transact-SQL&#41;](../Topic/hierarchyid%20\(Transact-SQL\).md)  
+ [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

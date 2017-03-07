@@ -17,14 +17,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SMO Programming - Getting Started in Visual C# .NET
-  [!INCLUDE[csprcs](../../integration-services/includes/csprcs-md.md)] .NET is one of the managed programming languages that are supported by the common language runtime (CLR) in [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] .NET. Many For more information about the C# language, see the [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] .NET documentation. You can use [!INCLUDE[vsprvslong](../../relational-databases/server-management-objects-smo/includes/vsprvslong-md.md)] and [!INCLUDE[vsOrcas](../../relational-databases/server-management-objects-smo/includes/vsorcas-md.md)] to develop SMO applications.  
+  [!INCLUDE[csprcs](../../a9retired/includes/csprcs-md.md)] .NET is one of the managed programming languages that are supported by the common language runtime (CLR) in [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] .NET. Many For more information about the C# language, see the [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] .NET documentation. You can use [!INCLUDE[vsprvslong](../../relational-databases/server-management-objects-smo/includes/vsprvslong-md.md)] and [!INCLUDE[vsOrcas](../../relational-databases/server-management-objects-smo/includes/vsorcas-md.md)] to develop SMO applications.  
   
 ## References and Imports  
- After you have started the [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] project, you must add references to the SMO assemblies. You then import the required namespaces so that your program can recognize the SMO types.  
+ After you have started the [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] project, you must add references to the SMO assemblies. You then import the required namespaces so that your program can recognize the SMO types.  
   
- In [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], the SMO assemblies are located in the C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\ folder.  
+ In [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], the SMO assemblies are located in the C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\ folder.  
   
 ## See Also  
- [Create a Visual C&#35; SMO Project in Visual Studio .NET](../Topic/Create%20a%20Visual%20C%23%20SMO%20Project%20in%20Visual%20Studio%20.NET.md)  
+ [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-.net.md)  
   
   

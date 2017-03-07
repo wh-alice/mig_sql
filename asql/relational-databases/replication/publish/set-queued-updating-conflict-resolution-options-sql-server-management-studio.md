@@ -30,10 +30,10 @@ manager: "jhubbard"
   
     -   **Reinitialize the subscription**  
   
-2.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+2.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 ## See Also  
  [Enable Updating Subscriptions for Transactional Publications](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)   
- [Queued Updating Conflict Detection and Resolution](../Topic/Queued%20Updating%20Conflict%20Detection%20and%20Resolution.md)  
+ [Queued Updating Conflict Detection and Resolution](../../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   
   

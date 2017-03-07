@@ -29,15 +29,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # END CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ends one side of an existing conversation.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -61,7 +61,7 @@ END CONVERSATION conversation_handle
  Is the error message. The *failure_text* is of type **nvarchar(3000)**. The failure text is user-defined text that is included in the error message sent to the other side of the conversation.  
   
  WITH CLEANUP  
- Removes all messages and catalog view entries for one side of a conversation that cannot complete normally. The other side of the conversation is not notified of the cleanup. [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] drops the conversation endpoint, all messages for the conversation in the transmission queue, and all messages for the conversation in the service queue. Administrators can use this option to remove conversations which cannot complete normally. For example, if the remote service has been permanently removed, an administrator can use WITH CLEANUP to remove conversations to that service. Do not use WITH CLEANUP in the code of a [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] application. If END CONVERSATION WITH CLEANUP is run before the receiving endpoint acknowledges receiving a message, the sending endpoint will send the message again. This could potentially re-run the dialog.  
+ Removes all messages and catalog view entries for one side of a conversation that cannot complete normally. The other side of the conversation is not notified of the cleanup. [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] drops the conversation endpoint, all messages for the conversation in the transmission queue, and all messages for the conversation in the service queue. Administrators can use this option to remove conversations which cannot complete normally. For example, if the remote service has been permanently removed, an administrator can use WITH CLEANUP to remove conversations to that service. Do not use WITH CLEANUP in the code of a [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] application. If END CONVERSATION WITH CLEANUP is run before the receiving endpoint acknowledges receiving a message, the sending endpoint will send the message again. This could potentially re-run the dialog.  
   
 ## Remarks  
  Ending a conversation locks the conversation group that the provided *conversation_handle* belongs to. When a conversation ends, [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] removes all messages for the conversation from the service queue.  
@@ -76,7 +76,7 @@ END CONVERSATION conversation_handle
   
 -   The WITH CLEANUP clause allows a database administrator to remove conversations that cannot complete normally. This option removes all messages and catalog view entries for the conversation. Notice that, in this case, the remote side of the conversation receives no indication that the conversation has ended, and may not receive messages that have been sent by an application but not yet transmitted over the network. Avoid this option unless the conversation cannot complete normally.  
   
- After a conversation ends, a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] SEND statement that specifies the conversation handle causes a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] error. If messages for this conversation arrive from the other side of the conversation, [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] discards those messages.  
+ After a conversation ends, a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] SEND statement that specifies the conversation handle causes a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] error. If messages for this conversation arrive from the other side of the conversation, [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] discards those messages.  
   
  If a conversation ends while the remote service still has unsent messages for the conversation, the remote service drops the unsent messages. This is not considered an error, and the remote service receives no notification that messages have been dropped.  
   
@@ -124,7 +124,7 @@ COMMIT TRANSACTION ;
 ```  
   
 ### C. Cleaning up a conversation that cannot complete normally  
- The following example ends the dialog specified by `@dialog_handle`. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] immediately removes all messages from the service queue and the transmission queue, without notifying the remote service. Since ending a dialog with cleanup does not notify the remote service, you should only use this in cases where the remote service is not available to receive an **EndDialog** or **Error** message.  
+ The following example ends the dialog specified by `@dialog_handle`. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] immediately removes all messages from the service queue and the transmission queue, without notifying the remote service. Since ending a dialog with cleanup does not notify the remote service, you should only use this in cases where the remote service is not available to receive an **EndDialog** or **Error** message.  
   
 ```  
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
@@ -133,6 +133,6 @@ END CONVERSATION @dialog_handle WITH CLEANUP ;
 ## See Also  
  [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.conversation-endpoints-transact-sql.md)  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.conversation-endpoints-transact-sql.md)  
   
   

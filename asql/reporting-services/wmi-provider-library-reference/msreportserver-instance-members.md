@@ -29,17 +29,17 @@ manager: "erikre"
   
 |||  
 |-|-|  
-|[EditionID](../Topic/EditionID%20Property%20\(WMI%20MSReportServer_Instance\).md)|Returns the edition of the report server.|  
-|[EditionName](../Topic/EditionName%20Property%20\(WMI%20MSReportServer_Instance\).md)|Returns the human readable name of the report server edition.|  
-|[InstanceID](../Topic/InstanceID%20Property%20\(WMI%20MSReportServer_Instance\).md)|This object supports the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] infrastructure and is not intended to be used directly from your code.|  
-|[InstanceName](../Topic/InstanceName%20Property%20\(WMI%20MSReportServer_Instance\).md)|Returns the name of a report server instance on a specific computer. Read-only.|  
-|[IsSharePointIntegrated](../Topic/IsSharePointIntegrated%20Property%20\(WMI%20MSReportServer_Instance\).md)|Indicates whether the report server is configured for SharePoint integrate mode.|  
-|[Version](../Topic/Version%20Property%20\(WMI%20MSReportServer_Instance\).md)|Returns the version of the report server.|  
+|[EditionID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Returns the edition of the report server.|  
+|[EditionName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|Returns the human readable name of the report server edition.|  
+|[InstanceID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instanceid.md)|This object supports the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] infrastructure and is not intended to be used directly from your code.|  
+|[InstanceName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instancename.md)|Returns the name of a report server instance on a specific computer. Read-only.|  
+|[IsSharePointIntegrated](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-issharepointintegrated.md)|Indicates whether the report server is configured for SharePoint integrate mode.|  
+|[Version](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-version.md)|Returns the version of the report server.|  
   
 ## Public Methods  
   
 |||  
 |-|-|  
-|[GetReportServerUrls Method &#40;WMI MSReportServer_Instance&#41;](../Topic/GetReportServerUrls%20Method%20\(WMI%20MSReportServer_Instance\).md)|Lists URLs users can use to access the report server and report manager.|  
+|[GetReportServerUrls Method &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|Lists URLs users can use to access the report server and report manager.|  
   
   

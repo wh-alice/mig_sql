@@ -31,7 +31,7 @@ manager: "erikre"
 > [!NOTE]  
 >  A shared dataset must be based on a shared data source. If the data source you need isn't available, you need to create one on the report server. For more information, see [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) .  
   
- For more information, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md).  
+ For more information, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../../a9retired/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
 ### Dataset  
  Use the **Set Options** button to set shared dataset properties. These include the following:  
@@ -63,7 +63,7 @@ manager: "erikre"
   
  Some data source types provide a graphical query designer that you can use to explore the metadata on an external data source. You can interactively drag names from the metadata pane to the query design surface, or interactively select the names to use.  
   
- Some data source types support a text-based query designer that you can use to paste in queries that you have created in other tools, such as [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+ Some data source types support a text-based query designer that you can use to paste in queries that you have created in other tools, such as [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
  Each data source type has specific requirements for the query that will work against the external data source. For more information, see the topic that corresponds to the data source type in [Add Data from External Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) and [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   

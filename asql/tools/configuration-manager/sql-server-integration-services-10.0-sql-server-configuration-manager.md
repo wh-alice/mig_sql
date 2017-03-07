@@ -15,8 +15,8 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SQL Server Integration Services 10.0 (SQL Server Configuration Manager)
-  This is the service that supports [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)]. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.  
+  This is the service that supports [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)]. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.  
   
- For information about [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)], see Books Online.  
+ For information about [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)], see Books Online.  
   
   

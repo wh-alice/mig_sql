@@ -32,11 +32,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CREATE COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Creates a column master key metadata object in a database. A column master key metadata entry that represents a key, stored in an external key store, which is used to protect (encrypt) column encryption keys when using the [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature. Multiple column master keys allow for key rotation; periodically changing the key to enhance security. You can create a column master key in a key store and its corresponding metadata object in the database by using the Object Explorer in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or PowerShell. For details, see [Overview of Key Management for Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
+  Creates a column master key metadata object in a database. A column master key metadata entry that represents a key, stored in an external key store, which is used to protect (encrypt) column encryption keys when using the [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature. Multiple column master keys allow for key rotation; periodically changing the key to enhance security. You can create a column master key in a key store and its corresponding metadata object in the database by using the Object Explorer in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or PowerShell. For details, see [Overview of Key Management for Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -73,7 +73,7 @@ The below tables captures the names of system providers:
     |'Azure_Key_Vault'|See [Getting Started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
   
 
- You can implement a custom key store provider, in order to store column master keys in a store for which there is no built-in key store provider in your Always Encrypted-enabled client driver.  Note that the names of custom key store providers cannot start with 'MSSQL_', which is a prefix reserved for [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] key store providers. 
+ You can implement a custom key store provider, in order to store column master keys in a store for which there is no built-in key store provider in your Always Encrypted-enabled client driver.  Note that the names of custom key store providers cannot start with 'MSSQL_', which is a prefix reserved for [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] key store providers. 
 
   
  key_path  
@@ -208,7 +208,7 @@ WITH (
  
 * [DROP COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
 * [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
-* [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys.column-master-keys-transact-sql.md)
+* [sys.column_master_keys (Transact-SQL)](../../relational-databases/reference/system-catalog-views/sys.column-master-keys-transact-sql.md)
 * [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
 * [Overview of Key Management for Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
   

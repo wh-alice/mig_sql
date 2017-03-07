@@ -20,7 +20,7 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # PolyBase scale-out groups
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   A standalone SQL Server instance with PolyBase can become a performance bottleneck when dealing with massive data sets in Hadoop or Azure Blob Storage. The PolyBase Group feature allows you to create a cluster of SQL Server instances to process large data sets from external data sources, such as Hadoop or Azure Blob Storage, in a scale-out fashion for better query performance.  
   
@@ -60,11 +60,11 @@ manager: "jhubbard"
   
 2.  Select one SQL Server instance as the head node. A head node can only be designated on an instance running SQL Server Enterprise.  
   
-3.  Add remaining SQL Server instances as compute nodes using [sp_polybase_join_group](../Topic/sp_polybase_join_group.md).  
+3.  Add remaining SQL Server instances as compute nodes using [sp_polybase_join_group](../../relational-databases/reference/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
   
-4.  Monitor nodes in the group using [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-exec-compute-nodes-transact-sql.md).  
+4.  Monitor nodes in the group using [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-exec-compute-nodes-transact-sql.md).  
   
-5.  Optional. Remove a compute node from  using [sp_polybase_leave_group &#40;Transact-SQL&#41;](../Topic/sp_polybase_leave_group%20\(Transact-SQL\).md).  
+5.  Optional. Remove a compute node from  using [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
   
 ## Example walk-through  
  This walks through the steps of configuring a PolyBase Group using:  
@@ -99,7 +99,7 @@ manager: "jhubbard"
   
 1.  Connect to SQL Server on PQTH4A-CMP02.  
   
-2.  Run the stored procedure [sp_polybase_join_group](../Topic/sp_polybase_join_group.md).  
+2.  Run the stored procedure [sp_polybase_join_group](../../relational-databases/reference/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
   
     ```  
     -- Enter head node details:   
@@ -129,7 +129,7 @@ manager: "jhubbard"
 5.  Verify that the node has been removed by running the DMV sys.dm_exec_compute_nodes on PQTH4A-CMP01. Now, PQTH4A-CMP02 will function as a standalone head node  
   
 ## Next steps  
- For troubleshooting, see [PolyBase troubleshooting with dynamic management views](../Topic/PolyBase%20troubleshooting%20with%20dynamic%20management%20views.md).  
+ For troubleshooting, see [PolyBase troubleshooting with dynamic management views](../../a9retired/polybase-troubleshooting-with-dynamic-management-views.md).  
   
 ## See Also  
  [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   

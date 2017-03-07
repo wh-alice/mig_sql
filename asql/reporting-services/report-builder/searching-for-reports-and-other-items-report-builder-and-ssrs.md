@@ -28,7 +28,7 @@ manager: "erikre"
 -   To search for specific text within a report, use the toolbar at the top of the report.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## See Also  
  [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx)   

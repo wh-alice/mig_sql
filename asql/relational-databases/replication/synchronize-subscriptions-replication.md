@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Synchronize Subscriptions (Replication)
-  Subscriptions are synchronized by replication agents. The Distribution Agent synchronizes subscriptions to transactional and snapshot publications, and the Merge Agent synchronizes subscriptions to merge publications. You can use [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], replication stored procedures, and Replication Management Objects (RMO) to synchronize subscriptions and to control synchronization behavior. The following topics describe how synchronize subscriptions and specify synchronization options.  
+  Subscriptions are synchronized by replication agents. The Distribution Agent synchronizes subscriptions to transactional and snapshot publications, and the Merge Agent synchronizes subscriptions to merge publications. You can use [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], replication stored procedures, and Replication Management Objects (RMO) to synchronize subscriptions and to control synchronization behavior. The following topics describe how synchronize subscriptions and specify synchronization options.  
   
 ## In This Section  
   

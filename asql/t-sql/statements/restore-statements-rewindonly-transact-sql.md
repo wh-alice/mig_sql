@@ -27,11 +27,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # RESTORE Statements - REWINDONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Rewinds and closes specified tape devices that were left open by BACKUP or RESTORE statements executed with the NOREWIND option. This command is supported only for tape devices.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -88,7 +88,7 @@ FROM <backup_device> [ ,...n ]
  Specifies that the tape is not unloaded automatically from the tape drive after a RESTORE. NOUNLOAD remains set until UNLOAD is specified.  
   
 ## General Remarks  
- RESTORE REWINDONLY is an alternative to RESTORE LABELONLY FROM TAPE = \<name> WITH REWIND. You can get a list of opened tape drives from the [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys.dm-io-backup-tapes-transact-sql.md) dynamic management view.  
+ RESTORE REWINDONLY is an alternative to RESTORE LABELONLY FROM TAPE = \<name> WITH REWIND. You can get a list of opened tape drives from the [sys.dm_io_backup_tapes](../../relational-databases/reference/system-dynamic-management-views/sys.dm-io-backup-tapes-transact-sql.md) dynamic management view.  
   
 ## Security  
   
@@ -98,7 +98,7 @@ FROM <backup_device> [ ,...n ]
 ## See Also  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Backup History and Header Information &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

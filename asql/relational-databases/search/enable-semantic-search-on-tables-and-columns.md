@@ -19,7 +19,7 @@ manager: "jhubbard"
 # Enable Semantic Search on Tables and Columns
   Describes how to enable or disable statistical semantic indexing on selected columns that contain documents or text.  
   
- Statistical Semantic Search uses the indexes that are created by Full-Text Search, and creates additional indexes. As a result of this dependency on full-text search, you create a new semantic index when you define a new full-text index, or when you alter an existing full-text index. You can create a new semantic index by using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements, or by using the Full-Text Indexing Wizard and other dialog boxes in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], as described in this topic.  
+ Statistical Semantic Search uses the indexes that are created by Full-Text Search, and creates additional indexes. As a result of this dependency on full-text search, you create a new semantic index when you define a new full-text index, or when you alter an existing full-text index. You can create a new semantic index by using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements, or by using the Full-Text Indexing Wizard and other dialog boxes in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], as described in this topic.  
   
 ##  <a name="BasicEnabling"></a> Create a semantic index  
   
@@ -114,7 +114,7 @@ GO
  Run the Full-Text Indexing Wizard and enable **Statistical Semantics** on the **Select Table Columns** page for each column on which you want to create a semantic index. For more information, including information about how to start the Full-Text Indexing Wizard, see [Use the Full-Text Indexing Wizard](../../relational-databases/search/use-the-full-text-indexing-wizard.md).  
   
 ##  <a name="HowToEnableAlter"></a> Create a semantic index when there is an existing full-text index  
- You can add semantic indexing when you alter an existing full-text index with the **ALTER FULLTEXT INDEX** statement. You can also add semantic indexing by using various dialog boxes in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+ You can add semantic indexing when you alter an existing full-text index with the **ALTER FULLTEXT INDEX** statement. You can also add semantic indexing by using various dialog boxes in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 ### Add a semantic index by using Transact-SQL  
  Call the **ALTER FULLTEXT INDEX** statement with the options described below for each column on which you want to add a semantic index. For more information about all the options for this statement, see [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md).  
@@ -140,7 +140,7 @@ GO
 ```  
   
 ### Add a semantic index by using SQL Server Management Studio  
- You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](../Topic/Manage%20Full-Text%20Indexes.md).  
+ You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](../../a9retired/manage-full-text-indexes.md).  
 
 ## Alter a semantic index
   
@@ -151,7 +151,7 @@ GO
 -   You cannot add indexing to a column, and alter or drop indexing for the same column, in a single call to the **ALTER FULLTEXT INDEX** statement.  
   
 ##  <a name="dropping"></a> Drop a semantic index  
-You can drop semantic indexing when you alter an existing full-text index with the **ALTER FULLTEXT INDEX** statement. You can also drop semantic indexing by using various dialog boxes in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+You can drop semantic indexing when you alter an existing full-text index with the **ALTER FULLTEXT INDEX** statement. You can also drop semantic indexing by using various dialog boxes in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
  ### Drop a semantic index by using Transact-SQL  
 To drop semantic indexing only from a column or columns, call the **ALTER FULLTEXT INDEX** statement with the **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** option. You can drop the indexing from multiple columns in a single **ALTER** statement.  
@@ -179,7 +179,7 @@ GO
 ```  
   
  ### Drop a semantic index by using SQL Server Management Studio  
- You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](../Topic/Manage%20Full-Text%20Indexes.md).  
+ You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](../../a9retired/manage-full-text-indexes.md).  
   
 ###  <a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
   
@@ -223,7 +223,7 @@ GO
     GO  
     ```  
   
--   Query the catalog view [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-index-columns-transact-sql.md) for the full-text index.  
+-   Query the catalog view [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-index-columns-transact-sql.md) for the full-text index.  
   
      A value of 1 in the **statistical_semantics** column indicates that the specified column is enabled for semantic indexing in addition to full-text indexing.  
   
@@ -232,7 +232,7 @@ GO
     GO  
     ```  
   
--   In Object Explorer in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], right-click on a column and select **Properties**. On the **General** page of the **Column Properties** dialog box, check the value of the **Statistical Semantics** property.  
+-   In Object Explorer in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], right-click on a column and select **Properties**. On the **General** page of the **Column Properties** dialog box, check the value of the **Statistical Semantics** property.  
   
      A value of True indicates that the specified column is enabled for semantic indexing in addition to full-text indexing.  
   
@@ -243,14 +243,14 @@ GO
 > [!IMPORTANT]  
 >  Fewer languages are supported for semantic indexing than for full-text indexing. As a result, there may be columns that you can index for full-text search, but not for semantic search.  
   
- Query the catalog view [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-semantic-languages-transact-sql.md).  
+ Query the catalog view [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-semantic-languages-transact-sql.md).  
   
 ```tsql  
 SELECT * FROM sys.fulltext_semantic_languages  
 GO  
 ```  
   
- The following languages are supported for semantic indexing. This list represents the output of the catalog view [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-semantic-languages-transact-sql.md), ordered by LCID.  
+ The following languages are supported for semantic indexing. This list represents the output of the catalog view [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-semantic-languages-transact-sql.md), ordered by LCID.  
   
 |Language|LCID|  
 |--------------|----------|  
@@ -266,7 +266,7 @@ GO
 |Spanish|3082|  
   
 ###  <a name="doctypes"></a> Determine which document types can be indexed  
- Query the catalog view [sys.fulltext_document_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-document-types-transact-sql.md).  
+ Query the catalog view [sys.fulltext_document_types &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-document-types-transact-sql.md).  
   
  If the document type that you want to index is not in the list of supported types, then you may have to locate, download, and install additional filters. For more information, see [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   

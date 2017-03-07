@@ -28,11 +28,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # @@SPID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the session ID of the current user process.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -63,8 +63,8 @@ ID     Login Name                     User Name
 54     SEATTLE\joanna                 dbo                             
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
- This example returns the [!INCLUDE[ssDW](../../database-engine/configure/windows/includes/ssdw-md.md)] session ID, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Control node session ID, login name, and user name for the current user process.  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
+ This example returns the [!INCLUDE[ssDW](../../database-engine/configure/windows/includes/ssdw-md.md)] session ID, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Control node session ID, login name, and user name for the current user process.  
   
 ```  
 SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
@@ -72,8 +72,8 @@ SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', 
   
 ## See Also  
  [Configuration Functions](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sp_who](../../relational-databases/reference/system-stored-procedures/sp-who-transact-sql.md)  
   
   
 

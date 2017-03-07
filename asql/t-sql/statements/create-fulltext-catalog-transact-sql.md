@@ -38,9 +38,9 @@ manager: "jhubbard"
  You cannot create full-text catalogs in the **master**, **model**, or **tempdb** databases.  
   
 > [!IMPORTANT]  
->  Beginning with [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)], a full-text catalog is a virtual object and does not belong to any filegroup. A full-text catalog is a logical concept that refers to a group of full-text indexes.  
+>  Beginning with [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)], a full-text catalog is a virtual object and does not belong to any filegroup. A full-text catalog is a logical concept that refers to a group of full-text indexes.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -60,18 +60,18 @@ CREATE FULLTEXT CATALOG catalog_name
   
 ## Arguments  
  *catalog_name*  
- Is the name of the new catalog. The catalog name must be unique among all catalog names in the current database. Also, the name of the file that corresponds to the full-text catalog (see ON FILEGROUP) must be unique among all files in the database. If the name of the catalog is already used for another catalog in the database, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns an error.  
+ Is the name of the new catalog. The catalog name must be unique among all catalog names in the current database. Also, the name of the file that corresponds to the full-text catalog (see ON FILEGROUP) must be unique among all files in the database. If the name of the catalog is already used for another catalog in the database, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns an error.  
   
  The length of the catalog name cannot exceed 120 characters.  
   
  ON FILEGROUP *filegroup*  
- Beginning with [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)], this clause has no effect.  
+ Beginning with [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)], this clause has no effect.  
   
  IN PATH **'***rootpath***'**  
  > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)]  
   
- Beginning with [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)], this clause has no effect.  
+ Beginning with [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)], this clause has no effect.  
   
  ACCENT_SENSITIVITY = {ON|OFF}  
  Specifies that the catalog is accent sensitive or accent insensitive for full-text indexing. When this property is changed, the index must be rebuilt. The default is to use the accent-sensitivity specified in the database collation. To display the database collation, use the **sys.databases** catalog view.  
@@ -113,10 +113,10 @@ GO
 ```  
   
 ## See Also  
- [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-catalogs-transact-sql.md)   
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
  [Full-Text Search](../../relational-databases/search/full-text-search.md)   
- [New Full-Text Catalog &#40;General Page&#41;](../Topic/New%20Full-Text%20Catalog%20\(General%20Page\).md)  
+ [New Full-Text Catalog &#40;General Page&#41;](../../a9retired/new-full-text-catalog-general-page.md)  
   
   

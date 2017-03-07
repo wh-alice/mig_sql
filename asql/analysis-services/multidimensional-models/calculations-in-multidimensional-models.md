@@ -54,7 +54,7 @@ manager: "erikre"
 ## Changing Solve Order  
  Calculations are solved in the order listed in the **Script Organizer** pane. You can reorder the calculations by right-clicking any calculation and then clicking **Move Up** or **Move Down** on the shortcut menu. You can also click a calculation and then click the **Move Up** or **Move Down** button on the toolbar.  
   
- You can override this order manually for calculated cells and calculated members. For more information about pass order and solve order, see [Understanding Pass Order and Solve Order &#40;MDX&#41;](../Topic/Understanding%20Pass%20Order%20and%20Solve%20Order%20\(MDX\).md).  
+ You can override this order manually for calculated cells and calculated members. For more information about pass order and solve order, see [Understanding Pass Order and Solve Order &#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md).  
   
 ## Deleting a Calculation  
  To delete an existing calculation, on the **Calculations** tab, in the **Script Organizer** pane, select the calculation to be deleted, and then click **Delete** on the **Edit** menu or click the **Delete** icon on the toolbar. You can also right-click the calculation in the **Script Organizer** pane and select **Delete** from the short-cut menu.  

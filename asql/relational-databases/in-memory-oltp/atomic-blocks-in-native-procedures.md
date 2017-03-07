@@ -15,11 +15,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Atomic Blocks in Native Procedures
-  **BEGIN ATOMIC** is part of the ANSI SQL standard. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports atomic blocks at the top-level of natively compiled stored procedures, as well as for natively compiled, scalar user-defined functions. For more information about these functions, see [Scalar User-Defined Functions for In-Memory OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
+  **BEGIN ATOMIC** is part of the ANSI SQL standard. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports atomic blocks at the top-level of natively compiled stored procedures, as well as for natively compiled, scalar user-defined functions. For more information about these functions, see [Scalar User-Defined Functions for In-Memory OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
--   Every natively compiled stored procedure contains exactly one block of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements. This is an ATOMIC block.  
+-   Every natively compiled stored procedure contains exactly one block of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements. This is an ATOMIC block.  
   
--   Non-native, interpreted [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] stored procedures and ad hoc batches do not support atomic blocks.  
+-   Non-native, interpreted [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] stored procedures and ad hoc batches do not support atomic blocks.  
   
  Atomic blocks are executed (atomically) within the transaction. Either all statements in the block succeed or the entire block will be rolled back to the savepoint that was created at the start of the block. In addition, the session settings are fixed for the atomic block. Executing the same atomic block in sessions with different settings will result in the same behavior, independent of the settings of the current session.  
   
@@ -130,15 +130,15 @@ GO
 |Required Setting|Description|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|Supported values are **SNAPSHOT**, **REPEATABLEREAD**, and **SERIALIZABLE**.|  
-|**LANGUAGE**|Determines date and time formats and system messages. All languages and aliases in [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys.syslanguages-transact-sql.md) are supported.|  
+|**LANGUAGE**|Determines date and time formats and system messages. All languages and aliases in [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/reference/system-compatibility-views/sys.syslanguages-transact-sql.md) are supported.|  
   
  The following settings are optional:  
   
 |Optional Setting|Description|  
 |----------------------|-----------------|  
-|**DATEFORMAT**|All [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] date formats are supported. When specified, **DATEFORMAT** overrides the default date format associated with **LANGUAGE**.|  
+|**DATEFORMAT**|All [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] date formats are supported. When specified, **DATEFORMAT** overrides the default date format associated with **LANGUAGE**.|  
 |**DATEFIRST**|When specified, **DATEFIRST** overrides the default associated with **LANGUAGE**.|  
-|**DELAYED_DURABILITY**|Supported values are **OFF** and **ON**.<br /><br /> [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] transaction commits can be either fully durable, the default, or delayed durable.For more information, see [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md).|  
+|**DELAYED_DURABILITY**|Supported values are **OFF** and **ON**.<br /><br /> [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] transaction commits can be either fully durable, the default, or delayed durable.For more information, see [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md).|  
   
  The following SET options have the same system default value for all atomic blocks in all natively compiled stored procedures:  
   

@@ -25,7 +25,7 @@ manager: "erikre"
 # Analysis Services Scripting Language XML Elements (ASSL)
   Although the Analysis Services Scripting Language (ASSL) schema contains only XML elements, from a developer's point of view, these elements correspond to the following concepts:  
   
--   Objects, such as **Database**, **Cube**, and **Dimension** objects, in the hierarchy of objects contained by an instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)].  
+-   Objects, such as **Database**, **Cube**, and **Dimension** objects, in the hierarchy of objects contained by an instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)].  
   
 -   Collections of objects, such as the **Dimensions** and **Cubes** collections.  
   

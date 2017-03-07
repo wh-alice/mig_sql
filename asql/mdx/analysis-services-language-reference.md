@@ -15,7 +15,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Analysis Services Language Reference
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [Data Analysis Expressions (DAX) Reference](http://msdn.microsoft.com/en-us/70a82136-0926-4a91-bcb3-e18e82593b0d)  
   

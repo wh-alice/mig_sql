@@ -17,9 +17,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Lesson 1-1 - Creating a New Integration Services Project
-The first step in creating a package in [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] is to create an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project. This project includes the templates for the objects — data sources, data source views, and packages — that you use in a data transformation solution.  
+The first step in creating a package in [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] is to create an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project. This project includes the templates for the objects — data sources, data source views, and packages — that you use in a data transformation solution.  
   
-The packages that you will create in this [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] tutorial interpret the values of locale-sensitive data. If your computer is not configured to use the regional option English (United States), you need to set additional properties in the package. The packages that you use in lessons 2 through 5 are copied from the package created in lesson 1, and you need not update locale-sensitive properties in the copied packages.  
+The packages that you will create in this [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] tutorial interpret the values of locale-sensitive data. If your computer is not configured to use the regional option English (United States), you need to set additional properties in the package. The packages that you use in lessons 2 through 5 are copied from the package created in lesson 1, and you need not update locale-sensitive properties in the copied packages.  
   
 > [!NOTE]  
 > This tutorial requires Microsoft SQL Server Data Tools.  
@@ -30,7 +30,7 @@ The packages that you will create in this [!INCLUDE[ssISnoversion](../../advance
   
 1.  On the **Start** menu, point to **All Programs**, point to **Microsoft SQL Server**, and click **SQL Server Data Tools**.  
   
-2.  On the **File** menu, point to **New**, and click **Project** to create a new [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project.  
+2.  On the **File** menu, point to **New**, and click **Project** to create a new [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project.  
   
 3.  In the **New Project** dialog box, expand the **Business Intelligence** node under **Installed Templates**, and select **Integration Services Project** in the **Templates** pane.  
   
@@ -45,5 +45,5 @@ The packages that you will create in this [!INCLUDE[ssISnoversion](../../advance
 7.  In **Solution Explorer** toolbar, right-click **Package.dtsx**, click **Rename**, and rename the default package to **Lesson 1.dtsx**.  
   
 ## Next Task in Lesson  
-[Step 2: Adding and Configuring a Flat File Connection Manager](../Topic/Step%202:%20Adding%20and%20Configuring%20a%20Flat%20File%20Connection%20Manager.md)  
+[Step 2: Adding and Configuring a Flat File Connection Manager](../../integration-services/tutorials/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   

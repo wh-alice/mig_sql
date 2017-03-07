@@ -15,9 +15,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.check_schema_version
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Determines whether the SSISDB catalog schema and the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] binaries (ISServerExec and SQLCLR assembly) are compatible.  
+  Determines whether the SSISDB catalog schema and the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] binaries (ISServerExec and SQLCLR assembly) are compatible.  
   
  The ISServerExec.exc logs an error message when the schema and the binaries are incompatible.  
   

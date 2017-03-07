@@ -21,32 +21,32 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Technical Reference (SSRS)
-  Find the tools and PowerShell reference documentation for using or administering [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] in [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  Find the tools and PowerShell reference documentation for using or administering [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] in [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)].  
   
- ![Small File Folder Icon](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Errors and Events**  
+ ![Small File Folder Icon](../a9retired/media/filefolder-small.png "Small File Folder Icon") **Errors and Events**  
  [Cause and Resolution of Reporting Services Errors](../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
- ![Small File Folder Icon](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Feature Reference**  
+ ![Small File Folder Icon](../a9retired/media/filefolder-small.png "Small File Folder Icon") **Feature Reference**  
  [Report Designer F1 Help](../reporting-services/tools/report-designer-f1-help.md)  
   
- [Report Manager F1 Help](../Topic/Report%20Manager%20F1%20Help.md)  
+ [Report Manager F1 Help](../a9retired/report-manager-f1-help.md)  
   
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../reporting-services/install/windows/reporting-services-configuration-manager-native-mode.md)  
   
- [Report Wizard Help](../Topic/Report%20Wizard%20Help.md)  
+ [Report Wizard Help](../a9retired/report-wizard-help.md)  
   
  [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
   
  [Device Information Settings for Rendering Extensions &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- ![Small File Folder Icon](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Report Server Command Prompt Utilities**  
+ ![Small File Folder Icon](../a9retired/media/filefolder-small.png "Small File Folder Icon") **Report Server Command Prompt Utilities**  
  [RS.exe Utility &#40;SSRS&#41;](../reporting-services/tools/rs.exe-utility-ssrs.md)  
   
  [rsconfig Utility &#40;SSRS&#41;](../reporting-services/tools/rsconfig-utility-ssrs.md)  
   
  [rskeymgmt Utility &#40;SSRS&#41;](../reporting-services/tools/rskeymgmt-utility-ssrs.md)  
   
- ![Small File Folder Icon](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Reporting Services WMI Provider Class Library**  
+ ![Small File Folder Icon](../a9retired/media/filefolder-small.png "Small File Folder Icon") **Reporting Services WMI Provider Class Library**  
  [Reporting Services WMI Provider Library Reference &#40;SSRS&#41;](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
   
 ## See Also  

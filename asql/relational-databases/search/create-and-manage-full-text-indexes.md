@@ -47,13 +47,13 @@ For more info, see [Populate Full-Text Indexes](../../relational-databases/searc
 ### View the properties of a full-text index with Transact-SQL
 |Catalog or Dynamic Management View|Description|  
 |----------------------------------------|-----------------|  
-|[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-index-catalog-usages-transact-sql.md)|Returns a row for each full-text catalog to full-text index reference.|  
-|[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-index-columns-transact-sql.md)|Contains a row for each column that is part of a full-text index.|  
-|[sys.fulltext_index_fragments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-index-fragments-transact-sql.md)|A fulltext index uses internal tables called full-text index fragments to store the inverted index data. This view can be used to query the metadata about these fragments. This view contains a row for each full-text index fragment in every table that contains a full-text index.|  
-|[sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-indexes-transact-sql.md)|Contains a row per full-text index of a tabular object.|  
-|[sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-index-keywords-transact-sql.md)|Returns information about the content of a full-text index for the specified table.|  
-|[sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-index-keywords-by-document-transact-sql.md)|Returns information about the document-level content of a full-text index for the specified table. A given keyword can appear in several documents.|  
-|[sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-index-population-transact-sql.md)|Returns information about the full-text index populations currently in progress.|  
+|[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-index-catalog-usages-transact-sql.md)|Returns a row for each full-text catalog to full-text index reference.|  
+|[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-index-columns-transact-sql.md)|Contains a row for each column that is part of a full-text index.|  
+|[sys.fulltext_index_fragments &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-index-fragments-transact-sql.md)|A fulltext index uses internal tables called full-text index fragments to store the inverted index data. This view can be used to query the metadata about these fragments. This view contains a row for each full-text index fragment in every table that contains a full-text index.|  
+|[sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-indexes-transact-sql.md)|Contains a row per full-text index of a tabular object.|  
+|[sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-index-keywords-transact-sql.md)|Returns information about the content of a full-text index for the specified table.|  
+|[sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-index-keywords-by-document-transact-sql.md)|Returns information about the document-level content of a full-text index for the specified table. A given keyword can appear in several documents.|  
+|[sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-index-population-transact-sql.md)|Returns information about the full-text index populations currently in progress.|  
  
 ### View the properties of a full-text index with Management Studio 
 1.  In Management Studio, in Object Explorer, expand the server.  
@@ -68,16 +68,16 @@ For more info, see [Populate Full-Text Indexes](../../relational-databases/searc
   
     |Page|Description|  
     |----------|-----------------|  
-    |**General**|Displays basic properties of the full-text index. These include several modifiable properties and a number of unchangeable properties such as database name, table name, and the name of full-text key column. The modifiable properties are:<br /><br /> **Full-Text Index Stoplist**<br /><br /> **Full-Text Indexing Enabled**<br /><br /> **Change Tracking**<br /><br /> **Search Property List**<br /><br />For more info, see [Full-Text Index Properties &#40;General Page&#41;](../Topic/Full-Text%20Index%20Properties%20\(General%20Page\).md).|  
-    |**Columns**|Displays the table columns that are available for full-text indexing. The selected column or columns are full-text indexed. You can select as many of the available columns as you want to include in the full-text index. For more info, see [Full-Text Index Properties &#40;Columns Page&#41;](../Topic/Full-Text%20Index%20Properties%20\(Columns%20Page\).md).|  
+    |**General**|Displays basic properties of the full-text index. These include several modifiable properties and a number of unchangeable properties such as database name, table name, and the name of full-text key column. The modifiable properties are:<br /><br /> **Full-Text Index Stoplist**<br /><br /> **Full-Text Indexing Enabled**<br /><br /> **Change Tracking**<br /><br /> **Search Property List**<br /><br />For more info, see [Full-Text Index Properties &#40;General Page&#41;](../../a9retired/full-text-index-properties-general-page.md).|  
+    |**Columns**|Displays the table columns that are available for full-text indexing. The selected column or columns are full-text indexed. You can select as many of the available columns as you want to include in the full-text index. For more info, see [Full-Text Index Properties &#40;Columns Page&#41;](../../a9retired/full-text-index-properties-columns-page.md).|  
     |**Schedules**|Use this page to create or manage schedules for a SQL Server Agent job that starts an incremental table population for the full-text index populations. For more info, see [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Note: After you exit the **Full-Text Index Properties** dialog box, any newly created schedule is associated with a SQL Server Agent job (Start Incremental Table Population on *database_name*.*table_name*).|  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)] to save any changes and exit the **Full-text index Properties** dialog box.  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)] to save any changes and exit the **Full-text index Properties** dialog box.  
   
 ##  <a name="props"></a> View the properties of indexed tables and columns  
- Several [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] functions such as OBJECTPROPERTYEX can be used to obtain the value of various full-text indexing properties. This information is useful for administering and troubleshooting full-text search.  
+ Several [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] functions such as OBJECTPROPERTYEX can be used to obtain the value of various full-text indexing properties. This information is useful for administering and troubleshooting full-text search.  
   
- The following table lists the full-text properties related to indexed tables and columns and their related [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] functions.  
+ The following table lists the full-text properties related to indexed tables and columns and their related [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] functions.  
   
 |Property|Description|Function|  
 |--------------|-----------------|--------------|  
@@ -162,7 +162,7 @@ GO
  If a **varbinary(max)**, **varbinary**, or **xml** column is full-text indexed, it can be queried using the full-text predicates (CONTAINS and FREETEXT) and functions (CONTAINSTABLE and FREETEXTTABLE), like any other full-text indexed column.
    
 ### Index varbinary(max) or varbinary data  
- A single **varbinary(max)** or **varbinary** column can store many types of documents. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports any document type for which a filter is installed and available in the operative system. The document type of each document is identified by the file extension of the document. For example, for a .doc file extension, full-text search uses the filter that supports Microsoft Word documents. For a list of available document types, query the [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys.fulltext-document-types-transact-sql.md) catalog view.  
+ A single **varbinary(max)** or **varbinary** column can store many types of documents. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports any document type for which a filter is installed and available in the operative system. The document type of each document is identified by the file extension of the document. For example, for a .doc file extension, full-text search uses the filter that supports Microsoft Word documents. For a list of available document types, query the [sys.fulltext_document_types](../../relational-databases/reference/system-catalog-views/sys.fulltext-document-types-transact-sql.md) catalog view.  
   
 Note that the Full-Text Engine can leverage existing filters that are installed in the operating system. Before you can use operating-system filters, word breakers, and stemmers, you must load them in the server instance, as follows:  
   
@@ -178,9 +178,9 @@ To create a full-text index on a **varbinary(max)** column, the Full-Text Engine
  For more info about indexing and querying on an **xml** column, see [Use Full-Text Search with XML Columns](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
   
 ##  <a name="disable"></a> Disable or re-enable tull-text indexing for a table   
- In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], all user-created databases are full-text enabled by default. Additionally, an individual table is automatically enabled for full-text indexing as soon as a full-text index is created on it and a column is added to the index. A table is automatically disabled for full-text indexing when the last column is dropped from its full-text index.  
+ In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], all user-created databases are full-text enabled by default. Additionally, an individual table is automatically enabled for full-text indexing as soon as a full-text index is created on it and a column is added to the index. A table is automatically disabled for full-text indexing when the last column is dropped from its full-text index.  
   
- On a table that has a full-text index, you can manually disable or re-enable a table for full-text indexing using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+ On a table that has a full-text index, you can manually disable or re-enable a table for full-text indexing using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
 
 1.  Expand the server group, expand **Databases**, and expand the database that contains the table you want to enable for full-text indexing.  
   

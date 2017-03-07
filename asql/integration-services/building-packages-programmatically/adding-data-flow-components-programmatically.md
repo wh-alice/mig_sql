@@ -34,17 +34,17 @@ manager: "jhubbard"
 ## Adding a Managed Component  
  You cannot use the CLSID or PROGID to add one the managed data flow components to the data flow, because these values point to a wrapper and not to the component itself. Instead you can use the **CreationName** property or the **AssemblyQualifiedName** property as shown in the following sample.  
   
- If you intend to use the **AssemblyQualifiedName** property, then you must add a reference in your [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] project to the assembly that contains the managed component. These assemblies are not listed on the .NET tab of the **Add Reference** dialog box. Normally you must browse to locate the assembly in the **C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** folder.  
+ If you intend to use the **AssemblyQualifiedName** property, then you must add a reference in your [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] project to the assembly that contains the managed component. These assemblies are not listed on the .NET tab of the **Add Reference** dialog box. Normally you must browse to locate the assembly in the **C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** folder.  
   
  The built-in managed data flow components include:  
   
--   [!INCLUDE[vstecado](../../analysis-services/data-mining/includes/vstecado-md.md)] Source  
+-   [!INCLUDE[vstecado](../../a9retired/includes/vstecado-md.md)] Source  
   
 -   XML Source  
   
 -   DataReader Destination  
   
--   [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Compact Destination  
+-   [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Compact Destination  
   
 -   Script Component  
   
@@ -283,7 +283,7 @@ End Module
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] page on MSDN:<br /><br /><br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] page on MSDN:<br /><br /><br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Connecting Data Flow Components Programmatically](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  

@@ -22,9 +22,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # DROP Statements (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] contains the following DROP statements. Use DROP statements to remove existing entities. For example, use DROP TABLE to remove a table from a database.  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] contains the following DROP statements. Use DROP statements to remove existing entities. For example, use DROP TABLE to remove a table from a database.  
   
 ## In This Section  
   

@@ -18,8 +18,8 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # precompute rank Server Configuration Option
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  This option is not implemented in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)]. This is a breaking change. Modify applications that currently use this feature as soon as possible.  
+  This option is not implemented in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)]. This is a breaking change. Modify applications that currently use this feature as soon as possible.  
   
   

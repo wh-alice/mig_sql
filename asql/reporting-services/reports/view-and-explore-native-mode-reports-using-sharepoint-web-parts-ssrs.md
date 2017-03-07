@@ -18,16 +18,16 @@ manager: "erikre"
 # View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] no longer supports using native mode (RSWebParts.cab) web parts to access report server content on a SharePoint site from a native mode report server. Use a [Report Viewer Web Part on a SharePoint Site](../../reporting-services/report-server/sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) instead.  
+>  [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] no longer supports using native mode (RSWebParts.cab) web parts to access report server content on a SharePoint site from a native mode report server. Use a [Report Viewer Web Part on a SharePoint Site](../../reporting-services/report-server/sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) instead.  
   
- [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] provides several Web Parts that work with specific versions of a report server and in particular deployment modes.  
+ [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] provides several Web Parts that work with specific versions of a report server and in particular deployment modes.  
   
--   **Native mode:** If you want to access report server content on a SharePoint site from a native mode report server, use the SharePoint 2.0 Web Parts Report Explorer and Report Viewer that are included with [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]. Instructions for installing and using the 2.0 Web Parts are provided in this topic.  
+-   **Native mode:** If you want to access report server content on a SharePoint site from a native mode report server, use the SharePoint 2.0 Web Parts Report Explorer and Report Viewer that are included with [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]. Instructions for installing and using the 2.0 Web Parts are provided in this topic.  
   
--   **SharePoint mode:** If you want to access a report server that runs in SharePoint mode, use the web parts that are installed by the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Add-in for SharePoint products. For more information about the add-in, see [Where to find the Reporting Services add-in for SharePoint Products](../../reporting-services/install/windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   **SharePoint mode:** If you want to access a report server that runs in SharePoint mode, use the web parts that are installed by the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] Add-in for SharePoint products. For more information about the add-in, see [Where to find the Reporting Services add-in for SharePoint Products](../../reporting-services/install/windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 > [!NOTE]  
->  The report viewer web part for Native mode (SPViewer.dwp) is a different web part than the one (ReportViewer.dwp) installed by the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Add-in for SharePoint products. The Web Parts have different schemas and implementations but they can both be installed on the same SharePoint farm. Visually, you can distinguish the two Web Parts through the following characteristic: the Report Viewer Web Part that is installed through the add-in has an **Actions** menu on the toolbar.  
+>  The report viewer web part for Native mode (SPViewer.dwp) is a different web part than the one (ReportViewer.dwp) installed by the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] Add-in for SharePoint products. The Web Parts have different schemas and implementations but they can both be installed on the same SharePoint farm. Visually, you can distinguish the two Web Parts through the following characteristic: the Report Viewer Web Part that is installed through the add-in has an **Actions** menu on the toolbar.  
   
  For more information about report server modes, see [Reporting Services Report Server](../../reporting-services/report-server/sharepoint/reporting-services-report-server.md).  
   
@@ -42,7 +42,7 @@ manager: "erikre"
 -   [Add and Configure Web Parts](#bkmk_configurewebparts)  
   
 ##  <a name="bkmk_aboutwebparts"></a> About Report Explorer and Report Viewer  
- Report Explorer and Report Viewer are SharePoint 2.0 Web Parts that were introduced in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Service Pack 2 (SP2) and continue to be available in current releases.  
+ Report Explorer and Report Viewer are SharePoint 2.0 Web Parts that were introduced in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] Service Pack 2 (SP2) and continue to be available in current releases.  
   
  The Web Parts provide a way to view reports and explore the report server folder hierarchy from a SharePoint site.  
   
@@ -59,24 +59,24 @@ manager: "erikre"
   
 -   Supported versions of SharePoint products and technologies are:  
   
-    -   [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)] 3.0 and [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[offSPServ](../../reporting-services/includes/offspserv-md.md)] 2007.  
+    -   [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)] 3.0 and [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[offSPServ](../../a9retired/includes/offspserv-md.md)] 2007.  
   
-    -   [!INCLUDE[SPF2010](../../reporting-services/report-data/includes/spf2010-md.md)] and [!INCLUDE[SPS2010](../../database-engine/install/windows/includes/sps2010-md.md)].  
+    -   [!INCLUDE[SPF2010](../../a9retired/includes/spf2010-md.md)] and [!INCLUDE[SPS2010](../../a9retired/includes/sps2010-md.md)].  
   
--   The Native mode report server version must be [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] or later.  
+-   The Native mode report server version must be [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] or later.  
   
 -   The report server must run in native mode. You **cannot** use the Report Explorer and Report Viewer Web Parts to connect to or view reports on a report server that runs in SharePoint mode..  
   
 -   Report Manager must be installed.  
   
- Report Explorer and Report Viewer Web Parts are distributed through a cabinet (.cab) file that is included with [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]. Instructions for installing, configuring, and using the Web Parts are provided in the following sections of this topic.  
+ Report Explorer and Report Viewer Web Parts are distributed through a cabinet (.cab) file that is included with [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]. Instructions for installing, configuring, and using the Web Parts are provided in the following sections of this topic.  
   
 ##  <a name="bkmk_installingwebparts"></a> Installing Web Parts  
  Web parts are delivered to a SharePoint server as a cabinet (.cab) file. Run the SharePoint Stsadm.exe tool on the .cab file from the command line to install the Web Parts. To learn more about the tool and Web part deployment see your SharePoint documentation.  
   
 #### Install Web Parts Using PowerShell  
   
-1.  Copy the **RSWebParts.cab** to a folder on the SharePoint server. You can copy it to any folder on the SharePoint server, and then delete it later after you install the Web Parts. By default [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] installs the RSWebParts.cab file into the following folder:  
+1.  Copy the **RSWebParts.cab** to a folder on the SharePoint server. You can copy it to any folder on the SharePoint server, and then delete it later after you install the Web Parts. By default [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] installs the RSWebParts.cab file into the following folder:  
   
     ```  
     C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint  
@@ -104,7 +104,7 @@ manager: "erikre"
   
 1.  Copy the **RSWebParts.cab** file to the same location on the SharePoint server as described in the PowerShell section of this document.  
   
-2.  On the computer that has the installation of the SharePoint product, open a Command Prompt window with administrative privileges and navigate to the folder that has the **Stsadm.exe** tool. The default path for [!INCLUDE[SPF2010](../../reporting-services/report-data/includes/spf2010-md.md)] is the following:  
+2.  On the computer that has the installation of the SharePoint product, open a Command Prompt window with administrative privileges and navigate to the folder that has the **Stsadm.exe** tool. The default path for [!INCLUDE[SPF2010](../../a9retired/includes/spf2010-md.md)] is the following:  
   
     > C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\BIN.  
   
@@ -134,7 +134,7 @@ manager: "erikre"
 4.  Select **Report Viewer**.  
   
     > [!WARNING]  
-    >  Do not select **SQL Server Reporting Services Report Viewer** That Web Part is registered when you install the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Add-in for SharePoint products, and is used for running a report server in SharePoint mode. It cannot be used to view reports on a native mode report server.  
+    >  Do not select **SQL Server Reporting Services Report Viewer** That Web Part is registered when you install the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] Add-in for SharePoint products, and is used for running a report server in SharePoint mode. It cannot be used to view reports on a native mode report server.  
   
 5.  Click **Add**.  
   
@@ -167,7 +167,7 @@ manager: "erikre"
     3.  Click **Report Viewer**.  
   
 ## See Also  
- [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md)   
  [Reporting Services Report Server &#40;SharePoint Mode&#41;](../../reporting-services/report-server/sharepoint/reporting-services-report-server-sharepoint-mode.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  
   

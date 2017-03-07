@@ -26,7 +26,7 @@ manager: "jhubbard"
 
   Returns a value cast to the specified data type if the cast succeeds; otherwise, returns null.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -57,7 +57,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
   
  **TRY_CONVERT** is a reserved keyword in compatibility level 110 and higher.  
   
- This function is capable of being remoted to servers that have a version of [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] and above. It will not be remoted to servers that have a version below [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)].  
+ This function is capable of being remoted to servers that have a version of [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] and above. It will not be remoted to servers that have a version below [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)].  
   
 ## Examples  
   

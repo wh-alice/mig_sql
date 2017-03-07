@@ -20,12 +20,12 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Calculated Members - Session-Scoped Calculated Members
-  To create a calculated member that is available throughout a Multidimensional Expressions (MDX) session, you use the [CREATE MEMBER](../Topic/CREATE%20MEMBER%20Statement%20\(MDX\).md) statement. A calculated member that is created by using the CREATE MEMBER statement will not be removed until after the MDX session closes.  
+  To create a calculated member that is available throughout a Multidimensional Expressions (MDX) session, you use the [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md) statement. A calculated member that is created by using the CREATE MEMBER statement will not be removed until after the MDX session closes.  
   
  As discussed in this topic, the syntax of the CREATE MEMBER statement is straightforward and easy to use.  
   
 > [!NOTE]  
->  For more information about calculated members, see [Building Calculated Members in MDX &#40;MDX&#41;](../Topic/Building%20Calculated%20Members%20in%20MDX%20\(MDX\).md).  
+>  For more information about calculated members, see [Building Calculated Members in MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
   
 ## CREATE MEMBER Syntax  
  Use the following syntax to add the CREATE MEMBER statement to the MDX statement:  
@@ -51,6 +51,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## See Also  
- [Creating Query-Scoped Calculated Members &#40;MDX&#41;](../Topic/Creating%20Query-Scoped%20Calculated%20Members%20\(MDX\).md)  
+ [Creating Query-Scoped Calculated Members &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

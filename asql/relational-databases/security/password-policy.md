@@ -38,11 +38,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Password Policy
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] can use Windows password policy mechanisms. The password policy applies to a login that uses [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] authentication, and to a contained database user with password.  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] can use Windows password policy mechanisms. The password policy applies to a login that uses [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] authentication, and to a contained database user with password.  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] can apply the same complexity and expiration policies used in Windows to passwords used inside [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. This functionality depends on the `NetValidatePasswordPolicy` API.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] can apply the same complexity and expiration policies used in Windows to passwords used inside [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. This functionality depends on the `NetValidatePasswordPolicy` API.  
   
- [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] enforces password complexity. The password expiration and  policy enforcement sections do not apply to [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] enforces password complexity. The password expiration and  policy enforcement sections do not apply to [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
 ## Password Complexity  
  Password complexity policies are designed to deter brute force attacks by increasing the number of possible passwords. When password complexity policy is enforced, new passwords must meet the following guidelines:  
@@ -64,7 +64,7 @@ manager: "jhubbard"
  Passwords can be up to 128 characters long. You should use passwords that are as long and complex as possible.  
   
 ## Password Expiration  
- Password expiration policies are used to manage the lifespan of a password. When [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] enforces password expiration policy, users are reminded to change old passwords, and accounts that have expired passwords are disabled.  
+ Password expiration policies are used to manage the lifespan of a password. When [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] enforces password expiration policy, users are reminded to change old passwords, and accounts that have expired passwords are disabled.  
   
 ## Policy Enforcement  
  The enforcement of password policy can be configured separately for each SQL Server login. Use [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md) to configure the password policy options of a SQL Server login. The following rules apply to the configuration of password policy enforcement:  

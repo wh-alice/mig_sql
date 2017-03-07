@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  The following information is relevant to replication in all environments:  
   
--   Encrypt the connections between computers in a replication topology using an industry standard method, such as Virtual Private Networks (VPN), Secure Sockets Layer (SSL), or IP Security (IPSEC). For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../Topic/Enable%20Encrypted%20Connections%20to%20the%20Database%20Engine%20\(SQL%20Server%20Configuration%20Manager\).md). For information about using VPN and SSL for replicating data over the Internet, see [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md).  
+-   Encrypt the connections between computers in a replication topology using an industry standard method, such as Virtual Private Networks (VPN), Secure Sockets Layer (SSL), or IP Security (IPSEC). For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure/windows/enable-encrypted-connections-to-the-database-engine.md). For information about using VPN and SSL for replicating data over the Internet, see [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md).  
   
      If you use SSL to secure the connections between computers in a replication topology, specify a value of **1** or **2** for the **-EncryptionLevel** parameter of each replication agent (a value of **2** is recommended). A value of **1** specifies that encryption is used, but the agent does not verify that the SSL server certificate is signed by a trusted issuer; a value of **2** specifies that the certificate is verified. Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
 -   If you use pull subscriptions, use a network share rather than a local path for the snapshot folder.  
   
- If your replication topology includes computers that are not in the same domain or are in domains that do not have trust relationships with each other, you can use Windows Authentication or [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication for the connections made by agents (For more information about domains, see the Windows documentation). It is recommended as a security best practice that you use Windows Authentication.  
+ If your replication topology includes computers that are not in the same domain or are in domains that do not have trust relationships with each other, you can use Windows Authentication or [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Authentication for the connections made by agents (For more information about domains, see the Windows documentation). It is recommended as a security best practice that you use Windows Authentication.  
   
 -   To use Windows Authentication:  
   
@@ -56,16 +56,16 @@ manager: "jhubbard"
   
     -   Ensure that a given agent (for example the Distribution Agent for a subscription) runs under the same account at each computer.  
   
--   To use [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication:  
+-   To use [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Authentication:  
   
-    -   Add a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] account for each agent at the appropriate nodes (use the same account name and password at each node). For example, the Distribution Agent for a push subscription runs at the Distributor and makes connections to the Distributor and Subscriber. The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] account for the Distribution Agent should be added to the Distributor and Subscriber.  
+    -   Add a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] account for each agent at the appropriate nodes (use the same account name and password at each node). For example, the Distribution Agent for a push subscription runs at the Distributor and makes connections to the Distributor and Subscriber. The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] account for the Distribution Agent should be added to the Distributor and Subscriber.  
   
     -   Ensure that a given agent (for example the Distribution Agent for a subscription) makes connections under the same account at each computer.  
   
-    -   In situations that require [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication, access to UNC snapshot shares is often not available (for example access might be blocked by a firewall). In this case, you can transfer the snapshot to Subscribers through file transfer protocol (FTP). For more information, see [Transfer Snapshots Through FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+    -   In situations that require [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Authentication, access to UNC snapshot shares is often not available (for example access might be blocked by a firewall). In this case, you can transfer the snapshot to Subscribers through file transfer protocol (FTP). For more information, see [Transfer Snapshots Through FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
   
 ## See Also  
- [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../Topic/Enable%20Encrypted%20Connections%20to%20the%20Database%20Engine%20\(SQL%20Server%20Configuration%20Manager\).md)   
+ [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure/windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication over the Internet](../../../relational-databases/replication/replication-over-the-internet.md)   
  [Secure the Subscriber](../../../relational-databases/replication/security/secure-the-subscriber.md)   
  [Secure the Distributor](../../../relational-databases/replication/security/secure-the-distributor.md)   

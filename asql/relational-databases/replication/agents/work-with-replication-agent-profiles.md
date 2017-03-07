@@ -20,7 +20,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Work with Replication Agent Profiles
-  This topic describes how to work with Replication Agent Profiles in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)], or Replication Management Objects (RMO). The behavior of each replication agent is controlled by a set of parameters that can be set through agent profiles. Each agent has a default profile, and some have additional predefined profiles; at a given time, only one profile is active for an agent.  
+  This topic describes how to work with Replication Agent Profiles in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)], or Replication Management Objects (RMO). The behavior of each replication agent is controlled by a set of parameters that can be set through agent profiles. Each agent has a default profile, and some have additional predefined profiles; at a given time, only one profile is active for an agent.  
   
  **In This Topic**  
   
@@ -110,7 +110,7 @@ manager: "jhubbard"
   
 5.  Modify parameters to tailor the profile. To view all parameters for an agent, clear the **Show only parameters used in this profile** check box. For information about agent parameters, see the links at the end of this topic.  
   
-6.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 ###  <a name="Delete_SSMS"></a> To delete a user-defined profile  
   
@@ -127,13 +127,13 @@ manager: "jhubbard"
   
 3.  Select the profile you want to delete, and then click **Delete**.  
   
-4.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 ###  <a name="Create_tsql"></a> To create a new agent profile  
   
-1.  At the Distributor, execute [sp_add_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md). Specify **@name**, a value of **1** for **@profile_type**, and one of the following values for **@agent_type**:  
+1.  At the Distributor, execute [sp_add_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-add-agent-profile-transact-sql.md). Specify **@name**, a value of **1** for **@profile_type**, and one of the following values for **@agent_type**:  
   
     -   **1** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -151,7 +151,7 @@ manager: "jhubbard"
   
 ###  <a name="Modify_tsql"></a> To modify an existing agent profile  
   
-1.  At the Distributor, execute [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Specify one of the following values for **@agent_type**:  
+1.  At the Distributor, execute [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Specify one of the following values for **@agent_type**:  
   
     -   **1** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -165,24 +165,24 @@ manager: "jhubbard"
   
      This returns all profiles for the specified type of agent. Note the value of **profile_id** in the result set for the profile to change.  
   
-2.  At the Distributor, execute [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md). Specify the profile identifier from step 1 for **@profile_id**. This returns all parameters for the profile. Note the name of any parameters to modify or remove from the profile.  
+2.  At the Distributor, execute [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-help-agent-parameter-transact-sql.md). Specify the profile identifier from step 1 for **@profile_id**. This returns all parameters for the profile. Note the name of any parameters to modify or remove from the profile.  
   
-3.  To change the value of a parameter in a profile, execute [sp_change_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md). Specify the profile identifier from step 1 for **@profile_id**, the name of the parameter to change for **@property**, and a new value for the parameter for **@value**.  
+3.  To change the value of a parameter in a profile, execute [sp_change_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-change-agent-profile-transact-sql.md). Specify the profile identifier from step 1 for **@profile_id**, the name of the parameter to change for **@property**, and a new value for the parameter for **@value**.  
   
     > [!NOTE]  
     >  You cannot change an existing agent profile to become the default profile for an agent. You must instead create a new profile as the default profile, as shown in the previous procedure.  
   
-4.  To remove a parameter from a profile, execute [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md). Specify the profile identifier from step 1 for **@profile_id** and the name of the parameter to remove for **@parameter_name**.  
+4.  To remove a parameter from a profile, execute [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md). Specify the profile identifier from step 1 for **@profile_id** and the name of the parameter to remove for **@parameter_name**.  
   
 5.  To add a new parameter to a profile, you must do the following:  
   
-    -   Query the [MSagentparameterlist &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msagentparameterlist-transact-sql.md) table at the Distributor to determine which profile parameters can be set for each agent type.  
+    -   Query the [MSagentparameterlist &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-tables/msagentparameterlist-transact-sql.md) table at the Distributor to determine which profile parameters can be set for each agent type.  
   
-    -   At the Distributor, execute [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md). Specify the profile identifier from step 1 for **@profile_id**, the name of a valid parameter to add for **@parameter_name**, and the value of the parameter for **@parameter_value**.  
+    -   At the Distributor, execute [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-add-agent-parameter-transact-sql.md). Specify the profile identifier from step 1 for **@profile_id**, the name of a valid parameter to add for **@parameter_name**, and the value of the parameter for **@parameter_value**.  
   
 ###  <a name="Delete_tsql"></a> To delete an agent profile  
   
-1.  At the Distributor, execute [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Specify one of the following values for **@agent_type**:  
+1.  At the Distributor, execute [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Specify one of the following values for **@agent_type**:  
   
     -   **1** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -196,11 +196,11 @@ manager: "jhubbard"
   
      This returns all profiles for the specified type of agent. Note the value of **profile_id** in the result set for the profile to remove.  
   
-2.  At the Distributor, execute [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md). Specify the profile identifier from step 1 for **@profile_id**.  
+2.  At the Distributor, execute [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-drop-agent-profile-transact-sql.md). Specify the profile identifier from step 1 for **@profile_id**.  
   
 ###  <a name="Synch_tsql"></a> To use agent profiles during synchronization  
   
-1.  At the Distributor, execute [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Specify one of the following values for **@agent_type**:  
+1.  At the Distributor, execute [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Specify one of the following values for **@agent_type**:  
   
     -   **1** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -221,7 +221,7 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example creates a custom profile for the Merge Agent named **custom_merge**, changes the value of the **-UploadReadChangesPerBatch** parameter, adds a new **-ExchangeType** parameter, and returns information on the profile that is created.  
   
- [!code-sql[HowTo#sp_addagentprofileparam](../../../relational-databases/replication/codesnippet/tsql/work-with-replication-ag_1.sql)]  
+ [!code-sql[HowTo#sp_addagentprofileparam](../../../a9retired/codesnippet/tsql/work-with-replication-ag_1.sql)]  
   
 ##  <a name="RMOProcedure"></a> Using RMO  
   

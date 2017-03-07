@@ -15,7 +15,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Backup to URL Best Practices and Troubleshooting
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   This topic includes best practices and troubleshooting tips for SQL Server backup and restores to the Windows Azure Blob service.  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 ## Handling Large Files  
   
--   The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backup operation uses multiple threads to optimize data transfer to Windows Azure Blob storage services.  However the performance depends on various factors, such as ISV bandwidth and size of the database. If you plan to back up large databases or filegroups from an on-premise SQL Server database, it is recommended that you do some throughput testing first. Azure [SLA for Storage](http://azure.microsoft.com/support/legal/sla/storage/v1_0/) has maximum processing times for blobs that you can take into consideration.  
+-   The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] backup operation uses multiple threads to optimize data transfer to Windows Azure Blob storage services.  However the performance depends on various factors, such as ISV bandwidth and size of the database. If you plan to back up large databases or filegroups from an on-premise SQL Server database, it is recommended that you do some throughput testing first. Azure [SLA for Storage](http://azure.microsoft.com/support/legal/sla/storage/v1_0/) has maximum processing times for blobs that you can take into consideration.  
   
 -   Using the **WITH COMPRESSION** option as recommended in the **Managing Backup** section, it is very important when backing up large files.  
   
@@ -155,5 +155,5 @@ manager: "jhubbard"
 ## See Also  
  [Restoring From Backups Stored in Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
-[RESTORE (Transact-SQL)](RESTORE%20\(Transact-SQL\).md)
+[RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
   

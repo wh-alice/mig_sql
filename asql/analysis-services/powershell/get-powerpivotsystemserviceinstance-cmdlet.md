@@ -15,7 +15,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Get-PowerPivotSystemServiceInstance cmdlet
-  Returns one or more instances of [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service running on application servers in the farm.  
+  Returns one or more instances of [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service running on application servers in the farm.  
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   
@@ -26,7 +26,7 @@ Get-PowerPivotSystemServiceInstance [-Identity <PowerPivotMidTierServiceInstance
 ```  
   
 ## Description  
- The Get-PowerPivotSystemServiceInstance cmdlet returns the properties of one or more [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service instances running in the farm. The cmdlet reports the application type, status (online or offline), and the identity. To view additional properties of a specific instance, add the Identity parameter and the format-list option to the cmdlet.  
+ The Get-PowerPivotSystemServiceInstance cmdlet returns the properties of one or more [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service instances running in the farm. The cmdlet reports the application type, status (online or offline), and the identity. To view additional properties of a specific instance, add the Identity parameter and the format-list option to the cmdlet.  
   
 ## Parameters  
   

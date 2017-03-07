@@ -23,17 +23,17 @@ ms.author: "carlasab"
 manager: "erikre"
 ---
 # Implementing a Data Processing Extension
-  Data processing extensions in [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] enable you to connect to a data source and retrieve data. They also serve as a bridge between a data source and a dataset. [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] data processing extensions are modeled after a subset of the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] data provider interfaces.  
+  Data processing extensions in [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] enable you to connect to a data source and retrieve data. They also serve as a bridge between a data source and a dataset. [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] data processing extensions are modeled after a subset of the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] data provider interfaces.  
   
 ## In This Section  
  [Data Processing Extensions Overview](../../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)  
- Introduces how to write a custom data processing extension for [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)].  
+ Introduces how to write a custom data processing extension for [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)].  
   
  [Preparing to Implement a Data Processing Extension](../../../reporting-services/extensions/data-processing/preparing-to-implement-a-data-processing-extension.md)  
- Describes the interfaces available when implementing an [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] data processing extension, as well as when you are required to implement a particular interface.  
+ Describes the interfaces available when implementing an [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] data processing extension, as well as when you are required to implement a particular interface.  
   
  [Creating a Data Processing Extension Library](../../../reporting-services/extensions/data-processing/creating-a-data-processing-extension-library.md)  
- Describes assigning a namespace for your [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] data processing extension and compiling your data processing extension into a library DLL.  
+ Describes assigning a namespace for your [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] data processing extension and compiling your data processing extension into a library DLL.  
   
  [Implementing a Connection Class for a Data Processing Extension](../../../reporting-services/extensions/data-processing/implementing-a-connection-class-for-a-data-processing-extension.md)  
  Describes the attributes of a connection and how to implement your own **Connection** class for your data processing extension.  

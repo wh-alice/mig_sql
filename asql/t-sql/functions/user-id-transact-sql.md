@@ -34,7 +34,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)] Use [DATABASE_PRINCIPAL_ID](../../t-sql/functions/database-principal-id-transact-sql.md) instead.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -53,7 +53,7 @@ USER_ID ( [ 'user' ] )
 ## Remarks  
  When *user* is omitted, the current user is assumed. If the parameter contains the word NULL will return NULL.When USER_ID is called after EXECUTE AS, USER_ID will return the ID of the impersonated context.  
   
- When a Windows principal that is not mapped to a specific database user accesses a database by way of membership in a group, USER_ID returns 0 (the ID of public). If such a principal creates an object without specifying a schema, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will create an implicit user and schema mapped to the Windows principal. The user created in such cases cannot be used to connect to the database. Calls to USER_ID by a Windows principal mapped to an implicit user will return the ID of the implicit user.  
+ When a Windows principal that is not mapped to a specific database user accesses a database by way of membership in a group, USER_ID returns 0 (the ID of public). If such a principal creates an object without specifying a schema, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will create an implicit user and schema mapped to the Windows principal. The user created in such cases cannot be used to connect to the database. Calls to USER_ID by a Windows principal mapped to an implicit user will return the ID of the implicit user.  
   
  USER_ID can be used in a select list, in a WHERE clause, and anywhere an expression is allowed. For more information, see [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
@@ -68,7 +68,7 @@ GO
   
 ## See Also  
  [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
- [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-principals-transact-sql.md)   
+ [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-principals-transact-sql.md)   
  [DATABASE_PRINCIPAL_ID &#40;Transact-SQL&#41;](../../t-sql/functions/database-principal-id-transact-sql.md)   
  [Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

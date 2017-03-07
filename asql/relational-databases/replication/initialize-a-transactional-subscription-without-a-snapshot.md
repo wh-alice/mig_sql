@@ -41,7 +41,7 @@ manager: "jhubbard"
   
  To initialize a subscription with a backup, you first must enable the option when you create a publication, and then specify values for a number of options when you create a subscription. Publications can be enabled through the New Publication Wizard or programmatically. However, the values required for the subscription options can only be specified programmatically.  
   
--   [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]: [Enable Initialization with a Backup for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/9df00514-aa9d-4ac6-9766-d226c9958175.md)  
+-   [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]: [Enable Initialization with a Backup for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/9df00514-aa9d-4ac6-9766-d226c9958175.md)  
   
 -   Replication Transact-SQL programming: [Initialize a Transactional Subscription from a Backup &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/d0637fc4-27cc-4046-98ea-dc86b7a3bd75.md)  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
 -   Subscribed timestamp columns at the restored database must be converted to **binary(8)** columns: copy the content of the tables containing timestamp columns to new tables with matching schemas except having **binary(8)** columns in place of the timestamp columns, drop the original tables, and rename the new tables with the same names as the original tables.  
   
 ## Initializing a subscription with an alternative method  
- It is possible to initialize a subscription using any method that allows you to copy the publication database schema and data to the Subscriber, such as [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)]. When you use an alternative method to initialize the Subscriber, replication support objects are copied to the Subscriber.  
+ It is possible to initialize a subscription using any method that allows you to copy the publication database schema and data to the Subscriber, such as [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)]. When you use an alternative method to initialize the Subscriber, replication support objects are copied to the Subscriber.  
   
  Unlike initializing with a backup, you or your application must ensure the data and schema are properly synchronized at the time you add the subscription. If, for example, there is activity on the Publisher between the time data and schema are copied to the Subscriber and the time at which the subscription is added, changes resulting from this activity might not be replicated to the Subscriber.  
   

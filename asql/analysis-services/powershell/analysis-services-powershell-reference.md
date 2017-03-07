@@ -16,10 +16,10 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Analysis Services PowerShell Reference
-  [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] includes a PowerShell provider (SQLAS) and cmdlets (SQLASCMDLETS) so that you can use Windows PowerShell to navigate, administer, and query [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] objects. For more information about loading and using the provider and cmdlets, see [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md). For an example of how to use AMO types in PowerShell to create a Tabular database, see [AMO PowerShell Example](../../analysis-services/powershell/amo-powershell-example.md).  
+  [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] includes a PowerShell provider (SQLAS) and cmdlets (SQLASCMDLETS) so that you can use Windows PowerShell to navigate, administer, and query [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] objects. For more information about loading and using the provider and cmdlets, see [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md). For an example of how to use AMO types in PowerShell to create a Tabular database, see [AMO PowerShell Example](../../analysis-services/powershell/amo-powershell-example.md).  
   
 ##  <a name="bkmk_cmdlets"></a> Analysis Services Cmdlets  
- [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] provides cmdlets correspond to methods in the **Microsoft.AnalysisServices** namespace. The following table describes each cmdlet and provides a link to the corresponding AMO method.  
+ [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] provides cmdlets correspond to methods in the **Microsoft.AnalysisServices** namespace. The following table describes each cmdlet and provides a link to the corresponding AMO method.  
   
  If you want to use PowerShell to perform a task that is not represented in the following list (for example to create or synchronize a database), you can write TMSL or XMLA script for that action, and then execute it using the **Invoke-ASCmd** cmdlet.  
   

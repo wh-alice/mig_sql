@@ -62,5 +62,5 @@ In this task, you will create a copy of the Lesson 5.dtsx package that you creat
     After copying the Lesson 5 package, if you currently have the packages from the previous lessons in your solution, right-click each package from lessons 1-5 and click Exclude From Project. When done you should have only Lesson 6.dtsx in your solution.  
   
 ## Next Task in Lesson  
-[Step 2: Converting the Project to the Project Deployment Model](../Topic/Step%202:%20Converting%20the%20Project%20to%20the%20Project%20Deployment%20Model.md)  
+[Step 2: Converting the Project to the Project Deployment Model](../../integration-services/tutorials/lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   

@@ -28,11 +28,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SET ANSI_NULL_DFLT_OFF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Alters the behavior of the session to override default nullability of new columns when the ANSI null default option for the database is **true**. For more information about setting the value for ANSI null default, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -51,9 +51,9 @@ SET ANSI_NULL_DFLT_OFF OFF
 ## Remarks  
  This setting only affects the nullability of new columns when the nullability of the column is not specified in the CREATE TABLE and ALTER TABLE statements. By default, when SET ANSI_NULL_DFLT_OFF is ON, new columns that are created by using the ALTER TABLE and CREATE TABLE statements are NOT NULL if the nullability status of the column is not explicitly specified. SET ANSI_NULL_DFLT_OFF does not affect columns that are created by using an explicit NULL or NOT NULL.  
   
- Both SET ANSI_NULL_DFLT_OFF and SET ANSI_NULL_DFLT_ON cannot be set ON at the same time. If one option is set ON, the other option is set OFF. Therefore, either ANSI_NULL_DFLT_OFF or SET ANSI_NULL_DFLT_ON can be set ON, or both can be set OFF. If either option is ON, that setting (SET ANSI_NULL_DFLT_OFF or SET ANSI_NULL_DFLT_ON) takes effect. If both options are set OFF, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses the value of the is_ansi_null_default_on column in the [sys.databases](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view.  
+ Both SET ANSI_NULL_DFLT_OFF and SET ANSI_NULL_DFLT_ON cannot be set ON at the same time. If one option is set ON, the other option is set OFF. Therefore, either ANSI_NULL_DFLT_OFF or SET ANSI_NULL_DFLT_ON can be set ON, or both can be set OFF. If either option is ON, that setting (SET ANSI_NULL_DFLT_OFF or SET ANSI_NULL_DFLT_ON) takes effect. If both options are set OFF, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses the value of the is_ansi_null_default_on column in the [sys.databases](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view.  
   
- For a more reliable operation of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] scripts that are used in databases with different nullability settings, it is better to always specify NULL or NOT NULL in CREATE TABLE and ALTER TABLE statements.  
+ For a more reliable operation of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] scripts that are used in databases with different nullability settings, it is better to always specify NULL or NOT NULL in CREATE TABLE and ALTER TABLE statements.  
   
  The setting of SET ANSI_NULL_DFLT_OFF is set at execute or run time and not at parse time.  
   

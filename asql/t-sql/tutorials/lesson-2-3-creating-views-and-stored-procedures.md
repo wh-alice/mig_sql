@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 2-3 - Creating Views and Stored Procedures
-Now that Mary can access the **TestData** database, you may want to create some database objects, such as a view and a stored procedure, and then grant Mary access to them. A view is a stored SELECT statement, and a stored procedure is one or more [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements that execute as a batch.  
+Now that Mary can access the **TestData** database, you may want to create some database objects, such as a view and a stored procedure, and then grant Mary access to them. A view is a stored SELECT statement, and a stored procedure is one or more [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements that execute as a batch.  
   
 Views are queried like tables and do not accept parameters. Stored procedures are more complex than views. Stored procedures can have both input and output parameters and can contain statements to control the flow of the code, such as IF and WHILE statements. It is good programming practice to use stored procedures for all repetitive actions in the database.  
   
@@ -76,7 +76,7 @@ For this example, you will use CREATE VIEW to create a view that selects only tw
     ```  
   
 ## Next Task in Lesson  
-[Granting Access to a Database Object](../Topic/Granting%20Access%20to%20a%20Database%20Object.md)  
+[Granting Access to a Database Object](../../t-sql/tutorials/lesson-2-4-granting-access-to-a-database-object.md)  
   
 ## See Also  
 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)  

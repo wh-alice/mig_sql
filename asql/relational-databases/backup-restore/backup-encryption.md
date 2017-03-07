@@ -15,11 +15,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Backup Encryption
-  This topic provides an overview of the encryption options for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] backups. It includes details of the usage, benefits, and recommended practices for encrypting during backup.  
+  This topic provides an overview of the encryption options for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] backups. It includes details of the usage, benefits, and recommended practices for encrypting during backup.  
   
   
 ##  <a name="Overview"></a> Overview  
- Starting in [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)], SQL Server has the ability to encrypt the data while creating a backup. By specifying the encryption algorithm and the encryptor (a Certificate or Asymmetric Key) when creating a backup, you can create an encrypted backup file. All storage destinations: on-premises and Window Azure storage are supported. In addition, encryption options can be configured for [!INCLUDE[ss_smartbackup](../../relational-databases/backup-restore/includes/ss-smartbackup-md.md)] operations, a new feature introduced in [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)].  
+ Starting in [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)], SQL Server has the ability to encrypt the data while creating a backup. By specifying the encryption algorithm and the encryptor (a Certificate or Asymmetric Key) when creating a backup, you can create an encrypted backup file. All storage destinations: on-premises and Window Azure storage are supported. In addition, encryption options can be configured for [!INCLUDE[ss_smartbackup](../../relational-databases/backup-restore/includes/ss-smartbackup-md.md)] operations, a new feature introduced in [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)].  
   
  To encrypt during backup, you must specify an encryption algorithm, and an encryptor to secure the encryption key. The following are the supported encryption options:  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 -   SQL Server Express and SQL Server Web do not support encryption during backup. However restoring from an encrypted backup to an instance of SQL Server Express or SQL Server Web is supported.  
   
--   Previous versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] cannot read encrypted backups.  
+-   Previous versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] cannot read encrypted backups.  
   
 -   Appending to an existing backup set option is not supported for encrypted backups.  
   

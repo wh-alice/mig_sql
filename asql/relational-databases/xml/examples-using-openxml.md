@@ -798,8 +798,8 @@ Col1        BinaryCol
 ```  
   
 ## See Also  
- [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
- [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
+ [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
+ [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   
  [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)  
   

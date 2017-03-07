@@ -31,7 +31,7 @@ manager: "erikre"
 -   **SUM**(**IF**(**Finished Goods Flag**, "Finished", "Unfinished"))  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## References  
  A reference is a field name. This can be an existing field name within the entity, or a calculated field name that you have created and added to the Fields list. The reference tells Report Builder where to look for the values, or data, you want to use within a formula. You can refer to fields within your context entity and to fields in other entities within one formula or use the value from one field in several formulas.  

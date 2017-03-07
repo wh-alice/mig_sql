@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Differential Database Backup (SQL Server)
-  Create a differential database backup in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  Create a differential database backup in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **Sections in this topic**  
   
@@ -59,13 +59,13 @@ manager: "jhubbard"
 ####  <a name="Permissions"></a> Check your permissions first!  
  BACKUP DATABASE and BACKUP LOG permissions default to members of the **sysadmin** fixed server role, the **db_owner** and **db_backupoperator** fixed database roles.  
   
- Ownership and permission problems on the backup device's physical file will interfere with a backup operation. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] needs to be able to read and write to the device; the account under which the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service runs must have write permissions. However, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, does **not** check file access permissions. Permissions problems on the backup device's physical file will not be obvious until the physical resource is accessed when you attempt the backup or restore.  
+ Ownership and permission problems on the backup device's physical file will interfere with a backup operation. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] needs to be able to read and write to the device; the account under which the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service runs must have write permissions. However, [sp_addumpdevice](../../relational-databases/reference/system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, does **not** check file access permissions. Permissions problems on the backup device's physical file will not be obvious until the physical resource is accessed when you attempt the backup or restore.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio  
   
 #### Create a differential database backup  
   
-1.  After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
+1.  After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
   
 2.  Expand **Databases**, and depending on the database, either select a user database or expand **System Databases** and select a system database.  
   

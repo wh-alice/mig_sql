@@ -48,7 +48,7 @@ public void GetReportServerUrls(out string[] applicationName,
 ## Return Values  
   
 ## Remarks  
- Methods exposed by WMI management objects are called through the InvokeMethod function. For more information, please see "Executing Methods on Management Objects" in the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] .NET Framework WMI documentation.  
+ Methods exposed by WMI management objects are called through the InvokeMethod function. For more information, please see "Executing Methods on Management Objects" in the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] .NET Framework WMI documentation.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspc](../../reporting-services/wmi-provider-library-reference/includes/ssrswminmspc-md.md)]  

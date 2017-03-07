@@ -15,11 +15,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Properties (FILESTREAM Tab)
-  Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
 ## UIElement List  
  **Enable FILESTREAM for Transact-SQL access**  
- Select to enable FILESTREAM for [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] access. This control must be checked before the other control options will be available.  
+ Select to enable FILESTREAM for [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] access. This control must be checked before the other control options will be available.  
   
  **Enable FILESTREAM for file I/O streaming access**  
  Select to enable Win32 streaming access for FILESTREAM.  

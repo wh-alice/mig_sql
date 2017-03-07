@@ -30,7 +30,7 @@ manager: "jhubbard"
 
   Removes an alias data type or a common language runtime (CLR) user-defined type from the current database.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -43,7 +43,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
  *IF EXISTS*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  Conditionally drops the type only if it already exists.  
   
@@ -56,11 +56,11 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 ## Remarks  
  The DROP TYPE statement will not execute when any of the following is true:  
   
--   There are tables in the database that contain columns of the alias data type or the user-defined type. Information about alias or user-defined type columns can be obtained by querying the [sys.columns](../../relational-databases/system-catalog-views/sys.columns-transact-sql.md) or [sys.column_type_usages](../../relational-databases/system-catalog-views/sys.column-type-usages-transact-sql.md) catalog views.  
+-   There are tables in the database that contain columns of the alias data type or the user-defined type. Information about alias or user-defined type columns can be obtained by querying the [sys.columns](../../relational-databases/reference/system-catalog-views/sys.columns-transact-sql.md) or [sys.column_type_usages](../../relational-databases/reference/system-catalog-views/sys.column-type-usages-transact-sql.md) catalog views.  
   
--   There are computed columns, CHECK constraints, schema-bound views, and schema-bound functions whose definitions reference the alias or user-defined type. Information about these references can be obtained by querying the [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md) catalog view.  
+-   There are computed columns, CHECK constraints, schema-bound views, and schema-bound functions whose definitions reference the alias or user-defined type. Information about these references can be obtained by querying the [sys.sql_expression_dependencies](../../relational-databases/reference/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md) catalog view.  
   
--   There are functions, stored procedures, or triggers created in the database, and these routines use variables and parameters of the alias or user-defined type. Information about alias or user-defined type parameters can be obtained by querying the [sys.parameters](../../relational-databases/system-catalog-views/sys.parameters-transact-sql.md) or [sys.parameter_type_usages](../../relational-databases/system-catalog-views/sys.parameter-type-usages-transact-sql.md) catalog views.  
+-   There are functions, stored procedures, or triggers created in the database, and these routines use variables and parameters of the alias or user-defined type. Information about alias or user-defined type parameters can be obtained by querying the [sys.parameters](../../relational-databases/reference/system-catalog-views/sys.parameters-transact-sql.md) or [sys.parameter_type_usages](../../relational-databases/reference/system-catalog-views/sys.parameter-type-usages-transact-sql.md) catalog views.  
   
 ## Permissions  
  Requires either CONTROL permission on *type_name* or ALTER permission on *schema_name*.  

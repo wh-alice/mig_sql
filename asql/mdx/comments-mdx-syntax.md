@@ -24,23 +24,23 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Comments (MDX Syntax)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Comments are non-executing text strings in program code. (Comments are also known as remarks). You can use comments to document code, or temporarily disable parts of Multidimensional Expressions (MDX) statements and scripts being diagnosed. By using comments to document code, you can make future program code maintenance easier. You frequently use comments to record the program name, the author name, and the dates of major code changes. You can also use comments to describe complex calculations or explain a programming method.  
   
  Comments in MDX follow these guidelines:  
   
--   All alphanumeric characters or symbols can be used within the comment. [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] ignores all characters within a comment.  
+-   All alphanumeric characters or symbols can be used within the comment. [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] ignores all characters within a comment.  
   
 -   There is no maximum length for a comment within a statement or script. A comment can be made up of one or more lines.  
   
  MDX supports three types of commenting characters:  
   
  // (double forward slashes)  
- These comment characters can be used on the same line as code to be run or on a line by themselves. Everything from the double forward slashes to the end of the line is part of the comment. For a multiple-line comment, the double forward slashes must appear at the starting of each comment line. For more information, see [&#40;Comment&#41; &#40;MDX&#41;](../Topic/\(Comment\)%20\(MDX\).md).  
+ These comment characters can be used on the same line as code to be run or on a line by themselves. Everything from the double forward slashes to the end of the line is part of the comment. For a multiple-line comment, the double forward slashes must appear at the starting of each comment line. For more information, see [&#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md).  
   
  -- (double hyphens)  
- These comment characters can be used on the same line as code to be run or on a line by themselves. Everything from the double hyphens to the end of the line is part of the comment. For a multiple-line comment, the double hyphens must appear at the starting of each comment line. For more information, see [-- &#40;Comment&#41; &#40;MDX&#41;](../Topic/--%20\(Comment\)%20\(MDX\).md).  
+ These comment characters can be used on the same line as code to be run or on a line by themselves. Everything from the double hyphens to the end of the line is part of the comment. For a multiple-line comment, the double hyphens must appear at the starting of each comment line. For more information, see [-- &#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md).  
   
  /* ... \*/ (forward slash-asterisk character pairs)  
  These comment characters can be used on the same line as code to be run, on lines by themselves, or even within executable code. Everything from the open comment pair (/\*) to the close comment pair (\*/) is considered part of the comment. For a multiple-line comment, the open-comment character pair (/\*) must start the comment, and the close-comment character pair (\*/) must end the comment. No other comment characters can appear on any lines of the comment. For more information, see [/*...\*/ (Comment)](../mdx/comment-mdx.md).  

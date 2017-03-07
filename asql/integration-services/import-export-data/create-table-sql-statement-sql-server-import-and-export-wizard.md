@@ -17,10 +17,10 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Create Table SQL Statement (SQL Server Import and Export Wizard)
-If you select **Create destination table** and then select **Edit SQL** in the **Column Mappings** dialog box, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard shows the **Create Table SQL Statement** dialog box. On this page, you review and optionally customize the **CREATE TABLE** command that the wizard will run to create the new destination table.
+If you select **Create destination table** and then select **Edit SQL** in the **Column Mappings** dialog box, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard shows the **Create Table SQL Statement** dialog box. On this page, you review and optionally customize the **CREATE TABLE** command that the wizard will run to create the new destination table.
   
 > [!NOTE]
-> If you're looking for info about the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] CREATE TABLE statement, and not about the **Create Table SQL Statement** dialog box of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). 
+> If you're looking for info about the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] CREATE TABLE statement, and not about the **Create Table SQL Statement** dialog box of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). 
   
 ## Screen shot of the Create Table SQL Statement page  
  The following screen shot shows the **Create Table SQL Statement** dialog box of the Wizard.
@@ -43,7 +43,7 @@ For more info about the CREATE TABLE statement and syntax, see [CREATE TABLE &#4
  Restore the default SQL statement, if you've changed it, by clicking **Auto Generate**.  
   
 ## Create a table that includes a FILESTREAM column  
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Import and Export Wizard generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement does not include the FILESTREAM attribute even if the source table has a FILESTREAM column.
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Import and Export Wizard generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement does not include the FILESTREAM attribute even if the source table has a FILESTREAM column.
  1.  To copy a FILESTREAM column by using the wizard, first implement FILESTREAM storage on the destination database.
  2.  Then, add the FILESTREAM attribute manually to the CREATE TABLE statement in the **Create Table SQL Statement** dialog box.  
 

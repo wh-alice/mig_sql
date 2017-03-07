@@ -16,9 +16,9 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Altering Natively Compiled T-SQL Modules
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  In [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] (and later) and [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] you can perform ALTER operations on natively compiled stored procedures and other natively compiled T-SQL modules such as scalar UDFs and triggers using the ALTER statement.  
+  In [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] (and later) and [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] you can perform ALTER operations on natively compiled stored procedures and other natively compiled T-SQL modules such as scalar UDFs and triggers using the ALTER statement.  
   
  When executing ALTER on a natively compiled T-SQL module, the module is recompiled using a new definition. While recompilation is in progress, the old version of the module continues to be available for execution. Once compilation completes, module executions are drained, and the new version of the module is installed. When you alter a natively compiled T-SQL module, you can modify the following options.  
   

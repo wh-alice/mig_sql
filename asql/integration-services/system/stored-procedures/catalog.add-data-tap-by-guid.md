@@ -15,7 +15,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.add_data_tap_by_guid
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Adds a data tap to a specific data flow path in a package data flow, for an instance of the execution.  
   
@@ -40,7 +40,7 @@ add_data_tap_by_guid [ @execution_id = ] execution_id
  [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
  The identification string for the data flow path. A path connects two data flow components. The **IdentificationString** property for the path specifies the string.  
   
- To locate the identification string, in [!INCLUDE[ssBIDevStudio](../../../analysis-services/includes/ssbidevstudio-md.md)] right-click the path between two data flow components and then click **Properties**. The **IdentificationString** property appears in the **Properties** window.  
+ To locate the identification string, in [!INCLUDE[ssBIDevStudio](../../../a9notintoc/includes/ssbidevstudio-md.md)] right-click the path between two data flow components and then click **Properties**. The **IdentificationString** property appears in the **Properties** window.  
   
  The *dataflow_path_id_string* is a **nvarchar(4000)**.  
   

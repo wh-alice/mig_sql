@@ -22,9 +22,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Data Mining Extensions (DMX) Operator Reference
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  The Data Mining Extensions (DMX) language in [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] supports arithmetic, assignment, comparison, logical, and unary operators. The following table lists the operators that DMX supports.  
+  The Data Mining Extensions (DMX) language in [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] supports arithmetic, assignment, comparison, logical, and unary operators. The following table lists the operators that DMX supports.  
   
 |Operator|Description|  
 |--------------|-----------------|  
@@ -43,14 +43,14 @@ manager: "erikre"
 |[OR &#40;DMX&#41;](../dmx/or-dmx.md)|A logical operator that performs a disjunction on two numeric expressions.|  
 |[+ &#40;Positive&#41; &#40;DMX&#41;](../dmx/positive-dmx.md)|A unary operator that returns the positive value of a numeric expression.|  
 |[- &#40;Negative&#41; &#40;DMX&#41;](../dmx/negative-dmx.md)|A unary operator that returns the negative value of a numeric expression.|  
-|[Double Slash &#40;Comment&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)|Indicates a text string that [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] should not execute. You can nest comments within a DMX statement, include them at the end of a line of code, or insert them on a separate line.|  
-|[-- &#40;Comment&#41; &#40;DMX&#41; Summary](../dmx/comment-dmx-summary.md)|Indicates a text string that [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] should not execute. You can nest comments within a DMX statement, include them at the end of a line of code, or insert them on a separate line.|  
-|[Slash Star &#40;Comment&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)|Indicates a text string that [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] should not execute. You can nest comments within a DMX statement, include them at the end of a line of code, or insert them on a separate line.|  
+|[Double Slash &#40;Comment&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)|Indicates a text string that [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] should not execute. You can nest comments within a DMX statement, include them at the end of a line of code, or insert them on a separate line.|  
+|[-- &#40;Comment&#41; &#40;DMX&#41; Summary](../dmx/comment-dmx-summary.md)|Indicates a text string that [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] should not execute. You can nest comments within a DMX statement, include them at the end of a line of code, or insert them on a separate line.|  
+|[Slash Star &#40;Comment&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)|Indicates a text string that [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] should not execute. You can nest comments within a DMX statement, include them at the end of a line of code, or insert them on a separate line.|  
   
 ## See Also  
  [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; Reference](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40;DMX&#41; Syntax Conventions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Data Mining Extensions &#40;DMX&#41; Syntax Elements](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  

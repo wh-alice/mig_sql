@@ -53,7 +53,7 @@ manager: "erikre"
 ##  <a name="bkmk_default"></a> Default behaviors  
  By default, processing stops at the first error implicating a key column. This behavior is controlled by an error limit that specifies zero as the number of allowed errors and the Stop Processing directive that tells the server to stop processing when the error limit is reached.  
   
- Records triggering an error, due to null or missing or duplicate values, are either converted to the unknown member or discarded. [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] will not import data that violates data integrity constraints.  
+ Records triggering an error, due to null or missing or duplicate values, are either converted to the unknown member or discarded. [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] will not import data that violates data integrity constraints.  
   
 -   Conversion to unknown member occurs by default, due to the **ConvertToUnknown** setting for **KeyErrorAction**. Records allocated to unknown member are quarantined in the database as evidence of a problem that you might want to investigate after processing is finished.  
   
@@ -98,7 +98,7 @@ manager: "erikre"
 |**KeyErrorLimitAction**|This is the action taken by the server when the number of key errors has reached the upper limit. With **Stop Processing**, processing terminates immediately. With **Stop Logging**, processing continues but errors are no longer reported or counted.|  
   
 ##  <a name="bkmk_tools"></a> Where to set Error Configuration properties  
- Use the property pages in either [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] after the database is deployed, or in the model project in [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)]. The same properties are found in both tools. You can also set error configuration properties in the msmdrsrv.ini file to change server defaults for error configuration, and in **Batch** and **Process** commands if processing runs as a scripted operation.  
+ Use the property pages in either [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] after the database is deployed, or in the model project in [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)]. The same properties are found in both tools. You can also set error configuration properties in the msmdrsrv.ini file to change server defaults for error configuration, and in **Batch** and **Process** commands if processing runs as a scripted operation.  
   
  You can set error configuration on any object that can be processed as a standalone operation.  
   
@@ -145,7 +145,7 @@ manager: "erikre"
   
 -   Set **NullProcessing**=**Error** to exclude records with null values. This produces the **NullKeyNotAllowed** error, which is logged and counts toward the key error limit. You can set error configuration property on **Null Key Not Allowed** to **IgnoreError** to allow processing to continue.  
   
- Nulls can be problem for non-key fields, in that MDX queries return different results depending on whether null is interpreted as zero or empty. For this reason, [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] provides null processing options that let you predefine the conversion behavior you want. See [Defining the Unknown Member and Null Processing Properties](../Topic/Defining%20the%20Unknown%20Member%20and%20Null%20Processing%20Properties.md) and <xref:Microsoft.AnalysisServices.NullProcessing> for details.  
+ Nulls can be problem for non-key fields, in that MDX queries return different results depending on whether null is interpreted as zero or empty. For this reason, [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] provides null processing options that let you predefine the conversion behavior you want. See [Defining the Unknown Member and Null Processing Properties](../../analysis-services/tutorials/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) and <xref:Microsoft.AnalysisServices.NullProcessing> for details.  
   
 #### Set NullProcessing property on a dimension attribute  
   
@@ -165,9 +165,9 @@ manager: "erikre"
  To change this behavior, set **KeyDuplicate** to **ReportAndContinue** or **ReportAndStop** to report the error. You can then examine the error to determine potential flaws in dimension design.  
   
 ##  <a name="bkmk_limit"></a> Change the error limit or error limit action  
- You can raise the error limit to allow more errors through during processing. There is no guidance for raising the error limit; the appropriate value will vary depending on your scenario. Error limits are specified as **KeyErrorLimit** in **ErrorConfiguration** properties in [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], or as **Number of Errors** in the Error Configuration tab for properties of dimensions, cubes, or measure groups in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+ You can raise the error limit to allow more errors through during processing. There is no guidance for raising the error limit; the appropriate value will vary depending on your scenario. Error limits are specified as **KeyErrorLimit** in **ErrorConfiguration** properties in [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], or as **Number of Errors** in the Error Configuration tab for properties of dimensions, cubes, or measure groups in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
- Once the error limit is reached, you can specify that processing stops or that logging stops. For example, suppose you set the action to **StopLogging** on an error limit of 100. On the 101st error, processing continues, but errors are no longer logged or counted. Error limit actions are specified as **KeyErrorLimitAction** in **ErrorConfiguration** properties in [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], or as **On error action** in the Error Configuration tab for properties of dimensions, cubes, or measure groups in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+ Once the error limit is reached, you can specify that processing stops or that logging stops. For example, suppose you set the action to **StopLogging** on an error limit of 100. On the 101st error, processing continues, but errors are no longer logged or counted. Error limit actions are specified as **KeyErrorLimitAction** in **ErrorConfiguration** properties in [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], or as **On error action** in the Error Configuration tab for properties of dimensions, cubes, or measure groups in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 ##  <a name="bkmk_log"></a> Set the error log path  
  You can specify a file to store key-related error messages that are reported during processing. By default, errors are visible during interactive processing in the Process window and then discarded when you close the window or session. The log will only contain error information related to keys, identical to the errors you see reported in the processing dialog boxes.  
@@ -177,10 +177,10 @@ manager: "erikre"
 ##  <a name="bkmk_next"></a> Next step  
  Decide whether errors will stop processing or be ignored. Remember that only the error is ignored. The record that caused the error is not ignored; it is either discarded or converted to unknown member. Records that violate data integrity rules are never added to the database. By default, processing stops when the first error occurs, but you can change this by raising the error limit. In cube development, it can be useful to relax error configuration rules, allowing processing to continue, so that there is data to test with.  
   
- Decide whether to change default null processing behaviors. By default, nulls in a string column are processed as empty values, while nulls in a numeric column are processed as zero. See [Defining the Unknown Member and Null Processing Properties](../Topic/Defining%20the%20Unknown%20Member%20and%20Null%20Processing%20Properties.md) for instructions on setting null processing on an attribute.  
+ Decide whether to change default null processing behaviors. By default, nulls in a string column are processed as empty values, while nulls in a numeric column are processed as zero. See [Defining the Unknown Member and Null Processing Properties](../../analysis-services/tutorials/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) for instructions on setting null processing on an attribute.  
   
 ## See Also  
  [Log Properties](../../analysis-services/server-properties/log-properties.md)   
- [Defining the Unknown Member and Null Processing Properties](../Topic/Defining%20the%20Unknown%20Member%20and%20Null%20Processing%20Properties.md)  
+ [Defining the Unknown Member and Null Processing Properties](../../analysis-services/tutorials/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   

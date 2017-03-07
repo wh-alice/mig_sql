@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Copy a Policy-Based Management Facet State to an XML File
-  This topic describes how to how to copy the state of a Policy-Based Management facet to an XML file in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+  This topic describes how to how to copy the state of a Policy-Based Management facet to an XML file in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
  **In This Topic**  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 #### To copy a facet state to an XML file  
   
-1.  In Object Explorer, right-click an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], instance object, database, or database object, and then click **Facets**.  
+1.  In Object Explorer, right-click an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], instance object, database, or database object, and then click **Facets**.  
   
 2.  In the **View Facets –***object_name* dialog box, click **Export Current State as Policy**.  
   

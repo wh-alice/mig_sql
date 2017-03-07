@@ -19,9 +19,9 @@ This topic describes methods for updating your R code to improve performance or 
 
 ## Compute Context
 
-[!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] can use either the __local__ or __SQL__ compute context when performing analysis. When using the __local__ compute context, analysis is performed on the client machine and data must be fetched from [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] over the network. The performance hit incurred for this network transfer depends on the size of the data transferred, speed of the network, and other network transfers occurring at the same time.
+[!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] can use either the __local__ or __SQL__ compute context when performing analysis. When using the __local__ compute context, analysis is performed on the client machine and data must be fetched from [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] over the network. The performance hit incurred for this network transfer depends on the size of the data transferred, speed of the network, and other network transfers occurring at the same time.
 
-If the compute context is __SQL Server__, then the analytic functions are executed inside [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The data is local to the analysis task, so no network overhead is introduced. 
+If the compute context is __SQL Server__, then the analytic functions are executed inside [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)]. The data is local to the analysis task, so no network overhead is introduced. 
 
 When working with large data sets, you should always use the SQL compute context.
 
@@ -35,7 +35,7 @@ To avoid run time conversions, consider storing levels as integers in the table 
 
 ## Data Transformation
 
-Data scientists often use transformation functions written in R as part of the analysis. The transformation functions must be applied to each row retrieved from the table. In [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)], this transformation happens in batch mode and involves communication between the R interpreter and the analytics engine. To perform the transformation, the data moves from SQL to the analytics engine and then to the R interpreter process and back. Therefore, using transformations can havea significant adverse effect on the performance of the algorithm, depending on the amount of data involved.
+Data scientists often use transformation functions written in R as part of the analysis. The transformation functions must be applied to each row retrieved from the table. In [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)], this transformation happens in batch mode and involves communication between the R interpreter and the analytics engine. To perform the transformation, the data moves from SQL to the analytics engine and then to the R interpreter process and back. Therefore, using transformations can havea significant adverse effect on the performance of the algorithm, depending on the amount of data involved.
 
 It is more efficient to have all necessary columns in the table or view before performing analysis, as this avoids transformations during the computation. If it is not possible to add additional columns to existing tables, consider creating another table or view with the transformed columns and use an appropriate query to retrieve the data.
 
@@ -47,15 +47,15 @@ Increasing this value may not always produce better results and may require some
 
 ## Parallel Processing
 
-To improve the performance of running rx analytic functions inside [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] relies on parallel processing using the available cores on the [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] machine. There are two ways to achieve parallelization with [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)]:
+To improve the performance of running rx analytic functions inside [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)], [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] relies on parallel processing using the available cores on the [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] machine. There are two ways to achieve parallelization with [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)]:
 
 * When using the `sp_execute_external_script` stored procedure to run an R script, set the `@parallel` parameter to `1`. This is useful for R scripts that do not use RevoScaleR functions, which are generally prefixed with "rx". If the script uses RevoScaleR functions, parallel processing is handled automatically and you should not set `@parallel` to `1`.
 
-    If the R script can be parallelized, and if the [!INCLUDE[tsql_md](../../advanced-analytics/r-services/includes/tsql-md.md)] query can be parallelized, then [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will create multiple parallel processes (up to the __max degree of parallelism MAXDOP__ setting for [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)],) and run the same script across all processes. Each process only receives a portion of the data, so this is not useful with scripts that must see all the data, such as when training a model. However, it is useful when performing tasks such as batch prediction in parallel. For more information on using parallelism with [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), see the __Advanced tips: parallel processing__ section of [Using R Code in Transact-SQL](../../advanced-analytics/r-services/tutorials/using-r-code-in-transact-sql-sql-server-r-services.md).
+    If the R script can be parallelized, and if the [!INCLUDE[tsql_md](../../a9notintoc/includes/tsql-md.md)] query can be parallelized, then [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] will create multiple parallel processes (up to the __max degree of parallelism MAXDOP__ setting for [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)],) and run the same script across all processes. Each process only receives a portion of the data, so this is not useful with scripts that must see all the data, such as when training a model. However, it is useful when performing tasks such as batch prediction in parallel. For more information on using parallelism with [sp_execute_external_script](../../relational-databases/reference/system-stored-procedures/sp-execute-external-script-transact-sql.md), see the __Advanced tips: parallel processing__ section of [Using R Code in Transact-SQL](../../advanced-analytics/r-services/tutorials/using-r-code-in-transact-sql-sql-server-r-services.md).
 
-* When using rx functions with a SQL Server compute context, set `numTasks` to the number of processes you wish to create. The actual number of processes created is determined by [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and may be less than you requested. The number of processes created can never be more than __MAXDOP__.
+* When using rx functions with a SQL Server compute context, set `numTasks` to the number of processes you wish to create. The actual number of processes created is determined by [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)], and may be less than you requested. The number of processes created can never be more than __MAXDOP__.
 
-    If the R script can be parallelized, and if the [!INCLUDE[tsql_md](../../advanced-analytics/r-services/includes/tsql-md.md)] query can be parallelized, then [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will create multiple parallel processes when running the rx functions.
+    If the R script can be parallelized, and if the [!INCLUDE[tsql_md](../../a9notintoc/includes/tsql-md.md)] query can be parallelized, then [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)] will create multiple parallel processes when running the rx functions.
 
 The number of processes that will be created depends on a variety of factors such as resource governance, current usage of resources, other sessions, and the query execution plan for the query used with the R script. 
 
@@ -63,7 +63,7 @@ The number of processes that will be created depends on a variety of factors suc
 
 To ensure that the data can be analyzed in parallel, the query used to retrieve the data should be framed in such a way that it can render itself for parallel execution. 
 
-[!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] supports working with SQL data sources using `RxSqlServerData` to specify the source. The source can be either a table or a query. For example, the following code samples both define an R data source object based on a SQL query:
+[!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] supports working with SQL data sources using `RxSqlServerData` to specify the source. The source can be either a table or a query. For example, the following code samples both define an R data source object based on a SQL query:
 ~~~~
 RxSqlServerData(table=”airline”, connectionString = sqlConnString)
 ~~~~
@@ -74,12 +74,12 @@ RxSqlServerData(sqlquery=”select [ArrDelay],[CRSDepTime],[DayOfWeek] from airl
 
 As the analytics algorithms pull large volumes of data from the tables, it is important to ensure that the query given to `RxSqlServerData` is optimized for parallel execution. A query that does not result in a parallel execution plan can result in a single process for computation.
 
-[!INCLUDE[ssManStudioFull_md](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] can be used to analyze the execution plan, and improve the performance of the query. For example, a missing index on a table can affect the time taken to execute a query. See [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md) for more information.
+[!INCLUDE[ssManStudioFull_md](../../a9notintoc/includes/ssmanstudiofull-md.md)] can be used to analyze the execution plan, and improve the performance of the query. For example, a missing index on a table can affect the time taken to execute a query. See [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md) for more information.
 
 Another oversight that can affect the performance is when the query retrieves more columns than are required. For example, if a formula is based on only 3 columns, and the table has 30 columns, do not use a query such as `select *` or one that selects more columns than needed.
 
 > [!NOTE]
-> If a table is specified in the data source instead of a query, [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] will internally determine the necessary columns to fetch from the table; however, this approach is unlikely to result in parallel execution.
+> If a table is specified in the data source instead of a query, [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] will internally determine the necessary columns to fetch from the table; however, this approach is unlikely to result in parallel execution.
 
 ## Algorithm Parameters
 
@@ -97,7 +97,7 @@ For more information on tuning performance for `rxDForest` and `rxDTree`, see [P
 
 Once the training has completed and the best model selected, we recommend storing the model in the database so that it is readily available for predictions. For on-line transaction processing that requires prediction, loading the pre-computed model from the database for the prediction is very efficient. The sample scripts use this approach to serialize and store the model in a database table. For prediction, the model is de-serialized from the database.
 
-Some models generated by algorithms such as lm or glm can be quite large, especially when used on a large data set. There are size limitations to the data that can be stored in [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. You should clean up the model before storing it to the database.
+Some models generated by algorithms such as lm or glm can be quite large, especially when used on a large data set. There are size limitations to the data that can be stored in [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)]. You should clean up the model before storing it to the database.
 
 > [!NOTE]
 > If fast prediction using a stored model and integrating the analytics into an application is an important scenario, we recommend __DeployR__. It can be used to easily integrate R analytics inside web, desktop, mobile, and dashboard applications. In particular, it is well suited for storing a model and then performing single row prediction using the stored model. For more information, see [About DeployR](https://msdn.microsoft.com/microsoft-r/deployr-about).

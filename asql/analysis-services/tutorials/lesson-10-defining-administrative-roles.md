@@ -24,8 +24,8 @@ In this lesson, you learn to define security roles for administrative tasks.
   
 This lesson contains the following task:  
   
-[Granting Process Database Permissions](../Topic/Granting%20Process%20Database%20Permissions.md)  
-In this task, you define a security role that has permissions to process the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] database, and then you test this security role.  
+[Granting Process Database Permissions](../../analysis-services/tutorials/lesson-10-granting-process-database-permissions.md)  
+In this task, you define a security role that has permissions to process the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] database, and then you test this security role.  
   
 ## See Also  
 [Analysis Services Tutorial Scenario](../../analysis-services/tutorials/analysis-services-tutorial-scenario.md)  

@@ -30,6 +30,6 @@ manager: "jhubbard"
  The instance name contains invalid characters or is too long.  
   
 ## User Action  
- Consult the Local Database Runtime API documentation on legal names for Local Database Runtime instances.  For additional information, see [SQL Server Express LocalDB Instance API Reference](SQL%20Server%20Express%20LocalDB%20Instance%20API%20Reference.md).
+ Consult the Local Database Runtime API documentation on legal names for Local Database Runtime instances.  For additional information, see [SQL Server Express LocalDB Instance API Reference](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md).
   
   

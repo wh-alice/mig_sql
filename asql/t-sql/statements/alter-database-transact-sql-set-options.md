@@ -31,7 +31,7 @@ manager: "jhubbard"
 # ALTER DATABASE (Transact-SQL) SET Options 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  This topic contains the ALTER DATABASE syntax that is related to setting database options in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For other ALTER DATABASE syntax, see the following topics.  
+  This topic contains the ALTER DATABASE syntax that is related to setting database options in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For other ALTER DATABASE syntax, see the following topics.  
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 
@@ -41,12 +41,12 @@ manager: "jhubbard"
   
 -   [ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)  
   
- Database mirroring, [!INCLUDE[ssHADR](../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)], and compatibility levels are **SET** options but are described in separate topics because of their length. For more information, see [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md), [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md), and [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ Database mirroring, [!INCLUDE[ssHADR](../../a9notintoc/includes/sshadr-md.md)], and compatibility levels are **SET** options but are described in separate topics because of their length. For more information, see [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), and [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
 >  Many database set options can be configured for the current session by using [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session level set options override the **ALTER DATABASE SET** values. The database options described below are values that can be set for sessions that do not explicitly provide other set option values.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -253,7 +253,7 @@ SET
  Is the name of the database to be modified.  
   
  CURRENT  
- **Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  CURRENT performs the action in the current database. CURRENT is not supported for all options in all contexts. If CURRENT fails, provide the database name.  
   
@@ -265,7 +265,7 @@ SET
  ON  
  The database is shut down cleanly and its resources are freed after the last user exits.  
   
- The database automatically reopens when a user tries to use the database again. For example, by issuing a USE *database_name* statement. If the database is shut down cleanly while AUTO_CLOSE is set to ON, the database is not reopened until a user tries to use the database the next time the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] is restarted.  
+ The database automatically reopens when a user tries to use the database again. For example, by issuing a USE *database_name* statement. If the database is shut down cleanly while AUTO_CLOSE is set to ON, the database is not reopened until a user tries to use the database the next time the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] is restarted.  
   
  OFF  
  The database remains open after the last user exits.  
@@ -273,17 +273,17 @@ SET
  The AUTO_CLOSE option is useful for desktop databases because it allows for database files to be managed as regular files. They can be moved, copied to make backups, or even e-mailed to other users. The AUTO_CLOSE process is asynchronous; repeatedly opening and closing the database does not reduce performance.  
   
 > [!NOTE]  
->  The AUTO_CLOSE option is not available in a Contained Database or on [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+>  The AUTO_CLOSE option is not available in a Contained Database or on [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  The status of this option can be determined by examining the is_auto_close_on column in the sys.databases catalog view or the IsAutoClose property of the DATABASEPROPERTYEX function.  
   
 > [!NOTE]  
->  When AUTO_CLOSE is ON, some columns in the [sys.databases](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view and DATABASEPROPERTYEX function will return NULL because the database is unavailable to retrieve the data. To resolve this, execute a USE statement to open the database.  
+>  When AUTO_CLOSE is ON, some columns in the [sys.databases](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view and DATABASEPROPERTYEX function will return NULL because the database is unavailable to retrieve the data. To resolve this, execute a USE statement to open the database.  
   
 > [!NOTE]  
 >  Database mirroring requires AUTO_CLOSE OFF.  
   
- When the database is set to AUTOCLOSE = ON, an operation that initiates an automatic database shutdown clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. In [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] Service Pack 2 and higher, for each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log contains the following informational message: "[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
+ When the database is set to AUTOCLOSE = ON, an operation that initiates an automatic database shutdown clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. In [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] Service Pack 2 and higher, for each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error log contains the following informational message: "[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
   
  AUTO_CREATE_STATISTICS { ON | OFF }  
  ON  
@@ -301,7 +301,7 @@ SET
  INCREMENTAL = ON | OFF  
  When AUTO_CREATE_STATISTICS is ON, and INCREMENTAL is set to ON, automatically created stats are created as incremental whenever incremental stats is supported. The default value is OFF. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
- **Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  AUTO_SHRINK { ON | OFF }  
  ON  
@@ -325,7 +325,7 @@ SET
  ON  
  Specifies that the query optimizer updates statistics when they are used by a query and when they might be out-of-date. Statistics become out-of-date after insert, update, delete, or merge operations change the data distribution in the table or indexed view. The query optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.  
   
- The query optimizer checks for out-of-date statistics before compiling a query and before executing a cached query plan. Before compiling a query, the query optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. Before executing a cached query plan, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.  
+ The query optimizer checks for out-of-date statistics before compiling a query and before executing a cached query plan. Before compiling a query, the query optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. Before executing a cached query plan, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.  
   
  The AUTO_UPDATE_STATISTICS option applies to statistics created for indexes, single-columns in query predicates, and statistics that are created by using the CREATE STATISTICS statement. This option also applies to filtered statistics.  
   
@@ -359,7 +359,7 @@ SET
   
  **<change_tracking_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the Examples section later in this topic.  
   
@@ -385,7 +385,7 @@ SET
   
  **<containment_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. Not available in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. Not available in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  Controls database containment options.  
   
@@ -397,7 +397,7 @@ SET
  The database is a contained database. Setting database containment to partial will fail if the database has replication, change data capture, or change tracking enabled. Error checking stops after one failure. For more information about contained databases, see [Contained Databases](../../relational-databases/databases/contained-databases.md).  
   
 > [!NOTE]  
->  Containment cannot be configured in [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)]. Containment is not explicitly designated, but [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] can use contained features such as contained database users.  
+>  Containment cannot be configured in [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)]. Containment is not explicitly designated, but [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] can use contained features such as contained database users.  
   
  **<cursor_option> ::=**  
   
@@ -410,12 +410,12 @@ SET
  OFF  
  Cursors remain open when a transaction is committed; rolling back a transaction closes any cursors except those defined as INSENSITIVE or STATIC.  
   
- Connection-level settings that are set by using the SET statement override the default database setting for CURSOR_CLOSE_ON_COMMIT. By default, ODBC and OLE DB clients issue a connection-level SET statement setting CURSOR_CLOSE_ON_COMMIT to OFF for the session when connecting to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information, see [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md).  
+ Connection-level settings that are set by using the SET statement override the default database setting for CURSOR_CLOSE_ON_COMMIT. By default, ODBC and OLE DB clients issue a connection-level SET statement setting CURSOR_CLOSE_ON_COMMIT to OFF for the session when connecting to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For more information, see [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md).  
   
  The status of this option can be determined by examining the is_cursor_close_on_commit_on column in the sys.databases catalog view or the IsCloseCursorsOnCommitEnabled property of the DATABASEPROPERTYEX function.  
   
  CURSOR_DEFAULT { LOCAL | GLOBAL }  
- **Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  Controls whether cursor scope uses LOCAL or GLOBAL.  
   
@@ -431,19 +431,19 @@ SET
   
  **<database_mirroring>**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
- For the argument descriptions, see [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md).  
+ For the argument descriptions, see [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).  
   
  **<date_correlation_optimization_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  Controls the date_correlation_optimization option.  
   
  DATE_CORRELATION_OPTIMIZATION { ON | OFF }  
  ON  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] maintains correlation statistics between any two tables in the database that are linked by a FOREIGN KEY constraint and have **datetime** columns.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] maintains correlation statistics between any two tables in the database that are linked by a FOREIGN KEY constraint and have **datetime** columns.  
   
  OFF  
  Correlation statistics are not maintained.  
@@ -461,11 +461,11 @@ SET
   
  When encryption is enabled at the database level all filegroups will be encrypted. Any new filegroups will inherit the encrypted property. If any filegroups in the database are set to **READ ONLY**, the database encryption operation will fail.  
   
- You can see the encryption state of the database by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys.dm-database-encryption-keys-transact-sql.md) dynamic management view.  
+ You can see the encryption state of the database by using the [sys.dm_database_encryption_keys](../../relational-databases/reference/system-dynamic-management-views/sys.dm-database-encryption-keys-transact-sql.md) dynamic management view.  
   
  **<db_state_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  Controls the state of the database.  
   
@@ -481,7 +481,7 @@ SET
 > [!NOTE]  
 >  **Permissions:** ALTER DATABASE permission for the subject database is required to change a database to the offline or emergency state. The server level ALTER ANY DATABASE permission is required to move a database from offline to online.  
   
- The status of this option can be determined by examining the state and state_desc columns in the [sys.databases](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view or the Status property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function. For more information, see [Database States](../../relational-databases/databases/database-states.md).  
+ The status of this option can be determined by examining the state and state_desc columns in the [sys.databases](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view or the Status property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function. For more information, see [Database States](../../relational-databases/databases/database-states.md).  
   
  A database marked as RESTORING cannot be set to OFFLINE, ONLINE, or EMERGENCY. A database may be in the RESTORING state during an active restore operation or when a restore operation of a database or log file fails because of a corrupted backup file.  
   
@@ -493,7 +493,7 @@ SET
  Users can read data from the database but not modify it.  
   
 > [!NOTE]  
->  To improve query performance, update statistics before setting a database to READ_ONLY. If additional statistics are needed after a database is set to READ_ONLY, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] will create statistics in tempdb. For more information about statistics for a read-only database, see [Statistics](../../relational-databases/statistics/statistics.md).  
+>  To improve query performance, update statistics before setting a database to READ_ONLY. If additional statistics are needed after a database is set to READ_ONLY, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] will create statistics in tempdb. For more information about statistics for a read-only database, see [Statistics](../../relational-databases/statistics/statistics.md).  
   
  READ_WRITE  
  The database is available for read and write operations.  
@@ -501,24 +501,24 @@ SET
  To change this state, you must have exclusive access to the database. For more information, see the SINGLE_USER clause.  
   
 > [!NOTE]  
->  On [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] federated databases, SET { READ_ONLY | READ_WRITE } is disabled.  
+>  On [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] federated databases, SET { READ_ONLY | READ_WRITE } is disabled.  
   
  **<db_user_access_option> ::=**  
   
  Controls user access to the database.  
   
  SINGLE_USER  
- **Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  Specifies that only one user at a time can access the database. If SINGLE_USER is specified and there are other users connected to the database the ALTER DATABASE statement will be blocked until all users disconnect from the specified database. To override this behavior, see the WITH \<termination> clause.  
   
  The database remains in SINGLE_USER mode even if the user that set the option logs off. At that point, a different user, but only one, can connect to the database.  
   
- Before you set the database to SINGLE_USER, verify the AUTO_UPDATE_STATISTICS_ASYNC option is set to OFF. When set to ON, the background thread used to update statistics takes a connection against the database, and you will be unable to access the database in single-user mode. To view the status of this option, query the is_auto_update_stats_async_on column in the [sys.databases](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view. If the option is set to ON, perform the following tasks:  
+ Before you set the database to SINGLE_USER, verify the AUTO_UPDATE_STATISTICS_ASYNC option is set to OFF. When set to ON, the background thread used to update statistics takes a connection against the database, and you will be unable to access the database in single-user mode. To view the status of this option, query the is_auto_update_stats_async_on column in the [sys.databases](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view. If the option is set to ON, perform the following tasks:  
   
 1.  Set AUTO_UPDATE_STATISTICS_ASYNC to OFF.  
   
-2.  Check for active asynchronous statistics jobs by querying the [sys.dm_exec_background_job_queue](../../relational-databases/system-dynamic-management-views/sys.dm-exec-background-job-queue-transact-sql.md) dynamic management view.  
+2.  Check for active asynchronous statistics jobs by querying the [sys.dm_exec_background_job_queue](../../relational-databases/reference/system-dynamic-management-views/sys.dm-exec-background-job-queue-transact-sql.md) dynamic management view.  
   
  If there are active jobs, either allow the jobs to complete or manually terminate them by using [KILL STATS JOB](../../t-sql/language-elements/kill-stats-job-transact-sql.md).  
   
@@ -532,7 +532,7 @@ SET
   
  **<delayed_durability_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  Controls whether transactions commit fully durable or delayed durable.  
   
@@ -547,7 +547,7 @@ SET
   
  **<external_access_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  Controls whether the database can be accessed by external resources, such as objects from another database.  
   
@@ -559,7 +559,7 @@ SET
  Database cannot participate in cross-database ownership chaining.  
   
 > [!IMPORTANT]  
->  The instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will recognize this setting when the cross db ownership chaining server option is 0 (OFF). When cross db ownership chaining is 1 (ON), all user databases can participate in cross-database ownership chains, regardless of the value of this option. This option is set by using [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+>  The instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will recognize this setting when the cross db ownership chaining server option is 0 (OFF). When cross db ownership chaining is 1 (ON), all user databases can participate in cross-database ownership chains, regardless of the value of this option. This option is set by using [sp_configure](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md).  
   
  To set this option, requires CONTROL SERVER permission on the database.  
   
@@ -583,7 +583,7 @@ SET
  The status of this option can be determined by examining the is_trustworthy_on column in the sys.databases catalog view.  
   
  DEFAULT_FULLTEXT_LANGUAGE  
- **Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
  Specifies the default language value for full-text indexed columns.  
   
@@ -591,28 +591,28 @@ SET
 >  This option is allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.  
   
  DEFAULT_LANGUAGE  
- **Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
- Specifies the default language for all newly created logins. Language can be specified by providing the local id (lcid), the language name, or the language alias. For a list of acceptable language names and aliases, see [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys.syslanguages-transact-sql.md). This option is allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.  
+ Specifies the default language for all newly created logins. Language can be specified by providing the local id (lcid), the language name, or the language alias. For a list of acceptable language names and aliases, see [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/reference/system-compatibility-views/sys.syslanguages-transact-sql.md). This option is allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.  
   
  NESTED_TRIGGERS  
- **Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
  Specifies whether an AFTER trigger can cascade; that is, perform an action that initiates another trigger, which initiates another trigger, and so on. This option is allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.  
   
  TRANSFORM_NOISE_WORDS  
- **Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
  Used to suppress an error message if noise words, or stopwords, cause a Boolean operation on a full-text query to fail. This option is allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.  
   
  TWO_DIGIT_YEAR_CUTOFF  
- **Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
  Specifies an integer from 1753 to 9999 that represents the cutoff year for interpreting two-digit years as four-digit years. This option is allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.  
   
  **<FILESTREAM_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
  Controls the settings for FileTables.  
   
@@ -627,17 +627,17 @@ SET
  Full non-transactional access to FILESTREAM data in FileTables is enabled.  
   
  DIRECTORY_NAME = *<directory_name>*  
- A windows-compatible directory name. This name should be unique among all the database-level directory names in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. Uniqueness comparison is case-insensitive, regardless of collation settings. This option must be set before creating a FileTable in this database.  
+ A windows-compatible directory name. This name should be unique among all the database-level directory names in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. Uniqueness comparison is case-insensitive, regardless of collation settings. This option must be set before creating a FileTable in this database.  
   
  **<HADR_options> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
- See [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md).  
+ See [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).  
   
  **<mixed_page_allocation_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)). Not available in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)). Not available in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  MIXED_PAGE_ALLOCATION { OFF | ON } controls whether the database can create initial pages using a mixed extent for the first eight pages of a table or index.  
   
@@ -658,13 +658,13 @@ SET
  Queries are parameterized based on the default behavior of the database.  
   
  FORCED  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] parameterizes all queries in the database.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] parameterizes all queries in the database.  
   
  The current setting of this option can be determined by examining the is_parameterization_forced column in the sys.databases catalog view.  
   
  **<query_store_options> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].  
   
 > [!IMPORTANT]  
 >  This is currently a preview feature. To use the Query Store you must acknowledge and agree that implementation of Query Store is subject to the preview terms in your license agreement (e.g. the Enterprise Agreement, Microsoft Azure Agreement, or Microsoft Online Subscription Agreement), as well as any applicable [Supplemental Terms of Use for Microsoft Azure Preview](http://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/).  
@@ -718,7 +718,7 @@ SET
   
  **<recovery_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  Controls database recovery options and disk I/O error checking.  
   
@@ -740,34 +740,34 @@ SET
   
  TORN_PAGE_DETECTION { ON | OFF }  
  ON  
- Incomplete pages can be detected by the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+ Incomplete pages can be detected by the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
  OFF  
- Incomplete pages cannot be detected by the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+ Incomplete pages cannot be detected by the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 > [!IMPORTANT]  
->  The syntax structure TORN_PAGE_DETECTION ON | OFF will be removed in a future version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Avoid using this syntax structure in new development work, and plan to modify applications that currently use the syntax structure. Use the PAGE_VERIFY option instead.  
+>  The syntax structure TORN_PAGE_DETECTION ON | OFF will be removed in a future version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Avoid using this syntax structure in new development work, and plan to modify applications that currently use the syntax structure. Use the PAGE_VERIFY option instead.  
   
  PAGE_VERIFY { CHECKSUM | TORN_PAGE_DETECTION | NONE }  
  Discovers damaged database pages caused by disk I/O path errors. Disk I/O path errors can be the cause of database corruption problems and are generally caused by power failures or disk hardware failures that occur at the time the page is being written to disk.  
   
  CHECKSUM  
- Calculates a checksum over the contents of the whole page and stores the value in the page header when a page is written to disk. When the page is read from disk, the checksum is recomputed and compared to the checksum value stored in the page header. If the values do not match, error message 824 (indicating a checksum failure) is reported to both the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log and the Windows event log. A checksum failure indicates an I/O path problem. To determine the root cause requires investigation of the hardware, firmware drivers, BIOS, filter drivers (such as virus software), and other I/O path components.  
+ Calculates a checksum over the contents of the whole page and stores the value in the page header when a page is written to disk. When the page is read from disk, the checksum is recomputed and compared to the checksum value stored in the page header. If the values do not match, error message 824 (indicating a checksum failure) is reported to both the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error log and the Windows event log. A checksum failure indicates an I/O path problem. To determine the root cause requires investigation of the hardware, firmware drivers, BIOS, filter drivers (such as virus software), and other I/O path components.  
   
  TORN_PAGE_DETECTION  
- Saves a specific 2-bit pattern for each 512-byte sector in the 8-kilobyte (KB) database page and stored in the database page header when the page is written to disk. When the page is read from disk, the torn bits stored in the page header are compared to the actual page sector information. Unmatched values indicate that only part of the page was written to disk. In this situation, error message 824 (indicating a torn page error) is reported to both the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log and the Windows event log. Torn pages are typically detected by database recovery if it is truly an incomplete write of a page. However, other I/O path failures can cause a torn page at any time.  
+ Saves a specific 2-bit pattern for each 512-byte sector in the 8-kilobyte (KB) database page and stored in the database page header when the page is written to disk. When the page is read from disk, the torn bits stored in the page header are compared to the actual page sector information. Unmatched values indicate that only part of the page was written to disk. In this situation, error message 824 (indicating a torn page error) is reported to both the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error log and the Windows event log. Torn pages are typically detected by database recovery if it is truly an incomplete write of a page. However, other I/O path failures can cause a torn page at any time.  
   
  NONE  
- Database page writes will not generate a CHECKSUM or TORN_PAGE_DETECTION value. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will not verify a checksum or torn page during a read even if a CHECKSUM or TORN_PAGE_DETECTION value is present in the page header.  
+ Database page writes will not generate a CHECKSUM or TORN_PAGE_DETECTION value. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will not verify a checksum or torn page during a read even if a CHECKSUM or TORN_PAGE_DETECTION value is present in the page header.  
   
  Consider the following important points when you use the PAGE_VERIFY option:  
   
 -   The default is CHECKSUM.  
   
--   When a user or system database is upgraded to [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] or a later version, the PAGE_VERIFY value (NONE or TORN_PAGE_DETECTION) is retained. We recommend that you use CHECKSUM.  
+-   When a user or system database is upgraded to [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] or a later version, the PAGE_VERIFY value (NONE or TORN_PAGE_DETECTION) is retained. We recommend that you use CHECKSUM.  
   
     > [!NOTE]  
-    >  In earlier versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the PAGE_VERIFY database option is set to NONE for the tempdb database and cannot be modified. In [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] and later versions, the default value for the tempdb database is CHECKSUM for new installations of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. When upgrading an installation [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the default value remains NONE. The option can be modified. We recommend that you use CHECKSUM for the tempdb database.  
+    >  In earlier versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], the PAGE_VERIFY database option is set to NONE for the tempdb database and cannot be modified. In [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] and later versions, the default value for the tempdb database is CHECKSUM for new installations of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. When upgrading an installation [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], the default value remains NONE. The option can be modified. We recommend that you use CHECKSUM for the tempdb database.  
   
 -   TORN_PAGE_DETECTION may use fewer resources but provides a minimal subset of the CHECKSUM protection.  
   
@@ -775,17 +775,17 @@ SET
   
 -   CHECKSUM is mutually exclusive to TORN_PAGE_DETECTION. Both options cannot be enabled at the same time.  
   
- When a torn page or checksum failure is detected, you can recover by restoring the data or potentially rebuilding the index if the failure is limited only to index pages. If you encounter a checksum failure, to determine the type of database page or pages affected, run DBCC CHECKDB. For more information about restore options, see [RESTORE Arguments &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md). Although restoring the data will resolve the data corruption problem, the root cause, for example, disk hardware failure, should be diagnosed and corrected as soon as possible to prevent continuing errors.  
+ When a torn page or checksum failure is detected, you can recover by restoring the data or potentially rebuilding the index if the failure is limited only to index pages. If you encounter a checksum failure, to determine the type of database page or pages affected, run DBCC CHECKDB. For more information about restore options, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md). Although restoring the data will resolve the data corruption problem, the root cause, for example, disk hardware failure, should be diagnosed and corrected as soon as possible to prevent continuing errors.  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will retry any read that fails with a checksum, torn page, or other I/O error four times. If the read is successful in any one of the retry attempts, a message will be written to the error log and the command that triggered the read will continue. If the retry attempts fail, the command will fail with error message 824.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will retry any read that fails with a checksum, torn page, or other I/O error four times. If the read is successful in any one of the retry attempts, a message will be written to the error log and the command that triggered the read will continue. If the retry attempts fail, the command will fail with error message 824.  
   
- For more information about checksum, torn page, read-retry, error messages 823 and 824, and other [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] I/O auditing features, see this [Microsoft Web site](http://go.microsoft.com/fwlink/?LinkId=47160).  
+ For more information about checksum, torn page, read-retry, error messages 823 and 824, and other [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] I/O auditing features, see this [Microsoft Web site](http://go.microsoft.com/fwlink/?LinkId=47160).  
   
- The current setting of this option can be determined by examining the page_verify_option column in the [sys.databases](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view or the IsTornPageDetectionEnabled property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  
+ The current setting of this option can be determined by examining the page_verify_option column in the [sys.databases](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view or the IsTornPageDetectionEnabled property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  
   
  **<remote_data_archive_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. Not available in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. Not available in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  Enables or disables Stretch Database for the database. For more info, see [Stretch Database](../../sql-server/install/stretch-database.md).  
   
@@ -799,7 +799,7 @@ SET
  Specifies the address of the Azure server. Include the `.database.windows.net` portion of the name. For example, `MyStretchDatabaseServer.database.windows.net`.  
   
  CREDENTIAL = <db_scoped_credential_name>  
- Specifies the database scoped credential that the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses to connect to the Azure server. Make sure the credential exists before you run this command. For more info, see [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
+ Specifies the database scoped credential that the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses to connect to the Azure server. Make sure the credential exists before you run this command. For more info, see [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
   
  FEDERATED_SERVICE_ACCOUNT =  ON | OFF  
  You can use a federated service account for the on premises SQL Server to communicate with the remote Azure server when the following conditions are all true.  
@@ -823,7 +823,7 @@ SET
   
  **<service_broker_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  Controls the following [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] options: enables or disables message delivery, sets a new [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] identifier, or sets conversation priorities to ON or OFF.  
   
@@ -831,7 +831,7 @@ SET
  Specifies that [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] is enabled for the specified database. Message delivery is started, and the is_broker_enabled flag is set to true in the sys.databases catalog view. The database retains the existing [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] identifier. Service broker cannot be enabled while the database is the principal in a database mirroring configuration.  
   
 > [!NOTE]  
->  ENABLE_BROKER requires an exclusive database lock. If other sessions have locked resources in the database, ENABLE_BROKER will wait until the other sessions release their locks. To enable [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] in a user database, ensure that no other sessions are using the database before you run the ALTER DATABASE SET ENABLE_BROKER statement, such as by putting the database in single user mode. To enable [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] in the msdb database, first stop [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Agent so that [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] can obtain the necessary lock.  
+>  ENABLE_BROKER requires an exclusive database lock. If other sessions have locked resources in the database, ENABLE_BROKER will wait until the other sessions release their locks. To enable [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] in a user database, ensure that no other sessions are using the database before you run the ALTER DATABASE SET ENABLE_BROKER statement, such as by putting the database in single user mode. To enable [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] in the msdb database, first stop [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Agent so that [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] can obtain the necessary lock.  
   
  DISABLE_BROKER  
  Specifies that [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] is disabled for the specified database. Message delivery is stopped, and the is_broker_enabled flag is set to false in the sys.databases catalog view. The database retains the existing [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] identifier.  
@@ -851,7 +851,7 @@ SET
   
  Changes to the HONOR_BROKER_PRIORITY option take effect immediately for new dialogs or dialogs that have no messages waiting to be sent. Dialogs that have messages waiting to be sent when ALTER DATABASE is run will not pick up the new setting until some of the messages for the dialog have been sent. The amount of time before all dialogs start using the new setting can vary considerably.  
   
- The current setting of this property is reported in the is_broker_priority_honored column in the [sys.databases](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view.  
+ The current setting of this property is reported in the is_broker_priority_honored column in the [sys.databases](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view.  
   
  **<snapshot_option> ::=**  
   
@@ -864,13 +864,13 @@ SET
  OFF  
  Turns off the Snapshot option at the database level. Transactions cannot specify the SNAPSHOT transaction isolation level.  
   
- When you set ALLOW_SNAPSHOT_ISOLATION to a new state (from ON to OFF, or from OFF to ON), ALTER DATABASE does not return control to the caller until all existing transactions in the database are committed. If the database is already in the state specified in the ALTER DATABASE statement, control is returned to the caller immediately. If the ALTER DATABASE statement does not return quickly, use [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys.dm-tran-active-snapshot-database-transactions-transact-sql.md) to determine whether there are long-running transactions. If the ALTER DATABASE statement is canceled, the database remains in the state it was in when ALTER DATABASE was started. The [sys.databases](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view indicates the state of snapshot-isolation transactions in the database. If **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON, ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF will pause six seconds and retry the operation.  
+ When you set ALLOW_SNAPSHOT_ISOLATION to a new state (from ON to OFF, or from OFF to ON), ALTER DATABASE does not return control to the caller until all existing transactions in the database are committed. If the database is already in the state specified in the ALTER DATABASE statement, control is returned to the caller immediately. If the ALTER DATABASE statement does not return quickly, use [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/reference/system-dynamic-management-views/sys.dm-tran-active-snapshot-database-transactions-transact-sql.md) to determine whether there are long-running transactions. If the ALTER DATABASE statement is canceled, the database remains in the state it was in when ALTER DATABASE was started. The [sys.databases](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view indicates the state of snapshot-isolation transactions in the database. If **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON, ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF will pause six seconds and retry the operation.  
   
  You cannot change the state of ALLOW_SNAPSHOT_ISOLATION if the database is OFFLINE.  
   
  If you set ALLOW_SNAPSHOT_ISOLATION in a READ_ONLY database, the setting will be retained if the database is later set to READ_WRITE.  
   
- You can change the ALLOW_SNAPSHOT_ISOLATION settings for the master, model, msdb, and tempdb databases. If you change the setting for tempdb, the setting is retained every time the instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] is stopped and restarted. If you change the setting for model, that setting becomes the default for any new databases that are created, except for tempdb.  
+ You can change the ALLOW_SNAPSHOT_ISOLATION settings for the master, model, msdb, and tempdb databases. If you change the setting for tempdb, the setting is retained every time the instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] is stopped and restarted. If you change the setting for model, that setting becomes the default for any new databases that are created, except for tempdb.  
   
  The option is ON, by default, for the master and msdb databases.  
   
@@ -895,19 +895,19 @@ SET
 >  When a table is created with **DURABILITY = SCHEMA_ONLY**, and **READ_COMMITTED_SNAPSHOT** is subsequently changed using **ALTER DATABASE**, data in the table will be lost.  
   
  MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | OFF }  
- **Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  ON  
- When the transaction isolation level is set to any isolation level lower than SNAPSHOT (for example, READ COMMITTED or READ UNCOMMITTED), all interpreted [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] operations on memory-optimized tables are performed under SNAPSHOT isolation. This is done regardless of whether the transaction isolation level is set explicitly at the session level, or the default is used implicitly.  
+ When the transaction isolation level is set to any isolation level lower than SNAPSHOT (for example, READ COMMITTED or READ UNCOMMITTED), all interpreted [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] operations on memory-optimized tables are performed under SNAPSHOT isolation. This is done regardless of whether the transaction isolation level is set explicitly at the session level, or the default is used implicitly.  
   
  OFF  
- Does not elevate the transaction isolation level for interpreted [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] operations on memory-optimized tables.  
+ Does not elevate the transaction isolation level for interpreted [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] operations on memory-optimized tables.  
   
  You cannot change the state of MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT if the database is OFFLINE.  
   
  The option is OFF, by default.  
   
- The current setting of this option can be determined by examining the **is_memory_optimized_elevate_to_snapshot_on** column in the [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view.  
+ The current setting of this option can be determined by examining the **is_memory_optimized_elevate_to_snapshot_on** column in the [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view.  
   
  **<sql_option> ::=**  
   
@@ -922,7 +922,7 @@ SET
  OFF  
  The default value is NOT NULL.  
   
- Connection-level settings that are set by using the SET statement override the default database-level setting for ANSI_NULL_DEFAULT. By default, ODBC and OLE DB clients issue a connection-level SET statement setting ANSI_NULL_DEFAULT to ON for the session when connecting to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information, see [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md).  
+ Connection-level settings that are set by using the SET statement override the default database-level setting for ANSI_NULL_DEFAULT. By default, ODBC and OLE DB clients issue a connection-level SET statement setting ANSI_NULL_DEFAULT to ON for the session when connecting to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For more information, see [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md).  
   
  For ANSI compatibility, setting the database option ANSI_NULL_DEFAULT to ON changes the database default to NULL.  
   
@@ -936,9 +936,9 @@ SET
  Comparisons of non-UNICODE values to a null value evaluate to TRUE if both values are NULL.  
   
 > [!IMPORTANT]  
->  In a future version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], ANSI_NULLS will always be ON and any applications that explicitly set the option to OFF will produce an error. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
+>  In a future version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], ANSI_NULLS will always be ON and any applications that explicitly set the option to OFF will produce an error. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
   
- Connection-level settings that are set by using the SET statement override the default database setting for ANSI_NULLS. By default, ODBC and OLE DB clients issue a connection-level SET statement setting ANSI_NULLS to ON for the session when connecting to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information, see [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
+ Connection-level settings that are set by using the SET statement override the default database setting for ANSI_NULLS. By default, ODBC and OLE DB clients issue a connection-level SET statement setting ANSI_NULLS to ON for the session when connecting to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For more information, see [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   
  SET ANSI_NULLS also must be set to ON when you create or make changes to indexes on computed columns or indexed views.  
   
@@ -956,12 +956,12 @@ SET
  When OFF is specified, this setting affects only the definition of new columns.  
   
 > [!IMPORTANT]  
->  In a future version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], ANSI_PADDING will always be ON and any applications that explicitly set the option to OFF will produce an error. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. We recommend that you always set ANSI_PADDING to ON. ANSI_PADDING must be ON when you create or manipulate indexes on computed columns or indexed views.  
+>  In a future version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], ANSI_PADDING will always be ON and any applications that explicitly set the option to OFF will produce an error. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. We recommend that you always set ANSI_PADDING to ON. ANSI_PADDING must be ON when you create or manipulate indexes on computed columns or indexed views.  
   
  **char(**  
  ***n* )** and **binary(*n*)** columns that allow for nulls are padded to the length of the column when ANSI_PADDING is set to ON, but trailing blanks and zeros are trimmed when ANSI_PADDING is OFF. **char(*n*)** and **binary(*n*)** columns that do not allow nulls are always padded to the length of the column.  
   
- Connection-level settings that are set by using the SET statement override the default database-level setting for ANSI_PADDING. By default, ODBC and OLE DB clients issue a connection-level SET statement setting ANSI_PADDING to ON for the session when connecting to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information, see [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+ Connection-level settings that are set by using the SET statement override the default database-level setting for ANSI_PADDING. By default, ODBC and OLE DB clients issue a connection-level SET statement setting ANSI_PADDING to ON for the session when connecting to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For more information, see [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
  The status of this option can be determined by examining the is_ansi_padding_on column in the sys.databases catalog view or the IsAnsiPaddingEnabled property of the DATABASEPROPERTYEX function.  
   
@@ -974,7 +974,7 @@ SET
   
  SET ANSI_WARNINGS must be set to ON when you create or make changes to indexes on computed columns or indexed views.  
   
- Connection-level settings that are set by using the SET statement override the default database setting for ANSI_WARNINGS. By default, ODBC and OLE DB clients issue a connection-level SET statement setting ANSI_WARNINGS to ON for the session when connecting to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information, see [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md).  
+ Connection-level settings that are set by using the SET statement override the default database setting for ANSI_WARNINGS. By default, ODBC and OLE DB clients issue a connection-level SET statement setting ANSI_WARNINGS to ON for the session when connecting to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For more information, see [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md).  
   
  The status of this option can be determined by examining the is_ansi_warnings_on column in the sys.databases catalog view or the IsAnsiWarningsEnabled property of the DATABASEPROPERTYEX function.  
   
@@ -990,7 +990,7 @@ SET
  The status of this option can be determined by examining the is_arithabort_on column in the sys.databases catalog view or the IsArithmeticAbortEnabled property of the DATABASEPROPERTYEX function.  
   
  COMPATIBILITY_LEVEL { 90 | 100 | 110 | 120}  
- For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
  CONCAT_NULL_YIELDS_NULL { ON | OFF }  
  ON  
@@ -1002,9 +1002,9 @@ SET
  CONCAT_NULL_YIELDS_NULL must be set to ON when you create or make changes to indexes on computed columns or indexed views.  
   
 > [!IMPORTANT]  
->  In a future version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], CONCAT_NULL_YIELDS_NULL will always be ON and any applications that explicitly set the option to OFF will produce an error. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
+>  In a future version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], CONCAT_NULL_YIELDS_NULL will always be ON and any applications that explicitly set the option to OFF will produce an error. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
   
- Connection-level settings that are set by using the SET statement override the default database setting for CONCAT_NULL_YIELDS_NULL. By default, ODBC and OLE DB clients issue a connection-level SET statement setting CONCAT_NULL_YIELDS_NULL to ON for the session when connecting to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information, see [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
+ Connection-level settings that are set by using the SET statement override the default database setting for CONCAT_NULL_YIELDS_NULL. By default, ODBC and OLE DB clients issue a connection-level SET statement setting CONCAT_NULL_YIELDS_NULL to ON for the session when connecting to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For more information, see [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
   
  The status of this option can be determined by examining the is_concat_null_yields_null_on column in the sys.databases catalog view or the IsNullConcat property of the DATABASEPROPERTYEX function.  
   
@@ -1012,16 +1012,16 @@ SET
  ON  
  Double quotation marks can be used to enclose delimited identifiers.  
   
- All strings delimited by double quotation marks are interpreted as object identifiers. Quoted identifiers do not have to follow the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] rules for identifiers. They can be keywords and can include characters not generally allowed in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] identifiers. If a single quotation mark (') is part of the literal string, it can be represented by double quotation marks (").  
+ All strings delimited by double quotation marks are interpreted as object identifiers. Quoted identifiers do not have to follow the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] rules for identifiers. They can be keywords and can include characters not generally allowed in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] identifiers. If a single quotation mark (') is part of the literal string, it can be represented by double quotation marks (").  
   
  OFF  
- Identifiers cannot be in quotation marks and must follow all [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] rules for identifiers. Literals can be delimited by either single or double quotation marks.  
+ Identifiers cannot be in quotation marks and must follow all [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] rules for identifiers. Literals can be delimited by either single or double quotation marks.  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] also allows for identifiers to be delimited by square brackets ([ ]). Bracketed identifiers can always be used, regardless of the setting of QUOTED_IDENTIFIER. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] also allows for identifiers to be delimited by square brackets ([ ]). Bracketed identifiers can always be used, regardless of the setting of QUOTED_IDENTIFIER. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
  When a table is created, the QUOTED IDENTIFIER option is always stored as ON in the metadata of the table, even if the option is set to OFF when the table is created.  
   
- Connection-level settings that are set by using the SET statement override the default database setting for QUOTED_IDENTIFIER. By default, ODBC and OLE DB clients issue a connection-level SET statement setting QUOTED_IDENTIFIER to ON when connecting to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ Connection-level settings that are set by using the SET statement override the default database setting for QUOTED_IDENTIFIER. By default, ODBC and OLE DB clients issue a connection-level SET statement setting QUOTED_IDENTIFIER to ON when connecting to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  The status of this option can be determined by examining the is_quoted_identifier_on column in the sys.databases catalog view or the IsQuotedIdentifiersEnabled property of the DATABASEPROPERTYEX function.  
   
@@ -1050,9 +1050,9 @@ SET
   
  **<target_recovery_time_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. Not available in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. Not available in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
- Specifies the frequency of indirect checkpoints on a per-database basis. Beginning with [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] the default value for new databases is 1 minute, which indicates database will use indirect checkpoints. For older versions the default is 0, which indicates that the database will use automatic checkpoints, whose frequency depends on the recovery interval setting of the server instance. [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] recommends 1 minute for most systems.  
+ Specifies the frequency of indirect checkpoints on a per-database basis. Beginning with [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] the default value for new databases is 1 minute, which indicates database will use indirect checkpoints. For older versions the default is 0, which indicates that the database will use automatic checkpoints, whose frequency depends on the recovery interval setting of the server instance. [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] recommends 1 minute for most systems.  
   
  TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
  *target_recovery_time*  
@@ -1082,7 +1082,7 @@ SET
 ## Remarks  
   
 ##  <a name="SettingOptions"></a> Setting Options  
- To retrieve current settings for database options, use the [sys.databases](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) catalog view or [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)  
+ To retrieve current settings for database options, use the [sys.databases](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) catalog view or [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)  
   
  After you set a database option, the modification takes effect immediately.  
   
@@ -1112,7 +1112,7 @@ SET
 |<change_tracking_option>|Yes|Yes|  
 |<db_encryption>|Yes|No|  
   
- The plan cache for the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is cleared by setting one of the following options:  
+ The plan cache for the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is cleared by setting one of the following options:  
   
 |||  
 |-|-|  
@@ -1136,12 +1136,12 @@ SET
   
 -   You detach a database.  
   
- Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log contains the following informational message: "[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
+ Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error log contains the following informational message: "[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
   
 ## Examples  
   
 ### A. Setting options on a database  
- The following example sets the recovery model and data page verification options for the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] sample database.  
+ The following example sets the recovery model and data page verification options for the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] sample database.  
   
 ```  
 USE master;  
@@ -1153,10 +1153,10 @@ GO
 ```  
   
 ### B. Setting the database to READ_ONLY  
- Changing the state of a database or filegroup to READ_ONLY or READ_WRITE requires exclusive access to the database. The following example sets the database to `SINGLE_USER` mode to obtain exclusive access. The example then sets the state of the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database to `READ_ONLY` and returns access to the database to all users.  
+ Changing the state of a database or filegroup to READ_ONLY or READ_WRITE requires exclusive access to the database. The following example sets the database to `SINGLE_USER` mode to obtain exclusive access. The example then sets the state of the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database to `READ_ONLY` and returns access to the database to all users.  
   
 > [!NOTE]  
->  This example uses the termination option `WITH ROLLBACK IMMEDIATE` in the first `ALTER DATABASE` statement. All incomplete transactions will be rolled back and any other connections to the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database will be immediately disconnected.  
+>  This example uses the termination option `WITH ROLLBACK IMMEDIATE` in the first `ALTER DATABASE` statement. All incomplete transactions will be rolled back and any other connections to the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database will be immediately disconnected.  
   
 ```  
 USE master;  
@@ -1175,7 +1175,7 @@ GO
 ```  
   
 ### C. Enabling snapshot isolation on a database  
- The following example enables the snapshot isolation framework option for the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+ The following example enables the snapshot isolation framework option for the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database.  
   
 ```  
 USE AdventureWorks2012;  
@@ -1203,7 +1203,7 @@ GO
  `AdventureWorks2012   1                         ON`  
   
 ### D. Enabling, modifying, and disabling change tracking  
- The following example enables change tracking for the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database and sets the retention period to `2` days.  
+ The following example enables change tracking for the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database and sets the retention period to `2` days.  
   
 ```  
 ALTER DATABASE AdventureWorks2012  
@@ -1218,7 +1218,7 @@ ALTER DATABASE AdventureWorks2012
 SET CHANGE_TRACKING (CHANGE_RETENTION = 3 DAYS);  
 ```  
   
- The following example shows how to disable change tracking for the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+ The following example shows how to disable change tracking for the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database.  
   
 ```  
 ALTER DATABASE AdventureWorks2012  
@@ -1226,7 +1226,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### E. Enabling the query store  
- **Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  The following example enables the query store and configures query store parameters.  
   
@@ -1243,17 +1243,17 @@ SET QUERY_STORE = ON
 ```  
   
 ## See Also  
- [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)   
- [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md)   
- [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md)   
+ [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
+ [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
+ [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
  [Statistics](../../relational-databases/statistics/statistics.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Enable and Disable Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md)   
- [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.data-spaces-transact-sql.md)  
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md)   
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.data-spaces-transact-sql.md)  
   
   

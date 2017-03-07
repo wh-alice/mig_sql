@@ -63,7 +63,7 @@ manager: "erikre"
  The order in which identifiers appear is not important.  
   
 ## Example  
- The following example creates the **Market Basket** mining structure, included in the [!INCLUDE[ssAWDWsp](../../../analysis-services/includes/ssawdwsp-md.md)] sample [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] database.  
+ The following example creates the **Market Basket** mining structure, included in the [!INCLUDE[ssAWDWsp](../../../a9notintoc/includes/ssawdwsp-md.md)] sample [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] database.  
   
 ```  
 <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -186,6 +186,6 @@ manager: "erikre"
 ```  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

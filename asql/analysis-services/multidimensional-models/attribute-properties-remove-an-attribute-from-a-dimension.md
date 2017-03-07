@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Attribute Properties - Remove an Attribute from a Dimension
-  To remove an attribute from a dimension in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], right-click the attribute in the **Attributes** pane of the **Dimension Structure** tab of Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], and then click **Delete**. In the **Delete Objects** dialog box, click **OK**. This removes the attribute from the dimension, but does not affect the data source view for the dimension.  
+  To remove an attribute from a dimension in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], right-click the attribute in the **Attributes** pane of the **Dimension Structure** tab of Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], and then click **Delete**. In the **Delete Objects** dialog box, click **OK**. This removes the attribute from the dimension, but does not affect the data source view for the dimension.  
   
 ## See Also  
  [Dimensions in Multidimensional Models](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)   

@@ -21,19 +21,19 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Start Report Builder
-  Microsoft [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] is a stand-alone report authoring environment. With it, you can create paginated reports and publish them to [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] installed in native or SharePoint integrated mode.  
+  Microsoft [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] is a stand-alone report authoring environment. With it, you can create paginated reports and publish them to [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] installed in native or SharePoint integrated mode.  
   
- The first time you start [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] from the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal or [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] in SharePoint integrated mode, you're prompted to download it from the Microsoft Download Center. 
+ The first time you start [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] from the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal or [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] in SharePoint integrated mode, you're prompted to download it from the Microsoft Download Center. 
  
 ![report-builder-get-report-builder](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
  
  You or an administrator can also [install Report Builder on your computer from the Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=219138). See "Install Report Builder with Systems Manager Server" in [Install Report Builder](../../reporting-services/install/windows/install-report-builder.md) for more details.
  
- [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] isn't installed when you install [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]; you need to  download and install it separately.  
+ [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] isn't installed when you install [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]; you need to  download and install it separately.  
   
- When you start [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] from the web portal or SharePoint site, if an earlier version of [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] opens, contact your administrator, who can update the version on the web portal or SharePoint site.  
+ When you start [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] from the web portal or SharePoint site, if an earlier version of [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] opens, contact your administrator, who can update the version on the web portal or SharePoint site.  
   
-## To start [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] from the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal  
+## To start [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] from the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal  
   
 1.  In your Web browser, type the URL for your report server in the address bar. By default, the URL is http://\<*servername*>/reports.  
   
@@ -43,9 +43,9 @@ manager: "erikre"
   
      The first time, you're prompted to [install Report Builder](../../reporting-services/install/windows/install-report-builder.md). 
   
-     After that first time, [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] opens, and you can create a paginated report or open a report from the report server.  
+     After that first time, [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] opens, and you can create a paginated report or open a report from the report server.  
   
-## To start [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] in SharePoint integrated mode  
+## To start [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] in SharePoint integrated mode  
   
 1.  Navigate to the SharePoint site that contains the library you want.  
   
@@ -55,9 +55,9 @@ manager: "erikre"
   
 4.  On the **New Document** menu, click **Report Builder Report**.  
   
-     The first time, this launches the SQL Server [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] Wizard. See [Install Report Builder](../../reporting-services/install/windows/install-report-builder.md) for more details.  
+     The first time, this launches the SQL Server [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] Wizard. See [Install Report Builder](../../reporting-services/install/windows/install-report-builder.md) for more details.  
   
-     [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] opens, and you can create a paginated report or open a report on the report server.  
+     [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)] opens, and you can create a paginated report or open a report on the report server.  
   
      **Note** If the **New Document** menu does not list **Report Builder Report**, **Report Builder Model**, or **Report Data Source**, their content types need to be added to the SharePoint library. For more information, see [Add Reporting Services Content Types to a SharePoint Library](../../reporting-services/report-server/sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   

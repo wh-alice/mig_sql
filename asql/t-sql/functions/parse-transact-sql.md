@@ -24,9 +24,9 @@ manager: "jhubbard"
 # PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns the result of an expression, translated to the requested data type in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Returns the result of an expression, translated to the requested data type in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -47,7 +47,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
  *culture*  
  Optional string that identifies the culture in which *string_value* is formatted.  
   
- If the *culture* argument is not provided, then the language of the current session is used. This language is set either implicitly, or explicitly by using the SET LANGUAGE statement. *culture* accepts any culture supported by the .NET Framework; it is not limited to the languages explicitly supported by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. If the *culture* argument is not valid, PARSE raises an error.  
+ If the *culture* argument is not provided, then the language of the current session is used. This language is set either implicitly, or explicitly by using the SET LANGUAGE statement. *culture* accepts any culture supported by the .NET Framework; it is not limited to the languages explicitly supported by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. If the *culture* argument is not valid, PARSE raises an error.  
   
 ## Return Types  
  Returns the result of the expression, translated to the requested data type.  
@@ -90,7 +90,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
  **More information about the culture parameter**  
   
- The following table shows the mappings from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] languages to .NET Framework cultures.  
+ The following table shows the mappings from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] languages to .NET Framework cultures.  
   
 |Full name|Alias|LCID|Specific culture|  
 |---------------|-----------|----------|----------------------|  

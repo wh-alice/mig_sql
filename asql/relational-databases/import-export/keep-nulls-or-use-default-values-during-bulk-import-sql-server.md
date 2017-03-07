@@ -25,11 +25,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Keep Nulls or Use Default Values During Bulk Import (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
 By default, when data is imported into a table, the [bcp](../../tools/bcp-utility.md) command and [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) statement observe any defaults that are defined for the columns in the table.  For example, if there is a null field in a data file, the default value for the column is loaded instead.  The [bcp](../../tools/bcp-utility.md) command and [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) statement both allow you to specify that nulls values be retained.
 
-In contrast, a regular INSERT statement retains the null value instead of inserting a default value. The INSERT ... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) statement provides the same basic behavior as regular INSERT but additionally supports a [table hint](Table%20Hints%20\(Transact-SQL\).md) for inserting the default values.
+In contrast, a regular INSERT statement retains the null value instead of inserting a default value. The INSERT ... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) statement provides the same basic behavior as regular INSERT but additionally supports a [table hint](../../t-sql/queries/hints-transact-sql-table.md) for inserting the default values.
 
 |Outline|
 |---|
@@ -50,16 +50,16 @@ The following qualifiers specify that an empty field in the data file retains it
 > These qualifiers disable checking of DEFAULT definitions on a table by these bulk-import commands.  However, for any concurrent INSERT statements, DEFAULT definitions are expected.
  
 ## Using Default Values with INSERT ... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)<a name="keep_default"></a>  
-You can specify that for an empty field in the data file, the corresponding table column uses its default value (if any).  To use default values, use the table hint [KEEPDEFAULTS](Table%20Hints%20\(Transact-SQL\).md).
+You can specify that for an empty field in the data file, the corresponding table column uses its default value (if any).  To use default values, use the table hint [KEEPDEFAULTS](../../t-sql/queries/hints-transact-sql-table.md).
  
 > [!NOTE]
->  For more information, see [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md), [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md), and [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)
+>  For more information, see [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md), [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md), and [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)
 
 ## Example Test Conditions<a name="etc"></a>  
 The examples in this topic are based on the table, data file, and format file defined below.
 
 ### **Sample Table**<a name="sample_table"></a>
-The script below creates a test database and a table named `myNulls`.  Notice that the fourth table column, `Kids`, has a default value.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+The script below creates a test database and a table named `myNulls`.  Notice that the fourth table column, `Kids`, has a default value.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 CREATE DATABASE TestDatabase;
 GO
@@ -185,7 +185,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
 
 ### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Keeping Null Values without a Format File**<a name="bulk_null"></a>
-**KEEPNULLS** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+**KEEPNULLS** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -203,7 +203,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
 ### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Keeping Null Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_null_fmt"></a>
-**KEEPNULLS** and the **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+**KEEPNULLS** and the **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -221,7 +221,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
 ### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Using Default Values without a Format File**<a name="bulk_default"></a>
-Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -239,7 +239,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
 ### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Using Default Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
-**FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+**FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -256,7 +256,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
 ### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Keeping Null Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset__null_fmt"></a>
-**FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+**FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```tsql
 USE TestDatabase;
@@ -275,7 +275,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
 ### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Using Default Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset__default_fmt"></a>
-**KEEPDEFAULTS** table hint and **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS):
+**KEEPDEFAULTS** table hint and **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```tsql
 USE TestDatabase;
@@ -338,6 +338,6 @@ SELECT * FROM TestDatabase.dbo.myNulls;
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
- [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)  
+ [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  
   
   

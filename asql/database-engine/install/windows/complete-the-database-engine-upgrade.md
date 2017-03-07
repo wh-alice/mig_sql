@@ -17,7 +17,7 @@ manager: "jhubbard"
 # Complete the Database Engine Upgrade
   After the upgrade to SQL Server 2016 is complete, there are a number of additional steps that you may need to take. These include the following:  
   
- After upgrading the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)], complete the following tasks:  
+ After upgrading the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)], complete the following tasks:  
   
 -   **Backup your databases:** Perform a full backup of each upgraded database.  
   
@@ -25,9 +25,9 @@ manager: "jhubbard"
   
 -   **Integration Services:**  
   
-     Migrate Integration Services packages to [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] format. For more information, see [Upgrade Integration Services Packages](../../../integration-services/install/windows/upgrade-integration-services-packages.md).  
+     Migrate Integration Services packages to [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] format. For more information, see [Upgrade Integration Services Packages](../../../integration-services/install/windows/upgrade-integration-services-packages.md).  
   
--   **Reporting Services:** For a new installation upgrade, restore the Reporting Services  encryption Keys. For more information, see [Back Up and Restore Reporting Services Encryption Keys](../Topic/Back%20Up%20and%20Restore%20Reporting%20Services%20Encryption%20Keys.md).  
+-   **Reporting Services:** For a new installation upgrade, restore the Reporting Services  encryption Keys. For more information, see [Back Up and Restore Reporting Services Encryption Keys](../../../reporting-services/install/windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
 -   **Master Data Services:**  Upgrade the MDS database schema and create the SQL Server 2016 web application. For more information, see [Upgrade Master Data Services](../../../database-engine/install/windows/upgrade-master-data-services.md).  
   

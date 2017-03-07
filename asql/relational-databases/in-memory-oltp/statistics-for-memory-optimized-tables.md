@@ -15,7 +15,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Statistics for Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   The query optimizer uses statistics about columns to create query plans that improve query performance. Statistics are collected from the tables in the database and stored in the database metadata.  
   
@@ -25,17 +25,17 @@ manager: "jhubbard"
   
  Considerations for statistics on memory-optimized tables:  
   
--   Starting in SQL Server 2016 and in [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)], automatic update of statistics is supported for memory-optimized tables, when using database compatibility level of at least 130. See [ALTER DATABASE Compatibility Level (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20(Transact-SQL).md). If a database has tables that were previously created using a lower compatibility level, the statistics need to be updated manually once, to enable automatic update of statistics going forward.
+-   Starting in SQL Server 2016 and in [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)], automatic update of statistics is supported for memory-optimized tables, when using database compatibility level of at least 130. See [ALTER DATABASE Compatibility Level (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). If a database has tables that were previously created using a lower compatibility level, the statistics need to be updated manually once, to enable automatic update of statistics going forward.
   
 -   For natively compiled stored procedures, execution plans for queries in the procedure are optimized when the procedure is compiled, which happens at create time. They are not automatically recompiled when statistics are updated. Therefore, the tables should contain a representative set of data before the procedures are created.  
   
--   Natively compiled stored procedures can be manually recompiled using [sp_recompile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md), and they are automatically recompiled if the database is taken offline and brought back online, or if there is a database failover or server restart.  
+-   Natively compiled stored procedures can be manually recompiled using [sp_recompile (Transact-SQL)](../../relational-databases/reference/system-stored-procedures/sp-recompile-transact-sql.md), and they are automatically recompiled if the database is taken offline and brought back online, or if there is a database failover or server restart.  
   
 ## Enabling Automatic Update of Statistics in Existing Tables
 
 When tables are created in a database that has compatibility level of at least 130, automatic update of statistics is enabled for all statistics on that table, and no further action is needed.
 
-If a database has memory-optimized tables that were created in an earlier version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or under a lower compatibility level than 130, the statistics need to be updated manually once to enable automatic update going forward.
+If a database has memory-optimized tables that were created in an earlier version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] or under a lower compatibility level than 130, the statistics need to be updated manually once to enable automatic update going forward.
 
 To enable automatic update of statistics for memory-optimized tables that were created under an older compatibility level, follow these steps:
 
@@ -84,7 +84,7 @@ WHERE o.is_memory_optimized=1
 ## Guidelines for Deploying Tables and Procedures  
  To ensure that the query optimizer has up-to-date statistics when creating query plans, deploy memory-optimized tables and natively compiled stored procedures that access these tables using these four steps:  
   
-1.  Ensure the database has compatibility level of at least 130. See [ALTER DATABASE Compatibility Level (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20(Transact-SQL).md).
+1.  Ensure the database has compatibility level of at least 130. See [ALTER DATABASE Compatibility Level (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 2.  Create tables and indexes. Indexes should be specified inline in the **CREATE TABLE** statements.  
   

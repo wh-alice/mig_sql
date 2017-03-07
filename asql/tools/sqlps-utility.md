@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # sqlps Utility
-  The **sqlps** utility starts a Windows PowerShell session with the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] PowerShell provider and cmdlets loaded and registered. You can enter PowerShell commands or scripts that use the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] PowerShell components to work with instances of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] and their objects.  
+  The **sqlps** utility starts a Windows PowerShell session with the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] PowerShell provider and cmdlets loaded and registered. You can enter PowerShell commands or scripts that use the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] PowerShell components to work with instances of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] and their objects.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)] Use the **sqlps** PowerShell module instead. For more information about the **sqlps** module, see [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md).  
@@ -72,11 +72,11 @@ sqlps
  Shows the syntax summary of the **sqlps** utility options.  
   
 ## Remarks  
- The **sqlps** utility starts the PowerShell environment (PowerShell.exe) and loads the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] PowerShell module. The module, also named **sqlps**, loads and registers these [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] PowerShell snap-ins:  
+ The **sqlps** utility starts the PowerShell environment (PowerShell.exe) and loads the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] PowerShell module. The module, also named **sqlps**, loads and registers these [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] PowerShell snap-ins:  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
   
-     Implements the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] PowerShell provider and associated cmdlets such as **Encode-SqlName** and **Decode-SqlName**.  
+     Implements the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] PowerShell provider and associated cmdlets such as **Encode-SqlName** and **Decode-SqlName**.  
   
 -   Microsoft.SqlServer.Management.PSSnapin.dll  
   
@@ -88,13 +88,13 @@ sqlps
   
 -   Run PowerShell script files.  
   
--   Run [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] cmdlets.  
+-   Run [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] cmdlets.  
   
--   Use the [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] provider paths to navigate through the hierarchy of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] objects.  
+-   Use the [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] provider paths to navigate through the hierarchy of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] objects.  
   
  By default, the **sqlps** utility runs with the scripting execution policy set to **Restricted**. This prevents running any PowerShell scripts. You can use the **Set-ExecutionPolicy** cmdlet to enable running signed scripts, or any scripts. Only run scripts from trusted sources, and secure all input and output files by using the appropriate NTFS permissions. For more information about enabling PowerShell scripts, see [Running Windows PowerShell Scripts](http://go.microsoft.com/fwlink/?LinkId=103166).  
   
- The version of the **sqlps** utility in [!INCLUDE[ssKatmai](../analysis-services/data-mining/includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)] was implemented as a Windows PowerShell 1.0 mini-shell. Mini-shells have certain restrictions, such as not allowing users to load snap-ins other than those loaded by the mini-shell. These restrictions do not apply to the [!INCLUDE[ssSQL11](../analysis-services/includes/sssql11-md.md)] and higher versions of the utility, which have been changed to use the **sqlps** module.  
+ The version of the **sqlps** utility in [!INCLUDE[ssKatmai](../a9notintoc/includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../a9notintoc/includes/sskilimanjaro-md.md)] was implemented as a Windows PowerShell 1.0 mini-shell. Mini-shells have certain restrictions, such as not allowing users to load snap-ins other than those loaded by the mini-shell. These restrictions do not apply to the [!INCLUDE[ssSQL11](../a9notintoc/includes/sssql11-md.md)] and higher versions of the utility, which have been changed to use the **sqlps** module.  
   
 ## Examples  
  **A. Run the sqlps utility in default, interactive mode without the copyright banner**  

@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # BottomCount (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Sorts a set in ascending order, and returns the specified number of tuples in the specified set with the lowest values.  
   

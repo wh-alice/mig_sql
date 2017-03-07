@@ -29,10 +29,10 @@ manager: "jhubbard"
 # Hints (Transact-SQL) - Join
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Join hints specify that the query optimizer enforce a join strategy between two tables in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. For general information about joins and join syntax, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
+  Join hints specify that the query optimizer enforce a join strategy between two tables in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. For general information about joins and join syntax, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
 > [!IMPORTANT]  
->  Because the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that hints, including <join_hint>, be used only as a last resort by experienced developers and database administrators.  
+>  Because the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that hints, including <join_hint>, be used only as a last resort by experienced developers and database administrators.  
   
  **Applies to:**  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
 ## Examples  
   
 ### A. Using HASH  
- The following example specifies that the `JOIN` operation in the query is performed by a `HASH` join. The example uses the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example specifies that the `JOIN` operation in the query is performed by a `HASH` join. The example uses the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 SELECT p.Name, pr.ProductReviewID  
@@ -82,7 +82,7 @@ ORDER BY ProductReviewID DESC;
 ```  
   
 ### B. Using LOOP  
- The following example specifies that the `JOIN` operation in the query is performed by a `LOOP` join. The example uses the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example specifies that the `JOIN` operation in the query is performed by a `LOOP` join. The example uses the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 DELETE FROM Sales.SalesPersonQuotaHistory   
@@ -94,7 +94,7 @@ GO
 ```  
   
 ### C. Using MERGE  
- The following example specifies that the `JOIN` operation in the query is performed by a `MERGE` join. The example uses the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example specifies that the `JOIN` operation in the query is performed by a `MERGE` join. The example uses the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 SELECT poh.PurchaseOrderID, poh.OrderDate, pod.ProductID, pod.DueDate, poh.VendorID   

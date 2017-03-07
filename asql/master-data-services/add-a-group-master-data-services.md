@@ -18,7 +18,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Add a Group (Master Data Services)
-  Add a group to the **Groups** list in [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] to begin the process of assigning permission to the Web application. Before a user in the group can access [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], you must give the group permission to one or more functional areas and model objects.  
+  Add a group to the **Groups** list in [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] to begin the process of assigning permission to the Web application. Before a user in the group can access [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], you must give the group permission to one or more functional areas and model objects.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 ### To add a group  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **User and Group Permissions**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **User and Group Permissions**.  
   
 2.  On the **Users** page, from the menu bar, click **Manage Groups**.  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
 6.  Click **OK**.  
   
     > [!NOTE]  
-    >  When the user first accesses [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], the user's name is added to the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] list of users.  
+    >  When the user first accesses [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], the user's name is added to the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] list of users.  
   
 ## Next Steps  
   

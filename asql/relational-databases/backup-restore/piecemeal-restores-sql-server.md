@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Piecemeal Restores (SQL Server)
-  This topic is relevant only for databases in the Enterprise edition of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that contain multiple files or filegroups; and, under the simple model, only for read-only filegroups.  
+  This topic is relevant only for databases in the Enterprise edition of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that contain multiple files or filegroups; and, under the simple model, only for read-only filegroups.  
   
  For information about piecemeal restore and memory-optimized tables, see [Piecemeal Restore of Databases With Memory-Optimized Tables](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
  The exact requirements for performing a piecemeal restore depend on the recovery model of the database. For more information, see "Piecemeal Restore Under the Simple Recovery Model" and "Piecemeal Restore Under the Full Recovery Model," later in this topic.  
   
 ## Piecemeal Restore Scenarios  
- All editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] support offline piecemeal restores. In the Enterprise edition, a piecemeal restore can be either online or offline. The implications of offline and online piecemeal restores are as follows:  
+ All editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] support offline piecemeal restores. In the Enterprise edition, a piecemeal restore can be either online or offline. The implications of offline and online piecemeal restores are as follows:  
   
 -   Offline piecemeal restore scenario  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
   
      Online piecemeal restores can involve deferred transactions. When only a subset of filegroups has been restored, transactions in the database that depend on online filegroups might become deferred. This is typical, because the whole database must be consistent. For more information, see [Deferred Transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).  
   
--   [!INCLUDE[hek_1](../../relational-databases/backup-restore/includes/hek-1-md.md)] piecemeal restore scenario  
+-   [!INCLUDE[hek_1](../../a9retired/includes/hek-1-md.md)] piecemeal restore scenario  
   
      For information on Piecemeal Restores of In-Memory OLTP databases see [Piecemeal Backup and Restore of Databases With Memory-Optimized Tables](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   
@@ -171,7 +171,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Restore and Recovery Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Plan and Perform Restore Sequences &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  

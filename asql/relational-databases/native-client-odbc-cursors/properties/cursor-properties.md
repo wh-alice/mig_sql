@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Cursor Properties
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
   The overall characteristics of a cursor are determined by setting either the ODBC-style cursor type or the SQL-92/ISO cursor behaviors. The following topics describe additional statement and connection attributes that affect the behavior of a cursor.  
   

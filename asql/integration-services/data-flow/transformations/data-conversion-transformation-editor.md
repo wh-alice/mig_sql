@@ -52,10 +52,10 @@ manager: "jhubbard"
  Select the appropriate code page for columns of type DT_STR.  
   
  **Configure error output**  
- Specify how to handle row-level errors by using the [Configure Error Output](../Topic/Configure%20Error%20Output.md) dialog box.  
+ Specify how to handle row-level errors by using the [Configure Error Output](../../../a9retired/configure-error-output.md) dialog box.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Convert Data to a Different Data Type by Using the Data Conversion Transformation](../Topic/Convert%20Data%20to%20a%20Different%20Data%20Type%20by%20Using%20the%20Data%20Conversion%20Transformation.md)  
+ [Convert Data to a Different Data Type by Using the Data Conversion Transformation](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
   
   

@@ -20,7 +20,7 @@ manager: "erikre"
 Use the instructions and links provided in this topic to install all of the data and project files used in the Analysis Services Tutorials.  
   
 ## Step 1: Install SQL Server Software  
-The lessons in this tutorial assume that you have the following software installed. All of the following software is installed using SQL Server installation media. For simplicity of deployment, you can install all of the features on a single computer. To install these features, run SQL Server Setup and select them from the Feature Selection page. For more information, see [Install SQL Server 2016 from the Installation Wizard &#40;Setup&#41;](../Topic/Install%20SQL%20Server%202016%20from%20the%20Installation%20Wizard%20(Setup).md).  
+The lessons in this tutorial assume that you have the following software installed. All of the following software is installed using SQL Server installation media. For simplicity of deployment, you can install all of the features on a single computer. To install these features, run SQL Server Setup and select them from the Feature Selection page. For more information, see [Install SQL Server 2016 from the Installation Wizard &#40;Setup&#41;](../../database-engine/install/windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 -   Database Engine  
   
@@ -36,7 +36,7 @@ The lessons in this tutorial assume that you have the following software install
   
 Optionally, consider installing Excel to browse your multidimensional data as you proceed through the tutorial. Installing Excel enables the **Analyze in Excel** feature that starts Excel using a PivotTable field list that is connected to the cube you are building. Using Excel to browse data is recommended because you can quickly build a pivot report that lets you interact with the data.  
   
-Alternatively, you can browse data using the built-in MDX query designer that is built into [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)]. The query designer returns the same data, except the data is presented as a flat rowset.  
+Alternatively, you can browse data using the built-in MDX query designer that is built into [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)]. The query designer returns the same data, except the data is presented as a flat rowset.  
   
 ## Step 2: Download SQL Server Data Tools for Visual Studio 2015  
 In this release, SQL Server Data Tools is downloaded and installed separately from other SQL Server features. The designers and project templates used to create BI models and reports are available as a free web download.  
@@ -50,7 +50,7 @@ An Analysis Services multidimensional model uses transactional data that you imp
   
 -   **AdventureWorksDW2012** – This is a relational data warehouse that runs on a Database Engine instance. It provides the original data that will be used by the Analysis Services databases and projects that you build and deploy throughout the tutorial.  
   
-    You can use this sample database with [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] as well as [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)].  
+    You can use this sample database with [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] as well as [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)].  
   
 To install this database, do the following:  
   
@@ -95,7 +95,7 @@ The project file for Lesson 4 is particularly important because it provides the 
   
 1.  Download the [Analysis Services Tutorial SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) on the product samples page on codeplex.  
   
-    The 2012 tutorials are valid for the [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] release.  
+    The 2012 tutorials are valid for the [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] release.  
   
     The “Analysis Services Tutorial SQL Server 2012.zip” file will be saved to the Downloads folder on your computer.  
   
@@ -127,7 +127,7 @@ The project file for Lesson 4 is particularly important because it provides the 
   
 4.  Remove the read-only permissions on these files. Right-click the parent folder, "Analysis Services Tutorial SQL Server 2012", select **Properties**, and clear the checkbox for **Read-only**. Click **OK**. Apply the changes to this folder, subfolders, and files.  
   
-5.  Start [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+5.  Start [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
 6.  Open the solution (.sln) file that corresponds to the lesson you are using. For example, in the folder named "Lesson 1 Complete", you would open the Analysis Services Tutorial.sln file.  
   
@@ -147,7 +147,7 @@ The project file for Lesson 4 is particularly important because it provides the 
 You are now ready to use the tutorial. For more information about how to get started, see [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](../../analysis-services/tutorials/multidimensional-modeling-adventure-works-tutorial.md).  
   
 ## See Also  
-[Install SQL Server 2016 from the Installation Wizard &#40;Setup&#41;](../Topic/Install%20SQL%20Server%202016%20from%20the%20Installation%20Wizard%20(Setup).md)  
+[Install SQL Server 2016 from the Installation Wizard &#40;Setup&#41;](../../database-engine/install/windows/install-sql-server-from-the-installation-wizard-setup.md)  
 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
 [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   

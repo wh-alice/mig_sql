@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 ### Data Options  
  **ConnectionManager**  
- Select the existing [!INCLUDE[vstecado](../../analysis-services/data-mining/includes/vstecado-md.md)] connection manager that uses the .NET Data Provider for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (SqlClient) to connect to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database that contains the table or view to be profiled.  
+ Select the existing [!INCLUDE[vstecado](../../a9retired/includes/vstecado-md.md)] connection manager that uses the .NET Data Provider for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] (SqlClient) to connect to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database that contains the table or view to be profiled.  
   
  **TableOrView**  
  Select the existing table or view that contains the column to be profiled.  

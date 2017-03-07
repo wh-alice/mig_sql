@@ -23,7 +23,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # ConfigurationSetting Method - GenerateDatabaseUpgradeScript
-  Generates a script that can be used to upgrade the report server database to the [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] schema.  
+  Generates a script that can be used to upgrade the report server database to the [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] schema.  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ public void GenerateDatabaseUpgradeScript (string DatabaseName,
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
   
 ## Remarks  
- The generated script supports [!INCLUDE[ssVersion2000](../../analysis-services/multidimensional-models/includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)], and [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)].  
+ The generated script supports [!INCLUDE[ssVersion2000](../../a9notintoc/includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)], and [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)].  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../reporting-services/wmi-provider-library-reference/includes/ssrswminmspca-md.md)]  

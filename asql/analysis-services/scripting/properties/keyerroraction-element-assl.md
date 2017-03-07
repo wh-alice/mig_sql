@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # KeyErrorAction Element (ASSL)
-  Specifies the action for [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] to take when an error occurs on a key.  
+  Specifies the action for [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] to take when an error occurs on a key.  
   
 ## Syntax  
   

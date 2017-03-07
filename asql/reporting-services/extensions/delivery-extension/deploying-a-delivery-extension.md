@@ -26,7 +26,7 @@ manager: "erikre"
   
  If a delivery extension is replaced or upgraded, all subscriptions that reference the delivery extension remain valid.  
   
- After you have written and compiled your [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] delivery extension into a [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] library, you must copy the extension to the appropriate directory and add an entry to the appropriate [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] configuration file so the report server can locate it.  
+ After you have written and compiled your [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] delivery extension into a [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../a9retired/includes/dnprdnshort-md.md)] library, you must copy the extension to the appropriate directory and add an entry to the appropriate [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] configuration file so the report server can locate it.  
   
 ## Configuration-File Extension Element  
  Delivery extensions that you deploy to the report server need to be entered as **Extension** elements in the configuration file. The configuration file for the report server is RSReportServer.config.  
@@ -51,7 +51,7 @@ manager: "erikre"
     > [!IMPORTANT]  
     >  If you are attempting to overwrite an existing delivery extension assembly, you must first stop the Report Server service before copying the updated assembly. Restart your service after the assembly is through copying.  
   
-2.  After the assembly file is copied, open the RSReportServer.config file. The RSReportServer.config file is located in the %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer directory. You need to make an entry in the configuration file for your delivery extension assembly file. You can open the configuration file with [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] or a simple text editor, such as Notepad.  
+2.  After the assembly file is copied, open the RSReportServer.config file. The RSReportServer.config file is located in the %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer directory. You need to make an entry in the configuration file for your delivery extension assembly file. You can open the configuration file with [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../a9retired/includes/vsprvs-md.md)] or a simple text editor, such as Notepad.  
   
 3.  Locate the **Delivery** element in the RSReportServer.config file. An entry for your newly created delivery extension should be made in the following location:  
   

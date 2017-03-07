@@ -64,7 +64,7 @@ All the code that you will need to complete this walkthrough has been provided i
 5.  In the PowerShell console, you can run the command `ls` to view a list of the files that were downloaded to *DestDir*.  For a list and description of the files, see [What's Included](#What-the-Download-Includes).
   
 ## 2. Install Required Packages  
-This walkthrough requires some R libraries that are not installed by default as part of [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)]. You must install the packages both on the client where you will be developing the solution, and on the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer where you will deploy the solution.  
+This walkthrough requires some R libraries that are not installed by default as part of [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)]. You must install the packages both on the client where you will be developing the solution, and on the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] computer where you will deploy the solution.  
   
 ### Install required packages on the client  
 The R script that you downloaded includes the commands to download and install these packages.  
@@ -93,9 +93,9 @@ The R script that you downloaded includes the commands to download and install t
 ### Install required packages on the server  
 
   
-1.  On the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer, open RGui.exe as administrator.  If you have installed SQL Server R Services using the defaults, RGui.exe can be found in C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64).  
+1.  On the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] computer, open RGui.exe as administrator.  If you have installed SQL Server R Services using the defaults, RGui.exe can be found in C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64).  
   
-    Or, if you have installed another R environment on the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer (such as RStudio) you can use the R console to run the commands.  
+    Or, if you have installed another R environment on the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] computer (such as RStudio) you can use the R console to run the commands.  
   
 2.  At an R prompt, run the following R commands:  
   
@@ -117,12 +117,12 @@ The R script that you downloaded includes the commands to download and install t
 
 ## 3. Run Powershell script RunSQL_R_Walkthrough.ps1  
 
-You can run this PowerShell script on the computer where you will be building the solution, for example, the computer develop and test your R code. This computer must be able to connect to the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer using the Named Pipes protocol.  
+You can run this PowerShell script on the computer where you will be building the solution, for example, the computer develop and test your R code. This computer must be able to connect to the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] computer using the Named Pipes protocol.  
   
 The script performs these actions:  
   
--   Checks whether the SQL Native Client and command-line utilities for [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] are installed. The command-line tool are needed to run the [bcp Utility](../../../tools/bcp-utility.md), which is used for fast bulk loading of data into SQL tables.    
--   Connects to the specified instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and runs some [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] scripts that configure the database and create the tables for the model and data.    
+-   Checks whether the SQL Native Client and command-line utilities for [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] are installed. The command-line tool are needed to run the [bcp Utility](../../../tools/bcp-utility.md), which is used for fast bulk loading of data into SQL tables.    
+-   Connects to the specified instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] and runs some [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] scripts that configure the database and create the tables for the model and data.    
 -   Runs a SQL script to create several stored procedures.    
 -   Loads the data you downloaded previously into the table nyctaxi_sample.    
 -   Rewrites the arguments in the R script file to use the database name that you specify. 
@@ -230,7 +230,7 @@ This example does the following:
   
 -   Connects to the specified instance and database using the credentials of *SqlUserName*.  
 -   Gets data from the file *C:\temp\nyctaxi1pct.csv*.  
--   Loads the data into the table *dbo.nyctaxi_sample*, in the database *MyDB* on the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance named *MyServer*.  
+-   Loads the data into the table *dbo.nyctaxi_sample*, in the database *MyDB* on the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance named *MyServer*.  
 
 ### The data loaded but it contains duplicates
 
@@ -258,10 +258,10 @@ To make the data easier to work with, the Microsoft data science team performed 
     
 + **taxiimportfmt.xml** A format definition file that is used by the BCP utility to load data into the database.
       
-+ **RSQL_R_Walkthrough.R**  This is the core R script that will be used in rest of the lessons for doing your data analysis and modeling. It provides all the R code that you need to explore [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data, build the classification model, and create plots.   
++ **RSQL_R_Walkthrough.R**  This is the core R script that will be used in rest of the lessons for doing your data analysis and modeling. It provides all the R code that you need to explore [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data, build the classification model, and create plots.   
   
 ### SQL Scripts  
-This PowerShell script executes multiple [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] scripts on the server. The following table lists the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] script files.  
+This PowerShell script executes multiple [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] scripts on the server. The following table lists the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] script files.  
   
 |SQL Script file name|What it does|  
 |------------------------|----------------|  
@@ -272,7 +272,7 @@ This PowerShell script executes multiple [!INCLUDE[tsql](../../../advanced-analy
 |fnCalculateDistance.sql|Creates a SQL scalar-valued function that calculates the direct distance between pick-up and drop-off locations.|  
 |fnEngineerFeatures.sql|Creates a SQL table-valued function that creates features for training the classification model|  
   
-All the SQL queries that are used in this walkthrough have been tested and can be run as-is in your R code. However, if you want to experiment further or develop your own solution using SQL queries, we recommended that you use a development environment such as [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to test and tune your queries first, before adding them to your R code.  
+All the SQL queries that are used in this walkthrough have been tested and can be run as-is in your R code. However, if you want to experiment further or develop your own solution using SQL queries, we recommended that you use a development environment such as [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] to test and tune your queries first, before adding them to your R code.  
   
   
 ## Next Lesson  

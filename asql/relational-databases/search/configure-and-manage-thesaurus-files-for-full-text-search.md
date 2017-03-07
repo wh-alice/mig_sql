@@ -19,9 +19,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure and Manage Thesaurus Files for Full-Text Search
-  In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Full-Text Search, full-text queries can search for synonyms of user-specified terms through the use of a thesaurus. A Full-Text Search *thesaurus* defines a set of synonyms for a specific language. System administrators can define two forms of synonyms: expansion sets and replacement sets.
+  In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Full-Text Search, full-text queries can search for synonyms of user-specified terms through the use of a thesaurus. A Full-Text Search *thesaurus* defines a set of synonyms for a specific language. System administrators can define two forms of synonyms: expansion sets and replacement sets.
   
-  By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. Thesaurus matching occurs for all [FREETEXT](../Topic/FREETEXT%20\(Transact-SQL\).md) and [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) queries and for any [CONTAINS](../Topic/CONTAINS%20\(Transact-SQL\).md) and [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) queries that specify the `FORMSOF THESAURUS` clause.
+  By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. Thesaurus matching occurs for all [FREETEXT](../Topic/FREETEXT%20\(Transact-SQL\).md) and [FREETEXTABLE](../../relational-databases/reference/system-functions/freetexttable-transact-sql.md) queries and for any [CONTAINS](../Topic/CONTAINS%20\(Transact-SQL\).md) and [CONTAINSTABLE](../../relational-databases/reference/system-functions/containstable-transact-sql.md) queries that specify the `FORMSOF THESAURUS` clause.
   
 A Full-Text Search thesaurus is an XML text file.
   
@@ -43,7 +43,7 @@ A Full-Text Search thesaurus is an XML text file.
      For a given thesaurus, all search patterns are either sensitive or insensitive to diacritical marks such as a tilde (**~**), acute accent mark (**´**), or umlaut (**¨**) (that is, *accent sensitive* or *accent insensitive*). For example, suppose you specify the pattern "café" to be replaced by other patterns in a full-text query. If the thesaurus is accent-insensitive, full-text search replaces the patterns "café" and "cafe". If the thesaurus is accent-sensitive, full-text search replaces only the pattern "café". By default, a thesaurus is accent-insensitive.  
   
 ##  <a name="initial_thesaurus_files"></a> Initial contents of a thesaurus file  
-[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provides a set of XML thesaurus files, one for each supported language. These files are essentially empty. They contain only the top-level XML structure that is common to all [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] thesauruses and a commented-out sample thesaurus.  
+[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] provides a set of XML thesaurus files, one for each supported language. These files are essentially empty. They contain only the top-level XML structure that is common to all [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] thesauruses and a commented-out sample thesaurus.  
   
 A typical empty thesaurus file contains the following XML text:  
   
@@ -212,7 +212,7 @@ and
   
 4.  Save the file and close Notepad.  
   
-5.  Use [sp_fulltext_load_thesaurus_file](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md) to load the content of the thesaurus file into tempdb, specifying the local identifier (LCID) that corresponds to the language of the thesaurus file. For example, for the English thesaurus file, tsenu.xml, the corresponding LCID is 1033.  
+5.  Use [sp_fulltext_load_thesaurus_file](../../relational-databases/reference/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md) to load the content of the thesaurus file into tempdb, specifying the local identifier (LCID) that corresponds to the language of the thesaurus file. For example, for the English thesaurus file, tsenu.xml, the corresponding LCID is 1033.  
   
     ```tsql  
     USE AdventureWorks;  
@@ -221,9 +221,9 @@ and
 
 ## See Also  
  [CONTAINS &#40;Transact-SQL&#41;](../Topic/CONTAINS%20\(Transact-SQL\).md)   
- [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
+ [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](../Topic/FREETEXT%20\(Transact-SQL\).md)   
- [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)     
- [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)  
- [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-fts-parser-transact-sql.md)
+ [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/freetexttable-transact-sql.md)     
+ [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)  
+ [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-fts-parser-transact-sql.md)
  

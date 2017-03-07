@@ -53,12 +53,12 @@ manager: "erikre"
 ## Remarks  
  This data type has no restrictions and can be used under any deployment mode: 0-Multidimensional and Data Mining, 1-SharePoint, and 2-Tabular.  
   
- In [!INCLUDE[ssASCurrent](../../../analysis-services/includes/ssascurrent-md.md)], the *Enabled* property cannot be set to **False** for *CubeHierarchy*.  
+ In [!INCLUDE[ssASCurrent](../../../a9notintoc/includes/ssascurrent-md.md)], the *Enabled* property cannot be set to **False** for *CubeHierarchy*.  
   
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.CubeHierarchy>.  
   
 ## See Also  
- [Discover Method &#40;XMLA&#41;](../Topic/Discover%20Method%20\(XMLA\).md)   
+ [Discover Method &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-methods-discover.md)   
  [Analysis Services Scripting Language XML Data Types &#40;ASSL&#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

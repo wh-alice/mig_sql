@@ -40,7 +40,7 @@ manager: "jhubbard"
  Is another **geography** instance on which `ReorientObject()` is invoked.  
   
 ## Return Value  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **geography**  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] return type: **geography**  
   
  CLR return type: **SqlGeography**  
   

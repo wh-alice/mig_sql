@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Prerequisites for Minimal Logging in Bulk Import
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   For a database under the full recovery model, all row-insert operations that are performed by bulk import are fully logged in the transaction log. Large data imports can cause the transaction log to fill rapidly if the full recovery model is used. In contrast, under the simple recovery model or bulk-logged recovery model, minimal logging of bulk-import operations reduces the possibility that a bulk-import operation will fill the log space. Minimal logging is also more efficient than full logging.  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
 -   Table locking is specified (using TABLOCK). For table with clustered columnstore index, you don't need TABLOCK for minimal logging.  Additionally, only the data load into compressed rowgroups are minimally logged requiring a batchsize of 102400 or higher.  
   
     > [!NOTE]  
-    >  Although data insertions are not logged in the transaction log during a minimally logged bulk-import operation, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] still logs extent allocations each time a new extent is allocated to the table.  
+    >  Although data insertions are not logged in the transaction log during a minimally logged bulk-import operation, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] still logs extent allocations each time a new extent is allocated to the table.  
   
 -   Table is not a memory-optimized table.  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)   
+ [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)  
   
   

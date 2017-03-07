@@ -19,9 +19,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Overview of PowerShell Cmdlets for Always On Availability Groups (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] PowerShell is a task-based command-line shell and scripting language designed especially for system administration. [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] provides a set of PowerShell cmdlets in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] that enable you to deploy, manage, and monitor availability groups, availability replicas, and availability databases.  
+  [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] PowerShell is a task-based command-line shell and scripting language designed especially for system administration. [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] provides a set of PowerShell cmdlets in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] that enable you to deploy, manage, and monitor availability groups, availability replicas, and availability databases.  
   
 > [!NOTE]  
 >  A PowerShell cmdlet can complete by successfully initiating an action. This does not indicate that the intended work, such as the fail over of an availability group, has completed. When scripting a sequence of actions, you might have to check the status of actions, and wait for them to complete.  
@@ -43,23 +43,23 @@ manager: "jhubbard"
 -   [Monitoring availability group health](#MonitorTblshtAGs)  
   
 > [!NOTE]  
->  For a list of topics in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] Books Online that describe how to use cmdlets to perform [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] tasks, see the "Related Tasks" section of [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
+>  For a list of topics in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] Books Online that describe how to use cmdlets to perform [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] tasks, see the "Related Tasks" section of [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="ConfiguringServerInstance"></a> Configuring a Server Instance for Always On Availability Groups  
   
 |Cmdlets|Description|Supported on|  
 |-------------|-----------------|------------------|  
-|**Disable-SqlAlways On**|Disables the [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] feature on a server instance.|The server instance that is specified by the **Path**, **InputObject**, or **Name** parameter. (Must be an edition of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that supports [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)].)|  
-|**Enable-SqlAlways On**|Enables [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] on an instance of [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] that supports the [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] feature. For information about support for [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)], see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../Topic/Prerequisites,%20Restrictions,%20and%20Recommendations%20for%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md).|Any edition of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that supports [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)].|  
-|**New-SqlHadrEndPoint**|Creates a new database mirroring endpoint on a server instance. This endpoint is required for data movement between primary and secondary databases.|Any instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|  
-|**Set-SqlHadrEndpoint**|Changes the properties of an existing database mirroring endpoint, such as the name, state, or authentication properties.|A server instance that supports [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] and lacks a database mirroring endpoint|  
+|**Disable-SqlAlways On**|Disables the [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] feature on a server instance.|The server instance that is specified by the **Path**, **InputObject**, or **Name** parameter. (Must be an edition of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] that supports [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)].)|  
+|**Enable-SqlAlways On**|Enables [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] on an instance of [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] that supports the [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] feature. For information about support for [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)], see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).|Any edition of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] that supports [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)].|  
+|**New-SqlHadrEndPoint**|Creates a new database mirroring endpoint on a server instance. This endpoint is required for data movement between primary and secondary databases.|Any instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]|  
+|**Set-SqlHadrEndpoint**|Changes the properties of an existing database mirroring endpoint, such as the name, state, or authentication properties.|A server instance that supports [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] and lacks a database mirroring endpoint|  
   
 ##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
   
 |Cmdlets|Description|Supported on|  
 |-------------|-----------------|------------------|  
-|**Backup-SqlDatabase**|Creates a data or log backup.|Any online database (for [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)], a database on the server instance that hosts the primary replica)|  
-|**Restore-SqlDatabase**|Restores a backup.|Any instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (for [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)], a server instance that hosts a secondary replica)<br /><br /> **\*\* Important \*\*** When preparing a secondary database, you must use the **-NoRecovery** parameter in every **Restore-SqlDatabase** command.|  
+|**Backup-SqlDatabase**|Creates a data or log backup.|Any online database (for [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)], a database on the server instance that hosts the primary replica)|  
+|**Restore-SqlDatabase**|Restores a backup.|Any instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] (for [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)], a server instance that hosts a secondary replica)<br /><br /> **\*\* Important \*\*** When preparing a secondary database, you must use the **-NoRecovery** parameter in every **Restore-SqlDatabase** command.|  
   
  For information about using these cmdlets to prepare a secondary database, see [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
@@ -99,7 +99,7 @@ manager: "jhubbard"
 |**Suspend-SqlAvailabilityDatabase**|Suspends the data movement for an availability database.|Any server instance that hosts an availability replica.|  
   
 ##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
- The following [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] cmdlets enable you to monitor the health of an availability group and its replicas and databases.  
+ The following [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] cmdlets enable you to monitor the health of an availability group and its replicas and databases.  
   
 > [!IMPORTANT]  
 >  You must have CONNECT, VIEW SERVER STATE, and VIEW ANY DEFINITION permissions to execute these cmdlets.  

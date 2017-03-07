@@ -32,7 +32,7 @@ Create a table report with the Table or Matrix wizard. There are two modes: repo
   
 ### To create a report  
   
-1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
+1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
   
     The **New Report or Dataset** dialog box opens.  
   
@@ -43,7 +43,7 @@ Create a table report with the Table or Matrix wizard. There are two modes: repo
 3.  In the right pane, select **Table or Matrix Wizard**.  
   
 ## <a name="DataConnection"></a>1a. Specify a Data Connection in the Table Wizard  
-A data connection contains the information to connect to an external data source such as a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database. Usually, you get the connection information and the type of credentials to use from the data source owner. To specify a data connection, you can use a shared data source from the report server or create an embedded data source that is used only in this report.  
+A data connection contains the information to connect to an external data source such as a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database. Usually, you get the connection information and the type of credentials to use from the data source owner. To specify a data connection, you can use a shared data source from the report server or create an embedded data source that is used only in this report.  
   
 In this tutorial, you will use an embedded data source. To learn more about using a shared data sources, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../../reporting-services/tutorials/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
@@ -57,7 +57,7 @@ In this tutorial, you will use an embedded data source. To learn more about usin
   
 4.  In **Select a connection type**, verify that **Microsoft SQL Server** is selected.  
   
-5.  In **Connection string**, type the following text, where \<servername> is the name of an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]:  
+5.  In **Connection string**, type the following text, where \<servername> is the name of an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]:  
   
     ```  
     Data Source=<servername>  
@@ -71,7 +71,7 @@ In this tutorial, you will use an embedded data source. To learn more about usin
   
     The message "Connection created successfully" appears.  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
     You are back on the **Choose a connection to a data source** page, with your new data source selected.  
   
@@ -89,7 +89,7 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
   
     Click **Edit As Text**. The text-based query designer displays a query pane and a results pane.  
   
-2.  Paste the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] query into the blank upper box.  
+2.  Paste the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] query into the blank upper box.  
   
     ```  
     SELECT CAST('2009-01-05' AS date) as SalesDate, 'Accessories' as Subcategory,   
@@ -235,7 +235,7 @@ The SalesDate values display in the default date format.
   
 5.  In the **Type** pane, select **January 31, 2000**.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
     The cell displays the example date **[January 31, 2000]**.  
   
@@ -281,10 +281,10 @@ The text can be further enhanced by applying different font styles, sizes, and c
   
 7.  Select **Bold**.  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## <a name="Save"></a>6. Save the Report  
-Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available.  
+Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available.  
   
 ### To save the report on a report server  
   

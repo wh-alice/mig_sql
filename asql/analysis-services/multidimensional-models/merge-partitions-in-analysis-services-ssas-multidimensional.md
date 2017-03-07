@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Merge Partitions in Analysis Services (SSAS - Multidimensional)
-  You can merge partitions in an existing [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] database to consolidate fact data from multiple partitions of the same measure group.  
+  You can merge partitions in an existing [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] database to consolidate fact data from multiple partitions of the same measure group.  
   
  [Common scenarios](#bkmk_Scenario)  
   
@@ -58,7 +58,7 @@ manager: "erikre"
   
  If the target partition is empty (that is, it has an aggregation design but no aggregations), merge will drop the aggregations for the source partitions. You must run Process Index, Process Full, or Process Default on the partition to build the aggregations.  
   
- Remote partitions can be merged only with other remote partitions that are defined with the same remote instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)].  
+ Remote partitions can be merged only with other remote partitions that are defined with the same remote instance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
 >  If you are using a combination of local and remote partitions, an alternative approach is to create new partitions that include the combined data, deleting the partitions you no longer use.  
@@ -136,7 +136,7 @@ manager: "erikre"
  [Create and Manage a Local Partition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
  [Create and Manage a Remote Partition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [Set Partition Writeback](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
- [Write-Enabled Partitions](../Topic/Write-Enabled%20Partitions.md)   
+ [Write-Enabled Partitions](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Configure String Storage for Dimensions and Partitions](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
   
   

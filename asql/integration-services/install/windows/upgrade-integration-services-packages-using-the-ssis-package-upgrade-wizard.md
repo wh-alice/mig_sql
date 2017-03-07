@@ -18,32 +18,32 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard
-  You can upgrade packages that were created in earlier versions of [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] to the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] format that [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] uses. [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provides the [!INCLUDE[ssIS](../../../analysis-services/instances/includes/ssis-md.md)] Package Upgrade Wizard to help in this process. Because you can configure the wizard to backup up your original packages, you can continue to use the original packages if you experience upgrade difficulties.  
+  You can upgrade packages that were created in earlier versions of [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] to the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] format that [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] uses. [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] provides the [!INCLUDE[ssIS](../../../a9retired/includes/ssis-md.md)] Package Upgrade Wizard to help in this process. Because you can configure the wizard to backup up your original packages, you can continue to use the original packages if you experience upgrade difficulties.  
   
- The [!INCLUDE[ssIS](../../../analysis-services/instances/includes/ssis-md.md)] Package Upgrade Wizard is installed when [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] is installed.  
+ The [!INCLUDE[ssIS](../../../a9retired/includes/ssis-md.md)] Package Upgrade Wizard is installed when [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] is installed.  
   
 > [!NOTE]  
->  The [!INCLUDE[ssIS](../../../analysis-services/instances/includes/ssis-md.md)] Package Upgrade Wizard is available in the Standard, Enterprise, and Developer Editions of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+>  The [!INCLUDE[ssIS](../../../a9retired/includes/ssis-md.md)] Package Upgrade Wizard is available in the Standard, Enterprise, and Developer Editions of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
- For more information about how to upgrade [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] packages, see [Upgrade Integration Services Packages](../../../integration-services/install/windows/upgrade-integration-services-packages.md).  
+ For more information about how to upgrade [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] packages, see [Upgrade Integration Services Packages](../../../integration-services/install/windows/upgrade-integration-services-packages.md).  
   
  The remainder of this topic describes how to run the wizard and back up the original packages.  
   
 ## Running the SSIS Package Upgrade Wizard  
- You can run the [!INCLUDE[ssIS](../../../analysis-services/instances/includes/ssis-md.md)] Package Upgrade Wizard from [!INCLUDE[ssBIDevStudioFull](../../../analysis-services/includes/ssbidevstudiofull-md.md)], from [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], or at the command prompt.  
+ You can run the [!INCLUDE[ssIS](../../../a9retired/includes/ssis-md.md)] Package Upgrade Wizard from [!INCLUDE[ssBIDevStudioFull](../../../a9notintoc/includes/ssbidevstudiofull-md.md)], from [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], or at the command prompt.  
   
 #### To run the wizard from SQL Server Data Tools  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../analysis-services/includes/ssbidevstudiofull-md.md)], create or open an [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../../a9notintoc/includes/ssbidevstudiofull-md.md)], create or open an [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] project.  
   
 2.  In Solution Explorer, right-click the **SSIS Packages** node, and then click **Upgrade All Packages** to upgrade all the packages under this node.  
   
     > [!NOTE]  
-    >  When you open an [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains [!INCLUDE[ssISversion10](../../../integration-services/control-flow/includes/ssisversion10-md.md)] or later packages, [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] automatically opens the [!INCLUDE[ssIS](../../../analysis-services/instances/includes/ssis-md.md)] Package Upgrade Wizard.  
+    >  When you open an [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] project that contains [!INCLUDE[ssISversion10](../../../a9retired/includes/ssisversion10-md.md)] or later packages, [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] automatically opens the [!INCLUDE[ssIS](../../../a9retired/includes/ssis-md.md)] Package Upgrade Wizard.  
   
 #### To run the wizard from SQL Server Management Studio  
   
--   In [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], connect to [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)], expand the **Stored Packages** node, and right-click the **File System** or **MSDB** node, and then click **Upgrade Packages**.  
+-   In [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], connect to [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)], expand the **Stored Packages** node, and right-click the **File System** or **MSDB** node, and then click **Upgrade Packages**.  
   
 #### To run the wizard at the command prompt  
   
@@ -52,9 +52,9 @@ manager: "jhubbard"
 ## Backing Up the Original Packages  
  To back up the original packages, both the original packages and the upgraded packages must be stored in the same folder in the file system. Depending on how you run the wizard, this storage location might be automatically selected.  
   
--   When you run the [!INCLUDE[ssIS](../../../analysis-services/instances/includes/ssis-md.md)] Package Upgrade Wizard from [!INCLUDE[ssBIDevStudioFull](../../../analysis-services/includes/ssbidevstudiofull-md.md)], the wizard automatically stores both the original packages and upgraded packages in the same folder in the file system.  
+-   When you run the [!INCLUDE[ssIS](../../../a9retired/includes/ssis-md.md)] Package Upgrade Wizard from [!INCLUDE[ssBIDevStudioFull](../../../a9notintoc/includes/ssbidevstudiofull-md.md)], the wizard automatically stores both the original packages and upgraded packages in the same folder in the file system.  
   
--   When you run the [!INCLUDE[ssIS](../../../analysis-services/instances/includes/ssis-md.md)] Package Upgrade Wizard from [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or at the command prompt, you can specify different storage locations for the original and upgraded packages. To back up the original packages, make sure to specify that both the original and upgraded packages are stored in the same folder in the file system. If you specify any other storage options, the wizard will not be able to back up the original packages.  
+-   When you run the [!INCLUDE[ssIS](../../../a9retired/includes/ssis-md.md)] Package Upgrade Wizard from [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or at the command prompt, you can specify different storage locations for the original and upgraded packages. To back up the original packages, make sure to specify that both the original and upgraded packages are stored in the same folder in the file system. If you specify any other storage options, the wizard will not be able to back up the original packages.  
   
  When the wizard backs up the original packages, the wizard stores a copy of the original packages in an **SSISBackupFolder** folder. The wizard creates this **SSISBackupFolder** folder as a subfolder to the folder that contains the original packages and the upgraded packages.  
   
@@ -65,7 +65,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  The backup option in the wizard only works with packages that have been stored to the file system.  
   
-2.  In [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or at the command prompt, run the [!INCLUDE[ssIS](../../../analysis-services/instances/includes/ssis-md.md)] Package Upgrade Wizard.  
+2.  In [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or at the command prompt, run the [!INCLUDE[ssIS](../../../a9retired/includes/ssis-md.md)] Package Upgrade Wizard.  
   
 3.  On the **Select Source Location** page of the wizard, set the **Package source** property to **File System**.  
   
@@ -83,8 +83,8 @@ manager: "jhubbard"
 2.  On the **Select Package Management Options** page of the wizard, select the **Backup original packages** option.  
   
     > [!WARNING]  
-    >  The **Backup original packages** option is not displayed when you open a [!INCLUDE[ssISversion10](../../../integration-services/control-flow/includes/ssisversion10-md.md)] or later project in [!INCLUDE[ssBIDevStudioFull](../../../analysis-services/includes/ssbidevstudiofull-md.md)], which automatically launches the wizard.  
+    >  The **Backup original packages** option is not displayed when you open a [!INCLUDE[ssISversion10](../../../a9retired/includes/ssisversion10-md.md)] or later project in [!INCLUDE[ssBIDevStudioFull](../../../a9notintoc/includes/ssbidevstudiofull-md.md)], which automatically launches the wizard.  
   
-3.  In [!INCLUDE[ssBIDevStudioFull](../../../analysis-services/includes/ssbidevstudiofull-md.md)], run the [!INCLUDE[ssIS](../../../analysis-services/instances/includes/ssis-md.md)] Package Upgrade Wizard.  
+3.  In [!INCLUDE[ssBIDevStudioFull](../../../a9notintoc/includes/ssbidevstudiofull-md.md)], run the [!INCLUDE[ssIS](../../../a9retired/includes/ssis-md.md)] Package Upgrade Wizard.  
   
   

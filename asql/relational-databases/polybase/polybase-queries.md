@@ -24,7 +24,7 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # PolyBase Queries
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Here are example queries using the [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md) feature of SQL Server 2016. Before using these examples, you must also understand the T-SQL statements required to setup PolyBase (See [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md).)  
   

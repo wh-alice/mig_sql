@@ -27,11 +27,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # ERROR_STATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Returns the state number of the error that caused the CATCH block of a TRY…CATCH construct to be run.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -50,11 +50,11 @@ ERROR_STATE ( )
  Returns NULL if called outside the scope of a CATCH block.  
   
 ## Remarks  
- Some error messages can be raised at multiple points in the code for the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)]. For example, an "1105" error can be raised for several different conditions. Each specific condition that raises the error assigns a unique state code.  
+ Some error messages can be raised at multiple points in the code for the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)]. For example, an "1105" error can be raised for several different conditions. Each specific condition that raises the error assigns a unique state code.  
   
- When viewing databases of known issues, such as the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Knowledge Base, you can use the state number to determine if the recorded issue might be the same as the error you have encountered. For example, if a Knowledge Base article discusses an 1105 error message with a state of 2, and the 1105 error message you received had a state of 3, your error probably had a different cause than the one reported in the article.  
+ When viewing databases of known issues, such as the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Knowledge Base, you can use the state number to determine if the recorded issue might be the same as the error you have encountered. For example, if a Knowledge Base article discusses an 1105 error message with a state of 2, and the 1105 error message you received had a state of 3, your error probably had a different cause than the one reported in the article.  
   
- A [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] support engineer can also use the state code from an error to find the location in the source code where that error is being raised, which may provide additional ideas on how to diagnose the problem.  
+ A [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] support engineer can also use the state code from an error to find the location in the source code where that error is being raised, which may provide additional ideas on how to diagnose the problem.  
   
  ERROR_STATE may be called anywhere within the scope of a CATCH block.  
   
@@ -98,7 +98,7 @@ END CATCH;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### C. Using ERROR_STATE in a CATCH block  
  The following example shows a `SELECT` statement that generates a divide-by-zero error. The state of the error is returned.  
@@ -134,14 +134,14 @@ GO
 ```  
   
 ## See Also  
- [sys.messages &#40;Transact-SQL&#41;](../Topic/sys.messages%20\(Transact-SQL\).md)   
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/messages-for-errors-catalog-views-sys.messages.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../Topic/TRY...CATCH%20\(Transact-SQL\).md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [RAISERROR &#40;Transact-SQL&#41;](../Topic/RAISERROR%20\(Transact-SQL\).md)   
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   
   

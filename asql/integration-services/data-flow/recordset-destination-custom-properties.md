@@ -28,6 +28,6 @@ manager: "jhubbard"
  For more information, see [Recordset Destination](../../integration-services/data-flow/recordset-destination.md).  
   
 ## See Also  
- [Common Properties](../Topic/Common%20Properties.md)  
+ [Common Properties](../../a9retired/common-properties.md)  
   
   

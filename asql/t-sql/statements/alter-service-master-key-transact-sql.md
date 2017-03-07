@@ -29,11 +29,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # ALTER SERVICE MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Changes the service master key of an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Changes the service master key of an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -62,40 +62,40 @@ ALTER SERVICE MASTER KEY
  Specifies the name of the old Windows service account.  
   
 > [!WARNING]  
->  This option is obsolete. Do not use. Use [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager instead.  
+>  This option is obsolete. Do not use. Use [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager instead.  
   
  OLD_PASSWORD **='***password***'**  
  Specifies the password of the old Windows service account.  
   
 > [!WARNING]  
->  This option is obsolete. Do not use. Use [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager instead.  
+>  This option is obsolete. Do not use. Use [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager instead.  
   
  NEW_ACCOUNT **='***account_name***'**  
  Specifies the name of the new Windows service account.  
   
 > [!WARNING]  
->  This option is obsolete. Do not use. Use [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager instead.  
+>  This option is obsolete. Do not use. Use [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager instead.  
   
  NEW_PASSWORD **='***password***'**  
  Specifies the password of the new Windows service account.  
   
 > [!WARNING]  
->  This option is obsolete. Do not use. Use [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager instead.  
+>  This option is obsolete. Do not use. Use [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager instead.  
   
 ## Remarks  
- The service master key is automatically generated the first time it is needed to encrypt a linked server password, credential, or database master key. The service master key is encrypted using the local machine key or the Windows Data Protection API. This API uses a key that is derived from the Windows credentials of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service account.  
+ The service master key is automatically generated the first time it is needed to encrypt a linked server password, credential, or database master key. The service master key is encrypted using the local machine key or the Windows Data Protection API. This API uses a key that is derived from the Windows credentials of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service account.  
   
- [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] uses the AES encryption algorithm to protect the service master key (SMK) and the database master key (DMK). AES is a newer encryption algorithm than 3DES used in earlier versions. After upgrading an instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] to [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] the SMK and DMK should be regenerated in order to upgrade the master keys to AES. For more information about regenerating the DMK, see [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] uses the AES encryption algorithm to protect the service master key (SMK) and the database master key (DMK). AES is a newer encryption algorithm than 3DES used in earlier versions. After upgrading an instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] to [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] the SMK and DMK should be regenerated in order to upgrade the master keys to AES. For more information about regenerating the DMK, see [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
 ##  <a name="_changing"></a> Changing the SQL Server Service Account  
- To change the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service account, use [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager. To manage a change of the service account, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] stores a redundant copy of the service master key protected by the machine account that has the necessary permissions granted to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service group. If the computer is rebuilt, the same domain user that was previously used by the service account can recover the service master key. This does not work with local accounts or the Local System, Local Service, or Network Service accounts. When you are moving [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to another computer, migrate the service master key by using backup and restore.  
+ To change the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service account, use [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager. To manage a change of the service account, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] stores a redundant copy of the service master key protected by the machine account that has the necessary permissions granted to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service group. If the computer is rebuilt, the same domain user that was previously used by the service account can recover the service master key. This does not work with local accounts or the Local System, Local Service, or Network Service accounts. When you are moving [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to another computer, migrate the service master key by using backup and restore.  
   
- The REGENERATE phrase regenerates the service master key. When the service master key is regenerated, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] decrypts all the keys that have been encrypted with it, and then encrypts them with the new service master key. This is a resource-intensive operation. You should schedule this operation during a period of low demand, unless the key has been compromised. If any one of the decryptions fail, the whole statement fails.  
+ The REGENERATE phrase regenerates the service master key. When the service master key is regenerated, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] decrypts all the keys that have been encrypted with it, and then encrypts them with the new service master key. This is a resource-intensive operation. You should schedule this operation during a period of low demand, unless the key has been compromised. If any one of the decryptions fail, the whole statement fails.  
   
  The FORCE option causes the key regeneration process to continue even if the process cannot retrieve the current master key, or cannot decrypt all the private keys that are encrypted with it. Use FORCE only if regeneration fails and you cannot restore the service master key by using the [RESTORE SERVICE MASTER KEY](../../t-sql/statements/restore-service-master-key-transact-sql.md) statement.  
   
 > [!CAUTION]  
->  The service master key is the root of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] encryption hierarchy. The service master key directly or indirectly protects all other keys and secrets in the tree. If a dependent key cannot be decrypted during a forced regeneration, the data the key secures will be lost.  
+>  The service master key is the root of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] encryption hierarchy. The service master key directly or indirectly protects all other keys and secrets in the tree. If a dependent key cannot be decrypted during a forced regeneration, the data the key secures will be lost.  
   
  If you move SQL to another machine, then you have to use the same service account to decrypt the SMK – SQL Server will fix the Machine account encryption automatically.  
   

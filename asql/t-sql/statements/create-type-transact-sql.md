@@ -33,14 +33,14 @@ manager: "jhubbard"
 # CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Creates an alias data type or a user-defined type in the current database in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)]. The implementation of an alias data type is based on a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] native system type. A user-defined type is implemented through a class of an assembly in the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] common language runtime (CLR). To bind a user-defined type to its implementation, the CLR assembly that contains the implementation of the type must first be registered in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] by using [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
+  Creates an alias data type or a user-defined type in the current database in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] or [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)]. The implementation of an alias data type is based on a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] native system type. A user-defined type is implemented through a class of an assembly in the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] common language runtime (CLR). To bind a user-defined type to its implementation, the CLR assembly that contains the implementation of the type must first be registered in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] by using [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
   
- The ability to run CLR code is off by default in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. You can create, modify and drop database objects that reference managed code modules, but these references will not execute in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] unless the [clr enabled Option](../../database-engine/configure/windows/clr-enabled-server-configuration-option.md) is enabled by using [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ The ability to run CLR code is off by default in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. You can create, modify and drop database objects that reference managed code modules, but these references will not execute in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] unless the [clr enabled Option](../../database-engine/configure/windows/clr-enabled-server-configuration-option.md) is enabled by using [sp_configure](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md).  
  
 > [!NOTE]  
->  The integration of .NET Framework CLR into SQL Server is discussed in this topic. CLR integration does not apply to Azure [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].
+>  The integration of .NET Framework CLR into SQL Server is discussed in this topic. CLR integration does not apply to Azure [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -157,7 +157,7 @@ column_name <data_type>
  Is the name of the alias data type or user-defined type. Type names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
  *base_type*  
- Is the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supplied data type on which the alias data type is based. *base_type* is **sysname**, with no default, and can be one of the following values:  
+ Is the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supplied data type on which the alias data type is based. *base_type* is **sysname**, with no default, and can be one of the following values:  
   
 |||||  
 |-|-|-|-|  
@@ -183,9 +183,9 @@ column_name <data_type>
  *assembly_name*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
- Specifies the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] assembly that references the implementation of the user-defined type in the common language runtime. *assembly_name* should match an existing assembly in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in the current database.  
+ Specifies the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] assembly that references the implementation of the user-defined type in the common language runtime. *assembly_name* should match an existing assembly in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] in the current database.  
   
 > [!NOTE]  
 >  EXTERNAL_NAME is not available in a contained database.  
@@ -193,9 +193,9 @@ column_name <data_type>
  **[.** *class_name*  **]**  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
- Specifies the class within the assembly that implements the user-defined type. *class_name* must be a valid identifier and must exist as a class in the assembly with assembly visibility. *class_name* is case-sensitive, regardless of the database collation, and must exactly match the class name in the corresponding assembly. The class name can be a namespace-qualified name enclosed in square brackets (**[ ]**) if the programming language that is used to write the class uses the concept of namespaces, such as C#. If *class_name* is not specified, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] assumes it is the same as *type_name*.  
+ Specifies the class within the assembly that implements the user-defined type. *class_name* must be a valid identifier and must exist as a class in the assembly with assembly visibility. *class_name* is case-sensitive, regardless of the database collation, and must exactly match the class name in the corresponding assembly. The class name can be a namespace-qualified name enclosed in square brackets (**[ ]**) if the programming language that is used to write the class uses the concept of namespaces, such as C#. If *class_name* is not specified, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] assumes it is the same as *type_name*.  
   
  <column_definition>  
  Defines the columns for a user-defined table type.  
@@ -221,34 +221,34 @@ column_name <data_type>
  MEMORY_OPTIMIZED  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
  Indicates whether the table type is memory optimized. This option is off by default; the table (type) is not a memory optimized table (type). Memory optimized table types are memory-optimized user tables, the schema of which is persisted on disk similar to other user tables.  
   
  BUCKET_COUNT  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
  Indicates the number of buckets that should be created in the hash index. The maximum value for BUCKET_COUNT in hash indexes is 1,073,741,824. For more information about bucket counts, see [Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md). *bucket_count* is a required argument.  
   
  HASH  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)].|  
   
  Indicates that a HASH index is created. Hash indexes are supported only on memory optimized tables.  
   
 ## Remarks  
- The class of the assembly that is referenced in *assembly_name*, together with its methods, should satisfy all the requirements for implementing a user-defined type in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information about these requirements, see [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+ The class of the assembly that is referenced in *assembly_name*, together with its methods, should satisfy all the requirements for implementing a user-defined type in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For more information about these requirements, see [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
  Additional considerations include the following:  
   
--   The class can have overloaded methods, but these methods can be called only from within managed code, not from [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+-   The class can have overloaded methods, but these methods can be called only from within managed code, not from [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
 -   Any static members must be declared as **const** or **readonly** if *assembly_name* is SAFE or EXTERNAL_ACCESS.  
   
- Within a database, there can be only one user-defined type registered against any specified type that has been uploaded in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from the CLR. If a user-defined type is created on a CLR type for which a user-defined type already exists in the database, CREATE TYPE fails with an error. This restriction is required to avoid ambiguity during SQL Type resolution if a CLR type can be mapped to more than one user-defined type.  
+ Within a database, there can be only one user-defined type registered against any specified type that has been uploaded in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] from the CLR. If a user-defined type is created on a CLR type for which a user-defined type already exists in the database, CREATE TYPE fails with an error. This restriction is required to avoid ambiguity during SQL Type resolution if a CLR type can be mapped to more than one user-defined type.  
   
  If any mutator method in the type does not return *void*, the CREATE TYPE statement does not execute.  
   
@@ -261,7 +261,7 @@ column_name <data_type>
  In user-defined table types, the primary key on computed columns must be PERSISTED and NOT NULL.  
   
 ## Memory-Optimized Table Types  
- Beginning in [!INCLUDE[ssSQL14](../../analysis-services/includes/sssql14-md.md)], processing data in a table type can be done in primary memory, and not on disk. For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). For code samples showing how to create memory-optimized table types, see [Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
+ Beginning in [!INCLUDE[ssSQL14](../../a9notintoc/includes/sssql14-md.md)], processing data in a table type can be done in primary memory, and not on disk. For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). For code samples showing how to create memory-optimized table types, see [Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
 ## Permissions  
  Requires CREATE TYPE permission in the current database and ALTER permission on *schema_name*. If *schema_name* is not specified, the default name resolution rules for determining the schema for the current user apply. If *assembly_name* is specified, a user must either own the assembly or have REFERENCES permission on it.  
@@ -281,7 +281,7 @@ FROM varchar(11) NOT NULL ;
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 CREATE ASSEMBLY utf8string  

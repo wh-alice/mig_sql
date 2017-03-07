@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Hierarchy Member Permissions (Master Data Services)
   Hierarchy member permissions are optional and should be used only when you want a user to have limited access to specific members. If you do not assign permissions on the **Hierarchy Members** tab, then the user's permissions are based solely on the permissions assigned on the **Models** tab.  
   
- Hierarchy member permissions are assigned in the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] user interface (UI), in the **User and Group Permissions** functional area on the **Hierarchy Members** tab. These permissions determine which members a user can access in the **Explorer** functional area of the UI.  
+ Hierarchy member permissions are assigned in the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] user interface (UI), in the **User and Group Permissions** functional area on the **Hierarchy Members** tab. These permissions determine which members a user can access in the **Explorer** functional area of the UI.  
   
  On the **Hierarchy Members** tab, each hierarchy is represented as a tree structure. When you assign permission to a node in the tree, all children inherit that permission unless permission is explicitly assigned at a lower level.  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
 |**Delete**|The members are displayed, and the user can delete them.|  
 |**Deny**|The members are not displayed.|  
   
- On the **Hierarchy Members** tab, the permissions you assign do not take effect immediately. The frequency that the permissions are applied depends on the **Member security processing interval setting** in the System Settings table in the [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)] database. You can apply member permissions immediately by following the steps in [Immediately Apply Member Permissions &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
+ On the **Hierarchy Members** tab, the permissions you assign do not take effect immediately. The frequency that the permissions are applied depends on the **Member security processing interval setting** in the System Settings table in the [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)] database. You can apply member permissions immediately by following the steps in [Immediately Apply Member Permissions &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
 > [!NOTE]  
 >  You cannot assign hierarchy member permissions to recursive hierarchies, derived hierarchies with explicit caps, and derived hierarchies with hidden levels.  

@@ -15,7 +15,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Set-PowerPivotServiceApplication cmdlet
-  Sets the properties of a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application.  
+  Sets the properties of a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application.  
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   
@@ -26,14 +26,14 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 ```  
   
 ## Description  
- The Set-PowerPivotServiceApplication cmdlet updates the properties of a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application in the farm. The Identity parameter is required. You must provide either the GUID of the service application for which you are updating properties.  
+ The Set-PowerPivotServiceApplication cmdlet updates the properties of a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application in the farm. The Identity parameter is required. You must provide either the GUID of the service application for which you are updating properties.  
   
  To verify your changes, run the following cmdlet: Get-PowerPivotServiceApplication -Identity \<GUID> | format-list.  
   
 ## Parameters  
   
 ### -Identity \<SPGeminiServiceApplicationPipeBind>  
- Specifies the service application to update. The type must be a valid GUID or an instance of a valid [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application object. You can use Get-PowerPivotServiceApplication to return an instance of the object.  
+ Specifies the service application to update. The type must be a valid GUID or an instance of a valid [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application object. You can use Get-PowerPivotServiceApplication to return an instance of the object.  
   
 |||  
 |-|-|  
@@ -44,7 +44,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accept wildcard characters?|false|  
   
 ### -AdministrationConnectionPoolSize \<int>  
- Specifies the number of open connections in a connection pool created for a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service connection to Analysis Services. Each [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service instance opens a separate administrative connection to the Analysis Services instance on the same computer. [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service creates a separate pool to reuse administrative connections for the purpose of checking for idle connections and monitoring server health. The default value is 200 connections. Valid values are -1 (unlimited), 0 (disables administrative connection pooling), or 1 to 10000. If you select 0, every connection will be created anew.  
+ Specifies the number of open connections in a connection pool created for a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service connection to Analysis Services. Each [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service instance opens a separate administrative connection to the Analysis Services instance on the same computer. [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service creates a separate pool to reuse administrative connections for the purpose of checking for idle connections and monitoring server health. The default value is 200 connections. Valid values are -1 (unlimited), 0 (disables administrative connection pooling), or 1 to 10000. If you select 0, every connection will be created anew.  
   
 |||  
 |-|-|  
@@ -55,7 +55,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accept wildcard characters?|false|  
   
 ### -AllowCustomWindowsCredentials [\<SwitchParameter>]  
- Specifies whether schedule owners can enter arbitrary Windows credentials to run a data refresh schedule. If you select this checkbox, [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application will create and manage a target application each set of stored credentials. Default is set to true. To turn off this feature, set AllowCustomWindowsCredentials:$false.  
+ Specifies whether schedule owners can enter arbitrary Windows credentials to run a data refresh schedule. If you select this checkbox, [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application will create and manage a target application each set of stored credentials. Default is set to true. To turn off this feature, set AllowCustomWindowsCredentials:$false.  
   
 |||  
 |-|-|  
@@ -92,7 +92,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accept wildcard characters?|false|  
   
 ### -CachedDatabaseholdLimit \<int>  
- Specifies how many hours an inactive database remains on the file system after it has been unloaded from memory. The default is 120 hours. The cleanup job uses this setting to determine which files to delete. All [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] databases that are inactive for 168 hours (48 hours in memory and 120 hours in the cache) are deleted from disk by the cleanup job.  
+ Specifies how many hours an inactive database remains on the file system after it has been unloaded from memory. The default is 120 hours. The cleanup job uses this setting to determine which files to delete. All [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] databases that are inactive for 168 hours (48 hours in memory and 120 hours in the cache) are deleted from disk by the cleanup job.  
   
 |||  
 |-|-|  
@@ -114,7 +114,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accept wildcard characters?|false|  
   
 ### -ConnectionPoolSize \<int>  
- Specifies the maximum number of idle connections the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service will create in individual connection pools for each SharePoint user, [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] dataset, and version combinations. The default value is 1000 idle connections. Valid values are -1 (unlimited), 0 (disables user connection pooling), or 1 to 10000. These connection pools enable the service to more efficiently support ongoing connections to the same read-only data by the same user. If you disable connection pooling, every connection will be created anew. Note that changing the limit on connection pool size, including setting it to 0, will not result in dropped connections. Connection pools exist to reduce wait times when connecting to data. The [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service will never deny a connection based on connection pool settings.  
+ Specifies the maximum number of idle connections the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service will create in individual connection pools for each SharePoint user, [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] dataset, and version combinations. The default value is 1000 idle connections. Valid values are -1 (unlimited), 0 (disables user connection pooling), or 1 to 10000. These connection pools enable the service to more efficiently support ongoing connections to the same read-only data by the same user. If you disable connection pooling, every connection will be created anew. Note that changing the limit on connection pool size, including setting it to 0, will not result in dropped connections. Connection pools exist to reduce wait times when connecting to data. The [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service will never deny a connection based on connection pool settings.  
   
 |||  
 |-|-|  
@@ -125,7 +125,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accept wildcard characters?|false|  
   
 ### -ConnectionPoolTimeout \<int>  
- Specifies how many minutes an idle data connection will remain open. The default value is 1800 seconds (or 30 minutes). During this period, the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application will reuse an idle data connection for read-only requests from the same SharePoint user for the same [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data. If no further requests are received for that data during the period specified, the connection is removed from the pool. Valid values are 1 to 3600 seconds.  
+ Specifies how many minutes an idle data connection will remain open. The default value is 1800 seconds (or 30 minutes). During this period, the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application will reuse an idle data connection for read-only requests from the same SharePoint user for the same [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data. If no further requests are received for that data during the period specified, the connection is removed from the pool. Valid values are 1 to 3600 seconds.  
   
 |||  
 |-|-|  
@@ -136,7 +136,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accept wildcard characters?|false|  
   
 ### -DataLoadTimeout \<int>  
- Specifies how long the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service application waits for a response from the SQL Server Analysis Services ([!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)]) instance to which it forwarded a load data request. Because very large datasets take time to move over the wire, you must allow sufficient time for the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] service instance to retrieve the Excel workbook and move the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data to an Analysis Services instance for query processing. The default value is 1800 seconds (or 30 minutes). Valid values range from 1 to 3600 seconds.  
+ Specifies how long the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service application waits for a response from the SQL Server Analysis Services ([!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)]) instance to which it forwarded a load data request. Because very large datasets take time to move over the wire, you must allow sufficient time for the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] service instance to retrieve the Excel workbook and move the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data to an Analysis Services instance for query processing. The default value is 1800 seconds (or 30 minutes). Valid values range from 1 to 3600 seconds.  
   
 |||  
 |-|-|  
@@ -171,7 +171,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accept wildcard characters?|false|  
   
 ### -DataRefreshMaxHistory \<int>  
- Specifies how long to retain a historical record of data refresh processing. This information appears in data refresh history pages that are kept for each workbook that uses data refresh. It also appears in the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Management Dashboard. Default value is 365 days.  
+ Specifies how long to retain a historical record of data refresh processing. This information appears in data refresh history pages that are kept for each workbook that uses data refresh. It also appears in the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Management Dashboard. Default value is 365 days.  
   
 |||  
 |-|-|  
@@ -182,7 +182,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accept wildcard characters?|false|  
   
 ### -HealthBasedAllocation \<switch>  
- Specifies the health-based allocation algorithm that forwards connection requests to the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint server that has the most CPU and memory resources available. This is the default allocation algorithm. HealthBasedAllocation and RoundRobinBasedAllocation are mutually exclusive. You must specify one or the other. If you set them both to false, HealthBasedAllocation will be used because it is the default. If you set them both to true, you will get a validation error. Syntax for these parameters include entering just the parameter name, or parameter:$true or parameter:$false.  
+ Specifies the health-based allocation algorithm that forwards connection requests to the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint server that has the most CPU and memory resources available. This is the default allocation algorithm. HealthBasedAllocation and RoundRobinBasedAllocation are mutually exclusive. You must specify one or the other. If you set them both to false, HealthBasedAllocation will be used because it is the default. If you set them both to true, you will get a validation error. Syntax for these parameters include entering just the parameter name, or parameter:$true or parameter:$false.  
   
 |||  
 |-|-|  
@@ -237,7 +237,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accept wildcard characters?|false|  
   
 ### -RoundRobinAllocation \<switch>  
- Specifies the round robin allocation algorithm that forwards connection requests to the next [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint server, alternating requests equally among available servers, regardless of server load. HealthBasedAllocation and RoundRobinBasedAllocation are mutually exclusive. You must specify one or the other. If you set them both to false, HealthBasedAllocation will be used because it is the default. If you set them both to true, you will get a validation error. Syntax for these parameters include entering just the parameter name, or parameter:$true or parameter:$false.  
+ Specifies the round robin allocation algorithm that forwards connection requests to the next [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint server, alternating requests equally among available servers, regardless of server load. HealthBasedAllocation and RoundRobinBasedAllocation are mutually exclusive. You must specify one or the other. If you set them both to false, HealthBasedAllocation will be used because it is the default. If you set them both to true, you will get a validation error. Syntax for these parameters include entering just the parameter name, or parameter:$true or parameter:$false.  
   
 |||  
 |-|-|  
@@ -248,7 +248,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accept wildcard characters?|false|  
   
 ### -UnattendedAccount \<string>  
- Specifies the target application name of a Secure Store Service application that stores a predefined account for running [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data refresh jobs.  
+ Specifies the target application name of a Secure Store Service application that stores a predefined account for running [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data refresh jobs.  
   
 |||  
 |-|-|  
@@ -314,7 +314,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accept wildcard characters?|false|  
   
 ### -UsageUpdateDayLimit \<int>  
- Specify the threshold (in days) for triggering a warning about a failure to refresh the data file used by reports in the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Management Dashboard. By default, the system updates usage data on a daily basis. The [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] Management Dashboard.xlsx file, which is the data source for administrative reports, is refreshed on the same schedule. If the .xlsx file is not updated over a number of days, a health rule is triggered indicating the file is out of date. The default is 5 days. Valid values are 1 through 30.  
+ Specify the threshold (in days) for triggering a warning about a failure to refresh the data file used by reports in the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Management Dashboard. By default, the system updates usage data on a daily basis. The [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] Management Dashboard.xlsx file, which is the data source for administrative reports, is refreshed on the same schedule. If the .xlsx file is not updated over a number of days, a health rule is triggered indicating the file is out of date. The default is 5 days. Valid values are 1 through 30.  
   
 |||  
 |-|-|  
@@ -341,7 +341,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 C:\PS>Set-PowerPivotServiceApplication -identity 1234567-890a-bcde-fghijklm -AllowCustomWindowsCredentials:$false -UnattendedAccount "MyTargetApp"  
 ```  
   
- This example turns off a data refresh feature that automatically creates and manages Secure Store Service target applications for storing arbitrary Windows credentials. It also sets the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] unattended data refresh account to a predefined target application.  
+ This example turns off a data refresh feature that automatically creates and manages Secure Store Service target applications for storing arbitrary Windows credentials. It also sets the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] unattended data refresh account to a predefined target application.  
   
  Use Get-powerpivotserviceapplication to get a valid identity.  
   
@@ -361,7 +361,7 @@ C:\PS>Set-PowerPivotServiceApplication -identity 1234567-890a-bcde-fghijklm -Hea
 C:\PS>Set-PowerPivotServiceApplication -identity 1234567-890a-bcde-fghijklmn -BusinessHoursStartTime "07:15AM" -BusinessHoursEndTime "08:00PM"  
 ```  
   
- This example shows how to set the starting and ending hours of a business day, used as a schedule option for scheduling [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data refresh. Schedules can specify an after business hours option for running data refresh at the end of a business day.  
+ This example shows how to set the starting and ending hours of a business day, used as a schedule option for scheduling [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data refresh. Schedules can specify an after business hours option for running data refresh at the end of a business day.  
   
  Use Get-powerpivotserviceapplication to get a valid identity.  
   

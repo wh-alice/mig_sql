@@ -19,9 +19,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # View Foreign Key Properties
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
 
-  You can view the foreign key attributes of a relationship in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  You can view the foreign key attributes of a relationship in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
- [!INCLUDE[ssCatViewPerm](../../relational-databases/system-catalog-views/includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../relational-databases/reference/system-catalog-views/includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 #### To view the foreign key attributes of a relationship in a specific table  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -80,6 +80,6 @@ manager: "jhubbard"
     WHERE f.parent_object_id = OBJECT_ID('HumanResources.Employee');  
     ```  
   
- For more information, see [sys.foreign_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.foreign-keys-transact-sql.md) and [sys.foreign_key_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.foreign-key-columns-transact-sql.md).  
+ For more information, see [sys.foreign_keys &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.foreign-keys-transact-sql.md) and [sys.foreign_key_columns &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.foreign-key-columns-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>  

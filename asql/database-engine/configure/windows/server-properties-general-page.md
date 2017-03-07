@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Server Properties - General Page
-  Use this page to view read-only information about your [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] installation.  
+  Use this page to view read-only information about your [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] installation.  
   
 ## Property Grid  
  View properties for the selected server, such as the server name, server operating system, or number of processors.  
@@ -28,19 +28,19 @@ manager: "jhubbard"
  Displays the name of the server instance.  
   
  **Product**  
- Displays the edition of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] currently running.  
+ Displays the edition of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] currently running.  
   
  **Operating System**  
- Displays the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows operating system currently running.  
+ Displays the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Windows operating system currently running.  
   
  **Platform**  
- Describes the operating system and hardware running [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Describes the operating system and hardware running [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
  **Version**  
- Displays the version number of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] edition currently running.  
+ Displays the version number of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] edition currently running.  
   
  **Language**  
- Displays the language supported by the running instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Displays the language supported by the running instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
  **Memory**  
  Lists the amount of RAM installed on the server.  
@@ -49,16 +49,16 @@ manager: "jhubbard"
  Displays the number of CPUs installed.  
   
  **Root Directory**  
- Displays the path to the location of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance, typically C:\Program Files\Microsoft SQL Server\\.  
+ Displays the path to the location of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance, typically C:\Program Files\Microsoft SQL Server\\.  
   
  **Server Collation**  
  Displays the collation supported by the server. A collation specifies the particular code page and sort order to use for Unicode and non-Unicode data.  
   
  **Is Clustered**  
- Displays **True** if the server instance is configured in a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] failover cluster or **False** if the server instance is not clustered.  
+ Displays **True** if the server instance is configured in a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] failover cluster or **False** if the server instance is not clustered.  
   
  **Is HADR Enabled**  
- Displays **True** if the [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] feature is enabled or **False** if the [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] feature is disabled. For information about enabling or disabling [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)], see [Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
+ Displays **True** if the [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] feature is enabled or **False** if the [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] feature is disabled. For information about enabling or disabling [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)], see [Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 ## Description Field  
  View additional information on the server properties.  

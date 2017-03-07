@@ -28,7 +28,7 @@ manager: "jhubbard"
 
   Is a system function that returns the last-inserted identity value.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
  Replication may affect the @@IDENTITY value, since it is used within the replication triggers and stored procedures. @@IDENTITY is not a reliable indicator of the most recent user-created identity if the column is part of a replication article. You can use the SCOPE_IDENTITY() function syntax instead of @@IDENTITY. For more information, see [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)  
   
 > [!NOTE]  
->  The calling stored procedure or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement must be rewritten to use the SCOPE_IDENTITY() function which will return the latest identity used within the scope of that user statement, and not the identity within the scope of the nested trigger used by replication.  
+>  The calling stored procedure or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement must be rewritten to use the SCOPE_IDENTITY() function which will return the latest identity used within the scope of that user statement, and not the identity within the scope of the nested trigger used by replication.  
   
 ## Examples  
  The following example inserts a row into a table with an identity column (`LocationID`) and uses `@@IDENTITY` to display the identity value used in the new row.  
@@ -78,7 +78,7 @@ GO
 ```  
   
 ## See Also  
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-transact-sql.md)   
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/system-functions-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   

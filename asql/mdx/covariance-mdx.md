@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Covariance (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the population covariance of x-y pairs of values evaluated over a set, by using the biased population formula (dividing by the number of x-y pairs).  
   

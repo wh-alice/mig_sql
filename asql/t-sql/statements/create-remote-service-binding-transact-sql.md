@@ -42,11 +42,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CREATE REMOTE SERVICE BINDING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a binding that defines the security credentials to use to initiate a conversation with a remote service.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -78,7 +78,7 @@ CREATE REMOTE SERVICE BINDING binding_name
 ## Remarks  
  [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] uses a remote service binding to locate the certificate to use for a new conversation. The public key in the certificate associated with *user_name* is used to authenticate messages sent to the remote service and to encrypt a session key that is then used to encrypt the conversation. The certificate for *user_name* must correspond to the certificate for a user in the database that hosts the remote service.  
   
- A remote service binding is only necessary for initiating services that communicate with target services outside of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. A database that hosts an initiating service must contain remote service bindings for any target services outside of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. A database that hosts a target service need not contain remote service bindings for the initiating services that communicate with the target service. When the initiator and target services are in the same instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], no remote service binding is necessary. However, if a remote service binding is present where the *service_name* specified for TO SERVICE matches the name of the local service, [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] will use the binding.  
+ A remote service binding is only necessary for initiating services that communicate with target services outside of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. A database that hosts an initiating service must contain remote service bindings for any target services outside of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. A database that hosts a target service need not contain remote service bindings for the initiating services that communicate with the target service. When the initiator and target services are in the same instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], no remote service binding is necessary. However, if a remote service binding is present where the *service_name* specified for TO SERVICE matches the name of the local service, [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] will use the binding.  
   
  When ANONYMOUS = ON, the initiating service connects to the target service as a member of the **public** fixed database role. By default, members of this role do not have permission to connect to a database. To successfully send a message, the target database must grant the **public** role CONNECT permission for the database and SEND permission for the target service.  
   

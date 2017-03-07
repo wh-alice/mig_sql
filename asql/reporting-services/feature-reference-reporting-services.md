@@ -21,22 +21,22 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Feature Reference (Reporting Services)
-  [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] includes several tools and applications that you can use to create, manage, and view reports. This section provides specific topics describing the dialog boxes, Web pages, and wizards of these tools and applications.  
+  [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] includes several tools and applications that you can use to create, manage, and view reports. This section provides specific topics describing the dialog boxes, Web pages, and wizards of these tools and applications.  
   
- To access a user interface topic while the tool or application is running, press F1 or click **Help** while the dialog box, Web page, or wizard is open. For more information about starting the [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] tools, see [Tutorial: How to Locate and Start Reporting Services Tools &#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
+ To access a user interface topic while the tool or application is running, press F1 or click **Help** while the dialog box, Web page, or wizard is open. For more information about starting the [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] tools, see [Tutorial: How to Locate and Start Reporting Services Tools &#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
 ## In This Section  
  [Report Designer F1 Help](../reporting-services/tools/report-designer-f1-help.md)  
  Provides help for Report Designer and its related dialog boxes, Report Wizard, and Image Wizard.  
   
- [Report Manager F1 Help](../Topic/Report%20Manager%20F1%20Help.md)  
+ [Report Manager F1 Help](../a9retired/report-manager-f1-help.md)  
  Provides help for Report Manager, a Web application used to manage a single report server instance  
   
- [Reporting Services Configuration Manager Help Topics](../Topic/Reporting%20Services%20Configuration%20Manager%20Help%20Topics.md)  
- Provides help for the [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Configuration tool used for deploying and managing report server instances.  
+ [Reporting Services Configuration Manager Help Topics](../a9retired/reporting-services-configuration-manager-help-topics.md)  
+ Provides help for the [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] Configuration tool used for deploying and managing report server instances.  
   
  [Report Server in Management Studio F1 Help](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
- Provides help for dialog boxes used to manage reports and report servers in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../advanced-analytics/r-services/includes/ssmanstudio-md.md)].  
+ Provides help for dialog boxes used to manage reports and report servers in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../a9notintoc/includes/ssmanstudio-md.md)].  
   
  [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
  Provides help for the HTML Viewer component used for viewing reports in a Web browser.  

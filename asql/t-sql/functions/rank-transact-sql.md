@@ -25,16 +25,16 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # RANK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the rank of each row within the partition of a result set. The rank of a row is one plus the number of ranks that come before the row in question.  
 
   ROW_NUMBER and RANK are similar. ROW_NUMBER numbers all rows sequentially (for example 1, 2, 3, 4, 5). RANK provides the same numeric value for ties (for example 1, 2, 2, 4, 5).   
   
 > [!NOTE]
-> RANK is a temporary value calulated when the query is run. To persist numbers in a table, see [IDENTITY Property](IDENTITY%20\(Property\)%20\(Transact-SQL\).md) and [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
+> RANK is a temporary value calulated when the query is run. To persist numbers in a table, see [IDENTITY Property](../../t-sql/statements/create-table-transact-sql-identity-property.md) and [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
    
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -46,7 +46,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
   
 ## Arguments  
  OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the order of the data before the function is applied. The *order_by_clause* is required. The \<rows or range clause> of the OVER clause cannot be specified for the RANK function. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../Topic/OVER%20Clause%20\(Transact-SQL\).md).  
+ *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the order of the data before the function is applied. The *order_by_clause* is required. The \<rows or range clause> of the OVER clause cannot be specified for the RANK function. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## Return Types  
  **bigint**  
@@ -127,7 +127,7 @@ BusinessEntityID Rate                  RankBySalary
 10               42.4808               9  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### C: Ranking rows within a partition  
  The following example ranks the sales representatives in each sales territory according to their total sales. The rowset is partitioned by `SalesTerritoryGroup` and sorted by `SalesAmountQuota`.  

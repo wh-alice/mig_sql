@@ -25,7 +25,7 @@ manager: "erikre"
  On a report server configured in SharePoint integrated mode, there is no equivalent to the My Reports folder. For more information, see [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Ways to Use My Reports  
  My Reports is empty until you add reports, folders, and other items. Here are some ways to add content to My Reports.  

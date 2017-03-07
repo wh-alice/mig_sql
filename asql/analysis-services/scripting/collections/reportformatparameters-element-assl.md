@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # ReportFormatParameters Element (ASSL)
-  Contains the collection of [ReportFormatParameter](../Topic/ReportFormatParameter%20Element%20\(ASSL\).md) elements for a [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) element.  
+  Contains the collection of [ReportFormatParameter](../../../analysis-services/scripting/objects/reportformatparameter-element-asl.md) elements for a [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) element.  
   
 ## Syntax  
   
@@ -55,7 +55,7 @@ manager: "erikre"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|[Action](../../../analysis-services/scripting/objects/action-element-assl.md) of type [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md)|  
-|Child elements|[ReportFormatParameter](../Topic/ReportFormatParameter%20Element%20\(ASSL\).md)|  
+|Child elements|[ReportFormatParameter](../../../analysis-services/scripting/objects/reportformatparameter-element-asl.md)|  
   
 ## Remarks  
  The element that corresponds to the parent of **ReportFormatParameters** in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.ReportAction>.  

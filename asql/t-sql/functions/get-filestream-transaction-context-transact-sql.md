@@ -22,11 +22,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns a token that represents the current transaction context of a session. The token is used by an application to bind FILESTREAM file-system streaming operations to the transaction. For a list of FILESTREAM topics, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -47,7 +47,7 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
  When you call GET_FILESTREAM_TRANSACTION_CONTEXT, the caller is granted file system access to the transaction for the duration of the transaction. To allow another user access to the transaction through the file system, use EXECUTE AS to run GET_FILESTREAM_TRANSACTION_CONTEXT as the other user.  
   
 ## Examples  
- The following example uses `GET_FILESTREAM_TRANSACTION_CONTEXT` in a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] transaction to obtain the transaction context.  
+ The following example uses `GET_FILESTREAM_TRANSACTION_CONTEXT` in a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] transaction to obtain the transaction context.  
   
 ```c#  
 using System;  
@@ -273,7 +273,7 @@ End Namespace
 ```  
   
 ## See Also  
- [PathName &#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
+ [PathName &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/pathname-transact-sql.md)   
  [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   

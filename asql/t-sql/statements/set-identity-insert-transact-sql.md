@@ -31,7 +31,7 @@ manager: "jhubbard"
 
   Allows explicit values to be inserted into the identity column of a table.  
 
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -51,9 +51,9 @@ SET IDENTITY_INSERT [ database_name . [ schema_name ] . ] table { ON | OFF }
  Is the name of a table with an identity column.  
   
 ## Remarks  
- At any time, only one table in a session can have the IDENTITY_INSERT property set to ON. If a table already has this property set to ON, and a SET IDENTITY_INSERT ON statement is issued for another table, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns an error message that states SET IDENTITY_INSERT is already ON and reports the table it is set ON for.  
+ At any time, only one table in a session can have the IDENTITY_INSERT property set to ON. If a table already has this property set to ON, and a SET IDENTITY_INSERT ON statement is issued for another table, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns an error message that states SET IDENTITY_INSERT is already ON and reports the table it is set ON for.  
   
- If the value inserted is larger than the current identity value for the table, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] automatically uses the new inserted value as the current identity value.  
+ If the value inserted is larger than the current identity value for the table, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] automatically uses the new inserted value as the current identity value.  
   
  The setting of SET IDENTITY_INSERT is set at execute or run time and not at parse time.  
   
@@ -111,7 +111,7 @@ GO
   
 ## See Also  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../Topic/IDENTITY%20\(Property\)%20\(Transact-SQL\).md)   
+ [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
  [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  

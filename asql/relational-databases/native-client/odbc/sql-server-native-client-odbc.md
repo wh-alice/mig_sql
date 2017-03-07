@@ -23,19 +23,19 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Native Client (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
-  ODBC is a standard definition of an application programming interface (API) used to access data in relational or indexed sequential access method (ISAM) databases. [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports ODBC, via the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver, as one of the native APIs for writing C and C++ applications that communicate with [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  ODBC is a standard definition of an application programming interface (API) used to access data in relational or indexed sequential access method (ISAM) databases. [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] supports ODBC, via the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver, as one of the native APIs for writing C and C++ applications that communicate with [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] programs that are written using the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver communicate with [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] through C function calls. The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]-specific versions of the ODBC functions are implemented in the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver. The driver passes SQL statements to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and returns the results of the statements to the application.  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] programs that are written using the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver communicate with [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] through C function calls. The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]-specific versions of the ODBC functions are implemented in the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver. The driver passes SQL statements to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] and returns the results of the statements to the application.  
   
- The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver complies with the Microsoft Win32 ODBC 3.51 specification. The driver supports applications written using earlier versions of ODBC in the manner defined in the ODBC 3.51 specification.  
+ The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver complies with the Microsoft Win32 ODBC 3.51 specification. The driver supports applications written using earlier versions of ODBC in the manner defined in the ODBC 3.51 specification.  
   
 ## In This Section  
   
 -   [Data Source Names and 64-Bit Operating Systems](../../../relational-databases/native-client/odbc/data-source-names-and-64-bit-operating-systems.md)  
   
--   [Creating a SQL Server Native Client ODBC Driver Application](../Topic/Creating%20a%20SQL%20Server%20Native%20Client%20ODBC%20Driver%20Application.md)  
+-   [Creating a SQL Server Native Client ODBC Driver Application](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
   
 -   [Communicating with SQL Server &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 -   [Using Cursors &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
--   [Performing Transactions &#40;ODBC&#41;](../Topic/Performing%20Transactions%20\(ODBC\).md)  
+-   [Performing Transactions &#40;ODBC&#41;](../../../a9retired/performing-transactions-odbc.md)  
   
 -   [Handling Errors and Messages](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
 -   [Sparse Columns Support &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
   
--   [SQL Server Native Client &#40;ODBC&#41; Reference](../Topic/SQL%20Server%20Native%20Client%20\(ODBC\)%20Reference.md)  
+-   [SQL Server Native Client &#40;ODBC&#41; Reference](../../../a9retired/sql-server-native-client-odbc-reference.md)  
   
 -   [ODBC How-to Topics](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   

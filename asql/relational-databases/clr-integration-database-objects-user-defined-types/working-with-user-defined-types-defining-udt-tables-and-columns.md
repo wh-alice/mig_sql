@@ -27,10 +27,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Working with User-Defined Types - Defining UDT Tables and Columns
-  Once the assembly containing the user-defined type (UDT) definition has been registered in a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database, it can be used in a column definition.  
+  Once the assembly containing the user-defined type (UDT) definition has been registered in a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database, it can be used in a column definition.  
   
 ## Creating Tables with UDTs  
- There is no special syntax for creating a UDT column in a table. You can use the name of the UDT in a column definition as though it were one of the intrinsic [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data types. The following CREATE TABLE [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement creates a table named **Points**, with a column named **ID,** which is defined as an **int** identity column and \ the primary key for the table. The second column is named **PointValue**, with a data type of **Point**. The schema name used in this example is **dbo**. Note that you must have the necessary permissions to specify a schema name. If you omit the schema name, the default schema for the database user is used.  
+ There is no special syntax for creating a UDT column in a table. You can use the name of the UDT in a column definition as though it were one of the intrinsic [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data types. The following CREATE TABLE [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement creates a table named **Points**, with a column named **ID,** which is defined as an **int** identity column and \ the primary key for the table. The second column is named **PointValue**, with a data type of **Point**. The schema name used in this example is **dbo**. Note that you must have the necessary permissions to specify a schema name. If you omit the schema name, the default schema for the database user is used.  
   
 ```  
 CREATE TABLE dbo.Points   
@@ -40,7 +40,7 @@ CREATE TABLE dbo.Points
 ## Creating Indexes on UDT Columns  
  There are two options for indexing a UDT column:  
   
--   Index the full value. In this case, if the UDT is binary ordered, you can create an index over the entire UDT column by using the CREATE INDEX [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement.  
+-   Index the full value. In this case, if the UDT is binary ordered, you can create an index over the entire UDT column by using the CREATE INDEX [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement.  
   
 -   Index UDT expressions. You can create indexes on persisted computed columns over UDT expressions. The UDT expression can be a field, method, or property of a UDT. The expression must be deterministic and must not perform data access.  
   

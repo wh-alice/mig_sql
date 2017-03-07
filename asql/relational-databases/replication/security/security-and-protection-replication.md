@@ -22,16 +22,16 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Security and Protection (Replication)
-  Help protect the replication scenarios that you deploy in [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] from malicious attacks and improve the security of your data.  
+  Help protect the replication scenarios that you deploy in [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] from malicious attacks and improve the security of your data.  
   
- ![Small File Folder Icon](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Security Overview**  
+ ![Small File Folder Icon](../../../a9retired/media/filefolder-small.png "Small File Folder Icon") **Security Overview**  
  [Threat and Vulnerability Mitigation &#40;Replication&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md)  
   
  [Identity and Access Control &#40;Replication&#41;](../../../relational-databases/replication/security/identity-and-access-control-replication.md)  
   
  [More…](../../../relational-databases/replication/security/security-overview-replication.md)  
   
- ![Small File Folder Icon](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Secure Development**  
+ ![Small File Folder Icon](../../../a9retired/media/filefolder-small.png "Small File Folder Icon") **Secure Development**  
  [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)  
   
  [Security Role Requirements for Replication](../../../relational-databases/replication/security/security-role-requirements-for-replication.md)  
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
  [More…](../../../relational-databases/replication/security/secure-development-replication.md)  
   
- ![Small File Folder Icon](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Secure Deployment**  
+ ![Small File Folder Icon](../../../a9retired/media/filefolder-small.png "Small File Folder Icon") **Secure Deployment**  
  [Secure the Distributor](../../../relational-databases/replication/security/secure-the-distributor.md)  
   
  [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)  
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
  [More…](../../../relational-databases/replication/security/secure-deployment-replication.md)  
   
- ![Small File Folder Icon](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Secure Operation**  
+ ![Small File Folder Icon](../../../a9retired/media/filefolder-small.png "Small File Folder Icon") **Secure Operation**  
  [Manage Logins and Passwords in Replication](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)  
   
 ## See Also  

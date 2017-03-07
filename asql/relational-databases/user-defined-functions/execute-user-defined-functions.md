@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 ###  <a name="Security"></a> Security  
   
- Permissions are not required to run the [EXECUTE](https://msdn.microsoft.com/library/ms188332.aspx) statement. However, permissions **are required** on the securables referenced within the EXECUTE string. For example, if the string contains an [INSERT](https://msdn.microsoft.com/library/ms174335.aspx) statement, the caller of the EXECUTE statement must have INSERT permission on the target table. Permissions are checked at the time EXECUTE statement is encountered, even if the EXECUTE statement is included within a module. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../Topic/EXECUTE%20\(Transact-SQL\).md)  
+ Permissions are not required to run the [EXECUTE](https://msdn.microsoft.com/library/ms188332.aspx) statement. However, permissions **are required** on the securables referenced within the EXECUTE string. For example, if the string contains an [INSERT](https://msdn.microsoft.com/library/ms174335.aspx) statement, the caller of the EXECUTE statement must have INSERT permission on the target table. Permissions are checked at the time EXECUTE statement is encountered, even if the EXECUTE statement is included within a module. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

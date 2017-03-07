@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # ReportParameter Element - ASSL
-  Contains the name and value of a parameter that is passed to a [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report at run time.  
+  Contains the name and value of a parameter that is passed to a [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] report at run time.  
   
 ## Syntax  
   

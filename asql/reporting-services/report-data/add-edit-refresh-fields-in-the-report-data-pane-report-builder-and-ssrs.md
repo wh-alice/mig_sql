@@ -25,7 +25,7 @@ manager: "erikre"
  Use **Refresh Fields** to update the list of fields in the report to match the current list of fields from the shared dataset query. Refreshing the field list does not affect the calculated fields that you define in your report.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ### To add a query field  
   
@@ -43,7 +43,7 @@ manager: "erikre"
   
 4.  In the **Field Source** text box, type the name of an existing field on the data source.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To add a calculated field  
   
@@ -61,7 +61,7 @@ manager: "erikre"
     > [!NOTE]  
     >  The expression for a calculated field cannot contain aggregates or references to report items.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To edit a query field or a dataset field  
   
@@ -71,7 +71,7 @@ manager: "erikre"
   
 3.  Change the name of the field or the value of the field.  
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To delete a query field or a calculated field  
   
@@ -91,7 +91,7 @@ manager: "erikre"
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Reporting Services Query Designers](../Topic/Reporting%20Services%20Query%20Designers.md)   
- [Query Designers &#40;Report Builder&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+ [Reporting Services Query Designers](../../a9retired/reporting-services-query-designers.md)   
+ [Query Designers &#40;Report Builder&#41;](../../a9retired/query-designers-report-builder.md)  
   
   

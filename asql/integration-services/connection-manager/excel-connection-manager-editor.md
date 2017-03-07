@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Excel Connection Manager Editor
-  Use the **Excel Connection Manager Editor** dialog box to add a connection to an existing or a new [!INCLUDE[ofprexcel](../../analysis-services/data-mining/includes/ofprexcel-md.md)] workbook file.  
+  Use the **Excel Connection Manager Editor** dialog box to add a connection to an existing or a new [!INCLUDE[ofprexcel](../../a9retired/includes/ofprexcel-md.md)] workbook file.  
   
  To learn more about the Excel connection manager, see [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md).  
   

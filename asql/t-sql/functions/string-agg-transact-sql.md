@@ -20,11 +20,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # STRING_AGG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../t-sql/functions/includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../a9notintoc/includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
 
 Concatenates the values of string expressions and places separator values between them. The separator is not added at the end of string.
  
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

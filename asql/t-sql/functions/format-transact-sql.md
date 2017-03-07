@@ -24,9 +24,9 @@ manager: "jhubbard"
 # FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../relational-databases/databases/includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Returns a value formatted with the specified format and optional culture in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. Use the FORMAT function for locale-aware formatting of date/time and number values as strings. For general data type conversions, use CAST or CONVERT.  
+  Returns a value formatted with the specified format and optional culture in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. Use the FORMAT function for locale-aware formatting of date/time and number values as strings. For general data type conversions, use CAST or CONVERT.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -47,7 +47,7 @@ FORMAT ( value, format [, culture ] )
  *culture*  
  Optional **nvarchar** argument specifying a culture.  
   
- If the *culture* argument is not provided, the language of the current session is used. This language is set either implicitly, or explicitly by using the SET LANGUAGE statement. *culture* accepts any culture supported by the .NET Framework as an argument; it is not limited to the languages explicitly supported by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] . If the *culture* argument is not valid, FORMAT raises an error.  
+ If the *culture* argument is not provided, the language of the current session is used. This language is set either implicitly, or explicitly by using the SET LANGUAGE statement. *culture* accepts any culture supported by the .NET Framework as an argument; it is not limited to the languages explicitly supported by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] . If the *culture* argument is not valid, FORMAT raises an error.  
   
 ## Return Types  
  **nvarchar** or null  
@@ -144,7 +144,7 @@ DateTime Result  Custom Number Result
 ```  
   
 ### C. FORMAT with numeric types  
- The following example returns 5 rows from the **Sales.CurrencyRate** table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. The column **EndOfDateRate** is stored as type **money** in the table. In this example, the column is returned unformatted and then formatted by specifying the .NET Number format, General format, and Currency format types. For more information about these and other numeric formats, see [Standard Numeric Format Strings](http://msdn.microsoft.com/library/dwhawy9k.aspx).  
+ The following example returns 5 rows from the **Sales.CurrencyRate** table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database. The column **EndOfDateRate** is stored as type **money** in the table. In this example, the column is returned unformatted and then formatted by specifying the .NET Number format, General format, and Currency format types. For more information about these and other numeric formats, see [Standard Numeric Format Strings](http://msdn.microsoft.com/library/dwhawy9k.aspx).  
   
 ```  
   

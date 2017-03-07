@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Register a Connected Server (SQL Server Management Studio)
-  This topic describes how to register a connected server in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] (SSMS). By registering the server, you can save the connection information for servers that you access frequently. A server can be registered before connecting, or at the time of connection from Object Explorer.  You can view your registered servers in SSMS by navigating to **View**\\**Registered Servers** from the menu.
+  This topic describes how to register a connected server in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] (SSMS). By registering the server, you can save the connection information for servers that you access frequently. A server can be registered before connecting, or at the time of connection from Object Explorer.  You can view your registered servers in SSMS by navigating to **View**\\**Registered Servers** from the menu.
   
  **In This Topic**  
   
@@ -38,28 +38,28 @@ In Object Explorer, right-click a server to which you already are connected, and
 This field defaults to the server name you connected to.  Optionally, you can type a server name or choose one from the drop-down list.
 
 **Authentication**  
-Two authentication modes are available when connecting to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. 
+Two authentication modes are available when connecting to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. 
 
 -    **Windows Authentication**  
-Windows Authentication mode allows a user to connect through a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows user account. 
+Windows Authentication mode allows a user to connect through a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows user account. 
 
 -    **SQL Server Authentication**   
-When a user connects with a specified login name and password from a nontrusted connection, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] performs the authentication itself by checking whether a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login account has been set up and whether the specified password matches the one previously recorded. If [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not have a login account set, authentication fails, and the user receives an error message.
+When a user connects with a specified login name and password from a nontrusted connection, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] performs the authentication itself by checking whether a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login account has been set up and whether the specified password matches the one previously recorded. If [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not have a login account set, authentication fails, and the user receives an error message.
 
      > [!IMPORTANT]  
-     > [!INCLUDE[ssNoteWinAuthentication](../../integration-services/includes/ssnotewinauthentication-md.md)] For more information, see [Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md).  
+     > [!INCLUDE[ssNoteWinAuthentication](../../a9retired/includes/ssnotewinauthentication-md.md)] For more information, see [Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md).  
 
      -    **User name**  
 Shows the current user name you are connecting with. This read-only option is only available if you have selected to connect using Windows Authentication. To change **User names**, log in to the computer as a different user. 
 
      -    **Login**  
-Enter the login to connect with. This option is available only if you have selected to connect using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication.  
+Enter the login to connect with. This option is available only if you have selected to connect using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication.  
 
      -    **Password**  
-Enter the password for the login. This option can be edited only if you have selected to connect by using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication. 
+Enter the password for the login. This option can be edited only if you have selected to connect by using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication. 
 
      -    **Remember password**  
-Select to have [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] encrypt and store the password you have entered. This option is displayed only if you have selected to connect using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication.  
+Select to have [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] encrypt and store the password you have entered. This option is displayed only if you have selected to connect using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication.  
 
           > [!NOTE]  
           > If you have stored the password and want to stop storing it, clear this check box, and then click **Save**.  

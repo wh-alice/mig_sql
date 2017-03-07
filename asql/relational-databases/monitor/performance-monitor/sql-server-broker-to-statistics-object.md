@@ -33,7 +33,7 @@ manager: "jhubbard"
 |**Avg. Time Between Batches Base**|For internal use only.| 
 |**Tran Object Gets/sec**|The number of times per second that dialogs requested transmission objects.|  
 |**Tran Objects Marked Dirty/sec**|The number of times per second that transmission objects were marked as dirty. Transmission objects are marked as dirty by the first modification that causes the in-memory copy to differ from the copy stored in **tempdb**. Transmission objects are modified when [!INCLUDE[ssSB](../../../database-engine/configure/windows/includes/sssb-md.md)] has to record a change in the state of message transmissions for the dialog.|  
-|**Tran Object Writes/sec**|The number of times per second that a batch of transmission objects were written to **tempdb** work tables. Large numbers of writes could indicate that [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] memory is being stressed.|  
+|**Tran Object Writes/sec**|The number of times per second that a batch of transmission objects were written to **tempdb** work tables. Large numbers of writes could indicate that [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] memory is being stressed.|  
   
 ## See Also  
  [SQL Server, Access Methods Object](../../../relational-databases/monitor/performance-monitor/sql-server-access-methods-object.md)   

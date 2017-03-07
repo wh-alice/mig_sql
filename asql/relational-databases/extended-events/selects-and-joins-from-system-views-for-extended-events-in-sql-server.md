@@ -16,7 +16,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # SELECTs and JOINs From System Views for Extended Events in SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
 This article explains the two sets of system views that relate to extended events in Microsoft SQL Server, and in the Azure SQL Database cloud service. The article illustrates:
@@ -78,7 +78,7 @@ This section matches and correlates three different technological perspectives o
 Every month it is wise to [install the latest update of SSMS](http://msdn.microsoft.com/library/mt238290.aspx), to avoid unexpected failures.
 
 
-Reference documentation about the catalog views for extended events is at [Extended Events Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md).
+Reference documentation about the catalog views for extended events is at [Extended Events Catalog Views (Transact-SQL)](../../relational-databases/reference/system-catalog-views/extended-events-catalog-views-transact-sql.md).
 
 
 &nbsp;
@@ -377,7 +377,7 @@ This completes the the section on catalog views.
 We now shift to DMVs. This section provides several Transact-SQL SELECT statements which each serve a specific useful business purpose. Further, the SELECTs demonstrate how you can JOIN the DMVs together for any new uses you want.
 
 
-Reference documentation of the DMVs is available at [Extended Events Dynamic Management Views](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)
+Reference documentation of the DMVs is available at [Extended Events Dynamic Management Views](../../relational-databases/reference/system-dynamic-management-views/extended-events-dynamic-management-views.md)
 
 
 In this article, any actual output rows from the following SELECTs are from SQL Server 2016, unless otherwise specified.

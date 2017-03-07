@@ -51,7 +51,7 @@ manager: "jhubbard"
 |**Settings**|Lists processing settings for the specified objects.|  
   
  **Add**  
- Add an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] object to the list.  
+ Add an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] object to the list.  
   
  **Remove**  
  Select an object, and then click **Delete**.  
@@ -59,7 +59,7 @@ manager: "jhubbard"
  **Impact Analysis**  
  Perform impact analysis on the selected object.  
   
- **Related Topics:** [Impact Analysis Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../Topic/Impact%20Analysis%20Dialog%20Box%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)  
+ **Related Topics:** [Impact Analysis Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../a9retired/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **Batch Settings Summary**  
  |Property|Description|  
@@ -73,7 +73,7 @@ manager: "jhubbard"
  **Change Settings**  
  Change the processing options and the handling of errors in dimension keys.  
   
- **Related Topics:** [Change Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../Topic/Change%20Settings%20Dialog%20Box%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)  
+ **Related Topics:** [Change Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../a9retired/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   

@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # JSON Data (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 JSON is a popular textual data format used for exchanging data in  modern web and mobile applications. JSON is  also used for storing unstructured data in log files or NoSQL databases like Microsoft Azure DocumentDB. Many REST web services return results formatted as JSON text or accept data formatted as JSON. For example, most Azure services such as Azure Search, Azure Storage, and Azure DocumentDb have REST endpoints that return or consume JSON. JSON is also the main format for exchanging data between web pages and web servers using AJAX calls.  
   
@@ -161,7 +161,7 @@ The **FOR JSON** clause formats SQL results as JSON text that can be provided to
 }] 
 ```  
   
- For more info, see [Format Query Results as JSON with FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md) and [FOR Clause &#40;Transact-SQL&#41;](../Topic/FOR%20Clause%20\(Transact-SQL\).md).  
+ For more info, see [Format Query Results as JSON with FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md) and [FOR Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md).  
   
 ## Combine relational and JSON data
  SQL Server provides a hybrid model for storing and processing both relational and JSON data using standard Transact-SQL language. You can organize collections of your JSON documents in tables, establish relationships between them, combine strongly-typed scalar columns stored in tables with flexible key/value pairs stored in JSON columns, and query both scalar and JSON values in one or more tables using full Transact-SQL.
@@ -170,7 +170,7 @@ JSON text is typically stored in varchar or nvarchar columns and is indexed as p
 
 If you have pure JSON workloads where you want to use a query language that's customized for the processing of JSON documents, consider Microsoft Azure [DocumentDB](https://azure.microsoft.com/services/documentdb/).  
   
- Here are some use cases that show how you can use the built-in JSON support in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Here are some use cases that show how you can use the built-in JSON support in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## Return data from a SQL Server table formatted as JSON  
  If you have a web service that takes data from the database layer and returns it in JSON format, or JavaScript frameworks or libraries that accept data formatted as JSON, you can format JSON output directly in a SQL query. Instead of writing code or including a library to convert tabular query results and then serialize objects to JSON format, you can use FOR JSON to delegate the JSON formatting to SQL Server.  
@@ -195,7 +195,7 @@ FOR JSON AUTO
 The output of this query is JSON text that's fully compliant with OData spec. Formatting and escaping are handled by SQL Server. SQL Server can also format query results in any format such as OData JSON or GeoJSON - for more info, see [Returning spatial data in GeoJSON format](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/returning-spatial-data-in-geojson-format-part-1).  
   
 ## Analyze JSON data with SQL queries  
- If you have to filter or aggregate JSON data for reporting purposes, you can use **OPENJSON** to transform JSON to relational format. Then use standard [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] and built-in functions to prepare the reports.  
+ If you have to filter or aggregate JSON data for reporting purposes, you can use **OPENJSON** to transform JSON to relational format. Then use standard [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] and built-in functions to prepare the reports.  
   
 ```tsql  
 SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date  
@@ -318,7 +318,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   
 ### Reference topics  
   
--   [FOR Clause &#40;Transact-SQL&#41;](../Topic/FOR%20Clause%20\(Transact-SQL\).md) (FOR JSON)  
+-   [FOR Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md) (FOR JSON)  
   
 -   [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  
   

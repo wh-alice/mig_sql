@@ -83,7 +83,7 @@ The basic syntax is: INSERT, table name, column list, VALUES, and then a list of
     ```  
   
 ## Next Task in Lesson  
-[Reading the Data in a Table &#40;Tutorial&#41;](../Topic/Reading%20the%20Data%20in%20a%20Table%20(Tutorial).md)  
+[Reading the Data in a Table &#40;Tutorial&#41;](../../t-sql/tutorials/lesson-1-4-reading-the-data-in-a-table.md)  
   
 ## See Also  
 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)  

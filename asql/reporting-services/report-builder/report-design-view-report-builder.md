@@ -92,7 +92,7 @@ manager: "erikre"
   
  For more about items in the Report Data pane, see the following topics:  
   
--   [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](../Topic/Built-in%20Globals%20and%20Users%20References%20\(Report%20Builder%20and%20SSRS\).md)  
+-   [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
 -   [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   

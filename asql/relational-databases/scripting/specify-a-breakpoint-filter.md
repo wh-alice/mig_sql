@@ -22,7 +22,7 @@ manager: "jhubbard"
   A breakpoint filter limits the breakpoint to acting only on specified computers, operating system processes, and threads. Breakpoint filters are typically used when debugging parallel applications.  
   
 ##  <a name="BKMK_ActionConsiderations"></a> Filter Considerations  
- Breakpoint filters are not typically used with the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] debugger because [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] scripts and stored procedures are not parallel applications.  
+ Breakpoint filters are not typically used with the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] debugger because [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] scripts and stored procedures are not parallel applications.  
   
 #### To Specify a Breakpoint Filter  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
     -   **ProcessID**, and **ProcessName** are the operating system process running the instance of the Database Engine.  
   
-    -   **ThreadID** and **ThreadName** are the operating system thread running the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] batch, procedure, or function in the instance of the Database Engine.  
+    -   **ThreadID** and **ThreadName** are the operating system thread running the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] batch, procedure, or function in the instance of the Database Engine.  
   
 3.  Click **OK** to implement the changes, or **Cancel** to exit without applying the changes.  
   

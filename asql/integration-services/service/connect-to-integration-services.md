@@ -15,11 +15,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Connect to Integration Services
-  Before you connect to the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] service, the administrator must grant you access to the service. For more information, see [Grant Permissions to Integration Services Service](../../integration-services/service/grant-permissions-to-integration-services-service.md).  
+  Before you connect to the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] service, the administrator must grant you access to the service. For more information, see [Grant Permissions to Integration Services Service](../../integration-services/service/grant-permissions-to-integration-services-service.md).  
   
 ### To open connect to Integration Services Service  
   
-1.  Open [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+1.  Open [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 2.  Click **Object Explorer** on the **View** menu.  
   

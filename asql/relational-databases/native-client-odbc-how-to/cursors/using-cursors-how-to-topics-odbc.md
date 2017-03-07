@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using Cursors How-to Topics (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
   To use cursors, you must first set connection and statement attributes that control ODBC cursor behavior. Cursors allow an application to retrieve multiple rows on each fetch and execute UPDATE, INSERT, or DELETE statements at the current location of the cursor.  
   

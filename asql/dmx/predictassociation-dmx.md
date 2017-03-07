@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # PredictAssociation (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Predicts associative membership.  
   
@@ -36,7 +36,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ```  
   
 ## Applies To  
- Algorithms that contain predictable nested tables, including association and some classification algorithms. Classification algorithms that support nested tables include the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Decision Trees, [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Naive Bayes, and [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Neural Network algorithms.  
+ Algorithms that contain predictable nested tables, including association and some classification algorithms. Classification algorithms that support nested tables include the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Decision Trees, [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Naive Bayes, and [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Neural Network algorithms.  
   
 ## Return Type  
  \<table expression>  

@@ -37,7 +37,7 @@ manager: "jhubbard"
  **New Variable**  
  Create a new variable.  
   
- **Related Topics:** [Add Variable](../Topic/Add%20Variable.md)  
+ **Related Topics:** [Add Variable](../../a9retired/add-variable.md)  
   
 ## See Also  
  [Message Queue Task](../../integration-services/control-flow/message-queue-task.md)  

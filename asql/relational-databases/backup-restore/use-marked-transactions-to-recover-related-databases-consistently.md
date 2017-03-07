@@ -25,9 +25,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use Marked Transactions to Recover Related Databases Consistently
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  This topic is relevant only for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases that are using the full or bulk-logged recovery models.  
+  This topic is relevant only for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] databases that are using the full or bulk-logged recovery models.  
   
  When you make related updates to two or more databases, *related databases*, you can use transaction marks to recover them to a logically consistent point. However, this recovery loses any transaction that is committed after the mark that was used as the recovery point. Marking transactions is suitable only when you are testing related databases or when you are willing to lose recently committed transactions.  
   
@@ -65,7 +65,7 @@ manager: "jhubbard"
   
 -   Because transaction marks consume log space, use them only for transactions that play a significant role in the database recovery strategy.  
   
--   After a marked transaction commits, a row is inserted in the [logmarkhistory](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) table in **msdb**.  
+-   After a marked transaction commits, a row is inserted in the [logmarkhistory](../../relational-databases/reference/system-tables/logmarkhistory-transact-sql.md) table in **msdb**.  
   
 -   If a marked transaction spans multiple databases on the same database server or on different servers, the marks must be recorded in the logs of all the affected databases.  
   
@@ -124,7 +124,7 @@ RESTORE LOG AdventureWorks
 ## Forcing a Mark to Spread to Other Servers  
  A transaction mark name is not automatically distributed to another server as the transaction spreads there. To force the mark to spread to the other servers, a stored procedure must be written that contains a BEGIN TRAN *name* WITH MARK statement. That stored procedure must then be executed on the remote server under the scope of the transaction in the originating server.  
   
- For example, consider a partitioned database that exists on multiple instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. On each instance is a database named `coyote`. First, in every database, create a stored procedure, for example, `sp_SetMark`.  
+ For example, consider a partitioned database that exists on multiple instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. On each instance is a database named `coyote`. First, in every database, create a stored procedure, for example, `sp_SetMark`.  
   
 ```tsql  
 CREATE PROCEDURE sp_SetMark  
@@ -178,7 +178,7 @@ GO
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../Topic/BEGIN%20TRANSACTION%20\(Transact-SQL\).md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Full Database Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Recovery of Related  Databases That Contain Marked Transaction](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)  
   
   

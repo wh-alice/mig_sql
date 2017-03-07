@@ -131,7 +131,7 @@ VALUES
  Node `/3/1/1.1/` is greater than node `/3/1/1/` but at the same level in the hierarchy.  
   
 ### D. Scalar examples  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports arbitrary insertions and deletions of any **hierarchyid** nodes. By using GetDescendant(), it is always possible to generate a node between any two **hierarchyid** nodes. Execute the following code to generate sample nodes using `GetDescendant`:  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports arbitrary insertions and deletions of any **hierarchyid** nodes. By using GetDescendant(), it is always possible to generate a node between any two **hierarchyid** nodes. Execute the following code to generate sample nodes using `GetDescendant`:  
   
 ```  
 DECLARE @h hierarchyid = hierarchyid::GetRoot();  
@@ -159,8 +159,8 @@ Console.Write(parent.GetDescendant(child1, child2).ToString());
 ```  
   
 ## See Also  
- [hierarchyid Data Type Method Reference](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)   
+ [hierarchyid Data Type Method Reference](../../a9retired/hierarchyid-data-type-method-reference.md)   
  [Hierarchical Data &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)   
- [hierarchyid &#40;Transact-SQL&#41;](../Topic/hierarchyid%20\(Transact-SQL\).md)  
+ [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

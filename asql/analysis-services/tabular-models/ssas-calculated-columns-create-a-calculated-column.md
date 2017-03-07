@@ -45,7 +45,7 @@ manager: "erikre"
 >  You can use DAX Formula AutoComplete in the middle of an existing formula with nested functions. The text immediately before the insertion point is used to display values in the drop-down list, and all of the text after the insertion point remains unchanged.  
   
 ## See Also  
- [Calculated Columns &#40;SSAS Tabular&#41;](../Topic/Calculated%20Columns%20\(SSAS%20Tabular\).md)   
+ [Calculated Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [Measures &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   

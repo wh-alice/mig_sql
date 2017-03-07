@@ -26,16 +26,16 @@ For more information, see [Dimension Relationships](../../analysis-services/mult
   
 This lesson contains the following tasks:  
   
-[Defining a Referenced Relationship](../Topic/Defining%20a%20Referenced%20Relationship.md)  
+[Defining a Referenced Relationship](../../analysis-services/tutorials/lesson-5-1-defining-a-referenced-relationship.md)  
 In this task, you learn to link a dimension to a fact table indirectly through a dimension that is linked directly through a primary key–foreign key relationship.  
   
-[Defining a Fact Relationship](../Topic/Defining%20a%20Fact%20Relationship.md)  
+[Defining a Fact Relationship](../../analysis-services/tutorials/lesson-5-2-defining-a-fact-relationship.md)  
 In this task, you learn to define a dimension based on data in the fact table, and to define the dimension relationship as a fact relationship.  
   
-[Defining a Many-to-Many Relationship](../Topic/Defining%20a%20Many-to-Many%20Relationship.md)  
+[Defining a Many-to-Many Relationship](../../analysis-services/tutorials/lesson-5-3-defining-a-many-to-many-relationship.md)  
 In this task, you learn to relate a fact to multiple dimension members through the definition of a many-to-many relationship between dimension tables and fact tables.  
   
-[Defining Dimension Granularity within a Measure Group](../Topic/Defining%20Dimension%20Granularity%20within%20a%20Measure%20Group.md)  
+[Defining Dimension Granularity within a Measure Group](../../analysis-services/tutorials/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
 In this task, you learn to modify the granularity of a dimension for a specific measure group.  
   
 ## Next Lesson  

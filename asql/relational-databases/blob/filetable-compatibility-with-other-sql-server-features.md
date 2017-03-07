@@ -17,16 +17,16 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # FileTable Compatibility with Other SQL Server Features
-  Describes how FileTables work with other features of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Describes how FileTables work with other features of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ##  <a name="alwayson"></a> AlwaysOn Availability Groups and FileTables  
  When the database that contains FILESTREAM or FileTable data belongs to an AlwaysOn availability group:  
   
--   FileTable functionality is partially supported by [!INCLUDE[ssHADR](../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)]. After a failover, FileTable data is accessible on the primary replica, but FileTable data is not accessible on readable secondary replicas.  
+-   FileTable functionality is partially supported by [!INCLUDE[ssHADR](../../a9notintoc/includes/sshadr-md.md)]. After a failover, FileTable data is accessible on the primary replica, but FileTable data is not accessible on readable secondary replicas.  
   
     > **NOTE:**  Notice that after a failover all FILESTREAM functionality is supported. FILESTREAM data is accessible on both readable secondary replicas and on the new primary.  
   
--   The FILESTREAM and FileTable functions accept or return virtual network names (VNNs) instead of computer names. For more information about these functions, see [Filestream and FileTable Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md).  
+-   The FILESTREAM and FileTable functions accept or return virtual network names (VNNs) instead of computer names. For more information about these functions, see [Filestream and FileTable Functions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/filestream-and-filetable-functions-transact-sql.md).  
   
 -   All access to FILESTREAM or FileTable data through the file system APIs should use VNNs instead of computer names. For more information, see [FILESTREAM and FileTable with Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
@@ -97,9 +97,9 @@ manager: "jhubbard"
   
 -   When non_transactional access is set to FULL for the database, then a transaction running under RCSI or SI has the following behavior:  
   
-    -   Any [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] reads of the FileTable file_stream column fail. INSERT and UPDATE to the column still succeed, as long as they do not read from the file_stream column.  
+    -   Any [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] reads of the FileTable file_stream column fail. INSERT and UPDATE to the column still succeed, as long as they do not read from the file_stream column.  
   
-    -   If the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement specifies READCOMMITTEDLOCK table hints, the reads succeed, and take locks on the rows, rather than use row versioning.  
+    -   If the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement specifies READCOMMITTEDLOCK table hints, the reads succeed, and take locks on the rows, rather than use row versioning.  
   
     -   Transacted Win32 FileStream open requests also fail.  
   

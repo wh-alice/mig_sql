@@ -27,9 +27,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Understanding the DMX Select Statement
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  The [SELECT](../dmx/select-dmx.md) statement is the basis for most queries that you create with Data Mining Extensions (DMX) in [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)]. It can perform many different kinds of tasks, such as browsing and predicting against data mining models.  
+  The [SELECT](../dmx/select-dmx.md) statement is the basis for most queries that you create with Data Mining Extensions (DMX) in [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)]. It can perform many different kinds of tasks, such as browsing and predicting against data mining models.  
   
  Following are the tasks that you can complete by using the **SELECT** statement:  
   
@@ -112,7 +112,7 @@ manager: "erikre"
   
 ## See Also  
  [Data Mining Extensions &#40;DMX&#41; Reference](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40;DMX&#41; Syntax Conventions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)  
   
   

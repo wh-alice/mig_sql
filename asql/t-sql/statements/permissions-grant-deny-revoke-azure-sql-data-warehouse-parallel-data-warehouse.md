@@ -17,9 +17,9 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # Permissions: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../a9retired/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Use [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]**GRANT** and **DENY** statements to grant or deny a permission (such as **UPDATE**) on a securable (such as a database, table, view, etc.) to a security principal (a login, a database user, or a database role). Use **REVOKE** to remove the grant or deny of a permission.  
+  Use [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]**GRANT** and **DENY** statements to grant or deny a permission (such as **UPDATE**) on a securable (such as a database, table, view, etc.) to a security principal (a login, a database user, or a database role). Use **REVOKE** to remove the grant or deny of a permission.  
   
  Server level permissions are applied to logins. Database level permissions are applied to database users and database roles.  
   
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   **REVOKE** removes existing **GRANT** or **DENY** permissions.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -83,7 +83,7 @@ REVOKE
  The class type of the securable. This can be **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE**, or **USER**. Permissions can also be granted to the **SERVER***class_type*, but **SERVER** is not specified for those permissions. **DATABASE** is not specified when the permission includes the word **DATABASE** (for example **ALTER ANY DATABASE**). When no *class_type* is specified and the permission type is not restricted to the server or database class, the class is assumed to be **OBJECT**.  
   
  *securable*  
- The name of the login, database, table, view, schema, procedure, role, or user on which to grant, deny, or revoke permissions. The object name can be specified with the three-part naming rules that are described in [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md).  
+ The name of the login, database, table, view, schema, procedure, role, or user on which to grant, deny, or revoke permissions. The object name can be specified with the three-part naming rules that are described in [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  TO *principal* [ **,**...*n* ]  
  One or more principals being granted, denied, or revoked permissions. Principal is the name of a login, database user, or database role.  
@@ -124,7 +124,7 @@ REVOKE
  An implicit permission can also be inherited from a covering or parent permission. For example, **UPDATE** permission on a table can be inherited by having **UPDATE** permission on the schema that contains the table, or **CONTROL** permission on the table.  
   
 ### Ownership Chaining  
- When multiple database objects access each other sequentially, the sequence is known as a *chain*. Although such chains do not independently exist, when [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] traverses the links in a chain, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] evaluates permissions on the constituent objects differently than it would if it were accessing the objects separately. Ownership chaining has important implications for managing security. For more information about ownership chains, see [Ownership Chains](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx) and [Tutorial: Ownership Chains and Context Switching](http://msdn.microsoft.com/en-us/library/bb153640\(v=sql11\).aspx).  
+ When multiple database objects access each other sequentially, the sequence is known as a *chain*. Although such chains do not independently exist, when [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] traverses the links in a chain, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] evaluates permissions on the constituent objects differently than it would if it were accessing the objects separately. Ownership chaining has important implications for managing security. For more information about ownership chains, see [Ownership Chains](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx) and [Tutorial: Ownership Chains and Context Switching](http://msdn.microsoft.com/en-us/library/bb153640\(v=sql11\).aspx).  
   
 ## Permission List  
   
@@ -260,7 +260,7 @@ REVOKE
   
 -   The **USE** statement does not require permissions. All principals can run the **USE** statement on any database.  
   
-##  <a name="Examples"></a> Examples: [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+##  <a name="Examples"></a> Examples: [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### A. Granting a server level permission to a login  
  The following two statements grant a server level permission to a login.  

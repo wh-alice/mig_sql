@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Enable Resource Governor
-  The Resource Governor is turned off by default. You can enable the Resource Governor by using either [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or Transact-SQL.  
+  The Resource Governor is turned off by default. You can enable the Resource Governor by using either [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or Transact-SQL.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -41,14 +41,14 @@ manager: "jhubbard"
 ##  <a name="RGOnObjEx"></a> Enable Resource Governor Using Object Explorer  
  **To enable the Resource Governor by using Object Explorer**  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to **Resource Governor**.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to **Resource Governor**.  
   
 2.  Right-click **Resource Governor**, and then click **Enable**.  
   
 ##  <a name="RGOnProp"></a> Enable Resource Governor Using Resource Governor Properties  
  **To enable the Resource Governor by using the Resource Governor Properties page**  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to **Resource Governor**.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to **Resource Governor**.  
   
 2.  Right-click **Resource Governor** and then click **Properties**, this opens the **Resource Governor Properties** page.  
   

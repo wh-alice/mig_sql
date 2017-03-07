@@ -20,11 +20,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # System Requirements
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Management Objects (SMO) uses the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] **System.Data.SqlClient** object driver to connect to and communicate with instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Management Objects (SMO) uses the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] **System.Data.SqlClient** object driver to connect to and communicate with instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- SMO clients require [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client, which is included with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] 2.0.  
+ SMO clients require [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client, which is included with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] 2.0.  
   
- To develop applications by using SMO, you must have [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] 2008 installed.  
+ To develop applications by using SMO, you must have [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] 2008 installed.  
   
 ## See Also  
  [Overview of SQL Server Installation](http://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  

@@ -19,12 +19,12 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Static Aggregate Geography Methods
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports the following aggregate methods as extensions to the static geography methods of the Open Geospatial Consortium (OGC).  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] supports the following aggregate methods as extensions to the static geography methods of the Open Geospatial Consortium (OGC).  
   
 > [!NOTE]  
->  These aggregate methods are exposed only in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. They are not exposed in the Microsoft.SqlServer.Types assembly.  
+>  These aggregate methods are exposed only in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. They are not exposed in the Microsoft.SqlServer.Types assembly.  
   
  For more information on OGC specifications, see the following resources:  
   

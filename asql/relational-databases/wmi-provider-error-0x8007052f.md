@@ -30,9 +30,9 @@ manager: "jhubbard"
 |Message Text|Logon failure: user account restriction. Possible reasons are blank passwords not allowed, login hour restrictions, or a policy restriction has been enforced.|  
   
 ## Explanation  
- This error can occur when using [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager to switch to the built-in accounts (Network Service, Local Service, or Local System) when [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] is running on a Windows Server Cluster or Windows Server Domain Controller. Do not run services under built-in accounts on a Windows Server Cluster or Windows Server Domain Controller. For recommendations on service accounts, see the topic Setting Up Windows Service Accounts in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Books Online.  
+ This error can occur when using [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager to switch to the built-in accounts (Network Service, Local Service, or Local System) when [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] is running on a Windows Server Cluster or Windows Server Domain Controller. Do not run services under built-in accounts on a Windows Server Cluster or Windows Server Domain Controller. For recommendations on service accounts, see the topic Setting Up Windows Service Accounts in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Books Online.  
   
 ## User Action  
- Configure [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] to use a domain account.  
+ Configure [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] to use a domain account.  
   
   

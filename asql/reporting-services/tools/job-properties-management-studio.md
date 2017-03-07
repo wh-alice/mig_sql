@@ -20,10 +20,10 @@ manager: "erikre"
 # Job Properties (Management Studio)
   Use the **Job Properties** page to view information about an in-progress report or subscription before you cancel it.  
   
- To open this page, start [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], connect to a report server, and open the **Jobs** folder. Right-click a job that is running, and then click **Properties**.  
+ To open this page, start [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], connect to a report server, and open the **Jobs** folder. Right-click a job that is running, and then click **Properties**.  
   
 > [!NOTE]  
->  This feature is not supported in [!INCLUDE[ssExpress](../../database-engine/configure/windows/includes/ssexpress-md.md)] with Advanced Services. The page does not appear when you are running [!INCLUDE[ssExpress](../../database-engine/configure/windows/includes/ssexpress-md.md)].  
+>  This feature is not supported in [!INCLUDE[ssExpress](../../a9notintoc/includes/ssexpress-md.md)] with Advanced Services. The page does not appear when you are running [!INCLUDE[ssExpress](../../a9notintoc/includes/ssexpress-md.md)].  
   
 ## Tasks  
  Before you can view information about a job, refresh the page to retrieve information about jobs that are currently running on the report server:  
@@ -48,7 +48,7 @@ manager: "erikre"
  For reports, this column shows which report execution processes are underway. This value is always **Render**.  
   
  **Job Description**  
- [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] does not provide job descriptions by default.  
+ [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] does not provide job descriptions by default.  
   
  **Server Name**  
  Shows the name of the report server that is processing the job. If you configured a scale-out deployment, this value will show which server is processing the job.  

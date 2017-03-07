@@ -29,14 +29,14 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SET ANSI_NULLS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Specifies ISO compliant behavior of the Equals (=) and Not Equal To (<>) comparison operators when they are used with null values in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  Specifies ISO compliant behavior of the Equals (=) and Not Equal To (<>) comparison operators when they are used with null values in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
->  In a future version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], ANSI_NULLS will always be ON and any applications that explicitly set the option to OFF will generate an error. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
+>  In a future version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], ANSI_NULLS will always be ON and any applications that explicitly set the option to OFF will generate an error. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -65,12 +65,12 @@ SET ANSI_NULLS ON;
   
  SET ANSI_NULLS should be set to ON for executing distributed queries.  
   
- SET ANSI_NULLS must also be ON when you are creating or changing indexes on computed columns or indexed views. If SET ANSI_NULLS is OFF, any CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views will fail. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will return an error that lists all SET options that violate the required values. Also, when you execute a SELECT statement, if SET ANSI_NULLS is OFF, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will ignore the index values on computed columns or views and resolve the select operation as if there were no such indexes on the tables or views.  
+ SET ANSI_NULLS must also be ON when you are creating or changing indexes on computed columns or indexed views. If SET ANSI_NULLS is OFF, any CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views will fail. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will return an error that lists all SET options that violate the required values. Also, when you execute a SELECT statement, if SET ANSI_NULLS is OFF, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will ignore the index values on computed columns or views and resolve the select operation as if there were no such indexes on the tables or views.  
   
 > [!NOTE]  
 >  ANSI_NULLS is one of seven SET options that must be set to required values when dealing with indexes on computed columns or indexed views. The options ANSI_PADDING, ANSI_WARNINGS, ARITHABORT, QUOTED_IDENTIFIER, and CONCAT_NULL_YIELDS_NULL must also be set to ON, and NUMERIC_ROUNDABORT must be set to OFF.  
   
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] automatically set ANSI_NULLS to ON when connecting. This setting can be configured in ODBC data sources, in ODBC connection attributes, or in OLE DB connection properties that are set in the application before connecting to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The default for SET ANSI_NULLS is OFF.  
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] automatically set ANSI_NULLS to ON when connecting. This setting can be configured in ODBC data sources, in ODBC connection attributes, or in OLE DB connection properties that are set in the application before connecting to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. The default for SET ANSI_NULLS is OFF.  
   
  When SET ANSI_DEFAULTS is ON, SET ANSI_NULLS is enabled.  
   

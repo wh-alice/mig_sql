@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLFreeStmt
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   Generally   
       **SQLFreeStmt** is not recommended in ODBC 3.0 and later. However if the application needs to reuse the statement you should still use **SQLFreeStmt** with the **SQL_RESET_PARAMS** and **SQL_UNBIND** options). You might also use [SQLCloseCursor](../../relational-databases/extended-stored-procedures-reference/sqlclosecursor.md), [SQLBindParameter](../../relational-databases/extended-stored-procedures-reference/sqlbindparameter.md), [SQLBindCol](../../relational-databases/extended-stored-procedures-reference/sqlbindcol.md), [SQLSetDescField](../../relational-databases/extended-stored-procedures-reference/sqlsetdescfield.md), and [SQLFreeHandle](../../relational-databases/extended-stored-procedures-reference/sqlfreehandle.md) to replace or duplicate the function of **SQLFreeStmt** and should use them instead.  

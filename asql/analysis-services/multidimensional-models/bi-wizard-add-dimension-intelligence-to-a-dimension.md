@@ -30,7 +30,7 @@ manager: "erikre"
  On the first **Set Dimension Intelligence Options** page of the wizard, you specify the dimension to which you want to apply dimension intelligence. The dimension intelligence enhancement added to this selected dimension will result in changes to the dimension. These changes will be inherited by all cubes that include the selected dimension.  
   
 > [!NOTE]  
->  If you select **Account** as the dimension, you will be specifying account intelligence for the dimension. For more information, see [Add Account Intelligence to a Dimension](../Topic/Add%20Account%20Intelligence%20to%20a%20Dimension.md).  
+>  If you select **Account** as the dimension, you will be specifying account intelligence for the dimension. For more information, see [Add Account Intelligence to a Dimension](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
 ## Specifying Dimension Attributes  
  On the **Define Dimension Intelligence** page, in **Dimension Type** list, the selection that you make sets the dimension's **Type** property. The **Type** property setting provides information to servers and client applications about the contents of a dimension. Some settings only provide guidance for client applications; these settings are optional. Other settings, such as Accounts or Time, determine specific behaviors and may be required to implement particular business intelligence enhancements. For example, the SQL Server Management Studio uses the dimension type to identify a Currency dimension and set the appropriate currency conversion rules. The default setting for the **Dimension Type** is **Regular**, which makes no assumptions about the contents of the dimension.  

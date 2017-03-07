@@ -15,7 +15,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Report Server Properties (Advanced Tab)
-  This service is the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]. If custom properties are defined, they appear on this tab, with their values.  
+  This service is the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]. If custom properties are defined, they appear on this tab, with their values.  
   
 ## Options  
  **Customer Feedback Reporting**  
@@ -25,7 +25,7 @@ manager: "jhubbard"
  Displays the location where memory dumps are placed in case of an error.  
   
  **Error Reporting**  
- When set to **Yes**, the Dr. Watson program forwards information to either [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] or your error server if a serious failure occurs. For more information on Error Reporting, search Books Online for the topic, "Error and Usage Report Settings."  
+ When set to **Yes**, the Dr. Watson program forwards information to either [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] or your error server if a serious failure occurs. For more information on Error Reporting, search Books Online for the topic, "Error and Usage Report Settings."  
   
  **Instance ID**  
  Indicates the instance that uses this service.  

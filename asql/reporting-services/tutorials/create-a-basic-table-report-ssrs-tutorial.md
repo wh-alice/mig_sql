@@ -21,16 +21,16 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Create a Basic Table Report (SSRS Tutorial)
-In this tutorial, you use Report Designer in SQL Server Data Tools to create a basic [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report with a table, based on the **[!INCLUDE[ssSampleDBAdventureworks2014_md](../../reporting-services/tutorials/includes/sssampledbadventureworks2014-md.md)]** database. You can also create [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports with Report Builder. 
+In this tutorial, you use Report Designer in SQL Server Data Tools to create a basic [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report with a table, based on the **[!INCLUDE[ssSampleDBAdventureworks2014_md](../../reporting-services/tutorials/includes/sssampledbadventureworks2014-md.md)]** database. You can also create [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports with Report Builder. 
 
 As you go through this tutorial, you will create a report project, set up connection information, define a query, add a Table data region, group and total some fields, and preview the report.  
   
 ## Requirements  
 Your system must have the following installed to use this tutorial:  
   
--   [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] database engine.  
+-   [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] database engine.  
   
--   [!INCLUDE[ssRSCurrent](../../reporting-services/includes/ssrscurrent-md.md)] in native mode.  
+-   [!INCLUDE[ssRSCurrent](../../a9notintoc/includes/ssrscurrent-md.md)] in native mode.  
   
 -   The [!INCLUDE[ssSampleDBAdventureworks2014_md](../../reporting-services/tutorials/includes/sssampledbadventureworks2014-md.md)] database.  For more information, see [Adventure Works 2014 Sample Databases)](https://msftdbprodsamples.codeplex.com/releases/view/125550).  
   
@@ -41,9 +41,9 @@ You must also have read-only permissions to retrieve data from the [!INCLUDE[ssS
 **Estimated time to complete the tutorial:** 30 minutes.
   
 ## Tasks  
-[Lesson 1: Creating a Report Server Project &#40;Reporting Services&#41;](../Topic/Lesson%201:%20Creating%20a%20Report%20Server%20Project%20(Reporting%20Services).md)  
+[Lesson 1: Creating a Report Server Project &#40;Reporting Services&#41;](../../reporting-services/tutorials/675671ca-e6c9-48a2-82e9-386778f3a49f.md)  
   
-[Lesson 2: Specifying Connection Information &#40;Reporting Services&#41;](../Topic/Lesson%202:%20Specifying%20Connection%20Information%20(Reporting%20Services).md)  
+[Lesson 2: Specifying Connection Information &#40;Reporting Services&#41;](../../reporting-services/tutorials/54405a3a-d7fa-4d95-8963-9aa224e5901e.md)  
   
 [Lesson 3: Defining a Dataset for the Table Report &#40;Reporting Services&#41;](../../reporting-services/tutorials/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
   

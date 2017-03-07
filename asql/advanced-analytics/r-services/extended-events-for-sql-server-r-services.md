@@ -16,9 +16,9 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Extended Events for SQL Server R Services
-  [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] provides a set of extended events to use in troubleshooting operations related to the [!INCLUDE[rsql_launchpad](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)] or R jobs sent to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] provides a set of extended events to use in troubleshooting operations related to the [!INCLUDE[rsql_launchpad](../../a9notintoc/includes/rsql-launchpad-md.md)] or R jobs sent to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- To view a list of events related to SQL Server, run the following query from [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+ To view a list of events related to SQL Server, run the following query from [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 ```  
 select o.name as event_name, o.description  
@@ -29,7 +29,7 @@ select o.name as event_name, o.description
    and p.name = 'SQLSatellite';  
 ```  
   
- However, some additional extended events for [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] are fired only from external processes, such as the [!INCLUDE[rsql_launchpad](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)], and BXLServer, the satellite process that starts the R runtime. For more information about how to capture these events, see [Collecting Events from External Processes](#bkmk_externalevents).  
+ However, some additional extended events for [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] are fired only from external processes, such as the [!INCLUDE[rsql_launchpad](../../a9notintoc/includes/rsql-launchpad-md.md)], and BXLServer, the satellite process that starts the R runtime. For more information about how to capture these events, see [Collecting Events from External Processes](#bkmk_externalevents).  
   
  For general information about using extended events, see [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md).  
 
@@ -70,9 +70,9 @@ select o.name as event_name, o.description
 |satellite_sessionId_mismatch|Message's session id is not expected||  
   
 ###  <a name="bkmk_externalevents"></a> Collecting Events from External Processes  
- [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] starts  some services that run outside of the SQL Server process. To capture events related to these external processes, you must create an events trace  configuration file and place the file in the same directory as the executable for the process.  
+ [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] starts  some services that run outside of the SQL Server process. To capture events related to these external processes, you must create an events trace  configuration file and place the file in the same directory as the executable for the process.  
   
--   **[!INCLUDE[rsql_launchpad](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)]**   
+-   **[!INCLUDE[rsql_launchpad](../../a9notintoc/includes/rsql-launchpad-md.md)]**   
   
      To capture events related to the Launchpad, place the *.config* file in the Binn directory for the SQL Server instance.  In a default installation, this would be:
       `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  

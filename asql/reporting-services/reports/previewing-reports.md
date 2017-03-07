@@ -21,7 +21,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Previewing Reports
-  When you design a     [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report, you may want to view it before publishing it to a production environment. You can do this in several ways: by switching to Preview mode in Report Designer, by using the preview window in Report Designer, and by publishing the report to a report server in a test environment.  
+  When you design a     [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] report, you may want to view it before publishing it to a production environment. You can do this in several ways: by switching to Preview mode in Report Designer, by using the preview window in Report Designer, and by publishing the report to a report server in a test environment.  
   
 > [!NOTE]  
 >  When you preview a report, the data for the report is cached to a file on the local computer. When you preview the same report again using the same query, parameters, and credentials, Report Designer retrieves the cached copy rather than rerunning the query. The data file is saved as *\<reportname>*.rdl.data in the same directory as the report definition file. The file is not deleted when you close Report Designer.  
@@ -34,7 +34,7 @@ manager: "erikre"
   
 -   By clicking **Start Debugging** on the **Debug** menu.  
   
--   By clicking the **Start** button on the [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] standard toolbar ![ssrs_ssdt_startdebug](../../reporting-services/reports/media/ssrs-ssdt-startdebug.png "ssrs_ssdt_startdebug").  
+-   By clicking the **Start** button on the [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] standard toolbar ![ssrs_ssdt_startdebug](../../reporting-services/reports/media/ssrs-ssdt-startdebug.png "ssrs_ssdt_startdebug").  
   
 -   By pressing **F5**.  
   
@@ -51,7 +51,7 @@ manager: "erikre"
 ## See Also  
  [Print Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Print a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)   
- [Publish Reports](../Topic/Publish%20Reports.md)   
+ [Publish Reports](../../a9retired/publish-reports.md)   
  [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

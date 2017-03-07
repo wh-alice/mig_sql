@@ -19,7 +19,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Reporting Services Features and Tasks (SSRS)
-  [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] foundational content is organized by reports and report features, report server features, and [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] product features.  
+  [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] foundational content is organized by reports and report features, report server features, and [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] product features.  
   
 ## In This Section  
  [Create mobile reports with SQL Server Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
@@ -49,7 +49,7 @@ manager: "erikre"
  [Reporting Services Tools](../reporting-services/tools/reporting-services-tools.md)  
   
 ## See Also  
- [Reporting Services &#40;SSRS&#41;](../Topic/Reporting%20Services%20\(SSRS\).md)   
- [What's New in Reporting Services &#40;SSRS&#41;](What's%20new%20in%20Reporting%20Services%20\(SSRS\).md)
+ [Reporting Services &#40;SSRS&#41;](../reporting-services/b8d18d3d-9db0-43e7-8286-7b46cc3a37ed.md)   
+ [What's New in Reporting Services &#40;SSRS&#41;](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
   
   

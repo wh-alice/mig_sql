@@ -20,7 +20,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 2-1 - Visualize SQL Server Data using R
-The enhanced packages in [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)] include multiple functions that have been optimized for scalability and parallel processing. Typically these functions are prefixed with *rx* or *Rx*.  
+The enhanced packages in [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)] include multiple functions that have been optimized for scalability and parallel processing. Typically these functions are prefixed with *rx* or *Rx*.  
   
 For this walkthrough, you will use the *rxHistogram* function to view the distribution of values in the _creditLine_ column by gender.  
   
@@ -40,7 +40,7 @@ For this walkthrough, you will use the *rxHistogram* function to view the distri
     rxSetComputeContext(sqlCompute)  
     ```  
  
-3.    The results are exactly the same, since you're using the same data source; however, the computations are performed on the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer.  The results are then returned to your local workstation for plotting.  
+3.    The results are exactly the same, since you're using the same data source; however, the computations are performed on the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] computer.  The results are then returned to your local workstation for plotting.  
    
 ![histogram results](../../../advanced-analytics/r-services/tutorials/media/rsql-sue-histogramresults.jpg "histogram results")  
 
@@ -83,7 +83,7 @@ From even this quick analysis, you can see that the risk of fraud increases with
 For more information about the *rxCube* function and crosstabs in general, see [Data Summaries](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-data-summaries).  
   
 ## Next Step  
-[Create Models &#40;Data Science Deep Dive&#41;](../Topic/Create%20Models%20(Data%20Science%20Deep%20Dive).md)  
+[Create Models &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-2-2-create-models.md)  
   
 ## Previous Step  
 [Lesson 2: Create and Run R Scripts &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-2-create-and-run-r-scripts-data-science-deep-dive.md)  

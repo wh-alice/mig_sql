@@ -31,7 +31,7 @@ manager: "jhubbard"
 
   Overrides the currently configured **query governor cost limit** value for the current connection.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -47,7 +47,7 @@ SET QUERY_GOVERNOR_COST_LIMIT value
  "Query cost" refers to the estimated elapsed time, in seconds, required to complete a query on a specific hardware configuration.  
   
 ## Remarks  
- Using SET QUERY_GOVERNOR_COST_LIMIT applies to the current connection only and lasts the duration of the current connection. Use the [Configure the query governor cost limit Server Configuration Option](../../database-engine/configure/windows/configure-the-query-governor-cost-limit-server-configuration-option.md)option of **sp_configure** to change the server-wide query governor cost limit value. For more information about configuring this option, see [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) and [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure/windows/server-configuration-options-sql-server.md).  
+ Using SET QUERY_GOVERNOR_COST_LIMIT applies to the current connection only and lasts the duration of the current connection. Use the [Configure the query governor cost limit Server Configuration Option](../../database-engine/configure/windows/configure-the-query-governor-cost-limit-server-configuration-option.md)option of **sp_configure** to change the server-wide query governor cost limit value. For more information about configuring this option, see [sp_configure](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md) and [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure/windows/server-configuration-options-sql-server.md).  
   
  The setting of SET QUERY_GOVERNOR_COST_LIMIT is set at execute or run time and not at parse time.  
   

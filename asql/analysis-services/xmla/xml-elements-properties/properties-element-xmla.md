@@ -30,7 +30,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # Properties Element (XMLA)
-  Contains XML for Analysis (XMAL) properties used by the [Discover](../Topic/Discover%20Method%20\(XMLA\).md) and [Execute](../Topic/Execute%20Method%20\(XMLA\).md) methods.  
+  Contains XML for Analysis (XMAL) properties used by the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) and [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) methods.  
   
 ## Syntax  
   
@@ -57,7 +57,7 @@ manager: "erikre"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[Discover](../Topic/Discover%20Method%20\(XMLA\).md), [Execute](../Topic/Execute%20Method%20\(XMLA\).md)|  
+|Parent elements|[Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md), [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
 |Child elements|[PropertyList](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)|  
   
 ## Remarks  
@@ -84,6 +84,6 @@ manager: "erikre"
 ```  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

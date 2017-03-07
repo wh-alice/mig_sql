@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 ### Get the modeling flags used in the model  
   
--   In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], open a DMX Query window, and type a query like the following:  
+-   In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], open a DMX Query window, and type a query like the following:  
   
     ```  
     SELECT COLUMN_NAME, CONTENT_TYPE, MODELING_FLAG  

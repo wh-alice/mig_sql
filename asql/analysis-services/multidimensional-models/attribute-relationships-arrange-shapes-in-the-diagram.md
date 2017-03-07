@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Attribute Relationships - Arrange Shapes in the Diagram
-  You can change the layout of the shapes on the **Attribute Relationships** tab of the Dimension Structure view in Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)].  
+  You can change the layout of the shapes on the **Attribute Relationships** tab of the Dimension Structure view in Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
 ### To arrange shapes in the attribute relationship diagram  
   
@@ -31,6 +31,6 @@ manager: "erikre"
   
 ## See Also  
  [Attribute Relationships](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
- [Define Attribute Relationships](../Topic/Define%20Attribute%20Relationships.md)  
+ [Define Attribute Relationships](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
   
   

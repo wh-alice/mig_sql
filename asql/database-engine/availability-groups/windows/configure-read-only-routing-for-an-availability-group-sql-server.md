@@ -22,7 +22,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Configure Read-Only Routing for an Availability Group (SQL Server)
-  To configure an Always On availability group to support read-only routing in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)], you can use either [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] or PowerShell. *Read-only routing* refers to the ability of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to route qualifying read-only connection requests to an available Always On [readable secondary replica](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) (that is, a replica that is configured to allow read-only workloads when running under the secondary role). To support read-only routing, the availability group must possess an [availability group listener](../Topic/Availability%20Group%20Listeners,%20Client%20Connectivity,%20and%20Application%20Failover%20\(SQL%20Server\).md). Read-only clients must direct their connection requests to this listener, and the client's connection strings must specify the application intent as "read-only." That is, they must be *read-intent connection requests*.  
+  To configure an Always On availability group to support read-only routing in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)], you can use either [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] or PowerShell. *Read-only routing* refers to the ability of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] to route qualifying read-only connection requests to an available Always On [readable secondary replica](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) (that is, a replica that is configured to allow read-only workloads when running under the secondary role). To support read-only routing, the availability group must possess an [availability group listener](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md). Read-only clients must direct their connection requests to this listener, and the client's connection strings must specify the application intent as "read-only." That is, they must be *read-intent connection requests*.  
   
 > [!NOTE]  
 >  For information about how to configure a readable secondary replica, see [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
@@ -42,7 +42,7 @@ manager: "jhubbard"
      [PowerShell](#PowerShellProcedure)  
   
     > [!NOTE]  
-    >  Configuring read-only routing is not supported by [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+    >  Configuring read-only routing is not supported by [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 -   **Follow Up:**  [After Configuring Read-Only Routing](#FollowUp)  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
     >  Read-intent connection requests are routed to the first available entry on the read-only routing list of the current primary replica. However, load-balancing across read-only replicas is supported. For more information, see [Configure load-balancing across read-only replicas](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
   
 > [!NOTE]  
->  For information about availability group listeners and more information about read-only routing, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../Topic/Availability%20Group%20Listeners,%20Client%20Connectivity,%20and%20Application%20Failover%20\(SQL%20Server\).md).  
+>  For information about availability group listeners and more information about read-only routing, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
 ###  <a name="Security"></a> Security  
   
@@ -90,7 +90,7 @@ manager: "jhubbard"
   
 1.  Connect to the server instance that hosts the primary replica.  
   
-2.  If you are specifying a replica for a new availability group, use the [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)[!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statement. If you are adding or modifying a replica for an existing availability group, use the [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)[!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statement.  
+2.  If you are specifying a replica for a new availability group, use the [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)[!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statement. If you are adding or modifying a replica for an existing availability group, use the [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)[!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statement.  
   
     -   To configure read-only routing for the secondary role, in the ADD REPLICA or MODIFY REPLICA WITH clause, specify the SECONDARY_ROLE option, as follows:  
   
@@ -102,7 +102,7 @@ manager: "jhubbard"
          Is a string, such as a system name, a fully qualified domain name, or an IP address, that unambiguously identifies the destination computer system.  
   
          *port*  
-         Is a port number that is used by the Database Engine of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance.  
+         Is a port number that is used by the Database Engine of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance.  
   
          For example:   `SECONDARY_ROLE (READ_ONLY_ROUTING_URL = N'TCP://COMPUTER01.contoso.com:1433')`  
   
@@ -122,7 +122,7 @@ manager: "jhubbard"
         >  You must set the read-only routing URL before configuring the read-only routing list.  
   
 ###  <a name="loadbalancing"></a> Configure load-balancing across read-only replicas  
- Beginning with [!INCLUDE[ssSQL15](../../../analysis-services/powershell/includes/sssql15-md.md)], you can configure load-balancing across a set of read-only replicas. Previously, read-only routing always directed traffic to the first available replica in the routing list. To take advantage of this feature, use one level of nested parentheses around the **READ_ONLY_ROUTING_LIST** server instances in the **CREATE AVAILABILITY GROUP** or **ALTER AVAILABILITY GROUP** commands.  
+ Beginning with [!INCLUDE[ssSQL15](../../../a9notintoc/includes/sssql15-md.md)], you can configure load-balancing across a set of read-only replicas. Previously, read-only routing always directed traffic to the first available replica in the routing list. To take advantage of this feature, use one level of nested parentheses around the **READ_ONLY_ROUTING_LIST** server instances in the **CREATE AVAILABILITY GROUP** or **ALTER AVAILABILITY GROUP** commands.  
   
  For example, the following routing list load balances read-intent connection request across two read-only replicas, `Server1` and `Server2`. The nested parentheses that surround these servers identify the load-balanced set. If neither replica is available in that set, it will proceed to attempt to sequentially connect to the other replicas, `Server3` and `Server4`, in the read-only routing list.  
   
@@ -194,7 +194,7 @@ GO
         >  You must set the read-only routing URL of a replica before configuring its read-only routing list.  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
 ### Set up and use the SQL Server PowerShell provider  
   
@@ -240,7 +240,7 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer
 Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly;MultiSubnetFailover=True  
 ```  
   
- For more information about read-only application intent and read-only routing, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../Topic/Availability%20Group%20Listeners,%20Client%20Connectivity,%20and%20Application%20Failover%20\(SQL%20Server\).md).  
+ For more information about read-only application intent and read-only routing, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
 ### If Read-Only Routing is Not Working Correctly  
  For information about troubleshooting a read-only routing configuration, see [Read-Only Routing is Not Working Correctly](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md#ROR).  
@@ -248,9 +248,9 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To view read-only routing configurations**  
   
--   [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.availability-read-only-routing-lists-transact-sql.md)  
+-   [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.availability-read-only-routing-lists-transact-sql.md)  
   
--   [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.availability-replicas-transact-sql.md) (**read_only_routing_url** column)  
+-   [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.availability-replicas-transact-sql.md) (**read_only_routing_url** column)  
   
  **To configure client connection access**  
   
@@ -285,6 +285,6 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Active Secondaries: Readable Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../Topic/Availability%20Group%20Listeners,%20Client%20Connectivity,%20and%20Application%20Failover%20\(SQL%20Server\).md)  
+ [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   

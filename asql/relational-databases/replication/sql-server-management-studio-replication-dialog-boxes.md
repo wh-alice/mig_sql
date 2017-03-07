@@ -15,7 +15,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SQL Server Management Studio Replication Dialog Boxes
-  This section includes information on a number of replication dialog boxes that are available in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]:  
+  This section includes information on a number of replication dialog boxes that are available in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]:  
   
 -   [Snapshot Agent Security](../../relational-databases/replication/snapshot-agent-security.md)  
   

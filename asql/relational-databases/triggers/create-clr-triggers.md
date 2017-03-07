@@ -19,21 +19,21 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create CLR Triggers
-  You can create a database object inside [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that is programmed in an assembly created in the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] common language runtime (CLR). Database objects that can leverage the rich programming model provided by the CLR include DML triggers, DDL triggers, stored procedures, functions, aggregate functions, and types.  
+  You can create a database object inside [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that is programmed in an assembly created in the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] common language runtime (CLR). Database objects that can leverage the rich programming model provided by the CLR include DML triggers, DDL triggers, stored procedures, functions, aggregate functions, and types.  
   
- Creating a CLR trigger (DML or DDL) in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] involves the following steps:  
+ Creating a CLR trigger (DML or DDL) in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] involves the following steps:  
   
--   Define the trigger as a class in a .NET Framework-supported language. For more information about how to program triggers in the CLR, see [CLR Triggers](../Topic/CLR%20Triggers.md). Then, compile the class to build an assembly in the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] using the appropriate language compiler.  
+-   Define the trigger as a class in a .NET Framework-supported language. For more information about how to program triggers in the CLR, see [CLR Triggers](../Topic/CLR%20Triggers.md). Then, compile the class to build an assembly in the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] using the appropriate language compiler.  
   
--   Register the assembly in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] using the CREATE ASSEMBLY statement. For more information about assemblies in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Assemblies &#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md).  
+-   Register the assembly in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] using the CREATE ASSEMBLY statement. For more information about assemblies in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Assemblies &#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md).  
   
 -   Create the trigger that references the registered assembly.  
   
 > [!NOTE]  
->  Deploying a SQL Server Project in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] registers an assembly in the database that was specified for the project. Deploying the project also creates CLR triggers in the database for all methods annotated with the **SqlTrigger** attribute. For more information, see [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
+>  Deploying a SQL Server Project in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] registers an assembly in the database that was specified for the project. Deploying the project also creates CLR triggers in the database for all methods annotated with the **SqlTrigger** attribute. For more information, see [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
   
 > [!NOTE]  
->  The ability of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to execute CLR code is off by default. You can create, alter, and drop database objects that reference managed code modules, but these references will not execute in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] unless the [clr enabled Option](../../database-engine/configure/windows/clr-enabled-server-configuration-option.md) is enabled using [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+>  The ability of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to execute CLR code is off by default. You can create, alter, and drop database objects that reference managed code modules, but these references will not execute in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] unless the [clr enabled Option](../../database-engine/configure/windows/clr-enabled-server-configuration-option.md) is enabled using [sp_configure (Transact-SQL)](../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md).  
   
  **To create, modify, or drop an assembly**  
   

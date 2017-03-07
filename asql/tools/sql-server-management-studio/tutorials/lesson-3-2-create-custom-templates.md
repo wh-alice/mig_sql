@@ -21,7 +21,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 3-2 - Create Custom Templates
-[!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] comes with templates for many common tasks, but the real power of templates lies in the ability to create a custom template for a complex script that you must create frequently. In this practice you will create a simple script with few parameters, but templates are useful for long, repetitive scripts, too.  
+[!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] comes with templates for many common tasks, but the real power of templates lies in the ability to create a custom template for a complex script that you must create frequently. In this practice you will create a simple script with few parameters, but templates are useful for long, repetitive scripts, too.  
   
 ## Using Custom Templates  
   
@@ -107,7 +107,7 @@ manager: "jhubbard"
 5.  Press F5 to execute the query, creating the procedure.  
   
 ## Next Task in Lesson  
-[Save Scripts as Projects or Solutions](../Topic/Save%20Scripts%20as%20Projects%20or%20Solutions.md)  
+[Save Scripts as Projects or Solutions](../../../tools/sql-server-management-studio/tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md)  
   
   
   

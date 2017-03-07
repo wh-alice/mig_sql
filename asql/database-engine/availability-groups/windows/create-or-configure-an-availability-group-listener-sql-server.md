@@ -20,10 +20,10 @@ ms.author: "mikeray"
 manager: "erikre"
 ---
 # Create or Configure an Availability Group Listener (SQL Server)
-  This topic describes how to create or configure a single *availability group listener* for an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  This topic describes how to create or configure a single *availability group listener* for an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
->  To create the first availability group listener of an availability group, we strongly recommend that you [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)], or [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] PowerShell. Avoid creating a listener directly in the WSFC cluster except when necessary, for example, to create an additional listener.  
+>  To create the first availability group listener of an availability group, we strongly recommend that you [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)], or [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] PowerShell. Avoid creating a listener directly in the WSFC cluster except when necessary, for example, to create an additional listener.  
   
 -   **Before you begin:**  
   
@@ -79,7 +79,7 @@ manager: "erikre"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   You can create only one listener per availability group through [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Typically, each availability group requires only one listener. However, some customer scenarios require multiple listeners for one availability group.   After creating a listener through SQL Server, you can use Windows PowerShell for failover clusters or the WSFC Failover Cluster Manager to create additional listeners. For more information, see [To Create An Additional Listener for an Availability Group (Optional)](#CreateAdditionalListener), later in this topic.  
+-   You can create only one listener per availability group through [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. Typically, each availability group requires only one listener. However, some customer scenarios require multiple listeners for one availability group.   After creating a listener through SQL Server, you can use Windows PowerShell for failover clusters or the WSFC Failover Cluster Manager to create additional listeners. For more information, see [To Create An Additional Listener for an Availability Group (Optional)](#CreateAdditionalListener), later in this topic.  
   
 ###  <a name="Recommendations"></a> Recommendations  
  Using a static IP address is recommended, although not required, for multiple subnet configurations.  
@@ -94,7 +94,7 @@ manager: "erikre"
 >  Before you create your first listener, we strongly recommend that you read [Always On Client Connectivity &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
 ###  <a name="DNSnameReqs"></a> Requirements for the DNS Name of an Availability Group Listener  
- Each availability group listener requires a DNS host name that is unique in the domain and in NetBIOS. The DNS name is a string value. This name can contain only alphanumeric characters, dashes (-), and hyphens (_), in any order. DNS host names are case insensitive. The maximum length is 63 characters, however, in [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], the maximum length you can specify is 15 characters.  
+ Each availability group listener requires a DNS host name that is unique in the domain and in NetBIOS. The DNS name is a string value. This name can contain only alphanumeric characters, dashes (-), and hyphens (_), in any order. DNS host names are case insensitive. The maximum length is 63 characters, however, in [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], the maximum length you can specify is 15 characters.  
   
  We recommend that you specify a meaningful string. For example, for an availability group named `AG1`, a meaningful DNS host name would be `ag1-listener`.  
   
@@ -233,7 +233,7 @@ manager: "erikre"
     ```  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the **Get-Help**  cmdlet in the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the **Get-Help**  cmdlet in the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
@@ -282,11 +282,11 @@ manager: "erikre"
      **Cons:** If a cross-subnet failover occurs, the client recovery time could be 15 minutes or longer, depending on your **HostRecordTTL** setting and the setting of your cross-site DNS/AD replication schedule.  
   
 ###  <a name="RegisterAllProvidersIP"></a> RegisterAllProvidersIP Setting  
- When you use [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)], or PowerShell to create an availability group listener, the Client Access Point is created in WSFC with the **RegisterAllProvidersIP** property set to 1 (true). The effect of this property value depends on the client connection string, as follows:  
+ When you use [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)], or PowerShell to create an availability group listener, the Client Access Point is created in WSFC with the **RegisterAllProvidersIP** property set to 1 (true). The effect of this property value depends on the client connection string, as follows:  
   
 -   Connection strings that set **MultiSubnetFailover** to true  
   
-     [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] sets the  **RegisterAllProvidersIP** property to 1 in order to reduce re-connection time after a failover for clients whose client connection strings specify `MultiSubnetFailover = True`, as recommended. Note that to take advantage of the listener multi-subnet feature, your clients might require a data provider that supports the **MultiSubnetFailover** keyword. For information about driver support for multi-subnet failover, see [Always On Client Connectivity &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
+     [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] sets the  **RegisterAllProvidersIP** property to 1 in order to reduce re-connection time after a failover for clients whose client connection strings specify `MultiSubnetFailover = True`, as recommended. Note that to take advantage of the listener multi-subnet feature, your clients might require a data provider that supports the **MultiSubnetFailover** keyword. For information about driver support for multi-subnet failover, see [Always On Client Connectivity &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
      For information about multi-subnet clustering, see [SQL Server Multi-Subnet Clustering &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
@@ -354,7 +354,7 @@ Start-ClusterResource yourListenerName
   
          For information about using Windows PowerShell for failover clusters, see [Overview of Server Manager Commands](http://technet.microsoft.com/library/cc732757.aspx#BKMK_wps).  
   
-2.  Start [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] listening on the new listener. After creating the additional listener, connect to the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that hosts the primary replica of the availability group and use [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)], or PowerShell to modify the listener port.  
+2.  Start [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] listening on the new listener. After creating the additional listener, connect to the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] that hosts the primary replica of the availability group and use [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)], or PowerShell to modify the listener port.  
   
  For more information, see [How to create multiple listeners for same availability group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/) (a SQL Server Always On team blog).  
   
@@ -372,7 +372,7 @@ Start-ClusterResource yourListenerName
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../Topic/Availability%20Group%20Listeners,%20Client%20Connectivity,%20and%20Application%20Failover%20\(SQL%20Server\).md)   
+ [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [SQL Server Multi-Subnet Clustering &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
   
   

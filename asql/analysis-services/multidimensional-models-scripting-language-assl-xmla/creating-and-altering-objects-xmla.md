@@ -50,10 +50,10 @@ manager: "erikre"
   
 -   Data sources  
   
- You use the [Create](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) command to create a major object on an instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], and the [Alter](../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md) command to alter an existing major object on an instance. Both commands are run using the [Execute](../Topic/Execute%20Method%20\(XMLA\).md) method.  
+ You use the [Create](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) command to create a major object on an instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], and the [Alter](../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md) command to alter an existing major object on an instance. Both commands are run using the [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) method.  
   
 ## Creating Objects  
- When you create objects by using the **Create** method, you must first identify the parent object that contains the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] object to be created. You identify the parent object by providing an object reference in the [ParentObject](../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md) property of the **Create** command. Each object reference contains the object identifiers needed to uniquely identify the parent object for the **Create** command. For more information about object references, see [Defining and Identifying Objects &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
+ When you create objects by using the **Create** method, you must first identify the parent object that contains the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] object to be created. You identify the parent object by providing an object reference in the [ParentObject](../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md) property of the **Create** command. Each object reference contains the object identifiers needed to uniquely identify the parent object for the **Create** command. For more information about object references, see [Defining and Identifying Objects &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
   
  For example, you must provide an object reference to a cube to create a new measure group for the cube. The object reference for the cube in the **ParentObject** property contains both a database identifier and a cube identifier, as the same cube identifier could potentially be used on a different database.  
   
@@ -95,7 +95,7 @@ manager: "erikre"
 ## Examples  
   
 ### Description  
- The following example creates a relational data source that references the [!INCLUDE[ssAWDWsp](../../analysis-services/includes/ssawdwsp-md.md)] sample [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database.  
+ The following example creates a relational data source that references the [!INCLUDE[ssAWDWsp](../../a9notintoc/includes/ssawdwsp-md.md)] sample [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database.  
   
 ### Code  
   
@@ -146,7 +146,7 @@ manager: "erikre"
  The **ObjectExpansion** attribute of the **Alter** command was set to *ObjectProperties*. This setting allows the [ImpersonationInfo](../../analysis-services/scripting/properties/impersonationinfo-element-assl.md) element, a minor object, to be excluded from the data source defined in **ObjectDefinition**. Therefore, the impersonation information for that data source remains set to the service account, as specified in the first example.  
   
 ## See Also  
- [Execute Method &#40;XMLA&#41;](../Topic/Execute%20Method%20\(XMLA\).md)   
+ [Execute Method &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
  [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Developing with XMLA in Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   

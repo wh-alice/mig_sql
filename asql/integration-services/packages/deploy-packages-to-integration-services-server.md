@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Deploy Packages to Integration Services Server
-  The Incremental Package Deployment feature introduced in  [!INCLUDE[ssISCurrent](../../analysis-services/data-mining/includes/ssiscurrent-md.md)] lets you deploy one or more packages to an existing or new project without deploying the whole project.  
+  The Incremental Package Deployment feature introduced in  [!INCLUDE[ssISCurrent](../../a9retired/includes/ssiscurrent-md.md)] lets you deploy one or more packages to an existing or new project without deploying the whole project.  
   
 ##  <a name="DeployWizard"></a> Deploy packages by using the Integration Services Deployment Wizard  
   

@@ -20,17 +20,17 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Executing Statements (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
-  The [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client ODBC driver offers a variety ways to execute SQL statements in a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database:  
+  The [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Native Client ODBC driver offers a variety ways to execute SQL statements in a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] database:  
   
 -   Direct execution  
   
 -   Prepared execution  
   
- Direct execution involves building a character string containing a [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statement and submitting it for execution using the **SQLExecDirect** function. Prepared execution involves building a character string containing a [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statement and then executing it in two stages. The first stage uses the [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360) function to parse and compile the execution plan for the statement in the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)]. The second stage uses the **SQLExecute** function to execute the previously prepared execution plan. This saves the parsing and compiling overhead on each execution. Prepared execution is commonly used by applications to repeatedly execute the same, parameterized SQL statement.  
+ Direct execution involves building a character string containing a [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statement and submitting it for execution using the **SQLExecDirect** function. Prepared execution involves building a character string containing a [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statement and then executing it in two stages. The first stage uses the [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360) function to parse and compile the execution plan for the statement in the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)]. The second stage uses the **SQLExecute** function to execute the previously prepared execution plan. This saves the parsing and compiling overhead on each execution. Prepared execution is commonly used by applications to repeatedly execute the same, parameterized SQL statement.  
   
- Both direct and prepared execution can execute a single [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statement or a batch of SQL statements, or they can call a stored procedure.  
+ Both direct and prepared execution can execute a single [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statement or a batch of SQL statements, or they can call a stored procedure.  
   
 ## In This Section  
   

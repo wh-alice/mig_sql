@@ -33,7 +33,7 @@ manager: "jhubbard"
 
   Returns the security identification number (SID) for the specified login name.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -46,16 +46,16 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
  **'** *login* **'**  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
- Is the login name of the user. *login* is **sysname**. *login*, which is optional, can be a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login or [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows user or group. If *login* is not specified, information about the current security context is returned. If the parameter contains the word NULL will return NULL.  
+ Is the login name of the user. *login* is **sysname**. *login*, which is optional, can be a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login or [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows user or group. If *login* is not specified, information about the current security context is returned. If the parameter contains the word NULL will return NULL.  
   
  *Param2*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
- Specifies whether the login name is validated. *Param2* is of type **int** and is optional. When *Param2* is 0, the login name is not validated. When *Param2* is not specified as 0, the Windows login name is verified to be exactly the same as the login name stored in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Specifies whether the login name is validated. *Param2* is of type **int** and is optional. When *Param2* is 0, the login name is not validated. When *Param2* is not specified as 0, the Windows login name is verified to be exactly the same as the login name stored in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## Return Types  
  **varbinary(85)**  
@@ -65,7 +65,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
  When called without an argument, SUSER_SID returns the SID of the current security context. When called without an argument within a batch that has switched context by using EXECUTE AS, SUSER_SID returns the SID of the impersonated context. When called from an impersonated context, SUSER_SID(ORIGINAL_LOGIN()) returns the SID of the original context.  
   
- When the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] collation and the Windows collation are different, SUSER_SID can fail when [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and Windows store the login in a different format. For example, if the Windows computer TestComputer has the login User and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] stores the login as TESTCOMPUTER\User, the lookup of the login TestComputer\User might fail to resolve the login name correctly. To skip this validation of the login name, use *Param2*. Differing collations is often a cause of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error 15401:  
+ When the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] collation and the Windows collation are different, SUSER_SID can fail when [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and Windows store the login in a different format. For example, if the Windows computer TestComputer has the login User and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] stores the login as TESTCOMPUTER\User, the lookup of the login TestComputer\User might fail to resolve the login name correctly. To skip this validation of the login name, use *Param2*. Differing collations is often a cause of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error 15401:  
   
  `Windows NT user or group '%s' not found. Check the name again.`  
   
@@ -79,11 +79,11 @@ SELECT SUSER_SID('sa');
 ```  
   
 ### B. Using SUSER_SID with a specific login  
- The following example returns the security identification number for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] `sa` login.  
+ The following example returns the security identification number for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] `sa` login.  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 SELECT SUSER_SID('sa');  
@@ -95,7 +95,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 SELECT SUSER_SID('London\Workstation1');  
@@ -121,11 +121,11 @@ GO
 ```  
   
 ### E. Comparing the Windows login name to the login name stored in SQL Server  
- The following example shows how to use *Param2* to obtain the SID from Windows and uses that SID as an input to the `SUSER_SNAME` function. The example provides the login in the format in which it is stored in Windows (`TestComputer\User`), and returns the login in the format in which it is stored in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (`TESTCOMPUTER\User`).  
+ The following example shows how to use *Param2* to obtain the SID from Windows and uses that SID as an input to the `SUSER_SNAME` function. The example provides the login in the format in which it is stored in Windows (`TestComputer\User`), and returns the login in the format in which it is stored in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] (`TESTCOMPUTER\User`).  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  
@@ -135,6 +135,6 @@ SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));
  [ORIGINAL_LOGIN &#40;Transact-SQL&#41;](../../t-sql/functions/original-login-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [binary and varbinary &#40;Transact-SQL&#41;](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-transact-sql.md)  
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/system-functions-transact-sql.md)  
   
   

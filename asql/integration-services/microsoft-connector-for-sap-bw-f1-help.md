@@ -17,7 +17,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Microsoft Connector for SAP BW F1 Help
-  This section contains the F1 Help topics for the three components of the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Connector 1.1 for SAP BW. These topics are also available from the user interface by pressing the F1 key, or by clicking Help on wizard pages and dialog boxes.  
+  This section contains the F1 Help topics for the three components of the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Connector 1.1 for SAP BW. These topics are also available from the user interface by pressing the F1 key, or by clicking Help on wizard pages and dialog boxes.  
   
 > [!IMPORTANT]  
 >  The documentation for the Microsoft Connector 1.1 for SAP BW assumes familiarity with the SAP Netweaver BW environment. For more information about SAP Netweaver BW, or for information about how to configure SAP Netweaver BW objects and processes, see your SAP documentation.  

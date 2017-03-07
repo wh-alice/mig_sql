@@ -16,7 +16,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Security Considerations for the R Runtime in SQL Server
-  This topic provides an overview of security considerations for working with [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  This topic provides an overview of security considerations for working with [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
  For more information about managing the service, and about how to provision the user accounts used to execute R scripts, see [Configure and Manage Advanced Analytics Extensions](../../advanced-analytics/r-services/configure-and-manage-advanced-analytics-extensions.md).  
   
@@ -29,7 +29,7 @@ manager: "jhubbard"
 For more information, see [Configure and Manage Advanced Analytics Extensions](../../advanced-analytics/r-services/configure-and-manage-advanced-analytics-extensions.md).  
   
 ## Authentication Methods Supported for Remote Compute Contexts 
-  [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] now supports both Windows Integrated Authentication and SQL logins when creating connections between [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and a remote data science client. 
+  [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] now supports both Windows Integrated Authentication and SQL logins when creating connections between [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and a remote data science client. 
   
  For example, if you are developing an R solution on your laptop and want to perform computations on the SQL Server computer, you would create a SQL Server data source in R, by using the **rx** functions and defining a connection string based on your Windows credentials. When you change the _compute context_ from your laptop to the SQL Server computer, if your Windows account has the necessary permissions, all R code will be executed on the SQL Server computer. Moreover, any SQL queries executed as part of the R code will be run under your credentials as well. 
  
@@ -37,7 +37,7 @@ For more information, see [Configure and Manage Advanced Analytics Extensions](.
  
  ### Implied authentication
   
- In general the [!INCLUDE[rsql_launchpad](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)] starts the R runtime and executes R scripts under its own account. However, if the R script makes an ODBC call, the [!INCLUDE[rsql_launchpad](../../advanced-analytics/r-services/includes/rsql-launchpad-md.md)] will impersonate the credentials of the user that sent the command to ensure that the ODBC call does not fail. This is called *implied authentication*. 
+ In general the [!INCLUDE[rsql_launchpad](../../a9notintoc/includes/rsql-launchpad-md.md)] starts the R runtime and executes R scripts under its own account. However, if the R script makes an ODBC call, the [!INCLUDE[rsql_launchpad](../../a9notintoc/includes/rsql-launchpad-md.md)] will impersonate the credentials of the user that sent the command to ensure that the ODBC call does not fail. This is called *implied authentication*. 
  
  > [!IMPORTANT] 
  >

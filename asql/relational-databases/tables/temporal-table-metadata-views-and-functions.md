@@ -16,17 +16,17 @@ ms.author: "carlrab"
 manager: "jhubbard"
 ---
 # Temporal Table Metadata Views and Functions
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)] include a number of metabase views and functions to enable administrators to retrieve information about temporal tables.  
+  [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)] include a number of metabase views and functions to enable administrators to retrieve information about temporal tables.  
   
  Information about temporal tables is exposed in the following metadata views:  
   
--   [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.tables-transact-sql.md)  
+-   [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.tables-transact-sql.md)  
   
--   [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.columns-transact-sql.md)  
+-   [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.columns-transact-sql.md)  
   
--   [sys.periods &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.periods-transact-sql.md)  
+-   [sys.periods &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.periods-transact-sql.md)  
   
  Information about temporal tables is exposed in the following metadata functions:  
   

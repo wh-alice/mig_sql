@@ -15,6 +15,6 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Run SQL Server Profiler
-  To run [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)], on the **Start** menu, point to **All Programs**, **Microsoft SQL Server 2014**, **Performance Tools**, and then click **SQL Server Profiler**.  
+  To run [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)], on the **Start** menu, point to **All Programs**, **Microsoft SQL Server 2014**, **Performance Tools**, and then click **SQL Server Profiler**.  
   
   

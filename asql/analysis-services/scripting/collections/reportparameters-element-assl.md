@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # ReportParameters Element (ASSL)
-  Contains the collection of [ReportParameter](../Topic/ReportParameter%20Element%20\(ASSL\).md) elements for a [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) element.  
+  Contains the collection of [ReportParameter](../../../analysis-services/scripting/objects/reportparameter-element-assl.md) elements for a [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) element.  
   
 ## Syntax  
   
@@ -55,7 +55,7 @@ manager: "erikre"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|[Action](../../../analysis-services/scripting/objects/action-element-assl.md) of type [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md)|  
-|Child elements|[ReportParameter](../Topic/ReportParameter%20Element%20\(ASSL\).md)|  
+|Child elements|[ReportParameter](../../../analysis-services/scripting/objects/reportparameter-element-assl.md)|  
   
 ## Remarks  
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.ReportParameterCollection>.  

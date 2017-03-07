@@ -33,9 +33,9 @@ manager: "jhubbard"
   
  **Destination Custom Properties**  
   
- The [!INCLUDE[vstecado](../../analysis-services/data-mining/includes/vstecado-md.md)] destination has both custom properties and the properties common to all data flow components.  
+ The [!INCLUDE[vstecado](../../a9retired/includes/vstecado-md.md)] destination has both custom properties and the properties common to all data flow components.  
   
- The following table describes the custom properties of the [!INCLUDE[vstecado](../../analysis-services/data-mining/includes/vstecado-md.md)] destination. All properties are read/write. These properties are not available in the **ADO NET Destination Editor**, but can be set by using the **Advanced Editor**.  
+ The following table describes the custom properties of the [!INCLUDE[vstecado](../../a9retired/includes/vstecado-md.md)] destination. All properties are read/write. These properties are not available in the **ADO NET Destination Editor**, but can be set by using the **Advanced Editor**.  
   
 |Property|Data Type|Description|  
 |--------------|---------------|-----------------|  
@@ -46,6 +46,6 @@ manager: "jhubbard"
  For more information, see [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md).  
   
 ## See Also  
- [Common Properties](../Topic/Common%20Properties.md)  
+ [Common Properties](../../a9retired/common-properties.md)  
   
   

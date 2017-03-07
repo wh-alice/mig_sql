@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Leaves (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns a set composed of all attributes (optionally limited to those belonging to a specific dimension). For each attribute x in the return set, if x is the granularity attribute or is directly or indirectly related to the granularity attribute, the granularity is set on attribute x without affecting the slice. The **Leaves** function is designed for use inside a SCOPE statement or at the left side of an assignment.  
   

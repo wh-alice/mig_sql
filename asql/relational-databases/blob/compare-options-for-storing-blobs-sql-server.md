@@ -15,7 +15,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Compare Options for Storing Blobs (SQL Server)
-  Discusses and compares the options that are available for storing files and documents in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Discusses and compares the options that are available for storing files and documents in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ##  <a name="Expectations"></a> Storing Files in the Database – Benefits and Expectations  
  A large percentage of enterprise data is unstructured in nature, and is typically stored as files and documents in file systems. Most of this data is produced, managed and consumed by applications that access the files through Windows APIs. Enterprises typically keep this data in the file system, while storing the related metadata for the files in a relational database.  
@@ -35,10 +35,10 @@ manager: "jhubbard"
 -   Windows applications require compatibility with file system APIs for file and directory data.  
   
 ##  <a name="Filestream"></a> FILESTREAM  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] already has the FILESTREAM feature, which provides efficient storage, management and streaming of unstructured data stored as files on the file system. However, a FILESTREAM solution requires custom programming, and does not satisfy the requirement for full Windows application compatibility described above.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] already has the FILESTREAM feature, which provides efficient storage, management and streaming of unstructured data stored as files on the file system. However, a FILESTREAM solution requires custom programming, and does not satisfy the requirement for full Windows application compatibility described above.  
   
 ##  <a name="FileTables"></a> FileTables  
- The FileTable feature builds on top of existing FILESTREAM capabilities to enable enterprise customers to store unstructured file data and directory hierarchies in a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database, by addressing the requirements for non-transactional access and Windows application compatibility for file-based data.  
+ The FileTable feature builds on top of existing FILESTREAM capabilities to enable enterprise customers to store unstructured file data and directory hierarchies in a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database, by addressing the requirements for non-transactional access and Windows application compatibility for file-based data.  
   
 ##  <a name="CompareFileTable"></a> Comparing FILESTREAM and FileTable  
   

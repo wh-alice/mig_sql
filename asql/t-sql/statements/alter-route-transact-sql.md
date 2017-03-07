@@ -26,11 +26,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ALTER ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifies route information for an existing route in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Modifies route information for an existing route in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -74,14 +74,14 @@ WHERE database_id = DB_ID();
 >  This option is not available in a contained database.  
   
  LIFETIME **=***route_lifetime*  
- Specifies the time, in seconds, that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] retains the route in the routing table. At the end of the lifetime, the route expires, and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] no longer considers the route when choosing a route for a new conversation. If this clause is omitted, the lifetime of the route is unchanged.  
+ Specifies the time, in seconds, that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] retains the route in the routing table. At the end of the lifetime, the route expires, and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] no longer considers the route when choosing a route for a new conversation. If this clause is omitted, the lifetime of the route is unchanged.  
   
  ADDRESS **='***next_hop_address'*  
  Specifies the network address for this route. The *next_hop_address* specifies a TCP/IP address in the following format:  
   
  **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
- The specified *port_number* must match the port number for the [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] endpoint of an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] at the specified computer. This can be obtained by running the following query in the selected database:  
+ The specified *port_number* must match the port number for the [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] endpoint of an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] at the specified computer. This can be obtained by running the following query in the selected database:  
   
 ```  
 SELECT tcpe.port  
@@ -91,7 +91,7 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- When a route specifies **'LOCAL'** for the *next_hop_address*, the message is delivered to a service within the current instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ When a route specifies **'LOCAL'** for the *next_hop_address*, the message is delivered to a service within the current instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  When a route specifies **'TRANSPORT'** for the *next_hop_address*, the network address is determined based on the network address in the name of the service. A route that specifies **'TRANSPORT'** can specify a service name or broker instance.  
   
@@ -105,7 +105,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- The specified *port_number* must match the port number for the [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] endpoint of an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] at the specified computer. This can be obtained by running the following query in the selected database:  
+ The specified *port_number* must match the port number for the [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] endpoint of an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] at the specified computer. This can be obtained by running the following query in the selected database:  
   
 ```  
 SELECT tcpe.port  
@@ -125,7 +125,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Clauses that are not specified in the ALTER ROUTE command remain unchanged. Therefore, you cannot ALTER a route to specify that the route does not time out, that the route matches any service name, or that the route matches any broker instance. To change these characteristics of a route, you must drop the existing route and create a new route with the new information.  
   
- When a route specifies **'TRANSPORT'** for the *next_hop_address*, the network address is determined based on the name of the service. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] can successfully process service names that begin with a network address in a format that is valid for a *next_hop_address*. Services with names that contain valid network addresses will route to the network address in the service name.  
+ When a route specifies **'TRANSPORT'** for the *next_hop_address*, the network address is determined based on the name of the service. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] can successfully process service names that begin with a network address in a format that is valid for a *next_hop_address*. Services with names that contain valid network addresses will route to the network address in the service name.  
   
  The routing table can contain any number of routes that specify the same service, network address, and/or broker instance identifier. In this case, [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)] chooses a route using a procedure designed to find the most exact match between the information specified in the conversation and the information in the routing table.  
   

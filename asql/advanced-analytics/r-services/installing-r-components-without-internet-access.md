@@ -123,6 +123,6 @@ When performing unattended setup, use the following command-line arguments to sp
 
 ## See Also  
  [Getting Started with SQL Server R Services](../../advanced-analytics/r-services/getting-started-with-sql-server-r-services.md)   
- [Troubleshooting R Services Setup](../Topic/Troubleshooting%20R%20Services%20Setup.md)  
+ [Troubleshooting R Services Setup](../../a9retired/troubleshooting-r-services-setup.md)  
   
   

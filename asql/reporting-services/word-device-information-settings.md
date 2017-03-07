@@ -19,7 +19,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Word Device Information Settings
-  The following table lists the device information settings for rendering in [!INCLUDE[ofprword](../integration-services/control-flow/includes/ofprword-md.md)] format.  
+  The following table lists the device information settings for rendering in [!INCLUDE[ofprword](../a9retired/includes/ofprword-md.md)] format.  
   
 |Setting|Value|  
 |-------------|-----------|  

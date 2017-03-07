@@ -22,7 +22,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # How Online Index Operations Work
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   This topic defines the structures that exist during an online index operation and shows the activities associated with these structures.  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 -   **Target**  
   
-     The target or targets is the new index (or heap) or a set of new indexes that is being created or rebuilt. User insert, update, and delete operations to the source are applied by the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] to the target during the index operation. For example, if the online index operation is rebuilding a clustered index, the target is the rebuilt clustered index; the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] does not rebuild nonclustered indexes when a clustered index is rebuilt.  
+     The target or targets is the new index (or heap) or a set of new indexes that is being created or rebuilt. User insert, update, and delete operations to the source are applied by the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] to the target during the index operation. For example, if the online index operation is rebuilding a clustered index, the target is the rebuilt clustered index; the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] does not rebuild nonclustered indexes when a clustered index is rebuilt.  
   
      The target index is not searched while processing SELECT statements until the index operation is committed. Internally, the index is marked as write-only.  
   

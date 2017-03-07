@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ClientSettings Class
-  The [ClientSettings Class](../../relational-databases/wmi-provider-configuration-classes/clientsettings-class.md) represents the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] settings on the client.  
+  The [ClientSettings Class](../../relational-databases/wmi-provider-configuration-classes/clientsettings-class.md) represents the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] settings on the client.  
   
  This class enables programmatic management of the client.  
   

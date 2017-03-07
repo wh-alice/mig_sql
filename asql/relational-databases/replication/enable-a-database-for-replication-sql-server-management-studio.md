@@ -23,6 +23,6 @@ manager: "jhubbard"
   
 1.  On the **Publication Databases** page of the **Publisher Properties - \<Publisher>** dialog box, select the **Transactional** and/or **Merge** check box for each database you want to replicate. Select **Transactional** to enable the database for snapshot replication.  
   
-2.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+2.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
   

@@ -30,7 +30,7 @@ manager: "erikre"
   Defines a derived data type that represents a COM library associated with a [Server](../../../analysis-services/scripting/objects/server-element-assl.md) or [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element.  
   
 > [!IMPORTANT]  
->  COM assemblies might pose a security risk. Due to this risk and other considerations, COM assemblies were deprecated in [!INCLUDE[ssASversion10](../../../analysis-services/multidimensional-models/includes/ssasversion10-md.md)]. COM assemblies might not be supported in future releases.  
+>  COM assemblies might pose a security risk. Due to this risk and other considerations, COM assemblies were deprecated in [!INCLUDE[ssASversion10](../../../a9notintoc/includes/ssasversion10-md.md)]. COM assemblies might not be supported in future releases.  
   
 ## Syntax  
   
@@ -58,7 +58,7 @@ manager: "erikre"
 |Derived elements|See [Assembly](../../../analysis-services/scripting/objects/assembly-element-assl.md) ([Assemblies](../../../analysis-services/scripting/collections/assemblies-element-assl.md) collection of [Database](../../../analysis-services/scripting/objects/database-element-assl.md) or [Server](../../../analysis-services/scripting/objects/server-element-assl.md))|  
   
 ## Remarks  
- The **ComAssembly** element contains a reference (either the fully qualified file name or the programmatic identifier) to a COM library associated with an instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] or with a specific database on an instance of [!INCLUDE[ssAS](../../../analysis-services/multidimensional-models/includes/ssas-md.md)].  
+ The **ComAssembly** element contains a reference (either the fully qualified file name or the programmatic identifier) to a COM library associated with an instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] or with a specific database on an instance of [!INCLUDE[ssAS](../../../analysis-services/multidimensional-models/includes/ssas-md.md)].  
   
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.ComAssembly>.  
   

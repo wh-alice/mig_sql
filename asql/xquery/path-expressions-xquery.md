@@ -23,7 +23,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Path Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery path expressions locate nodes, such as element, attribute, and text nodes, in a document. The result of a path expression always occurs in document order without duplicate nodes in the result sequence. In specifying a path, you can use either unabbreviated or abbreviated syntax. The following information focuses on the unabbreviated syntax. Abbreviated syntax is described later in this topic.  
   
@@ -49,10 +49,10 @@ manager: "jhubbard"
 ## Axis Step  
  An axis step in a path expression has the following parts.  
   
- [axis](../Topic/Specifying%20Axis%20in%20a%20Path%20Expression%20Step.md)  
+ [axis](../xquery/path-expressions-specifying-axis.md)  
  Defines the direction of movement. An axis step in a path expression that starts at the context node and navigates to those nodes that are reachable in the direction specified by the axis.  
   
- [node test](../Topic/Specifying%20Node%20Test%20in%20a%20Path%20Expression%20Step.md)  
+ [node test](../xquery/path-expressions-specifying-node-test.md)  
  Specifies the node type or node names to be selected.  
   
  Zero or more optional predicates  
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 -   The relative path expression, `child::root/child::Location[attribute::LocationID=10]`,contains two steps separated by a slash mark. The first step specifies an axis (`child`) and a node test (`root`). The second step specifies all three components of an axis step: an axis (child), a node test (`Location`), and a predicate (`[attribute::LocationID=10]`).  
   
- For more information about the components of an axis step, see [Specifying Axis in a Path Expression Step](../Topic/Specifying%20Axis%20in%20a%20Path%20Expression%20Step.md), [Specifying Node Test in a Path Expression Step](../Topic/Specifying%20Node%20Test%20in%20a%20Path%20Expression%20Step.md), and [Specifying Predicates in a Path Expression Step](../Topic/Specifying%20Predicates%20in%20a%20Path%20Expression%20Step.md).  
+ For more information about the components of an axis step, see [Specifying Axis in a Path Expression Step](../xquery/path-expressions-specifying-axis.md), [Specifying Node Test in a Path Expression Step](../xquery/path-expressions-specifying-node-test.md), and [Specifying Predicates in a Path Expression Step](../xquery/path-expressions-specifying-predicates.md).  
   
 ## General Step  
  A general step is just an expression that must evaluate to a sequence of nodes.  
@@ -78,19 +78,19 @@ manager: "jhubbard"
 id(/a/b)  
 ```  
   
- For more information about the id function see, [id Function &#40;XQuery&#41;](../Topic/id%20Function%20\(XQuery\).md).  
+ For more information about the id function see, [id Function &#40;XQuery&#41;](../xquery/functions-on-sequences-id.md).  
   
 ## In This Section  
- [Specifying Axis in a Path Expression Step](../Topic/Specifying%20Axis%20in%20a%20Path%20Expression%20Step.md)  
+ [Specifying Axis in a Path Expression Step](../xquery/path-expressions-specifying-axis.md)  
  Describes working with the axis step in a path expression.  
   
- [Specifying Node Test in a Path Expression Step](../Topic/Specifying%20Node%20Test%20in%20a%20Path%20Expression%20Step.md)  
+ [Specifying Node Test in a Path Expression Step](../xquery/path-expressions-specifying-node-test.md)  
  Describes working with node tests in a path expression.  
   
- [Specifying Predicates in a Path Expression Step](../Topic/Specifying%20Predicates%20in%20a%20Path%20Expression%20Step.md)  
+ [Specifying Predicates in a Path Expression Step](../xquery/path-expressions-specifying-predicates.md)  
  Describes working with predicates in a path expression.  
   
- [Using Abbreviated Syntax in a Path Expression](../Topic/Using%20Abbreviated%20Syntax%20in%20a%20Path%20Expression.md)  
+ [Using Abbreviated Syntax in a Path Expression](../xquery/path-expressions-using-abbreviated-syntax.md)  
  Describes working with abbreviated syntax in a path expression.  
   
   

@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Using Scalar Expressions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   In Multidimensional Expressions (MDX), a scalar expression is an element of MDX syntax that, when evaluated, returns a single value within the context of evaluation.  
   

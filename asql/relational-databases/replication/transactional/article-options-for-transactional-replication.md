@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Article Options for Transactional Replication
   There are a number of options for articles in transactional publications. With transactional replication, you can do the following:  
   
--   Specify how changes are propagated from the Publisher to Subscribers. For more information, see [Specify How Changes Are Propagated for Transactional Articles](../Topic/Specify%20How%20Changes%20Are%20Propagated%20for%20Transactional%20Articles.md).  
+-   Specify how changes are propagated from the Publisher to Subscribers. For more information, see [Specify How Changes Are Propagated for Transactional Articles](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
 -   Specify that the execution of a stored procedure be replicated. This is useful in replicating the results of maintenance-oriented stored procedures that affect large amounts of data. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   

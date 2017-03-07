@@ -21,7 +21,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create a Push Subscription
-  This topic describes how to create a push subscription in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], or Replication Management Objects (RMO). For information about creating a push subscription for a non-[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Subscriber, see [Create a Subscription for a Non-SQL Server Subscriber](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+  This topic describes how to create a push subscription in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], or Replication Management Objects (RMO). For information about creating a push subscription for a non-[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Subscriber, see [Create a Subscription for a Non-SQL Server Subscriber](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
  
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 #### To create a push subscription from the Publisher  
   
-1.  Connect to the Publisher in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to the Publisher in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder, and then expand the **Local Publications** folder.  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 #### To create a push subscription from the Subscriber  
   
-1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Expand the **Replication** folder.  
   
@@ -82,37 +82,37 @@ manager: "jhubbard"
   
 #### To create a push subscription to a snapshot or transactional publication  
   
-1.  At the Publisher on the publication database, verify that the publication supports push subscriptions by executing [sp_helppublication](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md).  
+1.  At the Publisher on the publication database, verify that the publication supports push subscriptions by executing [sp_helppublication](../../relational-databases/reference/system-stored-procedures/sp-helppublication-transact-sql.md).  
   
     -   If the value of **allow_push** is **1**, push subscriptions are supported.  
   
-    -   If the value of **allow_push** is **0**, execute [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying **allow_push** for **@property** and **true** for **@value**.  
+    -   If the value of **allow_push** is **0**, execute [sp_changepublication](../../relational-databases/reference/system-stored-procedures/sp-changepublication-transact-sql.md), specifying **allow_push** for **@property** and **true** for **@value**.  
   
 2.  At the Publisher on the publication database, execute [sp_addsubscription](https://msdn.microsoft.com/library/ms181702.aspx). Specify **@publication**, **@subscriber** and **@destination_db**. Specify a value of **push** for **@subscription_type**. For information about how to update subscriptions, see [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx).  
   
-3.  At the Publisher on the publication database, execute [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specify the following:  
+3.  At the Publisher on the publication database, execute [sp_addpushsubscription_agent](../../relational-databases/reference/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specify the following:  
   
     -   The **@subscriber**, **@subscriber_db**, and **@publication** parameters.  
   
-    -   The [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows credentials under which the Distribution Agent at the Distributor runs for **@job_login** and **@job_password**.  
+    -   The [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows credentials under which the Distribution Agent at the Distributor runs for **@job_login** and **@job_password**.  
   
         > **NOTE:** Connections made using Windows Integrated Authentication always use the Windows credentials specified by **@job_login** and **@job_password**. The Distribution Agent always makes the local connection to the Distributor using Windows Integrated Authentication. By default, the agent will connect to the Subscriber using Windows Integrated Authentication.  
   
-    -   (Optional) A value of **0** for **@subscriber_security_mode** and the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login information for **@subscriber_login** and **@subscriber_password**. Specify these parameters if you need to use SQL Server Authentication when connecting to the Subscriber.  
+    -   (Optional) A value of **0** for **@subscriber_security_mode** and the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login information for **@subscriber_login** and **@subscriber_password**. Specify these parameters if you need to use SQL Server Authentication when connecting to the Subscriber.  
   
     -   A schedule for the Distribution Agent job for this subscription. For more information, see [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
-    > **IMPORTANT!!** When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../Topic/Enable%20Encrypted%20Connections%20to%20the%20Database%20Engine%20\(SQL%20Server%20Configuration%20Manager\).md).  
+    > **IMPORTANT!!** When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure/windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### To create a push subscription to a merge publication  
   
-1.  At the Publisher on the publication database, verify that the publication supports push subscriptions by executing [sp_helpmergepublication](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md).  
+1.  At the Publisher on the publication database, verify that the publication supports push subscriptions by executing [sp_helpmergepublication](../../relational-databases/reference/system-stored-procedures/sp-helpmergepublication-transact-sql.md).  
   
     -   If the value of **allow_push** is **1**, the publication supports push subscriptions.  
   
-    -   If the value of **allow_push** is not **1**, execute [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying **allow_push** for **@property** and **true** for **@value**.  
+    -   If the value of **allow_push** is not **1**, execute [sp_changemergepublication](../../relational-databases/reference/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying **allow_push** for **@property** and **true** for **@value**.  
   
-2.  At the Publisher on the publication database, execute [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md), specifying the following parameters:  
+2.  At the Publisher on the publication database, execute [sp_addmergesubscription](../../relational-databases/reference/system-stored-procedures/sp-addmergesubscription-transact-sql.md), specifying the following parameters:  
   
     -   **@publication**. This is the name of the publication.  
   
@@ -120,9 +120,9 @@ manager: "jhubbard"
   
     -   **@subscription_priority**. For a server subscription, specify a priority for the subscription (**0.00** to **99.99**).  
   
-         For more information, see [Advanced Merge Replication Conflict Detection and Resolution](../Topic/Advanced%20Merge%20Replication%20Conflict%20Detection%20and%20Resolution.md).  
+         For more information, see [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
-3.  At the Publisher on the publication database, execute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Specify the following:  
+3.  At the Publisher on the publication database, execute [sp_addmergepushsubscription_agent](../../relational-databases/reference/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Specify the following:  
   
     -   The **@subscriber**, **@subscriber_db**, and **@publication** parameters.  
   
@@ -130,27 +130,27 @@ manager: "jhubbard"
   
         > **NOTE:**  Connections made using Windows Integrated Authentication always use the Windows credentials specified by **@job_login** and **@job_password**. The Merge Agent always makes the local connection to the Distributor using Windows Integrated Authentication. By default, the agent will connect to the Subscriber using Windows Integrated Authentication.  
   
-    -   (Optional) A value of **0** for **@subscriber_security_mode** and the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login information for **@subscriber_login** and **@subscriber_password**. Specify these parameters if you need to use SQL Server Authentication when connecting to the Subscriber.  
+    -   (Optional) A value of **0** for **@subscriber_security_mode** and the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login information for **@subscriber_login** and **@subscriber_password**. Specify these parameters if you need to use SQL Server Authentication when connecting to the Subscriber.  
   
-    -   (Optional) A value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. Specify these values if you need to use SQL Server Authentication when connecting to the Publisher.  
+    -   (Optional) A value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. Specify these values if you need to use SQL Server Authentication when connecting to the Publisher.  
   
     -   A schedule for the Merge Agent job for this subscription. For more information, see [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
-    > **IMPORTANT!!** When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../Topic/Enable%20Encrypted%20Connections%20to%20the%20Database%20Engine%20\(SQL%20Server%20Configuration%20Manager\).md).  
+    > **IMPORTANT!!** When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure/windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  The following example creates a push subscription to a transactional publication. Login and password values are supplied at run time by using **sqlcmd** scripting variables.  
   
- [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/create-a-push-subscription_1.sql)]  
+ [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../a9retired/codesnippet/tsql/create-a-push-subscription_1.sql)]  
   
  The following example creates a push subscription to a merge publication. Login and password values are supplied at run time by using **sqlcmd** scripting variables.  
   
- [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/create-a-push-subscription_2.sql)]  
+ [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../a9retired/codesnippet/tsql/create-a-push-subscription_2.sql)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  You can create push subscriptions programmatically by using Replication Management Objects (RMO). The RMO classes you use to create a push subscription depend on the type of publication to which the subscription is created.  
   
-> **IMPORTANT!** When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows .NET Framework.  
+> **IMPORTANT!** When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows .NET Framework.  
   
 #### To create a push subscription to a snapshot or transactional publication  
   
@@ -178,7 +178,7 @@ manager: "jhubbard"
   
     -   Name of the publication for <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>.  
   
-    -   The <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> and <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> or <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> fields of <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> to provide the credentials for the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows account under which the Distribution Agent runs at the Distributor. This account is used to make local connections to the Distributor and to make remote connections using Windows Authentication.  
+    -   The <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> and <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> or <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> fields of <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> to provide the credentials for the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows account under which the Distribution Agent runs at the Distributor. This account is used to make local connections to the Distributor and to make remote connections using Windows Authentication.  
   
         > **NOTE:** Setting <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> is not required when the subscription is created by a member of the **sysadmin** fixed server role, however it is recommended. In this case, the agent will impersonate the SQL Server Agent account. For more information, see [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
@@ -188,7 +188,7 @@ manager: "jhubbard"
   
 8.  Call the <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> method.  
   
-    > **IMPORTANT!!**When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> method. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../Topic/Enable%20Encrypted%20Connections%20to%20the%20Database%20Engine%20\(SQL%20Server%20Configuration%20Manager\).md).  
+    > **IMPORTANT!!**When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> method. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure/windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### To create a push subscription to a merge publication  
   
@@ -216,7 +216,7 @@ manager: "jhubbard"
   
     -   Name of the publication for <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>.  
   
-    -   The <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> and <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> or <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> fields of <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> to provide the credentials for the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows account under which the Merge Agent runs at the Distributor. This account is used to make local connections to the Distributor and to make remote connections using Windows Authentication.  
+    -   The <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> and <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> or <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> fields of <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> to provide the credentials for the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows account under which the Merge Agent runs at the Distributor. This account is used to make local connections to the Distributor and to make remote connections using Windows Authentication.  
   
         > **NOTE:** Setting <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> is not required when the subscription is created by a member of the **sysadmin** fixed server role, however it is recommended. In this case, the agent will impersonate the SQL Server Agent account. For more information, see [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
@@ -228,20 +228,20 @@ manager: "jhubbard"
   
 8.  Call the <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> method.  
   
-    > **IMPORTANT!**  When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> method. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../Topic/Enable%20Encrypted%20Connections%20to%20the%20Database%20Engine%20\(SQL%20Server%20Configuration%20Manager\).md).  
+    > **IMPORTANT!**  When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> method. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure/windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ###  <a name="PShellExample"></a> Examples (RMO)  
  This example creates a new push subscription to a transactional publication. The Windows account credentials you use to run the Distribution Agent job are passed at runtime.  
   
- [!code-cs[HowTo#rmo_CreateTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createtranpushsub)]  
+ [!code-cs[HowTo#rmo_CreateTranPushSub](../../a9retired/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createtranpushsub)]  
   
- [!code-vb[HowTo#rmo_vb_CreateTranPushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createtranpushsub)]  
+ [!code-vb[HowTo#rmo_vb_CreateTranPushSub](../../a9retired/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createtranpushsub)]  
   
  This example creates a new push subscription to a merge publication. The Windows account credentials you use to run the Merge Agent job are passed at runtime.  
   
- [!code-cs[HowTo#rmo_CreateMergePushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepushsub)]  
+ [!code-cs[HowTo#rmo_CreateMergePushSub](../../a9retired/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepushsub)]  
   
- [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
+ [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../a9retired/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
 ## See Also  
  [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
@@ -250,6 +250,6 @@ manager: "jhubbard"
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [Use sqlcmd with Scripting Variables](../Topic/Use%20sqlcmd%20with%20Scripting%20Variables.md)  
+ [Use sqlcmd with Scripting Variables](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

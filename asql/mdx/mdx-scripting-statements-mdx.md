@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Scripting Statements (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   In Multidimensional Expressions (MDX), the following statements manage context, scope, and control of flow within MDX scripts.  
   
@@ -29,12 +29,12 @@ manager: "erikre"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[CALCULATE Statement &#40;MDX&#41;](../Topic/CALCULATE%20Statement%20\(MDX\).md)|Calculates a subcube, optionally determining the solve order of dimensions included within the subcube.|  
+|[CALCULATE Statement &#40;MDX&#41;](../mdx/mdx-scripting-calculate.md)|Calculates a subcube, optionally determining the solve order of dimensions included within the subcube.|  
 |[CASE Statement &#40;MDX&#41;](../mdx/case-statement-mdx.md)|Lets you conditionally return specific values from multiple comparisons.|  
-|[EXISTING Keyword &#40;MDX&#41;](../Topic/EXISTING%20Keyword%20\(MDX\).md)|Forces a specified set to be evaluated within the current context.|  
-|[FREEZE Statement &#40;MDX&#41;](../Topic/FREEZE%20Statement%20\(MDX\).md)|Locks the cell values of a specified subcube to their current values.|  
-|[IF Statement  &#40;MDX&#41;](../Topic/IF%20Statement%20%20\(MDX\).md)|Executes a statement if the condition is true.|  
-|[SCOPE Statement &#40;MDX&#41;](../Topic/SCOPE%20Statement%20\(MDX\).md)|Limits the scope of specified MDX statements to a specified subcube.|  
+|[EXISTING Keyword &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)|Forces a specified set to be evaluated within the current context.|  
+|[FREEZE Statement &#40;MDX&#41;](../mdx/mdx-scripting-freeze.md)|Locks the cell values of a specified subcube to their current values.|  
+|[IF Statement  &#40;MDX&#41;](../mdx/mdx-scripting-if.md)|Executes a statement if the condition is true.|  
+|[SCOPE Statement &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)|Limits the scope of specified MDX statements to a specified subcube.|  
   
 ## See Also  
  [MDX Statement Reference &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   

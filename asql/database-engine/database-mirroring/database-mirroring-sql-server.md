@@ -30,9 +30,9 @@ manager: "jhubbard"
 # Database Mirroring (SQL Server)
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../database-engine/configure/windows/includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../a9notintoc/includes/sshadr-md.md)] instead.  
   
- *Database mirroring* is a solution for increasing the availability of a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database. Mirroring is implemented on a per-database basis and works only with databases that use the full recovery model.  
+ *Database mirroring* is a solution for increasing the availability of a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database. Mirroring is implemented on a per-database basis and works only with databases that use the full recovery model.  
   
 > [!IMPORTANT]  
 >  For information about support for database mirroring, restrictions, prerequisites, recommendations for configuring partner servers, and recommendations for deploying database mirroring, see [Prerequisites, Restrictions, and Recommendations for Database Mirroring](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md).  
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 -   Improves the availability of the production database during upgrades.  
   
-     To minimize downtime for a mirrored database, you can sequentially upgrade the instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that are hosting the failover partners. This will incur the downtime of only a single failover. This form of upgrade is known as a *rolling upgrade*. For more information, see [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
+     To minimize downtime for a mirrored database, you can sequentially upgrade the instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that are hosting the failover partners. This will incur the downtime of only a single failover. This form of upgrade is known as a *rolling upgrade*. For more information, see [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
   
 ##  <a name="TermsAndDefinitions"></a> Database Mirroring Terms and Definitions  
@@ -115,16 +115,16 @@ manager: "jhubbard"
   
   
 ##  <a name="HowWorks"></a> Overview of Database Mirroring  
- Database mirroring maintains two copies of a single database that must reside on different server instances of [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]. Typically, these server instances reside on computers in different locations. Starting database mirroring on a database, initiates a relationship, known as a *database mirroring session*, between these server instances.  
+ Database mirroring maintains two copies of a single database that must reside on different server instances of [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)]. Typically, these server instances reside on computers in different locations. Starting database mirroring on a database, initiates a relationship, known as a *database mirroring session*, between these server instances.  
   
  One server instance serves the database to clients (the *principal server*). The other instance acts as a hot or warm standby server (the *mirror server*), depending on the configuration and state of the mirroring session. When a database mirroring session is synchronized, database mirroring provides a hot standby server that supports rapid failover without a loss of data from committed transactions. When the session is not synchronized, the mirror server is typically available as a warm standby server (with possible data loss).  
   
  The principal and mirror servers communicate and cooperate as *partners* in a *database mirroring session*. The two partners perform complementary roles in the session: the *principal role* and the *mirror role*. At any given time, one partner performs the principal role, and the other partner performs the mirror role. Each partner is described as *owning* its current role. The partner that owns the principal role is known as the *principal server*, and its copy of the database is the current principal database. The partner that owns the mirror role is known as the *mirror server*, and its copy of the database is the current mirror database. When database mirroring is deployed in a production environment, the principal database is the *production database*.  
   
- Database mirroring involves *redoing* every insert, update, and delete operation that occurs on the principal database onto the mirror database as quickly as possible. Redoing is accomplished by sending a stream of active transaction log records to the mirror server, which applies log records to the mirror database, in sequence, as quickly as possible. Unlike replication, which works at the logical level, database mirroring works at the level of the physical log record. Beginning in [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)], the principal server compresses the stream of transaction log records before sending it to the mirror server. This log compression occurs in all mirroring sessions.  
+ Database mirroring involves *redoing* every insert, update, and delete operation that occurs on the principal database onto the mirror database as quickly as possible. Redoing is accomplished by sending a stream of active transaction log records to the mirror server, which applies log records to the mirror database, in sequence, as quickly as possible. Unlike replication, which works at the logical level, database mirroring works at the level of the physical log record. Beginning in [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)], the principal server compresses the stream of transaction log records before sending it to the mirror server. This log compression occurs in all mirroring sessions.  
   
 > [!NOTE]  
->  A given server instance can participate in multiple concurrent database mirroring sessions with the same or different partners. A server instance can be a partner in some sessions and a witness in other sessions. The mirror server instance must be running the same edition of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+>  A given server instance can participate in multiple concurrent database mirroring sessions with the same or different partners. A server instance can be a partner in some sessions and a witness in other sessions. The mirror server instance must be running the same edition of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  **In This Section:**  
   
@@ -161,13 +161,13 @@ manager: "jhubbard"
  For more information, see [Role Switching](#RoleSwitching), later in this topic.  
   
 > [!NOTE]  
->  Establishing a new mirroring session or adding a witness to an existing mirroring configuration requires that all involved server instances run the same version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. However, when you are upgrading to [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] or a later version, the versions of the involved instances can vary. For more information, see [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
+>  Establishing a new mirroring session or adding a witness to an existing mirroring configuration requires that all involved server instances run the same version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. However, when you are upgrading to [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] or a later version, the versions of the involved instances can vary. For more information, see [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
   
 ####  <a name="TxnSafety"></a> Transaction Safety and Operating Modes  
- Whether an operating mode is asynchronous or synchronous depends on the transaction safety setting. If you exclusively use [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to configure database mirroring, transaction safety settings are configured automatically when you select the operation mode.  
+ Whether an operating mode is asynchronous or synchronous depends on the transaction safety setting. If you exclusively use [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] to configure database mirroring, transaction safety settings are configured automatically when you select the operation mode.  
   
- If you use [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] to configure database mirroring, you must understand how to set transaction safety. Transaction safety is controlled by the SAFETY property of the ALTER DATABASE statement. On a database that is being mirrored, SAFETY is either FULL or OFF.  
+ If you use [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] to configure database mirroring, you must understand how to set transaction safety. Transaction safety is controlled by the SAFETY property of the ALTER DATABASE statement. On a database that is being mirrored, SAFETY is either FULL or OFF.  
   
 -   If the SAFETY option is set to FULL, database mirroring operation is synchronous, after the initial synchronizing phase. If a witness is set in high-safety mode, the session supports automatic failover.  
   
@@ -224,7 +224,7 @@ manager: "jhubbard"
 >  Because mirrored databases are independent of each other, databases cannot fail over as a group.  
   
 ###  <a name="ClientConnections"></a> Client Connections  
- Client-connection support for database mirroring sessions is provided by the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] .NET Data Provider for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information, see [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ Client-connection support for database mirroring sessions is provided by the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] .NET Data Provider for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For more information, see [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
   
 ###  <a name="ImpactOfPausing"></a> Impact of Pausing a Session on the Principal Transaction Log  
@@ -236,7 +236,7 @@ manager: "jhubbard"
  Before a mirroring session can begin, the database owner or system administrator must create the mirror database, set up endpoints and logins, and, in some cases, create and set up certificates. For more information, see [Setting Up Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
 ##  <a name="InterOp"></a> Interoperability and Coexistence with Other Database Engine Features  
- Database mirroring can be used with the following features or components of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Database mirroring can be used with the following features or components of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 -   [Log shipping](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
@@ -260,7 +260,7 @@ manager: "jhubbard"
  Contains information about switching partner roles during a database mirroring session, including automatic failover, manual failover, and forced service (with possible data loss). Also, contains information about estimating the interruption of service during role switching.  
   
  [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)  
- Discusses physical, operating system, and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] problems, including hard errors and soft errors, that can cause a failure in a database mirroring session. Discusses how the mirroring time-out mechanism responds to soft errors.  
+ Discusses physical, operating system, and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] problems, including hard errors and soft errors, that can cause a failure in a database mirroring session. Discusses how the mirroring time-out mechanism responds to soft errors.  
   
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
  Discusses how the database mirroring endpoint functions.  
@@ -286,21 +286,21 @@ manager: "jhubbard"
 ### Configuration Tasks  
  **Using SQL Server Management Studio**  
   
--   [Start the Configuring Database Mirroring Security Wizard &#40;SQL Server Management Studio&#41;](../Topic/Start%20the%20Configuring%20Database%20Mirroring%20Security%20Wizard%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [Start the Configuring Database Mirroring Security Wizard &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
--   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../Topic/Establish%20a%20Database%20Mirroring%20Session%20Using%20Windows%20Authentication%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
  **Using Transact-SQL**  
   
--   [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../Topic/Allow%20Network%20Access%20to%20a%20Database%20Mirroring%20Endpoint%20Using%20Windows%20Authentication%20\(SQL%20Server\).md)  
+-   [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)  
   
--   [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../Topic/Allow%20a%20Database%20Mirroring%20Endpoint%20to%20Use%20Certificates%20for%20Outbound%20Connections%20\(Transact-SQL\).md)  
+-   [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
--   [Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections &#40;Transact-SQL&#41;](../Topic/Allow%20a%20Database%20Mirroring%20Endpoint%20to%20Use%20Certificates%20for%20Inbound%20Connections%20\(Transact-SQL\).md)  
+-   [Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/143c68a5-589f-4e7f-be59-02707e1a430a.md)  
+-   [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
   
 -   [Add a Database Mirroring Witness Using Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   

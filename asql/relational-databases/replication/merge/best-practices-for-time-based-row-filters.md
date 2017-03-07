@@ -23,7 +23,7 @@ manager: "jhubbard"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- With a filter of this type, it is usually assumed that two things always occur when the Merge Agent runs: rows that satisfy this filter are replicated to Subscribers; and rows that no longer satisfy this filter are cleaned up at Subscribers. (For more information about filtering with **HOST_NAME()**, see [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md).) However, merge replication only replicates and cleans up data that has changed since the last synchronization, regardless of how you define a row filter for that data.  
+ With a filter of this type, it is usually assumed that two things always occur when the Merge Agent runs: rows that satisfy this filter are replicated to Subscribers; and rows that no longer satisfy this filter are cleaned up at Subscribers. (For more information about filtering with **HOST_NAME()**, see [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).) However, merge replication only replicates and cleans up data that has changed since the last synchronization, regardless of how you define a row filter for that data.  
   
  For merge replication to process a row, the data in the row must satisfy the row filter, and it must have changed since the last synchronization. In the case of the **SalesOrderHeader** table, **OrderDate** is entered when a row is inserted. Rows are replicated to the Subscriber as expected because the insert is a data change. However, if there are rows at the Subscriber that no longer satisfy the filter (they are for orders older than seven days), they are not removed from the Subscriber unless they were updated for some other reason.  
   
@@ -41,7 +41,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 -   If the publication does not use precomputed partitions, filters are evaluated when the Merge Agent runs.  
   
- For more information about precomputed partitions, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../Topic/Optimize%20Parameterized%20Filter%20Performance%20with%20Precomputed%20Partitions.md). The time at which the filter is evaluated affects what data satisfies the filter. For example, if a publication uses precomputed partitions, and you synchronize data every two days, the subset of data for the salesperson could include rows up to two days older than expected.  
+ For more information about precomputed partitions, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md). The time at which the filter is evaluated affects what data satisfies the filter. For example, if a publication uses precomputed partitions, and you synchronize data every two days, the subset of data for the salesperson could include rows up to two days older than expected.  
   
 ## Recommendations for Using Time-Based Row Filters  
  The following method provides a robust and straightforward approach to filtering based on time:  
@@ -67,7 +67,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND Replicate = 1  
 ```  
   
- The SQL Server Agent job could execute [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statements similar to the following before each Merge Agent run:  
+ The SQL Server Agent job could execute [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statements similar to the following before each Merge Agent run:  
   
 ```  
 UPDATE Events SET Replicate = 0 WHERE Replicate = 1  
@@ -76,7 +76,7 @@ UPDATE Events SET Replicate = 1 WHERE EventDate <= GETDATE()+6
 GO  
 ```  
   
- The first line resets the **Replicate** column to **0**, and the second line sets the column to **1** for events that occur in the next seven days. If this [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statement runs on 10/07/2006, the table is updated to:  
+ The first line resets the **Replicate** column to **0**, and the second line sets the column to **1** for events that occur in the next seven days. If this [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statement runs on 10/07/2006, the table is updated to:  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replicate**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
@@ -90,6 +90,6 @@ GO
 ## See Also  
  [GETDATE &#40;Transact-SQL&#41;](../../../t-sql/functions/getdate-transact-sql.md)   
  [Implement Jobs](../Topic/Implement%20Jobs.md)   
- [Parameterized Row Filters](../Topic/Parameterized%20Row%20Filters.md)  
+ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

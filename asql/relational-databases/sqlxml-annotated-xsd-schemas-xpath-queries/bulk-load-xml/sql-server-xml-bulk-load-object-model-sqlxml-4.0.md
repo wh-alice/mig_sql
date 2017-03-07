@@ -36,7 +36,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # SQL Server XML Bulk Load Object Model (SQLXML 4.0)
-  The Microsoft [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] XML Bulk Load object model consists of the SQLXMLBulkLoad object. This object supports the following methods and properties.  
+  The Microsoft [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] XML Bulk Load object model consists of the SQLXMLBulkLoad object. This object supports the following methods and properties.  
   
 ## Methods  
  Execute  
@@ -91,16 +91,16 @@ manager: "jhubbard"
  The default value is FALSE.  
   
  IgnoreDuplicateKeys  
- Specifies what to do if an attempt is made to insert duplicate values in a key column. If this property is set to TRUE and an attempt is made to insert a record with a duplicate value in a key column, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not insert that record. But it does insert the subsequent record; thus, the Bulk Load operation does not fail. If this property is set to FALSE, Bulk Load fails when an attempt is made to insert a duplicate value in a key column.  
+ Specifies what to do if an attempt is made to insert duplicate values in a key column. If this property is set to TRUE and an attempt is made to insert a record with a duplicate value in a key column, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] does not insert that record. But it does insert the subsequent record; thus, the Bulk Load operation does not fail. If this property is set to FALSE, Bulk Load fails when an attempt is made to insert a duplicate value in a key column.  
   
  When the IgnoreDuplicateKeys property is set to TRUE, a COMMIT statement is issued for every record inserted in the table. This slows down the performance. The property can be set to TRUE only when the Transaction property is set to FALSE, because the transactional behavior is implemented using files.  
   
  The default value is FALSE.  
   
  KeepIdentity  
- Specifies how to deal with the values for an Identity type column in the source file. This is a Boolean property. When the property is set to TRUE, XML Bulk Load assigns the values that are specified in the source file to the identity column. When the property is set to FALSE, the bulk-load operation ignores the identity-column values that are specified in the source. In this case, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] assigns a value to the identity column.  
+ Specifies how to deal with the values for an Identity type column in the source file. This is a Boolean property. When the property is set to TRUE, XML Bulk Load assigns the values that are specified in the source file to the identity column. When the property is set to FALSE, the bulk-load operation ignores the identity-column values that are specified in the source. In this case, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] assigns a value to the identity column.  
   
- If the Bulk Load involves a column that is a foreign key referring to an identity column in which [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]-generated values are stored, Bulk Load appropriately propagates these identity values to the foreign key column.  
+ If the Bulk Load involves a column that is a foreign key referring to an identity column in which [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]-generated values are stored, Bulk Load appropriately propagates these identity values to the foreign key column.  
   
  The value of this property applies to all columns involved in the bulk load. The default value is TRUE.  
   
@@ -119,9 +119,9 @@ manager: "jhubbard"
   
  Note that if you set the SchemaGen property to TRUE, XML Bulk Load does the following:  
   
--   Creates the necessary tables from the element and attribute names. Therefore, it is important that you do not use [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] reserved words for element and attribute names in the schema.  
+-   Creates the necessary tables from the element and attribute names. Therefore, it is important that you do not use [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] reserved words for element and attribute names in the schema.  
   
--   Returns overflow data for any column designated using the [sql:overflow-field](../Topic/sql:overflow-field%20\(SQLXML%204.0\).md) in [xml data type](../../../t-sql/xml/xml-transact-sql.md) format.  
+-   Returns overflow data for any column designated using the [sql:overflow-field](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md) in [xml data type](../../../t-sql/xml/xml-transact-sql.md) format.  
   
  SGDropTables  
  Specifies whether existing tables should be dropped and re-created. You use this property when the SchemaGen property is set to TRUE. If SGDropTables is FALSE, the existing tables are retained. When this property is TRUE, the existing tables are deleted and re-created.  
@@ -134,13 +134,13 @@ manager: "jhubbard"
  The default value is FALSE.  
   
  TempFilePath  
- Specifies the file path where XML Bulk Load creates the temporary files for a transacted bulk load. (This property is useful only when the Transaction property is set to TRUE.) You must ensure that the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] account that is used for XML Bulk Load has access to this path. If this property is not set, XML Bulk Load stores the temporary files in the location that is specified in the TEMP environment variable.  
+ Specifies the file path where XML Bulk Load creates the temporary files for a transacted bulk load. (This property is useful only when the Transaction property is set to TRUE.) You must ensure that the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] account that is used for XML Bulk Load has access to this path. If this property is not set, XML Bulk Load stores the temporary files in the location that is specified in the TEMP environment variable.  
   
  Transaction  
  Specifies whether the Bulk Load should be done as a transaction, in which case the rollback is guaranteed if the Bulk Load fails. This is a Boolean property. If the property is set to TRUE, the Bulk Load occurs in a transactional context. The TempFilePath property is useful only when Transaction is set to TRUE.  
   
 > [!NOTE]  
->  If you are loading binary data (such as the bin.hex, bin.base64 XML data types to the binary, image [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data types), the Transaction property must be set to FALSE.  
+>  If you are loading binary data (such as the bin.hex, bin.base64 XML data types to the binary, image [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data types), the Transaction property must be set to FALSE.  
   
  The default value is FALSE.  
   

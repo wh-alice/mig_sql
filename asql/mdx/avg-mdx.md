@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Avg (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Evaluates a set and returns the average of the non empty values of the cells in the set, averaged over the measures in the set or over a specified measure.  
   
@@ -45,7 +45,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  The **Avg** function calculates the average of the nonempty values of cells in the specified set by first calculating the sum of values across cells in the specified set, and then dividing the calculated sum by the count of nonempty cells in the specified set.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] ignores nulls when calculating the average value in a set of numbers.  
+>  [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] ignores nulls when calculating the average value in a set of numbers.  
   
  If a specific numeric expression (typically a measure) is not specified, the **Avg** function averages each measure within the current query context. If a specific measure is provided, the **Avg** function first evaluates the measure over the set, and then the function calculates the average based on the specified measure.  
   

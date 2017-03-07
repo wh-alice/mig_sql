@@ -19,7 +19,7 @@ manager: "erikre"
   Returns the value or the specified aggregate value for the previous instance of an item within the specified scope.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Syntax  
   
@@ -33,7 +33,7 @@ Previous(expression, scope)
  (**Variant** or **Binary**) The expression to use to identify the data and for which to retrieve the previous value, for example, `Fields!Fieldname.Value` or `Sum(Fields!Fieldname.Value)`.  
   
  *scope*  
- (**String**) Optional. The name of a group or data region, or null (**Nothing** in [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)]), that specifies the scope from which to retrieve the previous value specified by *expression*.  
+ (**String**) Optional. The name of a group or data region, or null (**Nothing** in [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)]), that specifies the scope from which to retrieve the previous value specified by *expression*.  
   
 ## Return Type  
  Returns a **Variant** or **Binary**.  
@@ -46,7 +46,7 @@ Previous(expression, scope)
  In a details group, use **Previous** to specify the value of a field reference in the previous instance of the detail row.  
   
 > [!NOTE]  
->  The **Previous** function only supports field references in the details group. For example, in a text box in the details group, `=Previous(Fields!Quantity.Value)` returns the data for the field `Quantity` from the previous row. In the first row, this expression returns a null (**Nothing** in [!INCLUDE[vbprvb](../../analysis-services/data-mining/includes/vbprvb-md.md)]).  
+>  The **Previous** function only supports field references in the details group. For example, in a text box in the details group, `=Previous(Fields!Quantity.Value)` returns the data for the field `Quantity` from the previous row. In the first row, this expression returns a null (**Nothing** in [!INCLUDE[vbprvb](../../a9retired/includes/vbprvb-md.md)]).  
   
  If *expression* contains an aggregate function that uses a default scope, **Previous** aggregates the data within the previous instance of the scope specified in the aggregate function call.  
   
@@ -54,7 +54,7 @@ Previous(expression, scope)
   
  The functions **Level**, **InScope**, **Aggregate** and **Previous** cannot be used in the *expression*parameter. Specifying the *recursive* parameter for any aggregate function is not supported.  
   
- For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../Topic/Aggregate%20Functions%20Reference%20\(Report%20Builder%20and%20SSRS\).md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/a8d24287-8557-4b03-bea7-ca087f449b62.md).  
+ For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/a8d24287-8557-4b03-bea7-ca087f449b62.md).  
   
 ## Examples  
   

@@ -23,7 +23,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Indicators (Report Builder and SSRS)
-  In [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports,indicators are small gauges that convey the state of a single data value at a glance. The icons that represent indicators and their states are simple and visually effective even when used in small sizes.  
+  In [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports,indicators are small gauges that convey the state of a single data value at a glance. The icons that represent indicators and their states are simple and visually effective even when used in small sizes.  
   
  You can use state indicators in your reports to show the following:  
   
@@ -39,7 +39,7 @@ manager: "erikre"
    
  ![rs_IndicatorTableTrafficLight](../../reporting-services/report-design/media/rs-indicatortabletrafficlight.gif "rs_IndicatorTableTrafficLight")  
   
- [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] provides built-in indicator sets and indicator icons to use as is, and you can also customize individual indicator icons and indicators sets to suit your needs.  
+ [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] provides built-in indicator sets and indicator icons to use as is, and you can also customize individual indicator icons and indicators sets to suit your needs.  
   
  For more information about using indicators as KPIs, see [Tutorial: Adding a KPI to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorials/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   

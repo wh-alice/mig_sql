@@ -22,7 +22,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # SQLXML 4.0 Data Access Components - SQLXMLOLEDB Provider
-  [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] SQLXML 4.0 includes three data providers that can insert XML data into and retrieve XML data from a database in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]:  
+  [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] SQLXML 4.0 includes three data providers that can insert XML data into and retrieve XML data from a database in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]:  
   
 -   SQLXMLOLEDB Provider  
   
@@ -30,14 +30,14 @@ manager: "jhubbard"
   
 -   SQLXML Managed Classes  
   
-     Expose SQLXML functionality inside the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] .NET Framework. For more information, see [SQLXML Managed Classes](../Topic/SQLXML%20Managed%20Classes.md).  
+     Expose SQLXML functionality inside the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] .NET Framework. For more information, see [SQLXML Managed Classes](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4.0-.net-framework-support-managed-classes.md).  
   
 -   SQL Server Native Client (SQLNCLI11)  
   
-     Exposes SQLXML 4.0 functionality through a new data access technology that extends and compliments current versions of Microsoft Data Access Components (MDAC). SQLNCLI11 provides full support for features introduced in [!INCLUDE[ssVersion2005](../../../analysis-services/data-mining/includes/ssversion2005-md.md)]. For more information, see [SQL Server Native Client Programming](../../../relational-databases/native-client/sql-server-native-client-programming.md).  
+     Exposes SQLXML 4.0 functionality through a new data access technology that extends and compliments current versions of Microsoft Data Access Components (MDAC). SQLNCLI11 provides full support for features introduced in [!INCLUDE[ssVersion2005](../../../a9notintoc/includes/ssversion2005-md.md)]. For more information, see [SQL Server Native Client Programming](../../../relational-databases/native-client/sql-server-native-client-programming.md).  
   
 ## In This Section  
- [SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](../Topic/SQLXMLOLEDB%20Provider%20\(SQLXML%204.0\).md)  
+ [SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](../../../a9retired/sqlxmloledb-provider-sqlxml-4.0.md)  
  Describes the SQLXMLOLEDB Provider and illustrates its usage.  
   
   

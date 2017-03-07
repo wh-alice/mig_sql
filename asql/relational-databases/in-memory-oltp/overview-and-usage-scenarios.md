@@ -15,7 +15,7 @@ ms.author: "jodebrui"
 manager: "jhubbard"
 ---
 # Overview and Usage Scenarios
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 In-Memory OLTP is the premier technology available in SQL Server and Azure SQL Database for optimizing performance of transaction processing, data ingestion, data load, and transient data scenarios. This topic includes an overview of the technology and outlines usage scenarios for In-Memory OLTP. Use this information to determine whether In-Memory OLTP is right for your application. The topic concludes with an example that shows In-Memory OLTP objects, reference to a perf demo, and references to resources you can use for next steps.
 

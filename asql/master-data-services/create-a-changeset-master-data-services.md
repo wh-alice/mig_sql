@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 ## To create a local changeset  
   
-1.  On the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] home page, select  the model and version and then click **Explorer**.  
+1.  On the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] home page, select  the model and version and then click **Explorer**.  
   
 2.  Click an entity on the **Entities** menu.  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 ## To create a changeset for approval  
   
-1.  On the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] home page, select  the model and version and then click **Explorer**.  
+1.  On the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] home page, select  the model and version and then click **Explorer**.  
   
 2.  Click an entity on the **Entities** menu.  
   

@@ -20,14 +20,14 @@ manager: "jhubbard"
   This topic provides information to help you create DDL triggers, modify DDL triggers, and disable or drop DDL triggers.  
   
 ## Creating DDL Triggers  
- DDL triggers are created by using the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] CREATE TRIGGER statement for DDL triggers.  
+ DDL triggers are created by using the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] CREATE TRIGGER statement for DDL triggers.  
   
  **To create a DDL trigger**  
   
 -   [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
 > [!IMPORTANT]  
->  The ability to return result sets from triggers will be removed in a future version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Triggers that return result sets may cause unexpected behavior in applications that are not designed to work with them. Avoid returning result sets from triggers in new development work, and plan to modify applications that currently do this. To prevent triggers from returning result sets in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], set the [disallow results from triggers Option](../../database-engine/configure/windows/disallow-results-from-triggers-server-configuration-option.md) to 1. The default setting of this option will be 1 in a future version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+>  The ability to return result sets from triggers will be removed in a future version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. Triggers that return result sets may cause unexpected behavior in applications that are not designed to work with them. Avoid returning result sets from triggers in new development work, and plan to modify applications that currently do this. To prevent triggers from returning result sets in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], set the [disallow results from triggers Option](../../database-engine/configure/windows/disallow-results-from-triggers-server-configuration-option.md) to 1. The default setting of this option will be 1 in a future version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## Modifying DDL Triggers  
  If you have to modify the definition of a DDL trigger, you can either drop and re-create the trigger or redefine the existing trigger in a single step.  
@@ -42,16 +42,16 @@ manager: "jhubbard"
   
  **To view the dependencies of a trigger**  
   
--   [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md)  
+-   [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.sql-expression-dependencies-transact-sql.md)  
   
--   [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-sql-referenced-entities-transact-sql.md)  
+-   [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-sql-referenced-entities-transact-sql.md)  
   
--   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys.dm-sql-referencing-entities-transact-sql.md)  
+-   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/reference/system-dynamic-management-views/sys.dm-sql-referencing-entities-transact-sql.md)  
   
 ## Disabling and Dropping DDL Triggers  
  When a DDL trigger is no longer needed, you can disable it or delete it.  
   
- Disabling a DDL trigger does not drop it. The trigger still exists as an object in the current database. However, the trigger will not fire when any [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements on which it was programmed are run. DDL triggers that are disabled can be reenabled. Enabling a DDL trigger causes it to fire in the same way the trigger did when it was originally created. When DDL triggers are created, they are enabled by default.  
+ Disabling a DDL trigger does not drop it. The trigger still exists as an object in the current database. However, the trigger will not fire when any [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements on which it was programmed are run. DDL triggers that are disabled can be reenabled. Enabling a DDL trigger causes it to fire in the same way the trigger did when it was originally created. When DDL triggers are created, they are enabled by default.  
   
  When a DDL trigger is deleted, it is dropped from the current database. Any objects or data upon which the DDL trigger is scoped are not affected.  
   

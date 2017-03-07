@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Conditional Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery supports the following conditional **if-then-else** statement:  
   
@@ -52,7 +52,7 @@ else
   
 -   The **else** expression is required. If you do not need it, you can return " ( ) ", as illustrated in the examples in this topic.  
   
- For example, the following query is specified against the **xml** type variable. The **if** condition tests the value of the SQL variable (@v) inside the XQuery expression by using the [sql:variable() function](../Topic/sql:variable\(\)%20Function%20\(XQuery\).md) extension function. If the variable value is "FirstName", it returns the <`FirstName`> element. Otherwise, it returns the <`LastName`> element.  
+ For example, the following query is specified against the **xml** type variable. The **if** condition tests the value of the SQL variable (@v) inside the XQuery expression by using the [sql:variable() function](../xquery/xquery-extension-functions-sql-variable.md) extension function. If the variable value is "FirstName", it returns the <`FirstName`> element. Otherwise, it returns the <`LastName`> element.  
   
 ```  
 declare @x xml  

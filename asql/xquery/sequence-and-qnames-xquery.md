@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Sequence and QNames (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   This topic describes the following fundamental concepts of XQuery:  
   
@@ -129,7 +129,7 @@ WHERE ProductModelID=7;
   
 -   The `$step` variable is a QName and does not have a prefix.  
   
- The following namespaces are predefined for use with XQuery support in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ The following namespaces are predefined for use with XQuery support in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)].  
   
 |Prefix|URI|  
 |------------|---------|  

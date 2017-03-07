@@ -26,17 +26,17 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Modeling Flags (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  You can use modeling flags in [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] to provide additional information to a data mining algorithm about the data that is defined in a case table. The algorithm can use this information to build a more accurate data mining model. You can define modeling flags on both mining structure columns and mining model columns.  
+  You can use modeling flags in [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] to provide additional information to a data mining algorithm about the data that is defined in a case table. The algorithm can use this information to build a more accurate data mining model. You can define modeling flags on both mining structure columns and mining model columns.  
   
- [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] supports the following modeling flags:  
+ [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] supports the following modeling flags:  
   
  **NOT NULL**  
- The values for the attribute column should never contain a null value. An error will result if [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] encounters a null value for this attribute column during the model training process. This flag is defined on a mining structure column.  
+ The values for the attribute column should never contain a null value. An error will result if [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] encounters a null value for this attribute column during the model training process. This flag is defined on a mining structure column.  
   
  **REGRESSOR**  
- Indicates that the algorithm can use the specified column in the regression formula of regression algorithms. This flag is supported by the [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Linear Regression and [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Decision Trees algorithms, and is defined on a mining model column.  
+ Indicates that the algorithm can use the specified column in the regression formula of regression algorithms. This flag is supported by the [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Linear Regression and [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] Decision Trees algorithms, and is defined on a mining model column.  
   
  **MODEL_EXISTENCE_ONLY**  
  The values for the attribute column are less important than the presence of the attribute. This flag is defined on a mining model column.  
@@ -54,7 +54,7 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  NOT NULL,REGRESSOR  
   
 ## Specifying Modeling Flags on a Mining Model  
- For examples of the syntax that [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] supports for specifying a flag on a mining structure column, see [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
+ For examples of the syntax that [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] supports for specifying a flag on a mining structure column, see [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
  For an example of the syntax for specifying a modeling flga on a mining model column, see [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
@@ -66,7 +66,7 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  [Data Mining Extensions &#40;DMX&#41; Syntax Elements](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40;DMX&#41; Syntax Conventions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Structure and Usage of DMX Prediction Queries](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

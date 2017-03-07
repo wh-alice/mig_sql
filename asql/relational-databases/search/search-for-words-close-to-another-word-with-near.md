@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Search for Words Close to Another Word with NEAR
-  You can use the *proximity term* **NEAR** in a [CONTAINS](../Topic/CONTAINS%20\(Transact-SQL\).md) predicate or [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) function to search for words or phrases near one another. 
+  You can use the *proximity term* **NEAR** in a [CONTAINS](../Topic/CONTAINS%20\(Transact-SQL\).md) predicate or [CONTAINSTABLE](../../relational-databases/reference/system-functions/containstable-transact-sql.md) function to search for words or phrases near one another. 
   
 ##  <a name="Custom_NEAR"></a> Overview of NEAR  
 **NEAR** has the following features:  
@@ -79,7 +79,7 @@ For more info about the syntax, see [CONTAINS &#40;Transact-SQL&#41;](../Topic/C
   
  To require that the terms be found in the specified order, you would change the example proximity term to `NEAR((John, Smith),2, TRUE).` This searches for "`John`" within two terms of "`Smith`" but only when "`John`" precedes "`Smith`". In a language that reads from left to right, such as English, an example of a string that matches is "`John Jacob Smith`".  
   
- Note that for a language that reads from right to left, such as Arabic or Hebrew, the Full-Text Engine applies the specified terms in reverse order. Also, Object Explorer in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] automatically reverses the display order of words specified in right-to-left languages.   
+ Note that for a language that reads from right to left, such as Arabic or Hebrew, the Full-Text Engine applies the specified terms in reverse order. Also, Object Explorer in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] automatically reverses the display order of words specified in right-to-left languages.   
 
 ### Example 2
  The following example searches the `Production.Document` table of the `AdventureWorks` sample database for all document summaries that contain the word "reflector" in the same document as the word "bracket".  
@@ -148,9 +148,9 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
 -   The **transform noise words** server option  
   
-     The value of **transform noise words** impacts how [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] treats stopwords if they are specified in proximity searches. For more information, see [transform noise words Server Configuration Option](../../database-engine/configure/windows/transform-noise-words-server-configuration-option.md).   
+     The value of **transform noise words** impacts how [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] treats stopwords if they are specified in proximity searches. For more information, see [transform noise words Server Configuration Option](../../database-engine/configure/windows/transform-noise-words-server-configuration-option.md).   
   
 ## See Also  
  [CONTAINS &#40;Transact-SQL&#41;](../Topic/CONTAINS%20\(Transact-SQL\).md)  
- [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
+ [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/containstable-transact-sql.md)   
  [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md)   

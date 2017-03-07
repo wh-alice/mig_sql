@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View Plan Guide Properties
-  You can view the properties of plan guides in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]  
+  You can view the properties of plan guides in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]  
   
  **In This Topic**  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
      The following properties show in the **Plan Guide Properties** dialog box.  
   
      **Hints**  
-     Displays the query hints or query plan to be applied to the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement. When a query plan is specified as a hint, the XML Showplan output for the plan is displayed.  
+     Displays the query hints or query plan to be applied to the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement. When a query plan is specified as a hint, the XML Showplan output for the plan is displayed.  
   
      **Is disabled**  
      Displays the status of the plan guide. Possible values are **True** and **False**.  
@@ -63,22 +63,22 @@ manager: "jhubbard"
      Displays the name of the plan guide.  
   
      **Parameters**  
-     When the scope type is SQL or TEMPLATE, displays the name and data type of all parameters that are embedded in the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement.  
+     When the scope type is SQL or TEMPLATE, displays the name and data type of all parameters that are embedded in the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement.  
   
      **Scope batch**  
-     Displays the batch text in which the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement appears.  
+     Displays the batch text in which the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement appears.  
   
      **Scope object name**  
-     When the scope type is OBJECT, displays the name of the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] stored procedure, user-defined scalar function, multistatement table-valued function, or DML trigger in which the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement appears.  
+     When the scope type is OBJECT, displays the name of the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] stored procedure, user-defined scalar function, multistatement table-valued function, or DML trigger in which the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement appears.  
   
      **Scope schema name**  
      When the scope type is OBJECT, displays the name of the schema in which the object is contained.  
   
      **Scope type**  
-     Displays the type of entity in which the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement appears. This specifies the context for matching the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement to the plan guide. Possible values are **OBJECT**, **SQL**, and **TEMPLATE**.  
+     Displays the type of entity in which the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement appears. This specifies the context for matching the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement to the plan guide. Possible values are **OBJECT**, **SQL**, and **TEMPLATE**.  
   
      **Statement**  
-     Displays the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement against which the plan guide is applied.  
+     Displays the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement against which the plan guide is applied.  
   
 4.  Click **OK**.  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
   
 #### To view the properties of a plan guide  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -125,6 +125,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.plan-guides-transact-sql.md).  
+ For more information, see [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.plan-guides-transact-sql.md).  
   
   

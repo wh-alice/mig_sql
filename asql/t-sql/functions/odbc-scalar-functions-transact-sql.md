@@ -56,22 +56,22 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # ODBC Scalar Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  You can use [ODBC Scalar Functions](http://go.microsoft.com/fwlink/?LinkID=88579) in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements. These statements are interpreted by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. They can be used in stored procedures and user-defined functions. These include string, numeric, time, date, interval, and system functions.  
+  You can use [ODBC Scalar Functions](http://go.microsoft.com/fwlink/?LinkID=88579) in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements. These statements are interpreted by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. They can be used in stored procedures and user-defined functions. These include string, numeric, time, date, interval, and system functions.  
   
 ## Usage  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
   
 ## Functions  
- The following tables list ODBC scalar functions that are not duplicated in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+ The following tables list ODBC scalar functions that are not duplicated in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
 ### String Functions  
   
 |Function|Description|  
 |--------------|-----------------|  
 |BIT_LENGTH( string_exp ) (ODBC 3.0)|Returns the length in bits of the string expression.<br /><br /> Does not work only for string data types. Therefore, will not implicitly convert string_exp to string but instead will return the (internal) size of whatever data type it is given.|  
-|CONCAT( string_exp1,string_exp2) (ODBC 1.0)|Returns a character string that is the result of concatenating string_exp2 to string_exp1. The resulting string is DBMS-dependent. For example, if the column represented by string_exp1 contained a NULL value, DB2 would return NULL but [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] would return the non-NULL string.|  
+|CONCAT( string_exp1,string_exp2) (ODBC 1.0)|Returns a character string that is the result of concatenating string_exp2 to string_exp1. The resulting string is DBMS-dependent. For example, if the column represented by string_exp1 contained a NULL value, DB2 would return NULL but [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] would return the non-NULL string.|  
 |OCTET_LENGTH( string_exp ) (ODBC 3.0)|Returns the length in bytes of the string expression. The result is the smallest integer not less than the number of bits divided by 8.<br /><br /> Does not work only for string data types. Therefore, will not implicitly convert string_exp to string but instead will return the (internal) size of whatever data type it is given.|  
   
 ### Numeric Function  
@@ -173,7 +173,7 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### D. Using an ODBC function in a stored procedure  
  The following example uses an ODBC function in a stored procedure:  

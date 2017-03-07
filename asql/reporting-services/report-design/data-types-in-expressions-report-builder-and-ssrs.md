@@ -21,7 +21,7 @@ manager: "erikre"
  For more information about display formats, see [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Report Definition Language (RDL) Data Types and Common Language Runtime (CLR) Data Types  
  Values that are specified in an RDL file must be an RDL data type. When the report is compiled and processed, RDL data types are converted to CLR data types. The following table displays the conversion, which is marked Default:  
@@ -63,7 +63,7 @@ manager: "erikre"
   
 -   Create a calculated field based on an existing report dataset field by writing an expression that converts all the data in one result set column to a new column with a different data type. For example, the following expression converts the field Year from an integer value to a string value: `=CStr(Fields!Year.Value)`. For more information, see [Add, Edit, Refresh Fields in the Report Data Pane &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Check whether the data processing extension you are using includes metadata for retrieving preformatted data. For example, a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] MDX query includes a FORMATTED_VALUE extended property for cube values that have already been formatted when processing the cube. For more information, see [Extended Field Properties for an Analysis Services Database &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+-   Check whether the data processing extension you are using includes metadata for retrieving preformatted data. For example, a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] MDX query includes a FORMATTED_VALUE extended property for cube values that have already been formatted when processing the cube. For more information, see [Extended Field Properties for an Analysis Services Database &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## Understanding Parameter Data Types  
  Report parameters must be one of five data types: Boolean, DateTime, Integer, Float, or Text (also known as String). When a dataset query includes query parameters, report parameters are automatically created and linked to the query parameters. The default data type for a report parameter is String. To change the default data type of a report parameter, select the correct value from the **Data type** drop-down list on the **General** page of the **Report Parameter Properties** dialog box.  
@@ -120,7 +120,7 @@ manager: "erikre"
   
 -   Add a new calculated field to the report dataset that uses an expression to extract parts of the string. For more information, see [Add, Edit, Refresh Fields in the Report Data Pane &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Change the report dataset query to use [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] functions to extract the date and time values independently to create separate columns. The following example shows how to use the function **DatePart** to add a column for the year and a column for the UTC time zone converted to minutes:  
+-   Change the report dataset query to use [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] functions to extract the date and time values independently to create separate columns. The following example shows how to use the function **DatePart** to add a column for the year and a column for the UTC time zone converted to minutes:  
   
      `SELECT`  
   
@@ -136,9 +136,9 @@ manager: "erikre"
   
      `2008-07-01 06:05:07             2008                   480`  
   
- For more information about [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md), and [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=120955).  
+ For more information about [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md), and [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=120955).  
   
- For more information about [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] data types, see [Data Types in Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=120955).  
+ For more information about [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] data types, see [Data Types in Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## See Also  
  [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

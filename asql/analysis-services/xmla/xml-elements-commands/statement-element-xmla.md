@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # Statement Element (XMLA)
-  Contains a query or statement to be sent using the **Execute** method to an instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].  
+  Contains a query or statement to be sent using the **Execute** method to an instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- The **Statement** command executes a query or statement on the [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] instance. [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] supports the following languages:  
+ The **Statement** command executes a query or statement on the [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] instance. [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] supports the following languages:  
   
 -   Multidimensional Expressions (MDX)  
   
@@ -65,6 +65,6 @@ manager: "erikre"
 -   A subset of Structured Query Language (SQL)  
   
 ## See Also  
- [Commands &#40;XMLA&#41;](../Topic/Commands%20\(XMLA\).md)  
+ [Commands &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

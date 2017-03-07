@@ -28,7 +28,7 @@ Options and recommendations for loading data into a columnstore index by using t
 s
 To perform a bulk load, you can use [bcp Utility](https://msdn.microsoft.com/library/ms162802.aspx), [Integration Services](https://msdn.microsoft.com/library/ms141026.aspx), or select rows from a staging table.
 
-![Loading into a clustered columnstore index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
+![Loading into a clustered columnstore index](../../a9notintoc/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
   
  As the diagram suggests, a bulk load::  
   
@@ -37,7 +37,7 @@ To perform a bulk load, you can use [bcp Utility](https://msdn.microsoft.com/lib
 * If the batch size < 102400 or if the remaining rows are \< 102400, the rows are loaded into delta rowgroups.
 
 >![Note]
->On a rowstore table with a nonclustered columnstore index data, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] always inserts data into the base table. The data is never inserted directly into the columnstore index.  
+>On a rowstore table with a nonclustered columnstore index data, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] always inserts data into the base table. The data is never inserted directly into the columnstore index.  
 
 Bulk loading has these built-in performance optimizations:
  
@@ -70,7 +70,7 @@ SELECT object_id, index_id, partition_number, row_group_id, delta_store_hobt_id,
 FROM sys.dm_db_column_store_row_group_physical_stats  
 ```  
   
- ![Rowgroup and deltastore for a batch load](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup and deltastore for a batch load")  
+ ![Rowgroup and deltastore for a batch load](../../a9notintoc/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup and deltastore for a batch load")  
   
 ## Use a staging table to improve performance
 If you are loading data only to stage it before running more transformations, loading the table to heap table will be much faster than loading the data to a clustered columnstore table. In addition, loading data to a [temporary table][Temporary] will also load much faster than loading a table to permanent storage.  
@@ -119,7 +119,7 @@ ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUP
 ```  
   
 ## How loading into a partitioned table works  
- For partitioned data, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] first assigns each row to a partition, and then performs columnstore operations on the data within the partition. Each partition has its own rowgroups and at least one delta rowgroup.  
+ For partitioned data, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] first assigns each row to a partition, and then performs columnstore operations on the data within the partition. Each partition has its own rowgroups and at least one delta rowgroup.  
   
 
  ## Next steps

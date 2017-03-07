@@ -38,7 +38,7 @@ manager: "jhubbard"
  Is another **geography** instance indicating which points to remove from the instance on which STDifference() is being invoked.  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **geography**  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] return type: **geography**  
   
  CLR return type: **SqlGeography**  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
 ## Remarks  
  This method always returns null if the spatial reference identifiers (SRIDs) of the **geography** instances do not match.  
   
- In [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the set of possible results returned on the server has been extended to **FullGlobe** instances. [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports spatial instances that are larger than a hemisphere. The result may contain circular arc segments only if the input instances contain circular arc segments. This method is not precise.  
+ In [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], the set of possible results returned on the server has been extended to **FullGlobe** instances. [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] supports spatial instances that are larger than a hemisphere. The result may contain circular arc segments only if the input instances contain circular arc segments. This method is not precise.  
   
 ## Examples  
   

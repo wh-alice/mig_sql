@@ -21,9 +21,9 @@ In this task, you will convert the project to the Package Deployment Model and e
   
 ### To create a new package-level variable mapped to the Directory property  
   
-1.  Click the background of the **Control Flow** tab in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer. This sets the scope for the variable you will create to the package.  
+1.  Click the background of the **Control Flow** tab in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer. This sets the scope for the variable you will create to the package.  
   
-2.  On the [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] menu, select **Variables**.  
+2.  On the [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] menu, select **Variables**.  
   
 3.  In the **Variables** window, click the Add Variable icon.  
   
@@ -58,7 +58,7 @@ In this task, you will convert the project to the Package Deployment Model and e
   
 2.  Click **OK** on the warning prompt and, once the conversion is complete, click **OK** on the **Convert to Package Deployment Model** dialog.  
   
-3.  Click the background of the **Control Flow** tab in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer.  
+3.  Click the background of the **Control Flow** tab in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer.  
   
 4.  On the **SSIS** menu, click **Package Configurations**.  
   
@@ -104,5 +104,5 @@ In this task, you will convert the project to the Package Deployment Model and e
 3.  In the **New Sample Data** folder, paste the copied files.  
   
 ## Next Task in Lesson  
-[Step 3: Modifying the Directory Property Configuration Value](../Topic/Step%203:%20Modifying%20the%20Directory%20Property%20Configuration%20Value.md)  
+[Step 3: Modifying the Directory Property Configuration Value](../../integration-services/tutorials/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   

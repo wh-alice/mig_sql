@@ -25,16 +25,16 @@ For this modeling task, rather than using the raw latitude and longitude values 
 You'll compare two different methods for creating a feature from data:  
   
 -   Using R and the *rxDataStep* function    
--   Using a custom function in [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]  
+-   Using a custom function in [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]  
   
-For both methods, the result of the code is a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data source object, *featureDataSource*, that includes the new numeric feature, *direct_distance*.  
+For both methods, the result of the code is a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data source object, *featureDataSource*, that includes the new numeric feature, *direct_distance*.  
   
 ## Creating Features Using R  
 
 The R language is well-known for its rich and varied statistical libraries, but you still might need to create custom data transformations. 
 
 + You'll create a new R function, *ComputeDist*, to calculate the linear distance between two points specified by latitude and longitude values.  
-+ You'll  call the function to transform the data in the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data object you created earlier, an save it in a new data source, *featureDataSource*.  
++ You'll  call the function to transform the data in the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data object you created earlier, an save it in a new data source, *featureDataSource*.  
 
 ### Create the transformation function  
 1.  Create a custom R function, *ComputeDist*. It takes in two pairs of latitude and longitude values, and calculates the linear distance between them.  The function returns a distance in miles.
@@ -130,9 +130,9 @@ Having defined the function, you will apply it to the data to create a new featu
 ## Creating Features using Transact-SQL  
 Now that you've seen how to create a feature using an R function, you'll create a custom SQL function, *ComputeDist*, to do the same thing. The custom SQL function *ComputeDist* operates on an existing *RxSqlServerData* data object to create the new distance features from the existing latitude and longitude values.  
   
-You'll save the results of the transformation to a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data object, *featureDataSource*, just as you did using R.  
+You'll save the results of the transformation to a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data object, *featureDataSource*, just as you did using R.  
   
-Very often, feature engineering using [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] will be faster than R. Choose the most efficient method based on your data and task.  
+Very often, feature engineering using [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] will be faster than R. Choose the most efficient method based on your data and task.  
 
 ### Define the T-SQL custom function
   
@@ -164,7 +164,7 @@ Very often, feature engineering using [!INCLUDE[tsql](../../../advanced-analytic
 
     + The code for this user-defined SQL function is provided as part of the PowerShell script you ran to create and configure the database.  The function should already exist in your database.  If it does not exist, use SQL Server Management Studio to generate the function in the same database where the taxi data is stored.
 
-2.  To see how the function works, the following [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statement from any application that supports [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)].   
+2.  To see how the function works, the following [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statement from any application that supports [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)].   
   
     ```tsql  
     SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,       
@@ -187,9 +187,9 @@ Very often, feature engineering using [!INCLUDE[tsql](../../../advanced-analytic
     ```  
   
     > [!TIP]
-    > This query is slightly different from the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] query used earlier. It has been modified to get a smaller sample of data, to make this walkthrough faster.  
+    > This query is slightly different from the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] query used earlier. It has been modified to get a smaller sample of data, to make this walkthrough faster.  
   
-4.  Now, use the following lines of code to call the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] function from your R environment and apply it to the data defined in *featureEngineeringQuery*.  
+4.  Now, use the following lines of code to call the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] function from your R environment and apply it to the data defined in *featureEngineeringQuery*.  
   
     ```R  
     featureDataSource = RxSqlServerData(sqlQuery = featureEngineeringQuery,  
@@ -208,9 +208,9 @@ Very often, feature engineering using [!INCLUDE[tsql](../../../advanced-analytic
   
 ## Comparing R Functions and SQL Functions
 
-As it turns out, for this particular task, the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] function approach is faster than the custom R function. Therefore, you'll use the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] function for these calculations in subsequent steps.  
+As it turns out, for this particular task, the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] function approach is faster than the custom R function. Therefore, you'll use the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] function for these calculations in subsequent steps.  
 
-Proceed to the next lesson to learn how to build a predictive model using this data and save the model to a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table.  
+Proceed to the next lesson to learn how to build a predictive model using this data and save the model to a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] table.  
   
 ## Next Lesson  
 [Lesson 4: Build and Save the Model &#40;Data Science End-to-End Walkthrough&#41;](../../../advanced-analytics/r-services/tutorials/lesson-4-build-and-save-the-model-data-science-end-to-end-walkthrough.md)  

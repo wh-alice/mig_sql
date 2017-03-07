@@ -15,11 +15,11 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Transact-SQL Constructs Not Supported by In-Memory OLTP
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Memory-optimized tables, natively compiled stored procedures, and user-defined functions do not support the full [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] surface area that is supported by disk-based tables, interpreted [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] stored procedures, and user-defined functions. When attempting to use one of the unsupported features, the server returns an error.  
+  Memory-optimized tables, natively compiled stored procedures, and user-defined functions do not support the full [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] surface area that is supported by disk-based tables, interpreted [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] stored procedures, and user-defined functions. When attempting to use one of the unsupported features, the server returns an error.  
   
- The error message text mentions the type of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement (feature, operation, option, for example) and well as the name of the feature or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] keyword. Most unsupported features will return error 10794, with the error message text indicating the unsupported feature. The following tables list the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] features and keywords that can appear in the error message text, as well as the corrective action to resolve the error.  
+ The error message text mentions the type of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement (feature, operation, option, for example) and well as the name of the feature or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] keyword. Most unsupported features will return error 10794, with the error message text indicating the unsupported feature. The following tables list the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] features and keywords that can appear in the error message text, as well as the corrective action to resolve the error.  
   
  For more information on supported features with memory-optimized tables and natively compiled stored procedures, see:  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
 -   [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
 ## Databases That Use In-Memory OLTP  
- The following table lists the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] features that are not supported, and the keywords that can appear in the message text of an error involving an In-Memory OLTP database. The table also lists the resolution for the error.  
+ The following table lists the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] features that are not supported, and the keywords that can appear in the message text of an error involving an In-Memory OLTP database. The table also lists the resolution for the error.  
   
 |Type|Name|Resolution|  
 |----------|----------|----------------|  
@@ -43,7 +43,7 @@ manager: "jhubbard"
 |Feature|DBCC CHECKDB<br /><br /> DBCC CHECKTABLE|DBCC CHECKDB skips the memory-optimized tables in the database.<br /><br /> DBCC CHECKTABLE will fail for memory-optimized tables.|  
   
 ## Memory-Optimized Tables  
- The following table lists the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] features that are not supported, and the keywords that can appear in the message text of an error involving a memory-optimized table. The table also lists the resolution for the error.  
+ The following table lists the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] features that are not supported, and the keywords that can appear in the message text of an error involving a memory-optimized table. The table also lists the resolution for the error.  
   
 |Type|Name|Resolution|  
 |----------|----------|----------------|  
@@ -74,7 +74,7 @@ manager: "jhubbard"
 |Operation|Memory-optimized tables as target of MERGE|Memory-optimized tables cannot be the target of a **MERGE** operation. Use **INSERT**, **UPDATE**, or **DELETE** statements instead.|  
   
 ## Indexes on Memory-Optimized Tables  
- The following table lists the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving an index on a memory-optimized table, as well as the corrective action to resolve the error.  
+ The following table lists the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving an index on a memory-optimized table, as well as the corrective action to resolve the error.  
   
 |Type|Name|Resolution|  
 |----------|----------|----------------|  
@@ -84,19 +84,19 @@ manager: "jhubbard"
 |Index option|*Index option*|Only one index option is supported – BUCKET_COUNT for HASH indexes.|  
   
 ## Nonclustered Hash Indexes  
- The following table lists the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving a nonclustered hash index, as well as the corrective action to resolve the error.  
+ The following table lists the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving a nonclustered hash index, as well as the corrective action to resolve the error.  
   
 |Type|Name|Resolution|  
 |----------|----------|----------------|  
 |Option|ASC/DESC|Nonclustered hash indexes are not ordered. Remove the keywords **ASC** and **DESC** from the index key specification.|  
   
 ## Natively Compiled Stored Procedures and User-Defined Functions  
- The following table lists the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving natively compiled stored procedures and user-defined functions, as well as the corrective action to resolve the error.  
+ The following table lists the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving natively compiled stored procedures and user-defined functions, as well as the corrective action to resolve the error.  
   
 |Type|Feature|Resolution|  
 |----------|-------------|----------------|  
 |Feature|Inline table variables|Table types cannot be declared inline with variable declarations. Table types must be declared explicitly using a **CREATE TYPE** statement.|  
-|Feature|Cursors|Cursors are not supported on or in natively compiled stored procedures.<br /><br /> When executing the procedure from the client, use RPC rather than the cursor API. With ODBC, avoid the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement **EXECUTE**, instead specify the name of the procedure directly.<br /><br /> When executing the procedure from a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] batch or another stored procedure, avoid using a cursor with the natively compiled stored procedure.<br /><br /> When creating a natively compiled stored procedure, rather than using a cursor, use set-based logic or a **WHILE** loop.|  
+|Feature|Cursors|Cursors are not supported on or in natively compiled stored procedures.<br /><br /> When executing the procedure from the client, use RPC rather than the cursor API. With ODBC, avoid the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement **EXECUTE**, instead specify the name of the procedure directly.<br /><br /> When executing the procedure from a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] batch or another stored procedure, avoid using a cursor with the natively compiled stored procedure.<br /><br /> When creating a natively compiled stored procedure, rather than using a cursor, use set-based logic or a **WHILE** loop.|  
 |Feature|Non-constant parameter defaults|When using default values with parameters on natively compiled stored procedures, the values must be constants. Remove any wildcards from the parameter declarations.|  
 |Feature|EXTERNAL|CLR stored procedures cannot be natively compiled. Either remove the AS EXTERNAL clause or the NATIVE_COMPILATION option from the CREATE PROCEDURE statement.|  
 |Feature|Numbered stored procedures|Natively compiled stored procedures cannot be numbered. Remove the **;***number* from the **CREATE PROCEDURE** statement.|  
@@ -113,7 +113,7 @@ manager: "jhubbard"
 |Feature|browse mode metadata|Natively compiled stored procedures do not support browse mode metadata. Make sure the session option **NO_BROWSETABLE** is set to OFF.|  
 |Feature|DELETE with FROM clause|The **FROM** clause is not supported for **DELETE** statements with a table source in natively compiled stored procedures.<br /><br /> **DELETE** with the **FROM** clause is supported when it is used to indicate the table to delete from.|  
 |Feature|UPDATE with FROM clause|The **FROM** clause is not supported for **UPDATE** statements in natively compiled stored procedures.|  
-|Feature|temporary procedures|Temporary stored procedures cannot be natively compiled. Either create a permanent natively compiled stored procedure or a temporary interpreted [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] stored procedure.|  
+|Feature|temporary procedures|Temporary stored procedures cannot be natively compiled. Either create a permanent natively compiled stored procedure or a temporary interpreted [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] stored procedure.|  
 |Isolation level|READ UNCOMMITTED|The isolation level READ UNCOMMITTED is not supported for natively compiled stored procedures. Use a supported isolation level, such as SNAPSHOT.|  
 |Isolation level|READ COMMITTED|The isolation level READ COMMITTED is not supported for natively compiled stored procedures. Use a supported isolation level, such as SNAPSHOT.|  
 |Feature|temporary tables|Tables in tempdb cannot be used in natively compiled stored procedures. Instead, use a table variable or a memory-optimized table with DURABILITY=SCHEMA_ONLY.|  
@@ -141,7 +141,7 @@ manager: "jhubbard"
 |Operator|FREETEXT|This operator is not supported. Remove **FREETEXT** from the natively compiled stored procedure.|  
 |Operator|TSEQUAL|This operator is not supported. Remove **TSEQUAL** from the natively compiled stored procedure.|  
 |Operator|LIKE|This operator is not supported. Remove **LIKE** from the natively compiled stored procedure.|  
-|Operator|NEXT VALUE FOR|Sequences cannot be referenced inside natively compiled stored procedures. Obtain the value using interpreted [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], and then pass it into the natively compiled stored procedure. For more information, see [Implementing IDENTITY in a Memory-Optimized Table](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md).|  
+|Operator|NEXT VALUE FOR|Sequences cannot be referenced inside natively compiled stored procedures. Obtain the value using interpreted [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], and then pass it into the natively compiled stored procedure. For more information, see [Implementing IDENTITY in a Memory-Optimized Table](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md).|  
 |Set option|*option*|SET options cannot be changed inside natively compiled stored procedures. Certain options can be set with the BEGIN ATOMIC statement. For more information, see the section on atonic blocks in [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Operand|TABLESAMPLE|This operator is not supported. Remove **TABLESAMPLE** from the natively compiled stored procedure.|  
 |Option|RECOMPILE|Natively compiled stored procedures are compiled at create time. Remove **RECOMPILE** from the procedure definition.<br /><br /> You can execute sp_recompile on a natively compiled stored procedure, which causes it to recompile on the next execution.|  
@@ -150,7 +150,7 @@ manager: "jhubbard"
 |Option|FOR XML|This option is not supported. Remove **FOR XML** from the natively compiled stored procedure.|  
 |Option|FOR BROWSE|This option is not supported. Remove **FOR BROWSE** from the natively compiled stored procedure.|  
 |Join hint|HASH, MERGE|Natively compiled stored procedures only support nested-loops joins. Hash and merge joins are not supported. Remove the join hint.|  
-|Query hint|*Query hint*|This query hint is not inside natively compiled stored procedures. For supported query hints see [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).|  
+|Query hint|*Query hint*|This query hint is not inside natively compiled stored procedures. For supported query hints see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).|  
 |Option|PERCENT|This option is not supported with **TOP** clauses. Remove **PERCENT** from the query in the natively compiled stored procedure.|  
 |Option|WITH TIES|This option is not supported with **TOP** clauses. Remove **WITH TIES** from the query in the natively compiled stored procedure.|  
 |Aggregate function|*Aggregate function*|This clause is not supported. For more information about aggregate functions in natively compiled stored procedures, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
@@ -163,7 +163,7 @@ manager: "jhubbard"
 |Feature|ROLLUP|**ROLLUP** cannot be used with **GROUP BY** clauses in natively compiled stored procedures. Remove **ROLLUP** from the procedure definition.|  
 |Feature|CUBE|**CUBE** cannot be used with **GROUP BY** clauses in natively compiled stored procedures. Remove **CUBE** from the procedure definition.|  
 |Feature|GROUPING SETS|**GROUPING SETS** cannot be used with **GROUP BY** clauses in natively compiled stored procedures. Remove **GROUPING SETS** from the procedure definition.|  
-|Feature|BEGIN TRANSACTION, COMMIT TRANSACTION, and ROLLBACK TRANSACTION|Use ATOMIC blocks to control transactions and error handling. For more information, see [Atomic Blocks](../Topic/Atomic%20Blocks.md).|  
+|Feature|BEGIN TRANSACTION, COMMIT TRANSACTION, and ROLLBACK TRANSACTION|Use ATOMIC blocks to control transactions and error handling. For more information, see [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).|  
 |Feature|Inline table variable declarations.|Table variables must reference explicitly defined memory-optimized table types. You should create a memory-optimized table type and use that type for the variable declaration, rather than specifying the type inline.|  
 |Feature|Disk-based tables|Disk-based tables cannot be accessed from natively compiled stored procedures. Remove references to disk-based tables from the natively-compiled stored procedures. Or, migrate the disk-based table(s) to memory optimized.|  
 |Feature|Views|Views cannot be accessed from natively compiled stored procedures. Instead of views, reference the underlying base tables.|  
@@ -173,7 +173,7 @@ manager: "jhubbard"
 |Option|STATISTICS XML|Not supported. When you run a query, with STATISTICS XML enabled, the XML content is returned without the part for the natively compiled stored procedure.|  
   
 ## Transactions that Access Memory-Optimized Tables  
- The following table lists the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving transactions that access memory-optimized tables, as well as the corrective action to resolve the error.  
+ The following table lists the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving transactions that access memory-optimized tables, as well as the corrective action to resolve the error.  
   
 |Type|Name|Resolution|  
 |----------|----------|----------------|  

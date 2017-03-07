@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 ### To create a cache file  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want, and then open the package.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want, and then open the package.  
   
 2.  On the **Control Flow** tab, add a Data Flow task.  
   
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 ### To deploy a cache file  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want, and then open the package.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want, and then open the package.  
   
 2.  Optionally, create a package configuration. For more information, see [Create Package Configurations](../../../integration-services/packages/create-package-configurations.md).  
   

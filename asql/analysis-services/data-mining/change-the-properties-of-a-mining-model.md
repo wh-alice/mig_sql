@@ -23,9 +23,9 @@ manager: "jhubbard"
   
  The following model properties have advanced editors that you can use to create expressions or configure complex model properties. The following properties provide:  
   
--   **Filter** property: Opens the [Data Set Filter or Model Filter Dialog Box](../Topic/Data%20Set%20Filter%20or%20Model%20Filter%20Dialog%20Box.md).  
+-   **Filter** property: Opens the [Data Set Filter or Model Filter Dialog Box](../../a9retired/mining-accuracy-chart-data-filter-or-model-filter-dialog-box.md).  
   
--   **AlgorithmParameters** property: Opens the [Algorithm Parameters Dialog Box &#40;Mining Models View&#41;](../Topic/Algorithm%20Parameters%20Dialog%20Box%20\(Mining%20Models%20View\).md).  
+-   **AlgorithmParameters** property: Opens the [Algorithm Parameters Dialog Box &#40;Mining Models View&#41;](../../a9retired/mining-models-view-algorithm-parameters-dialog-box.md).  
   
  For information about how to set the properties in a mining model, see [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md).  
   

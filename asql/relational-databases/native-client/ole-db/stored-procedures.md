@@ -20,9 +20,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Stored Procedures
-[!INCLUDE[SNAC_Deprecated](../../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../../a9retired/includes/snac-deprecated.md)]
 
-  A stored procedure ([Stored Procedures &#40;Database Engine&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) is an executable object stored in a database. [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] supports:  
+  A stored procedure ([Stored Procedures &#40;Database Engine&#41;](../../../relational-databases/reference/stored-procedures/stored-procedures-database-engine.md)) is an executable object stored in a database. [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] supports:  
   
 -   Stored procedures  
   
@@ -30,13 +30,13 @@ manager: "jhubbard"
   
 -   Extended stored procedures  
   
-     C or C++ dynamic-link libraries (DLLs) written to the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Open Data Services API for extended stored procedures. The Open Data Services API extends the capabilities of stored procedures to include C or C++ code.  
+     C or C++ dynamic-link libraries (DLLs) written to the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Open Data Services API for extended stored procedures. The Open Data Services API extends the capabilities of stored procedures to include C or C++ code.  
   
 ## In This Section  
   
--   [Running Stored Procedures &#40;OLE DB&#41;](../Topic/Running%20Stored%20Procedures%20\(OLE%20DB\).md)  
+-   [Running Stored Procedures &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
   
--   [Calling a Stored Procedure &#40;OLE DB&#41;](../Topic/Calling%20a%20Stored%20Procedure%20\(OLE%20DB\).md)  
+-   [Calling a Stored Procedure &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-calling.md)  
   
 ## See Also  
  [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

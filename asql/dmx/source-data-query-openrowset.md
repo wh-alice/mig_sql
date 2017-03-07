@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # &lt;source data query&gt; - OPENROWSET
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Replaces the source data query with a query to an external provider. The INSERT, SELECT FROM PREDICTION JOIN, and SELECT FROM NATURAL PREDICTION JOIN statements support **OPENROWSET**.  
   
@@ -47,7 +47,7 @@ OPENROWSET(provider_name,provider_string,query_syntax)
  The data mining provider will establish a connection to the data source object by using *provider_name* and *provider_string,* and will execute the query specified in *query_syntax* to retrieve the rowset from the source data.  
   
 ## Examples  
- The following example can be used within a PREDICTION JOIN statement to retrieve data from the [!INCLUDE[ssSampleDBDWobject](../analysis-services/data-mining/includes/sssampledbdwobject-md.md)] database by using a [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] SELECT statement.  
+ The following example can be used within a PREDICTION JOIN statement to retrieve data from the [!INCLUDE[ssSampleDBDWobject](../a9notintoc/includes/sssampledbdwobject-md.md)] database by using a [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] SELECT statement.  
   
 ```  
 OPENROWSET  
@@ -60,7 +60,7 @@ OPENROWSET
   
 ## See Also  
  [&#60;source data query&#62;](../dmx/source-data-query.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Manipulation%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)  
+ [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

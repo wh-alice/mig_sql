@@ -56,7 +56,7 @@ manager: "jhubbard"
      This is useful for applications that need to override specific data values or operations. For example, an application could transform a row delete into a special update that sets a **status** column in the row to a value of "deleted" and then tracks the identity of the client performing the delete. This might be useful for auditing or workflow purposes.  
   
 ### Custom Conflict Resolution  
- Merge replication provides conflict detection and resolution, allowing you to accept a default resolution strategy or choose custom resolution for conflicts. For more information, see [Advanced Merge Replication Conflict Detection and Resolution](../Topic/Advanced%20Merge%20Replication%20Conflict%20Detection%20and%20Resolution.md). The business logic handler can be invoked during the processing of conflicting data changes and can perform one of two actions:  
+ Merge replication provides conflict detection and resolution, allowing you to accept a default resolution strategy or choose custom resolution for conflicts. For more information, see [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). The business logic handler can be invoked during the processing of conflicting data changes and can perform one of two actions:  
   
 -   Accept default resolution  
   

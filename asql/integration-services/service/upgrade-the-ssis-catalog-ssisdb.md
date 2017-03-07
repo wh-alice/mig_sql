@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 1.  Backup the SSIS Catalog database, SSISDB.  
   
-2.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], expand the local server, and then expand **Integration Services Catalogs**.  
+2.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], expand the local server, and then expand **Integration Services Catalogs**.  
   
 3.  Right-click on **SSISDB**, and then select **Database Upgrade** to launch the SSISDB Upgrade Wizard.  
   

@@ -18,7 +18,7 @@ manager: "jhubbard"
 ---
 # View Collation Information
     
-##  <a name="Top"></a> You can view the collation of a server, database, or column in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] using Object Explorer menu options or by using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+##  <a name="Top"></a> You can view the collation of a server, database, or column in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] using Object Explorer menu options or by using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
 ##  <a name="Procedures"></a> How to View a Collation Setting  
  You can use one of the following:  
@@ -30,19 +30,19 @@ manager: "jhubbard"
 ###  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To view a collation setting for a server (instance of SQL Server) in Object Explorer**  
   
-1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  Right-click the instance and select **Properties**.  
   
  **To view a collation setting for a database in Object Explorer**  
   
-1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] and then expand that instance.  
+1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, right-click the database and select **Properties**.  
   
  **To view a collation setting for a column in Object Explorer**  
   
-1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] and then expand that instance.  
+1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, expand the database and then expand **Tables**.  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
 ###  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To view the collation setting of a server**  
   
-1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] and on the toolbar, click **New Query**.  
+1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] and on the toolbar, click **New Query**.  
   
 2.  In the query window, enter the following statement that uses the SERVERPROPERTY system function.  
   
@@ -67,9 +67,9 @@ manager: "jhubbard"
     EXECUTE sp_helpsort;  
     ```  
   
- **To view all collations supported by [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]**  
+ **To view all collations supported by [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]**  
   
-1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] and on the toolbar, click **New Query**.  
+1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] and on the toolbar, click **New Query**.  
   
 2.  In the query window, enter the following statement that uses the SERVERPROPERTY system function.  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
   
  **To view the collation setting of a database**  
   
-1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] and on the toolbar, click **New Query**.  
+1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] and on the toolbar, click **New Query**.  
   
 2.  In the query window, enter the following statement that uses the sys.databases system catalog view.  
   
@@ -95,7 +95,7 @@ manager: "jhubbard"
   
  **To view the collation setting of a column**  
   
-1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] and on the toolbar, click **New Query**.  
+1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] and on the toolbar, click **New Query**.  
   
 2.  In the query window, enter the following statement that uses the sys.columns system catalog view.  
   
@@ -105,10 +105,10 @@ manager: "jhubbard"
   
 ## See Also  
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
- [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-helpcollations-transact-sql.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md)   
- [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.columns-transact-sql.md)   
+ [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-helpcollations-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md)   
+ [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.columns-transact-sql.md)   
  [Collation Precedence &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
- [sp_helpsort &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsort-transact-sql.md)  
+ [sp_helpsort &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-helpsort-transact-sql.md)  
   
   

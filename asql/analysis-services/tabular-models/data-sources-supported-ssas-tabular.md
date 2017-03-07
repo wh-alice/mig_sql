@@ -20,7 +20,7 @@ manager: "erikre"
   This topic describes the types of data sources that can be used with tabular models.  
   
 ##  <a name="bkmk_supported_ds"></a> Supported data sources for in-memory models  
- You can import data from the data sources in the following table. When you install [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], setup does not install the providers that are listed for each data source. Some providers might already be installed with other applications on your computer; in other cases you will need to download and install the provider.  
+ You can import data from the data sources in the following table. When you install [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], setup does not install the providers that are listed for each data source. Some providers might already be installed with other applications on your computer; in other cases you will need to download and install the provider.  
   
 |||||  
 |-|-|-|-|  
@@ -35,9 +35,9 @@ manager: "erikre"
 |Other relational databases|(not applicable)|(not applicable)|OLE DB provider or ODBC driver|  
 |Text files|(not applicable)|.txt, .tab, .csv|ACE 14 OLE DB provider for Microsoft Access|  
 |Microsoft Excel files|Excel 2010 and later|.xlsx, xlsm, .xlsb, .xltx, .xltm|ACE 14 OLE DB provider|  
-|[!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbook|Microsoft SQL Server 2008 and later Analysis Services|xlsx, xlsm, .xlsb, .xltx, .xltm|ASOLEDB 10.5<br /><br /> (used only with [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbooks that are published to SharePoint farms that have [!INCLUDE[ssGeminiShort](../../analysis-services/includes/ssgeminishort-md.md)] installed)|  
+|[!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbook|Microsoft SQL Server 2008 and later Analysis Services|xlsx, xlsm, .xlsb, .xltx, .xltm|ASOLEDB 10.5<br /><br /> (used only with [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbooks that are published to SharePoint farms that have [!INCLUDE[ssGeminiShort](../../a9notintoc/includes/ssgeminishort-md.md)] installed)|  
 |Analysis Services cube|Microsoft SQL Server 2008 and later Analysis Services|(not applicable)|ASOLEDB 10|  
-|Data feeds<br /><br /> (used to import data from Reporting Services reports, Atom service documents, Microsoft Azure Marketplace DataMarket, and single data feed)|Atom 1.0 format<br /><br /> Any database or document that is exposed as a Windows Communication Foundation (WCF) Data Service (formerly ADO.NET Data Services).|.atomsvc for a service document that defines one or more feeds<br /><br /> .atom for an Atom web feed document|Microsoft Data Feed Provider for [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)]<br /><br /> .NET Framework data feed data provider for [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)]|  
+|Data feeds<br /><br /> (used to import data from Reporting Services reports, Atom service documents, Microsoft Azure Marketplace DataMarket, and single data feed)|Atom 1.0 format<br /><br /> Any database or document that is exposed as a Windows Communication Foundation (WCF) Data Service (formerly ADO.NET Data Services).|.atomsvc for a service document that defines one or more feeds<br /><br /> .atom for an Atom web feed document|Microsoft Data Feed Provider for [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)]<br /><br /> .NET Framework data feed data provider for [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)]|  
 |Office Database Connection files||.odc||  
   
   
@@ -66,6 +66,6 @@ OLE DB providers can sometimes offer faster performance for large scale data. Wh
   
 ## See Also  
  [Data Sources &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Import Data &#40;SSAS Tabular&#41;](../Topic/Import%20Data%20\(SSAS%20Tabular\).md)  
+ [Import Data &#40;SSAS Tabular&#41;](../../a9retired/import-data-ssas-tabular.md)  
   
   

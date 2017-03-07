@@ -23,9 +23,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # DISCOVER_SCHEMA_ROWSETS Rowset
-  Returns the names, restrictions, description, and other information for all enumeration values and any additional provider-specific enumeration values supported by the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] XML for Analysis (XMLA) provider.  
+  Returns the names, restrictions, description, and other information for all enumeration values and any additional provider-specific enumeration values supported by the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] XML for Analysis (XMLA) provider.  
   
- If you call the [Discover](../Topic/Discover%20Method%20\(XMLA\).md) method with the **DISCOVER_SCHEMA_ROWSETS** enumeration value in the [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) element, the **Discover** method returns the **DISCOVER_SCHEMA_ROWSETS** rowset.  
+ If you call the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method with the **DISCOVER_SCHEMA_ROWSETS** enumeration value in the [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) element, the **Discover** method returns the **DISCOVER_SCHEMA_ROWSETS** rowset.  
   
 ## Rowset Columns  
  The DISCOVER_SCHEMA_ROWSETS rowset contains the following columns.  

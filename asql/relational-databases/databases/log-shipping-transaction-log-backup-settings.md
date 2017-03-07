@@ -31,7 +31,7 @@ manager: "jhubbard"
  If you specify a local path here, the BACKUP command will use this path to create the transaction log backups; otherwise, if no local path is specified, the BACKUP command will use the network path specified in the **Network path to the backup folder** box.  
   
 > [!NOTE]  
->  If the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service account is running under the local system account on the primary server, you must create the backup folder on the primary server and specify the local path to that folder here. The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service account of the primary server instance must have Read and Write permissions on this folder.  
+>  If the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service account is running under the local system account on the primary server, you must create the backup folder on the primary server and specify the local path to that folder here. The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service account of the primary server instance must have Read and Write permissions on this folder.  
   
  **Delete files older than**  
  Specify the length of time you want transaction log backups to remain in your backup directory before being deleted.  

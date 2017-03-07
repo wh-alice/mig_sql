@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Data Quality Client Home Screen
-  Use this screen to gain access to the user interfaces for each the three major [!INCLUDE[ssDQSnoversion](../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS) groups of tasks: knowledge base management, data quality projects, and administration.  
+  Use this screen to gain access to the user interfaces for each the three major [!INCLUDE[ssDQSnoversion](../a9retired/includes/ssdqsnoversion-md.md)] (DQS) groups of tasks: knowledge base management, data quality projects, and administration.  
   
 ## Options  
   

@@ -15,7 +15,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Supported Features for Natively Compiled T-SQL Modules
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
   This topic contains a list of T-SQL surface area and supported features in the body of natively compiled T-SQL modules, such as stored procedures ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)), scalar user-defined functions, inline table-valued functions, and triggers.  
@@ -77,19 +77,19 @@ WHERE clause:
 -   AND, OR, NOT, IN, EXISTS, BETWEEN  
 
 
-[GROUP BY](../Topic/GROUP%20BY%20%28Transact-SQL%29.md) clause:
+[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) clause:
 
 - Aggregate functions AVG, COUNT, COUNT_BIG, MIN, MAX, and SUM.  
 
 - MIN and MAX are not supported for types nvarchar, char, varchar, varchar, varbinary, and binary.  
 
-[ORDER BY](../Topic/ORDER%20BY%20Clause%20%28Transact-SQL%29.md) clause:
+[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md) clause:
 
 
 - There is no support for **DISTINCT** in the **ORDER BY** clause.
 
 
-- Is supported with [GROUP BY &#40;Transact-SQL&#41;](../Topic/GROUP%20BY%20\(Transact-SQL\).md) if an expression in the ORDER BY list appears verbatim in the GROUP BY list.
+- Is supported with [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md) if an expression in the ORDER BY list appears verbatim in the GROUP BY list.
   - For example, GROUP BY a + b ORDER BY a + b is supported, but GROUP BY a, b ORDER BY a + b is not.  
 
 
@@ -118,7 +118,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 However, a constant in the **TOP** clause results in better performance compared to using a variable.  
 
-These restrictions on natively compiled [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] do not apply to interpreted [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] access on memory-optimized tables.  
+These restrictions on natively compiled [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] do not apply to interpreted [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] access on memory-optimized tables.  
 
 
 ##  <a name="dml"></a> Data Modification  
@@ -152,7 +152,7 @@ The following DML statements are supported.
 
 -   [THROW &#40;Transact-SQL&#41;](../Topic/THROW%20\(Transact-SQL\).md)  
 
--   BEGIN ATOMIC (at the outer level of the stored procedure). For more detail see [Atomic Blocks](../Topic/Atomic%20Blocks.md).  
+-   BEGIN ATOMIC (at the outer level of the stored procedure). For more detail see [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
 
 ##  <a name="so"></a> Supported Operators  
  The following operators are supported.  
@@ -210,7 +210,7 @@ The following DML statements are supported.
 ##  <a name="tqh"></a> Table and Query Hints  
  The following are supported:  
 
--   INDEX, FORCESCAN, and FORCESEEK hints, either in table hints syntax or in [OPTION Clause &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md) of the query. For more information, see [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+-   INDEX, FORCESCAN, and FORCESEEK hints, either in table hints syntax or in [OPTION Clause &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md) of the query. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
 
 -   FORCE ORDER  
 
@@ -218,12 +218,12 @@ The following DML statements are supported.
 
 -   OPTIMIZE FOR  
 
- For more information, see [Query Hints &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).  
+ For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
 
 ##  <a name="los"></a> Limitations on Sorting  
- You can sort greater than 8,000 rows in a query that uses [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) and an [ORDER BY Clause &#40;Transact-SQL&#41;](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md). However, without [ORDER BY Clause &#40;Transact-SQL&#41;](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md), [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) can sort up to 8,000 rows (fewer rows if there are joins).  
+ You can sort greater than 8,000 rows in a query that uses [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) and an [ORDER BY Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md). However, without [ORDER BY Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) can sort up to 8,000 rows (fewer rows if there are joins).  
 
- If your query uses both the [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) operator and an [ORDER BY Clause &#40;Transact-SQL&#41;](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md), you can specify up to 8192 rows for the TOP operator. If you specify more than 8192 rows you get the error message: **Msg 41398, Level 16, State 1, Procedure *\<procedureName>*, Line *\<lineNumber>* The TOP operator can return a maximum of 8192 rows; *\<number>* was requested.**  
+ If your query uses both the [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) operator and an [ORDER BY Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), you can specify up to 8192 rows for the TOP operator. If you specify more than 8192 rows you get the error message: **Msg 41398, Level 16, State 1, Procedure *\<procedureName>*, Line *\<lineNumber>* The TOP operator can return a maximum of 8192 rows; *\<number>* was requested.**  
 
  If you do not have a TOP clause, you can sort any number of rows with ORDER BY.  
 

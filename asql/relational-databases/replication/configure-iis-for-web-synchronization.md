@@ -21,16 +21,16 @@ manager: "jhubbard"
 # Configure IIS for Web Synchronization
   The procedures in this topic make up the second step in configuring Web synchronization for merge replication. You perform this step after you enable a publication for Web synchronization. For an overview of the configuration process, see [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md). After you complete the procedures in this topic, continue to the third step, configuring a subscription to use Web synchronization. This third step is described in the following topics:  
   
--   [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]: [How to: Configure a Subscription to Use Web Synchronization \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]: [How to: Configure a Subscription to Use Web Synchronization \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Replication [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] programming: [How to: Configure a Subscription to Use Web Synchronization (Replication Transact-SQL Programming)](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   Replication [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] programming: [How to: Configure a Subscription to Use Web Synchronization (Replication Transact-SQL Programming)](http://msdn.microsoft.com/library/ms345206.aspx)  
   
 -   RMO: [How to: Configure a Subscription to Use Web Synchronization (RMO Programming)](http://msdn.microsoft.com/library/ms345207.aspx)  
   
- Web synchronization uses a computer that is running [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Internet Information Services (IIS) to synchronize pull subscriptions to merge publications. IIS version 5.0, IIS version 6.0, and [!INCLUDE[iisver](../../relational-databases/replication/includes/iisver-md.md)] are supported. The Configure Web Synchronization Wizard is not supported on [!INCLUDE[iisver](../../relational-databases/replication/includes/iisver-md.md)].  
+ Web synchronization uses a computer that is running [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Internet Information Services (IIS) to synchronize pull subscriptions to merge publications. IIS version 5.0, IIS version 6.0, and [!INCLUDE[iisver](../../relational-databases/replication/includes/iisver-md.md)] are supported. The Configure Web Synchronization Wizard is not supported on [!INCLUDE[iisver](../../relational-databases/replication/includes/iisver-md.md)].  
   
 > [!IMPORTANT]  
->  Make sure that your application uses only [!INCLUDE[dnprdnlong](../../relational-databases/replication/includes/dnprdnlong-md.md)] or later versions, and that earlier versions of the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] are not installed on the IIS server. Earlier versions of the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] can cause errors. These include the following: "The format of a message during Web synchronization was invalid. Ensure that replication components are properly configured at the Web server".  
+>  Make sure that your application uses only [!INCLUDE[dnprdnlong](../../relational-databases/replication/includes/dnprdnlong-md.md)] or later versions, and that earlier versions of the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] are not installed on the IIS server. Earlier versions of the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] can cause errors. These include the following: "The format of a message during Web synchronization was invalid. Ensure that replication components are properly configured at the Web server".  
   
 > [!CAUTION]  
 >  Do not use both WebSync and alternate snapshot folder locations at the same time.  
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 1.  Configure Secure Sockets Layer (SSL). SSL is required for communication between IIS and all Subscribers.  
   
-2.  Install [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] connectivity components on the computer that is running IIS by using the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Installation Wizard. If you plan to use the Configure Web Synchronization Wizard that is mentioned in step 3, you must also install [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] on the computer that is running IIS.  
+2.  Install [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] connectivity components on the computer that is running IIS by using the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Installation Wizard. If you plan to use the Configure Web Synchronization Wizard that is mentioned in step 3, you must also install [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] on the computer that is running IIS.  
   
 3.  Configure the computer that is running IIS for Web synchronization. You can configure the computer manually or use the Configure Web Synchronization Wizard. We recommend that you use the wizard.  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
     cscript %SystemDrive%\inetpub\AdminScripts\adsutil.vbs set w3svc/AppPools/Enable32bitAppOnWin64 1  
     ```  
   
-4.  Set the appropriate permissions for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Replication Listener.  
+4.  Set the appropriate permissions for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Replication Listener.  
   
 5.  Run Web synchronization in diagnostic mode to test the connection to the computer that is running IIS and to make sure that the SSL certificate is properly installed.  
   
@@ -105,7 +105,7 @@ manager: "jhubbard"
   
 1.  Log on as an administrator to the computer that is running IIS.  
   
-2.  From the [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] installation disk, start the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Installation Wizard. For more information about using this wizard, see [Install SQL Server 2016 from the Installation Wizard &#40;Setup&#41;](../Topic/Install%20SQL%20Server%202016%20from%20the%20Installation%20Wizard%20\(Setup\).md).  
+2.  From the [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] installation disk, start the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Installation Wizard. For more information about using this wizard, see [Install SQL Server 2016 from the Installation Wizard &#40;Setup&#41;](../../database-engine/install/windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 3.  On the **Feature Selection** page, select **Client Tools Connectivity**.  
   
@@ -117,7 +117,7 @@ manager: "jhubbard"
     >  You can install additional components, but only the connectivity components are required for Web synchronization.  
   
 ## Configuring the Computer That Is Running IIS by Using the Configure Web Synchronization Wizard  
- Configure the IIS server by using the Configure Web Synchronization Wizard or manually. We recommend using the wizard, but we also provide steps for manual configuration in the next section. The Web Synchronization Wizard that is available with [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] can be used only for publications that were created on a Publisher that is running [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)], or a Publisher that was upgraded to [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)]. The wizard cannot be used for publications on [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)]. The wizard can be used with subscriptions on [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] and later versions, and [!INCLUDE[ssEWnoversion](../../relational-databases/replication/includes/ssewnoversion-md.md)] 3.0 and later versions.  
+ Configure the IIS server by using the Configure Web Synchronization Wizard or manually. We recommend using the wizard, but we also provide steps for manual configuration in the next section. The Web Synchronization Wizard that is available with [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] can be used only for publications that were created on a Publisher that is running [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)], or a Publisher that was upgraded to [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)]. The wizard cannot be used for publications on [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)]. The wizard can be used with subscriptions on [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] and later versions, and [!INCLUDE[ssEWnoversion](../../relational-databases/replication/includes/ssewnoversion-md.md)] 3.0 and later versions.  
   
  The configuration has the following characteristics:  
   
@@ -128,11 +128,11 @@ manager: "jhubbard"
   
 -   Creates a virtual directory and its associated alias. The alias is used when accessing the Web synchronization components. For example, if the IIS address is https://*server.domain.com* and you specify an alias of 'websync1', the address to access the replisapi.dll component is https://*server.domain.com*/websync1/replisapi.dll.  
   
--   Uses Basic Authentication. We recommend using Basic Authentication because Basic Authentication enables you to run IIS and the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Publisher/Distributor on separate computers (the recommended configuration) without requiring Kerberos delegation. Using SSL with Basic Authentication makes sure that logins, passwords, and all data are encrypted in transit. (SSL is required, regardless of the type of authentication that is used.) For more information about best practices for Web synchronization, see the section "Security Best Practices for Web Synchronization" in [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
+-   Uses Basic Authentication. We recommend using Basic Authentication because Basic Authentication enables you to run IIS and the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Publisher/Distributor on separate computers (the recommended configuration) without requiring Kerberos delegation. Using SSL with Basic Authentication makes sure that logins, passwords, and all data are encrypted in transit. (SSL is required, regardless of the type of authentication that is used.) For more information about best practices for Web synchronization, see the section "Security Best Practices for Web Synchronization" in [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
   
 #### To configure the computer that is running IIS by using the Configure Web Synchronization Wizard  
   
-1.  On the computer that is running IIS, start [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+1.  On the computer that is running IIS, start [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 2.  Connect to the Publisher, and then expand the server node.  
   
@@ -154,7 +154,7 @@ manager: "jhubbard"
   
     2.  In the **Path** box, enter a path of the virtual directory. For example, if you entered **websync1** in the **Alias** box, enter **C:\Inetpub\wwwroot\websync1** in the **Path** box. Click **Next**.  
   
-    3.  On both dialog boxes, click **Yes**. This specifies that you want to create a new folder and that you want to copy the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL. .  
+    3.  On both dialog boxes, click **Yes**. This specifies that you want to create a new folder and that you want to copy the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL. .  
   
 7.  On the **Authenticated Access** page:  
   
@@ -166,7 +166,7 @@ manager: "jhubbard"
   
 8.  On the **Directory Access** page:  
   
-    1.  Click **Add**, and then in the **Select Users or Groups** dialog box, add the accounts under which Subscribers will make connections to IIS. These are the accounts that you will specify on the **Web Server Information** page of the New Subscription Wizard or as the value for the [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* parameter.  
+    1.  Click **Add**, and then in the **Select Users or Groups** dialog box, add the accounts under which Subscribers will make connections to IIS. These are the accounts that you will specify on the **Web Server Information** page of the New Subscription Wizard or as the value for the [sp_addmergepullsubscription_agent](../../relational-databases/reference/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* parameter.  
   
 9. On the **Snapshot Share Access** page, enter the snapshot share. The appropriate permissions are set on this share so that Subscribers can access the snapshot files. For more information about permissions for the share, see [Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
@@ -187,14 +187,14 @@ manager: "jhubbard"
          **regsvr32 replisapi.dll**  
   
 ## Manually Configuring the Computer That Is Running IIS  
- To configure the computer that is running IIS manually, you must install and configure the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Replication Listener, and then configure authorization for Subscribers that will connect to IIS.  
+ To configure the computer that is running IIS manually, you must install and configure the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Replication Listener, and then configure authorization for Subscribers that will connect to IIS.  
   
 #### To install and configure the SQL Server Replication Listener  
   
 1.  Create a file directory on the computer that is running IIS to contain replisapi.dll. You can create the directory wherever you want, but we recommend that you create the directory under the \<*drive*>:\Inetpub directory. For example, create the directory \<*drive*>:\Inetpub\SQLReplication\\.  
   
     > [!IMPORTANT]  
-    >  We strongly recommend that you create this directory on an NTFS file system partition instead of a FAT file system. When you use the NTFS file system, you can use NTFS file system permissions to control precisely the users that can access [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] replication.  
+    >  We strongly recommend that you create this directory on an NTFS file system partition instead of a FAT file system. When you use the NTFS file system, you can use NTFS file system permissions to control precisely the users that can access [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] replication.  
   
 2.  Copy replisapi.dll from the directory [!INCLUDE[ssInstallPathVar](../../analysis-services/instances/install/windows/includes/ssinstallpathvar-md.md)]com\ to the file directory that you created in step 1.  
   
@@ -219,9 +219,9 @@ manager: "jhubbard"
      We recommend that you use Basic Authentication with SSL. SSL is required, regardless of the type of authentication that is used. For more information about how to configure authentication, see the IIS documentation.  
   
 ## Setting Permissions for the SQL Server Replication Listener  
- When a Subscriber connects to the computer that is running IIS, the Subscriber is authenticated by using the type of authentication that was specified when you configured IIS. After IIS authenticates the Subscriber, IIS checks whether the Subscriber is authorized to invoke [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] replication. You control the users that can invoke [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] replication by setting permissions for replisapi.dll. Properly configuring permissions is necessary to prevent unauthorized access to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] replication.  
+ When a Subscriber connects to the computer that is running IIS, the Subscriber is authenticated by using the type of authentication that was specified when you configured IIS. After IIS authenticates the Subscriber, IIS checks whether the Subscriber is authorized to invoke [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] replication. You control the users that can invoke [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] replication by setting permissions for replisapi.dll. Properly configuring permissions is necessary to prevent unauthorized access to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] replication.  
   
- To configure the minimum permissions for the account under which the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Replication Listener runs, complete the following procedure. The steps in the procedure apply to [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../database-engine/configure/windows/includes/winxpsvr-md.md)] running IIS 6.0.  
+ To configure the minimum permissions for the account under which the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Replication Listener runs, complete the following procedure. The steps in the procedure apply to [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../database-engine/configure/windows/includes/winxpsvr-md.md)] running IIS 6.0.  
   
  In addition to performing the following steps, make sure that the required logins are in the publication access list (PAL). For more information about the PAL, see [Secure the Publisher](../../relational-databases/replication/security/secure-the-publisher.md).  
   
@@ -310,7 +310,7 @@ manager: "jhubbard"
   
 1.  Make sure that local area network (LAN) settings at the Subscriber are correct:  
   
-    1.  In [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Internet Explorer, on the **Tools** menu, click **Internet Options**.  
+    1.  In [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Internet Explorer, on the **Tools** menu, click **Internet Options**.  
   
     2.  On the **Connections** tab, click **LAN Settings**.  
   

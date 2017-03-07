@@ -23,7 +23,7 @@ manager: "jhubbard"
 
   Specifies the properties of a computed column that is added to a table by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -67,7 +67,7 @@ column_name AS computed_column_expression
     >  Because each row in a table can have different values for columns involved in a computed column, the computed column may not have the same result for each row.  
   
  PERSISTED  
- Specifies that the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] will physically store the computed values in the table, and update the values when any other columns on which the computed column depends are updated. Marking a computed column as PERSISTED allows an index to be created on a computed column that is deterministic, but not precise. For more information, see [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). Any computed columns used as partitioning columns of a partitioned table must be explicitly marked PERSISTED. *computed_column_expression* must be deterministic when PERSISTED is specified.  
+ Specifies that the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] will physically store the computed values in the table, and update the values when any other columns on which the computed column depends are updated. Marking a computed column as PERSISTED allows an index to be created on a computed column that is deterministic, but not precise. For more information, see [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). Any computed columns used as partitioning columns of a partitioned table must be explicitly marked PERSISTED. *computed_column_expression* must be deterministic when PERSISTED is specified.  
   
  NULL | NOT NULL  
  Specifies whether null values are allowed in the column. NULL is not strictly a constraint but can be specified like NOT NULL. NOT NULL can be specified for computed columns only if PERSISTED is also specified.  
@@ -90,10 +90,10 @@ column_name AS computed_column_expression
  If a clustered constraint or index already exists on a table, CLUSTERED cannot be specified. If a clustered constraint or index already exists on a table, PRIMARY KEY constraints default to NONCLUSTERED.  
   
  WITH FILLFACTOR =*fillfactor*  
- Specifies how full the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] should make each index page used to store the index data. User-specified *fillfactor* values can be from 1 through 100. If a value is not specified, the default is 0.  
+ Specifies how full the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] should make each index page used to store the index data. User-specified *fillfactor* values can be from 1 through 100. If a value is not specified, the default is 0.  
   
 > [!IMPORTANT]  
->  Documenting WITH FILLFACTOR = *fillfactor* as the only index option that applies to PRIMARY KEY or UNIQUE constraints is maintained for backward compatibility, but will not be documented in this manner in future releases. Other index options can be specified in the [index_option &#40;Transact-SQL&#41;](../Topic/index_option%20\(Transact-SQL\).md) clause of ALTER TABLE.  
+>  Documenting WITH FILLFACTOR = *fillfactor* as the only index option that applies to PRIMARY KEY or UNIQUE constraints is maintained for backward compatibility, but will not be documented in this manner in future releases. Other index options can be specified in the [index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md) clause of ALTER TABLE.  
   
  FOREIGN KEY REFERENCES  
  Is a constraint that provides referential integrity for the data in the column or columns. FOREIGN KEY constraints require that each value in the column exists in the corresponding referenced column or columns in the referenced table. FOREIGN KEY constraints can reference only columns that are PRIMARY KEY or UNIQUE constraints in the referenced table or columns referenced in a UNIQUE INDEX on the referenced table. Foreign keys on computed columns must also be marked PERSISTED.  
@@ -108,26 +108,26 @@ column_name AS computed_column_expression
  Specifies what action happens to rows in the table if those rows have a referential relationship and the referenced row is deleted from the parent table. The default is NO ACTION.  
   
  NO ACTION  
- The [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] raises an error and the delete action on the row in the parent table is rolled back.  
+ The [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] raises an error and the delete action on the row in the parent table is rolled back.  
   
  CASCADE  
  Corresponding rows are deleted from the referencing table if that row is deleted from the parent table.  
   
- For example, in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database, the ProductVendor table has a referential relationship with the Vendor table. The ProductVendor.BusinessEntityID foreign key references the Vendor.BusinessEntityID primary key.  
+ For example, in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database, the ProductVendor table has a referential relationship with the Vendor table. The ProductVendor.BusinessEntityID foreign key references the Vendor.BusinessEntityID primary key.  
   
- If a DELETE statement is executed on a row in the Vendor table, and an ON DELETE CASCADE action is specified for ProductVendor.BusinessEntityID, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] checks for one or more dependent rows in the ProductVendor table. If any exist, the dependent rows in the ProductVendor table are deleted, in addition to the row referenced in the Vendor table.  
+ If a DELETE statement is executed on a row in the Vendor table, and an ON DELETE CASCADE action is specified for ProductVendor.BusinessEntityID, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] checks for one or more dependent rows in the ProductVendor table. If any exist, the dependent rows in the ProductVendor table are deleted, in addition to the row referenced in the Vendor table.  
   
- Conversely, if NO ACTION is specified, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] raises an error and rolls back the delete action on the Vendor row when there is at least one row in the ProductVendor table that references it.  
+ Conversely, if NO ACTION is specified, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] raises an error and rolls back the delete action on the Vendor row when there is at least one row in the ProductVendor table that references it.  
   
  Do not specify CASCADE if the table will be included in a merge publication that uses logical records. For more information about logical records, see [Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
  ON UPDATE { **NO ACTION** }  
- Specifies what action happens to rows in the table created when those rows have a referential relationship and the referenced row is updated in the parent table. When NO ACTION is specified, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] raises an error and rolls back the update action on the Vendor row if there is at least one row in the ProductVendor table that references it.  
+ Specifies what action happens to rows in the table created when those rows have a referential relationship and the referenced row is updated in the parent table. When NO ACTION is specified, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] raises an error and rolls back the update action on the Vendor row if there is at least one row in the ProductVendor table that references it.  
   
  NOT FOR REPLICATION  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Can be specified for FOREIGN KEY constraints and CHECK constraints. If this clause is specified for a constraint, the constraint is not enforced when replication agents perform insert, update, or delete operations.  
   
@@ -140,7 +140,7 @@ column_name AS computed_column_expression
  ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
  Specifies the storage location of the index created for the constraint. If *partition_scheme_name* is specified, the index is partitioned and the partitions are mapped to the filegroups that are specified by *partition_scheme_name*. If *filegroup* is specified, the index is created in the named filegroup. If "default" is specified or if ON is not specified at all, the index is created in the same filegroup as the table. If ON is specified when a clustered index is added for a PRIMARY KEY or UNIQUE constraint, the whole table is moved to the specified filegroup when the clustered index is created.  
   

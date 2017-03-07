@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Aggregate Functions - max
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns from a sequence of atomic values, *$arg*, the one item whose value is greater than that of all the others.  
   
@@ -45,10 +45,10 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  The **max()** function returns the one value in the sequence that is greater than any other in the input sequence. For xs:string values, the default Unicode Codepoint Collation is being used. If an xdt:untypedAtomic value cannot be cast to xs:double, the value is ignored in the input sequence, *$arg*. If the input is a dynamically calculated empty sequence, the empty sequence is returned.  
   
 ## Examples  
- This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the [!INCLUDE[ssSampleDBobject](../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+ This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the [!INCLUDE[ssSampleDBobject](../a9retired/includes/sssampledbobject-md.md)] database.  
   
 ### A. Using the max() XQuery function to find work center locations in the manufacturing process that have the most labor hours  
- The query provided in [min function (XQuery)](../Topic/min%20Function%20\(XQuery\).md) can be rewritten to use the **max()** function.  
+ The query provided in [min function (XQuery)](../xquery/aggregate-functions-min.md) can be rewritten to use the **max()** function.  
   
 ## Implementation Limitations  
  These are the limitations:  

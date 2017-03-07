@@ -21,9 +21,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Rowset Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  The following rowset functions return an object that can be used in place of a table reference in a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement.  
+  The following rowset functions return an object that can be used in place of a table reference in a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement.  
   
 |||  
 |-|-|  

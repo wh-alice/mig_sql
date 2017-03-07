@@ -21,7 +21,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Create a Database Mirroring Endpoint for Windows Authentication (Transact-SQL)
-  This topic describes how to create a database mirroring endpoint that uses Windows Authentication in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]. To support database mirroring or [!INCLUDE[ssHADR](../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] each instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] requires a database mirroring endpoint. A server instance can have only one database mirroring endpoint, which has a single port. A database mirroring endpoint can use any port that is available on the local system when the endpoint is created. All database mirroring sessions on a server instance listen on that port, and all incoming connections for database mirroring use that port.  
+  This topic describes how to create a database mirroring endpoint that uses Windows Authentication in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]. To support database mirroring or [!INCLUDE[ssHADR](../../a9notintoc/includes/sshadr-md.md)] each instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] requires a database mirroring endpoint. A server instance can have only one database mirroring endpoint, which has a single port. A database mirroring endpoint can use any port that is available on the local system when the endpoint is created. All database mirroring sessions on a server instance listen on that port, and all incoming connections for database mirroring use that port.  
   
 > [!IMPORTANT]  
 >  If a database mirroring endpoint exists and is already in use, we recommend that you use that endpoint. Dropping an in-use endpoint disrupts existing sessions.  
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 #### To Create a Database Mirroring Endpoint That Uses Windows Authentication  
   
-1.  Connect to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] on which you want to create a database mirroring endpoint.  
+1.  Connect to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] on which you want to create a database mirroring endpoint.  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -122,12 +122,12 @@ manager: "jhubbard"
         > [!NOTE]  
         >  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../database-engine/availability-groups/windows/includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.  
   
-    -   *\<role>* defines the role or roles that the server can perform. Specifying ROLE is required. However, the role of the endpoint is relevant only for database mirroring. For [!INCLUDE[ssHADR](../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)], the role of the endpoint is ignored.  
+    -   *\<role>* defines the role or roles that the server can perform. Specifying ROLE is required. However, the role of the endpoint is relevant only for database mirroring. For [!INCLUDE[ssHADR](../../a9notintoc/includes/sshadr-md.md)], the role of the endpoint is ignored.  
   
          To allow a server instance to serve as one role for one database mirroring session and different role for another session, specify ROLE=ALL. To restrict a server instance to being either a partner or a witness, specify ROLE=PARTNER or ROLE=WITNESS, respectively.  
   
         > [!NOTE]  
-        >  For more information about Database Mirroring options for different editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+        >  For more information about Database Mirroring options for different editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
   
      For a complete description of the CREATE ENDPOINT syntax, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
@@ -177,21 +177,21 @@ GO
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To Configure a Database Mirroring Endpoint**  
   
--   [Create a Database Mirroring Endpoint for Always On Availability Groups &#40;SQL Server PowerShell&#41;](../Topic/Create%20a%20Database%20Mirroring%20Endpoint%20for%20Always%20On%20Availability%20Groups%20\(SQL%20Server%20PowerShell\).md)  
+-   [Create a Database Mirroring Endpoint for Always On Availability Groups &#40;SQL Server PowerShell&#41;](../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../Topic/Allow%20a%20Database%20Mirroring%20Endpoint%20to%20Use%20Certificates%20for%20Outbound%20Connections%20\(Transact-SQL\).md)  
+    -   [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections &#40;Transact-SQL&#41;](../Topic/Allow%20a%20Database%20Mirroring%20Endpoint%20to%20Use%20Certificates%20for%20Inbound%20Connections%20\(Transact-SQL\).md)  
+    -   [Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [Specify a Server Network Address &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../Topic/Specify%20the%20Endpoint%20URL%20When%20Adding%20or%20Modifying%20an%20Availability%20Replica%20\(SQL%20Server\).md)  
+-   [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **To View Information About the Database Mirroring Endpoint**  
   
--   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-mirroring-endpoints-transact-sql.md)  
+-   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-mirroring-endpoints-transact-sql.md)  
   
 ## See Also  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   

@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Invoke-PolicyEvaluation cmdlet
-  **Invoke-PolicyEvaluation** is a [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] cmdlet that reports whether a target set of SQL Server objects complies with the conditions specified in one or more Policy-Based Management policies.  
+  **Invoke-PolicyEvaluation** is a [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] cmdlet that reports whether a target set of SQL Server objects complies with the conditions specified in one or more Policy-Based Management policies.  
   
 ## Using Invoke-PolicyEvaluation  
  **Invoke-PolicyEvaluation** evaluates one or more policies against a set of SQL Server objects called the target set. The set of target objects comes from a target server. Each policy defines conditions, which are the allowed states for the target objects. For example, the **Trustworthy Database** policy states that the TRUSTWORTHY database property must be set to OFF.  
@@ -105,7 +105,7 @@ Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MyCompu
 ```  
   
 ## Evaluating Analysis Services Policies  
- To evaluate policies against an instance of [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)], you must load and register an assembly into PowerShell, create a variable with an Analysis Services connection object, and pass the variable to the **-TargetObject** parameter. This example shows evaluating the Best Practices surface area configuration policy for [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)]:  
+ To evaluate policies against an instance of [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)], you must load and register an assembly into PowerShell, create a variable with an Analysis Services connection object, and pass the variable to the **-TargetObject** parameter. This example shows evaluating the Best Practices surface area configuration policy for [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)]:  
   
 ```  
 sl "C:\Program Files\Microsoft SQL Server\130\Tools\Policies\AnalysisServices\1033"  
@@ -116,7 +116,7 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Analysis Service
 ```  
   
 ## Evaluating Reporting Services Policies  
- To evaluate [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] policies, you must load and register an assembly into PowerShell, create a variable with a [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] connection object, and pass the variable to the **-TargetObject** parameter. This example shows evaluating the Best Practices surface area configuration policy for [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]:  
+ To evaluate [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] policies, you must load and register an assembly into PowerShell, create a variable with a [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] connection object, and pass the variable to the **-TargetObject** parameter. This example shows evaluating the Best Practices surface area configuration policy for [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)]:  
   
 ```  
 sl "C:\Program Files\Microsoft SQL Server\130\Tools\Policies\ReportingServices\1033"  

@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Examples of Advanced Integration Services Expressions
   This section provides examples of advanced expressions that combine multiple operators and functions. If an expression is used in a precedence constraint or the Conditional Split transformation, it must evaluate to a Boolean. That restriction, however, does not apply to expressions used in property expressions, variables, the Derived Column transformation, or the For Loop container.  
   
- The following examples use the **AdventureWorks** and the [!INCLUDE[ssSampleDBDWobject](../../analysis-services/data-mining/includes/sssampledbdwobject-md.md)][!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases. Each example identifies the tables it uses.  
+ The following examples use the **AdventureWorks** and the [!INCLUDE[ssSampleDBDWobject](../../a9notintoc/includes/sssampledbdwobject-md.md)][!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] databases. Each example identifies the tables it uses.  
   
 ## Boolean Expressions  
   
@@ -97,7 +97,7 @@ manager: "jhubbard"
     ```  
   
 ## Related Tasks  
- [Use an Expression in a Data Flow Component](../Topic/Use%20an%20Expression%20in%20a%20Data%20Flow%20Component.md)  
+ [Use an Expression in a Data Flow Component](../../a9retired/use-an-expression-in-a-data-flow-component.md)  
   
 ## Related Content  
  Technical article, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=746575), on pragmaticworks.com  

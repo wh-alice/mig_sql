@@ -29,7 +29,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Customize the Data and Display of a Map or Map Layer (Report Builder and SSRS)
-  After you add a map or map layer to a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report by using a wizard, you might want to change the way the map looks in the report. You can make improvements by considering the following ideas:  
+  After you add a map or map layer to a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report by using a wizard, you might want to change the way the map looks in the report. You can make improvements by considering the following ideas:  
   
 -   To help your users understand how to interpret the data display on a map, you can add legends and a color scale, and add labels and tooltips.  
   
@@ -52,7 +52,7 @@ manager: "erikre"
  A map report item includes the following parts: the map itself, a map viewport, a set of titles, a set of legends (legend, color scale, and distance scale), a set of layers, a set of map elements on each layer (polygons or lines or points). Use the information in the following sections to understand which property dialog box controls the display options for different parts of a map.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ##  <a name="Map"></a> Change Options for the Map  
  On a map report item, you can control the following:  
@@ -86,7 +86,7 @@ manager: "erikre"
   
 -   Resolution and simplification. Choose a balance between drawing time and detailed outlines for lines and polygons.  
   
- To change these options, right-click the map viewport, use the [Map Viewport Properties Dialog Box, General](../Topic/Map%20Viewport%20Properties%20Dialog%20Box,%20General.md) page and related pages.  
+ To change these options, right-click the map viewport, use the [Map Viewport Properties Dialog Box, General](../../a9retired/map-viewport-properties-dialog-box-general.md) page and related pages.  
   
 ##  <a name="Legends"></a> Change Options for the Legends  
  Legends help users interpret the data on a map.  

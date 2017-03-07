@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Crossjoin  - MDX Operator Reference
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Performs a set operation that returns the cross product of two sets.  
   

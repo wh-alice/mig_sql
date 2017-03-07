@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Disable Resource Governor
-  You can disable the Resource Governor by using either [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or Transact-SQL.  
+  You can disable the Resource Governor by using either [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or Transact-SQL.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -49,14 +49,14 @@ manager: "jhubbard"
 ##  <a name="RGOffObjEx"></a> Disable Resource Governor Using Object Explorer  
  **To disable the Resource Governor by using Object Explorer**  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to **Resource Governor**.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to **Resource Governor**.  
   
 2.  Right-click **Resource Governor**, and then click **Disable**.  
   
 ##  <a name="RGOffProp"></a> Disable Resource Governor Using Resource Governor Properties  
  **To disable the Resource Governor by using the Resource Governor Properties page**  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to **Resource Governor**.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to **Resource Governor**.  
   
 2.  Right-click **Resource Governor** and then click **Properties**, this opens the **Resource Governor Properties** page.  
   

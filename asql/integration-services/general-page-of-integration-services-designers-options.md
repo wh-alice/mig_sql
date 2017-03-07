@@ -19,11 +19,11 @@ manager: "jhubbard"
 # General Page of Integration Services Designers Options
   Use the **General** page of the **Integration Services Designers** page in the **Options** dialog box to specify the options for loading, displaying, and upgrading packages.  
   
- To open the **General** page, in [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], on the **Tools** menu, click **Options**, expand **Business Intelligence Designers**, and select **Integration Services Designers**.  
+ To open the **General** page, in [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], on the **Tools** menu, click **Options**, expand **Business Intelligence Designers**, and select **Integration Services Designers**.  
   
 ## Options  
  **Check digital signature when loading a package**  
- Select to have [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] check the digital signature when loading a package. [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] will only check whether the digital signature is present, is valid, and is from a trusted source. [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] will not check whether the package has been changed since the package was signed.  
+ Select to have [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] check the digital signature when loading a package. [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] will only check whether the digital signature is present, is valid, and is from a trusted source. [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] will not check whether the package has been changed since the package was signed.  
   
  If you set the **BlockedSignatureStates** registry value, this registry value overrides the **Check digital signature when loading a package** option. For more information, see [Implement a Signing Policy by Setting a Registry Value](../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md).  
   
@@ -33,22 +33,22 @@ manager: "jhubbard"
  Select to display a warning when loading a package that is not signed.  
   
  **Show precedence constraint labels**  
- Select which label—Success, Failure, or Completion—to display on precedence constraints when viewing packages in [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)].  
+ Select which label—Success, Failure, or Completion—to display on precedence constraints when viewing packages in [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
  **Scripting language**  
  Select the default scripting language for new Script tasks and Script components.  
   
  **Update connection strings to use new provider names**  
- When opening or upgrading [!INCLUDE[ssISversion2005](../database-engine/install/windows/includes/ssisversion2005-md.md)] packages, update connection strings to use the names for the following providers, for the current release of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)]:  
+ When opening or upgrading [!INCLUDE[ssISversion2005](../a9retired/includes/ssisversion2005-md.md)] packages, update connection strings to use the names for the following providers, for the current release of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)]:  
   
--   [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] OLE DB provider  
+-   [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] OLE DB provider  
   
--   [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client  
+-   [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Native Client  
   
- The [!INCLUDE[ssIS](../analysis-services/instances/includes/ssis-md.md)] Package Upgrade Wizard updates only connection strings that are stored in connection managers. The wizard does not update connection strings that are constructed dynamically by using the [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] expression language, or by using code in a Script task.  
+ The [!INCLUDE[ssIS](../a9retired/includes/ssis-md.md)] Package Upgrade Wizard updates only connection strings that are stored in connection managers. The wizard does not update connection strings that are constructed dynamically by using the [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] expression language, or by using code in a Script task.  
   
  **Create new package ID**  
- When upgrading [!INCLUDE[ssISversion2005](../database-engine/install/windows/includes/ssisversion2005-md.md)] packages, create new package IDs for the upgraded versions of the packages.  
+ When upgrading [!INCLUDE[ssISversion2005](../a9retired/includes/ssisversion2005-md.md)] packages, create new package IDs for the upgraded versions of the packages.  
   
 ## See Also  
  [Security Overview &#40;Integration Services&#41;](../integration-services/security/security-overview-integration-services.md)   

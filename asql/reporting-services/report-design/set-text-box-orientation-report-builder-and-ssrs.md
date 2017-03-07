@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Set Text Box Orientation (Report Builder and SSRS)
-In a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report, you can rotate a text box in different directions:   
+In a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report, you can rotate a text box in different directions:   
 * Horizontally   
 * Vertically (rotated 90 degrees, with text reading from top to bottom)  
 * Rotated by 270 degrees (text reading from bottom to top).   

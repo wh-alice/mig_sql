@@ -26,7 +26,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # SELECT DISTINCT FROM &lt;model &gt; (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns all possible states for the selected column in the model. The values that are returned vary depending on whether the specified column contains discrete values, discretized numeric values, or continuous numeric values.  
   
@@ -72,7 +72,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |Continuous|The midpoint for the values in the column.|  
   
 ## Discrete Column Example  
- The following code sample is based on the `[TM Decision Tree]` model that you create in the [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md). The query returns the unique values that exist in the discrete column, `Gender`.  
+ The following code sample is based on the `[TM Decision Tree]` model that you create in the [Basic Data Mining Tutorial](../a9notintoc/basic-data-mining-tutorial.md). The query returns the unique values that exist in the discrete column, `Gender`.  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -134,7 +134,7 @@ FROM [TM Decision Tree]
   
  You can see that the values of the [Yearly Income] column have been discretized into five buckets, plus an additional row of null values, to represent missing values.  
   
- The number of decimal places in the results depends on the client that you use for querying. Here they have been rounded to two decimal places, both for simplicity and to reflect the values that are displayed in [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)].  
+ The number of decimal places in the results depends on the client that you use for querying. Here they have been rounded to two decimal places, both for simplicity and to reflect the values that are displayed in [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)].  
   
  For example, if you browse the model by using the Decision Tree viewer and click a node that contains customers grouped by income, the following node properties are displayed in the Tooltip:  
   
@@ -145,7 +145,7 @@ FROM [TM Decision Tree]
   
 ## See Also  
  [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Manipulation%20Statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)  
+ [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

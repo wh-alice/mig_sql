@@ -29,7 +29,7 @@ In this lesson, you will create an OLE DB connection manager that uses Windows A
   
 3.  For **Server name**, enter **localhost**.  
   
-    When you specify localhost as the server name, the connection manager connects to the default instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] on the local computer. To use a remote instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], replace localhost with the name of the server to which you want to connect.  
+    When you specify localhost as the server name, the connection manager connects to the default instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] on the local computer. To use a remote instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], replace localhost with the name of the server to which you want to connect.  
   
 4.  In the **Log on to the server** group, verify that **Use Windows Authentication** is selected.  
   
@@ -46,7 +46,7 @@ In this lesson, you will create an OLE DB connection manager that uses Windows A
 10. Click **OK**.  
   
 ## Next Task in Lesson  
-[Step 4: Adding a Data Flow Task to the Package](../Topic/Step%204:%20Adding%20a%20Data%20Flow%20Task%20to%20the%20Package.md)  
+[Step 4: Adding a Data Flow Task to the Package](../../integration-services/tutorials/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 ## See Also  
 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)  

@@ -16,12 +16,12 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # RENAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../a9retired/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Renames a user-created table in [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)]. Renames a user-created table or database in [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)].  
+  Renames a user-created table in [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)]. Renames a user-created table or database in [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)].  
   
 > [!NOTE]  
->  To rename a database in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] use the stored procedure [sp_renamedb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).  
+>  To rename a database in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] or [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] use the stored procedure [sp_renamedb &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-renamedb-transact-sql.md).  
   
 ## Syntax  
   
@@ -49,15 +49,15 @@ RENAME DATABASE [::] database_name TO new_database_name
 ## Arguments  
  RENAME OBJECT [::]   
           [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*  
- **APPLIES TO:**  [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+ **APPLIES TO:**  [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
  Change the name of a user-defined table. Specify the table to be renamed with a one-, two-, or three-part name.    Specify the new table *new_table_name* as a one-part name.  
   
  RENAME DATABASE [::]   
           [ *database_name* TO *new_database_name*  
- **APPLIES TO:**  [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+ **APPLIES TO:**  [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
- Change the name of a user-defined database from *database_name* to *new_database_name*.  You cannot rename a database to any of these [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]reserved database names:  
+ Change the name of a user-defined database from *database_name* to *new_database_name*.  You cannot rename a database to any of these [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]reserved database names:  
   
 -   master  
   
@@ -102,7 +102,7 @@ You cannot rename an external table, indexes, or views. Instead of renaming, you
 ## Examples  
   
 ### A. Rename a database  
- **APPLIES TO:**  [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)] only  
+ **APPLIES TO:**  [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)] only  
   
  This example renames the user-defined database AdWorks to AdWorks2.  
   
@@ -115,7 +115,7 @@ RENAME DATABASE AdWorks to AdWorks2;
  When renaming a table, all objects and properties associated with the table are updated to reference the new table name. For example, table definitions, indexes, constraints, and permissions are updated. Views are not updated.  
   
 ### B. Rename a table  
- **APPLIES TO:**  [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+ **APPLIES TO:**  [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
  This example renames the Customer table to Customer1.  
   
@@ -130,7 +130,7 @@ RENAME OBJECT mydb.dbo.Customer TO Customer1;
    
   
 ### C. Move a table to a different schema  
- **APPLIES TO:**  [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+ **APPLIES TO:**  [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
  If your intent is to move the object to a different schema, use [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md). For example, this moves the table item from the product schema to the dbo schema.  
   
@@ -139,7 +139,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 ```  
   
 ### D. Terminate sessions before renaming a table  
- **APPLIES TO:**  [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+ **APPLIES TO:**  [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
  It is important to remember that you cannot rename a table while it is in use. A rename of a table requires an exclusive lock on the table. If the table is in use, you may need to terminate the session using the table. To terminate a session you can use the KILL command. Use KILL cautiously since when a session is terminated any uncommitted work will be rolled back. Sessions in SQL Data Warehouse are prefixed by 'SID'. You will need to include this and the session number when invoking the KILL command. This example views a list of active or idle sessions and then terminates session 'SID1234'.  
   

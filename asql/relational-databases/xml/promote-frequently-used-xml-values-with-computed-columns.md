@@ -172,7 +172,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  To do this, you first create the streaming CLR function. The **xml** data type is exposed as a managed class SqlXml in ADO.NET and supports the **CreateReader()** method that returns an XmlReader.  
   
 > [!NOTE]  
->  The example code in this section uses XPathDocument and XPathNavigator. These force you to load all the XML documents into memory. If you are using similar code in your application to process several large XML documents, this code is not scalable. Instead, keep memory allocations small and use streaming interfaces whenever possible. For more information about performance, see [Architecture of CLR Integration](../Topic/Architecture%20of%20CLR%20Integration.md).  
+>  The example code in this section uses XPathDocument and XPathNavigator. These force you to load all the XML documents into memory. If you are using similar code in your application to process several large XML documents, this code is not scalable. Instead, keep memory allocations small and use streaming interfaces whenever possible. For more information about performance, see [Architecture of CLR Integration](../../a9retired/clr-integration-architecture.md).  
   
 ```  
 public class c_streaming_xml_tvf {  
@@ -218,7 +218,7 @@ SqlDbType.NVarChar,50);
 }  
 ```  
   
- Next, create an assembly and a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] user-defined function, SQL_streaming_xml_tvf (not shown), that corresponds to the CLR function, streaming_xml_tvf. The user-defined function is used to define the table-valued function, CLR_udf_XML2Table, for rowset generation:  
+ Next, create an assembly and a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] user-defined function, SQL_streaming_xml_tvf (not shown), that corresponds to the CLR function, streaming_xml_tvf. The user-defined function is used to define the table-valued function, CLR_udf_XML2Table, for rowset generation:  
   
 ```  
 create function CLR_udf_XML2Table (@pk int, @xCol xml)  

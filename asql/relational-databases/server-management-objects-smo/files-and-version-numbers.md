@@ -21,12 +21,12 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Files and Version Numbers
-  All required [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Management Objects (SMO) components are installed as part of an instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] client or server. SMO is implemented in several managed assemblies. You can develop SMO applications on either a client or a server.  
+  All required [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Management Objects (SMO) components are installed as part of an instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] client or server. SMO is implemented in several managed assemblies. You can develop SMO applications on either a client or a server.  
   
 |Directory|File|Description|  
 |---------------|----------|-----------------|  
-|[!INCLUDE[ssSampPathSDK](../../relational-databases/server-management-objects-smo/includes/sssamppathsdk-md.md)]|Microsoft.SqlServer.ConnectionInfo.dll|Contains support for connecting to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].|  
-|C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\|Microsoft.SqlServer.ServiceBrokerEnum.dll|Contains support for programming the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Service Broker. This is required only in programs that access the Service Broker.|  
+|[!INCLUDE[ssSampPathSDK](../../relational-databases/server-management-objects-smo/includes/sssamppathsdk-md.md)]|Microsoft.SqlServer.ConnectionInfo.dll|Contains support for connecting to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].|  
+|C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\|Microsoft.SqlServer.ServiceBrokerEnum.dll|Contains support for programming the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Service Broker. This is required only in programs that access the Service Broker.|  
 |C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\|Microsoft.SqlServer.Smo.dll|Contains the most of the SMO classes.|  
 |C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\|Microsoft.SqlServer.SmoExtended.dll<br /><br /> Microsoft.SqlServer.Management.Sdk.Sfc.dll<br /><br /> Microsoft.SqlServer.SqlEnum.dll|Contains support for the SMO classes.|  
 |C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\|Microsoft.SqlServer.WmiEnum.dll|Contains the Windows Management Instrumentation (WMI) Provider classes. This is required only for programs that use the WMI Provider classes.|  

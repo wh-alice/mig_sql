@@ -38,7 +38,7 @@ manager: "jhubbard"
  Is an **nvarchar(4000)** string specifying one of 16 types exposed in the **geography** type hierarchy.  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] return type: **bit**  
+ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] return type: **bit**  
   
  CLR return type: **SqlBoolean**  
   

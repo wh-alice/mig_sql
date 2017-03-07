@@ -32,8 +32,8 @@ manager: "erikre"
 |--------------------|---------------------------|  
 |*unauthenticated connection*<br /> An unauthenticated connection does no form of authentication. This kind of connection represents the most widely supported, but least secure, form of connection.|**None**|  
 |*authenticated connection*<br /> An authenticated connection authenticates the user who is making the connection, but does not secure additional communications. This kind of connection is useful in that you can establish the identity of the user or application that is connecting to an analytical data source.|**Connect**|  
-|*signed connection*<br /> A signed connection authenticates the user who is requesting the connection, and then makes sure that transmissions are not modified. This kind of connection is useful when the authenticity of the transferred data must be verified. However, a signed connection only prevents the content of the data packet from being modified. The content can still be viewed in transit.<br /><br /><br /><br /> Note that a signed connection is only supported by the XML for Analysis provider supplied by [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)].|**Pkt Integrity** or **PktIntegrity**|  
-|*encrypted connection*<br /> An encrypted connection is the default connection type used by ADOMD.NET. This kind of connection authenticates the user who is requesting the connection, and then also encrypts the data that is transmitted. An encrypted connection is the securest form of connection that can be created by ADOMD.NET. The content of the data packet cannot be viewed or modified, thereby protecting data during transit.<br /><br /><br /><br /> An encrypted connection is only supported by the XML for Analysis provider supplied by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)].|**Pkt Privacy** or **PktPrivacy**|  
+|*signed connection*<br /> A signed connection authenticates the user who is requesting the connection, and then makes sure that transmissions are not modified. This kind of connection is useful when the authenticity of the transferred data must be verified. However, a signed connection only prevents the content of the data packet from being modified. The content can still be viewed in transit.<br /><br /><br /><br /> Note that a signed connection is only supported by the XML for Analysis provider supplied by [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)].|**Pkt Integrity** or **PktIntegrity**|  
+|*encrypted connection*<br /> An encrypted connection is the default connection type used by ADOMD.NET. This kind of connection authenticates the user who is requesting the connection, and then also encrypts the data that is transmitted. An encrypted connection is the securest form of connection that can be created by ADOMD.NET. The content of the data packet cannot be viewed or modified, thereby protecting data during transit.<br /><br /><br /><br /> An encrypted connection is only supported by the XML for Analysis provider supplied by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)].|**Pkt Privacy** or **PktPrivacy**|  
   
  However, not all levels of security are available for all kinds of connections:  
   
@@ -54,7 +54,7 @@ manager: "erikre"
 |**Pkt Privacy** or **PktPrivacy**|Yes|Specifies an encrypted connection.<br /><br /> <br /><br /> Note that you can also specify an encrypted connection by not setting the **ProtectionLevel** property in the connection string.<br /><br /> <br /><br /> A TCP stream is requested from the provider, and then the security context of the user requesting the stream is authenticated against the server:<br /><br /> <br /><br /> If authentication succeeds, the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> object closes the existing TCP stream and opens up an encrypted TCP stream to handle all requests. Each request for data or metadata is authenticated by using the security context that was used to open the connection. Additionally, the payload of each TCP packet is encrypted by using the highest encryption method supported by both the provider and the multidimensional data source.<br /><br /> <br /><br /> If authentication fails, the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> object disconnects from the multidimensional data source and an exception is thrown.|  
   
 ### Using Windows Integrated Security for the Connection  
- Windows Integrated Security is the securest way of establishing and securing a connection to an instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)]. Windows Integrated Security does not reveal security credentials, such as a user name or password, during the authentication process, but instead uses the security identifier of the currently running process to establish identity. For most client applications, this security identifier represents the identity of the currently logged-on user.  
+ Windows Integrated Security is the securest way of establishing and securing a connection to an instance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)]. Windows Integrated Security does not reveal security credentials, such as a user name or password, during the authentication process, but instead uses the security identifier of the currently running process to establish identity. For most client applications, this security identifier represents the identity of the currently logged-on user.  
   
  To use Windows Integrated Security, the connection string requires the following settings:  
   
@@ -78,7 +78,7 @@ manager: "erikre"
 |**Pkt Privacy** or **PktPrivacy**|HTTPS|  
   
 ### Opening a Secure HTTP Connection  
- The following example demonstrates how to use ADOMD.NET to open an HTTP connection for the **AdventureWorksAS** sample [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] database:  
+ The following example demonstrates how to use ADOMD.NET to open an HTTP connection for the **AdventureWorksAS** sample [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] database:  
   
 ```vb#  
 Public Function GetAWEncryptedConnection( _  
@@ -113,6 +113,6 @@ End Function
 ```  
   
 ## See Also  
- [Establishing Connections in ADOMD.NET](../Topic/Establishing%20Connections%20in%20ADOMD.NET.md)  
+ [Establishing Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd.net.md)  
   
   

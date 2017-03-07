@@ -19,7 +19,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Set Processing Options (Reporting Services in SharePoint Integrated Mode)
-  You can set processing options on a [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report to determine when data processing occurs. You can also set a time-out value for report processing, and options that determine whether report history is enabled for the current report.  
+  You can set processing options on a [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] report to determine when data processing occurs. You can also set a time-out value for report processing, and options that determine whether report history is enabled for the current report.  
   
 -   You can run a report as a report snapshot to prevent the report from being run at arbitrary times (for example, during a scheduled backup). A report snapshot is usually created and subsequently refreshed on a schedule, allowing you to time exactly when report and data processing will occur. If a report is based on queries that take a long time to run, or on queries that use data from a data source that you prefer no one access during certain hours, you should run the report as a snapshot.  
   
@@ -28,13 +28,13 @@ manager: "erikre"
 -   Report history is a collection of previously run copies of a report. You can use report history to maintain a record of a report over time. Report history is not intended for reports that contain confidential or personal data. For this reason, report history can include only those reports that query a data source using a single set of credentials (either stored credentials or credentials used for unattended report execution) that are available to all users who run a report.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] integration with SharePoint uses the check out and check in content management features of SharePoint to save updates to [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] content types. This includes the creation of report snapshots. Therefore if you have enabled versioning on a document library, you will see the report version updated when a new report history snapshot is created. This is a side-effect of updating snapshots. When a snapshot is updated it causes the LastExecution property of the report to change and that will cause a change in the version of the report.  
+    >  [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] integration with SharePoint uses the check out and check in content management features of SharePoint to save updates to [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] content types. This includes the creation of report snapshots. Therefore if you have enabled versioning on a document library, you will see the report version updated when a new report history snapshot is created. This is a side-effect of updating snapshots. When a snapshot is updated it causes the LastExecution property of the report to change and that will cause a change in the version of the report.  
   
 -   You can specify time-out values to set limits on how system resources are used.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../analysis-services/includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] SharePoint mode|  
+|**[!INCLUDE[applies](../../../a9retired/includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] SharePoint mode|  
   
  **In this topic:**  
   

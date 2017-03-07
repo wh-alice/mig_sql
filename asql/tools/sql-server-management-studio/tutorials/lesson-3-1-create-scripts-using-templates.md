@@ -17,13 +17,13 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Lesson 3-1 - Create Scripts Using Templates
-Microsoft [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] provides a large number of script templates containing the [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statements for many common tasks. These templates contain parameters for the user-provided values such as a table name. Using the parameters, you can type the name once and then automatically copy the name to all the necessary locations within the script. You can write your own custom templates to support the scripts that you write most often. You can also reorganize the template tree, moving templates or creating new folders to hold the templates. In the following practice, you will use a template to create a database, specifying collation template.  
+Microsoft [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] provides a large number of script templates containing the [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statements for many common tasks. These templates contain parameters for the user-provided values such as a table name. Using the parameters, you can type the name once and then automatically copy the name to all the necessary locations within the script. You can write your own custom templates to support the scripts that you write most often. You can also reorganize the template tree, moving templates or creating new folders to hold the templates. In the following practice, you will use a template to create a database, specifying collation template.  
   
 ## Using Templates  
   
 #### To create a script using a template  
   
-1.  In [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], on the **View** menu, click **Template Explorer**.  
+1.  In [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)], on the **View** menu, click **Template Explorer**.  
   
 2.  The templates in Template Explorer are organized into groups. Expand **Database**, and then double-click **Create Database**.  
   
@@ -34,7 +34,7 @@ Microsoft [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/incl
 5.  In the **Specify Values for Template Parameters** dialog box, the **Value** column contains a suggested value for the **Database_Name** parameter. In the **Database Name** parameter box, type **Marketing**, and then click **OK**. Note how "Marketing" is inserted into the script in several locations.  
   
 ## Next Task in Lesson  
-[Create Custom Templates](../Topic/Create%20Custom%20Templates.md)  
+[Create Custom Templates](../../../tools/sql-server-management-studio/tutorials/lesson-3-2-create-custom-templates.md)  
   
   
   

@@ -17,10 +17,10 @@ manager: "jhubbard"
 # Create Clustered DTC for an Always On Availability Group
 This topic walks you through a complete configuration of a clustered DTC resource for a SQL Server Always On Availability Group. The complete configuration can take up to an hour to complete. 
 
-The walkthrough creates a clustered DTC resource and the SQL Server Availability Groups to align with the requirements at [Cluster DTC for SQL Server Availability Groups](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md).
+The walkthrough creates a clustered DTC resource and the SQL Server Availability Groups to align with the requirements at [Cluster DTC for SQL Server Availability Groups](../../../a9notintoc/cluster-dtc-for-sql-server-2016-availability-groups.md).
 
 The walkthrough uses PowerShell and Transact-SQL (T-SQL) scripts.  Many of the T-SQL scripts require **SQLCMD Mode** to be enabled.  For more information on **SQLCMD Mode**, see [Enable SQLCMD Scripting in Query Editor](https://msdn.microsoft.com/library/ms174187.aspx#Anchor_1).  The PowerShell module **FailoverClusters** must be imported.  For more information of importing a PowerShell module, see [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx).  This walkthrough is based on the following:
-- All requirements from [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups (SQL Server)](Prerequisites,%20Restrictions,%20and%20Recommendations%20for%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md) have been met.  
+- All requirements from [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md) have been met.  
 - The domain is `contoso.lab`.
 - The user has the Create Computer objects permission in the OU where the DTC Network Name resource will be created.
 - The user is a domain user who has administrator rights on all nodes in the cluster.
@@ -44,7 +44,7 @@ The walkthrough uses PowerShell and Transact-SQL (T-SQL) scripts.  Many of the T
   - DTC IP resource: `DTCIP1`
 
 ## 1. Check operating system
-For supported distributed transactions, [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] must be running on Windows Server 2016 or Windows Server 2012 R2.  For Windows Server 2012 R2, you must install the update in KB3090973 available at [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973).  This script will check the operating system version and whether hotfix 3090973 needs to be installed.  Run the following PowerShell Script on `SQLNODE1`.
+For supported distributed transactions, [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] must be running on Windows Server 2016 or Windows Server 2012 R2.  For Windows Server 2012 R2, you must install the update in KB3090973 available at [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973).  This script will check the operating system version and whether hotfix 3090973 needs to be installed.  Run the following PowerShell Script on `SQLNODE1`.
 
 ```powershell  
 # A few OS checks
@@ -274,7 +274,7 @@ GO
 ```
 
 ## 7.	Create Availability Group
-[!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)] must be created with the **CREATE AVAILABILITY GROUP** command and the **WITH DTC_SUPPORT = PER_DB** clause.  You cannot currently alter an existing Availability Group.  The New Availability Group wizard does not allow you to enable DTC support for a new Availability Group.  The following script will create the new Availability Group and join the secondary.  Run the following T-SQL script in SSMS against `SQLNODE1` in **SQLCMD mode**.
+[!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)] must be created with the **CREATE AVAILABILITY GROUP** command and the **WITH DTC_SUPPORT = PER_DB** clause.  You cannot currently alter an existing Availability Group.  The New Availability Group wizard does not allow you to enable DTC support for a new Availability Group.  The following script will create the new Availability Group and join the secondary.  Run the following T-SQL script in SSMS against `SQLNODE1` in **SQLCMD mode**.
 
 ```tsql  
 /*******************************************************************
@@ -313,7 +313,7 @@ GO
 ```
 
 > [!IMPORTANT]
-You cannot Enable DTC on an existing [!INCLUDE[ssHADR](../../../analysis-services/power-pivot-sharepoint/includes/sshadr-md.md)].  [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will accept the following syntax for an existing Availability Group:  
+You cannot Enable DTC on an existing [!INCLUDE[ssHADR](../../../a9notintoc/includes/sshadr-md.md)].  [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] will accept the following syntax for an existing Availability Group:  
 >
 > USE master;    
 > ALTER AVAILABILITY GROUP \<availability_group\>  
@@ -472,11 +472,11 @@ $nodes = (Get-ClusterNode).Name;
 }
 ```  
 
-## 11.	Cycle the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service for each instance
+## 11.	Cycle the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] service for each instance
 
-With the clustered DTC service completely configured, you need to stop and restart each instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in the Availability Group in order to make sure [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is enrolled to use this DTC service.
+With the clustered DTC service completely configured, you need to stop and restart each instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] in the Availability Group in order to make sure [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is enrolled to use this DTC service.
 
-The first time [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service requires a distributed transaction, it enrolls with a DTC service. SQL Server service will continue to use that DTC service until it is restarted. If a clustered DTC service is available, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will enroll with the clustered DTC service. If a clustered DTC service is not available, [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will enroll with the local DTC service. In order to verify that [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] enrolls with the clustered DTC service, stop and restart each instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. 
+The first time [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] service requires a distributed transaction, it enrolls with a DTC service. SQL Server service will continue to use that DTC service until it is restarted. If a clustered DTC service is available, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] will enroll with the clustered DTC service. If a clustered DTC service is not available, [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] will enroll with the local DTC service. In order to verify that [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] enrolls with the clustered DTC service, stop and restart each instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. 
 
 Follow the steps contained in the T-SQL script below:
 ```tsql  

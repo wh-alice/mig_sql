@@ -1,7 +1,7 @@
 ---
 title: "ID Element (ASSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -56,11 +56,11 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- Every major object in [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] has an **ID** element as a property. The value of an **ID** element has the following restrictions:  
+ Every major object in [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] has an **ID** element as a property. The value of an **ID** element has the following restrictions:  
   
--   The value cannot contain leading or trailing spaces. [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] will implicitly remove leading or trailing spaces from the value of an **ID** element.  
+-   The value cannot contain leading or trailing spaces. [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] will implicitly remove leading or trailing spaces from the value of an **ID** element.  
   
--   The value cannot contain control characters. [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] will implicitly remove control characters from the value of an **ID** element.  
+-   The value cannot contain control characters. [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] will implicitly remove control characters from the value of an **ID** element.  
   
 -   The following reserved values cannot be used:  
   
@@ -82,7 +82,7 @@ manager: "erikre"
   
 |Parent element|Characters|  
 |--------------------|----------------|  
-|[Server](../../../analysis-services/scripting/objects/server-element-assl.md)|The value must follow the rules for [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows computer names. (IP addresses are not valid.)|  
+|[Server](../../../analysis-services/scripting/objects/server-element-assl.md)|The value must follow the rules for [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Windows computer names. (IP addresses are not valid.)|  
 |[DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md)|:/\\*&#124;?"()[]{}<>|  
 |[Level](../../../analysis-services/scripting/objects/level-element-assl.md), [Attribute Element](../../../analysis-services/scripting/objects/attribute-element-assl.md)|.,;'`:/\\*&#124;?"&%$!+=[]{}<>|  
 |All other parent elements|.,;'`:/\\*&#124;?"&%$!+=()[]{}<>|  

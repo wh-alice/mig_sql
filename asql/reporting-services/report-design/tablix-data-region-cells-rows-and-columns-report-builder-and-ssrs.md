@@ -21,14 +21,14 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Tablix Data Region Cells, Rows, and Columns (Report Builder) and SSRS
-  To control how the rows and columns of a tablix data region display data in a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report, you must understand how to specify rows and columns for detail data, for group data, and for labels and totals. In many cases, you can use the default structures for a table, matrix, or list to display your data. For more information, see [Tables &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md),  [Matrixes](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md), or [Lists](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md) .  
+  To control how the rows and columns of a tablix data region display data in a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report, you must understand how to specify rows and columns for detail data, for group data, and for labels and totals. In many cases, you can use the default structures for a table, matrix, or list to display your data. For more information, see [Tables &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md),  [Matrixes](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md), or [Lists](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md) .  
   
  A tablix data region displays detail data on detail rows and detail columns and grouped data on group rows and group columns. When you add row groups and column groups to a tablix data region, rows and columns on which to display the data are automatically added. You can manually add and remove rows and columns to customize a tablix data region and control the way your data displays in the report.  
   
  To understand how to customize a tablix data region, you should first understand how to interpret the visual cues you see when you select a tablix data region on the design surface.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Understanding Tablix Visual Cues  
  Visual cues on a tablix data region help you work with a tablix data region to display the data you want.  

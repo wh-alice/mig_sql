@@ -16,21 +16,21 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # SQL Azure Connection Type (SSRS)
-  [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] is a cloud-based, hosted relational database built on [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] technologies. To include data from [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] in your report, you must have a dataset that is based on a report data source of type [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)]. This built-in data source type is based on the [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] data extension. Use this data source type to connect to and retrieve data from [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+  [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../a9retired/includes/sssdsfull-md.md)] is a cloud-based, hosted relational database built on [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] technologies. To include data from [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] in your report, you must have a dataset that is based on a report data source of type [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)]. This built-in data source type is based on the [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] data extension. Use this data source type to connect to and retrieve data from [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  This data extension supports multivalued parameters, server aggregates, and credentials managed separately from the connection string.  
   
- [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] is similar to an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] on your premises and getting data from [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] is, with a few exceptions, identical to getting data from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] is similar to an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] on your premises and getting data from [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] is, with a few exceptions, identical to getting data from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  When opening a connection to a [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)], set the connection timeout to 30 seconds.  
+>  When opening a connection to a [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)], set the connection timeout to 30 seconds.  
   
  For more information, see [Microsoft Azure SQL Database on docs.microsoft.com](https://docs.microsoft.com/azure/sql-database/).  
   
  Use the information in this topic to build a data source. For step-by-step instructions, see [Add and Verify a Data Connection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Connection String  
- When you connect to [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)], you are connecting to a database object in the cloud. Just like onsite databases, the hosted database might have multiple schemas that have multiple tables, views, and stored procedures. You specify the database object to use in the query designer. If you do not specify a database in the connection string, you connect to the default database that the administrator assigned to you.  
+ When you connect to [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)], you are connecting to a database object in the cloud. Just like onsite databases, the hosted database might have multiple schemas that have multiple tables, views, and stored procedures. You specify the database object to use in the query designer. If you do not specify a database in the connection string, you connect to the default database that the administrator assigned to you.  
   
  Contact your database administrator for connection information and for the credentials to use to connect to the data source. The following connection string example specifies a hosted sample database named AdventureWorks.  
   
@@ -40,10 +40,10 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
  In addition, you use the **Data Sources Properties** dialog box to provide credentials such as user name and password. The `User Id` and `Password` options are automatically appended to the connection string; you do not need to type them as part of the connection string.  
   
- For more information and connection string examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md).  
+ For more information and connection string examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../../a9retired/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
 ##  <a name="Credentials"></a> Credentials  
- Windows Authentication (integrated security) is not supported. If you attempt to connect to [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] using Windows Authentication an error occurs. [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] supports only SQL Server Authentication (user name and password) and users must provide credentials (login and password) every time they connect to [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ Windows Authentication (integrated security) is not supported. If you attempt to connect to [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] using Windows Authentication an error occurs. [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] supports only SQL Server Authentication (user name and password) and users must provide credentials (login and password) every time they connect to [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
  Credentials must be sufficient to access the database. Depending on your query, you might need other permissions, such as sufficient permissions to run stored procedures and access tables and views. The owner of the external data source must configure credentials that are sufficient to provide read-only access to the database objects that you need.  
   
@@ -53,32 +53,32 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 -   No credentials are required. To use this option, you must have the unattended execution account configured on the report server. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in on msdn.microsoft.com.  
   
- For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) or [Specify Credentials in Report Builder](../Topic/Specify%20Credentials%20in%20Report%20Builder.md).  
+ For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) or [Specify Credentials in Report Builder](../../a9retired/specify-credentials-in-report-builder.md).  
   
   
 ##  <a name="Query"></a> Queries  
- A query specifies which data to retrieve for a report dataset. The columns in the result set for a query populate the field collection for a dataset. If the query returns multiple result sets, the report processes only the first result set that the query retrieves. Although there are some differences between [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)]s such as the sizes of databases supported, writing queries against [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)]s is similar to writing queries against [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases. Some [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements such as BACKUP are not supported in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)], but they are not ones that you use in report queries. For more information, see [SQL Server Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).  
+ A query specifies which data to retrieve for a report dataset. The columns in the result set for a query populate the field collection for a dataset. If the query returns multiple result sets, the report processes only the first result set that the query retrieves. Although there are some differences between [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)]s such as the sizes of databases supported, writing queries against [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)]s is similar to writing queries against [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] databases. Some [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements such as BACKUP are not supported in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)], but they are not ones that you use in report queries. For more information, see [SQL Server Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).  
   
  By default, if you create a new query or open an existing query that can be represented in the graphical query designer, the relational query designer is available. You can specify a query in the following ways:  
   
 -   Build a query interactively. Use the relational query designer that displays a hierarchical view of tables, views, stored procedures, and other database items, organized by database schema. Select columns from tables or views, or specify stored procedures or table-valued functions. Limit the number of rows of data to retrieve by specifying filter criteria. Customize the filter when the report runs by setting the parameter option.  
   
--   Type or paste a query. Use the text-based query designer to enter [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] text directly, to paste query text from another source, to enter complex queries that cannot be built by using the relational query designer, or to enter query-based expressions.  
+-   Type or paste a query. Use the text-based query designer to enter [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] text directly, to paste query text from another source, to enter complex queries that cannot be built by using the relational query designer, or to enter query-based expressions.  
   
 -   Import an existing query from a file or report. Use the **Import** query button from either query designer to browse to a .sql file or .rdl file and import a query.  
   
  The text-based query designer supports the following two modes:  
   
--   [Text](#QueryText) Type [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] commands that select data from the data source.  
+-   [Text](#QueryText) Type [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] commands that select data from the data source.  
   
 -   [Stored Procedure](#QueryStoredProcedure) Choose from a list of stored procedures.  
   
  For more information, see [Relational Query Designer User Interface &#40;Report Builder&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md) and [Text-based Query Designer User Interface &#40;Report Builder&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
- The graphical query designer that [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] uses provides built-in support for grouping and aggregates to help you write queries that retrieve only summary data. The [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] language features are: the GROUP BY clause, DISTINCT keyword, and aggregates such as SUM and COUNT. The text-based query designer provides full support for the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] language, including grouping and aggregates. For more information about [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)], see [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md)in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
+ The graphical query designer that [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] uses provides built-in support for grouping and aggregates to help you write queries that retrieve only summary data. The [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] language features are: the GROUP BY clause, DISTINCT keyword, and aggregates such as SUM and COUNT. The text-based query designer provides full support for the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] language, including grouping and aggregates. For more information about [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)], see [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md)in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
   
 ###  <a name="QueryText"></a> Using Query Type Text  
- In the text-based query designer, you type [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] commands to define the data in a dataset. For example, the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] query selects the names of all employees who are marketing assistants:  
+ In the text-based query designer, you type [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] commands to define the data in a dataset. For example, the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] query selects the names of all employees who are marketing assistants:  
   
 ```  
 SELECT  
@@ -139,12 +139,12 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="Remarks"></a> Remarks  
   
 ###### Alternate Data Extensions  
- You can also retrieve data from a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database by using an ODBC data source type. Connecting to [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] by using OLE DB is not supported.  
+ You can also retrieve data from a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database by using an ODBC data source type. Connecting to [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] by using OLE DB is not supported.  
   
  For more information, see [ODBC Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md).  
   
 ###### Platform and Version Information  
- For more information about platform and version support, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ For more information about platform and version support, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
   
 ##  <a name="HowTo"></a> How-To Topics  
@@ -163,7 +163,7 @@ WHERE EmployeeID = (@EmpID)
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Provides an overview of accessing data for your report.  
   
- [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)  
+ [Data Connections, Data Sources, and Connection Strings in Report Builder](../../a9retired/data-connections-data-sources-and-connection-strings-in-report-builder.md)  
  Provides information about data connections and data sources.  
   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -172,7 +172,7 @@ WHERE EmployeeID = (@EmpID)
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Provides information about the dataset field collection generated by the query.  
   
- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
  Provides in-depth information about platform and version support for each data extension.  
   
   

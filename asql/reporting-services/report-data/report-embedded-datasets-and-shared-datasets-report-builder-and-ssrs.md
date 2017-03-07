@@ -42,14 +42,14 @@ manager: "erikre"
   
 6.  **Query results** You can run the query and see an example result set. You must have design time credentials to run a query.  
   
-7.  **Metadata from schema** The data provider runs a schema query command separate from the query to retrieve metadata for the dataset field collection. For example, a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] **SELECT** statement returns the column names for a database table. Use the Report Data pane to expand the dataset to view the dataset field collection.  
+7.  **Metadata from schema** The data provider runs a schema query command separate from the query to retrieve metadata for the dataset field collection. For example, a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] **SELECT** statement returns the column names for a database table. Use the Report Data pane to expand the dataset to view the dataset field collection.  
   
  Data can also be included in a report by using predefined shared datasets and report parts. These items already have the data connection information that you need. For more information, see [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) and [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
  For more information about built-in data source types and data extensions, see [Add Data from External Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ##  <a name="Overview"></a> Understanding Report Datasets and Queries  
  A report dataset contains a query command that runs on the external data source and specifies what data to retrieve. To build the query command, you use the query designer that is associated with the data extension for the external data source. In the query designer, you can run the query command and view a result set. The result set is a rectangular row set that has column names and rows with the same number of values in each row. Hierarchical data, also known as *ragged hierarchies*, is not supported. The column names are saved in the report definition as a list of dataset fields.  
@@ -71,11 +71,11 @@ manager: "erikre"
   
 -   A flattened result set from XML data sources that include XML elements, their attributes, and their child elements.  
   
--   A result set from any registered and configured [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] data provider.  
+-   A result set from any registered and configured [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] data provider.  
   
 -   Data from a report model that has been designed for a specific data source, with predefined entities, entity relationships, and fields. For more information, see "Using Report Models as Data Sources" in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
   
- When the report is processed at run time, the actual result set returned for a query may have zero or more rows. It is also possible that the columns defined in the query may be missing from the data source. Null values from the data source are mapped to the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] value **System.DBNull.Value**.  
+ When the report is processed at run time, the actual result set returned for a query may have zero or more rows. It is also possible that the columns defined in the query may be missing from the data source. Null values from the data source are mapped to the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] value **System.DBNull.Value**.  
   
  For more information about dataset fields, see [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
   
@@ -86,7 +86,7 @@ manager: "erikre"
   
  In a query designer, you can do the following:  
   
--   Toggle between graphical and text-based query view. Use the graphical to explore schemas, tables, views, and stored procedures on the data source. Use the text-based view to type, paste, or view an existing query, typically used for a complex query that cannot be displayed in a graphical query designer. For example, you can import a query from a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] (.sql) file, a different report on the report server, or a report definition (.rdl) file from a file share.  
+-   Toggle between graphical and text-based query view. Use the graphical to explore schemas, tables, views, and stored procedures on the data source. Use the text-based view to type, paste, or view an existing query, typically used for a complex query that cannot be displayed in a graphical query designer. For example, you can import a query from a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] (.sql) file, a different report on the report server, or a report definition (.rdl) file from a file share.  
   
 -   Run the query to see data. The query returns a result set. The columns in the result set become the collection of fields for the dataset. The rows in the result become the data for the dataset. You can work with the query until you get the columns that you want.  
   
@@ -124,11 +124,11 @@ manager: "erikre"
   
 |Description|Embedded<br /><br /> Data Source|Shared<br /><br /> Data Source|  
 |-----------------|------------------------------|----------------------------|  
-|Data connection is embedded in the report definition.|![Available](../../reporting-services/report-data/media/greencheck.gif "Available")||  
-|Pointer to the data connection on the report server is embedded in the report definition.||![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|  
-|Managed on the report server|![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|  
-|Required for shared datasets||![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|  
-|Required for components||![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|  
+|Data connection is embedded in the report definition.|![Available](../../a9retired/media/greencheck.gif "Available")||  
+|Pointer to the data connection on the report server is embedded in the report definition.||![Available](../../a9retired/media/greencheck.gif "Available")|  
+|Managed on the report server|![Available](../../a9retired/media/greencheck.gif "Available")|![Available](../../a9retired/media/greencheck.gif "Available")|  
+|Required for shared datasets||![Available](../../a9retired/media/greencheck.gif "Available")|  
+|Required for components||![Available](../../a9retired/media/greencheck.gif "Available")|  
   
  In Report Designer, you can create shared datasets as part of a report project, and control whether to deploy them to a report server. You cannot browse to a report server and select a shared dataset to add to your report.  
   
@@ -164,17 +164,17 @@ manager: "erikre"
  You can set additional filters on a data region or a data region group. You can also use a combination of parameters and filters enable users to choose the data that they want to see in a report. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### Sorting Data in a Dataset  
- In a dataset, the order of the data is the order that it is retrieved from the external data source. This is the same order that you see when you run the query in the query designer. If the query-command syntax supports sorting, you can edit the query to sort the data at the source, before it is returned as report data. For example, for a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] query, the ORDER BY statement controls the sort order.  
+ In a dataset, the order of the data is the order that it is retrieved from the external data source. This is the same order that you see when you run the query in the query designer. If the query-command syntax supports sorting, you can edit the query to sort the data at the source, before it is returned as report data. For example, for a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] query, the ORDER BY statement controls the sort order.  
   
  To sort data after it is returned to the report, define sort expressions on data regions and data region groups. For more information, see the topic for the specific type of data region, for example, [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
  You can also use a combination of parameters and sort expressions to enable users to choose the sort order for data in a report. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### Grouping Data in a Dataset  
- You cannot group data in a dataset. To aggregate data in a dataset, you can edit the query command to calculate aggregates before the data is retrieved for a report. These are known as *server aggregates*. In expressions, to identify these values as precalculated aggregates, use the Aggregate function. For more information, see [Aggregate Function &#40;Report Builder and SSRS&#41;](../Topic/Aggregate%20Function%20\(Report%20Builder%20and%20SSRS\).md).  
+ You cannot group data in a dataset. To aggregate data in a dataset, you can edit the query command to calculate aggregates before the data is retrieved for a report. These are known as *server aggregates*. In expressions, to identify these values as precalculated aggregates, use the Aggregate function. For more information, see [Aggregate Function &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
   
 ##  <a name="Parameters"></a> Using Parameters and Datasets  
- For an embedded dataset query that contains query variables, query parameters and corresponding report parameters are automatically created. When the report runs, the value of the report parameter is linked to the dataset query parameter. In this way, the query command that runs on the external data source includes the values that are specified for report parameters. Report parameters enable a user to help choose the data that they want to see in the report. You can view how query parameters and report parameters are linked in the [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Parameters%20\(Report%20Builder\).md) page.  
+ For an embedded dataset query that contains query variables, query parameters and corresponding report parameters are automatically created. When the report runs, the value of the report parameter is linked to the dataset query parameter. In this way, the query command that runs on the external data source includes the values that are specified for report parameters. Report parameters enable a user to help choose the data that they want to see in the report. You can view how query parameters and report parameters are linked in the [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](../../a9retired/dataset-properties-dialog-box-parameters-report-builder.md) page.  
   
  For a shared dataset, query parameters are part of the shared dataset definition that can be managed on the report server independently from a report. The following list describes support for query parameter values:  
   
@@ -186,9 +186,9 @@ manager: "erikre"
   
 -   Cannot include references to the built-in collection Parameters, which represents report parameters.  
   
- To configure query parameter values for a shared dataset, in dataset design mode, browse to and open a shared dataset from the report server, and set options on the [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Parameters%20\(Report%20Builder\).md) page. For more information, see [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
+ To configure query parameter values for a shared dataset, in dataset design mode, browse to and open a shared dataset from the report server, and set options on the [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](../../a9retired/dataset-properties-dialog-box-parameters-report-builder.md) page. For more information, see [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
- For some multidimensional data sources, such as [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], the graphical query designer enables you to specify query filters and select an option to create a corresponding query parameter. When you select the parameter option, the data extension automatically creates a separate report dataset to provide available values for a drop-down list for that parameter. By default, these hidden datasets do not appear in the Report Data pane.  
+ For some multidimensional data sources, such as [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], the graphical query designer enables you to specify query filters and select an option to create a corresponding query parameter. When you select the parameter option, the data extension automatically creates a separate report dataset to provide available values for a drop-down list for that parameter. By default, these hidden datasets do not appear in the Report Data pane.  
   
  Report parameters that are linked to query parameters help filter data before the data is returned from the external data source. You can also filter data in the report by creating filters that are part of the report definition. For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
@@ -209,7 +209,7 @@ manager: "erikre"
   
 -   You can link related data from multiple datasets by using parameters with drillthrough reports or subreports. For example, a sales report can show summary data for all stores, and a drillthrough link can specify the store identifier as a parameter to a report with a dataset query that retrieves the individual sales for the specified store. For more information, see [Drillthrough, Drilldown, Subreports, and Nested Data Regions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/4791a157-b028-4698-905d-f1dd0887aa0d.md) and [Subreports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
   
--   You cannot display detail data from multiple datasets in a single data region. However, you can display aggregate or built-in function values for multiple datasets within a data region. For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../Topic/Aggregate%20Functions%20Reference%20\(Report%20Builder%20and%20SSRS\).md). If you need to combine detail data from multiple datasets into one data region, you must rewrite your query to retrieve the data as a single dataset.  
+-   You cannot display detail data from multiple datasets in a single data region. However, you can display aggregate or built-in function values for multiple datasets within a data region. For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md). If you need to combine detail data from multiple datasets into one data region, you must rewrite your query to retrieve the data as a single dataset.  
   
 ##  <a name="NoRows"></a> Displaying a Message When No Rows of Data Are Available  
  During report processing, when the query for a dataset runs, the result set may contain no rows. In the rendered report, a data region linked to an empty dataset displays as an empty data region. You can specify text to display in the rendered report in place of the empty data region. You can also specify a message for subreports when the queries for all datasets produce no data at run time. For more information, see [Set a No Data Message for a Data Region &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
@@ -219,7 +219,7 @@ manager: "erikre"
   
 ## See Also  
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)   
+ [Data Connections, Data Sources, and Connection Strings in Report Builder](../../a9retired/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

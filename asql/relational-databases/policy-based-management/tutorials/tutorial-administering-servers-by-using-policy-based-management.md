@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Tutorial: Administering Servers by Using Policy-Based Management
-Welcome to the Administering Servers by Using Policy-Based Management Policies tutorial. This tutorial is intended for users who are familiar with [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] but new to the Policy-Based Management.  
+Welcome to the Administering Servers by Using Policy-Based Management Policies tutorial. This tutorial is intended for users who are familiar with [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] but new to the Policy-Based Management.  
   
 ## What You Will Learn  
 This tutorial creates a policy to administer your server and a policy that applies to a single database. One policy is run on demand to test for compliance. The other policy enforces future compliance.  
@@ -34,9 +34,9 @@ This lesson creates a policy that specifies that Database Mail is not enabled on
 This lesson creates a policy that defines and enforces a naming standard for tables.  
   
 ## Requirements  
-This lesson requires basic database knowledge and a basic understanding of [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+This lesson requires basic database knowledge and a basic understanding of [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
-To use this tutorial, your system must have [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] installed.  
+To use this tutorial, your system must have [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] installed.  
   
 ## Start the Tutorial  
 [Lesson 1: Create and Apply an Off By Default Policy](../../../relational-databases/policy-based-management/tutorials/lesson-1-create-and-apply-an-off-by-default-policy.md)  

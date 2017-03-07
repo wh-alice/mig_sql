@@ -17,13 +17,13 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Lesson 2: Modifying the Report Data Source Properties
-In this [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] tutorial lesson, you use web portal to select a report that will be delivered to recipients. The data-driven subscription that you will define will distribute the **Sales Order** report created in the tutorial [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../../reporting-services/tutorials/create-a-basic-table-report-ssrs-tutorial.md).  In the steps that follow, you will modify the data source connection information used by the report to get data. Only reports that use **stored credentials** to access a report data source can be distributed through a data-driven subscription. Stored credentials are necessary for unattended report processing.  
+In this [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] tutorial lesson, you use web portal to select a report that will be delivered to recipients. The data-driven subscription that you will define will distribute the **Sales Order** report created in the tutorial [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../../reporting-services/tutorials/create-a-basic-table-report-ssrs-tutorial.md).  In the steps that follow, you will modify the data source connection information used by the report to get data. Only reports that use **stored credentials** to access a report data source can be distributed through a data-driven subscription. Stored credentials are necessary for unattended report processing.  
   
 You will also modify the dataset and report to use a parameter to filter the report on the `[Order]` so the subscription can output different instances of the report for specific orders and rendering formats.  
   
 ## <a name="bkmk_modify_datasource"></a>To Modify the Data Source to use stored credentials  
   
-1.  Browse to the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal with administrator privileges, for example, right-click the icon for Internet Explorer and click **Run as administrator**.  
+1.  Browse to the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal with administrator privileges, for example, right-click the icon for Internet Explorer and click **Run as administrator**.  
  
 2.    Browse to the web portal URL.  For example:   
     `http://<server name>/reports`.  
@@ -57,7 +57,7 @@ You will also modify the dataset and report to use a parameter to filter the rep
   
 ## <a name="bkmk_modify_dataset"></a>To Modify the AdventureWorksDataset  
  In the following steps you will modify the dataset to use a parameter to filter the data set based an order number.
-1.  Open the **Sales Orders** report in [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)]  
+1.  Open the **Sales Orders** report in [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)]  
   
 2.  Right-click the dataset `AdventureWorksDataset` and click **Dataset Properties**.  
     ![ssrs_tutorial_datadriven_datasetproperties](../../reporting-services/tutorials/media/ssrs-tutorial-datadriven-datasetproperties.png)  

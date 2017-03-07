@@ -62,11 +62,11 @@ manager: "erikre"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|maxParallel|Optional **Integer** attribute. Indicates the maximum number of threads on which to run commands in parallel. If not specified or set to 0, the instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] determines an optimal number of threads based on the number of processors available on the computer.|  
+|maxParallel|Optional **Integer** attribute. Indicates the maximum number of threads on which to run commands in parallel. If not specified or set to 0, the instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] determines an optimal number of threads based on the number of processors available on the computer.|  
   
 ## Remarks  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

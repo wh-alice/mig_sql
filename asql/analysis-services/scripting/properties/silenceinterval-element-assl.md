@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # SilenceInterval Element (ASSL)
-  Defines the minimum amount of time the instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] pauses before starting the multidimensional OLAP (MOLAP) imaging process.  
+  Defines the minimum amount of time the instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] pauses before starting the multidimensional OLAP (MOLAP) imaging process.  
   
 ## Syntax  
   

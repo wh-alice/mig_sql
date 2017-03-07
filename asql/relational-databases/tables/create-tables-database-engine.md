@@ -17,9 +17,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create Tables (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2016-all-md.md)]
 
-  You can create a new table, name it, and add it to an existing database in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  You can create a new table, name it, and add it to an existing database in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
 > **NOTE:** If you are connected to a SQL Azure database, the new table option launches a create table template script. Edit the parameters, then run the script to create a new table. For more information, see [SQL Azure Overview](http://go.microsoft.com/fwlink/?LinkId=163948).  
    
@@ -35,7 +35,7 @@ This task requires CREATE TABLE permission in the database, and ALTER permission
  
 ## Using Table Designer  
   
-1.  In SSMS, in **Object Explorer**, connect to the instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] that contains the database to be modified.  
+1.  In SSMS, in **Object Explorer**, connect to the instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] that contains the database to be modified.  
   
 2.  In **Object Explorer**, expand the **Databases** node and then expand the database that will contain the new table.  
   
@@ -71,7 +71,7 @@ This task requires CREATE TABLE permission in the database, and ALTER permission
   
 ## Using Query Editor  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

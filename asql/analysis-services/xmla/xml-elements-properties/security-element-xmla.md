@@ -58,7 +58,7 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- The **Security** element determines whether the security definitions, such as roles and permissions, defined on a [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] database are backed up or restored during, respectively, a **Backup** or **Restore** command. This element also determines if the Windows user accounts and groups defined as members of the security definitions are included as part of the **Backup** or **Restore** command.  
+ The **Security** element determines whether the security definitions, such as roles and permissions, defined on a [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] database are backed up or restored during, respectively, a **Backup** or **Restore** command. This element also determines if the Windows user accounts and groups defined as members of the security definitions are included as part of the **Backup** or **Restore** command.  
   
  The value of this element is limited to one of the strings listed in the following table.  
   
@@ -70,6 +70,6 @@ manager: "erikre"
   
 ## See Also  
  [SynchronizeSecurity Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/synchronizesecurity-element-xmla.md)   
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

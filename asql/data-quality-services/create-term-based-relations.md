@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create Term-Based Relations
-  This topic describes how to create term-based relations for a domain in [!INCLUDE[ssDQSnoversion](../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS). A term-based relation (TBR) enables you to make a correction to a term that is part of a value in a domain. It enables multiple values that are identical except for the spelling of a common part of them to be considered identical synonyms. For example, you can set up a term-based relation that changes the term “Inc.” to “Incorporated”. The term “Inc.” will be changed each time it occurs in the domain. Instances of “Contoso, Inc.” will be changed “Contoso, Incorporated”, and the two values will be considered exact synonyms.  
+  This topic describes how to create term-based relations for a domain in [!INCLUDE[ssDQSnoversion](../a9retired/includes/ssdqsnoversion-md.md)] (DQS). A term-based relation (TBR) enables you to make a correction to a term that is part of a value in a domain. It enables multiple values that are identical except for the spelling of a common part of them to be considered identical synonyms. For example, you can set up a term-based relation that changes the term “Inc.” to “Incorporated”. The term “Inc.” will be changed each time it occurs in the domain. Instances of “Contoso, Inc.” will be changed “Contoso, Incorporated”, and the two values will be considered exact synonyms.  
   
  To use term-based relations, you build a list of Value/Correct To pairs, such as “Inc.” and “Incorporated”, or “Senior” and “Sr.”. Using a term-based relation enables you to change a term throughout the domain without manually setting individual domain values as synonyms. You can specify that a value be corrected even if knowledge discovery has not discovered that value previously. If a term-based relation transformation causes two values to be identical, then DQS will create a synonym relationship between them (in knowledge discovery), a correction relationship between them (in data correction), or an exact match (in matching).  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssDQSInitialStep](../data-quality-services/includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] home screen, open or create a knowledge base. Select **Domain Management** as the activity, and then click **Open** or **Create**. For more information, see [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) or [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+2.  In the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] home screen, open or create a knowledge base. Select **Domain Management** as the activity, and then click **Open** or **Create**. For more information, see [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) or [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
     > [!NOTE]  
     >  Domain management is performed in a page of the Data Quality Service client that contains five tabs for separate domain management operations. It is not a wizard-driven process; any management operation can be performed separately.  
@@ -94,7 +94,7 @@ manager: "jhubbard"
   
 6.  Click **Apply Changes** to apply the term-based relations to the domain.  
   
-7.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md).  
+7.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](../a9retired/end-the-domain-management-activity.md).  
   
 ##  <a name="FollowUp"></a> Follow Up: After Creating Term-Based Relations  
  After you create term-based relations, you can perform other domain management tasks on the domain, you can perform knowledge discovery to add knowledge to the domain, or you can add a matching policy to the domain. For more information, see [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md), [Managing a Domain](../data-quality-services/managing-a-domain.md), or [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  

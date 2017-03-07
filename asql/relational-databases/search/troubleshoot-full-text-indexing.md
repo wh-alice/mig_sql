@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  Indexing failures can occur when:  
   
--   The indexer cannot find or load a filter or word breaker component. This failure can occur if the table row contains a document format or content in a language that has not been registered with the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. This failure can also happen if the registered word breaker or filter component was not signed or failed signature verification when it was being loaded.  
+-   The indexer cannot find or load a filter or word breaker component. This failure can occur if the table row contains a document format or content in a language that has not been registered with the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. This failure can also happen if the registered word breaker or filter component was not signed or failed signature verification when it was being loaded.  
   
 -   A component, such as a word breaker or filter, fails and returns an error to the indexer. This can happen if the document being indexed is corrupt and the filter is unable to extract text from the document. This can also occur when a component is unable to handle the content of a single row above a certain size, due to memory limits on the full-text filter daemon host (fdhost.exe).  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
  By default, the full-text indexer requires the filters and word breakers that it loads to be signed. If they are not signed, which is the case sometimes when custom components are installed, you must configure the full-text indexer to ignore signature verification.  
   
 > [!IMPORTANT]  
->  Ignoring signature verification makes the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] less secure. We recommend that you sign any components that you implement or ensure that any components that you acquire are signed. For information about signing components, see [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
+>  Ignoring signature verification makes the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] less secure. We recommend that you sign any components that you implement or ensure that any components that you acquire are signed. For information about signing components, see [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
   
 ##  <a name="state"></a> Full-Text Index in Inconsistent State after Transaction Log Restored  

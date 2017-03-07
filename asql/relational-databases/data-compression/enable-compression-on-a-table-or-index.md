@@ -27,7 +27,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Enable Compression on a Table or Index
-  This topic describes how to enable compression on a table or index in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  This topic describes how to enable compression on a table or index in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -198,7 +198,7 @@ manager: "jhubbard"
   
 #### To enable compression on a table  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -216,7 +216,7 @@ manager: "jhubbard"
   
 #### To enable compression on an index  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -244,6 +244,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Data Compression](../../relational-databases/data-compression/data-compression.md)   
- [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)  
+ [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)  
   
   

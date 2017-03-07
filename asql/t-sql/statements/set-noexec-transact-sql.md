@@ -31,7 +31,7 @@ manager: "jhubbard"
 
   Compiles each query but does not execute it.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -41,9 +41,9 @@ SET NOEXEC { ON | OFF }
 ```  
   
 ## Remarks  
- When SET NOEXEC is ON, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] compiles each batch of [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements but does not execute them. When SET NOEXEC is OFF, all batches are executed after compilation.  
+ When SET NOEXEC is ON, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] compiles each batch of [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements but does not execute them. When SET NOEXEC is OFF, all batches are executed after compilation.  
   
- The execution of statements in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] has two phases: compilation and execution. This setting is useful for having [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] validate the syntax and object names in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] code when executing. It is also useful for debugging statements that would generally be part of a larger batch of statements.  
+ The execution of statements in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] has two phases: compilation and execution. This setting is useful for having [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] validate the syntax and object names in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] code when executing. It is also useful for debugging statements that would generally be part of a larger batch of statements.  
   
  The setting of SET NOEXEC is set at execute or run time and not at parse time.  
   

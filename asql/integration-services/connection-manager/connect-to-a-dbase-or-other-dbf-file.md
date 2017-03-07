@@ -19,14 +19,14 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Connect to a dBASE or Other DBF File
-  You can connect to a dBASE or other .DBF database file in an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package by using an OLE DB connection manager and selecting the Microsoft OLE DB Provider for Jet 4.0.  
+  You can connect to a dBASE or other .DBF database file in an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package by using an OLE DB connection manager and selecting the Microsoft OLE DB Provider for Jet 4.0.  
   
 > [!NOTE]  
->  The SQL Server Import and Export Wizard in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not support importing from, or exporting to, dBASE or other DBF files. You can use Microsoft Access or Microsoft Excel to import the data from DBF files into an Access database or Excel spreadsheets, and then use the SQL Server Import and Export Wizard.  
+>  The SQL Server Import and Export Wizard in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not support importing from, or exporting to, dBASE or other DBF files. You can use Microsoft Access or Microsoft Excel to import the data from DBF files into an Access database or Excel spreadsheets, and then use the SQL Server Import and Export Wizard.  
   
 ### To configure a connection manager to connect to a dBASE or other DBF file  
   
-1.  Add a new OLE DB connection manager to the package. For more information, see [Add, Delete, or Share a Connection Manager in a Package](../Topic/Add,%20Delete,%20or%20Share%20a%20Connection%20Manager%20in%20a%20Package.md).  
+1.  Add a new OLE DB connection manager to the package. For more information, see [Add, Delete, or Share a Connection Manager in a Package](../../a9retired/add-delete-or-share-a-connection-manager-in-a-package.md).  
   
 2.  On the **Connection** page of the **Connection Manager** dialog box, select Native OLE DB\Microsoft Jet 4.0 OLE DB Provider as the **Provider**.  
   

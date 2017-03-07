@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Using Tuple Expressions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   A tuple is made up of one member from every dimension that is contained within a cube. Therefore, a tuple uniquely identifies a single cell within the cube.  
   

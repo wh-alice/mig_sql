@@ -31,11 +31,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # DBCC CLEANTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Reclaims space from dropped variable-length columns in tables or indexed views.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -90,7 +90,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ## Examples  
   
 ### A. Using DBCC CLEANTABLE to reclaim space  
- The following example executes DBCC CLEANTABLE for the `Production.Document` table in the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] sample database.  
+ The following example executes DBCC CLEANTABLE for the `Production.Document` table in the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] sample database.  
   
 ```tsql  
 DBCC CLEANTABLE (AdventureWorks2012,'Production.Document', 0)  
@@ -165,6 +165,6 @@ GO
   
 ## See Also  
  [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.allocation-units-transact-sql.md)  
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.allocation-units-transact-sql.md)  
   
   

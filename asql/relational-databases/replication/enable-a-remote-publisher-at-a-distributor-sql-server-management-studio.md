@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 5.  To view and modify settings for a Publisher, click the properties button (**…**).  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To enable a Publisher in the Distributor Properties dialog box  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 5.  To view and modify settings for a Publisher, click the properties button (**…**).  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## See Also  
  [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   

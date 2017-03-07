@@ -25,9 +25,9 @@ manager: "jhubbard"
 # @@SERVERNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns the name of the local server that is running [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Returns the name of the local server that is running [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -40,9 +40,9 @@ manager: "jhubbard"
  **nvarchar**  
   
 ## Remarks  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Setup sets the server name to the computer name during installation. To change the name of the server, use **sp_addserver**, and then restart [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Setup sets the server name to the computer name during installation. To change the name of the server, use **sp_addserver**, and then restart [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- With multiple instances of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] installed, @@SERVERNAME returns the following local server name information if the local server name has not been changed since setup.  
+ With multiple instances of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] installed, @@SERVERNAME returns the following local server name information if the local server name has not been changed since setup.  
   
 |Instance|Server information|  
 |--------------|------------------------|  
@@ -74,6 +74,6 @@ ACCTG
 ## See Also  
  [Configuration Functions &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
- [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)  
+ [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addserver-transact-sql.md)  
   
   

@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Display Percentage Values on a Pie Chart (Report Builder and SSRS)
-In [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports, by default the legend shows categories. You may also want percentages in the legend or the pie slices themselves.   
+In [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports, by default the legend shows categories. You may also want percentages in the legend or the pie slices themselves.   
 
 ![report-builder-pie-chart-preview-percents](../../reporting-services/report-design/media/report-builder-pie-chart-preview-percents.png)
 
@@ -44,7 +44,7 @@ In [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrs
 ## See Also  
 * [Tutorial: Add a Pie Chart to Your Report (Report Builder)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
 *  [Pie Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
-*  [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](../Topic/Formatting%20the%20Legend%20on%20a%20Chart%20\(Report%20Builder%20and%20SSRS\).md)   
+*  [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
 *  [Display Data Point Labels Outside a Pie Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  
   

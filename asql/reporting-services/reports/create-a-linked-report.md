@@ -32,20 +32,20 @@ manager: "erikre"
   
 2.  Type a name for the new linked report. Optionally type a description.  
   
-3.  To select a different folder for the report, click **Change Location**. Click the folder you want to use, or type the folder name in the **Location** box. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)] If you do not select a different folder, the linked report is created in the current folder (where the report it is based on is stored).  
+3.  To select a different folder for the report, click **Change Location**. Click the folder you want to use, or type the folder name in the **Location** box. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)] If you do not select a different folder, the linked report is created in the current folder (where the report it is based on is stored).  
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)] The linked report opens.  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)] The linked report opens.  
   
      A linked report's icon differs from other items managed by a report server. The following icon indicates a linked report:  
   
-     ![Linked report icon](../../reporting-services/report-server/media/hlp-16linked.gif "Linked report icon")  
+     ![Linked report icon](../../a9retired/media/hlp-16linked.gif "Linked report icon")  
   
 ## See Also  
  [Open and Close a Report &#40;Report Manager&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [New Linked Report Page &#40;Report Manager&#41;](../Topic/New%20Linked%20Report%20Page%20\(Report%20Manager\).md)   
- [Choose Item Location Page &#40;Report Manager&#41;](../Topic/Choose%20Item%20Location%20Page%20\(Report%20Manager\).md)   
- [General Properties Page, Reports &#40;Report Manager&#41;](../Topic/General%20Properties%20Page,%20Reports%20\(Report%20Manager\).md)   
+ [New Linked Report Page &#40;Report Manager&#41;](../../a9retired/new-linked-report-page-report-manager.md)   
+ [Choose Item Location Page &#40;Report Manager&#41;](../../a9retired/choose-item-location-page-report-manager.md)   
+ [General Properties Page, Reports &#40;Report Manager&#41;](../../a9retired/general-properties-page-reports-report-manager.md)   
  [Reporting Services Concepts &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)  
+ [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md)  
   
   

@@ -33,7 +33,7 @@ manager: "jhubbard"
   
  **To view and manage revision history**  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], select the model and version and then click **Explorer**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], select the model and version and then click **Explorer**.  
   
 2.  Select the entity from the **Entities** menu.  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
 ## View and Manage Revision History by Member  
  In the Explorer functional area, you can view the revisions for a member if you have read permissions on the member. If you have update permissions, you can roll back the member to a previous revision or add annotations to the revision.  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], select the model and version and then click **Explorer**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], select the model and version and then click **Explorer**.  
   
 2.  Select the entity from the **Entities** menu.  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
 4.  Click **View History** in the right pane.  
   
 ## Log Retention Setting  
- You can configure how long historical data is retained by setting the **Log retention in Days** property in system settings for the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] database, and by setting **Log Retention Days** when you create or edit a model.  
+ You can configure how long historical data is retained by setting the **Log retention in Days** property in system settings for the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] database, and by setting **Log Retention Days** when you create or edit a model.  
   
 ## Related Task  
   

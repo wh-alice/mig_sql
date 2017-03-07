@@ -21,7 +21,7 @@ In this task, you will create a copy of the Lesson 3.dtsx package that you creat
   
 ### To create the Lesson 4 package  
   
-1.  If [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Data Tools is not already open, click **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then click **SQL Server Data Tools**.  
+1.  If [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Data Tools is not already open, click **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then click **SQL Server Data Tools**.  
   
 2.  On the **File** menu, click **Open**, click **Project/Solution**, select **SSIS Tutorial** and click **Open**, and then double-click **SSIS Tutorial.sln**.  
   
@@ -41,7 +41,7 @@ In this task, you will create a copy of the Lesson 3.dtsx package that you creat
   
 ### To add the completed Lesson 3 package  
   
-1.  Open [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] and open the SSIS Tutorial project.  
+1.  Open [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] and open the SSIS Tutorial project.  
   
 2.  In Solution Explorer, right-click **SSIS Packages**, and click **Add Existing Package**.  
   
@@ -60,5 +60,5 @@ In this task, you will create a copy of the Lesson 3.dtsx package that you creat
 5.  Copy and paste the Lesson 3 package as described in steps 3-8 in the previous procedure.  
   
 ## Next Task in Lesson  
-[Step 2: Creating a Corrupted File](../Topic/Step%202:%20Creating%20a%20Corrupted%20File.md)  
+[Step 2: Creating a Corrupted File](../../integration-services/tutorials/lesson-4-2-creating-a-corrupted-file.md)  
   

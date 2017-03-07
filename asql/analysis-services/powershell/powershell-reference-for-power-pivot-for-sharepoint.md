@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # PowerShell Reference for Power Pivot for SharePoint
-  This section lists the PowerShell cmdlets used to configure or administer a [!INCLUDE[ssGeminiShort](../../analysis-services/includes/ssgeminishort-md.md)] installation. For more information about enabling the cmdlets and viewing built-in help, see [Power Pivot Configuration using Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
+  This section lists the PowerShell cmdlets used to configure or administer a [!INCLUDE[ssGeminiShort](../../a9notintoc/includes/ssgeminishort-md.md)] installation. For more information about enabling the cmdlets and viewing built-in help, see [Power Pivot Configuration using Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
   
 ## Cmdlet List  
  To see a list of cmdlets from the PowerShell prompt:  
@@ -38,7 +38,7 @@ manager: "erikre"
 |[Set-PowerPivotSystemService cmdlet](../../analysis-services/powershell/set-powerpivotsystemservice-cmdlet.md)|SharePoint 2013 &#124; SharePoint 2016|  
 |[Update-PowerPivotSystemService cmdlet](../../analysis-services/powershell/update-powerpivotsystemservice-cmdlet.md)|SharePoint 2013 &#124; SharePoint 2016|  
   
- Note: The following Cmdlets only worked with SharePoint 2010, which [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] does not support.  
+ Note: The following Cmdlets only worked with SharePoint 2010, which [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] does not support.  
   
 -   Get-PowerPivotEngineService  
   

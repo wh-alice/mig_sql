@@ -22,7 +22,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Search Text with Wildcards
-  The following expressions can replace characters or digits in the **Find what** field of the [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
+  The following expressions can replace characters or digits in the **Find what** field of the [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
   
 #### To search using wildcards  
   

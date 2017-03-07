@@ -18,10 +18,10 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SQL Server:Buffer Node
-  The **Buffer Node** object provides counters that complement counters provided by the **Buffer Manager** object. It allows you to monitor the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] buffer pool page distribution for each non-uniform memory access (NUMA) node. There is an instance of the **Buffer Node** object for each NUMA node in use. On non-NUMA architecture, there will be a single instance of the **Buffer Node** object.  
+  The **Buffer Node** object provides counters that complement counters provided by the **Buffer Manager** object. It allows you to monitor the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] buffer pool page distribution for each non-uniform memory access (NUMA) node. There is an instance of the **Buffer Node** object for each NUMA node in use. On non-NUMA architecture, there will be a single instance of the **Buffer Node** object.  
   
 ## Buffer Node Performance Objects  
- This table describes the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] **Buffer Node** performance objects.  
+ This table describes the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] **Buffer Node** performance objects.  
   
 |SQL Server Buffer Node counters|Description|  
 |-------------------------------------|-----------------|  
@@ -41,6 +41,6 @@ manager: "jhubbard"
  [SQL Server, Buffer Manager Object](../../../relational-databases/monitor/performance-monitor/sql-server-buffer-manager-object.md)   
  [Server Memory Server Configuration Options](../../../database-engine/configure/windows/server-memory-server-configuration-options.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../../relational-databases/monitor/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys.dm-os-performance-counters-transact-sql.md)  
+ [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-os-performance-counters-transact-sql.md)  
   
   

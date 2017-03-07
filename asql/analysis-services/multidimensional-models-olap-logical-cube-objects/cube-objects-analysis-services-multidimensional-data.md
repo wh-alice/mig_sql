@@ -24,7 +24,7 @@ manager: "erikre"
 ## Introducing Cube Objects  
  A simple <xref:Microsoft.AnalysisServices.Cube> object is composed of: basic information, dimensions, and measure groups. Basic information includes the name of the cube, the default measure of the cube, the data source, the storage mode, and others.  
   
- The Dimensions collection contains the actual set of dimensions used in the cube from the database dimensions colection. All dimensions have to be defined in the dimensions collection of the database before being referenced in the cube. Private dimensions are not available in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)].  
+ The Dimensions collection contains the actual set of dimensions used in the cube from the database dimensions colection. All dimensions have to be defined in the dimensions collection of the database before being referenced in the cube. Private dimensions are not available in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)].  
   
  Measure groups are sets of measures in the cube. A measure group is a collection of measures that have a common data source view and a common set of dimensions. A measure group is the unit of process for measures; measure groups can be processed individually and then browsed.  
   

@@ -33,7 +33,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Add, Change, or Delete a Map or Map Layer (Report Builder and SSRS)
-  A map is a collection of layers. When you add a map to a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report, you define the first layer. You can create additional layers by using the map layer wizard.  
+  A map is a collection of layers. When you add a map to a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report, you define the first layer. You can create additional layers by using the map layer wizard.  
   
  The easiest way to add, remove, or change options for a layer is to use the map layer wizard. You can also change options manually from the Map pane. To display the **Map** pane, click in the map on the report design surface. The following figure displays the parts of the pane:  
   
@@ -57,7 +57,7 @@ manager: "erikre"
  For more information about layers, see [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ##  <a name="AddLayer"></a> To add a layer from the map layer wizard  
   
@@ -98,7 +98,7 @@ manager: "erikre"
   
      For more information about linking spatial and analytical data, see [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="FilterAnalyticalData"></a> To filter analytical data for the layer  
   
@@ -114,9 +114,9 @@ manager: "erikre"
   
 1.  Select **General** on the **Map Point Properties** dialog box to change label, tooltip, and marker type options for the following map elements:  
   
-    -   All dynamic or embedded points on a point layer. Color rules, size rules, and marker type rules for points override these options. To override options for a specific embedded point, use the [Map Embedded Point Properties Dialog Box, Marker](../Topic/Map%20Embedded%20Point%20Properties%20Dialog%20Box,%20Marker.md) page.  
+    -   All dynamic or embedded points on a point layer. Color rules, size rules, and marker type rules for points override these options. To override options for a specific embedded point, use the [Map Embedded Point Properties Dialog Box, Marker](../../a9retired/map-embedded-point-properties-dialog-box-marker.md) page.  
   
-    -   The center point for all dynamic or embedded polygons on a polygon layer. Color rules, size rules, and marker type rules for center points override these options. To override options for a specific center point, use the [Map Embedded Point Properties Dialog Box, Marker](../Topic/Map%20Embedded%20Point%20Properties%20Dialog%20Box,%20Marker.md) page.  
+    -   The center point for all dynamic or embedded polygons on a polygon layer. Color rules, size rules, and marker type rules for center points override these options. To override options for a specific center point, use the [Map Embedded Point Properties Dialog Box, Marker](../../a9retired/map-embedded-point-properties-dialog-box-marker.md) page.  
   
 ##  <a name="Embedded"></a> To specify embedded data as a source of spatial data  
   
@@ -133,7 +133,7 @@ manager: "erikre"
     > [!NOTE]  
     >  If you do not know the name of the field and you browsed to an ESRI Shapefile, use the **Link to ESRI shape file option** instead of this option.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="ESRI"></a> To specify an ESRI Shapefile as a source of spatial data  
   
@@ -148,7 +148,7 @@ manager: "erikre"
     > [!NOTE]  
     >  If the Shapefile is on your local computer, the spatial data is embedded in the report definition. To retrieve the data dynamically when the report is processed, you must upload the ESRI .shp file and its .dbf support file to the report server. For more information, see " How to: Upload a File or Report (Report Manager)" in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="DatasetField"></a> To specify a report dataset field as a source of spatial data  
   
@@ -162,7 +162,7 @@ manager: "erikre"
   
 5.  In **Spatial field name**, click the name of the field in the dataset that contains spatial data.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="TileLayer"></a> To add a tile layer  
   
@@ -198,7 +198,7 @@ manager: "erikre"
   
 4.  In **Transparency options**, type a value that represents the percentage transparency, for example, **40**. Zero (0) % transparency means that the layer is opaque. 100% transparency means that you will not see the layer in the report.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="TileTransparency"></a> To change the transparency of a tile layer  
   
@@ -210,7 +210,7 @@ manager: "erikre"
   
 4.  In **Transparency options**, type a value that represents the percentage transparency, for example, **40**.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="Secure"></a> To specify a secure connection for a tile layer  
   

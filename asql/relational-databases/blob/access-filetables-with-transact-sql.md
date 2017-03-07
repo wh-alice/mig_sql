@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Access FileTables with Transact-SQL
-  Describes how [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] data manipulation language (DML) commands work with FileTables.  
+  Describes how [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] data manipulation language (DML) commands work with FileTables.  
   
 ##  <a name="BasicsInsert"></a> INSERT Operations on FileTables  
  The following considerations apply to **INSERT** Operations on FileTables:  
@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   System-defined constraints are enforced if the INSERT statement sets the **name**, **path_locator**, **parent_path_locator**, or file attributes.  
   
--   The application can obtain the **path_locator** for a file or directory by providing the file system path to the [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) function.  
+-   The application can obtain the **path_locator** for a file or directory by providing the file system path to the [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/getpathlocator-transact-sql.md) function.  
   
 ##  <a name="BasicsUpdate"></a> UPDATE Operations on FileTables  
  The following considerations apply to **UPDATE** operations on FileTables:  

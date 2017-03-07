@@ -44,7 +44,7 @@ manager: "erikre"
 |NTCanonicalUserName|40|8|Contains the Windows user name associated with the query event. The user name is in canonical form. For example, engineering.microsoft.com/software/user.|  
 |SPID|41|1|Contains the server process ID (SPID) that uniquely identifies the user session associated with the query event. The SPID directly corresponds to the session GUID used by XMLA.|  
 |TextData|42|9|Contains the text data associated with the query event.|  
-|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] on which the query event occurred.|  
+|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] on which the query event occurred.|  
 |RequestParameters|44|9|Contains the parameters for parameterized queries and commands associated with the query event.|  
 |RequestProperties|45|9|Contains the properties of the XMLA request.|  
   
@@ -72,7 +72,7 @@ manager: "erikre"
 |NTCanonicalUserName|40|8|Contains the Windows user name associated with the query event. The user name is in canonical form. For example, engineering.microsoft.com/software/user.|  
 |SPID|41|1|Contains the server process ID (SPID) that uniquely identifies the user session associated with the query event. The SPID directly corresponds to the session GUID used by XMLA.|  
 |TextData|42|9|Contains the text data associated with the query event.|  
-|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] on which the query event occurred.|  
+|ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] on which the query event occurred.|  
   
 ## See Also  
  [Queries Events Category](../../analysis-services/trace-events/queries-events-category.md)  

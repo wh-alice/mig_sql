@@ -23,14 +23,14 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Creating a Synchronous Transformation with the Script Component
-  You use a transformation component in the data flow of an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package to modify and analyze data as it passes from source to destination. A transformation with synchronous outputs processes each input row as it passes through the component. A transformation with asynchronous outputs waits until it has received all input rows to complete its processing. This topic discusses a synchronous transformation. For information about asynchronous transformations, see [Creating an Asynchronous Transformation with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). For more information about the difference between synchronous and asynchronous components, see [Understanding Synchronous and Asynchronous Transformations](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
+  You use a transformation component in the data flow of an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package to modify and analyze data as it passes from source to destination. A transformation with synchronous outputs processes each input row as it passes through the component. A transformation with asynchronous outputs waits until it has received all input rows to complete its processing. This topic discusses a synchronous transformation. For information about asynchronous transformations, see [Creating an Asynchronous Transformation with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). For more information about the difference between synchronous and asynchronous components, see [Understanding Synchronous and Asynchronous Transformations](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
   
  For an overview of the Script component, see [Extending the Data Flow with the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
  The Script component and the infrastructure code that it generates for you simplify significantly the process of developing a custom data flow component. However, to understand how the Script component works, you may find it useful to read the steps that you must follow in developing a custom data flow component in the section on [Developing a Custom Data Flow Component](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md), and especially [Developing a Custom Transformation Component with Synchronous Outputs](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md).  
   
 ## Getting Started with a Synchronous Transformation Component  
- When you add a Script component to the Data Flow pane of [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer, the **Select Script Component Type** dialog box opens and prompts you to select a Source, Destination, or Transformation component type. In this dialog box, select **Transformation**.  
+ When you add a Script component to the Data Flow pane of [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer, the **Select Script Component Type** dialog box opens and prompts you to select a Source, Destination, or Transformation component type. In this dialog box, select **Transformation**.  
   
 ## Configuring a Synchronous Transformation Component in Metadata-Design Mode  
  After you select the option to create a transformation component, you configure the component by using the **Script Transformation Editor**. For more information, see [Configuring the Script Component in the Script Component Editor](../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md).  
@@ -77,7 +77,7 @@ manager: "jhubbard"
  For more information about the **Script** page of the **Script Transformation Editor**, see [Script Transformation Editor &#40;Script Page&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
   
 ## Scripting a Synchronous Transformation Component in Code-Design Mode  
- After you have configured the metadata for your component, you can write your custom script. In the **Script Transformation Editor**, on the **Script** page, click **Edit Script** to open the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE where you can add your custom script. The scripting language that you use depends on whether you selected [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Visual C# as the script language for the **ScriptLanguage** property on the **Script** page.  
+ After you have configured the metadata for your component, you can write your custom script. In the **Script Transformation Editor**, on the **Script** page, click **Edit Script** to open the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE where you can add your custom script. The scripting language that you use depends on whether you selected [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Visual C# as the script language for the **ScriptLanguage** property on the **Script** page.  
   
  For important information that applies to all kinds of components created by using the Script component, see [Coding and Debugging the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).  
   
@@ -144,7 +144,7 @@ else
   
 1.  Add a new Script component to the Data Flow designer surface and configure it as a transformation.  
   
-2.  Connect the output of a source or of another transformation to the new transformation component in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer. This output should provide data from the **Person.Address** table of the **AdventureWorks** sample database that contains the **AddressID** and **City** columns.  
+2.  Connect the output of a source or of another transformation to the new transformation component in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer. This output should provide data from the **Person.Address** table of the **AdventureWorks** sample database that contains the **AddressID** and **City** columns.  
   
 3.  Open the **Script Transformation Editor**. On the **Input Columns** page, select the **AddressID** and **City** columns. Mark the **City** column as Read/Write.  
   
@@ -152,7 +152,7 @@ else
   
 5.  On the **Script** page, click **Edit Script** and enter the script that follows. Then close the script development environment and the **Script Transformation Editor**.  
   
-6.  Create and configure a destination component that expects the **AddressID** and **City** columns, such as a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] destination, or the sample destination component demonstrated in [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Then connect the output of the transformation to the destination component. You can create a destination table by running the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] command in the **AdventureWorks** database:  
+6.  Create and configure a destination component that expects the **AddressID** and **City** columns, such as a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] destination, or the sample destination component demonstrated in [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Then connect the output of the transformation to the destination component. You can create a destination table by running the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] command in the **AdventureWorks** database:  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -196,7 +196,7 @@ public class ScriptMain:
   
 1.  Add a new Script component to the Data Flow designer surface and configure it as a transformation.  
   
-2.  Connect the output of a source or of another transformation to the new transformation component in [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer. This output should provide data from the **Person.Address** table of the **AdventureWorks** sample database that contains at least the **AddressID** and **City** columns.  
+2.  Connect the output of a source or of another transformation to the new transformation component in [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer. This output should provide data from the **Person.Address** table of the **AdventureWorks** sample database that contains at least the **AddressID** and **City** columns.  
   
 3.  Open the **Script Transformation Editor**. On the **Input Columns** page, select the **AddressID** and **City** columns. Mark the **City** column as Read/Write.  
   
@@ -206,7 +206,7 @@ public class ScriptMain:
   
 6.  On the **Script** page, click **Edit Script** and enter the script that follows. Then close the script development environment and the **Script Transformation Editor**.  
   
-7.  Create and configure two destination components that expect the **AddressID** and **City** columns, such as a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] destination, a Flat File destination, or the sample destination component demonstrated in [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Then connect each of the outputs of the transformation to one of the destination components. You can create destination tables by running a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] command similar to the following (with unique table names) in the **AdventureWorks** database:  
+7.  Create and configure two destination components that expect the **AddressID** and **City** columns, such as a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] destination, a Flat File destination, or the sample destination component demonstrated in [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Then connect each of the outputs of the transformation to one of the destination components. You can create destination tables by running a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] command similar to the following (with unique table names) in the **AdventureWorks** database:  
   
     ```  
     CREATE TABLE [Person].[Address2](  

@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Migrating From ADO MD To ADOMD.NET
-  The ADOMD.NET library is similar to the ActiveX Data Objects Multidimensional (ADO MD) library, an extension of the ActiveX Data Objects (ADO) library that is used to access multidimensional data in Component Object Model (COM)–based client applications. ADO MD provides easy access to multidimensional data from unmanaged languages such as C++ and [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Visual Basic. ADOMD.NET provides easy access to analytical (both multidimensional and data mining) data from managed languages such as [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] C# and [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Visual Basic .NET. Additionally, ADOMD.NET provides an enhanced metadata object model.  
+  The ADOMD.NET library is similar to the ActiveX Data Objects Multidimensional (ADO MD) library, an extension of the ActiveX Data Objects (ADO) library that is used to access multidimensional data in Component Object Model (COM)–based client applications. ADO MD provides easy access to multidimensional data from unmanaged languages such as C++ and [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Visual Basic. ADOMD.NET provides easy access to analytical (both multidimensional and data mining) data from managed languages such as [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] C# and [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Visual Basic .NET. Additionally, ADOMD.NET provides an enhanced metadata object model.  
   
  Migrating existing client applications from ADO MD to ADOMD.NET is easy, but there are several important differences regarding migration:  
   
@@ -66,7 +66,7 @@ manager: "erikre"
  Both the existing ADO MD and equivalent ADOMD.NET code examples shown in this section perform the same set of actions: creating a connection, running a Multidimensional Expressions (MDX) statement, and retrieving metadata and data. However, these two sets of code do not use the same objects to perform those tasks.  
   
 ### Existing ADO MD Code  
- The following code example, drawn from ADO MD 2.8 documentation, is written in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Visual Basic® 6.0 and uses ADO MD to demonstrate how to connect to and query a [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data source. This ADO MD example uses the following objects:  
+ The following code example, drawn from ADO MD 2.8 documentation, is written in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Visual Basic® 6.0 and uses ADO MD to demonstrate how to connect to and query a [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data source. This ADO MD example uses the following objects:  
   
 -   Creates a connection from a **Catalog** object.  
   

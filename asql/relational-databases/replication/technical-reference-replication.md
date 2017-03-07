@@ -17,12 +17,12 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Technical Reference (Replication)
-  This section contains links to technical reference documentation for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] replication.  
+  This section contains links to technical reference documentation for [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] replication.  
   
- ![Small File Folder Icon](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Errors and Events**  
+ ![Small File Folder Icon](../../a9retired/media/filefolder-small.png "Small File Folder Icon") **Errors and Events**  
  [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
- ![Small File Folder Icon](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Feature Reference**  
+ ![Small File Folder Icon](../../a9retired/media/filefolder-small.png "Small File Folder Icon") **Feature Reference**  
  [Configure Distribution Wizard](../../relational-databases/replication/configure-distribution-wizard.md)  
   
  [New Subscription Wizard &#40;UI Reference&#41;](../../relational-databases/replication/new-subscription-wizard-ui-reference.md)  
@@ -31,43 +31,43 @@ manager: "jhubbard"
   
  [More…](../../relational-databases/replication/properties-reference-replication.md)  
   
- ![Small File Folder Icon](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Replication Agents**  
+ ![Small File Folder Icon](../../a9retired/media/filefolder-small.png "Small File Folder Icon") **Replication Agents**  
  [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
  [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
  [More…](../../relational-databases/replication/agents/replication-agents.md)  
   
- ![Small File Folder Icon](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Replication Stored Procedures**  
- [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)  
+ ![Small File Folder Icon](../../a9retired/media/filefolder-small.png "Small File Folder Icon") **Replication Stored Procedures**  
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addarticle-transact-sql.md)  
   
- [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)  
+ [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-adddistributiondb-transact-sql.md)  
   
- [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)  
+ [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-adddistributor-transact-sql.md)  
   
- [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)  
+ [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addpublication-transact-sql.md)  
   
- [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)  
+ [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addsubscriber-transact-sql.md)  
   
- [More…](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [More…](../../relational-databases/reference/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
- ![Small File Folder Icon](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Replication Tables**  
- [MSmerge_conflicts_info &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)  
+ ![Small File Folder Icon](../../a9retired/media/filefolder-small.png "Small File Folder Icon") **Replication Tables**  
+ [MSmerge_conflicts_info &#40;Transact-SQL&#41;](../../relational-databases/reference/system-tables/msmerge-conflicts-info-transact-sql.md)  
   
- [MSpeer_response &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mspeer-response-transact-sql.md)  
+ [MSpeer_response &#40;Transact-SQL&#41;](../../relational-databases/reference/system-tables/mspeer-response-transact-sql.md)  
   
- [syssubscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/syssubscriptions-transact-sql.md)  
+ [syssubscriptions &#40;Transact-SQL&#41;](../../relational-databases/reference/system-tables/syssubscriptions-transact-sql.md)  
   
- [More…](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
+ [More…](../../relational-databases/reference/system-tables/replication-tables-transact-sql.md)  
   
- ![Small File Folder Icon](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Replication Views**  
- [syspublications &#40;System View&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)  
+ ![Small File Folder Icon](../../a9retired/media/filefolder-small.png "Small File Folder Icon") **Replication Views**  
+ [syspublications &#40;System View&#41; &#40;Transact-SQL&#41;](../../relational-databases/reference/system-views/syspublications-system-view-transact-sql.md)  
   
- [syssubscriptions &#40;System View&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)  
+ [syssubscriptions &#40;System View&#41; &#40;Transact-SQL&#41;](../../relational-databases/reference/system-views/syssubscriptions-system-view-transact-sql.md)  
   
- [More…](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [More…](../../relational-databases/reference/system-views/replication-views-transact-sql.md)  
   
- ![Small File Folder Icon](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Replication Class Library**  
+ ![Small File Folder Icon](../../a9retired/media/filefolder-small.png "Small File Folder Icon") **Replication Class Library**  
  <xref:Microsoft.SqlServer.Replication>  
   
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  

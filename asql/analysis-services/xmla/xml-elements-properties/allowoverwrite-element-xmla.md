@@ -59,11 +59,11 @@ manager: "erikre"
 ## Remarks  
  For **Backup** commands, the **AllowOverwrite** element determines whether the command can overwrite the backup file specified in the **File** element.  
   
- For **Restore** elements, the **AllowOverwrite** element determines whether the command can overwrite the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)] database specified in the **DatabaseName** element.  
+ For **Restore** elements, the **AllowOverwrite** element determines whether the command can overwrite the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)] database specified in the **DatabaseName** element.  
   
 ## See Also  
  [DatabaseName Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/databasename-element-xmla.md)   
  [File Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md)   
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

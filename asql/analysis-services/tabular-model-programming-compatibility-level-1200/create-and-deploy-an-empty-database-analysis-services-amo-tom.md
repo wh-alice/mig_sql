@@ -99,5 +99,5 @@ namespace TOMSamples
 Once a database is created, you can add Model objects: 
 
 - [Add a data source to a Tabular model](../../analysis-services/tabular-model-programming-compatibility-level-1200/add-a-data-source-to-tabular-model-analysis-services-amo-tom.md)
-- [Create tables, partitions, and columns in a Tabular model](Create%20Tables,%20Partitions,%20and%20Columns%20in%20a%20Tabular%20model%20\(Analysis%20Services%20AMO-TOM\).md)
+- [Create tables, partitions, and columns in a Tabular model](../../analysis-services/tabular-model-programming-compatibility-level-1200/create-tables-partitions-and-columns-in-a-tabular-model.md)
  

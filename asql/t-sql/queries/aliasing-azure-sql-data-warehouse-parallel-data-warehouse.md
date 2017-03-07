@@ -15,11 +15,11 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../a9retired/includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Aliasing allows the temporary substitution of a short and easy-to-remember string in place of a table or column name in [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)][!INCLUDE[DWsql](../../reporting-services/report-data/includes/dwsql-md.md)] queries. Table aliases are often used in JOIN queries because the JOIN syntax requires fully qualified object names when referencing columns.  
+  Aliasing allows the temporary substitution of a short and easy-to-remember string in place of a table or column name in [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)][!INCLUDE[DWsql](../../a9retired/includes/dwsql-md.md)] queries. Table aliases are often used in JOIN queries because the JOIN syntax requires fully qualified object names when referencing columns.  
   
- Aliases must be single words conforming to object naming rules. For more information, see "Object Naming Rules" in the [!INCLUDE[pdw-product-documentation](../../relational-databases/system-dynamic-management-views/includes/pdw-product-documentation-md.md)]. Aliases cannot contain blank spaces and cannot be enclosed in either single or double quotes.  
+ Aliases must be single words conforming to object naming rules. For more information, see "Object Naming Rules" in the [!INCLUDE[pdw-product-documentation](../../relational-databases/reference/system-dynamic-management-views/includes/pdw-product-documentation-md.md)]. Aliases cannot contain blank spaces and cannot be enclosed in either single or double quotes.  
   
 ## Syntax  
   
@@ -37,9 +37,9 @@ object_source [ AS ] alias
  An optional alias preposition. When working with range variable aliasing, the AS keyword is prohibited.  
   
  *alias*  
- The desired temporary reference name for the table or column. Any valid object name can be used. For more information, see "Object Naming Rules" in the [!INCLUDE[pdw-product-documentation](../../relational-databases/system-dynamic-management-views/includes/pdw-product-documentation-md.md)].  
+ The desired temporary reference name for the table or column. Any valid object name can be used. For more information, see "Object Naming Rules" in the [!INCLUDE[pdw-product-documentation](../../relational-databases/reference/system-dynamic-management-views/includes/pdw-product-documentation-md.md)].  
   
-## Examples: [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
  The following example shows a query with multiple joins. Both table and column aliasing are demonstrated in this example.  
   
 -   Column Aliasing: Both columns and expressions involving columns in the select list are aliased in this example. `SalesTerritoryRegion AS SalesTR` demonstrates a simple column alias. `Sum(SalesAmountQuota) AS TotalSales` demonstrates  

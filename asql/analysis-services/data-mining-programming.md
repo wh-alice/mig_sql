@@ -21,19 +21,19 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # Data Mining Programming
-  If you find that the built-in tools and viewers in [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] do not meet your requirements, you can extend the power of [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] by coding your own extensions. In this approach, you have two options:  
+  If you find that the built-in tools and viewers in [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] do not meet your requirements, you can extend the power of [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] by coding your own extensions. In this approach, you have two options:  
   
 -   **XMLA**  
   
-     [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssASCurrent](../analysis-services/includes/ssascurrent-md.md)] supports XML for Analysis (XMLA) as a protocol for communication with client applications. Additional commands are supported by [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] that extend the XML for Analysis specification.  
+     [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssASCurrent](../a9notintoc/includes/ssascurrent-md.md)] supports XML for Analysis (XMLA) as a protocol for communication with client applications. Additional commands are supported by [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] that extend the XML for Analysis specification.  
   
-     Because [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] uses XMLA for data definition, data manipulation, and data control support, you can create mining structures and mining models by using the visual tools provided by [!INCLUDE[ssBIDevStudioFull](../analysis-services/includes/ssbidevstudiofull-md.md)], and then extend the data mining objects that you have created by using Data Mining Extensions (DMX) and Analysis Services Scripting Language (ASSL) scripts.  
+     Because [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] uses XMLA for data definition, data manipulation, and data control support, you can create mining structures and mining models by using the visual tools provided by [!INCLUDE[ssBIDevStudioFull](../a9notintoc/includes/ssbidevstudiofull-md.md)], and then extend the data mining objects that you have created by using Data Mining Extensions (DMX) and Analysis Services Scripting Language (ASSL) scripts.  
   
      You can create and modify data mining objects entirely in XMLA scripts, and run prediction queries against the models programmatically from your own applications.  
   
 -   **Analysis Management Objects (AMO)**  
   
-     [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] also provides a complete framework that enables third-party data mining providers to integrate the data mining objects into [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)].  
+     [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] also provides a complete framework that enables third-party data mining providers to integrate the data mining objects into [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)].  
   
      You can create mining structures and mining models by using AMO. See the following samples in CodePlex:  
   
@@ -49,10 +49,10 @@ manager: "erikre"
   
 -   **DMX**  
   
-     You can use DMX to encapsulate command statements, prediction queries, and metadata queries and return results in a tabular format, assuming you have created a connection to an [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] server.  
+     You can use DMX to encapsulate command statements, prediction queries, and metadata queries and return results in a tabular format, assuming you have created a connection to an [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] server.  
   
 ## In This Section  
- [OLE DB for Data Mining](../Topic/OLE%20DB%20for%20Data%20Mining.md)  
+ [OLE DB for Data Mining](../analysis-services/data-mining-programming-ole-db.md)  
  Describes additions to the specification to support data mining and multidimensional data: new schema rowsets and columns, Data Mining Extensions (DMX) language for creating and managing mining structures.  
   
 ## Related Reference  

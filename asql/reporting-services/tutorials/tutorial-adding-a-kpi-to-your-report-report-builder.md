@@ -17,7 +17,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Tutorial: Adding a KPI to Your Report (Report Builder)
-In this [!INCLUDE[ssRBnoversion_md](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)] tutorial, you add a key performance indicator (KPI) to a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report.  
+In this [!INCLUDE[ssRBnoversion_md](../../a9notintoc/includes/ssrbnoversion-md.md)] tutorial, you add a key performance indicator (KPI) to a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report.  
 
 KPIs are measurable values with business significance. In this scenario, the sales summary by product subcategories is the KPI. The current state of the KPI is shown with colors, gauges, and indicators.
   
@@ -38,7 +38,7 @@ In this section, you choose a shared data source, create an embedded dataset, an
  
 ### To create a table with an embedded dataset  
   
-1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
+1.  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md) either from your computer, the [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] web portal, or SharePoint integrated mode.  
   
     The **New Report or Dataset** dialog box opens.  
   
@@ -191,7 +191,7 @@ Background colors can be set to an expression that is evaluated when you run the
   
      This changes the background color to "Lime" green for each cell with an aggregated sum for `[Sum(Sales)]` greater than or equal to 5000. Values of `[Sum(Sales)]` between 2500 and 5000 are "Yellow". Values less than 2500 are "Red".  
   
-1.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+1.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 2.  Click **Run** to preview the report.  
   
@@ -216,7 +216,7 @@ A gauge depicts a single value in a dataset. This tutorial uses a horizontal lin
   
 5.  In the **Select Gauge Type** dialog box, select the first linear gauge type, **Horizontal**.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
     A gauge is added to the design surface.  
   
@@ -271,7 +271,7 @@ Indicators are small simple gauges that communicate data values at a glance. Bec
   
 6.  In the **Select Indicator Type** dialog box, under **Shapes**, select the first shape type, **3 Traffic Lights (Unrimmed)**.  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
     The indicator is added to the cell in the new Stoplight KPI column.  
   
@@ -305,7 +305,7 @@ You can further enhance the text by applying different font styles, sizes, and c
 4.  Click **Run** to preview the report.  
   
 ## <a name="Save"></a>7. Save the Report  
-Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available.  
+Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available.  
   
 ### To save the report on a report server  
   

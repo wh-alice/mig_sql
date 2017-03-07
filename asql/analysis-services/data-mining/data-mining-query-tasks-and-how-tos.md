@@ -18,10 +18,10 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Data Mining Query Tasks and How-tos
-  The ability to create queries is critical if you are to make use of your data mining models. This section provides links to examples of how to create queries against a data mining model by using the tools provided in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)]. If you need more information about what a data mining query is, or the different types of queries you can create, see [Data Mining Queries](../../analysis-services/data-mining/data-mining-queries.md).  
+  The ability to create queries is critical if you are to make use of your data mining models. This section provides links to examples of how to create queries against a data mining model by using the tools provided in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)]. If you need more information about what a data mining query is, or the different types of queries you can create, see [Data Mining Queries](../../analysis-services/data-mining/data-mining-queries.md).  
   
 ## Creating Queries with Prediction Query Builder  
- The Prediction Query Builder is provided in both [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] as a way of graphically building queries against data mining models. The following topics explain how you can select a model, specify a data source, customize the predictions, and save output.  
+ The Prediction Query Builder is provided in both [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] as a way of graphically building queries against data mining models. The following topics explain how you can select a model, specify a data source, customize the predictions, and save output.  
   
 -   [Create a Prediction Query Using the Prediction Query Builder](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
@@ -38,13 +38,13 @@ manager: "jhubbard"
 -   [Choose and Map Input Data for a Prediction Query](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)  
   
 ## Using Other Data Mining Query Tools  
- In addition to using the Prediction Query Builder, you can type a query directly into [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] by using DMX or by using XMLA. You can also build prediction queries programmatically and send them to an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] server. The following topics provide more information about how to create and work with prediction queries outside of the Prediction Query Builder.  
+ In addition to using the Prediction Query Builder, you can type a query directly into [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] by using DMX or by using XMLA. You can also build prediction queries programmatically and send them to an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] server. The following topics provide more information about how to create and work with prediction queries outside of the Prediction Query Builder.  
   
  [Create a Singleton Prediction Query from a Template](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
- Describes how to use the tools in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to build and run a prediction query.  
+ Describes how to use the tools in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] to build and run a prediction query.  
   
  [Create a Singleton Prediction Query from a Template](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
- Describes how to use the templates that are provided in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to add parameters to a prediction query.  
+ Describes how to use the templates that are provided in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] to add parameters to a prediction query.  
   
  [Change the Time-out Value for Data Mining Queries](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)  
  Describes how to set properties on the server that control behavior related to data mining queries.  
@@ -53,10 +53,10 @@ manager: "jhubbard"
  Describes how to create queries that return detailed information that is stored in the mining model by using the data mining schema rowsets.  
   
  [Create a Data Mining Query by Using XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)  
- Describes how to create a query against mining model content by using the XMLA templates in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+ Describes how to create a query against mining model content by using the XMLA templates in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
 ## See Also  
- [Query and Expression Language Reference &#40;Analysis Services&#41;](../Topic/Query%20and%20Expression%20Language%20Reference%20\(Analysis%20Services\).md)   
+ [Query and Expression Language Reference &#40;Analysis Services&#41;](../../a9retired/query-and-expression-language-reference-analysis-services.md)   
  [Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)  
   
   

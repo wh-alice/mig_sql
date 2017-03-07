@@ -18,7 +18,7 @@ manager: "erikre"
 # Tree Map and Sunburst Charts in Reporting Services
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../integration-services/includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-  The [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Tree Map and sunburst visualizations are great for visually representing hierarchal data.   This topic is an overview of how to add a Tree Map or Sunburst chart to a [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] report. The topic also includes a sample Adventureworks query to help get you started.  
+  The [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] Tree Map and sunburst visualizations are great for visually representing hierarchal data.   This topic is an overview of how to add a Tree Map or Sunburst chart to a [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] report. The topic also includes a sample Adventureworks query to help get you started.  
   
 ##  <a name="bkmk_treemap_chart"></a> Tree Map Chart  
  ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")  
@@ -103,7 +103,7 @@ manager: "erikre"
   
   
 ##  <a name="bkmk_sample_data"></a> Sample Adventureworks data  
- This sections includes a sample query and the basic steps for creating a data source and dataset in [!INCLUDE[ssRBnoversion](../../database-engine/availability-groups/windows/includes/ssrbnoversion-md.md)]. If your report already contains a data source and dataset you can skip this section.  
+ This sections includes a sample query and the basic steps for creating a data source and dataset in [!INCLUDE[ssRBnoversion](../../a9notintoc/includes/ssrbnoversion-md.md)]. If your report already contains a data source and dataset you can skip this section.  
   
  The query returns Adventureworks sales order detail data with sales territory, product category,  product sub category, and sales reason data.  
   

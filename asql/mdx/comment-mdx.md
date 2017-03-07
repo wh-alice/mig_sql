@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Comment (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Indicates comment text that is provided by the user.  
   
@@ -60,8 +60,8 @@ WHERE
 ```  
   
 ## See Also  
- [&#40;Comment&#41; &#40;MDX&#41;](../Topic/\(Comment\)%20\(MDX\).md)   
- [-- &#40;Comment&#41; &#40;MDX&#41;](../Topic/--%20\(Comment\)%20\(MDX\).md)   
+ [&#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
+ [-- &#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
  [MDX Operator Reference &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

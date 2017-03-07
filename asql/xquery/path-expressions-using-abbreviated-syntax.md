@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Path Expressions - Using Abbreviated Syntax
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   All the examples in [Understanding the Path Expressions in XQuery](../xquery/path-expressions-xquery.md) use unabbreviated syntax for path expressions. The unabbreviated syntax for an axis step in a path expression includes the axis name and node test, separated by double colon, and followed by zero or more step qualifiers.  
   

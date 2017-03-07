@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Disconnect from a Registered Server (SQL Server Management Studio)
-  This topic describes how to  disconnect Object Explorer from a server at any time in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. Disconnecting Object Explorer does not disconnect other [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] components such as SQL Editor.  
+  This topic describes how to  disconnect Object Explorer from a server at any time in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. Disconnecting Object Explorer does not disconnect other [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] components such as SQL Editor.  
   
 ##  <a name="SSMSProcedure"></a>  
   

@@ -34,7 +34,7 @@ manager: "jhubbard"
   
  This feature is incompatible with database export using Data Tier Application Framework (DACFx). You must drop all asymmetric keys before exporting.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -103,7 +103,7 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
  Creates a new key on the Extensible Key Management device. PROV_KEY_NAME must be used to specify key name on the device. If a key already exists on the device the statement fails with error.  
   
  CREATION_DISPOSITION = OPEN_EXISTING  
- Maps a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] asymmetric key to an existing Extensible Key Management key. PROV_KEY_NAME must be used to specify key name on the device. If CREATION_DISPOSITION = OPEN_EXISTING is not provided, the default is CREATE_NEW.  
+ Maps a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] asymmetric key to an existing Extensible Key Management key. PROV_KEY_NAME must be used to specify key name on the device. If CREATION_DISPOSITION = OPEN_EXISTING is not provided, the default is CREATE_NEW.  
   
  ALGORITHM = \<algorithm>  
  Five algorithms can be provided; RSA_4096, RSA_3072, RSA_2048, RSA_1024, and RSA_512.  
@@ -111,7 +111,7 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
  RSA_1024 and RSA_512 are deprecated. To use RSA_1024 or RSA_512 (not recommended) you must set the database to database compatibility level 120 or lower.  
   
  PASSWORD = '*password*'  
- Specifies the password with which to encrypt the private key. If this clause is not present, the private key will be encrypted with the database master key. *password* is a maximum of 128 characters. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Specifies the password with which to encrypt the private key. If this clause is not present, the private key will be encrypted with the database master key. *password* is a maximum of 128 characters. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## Remarks  
  An *asymmetric key* is a securable entity at the database level. In its default form, this entity contains both a public key and a private key. When executed without the FROM clause, CREATE ASYMMETRIC KEY generates a new key pair. When executed with the FROM clause, CREATE ASYMMETRIC KEY imports a key pair from a file or imports a public key from an assembly.  
@@ -121,7 +121,7 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
  The private key can be 512, 1024, or 2048 bits long.  
   
 ## Permissions  
- Requires CREATE ASYMMETRIC KEY permission on the database. If the AUTHORIZATION clause is specified, requires IMPERSONATE permission on the database principal, or ALTER permission on the application role. Only Windows logins, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] logins, and application roles can own asymmetric keys. Groups and roles cannot own asymmetric keys.  
+ Requires CREATE ASYMMETRIC KEY permission on the database. If the AUTHORIZATION clause is specified, requires IMPERSONATE permission on the database principal, or ALTER permission on the application role. Only Windows logins, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] logins, and application roles can own asymmetric keys. Groups and roles cannot own asymmetric keys.  
   
 ## Examples  
   

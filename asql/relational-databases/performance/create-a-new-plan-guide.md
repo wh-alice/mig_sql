@@ -20,13 +20,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a New Plan Guide
-Plan guides influence query optimization by attaching query hints or a fixed query plan to them. In the plan guide, you specify the statement that you want optimized, and either an OPTION clause that contains query hints you want to use. or a specific query plan you want to use to optimize the query. When the query executes, the query optimizer matches the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement to the plan guide and either attaches the OPTION clause to the query at run time or uses the specified query plan.  
+Plan guides influence query optimization by attaching query hints or a fixed query plan to them. In the plan guide, you specify the statement that you want optimized, and either an OPTION clause that contains query hints you want to use. or a specific query plan you want to use to optimize the query. When the query executes, the query optimizer matches the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement to the plan guide and either attaches the OPTION clause to the query at run time or uses the specified query plan.  
 
 A Plan Guide applies either a fixed query plan, and/or query hints, to a query.
   
 ##  <a name="Restrictions"></a> Limitations and restrictions  
   
--   The arguments to sp_create_plan_guide must be provided in the order that is shown. When you supply values for the parameters of **sp_create_plan_guide**, all parameter names must be specified explicitly, or none at all. For example, if **@name =** is specified, then **@stmt =** , **@type =**, and so on, must also be specified. Likewise, if **@name =** is omitted and only the parameter value is provided, the remaining parameter names must also be omitted, and only their values provided. Argument names are for descriptive purposes only, to help understand the syntax. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] does not verify that the specified parameter name matches the name for the parameter in the position where the name is used.  
+-   The arguments to sp_create_plan_guide must be provided in the order that is shown. When you supply values for the parameters of **sp_create_plan_guide**, all parameter names must be specified explicitly, or none at all. For example, if **@name =** is specified, then **@stmt =** , **@type =**, and so on, must also be specified. Likewise, if **@name =** is omitted and only the parameter value is provided, the remaining parameter names must also be omitted, and only their values provided. Argument names are for descriptive purposes only, to help understand the syntax. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] does not verify that the specified parameter name matches the name for the parameter in the position where the name is used.  
   
 -   You can create more than one OBJECT or SQL plan guide for the same query and batch or module. However, only one plan guide can be enabled at any given time.  
   
@@ -48,25 +48,25 @@ A Plan Guide applies either a fixed query plan, and/or query hints, to a query.
   
 3.  In the **New Plan Guide** dialog box, in the **Name** box, enter the name of the plan guide.  
   
-4.  In the **Statement** box, enter the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement against which the plan guide is to be applied.  
+4.  In the **Statement** box, enter the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement against which the plan guide is to be applied.  
   
-5.  In the **Scope type** list, select the type of entity in which the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement appears. This specifies the context for matching the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement to the plan guide. Possible values are **OBJECT**, **SQL**, and **TEMPLATE**.  
+5.  In the **Scope type** list, select the type of entity in which the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement appears. This specifies the context for matching the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement to the plan guide. Possible values are **OBJECT**, **SQL**, and **TEMPLATE**.  
   
-6.  In the **Scope batch** box, enter the batch text in which the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement appears. The batch text cannot include a USE``*database* statement. The **Scope batch** box is only available when **SQL** is selected as a scope type. If nothing is entered in the scope batch box when SQL is the scope type, then the value of the batch text is set to the same value as is in the **Statement** box.  
+6.  In the **Scope batch** box, enter the batch text in which the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement appears. The batch text cannot include a USE``*database* statement. The **Scope batch** box is only available when **SQL** is selected as a scope type. If nothing is entered in the scope batch box when SQL is the scope type, then the value of the batch text is set to the same value as is in the **Statement** box.  
   
 7.  In the **Scope schema name** list, enter the name of the schema in which the object is contained. The **Scope schema name** box is only available when **Object** is selected as a scope type.  
   
-8.  In the **Scope object name** box, enter the name of the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] stored procedure, user-defined scalar function, multistatement table-valued function, or DML trigger in which the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement appears. The **Scope object name** box is only available when **Object** is selected as a scope type.  
+8.  In the **Scope object name** box, enter the name of the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] stored procedure, user-defined scalar function, multistatement table-valued function, or DML trigger in which the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement appears. The **Scope object name** box is only available when **Object** is selected as a scope type.  
   
-9. In the **Parameters** box, enter the parameter name and data type of all parameters that are embedded in the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement.  
+9. In the **Parameters** box, enter the parameter name and data type of all parameters that are embedded in the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement.  
   
      Parameters apply only when either of the following is true:  
   
     -   The scope type is **SQL** or **TEMPLATE**. If **TEMPLATE**, parameters must not be NULL.  
   
-    -   The [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement is submitted by using sp_executesql and a value for the parameter is specified, or [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] internally submits a statement after parameterizing it.  
+    -   The [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement is submitted by using sp_executesql and a value for the parameter is specified, or [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] internally submits a statement after parameterizing it.  
   
-10. In the **Hints** box, enter the query hints or query plan to be applied to the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement. To specify one or more query hints, enter a valid OPTION clause.  
+10. In the **Hints** box, enter the query hints or query plan to be applied to the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement. To specify one or more query hints, enter a valid OPTION clause.  
   
 11. Click **OK**.  
 
@@ -75,7 +75,7 @@ A Plan Guide applies either a fixed query plan, and/or query hints, to a query.
   
 ##  <a name="TsqlProcedure"></a> Creat a plan guide using T-SQL  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -95,6 +95,6 @@ A Plan Guide applies either a fixed query plan, and/or query hints, to a query.
   
     ```  
   
- For more information, see [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md).  
+ For more information, see [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-create-plan-guide-transact-sql.md).  
   
   

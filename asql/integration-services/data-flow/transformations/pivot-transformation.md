@@ -43,7 +43,7 @@ manager: "jhubbard"
  The input data might contain duplicate rows, which will cause the Pivot transformation to fail. "Duplicate rows" means rows that have the same values in the set key columns and the pivot columns. To avoid failure, you can either configure the transformation to redirect error rows to an error output or you can pre-aggregate values to ensure there are no duplicate rows.  
   
 ##  <a name="options"></a> Options in the Pivot Dialog Box  
- You configure the pivot operation by setting the options in the **Pivot** dialog box. To open the **Pivot** dialog box, add the Pivot transformation to the package in [!INCLUDE[ssBIDevStudioFull](../../../analysis-services/includes/ssbidevstudiofull-md.md)], and then right-click the component and click **Edit**.  
+ You configure the pivot operation by setting the options in the **Pivot** dialog box. To open the **Pivot** dialog box, add the Pivot transformation to the package in [!INCLUDE[ssBIDevStudioFull](../../../a9notintoc/includes/ssbidevstudiofull-md.md)], and then right-click the component and click **Edit**.  
   
  The following list describes the options in the **Pivot** dialog box.  
   
@@ -119,11 +119,11 @@ manager: "jhubbard"
      [2002],[2003],[2004]  
   
 ## Configuration of the Pivot Transformation  
- You can set properties through [!INCLUDE[ssIS](../../../analysis-services/instances/includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../../../a9retired/includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box, click one of the following topics:  
   
--   [Common Properties](../Topic/Common%20Properties.md)  
+-   [Common Properties](../../../a9retired/common-properties.md)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

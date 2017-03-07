@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Aggregate Functions - count
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns the number of items that are contained in the sequence specified by *$arg*.  
   
@@ -61,7 +61,7 @@ WHERE Production.ProductModel.ProductModelID=7
   
  Note the following from the previous query:  
   
--   The **namespace** keyword in [XQuery Prolog](../Topic/XQuery%20Prolog.md) defines a namespace prefix. The prefix is then used in the XQuery body.  
+-   The **namespace** keyword in [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md) defines a namespace prefix. The prefix is then used in the XQuery body.  
   
 -   The query constructs XML that includes the <`NoOfWorkStations`> element.  
   

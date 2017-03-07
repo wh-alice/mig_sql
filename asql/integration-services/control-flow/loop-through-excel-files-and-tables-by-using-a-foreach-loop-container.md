@@ -29,7 +29,7 @@ manager: "jhubbard"
   
      If you do not use a variable for the Extended Properties argument, then you must add it manually to the expression that contains the connection string.  
   
-3.  Add a Foreach Loop container to the **Control Flow** tab. For information about how to configure the Foreach Loop Container, see [Configure a Foreach Loop Container](../Topic/Configure%20a%20Foreach%20Loop%20Container.md).  
+3.  Add a Foreach Loop container to the **Control Flow** tab. For information about how to configure the Foreach Loop Container, see [Configure a Foreach Loop Container](../../a9retired/configure-a-foreach-loop-container.md).  
   
 4.  On the **Collection** page of the **Foreach Loop Editor**, select the Foreach File enumerator, specify the folder in which the Excel workbooks are located, and specify the file filter (ordinarily *.xls).  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 6.  Close the **Foreach Loop Editor**.  
   
-7.  Add an Excel connection manager to the package as described in [Add, Delete, or Share a Connection Manager in a Package](../Topic/Add,%20Delete,%20or%20Share%20a%20Connection%20Manager%20in%20a%20Package.md). Select an existing Excel workbook file for the connection to avoid validation errors.  
+7.  Add an Excel connection manager to the package as described in [Add, Delete, or Share a Connection Manager in a Package](../../a9retired/add-delete-or-share-a-connection-manager-in-a-package.md). Select an existing Excel workbook file for the connection to avoid validation errors.  
   
     > [!IMPORTANT]  
     >  To avoid validation errors as you configure tasks and data flow components that use this Excel connection manager, select an existing Excel workbook in the **Excel Connection Manager Editor**. The connection manager will not use this workbook at run time after you configure an expression for the **ConnectionString** property as described in the following steps. After you create and configure the package, you can clear the value of the **ConnectionString** property in the Properties window. However, if you clear this value, the connection string property of the Excel connection manager is no longer valid until the Foreach Loop runs. Therefore you must set the **DelayValidation** property to **True** on the tasks in which the connection manager is used, or on the package, to avoid validation errors.  
@@ -66,11 +66,11 @@ manager: "jhubbard"
   
 ### To loop through Excel tables by using the Foreach ADO.NET Schema Rowset enumerator  
   
-1.  Create an ADO.NET connection manager that uses the Microsoft Jet OLE DB Provider to connect to an Excel workbook. On the All page of the **Connection Manager** dialog box, make sure that you enter Excel 8.0 as the value of the Extended Properties property. For more information, see [Add, Delete, or Share a Connection Manager in a Package](../Topic/Add,%20Delete,%20or%20Share%20a%20Connection%20Manager%20in%20a%20Package.md).  
+1.  Create an ADO.NET connection manager that uses the Microsoft Jet OLE DB Provider to connect to an Excel workbook. On the All page of the **Connection Manager** dialog box, make sure that you enter Excel 8.0 as the value of the Extended Properties property. For more information, see [Add, Delete, or Share a Connection Manager in a Package](../../a9retired/add-delete-or-share-a-connection-manager-in-a-package.md).  
   
 2.  Create a string variable that will receive the name of the current table on each iteration of the loop.  
   
-3.  Add a Foreach Loop container to the **Control Flow** tab. For information about how to configure the Foreach Loop container, see [Configure a Foreach Loop Container](../Topic/Configure%20a%20Foreach%20Loop%20Container.md).  
+3.  Add a Foreach Loop container to the **Control Flow** tab. For information about how to configure the Foreach Loop container, see [Configure a Foreach Loop Container](../../a9retired/configure-a-foreach-loop-container.md).  
   
 4.  On the **Collection** page of the **Foreach Loop Editor**, select the Foreach ADO.NET Schema Rowset enumerator.  
   
@@ -88,7 +88,7 @@ manager: "jhubbard"
 9. Create tasks in the Foreach Loop container that use the Excel connection manager to perform the same operations on each Excel table in the specified workbook. If you use a Script Task to examine the enumerated table name or to work with each table, remember to add the string variable to the ReadOnlyVariables property of the Script task.  
   
 ## See Also  
- [Configure a Foreach Loop Container](../Topic/Configure%20a%20Foreach%20Loop%20Container.md)   
+ [Configure a Foreach Loop Container](../../a9retired/configure-a-foreach-loop-container.md)   
  [Add or Change a Property Expression](../../integration-services/expressions/add-or-change-a-property-expression.md)   
  [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Excel Source](../../integration-services/data-flow/excel-source.md)   

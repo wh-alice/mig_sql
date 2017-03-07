@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Allow Non-Administrators to Use Replication Monitor
-  This topic describes how to allow non-administrators to use Replication Monitor in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]. Replication Monitor can be used by users who are members of the following roles:  
+  This topic describes how to allow non-administrators to use Replication Monitor in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]. Replication Monitor can be used by users who are members of the following roles:  
   
 -   The **sysadmin** fixed server role.  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 #### To allow non-administrators to use Replication Monitor  
   
-1.  In [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], connect to the Distributor, and then expand the server node.  
+1.  In [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], connect to the Distributor, and then expand the server node.  
   
 2.  Expand **Databases**, expand **System Databases**, and then expand the distribution database (named **distribution** by default).  
   
@@ -62,22 +62,22 @@ manager: "jhubbard"
   
 6.  Select the **replmonitor** check box in the **Database role membership** grid.  
   
-7.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To add a user to the replmonitor fixed database role  
   
-1.  At the Distributor on the distribution database, execute [sp_helpuser &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md). If the user is not listed in **UserName** in the result set, the user must be granted access to the distribution database using the [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) statement.  
+1.  At the Distributor on the distribution database, execute [sp_helpuser &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-helpuser-transact-sql.md). If the user is not listed in **UserName** in the result set, the user must be granted access to the distribution database using the [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) statement.  
   
-2.  At the Distributor on the distribution database, execute [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md), specifying a value of **replmonitor** for the **@rolename** parameter. If the user is listed in **MemberName** in the result set, the user already belongs to this role.  
+2.  At the Distributor on the distribution database, execute [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-helprolemember-transact-sql.md), specifying a value of **replmonitor** for the **@rolename** parameter. If the user is listed in **MemberName** in the result set, the user already belongs to this role.  
   
-3.  If the user does not belong to the **replmonitor** role, execute [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) at the Distributor on the distribution database. Specify a value of **replmonitor** for **@rolename** and the name of the database user or the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows login being added for **@membername**.  
+3.  If the user does not belong to the **replmonitor** role, execute [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-addrolemember-transact-sql.md) at the Distributor on the distribution database. Specify a value of **replmonitor** for **@rolename** and the name of the database user or the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] Windows login being added for **@membername**.  
   
 #### To remove a user from the replmonitor fixed database role  
   
-1.  To verify that the user belongs to the **replmonitor** role, execute [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) at the Distributor on the distribution database, and specify a value of **replmonitor** for **@rolename**. If the user is not listed in **MemberName** in the result set, the user does not currently belong to this role.  
+1.  To verify that the user belongs to the **replmonitor** role, execute [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-helprolemember-transact-sql.md) at the Distributor on the distribution database, and specify a value of **replmonitor** for **@rolename**. If the user is not listed in **MemberName** in the result set, the user does not currently belong to this role.  
   
-2.  If the user does belong to the **replmonitor** role, execute [sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) at the Distributor on the distribution database. Specify a value of **replmonitor** for **@rolename** and the name of the database user or the Windows login being removed for **@membername**.  
+2.  If the user does belong to the **replmonitor** role, execute [sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-droprolemember-transact-sql.md) at the Distributor on the distribution database. Specify a value of **replmonitor** for **@rolename** and the name of the database user or the Windows login being removed for **@membername**.  
   
   

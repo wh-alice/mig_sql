@@ -22,7 +22,7 @@ manager: "jhubbard"
   Use the **File Connection Manager Editor** dialog box to specify the properties used to connect to a file or a folder.  
   
 > [!NOTE]  
->  You can set the ConnectionString property for the File connection manager by specifying an expression in the Properties window of [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)]. However, to avoid a validation error when you use an expression to specify the file or folder, in the **File Connection Manager Editor**, for **File/Folder**, add a file or folder path.  
+>  You can set the ConnectionString property for the File connection manager by specifying an expression in the Properties window of [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)]. However, to avoid a validation error when you use an expression to specify the file or folder, in the **File Connection Manager Editor**, for **File/Folder**, add a file or folder path.  
   
  To learn more about the File connection manager, see [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
   

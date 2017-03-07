@@ -148,9 +148,9 @@ manager: "erikre"
 |`Short Time`|Displays a time using the 24-hour format, for example, 17:45.|  
   
 ## See Also  
- [LANGUAGE and FORMAT_STRING on FORMATED_VALUE](../Topic/LANGUAGE%20and%20FORMAT_STRING%20on%20FORMATED_VALUE.md)   
- [Using Cell Properties &#40;MDX&#41;](../Topic/Using%20Cell%20Properties%20\(MDX\).md)   
- [Creating and Using Property Values &#40;MDX&#41;](../Topic/Creating%20and%20Using%20Property%20Values%20\(MDX\).md)   
+ [LANGUAGE and FORMAT_STRING on FORMATED_VALUE](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
+ [Using Cell Properties &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [Creating and Using Property Values &#40;MDX&#41;](../../../a9retired/creating-and-using-property-values-mdx.md)   
  [MDX Query Fundamentals &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

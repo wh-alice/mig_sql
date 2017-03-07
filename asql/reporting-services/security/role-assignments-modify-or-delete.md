@@ -34,7 +34,7 @@ manager: "erikre"
   
 ### To modify or delete a system role assignment  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md).  
   
 2.  Click **Site Settings**.  
   
@@ -63,7 +63,7 @@ manager: "erikre"
 ## See Also  
  [Create and Manage Role Assignments](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Role Assignments](../../reporting-services/security/role-assignments.md)   
- [Site Settings Page &#40;Report Manager&#41;](../Topic/Site%20Settings%20Page%20\(Report%20Manager\).md)   
- [New System Role Assignments: Edit System Role Assignments Page &#40;Report Manager&#41;](../Topic/New%20System%20Role%20Assignments:%20Edit%20System%20Role%20Assignments%20Page%20\(Report%20Manager\).md)  
+ [Site Settings Page &#40;Report Manager&#41;](../../a9retired/site-settings-page-report-manager.md)   
+ [New System Role Assignments: Edit System Role Assignments Page &#40;Report Manager&#41;](../../a9retired/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

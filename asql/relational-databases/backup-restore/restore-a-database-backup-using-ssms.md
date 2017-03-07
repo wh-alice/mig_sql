@@ -24,20 +24,20 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Restore a Database Backup Using SSMS
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   This topic explains how to restore a full database backup using SQL Server Management Studio.    
        
 ### Important!    
 Before you can restore a database under the full or bulk-logged recovery model, you may need to back up the active transaction log (known as [tail of the log](https://msdn.microsoft.com/library/ms179314.aspx). For more information, see [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
 
-When restoring a database from another instance, consider the information from [Manage Metadata When Making a Database Available on Another Server Instance (SQL Server)](Manage%20Metadata%20When%20Making%20a%20Database%20Available%20on%20Another%20Server%20Instance%20\(SQL%20Server\).md).   
+When restoring a database from another instance, consider the information from [Manage Metadata When Making a Database Available on Another Server Instance (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).   
     
 To restore an encrypted database, you need access to the certificate or asymmetric key used to encrypt that database. Without the certificate or asymmetric key, you cannot restore that database. You must retain the certificate used to encrypt the database encryption key for as long as you need to save the backup. For more information, see [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).    
     
-If you restore an older version database to [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], that database will automatially upgrade to [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].   
+If you restore an older version database to [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], that database will automatially upgrade to [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].   
   
-Typically, the database becomes available immediately. However, if a [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] database has full-text indexes, the upgrade process either imports, resets, or rebuilds the indexes, depending on the setting of the **Full-Text Upgrade Option** server property. If you set upgrade option to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending on the amount of data being indexed, importing can take several hour; rebuilding will take up to ten times longer.     
+Typically, the database becomes available immediately. However, if a [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] database has full-text indexes, the upgrade process either imports, resets, or rebuilds the indexes, depending on the setting of the **Full-Text Upgrade Option** server property. If you set upgrade option to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending on the amount of data being indexed, importing can take several hour; rebuilding will take up to ten times longer.     
     
 When you set upgrade option to **Import**, if a full-text catalog is not available, the associated full-text indexes are rebuilt. For information about viewing or changing the setting of the **Full-Text Upgrade Option** property, see [Manage and Monitor Full-Text Search for a Server Instance](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
 
@@ -47,7 +47,7 @@ For information on SQL Server restore from the Microsoft Azure Blob storage serv
     
 ### **A. Restore a full database backup**    
     
-1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] and then expand that instance.  
     
 2.  Right-click **Databases** and select **Restore Database...**    
     
@@ -75,7 +75,7 @@ For information on SQL Server restore from the Microsoft Azure Blob storage serv
             |----------------|----------------|-----------------|    
             |**File**|**Locate Backup File**|In this dialog box, you can select a local file from the tree or specify a remote file using its fully qualified universal naming convention (UNC) name. For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|    
             |**Device**|**Select Backup Device**|In this dialog box, you can select from a list of the logical backup devices defined on the server instance.|    
-            |**Tape**|**Select Backup Tape**|In this dialog box, you can select from a list of the tape drives that are physically connected to the computer running the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].|    
+            |**Tape**|**Select Backup Tape**|In this dialog box, you can select from a list of the tape drives that are physically connected to the computer running the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].|    
             |**URL**|**Select a Backup File Location**|In this dialog box, you can select an existing SQL Server credential/Azure storage container, add a new Azure storage container with a shared access signature, or generate a shared access signature and SQL Server credential for an existing storage container.  See also, [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)|  
          
              **Remove**    
@@ -121,18 +121,18 @@ For information on SQL Server restore from the Microsoft Azure Blob storage serv
     
     3.  **Take tail-log backup before restore.** Not all restore scenarios require a tail-log backup.  For more information, see **Scenarios That Require a Tail-Log Backup** from [Tail-Log Backups (SQL Server).](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)
     
-    4.  Restore operations may fail if there are active connections to the database. Check the **Close existing connections option** to ensure that all active connections between [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] and the database are closed. This check box sets the database to single user mode before performing the restore operations, and sets the database to multi-user mode when complete.    
+    4.  Restore operations may fail if there are active connections to the database. Check the **Close existing connections option** to ensure that all active connections between [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] and the database are closed. This check box sets the database to single user mode before performing the restore operations, and sets the database to multi-user mode when complete.    
     
     5.  Select **Prompt before restoring each backup** if you wish to be prompted between each restore operation. This is not usually necessary unless the database is large and you wish to monitor the status of the restore operation.    
     
      For more information about these restore options, see [Restore Database &#40;Options Page&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).    
     
-9. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)] 
+9. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)] 
 
 ### **B. Restore an earlier disk backup over an existing database**    
 The following example restores an earlier disk backup of `Sales` and overwrites the existing `Sales` database.
 
-1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] and then expand that instance.  
     
 2.  Right-click **Databases** and select **Restore Database...**  
 
@@ -157,12 +157,12 @@ This option is not available for databases in the SIMPLE recovery model.
 
     > **NOTE:** Not checking this option may result in the following error message: "System.Data.SqlClient.SqlError: Exclusive access could not be obtained because the database is in use. (Microsoft.SqlServer.SmoExtended)"
     
-10. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)] 
+10. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)] 
 
 ### **C.  Restore an earlier disk backup with a new database name where the original database still exists**
 The following example restores an earlier disk backup of `Sales` and creates a new database called `SalesTest`.  The original database, `Sales`, still exists on the server.
 
-1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] and then expand that instance.  
     
 2.  Right-click **Databases** and select **Restore Database...**  
 
@@ -180,7 +180,7 @@ The following example restores an earlier disk backup of `Sales` and creates a n
 
     > **IMPORTANT!!** Not unchecking this option will result in the existing database, `Sales`, to change to the restoring state.
 
-9. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)] 
+9. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)] 
 
     > **NOTE:** If you receive the following error message: "System.Data.SqlClient.SqlError: The tail of the log for the database "`Sales`" has not been backed up. Use BACKUP LOG WITH NORECOVERY to backup the log if it contains work you do not want to lose. Use the WITH REPLACE or WITH STOPAT clause of the RESTORE statement to just overwrite the contents of the log. (Microsoft.SqlServer.SmoExtended)".  
 Then you likely did not enter the new database name from Step 6, above.  Restore normally prevents accidentally overwriting a database with a different database.  If the database specified in a RESTORE statement already exists on the current server and the specified database family GUID differs from the database family GUID recorded in the backup set, the database is not restored. This is an important safeguard.
@@ -188,7 +188,7 @@ Then you likely did not enter the new database name from Step 6, above.  Restore
 ### **D.  Restore earlier disk backups to a point in time**
 The following example restores a database to its state as of 1:23:17 PM on May 30, 2016 and shows a restore operation that involves multiple log backups.  The database does not currently exist on the server.
 
-1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] and then expand that instance.  
     
 2.  Right-click **Databases** and select **Restore Database...**  
 
@@ -206,7 +206,7 @@ The following example restores a database to its state as of 1:23:17 PM on May 3
 
 10. Click **OK** to return to the General page.
 
-11. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)] 
+11. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)] 
 
 ### **E.  Restore a backup from the Microsoft Azure storage service**
 #### **Common Steps**
@@ -273,7 +273,7 @@ The `Sales` database will be restored to the Microsoft Azure storage container `
  [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)     
  [Restore a Database to a New Location &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)     
  [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)     
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)     
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)     
  [Restore Database &#40;Options Page&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)     
  [Restore Database &#40;General Page&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)    
     

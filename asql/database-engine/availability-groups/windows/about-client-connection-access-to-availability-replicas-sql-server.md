@@ -29,7 +29,7 @@ manager: "jhubbard"
  During a failover, a secondary replica transitions to the primary role and the former primary replica transitions to the secondary role. During the failover process, all client connections to both the primary replica and secondary replicas are terminated. After the failover, when a client reconnects to the availability group listener, the listener reconnects the client to the new primary replica, except for a read-intent connect request. If read-only routing is configured on the client and on the server instances that hosts the new primary replica and on at least one readable secondary replica, read-intent connection requests are re-routed to a secondary replica that supports the type of connection access that the client requires. To ensure a graceful client experience after a failover, it is important to configure connection access for both the secondary and primary roles of every availability replica.  
   
 > [!NOTE]  
->  For information about the availability group listener, which handles client connection requests, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../Topic/Availability%20Group%20Listeners,%20Client%20Connectivity,%20and%20Application%20Failover%20\(SQL%20Server\).md).  
+>  For information about the availability group listener, which handles client connection requests, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
  **In This Topic:**  
   
@@ -85,7 +85,7 @@ manager: "jhubbard"
 |Primary|Read-write|Read-intent only|Failure|  
 |Primary|Read-write|Read-write or no connection intent specified|Success|  
   
- For information about configuring an availability group to accept client connections to its replicas, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../Topic/Availability%20Group%20Listeners,%20Client%20Connectivity,%20and%20Application%20Failover%20\(SQL%20Server\).md).  
+ For information about configuring an availability group to accept client connections to its replicas, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
 ### Example Connection-Access Configuration  
  Depending on how different availability replicas are configured for connection access, support for client connections might change after an availability group fails over. For example, consider an availability group for which reporting is performed on remote asynchronous-commit secondary replicas. All of the read-only applications for the databases in this availability group set their **Application Intent** connection property to **ReadOnly**, so that all read-only connections are read-intent connections.  
@@ -121,7 +121,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../Topic/Availability%20Group%20Listeners,%20Client%20Connectivity,%20and%20Application%20Failover%20\(SQL%20Server\).md)   
+ [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Statistics](../../../relational-databases/statistics/statistics.md)  
   
   

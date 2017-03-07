@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  A sequence is created independently of the tables by using the **CREATE SEQUENCE** statement. Options enable you to control the increment, maximum and minimum values, starting point, automatic restarting capability, and caching to improve performance. For information about the options, see [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md).  
   
- Unlike identity column values, which are generated when rows are inserted, an application can obtain the next sequence number before inserting the row by calling the [NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md) function. The sequence number is allocated when NEXT VALUE FOR is called even if the number is never inserted into a table. The NEXT VALUE FOR function can be used as the default value for a column in a table definition. Use [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) to get a range of multiple sequence numbers at once.  
+ Unlike identity column values, which are generated when rows are inserted, an application can obtain the next sequence number before inserting the row by calling the [NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md) function. The sequence number is allocated when NEXT VALUE FOR is called even if the number is never inserted into a table. The NEXT VALUE FOR function can be used as the default value for a column in a table definition. Use [sp_sequence_get_range](../../relational-databases/reference/system-stored-procedures/sp-sequence-get-range-transact-sql.md) to get a range of multiple sequence numbers at once.  
   
  A sequence can be defined as any integer data type. If the data type is not specified, a sequence defaults to **bigint**.  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
  The sequence object generates numbers according to its definition, but the sequence object does not control how the numbers are used. Sequence numbers inserted into a table can have gaps when a transaction is rolled back, when a sequence object is shared by multiple tables, or when sequence numbers are allocated without using them in tables. When created with the CACHE option, an unexpected shutdown, such as a power failure, can lose the sequence numbers in the cache.  
   
- If there are multiple instances of the **NEXT VALUE FOR** function specifying the same sequence generator within a single [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement, all those instances return the same value for a given row processed by that [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement. This behavior is consistent with the ANSI standard.  
+ If there are multiple instances of the **NEXT VALUE FOR** function specifying the same sequence generator within a single [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement, all those instances return the same value for a given row processed by that [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement. This behavior is consistent with the ANSI standard.  
   
 ## Typical Use  
  To create an integer sequence number that increments by 1 from -2,147,483,648 to 2,147,483,647, use the following statement.  
@@ -73,10 +73,10 @@ CREATE SEQUENCE Schema.SequenceName
 ```  
   
 ## Managing Sequences  
- For information about sequences, query [sys.sequences](../../relational-databases/system-catalog-views/sys.sequences-transact-sql.md).  
+ For information about sequences, query [sys.sequences](../../relational-databases/reference/system-catalog-views/sys.sequences-transact-sql.md).  
   
 ## Examples  
- There are additional examples in the topics [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md), [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md), and [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md).  
+ There are additional examples in the topics [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md), [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md), and [sp_sequence_get_range](../../relational-databases/reference/system-stored-procedures/sp-sequence-get-range-transact-sql.md).  
   
 ### A. Using a sequence number in a single table  
  The following example creates a schema named Test, a table named Orders, and a sequence named CountBy1, and then inserts rows into the table using the NEXT VALUE FOR function.  
@@ -384,7 +384,7 @@ GO
   
 ```  
   
- [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements that use `SELECT *` will receive the new column as the last column instead of the first column. If this is not acceptable, then you must create an entirely new table, move the data to it, and then recreate the permissions on the new table.  
+ [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements that use `SELECT *` will receive the new column as the last column instead of the first column. If this is not acceptable, then you must create an entirely new table, move the data to it, and then recreate the permissions on the new table.  
   
 ## Related Content  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  
@@ -393,6 +393,6 @@ GO
   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)  
   
- [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../Topic/IDENTITY%20\(Property\)%20\(Transact-SQL\).md)  
+ [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   

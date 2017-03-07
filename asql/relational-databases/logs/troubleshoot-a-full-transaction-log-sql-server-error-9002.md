@@ -25,12 +25,12 @@ manager: "jhubbard"
 # Troubleshoot a Full Transaction Log (SQL Server Error 9002)
   This topic discusses possible responses to a full transaction log and suggests how to avoid it in the future. 
   
-  When the transaction log becomes full, [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] issues a **9002 error**. The log can fill when the database is online, or in recovery. If the log fills while the database is online, the database remains online but can only be read, not updated. If the log fills during recovery, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] marks the database as RESOURCE PENDING. In either case, user action is required to make log space available.  
+  When the transaction log becomes full, [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] issues a **9002 error**. The log can fill when the database is online, or in recovery. If the log fills while the database is online, the database remains online but can only be read, not updated. If the log fills during recovery, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] marks the database as RESOURCE PENDING. In either case, user action is required to make log space available.  
   
 ## Responding to a full transaction log  
  The appropriate response to a full transaction log depends partly on what condition or conditions caused the log to fill. 
  
- To discover what is preventing log truncation in a given case, use the **log_reuse_wait** and **log_reuse_wait_desc** columns of the **sys.database** catalog view. For more information, see [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md). For descriptions of factors that can delay log truncation, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ To discover what is preventing log truncation in a given case, use the **log_reuse_wait** and **log_reuse_wait_desc** columns of the **sys.database** catalog view. For more information, see [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md). For descriptions of factors that can delay log truncation, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 > **IMPORTANT!!**  
 >  If the database was in recovery when the 9002 error occurred, after resolving the problem, recover the database by using [ALTER DATABASE *database_name* SET ONLINE.](https://msdn.microsoft.com/library/bb522682.aspx)  
@@ -52,7 +52,7 @@ manager: "jhubbard"
  These alternatives are discussed in the following sections. Choose a response that fits your situation best.  
   
 ## Back up the log  
- Under the full recovery model or bulk-logged recovery model, if the transaction log has not been backed up recently, backup might be what is preventing log truncation. If the log has never been backed up, you **must create two log backups** to permit the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] to truncate the log to the point of the last backup. Truncating the log frees space for new log records. To keep the log from filling up again, take log backups frequently.  
+ Under the full recovery model or bulk-logged recovery model, if the transaction log has not been backed up recently, backup might be what is preventing log truncation. If the log has never been backed up, you **must create two log backups** to permit the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] to truncate the log to the point of the last backup. Truncating the log frees space for new log records. To keep the log from filling up again, take log backups frequently.  
   
  **To create a transaction log backup**  
   
@@ -111,6 +111,6 @@ Sometimes you just have to end the process; you may have to use the [KILL](https
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
- [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  
+ [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  
   
   

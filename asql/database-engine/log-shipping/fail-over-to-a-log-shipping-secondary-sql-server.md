@@ -1,7 +1,7 @@
 ---
 title: "Fail Over to a Log Shipping Secondary (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -43,7 +43,7 @@ manager: "jhubbard"
 4.  After the secondary servers are synchronized, you can fail over to whichever one you prefer by recovering its secondary database and redirecting clients to that server instance. Recovering puts the database into a consistent state and brings it online.  
   
     > [!NOTE]  
-    >  When you make a secondary database available, you should ensure that its metadata is consistent with the metadata of the original primary database. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../Topic/Manage%20Metadata%20When%20Making%20a%20Database%20Available%20on%20Another%20Server%20Instance%20\(SQL%20Server\).md).  
+    >  When you make a secondary database available, you should ensure that its metadata is consistent with the metadata of the original primary database. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 5.  After you have recovered a secondary database, you can reconfigure it to act as a primary database for other secondary databases.  
   

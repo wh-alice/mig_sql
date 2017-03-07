@@ -70,24 +70,24 @@ Analysis of the source and destination data formats indicates that lookups will 
 ## Lesson Tasks  
 This lesson contains the following tasks:  
   
--   [Step 1: Creating a New Integration Services Project](../Topic/Step%201:%20Creating%20a%20New%20Integration%20Services%20Project.md)  
+-   [Step 1: Creating a New Integration Services Project](../../integration-services/tutorials/lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Step 2: Adding and Configuring a Flat File Connection Manager](../Topic/Step%202:%20Adding%20and%20Configuring%20a%20Flat%20File%20Connection%20Manager.md)  
+-   [Step 2: Adding and Configuring a Flat File Connection Manager](../../integration-services/tutorials/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [Step 3: Adding and Configuring an OLE DB Connection Manager](../Topic/Step%203:%20Adding%20and%20Configuring%20an%20OLE%20DB%20Connection%20Manager.md)  
+-   [Step 3: Adding and Configuring an OLE DB Connection Manager](../../integration-services/tutorials/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [Step 4: Adding a Data Flow Task to the Package](../Topic/Step%204:%20Adding%20a%20Data%20Flow%20Task%20to%20the%20Package.md)  
+-   [Step 4: Adding a Data Flow Task to the Package](../../integration-services/tutorials/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [Step 5: Adding and Configuring the Flat File Source](../Topic/Step%205:%20Adding%20and%20Configuring%20the%20Flat%20File%20Source.md)  
+-   [Step 5: Adding and Configuring the Flat File Source](../../integration-services/tutorials/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Step 6: Adding and Configuring the Lookup Transformations](../Topic/Step%206:%20Adding%20and%20Configuring%20the%20Lookup%20Transformations.md)  
+-   [Step 6: Adding and Configuring the Lookup Transformations](../../integration-services/tutorials/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [Step 7: Adding and Configuring the OLE DB Destination](../Topic/Step%207:%20Adding%20and%20Configuring%20the%20OLE%20DB%20Destination.md)  
+-   [Step 7: Adding and Configuring the OLE DB Destination](../../integration-services/tutorials/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Step 8: Making the Lesson 1 Package Easier to Understand](../Topic/Step%208:%20Making%20the%20Lesson%201%20Package%20Easier%20to%20Understand.md)  
+-   [Step 8: Making the Lesson 1 Package Easier to Understand](../../integration-services/tutorials/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Step 9: Testing the Lesson 1 Tutorial Package](../Topic/Step%209:%20Testing%20the%20Lesson%201%20Tutorial%20Package.md)  
+-   [Step 9: Testing the Lesson 1 Tutorial Package](../../integration-services/tutorials/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## Start the Lesson  
-[Step 1: Creating a New Integration Services Project](../Topic/Step%201:%20Creating%20a%20New%20Integration%20Services%20Project.md)  
+[Step 1: Creating a New Integration Services Project](../../integration-services/tutorials/lesson-1-1-creating-a-new-integration-services-project.md)  
   

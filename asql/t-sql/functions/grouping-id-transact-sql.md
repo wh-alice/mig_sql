@@ -27,7 +27,7 @@ manager: "jhubbard"
 
   Is a function that computes the level of grouping. GROUPING_ID can be used only in the SELECT \<select> list, HAVING, or ORDER BY clauses when GROUP BY is specified.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -38,7 +38,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
   
 ## Arguments  
  <column_expression>  
- Is a *column_expression* in a [GROUP BY](../Topic/GROUP%20BY%20\(Transact-SQL\).md) clause.  
+ Is a *column_expression* in a [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) clause.  
   
 ## Return Type  
  **int**  
@@ -90,7 +90,7 @@ SELECT 0 FROM T GROUP BY A,B
 ## Examples  
   
 ### A. Using GROUPING_ID to identify grouping levels  
- The following example returns the count of employees by `Name` and `Title`, `Name,` and company total in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. `GROUPING_ID()` is used to create a value for each row in the `Title` column that identifies its level of aggregation.  
+ The following example returns the count of employees by `Name` and `Title`, `Name,` and company total in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database. `GROUPING_ID()` is used to create a value for each row in the `Title` column that identifies its level of aggregation.  
   
 ```  
 SELECT D.Name  
@@ -114,7 +114,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle);
 ### B. Using GROUPING_ID to filter a result set  
   
 #### Simple Example  
- In the following code, to return only the rows that have a count of employees by title, remove the comment characters from `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0` in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. To return only rows with a count of employees by department, remove the comment characters from `HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;`.  
+ In the following code, to return only the rows that have a count of employees by title, remove the comment characters from `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0` in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database. To return only rows with a count of employees by department, remove the comment characters from `HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;`.  
   
 ```  
 SELECT D.Name  
@@ -149,7 +149,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle)
 |NULL|NULL|3|12|NULL|  
   
 #### Complex Example  
- The following example uses `GROUPING_ID()` to filter a result set that contains multiple grouping levels by grouping level. Similar code can be used to create a view that has several grouping levels and a stored procedure that calls the view by passing a parameter that filters the view by grouping level. The example uses the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ The following example uses `GROUPING_ID()` to filter a result set that contains multiple grouping levels by grouping level. Similar code can be used to create a view that has several grouping levels and a stored procedure that calls the view by passing a parameter that filters the view by grouping level. The example uses the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 DECLARE @Grouping nvarchar(50);  
@@ -241,7 +241,7 @@ ORDER BY
 >  GROUPING and GROUPING_ID can be used n a HAVING clause to filter a result set.  
   
 #### ROLLUP Example  
- In this example, all grouping levels do not appear as they do in the following CUBE example. If the order of the columns in the `ROLLUP` list is changed, the level values in the `Grouping Level` column will also have to be changed. The example uses the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database.  
+ In this example, all grouping levels do not appear as they do in the following CUBE example. If the order of the columns in the `ROLLUP` list is changed, the level values in the `Grouping Level` column will also have to be changed. The example uses the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database.  
   
 ```  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
@@ -322,7 +322,7 @@ ORDER BY GROUPING_ID(DATEPART(mm,OrderDate)
 #### CUBE Example  
  In this example, the `GROUPING_ID()` function is used to create a value for each row in the `Grouping Level` column to identify the level of grouping.  
   
- Unlike `ROLLUP` in the previous example, `CUBE` outputs all grouping levels. If the order of the columns in the `CUBE` list is changed, the level values in the `Grouping Level` column will also have to be changed. The example uses the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database  
+ Unlike `ROLLUP` in the previous example, `CUBE` outputs all grouping levels. If the order of the columns in the `CUBE` list is changed, the level values in the `Grouping Level` column will also have to be changed. The example uses the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database  
   
 ```  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
@@ -414,6 +414,6 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
   
 ## See Also  
  [GROUPING &#40;Transact-SQL&#41;](../../t-sql/functions/grouping-transact-sql.md)   
- [GROUP BY &#40;Transact-SQL&#41;](../Topic/GROUP%20BY%20\(Transact-SQL\).md)  
+ [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
   
   

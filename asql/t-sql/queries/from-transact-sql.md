@@ -39,11 +39,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # FROM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Specifies the tables, views, derived tables, and joined tables used in DELETE, SELECT, and UPDATE statements in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. In the SELECT statement, the FROM clause is required except when the select list contains only constants, variables, and arithmetic expressions (no column names).  
+  Specifies the tables, views, derived tables, and joined tables used in DELETE, SELECT, and UPDATE statements in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. In the SELECT statement, the FROM clause is required except when the select list contains only constants, variables, and arithmetic expressions (no column names).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -156,32 +156,32 @@ FROM { <table_source> [ ,...n ] }
   
 ## Arguments  
  <table_source>  
- Specifies a table, view, table variable, or derived table source, with or without an alias, to use in the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement. Up to 256 table sources can be used in a statement, although the limit varies depending on available memory and the complexity of other expressions in the query. Individual queries may not support up to 256 table sources.  
+ Specifies a table, view, table variable, or derived table source, with or without an alias, to use in the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement. Up to 256 table sources can be used in a statement, although the limit varies depending on available memory and the complexity of other expressions in the query. Individual queries may not support up to 256 table sources.  
   
 > [!NOTE]  
 >  Query performance may suffer with lots of tables referenced in a query. Compilation and optimization time is also affected by additional factors. These include the presence of indexes and indexed views on each <table_source> and the size of the <select_list> in the SELECT statement.  
   
- The order of table sources after the FROM keyword does not affect the result set that is returned. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns errors when duplicate names appear in the FROM clause.  
+ The order of table sources after the FROM keyword does not affect the result set that is returned. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns errors when duplicate names appear in the FROM clause.  
   
  *table_or_view_name*  
  Is the name of a table or view.  
   
- If the table or view exists in another database on the same instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], use a fully qualified name in the form *database*.*schema*.*object_name*.  
+ If the table or view exists in another database on the same instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], use a fully qualified name in the form *database*.*schema*.*object_name*.  
   
- If the table or view exists outside the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]l, use a four-part name in the form *linked_server*.*catalog*.*schema*.*object*. For more information, see [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). A four-part name that is constructed by using the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) function as the server part of the name can also be used to specify the remote table source. When OPENDATASOURCE is specified, *database_name* and *schema_name* may not apply to all data sources and is subject to the capabilities of the OLE DB provider that accesses the remote object.  
+ If the table or view exists outside the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]l, use a four-part name in the form *linked_server*.*catalog*.*schema*.*object*. For more information, see [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addlinkedserver-transact-sql.md). A four-part name that is constructed by using the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) function as the server part of the name can also be used to specify the remote table source. When OPENDATASOURCE is specified, *database_name* and *schema_name* may not apply to all data sources and is subject to the capabilities of the OLE DB provider that accesses the remote object.  
   
  [AS] *table_alias*  
- Is an alias for *table_source* that can be used either for convenience or to distinguish a table or view in a self-join or subquery. An alias is frequently a shortened table name used to refer to specific columns of the tables in a join. If the same column name exists in more than one table in the join, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] requires that the column name be qualified by a table name, view name, or alias. The table name cannot be used if an alias is defined.  
+ Is an alias for *table_source* that can be used either for convenience or to distinguish a table or view in a self-join or subquery. An alias is frequently a shortened table name used to refer to specific columns of the tables in a join. If the same column name exists in more than one table in the join, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] requires that the column name be qualified by a table name, view name, or alias. The table name cannot be used if an alias is defined.  
   
  When a derived table, rowset or table-valued function, or operator clause (such as PIVOT or UNPIVOT) is used, the required *table_alias* at the end of the clause is the associated table name for all columns, including grouping columns, returned.  
   
  WITH (<table_hint> )  
- Specifies that the query optimizer use an optimization or locking strategy with this table and for this statement. For more information, see [Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+ Specifies that the query optimizer use an optimization or locking strategy with this table and for this statement. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  *rowset_function*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
  Specifies one of the rowset functions, such as OPENROWSET, that returns an object that can be used instead of a table reference. For more information about a list of rowset functions, see [Rowset Functions &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md).  
   
@@ -190,7 +190,7 @@ FROM { <table_source> [ ,...n ] }
  *bulk_column_alias*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
  Is an optional alias to replace a column name in the result set. Column aliases are allowed only in SELECT statements that use the OPENROWSET function with the BULK option. When you use *bulk_column_alias*, specify an alias for every table column in the same order as the columns in the file.  
   
@@ -203,14 +203,14 @@ FROM { <table_source> [ ,...n ] }
  OPENXML <openxml_clause>  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
  Provides a rowset view over an XML document. For more information, see [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   
  *derived_table*  
  Is a subquery that retrieves rows from the database. *derived_table* is used as input to the outer query.  
   
- *derived* *_table* can use the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] table value constructor feature to specify multiple rows. For example, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. For more information, see [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
+ *derived* *_table* can use the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] table value constructor feature to specify multiple rows. For example, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. For more information, see [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
  *column_alias*  
  Is an optional alias to replace a column name in the result set of the derived table. Include one column alias for each column in the select list, and enclose the complete list of column aliases in parentheses.  
@@ -218,7 +218,7 @@ FROM { <table_source> [ ,...n ] }
  *table_or_view_name* FOR SYSTEM_TIME <system_time>  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
  Specifies that a specific version of data is returned from the specified temporal table and its linked system-versioned history table  
   
@@ -226,25 +226,25 @@ FROM { <table_source> [ ,...n ] }
  Specifies that a sample of data from the table is returned. The sample may be approximate. This clause can be used on any primary or joined table in a SELECT, UPDATE, or DELETE statement. TABLESAMPLE cannot be specified with views.  
   
 > [!NOTE]  
->  When you use TABLESAMPLE against databases that are upgraded to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], the compatibility level of the database is set to 110 or higher, PIVOT is not allowed in a recursive common table expression (CTE) query. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+>  When you use TABLESAMPLE against databases that are upgraded to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], the compatibility level of the database is set to 110 or higher, PIVOT is not allowed in a recursive common table expression (CTE) query. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
  SYSTEM  
- Is an implementation-dependent sampling method specified by ISO standards. In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], this is the only sampling method available and is applied by default. SYSTEM applies a page-based sampling method in which a random set of pages from the table is chosen for the sample, and all the rows on those pages are returned as the sample subset.  
+ Is an implementation-dependent sampling method specified by ISO standards. In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], this is the only sampling method available and is applied by default. SYSTEM applies a page-based sampling method in which a random set of pages from the table is chosen for the sample, and all the rows on those pages are returned as the sample subset.  
   
  *sample_number*  
  Is an exact or approximate constant numeric expression that represents the percent or number of rows. When specified with PERCENT, *sample_number* is implicitly converted to a **float** value; otherwise, it is converted to **bigint**. PERCENT is the default.  
   
  PERCENT  
- Specifies that a *sample_number* percent of the rows of the table should be retrieved from the table. When PERCENT is specified, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns an approximate of the percent specified. When PERCENT is specified the *sample_number* expression must evaluate to a value from 0 to 100.  
+ Specifies that a *sample_number* percent of the rows of the table should be retrieved from the table. When PERCENT is specified, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns an approximate of the percent specified. When PERCENT is specified the *sample_number* expression must evaluate to a value from 0 to 100.  
   
  ROWS  
- Specifies that approximately *sample_number* of rows will be retrieved. When ROWS is specified, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns an approximation of the number of rows specified. When ROWS is specified, the *sample_number* expression must evaluate to an integer value greater than zero.  
+ Specifies that approximately *sample_number* of rows will be retrieved. When ROWS is specified, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns an approximation of the number of rows specified. When ROWS is specified, the *sample_number* expression must evaluate to an integer value greater than zero.  
   
  REPEATABLE  
- Indicates that the selected sample can be returned again. When specified with the same *repeat_seed* value, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will return the same subset of rows as long as no changes have been made to any rows in the table. When specified with a different *repeat_seed* value, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will likely return some different sample of the rows in the table. The following actions to the table are considered changes: insert, update, delete, index rebuild or defragmentation, and database restore or attach.  
+ Indicates that the selected sample can be returned again. When specified with the same *repeat_seed* value, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will return the same subset of rows as long as no changes have been made to any rows in the table. When specified with a different *repeat_seed* value, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will likely return some different sample of the rows in the table. The following actions to the table are considered changes: insert, update, delete, index rebuild or defragmentation, and database restore or attach.  
   
  *repeat_seed*  
- Is a constant integer expression used by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to generate a random number. *repeat_seed* is **bigint**. If *repeat_seed* is not specified, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] assigns a value at random. For a specific *repeat_seed* value, the sampling result is always the same if no changes have been applied to the table. The *repeat_seed* expression must evaluate to an integer greater than zero.  
+ Is a constant integer expression used by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to generate a random number. *repeat_seed* is **bigint**. If *repeat_seed* is not specified, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] assigns a value at random. For a specific *repeat_seed* value, the sampling result is always the same if no changes have been applied to the table. The *repeat_seed* expression must evaluate to an integer greater than zero.  
   
  <joined_table>  
  Is a result set that is the product of two or more tables. For multiple joins, use parentheses to change the natural order of the joins.  
@@ -265,9 +265,9 @@ FROM { <table_source> [ ,...n ] }
  Specifies all rows from the right table not meeting the join condition are included in the result set, and output columns that correspond to the other table are set to NULL, in addition to all rows returned by the inner join.  
   
  <join_hint>  
- For [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)], specifies that the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] query optimizer use one join hint, or execution algorithm, per join specified in the query FROM clause. For more information, see [Join Hints &#40;Transact-SQL&#41;](../Topic/Join%20Hints%20\(Transact-SQL\).md).  
+ For [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)], specifies that the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] query optimizer use one join hint, or execution algorithm, per join specified in the query FROM clause. For more information, see [Join Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md).  
   
- For [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)], these join hints apply to INNER joins on two distribution incompatible columns. They can improve query performance by restricting the amount of data movement that occurs during query processing. The allowable join hints for [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)] are as follows:  
+ For [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)], these join hints apply to INNER joins on two distribution incompatible columns. They can improve query performance by restricting the amount of data movement that occurs during query processing. The allowable join hints for [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)] are as follows:  
   
  REDUCE  
  Reduces the number of rows to be moved for the table on the right side of the join in order to make two distribution incompatible tables compatible. The REDUCE hint is also called a semi-join hint.  
@@ -276,7 +276,7 @@ FROM { <table_source> [ ,...n ] }
  Causes the values in the joining column from the table on the left side of the join to be replicated to all nodes. The table on the right is joined to the replicated version of those columns.  
   
  REDISTRIBUTE  
- Forces two data sources to be distributed on columns specified in the JOIN clause. For a distributed table, [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)] will perform a shuffle move. For a replicated table, [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)] will perform a trim move. To understand these move types, see the "DMS Query Plan Operations" section in the "Understanding Query Plans" topic in the [!INCLUDE[pdw-product-documentation](../../relational-databases/system-dynamic-management-views/includes/pdw-product-documentation-md.md)]. This hint can improve performance when the query plan is using a broadcast move to resolve a distribution incompatible join.  
+ Forces two data sources to be distributed on columns specified in the JOIN clause. For a distributed table, [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)] will perform a shuffle move. For a replicated table, [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)] will perform a trim move. To understand these move types, see the "DMS Query Plan Operations" section in the "Understanding Query Plans" topic in the [!INCLUDE[pdw-product-documentation](../../relational-databases/reference/system-dynamic-management-views/includes/pdw-product-documentation-md.md)]. This hint can improve performance when the query plan is using a broadcast move to resolve a distribution incompatible join.  
   
  JOIN  
  Indicates that the specified join operation should occur between the specified table sources or views.  
@@ -292,7 +292,7 @@ ON (p.ProductID = v.ProductID);
   
 ```  
   
- When the condition specifies columns, the columns do not have to have the same name or same data type; however, if the data types are not the same, they must be either compatible or types that [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] can implicitly convert. If the data types cannot be implicitly converted, the condition must explicitly convert the data type by using the CONVERT function.  
+ When the condition specifies columns, the columns do not have to have the same name or same data type; however, if the data types are not the same, they must be either compatible or types that [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] can implicitly convert. If the data types cannot be implicitly converted, the condition must explicitly convert the data type by using the CONVERT function.  
   
  There can be predicates that involve only one of the joined tables in the ON clause. Such predicates also can be in the WHERE clause in the query. Although the placement of such predicates does not make a difference for INNER joins, they might cause a different result when OUTER joins are involved. This is because the predicates in the ON clause are applied to the table before the join, whereas the WHERE clause is semantically applied to the result of the join.  
   
@@ -317,7 +317,7 @@ ON (p.ProductID = v.ProductID);
  Is a table source as defined in the previous argument. For more information, see the Remarks section.  
   
  *table_source* PIVOT <pivot_clause>  
- Specifies that the *table_source* is pivoted based on the *pivot_column*. *table_source* is a table or table expression. The output is a table that contains all columns of the *table_source* except the *pivot_column* and *value_column*. The columns of the *table_source*, except the *pivot_column* and *value_column*, are called the grouping columns of the pivot operator. For more information about PIVOT and UNPIVOT, see [Using PIVOT and UNPIVOT](../Topic/Using%20PIVOT%20and%20UNPIVOT.md).  
+ Specifies that the *table_source* is pivoted based on the *pivot_column*. *table_source* is a table or table expression. The output is a table that contains all columns of the *table_source* except the *pivot_column* and *value_column*. The columns of the *table_source*, except the *pivot_column* and *value_column*, are called the grouping columns of the pivot operator. For more information about PIVOT and UNPIVOT, see [Using PIVOT and UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
  PIVOT performs a grouping operation on the input table with regard to the grouping columns and returns one row for each group. Additionally, the output contains one column for each value specified in the *column_list* that appears in the *pivot_column* of the *input_table*.  
   
@@ -345,33 +345,33 @@ ON (p.ProductID = v.ProductID);
  Is the alias name of the output table. *pivot_table_alias* must be specified.  
   
  UNPIVOT \< unpivot_clause >  
- Specifies that the input table is narrowed from multiple columns in *column_list* into a single column called *pivot_column*. For more information about PIVOT and UNPIVOT, see [Using PIVOT and UNPIVOT](../Topic/Using%20PIVOT%20and%20UNPIVOT.md).  
+ Specifies that the input table is narrowed from multiple columns in *column_list* into a single column called *pivot_column*. For more information about PIVOT and UNPIVOT, see [Using PIVOT and UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
  AS OF <date_time>  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
  Returns a table with single record for each row containing the values that were actual (current) at the specified point in time in the past. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values in the row that was valid at the point in time specified by the *<date_time>* parameter. The value for a row is deemed valid if the *system_start_time_column_name* value is less than or equal to the *<date_time>* parameter value and the *system_end_time_column_name* value is greater than the *<date_time>* parameter value.   
   
  FROM <start_date_time> TO <end_date_time>  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
  Returns a table with the values for all record versions that were active within the specified time range, regardless of whether they started being active before the *<start_date_time>* parameter value for the FROM argument or ceased being active after the *<end_date_time>* parameter value for the TO argument. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values for all row versions that were active at any time during the time range specified. Rows that became active exactly on the lower boundary defined by the FROM endpoint are included and rows that became active exactly on the upper boundary defined by the TO endpoint are not included.  
   
  BETWEEN <start_date_time> AND <end_date_time>  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
  Same as above in the  **FROM <start_date_time> TO <end_date_time>** description, except it includes rows that became active on the upper boundary defined by the <end_date_time> endpoint.  
   
  CONTAINED IN (<start_date_time> , <end_date_time>)  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
  Returns a table with the values for all record versions that were opened and closed within the specified time range defined by the two datetime values for the CONTAINED IN argument. Rows that became active exactly on the lower boundary or ceased being active exactly on the upper boundary are included.  
   
@@ -385,7 +385,7 @@ ON (p.ProductID = v.ProductID);
   
  A self-join is a table that is joined to itself. Insert or update operations that are based on a self-join follow the order in the FROM clause.  
   
- Because [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] considers distribution and cardinality statistics from linked servers that provide column distribution statistics, the REMOTE join hint is not required to force evaluating a join remotely. The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] query processor considers remote statistics and determines whether a remote-join strategy is appropriate. REMOTE join hint is useful for providers that do not provide column distribution statistics.  
+ Because [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] considers distribution and cardinality statistics from linked servers that provide column distribution statistics, the REMOTE join hint is not required to force evaluating a join remotely. The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] query processor considers remote statistics and determines whether a remote-join strategy is appropriate. REMOTE join hint is useful for providers that do not provide column distribution statistics.  
   
 ## Using APPLY  
  Both the left and right operands of the APPLY operator are table expressions. The main difference between these operands is that the *right_table_source* can use a table-valued function that takes a column from the *left_table_source* as one of the arguments of the function. The *left_table_source* can include table-valued functions, but it cannot contain arguments that are columns from the *right_table_source*.  
@@ -415,9 +415,9 @@ ON (p.ProductID = v.ProductID);
   
          `pivot_column = CONVERT(<data type of pivot_column>, 'output_column')`  
   
-    2.  *aggregate_function* is evaluated against the *value_column* on this subgroup and its result is returned as the value of the corresponding *output_column*. If the subgroup is empty, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] generates a null value for that *output_column*. If the aggregate function is COUNT and the subgroup is empty, zero (0) is returned.  
+    2.  *aggregate_function* is evaluated against the *value_column* on this subgroup and its result is returned as the value of the corresponding *output_column*. If the subgroup is empty, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] generates a null value for that *output_column*. If the aggregate function is COUNT and the subgroup is empty, zero (0) is returned.  
   
- For more information about PIVOT and UNPIVOT including examples, see [Using PIVOT and UNPIVOT](../Topic/Using%20PIVOT%20and%20UNPIVOT.md).  
+ For more information about PIVOT and UNPIVOT including examples, see [Using PIVOT and UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
 ## Permissions  
  Requires the permissions for the DELETE, SELECT, or UPDATE statement.  
@@ -425,7 +425,7 @@ ON (p.ProductID = v.ProductID);
 ## Examples  
   
 ### A. Using a simple FROM clause  
- The following example retrieves the `TerritoryID` and `Name` columns from the `SalesTerritory` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] sample database.  
+ The following example retrieves the `TerritoryID` and `Name` columns from the `SalesTerritory` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] sample database.  
   
 ```tsql  
   
@@ -463,7 +463,7 @@ FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;
 ```  
   
 ### C. Using the SQL-92 CROSS JOIN syntax  
- The following example returns the cross product of the two tables `Employee` and `Department` in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. A list of all possible combinations of `BusinessEntityID` rows and all `Department` name rows are returned.  
+ The following example returns the cross product of the two tables `Employee` and `Department` in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database. A list of all possible combinations of `BusinessEntityID` rows and all `Department` name rows are returned.  
   
 ```wql  
   
@@ -474,7 +474,7 @@ ORDER BY e.BusinessEntityID, d.Name ;
 ```  
   
 ### D. Using the SQL-92 FULL OUTER JOIN syntax  
- The following example returns the product name and any corresponding sales orders in the `SalesOrderDetail` table in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] database. It also returns any sales orders that have no product listed in the `Product` table, and any products with a sales order other than the one listed in the `Product` table.  
+ The following example returns the product name and any corresponding sales orders in the `SalesOrderDetail` table in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] database. It also returns any sales orders that have no product listed in the `Product` table, and any products with a sales order other than the one listed in the `Product` table.  
   
 ```tsql  
 -- The OUTER keyword following the FULL keyword is optional.  
@@ -606,7 +606,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
  The following example uses the FOR SYSTEM_TIME AS OF date_time_literal_or_variable argument to return table rows that were actual (current) as of January 1, 2014.  
   
@@ -672,7 +672,7 @@ WHERE ManagerID = 5
   
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### N. Using a simple FROM clause  
  The following example retrieves the `SalesTerritoryID` and `SalesTerritoryRegion` columns from the `DimSalesTerritory` table.  
@@ -858,9 +858,9 @@ ON dp.ProductKey = fis.ProductKey;
 ```  
   
 ## See Also  
- [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
+ [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/containstable-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
+ [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/freetexttable-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

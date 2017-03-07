@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Process ODBC Errors (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   Two ODBC function calls can be used to retrieve ODBC messages: [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) and [SQLGetDiagField](../../relational-databases/extended-stored-procedures-reference/sqlgetdiagfield.md). To obtain primary ODBC-related information in the **SQLState**, **pfNative**, and **ErrorMessage** diagnostic fields, call [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) until it returns SQL_NO_DATA. For each diagnostic record, [SQLGetDiagField](../../relational-databases/extended-stored-procedures-reference/sqlgetdiagfield.md) can be called to retrieve individual fields. All driver-specific fields must be retrieved using **SQLGetDiagField**.  
   
@@ -26,7 +26,7 @@ manager: "jhubbard"
 ## Example  
   
 ### Description  
- This sample shows a simple error handler that calls [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) for the standard ODBC information. It then tests for a valid connection, and if one exists, it calls **SQLGetDiagField** for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ODBC driver-specific diagnostic fields. This sample is not supported on IA64.  
+ This sample shows a simple error handler that calls [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) for the standard ODBC information. It then tests for a valid connection, and if one exists, it calls **SQLGetDiagField** for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ODBC driver-specific diagnostic fields. This sample is not supported on IA64.  
   
  This sample was developed for ODBC version 3.0 or later.  
   
@@ -35,13 +35,13 @@ manager: "jhubbard"
   
  You will need an ODBC data source called AdventureWorks, whose default database is the AdventureWorks sample database. (You can download the AdventureWorks sample database from the [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) home page.) This data source must be based on the ODBC driver that is supplied by the operating system (the driver name is "SQL Server"). If you will build and run this sample as a 32-bit application on a 64-bit operating system, you must create the ODBC data source with the ODBC Administrator in %windir%\SysWOW64\odbcad32.exe.  
   
- This sample connects to your computer's default [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. To connect to a named instance, change the definition of the ODBC data source to specify the instance using the following format: server\namedinstance. By default, [!INCLUDE[ssExpress](../../database-engine/configure/windows/includes/ssexpress-md.md)] installs to a named instance.  
+ This sample connects to your computer's default [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. To connect to a named instance, change the definition of the ODBC data source to specify the instance using the following format: server\namedinstance. By default, [!INCLUDE[ssExpress](../../a9notintoc/includes/ssexpress-md.md)] installs to a named instance.  
   
- Execute the first ([!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]) code listing to create the stored procedure used by this sample.  
+ Execute the first ([!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]) code listing to create the stored procedure used by this sample.  
   
  Compile the second (C++) code listing with odbc32.lib. Then, execute the program.  
   
- Execute the third ([!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]) code listing to delete the stored procedure used by this sample.  
+ Execute the third ([!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]) code listing to delete the stored procedure used by this sample.  
   
 ### Code  
   

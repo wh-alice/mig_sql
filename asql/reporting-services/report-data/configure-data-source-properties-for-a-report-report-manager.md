@@ -24,7 +24,7 @@ manager: "erikre"
   
 ### To configure an embedded data source  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md).  
   
 2.  In Report Manager, navigate to the **Contents** page. Navigate to the report that you want to configure a report-specific data source for, and open the report.  
   
@@ -38,7 +38,7 @@ manager: "erikre"
   
 7.  For **Connection String**, specify the connection string that the report server uses to connect to the data source. It is recommended that you do not specify credentials in the connection string.  
   
-     The following example illustrates a connection string for connecting to the local [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database:  
+     The following example illustrates a connection string for connecting to the local [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] database:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -57,11 +57,11 @@ manager: "erikre"
  For more information about configuring credentials, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). For more information about the unattended execution account, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install/windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## See Also  
- [Contents Page &#40;Report Manager&#41;](../Topic/Contents%20Page%20\(Report%20Manager\).md)   
- [New Data Source Page &#40;Report Manager&#41;](../Topic/New%20Data%20Source%20Page%20\(Report%20Manager\).md)   
+ [Contents Page &#40;Report Manager&#41;](../../a9retired/contents-page-report-manager.md)   
+ [New Data Source Page &#40;Report Manager&#41;](../../a9retired/new-data-source-page-report-manager.md)   
  [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Shared%20Data%20Source%20\(Report%20Manager\).md)   
- [Data Sources Properties Page &#40;Report Manager&#41;](../Topic/Data%20Sources%20Properties%20Page%20\(Report%20Manager\).md)  
+ [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../../a9retired/create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Data Sources Properties Page &#40;Report Manager&#41;](../../a9retired/data-sources-properties-page-report-manager.md)  
   
   

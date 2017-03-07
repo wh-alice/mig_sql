@@ -26,11 +26,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # DROP EVENT NOTIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Removes an event notification trigger from the current database.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -43,7 +43,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
   
 ## Arguments  
  *notification_name*  
- Is the name of the event notification to remove. Multiple event notifications can be specified. To see a list of currently created event notifications, use [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.event-notifications-transact-sql.md).  
+ Is the name of the event notification to remove. Multiple event notifications can be specified. To see a list of currently created event notifications, use [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.event-notifications-transact-sql.md).  
   
  SERVER  
  Indicates the scope of the event notification applies to the current server. SERVER must be specified if it was specified when the event notification was created.  
@@ -83,7 +83,7 @@ ON DATABASE;
 ## See Also  
  [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.event-notifications-transact-sql.md)   
- [sys.events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.events-transact-sql.md)  
+ [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.event-notifications-transact-sql.md)   
+ [sys.events &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.events-transact-sql.md)  
   
   

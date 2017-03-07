@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # XQuery Expressions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Topics that describe the XQuery expressions.  
   

@@ -46,14 +46,14 @@ manager: "jhubbard"
   
  A specific file format might implement properties of three types:  
   
--   Generic properties defined by [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)].  
+-   Generic properties defined by [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)].  
   
--   Category-specific properties defined by [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)].  
+-   Category-specific properties defined by [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)].  
   
 -   Custom, application-specific properties defined by the software vendor.  
   
 ##  <a name="filtdump"></a> Finding Information about Available Properties by using FILTDUMP.EXE  
- To learn what properties are discovered and extracted by an installed IFilter, you can install and run the **filtdump.exe** utility, which is part of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows SDK.  
+ To learn what properties are discovered and extracted by an installed IFilter, you can install and run the **filtdump.exe** utility, which is part of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows SDK.  
   
  You run **filtdump.exe** from the command prompt and provide a single argument. This argument is the name of an individual file that has a file type for which an IFilter is installed. The utility displays a list of all the properties discovered by the IFilter in the document, with their property set GUIDs, integer IDs, and additional information.  
   

@@ -19,9 +19,9 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Data Mining Solutions
-  A data mining solution is an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] solution that contains one or more data mining projects.  
+  A data mining solution is an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] solution that contains one or more data mining projects.  
   
- The topics in this section provide information about how to design and implement an integrated data mining solution by using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)]. For an overview of the data mining design process and related tools, see [Data Mining Concepts](../../analysis-services/data-mining/data-mining-concepts.md).  
+ The topics in this section provide information about how to design and implement an integrated data mining solution by using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)]. For an overview of the data mining design process and related tools, see [Data Mining Concepts](../../analysis-services/data-mining/data-mining-concepts.md).  
   
  For more information about additional projects types that are useful for data mining, see [Related Projects for Data Mining Solutions](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md).  
   
@@ -43,11 +43,11 @@ manager: "jhubbard"
      This is the preferred method for creating data mining models, as processing and querying is generally fastest against relational data sources. You can also easily move and backup models between servers by using the EXPORT and IMPORT commands.  
   
 ##  <a name="bkmk_Deploy"></a> Deploying Data Mining Solutions  
- The instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] to which you deploy the solution must be running in a mode that supports multidimensional objects and data mining objects; that is, you cannot deploy data mining objects to an instance that hosts tabular models or [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data.  
+ The instance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] to which you deploy the solution must be running in a mode that supports multidimensional objects and data mining objects; that is, you cannot deploy data mining objects to an instance that hosts tabular models or [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data.  
   
  Therefore, when you create a data mining solution in Visual Studio, be sure to use the template, **Analysis Services Multidimensional and Data Mining Project**.  
   
- When you deploy the solution, the objects used for data mining are created in the specified [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance, in a database with the same name as the solution file.  
+ When you deploy the solution, the objects used for data mining are created in the specified [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance, in a database with the same name as the solution file.  
   
  For more information about how to deploy both relational and multidimensional solutions, see [Deployment of Data Mining Solutions](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md).  
   

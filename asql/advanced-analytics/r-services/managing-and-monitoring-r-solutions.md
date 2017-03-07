@@ -16,11 +16,11 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Managing and Monitoring R Solutions
-  Database administrators must integrate competing projects and priorities into a single point of contact: the database server. They must provide data access not just to data scientists but to a variety of report developers, business analysts, and business data consumers, while maintaining the health of operational and reporting data stores. In the enterprise, the DBA is a critical part of building and deploying an effective infrastructure for data science. [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] provides many benefits to the database administrator who supports the data science role.  
+  Database administrators must integrate competing projects and priorities into a single point of contact: the database server. They must provide data access not just to data scientists but to a variety of report developers, business analysts, and business data consumers, while maintaining the health of operational and reporting data stores. In the enterprise, the DBA is a critical part of building and deploying an effective infrastructure for data science. [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] provides many benefits to the database administrator who supports the data science role.  
   
--   **Security.** The architecture of [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] keeps your databases secure and isolates the execution of R sessions from the operation of the database instance .  
+-   **Security.** The architecture of [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] keeps your databases secure and isolates the execution of R sessions from the operation of the database instance .  
   
-     You can specify who has permission to execute the R scripts and ensure that the data used in R jobs is managed using the same security roles that are defined in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+     You can specify who has permission to execute the R scripts and ensure that the data used in R jobs is managed using the same security roles that are defined in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 -   **Reliability.** R sessions are executed in a separate process to ensure that your server continues to run as usual even if the R session encounters issues. Low privilege physical user accounts are used to contain and isolate R instances.   
   

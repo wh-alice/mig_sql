@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Deprecated Analysis Services Features in SQL Server 2016
-  A *deprecated feature* is a feature will be cut from the product in a future release, but is still supported and included in the current release to maintain backward compatibility. Typically,  a deprecated feature is removed in a major release, often within two releases of the original  announcement. For example, deprecated features announced in [!INCLUDE[ssSQL11](../analysis-services/includes/sssql11-md.md)] are likely to be unsupported by [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+  A *deprecated feature* is a feature will be cut from the product in a future release, but is still supported and included in the current release to maintain backward compatibility. Typically,  a deprecated feature is removed in a major release, often within two releases of the original  announcement. For example, deprecated features announced in [!INCLUDE[ssSQL11](../a9notintoc/includes/sssql11-md.md)] are likely to be unsupported by [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)].  
   
  **Not supported in the next major release of SQL Server**  
   
@@ -36,7 +36,7 @@ manager: "erikre"
 |||  
 |-|-|  
 |**Category**|**Feature**|  
-|Multidimensional|SQL Server table notifications for proactive caching.  <br />The replacement is to use polling for proactive caching. <br />See [Proactive Caching &#40;Dimensions&#41;](../analysis-services/multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md) and [Proactive Caching &#40;Partitions&#41;](../Topic/Proactive%20Caching%20\(Partitions\).md).|  
+|Multidimensional|SQL Server table notifications for proactive caching.  <br />The replacement is to use polling for proactive caching. <br />See [Proactive Caching &#40;Dimensions&#41;](../analysis-services/multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md) and [Proactive Caching &#40;Partitions&#41;](../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
 |Multidimensional|Session cubes. There is no replacement.|  
 |Multidimensional|Local cubes. There is no replacement.|  
 |Tabular|Tabular model 1100 and 1103 compatibility levels will not be supported in a future release. The replacement is to set models at compatibility level 1200, converting model definitions to tabular metadata. See [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
@@ -45,7 +45,7 @@ manager: "erikre"
 |Trace Management Objects and Trace APIs|Microsoft.AnalysisServices.Trace objects (contains the APIs for Analysis Services Trace and Replay objects). The replacement is multi-part:<br /><br /> -   Trace Configuration: Microsoft.SqlServer.Management.XEvent<br />-   Trace Reading: Microsoft.SqlServer.XEvent.Linq<br />-   Trace Replay: None|  
   
 > [!NOTE]  
->  Previously deprecated feature announcements from [!INCLUDE[ssSQL14](../analysis-services/includes/sssql14-md.md)] remain in effect. Because the code supporting those features has not yet been cut from the product, many  of these features are still present in this release. While previously deprecated features might be accessible, they are still considered deprecated and could be physically removed from the product at any point during the [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)] release. We strongly recommend that you avoid using deprecated features in any new models or applications based on [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] in [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+>  Previously deprecated feature announcements from [!INCLUDE[ssSQL14](../a9notintoc/includes/sssql14-md.md)] remain in effect. Because the code supporting those features has not yet been cut from the product, many  of these features are still present in this release. While previously deprecated features might be accessible, they are still considered deprecated and could be physically removed from the product at any point during the [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)] release. We strongly recommend that you avoid using deprecated features in any new models or applications based on [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] in [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)].  
   
 ## See Also  
  [Analysis Services Backward Compatibility](../analysis-services/analysis-services-backward-compatibility.md)   

@@ -29,16 +29,16 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Move User Databases
-  In [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you can move the data, log, and full-text catalog files of a user database to a new location by specifying the new file location in the FILENAME clause of the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement. This method applies to moving database files within the same instance [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. To move a database to another instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or to another server, use [backup and restore](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) or [detach and attach operations](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md).  
+  In [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], you can move the data, log, and full-text catalog files of a user database to a new location by specifying the new file location in the FILENAME clause of the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement. This method applies to moving database files within the same instance [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. To move a database to another instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] or to another server, use [backup and restore](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) or [detach and attach operations](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md).  
   
 ## Considerations  
- When you move a database onto another server instance, to provide a consistent experience to users and applications, you might have to re-create some or all the metadata for the database. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../Topic/Manage%20Metadata%20When%20Making%20a%20Database%20Available%20on%20Another%20Server%20Instance%20\(SQL%20Server\).md).  
+ When you move a database onto another server instance, to provide a consistent experience to users and applications, you might have to re-create some or all the metadata for the database. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
- Some features of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] change the way that the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] stores information in the database files. These features are restricted to specific editions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. A database that contains these features cannot be moved to an edition of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that does not support them. Use the sys.dm_db_persisted_sku_features dynamic management view to list all edition-specific features that are enabled in the current database.  
+ Some features of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] change the way that the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] stores information in the database files. These features are restricted to specific editions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. A database that contains these features cannot be moved to an edition of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that does not support them. Use the sys.dm_db_persisted_sku_features dynamic management view to list all edition-specific features that are enabled in the current database.  
   
- The procedures in this topic require the logical name of the database files. To obtain the name, query the name column in the [sys.master_files](../../relational-databases/system-catalog-views/sys.master-files-transact-sql.md) catalog view.  
+ The procedures in this topic require the logical name of the database files. To obtain the name, query the name column in the [sys.master_files](../../relational-databases/reference/system-catalog-views/sys.master-files-transact-sql.md) catalog view.  
   
- Starting with [!INCLUDE[ssKilimanjaro](../../analysis-services/instances/install/windows/includes/sskilimanjaro-md.md)], full-text catalogs are integrated into the database rather than being stored in the file system. The full-text catalogs now move automatically when you move a database.  
+ Starting with [!INCLUDE[ssKilimanjaro](../../a9notintoc/includes/sskilimanjaro-md.md)], full-text catalogs are integrated into the database rather than being stored in the file system. The full-text catalogs now move automatically when you move a database.  
   
 ## Planned Relocation Procedure  
  To move a data or log file as part of a planned relocation, follow these steps:  
@@ -80,11 +80,11 @@ manager: "jhubbard"
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' );  
     ```  
   
-2.  Stop the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or shut down the system to perform maintenance. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../Topic/Start,%20Stop,%20Pause,%20Resume,%20Restart%20the%20Database%20Engine,%20SQL%20Server%20Agent,%20or%20SQL%20Server%20Browser%20Service.md).  
+2.  Stop the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] or shut down the system to perform maintenance. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure/windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Move the file or files to the new location.  
   
-4.  Restart the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or the server. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../Topic/Start,%20Stop,%20Pause,%20Resume,%20Restart%20the%20Database%20Engine,%20SQL%20Server%20Agent,%20or%20SQL%20Server%20Browser%20Service.md)  
+4.  Restart the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] or the server. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure/windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
 5.  Verify the file change by running the following query.  
   
@@ -100,9 +100,9 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  If the database cannot be started, that is it is in suspect mode or in an unrecovered state, only members of the sysadmin fixed role can move the file.  
   
-1.  Stop the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] if it is started.  
+1.  Stop the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] if it is started.  
   
-2.  Start the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in master-only recovery mode by entering one of the following commands at the command prompt.  
+2.  Start the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] in master-only recovery mode by entering one of the following commands at the command prompt.  
   
     -   For the default (MSSQLSERVER) instance, run the following command.  
   
@@ -116,23 +116,23 @@ manager: "jhubbard"
         NET START MSSQL$instancename /f /T3608  
         ```  
   
-     For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../Topic/Start,%20Stop,%20Pause,%20Resume,%20Restart%20the%20Database%20Engine,%20SQL%20Server%20Agent,%20or%20SQL%20Server%20Browser%20Service.md).  
+     For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure/windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  For each file to be moved, use **sqlcmd** commands or [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to run the following statement.  
+3.  For each file to be moved, use **sqlcmd** commands or [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] to run the following statement.  
   
     ```  
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' );  
     ```  
   
-     For more information about how to use the **sqlcmd** utility, see [Use the sqlcmd Utility](../Topic/Use%20the%20sqlcmd%20Utility.md).  
+     For more information about how to use the **sqlcmd** utility, see [Use the sqlcmd Utility](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
   
-4.  Exit the **sqlcmd** utility or [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)].  
+4.  Exit the **sqlcmd** utility or [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)].  
   
-5.  Stop the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+5.  Stop the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 6.  Move the file or files to the new location.  
   
-7.  Start the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For example, run: `NET START MSSQLSERVER`.  
+7.  Start the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For example, run: `NET START MSSQLSERVER`.  
   
 8.  Verify the file change by running the following query.  
   
@@ -143,7 +143,7 @@ manager: "jhubbard"
     ```  
   
 ## Examples  
- The following example moves the [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] log file to a new location as part of a planned relocation.  
+ The following example moves the [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] log file to a new location as part of a planned relocation.  
   
 ```  
 USE master;  
@@ -179,7 +179,7 @@ WHERE database_id = DB_ID(N'AdventureWorks2012')
  [Move System Databases](../../relational-databases/databases/move-system-databases.md)   
  [Move Database Files](../../relational-databases/databases/move-database-files.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../Topic/Start,%20Stop,%20Pause,%20Resume,%20Restart%20the%20Database%20Engine,%20SQL%20Server%20Agent,%20or%20SQL%20Server%20Browser%20Service.md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure/windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
   

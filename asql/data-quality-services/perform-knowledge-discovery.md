@@ -20,14 +20,14 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Perform Knowledge Discovery
-  This topic describes how to build a knowledge base through knowledge discovery. In the discovery process, [!INCLUDE[ssDQSnoversion](../data-quality-services/includes/ssdqsnoversion-md.md)] (DQS) analyzes the data in a sample data source through a computer-assisted process, and adds the knowledge that it gains to the knowledge base. This knowledge can be modified and enhanced in the **Manage Domain Values** step of the knowledge discovery activity, or in the domain management activity.  
+  This topic describes how to build a knowledge base through knowledge discovery. In the discovery process, [!INCLUDE[ssDQSnoversion](../a9retired/includes/ssdqsnoversion-md.md)] (DQS) analyzes the data in a sample data source through a computer-assisted process, and adds the knowledge that it gains to the knowledge base. This knowledge can be modified and enhanced in the **Manage Domain Values** step of the knowledge discovery activity, or in the domain management activity.  
   
  Knowledge discovery is a wizard-driven process that includes three steps, each of which must be completed.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
- Microsoft Excel must be installed on the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] computer if the source data against which you are running the discovery is in an Excel file. Otherwise, you will not be able to select the Excel file in the mapping stage. The files created by Microsoft Excel can have an extension of .xlsx, .xls, or .csv. If the 64-bit version of Excel is used, only Excel 2003 files (.xls) are supported; Excel 2007 or 2010 files (.xlsx) are not supported. If you are using 64-bit version of Excel 2007 or 2010, save the file as an .xls file or a .csv file, or install a 32-bit version of Excel instead.  
+ Microsoft Excel must be installed on the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] computer if the source data against which you are running the discovery is in an Excel file. Otherwise, you will not be able to select the Excel file in the mapping stage. The files created by Microsoft Excel can have an extension of .xlsx, .xls, or .csv. If the 64-bit version of Excel is used, only Excel 2003 files (.xls) are supported; Excel 2007 or 2010 files (.xlsx) are not supported. If you are using 64-bit version of Excel 2007 or 2010, save the file as an .xls file or a .csv file, or install a 32-bit version of Excel instead.  
   
 ###  <a name="Security"></a> Security  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 3.  If the data source is **Excel**, proceed as follows:  
   
-    1.  Click **Browse** and select the Excel file that you want to analyze to create the knowledge base. Excel must be installed on the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] computer to select an Excel file. If Excel is not installed on the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] computer, the Browse button will not be available, and you will be notified beneath this text box that Excel is not installed.  
+    1.  Click **Browse** and select the Excel file that you want to analyze to create the knowledge base. Excel must be installed on the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] computer to select an Excel file. If Excel is not installed on the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] computer, the Browse button will not be available, and you will be notified beneath this text box that Excel is not installed.  
   
     2.  Select the **Use first row as header** checkbox if the first row of the Excel file contains header data.  
   

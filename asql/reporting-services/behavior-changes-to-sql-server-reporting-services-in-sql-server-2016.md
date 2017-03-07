@@ -30,7 +30,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Behavior changes to SQL Server Reporting Services  in SQL Server 2016
-  This topic describes behavior changes in [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]. Behavior changes affect how features work or interact in [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)] as compared to previous versions of [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  This topic describes behavior changes in [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)]. Behavior changes affect how features work or interact in [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)] as compared to previous versions of [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)].  
   
  There are no behavior changes.
   

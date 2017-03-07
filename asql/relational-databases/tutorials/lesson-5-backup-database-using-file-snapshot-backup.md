@@ -73,7 +73,7 @@ To back up the AdventureWorks2014 database using file-snapshot backup, follow th
   
 ## See Also  
 [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
-[sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-db-backup-file-snapshots-transact-sql.md)  
+[sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-db-backup-file-snapshots-transact-sql.md)  
   
   
   

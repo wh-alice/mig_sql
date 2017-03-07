@@ -19,7 +19,7 @@ manager: "erikre"
   Cascading parameters provide a way of managing large amounts of report data. You can define a set of related parameters so that the list of values for one parameter depends on the value chosen in another parameter. For example, the first parameter is independent and might present a list of product categories. When the user selects a category, the second parameter is dependent on the value of the first parameter. Its values are updated with a list of subcategories within the chosen category. When the user views the report, the values for both the category and subcategory parameters are used to filter report data.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
  To create cascading parameters, you define the dataset query first and include a query parameter for each cascading parameter that you need. You must also create a separate dataset for each cascading parameter to provide available values. For more information, see [Add, Change, or Delete Available Values for a Report Parameter &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/0e03264c-523f-4c59-b71b-ceef600f75f6.md).  
   
@@ -39,16 +39,16 @@ manager: "erikre"
   
 5.  In **Query**, type the query to use to retrieve data for this report. The query must include the following parts:  
   
-    1.  A list of data source fields. For example, in a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement, the SELECT statement specifies a list of database column names from a given table or view.  
+    1.  A list of data source fields. For example, in a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement, the SELECT statement specifies a list of database column names from a given table or view.  
   
-    2.  One query parameter for each cascading parameter. A query parameter limits the data retrieved from the data source by specifying certain values to include or exclude from the query. Typically, query parameters occur in a restriction clause in the query. For example, in a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] SELECT statement, query parameters occur in the WHERE clause. For more information, see "Filtering Rows by Using WHERE and HAVING" in the [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] documentation in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=120955).  
+    2.  One query parameter for each cascading parameter. A query parameter limits the data retrieved from the data source by specifying certain values to include or exclude from the query. Typically, query parameters occur in a restriction clause in the query. For example, in a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] SELECT statement, query parameters occur in the WHERE clause. For more information, see "Filtering Rows by Using WHERE and HAVING" in the [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] documentation in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=120955).  
   
 6.  Click **Run** (**!**). After you include query parameters and then run the query, report parameters that correspond to the query parameters are automatically created.  
   
     > [!NOTE]  
     >  The order of query parameters the first time you run a query determines the order that they are created in the report. To change the order, see [Change the Order of a Report Parameter &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
  Next, you will create a dataset that provides the values for the independent parameter.  
   
@@ -62,7 +62,7 @@ manager: "erikre"
   
 4.  In **Query type**, choose the type of query for the selected data source. In this topic, query type **Text** is assumed.  
   
-5.  In **Query**, type the query to use to retrieve values for this parameter. Queries for independent parameters typically do not contain query parameters. For example, to create a query for a parameter that provides all category values, you might use a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement similar to the following:  
+5.  In **Query**, type the query to use to retrieve values for this parameter. Queries for independent parameters typically do not contain query parameters. For example, to create a query for a parameter that provides all category values, you might use a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement similar to the following:  
   
     ```  
     SELECT DISTINCT <column name> FROM <table>  
@@ -72,7 +72,7 @@ manager: "erikre"
   
      Click **Run** (**!**). The result set shows the values that are available for this first parameter.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
  Next, you will set the properties of the first parameter to use this dataset to populate its available values at run-time.  
   
@@ -92,7 +92,7 @@ manager: "erikre"
   
 7.  In **Label** field, click the name of the field that provides the parameter label.  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
  Next, you will create a dataset that provides the values for a dependent parameter.  
   
@@ -106,7 +106,7 @@ manager: "erikre"
   
 4.  In **Query type**, choose the type of query for the selected data source. In this topic, query type **Text** is assumed.  
   
-5.  In **Query**, type the query to use to retrieve values for this parameter. Queries for dependent parameters typically include query parameters for each parameter that this parameter is dependent on. For example, to create a query for a parameter that provides all subcategory (dependent parameter) values for a category (independent parameter), you might use a [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement similar to the following:  
+5.  In **Query**, type the query to use to retrieve values for this parameter. Queries for dependent parameters typically include query parameters for each parameter that this parameter is dependent on. For example, to create a query for a parameter that provides all subcategory (dependent parameter) values for a category (independent parameter), you might use a [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement similar to the following:  
   
     ```  
     SELECT DISTINCT Subcategory FROM <table>   
@@ -115,7 +115,7 @@ manager: "erikre"
   
      In the WHERE clause, Category is the name of a field from \<table> and @Category is a query parameter. This statement produces a list of subcategories for the category specified in @Category. At run time, this value will be filled in with the value that the user chooses for the report parameter that has the same name.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
  Next, you will set the properties of the second parameter to use this dataset to populate its available values at run time.  
   
@@ -135,7 +135,7 @@ manager: "erikre"
   
 7.  In **Label** field, click the name of the field that provides the parameter label.  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## To test the cascading parameters  
   

@@ -47,7 +47,7 @@ You can also use the tools provided in R Client, such as RGui and RTerm, to run 
   
 ##  <a name="bkmk_RTools"></a> R Tools for Visual Studio  
 
- For convenience in working with [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases, consider using [!INCLUDE[rsql_rtvs](../../advanced-analytics/r-services/includes/rsql-rtvs-md.md)] as your development environment. [!INCLUDE[rsql_rtvs](../../advanced-analytics/r-services/includes/rsql-rtvs-md.md)] is a free add-in for Visual Studio that works in all editions of Visual Studio. Visual Studio also provides support for Python and F# integration.  
+ For convenience in working with [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] databases, consider using [!INCLUDE[rsql_rtvs](../../advanced-analytics/r-services/includes/rsql-rtvs-md.md)] as your development environment. [!INCLUDE[rsql_rtvs](../../advanced-analytics/r-services/includes/rsql-rtvs-md.md)] is a free add-in for Visual Studio that works in all editions of Visual Studio. Visual Studio also provides support for Python and F# integration.  
 
 ### Install R Tools to an Existing Visual Studio edition
 

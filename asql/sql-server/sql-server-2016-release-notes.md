@@ -17,17 +17,17 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server 2016 Release Notes
-  This topic describes limitations and issues with [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)] .    
+  This topic describes limitations and issues with [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)] .    
     
  **Try it out:**    
    
-[![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
+[![Download from Evaluation Center](../a9notintoc/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
 [![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
     
-[![Download SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **SSMS:** To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)**.   
+[![Download SSMS](../a9notintoc/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **SSMS:** To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)**.   
     
- For information on what's new, see [What's New in SQL Server 2016](What's%20New%20in%20Report%20Builder%20for%20SQL%20Server%202016.md).
+ For information on what's new, see [What's New in SQL Server 2016](../a9retired/what-s-new-in-report-builder-for-sql-server-2016.md).
     
 ##  <a name="bkmk_top"></a> Sections In this topic:    
 
@@ -40,7 +40,7 @@ manager: "jhubbard"
     
 - [SQL Server 2016 SP1 download page](https://www.microsoft.com/en-us/download/details.aspx?id=54276)
 - [SQL Server 2016 Service Pack 1 release information](https://support.microsoft.com/en-us/kb/3182545) Lists the individual bug #s and issues that were fixed or changed in SP1.
- - ![info_tip](../sql-server/media/info-tip.png) See the [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) for links and information for all supported versions, inlcuding service packs of [!INCLUDE[ssNoVersion_md](../advanced-analytics/r-services/includes/ssnoversion-md.md)] 
+ - ![info_tip](../sql-server/media/info-tip.png) See the [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) for links and information for all supported versions, inlcuding service packs of [!INCLUDE[ssNoVersion_md](../a9notintoc/includes/ssnoversion-md.md)] 
     
     
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
@@ -121,13 +121,13 @@ Also, execute the following Query Store stored procedures periodically to clean 
     
  **Workaround:** Use one of the following:    
     
- ![Manage Help Settings for SQL Server](../sql-server/media/docs-sql2016-managehelpsettings.png "Manage Help Settings for SQL Server")    
+ ![Manage Help Settings for SQL Server](../a9notintoc/media/docs-sql2016-managehelpsettings.png "Manage Help Settings for SQL Server")    
     
 -   Use the option **Choose online or local help** and configure help for "I want to use online help".    
     
 -   Use the option **Install content from online** and download the SQL Server 2014 Content.    
     
- **F1 Help:** By design when you press F1 in [!INCLUDE[ssManStudioFull](../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], the online version of the F1 Help topic is displayed in the browser. This occurs even when you have installed local Help.    
+ **F1 Help:** By design when you press F1 in [!INCLUDE[ssManStudioFull](../a9notintoc/includes/ssmanstudiofull-md.md)], the online version of the F1 Help topic is displayed in the browser. This occurs even when you have installed local Help.    
      
 **Updating content:**    
 In SQL Server Management Studio and Visual Studio, the Help Viewer application may freeze (hang) during the process of adding the documentation. To resolve this issue, do the following. For more information about this issue, see [Visual Studio Help Viewer freezes](https://msdn.microsoft.com/library/mt654096.aspx).    
@@ -138,7 +138,7 @@ In SQL Server Management Studio and Visual Studio, the Help Viewer application m
 ```    
      Cache LastRefreshed="12/31/2017 00:00:00"    
 ``` 
-![horizontal_bar](../sql-server/media/horizontal-bar.png "horizontal_bar")  
+![horizontal_bar](../a9notintoc/media/horizontal-bar.png "horizontal_bar")  
 ##  <a name="bkmk_2016_rc3"></a> SQL Server 2016 Release Candidate 3 (RC3)    
 -   [Product Documentation (RC2)](#bkmk_rc3_docs)    
 -   [PolyBase (RC3)](#bkmk_rc3_polybase) 
@@ -149,13 +149,13 @@ In SQL Server Management Studio and Visual Studio, the Help Viewer application m
     
  **Workaround:** Use one of the following:    
     
- ![Manage Help Settings for SQL Server](../sql-server/media/docs-sql2016-managehelpsettings.png "Manage Help Settings for SQL Server")    
+ ![Manage Help Settings for SQL Server](../a9notintoc/media/docs-sql2016-managehelpsettings.png "Manage Help Settings for SQL Server")    
     
 -   Use the option **Choose online or local help** and configure help for "I want to use online help".    
     
 -   Use the option **Install content from online** and download the SQL Server 2014 Content.    
     
- **F1 Help:** By design when you press F1 in [!INCLUDE[ssManStudioFull](../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], the online version of the F1 Help topic is displayed in the browser. This occurs even when you have installed local Help.    
+ **F1 Help:** By design when you press F1 in [!INCLUDE[ssManStudioFull](../a9notintoc/includes/ssmanstudiofull-md.md)], the online version of the F1 Help topic is displayed in the browser. This occurs even when you have installed local Help.    
      
 **Updating content:**    
 In SQL Server Management Studio and Visual Studio, the Help Viewer application may freeze (hang) during the process of adding the documentation. To resolve this issue, do the following. For more information about this issue, see [Visual Studio Help Viewer freezes](https://msdn.microsoft.com/library/mt654096.aspx).    
@@ -183,6 +183,6 @@ In SQL Server Management Studio and Visual Studio, the Help Viewer application m
 ## Additional Information
 - [Installtion for SQL Server 2016](../database-engine/install/windows/installation-for-sql-server-2016.md)
     
- ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")    
+ ![MS_Logo_X-Small](../a9notintoc/media/ms-logo-x-small.png "MS_Logo_X-Small")    
     
   

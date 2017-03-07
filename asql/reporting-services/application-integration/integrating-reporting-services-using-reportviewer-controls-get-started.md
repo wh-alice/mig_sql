@@ -217,5 +217,5 @@ Let the team know about issues you encounter with the control on the [Reporting 
 
 ## See also
 
-[Data collection in the 2016 ReportingViewer control](Data%20collection%20in%20ReportViewer%20Control%202016.md)  
+[Data collection in the 2016 ReportingViewer control](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

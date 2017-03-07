@@ -17,7 +17,7 @@ manager: "erikre"
 # Power BI reports in Reporting Services
  ||  
 |-|  
-|**[!INCLUDE[applies](../analysis-services/includes/applies-md.md)]**  January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services|
+|**[!INCLUDE[applies](../a9retired/includes/applies-md.md)]**  January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services|
 
 Power BI reports can be uploaded and viewed within the Reporting Services web portal within the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services.
 
@@ -100,4 +100,4 @@ The following features within Power BI Desktop (SSRS) are not supported for use 
 ## See also
 [Getting started with Power BI desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-getting-started/)  
 [Configure Kerberos to use Power BI reports](../reporting-services/report-server/configure-kerberos-to-use-power-bi-reports.md)  
-[Install the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services](Install%20the%20January%202017%20Technical%20Preview%20of%20Power%20BI%20reports%20in%20SQL%20Server%20Reporting%20Services.md)
+[Install the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services](../reporting-services/install/windows/install-the-january-2017-preview-of-power-bi-reports-in-ssrs.md)

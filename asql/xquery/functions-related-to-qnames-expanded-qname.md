@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Functions Related to QNames - expanded-QName
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns a value of the xs:QName type with the namespace URI specified in the *$paramURI* and the local name specified in the *$paramLocal*. If *$paramURI* is the empty string or the empty sequence, it represents no namespace.  
   
@@ -44,12 +44,12 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   If the *$paramLocal* value specified is not in the correct lexical form for xs:NCName type, the empty sequence is returned and represents a dynamic error.  
   
--   Conversion from xs:QName type to any other type is not supported in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)]. Because of this, the **expanded-QName()** function cannot be used in XML construction. For example, when you are constructing a node, such as `<e> expanded-QName(…) </e>`, the value has to be untyped. This would require that you convert the xs:QName type value returned by `expanded-QName()` to xdt:untypedAtomic. However, this is not supported. A solution is provided in an example later in this topic.  
+-   Conversion from xs:QName type to any other type is not supported in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)]. Because of this, the **expanded-QName()** function cannot be used in XML construction. For example, when you are constructing a node, such as `<e> expanded-QName(…) </e>`, the value has to be untyped. This would require that you convert the xs:QName type value returned by `expanded-QName()` to xdt:untypedAtomic. However, this is not supported. A solution is provided in an example later in this topic.  
   
 -   You can modify or compare the existing QName type values. For example, `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` compares the value of the element, <`e`>, with the QName returned by the **expanded-QName()** function.  
   
 ## Examples  
- This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the [!INCLUDE[ssSampleDBobject](../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] database.  
+ This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the [!INCLUDE[ssSampleDBobject](../a9retired/includes/sssampledbobject-md.md)] database.  
   
 ### A. Replacing a QName type node value  
  This example illustrates how you can modify the value of an element node of QName type. The example performs the following:  
@@ -202,6 +202,6 @@ FROM T
  There is one limitation: The **expanded-QName()** function accepts the empty sequence as the second argument and will return empty instead of raising a run-time error when the second argument is incorrect.  
   
 ## See Also  
- [Functions Related to QNames &#40;XQuery&#41;](../Topic/Functions%20Related%20to%20QNames%20\(XQuery\).md)  
+ [Functions Related to QNames &#40;XQuery&#41;](../a9retired/functions-related-to-qnames-xquery.md)  
   
   

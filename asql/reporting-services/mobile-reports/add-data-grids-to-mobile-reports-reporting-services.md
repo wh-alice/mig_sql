@@ -15,7 +15,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Add data grids to mobile reports | Reporting Services
-Sometimes the best visualization is the data itself. Learn about the three *data grids*, or tables, for displaying data in [!INCLUDE[SS_MobileReptPub_Long](../../reporting-services/mobile-reports/includes/ss-mobilereptpub-long.md)]:
+Sometimes the best visualization is the data itself. Learn about the three *data grids*, or tables, for displaying data in [!INCLUDE[SS_MobileReptPub_Long](../../a9retired/includes/ss-mobilereptpub-long.md)]:
 * Simple data grid
 * Indicator data grid
 * Chart data grid

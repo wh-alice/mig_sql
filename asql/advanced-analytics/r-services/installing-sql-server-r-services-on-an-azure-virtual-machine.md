@@ -16,7 +16,7 @@ manager: "jhubbard"
 ---
 # Installing SQL Server R Services on an Azure Virtual Machine
  
-If you deploy an Azure virtual machine that includes [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], you can now select R Services as a feature to be added to the instance when the VM is created. 
+If you deploy an Azure virtual machine that includes [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], you can now select R Services as a feature to be added to the instance when the VM is created. 
 
 
 
@@ -48,7 +48,7 @@ Some additional steps might be needed to use R Services if you expect remote cli
 
 ### <a name="firewall"></a>Unblock the firewall  
   
-You must change a firewall rule on the virtual machine to ensure that you can access the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance from a remote data science client.  Otherwise, you might not be able to use compute contexts that require use of the virtual machine's workspace. 
+You must change a firewall rule on the virtual machine to ensure that you can access the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance from a remote data science client.  Otherwise, you might not be able to use compute contexts that require use of the virtual machine's workspace. 
 
 By default, the firewall on the Azure virtual machine includes a rule that blocks network access for local R user accounts.  
   
@@ -68,7 +68,7 @@ If you expect that R clients calling the server will need to issue ODBC queries 
   
 + Enable Named Pipes
   
-  [!INCLUDE[rsql_productname](../../advanced-analytics/r-services/includes/rsql-productname-md.md)] uses the Named Pipes protocol for connections between the client and server computers, and for some internal connections. If Named Pipes is not enabled, you must install and enable it on both the Azure virtual machine, and on any data science clients that connect to the server.  
+  [!INCLUDE[rsql_productname](../../a9notintoc/includes/rsql-productname-md.md)] uses the Named Pipes protocol for connections between the client and server computers, and for some internal connections. If Named Pipes is not enabled, you must install and enable it on both the Azure virtual machine, and on any data science clients that connect to the server.  
   
 + Enable TCP/IP
 
@@ -87,8 +87,8 @@ You can also enable or disable the feature on an existing virtual machine at any
 
 If you created an Azure VM with SQL Server 2016 that did not include R Services, you can add the feature by following these steps:
 
-1. Re-run [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup and add the feature on the **Server Configuration** page of the wizard.
-2. Enable execution of external scripts and restart the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance. For more information, see see [Set Up SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).
+1. Re-run [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] setup and add the feature on the **Server Configuration** page of the wizard.
+2. Enable execution of external scripts and restart the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance. For more information, see see [Set Up SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).
 3. (Optional) Configure database access for R worker accounts, if needed for remote script execution.
    For more information, see [Set Up SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md). 
 3. (Optional) Modify a firewall rule on the Azure virtual machine, if you intend to allow R script execution from remote data science clients. For more information, see [Unblock firewall](#firewall).

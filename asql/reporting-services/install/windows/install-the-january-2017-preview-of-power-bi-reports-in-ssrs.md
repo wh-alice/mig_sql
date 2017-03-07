@@ -17,28 +17,28 @@ manager: "erikre"
 # Install the January 2017 Preview of Power BI reports in SSRS
 Learn how to install the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services. This will install Reporting Services outside of the SQL Server setup experience.
 
- **Download** ![download](../../../analysis-services/media/download.png "download")
+ **Download** ![download](../../../a9notintoc/media/download.png "download")
  
 To download the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services, along with Power BI Desktop (SQL Server Reporting Services), go to the [Microsoft download center](https://go.microsoft.com/fwlink/?linkid=839351). 
   
- ![note](../../../analysis-services/instances/install/windows/media/ssrs-fyi-note.png "note") For the current release notes, see [Technical Preview of Power BI reports in SSRS - Release notes](Technical%20Preview%20of%20Power%20BI%20reports%20in%20SSRS%20-%20Release%20notes.md). 
+ ![note](../../../a9retired/media/ssrs-fyi-note.png "note") For the current release notes, see [Technical Preview of Power BI reports in SSRS - Release notes](../../../reporting-services/reporting-services-release-notes.md). 
  
  ||  
 |-|  
-|**[!INCLUDE[applies](../../../analysis-services/includes/applies-md.md)]**  January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services|
+|**[!INCLUDE[applies](../../../a9retired/includes/applies-md.md)]**  January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services|
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/A9O5BHZ4-9A?showinfo=0" frameborder="0" allowfullscreen></iframe>
 
 ##  Requirements  
 The January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services will install default values to configure the core settings required to make a report server operational. It has the following requirements:  
   
--   Review [Hardware and Software Requirements for Installing SQL Server](Hardware%20and%20Software%20Requirements%20for%20Installing%20SQL%20Server%202016.md).  
+-   Review [Hardware and Software Requirements for Installing SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
--   A [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] must be available after setup and before you configure the database for the report server. The [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] instance hosts the report server database that Reporting Services Configuration Manager will create. The [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] is not required for the actual setup experience.
+-   A [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] must be available after setup and before you configure the database for the report server. The [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] instance hosts the report server database that Reporting Services Configuration Manager will create. The [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] is not required for the actual setup experience.
   
 -   The user account used to run Setup must be a member of the local Administrators group.
 
--  The user account used for Reporting Services Configuration Manager must have permission to access and create databases on the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)] instance that hosts the report server databases.  
+-  The user account used for Reporting Services Configuration Manager must have permission to access and create databases on the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)] instance that hosts the report server databases.  
   
 -   Setup must be able to use the default values to reserve the URLs that provide access to the report server and the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../database-engine/availability-groups/windows/includes/ssrswebportal-non-markdown-md.md)]. These values are port 80, a strong wildcard, and the virtual directory names in the format **ReportServer** and **Reports**.
  
@@ -52,7 +52,7 @@ The January 2017 Technical Preview of Power BI reports in SQL Server Reporting S
 |----------|-----------------|  
 |Prefix|The default prefix is HTTP. If you previously installed a Secure Sockets Layer (SSL) certificate, Setup will try to create URL reservations that use the HTTPS prefix.|  
 |Host name|The default host name is a strong wildcard (+). It specifies that the report server will accept any HTTP request on the designated port for any host name that resolves to the computer, including http://\<computername>/reportserver, http://localhost/reportserver, or http://\<IPAddress>/reportserver.|  
-|Port|The default port is 80. Note that if you use any port other than port 80, you will have to explicitly add it to the URL when you open a [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] Web application in a browser window.|  
+|Port|The default port is 80. Note that if you use any port other than port 80, you will have to explicitly add it to the URL when you open a [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)] Web application in a browser window.|  
 |Virtual directory|By default, virtual directories are created in the format of ReportServer for the Report Server Web service and Reports for the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../database-engine/availability-groups/windows/includes/ssrswebportal-non-markdown-md.md)]. For the Report Server Web service, the default virtual directory is **reportserver**. For the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../database-engine/availability-groups/windows/includes/ssrswebportal-non-markdown-md.md)], the default virtual directory is **reports**.|  
   
  An example of the complete URL string might be as follows:  
@@ -86,7 +86,7 @@ Installing the January 2017 Technical Preview of Power BI reports in SQL Server 
 
 After you select **Configure Report Server** in the setup, you will be presented with Reporting Services Configuration Manager. For more information, see [Reporting Services Configuration Manager](../../../reporting-services/install/windows/reporting-services-configuration-manager-native-mode.md).
 
-You will need to [create a report server database](Create%20a%20Report%20Server%20Database%20%20\(SSRS%20Configuration%20Manager\).md) in order to complete the initial configuration of Reporting Services. A SQL Server Database server is required to complete this step.
+You will need to [create a report server database](../../../reporting-services/install/windows/ssrs-report-server-create-a-report-server-database.md) in order to complete the initial configuration of Reporting Services. A SQL Server Database server is required to complete this step.
 
 ### Creating a database on a different server
 
@@ -133,7 +133,7 @@ You will need to open up the TCP port that you have configured for your Web Serv
  [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)    
- [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../Topic/Initialize%20a%20Report%20Server%20\(SSRS%20Configuration%20Manager\).md)   
+ [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install/windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Configure SSL Connections on a Native Mode Report Server](../../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
  [Configure Windows Service Accounts and Permissions](../../../database-engine/configure/windows/configure-windows-service-accounts-and-permissions.md)   
  More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

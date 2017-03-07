@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use Microsoft Distributed Transaction Coordinator (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
     
 ### To update two or more SQL Servers by using MS DTC  
@@ -44,6 +44,6 @@ manager: "jhubbard"
 >  You can also call [SQLSetConnectAttr](../../relational-databases/extended-stored-procedures-reference/sqlsetconnectattr.md) and [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) in turn for each SQL Server instead of calling them as suggested earlier in Steps 4 and 5.  
   
 ## See Also  
- [Performing Transactions &#40;ODBC&#41;](../Topic/Performing%20Transactions%20\(ODBC\).md)  
+ [Performing Transactions &#40;ODBC&#41;](../../a9retired/performing-transactions-odbc.md)  
   
   

@@ -37,13 +37,13 @@ manager: "jhubbard"
  Specify the databases affected by this task. When selected, the drop down list provides the following options: **All databases**, **All system databases**, **All user databases**, **These specific databases**.  
   
  **All databases**  
- Generate a maintenance plan that runs maintenance tasks against all [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] databases.  
+ Generate a maintenance plan that runs maintenance tasks against all [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] databases.  
   
  **All system databases (master, msdb, model)**  
- Generate a maintenance plan that runs maintenance tasks against each of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system databases. No maintenance tasks are run against user-created databases.  
+ Generate a maintenance plan that runs maintenance tasks against each of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system databases. No maintenance tasks are run against user-created databases.  
   
  **All user databases (excluding master, model, msdb, tempdb)**  
- Generate a maintenance plan that runs maintenance tasks against all user-created databases. No maintenance tasks are run against the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] system databases.  
+ Generate a maintenance plan that runs maintenance tasks against all user-created databases. No maintenance tasks are run against the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] system databases.  
   
  **These databases**  
  Generate a maintenance plan that runs maintenance tasks against only those databases that are selected. At least one database in the list must be selected if this option is chosen.  
@@ -100,7 +100,7 @@ manager: "jhubbard"
 |**Do not compress backup**|Click to create an uncompressed backup, regardless of the server-level default.|  
   
  **View T-SQL**  
- View the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements performed against the server for this task, based on the selected options.  
+ View the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements performed against the server for this task, based on the selected options.  
   
 > [!NOTE]  
 >  When the number of objects affected is large, this display can take a considerable amount of time.  
@@ -119,13 +119,13 @@ manager: "jhubbard"
  Specify how to authenticate against the server.  
   
  **Use Windows integrated security**  
- Connect to an instance of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] with Windows Authentication.  
+ Connect to an instance of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] with Windows Authentication.  
   
  **Use a specific user name and password**  
- Connect to an instance of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication. This option is not available.  
+ Connect to an instance of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication. This option is not available.  
   
  **User name**  
- Provide a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login to use when authenticating. This option is not available.  
+ Provide a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login to use when authenticating. This option is not available.  
   
  **Password**  
  Provide a password to use when authenticating. This option is not available.  

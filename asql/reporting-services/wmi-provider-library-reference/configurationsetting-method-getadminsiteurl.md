@@ -18,7 +18,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # ConfigurationSetting Method - GetAdminSiteUrl
-  Gets the absolute URL for the Central Administration Web site for the Microsoft [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../reporting-services/includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../reporting-services/report-data/includes/spf2010-md.md)], or [!INCLUDE[SPS2010](../../database-engine/install/windows/includes/sps2010-md.md)] farm that the report server is integrated with.  
+  Gets the absolute URL for the Central Administration Web site for the Microsoft [!INCLUDE[winSPServ](../../relational-databases/tables/includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../a9retired/includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../a9retired/includes/spf2010-md.md)], or [!INCLUDE[SPS2010](../../a9retired/includes/sps2010-md.md)] farm that the report server is integrated with.  
   
 ## Syntax  
   

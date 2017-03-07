@@ -21,10 +21,10 @@ manager: "jhubbard"
   
 ## Options  
  **Generate a text file report**  
- Specify if you want [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to write a text file report.  
+ Specify if you want [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to write a text file report.  
   
  **Create a new file**  
- Create a new report file for each execution of the maintenance plan. By default, the report files are written to the computer hosting the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that contains this maintenance plan, in the folder established as the default log folder during [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] setup. To specify a different folder, enter the full path of the folder in the **Folder** text box, or click the browse button (**...**) and navigate to the desired folder.  
+ Create a new report file for each execution of the maintenance plan. By default, the report files are written to the computer hosting the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that contains this maintenance plan, in the folder established as the default log folder during [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] setup. To specify a different folder, enter the full path of the folder in the **Folder** text box, or click the browse button (**...**) and navigate to the desired folder.  
   
  **Append to file**  
  Append the report from each plan execution to the file specified in the **File name** text box. You may also specify a file by clicking the browse button and selecting a file from the dialog box.  

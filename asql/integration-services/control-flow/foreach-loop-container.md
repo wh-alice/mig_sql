@@ -31,23 +31,23 @@ manager: "jhubbard"
 # Foreach Loop Container
   The Foreach Loop container defines a repeating control flow in a package. The loop implementation is similar to **Foreach** looping structure in programming languages. In a package, looping is enabled by using a Foreach enumerator.  The Foreach Loop container repeats the control flow for each member of a specified enumerator.  
   
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] provides the following enumerator types:  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] provides the following enumerator types:  
   
 -   Foreach ADO enumerator to enumerate rows in tables. For example, you can get the rows in an ADO recordset.  
   
      The Recordset destination saves data in memory in a recordset that is stored in a package variable of **Object** data type. You typically use a Foreach Loop container with the Foreach ADO enumerator to process one row of the recordset at a time. The variable specified for the Foreach ADO enumerator must be of Object data type. For more information about the Recordeset destination, see [Use a Recordset Destination](../../integration-services/data-flow/use-a-recordset-destination.md).  
   
--   Foreach ADO.NET Schema Rowset enumerator to enumerate the schema information about a data source. For example, you can enumerate and get a list of the tables in the [!INCLUDE[ssSampleDBnormal](../../analysis-services/data-mining/includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database.  
+-   Foreach ADO.NET Schema Rowset enumerator to enumerate the schema information about a data source. For example, you can enumerate and get a list of the tables in the [!INCLUDE[ssSampleDBnormal](../../a9notintoc/includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database.  
   
 -   Foreach File enumerator to enumerate files in a folder. The enumerator can traverse subfolders. For example, you can read all the files that have the *.log file name extension in the Windows folder and its subfolders.  
   
--   Foreach From Variable enumerator to enumerate the enumerable object that a specified variable contains. The enumerable object can be an array, an ADO.NET **DataTable**, an [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] enumerator, and so on. For example, you can enumerate the values of an array that contains the name of servers.  
+-   Foreach From Variable enumerator to enumerate the enumerable object that a specified variable contains. The enumerable object can be an array, an ADO.NET **DataTable**, an [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] enumerator, and so on. For example, you can enumerate the values of an array that contains the name of servers.  
   
 -   Foreach Item enumerator to enumerate items that are collections. For example, you can enumerate the names of executables and working directories that an Execute Process task uses.  
   
 -   Foreach Nodelist enumerator to enumerate the result set of an XML Path Language (XPath) expression. For example, this expression enumerates and gets a list of all the authors in the classical period: `/authors/author[@period='classical']`.  
   
--   Foreach SMO enumerator to enumerate [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Management Objects (SMO) objects. For example, you can enumerate and get a list of the views in a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database.  
+-   Foreach SMO enumerator to enumerate [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Management Objects (SMO) objects. For example, you can enumerate and get a list of the views in a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database.  
   
 -   Foreach HDFS File Enumerator to enumerate HDFS files in the specified HDFS location.  
   
@@ -83,7 +83,7 @@ manager: "jhubbard"
 |Foreach Azure Blob|Specify the Azure blob container that containers blobs to be enumerated.|  
 
 ## Add enumeration to a control flow with a Foreach Loop container
- [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] includes the Foreach Loop container, a control flow element that makes it simple to include a looping construct that enumerates files and objects in the control flow of a package. For more information, see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md).  
+ [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] includes the Foreach Loop container, a control flow element that makes it simple to include a looping construct that enumerates files and objects in the control flow of a package. For more information, see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md).  
   
  The Foreach Loop container provides no functionality; it provides only the structure in which you build the repeatable control flow, specify an enumerator type, and configure the enumerator. To provide container functionality, you must include at least one task in the Foreach Loop container. For more information, see [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  
   
@@ -95,14 +95,14 @@ manager: "jhubbard"
   
 2.  Add tasks and containers to the Foreach Loop container. For more information, see [Add or Delete a Task or a Container in a Control Flow](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
-3.  Connect tasks and containers in the Foreach Loop container using precedence constraints. For more information, see [Connect Tasks and Containers by Using a Default Precedence Constraint](../Topic/Connect%20Tasks%20and%20Containers%20by%20Using%20a%20Default%20Precedence%20Constraint.md).  
+3.  Connect tasks and containers in the Foreach Loop container using precedence constraints. For more information, see [Connect Tasks and Containers by Using a Default Precedence Constraint](../../a9retired/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md).  
   
-4.  Configure the Foreach Loop container. For more information, see [Configure a Foreach Loop Container](../Topic/Configure%20a%20Foreach%20Loop%20Container.md).  
+4.  Configure the Foreach Loop container. For more information, see [Configure a Foreach Loop Container](../../a9retired/configure-a-foreach-loop-container.md).  
 
 ## Configure a Foreach Loop Container
 This procedure describes how to configure a Foreach Loop container, including property expressions at the enumerator and container levels.  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project that contains the package you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] project that contains the package you want.  
   
 2.  Click the **Control Flow** tab and double-click the Foreach Loop.  
   
@@ -165,7 +165,7 @@ This procedure describes how to configure a Foreach Loop container, including pr
 ## General Page - Foreach Loop Editor
 Use the **General** page of the **Foreach Loop Editor** dialog box to name and describe a Foreach Loop container that uses a specified enumerator to repeat a workflow for each member in a collection.  
   
- To learn about the Foreach Loop container and how to configure it, see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md) and [Configure a Foreach Loop Container](../Topic/Configure%20a%20Foreach%20Loop%20Container.md).  
+ To learn about the Foreach Loop container and how to configure it, see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md) and [Configure a Foreach Loop Container](../../a9retired/configure-a-foreach-loop-container.md).  
   
 ### Options  
  **Name**  
@@ -180,7 +180,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
 ## Collection Page - Foreach Loop Editor
  Use the **Collection** pageof the **Foreach Loop Editor** dialog box to specify the enumerator type and configure the enumerator.  
   
- To learn about the Foreach Loop container and how to configure it, see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md) and [Configure a Foreach Loop Container](../Topic/Configure%20a%20Foreach%20Loop%20Container.md).  
+ To learn about the Foreach Loop container and how to configure it, see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md) and [Configure a Foreach Loop Container](../../a9retired/configure-a-foreach-loop-container.md).  
   
 ### Static Options  
  **Enumerator**  
@@ -267,7 +267,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  **Columns**  
  Click to configure the data type of the columns in the item.  
   
- **Related Topics:** [For Each Item Columns Dialog Box UI Reference](../Topic/For%20Each%20Item%20Columns%20Dialog%20Box%20UI%20Reference.md)  
+ **Related Topics:** [For Each Item Columns Dialog Box UI Reference](../../a9retired/for-each-item-columns-dialog-box-ui-reference.md)  
   
 #### Enumerator = Foreach ADO Enumerator  
  You use the Foreach ADO enumerator to enumerate rows or tables in an ADO or ADO.NET object that is stored in a variable. For example, if the Foreach Loop includes a Script task that writes a dataset to a variable, you can use the Foreach ADO enumerator to enumerate the rows in the dataset. If the variable contains an ADO.NET dataset, the enumerator can be configured to enumerate rows in multiple tables or to enumerate tables.  
@@ -278,7 +278,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
 > [!NOTE]  
 >  The variable must have the Object data type, otherwise an error occurs.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../Topic/Add%20Variable.md)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../../a9retired/add-variable.md)  
   
  **Rows in first table**  
  Select to enumerate only rows in the first table.  
@@ -296,7 +296,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  Select an ADO.NET connection manager in the list, or click \<**New connection...**> to create a new ADO.NET connection manager.  
   
 > [!IMPORTANT]  
->  The ADO.NET connection manager must use a .NET provider for OLE DB. If connecting to SQL Server, the recommended provider to use is the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client, listed in the **.Net Providers for OleDb** section of the **Connection Manager** dialog box.  
+>  The ADO.NET connection manager must use a .NET provider for OLE DB. If connecting to SQL Server, the recommended provider to use is the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client, listed in the **.Net Providers for OleDb** section of the **Connection Manager** dialog box.  
   
  **Related Topics:** [ADO Connection Manager](../../integration-services/connection-manager/ado-connection-manager.md), [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado.net-connection-manager.md)  
   
@@ -306,7 +306,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  **Set Restrictions**  
  Set the restrictions to apply to the specified schema.  
   
- **Related Topics:** [Schema Restrictions Dialog Box](../Topic/Schema%20Restrictions%20Dialog%20Box.md)  
+ **Related Topics:** [Schema Restrictions Dialog Box](../../a9retired/schema-restrictions-dialog-box.md)  
   
 #### Enumerator = Foreach From Variable Enumerator  
  You use the Foreach From Variable enumerator to enumerate the enumerable objects in the specified variable. For example, if the Foreach Loop includes an Execute SQL task that runs a query and stores the result in a variable, you can use the Foreach From Variable enumerator to enumerate the query results.  
@@ -314,7 +314,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  **Variable**  
  Select a variable in the list, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../Topic/Add%20Variable.md)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../../a9retired/add-variable.md)  
   
 #### Enumerator = Foreach NodeList Enumerator  
  You use the Foreach Nodelist enumerator to enumerate the set of XML nodes that results from applying an XPath expression to an XML file. For example, if the Foreach Loop includes a Script task, you can use the Foreach NodeList enumerator to pass a value that meets the XPath expression criteria from the XML file to the Script task.  
@@ -341,7 +341,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
   
  If **DocumentSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../Topic/Add%20Variable.md).  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../../a9retired/add-variable.md).  
   
  **EnumerationType**  
  Select an enumeration type from the list. This property has the options listed in the following table.  
@@ -371,7 +371,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
   
  If **OuterXPathStringSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../Topic/Add%20Variable.md).  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../../a9retired/add-variable.md).  
   
  **InnerElementType**  
  If **EnumerationType** is set to **ElementCollection**, select the type of inner element in the list.  
@@ -394,7 +394,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
   
  If **InnerXPathStringSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../Topic/Add%20Variable.md).  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../../a9retired/add-variable.md).  
   
 #### Enumerator = Foreach SMO Enumerator  
  You use the Foreach SMO enumerator to enumerate SQL Server Management Object (SMO) objects. For example, if the Foreach Loop includes an Execute SQL task, you can use the Foreach SMO enumerator to enumerate the tables in the **AdventureWorks** database and run queries that counts the number of rows in each table.  
@@ -410,7 +410,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  **Browse**  
  Select the SMO enumeration.  
   
- **Related Topics:** [Select SMO Enumeration Dialog Box](../Topic/Select%20SMO%20Enumeration%20Dialog%20Box.md)  
+ **Related Topics:** [Select SMO Enumeration Dialog Box](../../a9retired/select-smo-enumeration-dialog-box.md)  
   
 ####  <a name="ForeachHDFSFile"></a> Enumerator = Foreach HDFS File Enumerator  
  The **Foreach HDFS File Enumerator** enables an SSIS package to enumerate HDFS files in the specified HDFS location. The name of each  HDFS file can be stored in a variable and used in tasks inside the Foreach Loop Container.  
@@ -439,7 +439,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
 ####  <a name="ForeachAzureBlob"></a> Enumerator = Foreach Azure Blob Enumerator  
  The  **Azure Blob Enumerator** enables an SSIS package to enumerate blob files in the specified blob location. The name of enumerated blob file can be stored in a variable and used in tasks inside the Foreach Loop Container.  
   
- The **Azure Blob Enumerator** is a component of the SQL Server Integration Services (SSIS) Feature Pack for Azure for [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)]. Download the Feature Pack [here](http://go.microsoft.com/fwlink/?LinkID=626967).  
+ The **Azure Blob Enumerator** is a component of the SQL Server Integration Services (SSIS) Feature Pack for Azure for [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)]. Download the Feature Pack [here](http://go.microsoft.com/fwlink/?LinkID=626967).  
   
  **Azure storage connection manager**  
  Select an existing Azure Storage Connection Manager or create a new one that refers to an Azure Storage Account.  
@@ -461,9 +461,9 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
 ## Variable Mappings Page - Foreach Loop Editor
  Use the **Variables Mappings** page of the **Foreach Loop Editor** dialog box to map variables to the collection value. The value of the variable is updated with the collection values on each iteration of the loop.  
   
- To learn about how to use the Foreach Loop container in an Integration Services package,  see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md) . To learn about how to configure it, see [Configure a Foreach Loop Container](../Topic/Configure%20a%20Foreach%20Loop%20Container.md).  
+ To learn about how to use the Foreach Loop container in an Integration Services package,  see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md) . To learn about how to configure it, see [Configure a Foreach Loop Container](../../a9retired/configure-a-foreach-loop-container.md).  
   
- The [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] tutorial, Creating a Simple ETL Package Tutorial, includes a lesson that teaches you to add and configure a Foreach Loop.  
+ The [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] tutorial, Creating a Simple ETL Package Tutorial, includes a lesson that teaches you to add and configure a Foreach Loop.  
   
 ### Options  
  **Variable**  
@@ -472,7 +472,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
 > [!NOTE]  
 >  After you map a variable, a new row is automatically added to the **Variable** list.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../Topic/Add%20Variable.md)  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../../a9retired/add-variable.md)  
   
  **Index**  
  If using the Foreach Item enumerator, specify the index of the column in the collection value to map to the variable. For other enumerator types, the index is read-only.  
@@ -493,7 +493,7 @@ Use the **Schema Restrictions** dialog box to set the schema restrictions to app
  **Variable**  
  Use a variable to define restrictions. Select a variable in the list, or click **New variable...** to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) , [Add Variable](../Topic/Add%20Variable.md)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) , [Add Variable](../../a9retired/add-variable.md)  
   
  **Text**  
  Provide the text to define restrictions.  
@@ -515,7 +515,7 @@ Use the **For Each Item Columns** dialog box to define the columns in the items 
  Select a column, and then click **Remove**.  
  
  ## Select SMO Enumeration dialog box
-Use the **Select SMO Enumeration** dialog box to specify the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Management Objects (SMO) object on the specified instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to enumerate, and to select the enumeration type.  
+Use the **Select SMO Enumeration** dialog box to specify the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Management Objects (SMO) object on the specified instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to enumerate, and to select the enumeration type.  
   
 ### Options  
  **Enumerate**  

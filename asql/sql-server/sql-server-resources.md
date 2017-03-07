@@ -26,9 +26,9 @@ manager: "jhubbard"
  - [What's new in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
  - [What's new in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)  
   
- [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)] is the biggest leap forward in Microsoft's data platform history with real-time operational analytics, rich visualizations on mobile devices, built-in advanced analytics, new advanced security technology, and new hybrid cloud scenarios. Other benefits include enhanced in-memory performance, stretching OLTP data to Microsoft Azure, and simplified management of relational and non-relational data.  
+ [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)] is the biggest leap forward in Microsoft's data platform history with real-time operational analytics, rich visualizations on mobile devices, built-in advanced analytics, new advanced security technology, and new hybrid cloud scenarios. Other benefits include enhanced in-memory performance, stretching OLTP data to Microsoft Azure, and simplified management of relational and non-relational data.  
   
--   [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) Download SQL Server 2016 from the  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
+-   [![Download from Evaluation Center](../a9notintoc/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) Download SQL Server 2016 from the  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
   
 - ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png) Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed. 
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 ## See Also
 - [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)
-- [Hardware and Software Requirements for Installing SQL Server 2016](Hardware%20and%20Software%20Requirements%20for%20Installing%20SQL%20Server%202016.md)
+- [Hardware and Software Requirements for Installing SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
  -  [SQL Server 2016 Product page on microsoft.com](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2016/)  
   
   

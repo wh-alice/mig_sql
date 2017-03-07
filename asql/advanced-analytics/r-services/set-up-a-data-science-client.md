@@ -15,7 +15,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Set Up  a Data Science Client
-  After you have configured an instance of [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)] by installing **R Services (In-Database)**, you'll want to set up an R development environment that is capable of connecting to the server for remote execution and deployment. 
+  After you have configured an instance of [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)] by installing **R Services (In-Database)**, you'll want to set up an R development environment that is capable of connecting to the server for remote execution and deployment. 
   
   This environment must include the ScaleR packages, and optionally con include a client development environment.
   
@@ -40,7 +40,7 @@ After installation, you will need to reconfigure your environment to use the Mic
  
 ## More Resources
   
- For a detailed walkthrough of how to connect to a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance for remote execution of R code, see this tutorial: [Data Science Deep Dive: Using the RevoScaleR Packages](../../advanced-analytics/r-services/tutorials/data-science-deep-dive-using-the-revoscaler-packages.md).  
+ For a detailed walkthrough of how to connect to a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] instance for remote execution of R code, see this tutorial: [Data Science Deep Dive: Using the RevoScaleR Packages](../../advanced-analytics/r-services/tutorials/data-science-deep-dive-using-the-revoscaler-packages.md).  
  
 
 To start using Microsoft R Client and the ScaleR packages with SQL Server, see  [ScaleR Getting Started](https://msdn.microsoft.com/microsoft-r/scaler-getting-started#).  

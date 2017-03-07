@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 ### Modify a query  
   
-1.  On the **Mining Model Prediction** tab in Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], click **SQL**.  
+1.  On the **Mining Model Prediction** tab in Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], click **SQL**.  
   
      The grid at the bottom of the screen is replaced by a text editor that contains the query. You can type changes to the query in this editor.  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Data Mining Queries](../../analysis-services/data-mining/data-mining-queries.md)   
- [Prediction Query Builder &#40;Data Mining&#41;](../Topic/Prediction%20Query%20Builder%20\(Data%20Mining\).md)   
- [Lesson 6: Creating and Working with Predictions &#40;Basic Data Mining Tutorial&#41;](../Topic/Lesson%206:%20Creating%20and%20Working%20with%20Predictions%20\(Basic%20Data%20Mining%20Tutorial\).md)  
+ [Prediction Query Builder &#40;Data Mining&#41;](../../a9retired/prediction-query-builder-data-mining.md)   
+ [Lesson 6: Creating and Working with Predictions &#40;Basic Data Mining Tutorial&#41;](../../a9notintoc/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

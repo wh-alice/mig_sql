@@ -21,9 +21,9 @@ manager: "jhubbard"
 # Assemblies (Database Engine)
   The topics in this section provide information to help you understand, design, and implement assemblies.  
   
- Assemblies are DLL files used in an instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to deploy functions, stored procedures, triggers, user-defined aggregates, and user-defined types that are written in one of the managed code languages hosted by the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] common language runtime (CLR), instead of in [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+ Assemblies are DLL files used in an instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to deploy functions, stored procedures, triggers, user-defined aggregates, and user-defined types that are written in one of the managed code languages hosted by the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] common language runtime (CLR), instead of in [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
- An assembly in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is an object that references a managed application module (.dll file) that was created in the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] common language runtime. An assembly contains class metadata and managed code. Uploading an assembly to an instance of SQL Server is the first step toward creating any of the following database objects:  
+ An assembly in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] is an object that references a managed application module (.dll file) that was created in the [!INCLUDE[dnprdnshort](../../a9retired/includes/dnprdnshort-md.md)] common language runtime. An assembly contains class metadata and managed code. Uploading an assembly to an instance of SQL Server is the first step toward creating any of the following database objects:  
   
 -   CLR functions. For more information, see [Create CLR Functions](../../relational-databases/user-defined-functions/create-clr-functions.md).  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   User-defined types. For more information, see [Using User-Defined Types](../../relational-databases/native-client/features/using-user-defined-types.md).  
   
- Assemblies perform the following functions in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]:  
+ Assemblies perform the following functions in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]:  
   
 -   Contain the managed code that runs the functionality of one or more of the CLR database objects previously listed.  
   
@@ -49,9 +49,9 @@ manager: "jhubbard"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Designing Assemblies](../Topic/Designing%20Assemblies.md)|Explains what you have to consider before creating an assembly. This includes packaging assemblies, code access permissions, and other restrictions.|  
-|[Implementing Assemblies](../Topic/Implementing%20Assemblies.md)|Explains how to create and drop assemblies, how and when to modify assemblies, and how to retrieve metadata about assemblies.|  
-|[Getting Information About Assemblies](../Topic/Getting%20Information%20About%20Assemblies.md)|Lists the catalog views and functions that can be queried for metadata about assemblies.|  
+|[Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)|Explains what you have to consider before creating an assembly. This includes packaging assemblies, code access permissions, and other restrictions.|  
+|[Implementing Assemblies](../../relational-databases/clr-integration/assemblies-implementing.md)|Explains how to create and drop assemblies, how and when to modify assemblies, and how to retrieve metadata about assemblies.|  
+|[Getting Information About Assemblies](../../relational-databases/clr-integration/assemblies-getting-information.md)|Lists the catalog views and functions that can be queried for metadata about assemblies.|  
   
 ## See Also  
  [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

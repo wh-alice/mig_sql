@@ -30,7 +30,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Get started by running the Enable Database for Stretch Wizard
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
  To configure a database for Stretch Database, run the Enable Database for Stretch Wizard.  This topic describes the info that you have to enter and the choices that you have to make in the wizard.  
   
@@ -121,7 +121,7 @@ If you want to use a different type of filter function to select rows to migrate
   
 4.  Specify whether you want to use an existing server or create a new Azure server.  
   
-     If the Active Directory on your SQL Server is federated with Azure Active Directory, you can optionally use a federated service account for SQL Server to communicate with the remote Azure server. For more info about the requirements for this option, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+     If the Active Directory on your SQL Server is federated with Azure Active Directory, you can optionally use a federated service account for SQL Server to communicate with the remote Azure server. For more info about the requirements for this option, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
     -   **Create new server**  
   
@@ -148,7 +148,7 @@ If you want to use a different type of filter function to select rows to migrate
   
  If a database master key already exists, enter the password for it.  
   
- ![Secure credentials page of the Stretch Database wizard](../../sql-server/install/media/stretch-wizard-6b.PNG "Secure credentials page of the Stretch Database wizard")  
+ ![Secure credentials page of the Stretch Database wizard](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Secure credentials page of the Stretch Database wizard")  
   
  If the database does not have an existing master key, enter a strong password to create a database master key.  
   
@@ -166,7 +166,7 @@ If you want to use a different type of filter function to select rows to migrate
 ##  <a name="Summary"></a> Summary  
  Review the values that you entered and the options that you selected in the wizard and the estimated costs on Azure. Then select **Finish** to enable Stretch.  
   
- ![Summary page of the Stretch Database wizard](../../sql-server/stretch-database/media/stretch-wizard-8.png "Summary page of the Stretch Database wizard")  
+ ![Summary page of the Stretch Database wizard](../../sql-server/install/media/stretch-wizard-8.png "Summary page of the Stretch Database wizard")  
   
 ##  <a name="Results"></a> Results  
  Review the results.  

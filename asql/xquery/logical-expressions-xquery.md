@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Logical Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery supports the logical **and** and **or** operators.  
   
@@ -34,7 +34,7 @@ expression1 and expression2
 expression1 or expression2  
 ```  
   
- The test expressions, `expression1,``expression2`, in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] can result in an empty sequence, a sequence of one or more nodes, or a single Boolean value. Based on the result, their effective Boolean value is determined in the following manner:  
+ The test expressions, `expression1,``expression2`, in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] can result in an empty sequence, a sequence of one or more nodes, or a single Boolean value. Based on the result, their effective Boolean value is determined in the following manner:  
   
 -   If the test expression results in an empty sequence, the result of the expression is False.  
   

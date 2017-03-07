@@ -25,14 +25,14 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CREATE TABLE (Transact-SQL) IDENTITY (Property)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Creates an identity column in a table. This property is used with the CREATE TABLE and ALTER TABLE [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements.  
+  Creates an identity column in a table. This property is used with the CREATE TABLE and ALTER TABLE [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements.  
   
 > [!NOTE]  
 >  The IDENTITY property is different from the SQL-DMO **Identity** property that exposes the row identity property of a column.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -63,7 +63,7 @@ IDENTITY [ (seed , increment) ]
   
 -   **Consecutive values within a transaction** – A transaction inserting multiple rows is not guaranteed to get consecutive values for the rows because other concurrent inserts might occur on the table. If values must be consecutive then the transaction should use an exclusive lock on the table or use the **SERIALIZABLE** isolation level.  
   
--   **Consecutive values after server restart or other failures** –[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] might cache identity values for performance reasons and some of the assigned values can be lost during a database failure or server restart. This can result in gaps in the identity value upon insert. If gaps are not acceptable then the application should use its own mechanism to generate key values. Using a sequence generator with the **NOCACHE** option can limit the gaps to transactions that are never committed.  
+-   **Consecutive values after server restart or other failures** –[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] might cache identity values for performance reasons and some of the assigned values can be lost during a database failure or server restart. This can result in gaps in the identity value upon insert. If gaps are not acceptable then the application should use its own mechanism to generate key values. Using a sequence generator with the **NOCACHE** option can limit the gaps to transactions that are never committed.  
   
 -   **Reuse of values** – For a given identity property with specific seed/increment, the identity values are not reused by the engine. If a particular insert statement fails or if the insert statement is rolled back then the consumed identity values are lost and will not be generated again. This can result in gaps when the subsequent identity values are generated.  
   
@@ -109,7 +109,7 @@ VALUES
  The following example shows generic syntax for finding gaps in identity values when data is removed.  
   
 > [!NOTE]  
->  The first part of the following [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] script is designed for illustration only. You can run the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] script that starts with the comment: `-- Create the img table`.  
+>  The first part of the following [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] script is designed for illustration only. You can run the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] script that starts with the comment: `-- Create the img table`.  
   
 ```  
 -- Here is the generic syntax for finding identity value gaps in data.  

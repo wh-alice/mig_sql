@@ -24,7 +24,7 @@ manager: "erikre"
  This stored procedure returns metrics for the whole data set as a single partition. To partition the dataset into cross-sections and return metrics for each partition, use [SystemGetCrossValidationResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md).  
   
 > [!NOTE]  
->  This stored procedure is not supported for models that are built by using the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Time Series algorithm or the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Sequence Clustering algorithm. Also, for clustering models, use the separate stored procedure, [SystemGetClusterAccuracyResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md).  
+>  This stored procedure is not supported for models that are built by using the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Time Series algorithm or the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Sequence Clustering algorithm. Also, for clustering models, use the separate stored procedure, [SystemGetClusterAccuracyResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md).  
   
 ## Syntax  
   
@@ -153,7 +153,7 @@ CALL SystemGetAccuracyResults (
 |v Target Mail DT|Bike Buyer|1|0|1638|Likelihood|Root Mean Square Error|0.361630800104946|  
   
 ## Requirements  
- Cross-validation is available only in [!INCLUDE[ssEnterprise](../../analysis-services/data-mining/includes/ssenterprise-md.md)] beginning with [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)].  
+ Cross-validation is available only in [!INCLUDE[ssEnterprise](../../analysis-services/data-mining/includes/ssenterprise-md.md)] beginning with [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)].  
   
 ## See Also  
  [SystemGetCrossValidationResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   

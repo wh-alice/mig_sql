@@ -15,7 +15,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Staging Stored Procedure (Master Data Services)
-  When initiating the staging process from [!INCLUDE[ssManStudioFull](../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], you use one of three stored procedures.  
+  When initiating the staging process from [!INCLUDE[ssManStudioFull](../a9notintoc/includes/ssmanstudiofull-md.md)], you use one of three stored procedures.  
   
 -   stg.udp_\<name>_Leaf  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 |Parameter|Description|  
 |---------------|-----------------|  
-|**VersionName**<br /><br /> Required|The name of the version. This may or may not be case-sensitive, depending on your [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] collation setting.|  
+|**VersionName**<br /><br /> Required|The name of the version. This may or may not be case-sensitive, depending on your [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] collation setting.|  
 |**LogFlag**<br /><br /> Required|Determines whether transactions are logged during the staging process. Possible values are:<br /><br /> **0**: Do not log transactions.<br /><br /> **1**: Log transactions.<br /><br /> <br /><br /> For more information about transactions, see [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).|  
 |**BatchTag**<br /><br /> Required, except by web service|The **BatchTag** value as specified in the staging table.|  
 |**Batch_ID**<br /><br /> Required by web service only|The **Batch_ID** value as specified in the staging table.|  

@@ -31,7 +31,7 @@ Folders in a browser
  For more information about types of browsers that you can use, see "Browser Types Supported by Reporting Services" in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../reporting-services/report-builder/includes/ssrbrddup-md.md)]  
+>  [!INCLUDE[ssRBRDDup](../../a9retired/includes/ssrbrddup-md.md)]  
   
 ## Navigating Report Server Folders in a Web Browser  
  You can use a Web browser to navigate report server folders and run reports. Reports and items are displayed as links in the folder hierarchy. You can click links to open a report, resource, or folder, or view the contents of a shared data source. Navigating the folder hierarchy is useful if you do not know the URL of a report. You can specify the report server Web address to open a browser connection at the root node of the folder hierarchy, and then click folder links to navigate through the hierarchy.  
@@ -47,7 +47,7 @@ Folders in a browser
 -   A file name extension indicates a resource. The file name extension identifies the MIME type of the resource. For example, .jpg indicates an image in JPEG format.  
   
 ## Typing the URL Address of a Report  
- [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] supports URL access to specific items on a report server. The URL must include a fully qualified path to the report and commands to render the report. If the report includes parameters, you must also specify any values that are required to open the report. If you are typing a URL for a report that includes spaces in the path, parameter values, or a rendering extension, you must incorporate URL encoded characters into the URL to get the results you expect. The following example illustrates a report URL that includes encoding for spaces in the path name, parameters, and a rendering extension:  
+ [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] supports URL access to specific items on a report server. The URL must include a fully qualified path to the report and commands to render the report. If the report includes parameters, you must also specify any values that are required to open the report. If you are typing a URL for a report that includes spaces in the path, parameter values, or a rendering extension, you must incorporate URL encoded characters into the URL to get the results you expect. The following example illustrates a report URL that includes encoding for spaces in the path name, parameters, and a rendering extension:  
   
  `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   

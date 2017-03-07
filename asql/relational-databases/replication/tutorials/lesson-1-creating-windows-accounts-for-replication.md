@@ -30,7 +30,7 @@ In this lesson, you will create Windows accounts to run replication agents. You 
 |Merge Agent|Publisher and Subscriber|\<*machine_name*>\repl_merge|  
   
 > [!NOTE]  
-> In the replication tutorials, the Publisher and Distributor share the same instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], but it is not a requirement. If the Publisher and Subscriber share the same instance, the steps that are used to create accounts at the Subscriber are not required.  
+> In the replication tutorials, the Publisher and Distributor share the same instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], but it is not a requirement. If the Publisher and Subscriber share the same instance, the steps that are used to create accounts at the Subscriber are not required.  
   
 ### To create local Windows accounts for replication agents at the Publisher  
   

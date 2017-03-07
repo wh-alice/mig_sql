@@ -29,7 +29,7 @@ ms.author: "jeannt"
 manager: "erikre"
 ---
 # Tuples Element (XMLA)
-  Contains a set of [Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) objects for an [Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) element that uses the [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) data type, returned by the [Execute](../Topic/Execute%20Method%20\(XMLA\).md) method.  
+  Contains a set of [Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) objects for an [Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) element that uses the [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) data type, returned by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.  
   
 ## Syntax  
   
@@ -111,6 +111,6 @@ manager: "erikre"
 ```  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

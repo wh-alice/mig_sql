@@ -25,6 +25,6 @@ manager: "jhubbard"
 |Control Name|Description|  
 |------------------|-----------------|  
 |**Internet Information Services**|Displays the version of Internet Information Services (IIS) that is installed on the local computer. IIS version 7.0 or later is required to use Master Data Services Configuration Manager.|  
-|**MDS Product Version**|Displays the product version of [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)].|  
+|**MDS Product Version**|Displays the product version of [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)].|  
   
   

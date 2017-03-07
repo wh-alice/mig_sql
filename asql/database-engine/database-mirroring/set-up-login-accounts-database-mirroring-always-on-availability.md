@@ -18,7 +18,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Set Up Login Accounts - Database Mirroring Always On Availability
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   For two server instances to connect to each other's [database mirroring endpoint](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) point, the login account of each instance requires access to the other instance. Also, each login account requires connect permission to the Database Mirroring endpoint of the other instance.  
   
@@ -32,10 +32,10 @@ manager: "jhubbard"
     >  To create a more secure environment, consider using separate domain accounts for each server instance.  
   
 ##  <a name="CreateLogin"></a> Create a Login for a Different Account  
- If two server instances run as different accounts, the system administrator must use the CREATE LOGIN [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement to create a login for the startup service account of the remote instance for each server instance. For more information, see [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
+ If two server instances run as different accounts, the system administrator must use the CREATE LOGIN [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement to create a login for the startup service account of the remote instance for each server instance. For more information, see [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
   
 > [!IMPORTANT]  
->  If you run [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] under a non-domain account, you must use certificates. For more information, see [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+>  If you run [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] under a non-domain account, you must use certificates. For more information, see [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
  For example, for the server instance sqlA, which runs under loginA, to connect to the server instance sqlB, which runs under loginB, loginA must exist on sqlB, and loginB must exist on sqlA. In addition, for a database mirroring session that includes a witness server instance (sqlC) and in which the three server instances run under different domain accounts, the following logins must be created:  
   
@@ -49,13 +49,13 @@ manager: "jhubbard"
 >  It is possible to connect with the network service account by using the machine account instead of a domain user. If the machine account is used, it must be added as a user on the other server instance.  
   
 ##  <a name="GrantConnect"></a> Grant Connect Permission  
- Once a login has been created on a server instance, the login must be granted permission to connect to the database mirroring endpoint of the server instance. The system administrator grants the connect permission using a GRANT [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement. For more information, see [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md).  
+ Once a login has been created on a server instance, the login must be granted permission to connect to the database mirroring endpoint of the server instance. The system administrator grants the connect permission using a GRANT [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement. For more information, see [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
 -   [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)  
   
--   [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../Topic/Allow%20Network%20Access%20to%20a%20Database%20Mirroring%20Endpoint%20Using%20Windows%20Authentication%20\(SQL%20Server\).md).  
+-   [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
 -   [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   

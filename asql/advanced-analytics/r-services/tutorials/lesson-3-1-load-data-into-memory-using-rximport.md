@@ -21,10 +21,10 @@ manager: "jhubbard"
 # Lesson 3-1 - Load Data into Memory using rxImport
 The *rxImport* function can be used to move data from a data source into a data frame in R session memory, or into an XDF file on disk. If you don't specify a file as destination, data is put into memory as a data frame.  
   
-In this step, you'll learn how to get data from [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and then use the *rxImport* function to put the data of interest into a local file. That way, you can analyze it in the local compute context repeatedly, without having to re-query the database.  
+In this step, you'll learn how to get data from [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], and then use the *rxImport* function to put the data of interest into a local file. That way, you can analyze it in the local compute context repeatedly, without having to re-query the database.  
   
 ## Extract a Subset of Data from SQL Server to Local Memory  
-You've decided that  you want to examine only the high risk individuals in more detail. The source table in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is big, so you will get the information about just the high-risk customers, and load it into a data frame in the memory of the local workstation.  
+You've decided that  you want to examine only the high risk individuals in more detail. The source table in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is big, so you will get the information about just the high-risk customers, and load it into a data frame in the memory of the local workstation.  
   
 1.  Reset the compute context to your local workstation.  
   
@@ -76,7 +76,7 @@ The *rxImport* function assigns variable names to the columns during the import 
 By specifying additional operations in the *transforms* parameter, you can do elementary processing on each chunk of data that is read.  
   
 ## Next Step  
-[Create New SQL Server Table using rxDataStep &#40;Data Science Deep Dive&#41;](Create%20New%20SQL%20Server%20Table%20using%20rxDataStep%20\(Data%20Science%20Deep%20Dive\).md)  
+[Create New SQL Server Table using rxDataStep &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-3-2-create-new-sql-server-table-using-rxdatastep.md)  
   
 ## Previous Step  
 [Lesson 3: Transform Data Using R &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-3-transform-data-using-r-data-science-deep-dive.md)  

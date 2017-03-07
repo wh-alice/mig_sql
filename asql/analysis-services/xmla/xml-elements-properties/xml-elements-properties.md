@@ -156,6 +156,6 @@ manager: "erikre"
   
 ## See Also  
  [XML Data Types &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
- [XML Elements &#40;XMLA&#41;](../Topic/XML%20Elements%20\(XMLA\).md)  
+ [XML Elements &#40;XMLA&#41;](../../../a9retired/xml-elements-xmla.md)  
   
   

@@ -67,7 +67,7 @@ manager: "erikre"
     </CodeGroup>  
     ```  
   
- URL membership is only one of many membership conditions you might choose for your data processing extension. For more information about code access security in [!INCLUDE[ssCurrentUI](../../../analysis-services/instances/install/windows/includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)], see [Secure Development &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
+ URL membership is only one of many membership conditions you might choose for your data processing extension. For more information about code access security in [!INCLUDE[ssCurrentUI](../../../a9notintoc/includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../../../a9notintoc/includes/ssrsnoversion-md.md)], see [Secure Development &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
   
 ## Verifying the Deployment  
  You can verify whether your data processing extension was deployed successfully to the report server by using the Web service <xref:ReportService2010.ReportingService2010.ListExtensions%2A> method. You can also open Report Manager and verify that your extension is included in the list of available data sources. For more information about Report Manager and data sources, see [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  

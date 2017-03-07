@@ -39,7 +39,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Change Map Legends, Color Scale, and Associated Rules (Report Builder and SSRS)
-  In a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report, a map can contain map legends, a color scale, and a distance scale. These parts of a map help users interpret the data visualization on the map.  
+  In a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report, a map can contain map legends, a color scale, and a distance scale. These parts of a map help users interpret the data visualization on the map.  
   
  Legends include the following parts of a map:  
   
@@ -61,7 +61,7 @@ manager: "erikre"
   
 3.  To display the legend outside the viewport, select **Show \<report item> outside viewport**.  
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  In preview, map legends and the color scale appear only when there are results from the rules related to that legend. If there are no items to display, the legend does not appear in the rendered report.  
@@ -74,7 +74,7 @@ manager: "erikre"
   
 2.  In **Legend layout**, click the table layout that you want to use for the legend. As you click different options, the layout on the design surface changes.  
   
-3.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+3.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="MapLegendTitle"></a> To show or hide a map legend title  
   
@@ -107,7 +107,7 @@ manager: "erikre"
   
 4.  In the **Show in this legend** drop-down list, click the name of the legend to display the rule results in.  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="TemplateStyle"></a> To vary map element colors based on a template style  
   
@@ -121,7 +121,7 @@ manager: "erikre"
   
      A template style specifies font, border style, and color palette. Each map element is assigned a different color from the color palette for the theme that was specified in the Map Wizard or Map Layer Wizard. This is the only option that applies to layers that do not have associated analytical data.  
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="ColorPalette"></a> To vary map element colors based on color palette  
   
@@ -139,7 +139,7 @@ manager: "erikre"
   
 5.  In **Palette**, from the drop-down list, select the name of the palette to use.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="ColorRanges"></a> To vary map element colors based on color ranges  
   
@@ -161,7 +161,7 @@ manager: "erikre"
   
 7.  In **End color**, specify the color to use for the highest range.  
   
-8.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+8.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="CustomColors"></a> To vary map element colors based on custom colors  
   
@@ -179,7 +179,7 @@ manager: "erikre"
   
 5.  In **Custom colors**, click **Add** to specify each custom color.  
   
-6.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="DistributionOptions"></a> To set distribution options for a legend  
   
@@ -211,7 +211,7 @@ manager: "erikre"
   
 8.  In **Range end**, type a maximum range value. All values larger than this number are the same as the range maximum.  
   
-9. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="RuleLegend"></a> To change the contents of a rule legend  
   
@@ -232,7 +232,7 @@ manager: "erikre"
   
 6.  In **Show in this legend**, select the map legend to use to display the rule results.  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="ColorScale"></a> To change the contents of the color scale  
   
@@ -253,7 +253,7 @@ manager: "erikre"
   
 6.  In **Color scale options**, select **Show in color scale** to display the rule results in the color scale. You can specify this option for more than one color rule.  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="HideItems"></a> To remove all items from a legend  
   
@@ -265,7 +265,7 @@ manager: "erikre"
   
 3.  Click **Legend**.  
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ##  <a name="ChangeFormatItems"></a> To change the format of content in a legend  
  Set legend options for the rule that is associated with the map legend.  
@@ -280,7 +280,7 @@ manager: "erikre"
   
 4.  **Legend text** displays keywords that specify which data appears in the legend. Use map keywords and custom formats to help control the format of legend text. For example, #FROMVALUE {C2} specifies a currency format with two decimal places. For more information, see [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/7f1f5584-37b4-4fa2-ae44-8988c5f0c744.md).  
   
-5.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## See Also  
  [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   

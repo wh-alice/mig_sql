@@ -28,11 +28,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # DBCC CHECKCATALOG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Checks for catalog consistency within the specified database. The database must be online.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -55,7 +55,7 @@ DBCC CHECKCATALOG
  Suppresses all informational messages.  
   
 ## Remarks  
- After the DBCC CATALOG command finishes, a message is written to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log. If the DBCC command successfully executes, the message indicates a successful completion and the amount of time that the command ran. If the DBCC command stops before completing the check because of an error, the message indicates the command was terminated, a state value, and the amount of time the command ran. The following table lists and describes the state values that can be included in the message.  
+ After the DBCC CATALOG command finishes, a message is written to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error log. If the DBCC command successfully executes, the message indicates a successful completion and the amount of time that the command ran. If the DBCC command stops before completing the check because of an error, the message indicates the command was terminated, a state value, and the amount of time the command ran. The following table lists and describes the state values that can be included in the message.  
   
 |State|Description|  
 |-----------|-----------------|  
@@ -85,7 +85,7 @@ DBCC CHECKCATALOG
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
- If [!INCLUDE[ssSampleDBobject](../../database-engine/availability-groups/windows/includes/sssampledbobject-md.md)] is specified as the database name, DBCC CHECKCATALOG returns:  
+ If [!INCLUDE[ssSampleDBobject](../../a9retired/includes/sssampledbobject-md.md)] is specified as the database name, DBCC CHECKCATALOG returns:  
   
 ```  
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
@@ -108,6 +108,6 @@ GO
   
 ## See Also  
  [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
- [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [System Tables &#40;Transact-SQL&#41;](../../relational-databases/reference/system-tables/system-tables-transact-sql.md)  
   
   

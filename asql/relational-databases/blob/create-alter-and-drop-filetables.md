@@ -24,7 +24,7 @@ manager: "jhubbard"
 ##  <a name="BasicsCreate"></a> Creating a FileTable  
  A FileTable is a specialized user table that has a pre-defined and fixed schema. This schema stores FILESTREAM data, file and directory information, and file attributes. For information about the FileTable schema, see [FileTable Schema](../../relational-databases/blob/filetable-schema.md).  
   
- You can create a new FileTable by using Transact-SQL or [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. Since a FileTable has a fixed schema, you do not have to specify a list of columns. The simple syntax for creating a FileTable lets you specify:  
+ You can create a new FileTable by using Transact-SQL or [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. Since a FileTable has a fixed schema, you do not have to specify a list of columns. The simple syntax for creating a FileTable lets you specify:  
   
 -   A directory name. In the FileTable folder hierarchy, this table-level directory becomes the child of the database directory specified at the database level, and the parent of the files or directories stored in the table.  
   
@@ -139,7 +139,7 @@ GO
  The DROP TABLE command fails if there are open file handles in the FileTable’s file namespace. For information about closing open handles, see [Manage FileTables](../../relational-databases/blob/manage-filetables.md).  
   
 ##  <a name="BasicsOtherObjects"></a> Other Database Objects Are Created When You Create a FileTable  
- When you create a new FileTable, some system-defined indexes and constraints are also created. You cannot alter or drop these objects; they disappear only when the FileTable itself is dropped. To see the list of these objects, query the catalog view [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.filetable-system-defined-objects-transact-sql.md).  
+ When you create a new FileTable, some system-defined indexes and constraints are also created. You cannot alter or drop these objects; they disappear only when the FileTable itself is dropped. To see the list of these objects, query the catalog view [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.filetable-system-defined-objects-transact-sql.md).  
   
 ```tsql  
 --View all objects for all filetables, unsorted  

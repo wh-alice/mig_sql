@@ -16,7 +16,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Data Alert Messages
-  [!INCLUDE[ssRSnoversion](../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] data alerts deliver two types of data alert messages by email: Messages with data alert results and messages with error descriptions. Messages with results keep all recipients informed about changes in report data that is of common interest and important to business decisions. If for some reason an error occurs and the results are not available, the error message is sent instead.  
+  [!INCLUDE[ssRSnoversion](../a9notintoc/includes/ssrsnoversion-md.md)] data alerts deliver two types of data alert messages by email: Messages with data alert results and messages with error descriptions. Messages with results keep all recipients informed about changes in report data that is of common interest and important to business decisions. If for some reason an error occurs and the results are not available, the error message is sent instead.  
   
  The owner of the data alert definition also can view information about the data alert instance in Data Alert Manager. For more information, see [Data Alert Manager for SharePoint Users](../reporting-services/data-alert-manager-for-sharepoint-users.md).  
   

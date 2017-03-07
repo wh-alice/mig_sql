@@ -17,9 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Create a BI Semantic Model Connection to a Power Pivot Workbook
-  Use the information in this topic to set up a BI semantic model connection that redirects to a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbook in the same farm.  
+  Use the information in this topic to set up a BI semantic model connection that redirects to a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbook in the same farm.  
   
- After you create a BI semantic model connection and configure SharePoint permissions, you can use it as a data source for Excel or [!INCLUDE[ssCrescent](../../analysis-services/includes/sscrescent-md.md)] reports.  
+ After you create a BI semantic model connection and configure SharePoint permissions, you can use it as a data source for Excel or [!INCLUDE[ssCrescent](../../a9notintoc/includes/sscrescent-md.md)] reports.  
   
  This topic includes the following sections. Perform each task in the order given.  
   
@@ -36,9 +36,9 @@ manager: "erikre"
 ##  <a name="bkmk_prereq"></a> Review Prerequisites  
  You must have Contribute permissions or above to create a BI semantic model connection file.  
   
- You must have a library that supports the BI semantic model connection content type. For more information, see [Add a BI Semantic Model Connection Content Type to a Library &#40;Power Pivot for SharePoint&#41;](../Topic/Add%20a%20BI%20Semantic%20Model%20Connection%20Content%20Type%20to%20a%20Library%20\(Power%20Pivot%20for%20SharePoint\).md).  
+ You must have a library that supports the BI semantic model connection content type. For more information, see [Add a BI Semantic Model Connection Content Type to a Library &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md).  
   
- You must know the URL of the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbook for which you are setting up a BI semantic model connection (for example, http://adventure-works/shared documents/myworkbook.xlsx). The workbook must be in the same farm.  
+ You must know the URL of the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbook for which you are setting up a BI semantic model connection (for example, http://adventure-works/shared documents/myworkbook.xlsx). The workbook must be in the same farm.  
   
  All computers and users that participate in the connection sequence must be in the same domain or trusted domain (two-way trust).  
   
@@ -48,9 +48,9 @@ manager: "erikre"
   
      ![New Document submenu in a SharePoint library](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "New Document submenu in a SharePoint library")  
   
-2.  Set the **Server** property to the SharePoint URL of the [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbook (for example, **http://mysharepoint/shared documents/myWorkbook.xlsx**. In a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint deployment, data can be loaded on any server in the farm. For this reason, data source connections to [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] data specify just the path to the workbook. The [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] System Service determines which server loads the data.  
+2.  Set the **Server** property to the SharePoint URL of the [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbook (for example, **http://mysharepoint/shared documents/myWorkbook.xlsx**. In a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint deployment, data can be loaded on any server in the farm. For this reason, data source connections to [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] data specify just the path to the workbook. The [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] System Service determines which server loads the data.  
   
-     Do not use the **Database** property; it is not used when specifying the location of a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] workbook.  
+     Do not use the **Database** property; it is not used when specifying the location of a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] workbook.  
   
      Your page should look similar to the following illustration.  
   
@@ -88,7 +88,7 @@ manager: "erikre"
 4.  Click **Remove User Permissions**.  
   
 ##  <a name="bkmk_userdb"></a> Configure SharePoint Permissions on the Workbook  
- If you are using a [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] database inside an Excel workbook, the SharePoint permissions on the Excel workbook determine data access via the BI semantic model connection. All users who access the workbook must have Read permissions on the workbook in order to use it as an external data source.  
+ If you are using a [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] database inside an Excel workbook, the SharePoint permissions on the Excel workbook determine data access via the BI semantic model connection. All users who access the workbook must have Read permissions on the workbook in order to use it as an external data source.  
   
  If you created a **BISM Users** group using the instructions in the previous section, user and group accounts that are members of **BISM Users** will have sufficient permission on the workbook as well as the BI semantic model connection file, assuming the workbook uses inherited permissions.  
   

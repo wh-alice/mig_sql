@@ -31,12 +31,12 @@ manager: "erikre"
   
  Running ClearCache will also clear in-memory caches in the xVelocity in-memory analytics engine (VertiPaq). The xVelocity engine maintains a small set of cached results. Running ClearCache will invalidate these caches in the xVelocity engine.  
   
- Finally, running ClearCache will also remove residual data that is left in memory when a tabular model is reconfigured for **DirectQuery** mode. This is particularly important if the model contains sensitive data that is subject to tight controls. In this case, running ClearCache is a precautionary action that you can take to ensure that sensitive data exists only where you expect it to be. Clearing the cache manually is necessary if you are using [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] to deploy the model and change the query mode. In contrast, using [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)] to specify **DirectQuery** on the model and partitions will automatically clear the cache when you switch the model to use that query mode.  
+ Finally, running ClearCache will also remove residual data that is left in memory when a tabular model is reconfigured for **DirectQuery** mode. This is particularly important if the model contains sensitive data that is subject to tight controls. In this case, running ClearCache is a precautionary action that you can take to ensure that sensitive data exists only where you expect it to be. Clearing the cache manually is necessary if you are using [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] to deploy the model and change the query mode. In contrast, using [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)] to specify **DirectQuery** on the model and partitions will automatically clear the cache when you switch the model to use that query mode.  
   
  Compared with recommendations for clearing multidimensional model caches during performance testing, there is no broad recommendation for clearing tabular model caches. If you are not managing the deployment of a tabular model that contains sensitive data, there is no specific administrative task that calls for clearing the cache.  
   
 ## Clear the cache for Analysis Services models  
- To clear the cache, use XMLA and [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. You can clear the cache at the database, cube, dimension or table, or measure group level. The following steps for clearing the cache at the database level apply to both multidimensional models and tabular models.  
+ To clear the cache, use XMLA and [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. You can clear the cache at the database, cube, dimension or table, or measure group level. The following steps for clearing the cache at the database level apply to both multidimensional models and tabular models.  
   
 > [!NOTE]  
 >  Rigorous performance testing might require a more comprehensive approach to clearing the cache. For instructions on how to flush Analysis Services and file system caches, see the section on clearing caches in the [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?linkID=http://go.microsoft.com/fwlink/?LinkID=225539).  
@@ -47,13 +47,13 @@ manager: "erikre"
   
 #### Step 1: Get the object identifier  
   
-1.  In [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], right-click an object, select **Properties**, and copy the value from the ID property in the **Properties** pane. This approach works for the database, cube, dimension, or table.  
+1.  In [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], right-click an object, select **Properties**, and copy the value from the ID property in the **Properties** pane. This approach works for the database, cube, dimension, or table.  
   
 2.  To get the measure group ID, right-click the measure group and select **Script Measure Group As**. Choose either **Create** or **Alter**, and send the query to a window. The ID of the measure group will be visible in the object definition. Copy the ID of the object definition.  
   
 #### Step 2: Run the query  
   
-1.  In [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], right-click a database, point to **New Query**, and select **XMLA**.  
+1.  In [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], right-click a database, point to **New Query**, and select **XMLA**.  
   
 2.  Copy the following code example into the XMLA query window. Change **DatabaseID** to the ID of the database on the current connection.  
   

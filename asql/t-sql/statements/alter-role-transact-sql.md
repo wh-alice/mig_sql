@@ -31,9 +31,9 @@ manager: "jhubbard"
   Adds or removes members to or from a database role, or changes the name of a user-defined database role.  
   
 > [!NOTE]  
->  To alter roles in [!INCLUDE[ssSDW](../../database-engine/configure/windows/includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)], use [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) and [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md).  
+>  To alter roles in [!INCLUDE[ssSDW](../../a9retired/includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)], use [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addrolemember-transact-sql.md) and [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-droprolemember-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -61,12 +61,12 @@ ALTER ROLE role_name
   
 ## Arguments  
  *role_name*  
- **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)]  
+ **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)]  
   
  Specifies the database role to change.  
   
  ADD MEMBER *database_principal*l  
- **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)]  
+ **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)]  
   
  Specifies to add the database principal to the membership of a database role.  
   
@@ -75,7 +75,7 @@ ALTER ROLE role_name
 -   *database_principal* cannot be a fixed database role or a server principal.  
   
  DROP MEMBER *database_principal*  
- **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)]  
+ **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)]  
   
  Specifies to remove a database principal from the membership of a database role.  
   
@@ -84,7 +84,7 @@ ALTER ROLE role_name
 -   *database_principal* cannot be a fixed database role or a server principal.  
   
  WITH NAME = *new_name*  
- **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)]  
+ **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)]  
   
  Specifies to change the name of a user-defined database role. The new name must not already exist in the database.  
   
@@ -109,14 +109,14 @@ ALTER ROLE role_name
 ## Metadata  
  These system views contain information about database roles and database principals.  
   
--   [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-role-members-transact-sql.md)  
+-   [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-role-members-transact-sql.md)  
   
--   [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-principals-transact-sql.md)  
+-   [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-principals-transact-sql.md)  
   
 ## Examples  
   
 ### A. Change the name of a database role  
- **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)]  
+ **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)]  
   
  The following example changes the name of role `buyers` to `purchasing`. [!INCLUDE[AdWorks-example](../../t-sql/statements/includes/adworks-example-md.md)]  
   
@@ -125,7 +125,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ```  
   
 ### B. Add or remove role members  
- **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)]  
+ **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)]  
   
  This example creates a database role named `Sales`. It adds a database user named Barry to the membership, and then shows how to remove the member Barry. [!INCLUDE[AdWorks-example](../../t-sql/statements/includes/adworks-example-md.md)]  
   
@@ -139,8 +139,8 @@ ALTER ROLE Sales DROP MEMBER Barry;
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
- [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-role-members-transact-sql.md)   
- [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-principals-transact-sql.md)  
+ [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-role-members-transact-sql.md)   
+ [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-principals-transact-sql.md)  
   
   

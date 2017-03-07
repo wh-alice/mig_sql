@@ -17,22 +17,22 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Remote Processing (Analysis Services)
-  You can run scheduled or unattended processing on a remote [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance, where the processing request originates from one computer but executes on another computer on the same network.  
+  You can run scheduled or unattended processing on a remote [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance, where the processing request originates from one computer but executes on another computer on the same network.  
   
 ## Prerequisites  
   
--   If you are running different versions of SQL Server on each computer, the client libraries must match the version of the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance that is processing the model. For example, if processing is on a [!INCLUDE[ssASCurrent](../../analysis-services/includes/ssascurrent-md.md)] instance, then the computer from which the request originates must have the client library corresponding to [!INCLUDE[ssASCurrent](../../analysis-services/includes/ssascurrent-md.md)]. See [Data providers used for Analysis Services connections](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md).  
+-   If you are running different versions of SQL Server on each computer, the client libraries must match the version of the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance that is processing the model. For example, if processing is on a [!INCLUDE[ssASCurrent](../../a9notintoc/includes/ssascurrent-md.md)] instance, then the computer from which the request originates must have the client library corresponding to [!INCLUDE[ssASCurrent](../../a9notintoc/includes/ssascurrent-md.md)]. See [Data providers used for Analysis Services connections](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md).  
   
 -   On the remote server, **Allow remote connections to this computer** must be enabled, and the account issuing the processing request must be listed as an allowed user.  
   
--   Windows firewall rules must be configured to allow inbound connections to [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)]. Verify you can connect to the remote [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]. See [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+-   Windows firewall rules must be configured to allow inbound connections to [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)]. Verify you can connect to the remote [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]. See [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 -   Resolve any existing local processing errors before attempting remote processing. Verify that when the processing request is local, data can be successfully retrieved from the external relational data source. See [Set Impersonation Options &#40;SSAS - Multidimensional&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md) for instructions on specifying credentials used to retrieve data.  
   
 ## On-demand remote processing  
- [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] accepts processing requests from user or application accounts that have [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] administrator permissions. If you are an administrator, verify that you can connect to the remote instance and process the database manually over the remote connection.  
+ [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] accepts processing requests from user or application accounts that have [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] administrator permissions. If you are an administrator, verify that you can connect to the remote instance and process the database manually over the remote connection.  
   
-1.  On the computer that will be used to schedule processing, start [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] and connect to the remote [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance.  
+1.  On the computer that will be used to schedule processing, start [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] and connect to the remote [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance.  
   
 2.  Right-click the database, select **Process**, point to **Script** and choose **Script Action to New Query Window**. Commands used to invoke processing will appear in the query window.  
   
@@ -41,7 +41,7 @@ manager: "erikre"
      Successful completion of this task provides an XMLA query that you can embed in a scheduled job. It also confirms there are no connection problems.  
   
 ## Schedule remote processing using SQL Server Agent Service  
- By default, SQL Server Agent service runs under a virtual account, with network connections made using the machine account. To avoid having to give a machine account administrative rights on the remote [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance, you should change the SQL Server Agent service account to run as a least-privilege domain user account.  
+ By default, SQL Server Agent service runs under a virtual account, with network connections made using the machine account. To avoid having to give a machine account administrative rights on the remote [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance, you should change the SQL Server Agent service account to run as a least-privilege domain user account.  
   
  Be sure to grant all of the necessary permissions, including giving the account **sysadmin** rights on the Database Engine instance providing the service.  
   
@@ -55,7 +55,7 @@ manager: "erikre"
   
 #### Grant the SQL Server Agent account administrator permission on SSAS  
   
-1.  Using [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], connect to the remote [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance.  
+1.  Using [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)], connect to the remote [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance.  
   
 2.  Right-click the server name, click P**roperties**, and then click **Security**.  
   
@@ -71,13 +71,13 @@ manager: "erikre"
   
 4.  In Type, choose **SQL Server Analysis Services Command**.  
   
-5.  In Server, enter the name of the remote [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance.  
+5.  In Server, enter the name of the remote [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance.  
   
 6.  In Command, paste the XMLA command for processing the database. This is the XMLA script that you generated in the verification step for on-demand remote processing. Click **OK** to save the job.  
   
 #### Start SQL Server Profiler  
   
-1.  On the remote computer, start SQL Server Profiler. Connect to the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] instance, and click **Run** to start the trace using the default events.  
+1.  On the remote computer, start SQL Server Profiler. Connect to the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] instance, and click **Run** to start the trace using the default events.  
   
      You will use SQL Server Profiler to monitor the processing events as they occur.  
   

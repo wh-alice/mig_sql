@@ -27,7 +27,7 @@ manager: "erikre"
   
 ### To create a folder  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md).  
   
 2.  In Report Manager, select the Home folder and click **New Folder**. Or, to create a folder under an existing folder, navigate to that folder in the **Contents** page and click the folder to open it. Then click **New Folder**.  
   
@@ -49,7 +49,7 @@ manager: "erikre"
   
 3.  In the drop-down menu, click **Delete**.  
   
-4.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+4.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ### To modify or delete a folder  
   
@@ -72,8 +72,8 @@ manager: "erikre"
 7.  Click **Apply** to save changes.  
   
 ## See Also  
- [New Folder Page &#40;Report Manager&#41;](../Topic/New%20Folder%20Page%20\(Report%20Manager\).md)   
- [Contents Page &#40;Report Manager&#41;](../Topic/Contents%20Page%20\(Report%20Manager\).md)   
+ [New Folder Page &#40;Report Manager&#41;](../../a9retired/new-folder-page-report-manager.md)   
+ [Contents Page &#40;Report Manager&#41;](../../a9retired/contents-page-report-manager.md)   
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

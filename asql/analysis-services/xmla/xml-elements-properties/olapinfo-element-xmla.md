@@ -66,6 +66,6 @@ manager: "erikre"
  The **OLAPInfo** section of a **root** element using the **MDDataSet** data type provides metadata about the cube, the axes of the multidimensional result, and the properties of the cells included the result.  
   
 ## See Also  
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

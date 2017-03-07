@@ -30,7 +30,7 @@ manager: "jhubbard"
 
   Inserts or deletes a stop word in the default full-text stoplist of the current database.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -62,7 +62,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
 |Format|Description|  
 |------------|-----------------|  
-|String|*language_term* corresponds to the **alias** column value in the [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys.syslanguages-transact-sql.md) compatibility view. The string must be enclosed in single quotation marks, as in **'***language_term***'**.|  
+|String|*language_term* corresponds to the **alias** column value in the [sys.syslanguages (Transact-SQL)](../../relational-databases/reference/system-compatibility-views/sys.syslanguages-transact-sql.md) compatibility view. The string must be enclosed in single quotation marks, as in **'***language_term***'**.|  
 |Integer|*language_term* is the LCID of the language.|  
 |Hexadecimal|*language_term* is 0x followed by the hexadecimal value of the LCID. The hexadecimal value must not exceed eight digits, including leading zeros. If the value is in double-byte character set (DBCS) format, SQL Server converts it to Unicode.|  
   
@@ -101,8 +101,8 @@ ALTER FULLTEXT STOPLIST CombinedFunctionWordList ADD 'en' LANGUAGE 'French';
  [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
  [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-stoplists-transact-sql.md)   
- [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.fulltext-stopwords-transact-sql.md)   
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-stoplists-transact-sql.md)   
+ [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.fulltext-stopwords-transact-sql.md)   
  [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
   
   

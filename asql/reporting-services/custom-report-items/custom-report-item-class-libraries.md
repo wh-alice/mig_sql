@@ -121,7 +121,7 @@ manager: "erikre"
 |**EditValue**|Invokes the Expression Editor, initialized with the given object value.|  
   
 ### Microsoft.ReportDesigner.IFieldsDataObject  
- This class is a collection of [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] fields, and is used to support drag-and-drop events in the design environment. Inherits from **IReportItemDataObject**.  
+ This class is a collection of [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] fields, and is used to support drag-and-drop events in the design environment. Inherits from **IReportItemDataObject**.  
   
 #### Public Properties  
   

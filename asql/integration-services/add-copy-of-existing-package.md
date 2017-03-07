@@ -19,29 +19,29 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Add Copy of Existing Package
-  Use the **Add Copy of Existing Package** dialog box to add a copy of a package stored in [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], the file system, or the SSIS Package Store to an [!INCLUDE[ssISnoversion](../advanced-analytics/r-services/includes/ssisnoversion-md.md)] project.  
+  Use the **Add Copy of Existing Package** dialog box to add a copy of a package stored in [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], the file system, or the SSIS Package Store to an [!INCLUDE[ssISnoversion](../a9notintoc/includes/ssisnoversion-md.md)] project.  
   
 ## Options  
  **Package location**  
  Select the type of storage location from which to copy the package.  
   
  **Server**  
- If copying from [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] or the SSIS Package Store, type a server name or select a server from the list.  
+ If copying from [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] or the SSIS Package Store, type a server name or select a server from the list.  
   
  **Authentication type**  
- If copying from [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)], select an authentication type.  
+ If copying from [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)], select an authentication type.  
   
  **User name**  
- If using [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication, provide a user name.  
+ If using [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Authentication, provide a user name.  
   
  **Password**  
- If using [!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication, provide a password.  
+ If using [!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)] Authentication, provide a password.  
   
  **Package path**  
  Type the package path, or click the browse button **(…)** and locate the package to copy.  
   
 ## See Also  
- [Save Copy of Package](../Topic/Save%20Copy%20of%20Package.md)   
+ [Save Copy of Package](../a9retired/save-copy-of-package.md)   
  [Import Package Dialog Box UI Reference](../integration-services/service/import-package-dialog-box-ui-reference.md)   
  [Export Package Dialog Box UI Reference](../integration-services/service/export-package-dialog-box-ui-reference.md)   
  [Save Packages](../integration-services/save-packages.md)   

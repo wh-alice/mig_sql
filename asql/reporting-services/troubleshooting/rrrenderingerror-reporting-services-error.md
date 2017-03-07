@@ -23,14 +23,14 @@ manager: "erikre"
   
 |||  
 |-|-|  
-|Product Name|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]|  
+|Product Name|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]|  
 |Event ID|rrRenderingError|  
 |Event Source|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources.Strings|  
-|Component|[!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)]|  
+|Component|[!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)]|  
 |Message Text|An error occurred during rendering of the report. (rrRenderingError) %1|  
   
 ## Explanation  
- This message is returned when [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] cannot render or export the report.  
+ This message is returned when [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] cannot render or export the report.  
   
  A message that indicates that the size is not supported is typically caused when the specified RDL page size is not valid. Specify a valid RDL page size and then try again.  
   

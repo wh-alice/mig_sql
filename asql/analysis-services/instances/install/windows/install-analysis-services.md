@@ -17,9 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Install Analysis Services
-  [!INCLUDE[ssASnoversion](../../../../analysis-services/includes/ssasnoversion-md.md)] is an analytical database server that hosts Tabular models, multidimensional cubes, and data mining models that you can access from reports, spreadsheets, and dashboards.  
+  [!INCLUDE[ssASnoversion](../../../../a9notintoc/includes/ssasnoversion-md.md)] is an analytical database server that hosts Tabular models, multidimensional cubes, and data mining models that you can access from reports, spreadsheets, and dashboards.  
   
- [!INCLUDE[ssASnoversion](../../../../analysis-services/includes/ssasnoversion-md.md)] is multi-instance, which means that you can install more than one copy of [!INCLUDE[ssASnoversion](../../../../analysis-services/includes/ssasnoversion-md.md)] on a single computer, or run new and old versions  side-by-side. Any instance you install runs in one of three modes, as determined during setup: Multidimensional and Data Mining, Tabular, or SharePoint. If you want to use multiple modes, you'll need a separate instance for each one.  
+ [!INCLUDE[ssASnoversion](../../../../a9notintoc/includes/ssasnoversion-md.md)] is multi-instance, which means that you can install more than one copy of [!INCLUDE[ssASnoversion](../../../../a9notintoc/includes/ssasnoversion-md.md)] on a single computer, or run new and old versions  side-by-side. Any instance you install runs in one of three modes, as determined during setup: Multidimensional and Data Mining, Tabular, or SharePoint. If you want to use multiple modes, you'll need a separate instance for each one.  
   
  After you install the server in a particular mode, you can use it host solutions that conform to that mode. For example, a tabular mode server is required if you want tabular model data access over the network.  
   
@@ -66,7 +66,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
 |Value|Description|  
 |-----------|-----------------|  
 |MULTIDIMENSIONAL|This is the default value. If you do not set **ASSERVERMODE**, the server is installed in Multidimensional server mode.|  
-|POWERPIVOT|This value is optional. In practice, if you set the **ROLE** parameter, the server mode is automatically set to 1, making **ASSERVERMODE** optional for a [!INCLUDE[ssGemini](../../../../analysis-services/includes/ssgemini-md.md)] for SharePoint installation. For more information, see [Install Power Pivot from the Command Prompt](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328).|  
+|POWERPIVOT|This value is optional. In practice, if you set the **ROLE** parameter, the server mode is automatically set to 1, making **ASSERVERMODE** optional for a [!INCLUDE[ssGemini](../../../../a9notintoc/includes/ssgemini-md.md)] for SharePoint installation. For more information, see [Install Power Pivot from the Command Prompt](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328).|  
 |TABULAR|This value is required if you are installing Analysis Services in Tabular mode using command line setup.|  
   
 ## See Also  

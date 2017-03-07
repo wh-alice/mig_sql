@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Choose an Accuracy Chart Type and Set Chart Options
-  [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] provides multiple methods for determining the validity of your mining models. The type of accuracy chart that you can create for each model or structure depends on these factors:  
+  [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] provides multiple methods for determining the validity of your mining models. The type of accuracy chart that you can create for each model or structure depends on these factors:  
   
 -   The type of algorithm that was used to create the model  
   

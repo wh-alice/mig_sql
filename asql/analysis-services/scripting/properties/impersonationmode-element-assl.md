@@ -64,7 +64,7 @@ manager: "erikre"
 |*ImpersonateAccount*|The parent uses the credentials of the user account that is specified in the parent element.|  
 |*ImpersonateAnonymous*|The parent uses the credentials of an anonymous user.|  
 |*ImpersonateCurrentUser*|The parent uses the credentials of the current user.|  
-|*ImpersonateServiceAccount*|The parent uses the credentials of the service account that is associated with the instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)].|  
+|*ImpersonateServiceAccount*|The parent uses the credentials of the service account that is associated with the instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)].|  
   
  The enumeration that corresponds to the allowed values for **ImpersonationMode** in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.ImpersonationLevel>.  
   

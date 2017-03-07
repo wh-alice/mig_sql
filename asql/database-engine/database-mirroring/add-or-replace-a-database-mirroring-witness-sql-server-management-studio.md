@@ -18,7 +18,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Add or Replace a Database Mirroring Witness (SQL Server Management Studio)
-  If the database mirroring endpoints use Windows Authentication,, you can use [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to add or replace a witness. Adding a witness in [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] also changes the operating mode to high-safety mode with automatic failover.  
+  If the database mirroring endpoints use Windows Authentication,, you can use [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] to add or replace a witness. Adding a witness in [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] also changes the operating mode to high-safety mode with automatic failover.  
   
 > [!NOTE]  
 >  We strongly recommend that the witness reside on a separate computer from either of the partners. The service account used by the witness must be in the same domain as the service accounts used by the principal and mirror server instances, or it must be in a trusted domain.  
@@ -69,7 +69,7 @@ manager: "jhubbard"
  [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Database Properties &#40;Mirroring Page&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../Topic/Establish%20a%20Database%20Mirroring%20Session%20Using%20Windows%20Authentication%20\(SQL%20Server%20Management%20Studio\).md)   
+ [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)   
  [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   

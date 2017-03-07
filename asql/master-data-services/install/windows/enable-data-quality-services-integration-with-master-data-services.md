@@ -15,17 +15,17 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Enable Data Quality Services Integration with Master Data Services
-  In the [!INCLUDE[ssMDSshort](../../../analysis-services/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../../analysis-services/includes/ssmdsxls-md.md)], matching functionality is provided by Data Quality Services (DQS). This functionality must be enabled to be used.  
+  In the [!INCLUDE[ssMDSshort](../../../a9notintoc/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../../a9notintoc/includes/ssmdsxls-md.md)], matching functionality is provided by Data Quality Services (DQS). This functionality must be enabled to be used.  
   
 ## Prerequisites  
   
--   A [!INCLUDE[ssMDSshort](../../../analysis-services/includes/ssmdsshort-md.md)] web application and database must exist.  
+-   A [!INCLUDE[ssMDSshort](../../../a9notintoc/includes/ssmdsshort-md.md)] web application and database must exist.  
   
--   The Data Quality Services feature and the Data Quality Client must be installed on the same [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance that hosts the MDS database. For more information, see [Install Data Quality Services](../../../data-quality-services/install/windows/install-data-quality-services.md).  
+-   The Data Quality Services feature and the Data Quality Client must be installed on the same [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance that hosts the MDS database. For more information, see [Install Data Quality Services](../../../data-quality-services/install/windows/install-data-quality-services.md).  
   
 ### To enable Data Quality Services integration  
   
-1.  Open [!INCLUDE[ssMDScfgmgr](../../../database-engine/install/windows/includes/ssmdscfgmgr-md.md)].  
+1.  Open [!INCLUDE[ssMDScfgmgr](../../../a9retired/includes/ssmdscfgmgr-md.md)].  
   
 2.  In the left pane, click **Web Configuration**.  
   

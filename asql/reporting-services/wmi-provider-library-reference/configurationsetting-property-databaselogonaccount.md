@@ -42,9 +42,9 @@ public string DatabaseLogonAccount;
  [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## Remarks  
- Valid values for this property will vary depending on the value of the [DatabaseLogonType](../Topic/DatabaseLogonType%20Property%20\(WMI%20MSReportServer_ConfigurationSetting\).md) property.  
+ Valid values for this property will vary depending on the value of the [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) property.  
   
- This property is ignored if the [DatabaseLogonType](../Topic/DatabaseLogonType%20Property%20\(WMI%20MSReportServer_ConfigurationSetting\).md) property is set to **2 (Service)**.  
+ This property is ignored if the [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) property is set to **2 (Service)**.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../reporting-services/wmi-provider-library-reference/includes/ssrswminmspca-md.md)]  

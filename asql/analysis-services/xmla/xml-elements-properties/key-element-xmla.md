@@ -68,6 +68,6 @@ manager: "erikre"
  [KeyColumn Element &#40;ASSL&#41;](../../../analysis-services/scripting/objects/keycolumn-element-assl.md)   
  [Update Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
  [Where Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)   
- [Properties &#40;XMLA&#41;](../Topic/Properties%20\(XMLA\).md)  
+ [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

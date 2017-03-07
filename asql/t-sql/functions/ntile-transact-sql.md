@@ -25,11 +25,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # NTILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Distributes the rows in an ordered partition into a specified number of groups. The groups are numbered, starting at one. For each row, NTILE returns the number of the group to which the row belongs.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -44,7 +44,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
  Is a positive integer constant expression that specifies the number of groups into which each partition must be divided. *integer_expression* can be of type **int**, or **bigint**.  
   
  <partition_by_clause>  
- Divides the result set produced by the [FROM](../../t-sql/queries/from-transact-sql.md) clause into partitions to which the function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;Transact-SQL&#41;](../Topic/OVER%20Clause%20\(Transact-SQL\).md).  
+ Divides the result set produced by the [FROM](../../t-sql/queries/from-transact-sql.md) clause into partitions to which the function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  <order_by_clause>  
  Determines the order in which the NTILE values are assigned to the rows in a partition. An integer cannot represent a column when the <order_by_clause> is used in a ranking function.  
@@ -147,7 +147,7 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 (14 row(s) affected)  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### C. Dividing rows into groups  
  The following example uses the NTILE function to divide a set of salespersons into four groups based on their assigned sales quota for the year 2003. Because the total number of rows is not divisible by the number of groups, the first group has five rows and the remaining groups have four rows each.  

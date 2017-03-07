@@ -26,9 +26,9 @@ manager: "jhubbard"
  **Snapshot format**  
  Select native mode or character mode for the snapshot format.  
   
--   Select **Native SQL Server - all Subscribers must be servers running SQL Server** if all Subscribers are instances of [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] other than [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssEW](../../analysis-services/instances/includes/ssew-md.md)]. The native snapshot format provides the best performance.  
+-   Select **Native SQL Server - all Subscribers must be servers running SQL Server** if all Subscribers are instances of [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] other than [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssEW](../../a9retired/includes/ssew-md.md)]. The native snapshot format provides the best performance.  
   
--   Select **Character - required if a Publisher or Subscriber is not running SQL Server** if any Subscribers are running [!INCLUDE[ssEW](../../analysis-services/instances/includes/ssew-md.md)] or are non-[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Subscribers.  
+-   Select **Character - required if a Publisher or Subscriber is not running SQL Server** if any Subscribers are running [!INCLUDE[ssEW](../../a9retired/includes/ssew-md.md)] or are non-[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Subscribers.  
   
  **Location of snapshot files**  
  Select the location to store snapshot files. They can be stored in the default location; they can also be stored in an alternate location instead of, or in addition to, the default location. Files stored in an alternate location can be compressed.  

@@ -19,7 +19,7 @@ manager: "jhubbard"
 # SAP BW Source Editor (Columns Page)
   Use the **Columns** page of the **SAP BW Source Editor** to map an output column to each external (source) column.  
   
- To learn more about the SAP BW source component of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Connector 1.1 for SAP BW, see [SAP BW Source](../../integration-services/data-flow/sap-bw-source.md).  
+ To learn more about the SAP BW source component of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Connector 1.1 for SAP BW, see [SAP BW Source](../../integration-services/data-flow/sap-bw-source.md).  
   
 > [!IMPORTANT]  
 >  The documentation for the Microsoft Connector 1.1 for SAP BW assumes familiarity with the SAP Netweaver BW environment. For more information about SAP Netweaver BW, or for information about how to configure SAP Netweaver BW objects and processes, see your SAP documentation.  
@@ -29,7 +29,7 @@ manager: "jhubbard"
   
  **To open the Columns page**  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] package that contains the SAP BW source.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] package that contains the SAP BW source.  
   
 2.  On the **Data Flow** tab, double-click the SAP BW source.  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
  To change the order of the columns, in the **Available External Columns** list, clear the check boxes for all columns. Then, select the columns in the order that you want them to appear.  
   
  **Output Column**  
- Provide a unique name for each output column. The default is the name of the selected external (source) column. However, you can enter any unique, descriptive name. [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer will display the **Output Column** names for the columns when you configure downstream components that consume data from this source.  
+ Provide a unique name for each output column. The default is the name of the selected external (source) column. However, you can enter any unique, descriptive name. [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer will display the **Output Column** names for the columns when you configure downstream components that consume data from this source.  
   
 ## See Also  
  [SAP BW Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   

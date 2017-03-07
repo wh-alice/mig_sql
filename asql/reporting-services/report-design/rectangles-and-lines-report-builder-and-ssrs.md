@@ -16,7 +16,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Rectangles and Lines (Report Builder and SSRS)
-  Rectangles and lines can create visual effects within a [!INCLUDE[ssRSnoversion_md](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated report. You can set display properties on these report items from the Border section of the Home tab, and set other properties in the Properties pane. You can add features like a background color or image, a tooltip, or a bookmark to a rectangle.  
+  Rectangles and lines can create visual effects within a [!INCLUDE[ssRSnoversion_md](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated report. You can set display properties on these report items from the Border section of the Home tab, and set other properties in the Properties pane. You can add features like a background color or image, a tooltip, or a bookmark to a rectangle.  
   
 ##  <a name="RectanglesLinesReportParts"></a> Rectangles and Lines as Report Parts  
  You can publish rectangles with the items that they contain separately from the report as report parts. Report parts are self-contained report items that are stored on the report server and can be included in other reports.  

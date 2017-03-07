@@ -29,7 +29,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDDataSet Data Type (XMLA)
-  Defines a derived data type that represents multidimensional data returned by the [Execute](../Topic/Execute%20Method%20\(XMLA\).md) method.  
+  Defines a derived data type that represents multidimensional data returned by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis:mddataset  
   
@@ -62,7 +62,7 @@ manager: "erikre"
 |Derived elements|None|  
   
 ## Remarks  
- The **MDDataSet** data type provides the OLAP-oriented rowset (or dataset) required to represent OLAP data in XML. The contents of this rowset can vary depending on the values of the **Content** and **Format** properties provided in the [Properties](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) collection of the **Execute** method. For more information about the **Content** and **Format** properties, see [Supported XMLA Properties &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md).  
+ The **MDDataSet** data type provides the OLAP-oriented rowset (or dataset) required to represent OLAP data in XML. The contents of this rowset can vary depending on the values of the **Content** and **Format** properties provided in the [Properties](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) collection of the **Execute** method. For more information about the **Content** and **Format** properties, see [Supported XMLA Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
  For basic information about the OLE DB for OLAP dataset structures, refer to "MDDataSet Data Type Mapping to OLE DB" in the XML for Analysis 1.1 specification. For a full XML Schema definition language (XSD) sample of the **MDDataSet** data type, refer to "Appendix D: MDDataSet Example" of the XML for Analysis 1.1 specification.  
   

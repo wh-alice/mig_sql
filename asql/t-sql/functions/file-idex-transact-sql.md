@@ -27,11 +27,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # FILE_IDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the file identification (ID) number for the specified logical file name of the data, log, or full-text file in the current database.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -50,7 +50,7 @@ FILE_IDEX ( file_name )
  **NULL** on error  
   
 ## Remarks  
- *file_name* corresponds to the logical file name displayed in the **name** column in the [sys.master_files](../../relational-databases/system-catalog-views/sys.master-files-transact-sql.md) or [sys.database_files](../../relational-databases/system-catalog-views/sys.database-files-transact-sql.md) catalog views.  
+ *file_name* corresponds to the logical file name displayed in the **name** column in the [sys.master_files](../../relational-databases/reference/system-catalog-views/sys.master-files-transact-sql.md) or [sys.database_files](../../relational-databases/reference/system-catalog-views/sys.database-files-transact-sql.md) catalog views.  
   
  FILE_IDEX can be used in a select list, a WHERE clause, or anywhere an expression is allowed. For more information, see [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
@@ -104,7 +104,7 @@ AS 'File_ID';
   
 ## See Also  
  [Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-files-transact-sql.md)   
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.master-files-transact-sql.md)  
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-files-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.master-files-transact-sql.md)  
   
   

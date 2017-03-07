@@ -19,9 +19,9 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Extended Events
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Extended Events has a highly scalable and highly configurable architecture that allows users to collect as much or as little information as is necessary to troubleshoot or identify a performance problem.  
+[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Extended Events has a highly scalable and highly configurable architecture that allows users to collect as much or as little information as is necessary to troubleshoot or identify a performance problem.  
 
 You can find more information about Extended Events at:
 
@@ -29,23 +29,23 @@ You can find more information about Extended Events at:
 - Blogs: [SQL Server Extended Events](http://blogs.msdn.com/b/extended_events/)
 
   
-## Benefits of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Extended Events  
+## Benefits of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Extended Events  
  Extended Events is a light weight performance monitoring system that uses very few performance resources. Extended Events provides two graphical user interfaces (**New Session Wizard** and **New Session**) to create, modify, display, and analyze your session data.  
   
 ## Extended Events Concepts  
- [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Extended Events (Extended Events) builds on existing concepts, such as an event or an event consumer, uses concepts from Event Tracing for Windows, and introduces new concepts.  
+ [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Extended Events (Extended Events) builds on existing concepts, such as an event or an event consumer, uses concepts from Event Tracing for Windows, and introduces new concepts.  
   
  The following table describes the concepts in Extended Events.  
   
 |Topic|Description|  
 |-----------|-----------------|  
 |[SQL Server Extended Events Packages](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Describes the Extended Events packages that contain objects that are used for obtaining and processing data when an Extended Events session is running.|  
-|[SQL Server Extended Events Targets](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)|Describes the event consumers that can receive data during an event session.|  
+|[SQL Server Extended Events Targets](../../a9retired/sql-server-extended-events-targets.md)|Describes the event consumers that can receive data during an event session.|  
 |[SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md)|Describes the engine that implements and manages an Extended Events session.|  
 |[SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)|Describes the Extended Events session.|  
   
 ## Extended Events Architecture  
- Extended Events (Extended Events) is a general event-handling system for server systems. The Extended Events infrastructure supports the correlation of data from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and under certain conditions, the correlation of data from the operating system and database applications. In the latter case, Extended Events output must be directed to Event Tracing for Windows (ETW) to correlate the event data with operating system or application event data.  
+ Extended Events (Extended Events) is a general event-handling system for server systems. The Extended Events infrastructure supports the correlation of data from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], and under certain conditions, the correlation of data from the operating system and database applications. In the latter case, Extended Events output must be directed to Event Tracing for Windows (ETW) to correlate the event data with operating system or application event data.  
   
  All applications have execution points that are useful both inside and outside an application. Inside the application, asynchronous processing may be enqueued using information that is collected during the initial execution of a task. Outside the application, execution points provide monitoring utilities with information about the behavioral and performance characteristics of the monitored application.  
   
@@ -53,7 +53,7 @@ You can find more information about Extended Events at:
   
 -   Tracing tools, such as SQL Trace and System Monitor.  
   
--   Logging tools, such as the Windows event log or the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] error log.  
+-   Logging tools, such as the Windows event log or the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] error log.  
   
 -   Users administering a product or developing applications on a product.  
   
@@ -61,7 +61,7 @@ You can find more information about Extended Events at:
   
 -   The Extended Events engine is event agnostic. This enables the engine to bind any event to any target because the engine is not constrained by event content. For more information about the Extended Events engine, see [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md).  
   
--   Events are separated from event consumers, which are called *targets* in Extended Events. This means that any target can receive any event. In addition, any event that is raised can be automatically consumed by the target, which can log or provide additional event context. For more information, see [SQL Server Extended Events Targets](../Topic/SQL%20Server%20Extended%20Events%20Targets.md).  
+-   Events are separated from event consumers, which are called *targets* in Extended Events. This means that any target can receive any event. In addition, any event that is raised can be automatically consumed by the target, which can log or provide additional event context. For more information, see [SQL Server Extended Events Targets](../../a9retired/sql-server-extended-events-targets.md).  
   
 -   Events are distinct from the action to take when an event occurs. Therefore, any action can be associated with any event.  
   
@@ -73,7 +73,7 @@ You can find more information about Extended Events at:
   
 -   Integration with, and support for existing ETW tools.  
   
--   A fully configurable event handling mechanism that is based on [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+-   A fully configurable event handling mechanism that is based on [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
 -   The ability to dynamically monitor active processes, while having minimal effect on those processes.  
   
@@ -81,22 +81,22 @@ You can find more information about Extended Events at:
   
 ## Extended Events Tasks  
 
-Using [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] to execute [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] Data Definition Language (DDL) statements, dynamic management views and functions, or catalog views, you can create simple or complex [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Extended Events troubleshooting solutions for your [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] environment.  
+Using [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] to execute [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] Data Definition Language (DDL) statements, dynamic management views and functions, or catalog views, you can create simple or complex [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Extended Events troubleshooting solutions for your [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] environment.  
   
 |Task Description|Topic|  
 |----------------------|-----------|  
 |Use the **Object Explorer** to manage event sessions.|[Manage Event Sessions in the Object Explorer](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)|  
-|Describes how to create an Extended Events session.|[Create an Extended Events Session](../Topic/Create%20an%20Extended%20Events%20Session.md)|  
+|Describes how to create an Extended Events session.|[Create an Extended Events Session](../../a9retired/create-an-extended-events-session.md)|  
 |Describes how to view and refresh target data.| [Advanced Viewing of Target Data from Extended Events in SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)|  
-|Describes how to use Extended Events tools to create and manage your [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Extended Events sessions.|[Extended Events Tools](../../relational-databases/extended-events/extended-events-tools.md)|  
+|Describes how to use Extended Events tools to create and manage your [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Extended Events sessions.|[Extended Events Tools](../../relational-databases/extended-events/extended-events-tools.md)|  
 |Describes how to alter an Extended Events session.|[Alter an Extended Events Session](../../relational-databases/extended-events/alter-an-extended-events-session.md)|  
-|Describes how to get information about the fields associated with the events.|[Get the Fields for All Events](../Topic/Get%20the%20Fields%20for%20All%20Events.md)|  
-|Describes how to find out what events are available in the registered packages.|[View the Events for Registered Packages](../Topic/View%20the%20Events%20for%20Registered%20Packages.md)|  
-|Describes how to determine what Extended Events targets are available in the registered packages.|[View the Extended Events Targets for Registered Packages](../Topic/View%20the%20Extended%20Events%20Targets%20for%20Registered%20Packages.md)|  
+|Describes how to get information about the fields associated with the events.|[Get the Fields for All Events](../../a9retired/get-the-fields-for-all-events.md)|  
+|Describes how to find out what events are available in the registered packages.|[View the Events for Registered Packages](../../a9retired/view-the-events-for-registered-packages.md)|  
+|Describes how to determine what Extended Events targets are available in the registered packages.|[View the Extended Events Targets for Registered Packages](../../a9retired/view-the-extended-events-targets-for-registered-packages.md)|  
 |Describes how to view the Extended Events events and actions that are equivalent to each SQL Trace event and its associated columns.|[View the Extended Events Equivalents to SQL Trace Event Classes](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
-|Describes how to find the parameters you can set when you use the ADD TARGET argument in CREATE EVENT SESSION or ALTER EVENT SESSION.|[Get the Configurable Parameters for the ADD TARGET Argument](../Topic/Get%20the%20Configurable%20Parameters%20for%20the%20ADD%20TARGET%20Argument.md)|  
+|Describes how to find the parameters you can set when you use the ADD TARGET argument in CREATE EVENT SESSION or ALTER EVENT SESSION.|[Get the Configurable Parameters for the ADD TARGET Argument](../../a9retired/get-the-configurable-parameters-for-the-add-target-argument.md)|  
 |Describes how to convert an existing SQL Trace script to an Extended Events session.|[Convert an Existing SQL Trace Script to an Extended Events Session](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
-|Describes how to determine which queries are holding the lock, the plan of the query, and the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] stack at the time the lock was taken.|[Determine Which Queries Are Holding Locks](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
+|Describes how to determine which queries are holding the lock, the plan of the query, and the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] stack at the time the lock was taken.|[Determine Which Queries Are Holding Locks](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |Describes how to identify the source of locks that are hindering database performance.|[Find the Objects That Have the Most Locks Taken on Them](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |Describes how to use Extended Events with Event Tracing for Windows to monitor system activity.|[Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
 | Using the Catalog views and the Dynamic management views (DMVs) for extended events | [SELECTs and JOINs From System Views for Extended Events in SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
@@ -107,7 +107,7 @@ Using [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmans
  [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [Deploy a Data-tier Application](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [Monitor Data-tier Applications](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
- [Extended Events Dynamic Management Views](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [Extended Events Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
+ [Extended Events Dynamic Management Views](../../relational-databases/reference/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
+ [Extended Events Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
   
   

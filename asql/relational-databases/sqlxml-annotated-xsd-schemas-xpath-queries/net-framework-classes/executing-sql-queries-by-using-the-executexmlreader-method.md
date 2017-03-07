@@ -24,7 +24,7 @@ manager: "jhubbard"
   Instead of using the ExecuteToStream method, you can use the ExecuteXmlReader method of the SqlXmlCommand object to execute commands. This method returns an XmlReader object that can be used for further processing of the result (which in this example is printing the element or attribute names and the values).  
   
 > [!NOTE]  
->  In the code, you must provide the name of the instance of Microsoft [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] in the connection string.  
+>  In the code, you must provide the name of the instance of Microsoft [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] in the connection string.  
   
 ```  
 using System;  
@@ -64,7 +64,7 @@ using System.Xml;
   
 ### To test the application  
   
-1.  Make sure that you have the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] .NET Framework installed on your computer.  
+1.  Make sure that you have the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] .NET Framework installed on your computer.  
   
 2.  Save the C# code (DocSample.cs) that is provided in this topic in a folder.  
   

@@ -18,18 +18,18 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Tabular Model Designer (SSAS)
-  The tabular model designer is part of [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], integrated with Microsoft [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)], with additional project type templates specifically for developing professional tabular model solutions.  [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] is installed as a free web download. See [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx) for details.   
+  The tabular model designer is part of [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], integrated with Microsoft [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)], with additional project type templates specifically for developing professional tabular model solutions.  [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] is installed as a free web download. See [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx) for details.   
   
 ##  <a name="bkmk_benefits"></a> Benefits  
- When you install [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], new project templates for creating tabular models are added to the available project types. After creating a new tabular model project by using one of the templates, you can begin model authoring by using the tabular model designer tools and wizards.  
+ When you install [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], new project templates for creating tabular models are added to the available project types. After creating a new tabular model project by using one of the templates, you can begin model authoring by using the tabular model designer tools and wizards.  
   
- In addition to new templates and tools for authoring professional multidimensional and tabular model solutions, the [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] environment provides debugging and project lifecycle capabilities that ensure you create the most powerful BI solutions for your organization. For more information about [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)], see [Getting Started with Visual Studio](http://go.microsoft.com/fwlink/?LinkId=206389).  
+ In addition to new templates and tools for authoring professional multidimensional and tabular model solutions, the [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] environment provides debugging and project lifecycle capabilities that ensure you create the most powerful BI solutions for your organization. For more information about [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)], see [Getting Started with Visual Studio](http://go.microsoft.com/fwlink/?LinkId=206389).  
   
 ##  <a name="bkmk_proj_temp"></a> Project Templates  
- When you install [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], the following tabular model project templates are added to the Business Intelligence project types:  
+ When you install [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], the following tabular model project templates are added to the Business Intelligence project types:  
   
  **Analysis Services Tabular Project**  
- This template can be used to create a new, blank tabular model project. Compatibility levels are specified when you create the project. Choose the default, **SQL Server 2016 RTM (1200)**, to use all of features built into [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+ This template can be used to create a new, blank tabular model project. Compatibility levels are specified when you create the project. Choose the default, **SQL Server 2016 RTM (1200)**, to use all of features built into [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].  
   
  ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.jpg "ssas_tabularproject_compat1200")  
   
@@ -38,11 +38,11 @@ manager: "erikre"
   
  Older models have older compatibility levels. You can upgrade to 1200 by changing the Compatibility Level property after importing the model definition.  
   
- **Import from [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)]**  
- This template is used for creating a new tabular model project by extracting the metadata and data from a [!INCLUDE[ssGeminiClient](../../analysis-services/includes/ssgeminiclient-md.md)] file.  
+ **Import from [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)]**  
+ This template is used for creating a new tabular model project by extracting the metadata and data from a [!INCLUDE[ssGeminiClient](../../a9notintoc/includes/ssgeminiclient-md.md)] file.  
   
 ##  <a name="bkmk_wind_men"></a> Windows and Menus  
- The [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] tabular model authoring environment includes the following:  
+ The [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] tabular model authoring environment includes the following:  
   
 ### Designer Window  
  The designer window is used to author tabular models by providing a visual representation of the model. When you open the Model.bim file, the model opens in the designer window. You can author a model in the designer window by using two different view modes:  
@@ -114,7 +114,7 @@ manager: "erikre"
  Build and deployment information is displayed in the **Output** Window (in addition to the modal progress dialog). To view the **Output** window, click the **View** menu, and then click Output.  
   
 ### Menu Items  
- When you install [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], additional menu items specifically for authoring tabular models are added to the Visual Studio menu bar. The **Model** menu can be used to launch the Data Import Wizard, view existing connections, process workspace data, and browse the model workspace in [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Excel. The **Table** menu is used to create and manage relationships between tables, create and manage measures, specify data table settings, specify calculation options, and specify other table properties. With the **Column** menu, you can add and delete columns in a table, hide and unhide columns, and specify other column properties such as data types and filters. You can build and deploy tabular model solutions on the **Build** menu. Copy/Paste functions are included on the **Edit** menu.  
+ When you install [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], additional menu items specifically for authoring tabular models are added to the Visual Studio menu bar. The **Model** menu can be used to launch the Data Import Wizard, view existing connections, process workspace data, and browse the model workspace in [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Excel. The **Table** menu is used to create and manage relationships between tables, create and manage measures, specify data table settings, specify calculation options, and specify other table properties. With the **Column** menu, you can add and delete columns in a table, hide and unhide columns, and specify other column properties such as data types and filters. You can build and deploy tabular model solutions on the **Build** menu. Copy/Paste functions are included on the **Edit** menu.  
   
  In addition to these menu items, additional settings are added to the Analysis Services options on the Tools menu items.  
   
@@ -126,10 +126,10 @@ manager: "erikre"
  Analysis Services projects integrate with the selected source control plug-in. If you have configured Visual Studio to use source control, you can use check in/check out from Solution Explorer. To configure to use Team Foundation Server, see [Configure Visual Studio with Team Foundation Version Control](http://msdn.microsoft.com/library/ms253064.aspx). Many third-party source control plug-ins are supported as well.  
   
  **Fonts**  
- Tabular models use the [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] environment font to control the fonts in the display. It can be necessary to change this font if the default [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] font does not have all of the Unicode characters you need for your language. To change fonts, click the **Tools** menu, then click **Options**, and then click **Fonts and Colors**.  
+ Tabular models use the [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] environment font to control the fonts in the display. It can be necessary to change this font if the default [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] font does not have all of the Unicode characters you need for your language. To change fonts, click the **Tools** menu, then click **Options**, and then click **Fonts and Colors**.  
   
  **Keyboard Shortcuts**  
- The Analysis Services keyboard shortcuts can be configured/remapped through the Tools->Options->Keyboard dialog. Some global [!INCLUDE[vsprvs](../../analysis-services/multidimensional-models/includes/vsprvs-md.md)] shortcuts, such as build, save, debug, new project, etc. are supported in the tabular model designer context. Other tabular model designer specific shortcuts are in the Analysis Services context.  
+ The Analysis Services keyboard shortcuts can be configured/remapped through the Tools->Options->Keyboard dialog. Some global [!INCLUDE[vsprvs](../../a9retired/includes/vsprvs-md.md)] shortcuts, such as build, save, debug, new project, etc. are supported in the tabular model designer context. Other tabular model designer specific shortcuts are in the Analysis Services context.  
   
 ## See Also  
  [Tabular Model Projects &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   

@@ -22,13 +22,13 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Manage and troubleshoot Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../database-engine/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   To manage and troubleshoot Stretch Database, use the tools and methods described in this topic .  
 ## Manage local data  
   
 ###  <a name="LocalInfo"></a> Get info about local databases and tables enabled for Stretch Database  
- Open the catalog views **sys.databases** and **sys.tables** to see info about Stretch-enabled SQL Server databases and tables. For more info, see [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.databases-transact-sql.md) and [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.tables-transact-sql.md).  
+ Open the catalog views **sys.databases** and **sys.tables** to see info about Stretch-enabled SQL Server databases and tables. For more info, see [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md) and [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.tables-transact-sql.md).  
  
  To see how much space a Stretch-enabled table is using in SQL Server, run the following statement.
  
@@ -42,7 +42,7 @@ GO
 ## Manage data migration  
   
 ### Check the filter function applied to a table  
- Open the catalog view **sys.remote_data_archive_tables** and check the value of the **filter_predicate** column to identify the function that Stretch Database is using to select rows to migrate. If the value is null, the entire table is eligible to be migrated. For more info, see [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../Topic/sys.remote_data_archive_tables%20\(Transact-SQL\).md) and [Select rows to migrate by using a filter function](../../sql-server/install/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
+ Open the catalog view **sys.remote_data_archive_tables** and check the value of the **filter_predicate** column to identify the function that Stretch Database is using to select rows to migrate. If the value is null, the entire table is eligible to be migrated. For more info, see [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/stretch-database-catalog-views-sys.remote-data-archive-tables.md) and [Select rows to migrate by using a filter function](../../sql-server/install/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
 ###  <a name="Migration"></a> Check the status of data migration  
  Select **Tasks | Stretch | Monitor** for a database in SQL Server Management Studio to monitor data migration in Stretch Database Monitor. For more info, see [Monitor and troubleshoot data migration &#40;Stretch Database&#41;](../../sql-server/install/monitor-and-troubleshoot-data-migration-stretch-database.md).  
@@ -55,7 +55,7 @@ GO
 ## Manage remote data  
   
 ###  <a name="RemoteInfo"></a> Get info about remote databases and tables used by Stretch Database  
- Open the catalog views **sys.remote_data_archive_databases** and **sys.remote_data_archive_tables** to see info about the remote databases and tables in which migrated data is stored. For more info, see [sys.remote_data_archive_databases &#40;Transact-SQL&#41;](../Topic/sys.remote_data_archive_databases%20\(Transact-SQL\).md) and [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../Topic/sys.remote_data_archive_tables%20\(Transact-SQL\).md).  
+ Open the catalog views **sys.remote_data_archive_databases** and **sys.remote_data_archive_tables** to see info about the remote databases and tables in which migrated data is stored. For more info, see [sys.remote_data_archive_databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/stretch-database-catalog-views-sys.remote-data-archive-databases.md) and [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/stretch-database-catalog-views-sys.remote-data-archive-tables.md).  
  
 To see how much space a Stretch-enabled table is using in Azure, run the following statement.
  
@@ -67,7 +67,7 @@ GO
  ```
 
 ### Delete migrated data  
-If you want to delete data that has already been migrated to Azure, follow the steps described in [sys.sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys.sp-rda-reconcile-batch-transact-sql.md).  
+If you want to delete data that has already been migrated to Azure, follow the steps described in [sys.sp_rda_reconcile_batch](../../relational-databases/reference/system-stored-procedures/sys.sp-rda-reconcile-batch-transact-sql.md).  
   
 ## Manage table schema
 
@@ -75,7 +75,7 @@ If you want to delete data that has already been migrated to Azure, follow the s
  Don't change the schema of a remote Azure table that's associated with a SQL Server table configured for Stretch Database. In particular, don't modify the name or the data type of a column. The Stretch Database feature makes various assumptions about the schema of the remote table in relation to the schema of the SQL Server table. If you change the remote schema, Stretch Database stops working for the changed table.  
 
 ### Reconcile table columns  
-If you have accidentally deleted columns from the remote table, run **sp_rda_reconcile_columns** to add columns to the remote table that exist in the Stretch-enabled SQL Server table but not in the remote table. For more info, see [sys.sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys.sp-rda-reconcile-columns-transact-sql.md).  
+If you have accidentally deleted columns from the remote table, run **sp_rda_reconcile_columns** to add columns to the remote table that exist in the Stretch-enabled SQL Server table but not in the remote table. For more info, see [sys.sp_rda_reconcile_columns](../../relational-databases/reference/system-stored-procedures/sys.sp-rda-reconcile-columns-transact-sql.md).  
   
   > [!IMPORTANT]
   > When **sp_rda_reconcile_columns** recreates columns that you accidentally deleted from the remote table, it does not restore the data that was previously in the deleted columns.
@@ -101,7 +101,7 @@ If you have accidentally deleted columns from the remote table, run **sp_rda_rec
  Queries against Stretch-enabled tables return both local and remote data by default. You can change the scope of queries for all queries by all users, or only for a single query by an administrator.  
    
  ### Change the scope of queries for all queries by all users  
- To change the scope of all queries by all users, run the stored procedure **sys.sp_rda_set_query_mode**. You can reduce the scope to query local data only, disable all queries, or restore the default setting. For more info, see [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys.sp-rda-set-query-mode-transact-sql.md).  
+ To change the scope of all queries by all users, run the stored procedure **sys.sp_rda_set_query_mode**. You can reduce the scope to query local data only, disable all queries, or restore the default setting. For more info, see [sys.sp_rda_set_query_mode](../../relational-databases/reference/system-stored-procedures/sys.sp-rda-set-query-mode-transact-sql.md).  
    
  ### <a name="queryHints"></a>Change the scope of queries for a single query by an administrator  
  To change the scope of a single query by a member of the db_owner role, add the **WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *value* )** query hint to the SELECT statement. The REMOTE_DATA_ARCHIVE_OVERRIDE query hint can have the following values.  

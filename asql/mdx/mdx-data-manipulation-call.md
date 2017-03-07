@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Data Manipulation - CALL
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Runs a stored procedure that returns a void either in the current scope or optionally on a specified cube.  
   
@@ -54,7 +54,7 @@ CALL SP_Name
  If a cube is not specified, the statement runs the stored procedure on the current cube.  
   
 > [!NOTE]  
->  If the stored procedure is not registered on the client, the **CALL** statement attempts to call the stored procedure from an instance of [!INCLUDE[msCoName](../advanced-analytics/r-services/tutorials/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../advanced-analytics/r-services/includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)].  
+>  If the stored procedure is not registered on the client, the **CALL** statement attempts to call the stored procedure from an instance of [!INCLUDE[msCoName](../a9notintoc/includes/msconame-md.md)][!INCLUDE[ssNoVersion](../a9notintoc/includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)].  
   
 ## See Also  
  [MDX Data Manipulation Statements &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   

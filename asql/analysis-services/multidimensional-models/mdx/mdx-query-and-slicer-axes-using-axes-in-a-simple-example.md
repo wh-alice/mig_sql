@@ -47,7 +47,7 @@ WHERE ( [Measures].[Packages] )
 |2nd quarter|45|45|  
   
 ## See Also  
- [Specifying the Contents of a Query Axis &#40;MDX&#41;](../Topic/Specifying%20the%20Contents%20of%20a%20Query%20Axis%20\(MDX\).md)   
- [Specifying the Contents of a Slicer Axis &#40;MDX&#41;](../Topic/Specifying%20the%20Contents%20of%20a%20Slicer%20Axis%20\(MDX\).md)  
+ [Specifying the Contents of a Query Axis &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
+ [Specifying the Contents of a Slicer Axis &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

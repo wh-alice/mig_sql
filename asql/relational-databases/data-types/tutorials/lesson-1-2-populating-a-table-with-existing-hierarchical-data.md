@@ -162,7 +162,7 @@ This task creates a new table and populates it with the data in the **EmployeeDe
 The next task will create indexes to support the hierarchical structure.  
   
 ## Next Task in Lesson  
-[Optimizing the NewOrg Table](../Topic/Optimizing%20the%20NewOrg%20Table.md)  
+[Optimizing the NewOrg Table](../../../relational-databases/data-types/tutorials/lesson-1-3-optimizing-the-neworg-table.md)  
   
   
   

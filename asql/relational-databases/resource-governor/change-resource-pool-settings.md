@@ -18,9 +18,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Change Resource Pool Settings
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  You can change resource pool settings by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)].  
+  You can change resource pool settings by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)].  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -37,9 +37,9 @@ manager: "jhubbard"
  Changing resource pool settings requires CONTROL SERVER permission.  
   
 ##  <a name="ChgRPProp"></a> Change Resource Pool Settings Using SQL Server Management Studio  
- **To change resource pool settings by using [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)]**  
+ **To change resource pool settings by using [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)]**  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to and including **Resource Pools**.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to and including **Resource Pools**.  
   
 2.  Right-click the resource pool to be modified, and then click **Properties**.  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
 5.  To save the changes, click **OK**  
   
 ##  <a name="ChgRPTSQL"></a> Change Resource Pool Settings Using Transact-SQL  
- **To change resource pool settings by using [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)]**  
+ **To change resource pool settings by using [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)]**  
   
 1.  Run the **ALTER RESOURCE POOL** or **ALTER EXTERNAL RESOURCE POOL** statement specifying the property values to be changed.  
   

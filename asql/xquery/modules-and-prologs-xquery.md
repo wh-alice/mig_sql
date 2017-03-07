@@ -22,9 +22,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Modules and Prologs (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [XQuery Prolog](../Topic/XQuery%20Prolog.md) is a series of namespace declarations. In using the declare namespace in prolog, you can specify prefix to namespace binding and use the prefix in the query body.  
+  [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md) is a series of namespace declarations. In using the declare namespace in prolog, you can specify prefix to namespace binding and use the prefix in the query body.  
   
 ## Implementation Limitations  
  The following XQuery specifications are not supported in this implementation:  
@@ -52,7 +52,7 @@ manager: "jhubbard"
 -   Function declaration (`declare function`)  
   
 ## In This Section  
- [XQuery Prolog](../Topic/XQuery%20Prolog.md)  
+ [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)  
  Describes the XQuery prolog.  
   
 ## See Also  

@@ -28,6 +28,6 @@ BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID /*lpReserved*/)
  A Boolean value, **True** if the DLL entry point initialized properly, otherwise **False**.  
   
 ## See Also  
- [FrameWindowVisible](../Topic/FrameWindowVisible.md)  
+ [FrameWindowVisible](../relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md)  
   
   

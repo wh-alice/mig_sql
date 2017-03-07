@@ -18,16 +18,16 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Set Report Server Properties (Management Studio)
-  You can set report server system properties in [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] to enable features or set server defaults.  
+  You can set report server system properties in [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] to enable features or set server defaults.  
   
 ### To open the Advanced Server Properties page  
   
-1.  Start [!INCLUDE[ssManStudio](../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] and connect to a report server instance.  
+1.  Start [!INCLUDE[ssManStudio](../../a9notintoc/includes/ssmanstudio-md.md)] and connect to a report server instance.  
   
 2.  Right-click the report server node, and select **Properties**. Click **Advanced** to open the properties page. See [Server Properties &#40;Advanced Page&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) for a description of each property.  
   
 ## See Also  
  [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Report Server System Properties](../Topic/Report%20Server%20System%20Properties.md)  
+ [Report Server System Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   

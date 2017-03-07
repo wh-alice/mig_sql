@@ -15,7 +15,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Errors and Events Reference (Power Pivot for SharePoint)
-  This section provides information about errors and events for [!INCLUDE[ssGemini](../../analysis-services/includes/ssgemini-md.md)] for SharePoint. Errors in this section are identified by the error message text that appears in a log or error window.  
+  This section provides information about errors and events for [!INCLUDE[ssGemini](../../a9notintoc/includes/ssgemini-md.md)] for SharePoint. Errors in this section are identified by the error message text that appears in a log or error window.  
   
  To view the list of error messages documented in this section, use the contents pane in Books Online.  
   

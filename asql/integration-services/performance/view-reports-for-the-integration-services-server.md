@@ -15,11 +15,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # View Reports for the Integration Services Server
-  In the current release of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] to help you monitor [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] projects that have been deployed to the [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] server.  For more information about the reports, see [Reports for the Integration Services Server](../../integration-services/performance/reports-for-the-integration-services-server.md).  
+  In the current release of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] to help you monitor [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] projects that have been deployed to the [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] server.  For more information about the reports, see [Reports for the Integration Services Server](../../integration-services/performance/reports-for-the-integration-services-server.md).  
   
 ### To view reports for the Integration Services server  
   
-1.  In [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], expand the **Integration Services Catalogs** node in Object Explorer.  
+1.  In [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)], expand the **Integration Services Catalogs** node in Object Explorer.  
   
 2.  Right-click **SSISDB**, click **Reports**, and then click **Standard Reports**.  
   

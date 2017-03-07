@@ -66,4 +66,4 @@ To enable or disable package management requires the command-line utility **Regi
 
 
 ## See Also
-[R Package Management for SQL Server R Services](R%20Package%20Management%20for%20SQL%20Server%20R%20Services.md)
+[R Package Management for SQL Server R Services](../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)

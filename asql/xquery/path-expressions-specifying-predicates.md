@@ -24,13 +24,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Path Expressions - Specifying Predicates
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   As described in the topic, [Path Expressions in XQuery](../xquery/path-expressions-xquery.md), an axis step in a path expression includes the following components:  
   
--   [An axis](../Topic/Specifying%20Axis%20in%20a%20Path%20Expression%20Step.md).  
+-   [An axis](../xquery/path-expressions-specifying-axis.md).  
   
--   A node test. For more information, see [Specifying Node Test in a Path Expression Step](../Topic/Specifying%20Node%20Test%20in%20a%20Path%20Expression%20Step.md).  
+-   A node test. For more information, see [Specifying Node Test in a Path Expression Step](../xquery/path-expressions-specifying-node-test.md).  
   
 -   Zero or more predicates. This is optional.  
   

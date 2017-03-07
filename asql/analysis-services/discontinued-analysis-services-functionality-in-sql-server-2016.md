@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Discontinued Analysis Services Functionality in SQL Server 2016
-  A *discontinued feature* is one that is no longer supported. It might also be physically removed from the product. The following features are discontinued [!INCLUDE[ssASCurrent](../analysis-services/includes/ssascurrent-md.md)].  
+  A *discontinued feature* is one that is no longer supported. It might also be physically removed from the product. The following features are discontinued [!INCLUDE[ssASCurrent](../a9notintoc/includes/ssascurrent-md.md)].  
   
 |||  
 |-|-|  
@@ -34,7 +34,7 @@ manager: "erikre"
 |CELL_EVALUATION_LIST intrinsic cell property|None. This feature was deprecated in SQL Server 2005.|  
   
 > [!NOTE]  
->  Previously deprecated feature announcements from [!INCLUDE[ssSQL14](../analysis-services/includes/sssql14-md.md)] remain in effect. Because the code supporting those features has not yet been cut from the product, many  of these features are still present in this release. While previously deprecated features might be accessible, they are still considered deprecated and could be physically removed from the product at any point during the [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)] release. We strongly recommend that you avoid using deprecated features in any new models or applications based on [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] in [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)].  
+>  Previously deprecated feature announcements from [!INCLUDE[ssSQL14](../a9notintoc/includes/sssql14-md.md)] remain in effect. Because the code supporting those features has not yet been cut from the product, many  of these features are still present in this release. While previously deprecated features might be accessible, they are still considered deprecated and could be physically removed from the product at any point during the [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)] release. We strongly recommend that you avoid using deprecated features in any new models or applications based on [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] in [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)].  
   
 ## See Also  
  [Analysis Services Backward Compatibility](../analysis-services/analysis-services-backward-compatibility.md)   

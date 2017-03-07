@@ -19,7 +19,7 @@ manager: "jhubbard"
   
 |Transaction Log Type|Description|  
 |--------------------------|-----------------|  
-|Attribute|Entity change logs are saved at the attribute level.<br /><br /> The transaction log is saved, as it is for [!INCLUDE[ssSQL14](../analysis-services/includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../analysis-services/includes/ssmdsshort-md.md)].|  
+|Attribute|Entity change logs are saved at the attribute level.<br /><br /> The transaction log is saved, as it is for [!INCLUDE[ssSQL14](../a9notintoc/includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../a9notintoc/includes/ssmdsshort-md.md)].|  
 |Member|Entity change logs as saved at the row level.<br /><br /> Any attribute change triggers a new row revision.<br /><br /> When using row transaction log type, the entity is stored as a slowly changing dimension Type 4. Type 2 subscription view and Type 4 (History) subscription view are supported. For more information, see [Subscription View Formats &#40;Master Data Services&#41;](../master-data-services/subscription-view-formats-master-data-services.md)<br /><br /> Provides better performance.|  
 |None|No change logs are saved.<br /><br /> Provides the best performance.|  
   

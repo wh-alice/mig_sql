@@ -18,9 +18,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Page Compression Implementation
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  This topic summarizes how the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] implements page compression. This summary provides basic information to help you plan the storage space that you need for your data.  
+  This topic summarizes how the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] implements page compression. This summary provides basic information to help you plan the storage space that you need for your data.  
   
  Page compression is similar for tables, table partitions, indexes, and index partitions. The following description of page compression for a table applies equally to page compression for all object types. The following examples compress character strings, but both prefix and dictionary compression apply the same principles to other data types.  
   

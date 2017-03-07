@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 ## Options  
  **Connection manager name**  
- Provide a unique name for the flat file connection manager in the workflow. The name provided will be displayed within [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer.  
+ Provide a unique name for the flat file connection manager in the workflow. The name provided will be displayed within [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer.  
   
  **Description**  
  Describe the connection manager. As a best practice, describe the connection manager in terms of its purpose, to make packages self-documenting and easier to maintain.  
@@ -41,7 +41,7 @@ manager: "jhubbard"
 |**OutputColumnWidth**|Specify a value to be stored as a count of bytes; for Unicode files, this value corresponds to a count of characters. In the Data Flow task, this value is used to set the output column width for the Flat File source. In the object model, the name of this property is MaximumWidth.|  
 |**DataType**|Select from the list of available data types. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**TextQualified**|Indicate whether text data is surrounded by text qualifier characters such as quote characters.<br /><br /> True: Text data in the flat file is qualified. False: Text data in the flat file is NOT qualified.|  
-|**Name**|Provide a descriptive column name. If you do not enter a name, [!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] automatically creates a name in the format Column 0, Column 1 and so forth.|  
+|**Name**|Provide a descriptive column name. If you do not enter a name, [!INCLUDE[ssISnoversion](../../a9notintoc/includes/ssisnoversion-md.md)] automatically creates a name in the format Column 0, Column 1 and so forth.|  
 |**DataScale**|Specify the scale of numeric data. Scale refers to the number of decimal places. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**ColumnDelimiter**|Select from the list of available column delimiters. Choose delimiters that are not likely to occur in the text. This value is ignored for fixed-width columns.<br /><br /> **{CR}{LF}**. Columns are delimited by a carriage return-line feed combination.<br /><br /> **{CR}**. Columns are delimited by a carriage return.<br /><br /> **{LF}**. Columns are delimited by a line feed.<br /><br /> **Semicolon {;}**. Columns are delimited by a semicolon.<br /><br /> **Colon {:}**. Columns are delimited by a colon.<br /><br /> **Comma {,}**. Columns are delimited by a comma.<br /><br /> **Tab {t}**. Columns are delimited by a tab.<br /><br /> **Vertical bar {&#124;}**. Columns are delimited by a vertical bar.|  
 |**DataPrecision**|Specify the precision of numeric data. Precision refers to the number of digits. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  

@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Native Client Error MSSQLSERVER_50000
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
     
 ## Details  
@@ -28,15 +28,15 @@ manager: "jhubbard"
 |Product Version|11.0|  
 |Event ID|50000|  
 |Event Source|SETUP|  
-|Component|[!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client|  
+|Component|[!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client|  
 |Symbolic Name||  
 |Message Text|A network error occurred while attempting to read from the file '%.*ls'.|  
   
 ## Explanation  
- An attempt was made to install (or update) [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client on a computer where [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client is already installed, and where the existing installation was from an MSI file that was renamed from sqlncli.msi.  
+ An attempt was made to install (or update) [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client on a computer where [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client is already installed, and where the existing installation was from an MSI file that was renamed from sqlncli.msi.  
   
 ## User Action  
- To resolve this error, uninstall the existing version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client. To prevent this error, do not install [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client from an MSI file that is not named sqlncli.msi.  
+ To resolve this error, uninstall the existing version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client. To prevent this error, do not install [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client from an MSI file that is not named sqlncli.msi.  
   
 ## Internal-Only  
   

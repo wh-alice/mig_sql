@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Using Set Expressions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   A set consists of an ordered list of zero or more tuples. A set that does not contain any tuples is known as an empty set.  
   

@@ -17,19 +17,19 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Lesson 4-3 - Automatically Grouping Attribute Members
-When you browse a cube, you typically dimension the members of one attribute hierarchy by the members of another attribute hierarchy. For example, you might group customer sales by city, by product purchased, or by gender. However, with certain types of attributes, it is useful to have [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] automatically create groupings of attribute members based on the distribution of the members within an attribute hierarchy. For example, you can have [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] create groups of yearly income values for customers. When you do this, users who browse the attribute hierarchy will see the names and values of the groups instead of the members themselves. This limits the number of levels that are presented to users, which can be more useful for analysis.  
+When you browse a cube, you typically dimension the members of one attribute hierarchy by the members of another attribute hierarchy. For example, you might group customer sales by city, by product purchased, or by gender. However, with certain types of attributes, it is useful to have [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] automatically create groupings of attribute members based on the distribution of the members within an attribute hierarchy. For example, you can have [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] create groups of yearly income values for customers. When you do this, users who browse the attribute hierarchy will see the names and values of the groups instead of the members themselves. This limits the number of levels that are presented to users, which can be more useful for analysis.  
   
-The **DiscretizationMethod** property determines whether [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] creates groupings, and determines the type of grouping that is performed. By default, [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] does not perform any groupings. When you enable automatic groupings, you can allow [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] to automatically determine the best grouping method based on the structure of the attribute, or you can choose one of the grouping algorithms in the following list to specify the grouping method:  
+The **DiscretizationMethod** property determines whether [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] creates groupings, and determines the type of grouping that is performed. By default, [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] does not perform any groupings. When you enable automatic groupings, you can allow [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] to automatically determine the best grouping method based on the structure of the attribute, or you can choose one of the grouping algorithms in the following list to specify the grouping method:  
   
 **EqualAreas**  
-[!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] creates group ranges so that the total population of dimension members is distributed equally across the groups.  
+[!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] creates group ranges so that the total population of dimension members is distributed equally across the groups.  
   
 **Clusters**  
-[!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] creates groups by performing single-dimensional clustering on the input values by using the K-Means clustering method with Gaussian distributions. This option is valid only for numeric columns.  
+[!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] creates groups by performing single-dimensional clustering on the input values by using the K-Means clustering method with Gaussian distributions. This option is valid only for numeric columns.  
   
-After you specify a grouping method, you must specify the number of groups, by using the **DiscretizationBucketCount** property. For more information, see [Group Attribute Members &#40;Discretization&#41;](../Topic/Group%20Attribute%20Members%20(Discretization).md)  
+After you specify a grouping method, you must specify the number of groups, by using the **DiscretizationBucketCount** property. For more information, see [Group Attribute Members &#40;Discretization&#41;](../../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
-In the tasks in this topic, you will enable different types of groupings for the following: the yearly income values in the **Customer** dimension; the number of employee sick leave hours in the **Employees** dimension; and the number of employee vacation hours in the **Employees** dimension. You will then process and browse the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial cube to view the effect of the member groups. Finally, you will modify the member group properties to see the effect of the change in grouping type.  
+In the tasks in this topic, you will enable different types of groupings for the following: the yearly income values in the **Customer** dimension; the number of employee sick leave hours in the **Employees** dimension; and the number of employee vacation hours in the **Employees** dimension. You will then process and browse the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial cube to view the effect of the member groups. Finally, you will modify the member group properties to see the effect of the change in grouping type.  
   
 ## Grouping Attribute Hierarchy Members in the Customer Dimension  
   
@@ -69,9 +69,9 @@ In the tasks in this topic, you will enable different types of groupings for the
   
 ## Browsing the Modified Attribute Hierarchies  
   
-1.  On the **Build** menu of [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], click **Deploy Analysis Services Tutorial**.  
+1.  On the **Build** menu of [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], click **Deploy Analysis Services Tutorial**.  
   
-2.  When deployment has successfully completed, switch to Cube Designer for the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial cube, and then click **Reconnect** on the **Browser** tab.  
+2.  When deployment has successfully completed, switch to Cube Designer for the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial cube, and then click **Reconnect** on the **Browser** tab.  
   
 3.  Click the Excel icon, and then click **Enable**.  
   
@@ -107,9 +107,9 @@ In the tasks in this topic, you will enable different types of groupings for the
   
 2.  In the Properties window, change the value of the **DiscretizationBucketCount** property to **10.**  
   
-3.  On the **Build** menu of [!INCLUDE[ssBIDevStudio](../../analysis-services/includes/ssbidevstudio-md.md)], click **Deploy Analysis Services Tutorial**.  
+3.  On the **Build** menu of [!INCLUDE[ssBIDevStudio](../../a9notintoc/includes/ssbidevstudio-md.md)], click **Deploy Analysis Services Tutorial**.  
   
-4.  When deployment has successfully completed, switch back to Cube Designer for the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] Tutorial cube.  
+4.  When deployment has successfully completed, switch back to Cube Designer for the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] Tutorial cube.  
   
 5.  Click **Reconnect** on the **Browser** tab, click the Excel icon, and then reconstruct the PivotTable so that you can view the effect of the change to the grouping method:  
   
@@ -122,10 +122,10 @@ In the tasks in this topic, you will enable different types of groupings for the
     Notice that there are now three groups of members of the **Vacation Hours** attribute that have sales values for products. (The other seven groups contain members with no sales data.)  
   
 ## Next Task in Lesson  
-[Hiding and Disabling Attribute Hierarchies](../Topic/Hiding%20and%20Disabling%20Attribute%20Hierarchies.md)  
+[Hiding and Disabling Attribute Hierarchies](../../analysis-services/tutorials/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## See Also  
-[Group Attribute Members &#40;Discretization&#41;](../Topic/Group%20Attribute%20Members%20(Discretization).md)  
+[Group Attribute Members &#40;Discretization&#41;](../../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   
   

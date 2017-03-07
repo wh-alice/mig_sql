@@ -46,9 +46,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Profiler F1 Help
-  Microsoft [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] is a tool that captures [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] events from a server. The events are saved in a trace file that can later be analyzed or used to replay a specific series of steps when trying to diagnose a problem.  
+  Microsoft [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] is a tool that captures [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] events from a server. The events are saved in a trace file that can later be analyzed or used to replay a specific series of steps when trying to diagnose a problem.  
   
- The following section contains the context-sensitive help topics for [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)]. These topics are available from the user interface by pressing the F1 key or by clicking **Help** in dialog boxes.  
+ The following section contains the context-sensitive help topics for [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)]. These topics are available from the user interface by pressing the F1 key or by clicking **Help** in dialog boxes.  
   
  ## Trace Properties (General)
    Use the **General** tab of the **Trace Properties** dialog box to view or specify properties of a trace.  
@@ -58,7 +58,7 @@ manager: "jhubbard"
  Specify the name of the trace.  
   
  **Trace provider name**  
- Shows the name of the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that will be traced. This field is populated automatically with the name of the server that you specified when you connected. To change the name of the trace provider, click **Cancel** to close the dialog box, and start a new trace.  
+ Shows the name of the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that will be traced. This field is populated automatically with the name of the server that you specified when you connected. To change the name of the trace provider, click **Cancel** to close the dialog box, and start a new trace.  
   
  **Trace provider type**  
  Shows the server type that is providing the trace. The trace definition file populates the **Trace provider type** field automatically. You cannot modify this field.  
@@ -107,7 +107,7 @@ manager: "jhubbard"
  Data columns  
  Specify traced data columns by checking the box that corresponds with the event and the data column you need. All relevant event columns are checked by default for each event included in the trace.  
   
- Specify filters by clicking the data column heading and entering the filter criteria. Filtered data columns are indicated by a filter icon to the left of the column label in the **Edit Filter** dialog box. For more information, see [SQL Server Profiler - Edit Filter](../Topic/SQL%20Server%20Profiler%20-%20Edit%20Filter.md).  
+ Specify filters by clicking the data column heading and entering the filter criteria. Filtered data columns are indicated by a filter icon to the left of the column label in the **Edit Filter** dialog box. For more information, see [SQL Server Profiler - Edit Filter](../../a9retired/sql-server-profiler-edit-filter.md).  
   
  **Show all events**  
  Show all available events. By default, only rows in the **Events Selection** grid that are selected display. Uncheck this box to hide all unselected events in the **Events Selection** grid.  
@@ -125,7 +125,7 @@ manager: "jhubbard"
 
 
 ## Trace Template Properties (General Tab)
-  Use the **General** tab of the **Trace Template Properties** dialog box to create new trace templates by using the following options. To access this dialog box, on the [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **New Template**.  
+  Use the **General** tab of the **Trace Template Properties** dialog box to create new trace templates by using the following options. To access this dialog box, on the [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **New Template**.  
   
 #### Options  
  **Select server type**  
@@ -141,7 +141,7 @@ manager: "jhubbard"
  Use this template by default, for traces created for this server type.  
 
 ## Edit Trace Template Properties (General Tab)
- Use the **General** tab of the **Trace Template Properties** dialog box to view or edit existing trace templates by using the following options. To access this dialog box, on the [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **Edit Template**.  
+ Use the **General** tab of the **Trace Template Properties** dialog box to view or edit existing trace templates by using the following options. To access this dialog box, on the [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **Edit Template**.  
   
 #### Options  
  **Select server type**  
@@ -155,7 +155,7 @@ manager: "jhubbard"
   
  ## Trace Template Properties (Events Selection Tab)
   
-  Use the **Events Selection** tab of the **Trace Template Properties** dialog box to view, edit, or specify event classes and data columns to include in a [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] trace template.  
+  Use the **Events Selection** tab of the **Trace Template Properties** dialog box to view, edit, or specify event classes and data columns to include in a [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] trace template.  
   
 #### Options  
  **Events** column  
@@ -190,7 +190,7 @@ manager: "jhubbard"
  The path and name of the trace file displayed.  
   
  **Trace provider name**  
- Shows the name of the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] that was traced.  
+ Shows the name of the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] that was traced.  
   
  **Trace provider type**  
  Shows the server type that provided the trace.  
@@ -237,7 +237,7 @@ manager: "jhubbard"
  ## Trace Table Properties (Events Selection Tab)
   Use the **Events Selection** tab of the **Trace Table Properties** dialog box to view the events and data column properties of the trace or to remove events or columns from the trace.  
   
- To view this window, use [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] to open a trace table. Then on the **File** menu, click **Properties**, and then click the **Events Selection** tab.  
+ To view this window, use [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] to open a trace table. Then on the **File** menu, click **Properties**, and then click the **Events Selection** tab.  
   
 ### Options  
  **Events** column  
@@ -261,7 +261,7 @@ manager: "jhubbard"
  After selecting **Events** and data columns to trace, click **Organize Columns** to force the grid to reorder the column in the trace results window.  
   
   ## SQL Server Profiler - Performance Counters Limit
-   Use the Performance Counters Limit dialog box to limit the information from a System Monitor performance log file when correlating it with a [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] trace. You can use this dialog box to select counters that should be displayed and used for correlation.  
+   Use the Performance Counters Limit dialog box to limit the information from a System Monitor performance log file when correlating it with a [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] trace. You can use this dialog box to select counters that should be displayed and used for correlation.  
   
  The **Performance Counters Limit** dialog box is populated with the performance objects and counters that the performance log file contains.  
   
@@ -269,7 +269,7 @@ manager: "jhubbard"
   
 1.  Expand a performance object to see which counters are included in the performance log file.  
   
-2.  Check the counters that you want to correlate with the [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] trace file.  
+2.  Check the counters that you want to correlate with the [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] trace file.  
   
      If you want to select all counters for a performance object, check the box that is adjacent to the performance object. Checking the topmost node, which indicates the computer, selects all performance objects and counters contained in the performance log file. 
       
@@ -289,7 +289,7 @@ manager: "jhubbard"
  Opens a dialog to change the font settings.  
   
  **Use regional settings to display date and time values**  
- Displays date and time values in regional settings configured for your computer. If you do not select this option, the date and time values are displayed in the fixed format used by Microsoft [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], which includes milliseconds.  
+ Displays date and time values in regional settings configured for your computer. If you do not select this option, the date and time values are displayed in the fixed format used by Microsoft [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], which includes milliseconds.  
   
 > **NOTE:**Toggling this checkbox changes the time columns display format such as **StartTime** and **EndTime**. However, it does not change the **DateTime** value parameters inside the language events or remote procedure calls (RPCs).  
   
@@ -301,17 +301,17 @@ manager: "jhubbard"
  Begin a trace using the default template as soon as a connection is made.  
   
  **Update trace definition when provider version changes**  
- Apply the most current trace definition to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] when the provider is updated. This item is not checked by default. This forces [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] to query the server for the trace definition and re-create, if one exists, the file on disk.  
+ Apply the most current trace definition to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] when the provider is updated. This item is not checked by default. This forces [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] to query the server for the trace definition and re-create, if one exists, the file on disk.  
   
 ### File Rollover Options  
  **Load all rollover files in sequence without prompting**  
  Load rollover files automatically when a trace file is opened. If more than one file was created while tracing, selecting this option automatically loads all rollover files.  
   
  **Prompt before loading rollover files**  
- Have [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] prompt you before adding a rollover file when a trace file is opened.  
+ Have [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] prompt you before adding a rollover file when a trace file is opened.  
   
  **Never load subsequent rollover files**  
- [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] never loads subsequent rollover files when a trace file is opened.  
+ [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] never loads subsequent rollover files when a trace file is opened.  
   
 ### Replay Options  
  **Default number of replay threads**  
@@ -348,7 +348,7 @@ manager: "jhubbard"
   
 #### Options  
  **SQL Server**  
- Specifies the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] currently connected. This field is populated automatically and cannot be updated. To change the server, click **Cancel** and connect to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] where you want to store the trace table.  
+ Specifies the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] currently connected. This field is populated automatically and cannot be updated. To change the server, click **Cancel** and connect to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] where you want to store the trace table.  
   
  **Database**  
  Specify the database where you want the trace table to be stored.  
@@ -362,20 +362,20 @@ manager: "jhubbard"
  ## SQL Server Profiler - Replay Configuration (Basic Replay Options)
    In the **Replay Configuration** dialog box, use the **Basic Replay Options** page to specify how to replay a trace file or table.  
   
- To view this window, use [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] to open a trace file or table that contains the appropriate events for replay. For more information, see [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md). While the trace file or table is open, on the **Replay** menu, click **Start**, and then connect to the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] where you want to replay the trace.  
+ To view this window, use [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] to open a trace file or table that contains the appropriate events for replay. For more information, see [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md). While the trace file or table is open, on the **Replay** menu, click **Start**, and then connect to the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] where you want to replay the trace.  
   
 #### Options  
  **Replay server**  
- Displays the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to connect to for the replay.  
+ Displays the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to connect to for the replay.  
   
  **Change...**  
  Launches the **Connect to Server** dialog box to connect to another server.  
   
  **Save to file**  
- Save the replay results to a file. [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] displays the standard file dialog, where you can specify the location to save the file.  
+ Save the replay results to a file. [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] displays the standard file dialog, where you can specify the location to save the file.  
   
  **Save to table**  
- Save the replay results to a table. [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] displays the table selection dialog, where you can specify the location to save the table.  
+ Save the replay results to a table. [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] displays the table selection dialog, where you can specify the location to save the table.  
   
  **Number of replay threads**  
  Specify the number of replay threads to use concurrently. A higher number consumes more resources during replay, but replay is faster and more concurrent.  
@@ -387,16 +387,16 @@ manager: "jhubbard"
  Replay events concurrently. This option is faster than replaying events sequentially, but disables debugging. The events are ordered within their system process identifiers (SPID).  
   
  **Display replay results**  
- Display replay results in [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)]. 
+ Display replay results in [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)]. 
  
  ## SQL Server Profiler - Replay Configuration (Advanced Replay Options)
  In the **Replay Configuration** dialog box, use the **Advanced Replay Options** tab to specify how to replay a trace file.  
   
- To view this window, use [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] to open a trace file or table that contains the appropriate events for replay. For more information, see [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md). While the trace file or table is open, on the **Replay** menu, click **Start**, connect to the instance of SQL Server where you want to replay the trace, and then click the **Advanced Replay Options** tab.  
+ To view this window, use [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] to open a trace file or table that contains the appropriate events for replay. For more information, see [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md). While the trace file or table is open, on the **Replay** menu, click **Start**, connect to the instance of SQL Server where you want to replay the trace, and then click the **Advanced Replay Options** tab.  
   
 #### Options  
  **Replay system SPIDs**  
- Specifies whether [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] replays system process identifiers (SPIDs).  
+ Specifies whether [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] replays system process identifiers (SPIDs).  
   
  **Replay one SPID only**  
  Replays only the activity in the source trace file that is related to the selected SPID.  
@@ -429,7 +429,7 @@ manager: "jhubbard"
  
   Use the **Find** dialog box to search a trace for specific characters or words. To cancel a search in progress, press ESC.  
   
- To open this dialog box in [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)], on the **Edit** menu, click **Find**.  
+ To open this dialog box in [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)], on the **Edit** menu, click **Find**.  
   
 #### Options  
  **Find what**  
@@ -459,7 +459,7 @@ manager: "jhubbard"
   
  When you group or aggregate events in a trace window display, the columns selected for grouping or aggregating remain fixed in the display window, but you can scroll to the right or left to view all other data columns.  
   
- To access this dialog box, open an existing trace file or table, and click **Properties** on the [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] **File** menu. In the **Trace Properties** dialog box, click the **Events Selection** tab, and then click **Organize Columns**. You can also click **Organize Columns** on the **Events Selection** tab when you are creating a new trace.  
+ To access this dialog box, open an existing trace file or table, and click **Properties** on the [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] **File** menu. In the **Trace Properties** dialog box, click the **Events Selection** tab, and then click **Organize Columns**. You can also click **Organize Columns** on the **Events Selection** tab when you are creating a new trace.  
   
 #### Options  
  **Groups**  
@@ -484,7 +484,7 @@ manager: "jhubbard"
 > **NOTE:** For string type data columns, the filter criteria will show as a LIKE or NOT LIKE string value.  
 
 ## Select Template Name
-  Use the **Select Template Name** dialog box to select an existing [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] trace template to export to a file on the operating system. You can also use this dialog box to select or enter a different name to save a trace template as when editing an existing trace template. To access this dialog box when exporting a template, on the [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **Export Template**. To access this dialog box when changing the name of a template, on the **File** menu, point to **Templates**, point to **Edit Template**, and then click **Save As**.  
+  Use the **Select Template Name** dialog box to select an existing [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] trace template to export to a file on the operating system. You can also use this dialog box to select or enter a different name to save a trace template as when editing an existing trace template. To access this dialog box when exporting a template, on the [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **Export Template**. To access this dialog box when changing the name of a template, on the **File** menu, point to **Templates**, point to **Edit Template**, and then click **Save As**.  
   
 #### Options  
  **Server type**  

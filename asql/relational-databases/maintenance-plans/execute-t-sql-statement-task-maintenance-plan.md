@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Execute T-SQL Statement Task (Maintenance Plan)
-  Use the **Execute T-SQL Statement Task** dialog to customize your maintenance plan by adding [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements of your choice to this maintenance plan.  
+  Use the **Execute T-SQL Statement Task** dialog to customize your maintenance plan by adding [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements of your choice to this maintenance plan.  
   
 ## Options  
  **Connection**  
@@ -32,10 +32,10 @@ manager: "jhubbard"
  Time (seconds) to wait for task completion before timing out (terminating task).  
   
  **T-SQL statement**  
- [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements to execute.  
+ [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements to execute.  
   
  **View T-SQL**  
- View the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements performed against the server for this task, based on the selected options.  
+ View the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements performed against the server for this task, based on the selected options.  
   
 > [!NOTE]  
 >  When the number of objects affected is large, this display can take a considerable amount of time.  
@@ -54,13 +54,13 @@ manager: "jhubbard"
  Specify how to authenticate against the server.  
   
  **Use Windows integrated security**  
- Connect to an instance of the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] with [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows Authentication.  
+ Connect to an instance of the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] with [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows Authentication.  
   
  **Use a specific user name and password**  
- Connect to an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication. This option is not available.  
+ Connect to an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication. This option is not available.  
   
  **User name**  
- Provide a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login to use when authenticating. This option is not available.  
+ Provide a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login to use when authenticating. This option is not available.  
   
  **Password**  
  Provide a password to use when authenticating. This option is not available.  

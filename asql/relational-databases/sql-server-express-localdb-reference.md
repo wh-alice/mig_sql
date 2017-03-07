@@ -17,12 +17,12 @@ manager: "jhubbard"
 # SQL Server Express LocalDB Reference
   This section contains information about the SQL Server Express LocalDB:  
   
--   [SQL Server Express LocalDB Error Message Reference](../Topic/SQL%20Server%20Express%20LocalDB%20Error%20Message%20Reference.md)  
+-   [SQL Server Express LocalDB Error Message Reference](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)  
   
--   [SQL Server Express LocalDB Instance API Reference](../Topic/SQL%20Server%20Express%20LocalDB%20Instance%20API%20Reference.md)  
+-   [SQL Server Express LocalDB Instance API Reference](../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md)  
   
 ## Code Sample  
- The following sample demonstrates the LocalDB API.  Make sure that LocalDB is installed on the computer before running this sample.  You can install LocalDB from setup in the [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)] Express.  
+ The following sample demonstrates the LocalDB API.  Make sure that LocalDB is installed on the computer before running this sample.  You can install LocalDB from setup in the [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)] Express.  
   
 ```  
 // compile with: Advapi32.lib  

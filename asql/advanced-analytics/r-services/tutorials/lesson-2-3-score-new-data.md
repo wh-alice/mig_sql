@@ -19,7 +19,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 2-3 - Score New Data
-Now that you have a model you can use for predictions, you'll feed it data from the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database to generate some predictions.  
+Now that you have a model you can use for predictions, you'll feed it data from the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] database to generate some predictions.  
   
 ## Score New Data  
 You will use the logistic regression model, *logitObj*, to create scores for another data set that uses the same independent variables as inputs.  
@@ -37,7 +37,7 @@ You will use the logistic regression model, *logitObj*, to create scores for ano
         rowsPerRead = sqlRowsPerRead)    
     ```  
   
-2.  To make sure you don't lose the results, you'll create a new data source object, and use that to populate a new table in the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database.  
+2.  To make sure you don't lose the results, you'll create a new data source object, and use that to populate a new table in the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] database.  
   
     ```R    
     sqlServerOutDS <- RxSqlServerData(table = "ccScoreOutput",   
@@ -153,7 +153,7 @@ After the new table has been created, you will compute and display a histogram o
 [Lesson 3: Transform Data Using R &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-3-transform-data-using-r-data-science-deep-dive.md)  
   
 ## Previous Step  
-[Create Models &#40;Data Science Deep Dive&#41;](../Topic/Create%20Models%20(Data%20Science%20Deep%20Dive).md)  
+[Create Models &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-2-2-create-models.md)  
   
 ## See Also  
 [Data Science Deep Dive: Overview &#40;SQL Server R Services&#41;](http://msdn.microsoft.com/library/mt637368(SQL.130).aspx)  

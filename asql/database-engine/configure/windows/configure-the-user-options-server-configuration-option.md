@@ -19,9 +19,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Configure the user options Server Configuration Option
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes how to configure the **user options** server configuration option in [!INCLUDE[ssCurrent](../../../advanced-analytics/r-services/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)]. The **user options** option specifies global defaults for all users. A list of default query processing options is established for the duration of a user's work session. The **user options** option allows you to change the default values of the SET options (if the server's default settings are not appropriate).  
+  This topic describes how to configure the **user options** server configuration option in [!INCLUDE[ssCurrent](../../../a9notintoc/includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)]. The **user options** option specifies global defaults for all users. A list of default query processing options is established for the duration of a user's work session. The **user options** option allows you to change the default values of the SET options (if the server's default settings are not appropriate).  
   
  A user can override these defaults by using the SET statement. You can configure **user options** dynamically for new logins. After you change the setting of **user options**, new login sessions use the new setting; current login sessions are not affected.  
   
@@ -65,7 +65,7 @@ manager: "jhubbard"
     |8192|NUMERIC_ROUNDABORT|Generates an error when a loss of precision occurs in an expression.|  
     |16384|XACT_ABORT|Rolls back a transaction if a Transact-SQL statement raises a run-time error.|  
   
--   The bit positions in **user options** are identical to those in @@OPTIONS. Each connection has its own @@OPTIONS function, which represents the configuration environment. When logging in to an instance of \ [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], a user receives a default environment that assigns the current **user options** value to @@OPTIONS. Executing SET statements for **user options** affects the corresponding value in the session's @@OPTIONS function. All connections created after this setting is changed receive the new value.  
+-   The bit positions in **user options** are identical to those in @@OPTIONS. Each connection has its own @@OPTIONS function, which represents the configuration environment. When logging in to an instance of \ [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], a user receives a default environment that assigns the current **user options** value to @@OPTIONS. Executing SET statements for **user options** affects the corresponding value in the session's @@OPTIONS function. All connections created after this setting is changed receive the new value.  
   
 ###  <a name="Security"></a> Security  
   
@@ -88,11 +88,11 @@ manager: "jhubbard"
   
 #### To configure the user options configuration option  
   
-1.  Connect to the [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to configure the `user options` to change the setting for the ANSI_WARNINGS server option.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md) to configure the `user options` to change the setting for the ANSI_WARNINGS server option.  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -110,7 +110,7 @@ GO
 ## See Also  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../../database-engine/configure/windows/server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-stored-procedures/sp-configure-transact-sql.md)   
  [SET Statements &#40;Transact-SQL&#41;](../../../t-sql/statements/set-statements-transact-sql.md)  
   
   

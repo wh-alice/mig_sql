@@ -52,7 +52,7 @@ In this procedure, you add and configure an OLE DB destination to use the OLE DB
 14. In the Properties window, verify that the **LocaleID** property is set to **English (United States)** and the**DefaultCodePage** property is set to **1252**.  
   
 ## Next Task in Lesson  
-[Step 8: Making the Lesson 1 Package Easier to Understand](../Topic/Step%208:%20Making%20the%20Lesson%201%20Package%20Easier%20to%20Understand.md)  
+[Step 8: Making the Lesson 1 Package Easier to Understand](../../integration-services/tutorials/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 ## See Also  
 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)  

@@ -27,11 +27,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # OPENDATASOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Provides ad hoc connection information as part of a four-part object name without using a linked server name.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -47,11 +47,11 @@ OPENDATASOURCE ( provider_name, init_string )
  *init_string*  
  Is the connection string passed to the IDataInitialize interface of the destination provider. The provider string syntax is based on keyword-value pairs separated by semicolons, such as: **'***keyword1*=*value***;***keyword2*=*value***'**.  
   
- For specific keyword-value pairs supported on the provider, see the [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Data Access SDK. This documentation defines the basic syntax. The following table lists the most frequently used keywords in the *init_string* argument.  
+ For specific keyword-value pairs supported on the provider, see the [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Data Access SDK. This documentation defines the basic syntax. The following table lists the most frequently used keywords in the *init_string* argument.  
   
 |Keyword|OLE DB property|Valid values and description|  
 |-------------|---------------------|----------------------------------|  
-|Data Source|DBPROP_INIT_DATASOURCE|Name of the data source to connect to. Different providers interpret this in different ways. For [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB provider, this indicates the name of the server. For Jet OLE DB provider, this indicates the full path of the .mdb file or .xls file.|  
+|Data Source|DBPROP_INIT_DATASOURCE|Name of the data source to connect to. Different providers interpret this in different ways. For [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB provider, this indicates the name of the server. For Jet OLE DB provider, this indicates the full path of the .mdb file or .xls file.|  
 |Location|DBPROP_INIT_LOCATION|Location of the database to connect to.|  
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|The provider-specific connect-string.|  
 |Connect timeout|DBPROP_INIT_TIMEOUT|Time-out value after which the connection try fails.|  
@@ -63,14 +63,14 @@ OPENDATASOURCE ( provider_name, init_string )
 ## Remarks  
  OPENDATASOURCE can be used to access remote data from OLE DB data sources only when the DisallowAdhocAccess registry option is explicitly set to 0 for the specified provider, and the Ad Hoc Distributed Queries advanced configuration option is enabled. When these options are not set, the default behavior does not allow for ad hoc access.  
   
- The OPENDATASOURCE function can be used in the same [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] syntax locations as a linked-server name. Therefore, OPENDATASOURCE can be used as the first part of a four-part name that refers to a table or view name in a SELECT, INSERT, UPDATE, or DELETE statement, or to a remote stored procedure in an EXECUTE statement. When executing remote stored procedures, OPENDATASOURCE should refer to another instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. OPENDATASOURCE does not accept variables for its arguments.  
+ The OPENDATASOURCE function can be used in the same [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] syntax locations as a linked-server name. Therefore, OPENDATASOURCE can be used as the first part of a four-part name that refers to a table or view name in a SELECT, INSERT, UPDATE, or DELETE statement, or to a remote stored procedure in an EXECUTE statement. When executing remote stored procedures, OPENDATASOURCE should refer to another instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. OPENDATASOURCE does not accept variables for its arguments.  
   
  Like the OPENROWSET function, OPENDATASOURCE should only reference OLE DB data sources that are accessed infrequently. Define a linked server for any data sources accessed more than several times. Neither OPENDATASOURCE nor OPENROWSET provide all the functionality of linked-server definitions, such as security management and the ability to query catalog information. All connection information, including passwords, must be provided every time that OPENDATASOURCE is called.  
   
 > [!IMPORTANT]  
->  Windows Authentication is much more secure than [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Authentication. You should use Windows Authentication whenever possible. OPENDATASOURCE should not be used with explicit passwords in the connection string.  
+>  Windows Authentication is much more secure than [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Authentication. You should use Windows Authentication whenever possible. OPENDATASOURCE should not be used with explicit passwords in the connection string.  
   
- The connection requirements for each provider are similar to the requirements for those parameters when creating linked servers. The details for many common providers are listed in the topic [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+ The connection requirements for each provider are similar to the requirements for those parameters when creating linked servers. The details for many common providers are listed in the topic [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
  Any call to OPENDATASOURCE, OPENQUERY, or OPENROWSET in the FROM clause is evaluated separately and independently from any call to these functions used as the target of the update, even if identical arguments are supplied to the two calls. In particular, filter or join conditions applied on the result of one of those calls have no effect on the results of the other.  
   
@@ -78,7 +78,7 @@ OPENDATASOURCE ( provider_name, init_string )
  Any user can execute OPENDATASOURCE. The permissions that are used to connect to the remote server are determined from the connection string.  
   
 ## Examples  
- The following example creates an ad hoc connection to the `Payroll` instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] on server `London`, and queries the `AdventureWorks2012.HumanResources.Employee` table. (Use SQLNCLI and [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] will redirect to the latest version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Native Client OLE DB Provider.)  
+ The following example creates an ad hoc connection to the `Payroll` instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] on server `London`, and queries the `AdventureWorks2012.HumanResources.Employee` table. (Use SQLNCLI and [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] will redirect to the latest version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Native Client OLE DB Provider.)  
   
 ```  
 SELECT *  
@@ -96,6 +96,6 @@ SELECT * FROM OPENDATASOURCE('Microsoft.Jet.OLEDB.4.0',
   
 ## See Also  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
   
   

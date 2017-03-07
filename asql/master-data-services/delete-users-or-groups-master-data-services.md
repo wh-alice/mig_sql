@@ -20,15 +20,15 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Delete Users or Groups (Master Data Services)
-  Delete users or groups when you no longer want them to access [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)].  
+  Delete users or groups when you no longer want them to access [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)].  
   
  Note the following behavior when deleting users and groups:  
   
--   If you delete a user who is a member of a group that has access to [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], then the user can still access [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] until you remove the user from the Active Directory or local group.  
+-   If you delete a user who is a member of a group that has access to [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], then the user can still access [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] until you remove the user from the Active Directory or local group.  
   
--   If you delete a group, all users from the group who have accessed [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] are displayed in the **Users** list until you delete them.  
+-   If you delete a group, all users from the group who have accessed [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] are displayed in the **Users** list until you delete them.  
   
--   Changes to security are not propagated to the MDS [!INCLUDE[ssMDSXLS](../analysis-services/includes/ssmdsxls-md.md)] for 20 minutes.  
+-   Changes to security are not propagated to the MDS [!INCLUDE[ssMDSXLS](../a9notintoc/includes/ssmdsxls-md.md)] for 20 minutes.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 ### To delete users or groups  
   
-1.  In [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)], click **User and Group Permissions**.  
+1.  In [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)], click **User and Group Permissions**.  
   
 2.  To delete a user, remain on the **Users** page. To delete a group, from the menu bar, click **ManageGroups.**  
   

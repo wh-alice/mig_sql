@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # datetime Data Type Conversions (ODBC)
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   The following conversions are either already defined by ODBC or are a consistent extension of ODBC. The conversions supplied by each provider are determined by the community served by the provider, and there are often inconsistencies between providers as a result. Values in square brackets are optional.  
   
@@ -50,11 +50,11 @@ manager: "jhubbard"
 -   If truncation of seconds or fractional seconds occurs when converting from SQL to C, a diagnostic record is generated with SQLSTATE 01S07 and the message "Fractional truncation".  
   
 ## In This Section  
- [Conversions from C to SQL](../Topic/Conversions%20from%20C%20to%20SQL.md)  
- Lists issues to consider when you convert from C types to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data/time types.  
+ [Conversions from C to SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)  
+ Lists issues to consider when you convert from C types to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data/time types.  
   
- [Conversions from SQL to C](../Topic/Conversions%20from%20SQL%20to%20C.md)  
- Lists issues to consider when you convert from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data/time types to C types.  
+ [Conversions from SQL to C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)  
+ Lists issues to consider when you convert from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data/time types to C types.  
   
 ## See Also  
  [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

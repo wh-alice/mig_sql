@@ -28,27 +28,27 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create a Database User
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  This topic describes how to create the most common types of database users. There are eleven type of users. The complete list is provided in the topic [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). All varieties of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] support database users, but not necessarily all types of users.  
+  This topic describes how to create the most common types of database users. There are eleven type of users. The complete list is provided in the topic [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). All varieties of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] support database users, but not necessarily all types of users.  
   
- You can create a database user by using [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] or by using [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)].  
+ You can create a database user by using [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)] or by using [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)].  
   
 ##  <a name="Understanding"></a> Understanding the Types of Users  
- [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)] presents 6 options when creating a database user. The following graphic shows the 6 options in the green box, and indicates what they represent.  
+ [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)] presents 6 options when creating a database user. The following graphic shows the 6 options in the green box, and indicates what they represent.  
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
   
 ### Selecting the Type of User  
  **Login or user that is not mapped to a login**  
   
- If you are new to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], it can be difficult to determine what type of user you want to create. First ask yourself, does the person or group that needs to access the database have a login? Logins in the master database are common for the people who manage the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and for people who need to access many or all of the database on the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For this situation, you will create a **SQL user with login**. The database user is the identity of the login when it is connected to a database. The database user can use the same name as the login, but that is not required. This topic assumes that a login already exists in [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For information about how to create a login, see [Create a Login](../../../relational-databases/security/authentication-access/create-a-login.md)  
+ If you are new to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], it can be difficult to determine what type of user you want to create. First ask yourself, does the person or group that needs to access the database have a login? Logins in the master database are common for the people who manage the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] and for people who need to access many or all of the database on the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. For this situation, you will create a **SQL user with login**. The database user is the identity of the login when it is connected to a database. The database user can use the same name as the login, but that is not required. This topic assumes that a login already exists in [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. For information about how to create a login, see [Create a Login](../../../relational-databases/security/authentication-access/create-a-login.md)  
   
- If the person or group that needs to access the database does not have a login and if they only need access to one or few databases, create a **Windows user** or a **SQL user with password**. Also called a contained database user, it is not associated with a login in the master database. This is an excellent choice when you want to be able to easily move your database between instances of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. To use this option on [!INCLUDE[ssSQL15](../../../analysis-services/powershell/includes/sssql15-md.md)], an administrator must first enable contained databases for the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], and the database be enabled for containment. For more information, see [Contained Database Users - Making Your Database Portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+ If the person or group that needs to access the database does not have a login and if they only need access to one or few databases, create a **Windows user** or a **SQL user with password**. Also called a contained database user, it is not associated with a login in the master database. This is an excellent choice when you want to be able to easily move your database between instances of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. To use this option on [!INCLUDE[ssSQL15](../../../a9notintoc/includes/sssql15-md.md)], an administrator must first enable contained databases for the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], and the database be enabled for containment. For more information, see [Contained Database Users - Making Your Database Portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-> **IMPORTANT!** When connecting as a contained database user you must provide the name of the database as part of the connection string. To specify the database in [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], in the **Connect to** dialog box, click **Options**, and then click the **Connection Properties** tab.  
+> **IMPORTANT!** When connecting as a contained database user you must provide the name of the database as part of the connection string. To specify the database in [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)], in the **Connect to** dialog box, click **Options**, and then click the **Connection Properties** tab.  
   
- Select **SQL user with password** or a **SQL user with login** based on a **SQL Server authentication login**, when the person connecting cannot authenticate with Windows. This is common when people outside of your organization (for example customers) are connecting to your [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Select **SQL user with password** or a **SQL user with login** based on a **SQL Server authentication login**, when the person connecting cannot authenticate with Windows. This is common when people outside of your organization (for example customers) are connecting to your [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
 > **TIP!** For people inside your organization, Windows authentication is a better choice, because they won't have to remember an additional password, and because Windows authentication offers additional security features such as Kerberos.  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 > **IMPORTANT!** The guest user is ordinarily disabled. Do not enable the guest user unless it is necessary.  
   
- As a security principal, permissions can be granted to users. The scope of a user is the database. To connect to a specific database on the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], a login must be mapped to a database user. Permissions inside the database are granted and denied to the database user, not the login.  
+ As a security principal, permissions can be granted to users. The scope of a user is the database. To connect to a specific database on the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], a login must be mapped to a database user. Permissions inside the database are granted and denied to the database user, not the login.  
   
 ##  <a name="Permissions"></a> Permissions  
  Requires **ALTER ANY USER** permission on the database.  
@@ -108,7 +108,7 @@ manager: "jhubbard"
      **Asymmetric key name**  
      Enter the key to be used for the database user. Alternately, click the ellipsis **(…)** to open the **Select Asymmetric Key** dialog box. **Asymmetric key name** is available if you select **User mapped to an asymmetric key** from the **User type** list.  
   
-6.  [!INCLUDE[clickOK](../../../analysis-services/data-mining/includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../../a9notintoc/includes/clickok-md.md)]  
   
 ### Additional Options  
  The **Database User – New** dialog box also offers options on four additional pages: **Owned Schemas**, **Membership**, **Securables**, and **Extended Properties**.  
@@ -138,7 +138,7 @@ manager: "jhubbard"
   
 ##  <a name="TsqlProcedure"></a> Create a user using T-SQL  
     
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../a9notintoc/includes/ssde-md.md)].  
   
 2.  On the **Standard** bar, click **New Query**.  
   
@@ -155,7 +155,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) which contains many more [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] examples.  
+ For more information, see [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) which contains many more [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] examples.  
   
 ## See Also  
  [Principals &#40;Database Engine&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   

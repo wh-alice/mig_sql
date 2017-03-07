@@ -33,9 +33,9 @@ manager: "jhubbard"
 # SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../relational-databases/import-export/includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Causes Microsoft [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] not to execute [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements. Instead, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns detailed information about how the statements are executed.  
+  Causes Microsoft [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] not to execute [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements. Instead, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns detailed information about how the statements are executed.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -47,17 +47,17 @@ SET SHOWPLAN_TEXT { ON | OFF }
 ## Remarks  
  The setting of SET SHOWPLAN_TEXT is set at execute or run time and not at parse time.  
   
- When SET SHOWPLAN_TEXT is ON, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns execution information for each [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement without executing it. After this option is set ON, execution plan information about all subsequent [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] statements is returned until the option is set OFF. For example, if a CREATE TABLE statement is executed while SET SHOWPLAN_TEXT is ON, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] returns an error message from a subsequent SELECT statement involving that same table informing the user that the specified table does not exist. Therefore, subsequent references to this table fail. When SET SHOWPLAN_TEXT is OFF, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] executes statements without generating a report with execution plan information.  
+ When SET SHOWPLAN_TEXT is ON, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns execution information for each [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement without executing it. After this option is set ON, execution plan information about all subsequent [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] statements is returned until the option is set OFF. For example, if a CREATE TABLE statement is executed while SET SHOWPLAN_TEXT is ON, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] returns an error message from a subsequent SELECT statement involving that same table informing the user that the specified table does not exist. Therefore, subsequent references to this table fail. When SET SHOWPLAN_TEXT is OFF, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] executes statements without generating a report with execution plan information.  
   
  SET SHOWPLAN_TEXT is intended to return readable output for Microsoft Win32 command prompt applications such as the **osql** utility. SET SHOWPLAN_ALL returns more detailed output intended to be used with programs designed to handle its output.  
   
  SET SHOWPLAN_TEXT and SET SHOWPLAN_ALL cannot be specified in a stored procedure. They must be the only statements in a batch.  
   
- SET SHOWPLAN_TEXT returns information as a set of rows that form a hierarchical tree representing the steps taken by the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] query processor as it executes each statement. Each statement reflected in the output contains a single row with the text of the statement, followed by several rows with the details of the execution steps. The table shows the column that the output contains.  
+ SET SHOWPLAN_TEXT returns information as a set of rows that form a hierarchical tree representing the steps taken by the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] query processor as it executes each statement. Each statement reflected in the output contains a single row with the text of the statement, followed by several rows with the details of the execution steps. The table shows the column that the output contains.  
   
 |Column name|Description|  
 |-----------------|-----------------|  
-|**StmtText**|For rows which are not of type PLAN_ROW, this column contains the text of the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statement. For rows of type PLAN_ROW, this column contains a description of the operation. This column contains the physical operator and may optionally also contain the logical operator. This column may also be followed by a description which is determined by the physical operator. For more information about physical operators, see the **Argument** column in [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md).|  
+|**StmtText**|For rows which are not of type PLAN_ROW, this column contains the text of the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statement. For rows of type PLAN_ROW, this column contains a description of the operation. This column contains the physical operator and may optionally also contain the logical operator. This column may also be followed by a description which is determined by the physical operator. For more information about physical operators, see the **Argument** column in [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md).|  
   
  For more information about the physical and logical operators that can be seen in Showplan output, see [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   
@@ -66,14 +66,14 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  For SELECT, INSERT, UPDATE, DELETE, EXEC *stored_procedure*, and EXEC *user_defined_function* statements, to produce a Showplan the user must:  
   
--   Have the appropriate permissions to execute the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements.  
+-   Have the appropriate permissions to execute the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements.  
   
 -   Have SHOWPLAN permission on all databases containing objects referenced by the Transact-SQL statements, such as tables, views, and so on.  
   
- For all other statements, such as DDL, USE *database_name*, SET, DECLARE, dynamic SQL, and so on, only the appropriate permissions to execute the [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] statements are needed.  
+ For all other statements, such as DDL, USE *database_name*, SET, DECLARE, dynamic SQL, and so on, only the appropriate permissions to execute the [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] statements are needed.  
   
 ## Examples  
- This example shows how indexes are used by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] as it processes the statements.  
+ This example shows how indexes are used by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] as it processes the statements.  
   
  This is the query using an index:  
   

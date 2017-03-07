@@ -32,9 +32,9 @@ manager: "jhubbard"
   
  This destination has one input and no output.  
   
- The Data Mining Model Training destination uses an [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] connection manager to connect to the [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] project or the instance of [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] that contains the mining structure and mining models that the destination trains. For more information, see [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
+ The Data Mining Model Training destination uses an [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] connection manager to connect to the [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] project or the instance of [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] that contains the mining structure and mining models that the destination trains. For more information, see [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
- You can set properties through [!INCLUDE[ssIS](../../analysis-services/instances/includes/ssis-md.md)] Designer or programmatically.  
+ You can set properties through [!INCLUDE[ssIS](../../a9retired/includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Data Mining Model Training Editor** dialog box, click one of the following topics:  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](../Topic/Common%20Properties.md)  
+-   [Common Properties](../../a9retired/common-properties.md)  
   
 -   [Data Mining Model Training Destination Custom Properties](../../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md)  
   

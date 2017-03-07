@@ -17,11 +17,11 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Lesson 4-5 - Sorting Attribute Members Based on a Secondary Attribute
-In Lesson 3, you learned how to sort attribute members based on either their name or key value. You also learned how to use a composite member key to affect attribute members and sort order. For more information, see [Modifying the Date Dimension](../Topic/Modifying%20the%20Date%20Dimension.md). However, if neither the name nor the key of the attribute provide the sort order that you want, you can use a secondary attribute to achieve the desired sort order. By defining a relationship between the attributes, you can use the second attribute to sort the members of the first attribute.  
+In Lesson 3, you learned how to sort attribute members based on either their name or key value. You also learned how to use a composite member key to affect attribute members and sort order. For more information, see [Modifying the Date Dimension](../../analysis-services/tutorials/lesson-3-4-modifying-the-date-dimension.md). However, if neither the name nor the key of the attribute provide the sort order that you want, you can use a secondary attribute to achieve the desired sort order. By defining a relationship between the attributes, you can use the second attribute to sort the members of the first attribute.  
   
 Attribute relationships define the relationships or dependencies between attributes. In a dimension that is based on a single relational table, all attributes are typically related to each other through the key attribute. This is because all the attributes for a dimension provide information about the members linked by the key attribute of the dimension to the facts in the fact table for each related measure group. In a dimension that is based on multiple tables, attributes are typically linked based on the join key between the tables. If the underlying data supports it, related attributes can be used to specify a sort order. For example, you might create a new attribute that provides the sort logic for a related attribute.  
   
-Dimension Designer lets you define additional relationships between attributes or change the default relationships to increase performance. The main constraint when you create an attribute relationship is to make sure that the attribute referred to has no more than one value for any member in the attribute to which it is related. When you define a relationship between two attributes, you can define the relationship as rigid or flexible, based on whether the relationships between members will change over time. For example, an employee might move to a different sales region, but a city will not move to a different state. If a relationship is defined as rigid, attribute aggregations are not recalculated every time the dimension is incrementally processed. However, if the relationship between members does change, the dimension must be fully processed. For more information, see [Attribute Relationships](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Define Attribute Relationships](../Topic/Define%20Attribute%20Relationships.md), [Configure Attribute Relationship Properties](../Topic/Configure%20Attribute%20Relationship%20Properties.md), and [Specifying Attribute Relationships Between Attributes in a User-Defined Hierarchy](../Topic/Specifying%20Attribute%20Relationships%20Between%20Attributes%20in%20a%20User-Defined%20Hierarchy.md).  
+Dimension Designer lets you define additional relationships between attributes or change the default relationships to increase performance. The main constraint when you create an attribute relationship is to make sure that the attribute referred to has no more than one value for any member in the attribute to which it is related. When you define a relationship between two attributes, you can define the relationship as rigid or flexible, based on whether the relationships between members will change over time. For example, an employee might move to a different sales region, but a city will not move to a different state. If a relationship is defined as rigid, attribute aggregations are not recalculated every time the dimension is incrementally processed. However, if the relationship between members does change, the dimension must be fully processed. For more information, see [Attribute Relationships](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Define Attribute Relationships](../../analysis-services/multidimensional-models/attribute-relationships-define.md), [Configure Attribute Relationship Properties](../../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md), and [Specifying Attribute Relationships Between Attributes in a User-Defined Hierarchy](../../analysis-services/tutorials/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md).  
   
 In the tasks in this topic, you will define a new attribute in the **Date** dimension based on an existing column in the underlying dimension table. You will use this new attribute to sort calendar month members chronologically instead of alphabetically. You will also define a new attribute in the **Customer** dimension based on the named calculation that you will use to sort the **Commute Distance** attribute members. In the tasks in the next topic, you will learn to use attribute relationships to increase query performance.  
   
@@ -56,7 +56,7 @@ In the tasks in this topic, you will define a new attribute in the **Date** dime
   
     The relationships between the members of the **Month Name** attribute and the **Month Number Of Year** attribute will not change over time. As a result, Analysis Services will not drop aggregations for this relationship during incremental processing. If a change does occur, a processing error will occur during incremental processing and you will need to perform a full process of the dimension. You are now ready to set the sort order for the members of **Month Name**.  
   
-9. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 10. Click the **Dimension Structure** tab.  
   
@@ -74,7 +74,7 @@ In the tasks in this topic, you will define a new attribute in the **Date** dime
   
 1.  Switch to the **Browser** tab in Dimension Designer for the Customer dimension, and then browse the members of the **Commute Distance** attribute hierarchy.  
   
-    Notice that the members of this attribute hierarchy are sorted based on the ASCII values of the member key. In this case, sorting by the attribute name or key does not sort the commute distances from least to most. In this task, you sort the members of the attribute hierarchy based on the **CommuteDistanceSort** named calculation that ascribes the appropriate sort number to each distinct value in the column. To save time, this named calculation has already been added to the **Customer** table in the [!INCLUDE[ssSampleDBCoShort](../../analysis-services/data-mining/includes/sssampledbcoshort-md.md)] DW data source view. You can switch to this data source view to view the SQL script that is used in this named calculation. For more information, see [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
+    Notice that the members of this attribute hierarchy are sorted based on the ASCII values of the member key. In this case, sorting by the attribute name or key does not sort the commute distances from least to most. In this task, you sort the members of the attribute hierarchy based on the **CommuteDistanceSort** named calculation that ascribes the appropriate sort number to each distinct value in the column. To save time, this named calculation has already been added to the **Customer** table in the [!INCLUDE[ssSampleDBCoShort](../../a9notintoc/includes/sssampledbcoshort-md.md)] DW data source view. You can switch to this data source view to view the SQL script that is used in this named calculation. For more information, see [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
     The following image shows the members of the **Commute Distance** attribute hierarchy, sorted by the ASCII values of the member key.  
   
@@ -100,7 +100,7 @@ In the tasks in this topic, you will define a new attribute in the **Date** dime
   
     The relationship between the members of the **Commute Distance** attribute and the **Commute Distance Sort** attribute will not change over time.  
   
-9. [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
     You are now ready to set the sort order for the **Commute Distance** attribute.  
   
@@ -117,7 +117,7 @@ In the tasks in this topic, you will define a new attribute in the **Date** dime
     ![Re-sorted Commute Distance attribute hierarchy](../../analysis-services/tutorials/media/l4-memberproperties-5.gif "Re-sorted Commute Distance attribute hierarchy")  
   
 ## Next Task in Lesson  
-[Specifying Attribute Relationships Between Attributes in a User-Defined Hierarchy](../Topic/Specifying%20Attribute%20Relationships%20Between%20Attributes%20in%20a%20User-Defined%20Hierarchy.md)  
+[Specifying Attribute Relationships Between Attributes in a User-Defined Hierarchy](../../analysis-services/tutorials/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
   
   
   

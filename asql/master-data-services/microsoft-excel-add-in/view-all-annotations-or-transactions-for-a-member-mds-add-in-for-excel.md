@@ -16,7 +16,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # View All Annotations or Transactions for a Member (MDS Add-in for Excel)
-  In the [!INCLUDE[ssMDSshort](../../analysis-services/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../analysis-services/includes/ssmdsxls-md.md)], view annotations (comments) and transactions for rows of data (members) when you want to view updates to the data over time.  
+  In the [!INCLUDE[ssMDSshort](../../a9notintoc/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../a9notintoc/includes/ssmdsxls-md.md)], view annotations (comments) and transactions for rows of data (members) when you want to view updates to the data over time.  
   
 ## Prerequisites  
  To perform this procedure:  

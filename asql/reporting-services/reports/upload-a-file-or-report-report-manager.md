@@ -32,7 +32,7 @@ manager: "erikre"
   
 ### To upload a file or report  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../../a9retired/report-manager-ssrs-native-mode.md).  
   
 2.  In Report Manager, navigate to the **Contents** page. Navigate to the folder to which you want to add an item.  
   
@@ -44,12 +44,12 @@ manager: "erikre"
   
 6.  If you want to replace an existing item with the new item, select **Overwrite item if it exists**.  
   
-7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../a9notintoc/includes/clickok-md.md)]  
   
 ## See Also  
- [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Shared%20Data%20Source%20\(Report%20Manager\).md)   
- [Contents Page &#40;Report Manager&#41;](../Topic/Contents%20Page%20\(Report%20Manager\).md)   
- [Upload File Page &#40;Report Manager&#41;](../Topic/Upload%20File%20Page%20\(Report%20Manager\).md)   
+ [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../../a9retired/create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Contents Page &#40;Report Manager&#41;](../../a9retired/contents-page-report-manager.md)   
+ [Upload File Page &#40;Report Manager&#41;](../../a9retired/upload-file-page-report-manager.md)   
  [Upload Files to a Folder](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
   

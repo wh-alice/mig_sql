@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # TopCount (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the specified number of top-most rows in decreasing order of rank as specified by an expression.  
   
@@ -47,7 +47,7 @@ TopCount(<table expression>, <rank expression>, <count>)
  However, there are situations where you might still need to use TopCount. For example, DMX does not support the **TOP** qualifier in a sub-select statement. The [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) function also does not support the addition of **TOP**.  
   
 ## Examples  
- The following examples are prediction queries against the Association model that you build by using the [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md). The queries return the same results, but the first example uses TopCount, and the second example uses the Predict function.  
+ The following examples are prediction queries against the Association model that you build by using the [Basic Data Mining Tutorial](../a9notintoc/basic-data-mining-tutorial.md). The queries return the same results, but the first example uses TopCount, and the second example uses the Predict function.  
   
  To understand how TopCount works, it may be helpful to first execute a prediction query that returns only the nested table.  
   

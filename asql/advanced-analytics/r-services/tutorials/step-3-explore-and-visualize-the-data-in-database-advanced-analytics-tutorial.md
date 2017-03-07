@@ -20,7 +20,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Step 3: Explore and Visualize the Data (In-Database Advanced Analytics Tutorial)
-Developing a data science solution usually includes intensive data exploration and data visualization. In this step, you'll review the sample data, and then generate some plots using R functions. These R functions are already included in [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)]; in this walkthrough, you'll practice calling R functions from [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)].  
+Developing a data science solution usually includes intensive data exploration and data visualization. In this step, you'll review the sample data, and then generate some plots using R functions. These R functions are already included in [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)]; in this walkthrough, you'll practice calling R functions from [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)].  
   
 ## Review the Data  
 First, take a minute to review the sample data, if you haven't already.  
@@ -62,13 +62,13 @@ In this section, you'll learn how to work with each type of output using stored 
 -   Saving plots in files (.JPG, .PDF) on the server  
   
 ### Storing plots as varbinary data type  
-You'll use `rxHistogram`, one of the enhanced R functions provided in [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)], to plot a histogram based on data from a [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] query. To make it easier to call the R function, you will wrap it in a stored procedure, _PlotHistogram_.  
+You'll use `rxHistogram`, one of the enhanced R functions provided in [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)], to plot a histogram based on data from a [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] query. To make it easier to call the R function, you will wrap it in a stored procedure, _PlotHistogram_.  
   
 The stored procedure returns the image as a stream of varbinary data, which obviously you cannot view directly. However, you can use the **bcp** utility to get the varbinary data and save it as an image file on a client computer.  
   
 ##### To create the stored procedure PlotHistogram  
   
-1.  In [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], open a new query window.  
+1.  In [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], open a new query window.  
   
 2.  Select the database for the walkthrough,  and create the procedure using this statement.  
   
@@ -110,7 +110,7 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
   
 ##### To output varbinary data to viewable graphics file  
   
-1.  In [!INCLUDE[ssManStudio](../../../advanced-analytics/r-services/includes/ssmanstudio-md.md)], run the following statement:  
+1.  In [!INCLUDE[ssManStudio](../../../a9notintoc/includes/ssmanstudio-md.md)], run the following statement:  
   
     ```  
     EXEC [dbo].[PlotHistogram]  
@@ -167,11 +167,11 @@ Outputting an R plot to a binary data type might be convenient  for consumption 
   
 To generate graphs that can be more easily viewed, you can use a stored procedure that creates the output of R in popular formats such as .JPG, .PDF, and .PNG. After the stored procedure creates the graphic, simply open the file to visualize the plot.  
   
-In this step, you'll create a new stored procedure, _PlotInOutputFiles_, that demonstrates how to use R plotting functions to create histograms, scatterplots, and more in .JPG and .PDF format. The graphics files are saved to local files; that is, in a folder on the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance.  
+In this step, you'll create a new stored procedure, _PlotInOutputFiles_, that demonstrates how to use R plotting functions to create histograms, scatterplots, and more in .JPG and .PDF format. The graphics files are saved to local files; that is, in a folder on the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance.  
   
 ##### To create the stored procedure PlotInOutputFiles  
   
-1.  In [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], open a new query window, and paste in the following [!INCLUDE[tsql](../../../advanced-analytics/r-services/includes/tsql-md.md)] statement.  
+1.  In [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], open a new query window, and paste in the following [!INCLUDE[tsql](../../../a9notintoc/includes/tsql-md.md)] statement.  
   
     ```  
     CREATE PROCEDURE [dbo].[PlotInOutputFiles]  
@@ -251,7 +251,7 @@ In this step, you'll create a new stored procedure, _PlotInOutputFiles_, that de
   
 ##### To generate the graphics files  
   
-1.  In [!INCLUDE[ssManStudioFull](../../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)], run the following SQL query:  
+1.  In [!INCLUDE[ssManStudioFull](../../../a9notintoc/includes/ssmanstudiofull-md.md)], run the following SQL query:  
   
     ```  
     EXEC PlotInOutputFiles  
@@ -283,7 +283,7 @@ In this step, you'll create a new stored procedure, _PlotInOutputFiles_, that de
 [Step 4: Create Data Features using T-SQL](../../../advanced-analytics/r-services/tutorials/step-4-create-data-features-using-t-sql-in-database-advanced-analytics-tutorial.md)  
   
 ## Previous Step  
-[Step 2: Import Data to SQL Server using PowerShell](../Topic/Step%202:%20Import%20Data%20to%20SQL%20Server%20using%20PowerShell%20(In-Database%20Advanced%20Analytics%20Tutorial).md)  
+[Step 2: Import Data to SQL Server using PowerShell](../../../advanced-analytics/r-services/tutorials/step-2-import-data-to-sql-server-using-powershell.md)  
   
 ## See Also  
 [In-Database Advanced Analytics for SQL Developers &#40;Tutorial&#41;](../../../advanced-analytics/r-services/tutorials/in-database-advanced-analytics-for-sql-developers-tutorial.md)  

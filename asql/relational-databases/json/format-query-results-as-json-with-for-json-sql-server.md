@@ -20,9 +20,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Format Query Results as JSON with FOR JSON (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../relational-databases/data-compression/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../a9notintoc/includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Format query results as JSON, or export data from SQL Server as JSON, by adding the **FOR JSON** clause to a **SELECT** statement. Use the **FOR JSON** clause to delegate the formatting of JSON output from client applications to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].
+Format query results as JSON, or export data from SQL Server as JSON, by adding the **FOR JSON** clause to a **SELECT** statement. Use the **FOR JSON** clause to delegate the formatting of JSON output from client applications to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].
   
  When you use the **FOR JSON** clause, you can specify the structure of the output explicitly, or let the structure of the SELECT statement determine the output.  
   
@@ -44,7 +44,7 @@ Here's a sample query that uses **PATH** mode with the **FOR JSON** clause.
 ### More info
 For more info and examples, see [Format Nested JSON Output with PATH Mode &#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
 
-For syntax and usage, see [FOR Clause &#40;Transact-SQL&#41;](../Topic/FOR%20Clause%20\(Transact-SQL\).md).  
+For syntax and usage, see [FOR Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md).  
 
 ## Let the SELECT statement control JSON output with AUTO mode  
 In **AUTO** mode, the structure of the SELECT statement determines the format of the JSON output. By default, **null** values are not included in the output. You can use the **INCLUDE_NULL_VALUES** to change this behavior.  
@@ -72,16 +72,16 @@ FOR JSON AUTO
 ### More info
 For more info and examples, see [Format JSON Output Automatically with AUTO Mode &#40;SQL Server&#41;](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md).
 
-For syntax and usage, see [FOR Clause &#40;Transact-SQL&#41;](../Topic/FOR%20Clause%20\(Transact-SQL\).md).  
+For syntax and usage, see [FOR Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md).  
   
 ## Control other JSON output options  
  Control the output of the **FOR JSON** clause by using the following options.  
   
 -   To add a single, top-level element to the JSON output, specify the **ROOT** option. If you don't specify the **ROOT** option, the JSON output doesn't have a root element. For more info, see [Add a Root Node to JSON Output with the ROOT Option &#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
   
--   To include null values in the JSON output, specify the **INCLUDE_NULL_VALUES** option. If you don't specify this option, the output does not include JSON properties for NULL values in the query results. For more info, see[Include Null Values in JSON Output with the INCLUDE_NULL_VALUES Option &#40;SQL Server&#41;](../Topic/Include%20Null%20Values%20in%20JSON%20Output%20with%20the%20INCLUDE_NULL_VALUES%20Option%20\(SQL%20Server\).md).   
+-   To include null values in the JSON output, specify the **INCLUDE_NULL_VALUES** option. If you don't specify this option, the output does not include JSON properties for NULL values in the query results. For more info, see[Include Null Values in JSON Output with the INCLUDE_NULL_VALUES Option &#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).   
 
--   To remove the square brackets that surround the JSON output of the **FOR JSON** clause by default, specify the **WITHOUT_ARRAY_WRAPPER** option. Use this option to generate a single JSON object as output. If you don't specify this option, the JSON output is enclosed within square brackets. For more info, see [Remove Square Brackets from JSON Output with the WITHOUT_ARRAY_WRAPPER Option &#40;SQL Server&#41;](../Topic/Remove%20Square%20Brackets%20from%20JSON%20Output%20with%20the%20WITHOUT_ARRAY_WRAPPER%20Option%20\(SQL%20Server\).md). 
+-   To remove the square brackets that surround the JSON output of the **FOR JSON** clause by default, specify the **WITHOUT_ARRAY_WRAPPER** option. Use this option to generate a single JSON object as output. If you don't specify this option, the JSON output is enclosed within square brackets. For more info, see [Remove Square Brackets from JSON Output with the WITHOUT_ARRAY_WRAPPER Option &#40;SQL Server&#41;](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md). 
    
 ## Output of the FOR JSON clause  
  The output of the **FOR JSON** clause has the following characteristics.  
@@ -142,7 +142,7 @@ The **FOR JSON** clause uses the rules described in this topic to convert SQL da
  [Blog posts by Microsoft Program Manager Jovan Popovic](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)  
   
 ## See Also  
- [FOR Clause &#40;Transact-SQL&#41;](../Topic/FOR%20Clause%20\(Transact-SQL\).md)   
+ [FOR Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)   
  [Use FOR JSON output in SQL Server and in client apps &#40;SQL Server&#41;](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md)  
   
   

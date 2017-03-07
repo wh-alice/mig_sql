@@ -15,9 +15,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQLNumParams
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  Improvements in the database engine beginning with [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] allow SQLNumParams to obtain more accurate descriptions of the expected results. These more accurate results may differ from the values returned by SQLNumParams in previous versions of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Improvements in the database engine beginning with [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] allow SQLNumParams to obtain more accurate descriptions of the expected results. These more accurate results may differ from the values returned by SQLNumParams in previous versions of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
  For more information, see [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   

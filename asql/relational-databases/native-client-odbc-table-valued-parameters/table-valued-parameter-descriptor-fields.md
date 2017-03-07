@@ -17,9 +17,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Table-Valued Parameter Descriptor Fields
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  Support for table-valued parameters includes new [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]-specific fields in ODBC application parameter descriptors (APDs) and implementation parameter descriptors (IPDs).  
+  Support for table-valued parameters includes new [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]-specific fields in ODBC application parameter descriptors (APDs) and implementation parameter descriptors (IPDs).  
   
 ## Remarks  
   

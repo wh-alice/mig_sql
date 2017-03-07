@@ -32,11 +32,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # BACKUP CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../relational-databases/system-catalog-views/includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../relational-databases/reference/system-catalog-views/includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Exports a certificate to a file.  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -66,10 +66,10 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
 ## Arguments  
  *path_to_file*  
- Specifies the complete path, including file name, of the file in which the certificate is to be saved. This can be a local path or a UNC path to a network location. The default is the path of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] DATA folder.  
+ Specifies the complete path, including file name, of the file in which the certificate is to be saved. This can be a local path or a UNC path to a network location. The default is the path of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] DATA folder.  
   
  *path_to_private_key_file*  
- Specifies the complete path, including file name, of the file in which the private key is to be saved. This can be a local path or a UNC path to a network location. The default is the path of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] DATA folder.  
+ Specifies the complete path, including file name, of the file in which the private key is to be saved. This can be a local path or a UNC path to a network location. The default is the path of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] DATA folder.  
   
  *encryption_password*  
  Is the password that is used to encrypt the private key before writing the key to the backup file. The password is subject to complexity checks.  
@@ -118,7 +118,7 @@ BACKUP CERTIFICATE sales09 TO FILE = 'c:\storedcerts\sales09cert'
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### D. Exporting a certificate and a private key  
  In the following example, the private key of the certificate that is backed up will be encrypted with the password `997jkhUbhk$w4ez0876hKHJH5gh`.  

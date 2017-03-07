@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # XQueries Handling Relational Data
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   You specify XQuery against an **xml** type column or variable by using one of the [XML Data Type Methods](../t-sql/xml/xml-data-type-methods.md). These include **query()**, **value()**, **exist()**, or **modify()**. The XQuery is executed against the XML instance identified in the query generating the XML.  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  You can also use these functions when you use the **xml** data type methods **modify()**, **value()**, **query()**, and **exist()**to expose a relational value inside XML.  
   
- For more information, see [sql:column() function (XQuery)](../Topic/sql:column\(\)%20Function%20\(XQuery\).md) and [sql:variable() function (XQuery)](../Topic/sql:variable\(\)%20Function%20\(XQuery\).md).  
+ For more information, see [sql:column() function (XQuery)](../xquery/xquery-extension-functions-sql-column.md) and [sql:variable() function (XQuery)](../xquery/xquery-extension-functions-sql-variable.md).  
   
 ## See Also  
  [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   

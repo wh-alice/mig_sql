@@ -28,7 +28,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MDX Data Definition - CREATE SESSION CUBE
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates and populates a session cube from an existing server cube. The session cube is only visible within the current session; it cannot be browsed or queried from any other session. The session cube is implicitly deleted when the session is closed.  
   
@@ -212,6 +212,6 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
   
 ## See Also  
  [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [CREATE GLOBAL CUBE Statement  &#40;MDX&#41;](../Topic/CREATE%20GLOBAL%20CUBE%20Statement%20%20\(MDX\).md)  
+ [CREATE GLOBAL CUBE Statement  &#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)  
   
   

@@ -19,7 +19,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Functional Area Permissions (Master Data Services)
-  You can assign permission to each of the functional areas of the [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)] user interface (UI). The following are the functional areas:  
+  You can assign permission to each of the functional areas of the [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)] user interface (UI). The following are the functional areas:  
   
 -   **Explorer**  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  A user with Super User permissions effectively has Admin permission on all models and has all other functional permissions.  
   
- A user or group must have permission to at least one functional area and one model on the **Models** tab in order to access [!INCLUDE[ssMDSmdm](../database-engine/install/windows/includes/ssmdsmdm-md.md)].  
+ A user or group must have permission to at least one functional area and one model on the **Models** tab in order to access [!INCLUDE[ssMDSmdm](../a9notintoc/includes/ssmdsmdm-md.md)].  
   
 ## See Also  
  [Assign Functional Area Permissions &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)   

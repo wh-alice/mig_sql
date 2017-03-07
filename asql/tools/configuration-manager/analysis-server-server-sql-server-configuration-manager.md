@@ -15,8 +15,8 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Analysis Server &lt;server&gt; (SQL Server Configuration Manager)
-  This is the service that supports Microsoft [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)]. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.  
+  This is the service that supports Microsoft [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)]. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.  
   
- For information about [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)], see Books Online.  
+ For information about [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)], see Books Online.  
   
   

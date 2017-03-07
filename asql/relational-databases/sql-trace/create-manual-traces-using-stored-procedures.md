@@ -15,21 +15,21 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create Manual Traces using Stored Procedures
-  Microsoft [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] provides [!INCLUDE[tsql](../../advanced-analytics/r-services/includes/tsql-md.md)] system stored procedures to create traces on an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)]. These system stored procedures can be used from within your own applications to create traces manually, instead of using [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)]. This allows you to write custom applications specific to the needs of your enterprise.  
+  Microsoft [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] provides [!INCLUDE[tsql](../../a9notintoc/includes/tsql-md.md)] system stored procedures to create traces on an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)]. These system stored procedures can be used from within your own applications to create traces manually, instead of using [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)]. This allows you to write custom applications specific to the needs of your enterprise.  
   
 ## In This Section  
- The following table lists the system stored procedures for tracing an instance of the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)].  
+ The following table lists the system stored procedures for tracing an instance of the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)].  
   
 |Stored procedure|Task performed|  
 |----------------------|--------------------|  
-|[sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-trace-geteventinfo-transact-sql.md)|Returns information about events included in a trace.|  
-|[sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-trace-getinfo-transact-sql.md)|Returns information about a specified trace or all existing traces.|  
-|[sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)|Creates a trace definition. The new trace will be in a stopped state.|  
-|[sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)|Creates a user-defined event.|  
-|[sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)|Adds an event class or data column to a trace, or removes one from it.|  
-|[sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)|Starts, stops, or closes a trace.|  
-|[sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys.fn-trace-getfilterinfo-transact-sql.md)|Returns information about filters applied to a trace.|  
-|[sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)|Applies a new or modified filter to a trace.|  
+|[sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-trace-geteventinfo-transact-sql.md)|Returns information about events included in a trace.|  
+|[sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-trace-getinfo-transact-sql.md)|Returns information about a specified trace or all existing traces.|  
+|[sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-trace-create-transact-sql.md)|Creates a trace definition. The new trace will be in a stopped state.|  
+|[sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-trace-generateevent-transact-sql.md)|Creates a user-defined event.|  
+|[sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-trace-setevent-transact-sql.md)|Adds an event class or data column to a trace, or removes one from it.|  
+|[sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-trace-setstatus-transact-sql.md)|Starts, stops, or closes a trace.|  
+|[sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/reference/system-functions/sys.fn-trace-getfilterinfo-transact-sql.md)|Returns information about filters applied to a trace.|  
+|[sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-trace-setfilter-transact-sql.md)|Applies a new or modified filter to a trace.|  
   
  **To define your own trace using stored procedures**  
   
@@ -59,6 +59,6 @@ manager: "jhubbard"
   
  [SQL Server Profiler](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
- [Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
+ [Transact-SQL](../../relational-databases/reference/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

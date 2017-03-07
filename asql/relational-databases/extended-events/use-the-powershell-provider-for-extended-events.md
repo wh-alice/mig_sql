@@ -20,9 +20,9 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Use the PowerShell Provider for Extended Events
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../relational-databases/extended-events/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  You can manage [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Extended Events by using the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] PowerShell provider. The XEvent subfolder is available under the SQLSERVER drive. You can access the folder by using either of the following methods:  
+  You can manage [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Extended Events by using the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] PowerShell provider. The XEvent subfolder is available under the SQLSERVER drive. You can access the folder by using either of the following methods:  
   
 -   At a command prompt, type **sqlps**, and then press ENTER. Type **cd xevent**, and then press ENTER. From there, you can use the **cd** and **dir** commands (or **Set-Location** and **Get-Childitem** cmdlets) to navigate to the server name and instance name.  
   
@@ -37,14 +37,14 @@ manager: "jhubbard"
   
  To view the events, their predictates, and the targets that are associated with a session, you can change directories to the session name, and then view either the events or targets folder. For example, to view the events and their predicates that are associated with the default system health session, from the PS SQLSERVER:\XEvent\\*ServerName*\\*InstanceName*\Sessions> path, type **cd system_health\events,** press ENTER, type **dir**, and then press ENTER.  
   
- The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] PowerShell provider is a powerful tool that you can use to create, alter, and manage Extended Events sessions. The following section provides some basic examples of using PowerShell scripts with Extended Events.  
+ The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] PowerShell provider is a powerful tool that you can use to create, alter, and manage Extended Events sessions. The following section provides some basic examples of using PowerShell scripts with Extended Events.  
   
 ## Examples  
  In the following examples, note the following:  
   
 -   The scripts must be run from the PS SQLSERVER:\\> prompt (available by typing **sqlps** at a command prompt).  
   
--   The scripts use the default instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+-   The scripts use the default instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 -   The scripts must be saved with a .ps1 extension.  
   

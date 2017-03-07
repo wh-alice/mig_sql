@@ -22,9 +22,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # bcp_colfmt
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  Specifies the source or target format of the data in a user file. When used as a source format, **bcp_colfmt** specifies the format of an existing data file used as the source of data in a bulk copy to a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table. When used as a target format, the data file is created using the column formats specified with **bcp_colfmt**.  
+  Specifies the source or target format of the data in a user file. When used as a source format, **bcp_colfmt** specifies the format of an existing data file used as the source of data in a bulk copy to a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] table. When used as a target format, the data file is created using the column formats specified with **bcp_colfmt**.  
   
 ## Syntax  
   
@@ -51,13 +51,13 @@ RETCODE bcp_colfmt (
  *eUserDataType*  
  Is the data type of this column in the user file. If different from the data type of the corresponding column in the database table (*idxServerColumn*), bulk copy converts the data if possible.  
   
- [!INCLUDE[ssVersion2005](../../analysis-services/data-mining/includes/ssversion2005-md.md)] introduced support for SQLXML and SQLUDT data type tokens in the *eUserDataType* parameter.  
+ [!INCLUDE[ssVersion2005](../../a9notintoc/includes/ssversion2005-md.md)] introduced support for SQLXML and SQLUDT data type tokens in the *eUserDataType* parameter.  
   
- The *eUserDataType* parameter is enumerated by the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data type tokens in sqlncli.h, not the ODBC C data type enumerators. For example, you can specify a character string, ODBC type SQL_C_CHAR, using the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]-specific type SQLCHARACTER.  
+ The *eUserDataType* parameter is enumerated by the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data type tokens in sqlncli.h, not the ODBC C data type enumerators. For example, you can specify a character string, ODBC type SQL_C_CHAR, using the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]-specific type SQLCHARACTER.  
   
- To specify the default data representation for the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data type, set this parameter to 0.  
+ To specify the default data representation for the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] data type, set this parameter to 0.  
   
- For a bulk copy out of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] into a file, when *eUserDataType* is SQLDECIMAL or SQLNUMERIC:  
+ For a bulk copy out of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] into a file, when *eUserDataType* is SQLDECIMAL or SQLNUMERIC:  
   
 -   If the source column is not **decimal** or **numeric**, the default precision and scale are used.  
   
@@ -79,9 +79,9 @@ RETCODE bcp_colfmt (
   
  Setting *cbUserData* to SQL_NULL_DATA indicates that all values in the data file column are, or should be set to NULL.  
   
- Setting *cbUserData* to SQL_VARLEN_DATA indicates that the system should determine the length of data in each column. For some columns, this could mean that a length/null indicator is generated to precede data on a copy from [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], or that the indicator is expected in data copied to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Setting *cbUserData* to SQL_VARLEN_DATA indicates that the system should determine the length of data in each column. For some columns, this could mean that a length/null indicator is generated to precede data on a copy from [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], or that the indicator is expected in data copied to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
- For [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] character and binary data types, *cbUserData* can be SQL_VARLEN_DATA, SQL_NULL_DATA, 0, or some positive value. If *cbUserData* is SQL_VARLEN_DATA, the system uses either the length indicator, if present, or a terminator sequence to determine the length of the data. If both a length indicator and a terminator sequence are supplied, bulk copy uses the one that results in the least amount of data being copied. If *cbUserData* is SQL_VARLEN_DATA, the data type is an [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] character or binary type, and neither a length indicator nor a terminator sequence is specified, the system returns an error message.  
+ For [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] character and binary data types, *cbUserData* can be SQL_VARLEN_DATA, SQL_NULL_DATA, 0, or some positive value. If *cbUserData* is SQL_VARLEN_DATA, the system uses either the length indicator, if present, or a terminator sequence to determine the length of the data. If both a length indicator and a terminator sequence are supplied, bulk copy uses the one that results in the least amount of data being copied. If *cbUserData* is SQL_VARLEN_DATA, the data type is an [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] character or binary type, and neither a length indicator nor a terminator sequence is specified, the system returns an error message.  
   
  If *cbUserData* is 0 or a positive value, the system uses *cbUserData* as the maximum data length. However, if, in addition to a positive *cbUserData*, a length indicator or terminator sequence is provided, the system determines the data length by using the method that results in the least amount of data being copied.  
   
@@ -132,7 +132,7 @@ RETCODE bcp_colfmt (
   
  Calling **bcp_colfmt** more than once for any user-file column causes an error.  
   
- You do not need to copy all data in a user file to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] table. To skip a column, specify the format of the data for the column, setting the *idxServerCol* parameter to 0. If you want to skip a column, you must specify its type.  
+ You do not need to copy all data in a user file to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] table. To skip a column, specify the format of the data for the column, setting the *idxServerCol* parameter to 0. If you want to skip a column, you must specify its type.  
   
  The [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) function can be used to persist the format specification.  
   
@@ -142,6 +142,6 @@ RETCODE bcp_colfmt (
  For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## See Also  
- [Bulk Copy Functions](../Topic/Bulk%20Copy%20Functions.md)  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

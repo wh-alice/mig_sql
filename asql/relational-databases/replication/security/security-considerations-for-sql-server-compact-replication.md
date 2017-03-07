@@ -17,7 +17,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Security Considerations for SQL Server Compact Replication
-  Securing connectivity between an instance of [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Database Engine and [!INCLUDE[ssEW](../../../analysis-services/instances/includes/ssew-md.md)] involves properly configuring security for both Microsoft Internet Information Services (IIS) and [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+  Securing connectivity between an instance of [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] Database Engine and [!INCLUDE[ssEW](../../../a9retired/includes/ssew-md.md)] involves properly configuring security for both Microsoft Internet Information Services (IIS) and [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].  
   
 ## See Also  
  [Security and Protection &#40;Replication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   

@@ -20,7 +20,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 2-1 - View and Summarize Data using R
-Now you'll work with the same data using R code. You'll also learn how to use the functions in the **RevoScaleR** package included with [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)] to generate  data summaries in the context of the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] server, and send the results back to your R environment.  
+Now you'll work with the same data using R code. You'll also learn how to use the functions in the **RevoScaleR** package included with [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)] to generate  data summaries in the context of the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] server, and send the results back to your R environment.  
 
 An R script is provided with this walkthrough that includes all the code needed to create the data object, generate summaries, and build models. The R script file, **RSQL_RWalkthrough.R**, can be found in the location where you installed the script files.  
 + If you are experienced with R, you can run the script all at once.
@@ -31,9 +31,9 @@ An R script is provided with this walkthrough that includes all the code needed 
 > Save your R workspace in case you want to complete the rest of the walkthrough later.  That way the data objects and other variables will be ready for re-use.   
 
 ## Defining SQL Server Data Sources and Compute Contexts
-To get data from  [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to use in your R code, you need to:  
+To get data from  [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] to use in your R code, you need to:  
   
-- Create a connection to a [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance  
+- Create a connection to a [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance  
 - Define a query that has the data you need, or specify a table or view    
 - =Define one or more compute contexts to use when running R code    
 -   Optionally, define functions that can be applied to the data source  
@@ -53,7 +53,7 @@ To get data from  [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/
 
 1. The R script that you downlaoded uses SQL logins. For this tutorial, we've provided examples of both SQL logins and Windows integrated authentication. We recommend that you use Windows authentication where possible, to avoid saving paswords in your R code.
 
-    Regardless of which credentials you use, the account that you use must have permissions to read data and to create new tables in the specified database. For information about how to add users to the SQL database and give them the correct permissions, see [Post-Installation Server Configuration &#40;SQL Server R Services&#41;](../Topic/Post-Installation%20Server%20Configuration%20(SQL%20Server%20R%20Services).md). 
+    Regardless of which credentials you use, the account that you use must have permissions to read data and to create new tables in the specified database. For information about how to add users to the SQL database and give them the correct permissions, see [Post-Installation Server Configuration &#40;SQL Server R Services&#41;](../../../a9retired/post-installation-server-configuration-sql-server-r-services.md). 
 
     ```R  
     # SQL authentication  
@@ -72,7 +72,7 @@ To get data from  [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/
   
 ### Define and set a compute context  
 
-Next, you'll define a *compute context* that enable the R code to run on the SQL Server computer. Typically, when you are using R, all operations run in memory on your computer. However, by indicating that R operations should be run on the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance, you can run some tasks in parallel, and tae advantage of server resources.  
+Next, you'll define a *compute context* that enable the R code to run on the SQL Server computer. Typically, when you are using R, all operations run in memory on your computer. However, by indicating that R operations should be run on the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance, you can run some tasks in parallel, and tae advantage of server resources.  
 
 By default, the compute context is local, so you'll need to explicitly set the compute context, depending on the operation.  
 
@@ -84,7 +84,7 @@ By default, the compute context is local, so you'll need to explicitly set the c
     sqlWait <- TRUE  
     sqlConsoleOutput <- FALSE    
     ```    
-    -   R uses a temporary directory when serializing R objects back and forth between your workstation and the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer. You can specify the local directory that is used as *sqlShareDir*, or accept the default.  
+    -   R uses a temporary directory when serializing R objects back and forth between your workstation and the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] computer. You can specify the local directory that is used as *sqlShareDir*, or accept the default.  
   
     -   Use *sqlWait* to indicate whether you want R to wait for results or not.  For a discussion of waiting vs. non-waiting jobs, see [ScaleR Distributed Computing](https://msdn.microsoft.com/microsoft-r/scaler-distributed-computing).
   
@@ -108,7 +108,7 @@ By default, the compute context is local, so you'll need to explicitly set the c
   
 ### Create an RxSqlServer data object  
 
-Having defined the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] connection to work with, you can use that data connection object as the basis to define different data sources. A *data source* specifies some set of data that you want to use for a task, such as training, exploration, scoring, or generating features.  
+Having defined the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] connection to work with, you can use that data connection object as the basis to define different data sources. A *data source* specifies some set of data that you want to use for a task, such as training, exploration, scoring, or generating features.  
     
 You define sets of SQL Server data by using the *RxSqlServer* function, and passing a connection string and the definition of the data to get.  
   
@@ -132,9 +132,9 @@ You define sets of SQL Server data by using the *RxSqlServer* function, and pass
          rowsPerRead=500)  
     ```
     
-    + The argument  *colClasses* specifies the column types to use when moving the data between [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] and R.  This is important because [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses different data types than R, and more data types. For more information, see [Working with R Data Types](../../../advanced-analytics/r-services/working-with-r-data-types.md).  
+    + The argument  *colClasses* specifies the column types to use when moving the data between [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] and R.  This is important because [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] uses different data types than R, and more data types. For more information, see [Working with R Data Types](../../../advanced-analytics/r-services/working-with-r-data-types.md).  
   
-    + The argument *rowsPerRead* is important for handling memory usage and efficient computations.  Most of the enhanced analytical functions in[!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)] process data in chunks and accumulate intermediate results, returning the final computations after all of the data has been read.  By adding the `rowsPerRead` parameter, you can control how many rows of data are read into each chunk for processing.  If the value of this parameter is too large, data access might be slow because you don’t have enough memory to efficiently process such a large chunk of data.  On some systems, setting `rowsPerRead` to too small a value can also provide slower performance.  
+    + The argument *rowsPerRead* is important for handling memory usage and efficient computations.  Most of the enhanced analytical functions in[!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)] process data in chunks and accumulate intermediate results, returning the final computations after all of the data has been read.  By adding the `rowsPerRead` parameter, you can control how many rows of data are read into each chunk for processing.  If the value of this parameter is too large, data access might be slow because you don’t have enough memory to efficiently process such a large chunk of data.  On some systems, setting `rowsPerRead` to too small a value can also provide slower performance.  
 
 > [!TIP] 
 > After the *inDataSource* object has been created, you can reuse this object as many times as you need, to get basic information about the data and the variables used, to manipulate and transform the data, or to use it for training a model.  
@@ -142,7 +142,7 @@ You define sets of SQL Server data by using the *RxSqlServer* function, and pass
 > However, the *inDataSource* object itself doesn't contain any data from the SQL query yet. The data is not pulled into the local environment until you run a function such as *rxImport* or *rxSummary*.          
   
 ## Using the SQL Server Data in R  
-You can now apply R functions to the data source, to explore, summarize, and chart the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] data. In this section, you 'll try out several of the functions provided in [!INCLUDE[rsql_productname](../../../advanced-analytics/r-services/includes/rsql-productname-md.md)] that support remote compute contexts.  
+You can now apply R functions to the data source, to explore, summarize, and chart the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] data. In this section, you 'll try out several of the functions provided in [!INCLUDE[rsql_productname](../../../a9notintoc/includes/rsql-productname-md.md)] that support remote compute contexts.  
   
 -   **rxGetVarInfo**: Use this function with any data frame or set of data in a remote data object (also with some lists and matrices) to get information such as the maximum and minimum values, the data type, and the number of levels in factor columns.  
   
@@ -215,7 +215,7 @@ You can now apply R functions to the data source, to explore, summarize, and cha
 
   
 ## Next Step  
-[Create Graphs and Plots Using R &#40;Data Science End-to-End Walkthrough&#41;](../Topic/Create%20Graphs%20and%20Plots%20Using%20R%20(Data%20Science%20End-to-End%20Walkthrough).md)  
+[Create Graphs and Plots Using R &#40;Data Science End-to-End Walkthrough&#41;](../../../advanced-analytics/r-services/tutorials/lesson-2-2-create-graphs-and-plots-using-r.md)  
   
 ## Previous Lesson  
 [Lesson 1: Prepare the Data &#40;Data Science End-to-End Walkthrough&#41;](../../../advanced-analytics/r-services/tutorials/lesson-1-prepare-the-data-data-science-end-to-end-walkthrough.md)  

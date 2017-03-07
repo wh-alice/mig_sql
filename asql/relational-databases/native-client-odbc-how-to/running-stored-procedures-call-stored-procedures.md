@@ -17,13 +17,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Running Stored Procedures - Call Stored Procedures
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
-  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ODBC driver supports executing stored procedures as remote stored procedures. Executing a stored procedure as a remote stored procedure allows the driver and the server to optimize the performance of executing the procedure.  
+  The [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ODBC driver supports executing stored procedures as remote stored procedures. Executing a stored procedure as a remote stored procedure allows the driver and the server to optimize the performance of executing the procedure.  
   
   When a SQL statement calls a stored procedure using the ODBC CALL escape clause, the Microsoft® SQL Server™ driver sends the procedure to SQL Server using the remote stored procedure call (RPC) mechanism. RPC requests bypass much of the statement parsing and parameter processing in SQL Server and are faster than using the Transact-SQL EXECUTE statement.  
   
- For a sample application that demonstrates this feature, see [Process Return Codes and Output Parameters &#40;ODBC&#41;](../Topic/Process%20Return%20Codes%20and%20Output%20Parameters%20\(ODBC\).md).  
+ For a sample application that demonstrates this feature, see [Process Return Codes and Output Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
 ### To run a procedure as an RPC  
   

@@ -28,7 +28,7 @@ In this step, you'll learn how to use the *RxInSqlServer* function to define a c
 
   
 ## Create and Set a Compute Context  
-To create a compute context requires the following basic information about the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] instance :  
+To create a compute context requires the following basic information about the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] instance :  
   
 -   The connection string for the instance  
 -   A specification for how output should be handled  
@@ -61,9 +61,9 @@ To create a compute context requires the following basic information about the [
   
     -   **TRUE**. The job will be blocking and will not return until it has completed or has failed.  For more information about blocking and non-blocking jobs, see 
   
-    -   **FALSE**. Jobs will be non-blocking and return immediately, allowing you to continue running other R code. However, even in non-blocking mode, the client connection with [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] must be maintained while the job is running.  
+    -   **FALSE**. Jobs will be non-blocking and return immediately, allowing you to continue running other R code. However, even in non-blocking mode, the client connection with [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] must be maintained while the job is running.  
 
-3. Optionally, you can specify the location of a local directory for shared use by the local R session and by the remote  [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] computer and its accounts.
+3. Optionally, you can specify the location of a local directory for shared use by the local R session and by the remote  [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] computer and its accounts.
     
     ```R  
     sqlShareDir <- paste("c:\\AllShare\\", Sys.getenv("USERNAME"), sep="")   
@@ -125,7 +125,7 @@ Now that you have created a remote compute context, you'll learn how to change c
 [Lesson 2: Create and Run R Scripts &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-2-create-and-run-r-scripts-data-science-deep-dive.md)  
   
 ## Previous Step  
-[Query and Modify the SQL Server Data &#40;Data Science Deep Dive&#41;](../Topic/Query%20and%20Modify%20the%20SQL%20Server%20Data%20(Data%20Science%20Deep%20Dive).md)  
+[Query and Modify the SQL Server Data &#40;Data Science Deep Dive&#41;](../../../advanced-analytics/r-services/tutorials/lesson-1-2-query-and-modify-the-sql-server-data.md)  
   
 ## See Also  
 [Data Science Deep Dive: Using the RevoScaleR Packages](../../../advanced-analytics/r-services/tutorials/data-science-deep-dive-using-the-revoscaler-packages.md)  

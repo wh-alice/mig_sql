@@ -23,9 +23,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # DISCOVER_LITERALS Rowset
-  Returns information about literals, including data types and values, supported by the [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] XML for Analysis (XMLA) provider.  
+  Returns information about literals, including data types and values, supported by the [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] XML for Analysis (XMLA) provider.  
   
- If you call the [Discover](../Topic/Discover%20Method%20\(XMLA\).md) method with the **DISCOVER_LITERALS** enumeration value in the [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) element, the **Discover** method returns the **DISCOVER_LITERALS** rowset.  
+ If you call the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method with the **DISCOVER_LITERALS** enumeration value in the [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) element, the **Discover** method returns the **DISCOVER_LITERALS** rowset.  
   
 ## Rowset Columns  
  The **DISCOVER_LITERALS** rowset contains the following columns.  

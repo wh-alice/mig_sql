@@ -27,7 +27,7 @@ manager: "erikre"
 # Data Source Views in Multidimensional Models
   A data source view (DSV) is an abstraction of a relational data source that becomes the basis of the cubes and dimensions you create in a multidimensional project. The purpose of a DSV is to give you control over the data structures used in your project, and to work independently of the underlying data sources (for example, the ability to rename or concatenate columns without directly modifying the original data source).  
   
- You can build multiple data source views in an [!INCLUDE[ssASnoversion](../../analysis-services/includes/ssasnoversion-md.md)] project or database on one or more data sources, and construct each one to satisfy the requirements for a different solution.  
+ You can build multiple data source views in an [!INCLUDE[ssASnoversion](../../a9notintoc/includes/ssasnoversion-md.md)] project or database on one or more data sources, and construct each one to satisfy the requirements for a different solution.  
   
 ## Related Tasks  
  [Defining a Data Source View &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  

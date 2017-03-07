@@ -32,18 +32,18 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # CHECKPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../a9retired/includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Generates a manual checkpoint in the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] database to which you are currently connected.  
+  Generates a manual checkpoint in the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] database to which you are currently connected.  
   
 > [!NOTE]  
 >  For information about different types of database checkpoints and checkpoint operation in general, see [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -54,12 +54,12 @@ CHECKPOINT [ checkpoint_duration ]
   
 ## Arguments  
  *checkpoint_duration*  
- Specifies the requested amount of time, in seconds, for the manual checkpoint to complete. When *checkpoint_duration* is specified, the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] attempts to perform the checkpoint within the requested duration. The *checkpoint_duration* must be an expression of type **int** and must be greater than zero. When this parameter is omitted, the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] adjusts the checkpoint duration to minimize the performance impact on database applications. *checkpoint_duration* is an advanced option.  
+ Specifies the requested amount of time, in seconds, for the manual checkpoint to complete. When *checkpoint_duration* is specified, the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] attempts to perform the checkpoint within the requested duration. The *checkpoint_duration* must be an expression of type **int** and must be greater than zero. When this parameter is omitted, the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] adjusts the checkpoint duration to minimize the performance impact on database applications. *checkpoint_duration* is an advanced option.  
   
 ## Factors Affecting the Duration of Checkpoint Operations  
- In general, the amount time required for a checkpoint operation increases with the number of dirty pages that the operation must write. By default, to minimize the performance impact on other applications, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] adjusts the frequency of writes that a checkpoint operation performs. Decreasing the write frequency increases the time the checkpoint operation requires to complete. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] uses this strategy for a manual checkpoint unless a *checkpoint_duration* value is specified in the CHECKPOINT command.  
+ In general, the amount time required for a checkpoint operation increases with the number of dirty pages that the operation must write. By default, to minimize the performance impact on other applications, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] adjusts the frequency of writes that a checkpoint operation performs. Decreasing the write frequency increases the time the checkpoint operation requires to complete. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] uses this strategy for a manual checkpoint unless a *checkpoint_duration* value is specified in the CHECKPOINT command.  
   
- The performance impact of using *checkpoint_duration* depends on the number of dirty pages, the activity on the system, and the actual duration specified. For example, if the checkpoint would normally complete in 120 seconds, specifying a *checkpoint_duration* of 45 seconds causes [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to devote more resources to the checkpoint than would be assigned by default. In contrast, specifying a *checkpoint_duration* of 180 seconds would cause [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to assign fewer resources than would be assigned by default. In general, a short *checkpoint_duration* will increase the resources devoted to the checkpoint, while a long *checkpoint_duration* will reduce the resources devoted to the checkpoint. [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] always completes a checkpoint if possible, and the CHECKPOINT statement returns immediately when a checkpoint completes. Therefore, in some cases, a checkpoint may complete sooner than the specified duration or may run longer than the specified duration.  
+ The performance impact of using *checkpoint_duration* depends on the number of dirty pages, the activity on the system, and the actual duration specified. For example, if the checkpoint would normally complete in 120 seconds, specifying a *checkpoint_duration* of 45 seconds causes [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to devote more resources to the checkpoint than would be assigned by default. In contrast, specifying a *checkpoint_duration* of 180 seconds would cause [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to assign fewer resources than would be assigned by default. In general, a short *checkpoint_duration* will increase the resources devoted to the checkpoint, while a long *checkpoint_duration* will reduce the resources devoted to the checkpoint. [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] always completes a checkpoint if possible, and the CHECKPOINT statement returns immediately when a checkpoint completes. Therefore, in some cases, a checkpoint may complete sooner than the specified duration or may run longer than the specified duration.  
   
 ##  <a name="Security"></a> Security  
   

@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Specify Events and Data Columns for a Trace File (SQL Server Profiler)
-  This topic describes how to specify event classes and data columns for traces by using [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)].  
+  This topic describes how to specify event classes and data columns for traces by using [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)].  
   
 ### To specify events and data columns for a trace  
   

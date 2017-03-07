@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Optimize SQL Trace
   Although running SQL Trace incurs a performance cost because it uses system resources to gather data, you can do many things to minimize it. To minimize the performance cost incurred by a trace, try the following:  
   
--   Consider using the command prompt to run traces. Using a graphical user interface hinders performance. For more information, see [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).  
+-   Consider using the command prompt to run traces. Using a graphical user interface hinders performance. For more information, see [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-trace-create-transact-sql.md).  
   
 -   Avoid including events that occur frequently. If possible, narrow your trace by means of specific event classes and filters. If fewer trace events are gathered, fewer system resources are required to support tracing.  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 -   Limit the size of the trace results. You can limit the size of the trace results to a maximum file size. This strategy ensures that the performance cost stops when the file-size limit is reached (if file rollover is not enabled).  
   
--   Limit the number of events returned. With [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] you can limit the number of events returned by saving the trace to a table and setting the maximum number of rows. Trace results are still returned to the [!INCLUDE[ssSqlProfiler](../../analysis-services/data-mining/includes/sssqlprofiler-md.md)] screen after the maximum number of rows has been reached, but the cost of recording the results to a table is eliminated.  
+-   Limit the number of events returned. With [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] you can limit the number of events returned by saving the trace to a table and setting the maximum number of rows. Trace results are still returned to the [!INCLUDE[ssSqlProfiler](../../a9retired/includes/sssqlprofiler-md.md)] screen after the maximum number of rows has been reached, but the cost of recording the results to a table is eliminated.  
   
 ## See Also  
  [Filter a Trace](../../relational-databases/sql-trace/filter-a-trace.md)  

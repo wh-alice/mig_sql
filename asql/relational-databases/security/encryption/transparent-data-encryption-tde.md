@@ -24,14 +24,14 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Transparent Data Encryption (TDE)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
-  *Transparent Data Encryption* (TDE) encrypts [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)], and [!INCLUDE[ssSDWfull](../../../relational-databases/security/encryption/includes/sssdwfull-md.md)] data files, known as encrypting data at rest. You can take several precautions to help secure the database such as designing a secure system, encrypting confidential assets, and building a firewall around the database servers. However, in a scenario where the physical media (such as drives or backup tapes) are stolen, a malicious party can just restore or attach the database and browse the data. One solution is to encrypt the sensitive data in the database and protect the keys that are used to encrypt the data with a certificate. This prevents anyone without the keys from using the data, but this kind of protection must be planned in advance.  
+  *Transparent Data Encryption* (TDE) encrypts [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../a9retired/includes/sssdsfull-md.md)], and [!INCLUDE[ssSDWfull](../../../a9notintoc/includes/sssdwfull-md.md)] data files, known as encrypting data at rest. You can take several precautions to help secure the database such as designing a secure system, encrypting confidential assets, and building a firewall around the database servers. However, in a scenario where the physical media (such as drives or backup tapes) are stolen, a malicious party can just restore or attach the database and browse the data. One solution is to encrypt the sensitive data in the database and protect the keys that are used to encrypt the data with a certificate. This prevents anyone without the keys from using the data, but this kind of protection must be planned in advance.  
   
  TDE performs real-time I/O encryption and decryption of the data and log files. The encryption uses a database encryption key (DEK), which is stored in the database boot record for availability during recovery. The DEK is a symmetric key secured by using a certificate stored in the master database of the server or an asymmetric key protected by an EKM module. TDE protects data "at rest", meaning the data and log files. It provides the ability to comply with many laws, regulations, and guidelines established in various industries. This enables software developers to encrypt data by using AES and 3DES encryption algorithms without changing existing applications.  
   
 > [!IMPORTANT]  
->  TDE does not provide encryption across communication channels. For more information about how to encrypt data across communication channels, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../Topic/Enable%20Encrypted%20Connections%20to%20the%20Database%20Engine%20\(SQL%20Server%20Configuration%20Manager\).md).  
+>  TDE does not provide encryption across communication channels. For more information about how to encrypt data across communication channels, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure/windows/enable-encrypted-connections-to-the-database-engine.md).  
 >   
 >  **Related topics:**  
 >   
@@ -46,11 +46,11 @@ manager: "jhubbard"
 ## About TDE  
  Encryption of the database file is performed at the page level. The pages in an encrypted database are encrypted before they are written to disk and decrypted when read into memory. TDE does not increase the size of the encrypted database.  
   
- **Information applicable to [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)]**  
+ **Information applicable to [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)]**  
   
- When using TDE with [!INCLUDE[sqldbesa](../../../database-engine/configure/windows/includes/sqldbesa-md.md)] V12 the server-level certificate stored in the master database is automatically created for you by [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)]. To move a TDE database on [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)] you must decrypt the database, move the database, and then re-enable TDE on the destination [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)]. For step-by-step instructions for TDE on [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)], see [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md).  
+ When using TDE with [!INCLUDE[sqldbesa](../../../a9retired/includes/sqldbesa-md.md)] V12 the server-level certificate stored in the master database is automatically created for you by [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)]. To move a TDE database on [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)] you must decrypt the database, move the database, and then re-enable TDE on the destination [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)]. For step-by-step instructions for TDE on [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)], see [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md).  
   
- **Information applicable to [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]**  
+ **Information applicable to [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]**  
   
  After it is secured, the database can be restored by using the correct certificate. For more information about certificates, see [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
@@ -58,7 +58,7 @@ manager: "jhubbard"
   
  **Encryption Hierarchy**  
   
- The following illustration shows the architecture of TDE encryption. Only the database level items (the database encryption key and ALTER DATABASE portions are user-configurable when using TDE on [!INCLUDE[ssSDS](../../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ The following illustration shows the architecture of TDE encryption. Only the database level items (the database encryption key and ALTER DATABASE portions are user-configurable when using TDE on [!INCLUDE[ssSDS](../../../a9retired/includes/sssds-md.md)].  
   
  ![Displays the hierarchy described in the topic.](../../../relational-databases/security/encryption/media/tde-architecture.gif "Displays the hierarchy described in the topic.")  
   
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)].|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)].|  
   
 -   Create a master key  
   
@@ -97,7 +97,7 @@ SET ENCRYPTION ON;
 GO  
 ```  
   
- The encryption and decryption operations are scheduled on background threads by [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. You can view the status of these operations using the catalog views and dynamic management views in the list that appears later in this topic.  
+ The encryption and decryption operations are scheduled on background threads by [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. You can view the status of these operations using the catalog views and dynamic management views in the list that appears later in this topic.  
   
 > [!CAUTION]  
 >  Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available. For more information, see [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
@@ -115,16 +115,16 @@ GO
 |[CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-database-encryption-key-transact-sql.md)|Creates a key that is used to encrypt a database.|  
 |[ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Changes the key that is used to encrypt a database.|  
 |[DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Removes the key that was used to encrypt a database.|  
-|[ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)|Explains the **ALTER DATABASE** option that is used to enable TDE.|  
+|[ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql-set-options.md)|Explains the **ALTER DATABASE** option that is used to enable TDE.|  
   
 ## Catalog Views and Dynamic Management Views  
  The following table shows TDE catalog views and dynamic management views.  
   
 |Catalog view or dynamic management view|Purpose|  
 |---------------------------------------------|-------------|  
-|[sys.databases &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.databases-transact-sql.md)|Catalog view that displays database information.|  
-|[sys.certificates &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys.certificates-transact-sql.md)|Catalog view that shows the certificates in a database.|  
-|[sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys.dm-database-encryption-keys-transact-sql.md)|Dynamic management view that provides information about the encryption keys used in a database, and the state of encryption of a database.|  
+|[sys.databases &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.databases-transact-sql.md)|Catalog view that displays database information.|  
+|[sys.certificates &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-catalog-views/sys.certificates-transact-sql.md)|Catalog view that shows the certificates in a database.|  
+|[sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../../../relational-databases/reference/system-dynamic-management-views/sys.dm-database-encryption-keys-transact-sql.md)|Dynamic management view that provides information about the encryption keys used in a database, and the state of encryption of a database.|  
   
 ## Permissions  
  Each TDE feature and command has individual permission requirements, described in the tables shown earlier.  
@@ -209,17 +209,17 @@ WHERE encryption_state = 3;
 GO  
 ```  
   
- For more information about the [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] log file architecture, see [The Transaction Log &#40;SQL Server&#41;](../../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ For more information about the [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] log file architecture, see [The Transaction Log &#40;SQL Server&#41;](../../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  All data written to the transaction log before a change in the database encryption key will be encrypted by using the previous database encryption key.  
   
  After a database encryption key has been modified twice, a log backup must be performed before the database encryption key can be modified again.  
   
 ### Transparent Data Encryption and the tempdb System Database  
- The tempdb system database will be encrypted if any other database on the instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] is encrypted by using TDE. This might have a performance effect for unencrypted databases on the same instance of [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information about the tempdb system database, see [tempdb Database](../../../relational-databases/databases/tempdb-database.md).  
+ The tempdb system database will be encrypted if any other database on the instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] is encrypted by using TDE. This might have a performance effect for unencrypted databases on the same instance of [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)]. For more information about the tempdb system database, see [tempdb Database](../../../relational-databases/databases/tempdb-database.md).  
   
 ### Transparent Data Encryption and Replication  
- Replication does not automatically replicate data from a TDE-enabled database in an encrypted form. You must separately enable TDE if you want to protect the distribution and subscriber databases. Snapshot replication, as well as the initial distribution of data for transactional and merge replication, can store data in unencrypted intermediate files; for example, the bcp files.  During transactional or merge replication, encryption can be enabled to protect the communication channel. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../Topic/Enable%20Encrypted%20Connections%20to%20the%20Database%20Engine%20\(SQL%20Server%20Configuration%20Manager\).md).  
+ Replication does not automatically replicate data from a TDE-enabled database in an encrypted form. You must separately enable TDE if you want to protect the distribution and subscriber databases. Snapshot replication, as well as the initial distribution of data for transactional and merge replication, can store data in unencrypted intermediate files; for example, the bcp files.  During transactional or merge replication, encryption can be enabled to protect the communication channel. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure/windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ### Transparent Data Encryption and FILESTREAM DATA  
  FILESTREAM data is not encrypted even when TDE is enabled.  
@@ -228,7 +228,7 @@ GO
  Files related to buffer pool extension (BPE) are not encrypted when database is encrypted using TDE. You must use file system level encryption tools like Bitlocker or EFS for BPE related files.  
   
 ## Transparent Data Encryption and In-Memory OLTP  
- TDE can be enabled on a database that has In-Memory OLTP objects. In [!INCLUDE[ssSQL15](../../../analysis-services/powershell/includes/sssql15-md.md)] and [!INCLUDE[ssSDSfull](../../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)] In-Memory OLTP log records and data are encrypted if TDE is enabled. In [!INCLUDE[ssSQL14](../../../analysis-services/includes/sssql14-md.md)] In-Memory OLTP log records are encrypted if TDE is enabled, but files in the MEMORY_OPTIMIZED_DATA filegroup are not encrypted.  
+ TDE can be enabled on a database that has In-Memory OLTP objects. In [!INCLUDE[ssSQL15](../../../a9notintoc/includes/sssql15-md.md)] and [!INCLUDE[ssSDSfull](../../../a9retired/includes/sssdsfull-md.md)] In-Memory OLTP log records and data are encrypted if TDE is enabled. In [!INCLUDE[ssSQL14](../../../a9notintoc/includes/sssql14-md.md)] In-Memory OLTP log records are encrypted if TDE is enabled, but files in the MEMORY_OPTIMIZED_DATA filegroup are not encrypted.  
   
 ## Related Tasks  
  [Move a TDE Protected Database to Another SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)  

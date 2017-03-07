@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Open, Unlock, Rename, and Delete a Data Quality Project
-  This topic describes how to manage a data quality project by using [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] such as open, unlock, rename, and delete a data quality project.  
+  This topic describes how to manage a data quality project by using [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] such as open, unlock, rename, and delete a data quality project.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssDQSInitialStep](../data-quality-services/includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] home screen, click **Open data quality project**. The **Open project** screen appears.  
+2.  In the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] home screen, click **Open data quality project**. The **Open project** screen appears.  
   
      Alternately, you can directly open a data quality project listed under **Recent data quality project** area by clicking it.  
   
@@ -65,7 +65,7 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssDQSInitialStep](../data-quality-services/includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] home screen, click **Open data quality project**. The **Open project** screen appears.  
+2.  In the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] home screen, click **Open data quality project**. The **Open project** screen appears.  
   
 3.  In the **Open project** screen, right-click a locked data quality project that is created by you, and then click **Unlock** in the shortcut menu. A green check mark is displayed for the project indicating that it is unlocked.  
   
@@ -73,7 +73,7 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssDQSInitialStep](../data-quality-services/includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] home screen, click **Open data quality project**. The **Open project** screen appears.  
+2.  In the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] home screen, click **Open data quality project**. The **Open project** screen appears.  
   
 3.  In the **Open project** screen, right-click a data quality project that is created by you, and then click **Rename** in the shortcut menu.  
   
@@ -83,7 +83,7 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssDQSInitialStep](../data-quality-services/includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  In the [!INCLUDE[ssDQSClient](../data-quality-services/includes/ssdqsclient-md.md)] home screen, click **Open data quality project**. The **Open project** screen appears.  
+2.  In the [!INCLUDE[ssDQSClient](../a9retired/includes/ssdqsclient-md.md)] home screen, click **Open data quality project**. The **Open project** screen appears.  
   
 3.  In the **Open project** screen, right-click an unlocked data quality project that is created by you, and then click **Delete** in the shortcut menu.  
   

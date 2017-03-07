@@ -19,13 +19,13 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Protocols for MSSQLSERVER Properties (Certificate Tab)
-  Use the **Certificate** tab on the **Protocols for MSSQLSERVER Properties** dialog box to select a certificate for [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], or to view the properties of a certificate. All fields are blank until a certificate is selected.  
+  Use the **Certificate** tab on the **Protocols for MSSQLSERVER Properties** dialog box to select a certificate for [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], or to view the properties of a certificate. All fields are blank until a certificate is selected.  
   
- Certificates are stored locally for the users on the computer. To load a certificate for use by [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], you must be running [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Configuration Manager under the same user account as the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service.  
+ Certificates are stored locally for the users on the computer. To load a certificate for use by [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], you must be running [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Configuration Manager under the same user account as the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service.  
   
 ## Page Header  
  **View**  
- Provides access to additional details on the certificate. Not available until a certificate is selected in the **Certificate** box. For additional information on certificate details, see your [!INCLUDE[msCoName](../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] Windows documentation.  
+ Provides access to additional details on the certificate. Not available until a certificate is selected in the **Certificate** box. For additional information on certificate details, see your [!INCLUDE[msCoName](../../a9notintoc/includes/msconame-md.md)] Windows documentation.  
   
  **Clear**  
  Removes the selection from the **Certificate** box.  

@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # XQuery Extension Functions - sql:variable()
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../integration-services/system/stored-procedures/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../a9retired/includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Exposes a variable that contains a SQL relational value inside an XQuery expression.  
   
@@ -36,7 +36,7 @@ sql:variable("variableName") as xdt:anyAtomicType?
 ## Remarks  
  As described in the topic [Binding Relational Data Inside XML](../t-sql/data-types/binding-relational-data-inside-xml-data.md), you can use this function when you use [XML data type methods](../t-sql/xml/xml-data-type-methods.md) to expose a relational value inside XQuery.  
   
- For example, the [query() method](../t-sql/data-types/query-method-xml-data-type.md) is used to specify a query against an XML instance that is stored in an **xml** data type variable or column. Sometimes, you might also want your query to use values from a [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] variable, or parameter, to bring relational and XML data together. To do this, you use the **sql:variable** function.  
+ For example, the [query() method](../t-sql/data-types/query-method-xml-data-type.md) is used to specify a query against an XML instance that is stored in an **xml** data type variable or column. Sometimes, you might also want your query to use values from a [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] variable, or parameter, to bring relational and XML data together. To do this, you use the **sql:variable** function.  
   
  The SQL value will be mapped to a corresponding XQuery value and its type will be an XQuery base type that is equivalent to the corresponding SQL type.  
   
@@ -47,11 +47,11 @@ sql:variable("variableName") as xdt:anyAtomicType?
 ### A. Using the sql:variable() function to bring a Transact-SQL variable value into XML  
  The following example constructs an XML instance that made up of the following:  
   
--   A value (`ProductID`) from a non-XML column. The [sql:column() function](../Topic/sql:column\(\)%20Function%20\(XQuery\).md) is used to bind this value in the XML.  
+-   A value (`ProductID`) from a non-XML column. The [sql:column() function](../xquery/xquery-extension-functions-sql-column.md) is used to bind this value in the XML.  
   
 -   A value (`ListPrice`) from a non-XML column from another table. Again, `sql:column()` is used to bind this value in the XML.  
   
--   A value (`DiscountPrice`) from a [!INCLUDE[tsql](../advanced-analytics/r-services/includes/tsql-md.md)] variable. The `sql:variable()` method is used to bind this value into the XML.  
+-   A value (`DiscountPrice`) from a [!INCLUDE[tsql](../a9notintoc/includes/tsql-md.md)] variable. The `sql:variable()` method is used to bind this value into the XML.  
   
 -   A value (`ProductModelName`) from an **xml** type column, to make the query more interesting.  
   
@@ -81,7 +81,7 @@ WHERE ProductID=771
   
 -   The XQuery inside the `query()` method constructs the XML.  
   
--   The `namespace` keyword is used to define a namespace prefix in the [XQuery Prolog](../Topic/XQuery%20Prolog.md). This is done because the `ProductModelName` attribute value is retrieved from the `CatalogDescription xml` type column, which has a schema associated with it.  
+-   The `namespace` keyword is used to define a namespace prefix in the [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md). This is done because the `ProductModelName` attribute value is retrieved from the `CatalogDescription xml` type column, which has a schema associated with it.  
   
  This is the result:  
   
@@ -92,7 +92,7 @@ WHERE ProductID=771
 ```  
   
 ## See Also  
- [SQL Server XQuery Extension Functions](../Topic/SQL%20Server%20XQuery%20Extension%20Functions.md)   
+ [SQL Server XQuery Extension Functions](../a9retired/xquery-extension-functions.md)   
  [Compare Typed XML to Untyped XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Create Instances of XML Data](../relational-databases/xml/create-instances-of-xml-data.md)   

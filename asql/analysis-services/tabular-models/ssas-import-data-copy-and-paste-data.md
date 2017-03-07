@@ -50,7 +50,7 @@ manager: "erikre"
   
 #### To paste data into the designer  
   
--   In [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], click the **Edit** menu, and then clicke of the following:  
+-   In [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], click the **Edit** menu, and then clicke of the following:  
   
     -   Click **Paste** to paste the contents of the Clipboard into a new table.  
   
@@ -85,7 +85,7 @@ manager: "erikre"
  Shows a sample of the Clipboard contents. The existing data in the destination table will be deleted and the new rows will be inserted into the table.  
   
 ## See Also  
- [Import Data &#40;SSAS Tabular&#41;](../Topic/Import%20Data%20\(SSAS%20Tabular\).md)   
+ [Import Data &#40;SSAS Tabular&#41;](../../a9retired/import-data-ssas-tabular.md)   
  [Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Set the Data Type of a Column &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   

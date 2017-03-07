@@ -15,7 +15,7 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Delete a Row (MDS Add-in for Excel)
-  In the [!INCLUDE[ssMDSshort](../../analysis-services/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../analysis-services/includes/ssmdsxls-md.md)], delete a row of data (a member) from the MDS repository when you no longer want it to be available to users.  
+  In the [!INCLUDE[ssMDSshort](../../a9notintoc/includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../a9notintoc/includes/ssmdsxls-md.md)], delete a row of data (a member) from the MDS repository when you no longer want it to be available to users.  
   
 > [!NOTE]  
 >  Administrators can reactivate deleted members. For more information, see [Reactivate a Member or Collection &#40;Master Data Services&#41;](../../master-data-services/reactivate-a-member-or-collection-master-data-services.md).  

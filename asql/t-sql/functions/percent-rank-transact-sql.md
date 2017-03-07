@@ -25,7 +25,7 @@ manager: "jhubbard"
 # PERCENT_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx_md](../../t-sql/data-types/includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-  Calculates the relative rank of a row within a group of rows in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. Use PERCENT_RANK to evaluate the relative standing of a value within a query result set or partition. PERCENT_RANK is similar to the CUME_DIST function.  
+  Calculates the relative rank of a row within a group of rows in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. Use PERCENT_RANK to evaluate the relative standing of a value within a query result set or partition. PERCENT_RANK is similar to the CUME_DIST function.  
   
 ## Syntax  
   
@@ -37,7 +37,7 @@ PERCENT_RANK( )
   
 ## Arguments  
  OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the logical order in which the operation is performed. The *order_by_clause* is required. The \<rows or range clause> of the OVER syntax cannot be specified in a PERCENT_RANK function.  For more information, see [OVER Clause &#40;Transact-SQL&#41;](../Topic/OVER%20Clause%20\(Transact-SQL\).md).  
+ *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the logical order in which the operation is performed. The *order_by_clause* is required. The \<rows or range clause> of the OVER syntax cannot be specified in a PERCENT_RANK function.  For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## Return Types  
  **float(53)**  

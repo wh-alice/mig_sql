@@ -27,7 +27,7 @@ manager: "jhubbard"
   This topic describes how to enable and disable change tracking for a database and a table.  
   
 ## Enable Change Tracking for a Database  
- Before you can use change tracking, you must enable change tracking at the database level. The following example shows how to enable change tracking by using [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+ Before you can use change tracking, you must enable change tracking at the database level. The following example shows how to enable change tracking by using [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012  
@@ -35,7 +35,7 @@ SET CHANGE_TRACKING = ON
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
   
- You can also enable change tracking in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] by using the [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) dialog box.  
+ You can also enable change tracking in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] by using the [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) dialog box.  
   
  You can specify the CHANGE_RETENTION and AUTO_CLEANUP options when you enable change tracking, and you can change the values at any time after change tracking is enabled.  
   
@@ -60,14 +60,14 @@ ENABLE CHANGE_TRACKING
 WITH (TRACK_COLUMNS_UPDATED = ON)  
 ```  
   
- You can also enable change tracking for a table in [!INCLUDE[ssManStudioFull](../../advanced-analytics/r-services/includes/ssmanstudiofull-md.md)] by using the [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) dialog box.  
+ You can also enable change tracking for a table in [!INCLUDE[ssManStudioFull](../../a9notintoc/includes/ssmanstudiofull-md.md)] by using the [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) dialog box.  
   
- When the TRACK_COLUMNS_UPDATED option is set to ON, the [!INCLUDE[ssDEnoversion](../../analysis-services/instances/install/windows/includes/ssdenoversion-md.md)] stores extra information about which columns were updated to the internal change tracking table. Column tracking can enable an application to synchronize only those columns that were updated. This can improve efficiency and performance. However, because maintaining column tracking information adds some extra storage overhead, this option is set to OFF by default.  
+ When the TRACK_COLUMNS_UPDATED option is set to ON, the [!INCLUDE[ssDEnoversion](../../a9notintoc/includes/ssdenoversion-md.md)] stores extra information about which columns were updated to the internal change tracking table. Column tracking can enable an application to synchronize only those columns that were updated. This can improve efficiency and performance. However, because maintaining column tracking information adds some extra storage overhead, this option is set to OFF by default.  
   
 ## Disable Change Tracking for a Database or Table  
- Change tracking must first be disabled for all change-tracked tables before change tracking can be set to OFF for the database. To determine the tables that have change tracking enabled for a database, use the [sys.change_tracking_tables](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md) catalog view.  
+ Change tracking must first be disabled for all change-tracked tables before change tracking can be set to OFF for the database. To determine the tables that have change tracking enabled for a database, use the [sys.change_tracking_tables](../../relational-databases/reference/system-catalog-views/change-tracking-catalog-views-sys.change-tracking-tables.md) catalog view.  
   
- When no tables in a database track changes, you can disable change tracking for the database. The following example shows how to disable change tracking for a database by using [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+ When no tables in a database track changes, you can disable change tracking for the database. The following example shows how to disable change tracking for a database by using [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012  
@@ -83,9 +83,9 @@ DISABLE CHANGE_TRACKING;
   
 ## See Also  
  [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
- [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)   
- [sys.change_tracking_databases &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)   
- [sys.change_tracking_tables &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)   
+ [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/change-tracking-catalog-views-sys.change-tracking-databases.md)   
+ [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/change-tracking-catalog-views-sys.change-tracking-tables.md)   
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [About Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Work with Change Data &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

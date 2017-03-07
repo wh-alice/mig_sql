@@ -42,7 +42,7 @@ manager: "erikre"
 -   Make sure that the <xref:System.Data.DataRowView> object contains a column called "DocUrl" that contains the report path.  
   
     > [!NOTE]  
-    >  The Report Viewer Web Part in the add-in for [!INCLUDE[offSPServ](../reporting-services/includes/offspserv-md.md)] 2010 also supports receiving the report path using the "FileRef" column.  
+    >  The Report Viewer Web Part in the add-in for [!INCLUDE[offSPServ](../a9retired/includes/offspserv-md.md)] 2010 also supports receiving the report path using the "FileRef" column.  
   
 ### Implementing a Report Parameter Provider with IFilterValues  
  A Web Part that implements T:Microsoft.SharePoint.WebPartPages.IFilterValues can provide one parameter value to the Report Viewer Web Part. The parameter value sent to the Report Viewer Web Part is subject to the same restrictions placed on the report parameter as specified in the report definition, such as data type, valid values, and so on  

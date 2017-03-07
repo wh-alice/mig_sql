@@ -24,11 +24,11 @@ manager: "jhubbard"
 ## Options  
  Select each Subscriber type that this publication must support.  
   
- [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]  
+ [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]  
  The publication can use all features.  
   
- [!INCLUDE[ssEW](../../analysis-services/instances/includes/ssew-md.md)]  
- The publication requires snapshot files to be in character format (this is handled automatically by the Snapshot Agent). [!INCLUDE[ssEW](../../analysis-services/instances/includes/ssew-md.md)] also has a number of restrictions not related to compatibility level.  
+ [!INCLUDE[ssEW](../../a9retired/includes/ssew-md.md)]  
+ The publication requires snapshot files to be in character format (this is handled automatically by the Snapshot Agent). [!INCLUDE[ssEW](../../a9retired/includes/ssew-md.md)] also has a number of restrictions not related to compatibility level.  
   
  If this option is selected, the Web synchronization option is enabled for the publication. For more information about Web synchronization, see [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   

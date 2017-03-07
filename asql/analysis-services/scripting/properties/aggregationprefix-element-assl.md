@@ -56,7 +56,7 @@ manager: "erikre"
 |Child elements|None|  
   
 ## Remarks  
- Aggregation prefixes generate aggregation names in [!INCLUDE[msCoName](../../../advanced-analytics/r-services/tutorials/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../advanced-analytics/r-services/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../analysis-services/includes/ssasnoversion-md.md)], and also generate table names in the relational database for aggregations stored in a relational OLAP (ROLAP) partition.  
+ Aggregation prefixes generate aggregation names in [!INCLUDE[msCoName](../../../a9notintoc/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../a9notintoc/includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../a9notintoc/includes/ssasnoversion-md.md)], and also generate table names in the relational database for aggregations stored in a relational OLAP (ROLAP) partition.  
   
  A fully expanded aggregation name has the following parts:  
   

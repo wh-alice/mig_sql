@@ -17,15 +17,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # sql_variant Support for Date and Time Types
-[!INCLUDE[SNAC_Deprecated](../../relational-databases/extended-stored-procedures-reference/includes/snac-deprecated.md)]
+[!INCLUDE[SNAC_Deprecated](../../a9retired/includes/snac-deprecated.md)]
 
   This topic describes how the **sql_variant** data type supports enhanced date and time functionality.  
   
- The column attribute SQL_CA_SS_VARIANT_TYPE is used to return the C type of a variant result column. [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] introduces an additional attribute, SQL_CA_SS_VARIANT_SQL_TYPE, which sets the SQL type of a variant result column in the implementation row descriptor (IRD). SQL_CA_SS_VARIANT_SQL_TYPE can also be used in the implementation parameter descriptor (IPD) to specify the SQL type of a SQL_SS_TIME2 or SQL_SS_TIMESTAMPOFFSET parameter that has SQL_C_BINARY C type bound with type SQL_SS_VARIANT.  
+ The column attribute SQL_CA_SS_VARIANT_TYPE is used to return the C type of a variant result column. [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] introduces an additional attribute, SQL_CA_SS_VARIANT_SQL_TYPE, which sets the SQL type of a variant result column in the implementation row descriptor (IRD). SQL_CA_SS_VARIANT_SQL_TYPE can also be used in the implementation parameter descriptor (IPD) to specify the SQL type of a SQL_SS_TIME2 or SQL_SS_TIMESTAMPOFFSET parameter that has SQL_C_BINARY C type bound with type SQL_SS_VARIANT.  
   
  The new types SQL_SS_TIME2 and SQL_SS_TIMESTAMPOFFSET can be set by SQLColAttribute. SQL_CA_SS_VARIANT_SQL_TYPE can be returned by SQLGetDescField.  
   
- For result columns, the driver will convert from the variant to date/time types. For more information, see [Conversions from SQL to C](../Topic/Conversions%20from%20SQL%20to%20C.md). When binding to SQL_C_BINARY, the buffer length must be large enough to receive the struct that corresponds to the SQL type.  
+ For result columns, the driver will convert from the variant to date/time types. For more information, see [Conversions from SQL to C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md). When binding to SQL_C_BINARY, the buffer length must be large enough to receive the struct that corresponds to the SQL type.  
   
  For the SQL_SS_TIME2 and SQL_SS_TIMESTAMPOFFSET parameters, the driver will convert C values to **sql_variant** values, as described in the table below. If a parameter is bound as SQL_C_BINARY and the server type is SQL_SS_VARIANT, it will be treated as a binary value unless the application has set SQL_CA_SS_VARIANT_SQL_TYPE to some other SQL type. In this case, SQL_CA_SS_VARIANT_SQL_TYPE takes precedence; that is, if SQL_CA_SS_VARIANT_SQL_TYPE is set, it overrides the default behavior of deducing the variant SQL type from the C type.  
   

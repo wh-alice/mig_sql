@@ -34,7 +34,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CREATE USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Adds a user to the current database. The eleven types of users are listed below with a sample of the most basic syntax:  
   
@@ -42,29 +42,29 @@ manager: "jhubbard"
   
 -   User based on a login based on a Windows Active Directory account. `CREATE USER [Contoso\Fritz];`     
 -   User based on a login based on a Windows group. `CREATE USER [Contoso\Sales];`   
--   User based on a login using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] authentication. `CREATE USER Mary;`  
+-   User based on a login using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] authentication. `CREATE USER Mary;`  
   
  **Users that authenticate at the database**  Recommended to help make your database more portable.  
- Always allowed in [!INCLUDE[ssSDS_md](../../analysis-services/multidimensional-models/includes/sssds-md.md)]. Only allowed in a contained database in [!INCLUDE[ssNoVersion_md](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ Always allowed in [!INCLUDE[ssSDS_md](../../a9retired/includes/sssds-md.md)]. Only allowed in a contained database in [!INCLUDE[ssNoVersion_md](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 -   User based on a Windows user that has no login. `CREATE USER [Contoso\Fritz];`    
 -   User based on a Windows group that has no login. `CREATE USER [Contoso\Sales];`  
--   User in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)] or [!INCLUDE[ssSDW_md](../../database-engine/configure/windows/includes/sssdw-md.md)] based on an Azure Active Directory user. `CREATE USER [Contoso\Fritz] FROM EXTERNAL PROVIDER;`     
--   Contained database user with password. (Not available in [!INCLUDE[ssSDW_md](../../database-engine/configure/windows/includes/sssdw-md.md)].) `CREATE USER Mary WITH PASSWORD = '********';`   
+-   User in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)] or [!INCLUDE[ssSDW_md](../../a9retired/includes/sssdw-md.md)] based on an Azure Active Directory user. `CREATE USER [Contoso\Fritz] FROM EXTERNAL PROVIDER;`     
+-   Contained database user with password. (Not available in [!INCLUDE[ssSDW_md](../../a9retired/includes/sssdw-md.md)].) `CREATE USER Mary WITH PASSWORD = '********';`   
   
  **Users based on Windows principals that connect through Windows group logins**  
   
--   User based on a Windows user that has no login, but can connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] through membership in a Windows group. `CREATE USER [Contoso\Fritz];`  
+-   User based on a Windows user that has no login, but can connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] through membership in a Windows group. `CREATE USER [Contoso\Fritz];`  
   
--   User based on a Windows group that has no login, but can connect to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] through membership in a different Windows group. `CREATE USER [Contoso\Fritz];`  
+-   User based on a Windows group that has no login, but can connect to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] through membership in a different Windows group. `CREATE USER [Contoso\Fritz];`  
   
- **Users that cannot authenticate** These users cannot login to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] or [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].  
+ **Users that cannot authenticate** These users cannot login to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] or [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].  
   
 -   User without a login. Cannot login but can be granted permissions. `CREATE USER CustomApp WITHOUT LOGIN;`    
 -   User based on a certificate. Cannot login but can be granted permissions and can sign modules. `CREATE USER TestProcess FOR CERTIFICATE CarnationProduction50;`  
 -   User based on an asymmetric key. Cannot login but can be granted permissions and can sign modules. `CREATE User TestProcess FROM ASYMMETRIC KEY PacificSales09;`   
  
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -159,7 +159,7 @@ CREATE USER user_name
  Specifies the name by which the user is identified inside this database. *user_name* is a **sysname**. It can be up to 128 characters long. When creating a user based on a Windows principal, the Windows principal name becomes the user name unless another user name is specified.  
   
  LOGIN *login_name*  
- Specifies the login for which the database user is being created. *login_name* must be a valid login in the server. Can be a login based on a Windows principal (user or group), or a login using [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] authentication. When this [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login enters the database, it acquires the name and ID of the database user that is being created. When creating a login mapped from a Windows principal, use the format **[***\<domainName>***\\***\<loginName>***]**. For examples, see [Syntax Summary](#SyntaxSummary).  
+ Specifies the login for which the database user is being created. *login_name* must be a valid login in the server. Can be a login based on a Windows principal (user or group), or a login using [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] authentication. When this [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login enters the database, it acquires the name and ID of the database user that is being created. When creating a login mapped from a Windows principal, use the format **[***\<domainName>***\\***\<loginName>***]**. For examples, see [Syntax Summary](#SyntaxSummary).  
   
  If the CREATE USER statement is the only statement in a SQL batch, Windows Azure SQL Database supports the WITH LOGIN clause. If the CREATE USER statement is not the only statement in a SQL batch or is executed in dynamic SQL, the WITH LOGIN clause is not supported.  
   
@@ -167,14 +167,14 @@ CREATE USER user_name
  Specifies the first schema that will be searched by the server when it resolves the names of objects for this database user.  
   
  '*windows_principal*'  
- Specifies the Windows principal for which the database user is being created. The *windows_principal* can be a Windows user, or a Windows group. The user will be created even if the *windows_principal* does not have a login. When connecting to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)], if the *windows_principal* does not have a login, the Windows principal must authenticate at the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] through membership in a Windows group that has a login, or the connection string must specify the contained database as the initial catalog. When creating a user from a Windows principal, use the format **[***\<domainName>***\\***\<loginName>***]**. For examples, see [Syntax Summary](#SyntaxSummary).  
+ Specifies the Windows principal for which the database user is being created. The *windows_principal* can be a Windows user, or a Windows group. The user will be created even if the *windows_principal* does not have a login. When connecting to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)], if the *windows_principal* does not have a login, the Windows principal must authenticate at the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] through membership in a Windows group that has a login, or the connection string must specify the contained database as the initial catalog. When creating a user from a Windows principal, use the format **[***\<domainName>***\\***\<loginName>***]**. For examples, see [Syntax Summary](#SyntaxSummary).  
   
  '*Azure_Active_Directory_principal*'  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../database-engine/configure/windows/includes/sssdw-md.md)].|  
+|**Applies to**: [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../a9retired/includes/sssdw-md.md)].|  
   
- Specifies the Azure Active Directory principal for which the database user is being created. The *Azure_Active_Directory_principal* can be an Azure Active Directory user, or an Azure Active Directory group. (Azure Active Directory users cannot have Windows Authentication logins in [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)]; only database users.) The connection string must specify the contained database as the initial catalog. When creating a user from an Azure Active Directory principal, use one of the following formats.  
+ Specifies the Azure Active Directory principal for which the database user is being created. The *Azure_Active_Directory_principal* can be an Azure Active Directory user, or an Azure Active Directory group. (Azure Active Directory users cannot have Windows Authentication logins in [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)]; only database users.) The connection string must specify the contained database as the initial catalog. When creating a user from an Azure Active Directory principal, use one of the following formats.  
   
 -   `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
   
@@ -187,9 +187,9 @@ CREATE USER user_name
  WITH PASSWORD = '*password*'  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
- Can only be used in a contained database. Specifies the password for the user that is being created. Beginning with [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.  
+ Can only be used in a contained database. Specifies the password for the user that is being created. Beginning with [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.  
   
  WITHOUT LOGIN  
  Specifies that the user should not be mapped to an existing login.  
@@ -197,21 +197,21 @@ CREATE USER user_name
  CERTIFICATE *cert_name*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
  Specifies the certificate for which the database user is being created.  
   
  ASYMMETRIC KEY *asym_key_name*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
  Specifies the asymmetric key for which the database user is being created.  
   
  DEFAULT_LANGUAGE = *{ NONE | \<lcid> | \<language name> | \<language alias> }*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)],   [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)],   [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)].|  
   
  Specifies the default language for the new user. If a default language is specified for the user and the default language of the database is later changed, the users default language remains as specified. If no default language is specified, the default language for the user will be the default language of the database. If the default language for the user is not specified and the default language of the database is later changed, the default language of the user will change to the new default language for the database.  
   
@@ -221,14 +221,14 @@ CREATE USER user_name
  SID = *sid*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
- Applies only to users with passwords ([!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] authentication) in a contained database. Specifies the SID of the new database user. If this option is not selected, [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] automatically assigns a SID. Use the SID parameter to create users in multiple databases that have the same identity (SID). This is useful when creating users in multiple databases to prepare for Always On failover. To determine the SID of a user, query sys.database_principals.  
+ Applies only to users with passwords ([!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] authentication) in a contained database. Specifies the SID of the new database user. If this option is not selected, [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] automatically assigns a SID. Use the SID parameter to create users in multiple databases that have the same identity (SID). This is useful when creating users in multiple databases to prepare for Always On failover. To determine the SID of a user, query sys.database_principals.  
   
  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].|  
   
  Suppresses cryptographic metadata checks on the server in bulk copy operations. This  enables the user to bulk copy encrypted data between tables or databases, without decrypting the data. The default is OFF.  
   
@@ -236,7 +236,7 @@ CREATE USER user_name
 >  Improper use of this option can lead to data corruption. For more information, see [Migrate Sensitive Data Protected by Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
   
 ## Remarks  
- If FOR LOGIN is omitted, the new database user will be mapped to the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login with the same name.  
+ If FOR LOGIN is omitted, the new database user will be mapped to the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login with the same name.  
   
  The default schema will be the first schema that will be searched by the server when it resolves the names of objects for this database user. Unless otherwise specified, the default schema will be the owner of objects created by this database user.  
   
@@ -259,7 +259,7 @@ GRANT CONNECT TO guest;
 GO  
 ```  
   
- Information about database users is visible in the [sys.database_principals](../../relational-databases/system-catalog-views/sys.database-principals-transact-sql.md) catalog view.  
+ Information about database users is visible in the [sys.database_principals](../../relational-databases/reference/system-catalog-views/sys.database-principals-transact-sql.md) catalog view.  
   
 ##  <a name="SyntaxSummary"></a> Syntax Summary  
  **Users based on logins in master**  
@@ -289,7 +289,7 @@ GO
  The following list shows possible syntax for users that can only be used in a contained database. The users created will not be related to any logins in the **master** database. The default schema and language options are not listed.  
   
 > [!IMPORTANT]  
->  This syntax grants users access to the database and also grants new access to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+>  This syntax grants users access to the database and also grants new access to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 -   `CREATE USER [Domain1\WindowsUserBarry]`  
   
@@ -299,11 +299,11 @@ GO
   
  **Users based on Windows principals without logins in master**  
   
- The following list shows possible syntax for users that have access to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] through a Windows group but do not have a login in **master**. This syntax can be used in all types of databases. The default schema and language options are not listed.  
+ The following list shows possible syntax for users that have access to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] through a Windows group but do not have a login in **master**. This syntax can be used in all types of databases. The default schema and language options are not listed.  
   
- This syntax is similar to users based on logins in master, but this category of user does not have a login in master. The user must have access to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] through a Windows group login.  
+ This syntax is similar to users based on logins in master, but this category of user does not have a login in master. The user must have access to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] through a Windows group login.  
   
- This syntax is similar to contained database users based on Windows principals, but this category of user does not get new access to the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)].  
+ This syntax is similar to contained database users based on Windows principals, but this category of user does not get new access to the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)].  
   
 -   `CREATE USER [Domain1\WindowsUserBarry]`  
   
@@ -319,7 +319,7 @@ GO
   
  **Users that cannot authenticate**  
   
- The following list shows possible syntax for users that cannot login to [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)].  
+ The following list shows possible syntax for users that cannot login to [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)].  
   
 -   `CREATE USER RIGHTSHOLDER WITHOUT LOGIN`  
   
@@ -337,13 +337,13 @@ GO
 ### Special Considerations for Contained Databases  
  When connecting to a contained database, if the user does not have a login in the **master** database, the connection string must include the contained database name as the initial catalog. The initial catalog parameter is always required for a contained database user with password.  
   
- In a contained database, creating users helps separate the database from the instance of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] so that the database can easily be moved to another instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information, see [Contained Databases](../../relational-databases/databases/contained-databases.md) and [Contained Database Users - Making Your Database Portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md). To change a database user from a user based on a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] authentication login to a contained database user with password, see [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
+ In a contained database, creating users helps separate the database from the instance of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] so that the database can easily be moved to another instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For more information, see [Contained Databases](../../relational-databases/databases/contained-databases.md) and [Contained Database Users - Making Your Database Portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md). To change a database user from a user based on a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] authentication login to a contained database user with password, see [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/reference/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- In a contained database, users do not have to have logins in the **master** database. [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] administrators should understand that access to a contained database can be granted at the database level, instead of the [!INCLUDE[ssDE](../../analysis-services/instances/install/windows/includes/ssde-md.md)] level. For more information, see [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+ In a contained database, users do not have to have logins in the **master** database. [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] administrators should understand that access to a contained database can be granted at the database level, instead of the [!INCLUDE[ssDE](../../a9notintoc/includes/ssde-md.md)] level. For more information, see [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
- When using contained database users on [!INCLUDE[ssSDSfull](../../analysis-services/multidimensional-models/includes/sssdsfull-md.md)], configure access using a database-level firewall rule, instead of a server-level firewall rule. For more information, see [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
+ When using contained database users on [!INCLUDE[ssSDSfull](../../a9retired/includes/sssdsfull-md.md)], configure access using a database-level firewall rule, instead of a server-level firewall rule. For more information, see [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/reference/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
-For [!INCLUDE[ssSDS_md](../../analysis-services/multidimensional-models/includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../database-engine/configure/windows/includes/sssdw-md.md)] contained database users, SSMS can support Multi-Factor Authentication. For more information, see [SSMS support for Azure AD MFA with SQL Database and SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+For [!INCLUDE[ssSDS_md](../../a9retired/includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../a9retired/includes/sssdw-md.md)] contained database users, SSMS can support Multi-Factor Authentication. For more information, see [SSMS support for Azure AD MFA with SQL Database and SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
 ### Permissions  
  Requires ALTER ANY USER permission on the database.  
@@ -351,7 +351,7 @@ For [!INCLUDE[ssSDS_md](../../analysis-services/multidimensional-models/includes
 ## Examples  
   
 ### A. Creating a database user based on a SQL Server login  
- The following example first creates a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login named `AbolrousHazem`, and then creates a corresponding database user `AbolrousHazem` in `AdventureWorks2012`.  
+ The following example first creates a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login named `AbolrousHazem`, and then creates a corresponding database user `AbolrousHazem` in `AdventureWorks2012`.  
   
 ```  
 CREATE LOGIN AbolrousHazem   
@@ -379,7 +379,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../analysis-services/data-mining/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../a9notintoc/includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 USE AdventureWorks2012;  
@@ -392,7 +392,7 @@ GO
 ```  
   
 ###  <a name="withoutLogin"></a> D. Creating and using a user without a login  
- The following example creates a database user `CustomApp` that does not map to a [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] login. The example then grants a user `adventure-works\tengiz0` permission to impersonate the `CustomApp` user.  
+ The following example creates a database user `CustomApp` that does not map to a [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] login. The example then grants a user `adventure-works\tengiz0` permission to impersonate the `CustomApp` user.  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -420,7 +420,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. This example works in [!INCLUDE[sqldbesa](../../database-engine/configure/windows/includes/sqldbesa-md.md)] if DEFAULT_LANGUAGE is removed.|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. This example works in [!INCLUDE[sqldbesa](../../a9retired/includes/sqldbesa-md.md)] if DEFAULT_LANGUAGE is removed.|  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -437,7 +437,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -451,7 +451,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../analysis-services/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../a9notintoc/includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)].|  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -466,7 +466,7 @@ CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../analysis-services/powershell/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../analysis-services/multidimensional-models/includes/sssds-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../a9notintoc/includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../a9retired/includes/sssds-md.md)].|  
   
 ```  
 CREATE USER [Chin]   
@@ -475,7 +475,7 @@ WITH
     , ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON ;  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### I. Creating a database user  
  The following example first creates a server login named `AbolrousHazem` with a password, and then creates a corresponding database user `AbolrousHazem` in `AdventureWorks2008R2`.  
@@ -496,7 +496,7 @@ You might also want to [GRANT Object Permissions](GRANT%20Object%20Permissions%2
   
 ## See Also  
  [Create a Database User](../../relational-databases/security/authentication-access/create-a-database-user.md)   
- [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys.database-principals-transact-sql.md)   
+ [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/reference/system-catalog-views/sys.database-principals-transact-sql.md)   
  [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
  [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   

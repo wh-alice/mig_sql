@@ -52,7 +52,7 @@ manager: "jhubbard"
 ## See Also  
  [Variables Window](../integration-services/variables-window.md)   
  [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md)   
- [Use Variables in Packages](../Topic/Use%20Variables%20in%20Packages.md)   
+ [Use Variables in Packages](../a9retired/use-variables-in-packages.md)   
  [Integration Services &#40;SSIS&#41; Event Handlers](../integration-services/integration-services-ssis-event-handlers.md)  
   
   

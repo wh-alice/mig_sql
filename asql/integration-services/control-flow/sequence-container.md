@@ -45,16 +45,16 @@ manager: "jhubbard"
      For example, if a Sequence container includes two related tasks, one task that deletes data in a table and another task that inserts data into a table, you can configure a transaction to ensure that the delete action is rolled back if the insert action fails. For more information, see [Integration Services Transactions](../../integration-services/integration-services-transactions.md).  
   
 ## Configuration of the Sequence Container  
- The Sequence container has no custom user interface and you can configure it only in the **Properties** window of [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)] or programmatically.  
+ The Sequence container has no custom user interface and you can configure it only in the **Properties** window of [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)] or programmatically.  
   
  For information about programmatically setting these properties, see documentation for the **T:Microsoft.SqlServer.Dts.Runtime.Sequence** class in the Developer Guide.  
   
 ## Related Tasks  
- For information about how to set properties of the component in the [!INCLUDE[ssBIDevStudioFull](../../analysis-services/includes/ssbidevstudiofull-md.md)], see [Set the Properties of a Task or Container](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md).  
+ For information about how to set properties of the component in the [!INCLUDE[ssBIDevStudioFull](../../a9notintoc/includes/ssbidevstudiofull-md.md)], see [Set the Properties of a Task or Container](../../a9retired/set-the-properties-of-a-task-or-container.md).  
   
 ## See Also  
  [Add or Delete a Task or a Container in a Control Flow](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Connect Tasks and Containers by Using a Default Precedence Constraint](../Topic/Connect%20Tasks%20and%20Containers%20by%20Using%20a%20Default%20Precedence%20Constraint.md)   
+ [Connect Tasks and Containers by Using a Default Precedence Constraint](../../a9retired/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)  
   
   

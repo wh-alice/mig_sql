@@ -27,11 +27,11 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # ALTER CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../database-engine/configure/windows/includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../a9retired/includes/tsql-appliesto-ss2008-all-md.md)]
 
   Changes the private key used to encrypt a certificate, or adds one if none is present. Changes the availability of a certificate to [!INCLUDE[ssSB](../../database-engine/configure/windows/includes/sssb-md.md)].  
   
- ![Topic link icon](../../database-engine/configure/windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20\(Transact-SQL\).md)  
+ ![Topic link icon](../../a9notintoc/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -72,13 +72,13 @@ ALTER CERTIFICATE certificate_name
  Is the unique name by which the certificate is known in database.  
   
  FILE **='***path_to_private_key***'**  
- Specifies the complete path, including file name, to the private key. This parameter can be a local path or a UNC path to a network location. This file will be accessed within the security context of the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] service account. When you use this option, you must make sure that the service account has access to the specified file.  
+ Specifies the complete path, including file name, to the private key. This parameter can be a local path or a UNC path to a network location. This file will be accessed within the security context of the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] service account. When you use this option, you must make sure that the service account has access to the specified file.  
   
  DECRYPTION BY PASSWORD **='***key_password***'**  
  Specifies the password that is required to decrypt the private key.  
   
  ENCRYPTION BY PASSWORD **='***password***'**  
- Specifies the password used to encrypt the private key of the certificate in the database. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. For more information, see [Password Policy](../../relational-databases/security/password-policy.md).  
+ Specifies the password used to encrypt the private key of the certificate in the database. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]. For more information, see [Password Policy](../../relational-databases/security/password-policy.md).  
   
  REMOVE PRIVATE KEY  
  Specifies that the private key should no longer be maintained inside the database.  
@@ -142,7 +142,7 @@ ALTER CERTIFICATE Shipping15
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../relational-databases/security/encryption/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../database-engine/configure/windows/includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDWfull](../../a9notintoc/includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../a9notintoc/includes/sspdw-md.md)]  
   
 ### E. Importing a private key for a certificate that is already present in the database  
   

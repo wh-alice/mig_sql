@@ -30,7 +30,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use the Copy Database Wizard
-The Copy Database Wizard moves or copies databases and certain server objects easily from one instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]  to another instance, with no server downtime. By using this wizard, you can do the following: 
+The Copy Database Wizard moves or copies databases and certain server objects easily from one instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)]  to another instance, with no server downtime. By using this wizard, you can do the following: 
   
 -   Pick a source and destination server.  
   
@@ -64,9 +64,9 @@ The Copy Database Wizard moves or copies databases and certain server objects ea
   
 -   If you select the **Move** option, the wizard deletes the source database automatically after moving the database. The Copy Database Wizard does not delete a source database if you select the **Copy** option.  In addition, selected server objects are copied rather than moved to the destination; the database is the only object that is actually moved.
   
--   If you use the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Management Object method to move the full-text catalog, you must repopulate the index after the move.  
+-   If you use the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Management Object method to move the full-text catalog, you must repopulate the index after the move.  
   
--   The **detach and attach** method detaches the database, moves or copies the database .mdf, .ndf, .ldf files and reattaches the database in the new location. For the **detach and attach** method, to avoid data loss or inconsistency, active sessions cannot be attached to the database being moved or copied. For the [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] Management Object method, active sessions are allowed because the database is never taken offline.  
+-   The **detach and attach** method detaches the database, moves or copies the database .mdf, .ndf, .ldf files and reattaches the database in the new location. For the **detach and attach** method, to avoid data loss or inconsistency, active sessions cannot be attached to the database being moved or copied. For the [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] Management Object method, active sessions are allowed because the database is never taken offline.  
 
 -    Transferring SQL Server Agent jobs which reference databases that do not already exist on the destination server will cause the entire operation to fail.  The Wizard attempts to create a SQL Server Agent job prior to creating the database.  As a workaround:
      1.	Create a shell database on the destination server with the same name as the database to be copied or moved.  See [Create a Database](../../relational-databases/databases/create-a-database.md).
@@ -87,9 +87,9 @@ The Copy Database Wizard moves or copies databases and certain server objects ea
   
 ##  <a name="Recommendations"></a> Recommendations  
   
--   To ensure optimal performance of an upgraded database, run [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) (update statistics) against the upgraded database.  
+-   To ensure optimal performance of an upgraded database, run [sp_updatestats (Transact-SQL)](../../relational-databases/reference/system-stored-procedures/sp-updatestats-transact-sql.md) (update statistics) against the upgraded database.  
   
--   When you move or copy a database to another server instance, to provide a consistent experience to users and applications, you might have to re-create some or all of the metadata for the database, such as logins and jobs, on the other server instance. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../Topic/Manage%20Metadata%20When%20Making%20a%20Database%20Available%20on%20Another%20Server%20Instance%20\(SQL%20Server\).md).  
+-   When you move or copy a database to another server instance, to provide a consistent experience to users and applications, you might have to re-create some or all of the metadata for the database, such as logins and jobs, on the other server instance. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 
   
@@ -141,7 +141,7 @@ Used to enter the password for the login. This option is only available if you h
 ###  Select the transfer method
  
 -    **Use the detach and attach method**  
-Detach the database from the source server, copy the database files (.mdf, .ndf, and .ldf) to the destination server, and attach the database at the destination server. This method is usually the faster method because the principal work is reading the source disk and writing the destination disk. No [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] logic is required to create objects within the database, or create data storage structures. This method can be slower, however, if the database contains a large amount of allocated but unused space. For instance, a new and practically empty database that is created allocating 100 MB, copies the entire 100 MB, even if only 5 MB is full.
+Detach the database from the source server, copy the database files (.mdf, .ndf, and .ldf) to the destination server, and attach the database at the destination server. This method is usually the faster method because the principal work is reading the source disk and writing the destination disk. No [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] logic is required to create objects within the database, or create data storage structures. This method can be slower, however, if the database contains a large amount of allocated but unused space. For instance, a new and practically empty database that is created allocating 100 MB, copies the entire 100 MB, even if only 5 MB is full.
 
      > **NOTE** This method makes the database unavailable to users during the transfer.
 
@@ -382,9 +382,9 @@ In this example the `Sales` database will be copied and created as `SalesCopy` o
 
   
 ##  <a name="FollowUp"></a> Follow up: After upgrading a database  
- After you use the Copy Database Wizard to upgrade a database from an earlier version of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] to [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)], the database becomes available immediately and is automatically upgraded. If the database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the **Full-Text Upgrade Option** server property. If the upgrade option is set to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending the amount of data being indexed, importing can take several hours, and rebuilding can take up to ten times longer. Note also that when the upgrade option is set to **Import**, if a full-text catalog is not available, the associated full-text indexes are rebuilt. For information about viewing or changing the setting of the **Full-Text Upgrade Option** property, see [Manage and Monitor Full-Text Search for a Server Instance](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+ After you use the Copy Database Wizard to upgrade a database from an earlier version of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] to [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)], the database becomes available immediately and is automatically upgraded. If the database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the **Full-Text Upgrade Option** server property. If the upgrade option is set to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending the amount of data being indexed, importing can take several hours, and rebuilding can take up to ten times longer. Note also that when the upgrade option is set to **Import**, if a full-text catalog is not available, the associated full-text indexes are rebuilt. For information about viewing or changing the setting of the **Full-Text Upgrade Option** property, see [Manage and Monitor Full-Text Search for a Server Instance](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
- If the compatibility level of a user database was 100 or higher before upgrade, it remains the same after upgrade. If the compatibility level was 90 in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssCurrent](../../advanced-analytics/r-services/includes/sscurrent-md.md)]. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ If the compatibility level of a user database was 100 or higher before upgrade, it remains the same after upgrade. If the compatibility level was 90 in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssCurrent](../../a9notintoc/includes/sscurrent-md.md)]. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
  
  ## <a name="Post"></a> Post copy or move considerations
  Consider whether to perform the following steps after a **Copy** or **Move**:

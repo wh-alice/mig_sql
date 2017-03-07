@@ -23,17 +23,17 @@ manager: "erikre"
  Feature behaviors that changed in this release, yet do not break an existing model or code post-upgrade, are listed here.  
   
 > [!NOTE]  
->  In contrast with a *behavior change*, a *breaking change* is one that prevents a data model or application integrated with [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)] from running after upgrading a server, client tool, or model. To see the list, visit [Breaking Changes to Analysis Services Features in SQL Server 2016](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md).  
+>  In contrast with a *behavior change*, a *breaking change* is one that prevents a data model or application integrated with [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)] from running after upgrading a server, client tool, or model. To see the list, visit [Breaking Changes to Analysis Services Features in SQL Server 2016](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md).  
   
 ## Analysis Services in SharePoint mode  
- Running the Power Pivot Configuration wizard is no longer required as a post-installation task. This is true for all supported versions of SharePoint that load models from the  current [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)] release of [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)].  
+ Running the Power Pivot Configuration wizard is no longer required as a post-installation task. This is true for all supported versions of SharePoint that load models from the  current [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)] release of [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)].  
   
 ## DirectQuery mode for Tabular models  
  *DirectQuery* is a data access mode for tabular models, where query execution is performed on a backend relational database, retrieving a result set in real time. It's often used for very large datasets that cannot fit in memory or when data is volatile and you want the most recent data returned in queries against a tabular model.  
   
- DirectQuery has existed as a data access mode for the last several releases. In [!INCLUDE[ssCurrent](../advanced-analytics/r-services/includes/sscurrent-md.md)], the implementation has been slightly revised, assuming the tabular model is at compatibility level 1200. DirectQuery has fewer restrictions than before. It also has different database properties.  
+ DirectQuery has existed as a data access mode for the last several releases. In [!INCLUDE[ssCurrent](../a9notintoc/includes/sscurrent-md.md)], the implementation has been slightly revised, assuming the tabular model is at compatibility level 1200. DirectQuery has fewer restrictions than before. It also has different database properties.  
   
- If you are using DirectQuery in an existing tabular model, you can keep the model at its currently compatibility level of 1100 or 1103 and continue to use DirectQuery as its implemented for those levels. Alternatively, you can upgrade to 1200 to benefit from enhancements made to DirectQuery in this release of [!INCLUDE[ssASnoversion](../analysis-services/includes/ssasnoversion-md.md)].  
+ If you are using DirectQuery in an existing tabular model, you can keep the model at its currently compatibility level of 1100 or 1103 and continue to use DirectQuery as its implemented for those levels. Alternatively, you can upgrade to 1200 to benefit from enhancements made to DirectQuery in this release of [!INCLUDE[ssASnoversion](../a9notintoc/includes/ssasnoversion-md.md)].  
   
  There is no in-place upgrade of a DirectQuery model because the settings from older compatibility levels do not have exact counterparts in the newer 1200 compatibility level. If you have an existing tabular model that runs in DirectQuery mode, you should open the model in SQL Server Data Tools, turn DirectQuery off, set the **Compatibility Level** property to 1200, and then reconfigure the DirectQuery properties as defined for tabular 1200 models. See [DirectQuery Mode &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md) for details.  
   

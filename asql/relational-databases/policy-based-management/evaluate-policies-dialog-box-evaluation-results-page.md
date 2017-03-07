@@ -27,7 +27,7 @@ manager: "jhubbard"
  A link to information if an error occurs.  
   
  **Target details: Server**  
- The instance of [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)] against which the policies are evaluated.  
+ The instance of [!INCLUDE[ssNoVersion](../../a9notintoc/includes/ssnoversion-md.md)] against which the policies are evaluated.  
   
  **Target details: Target**  
  The target against which the policies are evaluated.  

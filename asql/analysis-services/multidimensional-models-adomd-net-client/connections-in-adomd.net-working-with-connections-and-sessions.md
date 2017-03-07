@@ -103,6 +103,6 @@ static string CreateSession(string connectionString)
 ```  
   
 ## See Also  
- [Establishing Connections in ADOMD.NET](../Topic/Establishing%20Connections%20in%20ADOMD.NET.md)  
+ [Establishing Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd.net.md)  
   
   

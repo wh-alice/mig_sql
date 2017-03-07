@@ -44,7 +44,7 @@ manager: "erikre"
 > [!NOTE]  
 >  Some properties are set automatically when the cube is created and cannot be changed.  
   
- For more information about how to set cube properties, see [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](../Topic/Cube%20Designer%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md).  
+ For more information about how to set cube properties, see [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](../../a9retired/cube-designer-analysis-services-multidimensional-data.md).  
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -71,6 +71,6 @@ manager: "erikre"
 >  For more information about setting values for the ErrorConfiguration property when working with null values and other data integrity issues, see [Handling Data Integrity Issues in Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
   
 ## See Also  
- [Proactive Caching &#40;Partitions&#41;](../Topic/Proactive%20Caching%20\(Partitions\).md)  
+ [Proactive Caching &#40;Partitions&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)  
   
   

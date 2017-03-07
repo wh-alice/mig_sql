@@ -19,7 +19,7 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Keyboard Shortcuts (Report Builder)
-  When you create and edit paginated [!INCLUDE[ssRSnoversion](../../advanced-analytics/r-services/includes/ssrsnoversion-md.md)] paginated reports in Report Builder, you have access to all the shortcut keys for navigation that are provided by the Windows environment. You can select from several standard keyboard mapping schemes.  
+  When you create and edit paginated [!INCLUDE[ssRSnoversion](../../a9notintoc/includes/ssrsnoversion-md.md)] paginated reports in Report Builder, you have access to all the shortcut keys for navigation that are provided by the Windows environment. You can select from several standard keyboard mapping schemes.  
   
  You can navigate through the Report Builder window, or select and change options in dialog boxes, without using the mouse.  
   

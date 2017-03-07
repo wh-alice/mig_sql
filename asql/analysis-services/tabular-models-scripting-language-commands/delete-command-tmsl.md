@@ -133,7 +133,7 @@ It deletes the specified object and all child objects and collections. If the ob
 ```  
   
 ## Usage (endpoints)  
- This command element is used in  a statement of the [Execute Method &#40;XMLA&#41;](../Topic/Execute%20Method%20\(XMLA\).md) call over an XMLA endpoint, exposed in the following ways:  
+ This command element is used in  a statement of the [Execute Method &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md) call over an XMLA endpoint, exposed in the following ways:  
   
 -   As an XMLA window in SQL Server Management Studio (SSMS)  
   

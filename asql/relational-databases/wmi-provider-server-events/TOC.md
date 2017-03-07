@@ -1,0 +1,7 @@
+# [WMI Provider for Server Events Classes and Properties](wmi-provider-for-server-events-classes-and-properties.md)
+# [Sample: Creating a SQL Server Agent Alert by Using the WMI Provider for Server Events](d44811c7-cd46-4017-b284-c863ca088e8f.md)
+# [Working with the WMI Provider for Server Events](working-with-the-wmi-provider-for-server-events.md)
+# [Understanding the WMI Provider for Server Events](understanding-the-wmi-provider-for-server-events.md)
+# [WMI Provider for Server Events Concepts](wmi-provider-for-server-events-concepts.md)
+# [Using WQL with the WMI Provider for Server Events](using-wql-with-the-wmi-provider-for-server-events.md)
+# [Sample: Using the WMI Event Provider with the .NET Framework](sample-using-the-wmi-event-provider-with-the-.net-framework.md)

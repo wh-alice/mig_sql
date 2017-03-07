@@ -1,0 +1,39 @@
+---
+title: "Microsoft Replication Conflict Viewer and Interactive Resolver | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "replication"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "replication conflict viewer [SQL Server]"
+  - "interactive resolver [SQL Server replication]"
+ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
+caps.latest.revision: 22
+ms.author: "rickbyh"
+manager: "jhubbard"
+---
+# Microsoft Replication Conflict Viewer and Interactive Resolver
+  This section includes information on the Replication Conflict Viewer for merge replication and transactional replication, and the Interactive Resolver for merge replication:  
+  
+-   [Microsoft Replication Conflict Viewer &#40;Merge Replication&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)  
+  
+-   [Microsoft Replication Conflict Viewer &#40;Transactional Replication&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-transactional-replication.md)  
+  
+-   [Microsoft Replication Interactive Conflict Resolver](../../relational-databases/replication/microsoft-replication-interactive-conflict-resolver.md)  
+  
+-   [Define Filters](../../relational-databases/replication/define-filters.md)  
+  
+## See Also  
+ [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/aeee9546-4480-49f9-8b1e-c71da1f056c7.md)   
+ [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](../Topic/Advanced%20Merge%20Replication%20Conflict%20Detection%20and%20Resolution.md)   
+ [Conflict Detection in Peer-to-Peer Replication](../Topic/Conflict%20Detection%20in%20Peer-to-Peer%20Replication.md)   
+ [Queued Updating Conflict Detection and Resolution](../Topic/Queued%20Updating%20Conflict%20Detection%20and%20Resolution.md)   
+ [Properties Reference &#40;Replication&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+  
+  

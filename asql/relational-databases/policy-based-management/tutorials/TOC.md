@@ -1,7 +1,0 @@
-# [Lesson 1: Create and Apply an Off By Default Policy](lesson-1-create-and-apply-an-off-by-default-policy.md)
-# [Lesson 1-1 - Create the Off By Default Policy](lesson-1-1-create-the-off-by-default-policy.md)
-# [Lesson 2: Create and Apply a Naming Standards Policy](lesson-2-create-and-apply-a-naming-standards-policy.md)
-# [Tutorial: Administering Servers by Using Policy-Based Management](tutorial-administering-servers-by-using-policy-based-management.md)
-# [Lesson 2-1 - Create the Finance Name Policy](lesson-2-1-create-the-finance-name-policy.md)
-# [Lesson 1-2 - Configure a Server to Run the Off By Default Policy](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
-# [Lesson 2-2 - Subscribe to and Check the Finance Name Policy](lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md)

@@ -1,6 +1,0 @@
-# [Access WMI Provider for Configuration Management using VBScript](access-wmi-provider-for-configuration-management-using-vbscript.md)
-# [Access WMI Provider for Configuration Management using WQL and Scripting Languages](c1e64905-3c2b-4974-88f4-abf17cf7e289.md)
-# [Understanding the WMI Provider for Configuration Management](understanding-the-wmi-provider-for-configuration-management.md)
-# [WMI Provider for Configuration Management](wmi-provider-for-configuration-management.md)
-# [Working with the WMI Provider for Configuration Management](working-with-the-wmi-provider-for-configuration-management.md)
-# [Access WMI Provider for Configuration Management using WQL](access-wmi-provider-for-configuration-management-using-wql.md)

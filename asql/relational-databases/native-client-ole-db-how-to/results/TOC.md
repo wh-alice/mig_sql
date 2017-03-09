@@ -1,5 +1,0 @@
-# [Execute a User-Defined Function and Process Return Code (OLE DB)](execute-a-user-defined-function-and-process-return-code-ole-db.md)
-# [Execute a Stored Procedure (Using ODBC CALL Syntax) and Process Return Codes and Output Parameters (OLE DB)](921a24d1-ea09-4a3c-980a-4dcbd0a43d31.md)
-# [Fetch Rows from a Result Set (OLE DB)](fetch-rows-from-a-result-set-ole-db.md)
-# [Processing Results How-to Topics (OLE DB)](processing-results-how-to-topics-ole-db.md)
-# [Execute a Stored Procedure (Using RPC Syntax) and Process Return Codes and Output Parameters (OLE DB)](1eb60087-da67-433f-9b45-4028595e68ab.md)

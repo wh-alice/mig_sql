@@ -1,0 +1,122 @@
+---
+title: "Working with Inputs and Outputs (R in T-SQL Tutorial) | Microsoft Docs"
+ms.custom: ""
+ms.date: "2017-02-10"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "r-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "R"
+  - "SQL"
+ms.assetid: 75480e5c-f37f-45b9-a176-67e08e9a9daf
+caps.latest.revision: 6
+ms.author: "jeannt"
+manager: "jhubbard"
+---
+# Working with Inputs and Outputs (R in T-SQL Tutorial)
+When you want to run R code in  SQL Server, you must wrap the R script in a system stored procedure, [sp_execute_external_script](https://msdn.microsoft.com/library/mt604368.aspx). This stored procedure is used to start the R runtime in the context of SQL Server, which passes data to R, manages R user sessions securely, and returns any results to the client. 
+
+
+## <a name="bkmk_SSMSBasics"></a>Create some simple test data 
+  
+Create a small table of test data by running the following T-SQL statement.     
+   
+```sql    
+CREATE TABLE RTestData ([col1] int not null) ON [PRIMARY]    
+INSERT INTO RTestData   VALUES (1);    
+INSERT INTO RTestData   VALUES (10);    
+INSERT INTO RTestData   VALUES (100) ;    
+GO
+```    
+
+When the table has been created, use the following statement to query the table:
+  
+```sql  
+SELECT * FROM RTestData  
+```  
+
+**Results**  
+  
+col1
+*1*   
+*10*   
+*100*   
+  
+    
+## Get the same data using R script    
+  
+After the table has been created, run the following statement. It gets the data from the table, makes a round-trip through the R runtime, and returns the values with the column name, *NewColName*.   
+  
+```sql    
+EXECUTE sp_execute_external_script    
+      @language = N'R'    
+    , @script = N' OutputDataSet <- InputDataSet;'    
+    , @input_data_1 = N' SELECT *  FROM RTestData;'    
+    WITH RESULT SETS (([NewColName] int NOT NULL));
+```    
+**Results**
+
+![rsql_basictut_getsamedataR](../../../advanced-analytics/r-services/tutorials/media/rsql-basictut-getsamedatar.PNG)
+
+**Notes**    
+
+
++ The *@language* parameter defines the language extension to call, in this case, R.    
++ In the *@script* parameter, you define the commands to pass to the R runtime. Your entire R script must be enclosed in this argument, as Unicode text. You could also add the text to a variable of type **nvarchar** and then call the variable. 
++ The data returned by the query is passed to the R runtime, which returns the data to SQL Server as a data frame.
++ The WITH RESULT SETS clause defines the schema of the returned data table for SQL Server. 
+   
+## Change input or output variables
+
+The preceding example used the default input and output variable names, _InputDataSet_ and _OutputDataSet_. To define the input data associated with  _InputDatSet_, you use the *@input_data_1*  variable.
+
+In this example, the names of the output and input variables have been changed to *SQLout* and *SQLin*: 
+
+```sql    
+EXECUTE sp_execute_external_script    
+  @language = N'R'      
+  , @script = N' SQLout <- SQLin;'    
+  , @input_data_1 = N' SELECT 12 as Col;'    
+  , @input_data_1_name  = N'SQLIn'    
+  , @output_data_1_name =  N'SQLOut'    
+  WITH RESULT SETS (([NewColName] int NOT NULL));    
+```
+
+**Notes**    
+- R is case-sensitive! You'll get an error such as "variable not found" if you type *SQLIN* instead of *SQLin*.  
+- Variable names must follow the rules for valid SQL identifiers. 
+- The order of the parameters is important. You must specify the required parameters *@input_data_1* and *@output_data_1* first, in order to use the optional parameters *@input_data_1_name* and *@output_data_1_name*.     
+- Only one input dataset can be passed as a parameter, and you can return only one dataset. However, you can call other datasets from inside your R code and you can return outputs of other types in addition to the dataset. You can also add the OUTPUT keyword to any parameter to have it returned with the results. There is a simple example later in this tutorial.      
+- The `WITH RESULT SETS` statement defines the schema for the data, for the benefit of SQL Server. You need to provide SQL compatible data types for each column you return from R. You can use the schema definition to provide new column names too; you need not use the column names from the R data.frame. In some cases this clause is optional; try omitting it and see what happens.    
+- In Management Studio, tabular results are returned in the **Values** pane. Messages returned by the R runtime are provided in the **Messages** pane.     
+  
+## Generate results using R    
+    
+You can also generate values using just the R script and leave the input query string in _@input_data_1_ blank. Or, use a valid SQL SELECT statement as a placeholder, and not use the SQL results in the R script.   
+    
+```sql    
+EXECUTE sp_execute_external_script    
+    @language = N'R'    
+   , @script = N' mytextvariable <- c("hello", " ", "world");  
+       OutputDataSet <- as.data.frame(mytextvariable);'    
+   , @input_data_1 = N' SELECT 1 as Temp1'    
+   WITH RESULT SETS (([Col1] char(20) NOT NULL));    
+```    
+    
+**Results**    
+   
+*Col1*     
+*hello*    
+<code>   </code>         
+*world*    
+    
+
+## Next Step
+
+You'll examine some of the problems that you might encounter when passing data between R and SQL Server, such as implicit conversions and differences in tabular data between R and SQL. 
+
+[R and SQL Data Types and Data Objects](../../../advanced-analytics/r-services/tutorials/r-and-sql-data-types-and-data-objects-r-in-t-sql-tutorial.md)

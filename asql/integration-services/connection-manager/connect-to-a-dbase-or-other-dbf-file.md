@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 ### To configure a connection manager to connect to a dBASE or other DBF file  
   
-1.  Add a new OLE DB connection manager to the package. For more information, see [Add, Delete, or Share a Connection Manager in a Package](../Topic/Add,%20Delete,%20or%20Share%20a%20Connection%20Manager%20in%20a%20Package.md).  
+1.  Add a new OLE DB connection manager to the package. For more information, see [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/en-US/library/ms140237(SQL.130).aspx).  
   
 2.  On the **Connection** page of the **Connection Manager** dialog box, select Native OLE DB\Microsoft Jet 4.0 OLE DB Provider as the **Provider**.  
   

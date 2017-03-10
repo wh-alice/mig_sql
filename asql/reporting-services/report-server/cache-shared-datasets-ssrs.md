@@ -51,7 +51,7 @@ manager: "erikre"
   
  While the query results for a specific parameter combination are in the cache, each report that is launched for processing and that includes a reference to the shared dataset with those parameter values will use the cached data.  
   
- You can specify how long to keep data in the the cache before it expires. For more information, see [Caching Page, Shared Datasets &#40;Report Manager&#41;](../Topic/Caching%20Page,%20Shared%20Datasets%20\(Report%20Manager\).md).  
+ You can specify how long to keep data in the the cache before it expires. For more information, see [Caching Page, Shared Datasets &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ee636977(SQL.130).aspx).  
   
 ## Preloading the Cache  
  You can preload the cache by creating a cache refresh plan. With a refresh plan, you can specify how often to refresh the cache by using an item-specific schedule or a shared schedule. To avoid multiple cache entries for the same item, the schedule that you specify should allow enough time for query processing on the external data source. For example, if the query takes 20 minutes to run, the refresh schedule should be greater than 20 minutes. For more information, see [Schedules](../../reporting-services/subscriptions/schedules.md).  

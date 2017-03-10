@@ -30,7 +30,7 @@ manager: "erikre"
  .  
   
 ## Graphical Query Designer  
- This graphical query designer supports three types of query commands: **Text**, **StoredProcedure**, or **TableDirect**. Before you create a query for your dataset, you must select a command type option on the Query page of the [Dataset Properties](../Topic/Dataset%20Properties%20Dialog%20Box,%20Query.md) dialog box.  
+ This graphical query designer supports three types of query commands: **Text**, **StoredProcedure**, or **TableDirect**. Before you create a query for your dataset, you must select a command type option on the Query page of the [Dataset Properties](http://msdn.microsoft.com/en-US/library/ms178261(SQL.130).aspx) dialog box.  
   
  The following options are available for query type:  
   

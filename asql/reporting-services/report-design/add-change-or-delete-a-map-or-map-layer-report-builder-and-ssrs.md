@@ -114,9 +114,9 @@ manager: "erikre"
   
 1.  Select **General** on the **Map Point Properties** dialog box to change label, tooltip, and marker type options for the following map elements:  
   
-    -   All dynamic or embedded points on a point layer. Color rules, size rules, and marker type rules for points override these options. To override options for a specific embedded point, use the [Map Embedded Point Properties Dialog Box, Marker](../Topic/Map%20Embedded%20Point%20Properties%20Dialog%20Box,%20Marker.md) page.  
+    -   All dynamic or embedded points on a point layer. Color rules, size rules, and marker type rules for points override these options. To override options for a specific embedded point, use the [Map Embedded Point Properties Dialog Box, Marker](http://msdn.microsoft.com/en-US/library/ee210590(SQL.130).aspx) page.  
   
-    -   The center point for all dynamic or embedded polygons on a polygon layer. Color rules, size rules, and marker type rules for center points override these options. To override options for a specific center point, use the [Map Embedded Point Properties Dialog Box, Marker](../Topic/Map%20Embedded%20Point%20Properties%20Dialog%20Box,%20Marker.md) page.  
+    -   The center point for all dynamic or embedded polygons on a polygon layer. Color rules, size rules, and marker type rules for center points override these options. To override options for a specific center point, use the [Map Embedded Point Properties Dialog Box, Marker](http://msdn.microsoft.com/en-US/library/ee210590(SQL.130).aspx) page.  
   
 ##  <a name="Embedded"></a> To specify embedded data as a source of spatial data  
   

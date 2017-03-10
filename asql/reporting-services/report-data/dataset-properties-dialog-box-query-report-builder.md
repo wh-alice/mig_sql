@@ -24,13 +24,13 @@ manager: "erikre"
   
  The **Dataset Properties** dialog box includes the following:  
   
--   [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Parameters%20\(Report%20Builder\).md)  
+-   [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](http://msdn.microsoft.com/en-US/library/dd207135(SQL.130).aspx)  
   
--   [Dataset Properties Dialog Box, Fields &#40;Report Builder&#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Fields%20\(Report%20Builder\).md)  
+-   [Dataset Properties Dialog Box, Fields &#40;Report Builder&#41;](http://msdn.microsoft.com/en-US/library/dd220483(SQL.130).aspx)  
   
 -   [Dataset Properties Dialog Box, Options &#40;Report Builder&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)  
   
--   [Dataset Properties Dialog Box, Filters &#40;Report Builder&#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Filters%20\(Report%20Builder\).md)  
+-   [Dataset Properties Dialog Box, Filters &#40;Report Builder&#41;](http://msdn.microsoft.com/en-US/library/dd220504(SQL.130).aspx)  
   
  For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
@@ -72,7 +72,7 @@ manager: "erikre"
  Type the number of seconds until the query times out. The default is 30 seconds. The value for **Time out** must be empty or greater than zero. If it is empty, the query does not time out.  
   
  **Refresh Fields**  
- Run the query command to update the list of fields in the [Dataset Properties Dialog Box, Fields](../Topic/Dataset%20Properties%20Dialog%20Box,%20Fields%20\(Report%20Builder\).md) page.  
+ Run the query command to update the list of fields in the [Dataset Properties Dialog Box, Fields](http://msdn.microsoft.com/en-US/library/dd220483(SQL.130).aspx) page.  
   
 ## See Also  
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   

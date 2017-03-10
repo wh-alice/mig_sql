@@ -48,7 +48,7 @@ manager: "erikre"
   
      When you first save to, publish to, or browse to a report server or SharePoint site, you might need to enter your credentials. The credentials that you enter are used until the Report Builder session ends. If you choose to save the credentials, they are stored securely with your user settings on your computer. In subsequent Report Builder sessions, saved credentials are used to connect to the same report server or SharePoint site. The report server administrator or SharePoint administrator specifies which type of credentials to use.  
   
--   Data source credentials that you enter in the [Data Source Properties Dialog Box, Credentials &#40;Report Builder&#41;](../Topic/Data%20Source%20Properties%20Dialog%20Box,%20Credentials%20\(Report%20Builder\).md) page for an embedded data source.  
+-   Data source credentials that you enter in the [Data Source Properties Dialog Box, Credentials &#40;Report Builder&#41;](http://msdn.microsoft.com/en-US/library/dd220422(SQL.130).aspx) page for an embedded data source.  
   
      These credentials are used by the report server to make a data connection to the external data source. For some types of data sources, credentials can be stored securely on the report server. These credentials enable other users to run the report without providing credentials for the underlying data connection.  
   
@@ -58,7 +58,7 @@ manager: "erikre"
   
      For shared data sources, use the **Save my password** option to save the credentials locally with your user settings on your computer. Report Builder uses the saved credentials every time a connection is made to the corresponding external data source.  
   
- For more information, see [Data Source Properties Dialog Box, General &#40;Report Builder&#41;](../Topic/Data%20Source%20Properties%20Dialog%20Box,%20General%20\(Report%20Builder\).md) and [Previewing Reports in Report Builder](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
+ For more information, see [Data Source Properties Dialog Box, General &#40;Report Builder&#41;](http://msdn.microsoft.com/en-US/library/dd220566(SQL.130).aspx) and [Previewing Reports in Report Builder](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ## Using Remote Data Sources  
  If the report retrieves data from a remote database server, verify the following:  
@@ -164,7 +164,7 @@ manager: "erikre"
  [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx)   
- [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Shared%20Data%20Source%20\(Report%20Manager\).md)   
+ [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms159863(SQL.130).aspx)   
  [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

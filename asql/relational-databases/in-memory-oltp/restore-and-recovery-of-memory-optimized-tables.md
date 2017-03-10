@@ -58,6 +58,6 @@ manager: "jhubbard"
 -   Large memory-optimized tables with one or more nonclustered indexes, unlike a hash index whose bucket count is sized at create time, the nonclustered indexes grow dynamically, resulting in high CPU utilization.  
   
 ## See Also  
- [Backup, Restore, and Recovery of Memory-Optimized Tables](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+ [Backup, Restore, and Recovery of Memory-Optimized Tables](http://msdn.microsoft.com/en-US/library/dn624160(SQL.130).aspx)  
   
   

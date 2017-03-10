@@ -44,7 +44,7 @@ manager: "erikre"
  [Open and Close a Report &#40;Report Manager&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
  [New Linked Report Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms190170(SQL.130).aspx)   
  [Choose Item Location Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms181266(SQL.130).aspx)   
- [General Properties Page, Reports &#40;Report Manager&#41;](../Topic/General%20Properties%20Page,%20Reports%20\(Report%20Manager\).md)   
+ [General Properties Page, Reports &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms186545(SQL.130).aspx)   
  [Reporting Services Concepts &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-US/library/ms157147(SQL.130).aspx)  
   

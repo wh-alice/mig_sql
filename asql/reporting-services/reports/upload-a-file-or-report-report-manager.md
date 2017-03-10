@@ -47,7 +47,7 @@ manager: "erikre"
 7.  [!INCLUDE[clickOK](../../analysis-services/data-mining/includes/clickok-md.md)]  
   
 ## See Also  
- [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Shared%20Data%20Source%20\(Report%20Manager\).md)   
+ [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms159863(SQL.130).aspx)   
  [Contents Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms186470(SQL.130).aspx)   
  [Upload File Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms187015(SQL.130).aspx)   
  [Upload Files to a Folder](../../reporting-services/report-server/upload-files-to-a-folder.md)  

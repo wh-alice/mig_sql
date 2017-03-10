@@ -85,7 +85,7 @@ manager: "erikre"
 ## See Also  
  [Create and Manage Role Assignments](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [New Role Assignment: Edit Role Assignment Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms179929(SQL.130).aspx)   
- [Security Properties Page, Items &#40;Report Manager&#41;](../Topic/Security%20Properties%20Page,%20Items%20\(Report%20Manager\).md)   
+ [Security Properties Page, Items &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms180265(SQL.130).aspx)   
  [Role Assignments](../../reporting-services/security/role-assignments.md)   
  [Role Definitions](../../reporting-services/security/role-definitions.md)  
   

@@ -33,7 +33,7 @@ manager: "erikre"
 |XML document|`http://localhost/XML/Customers.xml`|  
 |Embedded XML document|*Empty*|  
   
- For more connection string examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md).  
+ For more connection string examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/en-US/library/dd220525(SQL.130).aspx).  
   
 ##  <a name="Credentials"></a> Credentials  
  Credentials are required to run queries, to preview the report locally, and to preview the report from the report server.  
@@ -134,7 +134,7 @@ manager: "erikre"
 ##  <a name="Parameters"></a> Parameters  
  The query is not analyzed to identify parameters.  
   
- To add parameters, you must create them manually through the **Parameter** page on the [Dataset Properties](../Topic/Dataset%20Properties%20Dialog%20Box,%20Parameters%20\(Report%20Builder\).md) dialog box.  
+ To add parameters, you must create them manually through the **Parameter** page on the [Dataset Properties](http://msdn.microsoft.com/en-US/library/dd207135(SQL.130).aspx) dialog box.  
   
 ##  <a name="Remarks"></a> Remarks  
  The XML data extension supports reporting from XML data that is tabular and not hierarchical. For more information, see [Add Data from External Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
@@ -156,7 +156,7 @@ manager: "erikre"
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Provides an overview of accessing data for your report.  
   
- [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)  
+ [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/en-US/library/dd220525(SQL.130).aspx)  
  Provides information about data connections and data sources.  
   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

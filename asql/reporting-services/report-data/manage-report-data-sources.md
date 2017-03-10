@@ -64,7 +64,7 @@ manager: "erikre"
 |Add data source connection properties to a report definition (.rdl) file.|Report Designer|[Create an Embedded or Shared Data Source &#40;SSRS&#41;](http://msdn.microsoft.com/en-US/library/ms159165(SQL.130).aspx)|  
 |Add and link to a shared data source (.rds) file in report project.|Report Designer|[Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |Create a predefined list of data sources that users can select at run time. When a user requests a report, the report provides a list of data sources. The user must select which data source to use prior to running the report. To add a data source selection list to a report, you use an expression.<br /><br /> This is known as a dynamic data source connection.|Report Designer|[Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
-|Create a shared data source item on a report server.|Report Manager|[Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Shared%20Data%20Source%20\(Report%20Manager\).md)|  
+|Create a shared data source item on a report server.|Report Manager|[Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms159863(SQL.130).aspx)|  
 |Store credentials as a prerequisite for creating subscriptions or report snapshots.|Report Manager|[Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)|  
 |Edit data source connection properties on a published report.|Report Manager|[Configure Data Source Properties for a Report  &#40;Report Manager&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
 |Create a shared data source item on a report server.|SharePoint site|[Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](http://msdn.microsoft.com/en-US/library/bb283152(SQL.130).aspx)|  
@@ -75,7 +75,7 @@ manager: "erikre"
   
 ## See Also  
  [Bind a Report or Model to a Shared Data Source &#40;SSRS&#41;](../../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
- [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Shared%20Data%20Source%20\(Report%20Manager\).md)   
+ [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms159863(SQL.130).aspx)   
  [Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)   
  [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   

@@ -96,7 +96,7 @@ manager: "erikre"
 ## See Also  
  [Print Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Report Properties Dialog Box, Page Setup &#40;Report Builder&#41;](../Topic/Report%20Properties%20Dialog%20Box,%20Page%20Setup%20\(Report%20Builder\).md)   
+ [Report Properties Dialog Box, Page Setup &#40;Report Builder&#41;](http://msdn.microsoft.com/en-US/library/dd220640(SQL.130).aspx)   
  [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
   
   

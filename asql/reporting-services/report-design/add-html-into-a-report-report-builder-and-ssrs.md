@@ -25,7 +25,7 @@ manager: "erikre"
   
 1.  On the **Insert** tab, click **List**. Click the design surface, and then drag to create a box that is the size you want.  
   
-     The **Dataset Properties** dialog box opens. You can use a shared dataset or a dataset embedded in your report. For more information, click [Dataset Properties Dialog Box, Query &#40;Report Builder&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md) or [Dataset Properties Dialog Box, Query](../Topic/Dataset%20Properties%20Dialog%20Box,%20Query.md).  
+     The **Dataset Properties** dialog box opens. You can use a shared dataset or a dataset embedded in your report. For more information, click [Dataset Properties Dialog Box, Query &#40;Report Builder&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md) or [Dataset Properties Dialog Box, Query](http://msdn.microsoft.com/en-US/library/ms178261(SQL.130).aspx).  
   
 2.  On the **Insert** tab, click **Text Box**. Click in the list, and then drag to create a box that is the size you want.  
   
@@ -42,6 +42,6 @@ manager: "erikre"
 ## See Also  
  [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Formatting Lines, Colors, and Images &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
- [Placeholder Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](../Topic/Placeholder%20Properties%20Dialog%20Box,%20General%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Placeholder Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](http://msdn.microsoft.com/en-US/library/dd220488(SQL.130).aspx)  
   
   

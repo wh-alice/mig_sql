@@ -31,7 +31,7 @@ manager: "erikre"
 > [!NOTE]  
 >  A shared dataset must be based on a shared data source. If the data source you need isn't available, you need to create one on the report server. For more information, see [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) .  
   
- For more information, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md).  
+ For more information, see [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/en-US/library/dd220525(SQL.130).aspx).  
   
 ### Dataset  
  Use the **Set Options** button to set shared dataset properties. These include the following:  

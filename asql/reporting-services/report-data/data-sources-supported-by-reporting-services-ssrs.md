@@ -137,7 +137,7 @@ manager: "erikre"
 > [!NOTE]  
 >  The [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../advanced-analytics/r-services/includes/ssisnoversion-md.md)] data processing extension is not supported at this time.  
   
- For more information about data processing extensions supported by Report Builder, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md) in the [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
+ For more information about data processing extensions supported by Report Builder, see [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/en-US/library/dd220525(SQL.130).aspx) in the [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
   
 ###  <a name="MicrosoftSQLServer"></a> Microsoft SQL Server Data Processing Extension  
  The data source type **Microsoft SQL Server** wraps and extends the [!INCLUDE[dnprdnshort](../../analysis-services/multidimensional-models/includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../advanced-analytics/r-services/includes/ssnoversion-md.md)]. This data processing extension is natively compiled for and runs on x86 and [!INCLUDE[vcprx64](../../analysis-services/data-mining/includes/vcprx64-md.md)]-based platforms.  

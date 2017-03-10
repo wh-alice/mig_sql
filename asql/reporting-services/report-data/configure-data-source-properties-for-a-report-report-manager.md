@@ -61,7 +61,7 @@ manager: "erikre"
  [New Data Source Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms180077(SQL.130).aspx)   
  [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Shared%20Data%20Source%20\(Report%20Manager\).md)   
+ [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms159863(SQL.130).aspx)   
  [Data Sources Properties Page &#40;Report Manager&#41;](http://msdn.microsoft.com/en-US/library/ms190041(SQL.130).aspx)  
   
   

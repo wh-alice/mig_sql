@@ -442,7 +442,7 @@ This section describes how to use a parameterized SQL statement in the Execute S
     |ODBC|1, 2, 3, …|  
     |EXCEL and OLE DB|0, 1, 2, 3, …|  
   
-10. From the **Variable Name** list, select a variable. For more information, see [Add, Delete, Change Scope of User-Defined Variable in a Package](../Topic/Add,%20Delete,%20Change%20Scope%20of%20User-Defined%20Variable%20in%20a%20Package.md).  
+10. From the **Variable Name** list, select a variable. For more information, see [Add, Delete, Change Scope of User-Defined Variable in a Package](http://msdn.microsoft.com/en-US/library/ms141670(SQL.130).aspx).  
   
 11. In the **Direction** list, specify if the parameter is an input, an output, or a return value.  
   
@@ -551,7 +551,7 @@ This section describes how to create a mapping between a result set and a variab
   
 8.  To add a result set mapping, click **Add**.  
   
-9. From the **Variables Name** list, select a variable or create a new variable. For more information, see [Add, Delete, Change Scope of User-Defined Variable in a Package](../Topic/Add,%20Delete,%20Change%20Scope%20of%20User-Defined%20Variable%20in%20a%20Package.md).  
+9. From the **Variables Name** list, select a variable or create a new variable. For more information, see [Add, Delete, Change Scope of User-Defined Variable in a Package](http://msdn.microsoft.com/en-US/library/ms141670(SQL.130).aspx).  
   
 10. In the **Result Name** list, optionally, modify the name of the result set.  
   

@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 6.  Close the **Foreach Loop Editor**.  
   
-7.  Add an Excel connection manager to the package as described in [Add, Delete, or Share a Connection Manager in a Package](../Topic/Add,%20Delete,%20or%20Share%20a%20Connection%20Manager%20in%20a%20Package.md). Select an existing Excel workbook file for the connection to avoid validation errors.  
+7.  Add an Excel connection manager to the package as described in [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/en-US/library/ms140237(SQL.130).aspx). Select an existing Excel workbook file for the connection to avoid validation errors.  
   
     > [!IMPORTANT]  
     >  To avoid validation errors as you configure tasks and data flow components that use this Excel connection manager, select an existing Excel workbook in the **Excel Connection Manager Editor**. The connection manager will not use this workbook at run time after you configure an expression for the **ConnectionString** property as described in the following steps. After you create and configure the package, you can clear the value of the **ConnectionString** property in the Properties window. However, if you clear this value, the connection string property of the Excel connection manager is no longer valid until the Foreach Loop runs. Therefore you must set the **DelayValidation** property to **True** on the tasks in which the connection manager is used, or on the package, to avoid validation errors.  
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 ### To loop through Excel tables by using the Foreach ADO.NET Schema Rowset enumerator  
   
-1.  Create an ADO.NET connection manager that uses the Microsoft Jet OLE DB Provider to connect to an Excel workbook. On the All page of the **Connection Manager** dialog box, make sure that you enter Excel 8.0 as the value of the Extended Properties property. For more information, see [Add, Delete, or Share a Connection Manager in a Package](../Topic/Add,%20Delete,%20or%20Share%20a%20Connection%20Manager%20in%20a%20Package.md).  
+1.  Create an ADO.NET connection manager that uses the Microsoft Jet OLE DB Provider to connect to an Excel workbook. On the All page of the **Connection Manager** dialog box, make sure that you enter Excel 8.0 as the value of the Extended Properties property. For more information, see [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/en-US/library/ms140237(SQL.130).aspx).  
   
 2.  Create a string variable that will receive the name of the current table on each iteration of the loop.  
   

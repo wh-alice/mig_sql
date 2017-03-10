@@ -41,6 +41,6 @@ manager: "erikre"
   
 ## See Also  
  [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Report Properties Dialog Box, References](../Topic/Report%20Properties%20Dialog%20Box,%20References.md)  
+ [Report Properties Dialog Box, References](http://msdn.microsoft.com/en-US/library/ms181190(SQL.130).aspx)  
   
   
